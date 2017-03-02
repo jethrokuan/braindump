@@ -1,0 +1,24 @@
+* Outline
+1. Combinatorics
+2. Axioms of Probability
+3. Conditional Probability and Independence
+4. Random Variables
+5. Continuous Random Variables
+6. Joint Distributions
+7. Properties of Expectations
+8. Limit Theorems
+* Weightage
+| Component      | Weightage |
+|----------------+-----------|
+| 5 IVLE Quizzes |       10% |
+| Assignment     |       10% |
+| Mid Term       |       30% |
+| Final          |       50% |
+** Quizzes
+unlimited attempts:
+Quiz 1 - Combinatorics - topic 1
+Quiz 2 - Axioms of Probability - topic 2
+Quiz 3 - Conditional Probability and Independence - topic 3
+Quiz 4/5 - (Discrete) Random Variables - topic 4
+
+to be completed before the mid-term

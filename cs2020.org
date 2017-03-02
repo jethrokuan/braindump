@@ -1,0 +1,18 @@
+* Overview
+1. Data Structures
+2. Trees
+3. Hash Tables
+4. Graphs
+5. Advanced Topics
+   - DP
+   - Optimization
+   - Numerical Methods
+
+For each algo:
+1. What problem does it solve?
+2. Why does it work?
+3. How do you implement it?
+4. Asymptotic performance?
+5. Real world performance?
+6. Trade-offs?
+* Quizzes

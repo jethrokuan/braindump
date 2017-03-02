@@ -1,0 +1,4 @@
+* Getting Things Done (GTD)
+* Zeigarnik Effect
+Interrupted tasks are better remembered than completed ones
+- Stop coding halfway while having a good streak, and come back another day

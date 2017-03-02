@@ -1,0 +1,65 @@
+* Chapter 1
+** Definitions
+Cyberethics - study of moral, legal and social issues involving cybertechnology.
+Cybertechnology - wide range of computing and communication devices.
+** 4 phases
+*** 1950s and 1960s
+1. Building of ENIAC, huge mainframe computers, unconnected
+2. Can machines think? Should these be invented?
+3. What does it mean to be human?
+4. Privacy threats, govt surveillance
+*** 1970s and 1980s
+1. networked computers, facilitate communication of information
+2. Intellectual property, personal privacy, computer crime
+*** 1990-present
+1. World Wide Web
+2. Free speech, anonymity
+3. Geographical boundaries, legal jurisdiction
+*** present-near future
+1. Biotech, RFID
+2. increased use of autonomous systems
+** Cyberethics as different kinds of ethics
+| Type          | Disciplines                        | Issues                                                                                     |
+|---------------+------------------------------------+--------------------------------------------------------------------------------------------|
+| Professional  | CS/Engineering/Information Science | Prof. Responsibility                                                                       |
+|               |                                    | System Reliability                                                                         |
+|               |                                    | Codes of Conduct                                                                           |
+| Philosophical | Philosophy/Law                     | Privacy and Anonymity                                                                      |
+|               |                                    | Intellectual Property                                                                      |
+|               |                                    | Free Speech                                                                                |
+| Sociological  | Sociology/Behavioural Sciences     | Impact of cybertech on govt/financial/educational institutions and sociodemographic groups |
+** Methodology
+1. Identify a practice involving cybertech, or a controversial feature
+   - Disclose hidden/opaque features
+   - Assess descriptive components of ethical issues via sociological implications
+   - Analyze normative elements, determine if guidelines/policies can resolve the issue
+2. Analyze ethical issue by clarifying concepts and situating it in context
+   - If a policy vacuum exists, go next substep, if not go to step 3
+   - Clear up any conceptual muddles involving policy vacuum
+3. Deliberate on ethical issue
+   - Apply one or more ethical theories to the analysis
+   - Justify the position you reach via sound logical analysis
+* Chapter 2
+** Morality
+1. Directives that guide our conduct as individuals
+2. Social policies framed at the macrolevel
+
+Moral systems are evaluated against standards called /principles/.
+
+Morality is:
+1. Public
+   - Rules are public
+   - Everyone is obligated to partake in a moral system
+2. Informal
+   - Has no formal authoritative judges presiding over it
+3. Impartial
+   - Moral rules are ideally designed to apply equitably to all participants
+4. Rational
+   - The system is based on principles of logical reason
+** Values
+1. Instrumental
+   - Provide external benefit (eg. computers etc)
+2. Intrinsic
+   - Valued for their own sake (eg. life, happiness)
+
+

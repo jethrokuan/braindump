@@ -1,0 +1,59 @@
+* Initialization
+#+BEGIN_SRC bash
+  mkdir express-blog
+  cd express-blog
+  npm init
+#+END_SRC
+
+Check that package.json is created, with proper details.
+* Install Express
+#+BEGIN_SRC bash
+  npm install express --save
+#+END_SRC
+* Basic Express app
+#+BEGIN_SRC javascript
+  // index.js
+
+  var express = require('express');
+  var app = express();
+
+  app.get('/', function(req, res) {
+    res.send('Hello World!');
+  })
+
+  app.listen(3000, function() {
+    console.log("example app listening on port 3000");
+  })
+#+END_SRC
+* Routing
+** HTTP Methods
+- GET, POST, PUT, DELETE
+- String, regex route matching (quotes, no quotes)
+** Express.Router
+#+BEGIN_SRC javascript
+  //  /routes/hi.js
+  var router = express.Router();
+
+  router.get('/hello', function(req, res) {
+    res.send("hello");
+  })
+
+  router.get('/there' function(req, res) {
+    res.send("there");
+  })
+
+  module.exports = router;
+#+END_SRC
+
+#+BEGIN_SRC javascript
+  // index.js
+  var hiRoutes = require('./routes/hi');
+
+  app.use('/hi', hiRoutes);
+#+END_SRC
+
+
+* Parting thoughts
+** Express overloads a lot of functions
+app.get() for routing, and setting app settings
+
