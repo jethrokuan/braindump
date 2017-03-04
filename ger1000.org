@@ -1,5 +1,4 @@
 * Chapter 1: Design
-
 ** What is a study?
 A study seeks to establish whether there is an /association/ between a
 /dependent/ and /independent/ variable.
@@ -66,13 +65,19 @@ a.k.a. numerical, measurement
 | not A | b | d     | 
 ** Association
 A and Y are associated if
+
+#+BEGIN_SRC text
 (1) rate(A|Y) != rate(A|!Y) OR
 (2) rate(Y|A) != rate(Y|!A)
+#+END_SRC
 
 Consistency rule states than (1) iff (2), and vice-versa.
 
+#+BEGIN_SRC text
 a/(a+c) != b/(b+d)
 a/(a+b) != c/(c+d)
+#+END_SRC
+
 ** Adherence
 - Assignment may be random, but adherence is not
 - Clues in to success of blinding (eg. drug has negative side effects)
@@ -87,33 +92,44 @@ subgroups are combined.
 - Observational
 
 Randomized and controlled studies minimize confounding.
+
 *** Theorem
 Suppose units are randomly assigned to be exposed or not. If the
 sample size is very large, then the likelihood that a given variable C
 is not associated to exposure x tends to almost certainty.
+
 ** Risk Ratio
 |       | A | not A | row Total |
 | B     | x | y     | x + y     |
 | not B | a | b     | a + b     |
 
+#+BEGIN_SRC text
 risk (A | B) = x / (x+y)
 risk (A | !B) = a / (a+b)
+#+END_SRC
 
+#+BEGIN_SRC text
 RR = risk(A|B) / risk(A|!B)
 RR = 1 means no association
+#+END_SRC
 
-RR > 1 => first group has higher risk
-Population risk cannot be estimated in case-control studies, even with
-random samples.
+- RR > 1 => first group has higher risk
+- Population risk cannot be estimated in case-control studies, even
+  with random samples.
+
 ** Odds Ratio
 |       | A | not A |
 | B     | x | y     |
 | not B | a | b     |
+
+#+BEGIN_SRC text
 odds(A|B) = x/y
 odds(A|!B)= a/b
 
 OR = bx/ay
 odds = risk/(1-risk)
+#+END_SRC
+
 *** Population vs Estimated RR
 population sample size too large, calculation done based on samples.
 | Study        | Samples from | Advantage                    |
@@ -122,20 +138,22 @@ population sample size too large, calculation done based on samples.
 | Case-control | Response     | Good for rare diseases       |
 * Chapter 2: Association
 1. Deterministic Relationship
-   1. Value of variable can be determined if we know the value of the
-      other variable
+   - Value of variable can be determined if we know the value of the
+     other variable
 2. Statistical Relationship
-   1. Natural variability exists in measurements
-   2. Average pattern of one variable can be described given the value
-      of the other variable
+   - Natural variability exists in measurements
+   - Average pattern of one variable can be described given the value
+     of the other variable
+
 ** Categorical Variables
 Data that consists of group or category names. Measurements can be
 grouped too.
+
 *** Measurements of Association: RR and OR
-RR and OR can be accurately estimated to a cohort study
-RR is intuitively clearer and can only be estimated from cohort
-studies
-OR applies to both cohort and case-control studies
+- RR and OR can be accurately estimated to a cohort study
+- RR is intuitively clearer and can only be estimated from cohort
+  studies
+- OR applies to both cohort and case-control studies
 ** Measurement Variables
 *** Bivariate data and Scatter Diagram
 *** Exploring relationship
@@ -144,22 +162,27 @@ association: positive gradient?
 linear or exponential relationship?
 Standard deviation: spread or variability of data
 *** Correlation Coefficient
-Summarizes direction and strength of linear association
--1 <= r <= 1
-r > 0 positive association
-r < 0 negative association
-r = 0 no association
-r = 1 perfectly positive association
-r value close to 0 weak association
- weak   moderate    strong
-0    0.3        0.7       1
+Summarizes direction and strength of linear association: -1 <= r <= 1
 
+- r > 0 positive association
+- r < 0 negative association
+- r = 0 no association
+- r = 1 perfectly positive association
+- r value close to 0 weak association
+
+#+BEGIN_SRC text
+weak   moderate    strong
+0    0.3        0.7       1
+#+END_SRC
+ 
 Not affected by:
 1. Interchanging two variables
 2. Adding a number to all values of a variable
 3. Multiplying a number to all values of a variable
 *** Standard Unit
+#+BEGIN_SRC text
 SU = (X - X_bar) / sd_x 
+#+END_SRC
 
 To obtain r, obtain the product of standard unit of father-son pairs,
 then take the average of the products
@@ -172,8 +195,8 @@ Data points that are unusually far away from the bulk of the data.
 Dangerous to exclude outliers without understanding the cause of the
 occurrence.
 **** non-linear association
-zero correlation only says no "linear association"
-high correlation doesn't mean linear association
+- zero correlation only says no "linear association"
+- high correlation doesn't mean linear association
 ** Ecological Correlation
 Correlation based on aggregated data, such as gorup averages or rates.
 
@@ -191,24 +214,27 @@ level correlation
 ** Association
 *** Attentuation Effect
 #+BEGIN_QUOTE
-Due to range restriction in one variable, the correlation coefficient obtained tends to understate the strength of association between two variables.
+Due to range restriction in one variable, the correlation coefficient
+obtained tends to understate the strength of association between two
+variables.
 #+END_QUOTE
 Range restriction: bivariate data set formed based on criteria on one
-variable
-data for the other variable is only available for a limited range.
+variable data for the other variable is only available for a limited
+range.
 
 Range restriction tends to have diminishing influence on the strength
 of the association, called the attenuation effect.
 *** Regression fallacy
 #+BEGIN_QUOTE
-In virtual test-retest situations, the bottom group on the first test will on average show some improvement on the second test, and the top group will, on average, fall back.
+In virtual test-retest situations, the bottom group on the first test
+will on average show some improvement on the second test, and the top
+group will, on average, fall back.
 #+END_QUOTE
 ** Prediction with linear regression
 Y = a + bX
 
-slope and intercept determined using least-square-method.
-Predicting "average", not exact. Also dangerous to predict beyond
-observed range.
+slope and intercept determined using least-square-method. Predicting
+"average", not exact. Also dangerous to predict beyond observed range.
 * Appendix: Answering Questions
 - exposure (potential cause)
 - response (potential effect)

@@ -15,4 +15,46 @@ For each algo:
 4. Asymptotic performance?
 5. Real world performance?
 6. Trade-offs?
-* Quizzes
+* Hash Table
+hash code rules:
+1. every object will return only 1 hash code
+2. Every object that is equal will return the same hash code
+
+Default java implementation:
+1. hashcode returns memory location of the object
+2. Every object hashes to a different location
+
+#+BEGIN_SRC java
+int hashCode() {
+
+}
+#+END_SRC
+
+** Long
+#+BEGIN_SRC java
+  public int hashCode() {
+      return (int) (value ^ (value >> 32));
+  }
+#+END_SRC
+
+** String
+#+BEGIN_SRC java
+  public int hashCode() {
+      int h = hash; // only caluclate hash once
+      if (h == 0 && count > 0) { // empty = 0
+          int off = offset;
+          char val[] = value;
+          int len = count;
+          for (int i = 0; i < len; i++) {
+              h = 31*h + val [off++];
+          }
+          hash = h;
+          }
+          return h;
+  }
+#+END_SRC
+
+#+BEGIN_SRC
+hash = s[0] * 31^(n-1)
+      + s[1] * 32^(n-2)
+#+END_SRC
