@@ -1,10 +1,2 @@
 * atan2
 arctan that takes into account which "quadrant" you're in, measured CCW from x-axis [[https://en.wikipedia.org/wiki/Atan2][wikipedia]]
-* C++
-** cin/cout vs scanf/printf
-cin/cout is actually faster; but C++ slows it down to sync it with C-style io. If using only one style (cin), you can achieve greater IO speed with:
-#+BEGIN_SRC C++
-std::ios::sync_with_stdio(false);
-#+END_SRC
-** hypot
-hypot(x,y) -> sqrt(x^2 + y^2)
