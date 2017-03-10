@@ -1,0 +1,199 @@
+% Created 2017-03-05 Sun 21:04
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{grffile}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\documentclass[8pt]{extarticle}
+\usepackage[margin={0.3in,0.3in}, a4paper,landscape]{geometry}
+\usepackage{multicol}
+\usepackage{minted}
+\usepackage{booktabs}
+\usepackage{titlesec}
+\titleformat*{\section}{\large\bfseries}
+\titleformat*{\subsection}{\normalsize\bfseries}
+\titleformat*{\subsubsection}{\normalsize\bfseries}
+\usemintedstyle{bw}
+\setlength\columnsep{10pt}
+\setlength{\columnseprule}{1pt}
+\usepackage{enumitem}
+\setlist{nosep}
+\usepackage{etoolbox}
+\AtBeginEnvironment{minted}{\singlespacing\fontsize{8}{8}\selectfont}
+\author{Jethro Kuan}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={Jethro Kuan},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 25.1.1 (Org mode 9.0.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\begin{multicols*}{2}
+\section{Comparable}
+\label{sec:org2fbee87}
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{java}
+class Author implements Comparable<Author>{
+    String firstName;
+    String lastName;
+
+    @Override
+    public int compareTo(Author other){
+        // compareTo should return < 0 if this is supposed to be
+        // less than other, > 0 if this is supposed to be greater than 
+        // other and 0 if they are supposed to be equal
+        int last = this.lastName.compareTo(other.lastName);
+        return last == 0 ? this.firstName.compareTo(other.firstName) : last;
+    }
+}
+\end{minted}
+\section{Quickselect}
+\label{sec:org0e6d79d}
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{java}
+public class QuickSelect {
+    private static void swap(int[] arr, int left, int right) {
+        int temp = arr[left];
+        arr[left] = arr[right];
+        arr[right] = temp;
+    }
+
+    public static int partition(int[] arr, int left, int right, int pivot) {
+        int pivotVal = arr[pivot];
+        swap(arr, pivot, left);
+        int low = left;
+        int high = right+1;
+        while(true) {
+            while(arr[++low] <= pivotVal) {
+                if( low == right) break;
+            }
+            while(arr[--high] > pivotVal) {
+                if( high == left) break;
+            }
+
+            if (low < high) {
+                swap (arr, low, high);
+            } else {
+                swap(arr, high, left);
+                break;
+            }
+        }
+
+        return high;
+    }
+
+    public static int select(int[] arr, int k) {
+        int ans = k-1; // k - 1 because arrays are 0-indexed
+        Random rand = new java.util.Random();
+        int found = -1;
+        // select a pivot
+        int start = 0;
+        int end = arr.length - 1;
+
+        while (start <= end) {
+            int pivot = rand.nextInt(end-start + 1) + start;
+            int pivotIndex = partition(arr, start, end, pivot);
+            if (pivotIndex == ans) {
+                return found = arr[pivotIndex];
+            } else if (pivotIndex < ans) {
+                start = pivotIndex + 1;
+            } else {
+                end = pivotIndex - 1;
+            }
+        }
+
+        return found;
+    }
+}
+\end{minted}
+\section{\texttt{Collections.sort}}
+\label{sec:org367f7cb}
+\texttt{compare} returns \texttt{0} if the objects are equal. It returns a
+positive value if \texttt{obj1} is greater than \texttt{obj2}. Otherwise, a negative
+value is returned. Below snippet reversees the array.
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{java}
+ArrayList<Integer> stuff =  new ArrayList<>(Arrays.asList(1,2,3,4));
+Collections.sort(stuff, new Comparator<Integer>() {
+        @Override
+        public int compare(Integer i1, Integer i2) {
+            if (i1 < i2) {
+                return 1;
+            } else {
+                return -1;
+            }
+        }
+    });
+\end{minted}
+\section{Iterators}
+\label{sec:org79314ba}
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{java}
+@Override
+public Iterator<Type> iterator() {
+    Iterator<Type> it = new Iterator<Type>() {
+
+            private int currentIndex = 0;
+
+            @Override
+            public boolean hasNext() {
+                return currentIndex < currentSize && arrayList[currentIndex] != null;
+            }
+
+            @Override
+            public Type next() {
+                return arrayList[currentIndex++];
+            }
+
+            @Override
+            public void remove() {
+                throw new UnsupportedOperationException();
+            }
+        };
+    return it;
+}
+\end{minted}
+\section{Interfaces}
+\label{sec:orga1381c8}
+\subsection{Stack}
+\label{sec:org5b5efd7}
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{text}
+push(T): void
+pop(): T
+size(): T
+isEmpty(): boolean
+top(): T
+\end{minted}
+\subsection{Queue}
+\label{sec:org2e78e3d}
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{text}
+offer(T): boolean
+peek(): T (returns null if empty)
+poll(): T (returns null if empty)
+\end{minted}
+\subsection{Set}
+\label{sec:org216edf6}
+\begin{minted}[numbersep=5pt,framesep=2mm,fontfamily=tt]{text}
+add(T) : boolean
+addAll(Coll): boolean
+clear(): void
+contains(T): boolean
+containsAll(T): boolean
+isEmpty(): boolean
+remove(T): boolean
+removeAll(Coll): boolean
+size(): int
+\end{minted}
+
+\end{multicols*}
+\end{document}

@@ -1,0 +1,56 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k+kd}{public} \PYG{k+kd}{class} \PYG{n+nc}{QuickSelect} \PYG{o}{\PYGZob{}}
+    \PYG{k+kd}{private} \PYG{k+kd}{static} \PYG{k+kt}{void} \PYG{n+nf}{swap}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{left}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{right}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{temp} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{left}\PYG{o}{];}
+        \PYG{n}{arr}\PYG{o}{[}\PYG{n}{left}\PYG{o}{]} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{right}\PYG{o}{];}
+        \PYG{n}{arr}\PYG{o}{[}\PYG{n}{right}\PYG{o}{]} \PYG{o}{=} \PYG{n}{temp}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{int} \PYG{n+nf}{partition}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{left}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{right}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{pivot}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{pivotVal} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{pivot}\PYG{o}{];}
+        \PYG{n}{swap}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{,} \PYG{n}{pivot}\PYG{o}{,} \PYG{n}{left}\PYG{o}{);}
+        \PYG{k+kt}{int} \PYG{n}{low} \PYG{o}{=} \PYG{n}{left}\PYG{o}{;}
+        \PYG{k+kt}{int} \PYG{n}{high} \PYG{o}{=} \PYG{n}{right}\PYG{o}{+}\PYG{l+m+mi}{1}\PYG{o}{;}
+        \PYG{k}{while}\PYG{o}{(}\PYG{k+kc}{true}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{k}{while}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{[++}\PYG{n}{low}\PYG{o}{]} \PYG{o}{\PYGZlt{}=} \PYG{n}{pivotVal}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{k}{if}\PYG{o}{(} \PYG{n}{low} \PYG{o}{==} \PYG{n}{right}\PYG{o}{)} \PYG{k}{break}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+            \PYG{k}{while}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{[\PYGZhy{}\PYGZhy{}}\PYG{n}{high}\PYG{o}{]} \PYG{o}{\PYGZgt{}} \PYG{n}{pivotVal}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{k}{if}\PYG{o}{(} \PYG{n}{high} \PYG{o}{==} \PYG{n}{left}\PYG{o}{)} \PYG{k}{break}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{low} \PYG{o}{\PYGZlt{}} \PYG{n}{high}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{swap} \PYG{o}{(}\PYG{n}{arr}\PYG{o}{,} \PYG{n}{low}\PYG{o}{,} \PYG{n}{high}\PYG{o}{);}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+                \PYG{n}{swap}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{,} \PYG{n}{high}\PYG{o}{,} \PYG{n}{left}\PYG{o}{);}
+                \PYG{k}{break}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+
+        \PYG{k}{return} \PYG{n}{high}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+
+    \PYG{k+kd}{public} \PYG{k+kd}{static} \PYG{k+kt}{int} \PYG{n+nf}{select}\PYG{o}{(}\PYG{k+kt}{int}\PYG{o}{[]} \PYG{n}{arr}\PYG{o}{,} \PYG{k+kt}{int} \PYG{n}{k}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+        \PYG{k+kt}{int} \PYG{n}{ans} \PYG{o}{=} \PYG{n}{k}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{;} \PYG{c+c1}{// k \PYGZhy{} 1 because arrays are 0\PYGZhy{}indexed}
+        \PYG{n}{Random} \PYG{n}{rand} \PYG{o}{=} \PYG{k}{new} \PYG{n}{java}\PYG{o}{.}\PYG{n+na}{util}\PYG{o}{.}\PYG{n+na}{Random}\PYG{o}{();}
+        \PYG{k+kt}{int} \PYG{n}{found} \PYG{o}{=} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{o}{;}
+        \PYG{c+c1}{// select a pivot}
+        \PYG{k+kt}{int} \PYG{n}{start} \PYG{o}{=} \PYG{l+m+mi}{0}\PYG{o}{;}
+        \PYG{k+kt}{int} \PYG{n}{end} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{.}\PYG{n+na}{length} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;}
+
+        \PYG{k}{while} \PYG{o}{(}\PYG{n}{start} \PYG{o}{\PYGZlt{}=} \PYG{n}{end}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+            \PYG{k+kt}{int} \PYG{n}{pivot} \PYG{o}{=} \PYG{n}{rand}\PYG{o}{.}\PYG{n+na}{nextInt}\PYG{o}{(}\PYG{n}{end}\PYG{o}{\PYGZhy{}}\PYG{n}{start} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{)} \PYG{o}{+} \PYG{n}{start}\PYG{o}{;}
+            \PYG{k+kt}{int} \PYG{n}{pivotIndex} \PYG{o}{=} \PYG{n}{partition}\PYG{o}{(}\PYG{n}{arr}\PYG{o}{,} \PYG{n}{start}\PYG{o}{,} \PYG{n}{end}\PYG{o}{,} \PYG{n}{pivot}\PYG{o}{);}
+            \PYG{k}{if} \PYG{o}{(}\PYG{n}{pivotIndex} \PYG{o}{==} \PYG{n}{ans}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{k}{return} \PYG{n}{found} \PYG{o}{=} \PYG{n}{arr}\PYG{o}{[}\PYG{n}{pivotIndex}\PYG{o}{];}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{k}{if} \PYG{o}{(}\PYG{n}{pivotIndex} \PYG{o}{\PYGZlt{}} \PYG{n}{ans}\PYG{o}{)} \PYG{o}{\PYGZob{}}
+                \PYG{n}{start} \PYG{o}{=} \PYG{n}{pivotIndex} \PYG{o}{+} \PYG{l+m+mi}{1}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}} \PYG{k}{else} \PYG{o}{\PYGZob{}}
+                \PYG{n}{end} \PYG{o}{=} \PYG{n}{pivotIndex} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{1}\PYG{o}{;}
+            \PYG{o}{\PYGZcb{}}
+        \PYG{o}{\PYGZcb{}}
+
+        \PYG{k}{return} \PYG{n}{found}\PYG{o}{;}
+    \PYG{o}{\PYGZcb{}}
+\PYG{o}{\PYGZcb{}}
+\end{Verbatim}

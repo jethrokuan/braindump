@@ -1,0 +1,11 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+add(T) : boolean
+addAll(Coll): boolean
+clear(): void
+contains(T): boolean
+containsAll(T): boolean
+isEmpty(): boolean
+remove(T): boolean
+removeAll(Coll): boolean
+size(): int
+\end{Verbatim}

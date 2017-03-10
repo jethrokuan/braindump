@@ -30,3 +30,16 @@ Default java implementation:
 hash = s[0] * 31^(n-1)
       + s[1] * 32^(n-2)
 #+END_SRC
+* Add vs Offer
+http://stackoverflow.com/questions/15591431/difference-between-offer-and-add-in-priority-queue-in-java
+
+The two functions come from two different interfaces that
+PriorityQueue implements:
+
+- add() comes from Collection.
+- offer() comes from Queue.
+
+For a capacity-constrained queue, the difference is that add() always
+returns true and throws an exception if it can't add the element,
+whereas offer() is allowed to return false if it can't add the
+element.

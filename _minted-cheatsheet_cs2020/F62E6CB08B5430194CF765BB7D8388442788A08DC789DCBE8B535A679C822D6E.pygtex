@@ -1,0 +1,7 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+push(T): void
+pop(): T
+size(): T
+isEmpty(): boolean
+top(): T
+\end{Verbatim}

@@ -80,3 +80,5 @@ char *fgets(char *str, int n, FILE *stream)
 char str[100];
 fgets(str, 100, stdin);
 #+END_SRC
+* Algorithms in C++
+http://www.techiedelight.com/data-structures-and-algorithms-interview-questions-stl/

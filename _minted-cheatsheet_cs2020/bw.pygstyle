@@ -1,0 +1,71 @@
+
+\makeatletter
+\def\PYGbw@reset{\let\PYGbw@it=\relax \let\PYGbw@bf=\relax%
+    \let\PYGbw@ul=\relax \let\PYGbw@tc=\relax%
+    \let\PYGbw@bc=\relax \let\PYGbw@ff=\relax}
+\def\PYGbw@tok#1{\csname PYGbw@tok@#1\endcsname}
+\def\PYGbw@toks#1+{\ifx\relax#1\empty\else%
+    \PYGbw@tok{#1}\expandafter\PYGbw@toks\fi}
+\def\PYGbw@do#1{\PYGbw@bc{\PYGbw@tc{\PYGbw@ul{%
+    \PYGbw@it{\PYGbw@bf{\PYGbw@ff{#1}}}}}}}
+\def\PYGbw#1#2{\PYGbw@reset\PYGbw@toks#1+\relax+\PYGbw@do{#2}}
+
+\expandafter\def\csname PYGbw@tok@c\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@k\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@ow\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@nc\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@nn\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@ne\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@ni\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@nt\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@s\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@si\endcsname{\let\PYGbw@bf=\textbf\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@se\endcsname{\let\PYGbw@bf=\textbf\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@gh\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@gu\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@ge\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@gs\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@gp\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@err\endcsname{\def\PYGbw@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PYGbw@tok@kc\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@kd\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@kn\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@kr\endcsname{\let\PYGbw@bf=\textbf}
+\expandafter\def\csname PYGbw@tok@sa\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@sb\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@sc\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@dl\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@sd\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@s2\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@sh\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@sx\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@sr\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@s1\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@ss\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@ch\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@cm\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@cpf\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@c1\endcsname{\let\PYGbw@it=\textit}
+\expandafter\def\csname PYGbw@tok@cs\endcsname{\let\PYGbw@it=\textit}
+
+\def\PYGbwZbs{\char`\\}
+\def\PYGbwZus{\char`\_}
+\def\PYGbwZob{\char`\{}
+\def\PYGbwZcb{\char`\}}
+\def\PYGbwZca{\char`\^}
+\def\PYGbwZam{\char`\&}
+\def\PYGbwZlt{\char`\<}
+\def\PYGbwZgt{\char`\>}
+\def\PYGbwZsh{\char`\#}
+\def\PYGbwZpc{\char`\%}
+\def\PYGbwZdl{\char`\$}
+\def\PYGbwZhy{\char`\-}
+\def\PYGbwZsq{\char`\'}
+\def\PYGbwZdq{\char`\"}
+\def\PYGbwZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYGbwZat{@}
+\def\PYGbwZlb{[}
+\def\PYGbwZrb{]}
+\makeatother
+
