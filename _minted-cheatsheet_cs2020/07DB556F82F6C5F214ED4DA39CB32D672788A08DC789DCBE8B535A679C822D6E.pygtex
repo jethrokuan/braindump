@@ -1,5 +1,0 @@
-\begin{Verbatim}[commandchars=\\\{\}]
-offer(T): boolean
-peek(): T (returns null if empty)
-poll(): T (returns null if empty)
-\end{Verbatim}
