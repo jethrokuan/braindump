@@ -82,3 +82,5 @@ fgets(str, 100, stdin);
 #+END_SRC
 * Algorithms in C++
 http://www.techiedelight.com/data-structures-and-algorithms-interview-questions-stl/
+* Books to read
+http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list

@@ -2,3 +2,17 @@
 * Zeigarnik Effect
 Interrupted tasks are better remembered than completed ones
 - Stop coding halfway while having a good streak, and come back another day
+* Work Clean (Mise-en-place)
+** Preparation
+1. Always turn up early, greet the day
+2. Calculate Meeze point
+   - Optimal number of Actions done per day
+** Process
+1. Optimize the workplace:
+   - Put pens etc near dominant hand, not so important things within
+     arms reach. This is to prevent hands from crossing over, reducing friction.
+   - Think about all the pain points, and think about how to automate
+     them.
+   - Make checklists for recurring tasks. Checklists are immutable,
+     unlike task lists.
+** Presence
