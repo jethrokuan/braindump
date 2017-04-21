@@ -4,3 +4,5 @@ There is no redo. Add a non-editing command to undo the undo, eg.
 
 http://stackoverflow.com/questions/3527142/how-do-you-redo-changes-after-undo-with-emacs
 * iedit
+* Deleting Windows ^M (CR) characters
+Simply run =M-x delete-trailing-whitespaces=

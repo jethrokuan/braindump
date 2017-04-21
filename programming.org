@@ -1,2 +1,3 @@
 * atan2
-arctan that takes into account which "quadrant" you're in, measured CCW from x-axis [[https://en.wikipedia.org/wiki/Atan2][wikipedia]]
+arctan that takes into account which "quadrant" you're in, measured
+CCW from x-axis [[https://en.wikipedia.org/wiki/Atan2][wikipedia]]

@@ -235,6 +235,93 @@ Y = a + bX
 
 slope and intercept determined using least-square-method. Predicting
 "average", not exact. Also dangerous to predict beyond observed range.
+* Chapter 3: Sampling
+** Definitions
+1. Unit: Object/Individual
+2. Population: Collection of units
+3. Sample: Subset of a population
+4. Sampling frame: list of sampling units intended to identify all
+   units in the population
+   1. Good Coverage
+   2. Up-to-date and complete
+** Sampling methods
+1. Probability Sampling
+   - Every unit must have a known probability of being sampled
+   - Simple random sampling: all units have equal probability
+2. Systematic sampling
+   - Selecting units from a list through the application of a
+     selection interval K, so every Kth unit following a random start
+     is included in the sample
+   - treated as simple random when sampling units are arranged randomly
+   - might obtain undesirable sample if sampling units and K have
+     cyclical effect
+   - can use when # sampling units unknown
+3. Stratified
+   - first divide population of units into strata, take a probability
+     sample from each group
+4. Multi-stage
+** Difficulties in Sampling
+1. Imperfect sample frame
+   - Perfect sampling frame consists of all units in population
+   - otherwise, might include unwanted units (increased cost of
+     study), or exclude desired units (need to redefine target population).
+2. Non-response
+   - not all units are contactable, willing to take part.
+     Non-respondents typically differ from respondents, and this
+     effect needs to be studied.
+3. Volunteer sample (biased)
+4. Convenience sample (biased)
+5. Judgement sample (uses own discretion, biased)
+6. Quota sample (Having proportions of categories dose not make
+   extension of results to population better)
+* Chapter 4: Probability
+** Interpretations
+| Relative Frequency                        | Personal Probability                            |
+|-------------------------------------------+-------------------------------------------------|
+| Will you win the lottery                  | Will you be working overseas once you graduate? |
+| Can be quantified exactly                 | Cannot be quantified exactly                    |
+| Based on repeated observation of outcomes | Based on personal belief                        |
+
+Odds of having disease = P(disease) / P(no disease)
+
+Average value = expected value
+** P-values 
+ - p-value = the probability of obtaining an outcome /equivalent to or
+   more extreme/ than the observed
+ - null hypothesis: assumption used to calculate p-value (eg. coin is fair)
+ - if p-value is small, unlikely for observed to occur by chance, and
+   unlikely for null hypothesis to be true. Converse for large.
+ - p-value > 0.05 : do not reject NH at 5% significance level. Cannot
+   conclude that it is not fair. Observed effect in sample is likely
+   to reflect effect in population.
+** Testing rare events (Medical screening)
+1. Base rate: P(disease)
+2. Sensitivity: P(positive | disease)
+3. Specificity: P(negative | no disease)
+
+| To test                                       | Not to test                    |
+|-----------------------------------------------+--------------------------------|
+| no alternative test                           | Alternative more reliable test |
+| Test is inexpensive & more expensive 2nd test | Test is expensive              |
+| Goo chance of successful treatment            | Unreliable treatment           |
+* Chapter 5: Networks
+- Collection of objects and well-defined relations between objects
+** Definitions
+1. Degree: number of other vertices in the network a node is adjacent to
+2. Order: number of vertices
+3. Size: number of edges
+4. Distance d(X,Y) = distance between X and Y
+** Centrality
+n vertices
+| Centrality | Formula                      |
+|------------+------------------------------|
+| Closeness  | Ccen(u) = sum[d(u,vi)/ n-1 ] |
+| Degree     | Dcen(u) = deg(u) / n-1       |
+
+Betweeness: For a vertex Z in any graph, how many shortest paths are
+there, between any pair of 2 vertices, passing through Z?
+
+If 2 shortest paths between a,b, only 1 pass through z, add 1/2.
 * Appendix: Answering Questions
 - exposure (potential cause)
 - response (potential effect)
