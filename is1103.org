@@ -44,22 +44,15 @@ Cybertechnology - wide range of computing and communication devices.
 2. Social policies framed at the macrolevel
 
 Moral systems are evaluated against standards called /principles/.
-
 Morality is:
-1. Public
-   - Rules are public
-   - Everyone is obligated to partake in a moral system
-2. Informal
-   - Has no formal authoritative judges presiding over it
-3. Impartial
-   - Moral rules are ideally designed to apply equitably to all participants
-4. Rational
-   - The system is based on principles of logical reason
+
+- Public :: Rules are public; Everyone is obligated to partake in a moral system
+- Informal :: Has no formal authoritative judges presiding over it
+- Impartial :: Moral rules are ideally designed to apply equitably to all participants
+- Rational :: The system is based on principles of logical reason
 * Values
-1. Instrumental
-   - Provide external benefit (eg. computers etc)
-2. Intrinsic
-   - Valued for their own sake (eg. life, happiness)
+- Instrumental :: Provide external benefit (eg. computers etc)
+- Intrinsic :: Valued for their own sake (eg. life, happiness)
 * Ethical Theories
 ** Consequence-based (Utilitarianism) 
 Some have argued that the primary goal of a moral system is to produce
