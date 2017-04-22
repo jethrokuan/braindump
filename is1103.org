@@ -150,7 +150,7 @@ so forth.
 
 ** Contract-based
 In his classic work /Leviathan/, Hobbes describes an original
-“premoral” state that he calls the “state of nature.” It is premoral
+"premoral” state that he calls the "state of nature.” It is premoral
 because there are no moral (or legal) rules yet in existence. In this
 state, each individual is free to act in ways that satisfy his or her
 own natural desires. According to Hobbes, our natural (or physical)
@@ -159,7 +159,7 @@ will enable us to satisfy our desires (or appetites) and to avoid what
 Hobbes calls our "aversions."
 
 Hobbes believes that we are willing to surrender some of our
-“absolute” freedoms to a sovereign. In return, we receive many
+"absolute” freedoms to a sovereign. In return, we receive many
 benefits, including a system of rules and laws that are designed and
 enforced to protect individuals from being harmed by other members of
 the system.
@@ -249,21 +249,77 @@ As IT professionals we have significant opportunities to:
 
 ** Whistleblowing
 Morally permitted to blow the whistle:
-1. The product will do “serious and considerable harm” to the public.
-2. The engineer(s) have reported the “serious threat” to their
+1. The product will do "serious and considerable harm” to the public.
+2. The engineer(s) have reported the "serious threat” to their
    immediate supervisor.
-3. The engineer(s) have “exhausted the internal procedures and
+3. The engineer(s) have "exhausted the internal procedures and
    possibilities” within the company, including going to the board of
    directors, having received no support from their immediate
    supervisor.
 
 To have a strict moral obligation to blow the whistle, De George
-   believes that two additional conditions must be satisfied:
-1. The engineer(s) have “accessible, documented evidence that would
+   believes that two additional conditions must be satisfied: 
+1. The engineer(s) have "accessible, documented evidence that would
    convince a reasonable, impartial, observer that one’s view of the
    situation is correct.”
-2. The engineer(s) have “good reasons to believe that by going public
+2. The engineer(s) have "good reasons to believe that by going public
    the necessary changes will be brought about.”
+
+* Privacy
+Consider the impact that changes involving this technology have had on
+privacy with respect to the:
+
+1. amount of personal information that can be collect,
+2. speed at which personal information can be transmitted,
+3. duration of time that the information can be retained,
+4. kind of information that can be acquired and exchanged.
+
+** Definitions
+- Accessibility privacy :: Privacy is defined as one’s physically
+     being let alone, or being free from intrusion into one’s physical
+     space.
+- Decisional privacy :: Privacy is defined as freedom from
+     interference in one’s choices and decisions.
+- Informational privacy :: Privacy is defined as control over the flow
+     of one’s personal information, including the transfer and
+     exchange of that information.
+
+** Moor's Account of Privacy
+#+BEGIN_QUOTE
+An individual [has] privacy in a situation with regard to others if
+and only if in that situation the individual [is] protected from
+intrusion, interference, and information access by others.
+#+END_QUOTE
+
+*** Naturally private vs normatively private
+In a naturally private situation, individuals are protected from
+access and interference from others by natural means, for example,
+physical boundaries such as those one enjoys while hiking alone in the
+woods. In this case, privacy can be lost but not violated, because
+there are no norms—conventional, legal, or ethical—according to which
+one has a right, or even an expectation, to be protected. In a
+normatively private situation, on the other hand, individuals are
+protected by conventional norms (e.g., formal laws and informal
+policies) because they involve certain kinds of zones or contexts that
+we have determined to need normative protection.
+
+** Contextual Integrity
+Nissenbaum’s privacy framework requires that the processes used in
+gathering and disseminating information (a) are "appropriate to a
+particular context” and (b) comply with norms that govern the flow of
+personal information in a given context. She refers to these two types
+of informational norms as follows:
+
+1. Norms of appropriateness.
+2. Norms of distribution.
+
+Whereas norms of appropriateness determine whether a given type of
+personal information is either appropriate or inappropriate to divulge
+within a particular context, norms of distribution restrict or limit
+the flow of information within and across contexts. When either norm
+has been "breached," a violation of privacy occurs; conversely, the
+contextual integrity of the flow of personal information is maintained
+when both kinds of norms are "respected."
 
 * Appendix
 ** ACM Code of Ethics
