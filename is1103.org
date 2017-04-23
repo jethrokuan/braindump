@@ -488,7 +488,94 @@ Internet technology facilitates the following:
 - Easier for the poster and the reader to remain anonymous
 - Harder for the offenders to “erase” their label. The stigma may be
   permanent.
-5
+
+* Big Data
+** Paradoxes
+*** Transparency
+Big data promises to use this data to make the world more transparent,
+but its collection is invisible, and its tools and techniques are
+opaque, shrouded by layers of physical, legal, and technical privacy
+by design. If big data spells the end of privacy, then why is the big
+data revolution occurring mostly in secret?
+*** Identity
+Big data seeks to identify, but it also threatens identity. This is
+the Identity Paradox. We instinctively desire sovereignty over our
+personal identity. Whereas the important right to privacy harkens from
+the right to be left alone, the right to identity originates from
+the right to free choice about who we are.
+
+If we lack the power to individually say who “I am,” if filters and
+nudges and personalized recommendations undermine our intellectual
+choices, we will have become identified but lose our identities as we
+have defined and cherished them in the past.
+*** Power
+Big data will create winners and losers, and it is likely to benefit
+the institutions who wield its tools over the individuals being mined,
+analyzed, and sorted. Not knowing the appropriate legal or technical
+boundaries, each side is left guessing. Individuals succumb to denial
+while governments and corporations get away with what they can by
+default, until they are left reeling from scandal after shock of
+disclosure. The result is an uneasy, uncertain state of affairs that
+is not healthy for anyone and leaves individual rights eroded and our
+democracy diminished.
+** Privacy
+- Companies and governments increase use of big data to improve
+  products and services, including defending against terrorist and
+  cybersecurity attacks
+- Public increases questions about privacy and how data is used as
+  realisation of invasions is brought to awareness
+
+Privacy needs new focus. Instead of focusing on the collection of 
+information, our new focus should be on the rules that govern 
+how personal information is used and disclosed 
+
+- The rules that govern how information flows and not merely
+  restrictions on acquiring personal information or data (Nissenbaum)
+- But our practical ability to manage the trade of personal
+  information needs to be fixed. How can we self-manage privacy?
+  - notice: data processors should disclose what they are doing with
+    personal data
+  - choice: people should be able to opt-out of uses of their data
+    that they dislike
+- But is self-management a feasible route?
+** Confidentiality 
+Information exists in states between being completely private and
+completely public. 
+
+- Privacy is not binary. Important to recognise that. 
+- Before big data, individuals could more easily gauge the expected
+  uses of their personal data and weigh the benefits and the costs at
+  the time they provided their consent.  
+- For companies, the potential for harm due to unintended
+  consequences, can quickly outweigh the value the big data innovation
+  is intended to provide. Not limited to harm to individuals, but also
+  institutions. 
+- Big data uses secondary information shared privately in confidence.
+  Can we trust this information to remain confidential? How can it be
+  regulated by law?
+
+** Transparency
+The power of big data comes in large part from secondary uses of data
+sets to produce new predictions and inferences. Institutions like data
+brokers, often without our knowledge or consent, are collecting
+massive amounts of data about us they can use and share in secondary
+ways that we do not want or expect.
+
+- Why is there privacy for institutions but none for individuals? How
+  can this be better balanced? Those who collect, share, and use data
+  must be made more transparent and thus more accountable.
+
+** Changes
+Changes in law are essential but insufficient, usually slow. So how 
+do we fill this gap?
+
+- Chief Privacy Officers  
+- In-house philosophers (eg. Damon Horowitz at Google)  
+- Users (but requires institutions to be transparent)  
+- Technologists can fill these gaps by rebutting “privacy is dead”
+  beliefs and moving to advance ethics of data, and creating new
+  business models, practices and technologies
+- Review boards (IRBs) for consumer experiments
 
 
 
