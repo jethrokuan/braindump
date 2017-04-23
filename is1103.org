@@ -352,13 +352,26 @@ noting that privacy is essential for democracy.
                    threats to the confidentiality, integrity, and
                    availability of data that resides in computer
                    storage devices or is exchanged between computer
-                   systems.
+                   systems. Data can either be sensitive, or proprietary,
+                   or both. 
+   - Confidentiality :: Preventing unauthorized persons from gaining
+                        access to unauthorized information
+   - Integrity :: Preventing an attacker from modifying data.
+   - Accessibility :: Making sure that resources are available for authorized users.
 - System security :: Concerned with attacks on system resources (such
      as computer hardware, operating system software, and application
      software) by malicious programs.
 - Network security :: Concerned with attacks on computer networks,
      including the infrastructure of privately owned networks as well
      as the Internet itself.
+     
+** Difference between privacy and security 
+- Privacy :: Personal info accessed by organisations claiming to have legitimate need 
+- Security :: Obtaining of information by unauthorised personnel
+- Privacy can obscure the identity of security violaters
+
+     
+
 
 ** Cloud Computing
 #+BEGIN_QUOTE
@@ -410,7 +423,7 @@ either loss of life or severe economic loss, or both.
 
 - Hacktivism :: The convergence of political activism and computer
                 hacking techniques to engage in a new form of civil
-                disobedience.
+                disobedience. 
 - Cyberterrorism :: The convergence of cybertechnology and terrorism
                     for carrying out acts of terror in (or via)
                     cyberspace.
@@ -444,6 +457,18 @@ cybertechnology and can take place only in the cyberrealm.
                     networks, including the Internet, or (b) destroy
                     data resident in a computer or damage a computer
                     system’s resources, or both.
+                    
+** Pre-emptive hacking
+
+#+BEGIN_QUOTE
+The goal of the ethical hacker is to help the organization take preemptive measures against
+malicious attacks by attacking the system himself; all the while staying within legal limits . . . an
+Ethical Hacker is very similar to a Penetration Tester . . . When it is done by request and
+under a contract between an Ethical Hacker and an organization, it is legal.
+#+END_QUOTE
+
+- Justified through utilitarian/consequentialist means :: Less harm overall, society gain benefits from a more robost                                                                 system
+- Not justified as innocent individuals are used as means to an end :: The systems of innocent users are used for pre-                                                                              emptive hacking as 'host computers', which is morally                                                                        unjustifiable under deontological theory, as nobody                                                                          should be used as an means to an end
 
 ** Cyber-assisted crimes
 1. Cyberexacerbated :: Cyberstalking; Internet pedophilia; Internet
