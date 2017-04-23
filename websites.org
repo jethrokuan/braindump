@@ -1,5 +1,5 @@
 * [[https://teachyourselfcs.com/][Teach Yourself Computer Science]]
-* [[about:reader?url=https%3A%2F%2Ftallys.github.io%2Fcolor-theory%2F][Practical Color Theory for People Who Code]]
+* [[https://tallys.github.io/color-theory/][Practical Color Theory for People Who Code]]
 * [[http://beautifulracket.com/][Beautiful Racket by Matthew Butterick]]
 * [[https://nixcloud.io/tour/?id=1][A tour of Nix]]
 * [[https://www.youtube.com/watch?v=NETmfwOAKpQ][Double Integrals - Changing Order of Integration - Full Ex. - YouTube]]
