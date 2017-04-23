@@ -412,10 +412,85 @@ either loss of life or severe economic loss, or both.
                 hacking techniques to engage in a new form of civil
                 disobedience.
 - Cyberterrorism :: The convergence of cybertechnology and terrorism
-                    for carrying out acts of terror in (or via) cyberspace.
+                    for carrying out acts of terror in (or via)
+                    cyberspace.
 - Information Warfare :: Using malware in cyberattacks designed to
-     mislead the enemy and disrupt/damage an opponent’s military
-     defense system and its critical infrastructure.  
+     mislead the enemy and disrupt/damage an opponent’s military 
+     defense system and its critical infrastructure.
+
+* Cybercrime
+By thinking about cybercrimes in terms of their unique or special
+features—i.e., conditions that separate them from ordinary crimes—we
+could distinguish authentic or “genuine” cybercrimes from other crimes
+that merely involve the use or the presence of cybertechnology. We
+propose a definition of a genuine cybercrime as a crime in which
+
+#+BEGIN_QUOTE
+the criminal act can be carried out only through the use of
+cybertechnology and can take place only in the cyberrealm.
+#+END_QUOTE
+
+- Cyberpiracy :: using cybertechnology in unauthorized ways to (a)
+                 reproduce copies of proprietary information, or (b)
+                 distribute proprietary information (in digital form)
+                 across a computer network.
+- Cybertrespass :: using cybertechnology to gain unauthorized access
+                   to (a) an individual’s or an organization’s
+                   computer system, or (b) a password-protected Web
+                   site.
+- Cybervandalism :: using cybertechnology to unleash one or more
+                    programs that (a) disrupt the transmission of
+                    electronic information across one or more computer
+                    networks, including the Internet, or (b) destroy
+                    data resident in a computer or damage a computer
+                    system’s resources, or both.
+
+** Cyber-assisted crimes
+1. Cyberexacerbated :: Cyberstalking; Internet pedophilia; Internet
+     pornography
+2. Cyberassisted :: Online tax fraud; Physical assault with a computer
+                    (e.g., hitting someone over the head with a
+                    computer monitor); Property damage using a
+                    computer hardware device (e.g., throwing a CPU
+                    through a window)
+
+** Identity Theft
+Cyberexcerbated; a crime in which an imposter obtains key pieces of
+personal information, such as social security or driver’s license
+numbers, in order to impersonate someone else. The information can be
+used to obtain credit, merchandise, and services in the name of the
+victim, or to provide the thief with false credentials.
+
+** Vigilante
+Definition: a civilian or organization acting in a law enforcement
+capacity (or in the pursuit of self-perceived justice) without legal
+authority.
+
+- Vigilantism – reaction (often punishment) to real/perceived
+  deviance.
+- Involves planning and premeditation by those engaging in it
+- Its participants are private citizens whose engagement is voluntary
+- Form of autonomous citizenship that constitutes a social movement
+- Uses or threatens the use of force
+- Arises when established order is under threat from the
+  transgression, potential transgression or imputed transgression of
+  institutionalized norms
+- Aims to control crime or other social infractions by offering
+  reassurances (or ‘guarantees’) of security both to the participants
+  and to others.
+
+Internet technology facilitates the following:
+- Allows the average person to play the role of the report/journalist
+  to chronicle objectionable act (i.e. become reporters)
+- Allows the average person to read/watch the footage of the act and
+  take active actions in response (i.e. become vigilantes)
+- Footage of the act could be easily circulated to a global audience
+- Easier for the poster and the reader to remain anonymous
+- Harder for the offenders to “erase” their label. The stigma may be
+  permanent.
+5
+
+
 
 * Appendix
 ** ACM Code of Ethics
