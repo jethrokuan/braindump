@@ -1,21 +1,286 @@
-* Overview
-1. Data Structures
-2. Trees
-3. Hash Tables
-4. Graphs
-5. Advanced Topics
-   - DP
-   - Optimization
-   - Numerical Methods
+#+OPTIONS: toc:nil
 
-For each algo:
-1. What problem does it solve?
-2. Why does it work?
-3. How do you implement it?
-4. Asymptotic performance?
-5. Real world performance?
-6. Trade-offs?
-* Hash Table
-hash code rules:
-1. every object will return only 1 hash code
-2. Every object that is equal will return the same hash code
+#+BEGIN_EXPORT latex
+\null\hfill\begin{tabular}[t]{l@{}}
+  \small
+  \textbf{Jethro Kuan} -- \textit{\today}
+  \par
+\end{tabular}
+#+END_EXPORT
+
+* Trees
+** Binary Trees (height =h=)
+$h(v) = max\left(h(v.left), h(v.right)\right) + 1$
+- BST: left ST < key < right ST
+- traversal $O(n)$ IN:LSR, PRE:SLR, POST:LRS
+- insert, search, findMax, findMin: $O(h)$
+- successor $O(h)$:
+  - if hasRightChild, smallest node in right sub-tree
+  - else, first parent node that is left child
+- delete $O(h)$: switch numChild
+  - 0: remove v
+  - 1: remove v, connect child(v) to parent(v)
+  - 2: swap with successor(v), remove(v)
+** AVL Trees (height $h = \log n$)
+- *Property*: Every node is height-balanced
+- $\lvert v.left.height - v.right.height \rvert \le 1$
+[[file:images/avl_tree.png]]
+- insert $O(\log n)$:
+  - insert key in BST
+  - walk up, perform max 2 rotations if out-of-balance
+- delete(v): ($\log n$ rotations)
+  - If v has 2 children, swap with successor
+  - delete v, and reconnect children
+  - for every ancestor of deleted node
+    - rotate if out-of-balance
+- Splay Trees: Rotate nodes that are accessed to root. consider using
+  where operations are non-random.
+** Augmented Trees
+*** Rank Tree (Order Statistics)
+- store weight of tree in each node:
+- $w(v) = w(v.left) + w(v.right) + 1$
+- select(k) $O(\log n)$: finds node with rank $k$
+#+BEGIN_SRC text
+  rank = left.weight + 1;
+    if (k == rank)
+      return v
+    else if (k < rank)
+      return left.select(k)
+    else return right.select(k-rank)
+#+END_SRC
+- rank(v) $O(\log n)$: computes rank of node v
+#+BEGIN_SRC text
+  rank = v.left.weight + 1
+    while (v != null) do
+      if v is left child do nothing
+      if v is right child,
+         rank += v.parent.left.weight + 1
+      v = v.parent
+#+END_SRC
+  
+*** Interval Trees
+- Each node is an interval $(m, n), m \le n$
+- Sort by $m$, augment node with maximum $n$ of children in each node
+- search(x) $O(\log n)$:
+#+BEGIN_SRC text
+  if x in c
+    return c
+  else if c has no left child
+    search in right subtree
+  else if x > max endpoint in c.left
+    search in right subtree
+  else search in left subtree
+#+END_SRC
+- findAll(x) $O(k \log n)$ for k overlapping intervals
+#+BEGIN_SRC text
+  search(x)
+  store it somewhere else
+  remove interval
+  repeat until no intervals found
+#+END_SRC
+* Hash Tables
+- n: #items, m: #buckets
+- _Simple Uniform Hashing_: Keys are equally likely to map to every
+  bucket, and are mapped independently
+  - $load(ht) = \frac{n}{m}$
+  - $E_\text{search} = 1 + \frac{n}{m}$
+  - Assume $m=\Omega(n)$, $E_\text{search} = O(1)$
+** Hash Functions
+*** Division
+- $h(k) = k \text{ mod } m$, choose m prime
+*** Multiplication
+- fix table size: $m=2^r$, for some $r$
+- fix word size: $w$, size of key in bits
+- fix odd constant $A$, $A > 2^{w-1}$
+- $h(k) = (Ak) \text{ mod } 2^w >> (w - r)$
+*** Rolling Hash
+- When key changes by single character
+
+** Chaining
+- bucket stores linked list, containing (object, value)
+- Worst insert $O(1 + cost(h))$
+- Expected search = $1 + \frac{n}{m} = O(1)$
+- Worst search $O(n)$
+** Open Addressing
+- One item per slot, probe sequence of buckets until find only one
+- $h(key, i) : U \mapsto {1..m}$, $i$ is no. of collisions
+- /search/: keep probing until empty bucket, or exhausted entire table
+- /delete/: set key to tombstone value, so probe sequence still works
+- /insert/: on deleted cell, overwrite, else find next available slot
+- good hash function:
+  1. $h(key, i)$ enumerates all possible buckets
+  2. Simple Uniform Hashing
+- /Linear/: $h(k,i) = h(k) + i$, Clustering
+- /Double/: $h(k,i) = f(k) + i \cdot g(k) \text{ mod } m$
+- Insert, Search: $\frac{1}{1-\alpha}$ where $\alpha = \frac{n}{m} \le
+  1$
+- good: saves space, rare mem alloc, better cache perf
+- bad: sensitive to hash, load
+** Table resizing
+- Scan old table $O(m_1)$, create new table $O(m_2)$, insert each
+  element $O(1), total $O(m_1 + m_2 + n)$
+- $O(n)$ amor: if $n == m$, $m = 2m$, if $n < \frac{m}{4}$, $m = \frac{m}{2}$
+** Fingerprint Hash Table (FHT)
+- Vector of 0/1 bits
+- no false negatives, but has false positives. $P_{\text{no FP}} = \left(\frac{1}{e}\right)^{n/m}$
+** Bloom Filter
+- use $n$ hash functions. More space per item, but require $n$
+  collisions for false positive.
+- $P_{\text{coll}} = \left(1- e^{-kn/m}\right)^k$
+- Two hash functions, $h(k)$ and $t(k)$, two tables $T_1$ and $T_2$
+- /insert/: $T_1[h(k)] = 1$, $T_2[h(k)] = 1$
+- /search/: if $T_1[h(k)]$ and $T_2[h(k)]$ both 1 return true
+* Graphs
+| Type   | Space    | v,w  | any  | all  |
+|--------+----------+------+------+------|
+| List   | $O(V+E)$ | slow | fast | fast |
+| Mat    | $O(V^2)$ | fast | slow | slow |
+** Simple search
+- BFS/DFS do not explore all paths
+*** BFS $O(V+E)$
+#+BEGIN_SRC text
+  bfs(root)
+    Q.enqueue(root)
+
+    while Q is not empty:
+      current = Q.dequeue()
+      visit(current)
+      for each node n adj to current
+        if n not visited
+          n.parent = current
+          Q.enqueue(n)
+#+END_SRC
+*** DFS $O(V+E)$
+- Same as BFS, but use stack instead of queue
+
+*** Topological Sort (DAG)
+- Post-order DFS
+- Kahn's Algorithm (first append all nodes with no incoming edges to
+  result set, remove edges connected to these nodes and repeat,
+  also O(V+E))
+** SSSP
+*** Bellman-Ford $O(EV)$
+#+BEGIN_SRC text
+  do V number of times
+    for (Edge e : graph)
+      relax(e)
+#+END_SRC
+- can terminate early if no improvement
+- can detect negative cycle: perform V times, then perform once more,
+  if have changes it has negative cycle
+- if all weights are the same, use BFS
+*** Dijkstra $O(E\log V)$
+- Doesn't work with negative edge weights
+- can terminate once end is found
+#+BEGIN_SRC text
+  add start to PQ
+  dist[i] = INF for all i
+  dist[start] = 0
+  while PQ not empty
+    w = pq.dequeue()
+    for each edge e connected to w
+      if edge is improvement
+        update pq[w] O(logn)
+        update dist[w]
+#+END_SRC
+
+
+*** DAG
+- Toposort, relax in order
+
+** Heap
+- implements priority queue, is a complete binary tree
+- priority of parent > priority of child
+- insert: create new leaf, =bubbleUp=
+- decreaseKey: update priority, =bubbleDown=
+- delete: swap with leaf, delete, and then =bubble=
+- store in array:
+  - $left(x) = 2x + 1$
+  - $right(x) = 2x + 2$
+  - $parent(x) = floor((x-1)/2)$
+*** Heap Sort
+1. Heapify (insert n items)  O(n log n)
+2. Extract from heap n times (O(n log n))
+
+- *Improvement*: recursively join 2 heaps and bubble root down (base
+  case single node) O(n)
+- O(n log n) worst case, deterministic, in-place
+
+*** UFDS (weighted)
+- union(p,q) $O(\log n)$
+  - find parent of p and q
+  - make root of smaller tree root of larger tree
+- find(k) $O(\log n)$
+  - search up the tree, return the root
+  - (PC): update all traversed nodes parent to root
+
+- WU with PC, union and find $O(\alpha(m,n))$
+
+** MST
+- acyclic subset of edges that connects all nodes, and has minimum
+  weight
+*** Properties
+1. Cutting edge in MST results in 2 MSTs
+2. *Cycle Poperty*: $\forall$ cycle, max weight edge is not in MST
+3. *Cut Property*: $\forall$ partitions, min weight edge
+   across cut is in MST
+*** Prim's $O(E \log V)$
+#+BEGIN_SRC text
+  T = {start}
+  enqueue start's edges in PQ
+  while PQ not empty
+    e = PQ.dequeue()
+    if (vertex v linked with e not in T)
+      T = T U {v, e}
+    else
+      ignore edge
+  MST = T
+#+END_SRC
+
+*** Kruskal's $O(E\log V)$
+
+- Use union find
+- connect two nodes if they are in the same blue tree
+  
+#+BEGIN_SRC text
+  Sort E edges by increasing weight
+  T = {}
+  for (i = 0; i < edgeList.length; i++)
+    if adding e = edgelist[i] does
+    not form a cycle
+      add e to T
+      else ignore e
+  MST = T
+#+END_SRC
+
+*** Boruvka's $O(E\log V)$
+#+BEGIN_SRC text
+  T = { one-vertex trees }
+  While T has more than one component:
+   For each component C of T:
+     Begin with an empty set of edges S
+     For each vertex v in C:
+       Find the cheapest edge from v
+       to a vertex outside of C, and
+       add it to S
+     Add the cheapest edge in S to T
+   Combine trees connected by edges
+  MST = T
+#+END_SRC
+
+*** Variants
+1. Same weight: BFS/DFS $O(E)$
+2. Edges have weight $1..k$:
+   - Kruskal's
+     - Bucket sort Edges $O(E)$
+     - Union/check $O(\alpha (V))$
+     - Total cost: $O(\alpha(V)E)$
+   - Prim's 
+     - Use array of size k as PQ, each slot holds linked
+          list of nodes
+   - insert/remove nodes $O(V)$
+   - decreaseKey $O(E)$
+3. Directed MST
+   - $\forall$ node except root, add minimum incoming edge $O(E)$
+4. MaxST
+   - negate all weights, run MST algo

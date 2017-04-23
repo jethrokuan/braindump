@@ -1,3 +1,7 @@
+#+AUTHOR: Jethro Kuan
+#+OPTIONS: toc:nil
+#+OPTIONS:
+
 * Introduction                                                     :noexport:
 ** Definitions
 Cyberethics - study of moral, legal and social issues involving cybertechnology.
@@ -187,13 +191,13 @@ aid of that developing nation.
 
 ** Character-based
 Because virtue ethics focuses primarily on character development and
-moral educa- tion, it does not need to rely on a system of formal
+moral education, it does not need to rely on a system of formal
 rules.
 
 Character-based ethical systems would most likely flourish in cultures
 where the emphasis placed on community life is stronger than that
 accorded to the role of individuals themselves.
-
+#+ATTR_LATEX: :width \textwidth :align |X|X|X|
  | Type of Theory                  | Advantages                                         | Disadvantages                                                 |
  |---------------------------------+----------------------------------------------------+---------------------------------------------------------------|
  | Consequence-based (Utilitarian) | Stresses promotion of happiness and utility        | Ignores concerns of justice for the minority population       |
@@ -234,6 +238,7 @@ As IT professionals we have significant opportunities to:
 1. do good or cause harm,
 2. enable others to do good or cause harm,
 3. influence others to do good or cause harm.
+
 
 - Moral Responsibility :: determined by looking at causality and
      intent. X is responsible for Y if X caused Y, regardless of
@@ -341,6 +346,7 @@ authors have pointed out the social value that privacy also provides,
 noting that privacy is essential for democracy.
 
 * Security
+  #+ATTR_LATEX: :width \textwidth :align |c|X|
 | Type    | What                                                                                    |
 |---------+-----------------------------------------------------------------------------------------|
 | Data    | Securing data that resides in computer databases; transmitted between computer systems  |
@@ -421,6 +427,7 @@ either loss of life or severe economic loss, or both.
    unfair, to the extreme detriment of the common good.
 5. Willingness to accept personal responsibility for the outcome of
    actions.
+
 
 - Hacktivism :: The convergence of political activism and computer
                 hacking techniques to engage in a new form of civil
@@ -685,80 +692,7 @@ deserve legal protection.
 
 * Appendix
 ** ACM Code of Ethics
-Software Engineering Code of Ethics and Professional Practice (Full Version)
-
-PREAMBLE
-
-omputers have a central and growing role in commerce, industry,
-government, medicine, education, entertainment and society at large.
-Software engineers are those who contribute by direct participation or
-by teaching, to the analysis, specification, design, development,
-certification, maintenance and testing of software systems. Because of
-their roles in developing software systems, software engineers have
-significant opportunities to do good or cause harm, to enable others
-to do good or cause harm, or to influence others to do good or cause
-harm. To ensure, as much as possible, that their efforts will be used
-for good, software engineers must commit themselves to making software
-engineering a beneficial and respected profession. In accordance with
-that commitment, software engineers shall adhere to the following Code
-of Ethics and Professional Practice.
-
-The Code contains eight Principles related to the behavior of and
-decisions made by professional software engineers, including
-practitioners, educators, managers, supervisors and policy makers, as
-well as trainees and students of the profession. The Principles
-identify the ethically responsible relationships in which individuals,
-groups, and organizations participate and the primary obligations
-within these relationships. The Clauses of each Principle are
-illustrations of some of the obligations included in these
-relationships. These obligations are founded in the software
-engineer’s humanity, in special care owed to people affected by the
-work of software engineers, and the unique elements of the practice of
-software engineering. The Code prescribes these as obligations of
-anyone claiming to be or aspiring to be a software engineer.
-
-It is not intended that the individual parts of the Code be used in
-isolation to justify errors of omission or commission. The list of
-Principles and Clauses is not exhaustive. The Clauses should not be
-read as separating the acceptable from the unacceptable in
-professional conduct in all practical situations. The Code is not a
-simple ethical algorithm that generates ethical decisions. In some
-situations standards may be in tension with each other or with
-standards from other sources. These situations require the software
-engineer to use ethical judgment to act in a manner which is most
-consistent with the spirit of the Code of Ethics and Professional
-Practice, given the circumstances.
-
-Ethical tensions can best be addressed by thoughtful consideration of
-fundamental principles, rather than blind reliance on detailed
-regulations. These Principles should influence software engineers to
-consider broadly who is affected by their work; to examine if they and
-their colleagues are treating other human beings with due respect; to
-consider how the public, if reasonably well informed, would view their
-decisions; to analyze how the least empowered will be affected by
-their decisions; and to consider whether their acts would be judged
-worthy of the ideal professional working as a software engineer. In
-all these judgments concern for the health, safety and welfare of the
-public is primary; that is, the "Public Interest" is central to this
-Code.
-
-The dynamic and demanding context of software engineering requires a
-code that is adaptable and relevant to new situations as they occur.
-However, even in this generality, the Code provides support for
-software engineers and managers of software engineers who need to take
-positive action in a specific case by documenting the ethical stance
-of the profession. The Code provides an ethical foundation to which
-individuals within teams and the team as a whole can appeal. The Code
-helps to define those actions that are ethically improper to request
-of a software engineer or teams of software engineers.
-
-The Code is not simply for adjudicating the nature of questionable
-acts; it also has an important educational function. As this Code
-expresses the consensus of the profession on ethical issues, it is a
-means to educate both the public and aspiring professionals about the
-ethical obligations of all software engineers. PRINCIPLES
-
-Principle 1: PUBLIC
+*** Principle 1: PUBLIC
 
 Software engineers shall act consistently with the public interest. In
 particular, software engineers shall, as appropriate:
@@ -793,7 +727,7 @@ access to the benefits of software.
 1.08. Be encouraged to volunteer professional skills to good causes
 and contribute to public education concerning the discipline.
 
-Principle 2: CLIENT AND EMPLOYER
+*** Principle 2: CLIENT AND EMPLOYER
 
 Software engineers shall act in a manner that is in the best interests
 of their client and employer, consistent with the public interest. In
@@ -831,7 +765,7 @@ their primary employer.
 a higher ethical concern is being compromised; in that case, inform
 the employer or another appropriate authority of the ethical concern.
 
-Principle 3: PRODUCT
+*** Principle 3: PRODUCT
 
 Software engineers shall ensure that their products and related
 modifications meet the highest professional standards possible. In
@@ -889,7 +823,7 @@ flawed occurrences.
 3.15 Treat all forms of software maintenance with the same
 professionalism as new development.
 
-Principle 4: JUDGMENT
+*** Principle 4: JUDGMENT
 
 Software engineers shall maintain integrity and independence in their
 professional judgment. In particular, software engineers shall, as
@@ -915,7 +849,7 @@ governmental or professional body concerned with software related
 issues, in which they, their employers or their clients have
 undisclosed potential conflicts of interest.
 
-Principle 5: MANAGEMENT
+*** Principle 5: MANAGEMENT
 
 Software engineering managers and leaders shall subscribe to and
 promote an ethical approach to the management of software development
@@ -963,7 +897,7 @@ this Code.
 5.12. Not punish anyone for expressing ethical concerns about a
 project.
 
-Principle 6: PROFESSION
+*** Principle 6: PROFESSION
 
 Software engineers shall advance the integrity and reputation of the
 profession consistent with the public interest. In particular,
@@ -1015,7 +949,7 @@ authorities when it is clear that consultation with people involved in
 these significant violations is impossible, counter-productive or
 dangerous.
 
-Principle 7: COLLEAGUES
+*** Principle 7: COLLEAGUES
 
 Software engineers shall be fair to and supportive of their
 colleagues. In particular, software engineers shall, as appropriate:
@@ -1047,7 +981,7 @@ colleague.
 upon the opinions of other professionals who have competence in that
 area.
 
-Principle 8: SELF
+*** Principle 8: SELF
 
 Software engineers shall participate in lifelong learning regarding
 the practice of their profession and shall promote an ethical approach
