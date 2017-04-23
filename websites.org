@@ -1,0 +1,23 @@
+* [[https://teachyourselfcs.com/][Teach Yourself Computer Science]]
+* [[about:reader?url=https%3A%2F%2Ftallys.github.io%2Fcolor-theory%2F][Practical Color Theory for People Who Code]]
+* [[http://beautifulracket.com/][Beautiful Racket by Matthew Butterick]]
+* [[https://nixcloud.io/tour/?id=1][A tour of Nix]]
+* [[https://www.youtube.com/watch?v=NETmfwOAKpQ][Double Integrals - Changing Order of Integration - Full Ex. - YouTube]]
+Having not done MA1104 yet, I faced a similar issue (When reading the proof of tail sum formula for expectation). The video below explains it quite well though - learnt the concept (interchanging order of integration) in ~2 minutes.
+* [[https://notes.breakoutlist.com/engineer-data-scientist-resume-checklist-882c5e0e272f#.yaiibm1cs][Engineer/data scientist resume checklist]]
+mish country, where the problem was transmitted in the front left hoof of a mule named Deliverance. The systems program-mer has read the kernel source, to better understand the deep ways of the universe, and the systems programmer has seen the comment in the sche
+* [[http://articulate-lisp.com/][articulate-lisp.com]]
+Interactive%252525252525252520selection%252525252525252520of%252525252525252520which%252525252525252520kill%252525252525252520or%252525252525252520clip%252525252525252520to%252525252525252520use.%25252525252525250A%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252525%25252525252525255EL%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252520%252525252525252520Like%252525252525252520%252525252525252525%25252525252525255EC%25252525252525252C%252525252525252520but%252525252525252520insert%252525252525252520as%252525252525252520link.
+* [[https://www.youtube.com/playlist?list=PL5PHm2jkkXmi5CxxI7b3JCL1TWybTDtKq][Spring 2015 -- Computer Architecture Lectures -- Carnegie Mellon]]
+* [[https://explainshell.com/][explainshell.com - match command-line arguments to their help text]]
+* [[http://viewsourcecode.org/snaptoken/kilo/][Build Your Own Text Editor]]
+* [[http://www.ithkuil.net/][A Grammar of Ithkuil, a Constructed Philosophical Language]]
+* [[https://github.com/gurugio/lowlevelprogramming-university][gurugio/lowlevelprogramming-university: How to be low-level programmer]]
+* [[about:reader?url=http%3A%2F%2Fnewartisans.com%2F2016%2F01%2Fpattern-matching-with-pcase%2F][Lost in Technopolis]]
+* [[about:reader?url=http%3A%2F%2Fcamlorn.net%2Fposts%2FApril%25202017%2Frust-struct-field-reordering.html][Optimizing Rust Struct Size: A 6-month Compiler Development Project]]
+* [[https://lakshminp.com/publishing-book-using-org-mode][Publishing a book using org-mode | Lakshmi Narasimhan]]
+* [[http://kam.mff.cuni.cz/~matousek/stml-53-matousek-1.pdf][la-ams.dvi - stml-53-matousek-1.pdf]]
+* [[http://antranik.org/the-floreio-project/][The Floreio Project]]
+* [[https://superuser.com/questions/167965/how-do-i-list-the-groups-that-a-unix-user-is-a-member-of][permissions - How do I list the groups that a UNIX user is a member of? - Super User]]
+* [[https://tomassetti.me/resources-create-programming-languages/][68 Resources on creating programming languages]]
+* [[http://djm.cc/library/Calculus_Made_Easy_Thompson.pdf][Calculus_Made_Easy_Thompson.pdf]]
