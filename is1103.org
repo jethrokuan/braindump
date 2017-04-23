@@ -150,7 +150,7 @@ so forth.
 
 ** Contract-based
 In his classic work /Leviathan/, Hobbes describes an original
-"premoral” state that he calls the "state of nature.” It is premoral
+"premoral" state that he calls the "state of nature." It is premoral
 because there are no moral (or legal) rules yet in existence. In this
 state, each individual is free to act in ways that satisfy his or her
 own natural desires. According to Hobbes, our natural (or physical)
@@ -159,7 +159,7 @@ will enable us to satisfy our desires (or appetites) and to avoid what
 Hobbes calls our "aversions."
 
 Hobbes believes that we are willing to surrender some of our
-"absolute” freedoms to a sovereign. In return, we receive many
+"absolute" freedoms to a sovereign. In return, we receive many
 benefits, including a system of rules and laws that are designed and
 enforced to protect individuals from being harmed by other members of
 the system.
@@ -249,11 +249,11 @@ As IT professionals we have significant opportunities to:
 
 ** Whistleblowing
 Morally permitted to blow the whistle:
-1. The product will do "serious and considerable harm” to the public.
-2. The engineer(s) have reported the "serious threat” to their
+1. The product will do "serious and considerable harm" to the public.
+2. The engineer(s) have reported the "serious threat" to their
    immediate supervisor.
 3. The engineer(s) have "exhausted the internal procedures and
-   possibilities” within the company, including going to the board of
+   possibilities" within the company, including going to the board of
    directors, having received no support from their immediate
    supervisor.
 
@@ -261,9 +261,9 @@ To have a strict moral obligation to blow the whistle, De George
    believes that two additional conditions must be satisfied: 
 1. The engineer(s) have "accessible, documented evidence that would
    convince a reasonable, impartial, observer that one’s view of the
-   situation is correct.”
+   situation is correct."
 2. The engineer(s) have "good reasons to believe that by going public
-   the necessary changes will be brought about.”
+   the necessary changes will be brought about."
 
 * Privacy
 Consider the impact that changes involving this technology have had on
@@ -306,7 +306,7 @@ we have determined to need normative protection.
 ** Contextual Integrity
 Nissenbaum’s privacy framework requires that the processes used in
 gathering and disseminating information (a) are "appropriate to a
-particular context” and (b) comply with norms that govern the flow of
+particular context" and (b) comply with norms that govern the flow of
 personal information in a given context. She refers to these two types
 of informational norms as follows:
 
@@ -320,6 +320,102 @@ the flow of information within and across contexts. When either norm
 has been "breached," a violation of privacy occurs; conversely, the
 contextual integrity of the flow of personal information is maintained
 when both kinds of norms are "respected."
+
+** The Value of Privacy
+Fried suggests that unlike most instrumental values that are simply
+one means among others for achieving a desired end, privacy is also
+essential, that is, necessary to achieve some important human ends,
+such as trust and friendship. We tend to associate intrinsic values
+with necessary conditions and instrumental values with contingent, or
+nonnecessary conditions; so while privacy is instrumental in that it
+is a means to certain human ends, Fried argues that it is also a
+necessary condition for achieving those ends.
+
+Moor believes that privacy is an articulation, or "expression" of the
+"core value" security, which in turn is essential across cultures, for
+human flourishing.
+
+Based on the insights of DeCew and others, one might infer that
+privacy is a value that simply benefits individuals. However, some
+authors have pointed out the social value that privacy also provides,
+noting that privacy is essential for democracy.
+
+* Security
+| Type    | What                                                                                     |
+|---------+------------------------------------------------------------------------------------------|
+| Data    | Securing data that resides in computer databases; transmitted between computer systems   |
+| System  | Securing hardware and operating system resources; application software and programs      |
+| Network | Securitng the infrastructure of privately owned networks; infrastructure of the Internet |
+
+- Data security :: Concerned with vulnerabilities pertaining to
+                   unauthorized access to data, as well as with
+                   threats to the confidentiality, integrity, and
+                   availability of data that resides in computer
+                   storage devices or is exchanged between computer
+                   systems.
+- System security :: Concerned with attacks on system resources (such
+     as computer hardware, operating system software, and application
+     software) by malicious programs.
+- Network security :: Concerned with attacks on computer networks,
+     including the infrastructure of privately owned networks as well
+     as the Internet itself.
+
+** Cloud Computing
+#+BEGIN_QUOTE
+a model for enabling ubiquitous, convenient, on-demand network access
+to a shared pool of configurable computing resources (e.g., networks,
+servers, storage, applications and services).
+#+END_QUOTE
+
+*** Major Concerns
+ 1. How users can control their data stored in the cloud—currently,
+    users have very little "control over or direct knowledge about how
+    their information is transmitted, processed, or stored".
+ 2. Integrity of the data —- for example, if the host company goes out
+    of business, what happens to the users’ data?
+ 3. Access to the data; i.e., can the host deny a user access to
+    his/her own data?
+ 4. And a fourth concern has to do with who actually "owns" the data
+    that is stored in the cloud
+
+** Hacking and Hacker Ethic
+According to Simpson (2006), a hacker is anyone who "accesses a
+computer system or network without authorization from the owner."
+
+Steven Levy (2001)
+1. Access to computers should be unlimited and total.
+2. All information should be free.
+3. Mistrust authority–promote decentralization.
+4. Hackers should be judged by their hacking (not by bogus criteria
+   such as degrees, age, race, or position).
+5. You can create art and beauty on a computer.
+6. Computers can change your life for the better.
+
+** Cyberterrorism
+Dorothy Denning (2004) defines it as the “convergence of terrorism and
+cyberspace.” As such, cyberterrorism covers politically motivated
+hacking operations intended to cause grave harm—that is, resulting in
+either loss of life or severe economic loss, or both.
+
+** Hacktivism
+"Electronic Civil Disobedience" (ECD). Criteria for CD:
+
+1. No damage done to persons or property. (Debatable, depending on context)
+2. Nonviolent.
+3. Not for personal profit.
+4. Ethical motivation—the strong conviction that a law is unjust, or
+   unfair, to the extreme detriment of the common good.
+5. Willingness to accept personal responsibility for the outcome of
+   actions.
+
+- Hacktivism :: The convergence of political activism and computer
+                hacking techniques to engage in a new form of civil
+                disobedience.
+- Cyberterrorism :: The convergence of cybertechnology and terrorism
+                    for carrying out acts of terror in (or via) cyberspace.
+- Information Warfare :: Using malware in cyberattacks designed to
+     mislead the enemy and disrupt/damage an opponent’s military
+     defense system and its critical infrastructure.  
 
 * Appendix
 ** ACM Code of Ethics
