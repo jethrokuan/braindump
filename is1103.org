@@ -578,6 +578,78 @@ do we fill this gap?
 - Review boards (IRBs) for consumer experiments
 
 
+* Intellectual Property
+** Copyright
+Copyright is a form of protection provided to the authors of “original
+works of authorship” including literary, dramatic, musical, artistic,
+and certain other intellectual works, both published and unpublished.
+The 1976 Copyright Act generally gives the owner of copyright the
+exclusive right to reproduce the copyrighted work, to prepare
+derivative works, to distribute copies or phonorecords of the
+copyrighted work, to perform the copyrighted work publicly, or to
+display the copyrighted work publicly.
+
+The copyright protects the form of expression rather than the subject
+matter of the writing. For example, a description of a machine could
+be copyrighted, but this would only prevent others from copying the
+description; it would not prevent others from writing a description of
+their own or from making and using the machine. Copyrights are
+registered by the Copyright Office of the Library of Congress.
+** Trademark
+A trademark is a word, name, symbol or device which is used in trade
+with goods to indicate the source of the goods and to distinguish them
+from the goods of others. A servicemark is the same as a trademark
+except that it identifies and distinguishes the source of a service
+rather than a product. The terms “trademark” and “mark” are commonly
+used to refer to both trademarks and servicemarks.
+
+Trademark rights may be used to prevent others from using a
+confusingly similar mark, but not to prevent others from making the
+same goods or from selling the same goods or services under a clearly
+different mark. Trademarks which are used in interstate or foreign
+commerce may be registered with the Patent and Trademark Office.
+** Patent
+A patent for an invention is the grant of a property right to the
+inventor, issued by the Patent and Trademark Office. The term of a new
+patent is 20 years from the date on which the application for the
+patent was filed in the United States or, in special cases, from the
+date an earlier related application was filed, subject to the payment
+of maintenance fees. US patent grants are effective only within the
+US, US territories, and US possessions.
+
+The right conferred by the patent grant is, in the language of the
+statute and of the grant itself, “the right to exclude others from
+making, using, offering for sale, or selling” the invention in the
+United States or “importing” the invention into the United States.
+What is granted is not the right to make, use, offer for sale, sell or
+import, but the right to exclude others from making, using, offering
+for sale, selling or importing the invention.
+** Labour Theory of Property
+Locke argues that when a person “mixes” his or her labor with the
+land, that person is entitled to the fruit of his or her labor. So if
+a person tills and plants crops on a section of land that is not
+already owned by another—an act which, Locke notes, requires
+considerable toil—that person has a right to claim ownership of the
+crops.
+*** Criticisms
+1. Intellectual Property are nonexclusionary in nature, and are thus
+   not scarce
+2. Property right is a natural right
+** Utilitarian Theory of Property
+Property rights are better understood as artificial rights or
+conventions devised by the state to achieve certain practical ends.
+According to utilitarian theory, granting property rights will
+maximize the good for the greatest number of people in a given
+society. inventions. Incentives in the form of copyrights and patents
+would motivate individuals to bring out their creative products and
+that, as a result, American society in general would benefit.
+** Personality Theory
+According to the personality theory of property, the intellectual
+object is an extension of the creator’s personality (i.e., the
+person’s being, or soul). And it is because of this relationship
+between the intellectua object and the creator’s personality that
+advocates of the personality theory believe that creative works
+deserve legal protection.
 
 * Appendix
 ** ACM Code of Ethics
