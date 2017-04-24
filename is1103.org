@@ -1,6 +1,5 @@
 #+AUTHOR: Jethro Kuan
 #+OPTIONS: toc:nil
-#+OPTIONS:
 
 * Introduction                                                     :noexport:
 ** Definitions
