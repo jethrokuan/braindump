@@ -485,9 +485,9 @@ organization, it is legal.
      end
 
 ** Cyber-assisted crimes
-1. Cyberexacerbated :: Cyberstalking; Internet pedophilia; Internet
+- Cyberexacerbated :: Cyberstalking; Internet pedophilia; Internet
      pornography
-2. Cyberassisted :: Online tax fraud; Physical assault with a computer
+- Cyberassisted :: Online tax fraud; Physical assault with a computer
                     (e.g., hitting someone over the head with a
                     computer monitor); Property damage using a
                     computer hardware device (e.g., throwing a CPU

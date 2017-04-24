@@ -413,16 +413,16 @@
 
 
 #+DOWNLOADED: https://www.comp.nus.edu.sg/~cs1101s/sicp/img_javascript/ch3-Z-G-7.png @ 2016-11-22 12:50:39
-[[file:pictures/ch3-Z-G-7_2016-11-22_12-50-38.png]]
+[[file:images/ch3-Z-G-7_2016-11-22_12-50-38.png]]
 
 #+DOWNLOADED: https://www.comp.nus.edu.sg/~cs1101s/sicp/img_javascript/ch3-Z-G-8.png @ 2016-11-22 12:50:51
-[[file:pictures/ch3-Z-G-8_2016-11-22_12-50-50.png]]
+[[file:images/ch3-Z-G-8_2016-11-22_12-50-50.png]]
 
 #+DOWNLOADED: https://www.comp.nus.edu.sg/~cs1101s/sicp/img_javascript/ch3-Z-G-9.png @ 2016-11-22 12:51:27
-[[file:pictures/ch3-Z-G-9_2016-11-22_12-51-26.png]]
+[[file:images/ch3-Z-G-9_2016-11-22_12-51-26.png]]
 
 #+DOWNLOADED: https://www.comp.nus.edu.sg/~cs1101s/sicp/img_javascript/ch3-Z-G-10.png @ 2016-11-22 12:51:49
-[[file:pictures/ch3-Z-G-10_2016-11-22_12-51-47.png]]
+[[file:images/ch3-Z-G-10_2016-11-22_12-51-47.png]]
 
 * Metacircular Interpreter
 
