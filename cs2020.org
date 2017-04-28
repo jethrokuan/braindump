@@ -1,13 +1,126 @@
 #+OPTIONS: toc:nil
 
 #+BEGIN_EXPORT latex
-\null\hfill\begin{tabular}[t]{l@{}}
-  \small
-  \textbf{Jethro Kuan} -- \textit{\today}
-  \par
-\end{tabular}
+\null\hfill\underline{\textbf{Jethro Kuan} -- \textit{\today}}
 #+END_EXPORT
 
+* Java
+** Access Modifier
+C: Class; P: Package; SC: Subclass; W: World
+#+ATTR_LATEX: :font \footnotesize
+| Modifier  | C | P | SC | W |
+|-----------+---+---+----+---|
+| public    | Y | Y | Y  | Y |
+| protected | Y | Y | Y  | N |
+| none      | Y | Y | N  | N |
+| private   | Y | N | N  | N |
+** Comparable
+Implement =Comparable<T>=:
+#+BEGIN_SRC text
+int compareTo(T o)
+#+END_SRC
+** hashCode
+- If two objects are =equal=, =hashCode= must return the same result
+- hashCode must return the same result hen invoked on the same object
+  more than once
+#+BEGIN_SRC text
+  int hashCode() {} 
+  boolean equals(Object o) {}
+#+END_SRC
+* Algorithmic Analysis
+- Amortized Cost :: Algo has amortized cost $T(n)$ if \forall k
+                    \in \mathbb{Z}, cost of k operations is $\leq
+                    kT(n)$
+** Master's Theorem
+$T(n) = aT(\frac{n}{b}) + f(n)$ where a \ge 1, b > 1
+- $f(n) \in O(n^c)\text{, } c < \log_ba \\ \text{ then } T(n) \in \Theta(n^{\log_ba})$
+- $f(n) \in O(n^c\log^kn)\text{, } c = \log_ba \\ \text{ then } T(n) \in \Theta(n^c\log^{k+1}n)$
+- $f(n) \in O(n^c), c > \log_ba \text{ and } \exists k \\ \text{ st }
+  af(\frac{n}{b})\le kf(n) \text{ then } T(n) \in \Theta(n^{\log_ba})$
+*** Common Ones
+- $T(n) = T(n/2) + \Theta(1) = O(\log n)$ (Binary Search)
+- $T(n) = 2T(n/2) + \Theta(1) = O(n)$ (Binary Tree Traversal)
+- $T(n) = 2T(n/2) + \Theta(\log n) = O(n)$ (Optimal Sorted Matrix
+  Search)
+- $T(n) = 2T(n/2) + O(n) = O(n \log n)$ (Merge Sort)
+* Abstract Data Types
+- Bag :: Insert(i); Draw()
+- Stack (LIFO) :: empty(); peek(); pop(); push(i)
+- Queue (FIFO) :: add(); offer(i); peek(); poll(); remove()
+- Dequeue :: double-ended queue
+* Searching
+- Binary Search $O(\log n)$
+#+BEGIN_SRC java
+  int binarySearch(int[] arr, int key) {
+      int start = 0, end = arr.length - 1;
+      int found = -1;
+      while(start <= end) {
+          int mid = start + (end - start)/2;
+          if(arr[mid] < key) {
+              start = mid + 1;
+          } else if(arr[mid] > key) {
+              end = mid - 1;
+          } else {
+              found = mid;
+              // if we want first instance
+              end = mid - 1;
+              // if we want last instance
+              // start = mid + 1;
+          }
+      }
+      return found;
+  }
+#+END_SRC
+- One sided Binary Search :: Suppose one side is bounded, eg [1,
+     \infty). Use the sequence [1,2,4,8,16..., $2^k$...] If it works for
+     $2^k$, then search on [$2^{k-1}, 2^k$]
+- Peak Finding :: A[j] in array A is peak if (i) A[j] > A[j-1] (ii)
+                  A[j] > A[j+1]. If only one item in array, vacously true
+- 1D Peak Finding $O(\log n)$ :: D&C
+#+BEGIN_SRC text
+  if a[n/2] < a[n/2-1] look at 1..n/2-1
+  else if a[n/2] < a[n/2+1] look at n/2+1..n
+  else return a[n/2]
+#+END_SRC
+- 2D Peak Finding $O(m + n)$ :: D&C
+#+BEGIN_SRC text
+  find max in border + cross O(m+n)
+  if max is peak return
+  else go into quadrant with higher number
+#+END_SRC
+* Sorting
+- Bubble Sort :: Stable, In-place, W&A $O(n^2)$, B $O(n)$, S $O(1)$;
+                 Invariant : At iteration i , the sub-array A[1 .. i]
+                 is sorted and any element in A[i + 1 .. A . size] is
+                 greater or equal to any element in A[1 .. i]
+- Selection Sort :: In-Place, Unstable; find minimum element and swap.
+                    W,A,B $O(n^2)$, S $O(n/1)$; Invariant: a[0...i-1] is
+                    sorted all entries in a[i..n-1] are larger than or
+                    equal to the entries in a[0..i-1]
+- Insertion Sort :: In-place, Stable; W $O(n^2)$, B $O(n \log n)$, S $O(n)$;
+                    Invariant: The subarray a[i] consists of the
+                    original elements in sorted order.
+- Merge Sort :: Stable, In Place; W/B $O(n\log n)$, S $O(n)$
+- Quick Sort :: In-place, Unstable; W $O(n^2)$, A/B $O(n\log n)$ S
+                $O(\log n)$
+* Geometric Algorithms
+** Jarvis March $O(hn)$
+1. Find somewhere to start, e.g. y-min coordinate
+2. Add point with maximum angle from horizon $O(n)$
+3. Keep adding points with maximum angle from previous
+** Line Intersection Algorithm $O(n\log n)$
+1. Divide into two equal size sets (along vertical line)
+2. Recursively find convex hulls (base case 3 points)
+3. Merge convex hulls
+   1. Find upper tangent lines
+      1. while $(u,v,w)$ clockwise, decrement $v$
+      2. while $(v,w,z)$ clockwise, increment $w$
+   2. Find lower tangent lines
+      1. while $(w,v,u)$ clockwise, increment $v$
+      2. while $(z,v,u)$ clockwise, decrement $w$
+** Quick Hull $O(n \log n)$
+1. Choose pivot, construct two subproblems, delete interior points
+2. recurse on subproblems
 * Trees
 ** Binary Trees (height =h=)
 $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
@@ -24,7 +137,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 ** AVL Trees (height $h = \log n$)
 - *Property*: Every node is height-balanced
 - $\lvert v.left.height - v.right.height \rvert \le 1$
-[[file:images/avl_tree.png]]
+[[file:images/cs2020/avl_tree.png]]
 - insert $O(\log n)$:
   - insert key in BST
   - walk up, perform max 2 rotations if out-of-balance
@@ -78,6 +191,23 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
   remove interval
   repeat until no intervals found
 #+END_SRC
+*** Orthogonal Range Searching
+**** 1D
+
+1. use a binary tree search tree
+2. store all points in the leaves of the tree, internal nodes store
+   only copies
+3. each internal node v stores the max of any leaf in the left subtree
+4. Query Time: $O(k + \log n)$
+5. Building Tree: $O(n \log n)$
+
+**** k-dim Tree
+1. each node in the x-tree has a set of points in its subtree
+2. store the y-tree at each x-node containing all points
+3. Query Time: $O(k + \log^d n)$
+4. Building Tree: $O(n \log^{d-1}n)$
+5. Space: $O(n \log^{d-1}n)$
+
 * Hash Tables
 - n: #items, m: #buckets
 - _Simple Uniform Hashing_: Keys are equally likely to map to every
@@ -95,7 +225,6 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 - $h(k) = (Ak) \text{ mod } 2^w >> (w - r)$
 *** Rolling Hash
 - When key changes by single character
-
 ** Chaining
 - bucket stores linked list, containing (object, value)
 - Worst insert $O(1 + cost(h))$
@@ -116,6 +245,12 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
   1$
 - good: saves space, rare mem alloc, better cache perf
 - bad: sensitive to hash, load
+** Cuckoo Hashing
+- Resolving hash collisions with worst-case constant lookup time
+- Lookup: inspection of just two locations in the hash table
+- Insertion: Insert in one of two cells if empty; else kick out other
+  keys to second location.
+- If infinite loop, hash function is rebuilt in place
 ** Table resizing
 - Scan old table $O(m_1)$, create new table $O(m_2)$, insert each
   element $O(1), total $O(m_1 + m_2 + n)$
@@ -184,7 +319,6 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
         update dist[w]
 #+END_SRC
 
-
 *** DAG
 - Toposort, relax in order
 
@@ -197,7 +331,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 - store in array:
   - $left(x) = 2x + 1$
   - $right(x) = 2x + 2$
-  - $parent(x) = floor((x-1)/2)$
+  - $parent(x) = \lfloor(x-1)/2\rfloor$
 *** Heap Sort
 1. Heapify (insert n items)  O(n log n)
 2. Extract from heap n times (O(n log n))
@@ -284,3 +418,197 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
    - $\forall$ node except root, add minimum incoming edge $O(E)$
 4. MaxST
    - negate all weights, run MST algo
+
+*** MST Problems
+**** How do I add an edge (A,B) of weight k into graph G and find MST quickly?
+- Use cycle property; max edge in any cycle is not in MST
+- only add (A,B) if k is not the max weight edge
+- O(V + E) time to find max edge along A → B with DFS
+
+**** Given an undirected graph with $K$ power plants, find the minimum cost to connect all other sites.
+- run Prim’s, use super source
+- weight of new edges are zero
+- this is a single MST
+
+**** How do I make Kruskal run faster when sorting?
+- Store edges in separate linked lists
+- To process edges in increasing weight, process all edges in one
+  linked list then the next
+- Time: $O(E)$ or $O(E\alpha(m, n))$
+- Space: $O(E)$, need to store all $E$ edges
+
+**** Minimum Bottleneck Spanning Tree (MBST)
+- General idea: If I use some edge e that is not in the MST to replace
+  some edge e’ in the MST, then my max. edge is max (max edge on
+  original MST, e).
+- Intuitively, my MST would then fulfill the condition of MBST.
+- Note: Every MST is an MBST, but not every MBST is an MST
+
+**** Find maximum distance between 2 vertices in MST
+- Bruteforce: perform DFS starting from every single location since
+  there is only one path from any node to another
+- DFS: $O(V+E)$, doing it $V$ times, $O(V(V+E)) =O(V^2)$ since $E =
+  V - 1$
+- Space: $O(V)$, need to store all the edges in MST
+
+** Floyd-Warshall (APSP)
+- Shortest paths have optimal substructure
+- Shortest paths have overlapping subproblems
+- Idea: gradually allow usage of intermediate vertices
+- Invariant: At step k, shortest path via nodes 0 to k are correct
+#+BEGIN_SRC java
+  // precondition: A[i][j] contains weight
+  //  of edge (i,j) or inf if no edge
+  int[][] APSP(A) {
+    // len = # vertices
+    // clone A into S
+    for(int k = 0; k < len; k++)
+        for(int i = 0; i < len; i++)
+            for(int j = 0; j < len; j++)
+                S[i][j] =
+                    Math.min(S[i][j],
+                             S[i][k] + S[k][j]);
+    return S;
+  }
+#+END_SRC
+
+** Network Flow
+- k-edge connected :: Source and target are k-edge connected if there
+     are k edge disjoint paths(don’t share edges) from source to
+     target.
+- Max flow :: st-cut property with minimum capacity(outgoing from s,
+              ignore incoming to s) 
+- Min cut :: Let $S$ be the nodes reachable from the source in the
+             residual graph. $T$ = all other nodes, S → T is minimum cut 
+- Augmenting Path :: path in residual graph from s to t that has no 0
+     weight edges 
+*** Ford-Fulkerson
+1. Start with 0 flow
+2. While there exists augmenting path:
+  - find an augmenting path
+  - compute bottleneck (min edge)
+  - increase flow on the path by bottleneck capacity
+Time Complexity:
+- DFS: $O(|F|E)$
+- BFS(Edmonds-Karp, shortest augmenting path): $O(VE^2)$
+- Dinitz: $O(V^2E)$
+
+** Graph Algorithms on Trees
+*** Min Vertex Cover
+- Idea: transform tree into DAG, run DP
+- only two possiblities for each vertex; taken or not
+#+BEGIN_SRC java
+  int MVC(int v, int flag) {
+      int ans = 0;
+      if (memo[v][flag] != -1)
+          return memo[v][flag];
+      else if (leaf[v]) //if v is leaf
+          ans = flag;
+      else if (flag == 0) {
+          ans = 0;
+          for(child : adjList[v]) {
+              ans+= MVC(child, 1);
+          }
+      }
+      else if (flag == 1) {
+          for (child : adjList[v]) {
+              ans += min(MVC(child,1),
+                         MVC(child,0));
+          }
+      }
+  }
+#+END_SRC
+*** SSSP
+- On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
+  obtain the shortest path to any vertice in $O(V)$
+- Weight of shortest path between two vertices is the sum of the
+  weights of edges on the unique path
+
+*** ASSP
+- Run SSSP on V vertices in total $O(V^2)$, compared to $O(V^3)$ FW algorithm
+
+*** Diameter
+- Originally, run FW in $O(V^3)$ and do an $O(V^2)$ all-pairs check,
+  to total $O(V^2)$.
+- Now, only need 2 $O(V)$ traversals: DFS/BFS from any vertex $s$ to find
+  the furthest vertex $x$. Then do a DFS/BFS one more time from vertex
+  $x$ to find furthest vertex $y$. Length of unique path along x to y
+  is the diameter of the tree.
+
+* Parallel Algorithms
+** Parallel Fibonacci
+#+BEGIN_SRC text
+  parallelFib(n) {
+    if(n < 2) then
+    return n;
+    x = spawn parallelFib(n - 1);
+    y = spawn parallelFib(n - 2);
+    sync;
+    return x + y;
+  }
+#+END_SRC
+
+- Critical Path: $T_\infty$, Parallelism = $T_1/T_\infty$
+- $T_\infty(n) = max(T_\infty(n - 1), T_\infty(n - 2)) + O(1) = O(n)$
+- $T_p> T_1/p$
+- $T_p > T_\infty$, cannot run slower on more processors
+- Goal: $T_p = (T_1/p) + T_\infty$, $T_1/p$ is the parallel part,
+  $T_\infty$ is the sequential part
+
+** Matrix Addition
+Before:
+• Work analysis: $T_1(n) = O(n^2)$
+• critical path analysis: $T_\infty(n) = O(n^2)$
+After:
+#+BEGIN_SRC text
+  pMatAdd(A,B,C,i,j,n)
+    if(n == 1)
+      C[i,j] = A[i,j] + B[i,j];
+    else:
+      spawn pMatAdd(A,B,C,i,j,n/2);
+      spawn pMatAdd(A,B,C,i,j + n/2,n/2);
+      spawn pMatAdd(A,B,C,i + n/2,j,n/2);
+      spawn pMatAdd(A,B,C,i + n/2,j + n/2,n/2);
+      sync;
+#+END_SRC
+
+- Work Analysis: $T_1(n) = 4T_1(n/2) + O(1) = O(n^2)$
+- Critical Path Analysis: $T_\infty(n) = T_\infty(n/2) + O(1) = O(\log n)$
+
+** Parallelized Merge Sort
+#+BEGIN_SRC text
+  pMerge(A[1..k], B[1..m], C[1..n])
+    if (m > k) then pMerge(B, A, C);
+    else if (n==1) then C[1] = A[1];
+    else if (k==1) and (m==1) then
+      if (A[1] <= B[1]) then
+        C[1] = A[1]; C[2] = B[1];
+      else
+        C[1] = B[1]; C[2] = A[1];
+    else
+      // binary search for j where
+      // B[j] <= A[k/2] <= B[j+1]
+      spawn pMerge(A[1..k/2],
+                   B[1..j],
+                   C[1..k/2+j])
+      spawn pMerge(A[k/2+1..l],
+                   B[j+1..m],
+                   C[k/2+j+1..n])
+      synch;
+    
+  pMergeSort(A, n)
+    if (n=1) then return;
+    else
+      X = spawn pMergeSort(A[1..n/2], n/2)
+      Y = spawn pMergeSort(A[n/2+1, n], n/2)
+      synch;
+      A = spawn pMerge(X, Y);
+#+END_SRC
+
+Critical Path Analysis:
+- $T_\infty(n)$: critical path of parallel merge for $A$,$B$ of length $n$
+- $k > n/2$ elements in $A$, $n - k$ elements in $B$, $k/2 + (n - k) < 3n/4$
+- $T_\infty(n) ≤ T_\infty(3n/4) + O(\log n) ≈ O(\log^2n)$
+- $T_1(n) =T_1(\alpha n) +T_1((1- \alpha)n) +O(\log n) \approx
+  2T_1(n/2) +O(\log n) = O(n)$
+• Parallel Sorting: $T_\infty(n) = T_\infty(n/2) + O(log^2n) = O(log^3n)$

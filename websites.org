@@ -20,3 +20,7 @@ Interactive%252525252525252520selection%252525252525252520of%252525252525252520w
 * [[https://superuser.com/questions/167965/how-do-i-list-the-groups-that-a-unix-user-is-a-member-of][permissions - How do I list the groups that a UNIX user is a member of? - Super User]]
 * [[https://tomassetti.me/resources-create-programming-languages/][68 Resources on creating programming languages]]
 * [[http://djm.cc/library/Calculus_Made_Easy_Thompson.pdf][Calculus_Made_Easy_Thompson.pdf]]
+* [[https://80000hours.org/career-guide/how-to-be-successful/][Part 9: All the evidence-based advice we found on how to be successful in any job - 80,000 Hours]]
+* [[http://firstround.com/review/how-to-become-insanely-well-connected/][How to Become Insanely Well-Connected | First Round Review]]
+* [[http://courses.csail.mit.edu/6.851/spring14/lectures/][Lectures in Advanced Data Structures (6.851)]]
+* [[https://stackoverflow.blog/2017/04/27/how-to-talk-about-yourself-in-an-interview/?utm_content=buffer74fe2&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer][How to Talk About Yourself in an Interview - Stack Overflow Blog]]
