@@ -208,14 +208,13 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 4. Building Tree: $O(n \log^{d-1}n)$
 5. Space: $O(n \log^{d-1}n)$
 *** Custom Augmentations
-- Average height of people taller than Andy :: augment nodes to
-     include the count of the number of nodes in that sub-tree, along
-     with thce sum of the heights of all the people in that sub-tree.
-     To return the desired average, ﬁrst search for the name in the
-     hash table; assume it is at node v; then ﬁnd the sum of the
-     heights of: the right-child of v, and if w is on the path from v
-     to the root and v is in w’s left-subtree, then w’s right-subtree
-     and w.
+- *Average height of people taller*: augment nodes to include the
+  count of the number of nodes in that sub-tree, along with the sum
+  of the heights of all the people in that sub-tree. To return the
+  desired average, first search for the name in the hash table; assume
+  it is at node v; then find the sum of the heights of: the right-child
+  of v, and if w is on the path from v to the root and v is in w’s
+  left-subtree, then w’s right-subtree and w.
 * Hash Tables
 - n: #items, m: #buckets
 - _Simple Uniform Hashing_: Keys are equally likely to map to every
@@ -506,6 +505,10 @@ Time Complexity:
 - Dinitz: $O(V^2E)$
 
 ** Graph Algorithms on Trees
+*** Check if connected graph is tree
+Run DFS, stop when after traversing $V-1$ edges, return true if all
+nodes connected and no other used edge. False otherwise. $O(V)$
+
 *** Min Vertex Cover
 - Idea: transform tree into DAG, run DP
 - only two possiblities for each vertex; taken or not
