@@ -207,7 +207,15 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 3. Query Time: $O(k + \log^d n)$
 4. Building Tree: $O(n \log^{d-1}n)$
 5. Space: $O(n \log^{d-1}n)$
-
+*** Custom Augmentations
+- Average height of people taller than Andy :: augment nodes to
+     include the count of the number of nodes in that sub-tree, along
+     with thce sum of the heights of all the people in that sub-tree.
+     To return the desired average, ﬁrst search for the name in the
+     hash table; assume it is at node v; then ﬁnd the sum of the
+     heights of: the right-child of v, and if w is on the path from v
+     to the root and v is in w’s left-subtree, then w’s right-subtree
+     and w.
 * Hash Tables
 - n: #items, m: #buckets
 - _Simple Uniform Hashing_: Keys are equally likely to map to every
@@ -248,12 +256,12 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 ** Cuckoo Hashing
 - Resolving hash collisions with worst-case constant lookup time
 - Lookup: inspection of just two locations in the hash table
-- Insertion: Insert in one of two cells if empty; else kick out other
-  keys to second location.
+- Insertion: Insert into first table if empty; else kick out other
+  key to second location.
 - If infinite loop, hash function is rebuilt in place
 ** Table resizing
 - Scan old table $O(m_1)$, create new table $O(m_2)$, insert each
-  element $O(1), total $O(m_1 + m_2 + n)$
+  element $O(1)$, total $O(m_1 + m_2 + n)$
 - $O(n)$ amor: if $n == m$, $m = 2m$, if $n < \frac{m}{4}$, $m = \frac{m}{2}$
 ** Fingerprint Hash Table (FHT)
 - Vector of 0/1 bits
@@ -295,6 +303,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
   also O(V+E))
 ** SSSP
 *** Bellman-Ford $O(EV)$
+- $O(V^3)$ if using Adj Matrix
 #+BEGIN_SRC text
   do V number of times
     for (Edge e : graph)
@@ -321,7 +330,9 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 
 *** DAG
 - Toposort, relax in order
-
+- SSSP on DAG: run topo sort, and relax edges in that order in $O(V+E)$
+- Single Source Longest Path problem is easy on DAG: multiply edge
+  weights by -1 and run SSSP
 ** Heap
 - implements priority queue, is a complete binary tree
 - priority of parent > priority of child
@@ -359,6 +370,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 3. *Cut Property*: $\forall$ partitions, min weight edge
    across cut is in MST
 *** Prim's $O(E \log V)$
+- Uses cycle property
 #+BEGIN_SRC text
   T = {start}
   enqueue start's edges in PQ
@@ -372,9 +384,9 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 #+END_SRC
 
 *** Kruskal's $O(E\log V)$
-
-- Use union find
-- connect two nodes if they are in the same blue tree
+- Uses UFDS
+- It is possible that some edge in the first $V-1$ edges will form a
+  cycle with pre-existing MST solution
   
 #+BEGIN_SRC text
   Sort E edges by increasing weight
@@ -534,6 +546,17 @@ Time Complexity:
   the furthest vertex $x$. Then do a DFS/BFS one more time from vertex
   $x$ to find furthest vertex $y$. Length of unique path along x to y
   is the diameter of the tree.
+
+** Graph Modelling Techniques
+1. minimum shortest path from many source to one destination: run SSSP
+   treating destination as source.
+2. multiple sources to multiple destinations: consider super source
+   and super sink, with edge weight 0, and run Dijkstra (if no
+   negative edge weights), BF otherwise.
+3. Attempt to convert graph into a DAG and use DP techniques. Example:
+   attaching a variable to a vertex that is monotonically decreasing
+4. Shortest path between X and Y that passes through node $A$:
+   Compute two shortest paths; X to A, A to Y, and join the paths.
 
 * Parallel Algorithms
 ** Parallel Fibonacci
