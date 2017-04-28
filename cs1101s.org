@@ -2,8 +2,13 @@
 #+LATEX_HEADER: \geometry{margin={0.3in,0.3in}, a4paper, landscape}
 #+LATEX_HEADER: \usepackage{multicol}
 #+LATEX_HEADER: \usepackage{minted}
+#+LATEX_HEADER: \usemintedstyle[javascript]{emacs}
 
 #+OPTIONS: toc:nil
+
+#+BEGIN_EXPORT latex
+\null\hfill\underline{\textbf{Jethro Kuan} -- \textit{\today}}
+#+END_EXPORT
 
 * Source Specification
   Predefined in global env: =undefined=, =NaN=,  =Infinity=
