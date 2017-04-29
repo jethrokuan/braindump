@@ -27,6 +27,9 @@ int compareTo(T o)
   int hashCode() {} 
   boolean equals(Object o) {}
 #+END_SRC
+** Common Issues
+Array out of bounds; divide by zero; infinite loop; exception thrown
+but not caught; access member variable in static method
 * Algorithmic Analysis
 - Amortized Cost :: Algo has amortized cost $T(n)$ if \forall k
                     \in \mathbb{Z}, cost of k operations is $\leq
