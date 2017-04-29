@@ -129,7 +129,8 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 - insert, search, findMax, findMin: $O(h)$
 - successor $O(h)$:
   - if hasRightChild, smallest node in right sub-tree
-  - else, first parent node that is left child
+  - else, first parent node that is left child (parent of node is
+    successor)
 - delete $O(h)$: switch numChild
   - 0: remove v
   - 1: remove v, connect child(v) to parent(v)
@@ -601,7 +602,7 @@ After:
 - Work Analysis: $T_1(n) = 4T_1(n/2) + O(1) = O(n^2)$
 - Critical Path Analysis: $T_\infty(n) = T_\infty(n/2) + O(1) = O(\log n)$
 
-** Parallelized Merge Sort
+** Parallelized Merge Sort $O(\log^3n)$
 #+BEGIN_SRC text
   pMerge(A[1..k], B[1..m], C[1..n])
     if (m > k) then pMerge(B, A, C);
@@ -631,6 +632,7 @@ After:
       A = spawn pMerge(X, Y);
 #+END_SRC
 
+*** Analyses                                                         :noexport:
 Critical Path Analysis:
 - $T_\infty(n)$: critical path of parallel merge for $A$,$B$ of length $n$
 - $k > n/2$ elements in $A$, $n - k$ elements in $B$, $k/2 + (n - k) < 3n/4$
