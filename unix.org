@@ -1,2 +1,4 @@
 * find
 http://www.grymoire.com/Unix/Find.html
+* awk
+[[http://sparky.rice.edu/~hartigan/awk.html]]
