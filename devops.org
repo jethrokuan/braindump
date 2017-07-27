@@ -1,0 +1,53 @@
+* Kubernetes
+[[https://www.opencontainers.org/][Open Containers Initiative]]
+** Features of a COE
+1. clustering
+2. scheduling
+3. scaling
+4. load balancing (pets to cattle)
+   - monitoring services vs monitoring
+5. fault tolerance
+6. app deployment
+** Why use kubernetes
+1. google
+2. battle hardened
+3. features
+4. open source
+** Downsides to kubernetes
+1. complex
+2. zero to dev
+3. non-native
+
+| Feature                 | Concept                               |
+|-------------------------+---------------------------------------|
+| Colocation              | Pods                                  |
+| Scaling/Fault Tolerance | Replication controllers, replica sets |
+| Load Balancing          | Services                              |
+| App Deployment          | Rolling-updates                       |
+** Architecture
+kubectl <--- scheduler (which node is used for container launch etc.)
+             api server
+             controllers manager (replication controller etc.)
+             etcd (service discovery)
+
+             MASTER
+
+** Replication controller vs set
+| Controller                 | Set                           |
+|----------------------------+-------------------------------|
+| old way                    | new way                       |
+| works with rolling updates | supports sets based selectors |
+| imperative                 | part of deployments           |
+|                            | declarative                   |
+
+** Selectors
+eg. I want to select these pods, add it to replication sets
+
+** Kubernetes Schema
+| Api Version | v1                               |   
+| Kind        | Pod/ReplicaSet/ReplicaController |
+| Metadata    | name/labels                      |
+| Spec        | Containers                       |
+
+[[https://github.com/schoolofdevops/course-outlines][School of Dev Ops]]
+[[https://katacoda.com/][KataCoda]]
