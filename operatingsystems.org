@@ -1,0 +1,59 @@
+* Process
+A program in execution. Associated with each process is a *address
+space*. Address space is a list of memory locations from 0 to maximum
+in which the program can write to.
+
+Information about all the processes are stored in the operating system
+table called the *process table*, which is an array structure, one for
+each process currently in existence.
+
+A suspended process consists of its address space, and its entry in
+the process table, which contains the contents of the registers and
+other items required to resume the process later on.
+* Alarm signal
+The alarm signal causes the operating system to suspend whatever it is
+doing, save its registers on the stack, and start running a special
+signal-handling procedure.
+* Identification
+Each person authorized to use the OS is assigned a UID (User
+Identification). Each process started has the UID of the person who
+started it. The child process inherits the UID from the parent. Users
+can also be members of groups, each with a GID (Group Identification).
+
+* File systems
+Before a file can be read or written, it must be opened, at which time
+the permissions are checked. If access is permitted, the system
+returns a small integer called the *file descriptor* to use in
+subsequent operations.
+
+*Special files* are provided in order tomake I/O devices look like
+files. That way, they can be read and written using the same system
+calls as are used for reading and writing files. *block special files*
+are used to model devices that consist of a collection of randomly
+addressable blocks, such as disks. A program can open a block special
+file, and access a particular block to read it. *character special
+files* are used to model printers, modems and other devices that
+accept or output a character stream.
+
+* Pipe
+A sort of pseudofile that can be used to connect two processes. If
+process A and B wish to talk using a pipe, they must set it up in
+advance.
+[[file:./images/screenshot-02.png]]
+
+* Process segments
+[[file:./images/screenshot-03.png]]
+
+* Files in UNIX
+Every file in UNIX has a unique number, its i-number, that identifies
+it. The i-number is an index into a table of *i-nodes*, one per file,
+telling who owns the file, where its disk-blocks are and so one. A
+directory is a file containing a set of (i-number, ASCII name) pairs.
+
+* Hypervisors
+In practice, the real distinction between a type 1 hypervisor and a
+type 2 hyper- visor is that a type 2 makes uses of a host operating
+system and its file system to create processes, store files, and so
+on. A type 1 hypervisor has no underlying sup- port and must perform
+all these functions itself.
+
