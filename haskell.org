@@ -1,0 +1,115 @@
+* Expressions
+- Expressions include concrete values, variables, and also functions
+- Functions are expressions that are applied to an argument, and hence
+  can be /reduced/ or /evaluated/
+* Infix/Prefix
+#+BEGIN_SRC text
+  div (prefix) -> `div` (infix)
+  + (infix) -> (+) (prefix)
+#+END_SRC
+* Let vs Where
+Let introduces an expression, so it can be used wherever you can have
+an expression, but where is a declaration and is bound to a
+surrounding syntactic construct.
+* Typeclasses
+Typeclasses are a way of adding additional functionality that is
+reusable across all the types that have instances of that typeclass.
+=Num= is a typeclass for most numeric types, that provide the basic
+operators =(+)=, =(-)=, =(*)= , =(/)= etc.
+* Datatype declaration
+  A datatype declaration defines a type constructor and data
+  constructors. Data constructors are the values of a particular type,
+  and are also functions that let us create data, or values, of a
+  particular type.
+* Sectioning
+  Refers to the partial application of infix operators.
+#+BEGIN_SRC haskell
+  let x = 5
+  let y = (2^)
+  let z = (^2)
+
+  y x                             -- 32
+  z x                             -- 25
+
+  let celebrate = (++ " woot!")
+  celebrate "naptime" -- "naptime woot!"
+  celebrate "dogs" -- "dogs woot!"
+#+END_SRC
+* Types
+** Polymorphism
+1. Parametric polymorphism
+   - Refers to type variables, or parameters, that are fully
+     polymorphic
+   - When unconstrained by a typeclass, the final concrete type could
+     be anything
+2. Constrained polymorphism
+   - Puts typeclass constraints on the variable, decreasing the number
+     of concrete types it could be, but increasing what you can
+     actually do with it by defining and bringing into scope a set of
+     operations
+
+Numeric literals are polymorphic and stay so until given a more
+specific type.
+** Parametricity
+ /parametricity/ means that the behaviour of a function with respect to
+ the types its (parametric polymorphic) arguments is uniform. The
+ behaviour cannot change just because it was applied to an argument of
+ a different type.
+** Making things more polymorphic
+#+BEGIN_SRC haskell
+  -- fromIntegral :: (Num b, Integral a) => a -> b
+  -- e.g.
+  6 / fromIntegral (length [1,2,3])
+#+END_SRC
+* Typeclasses
+Where a declaration of a type defines how that particular type is
+created, a declaration of a typeclass defines how a set of types are
+consumed or used in computations.
+
+As long as a type implements, or instantiates a typeclass, then
+standard functions implemented on the typeclass can be used.
+
+#+BEGIN_SRC haskell
+  data DayOfWeek =
+    Mon | Tue | Wed | Thu | Fri | Sat | Sun
+
+  -- day of week and numerical day of month
+
+  data Date =
+    Date DayOfWeek Int
+#+END_SRC
+
+Because Eq is not derived in the typeclass, we need to instantiate one
+of our own:
+
+#+BEGIN_SRC haskell
+  instance Eq DayOfWeek where
+    (==) Mon Mon = True
+    (==) Tue Tue = True
+    (==) Wed Wed = True
+    (==) Thu Thu = True
+    (==) Fri Fri = True
+    (==) Sat Sat = True
+    (==) Sun Sun = True
+    (==) _ _ = False
+
+  instance Eq Date where
+    (==) (Date weekday dayOfMonth) (Date weekday' dayOfMonth') =
+      weekday == weekday' && dayOfMonth = dayOfMonth'
+#+END_SRC
+
+Typeclass instances are unique parings of the typeclass and a type.
+They define the ways to implement the typeclass methods for that type.
+
+** IO
+An IO action is an action that, when performed, has side effects,
+including reading from input and printing to the screen, and will
+contain a return value.
+
+In =IO ()=, =()= denotes an empty tuple, referred to as a /unit/. A
+unit is both a value and a type, that has only one inhabitant.
+
+** Summary
+- A typeclass defines a set of functions and/or values;
+- Types have instances of that typeclass
+- The instances specify the ways that type uses the functions of the typeclass
