@@ -113,3 +113,56 @@ unit is both a value and a type, that has only one inhabitant.
 - A typeclass defines a set of functions and/or values;
 - Types have instances of that typeclass
 - The instances specify the ways that type uses the functions of the typeclass
+* Lists
+#+BEGIN_SRC haskell
+  data [] a = [] | a : [a]
+#+END_SRC
+** Extracting portions of lists
+#+BEGIN_SRC haskell
+  take :: Int -> [a] -> [a]
+  drop :: Int -> [a] -> [a]
+  splitAt :: Int -> [a] -> ([a], [a])
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  takeWhile :: (a -> Bool) -> [a] -> [a]
+  dropWhile :: (a -> Bool) -> [a] -> [a]
+#+END_SRC
+** Transforming lists of values
+#+BEGIN_SRC haskell
+  map :: (a -> b) -> [a] -> [b]
+  fmap :: Functor f => (a -> b) -> f a -> f b
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  map (+1) [1,2,3,4] -- [2,3,4,5]
+  map (1-) [1,2,3,4] -- [0,-1,-2,-3]
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  filter :: (a -> Bool) -> [a] -> [a]
+  filter _ [] = []
+  filter pred (x:xs)
+    | pred x = x : filter pred xs
+    | otherwise = filter pred xs
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  zip :: [a] -> [b] -> [(a,b)]
+  zip [1,2] [3,4] -- [(1,3), (2,4)]
+
+  zipWith (+) [1,2,3] [10,11,12] -- [11,13,15]
+#+END_SRC
+** Folding lists
+   Folds as a general concept are called /catamorphisms/.
+   /Catamorphisms/ are a means of deconstructing data. If the spine of
+   the list is the structure of a list, then a fold is what can reduce
+   that structure.
+
+#+BEGIN_SRC haskell
+  foldr :: (a -> b -> b) -> b -> [a] -> b
+  foldr f z xs =
+    case xs of
+      [] -> z
+      (x:xs) -> f x (foldr f z xs)
+#+END_SRC

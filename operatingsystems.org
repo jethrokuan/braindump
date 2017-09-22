@@ -1,15 +1,3 @@
-* Process
-A program in execution. Associated with each process is a *address
-space*. Address space is a list of memory locations from 0 to maximum
-in which the program can write to.
-
-Information about all the processes are stored in the operating system
-table called the *process table*, which is an array structure, one for
-each process currently in existence.
-
-A suspended process consists of its address space, and its entry in
-the process table, which contains the contents of the registers and
-other items required to resume the process later on.
 * Alarm signal
 The alarm signal causes the operating system to suspend whatever it is
 doing, save its registers on the stack, and start running a special
@@ -58,3 +46,211 @@ system and its file system to create processes, store files, and so
 on. A type 1 hypervisor has no underlying sup- port and must perform
 all these functions itself.
 
+* Process
+A program in execution. Associated with each process is a *address
+space*. Address space is a list of memory locations from 0 to maximum
+in which the program can write to.
+
+Information about all the processes are stored in the operating system
+table called the *process table*, which is an array structure, one for
+each process currently in existence.
+
+A suspended process consists of its address space, and its entry in
+the process table, which contains the contents of the registers and
+other items required to resume the process later on.
+** Process Creation
+OS needs to load its code and any static data (e.g. initialized
+variables) into memory, into the address space of the process. Modern
+OSes load these lazily, via the machinery of paging and swapping.
+
+1. Run-time stack
+   - Used for local variables, function parameters and return addresses
+2. Heap
+   - Dynamically allocated data, programs request this space by
+     calling =malloc()= and free it explicitly using =free()=
+3. I/O related tasks
+   - 3 open file descriptors: =stdin=, =stdout= and =stderr=
+** Process States
+1. /Running/: A process is running if it is executing instructions on
+   the processor.
+2. /Ready/: Process is ready to run, but the OS has not chosen to run
+   it yet.
+3. /Blocked/: Process has performed some kind of operation that makes
+   it not ready to run until another event has taken place, e.g. being
+   blocked by I/O.
+** Data structures required
+1. Process Table, for keeping track of all processes
+3. Register context, containing all the information required to resume
+   running a process (also called the Process Control Block, or PCB)
+** Mechanism: Limited Direct Execution
+The OS must virtualize the CPU in an efficient manner, while retaining
+control over the system. To do so, both hardware and operating systems
+support will be required. The OS will often use a judicious bit of
+hardware support in order to accomplish its work effectively.
+** Access Control
+In /user mode/, applications do not have full access to hardware
+resources. The OS runs in /kernel mode/, which has access to the full
+resources of the machine.
+
+Code can request access to system resource by calling the /trap/ call,
+which raises the privilege level to kernel mode. Once finished, the OS
+calls the /return-from-trap/ instruction, which returns the calling
+user program, while reducing the privilege level back to user mode.
+
+During bootup, the machine is started in kernel mode. The OS sets up a
+trap table, and informs the hardware of the location of specialised
+/trap handlers/, which is the code to run when certain exceptional
+events occur. One such example is the hard-disk interrupt.
+
+** Switching between processes
+
+*** Cooperative Approach
+Processes transfer control of the CPU to the OS by making system
+calls. The OS regains control of the CPU by waiting for a system call
+or an illegal operation of some kind to take place.
+
+*** Non-cooperative Approach
+The question is: what ca the OS do to ensure that a rogue process
+does not take over the machine?
+
+The answer is: /timer interrupt/. A timer device is programmed to
+raise an interrupt at a fixed interval. Each time the interrupt is
+raised, a pre-configured interrupt handler in the OS runs.
+
+At this time, the OS will decide whether to continue running the
+process, or switch to a different one. This is the role of the
+/scheduler/.
+
+If the decision is to switch processes, then the OS executes a
+low-level piece of code which is referred to as the /context
+switch/. The OS saves a few register values for the current
+executing process. This includes:
+
+1. Program Counter (PC)
+2. Stack Pointer (Pointing to the new context)
+
+** Scheduling
+Assumptions made:
+1. Each job runs for the same amount of time
+2. All jobs arrive at the same time
+3. All jobs only use the CPU (i.e. they perform no I/O)
+4. The run-time of each job is known
+
+*** Scheduling Metrics
+1. Turn-around time
+#+BEGIN_EXPORT latex
+\begin{equation}
+T_{turnaround} = T_{completion} - T_{arrival}
+\end{equation}
+#+END_EXPORT
+
+*** First Come First Served (FCFS)
+Example:
+- A, B and C arrived at time T=0.
+- A runs first, followed by B, then C
+Average Turnaround time:
+(10 + 20 + 30)/3 = 20
+**** Pros
+Easy to implement
+**** Cons
+/Convoy effect/: a number of relatively-short potential consumers
+of a resource get queued behind a heavyweight resource consumer.
+ - E.g. A takes 100 TU, B and C 10
+ - Average turnaround time: (100 + 110 + 120)/3
+ - if instead, B and C were scheduled before A, it would be (10 + 20+
+   120)/3
+*** Shortest Job First (SJF)
+Schedule the job that takes the shortest TU.
+**** Pros
+Optimizes for Turnaround time
+**** Cons
+Relies on unrealistic assumptions. For example, if A takes 100TU, and
+B and C takes 10 TU, but B and C arrive only shortly after A, then A
+will still get queued, and the turnaround time will be high (convoy
+problem again)
+*** Shortest Time-to-Completion First (PSTCF)
+Any time a new job enters the system, it determines the job that has
+the least time left, and schedules that one first.
+**** Pros
+Good turnaround time
+**** Cons
+Bad for response time and interactivity.
+*** Round Robin
+Instead of running jobs to completion, RR runs a job for a /time
+slice/, also sometimes called a /scheduling quantum/. After the time
+slice, the next job in the run queue is scheduled. The length of the
+time slice must be a multiple of the length of the timer-interrupt
+period.
+
+The shorter the time slice, the better the performance of RR under the
+response-time metric. However, if the time slice is too short, there
+will be a lot of overhead, and the cost of context switching will
+dominate the overall performance.
+**** Incorporating I/O
+By treating each CPU burst as a job, the scheduler makes sure
+processes that are "interactive" get run frequently.
+
+*** Multi-level Feedback Queue (MLFQ)
+1. Optimise /turnaround time/.
+2. Make the system responsive to interactive users, minimise /response
+   time/.
+
+How to schedule without perfect knowledge? (Knowing the length of the
+job). Many jobs have phases of behaviour, and are thus predictable.
+
+MLFQ has a number of distinct queues, each assigned a different
+/priority level/. At any given time, a job that is ready to run is on
+a single queue.
+
+Rule 1: If Priority(A) > Priority(B), A runs
+Rule 2: If Priority(A) = Priority(B), A and B run in RR
+
+Note that job priority /changes/ over time.
+
+First try at MLFQ:
+- Rule 3: When a job enters the system, it is placed at the highest
+  priority (the top most queue)
+- Rule 4a: If a job uses up an entire time slice while running, its
+  priority is /reduced/ (it moves down one queue)
+- Rule 4b: If a job gives up the CPU before the time slice is up, it
+  stays at the same /priority/ level.
+
+Problems:
+1. /starvation/: if there are "too many" interactive jobs in the
+   system, they will combine to consume /all/ CPU time, and
+   long-running jobs will never receive any CPU time.
+2. /Gaming the scheduler/: One can stop using the CPU right before the
+   time slice ends, then it will maintain at top priority.
+
+Attempt 2:
+- Rule 5: After some time period S, move all the jobs in the system to
+  the topmost queue
+
+This solves two problems:
+1. Processes are guaranteed not to starve: by sitting in the top
+   queue, a job will share the CPU with other high-priority jobs in a
+   round-robin fashion, and will eventually receive service
+2. If a CPU-bound job has become interactive, the scheduler treats it
+   properly once it has received the priority boost
+
+Attempt 3:
+Instead of forgetting how much of a time slice a process used at a
+given level, the scheduler should keep track, once a process has used
+its allotment, it is demoted to the next priority queue.
+
+- Rule 4: Once a job uses up its time allotment at a given level
+  (regardless of how many times it has given up the CPU), its priority
+  is reduced
+
+**** Tuning MLFQ
+1. Varying time-slice length across different queues. Shorter time
+   slices are comprised of interactive jobs, and quickly alternating
+   between them makes sense
+2. The low-priority queues are CPU bound, and longer time slices work well.
+
+*** Lottery Scheduling
+Tickets are used to represent the share of a resource that a process
+should receive. Lottery scheduling achieves probabilistic fair sharing
+of the CPU resources.
+
+* Virtualisation
