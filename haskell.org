@@ -166,3 +166,109 @@ unit is both a value and a type, that has only one inhabitant.
       [] -> z
       (x:xs) -> f x (foldr f z xs)
 #+END_SRC
+* Algebraic Datatypes
+A type can be thought of as an enumeration of constructors that have
+zero or more arguments.
+
+Haskell offers sum types, product types, product types with record
+syntax, type aliases, and a special datatype called a newtype that
+offers a different set of options and constraints from either type
+synonyms or data declarations.
+
+#+BEGIN_SRC haskell
+    data Bool = False | True
+  -- [1] [2] [3] [4] [5] [6]
+
+    data [] a = [] | a : [a]
+  --     [7]   [8]    [9]
+#+END_SRC
+
+1. Keyword /data/ to signal that what follows is a data declaration,
+   or a declaration of a datatype
+2. Type constructor (with no arguments)
+3. Equals sign divides the type constructor from the data constructor
+4. Data constructor. In this case, a data constructor that takes no
+   arguments, so is called a /nullary/ constructor.
+5. Pipe denotes a sum type, which indicates a logical disjunction
+   (colloquially /or/) in what values can have that type
+6. Constructor for the value True, another nullary constructor
+7. Type constructor with an argument. The argument is a polymorphic
+   type variable, so the list's argument can be of different types
+8. Data constructor for the empty list
+9. Data constructor that takes two arguments, an a and also a [a]
+** Data and type constructors
+Type constructors are used only at the type level, in type signatures
+and typeclass declarations and instances. Types are static and resolve
+at compile time.
+
+Data constructors construct the values at term level, values you can
+interact with at runtime.
+
+Type and data constructors that take no arguments are constants. They
+can only store a fixed type and amount of data.
+** Type constructors and kinds
+Kinds are types of types, or types one level up. We represent kinds in
+Haskell with =*=. We know something is a fully applied, concrete type
+when it is represented as =*=. When it is =* -> *=, it is still
+waiting to be applied.
+
+#+BEGIN_SRC haskell
+  -- :k Bool
+  Bool :: *
+
+  -- :k [Int]
+  [Int] :: *
+
+  -- :k []
+  [] :: * -> *
+#+END_SRC
+
+
+Both =Bool= and [Int] are fully applied, concrete types, so their kind
+signatures have no function arrows.
+** Types vs Data
+When data constructors take arguments, those arguments refer to other
+types.
+
+#+BEGIN_SRC haskell
+  data Price =
+    --  (a)
+    Price Integer deriving (Eq, Show)
+  -- (b)  [1]
+  -- type constructor a
+  -- data constructor b
+  -- type argument [1]
+#+END_SRC
+** What makes these datatypes algebraic?
+Algebraic datatypes are so, because we can describe the patterns of
+argument structures using two basic operations: sum and product.
+
+The cardinality of a datatype is the number of possible values it
+defines. Knowing how many possible values inhabit a type can help
+reason about programs.
+
+The cardinality of =Bool= is 2, only being to take on =True= or =False=.
+
+Datatypes that only contains a unary constructor always have the same
+cardinality as the type they contain.
+
+#+BEGIN_SRC haskell
+  data Goats = Goats Int deriving (Eq, Show)
+#+END_SRC
+
+Here, =Goats= has the cardinality of =Int=.
+** Sum Types
+Cardinality is obtained through summation. Example, Bool:
+#+BEGIN_SRC haskell
+  data Bool = True | False
+#+END_SRC
+
+In this case, the cardinality of =Bool= is the sum of the cardinality
+of =True= and =False=.
+** Record syntax
+#+BEGIN_SRC haskell
+  data Person =
+    Person { name :: String
+           , age :: Int }
+           deriving (Eq, Show)
+#+END_SRC
