@@ -272,3 +272,211 @@ of =True= and =False=.
            , age :: Int }
            deriving (Eq, Show)
 #+END_SRC
+* Signaling Adversity
+** Maybe
+#+BEGIN_SRC haskell
+  data Maybe = Just a | Nothing
+#+END_SRC
+#+BEGIN_SRC haskell
+  type Name = String
+  type Age = Integer
+
+  data Person = Person Name Age Deriving (Eq, Show)
+
+  mkPerson :: Name -> Age -> Maybe Person
+  mkPerson name age
+    | name /= "" && age >=0 = Just $ Person name age
+    | otherwise = Nothing
+#+END_SRC
+
+mkPerson is a /smart constructor/. It allows us to construct values
+only if it meets a certain criteria.
+** Either
+We use an =either= to figure out which criteria is not met:
+#+BEGIN_SRC haskell
+  data Either a b = Left a | Right b
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  data Person Invalid = NameEmpty | AgeTooLow deriving (Eq, Show)
+
+  mkPerson :: Name -> Age -> Either PersonInvalid Person
+  mkPerson name age
+    | name /= "" && age >=0 - Right $ Person name age
+    | name == "" = Left PersonInvalid
+    | otherwise = Left AgeTooLow
+#+END_SRC
+
+=Left= is used as the invalid or error constructor. =Functor= will not
+map over the left type argument because it has been applied away.
+*** Signalling Multiple errors
+#+BEGIN_SRC haskell
+  type Name = String
+  type Age = Integer
+  type ValidatePerson a = Either [PersonInvalid] a
+
+  data Person = Person Name Age deriving Show
+
+  data PersonInvalid = NameEmpty | AgeTooLow deriving (Eq, Show)
+
+  ageOkay :: Age -> Either [PersonInvalid] Age
+  ageOkay age = case age >= 0 of
+    True -> Right age
+    False -> Left [AgeTooLow]
+
+  nameOkay :: Name -> Either [PersonInvalid] Name
+  nameOkay name = case name == "" of
+    True -> Left [NameEmpty]
+    False -> Right name
+
+  mkPerson :: Name -> Age -> ValidatePerson Person
+  mkPerson name age =
+    mkPerson' (nameOkay name) (ageOkay age)
+
+  mkPerson' :: ValidatePerson Name
+            -> ValidatePerson Age
+            -> ValidatePerson Person
+
+  mkPerson' (Right nameOk) (Right ageOk) = Right (Person nameOk ageOk)
+  mkPerson' (Left badName) (Left badAge) = Left (badName ++ badAge)
+  mkPerson' (Left badName) _ = Left badName
+  mkPerson' _ (Left badAge) = Left badAge
+#+END_SRC
+** Anamorphisms
+/Anamorphisms/ are the dual of /catamorphisms/. Catamorphisms, or
+folds, break data structures down, anamorphisms builds up data
+structures.
+
+#+BEGIN_SRC haskell
+  -- iterate is like a very limited unfold that never ends
+  iterate :: (a -> a) -> a -> [a]
+
+  take 10 $ iterate (+1) 0
+  [0,1,2,3,4,5,6,7,8,9]
+
+  --unfoldr is more general
+  unfoldr :: (b -> Maybe (a,b)) -> b -> [a]
+
+  take 10 $ unfoldr (\b -> Just (b, b+1)) 0
+  [0,1,2,3,4,5,6,7,8,9]
+#+END_SRC
+* Monoids
+In Haskell, algebras are implemented with typeclasses; the typeclasses
+define the set of operations. When we talk about operations over a
+set, the set is the /type/ the operations are for.
+
+One of those algebras we use in Haskell is Monoid.
+
+=A monoid is a binary associative pattern with an identity.=
+
+A monoid is a function that takes two arguments and follows two laws:
+associativity and identity.
+
+1. Associativity: arguments can be regrouped or paranthesised in
+   different orders and give the same result
+2. Identity: there exists some value such that when it is passed as
+   input to the function, the operation is rendered moot and the other
+   value is returned. E.g. adding 0, multiplying by 1
+
+Monoids are the pattern of summation, multiplication and list
+concatenation, among other things.
+
+#+BEGIN_SRC haskell
+  class Monoid m where
+    mempty :: m
+    mappend :: m -> m -> m
+    mconcat :: [m] -> m
+    mconcat = foldr mappend mempty
+#+END_SRC
+
+=mappend= is how any two values that inhabit the type can be joined
+together. =mempty= is the identity value for that mappend operation.
+** Examples of Monoids
+*** List
+#+BEGIN_SRC haskell
+  mappend [1,2,3] [4,5,6]
+  -- [1,2,3,4,5,6]
+  mconcat [[1..3], [4..6]]
+  -- [1,2,3,4,5,6]
+  mappend "Trout" " goes well with garlic"
+  -- "Trout goes well with garlic"
+
+  instance Monoid [a] where
+    mempty = []
+    mappend = (++)
+#+END_SRC
+*** Integers
+Integers form a monoid under summation and multiplication. Because it
+is unclear which rule is to be followed, there is no Monoid class
+under Integer, but there is the =Sum= and =Product= types that signal
+which Monoid instance is wanted.
+** Newtype
+Using =newtype= constrains the datatype to having a single unary data
+constructor, and =newtype= guarantees no additional runtime overhead
+in "wrapping" the original type. The runtime representation of newtype
+and what it wraps are always identical.
+
+#+BEGIN_SRC haskell
+  (<>) :: Monoid m => m -> m -> m
+#+END_SRC
+
+=<>= is the infix version of =mappend=.
+
+Monoid instances must abide by the following laws:
+
+#+BEGIN_SRC haskell
+  -- left identity
+  mappend mempty x = x
+
+  -- right identity
+  mappend x mempty = x
+
+  -- associativity
+  mappend x (mappend y z) = mappend (mappend x y) z
+
+  mconcat = foldr mappend mempty
+#+END_SRC
+** Monoid instances in =Bool=
+#+BEGIN_SRC haskell
+  All True <> All True
+  -- All {getAll = True}
+
+  All True <> All False
+  -- All {getAll = False}
+
+  Any True <> Any False
+  -- Any {getAny = True}
+
+  Any False <> Any False
+  -- Any {getAny = False}
+#+END_SRC
+
+=All= represents boolean /conjuction/, while =Any= represents boolean disjunction.
+
+For =Maybe=, =First= returns the "first" or leftmost non-Nothing
+value. =Last= returns the "last" or rightmost non-Nothing value.
+
+#+BEGIN_SRC haskell
+  (First (Just 1)) <> (First (Just 2))
+  -- First {getFirst = Just 1}
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  instance Monoid b => Monoid (a -> b)
+  instance (Monoid a, Monoid b) => Monoid (a,b)
+  instance (Monoid a, Monoid, b, Monoid c) => Monoid (a,b,c)
+#+END_SRC
+* Semigroups
+Semigroups are like monoids, but without the identity constraint. The
+core operation remains binary and associative.
+
+#+BEGIN_SRC haskell
+  class Semigroup a where
+    (<>) :: a -> a -> a
+
+  (a <> b) <> c = a <> (b <> c)
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  data NonEmpty a = a :| [a] deriving (Eq, Ord, Show)
+#+END_SRC
