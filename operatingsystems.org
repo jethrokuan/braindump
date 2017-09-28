@@ -1,50 +1,51 @@
-* Alarm signal
-The alarm signal causes the operating system to suspend whatever it is
-doing, save its registers on the stack, and start running a special
-signal-handling procedure.
-* Identification
-Each person authorized to use the OS is assigned a UID (User
-Identification). Each process started has the UID of the person who
-started it. The child process inherits the UID from the parent. Users
-can also be members of groups, each with a GID (Group Identification).
+* Operating System Key Concepts
+** Alarm signal
+ The alarm signal causes the operating system to suspend whatever it is
+ doing, save its registers on the stack, and start running a special
+ signal-handling procedure.
+** Identification
+ Each person authorized to use the OS is assigned a UID (User
+ Identification). Each process started has the UID of the person who
+ started it. The child process inherits the UID from the parent. Users
+ can also be members of groups, each with a GID (Group Identification).
 
-* File systems
-Before a file can be read or written, it must be opened, at which time
-the permissions are checked. If access is permitted, the system
-returns a small integer called the *file descriptor* to use in
-subsequent operations.
+** File systems
+ Before a file can be read or written, it must be opened, at which time
+ the permissions are checked. If access is permitted, the system
+ returns a small integer called the *file descriptor* to use in
+ subsequent operations.
 
-*Special files* are provided in order tomake I/O devices look like
-files. That way, they can be read and written using the same system
-calls as are used for reading and writing files. *block special files*
-are used to model devices that consist of a collection of randomly
-addressable blocks, such as disks. A program can open a block special
-file, and access a particular block to read it. *character special
-files* are used to model printers, modems and other devices that
-accept or output a character stream.
+ *Special files* are provided in order tomake I/O devices look like
+ files. That way, they can be read and written using the same system
+ calls as are used for reading and writing files. *block special files*
+ are used to model devices that consist of a collection of randomly
+ addressable blocks, such as disks. A program can open a block special
+ file, and access a particular block to read it. *character special
+ files* are used to model printers, modems and other devices that
+ accept or output a character stream.
 
-* Pipe
-A sort of pseudofile that can be used to connect two processes. If
-process A and B wish to talk using a pipe, they must set it up in
-advance.
+** Pipe
+ A sort of pseudofile that can be used to connect two processes. If
+ process A and B wish to talk using a pipe, they must set it up in
+ advance.
 
-[[file:./images/screenshot-04.png]]
+ [[file:./images/screenshot-04.png]]
 
-* Process segments
-[[file:./images/screenshot-05.png]]
+** Process segments
+ [[file:./images/screenshot-05.png]]
 
-* Files in UNIX
-Every file in UNIX has a unique number, its i-number, that identifies
-it. The i-number is an index into a table of *i-nodes*, one per file,
-telling who owns the file, where its disk-blocks are and so one. A
-directory is a file containing a set of (i-number, ASCII name) pairs.
+** Files in UNIX
+ Every file in UNIX has a unique number, its i-number, that identifies
+ it. The i-number is an index into a table of *i-nodes*, one per file,
+ telling who owns the file, where its disk-blocks are and so one. A
+ directory is a file containing a set of (i-number, ASCII name) pairs.
 
-* Hypervisors
-In practice, the real distinction between a type 1 hypervisor and a
-type 2 hyper- visor is that a type 2 makes uses of a host operating
-system and its file system to create processes, store files, and so
-on. A type 1 hypervisor has no underlying sup- port and must perform
-all these functions itself.
+** Hypervisors
+ In practice, the real distinction between a type 1 hypervisor and a
+ type 2 hyper- visor is that a type 2 makes uses of a host operating
+ system and its file system to create processes, store files, and so
+ on. A type 1 hypervisor has no underlying sup- port and must perform
+ all these functions itself.
 
 * Process
 A program in execution. Associated with each process is a *address
@@ -253,4 +254,354 @@ Tickets are used to represent the share of a resource that a process
 should receive. Lottery scheduling achieves probabilistic fair sharing
 of the CPU resources.
 
-* Virtualisation
+* Concurrency
+Processes take a single physical CPU and turn it into multiple virtual
+CPUs, enabling the illusion of multiple programs running at the same
+time.
+
+Now, we will examine the abstraction for running a single process:
+that of a thread.
+* Thread
+The state of a single thread is similar to that of a process. It has a
+program counter (PC) that tracks where the program is fetching
+instructions from. Each thread has its own private set of registers it
+uses for computation. If 2 threads are running on a single processor,
+switching from a running one (T1) to running the other (T2) requires a
+/context switch/. /Thread Control Blocks/ (TCBs) store the state of
+each thread of a process. Unlike the context switch for processes, the
+address space for threads remain the same.
+
+[[file:./images/screenshot-01.png]]
+** Example Thread creation
+
+#+BEGIN_SRC c
+  #include <stdio.h>
+  #include <assert.h>
+  #include <pthread.h>
+
+  void *mythread(void *arg) {
+    printf("%s\n", (char *) arg);
+    return NULL; 
+  }
+
+  int main (int argc, char* argv[]) {
+    pthread_t p1, p2;
+    br int rc;
+    printf("main: begin\n");
+    rc = pthread_create(&p1, NULL, mythread, "A"); assert(rc == 0);
+    rc = pthread_create(&p2, NULL, mythread, "B"); assert(rc == 0);
+    //join waits for the threads to finish
+    rc = pthread_join(p1, NULL); assert (rc == 0);
+    rc = pthread_join(p2, NULL); assert (rc == 0);
+    printf("main: end");
+    return 0;
+  }
+#+END_SRC
+
+** Issues with Uncontrolled Scheduling
+*** Race Condition
+Context switches that occur at untimely points in the execution can
+result in the wrong result. Because multiple threads executing this
+code can result in a race condition, we call this code a /critical
+section/. What's required for this code to run properly is /mutual
+exclusion/. This property guarantees that if one thread is executing
+within the critical section, others will be prevented from doing so.
+*** Key Terms
+- Critical Section :: piece of code that accesses a /shared/ resource,
+     usually a variable or data structure
+- Race Condition :: A situation which arises if multiple threads of
+                    execution enter the critical section at roughly
+                    the same time; both attempt to update the shared
+                    data structure at the same time, leading to
+                    surprising and sometimes undesirable outcomes
+- Indeterminate Program :: Consists of one or more race conditions;
+     the output is non deterministic, something typically expected of
+     computer programs
+- Mutual Exclusion :: threads use /mutual exclusion/ primitives to
+     avoid the problems that concurrency yields, such as race conditions
+*** The wish for atomicity
+What if we had a super-instruction like this:
+
+#+BEGIN_SRC text
+  memory-add 0x8044a1c, $0x1
+#+END_SRC
+
+Assume this instruction adds a value to a memory location, and the
+hardware guarantees that it executes atomically. This would be easy if
+the instruction set contained only 1 instruction. However, in the
+general case this is not possible.
+
+Instead, we ask the hardware for a few useful instructions upon which
+we can build a general set of what is called /synchronisation
+primitives/.
+** Thread API
+#+BEGIN_SRC c
+  #include <pthread.h>
+
+  int pthread_create (pthread_t * thread,
+                      const pthread_attr_t* attr,
+                      void * (*start_routine) (void *)
+                      void * arg);
+#+END_SRC
+
+1. =thread= is a pointer to the structure of type =pthread_t=, used to
+   interact with the thread
+2. =attr= is used to specify attributes this thread might have,
+   including setting the stack size, and scheduling priority of the
+   thread. We can usually pass NULL in.
+3. =start_routine= is the function this thread should start running in
+4. =arg= is the argument =start_routine= requires.
+
+#+BEGIN_SRC c
+  int pthread_join(pthread_t trhead, void ** value_ptr);
+#+END_SRC
+
+=pthread_join= waits for the thread's completion.
+*** Locks API
+#+BEGIN_SRC c
+  int pthread_mutex_lock(pthread_mutex_t *mutex);
+  int pthread_mutex_unlock(pthread_mutex_t *mutex);
+
+  // Usage
+  //sets the lock to default values, making the lock usable
+  pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+
+  // dynamic way to do it is to make a call:
+  int rc = pthread_mutex_init(&lock, NULL);
+  assert (rc == 0); //always check success!
+
+  pthread_mutex_lock(&lock);
+  // Critical section
+  x = x + 1;
+  pthread_mutex_unlock(&lock);
+#+END_SRC
+
+#+BEGIN_SRC c
+  int pthread_mutex_trylock(pthread_mutex_t *mutex);
+  int pthread_mutex_timedlock(pthread_mutex_t *mutex,
+                              struct timespec *abs_timeout);
+#+END_SRC
+
+These two calls are used in lock acquisition. =trylock= returns
+failure if the lock is already held, and =timedlock= returns after a
+timeout or after acquiring the lock, whichever happens first.
+*** Condition Variables
+#+BEGIN_SRC c
+  int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);
+  int pthread_cond_signal(pthread_cond_t *cond);
+#+END_SRC
+
+*condition variables* are useful when some kind of signalling must
+ take place between threads.
+
+#+BEGIN_SRC c
+  pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+  pthread_cond_t init = PTHREAD_COND_INITIALIZER;
+
+  int rc = pthread_mutex_lock(&lock); assert(rc == 0);
+  while (initialized == 0) {
+    int rc = pthread_cond_wait(&init, &lock);
+    assert (rc == 0);
+  }
+  pthread_mutex_unlock(&lock);
+
+  //Some other thread
+  pthread_mutex_lock(&lock);
+  initialized = 1;
+  pthread_cond_signal(&init);
+  pthread_mutex_unlock(&lock);
+#+END_SRC
+** Properties of Correct CS Implementation
+- Mutual Exclusion :: If process P1 is executing in critical section,
+     all other processes are prevented from entering the critical section
+- Progress :: If no process is in a critical section, one of the
+              waiting processes should be granted access
+- Bounded Wait :: After process p1 request to enter critical section,
+                  there exists an upperbound of number of times other
+                  processes can enter the critical section before p1
+- Independence :: Process *not* executing in critical section should
+                 never block other process
+** Locks
+Calling the routine =lock()= tries to acquire the lock; if no other
+thread holds the lock, the thread will acquire the lock and enter the
+critical section; this thread is sometimes said to be the *owner* of
+the lock.Once the *owner* of the lock calls =unlock()=, the lock in
+now available again. If no othre threads are waiting for the lock
+(i.e. no other thread has called =lock()= and is stuck), the state of
+the lock is simply changed to free, if thee are waiting threads, one
+of them will acquire the lock.
+*** Pthread Locks
+
+The name that the POSIX library uses for a lock is a *mutex*, as it is
+used to provide *mutual exclusion* between threads. Different locks
+can be initialized to protect different critical sections.
+*** Evaluating locks
+- mutual exclusion :: does the lock work, preventing multiple threads
+     from entering a critical section?
+- fairness :: Does each thread contending for the lock get a fair shot?
+- performance :: Are the time overheads added by using the lock significant?
+*** Approach 1: Controlling Interrupts
+Using a special hardware instruction, turn off all interrupts during
+critical section:
+
+#+BEGIN_SRC c
+  void lock() {
+    DisableInterrupts(); 
+  }
+
+  void unlock() {
+    EnableInterrupts();
+  }
+#+END_SRC
+**** Pros
+1. Simplicity
+**** Cons
+1. Requires calling thread to perform a /privileged/ operation
+2. Doesn't work on multiprocessor systems
+*** Approach 2: Test and Set
+Hardware support for atomicity was created. This is known as the
+*test-and-set instruction*, or *atomic exchange*.
+
+The idea is to use a variable to indicate whether some thread has
+possession of a lock. Calling =lock()= then tests and sets that variable.
+
+However, this presents several issues:
+1. *No Mutex*!
+2. The thread waiting to acquire a lock is endlessly checking for the
+   value of flag, a technique known as *spin-waiting*, which wastes
+   time waiting for another thread to release a lock.
+
+With hardware support for *test-and-set*, we achieve mutex, and have a
+*spin lock*! To work correctly on a single processor, it requires a
+preemptive scheduler, one that will interrupt a thread via  atimer, in
+order to run a different thread, from time to time.
+**** Evaluating the spin lock:
+- correctness :: YES
+- fairness :: NO, a thread may spin forever under contention
+- performance ::  NO, high performance overheads
+
+Other hardware primitives one can use to write locks:
+1. LoadLinked and StoreConditional
+2. Fetch-And-Add (ticket lock)
+*** Two Phase Locks
+A two-phase lock realises that spinning can be useful, particularly if
+the lock is about to be released. In the first-phase, the lock spins
+for a while, hoping that it can acquire a lock. However, if the lock
+is not acquired during the first phase, the second phase is entered,
+where the caller is put to sleep, and only woken up when the lock
+becomes free later.
+** Classical Synchronization Problems
+*** Producer/Consumer
+Producers and Consumers share a bounded buffer K
+
+Blocking Version contains 3 semaphores:
+1. Binary semaphore (initialized to 1) [mutex]
+2. !Full (initialized to 4) [!Full]
+3. !Empty (initialized to 0) [!Empty]
+
+#+BEGIN_SRC c
+  //Producer
+  while (TRUE) {
+    Produce Item;
+    while(notFull);
+    wait(mutex);
+    if (count < K) {
+      buffer[in] = item;
+      in = (in + 1) % K;
+    }
+    signal(mutex);
+    signal(notEmpty);
+   }
+
+  // Consumer
+  while (TRUE) {
+    wait(notEmpty);  
+    wait(mutex);
+    item = buffer[out];
+    out = (out + 1) % K;
+    count--;
+    signal(mutex);
+    signal(notFull);
+    Consume Item;
+  }
+
+#+END_SRC
+*** Readers/Writers
+Processes share a data structure D
+1. Reader: Retrieves information from D
+2. Writer: Modifies information from D
+3. Writer must have exclusive access
+4. Readers can read with other readers
+
+#+BEGIN_SRC c
+  while (true) {
+    wait(roomEmpty);
+    //Modifies data;
+    signal(roomEmpty);
+  }
+
+  while (true) {
+    wait(mutex);
+    nReader++;
+    if (nReader == 1) {
+      wait(roomEmpty);
+    }
+    signal(mutex);
+
+    // Reads data;
+    wait(mutex);
+    nReader --;
+    if (nReader == 0) {
+      signal(roomEmpty);
+    }
+    signal(mutex);
+  }
+#+END_SRC
+*** Dining Philosophers
+Philosophers sitting in a circle, requiring resource from both left
+and right side.
+**** Tanenbaum Solution
+#+BEGIN_SRC C
+  #define N 5
+  #define LEFT i
+  #define RIGHT ((i+1)%N)
+  #define THINKING 1
+  #define HUNGRY 1
+  #define EATING 2
+
+  int state[N];
+
+  void philosopher(int i) {
+    while(true) {
+      think();
+      hungry();
+      eat();    
+    }
+  }
+  void takeChpStcks(i) {
+    wait(mutex);
+    state[i] = HUNGRY;
+    safeToEat(i);
+    signal(mutex);
+    wait(s[i]);
+  }
+
+  void safeToEat(i) {
+    if (state[i] == HUNGRY &&
+        state[LEFT] !=EATING &&
+        state[RIGHT] != EATING) {
+      state[i] = EATING;
+      signal(s[i]);
+    }
+  }
+
+  void putChpStcks(i) {
+    wait(mutex);
+    state[i] = THINKING;
+    safeToEat(LEFT);
+    safeToEat(RIGHT);
+    signal(mutex);
+  }
+#+END_SRC
+**** Limited Eater
+Each chopstick has a semaphore of their own.
