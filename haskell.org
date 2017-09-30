@@ -480,3 +480,159 @@ core operation remains binary and associative.
 #+BEGIN_SRC haskell
   data NonEmpty a = a :| [a] deriving (Eq, Ord, Show)
 #+END_SRC
+* Functors
+A functor is a way to apply a function over or around some structure
+that we don't want to alter. That is, we want to apply the function to
+the value that is "inside" some structure, and leave the structure
+alone.
+
+This is why functors are generally introduced by way of fmapping over
+lists. No elements are removed or added, only transformed.
+
+The typeclass =Functor= generalises this pattern, so that this basic
+idea can be used across different structures.
+
+#+BEGIN_SRC haskell
+  class Functor f where
+    fmap :: (a -> b) -> f a -> f b
+#+END_SRC
+
+The argument =f a= is a Functor =f= that takes a type argument =a=.
+That is, the =f= is a type that has an instance of the Functor
+typeclass.
+
+The return value is =f b=. It is the same =f= from =f a=, while the
+type argument b /possibly but not necessarily/ refers to a different type.
+
+/fmap/ specialises to different types as such:
+#+BEGIN_SRC haskell
+  fmap :: (a -> b) -> f a -> f b
+  fmap :: (a -> b) -> [] a -> [] b
+  fmap :: (a -> b) -> Maybe a -> Maybe b
+  fmap :: (a -> b) -> Just a -> Just b
+  fmap :: (a -> b) -> Either a -> Either b
+  fmap :: (a -> b) -> (e,) a -> (e,) b
+  fmap :: (a -> b) -> Identity a -> Identity b
+#+END_SRC
+** Functor Laws
+*** Identity
+#+BEGIN_SRC haskell
+  fmap id == id
+#+END_SRC
+
+If we fmap the identity function, it should have the same result as
+passing our value to identity.
+*** Composition
+#+BEGIN_SRC haskell
+  fmap (f . g) == fmap f . fmap g
+#+END_SRC
+*** Structure Preservation
+#+BEGIN_SRC haskell
+  fmap :: Functor f => (a -> b) -> f a -> f b
+#+END_SRC
+
+The /f/ is constrained by the typeclass Functor, but that is all we
+know about its type from this definition. Because the /f/ persists
+through the type of =fmap=, whatever the type is, we know it must be a
+type that can take an argument, as in =f a= and =f b= and that it will
+be the "structure" we're lifting the function over when we apply it to
+the value inside.
+** Examples
+#+BEGIN_SRC haskell
+  data WhoCares a =
+    ItDoesnt
+    | Matter a
+    | WhatThisIsCalled
+    deriving (Eq, Show)
+#+END_SRC
+
+In the above datatype, only =Matter= can be /fmapped/ over, because
+the others are nullary, and there is no value to work with inside the
+structure.
+
+Here is a law-abiding instance of Functor.
+
+#+BEGIN_SRC haskell
+  instance Functor WhoCares where
+    fmap _ ItDoesnt = ItDoesnt
+    fmap _ WhatThisIsCalled = WhatThisIsCalled
+    fmap f (Matter a) = Matter (f a)
+#+END_SRC
+
+This is a law-breaking instance:
+#+BEGIN_SRC haskell
+  instance Functor WhoCares where
+    fmap _ ItDoesnt = WhatThisIsCalled
+    fmap f WhatThisIsCalled = ItDoesnt
+    fmap f (Matter a) = Matter (f a)
+#+END_SRC
+
+In this instance, the structure -- not the values wrapped or contained
+within the structure -- change.
+** Maybe and Either Functors
+#+BEGIN_SRC haskell
+  data Two a b = Two a b
+#+END_SRC
+
+Notice =Two= has the kind =* -> * -> *=, however, functors are of kind
+=* -> *=, and hence functors on the type Two would be invalid. we can
+reduce the kindness by doing the following:
+
+#+BEGIN_SRC haskell
+  instance Functor (Two a) where
+    fmap f (Two a b) = Two a (f b)
+#+END_SRC
+
+Notice that we didn't apply =f= to =a=, because =a= is now part of the
+Functor structure, and is untouchable.
+** Ignoring possibilities
+The Functor instances for the Maybe and Either datatypes are useful if
+you tend to ignore the left cases, which are typically the error or
+failure cases. Because fmap doesn't touch those cases, you can map
+your function right to the values that you intend to work with and
+ignore failure cases.
+*** Maybe
+#+BEGIN_SRC haskell
+  incIfJust :: Num a => Maybe a -> Maybe a
+  incIfJust (Just n) = Just $ n + 1
+  incIfJust Nothing = Nothing
+
+  incMaybe :: Num a => Maybe a -> Maybe a
+  incMaybe = fmap (+1)
+#+END_SRC
+*** Either
+#+BEGIN_SRC haskell
+  incIfRight :: Num a => Either e a => Either e a
+  incIfRight (Right n) = Right $ n + 1
+  incIfRight (Left e) = Left e
+
+  -- can be simplified to
+  incEither :: Num a => Either e a => Either e a
+  incEither = fmap (+1)
+#+END_SRC
+** Summary
+=Functor= is a mapping between categories. In Haskell, this manifests
+as a typeclass which lifts a function between to types over two new
+types. This conventionally implies some notion of a function which can
+be applied to a value with more structure than the unlifted function
+was originally designed for. The additional structure is represented
+by the use of a higher kinded type /f/, introduced by the definition
+of the Functor typeclass.
+
+To /lift over/, and later in Monad, to /bind over/, is a metaphor. One
+way to think about it is that we can lift a function into a context.
+Another is that we lift a function over some layer of structure to
+apply it.
+
+#+BEGIN_SRC haskell
+  fmap (+1) $ Just 1 -- Just 2
+  fmap (+1) [1,2,3] -- [2,3,4]
+#+END_SRC
+
+In both cases, the function we're lifting is the same. In the first
+case, we lift that function into a Maybe context in order to apply it,
+in the second case, into a list context.
+
+The context determines how the function will get applied: the context
+is the datatype, the definition of the datatype, and the Functor
+instance we have for that datatype.
