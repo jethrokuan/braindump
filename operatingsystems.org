@@ -1,4 +1,11 @@
 * Operating System Key Concepts
+** Motivation
+1. Abstraction
+   - Presents common high level functionality to users
+   - Efficient and Portable
+2. Resource Allocator
+4. Program Control
+   - Monitor execution of program, and manage resource access privileges
 ** Alarm signal
  The alarm signal causes the operating system to suspend whatever it is
  doing, save its registers on the stack, and start running a special
@@ -65,24 +72,92 @@ variables) into memory, into the address space of the process. Modern
 OSes load these lazily, via the machinery of paging and swapping.
 
 1. Run-time stack
-   - Used for local variables, function parameters and return addresses
+   - Used for local variables, function parameters and return
+     addresses
 2. Heap
    - Dynamically allocated data, programs request this space by
      calling =malloc()= and free it explicitly using =free()=
 3. I/O related tasks
    - 3 open file descriptors: =stdin=, =stdout= and =stderr=
-** Process States
-1. /Running/: A process is running if it is executing instructions on
-   the processor.
-2. /Ready/: Process is ready to run, but the OS has not chosen to run
-   it yet.
-3. /Blocked/: Process has performed some kind of operation that makes
-   it not ready to run until another event has taken place, e.g. being
-   blocked by I/O.
+** Function Call
+*** Control Flow issues
+1. Need to jump to the function body
+2. Need to resume when the function call is done
+3. Minimally, need to store the PC of the caller
+*** Data Storage issues
+1. Need to pass parameters to the function
+2. Need to capture the return result
+3. May have local variable declarations
+*** Stack Memory
+Define new region of memory, called *stack memory*, for function
+invocations. A new hardware register, the *stack pointer*, stores
+the current memory address of the top of the stack.
+
+When the stack grows, the stack pointer decreases. The stack grows
+from bottom up. This is true for most architectures.
+*** Stack Frame
+The stack memory stores a bunch of stack frames, one stack frame for
+each function invocation. The stack frame stores:
+
+1. Local variables
+2. Parameters
+3. Return PC
+4. Saved Registers
+5. Saved Stack Pointer
+6. Frame Pointer
+*** Function Call Convention (FCC)
+There are different ways to setup stack frames. An example scheme is
+described below.
+
+1. Caller passes parameters with registers and/or stack
+2. Caller saves return PC on stack
+3. *Transfer Control from Caller to Callee*
+4. Callee save registers used by callee. Save old SP and FP
+6. Callee allocates space for local variables on stack
+7. Callee updates stack pointer to top of stack
+
+Teardown:
+
+1. Callee: Restore saved registers, FP, SP
+2. *Transfer control from callee to caller using saved PC*
+3. Caller: Continues execution in caller
+
+*** Frame Pointer
+Stack Pointer is hard to use as it can change. Frame pointer points to
+a fixed location in a stack frame, and other items are accessed as
+offsets from the frame pointer.
+** Dynamic Memory Allocation
+High Level Languages allow dynamic allocation of memory space, e.g.
+C's =malloc=. These memory blocks have different behaviours. First,
+they are only allocated at runtime, and hence cannot be placed in the
+data region. Next, there is no definition deallocation timing, and
+hence cannot be placed in the stack region.
+
+Hence, a new region is needed, called the heap. Heap memory is a lot
+trickier to manage. Variable size, and allocation/deallocation timing
+is not known before hand.
+** Process Identification
+To distinguish processes from each other, a process ID (PID) is
+assigned to each process.
+** 5-state Process Model
+   - New :: The process creation is started, but has not been
+            allocated the required resources.
+   - Ready :: Process is ready to run, but the OS has not chosen to run
+              it yet.
+   - Running :: A process is running if it is executing instructions on
+                the processor.
+   - Blocked :: Process has performed some kind of operation that
+                makes it not ready to run until another event has
+                taken place, e.g. being blocked by I/O.
+   - Terminated :: Process is finished, may require OS cleanup.
+
+[[file:./images/screenshot-02.png]]
+
 ** Data structures required
-1. Process Table, for keeping track of all processes
-3. Register context, containing all the information required to resume
-   running a process (also called the Process Control Block, or PCB)
+   - Process Table :: keeps track of all processes
+   - PCB :: contains the entire execution context for a process
+
+[[file:./images/screenshot-03.png]]
 ** Mechanism: Limited Direct Execution
 The OS must virtualize the CPU in an efficient manner, while retaining
 control over the system. To do so, both hardware and operating systems
@@ -104,7 +179,6 @@ trap table, and informs the hardware of the location of specialised
 events occur. One such example is the hard-disk interrupt.
 
 ** Switching between processes
-
 *** Cooperative Approach
 Processes transfer control of the CPU to the OS by making system
 calls. The OS regains control of the CPU by waiting for a system call
