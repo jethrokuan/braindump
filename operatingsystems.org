@@ -49,7 +49,7 @@
 
 ** Hypervisors
  In practice, the real distinction between a type 1 hypervisor and a
- type 2 hyper- visor is that a type 2 makes uses of a host operating
+ type 2 hypervisor is that a type 2 makes uses of a host operating
  system and its file system to create processes, store files, and so
  on. A type 1 hypervisor has no underlying sup- port and must perform
  all these functions itself.
@@ -158,6 +158,7 @@ assigned to each process.
    - PCB :: contains the entire execution context for a process
 
 [[file:./images/screenshot-03.png]]
+
 ** Mechanism: Limited Direct Execution
 The OS must virtualize the CPU in an efficient manner, while retaining
 control over the system. To do so, both hardware and operating systems
@@ -177,6 +178,20 @@ During bootup, the machine is started in kernel mode. The OS sets up a
 trap table, and informs the hardware of the location of specialised
 /trap handlers/, which is the code to run when certain exceptional
 events occur. One such example is the hard-disk interrupt.
+** General System Call Mechanism
+   1. User program invokes the library call, using the normal function
+      call mechanism
+   2. Library call places the *system call number* in a designated location
+   3. Library call executes a special instruction to switch from user
+      mode to kernel mode (known as TRAP)
+   4. Now in kernel mode, the appropriate system call handler is determined:
+      1. Using the system call number as index
+      2. This step is usually handled by a *dispatcher*
+   5. System call handler is executed
+   6. Control is returned to the library call, and switches from
+      kernel mode to user mode
+   7. Library call return to user program, via normal function
+      return mechanism
 
 ** Switching between processes
 *** Cooperative Approach
@@ -204,14 +219,34 @@ executing process. This includes:
 1. Program Counter (PC)
 2. Stack Pointer (Pointing to the new context)
 
-** Scheduling
+** Exception and Interrupts
+Executing a machine level instruction can lead to exceptions, for
+example arithmetic errors.
+
+Exceptions are synchronous, and occur due to program execution. An
+exception handle is executed automatically.
+
+External events can interrupt the execution of a program. These are
+usually hardware related: timer, keyboard events etc.
+
+When an exception or an interrupt handler executes, control is
+transferred to a handler routine automatically.
+
+A handler does the following:
+
+1. Save Register/CPU state
+2. Perform Register/CPU
+3. Restore Register/CPU
+4. Return from interrupt
+
+* Scheduling
 Assumptions made:
 1. Each job runs for the same amount of time
 2. All jobs arrive at the same time
 3. All jobs only use the CPU (i.e. they perform no I/O)
 4. The run-time of each job is known
 
-*** Scheduling Metrics
+** Scheduling Metrics
 1. Turn-around time
 #+BEGIN_EXPORT latex
 \begin{equation}
@@ -219,38 +254,38 @@ T_{turnaround} = T_{completion} - T_{arrival}
 \end{equation}
 #+END_EXPORT
 
-*** First Come First Served (FCFS)
+** First Come First Served (FCFS)
 Example:
 - A, B and C arrived at time T=0.
 - A runs first, followed by B, then C
 Average Turnaround time:
 (10 + 20 + 30)/3 = 20
-**** Pros
+*** Pros
 Easy to implement
-**** Cons
+*** Cons
 /Convoy effect/: a number of relatively-short potential consumers
 of a resource get queued behind a heavyweight resource consumer.
  - E.g. A takes 100 TU, B and C 10
  - Average turnaround time: (100 + 110 + 120)/3
  - if instead, B and C were scheduled before A, it would be (10 + 20+
    120)/3
-*** Shortest Job First (SJF)
+** Shortest Job First (SJF)
 Schedule the job that takes the shortest TU.
-**** Pros
+*** Pros
 Optimizes for Turnaround time
-**** Cons
+*** Cons
 Relies on unrealistic assumptions. For example, if A takes 100TU, and
 B and C takes 10 TU, but B and C arrive only shortly after A, then A
 will still get queued, and the turnaround time will be high (convoy
 problem again)
-*** Shortest Time-to-Completion First (PSTCF)
+** Shortest Time-to-Completion First (PSTCF)
 Any time a new job enters the system, it determines the job that has
 the least time left, and schedules that one first.
-**** Pros
+*** Pros
 Good turnaround time
-**** Cons
+*** Cons
 Bad for response time and interactivity.
-*** Round Robin
+** Round Robin
 Instead of running jobs to completion, RR runs a job for a /time
 slice/, also sometimes called a /scheduling quantum/. After the time
 slice, the next job in the run queue is scheduled. The length of the
@@ -261,11 +296,11 @@ The shorter the time slice, the better the performance of RR under the
 response-time metric. However, if the time slice is too short, there
 will be a lot of overhead, and the cost of context switching will
 dominate the overall performance.
-**** Incorporating I/O
+*** Incorporating I/O
 By treating each CPU burst as a job, the scheduler makes sure
 processes that are "interactive" get run frequently.
 
-*** Multi-level Feedback Queue (MLFQ)
+** Multi-level Feedback Queue (MLFQ)
 1. Optimise /turnaround time/.
 2. Make the system responsive to interactive users, minimise /response
    time/.
@@ -317,13 +352,13 @@ its allotment, it is demoted to the next priority queue.
   (regardless of how many times it has given up the CPU), its priority
   is reduced
 
-**** Tuning MLFQ
+*** Tuning MLFQ
 1. Varying time-slice length across different queues. Shorter time
    slices are comprised of interactive jobs, and quickly alternating
    between them makes sense
 2. The low-priority queues are CPU bound, and longer time slices work well.
 
-*** Lottery Scheduling
+** Lottery Scheduling
 Tickets are used to represent the share of a resource that a process
 should receive. Lottery scheduling achieves probabilistic fair sharing
 of the CPU resources.
