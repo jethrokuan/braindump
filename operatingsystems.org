@@ -599,7 +599,7 @@ for a while, hoping that it can acquire a lock. However, if the lock
 is not acquired during the first phase, the second phase is entered,
 where the caller is put to sleep, and only woken up when the lock
 becomes free later.
-** Classical Synchronization Problems
+* Classical Synchronization Problems
 *** Producer/Consumer
 Producers and Consumers share a bounded buffer K
 
@@ -612,19 +612,18 @@ Blocking Version contains 3 semaphores:
   //Producer
   while (TRUE) {
     Produce Item;
-    while(notFull);
+    wait(notFull);
     wait(mutex);
-    if (count < K) {
-      buffer[in] = item;
-      in = (in + 1) % K;
-    }
+    buffer[in] = item;
+    in = (in + 1) % K;
+    count++;
     signal(mutex);
     signal(notEmpty);
    }
 
   // Consumer
   while (TRUE) {
-    wait(notEmpty);  
+    wait(notEmpty);
     wait(mutex);
     item = buffer[out];
     out = (out + 1) % K;
@@ -682,9 +681,11 @@ and right side.
 
   void philosopher(int i) {
     while(true) {
-      think();
+      think(); 
       hungry();
-      eat();    
+      takeChpStcks(i);
+      eat();
+      putChpStcks(i);
     }
   }
   void takeChpStcks(i) {
