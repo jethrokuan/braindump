@@ -600,7 +600,7 @@ is not acquired during the first phase, the second phase is entered,
 where the caller is put to sleep, and only woken up when the lock
 becomes free later.
 * Classical Synchronization Problems
-*** Producer/Consumer
+** Producer/Consumer
 Producers and Consumers share a bounded buffer K
 
 Blocking Version contains 3 semaphores:
@@ -634,7 +634,7 @@ Blocking Version contains 3 semaphores:
   }
 
 #+END_SRC
-*** Readers/Writers
+** Readers/Writers
 Processes share a data structure D
 1. Reader: Retrieves information from D
 2. Writer: Modifies information from D
@@ -665,10 +665,10 @@ Processes share a data structure D
     signal(mutex);
   }
 #+END_SRC
-*** Dining Philosophers
+** Dining Philosophers
 Philosophers sitting in a circle, requiring resource from both left
 and right side.
-**** Tanenbaum Solution
+*** Tanenbaum Solution
 #+BEGIN_SRC C
   #define N 5
   #define LEFT i
@@ -713,5 +713,3 @@ and right side.
     signal(mutex);
   }
 #+END_SRC
-**** Limited Eater
-Each chopstick has a semaphore of their own.
