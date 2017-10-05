@@ -312,8 +312,8 @@ MLFQ has a number of distinct queues, each assigned a different
 /priority level/. At any given time, a job that is ready to run is on
 a single queue.
 
-Rule 1: If Priority(A) > Priority(B), A runs
-Rule 2: If Priority(A) = Priority(B), A and B run in RR
+- Rule 1: If Priority(A) > Priority(B), A runs
+- Rule 2: If Priority(A) = Priority(B), A and B run in RR
 
 Note that job priority /changes/ over time.
 
