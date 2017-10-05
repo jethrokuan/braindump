@@ -646,3 +646,268 @@ in the second case, into a list context.
 The context determines how the function will get applied: the context
 is the datatype, the definition of the datatype, and the Functor
 instance we have for that datatype.
+* Applicative
+Monoid gives us a means of hashing two values of the same type
+together.
+
+Functor is for function application over some structure we don't want
+to have to think about.
+
+The Applicative typeclass is a Monoidal Functor. The Applicative
+typeclass allows for function application lifted over structure (like
+Functor). But with Applicative the function we're applying is also
+embedded in some structure. Because the function and the value it's
+being applied to both have structure, we have to smash those
+structures together.
+
+#+BEGIN_SRC haskell
+  class Functor f => Applicative f where
+    pure :: a -> f a
+    (<*>) :: f (a -> b) -> f a -> f b
+#+END_SRC
+The =pure= function embeds something into functorial (applicative)
+structure.
+
+=<*>= is an infix operation called 'apply'. This is very similar to
+the types of fmap.
+
+#+BEGIN_SRC haskell
+  -- fmap
+  (<$>) :: Functor f => (a -> b) -> f a -> f b
+  (<*>) :: Applicative f => f (a -> b) -> f a -> f b
+#+END_SRC
+
+the Control.Applicative library provides some convenience functions:
+=liftA=, =liftA2= and =liftA3=:
+
+#+BEGIN_SRC haskell
+  liftA :: Applicative f => (a -> b) -> f a -> f b
+  liftA2 :: Appplicative f => (a -> b -> c) -> f a -> f b -> f c
+  liftA2 :: Appplicative f => (a -> b -> c -> d) -> f a -> f b -> f c -> f d
+#+END_SRC
+
+=liftA= is just =fmap= with an Applicative typeclass constraint as
+opposed to a Functor typeclass constraint.
+
+In =pure=, the left type is handled differently from the right:
+#+BEGIN_SRC haskell
+  pure 1 :: ([a], Int) -- ([], 1)
+  pure 1 :: Either a Int -- Right 1
+#+END_SRC
+
+The left type is part of the structure, and the structure is not
+transformed by the function application.
+
+In a sense, Applicative is Monoid bolted onto a Functor to be able to
+deal with functions embedded in additional structure. In another,
+we're enriching function application with the very structure we were
+previously merely mapping over with Functor.
+
+#+BEGIN_SRC haskell
+  [(*2), (*3)] <*> [4,5] -- [2*4, 2*5, 3*4, 3*5]
+  = [8,10,12,15]
+#+END_SRC
+
+=<*>= takes a functor that has a function in it, and another functor
+and applies the function inside the functor. =<*>= is left associative.
+
+#+BEGIN_SRC haskell
+  instance Applicative Maybe where
+    pure = Just
+    Nothing <*> _ = Nothing
+    (Just f) <*> something = fmap f something
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  instance Applicative [] where
+    pure x = [x]
+    fs <*> xs = [f x | f <- fs, x <- xs]
+#+END_SRC
+* Monads
+Monads are a natural extension to applicative functors. If you have a
+value with a context =m a=, how do you apply to it a function that
+takes a normal a and returns a value with a context?
+
+#+BEGIN_SRC haskell
+  (>>=) :: (Monad m) => m a -> (a -> m b) -> m b
+#+END_SRC
+
+In Prelude, =IO=, lists, and =Maybe= are members of the monadic
+classes.
+
+#+BEGIN_SRC haskell
+  -- infixl 1 >>=, >>
+  class Applicative m => Monad (m :: * -> *) where
+    (>>=) :: m a -> (a -> m b) -> m b
+    (>>) :: m a -> m b -> m b
+    return :: a -> m a
+    fail :: String -> m a 
+#+END_SRC
+
+=>>=, referred, to as bind, combines a Monad containing values of type
+=a=, and a function which operates on =a= and returns a monad of type
+=b=.
+
+=>>=, also sometimes called /Mr. Pointy/, is used when the function
+does not need the value of the first Monadic operator.
+
+The precise meaning of bind depends on the monad. For example, in the
+=IO= monad, =x>>=y= performs two actions sequentially, passing the
+result of the first into the second. For the lists and =Maybe= type,
+these monadic operations can be understood in terms of passing zero or
+more values from one calculation to the next.
+
+The =do= syntax provides a simple shorthand for chains of monadic
+operations:
+
+#+BEGIN_SRC haskell
+  do e1 ; e2 = e1 >> e2
+  do p <- e1; e2 = e1 >>= (\v -> case v of p -> e2; _ -> fail "s")
+#+END_SRC
+
+The laws which govern =>>== and =return= are:
+
+#+BEGIN_SRC haskell
+  return a >>= k          = k a
+  m >>= return            = m
+  xs >>= return . f       = fmap f xs
+  m >>= (\x -> k x >>= h) = (m >>= k) >>= h
+#+END_SRC
+** Built in Monads
+*** Maybe
+#+BEGIN_SRC haskell
+  -- treating Maybe as unctors
+  fmap (++"!") (Just "wisdom") -- Just "wisdom!"
+  fmap (++"!") Nothing -- Nothing
+
+  -- treating Maybe as Applicatives
+  Just (+3) <*> Just 3 -- Just 6
+  Nothing <*> Just "greed" -- Nothing
+  max <$> Just 3 <*> Just 6 -- Just 6
+  max <$> Just 3 <*> Nothing -- Nothing
+
+  -- Upgrading to Monads
+  (\x -> Just (x + 1)) 1 -- Just 2
+  applyMaybe :: Maybe a -> (a -> Maybe b) -> Maybe b
+  applyMaybe Nothing f = Nothing
+  applyMaybe (Just x) f = f x
+
+  Just 3 `applyMaybe` \x -> Just (x + 1) -- Just 4
+  Nothing `applyMaybe` \x -> Just (x + 1) -- Nothing
+
+  -- applyMaybe is >>= for the Maybe monad
+#+END_SRC
+*** Lists
+The monadic aspects of lists bring non-determinism into code in a
+clear and readable manner.
+
+#+BEGIN_SRC haskell
+  instance Monad [] where
+    return x = [x]
+    xs >>= f = concat (map f xs)
+    fail _ = []
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  [3,4,5] >> = \x -> [x, -x]
+  -- [3, -3, 4, -4, 5, -5]
+#+END_SRC
+
+Non-determinism also includes support for failure. Here, the empty
+list =[]= is the equivalent of =Nothing=, because it signifies the
+absence of a result.
+
+Just like with =Maybe= values, we can chain several lists with =>>==:
+
+#+BEGIN_SRC haskell
+  [1,2] >>= \n -> ['a', 'b'] >>= \ch -> return (n,ch)
+  -- [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]
+
+  do
+    n <- [1,2]
+    ch <- ['a', 'b']
+    return (n,ch)
+#+END_SRC
+
+The list =[1,2]= gets bound to n, and =["a", "b"]= gets bound to ch.
+=return (n,ch)=, takes the tuple, and makes the smallest possible list
+that still presents (n,ch) as the result.
+
+For lists, monadic binding involves joining together a set of
+calculations for each value in the list. When used with lists, the
+signature of =>>== becomes:
+
+#+BEGIN_SRC haskell
+  (>>=) :: [a] -> (a -> [b]) -> [b] 
+#+END_SRC
+
+Given a list of =a='s and a function that maps an a onto a list of
+=b='s, =>>== applies this function to each of the =a='s in the input
+and returns the generated =b='s concatenated into a list. The return
+function creates a singleton list.
+
+The following two expressions are equivalent:
+#+BEGIN_SRC haskell
+  [(x,y) | x <- [1,2,3] , y <- [1,2,3], x /= y]
+
+  do x <- [1,2,3]
+     y <- [1,2,3]
+     True <- return (x /= y)
+     return (x,y)
+#+END_SRC
+** Using Monads
+We first analyse this state monad, built around a state type =s= that
+looks like this:
+
+#+BEGIN_SRC haskell
+  data SM a = SM (S -> (a, S)) -- The monadic type
+
+  instance Monad SM where
+    -- defines state propogation
+    SM c1 >>= fc2 = SM (\s0 -> let (r, s1) = c1 s0
+                                   SM c2 = fc2 r
+                               in
+                                 c2 s1)
+    return k = SM (\s -> (k, s))
+
+  -- extracts the state from the Monad
+  readSM :: SM S
+  readSM = SM (\s -> (s, s))
+
+  -- updates the state of the monad
+  updateSM :: (S -> S) -> SM () -- alters the state
+  updateSM f = SM (\s -> ((), f s))
+
+  -- run a computation in the SM monad
+  runSM :: S -> SM a -> (a, S)
+  runSM s0 (SM c) = c s0
+#+END_SRC
+
+=SM= is defined to be a computation that implicitly carries a type
+=s=. =SM= consists of functions that take a state and produce two
+results: a returned value (of any type) and an updated state.
+
+The instance declaration defines the 'plumbing' of the monad: how to
+sequence two computations and the definition of an empty computation.
+
+Sequencing (=>>==) defines a computation (denoted by the constructor
+=SM=) that passes the initial state, =s0= into =c1=, then passes the
+value coming out of this computation, =r=, to the function that
+returns the second computation, =c2=. Finally, the state coming out of
+=c1= is passed into =c2= and the overall result is the result of =c2=.
+
+Here =return= doesn't change the state at all; it only serves to
+bring a value into the monad.
+
+=readSM= brings the state out of the monad for observation while
+=updateSM= allows the user to alter the state in the monad.
+
+* Do Notation
+#+BEGIN_SRC haskell
+  routine :: Maybe Pole
+  routine = do
+    start <- return (0,0)
+    first <- landLeft 2 start
+    second <- landRight 2 first
+    landLeft 1 second
+#+END_SRC
