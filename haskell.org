@@ -1,3 +1,6 @@
+#+TITLE: Haskell
+#+OPTIONS: toc:nil
+
 * Introduction
 ** Expressions
  - Expressions include concrete values, variables, and also functions
@@ -71,6 +74,8 @@ the expression in the heap in a suspension (or thunk) in case it is
 evaluated later. Storing and evaluating suspensions is costly, and
 unnecessary if the expression was going to be evaluated anyway.
 
+One can force eager evaluation by prepending a bang(=!=) in front of
+the expression.
 * Typeclasses
 Where a declaration of a type defines how that particular type is
 created, a declaration of a typeclass defines how a set of types are
