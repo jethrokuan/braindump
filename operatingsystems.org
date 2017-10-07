@@ -278,7 +278,7 @@ Relies on unrealistic assumptions. For example, if A takes 100TU, and
 B and C takes 10 TU, but B and C arrive only shortly after A, then A
 will still get queued, and the turnaround time will be high (convoy
 problem again)
-** Shortest Time-to-Completion First (PSTCF)
+** Shortest Time-to-Completion First (SRT)
 Any time a new job enters the system, it determines the job that has
 the least time left, and schedules that one first.
 *** Pros

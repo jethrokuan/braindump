@@ -1,0 +1,179 @@
+#+TITLE: Statistics
+#+AUTHOR: Jethro Kuan
+#+OPTIONS: toc:nil title:nil author:nil
+* Basic Properties
+1. $E(X) = \sum x p(x)$
+2. $Var(X) = \sum (x-\mu)^2f(x)$
+3. X is around $E(X)$, give or take $SD(X)$
+4. $E(aX + bY) = aE(X) + bE(Y)$
+5. $Var(aX + bY) = a^2Var(X) + b^2Var(Y)$
+6. $Var(X) = E(X^2) - [E(X)]^2$
+7. $Cov(X_1, X_2) = E(X_1X_2) - E(X_1)E(X_2)$
+8. $P(A\intersect B) = P(A)P(B)$ if A and B independent
+9. RV is centered when $E(X)=0$, and any RV can be centered via $Y =
+   X - E(X)$, with SD and variance unaffected
+10. In $X = \mu + \epsilon$, $\mu$ is the unknown constant of interest,
+    and $\epsilon$ represents random measurement error.
+11. if $X$, $Y$ are independent:
+    1. $M_{X+Y}(t) = M_X(t)M_Y(t)$ 
+    2. $E(XY)=E(X)E(Y)$, converse is true if $X$ and $Y$ are bivariate
+       normal, extends to multivariate normal
+* Approximations
+** Law of Large Numbers
+Let $X_1, X_2, ..., X_n$ be IID, with expectation $\mu$ and variance
+$\sigma^2$. $\overline{X_n} =
+\frac{1}{n}\sum^{n}_{i=1}X_i\xrightarrow[n]{\infty}\mu$. Let $x_1,
+x_2, ..., x_n$ be realisations of the random variable $X_1, X_2, ..., X_n$,
+then $\overline{x_n} = \frac{1}{n}\sum^{n}_{i=1}x_n
+\xrightarrow[n]{\infty} \mu$
+** Central Limit Theorem
+Let $S_n = \sum^{n}_{i=1}X_i$ where $X_1, X_2, ..., X_n$ IID.
+$\frac{S_n - n\mu}{\sqrt{n}\sigma} \xrightarrow[n]{\infty} \mathcal{N}(0,1)$
+* Distributions
+** Normal $X \sim \mathcal{N}(\mu, \sigma^2)$
+$f(x) = \frac{1}{\sqrt{2\pi}\sigma} exp
+\left(-\frac{(x-\mu)^2}{2\sigma^2}\right), -\infty<x<\infty$
+1. When $\mu = 0$, $f(x)$ is an even function, and $E(X^k) = 0$ where
+   $k$ is odd
+2. $Y = \frac{X-E(X)}{SD(X)}$ is the standard normal
+** Gamma $\Gamma$
+$g(t) = \frac{\lambda^\alpha}{\Gamma(\alpha)}t^{\alpha-1}e^{-\lambda
+t}, t \ge 0$
+** $\chi^2$ Distribution
+Let $\mathcal{Z} \sim \mathcal{N}(0,1)$, $\mathcal{U} =
+\mathcal{Z}^2$ has a $\chi^2$ distribution with 1 d.f. 
+
+$f_{\mathcal{U}}(u) = \frac{1}{\sqrt{2\pi}} u^{-\frac{1}{2}}
+e^{-\frac{u}{2}}, u \ge 0$
+
+$\chi_1^2 \sim \Gamma(\alpha=\frac{1}{2}, \lambda=\frac{1}{2})$
+
+Let $U_1, U_2, ..., U_n$ be $\chi_1^2$ IID, then $V=\sum^{n}_{i=1}U_i$
+is $\chi_n^2$ with n degree freedom, $V \sim
+\Gamma(\alpha=\frac{n}{2}, \lambda=\frac{1}{2})$
+
+$E(\chi_n^2) = n, Var(\chi_n^2) = 2n$
+
+$M(t) = \left(1 - 2t\right)^{-\frac{n}{2}}$
+** t-distribution
+Let $\mathcal{Z} \sim \mathcal{N}(0,1)$, $\mathcal{U}_n \sim
+\chi_n^2$ be independent, $t_n = \frac{\mathcal{Z}}{\sqrt{U_n / n}}$ has a t-distribution with n d.f.
+
+$f(t) = \frac{\Gamma([(n+1)/2])}{\sqrt{n}\pi\Gamma(n/2)}\left(1 +
+\frac{t^2}{n} \right)^{-\frac{n+1}{2}}$
+1. t is symmetric about 0
+2. $t_n \xrightarrow[n]{\infty} \mathcal{Z}$
+** F-distribution
+Let $U \sim \chi_m^2, V \sim \chi_n^2$ be independent, $W =
+\frac{U/m}{V/n}$ has an F distribution with (m,n) d.f.
+
+If $X \sim t_n$, $X^2 = \frac{\mathcal{Z}/1}{U_n/n}$ is an F
+distribution with (1,n) d.f, with $w \ge 0$:
+
+#+BEGIN_EXPORT latex
+$f(w) = \frac{\Gamma([(n+1)/2])}{\Gamma(m/2)\Gamma(n/2)}
+\frac{m}{n}^{\frac{m}{2}}w^{\frac{m}{2}-1}\left(1 +
+\frac{m}{n}w\right)^{-\frac{m+n}{2}}$
+#+END_EXPORT
+
+For $n > 2$, $E(W) = \frac{n}{n-2}$
+* Sampling
+Let $X_1, X_2, ..., X_n$ be IID $\mathcal{N}(\mu, \sigma^2)$.
+
+$\text{sample mean, } \overline{X} = \frac{1}{n}\sum^{n}_{i=1}X_i$
+
+$\text{sample variance, } S^2 = \frac{1}{n-1}\sum^{n}_{i=1}\left(X_i-\overline{X}\right)^2$
+** Properties of $\overline{X}$ and $S^2$
+1. $\overline{X}$ and $S^2$ are independent
+2. $\overline{X} \sim \mathcal{N}(\mu, \frac{\sigma^2}{n})$
+3. $\frac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2$
+4. $\frac{\overline{X} - \mu}{S/\sqrt{n}} \sim t_{n-1}$
+** Survey Sampling
+In population of size $N$, we are interested in a variable $x$. The
+ith individual has fixed value $x_i$.
+
+$\text{mean of population} = \mu = \frac{1}{N}\sum^{N}_{i=1}x_i$
+
+$\text{total of population} = \tau = \sum^{N}_{i=1}x_i =\mu N$
+
+$\text{SD of population} = \sigma$
+
+$\sigma^2 = \sum^{N}_{i=1}\left(x_i-\mu\right)^2 
+\frac{1}{N}\sum^{n}_{i=1}x_i^2 - \mu^2$
+*** Dichotomous case
+Population are members with value 0 or 1. Let $p$ be the proportion of
+members with value 1.
+$\mu = p, \sigma^2 = p(1-p)$
+** Simple Random Sampling (SRS)
+Assume $n$ random draws are made without replacement. (Not SRS, will
+be corrected for later).
+*** Lemma A
+The draws $X_i$ have the same distribution, and denote $\xi_1, \xi_2,
+... \xi_n$ as values assumed by the population, and let the number
+of members with value $\xi_j$ be $n_j$
+
+$P(X_i =\xi_j) = \frac{n_j}{N}$
+
+$E(X_i) = \mu, Var(x_i) = \sigma^2$
+*** Lemma B 
+For $i \ne j$, $Cov(X_i, X_j) = - \frac{\sigma^2}{N-1}$
+
+We use sample mean $\overline(X)$ to estimate $\mu$:
+
+$E(\overline(X)) = \mu$ from Lemma A, and
+
+$Var(\overline(X)) = \frac{\sigma^2}{n} \left(\frac{N-n}{N-1}\right)$
+from Lemma B, where $\frac{N-n}{N-1}$ is the finite population
+correction factor.
+
+In 0-1 population, let $\hat{p}$ be proportion of 1s in the sample:
+
+$E(\hat{p}) = p, SD(\hat{p}) = \sqrt{\frac{p(1-p)}{n}{\frac{N-n}{N-1}}}$
+*** Estimation Problem
+Let $X_1, X_2, ..., X_n$ be random draws with replacement. Then
+$\overline(X)$ is an estimator of $\mu$. and the observed value of
+$\overline{X}$, $\overline{x}$ is an estimate of $\mu$.
+*** Standard Error (SE)
+Since $E(\overline(X)) = \mu$, the estimator is unbiased.
+
+The error in a particular estimate $\overline(x)$ is unknown, but on
+average its size is about $SD(\overline{x}) = \frac{\sigma}{\sqrt{n}}$
+
+Standard error of an $\overline{X}$ is defined to be $SD(\overline{X})$
+
+An unbiased estimator for $\sigma^2$ is $s^2 =
+\frac{1}{n-1}\sum^{n}_{i=1}(X_i - \overline{X})^2$
+
+| param | est            | SE                        | Est. SE                                 |
+| $\mu$ | $\overline{X}$ | $\frac{\sigma}{\sqrt{n}}$ | $\frac{s}{\sqrt{n}}$                    |
+| $p$   | $\hat{p}$      | $\sqrt{\frac{p(1-p)}{n}}$ | $\sqrt{\frac{\hat{p}(1-\hat{p})}{n-1}}$ |
+*** Without Replacement
+SE is multiplied by $\frac{N-n}{N-1}$, because $s^2$ is biased for
+$\sigma^2$: $E(\frac{N-1}{N}s^2) = \sigma^2$, but N is normally large.
+*** Confidence Interval
+An approximate $1-\alpha$ CI for $\mu$ is
+
+$(\overline{x} - z_{\alpha/2}\frac{s}{\sqrt{n}}, \overline{x} + z_{\alpha/2}\frac{s}{\sqrt{n}})$
+** Measurement Error
+Let $x_1, x_2, ..., x_n$ be independent measurements of unknown
+constant $\mu$. $X_i = \mu + \epsilon_i$.
+
+The errors are IID with expectation 0 , and variance $\sigma^2$. $x_i
+= \mu + e_i$, where $x_i$ and $e_i$ are realisations of the RV. Then
+$\overline{x}$ is an estimate of $\mu$, with SE $\frac{\sigma}{\sqrt{n}}$.
+*** Biased Measurements
+Let $X = \mu + \epsilon$, where $E(\epsilon) = 0$, $Var(\epsilon) =
+\sigma^2$
+
+Suppose X is used to measure an unknown constant a, $a \ne \mu$. $X =
+a + (\mu - a) + \epsilon$, where $\mu-a$ is the bias.
+
+Mean square error (MSE) is $E((X-a)^2) = \sigma^2 + (\mu - a)^2$
+
+with n IID measurements, $\overline{x} = \mu + \overline{\epsilon}$
+
+$E((x - a)^2) = \frac{\sigma^2}{n} + \left(\mu - a\right)^2$
+
+$\text{MSE} = \text{\text{SE}}^2 + \text{bias}^2$, hence
+$\sqrt{\text{MSE}}$ is a good measure of the accuracy of the estimate
+$\overline(x)$ of a.
