@@ -269,3 +269,43 @@ and $\lambda$ is estimated as $1.58 \pm 0.35$
 $\overline{X} \xrightarrow[n]{\infty} \alpha/\lambda, \hat{\sigma}^2
 \xrightarrow[n]{\infty}\alpha/\lambda^2$, MOM estimators are
 consistent (asymptotically unbiased).
+** Maximum Likelihood Estimator (MLE)
+Let ${f(\cdot | \theta) : \theta \in \Theta}$ be a (identifiable)
+parametric identity
+
+Suppose $X_1, X_2, ...,X_n$ are IID with density $f(\cdot|\theta)$,
+where $\theta_0 \in \Theta$ is an unknown constant, we want to
+estimate $\theta_0$ using realisations $x_1, x_2, ..., x_n$.
+
+$Pr(X_1=x_1, X_2=x_2,...) = \prod^{n}_{i=1}f(x_i|\theta)$ for a
+discrete distribution.
+
+$\theta \rightarrow L(\theta) = \prod^{n}_{i=1}f(x_i|\theta)$
+
+The maximum likelihood (ML) estimate of $\theta_0$ is the number that
+maximises the likelihood over $\theta$. 
+
+The estimate is a realisation of the ML estimator $\hat{\theta}_0$,
+which can also be found my maximising $L(\theta) =
+\prod^{n}_{i=1}f(X_i|\theta)$
+
+The bias and SE are:
+
+$\text{bias} = E_{\theta_0}(\hat{\theta}_0)-\theta_0, SE = SD(\hat{\theta}_0)
+*** Poisson Case
+$L(\lambda) = \prod^n_{i=1}\frac{\lambda^{x_i}e^{-\lambda}}{x_i!} = \frac{\lambda\sum^n_{i=1}x_ie^{-n\lambda}}{\prod^{n}_{i=1}x_i!}$
+
+$l(\lambda) = \sum^{n}_{i=1}x_i\log\lambda - n\lambda -
+\sum^{n}_{i=1}\log x_i!$
+
+ML estimate of $\lambda_0$ is $\overline{x}$. ML estimator is
+$\hat{\lambda}_0 = \overline{X}$
+*** Normal case
+$l(\mu, \sigma) = -n\log\sigma - \frac{n\log 2\pi}{2} - \frac{\sum^{n}_{i=1}\left(X_i-\mu\right)^2}{2\sigma^2}$
+
+$\frac{\partial l}{\partial \mu} = \frac{\sum \left(X_i -
+\mu\right)}{\sigma^2} \implies \hat{\mu} = \overline{x}$
+
+$\frac{\partial l}{\partial \sigma} =
+\frac{\sum^{n}_{i=1}\left(X_i-\mu\right)^2}{\sigma^3} -
+\frac{n}{\sigma} \\ \implies \hat{\sigma^2} = \frac{1}{n}\sum^{n}_{i=1}\left(X_i-\overline{X}\right)^2$
