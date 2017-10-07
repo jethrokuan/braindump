@@ -118,11 +118,11 @@ $E(X_i) = \mu, Var(x_i) = \sigma^2$
 *** Lemma B 
 For $i \ne j$, $Cov(X_i, X_j) = - \frac{\sigma^2}{N-1}$
 
-We use sample mean $\overline(X)$ to estimate $\mu$:
+We use sample mean $\overline{X}$ to estimate $\mu$:
 
-$E(\overline(X)) = \mu$ from Lemma A, and
+$E(\overline{X}) = \mu$ from Lemma A, and
 
-$Var(\overline(X)) = \frac{\sigma^2}{n} \left(\frac{N-n}{N-1}\right)$
+$Var(\overline{X}) = \frac{\sigma^2}{n} \left(\frac{N-n}{N-1}\right)$
 from Lemma B, where $\frac{N-n}{N-1}$ is the finite population
 correction factor.
 
@@ -131,12 +131,12 @@ In 0-1 population, let $\hat{p}$ be proportion of 1s in the sample:
 $E(\hat{p}) = p, SD(\hat{p}) = \sqrt{\frac{p(1-p)}{n}{\frac{N-n}{N-1}}}$
 *** Estimation Problem
 Let $X_1, X_2, ..., X_n$ be random draws with replacement. Then
-$\overline(X)$ is an estimator of $\mu$. and the observed value of
+$\overline{X}$ is an estimator of $\mu$. and the observed value of
 $\overline{X}$, $\overline{x}$ is an estimate of $\mu$.
 *** Standard Error (SE)
-Since $E(\overline(X)) = \mu$, the estimator is unbiased.
+Since $E(\overline{X}) = \mu$, the estimator is unbiased.
 
-The error in a particular estimate $\overline(x)$ is unknown, but on
+The error in a particular estimate $\overline{X}$ is unknown, but on
 average its size is about $SD(\overline{x}) = \frac{\sigma}{\sqrt{n}}$
 
 Standard error of an $\overline{X}$ is defined to be $SD(\overline{X})$
@@ -176,4 +176,4 @@ $E((x - a)^2) = \frac{\sigma^2}{n} + \left(\mu - a\right)^2$
 
 $\text{MSE} = \text{\text{SE}}^2 + \text{bias}^2$, hence
 $\sqrt{\text{MSE}}$ is a good measure of the accuracy of the estimate
-$\overline(x)$ of a.
+$\overline{x}$ of a.
