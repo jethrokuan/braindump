@@ -30,6 +30,10 @@ then $\overline{x_n} = \frac{1}{n}\sum^{n}_{i=1}x_n
 Let $S_n = \sum^{n}_{i=1}X_i$ where $X_1, X_2, ..., X_n$ IID.
 $\frac{S_n - n\mu}{\sqrt{n}\sigma} \xrightarrow[n]{\infty} \mathcal{N}(0,1)$
 * Distributions
+** Poisson($\lambda$)
+$Pr(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}, k = 0,1,2,...$
+
+$E(X) = Var(X) = \lambda$
 ** Normal $X \sim \mathcal{N}(\mu, \sigma^2)$
 $f(x) = \frac{1}{\sqrt{2\pi}\sigma} exp
 \left(-\frac{(x-\mu)^2}{2\sigma^2}\right), -\infty<x<\infty$
@@ -39,6 +43,10 @@ $f(x) = \frac{1}{\sqrt{2\pi}\sigma} exp
 ** Gamma $\Gamma$
 $g(t) = \frac{\lambda^\alpha}{\Gamma(\alpha)}t^{\alpha-1}e^{-\lambda
 t}, t \ge 0$
+
+$\mu_1 = \frac{\alpha}{\lambda}, $\mu_2 =
+\frac{\alpha(\alpha+1)}{\lambda^2}$
+
 ** $\chi^2$ Distribution
 Let $\mathcal{Z} \sim \mathcal{N}(0,1)$, $\mathcal{U} =
 \mathcal{Z}^2$ has a $\chi^2$ distribution with 1 d.f. 
@@ -222,4 +230,42 @@ Variance of $\overline{Y}_R$ can be estimated by
 $s_{\overline{Y}_R}^2 =
 \frac{1}{n}\frac{N-n}{N-1}\left(R^2s_x^2+s_y^2-2Rs_{xy}\right)$
 
-An approximate $1-\alpha$ C.I. for $\mu_y$ is $\overline{Y}_R \pm z_\alpha/2s_{\overline{Y}_R}$
+An approximate $1-\alpha$ C.I. for $\mu_y$ is $\overline{Y}_R \pm
+z_\alpha/2s_{\overline{Y}_R}$
+* Estimation
+Let $X_1, X_2, ..., X_n$ be IID random variables with density
+$f(x|\theta)$, where $\theta \in \mathcal{R}^P$ is an unknown
+constant. Realisations $x_1, x_2, ..., x_n$ will be used to estimate
+$\theta$, the estimate a realisation of RV $\hat{\theta}$. The bias and
+SE are:
+
+$\text{bias} = E(\hat{\theta}) - \theta, SE = SD(\hat{\theta})$
+** Moments
+Let $X_1, X_2, ..., X_n$ be IID with the same distribution as $X$.
+
+$\hat{\mu}_k = \frac{1}{n}\sum^{n}_{i=1}X_i^k$ is an estimator of
+$\mu_k$, where $\mu_k$ is the kth moment. An estimate is also denoted
+$\hat{\mu}_k$.
+** Method of Moments
+To estimate $\theta$, express it as a function of moments $g(\hat{\mu}_1,\hat{\mu}_2,...)$
+
+The bias and SE in an estimate, still depends on the unknown value of
+the constant. Suppose 1.67 and 0.38 are estimates of $\lambda$ and
+$\alpha$. Data is generated from $\Gamma(1.67, 0.38)$, and the MOM
+estimators are written as $\widehat{1.67}$ and $\widehat{0.38}$. Because the
+sample size is large, $(\hat{\lambda} - \lambda, \hat{\alpha}-\alpha)
+\approx (\widehat{1.67} - 1.67, \widehat{0.38} - 0.38)$
+
+*Monte Carlo* is used to generate many realisations of
+ $\widehat{1.67}$ via the $\Gamma(1.67,0.38)$ distribution. With
+ 10,000 realisations,
+
+$bias(1.67) = E_{1.67,0.38}(\widehat{1.67} - 1.67) \approx 0.09$
+
+$SE(1.67) = SD_{1.67,0.38}(\widehat{0.38}) \approx 0.35$
+
+and $\lambda$ is estimated as $1.58 \pm 0.35$
+
+$\overline{X} \xrightarrow[n]{\infty} \alpha/\lambda, \hat{\sigma}^2
+\xrightarrow[n]{\infty}\alpha/\lambda^2$, MOM estimators are
+consistent (asymptotically unbiased).
