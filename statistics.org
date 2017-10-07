@@ -177,3 +177,49 @@ $E((x - a)^2) = \frac{\sigma^2}{n} + \left(\mu - a\right)^2$
 $\text{MSE} = \text{\text{SE}}^2 + \text{bias}^2$, hence
 $\sqrt{\text{MSE}}$ is a good measure of the accuracy of the estimate
 $\overline{x}$ of a.
+** Estimation of a Ratio
+Consider a population of $N$ members, and two characteristics are
+recorded: $(X_1, Y_1), (X_2, Y_2), ... , (X_n, Y_n)$, $r =
+\frac{\mu_y}{\mu_x}$.
+
+An obvious estimator of r is $R = \frac{\overline{Y}}{\overline{X}}$
+
+$Cov(\overline{X},\overline{Y}) = \frac{\sigma_{xy}}{n}$, where
+
+$\sigma_{xy} := \frac{1}{N}\sum^{N}_{i=1}(x_i-\mu_x)(x_i-\mu_y)$ is
+the population covariance.
+*** Properties
+With SRS, the approx variance of $R = \overline{Y}/\overline{X}$ is 
+\begin{align*}
+Var(R) &\approx \frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right) \\ &= \frac{1}{n}\frac{N-n}{N-1}\frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right)
+\end{align*}
+
+Population coefficient $\rho =
+\frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}$
+
+$E(R) \approx r + \frac{1}{n}\left(\frac{N-n}{N-1}\right)\frac{1}{\mu_x^2}\left(r\sigma_x^2-\rho\sigma_x\sigma_y\right)$
+
+$s_{xy} = \frac{1}{n-1}\sum^{n}_{i=1}\left(X_i -
+\overline{X}\right)\left(Y_i - \overline{Y}\right)$
+*** Ratio Estimates
+$\overline{Y}_R = \frac{\mu_x}{\overline{X}}\overline{Y} = \mu_xR$
+
+$Var(\overline{Y}_R) \approx
+\frac{1}{n}\frac{N-n}{N-1}(r^2\sigma_x^2 + \sigma_y^2
+-2r\rho\sigma_x\sigma_y)$
+
+$E(\overline{Y}_R) - \mu_y \approx
+\frac{1}{n}\frac{N-n}{N-1}\frac{1}{\mu_x}\left(r\sigma_x^2 -\rho\sigma_x\sigma_y\right)$
+
+The bias is of order $\frac{1}{n}$, small compared to its standard error.
+
+$\overline{Y}_R$ is better than $\overline{Y}$, having smaller
+variance, when $\rho > \frac{1}{2}\left(\frac{C_x}{C_y}\right)$, where
+$C_i = \sigma_i/\mu_i$
+
+Variance of $\overline{Y}_R$ can be estimated by
+
+$s_{\overline{Y}_R}^2 =
+\frac{1}{n}\frac{N-n}{N-1}\left(R^2s_x^2+s_y^2-2Rs_{xy}\right)$
+
+An approximate $1-\alpha$ C.I. for $\mu_y$ is $\overline{Y}_R \pm z_\alpha/2s_{\overline{Y}_R}$
