@@ -46,8 +46,7 @@ $f(x) = \frac{1}{\sqrt{2\pi}\sigma} exp
 $g(t) = \frac{\lambda^\alpha}{\Gamma(\alpha)}t^{\alpha-1}e^{-\lambda
 t}, t \ge 0$
 
-$\mu_1 = \frac{\alpha}{\lambda}, $\mu_2 =
-\frac{\alpha(\alpha+1)}{\lambda^2}$
+$\mu_1 = \frac{\alpha}{\lambda}, \mu_2 = \frac{\alpha(\alpha+1)}{\lambda^2}$
 
 ** $\chi^2$ Distribution
 Let $\mathcal{Z} \sim \mathcal{N}(0,1)$, $\mathcal{U} =
