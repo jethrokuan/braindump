@@ -31,7 +31,9 @@ Let $S_n = \sum^{n}_{i=1}X_i$ where $X_1, X_2, ..., X_n$ IID.
 $\frac{S_n - n\mu}{\sqrt{n}\sigma} \xrightarrow[n]{\infty} \mathcal{N}(0,1)$
 * Distributions
 ** Poisson($\lambda$)
-$Pr(X=k) = \frac{\lambda^ke^{-\lambda}}{k!}, k = 0,1,2,...$
+#+BEGIN_EXPORT latex
+$Pr(X = k) = \frac{\lambda^{k} e^{-\lambda}}{k!}, k = 0,1,...$
+#+END_EXPORT
 
 $E(X) = Var(X) = \lambda$
 ** Normal $X \sim \mathcal{N}(\mu, \sigma^2)$
