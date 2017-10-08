@@ -232,7 +232,7 @@ $s_{\overline{Y}_R}^2 =
 \frac{1}{n}\frac{N-n}{N-1}\left(R^2s_x^2+s_y^2-2Rs_{xy}\right)$
 
 An approximate $1-\alpha$ C.I. for $\mu_y$ is $\overline{Y}_R \pm
-z_\alpha/2s_{\overline{Y}_R}$
+z_{\alpha/2}s_{\overline{Y}_R}$
 * Estimation
 Let $X_1, X_2, ..., X_n$ be IID random variables with density
 $f(x|\theta)$, where $\theta \in \mathcal{R}^P$ is an unknown
@@ -299,7 +299,7 @@ which can also be found my maximising $L(\theta) =
 
 The bias and SE are:
 
-$\text{bias} = E_{\theta_0}(\hat{\theta}_0)-\theta_0, SE = SD(\hat{\theta}_0)
+$\text{bias} = E_{\theta_0}(\hat{\theta}_0)-\theta_0, SE = SD(\hat{\theta}_0)$
 *** Poisson Case
 $L(\lambda) = \prod^n_{i=1}\frac{\lambda^{x_i}e^{-\lambda}}{x_i!} = \frac{\lambda\sum^n_{i=1}x_ie^{-n\lambda}}{\prod^{n}_{i=1}x_i!}$
 
