@@ -269,6 +269,13 @@ and $\lambda$ is estimated as $1.58 \pm 0.35$
 $\overline{X} \xrightarrow[n]{\infty} \alpha/\lambda, \hat{\sigma}^2
 \xrightarrow[n]{\infty}\alpha/\lambda^2$, MOM estimators are
 consistent (asymptotically unbiased).
+
+$\text{Poisson}(\lambda)$: $\text{bias} = 0, SE \approx \sqrt{\frac{\overline{x}}{n}}$
+
+$N(\mu, \sigma^2)$: $\mu = \mu_1$, $\sigma^2 = \mu_2 - \mu_1^2$
+
+$\Gamma(\lambda, \alpha)$: $\hat{\lambda} =
+\frac{\hat{\mu}_1}{\hat{\mu}_2-\hat{\mu}_1^2}=\frac{\overline{X}}{\hat{\sigma}^2}, \hat{\alpha} = \frac{\hat{\mu}_1^2}{\hat{\mu}_2-\hat{\mu}_1^2}=\frac{\overline{X}^2}{\hat{\sigma}^2}$
 ** Maximum Likelihood Estimator (MLE)
 Let ${f(\cdot | \theta) : \theta \in \Theta}$ be a (identifiable)
 parametric identity
@@ -309,3 +316,67 @@ $\frac{\partial l}{\partial \mu} = \frac{\sum \left(X_i -
 $\frac{\partial l}{\partial \sigma} =
 \frac{\sum^{n}_{i=1}\left(X_i-\mu\right)^2}{\sigma^3} -
 \frac{n}{\sigma} \\ \implies \hat{\sigma^2} = \frac{1}{n}\sum^{n}_{i=1}\left(X_i-\overline{X}\right)^2$
+*** Gamma case
+$l(\theta) = n\alpha\log\lambda + (\alpha -1)\sum^{n}_{i=1}\log X_i -
+\lambda\sum^{n}_{i=1} X_i - n\log\Gamma(\alpha)$
+
+$\frac{\partial l}{\partial \alpha} = n\log\alpha + \sum^{n}_{i=1}\log
+X_i - \sum^{n}_{i=1}X_i - \frac{n}{\Gamma(\alpha)}\Gamma '(\alpha)$
+
+$\frac{\partial l}{\partial \lambda} = \frac{n\alpha}{\lambda} -
+\sum^{n}_{i=1}X_i$
+
+$\hat{\lambda} = \frac{\hat{\alpha}}{\hat{x}}$
+
+bias and SE are estimated through Monte Carlo and Bootstrap methods.
+*** Multinomial Case
+$f(x_1, ..., x_r) = {n \choose {x_1, x_2, ... x_r}} \prod^{n}_{i=1}
+p_i^{X_i}$
+
+where $X_i$ is the number of times the value occurs, and not the
+number of trials. and $x_1, x_2, ... x_r$ are non-negative integers
+summing to $n$. $\forall i$:
+
+$E(X_i) = np_i, Var(X_i)=np_i(1-p_i)$
+
+$Cov(X_i,X_j) = -np_ip_j, \forall i \ne j$
+
+$l(p) = \Kappa + \sum^{r-1}_{i=1}x_i\log p_i +
+x_r\log(1-p_1-...-p_{r-1})$
+
+$\frac{\partial l}{\partial p_i} = \frac{x_i}{p_i} - \frac{x_r}{p_r} =
+0 \text{ assuming MLE exists}$
+
+$\frac{x_i}{\hat{p}_i} = \frac{x_r}{\hat{p}_r} \implies \hat{p}_i =
+\frac{x_i}{c}, c=\frac{x_r}{\hat{p}_r}$
+
+$\sum^r_{i=1}\hat{p}_i = \sum^r_{i=1}\frac{x_i}{c} = 1 \\ \implies c =
+\sum^{r}_{i=1}x_i = n \implies \hat{p}_i = \frac{\overline{x}_i}{n}$
+
+same as MOM estimator.
+*** MLE vs MOM
+1. ML estimates have smaller SEs than MOM estimates
+2. In some cases bias and SE have to be computed numerically via
+   methods like Newton-Rhapson, and requires bootstrap and Monte Carlo
+*** Hardy-Weinberg Equilibrium
+Let a locus have two alleles A and a, where the proportion of $a$ in
+the population is $\theta$.
+
+Assuming, the population is large, and mating is random, then in the
+next generation, the proportion of a alleles is the sum of 2 Be RV,
+$Bin(2,\theta)$ and the number of $a$ alleles is $Bin(2n,\theta)$
+*** CIs in MLE
+When sample size is large, $\hat{\theta}_0$ is approximately normal.
+
+$\frac{\hat{X} - \mu}{s/\sqrt{n}} \sim t_{n-1}$
+
+Given the realisations $\overline{x}$ and $s$,
+
+$\left(\overline{x} - t_{n-1, \alpha/2}\frac{s}{\sqrt{n}},
+\overline{x} + t_{n-1, \alpha/2}\frac{s}{\sqrt{n}}\right)$
+
+is the exact $1-\alpha$ CI for $\mu$.
+
+$\frac{n\hat{\sigma}^2}{\sigma^2} \sim \chi_{n-1}^$
+
+
