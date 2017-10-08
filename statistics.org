@@ -381,4 +381,9 @@ is the exact $1-\alpha$ CI for $\mu$.
 
 $\frac{n\hat{\sigma}^2}{\sigma^2} \sim \chi_{n-1}^$
 
+$\left(\frac{n\hat{\sigma}^2}{\chi_{n-1,\alpha/2}^2},
+\frac{n\hat{\sigma}^2}{\chi_{n-1,1-\alpha/2}^2}\right)$
+
+is the exact $1-\alpha$ CI for $\sigma$.
+
 
