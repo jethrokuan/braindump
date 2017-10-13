@@ -19,23 +19,42 @@
 #+FAVICON: images/docker/docker.png
 #+ICON: images/docker/docker.png
 #+HASHTAG: #hackerschool #docker
-
+* Load I/O Slides                                                  :noexport:
+#+BEGIN_SRC emacs-lisp :tangle no
+  (require 'ox-ioslide)
+#+END_SRC
 * Why Containers
-[[file:images/docker/cargo.jpg]]
-** Why Containers
+  :PROPERTIES:
+  :FILL:     images/docker/cargo.jpg
+  :END:
+** Containers are Cheap
+[[file:images/docker/container_vm.png]]
+*** Containers are Cheap
 #+ATTR_HTML: :class build fade
-- Containers are cheap
-- Containers are portable
-- Containers are secure
-- Containers greatly increase developer productivity
-  - Development environment exactly the same as production
-  - Much quicker to start than VMs
+- Docker provides lightweight virtualization with almost zero
+  overhead.
+- Start and stop containers within seconds.
+** Containers are Portable
+Containers contain all the required software dependencies to run your
+application.
+
+Once a container is built, you can be sure it runs "the same way" on any
+host operating system with the same Linux kernel.
 * Containers in OSes
 | Year |                                                                |
 |------+----------------------------------------------------------------|
 | 2006 | Process Containers, later renamed to cgroups                   |
 | 2008 | LXC: implemented using cgroups and kernel namespaces           |
 | 2013 | Docker: initially built on LXC, but now runs on =libcontainer= |
+** 2006: Process Containers
+[[file:images/docker/cgroups.png]]
+** 2008: LXC Containers, and 2013: Docker
+#+ATTR_HTML: :width 60%
+[[file:images/docker/lxc_docker.png]]
+* What is Docker?
+Docker is a toolchain for managing containers.
+#+ATTR_HTML: :width 60%
+[[file:images/docker/docker_architecture.png]]
 * What You'll Do Today
 You'll be packaging a simple node application with Docker. You'll also
 be running Docker for both development and production environments!
@@ -92,80 +111,85 @@ List all docker containers (including stopped containers):
 
 #+BEGIN_SRC sh
   uname -r                        # 4.9.41-moby
+  hostname                        # container_id
   whoami                          # root
   id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
 #+END_SRC
-* Running a Simple Webserver
-#+BEGIN_SRC sh
-  nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
-#+END_SRC
-* Docker Images
-Docker images consist of multiple layers:
 
-[[file:images/docker/container-layers.jpg]]
+* Docker Networking
+Docker creates three networks by default. We're mostly concerned with
+=bridge=.
+
+#+BEGIN_SRC text
+  $ docker network ls
+
+  NETWORK ID          NAME                DRIVER
+  7fca4eb8c647        bridge              bridge
+  9f904ee27bf5        none                null
+  cf03ee007fb4        host                host
+#+END_SRC
+** How =bridge= works 
+Unless specified otherwise, the docker container will connect to this
+default =bridge= network. This provides a means of Docker containers
+to access the outside world. This is achieved through rules on the
+kernel's =iptable=.
+
+By default, none of the ports are published and the outside world has
+no access to the docker containers.
+** Running a Simple Webserver
+#+BEGIN_SRC sh
+  nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
+#+END_SRC
+** Allowing Ingress
+ #+BEGIN_SRC sh
+   docker run -p 5001:8080 alpine \
+          nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
+ #+END_SRC
+
+ As a daemon:
+ #+BEGIN_SRC sh
+   docker run -p 5001:8080 -d alpine \
+          nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
+ #+END_SRC
+* Deploying a Node.js Server onto Docker
+** Docker Images
+ Docker images consist of multiple layers:
+
+ #+ATTR_HTML: :width 60%
+ [[file:images/docker/container-layers.jpg]]
 ** Layers for the ubuntu image
  Observe the output for the following:
  #+BEGIN_SRC sh
    docker pull ubuntu:15.04
+   docker history ubuntu
  #+END_SRC
-* Docker Networking
-#+BEGIN_SRC sh
-  docker run -p 5001:8080 alpine \
-         nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
-#+END_SRC
+** Declare layers with a =Dockerfile=
+#+BEGIN_SRC docker-file
+  FROM ubuntu
+  MAINTAINER Kimbro Staken
 
-As a daemon:
-#+BEGIN_SRC sh
-  docker run -p 5001:8080 -d alpine \
-         nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
+  RUN apt-get install -y software-properties-common python
+  RUN add-apt-repository ppa:chris-lea/node.js
+  RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list
+  RUN apt-get update
+  RUN apt-get install -y nodejs
+  #RUN apt-get install -y nodejs=0.6.12~dfsg1-1ubuntu1
+  RUN mkdir /var/www
+
+  ADD app.js /var/www/app.js
+
+  CMD ["/usr/bin/node", "/var/www/app.js"] 
 #+END_SRC
-* Docker Volumes
+* But... I want to change my files!
+#+BEGIN_SRC sh
+  docker run -d my/webserver
+  # Create file locally
+  docker exec -it container_name sh
+  ls #WAT
+#+END_SRC
 * Thank You
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
 :ASIDE: right
 :ARTICLE: flexbox vleft auto-fadein
 :END:
-
-* What is Docker?
-Docker is software tool chain for managing LXC containers. Docker
-containers have an API that allow for external adminstration of the
-containers.
-
-https://www.youtube.com/watch?v=PivpCKEiQOQ
-
-Containers virtualize at the operating system level, Hypervisors
-virtualize at the hardware level.
-
-Hypervisors abstract the operating system from hardware, containers
-abstract the application from the operation system.
-
-Hypervisors consumes storage space for each instance. Containers use a
-single storage space plus smaller deltas for each layer and thus are
-much more efficient.
-
-Containers can boot and be application-ready in less than 500ms and
-creates new designs opportunities for rapid scaling. Hypervisors boot
-according to the OS typically 20 seconds, depending on storage speed.
-
-Containers have built-in and high value APIs for cloud orchestration.
-Hypervisors have lower quality APIs that have limited cloud
-orchestration value.
-* Docker Storage Drivers
-When you start a container, a thin writable container layer is added
-on top of the other layers. Any changes the container makes to the
-filesystem are stored here. Any files the container does not change do
-not get copied to this writable layer. This means that the writable
-layer is as small as possible.
-
-When an existing file in a container is modified, the storage driver
-performs a copy-on-write operation.
-
-A data volume is a directory or file in the Docker host’s filesystem
-that is mounted directly into a container. Data volumes are not
-controlled by the storage driver. Reads and writes to data volumes
-bypass the storage driver and operate at native host speeds. You can
-mount any number of data volumes into a container. Multiple containers
-can also share one or more data volumes.
-* TODO Stuff
-- establish motivation for using Docker

@@ -2,7 +2,7 @@
 <html>
 <head>
 <title></title>
-<!-- 2017-10-13 Fri 12:40 -->
+<!-- 2017-10-13 Fri 23:09 -->
 <meta  charset="utf-8" />
 <meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
 <meta  name="generator" content="Org-mode with org-ioslide" />
@@ -35,11 +35,23 @@
          <p data-config-presenter><!-- populated from slide_config.json --></p>
        </hgroup>
     </slide>
-  
+  <slide id="sec-" class="fill nil nobackground" style="background-image: url(images/docker/cargo.jpg)">
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org228bbcd" class="outline-2">
+<h2 id="org228bbcd">Why Containers</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+
+</article>
+</slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org025341e" class="outline-2">
-<h2 id="org025341e">Why Containers</h2>
+       <h2 class=" "><div id="outline-container-org7f03f33" class="outline-3">
+<h3 id="org7f03f33">Containers are Cheap</h3>
 </div>
 </h2>
        <h3></h3>
@@ -47,7 +59,7 @@
 <article class="" id="text-">
 
 <div class="figure">
-<p><img src="images/docker/cargo.jpg" alt="cargo.jpg" />
+<p><img src="images/docker/container_vm.png" alt="container_vm.png" />
 </p>
 </div>
 
@@ -56,22 +68,17 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgdb2761e" class="outline-3">
-<h3 id="orgdb2761e">Why Containers</h3>
+       <h2 class=" "><div id="outline-container-orgeb9f575" class="outline-4">
+<h4 id="orgeb9f575">Containers are Cheap</h4>
 </div>
 </h2>
        <h3></h3>
        </hgroup>
 <article class="" id="text-">
 <ul class="build fade">
-<li>Containers are cheap</li>
-<li>Containers are portable</li>
-<li>Containers are secure</li>
-<li>Containers greatly increase developer productivity
-<ul>
-<li>Development environment exactly the same as production</li>
-<li>Much quicker to start than VMs</li>
-</ul></li>
+<li>Docker provides lightweight virtualization with almost zero
+overhead.</li>
+<li>Start and stop containers within seconds.</li>
 </ul>
 
 
@@ -83,8 +90,34 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org977b61e" class="outline-2">
-<h2 id="org977b61e">Containers in OSes</h2>
+       <h2 class=" "><div id="outline-container-orgc03d6d6" class="outline-3">
+<h3 id="orgc03d6d6">Containers are Portable</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Containers contain all the required software dependencies to run your
+application.
+</p>
+
+<p>
+Once a container is built, you can be sure it runs "the same way" on any
+host operating system with the same Linux kernel.
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org7c4bd7e" class="outline-2">
+<h2 id="org7c4bd7e">Containers in OSes</h2>
 </div>
 </h2>
        <h3></h3>
@@ -124,13 +157,96 @@
 
 
 </article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org08fed42" class="outline-3">
+<h3 id="org08fed42">2006: Process Containers</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+<div class="figure">
+<p><img src="images/docker/cgroups.png" alt="cgroups.png" />
+</p>
+</div>
+
+
+</article>
 
 </slide>
 </slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org264d45b" class="outline-3">
+<h3 id="org264d45b">2008: LXC Containers, and 2013: Docker</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+<div class="figure">
+<p><img src="images/docker/lxc_docker.png" alt="lxc_docker.png" width="60%" />
+</p>
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org136c3c7" class="outline-2">
+<h2 id="org136c3c7">What is Docker?</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Docker is a toolchain for managing containers.
+</p>
+
+<div class="figure">
+<p><img src="images/docker/docker_architecture.png" alt="docker_architecture.png" width="60%" />
+</p>
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgb974ebf" class="outline-2">
+<h2 id="orgb974ebf">What You'll Do Today</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+You'll be packaging a simple node application with Docker. You'll also
+be running Docker for both development and production environments!
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/docker/docker.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org20cdd4b" class="outline-2">
-<h2 id="org20cdd4b">Docker Basics</h2>
+       <h2 class=" "><div id="outline-container-org9b92731" class="outline-2">
+<h2 id="org9b92731">Docker Basics</h2>
 </div>
 </h2>
        <h3></h3>
@@ -142,8 +258,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfa8d13c" class="outline-3">
-<h3 id="orgfa8d13c">Pulling images</h3>
+       <h2 class=" "><div id="outline-container-orgb39b169" class="outline-3">
+<h3 id="orgb39b169">Pulling images</h3>
 </div>
 </h2>
        <h3></h3>
@@ -161,8 +277,8 @@ docker pull alpine</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge9f3f53" class="outline-4">
-<h4 id="orge9f3f53">Alpine?</h4>
+       <h2 class=" "><div id="outline-container-org1f450b2" class="outline-4">
+<h4 id="org1f450b2">Alpine?</h4>
 </div>
 </h2>
        <h3></h3>
@@ -193,8 +309,8 @@ thousands of images are hosted.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge2540ba" class="outline-3">
-<h3 id="orge2540ba">Starting a container</h3>
+       <h2 class=" "><div id="outline-container-orgbf8aac2" class="outline-3">
+<h3 id="orgbf8aac2">Starting a container</h3>
 </div>
 </h2>
        <h3></h3>
@@ -218,8 +334,8 @@ What is happening here?
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org8cef943" class="outline-3">
-<h3 id="org8cef943">Running a command</h3>
+       <h2 class=" "><div id="outline-container-org77c3688" class="outline-3">
+<h3 id="org77c3688">Running a command</h3>
 </div>
 </h2>
        <h3></h3>
@@ -239,8 +355,8 @@ docker run alpine echo "Hello from alpine!"</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgaaba218" class="outline-3">
-<h3 id="orgaaba218">Docker Status</h3>
+       <h2 class=" "><div id="outline-container-org8836206" class="outline-3">
+<h3 id="org8836206">Docker Status</h3>
 </div>
 </h2>
        <h3></h3>
@@ -283,8 +399,8 @@ docker ps -a</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org21cb14a" class="outline-3">
-<h3 id="org21cb14a">Entering a container interactively</h3>
+       <h2 class=" "><div id="outline-container-org4cba9a0" class="outline-3">
+<h3 id="org4cba9a0">Entering a Container Interactively</h3>
 </div>
 </h2>
        <h3></h3>
@@ -301,6 +417,7 @@ docker run -it alpine sh</pre>
 
 <pre class="prettyprint" data-lang="sh">
 uname -r                        # 4.9.41-moby
+hostname                        # container_id
 whoami                          # root
 id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...</pre>
 
@@ -315,8 +432,29 @@ id                              # uid=0(root) gid=0(root) groups=0(root),1(bin).
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org57c804c" class="outline-2">
-<h2 id="org57c804c">Docker Images</h2>
+       <h2 class=" "><div id="outline-container-org199231c" class="outline-2">
+<h2 id="org199231c">Running a Simple Webserver</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org32cd989" class="outline-2">
+<h2 id="org32cd989">Docker Images</h2>
 </div>
 </h2>
        <h3></h3>
@@ -328,7 +466,7 @@ Docker images consist of multiple layers:
 
 
 <div class="figure">
-<p><img src="images/docker/container-layers.jpg" alt="container-layers.jpg" />
+<p><img src="images/docker/container-layers.jpg" alt="container-layers.jpg" width="60%" />
 </p>
 </div>
 
@@ -337,8 +475,8 @@ Docker images consist of multiple layers:
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orge295e48" class="outline-3">
-<h3 id="orge295e48">Layers for the ubuntu image</h3>
+       <h2 class=" "><div id="outline-container-orgcfc57b0" class="outline-3">
+<h3 id="orgcfc57b0">Layers for the ubuntu image</h3>
 </div>
 </h2>
        <h3></h3>
@@ -363,8 +501,8 @@ docker pull ubuntu:15.04</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orga7d89d8" class="outline-2">
-<h2 id="orga7d89d8">Docker Networking</h2>
+       <h2 class=" "><div id="outline-container-orgf4fef69" class="outline-2">
+<h2 id="orgf4fef69">Docker Networking</h2>
 </div>
 </h2>
        <h3></h3>
@@ -393,7 +531,17 @@ docker run -p 5001:8080 -d alpine \
 </article>
 
 </slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org5f2a3fe" class="outline-2">
+<h2 id="org5f2a3fe">Docker Volumes</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
 
+</slide>
 </slide>
 <slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
 <aside class="gdbar right"><img src="images/docker/docker.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
@@ -403,95 +551,6 @@ docker run -p 5001:8080 -d alpine \
 <br>
 <p class="auto-fadein" data-config-contact>
 </p>
-</article>
-
-</slide>
-
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfdc26f2" class="outline-2">
-<h2 id="orgfdc26f2">What is Docker?</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-Docker is software tool chain for managing LXC containers. Docker
-containers have an API that allow for external adminstration of the
-containers.
-</p>
-
-<p>
-<a href="https://www.youtube.com/watch?v=PivpCKEiQOQ">https://www.youtube.com/watch?v=PivpCKEiQOQ</a>
-</p>
-
-<p>
-Containers virtualize at the operating system level, Hypervisors
-virtualize at the hardware level.
-</p>
-
-<p>
-Hypervisors abstract the operating system from hardware, containers
-abstract the application from the operation system.
-</p>
-
-<p>
-Hypervisors consumes storage space for each instance. Containers use a
-single storage space plus smaller deltas for each layer and thus are
-much more efficient.
-</p>
-
-<p>
-Containers can boot and be application-ready in less than 500ms and
-creates new designs opportunities for rapid scaling. Hypervisors boot
-according to the OS typically 20 seconds, depending on storage speed.
-</p>
-
-<p>
-Containers have built-in and high value APIs for cloud orchestration.
-Hypervisors have lower quality APIs that have limited cloud
-orchestration value.
-</p>
-
-
-</article>
-
-</slide>
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org9c4c66c" class="outline-2">
-<h2 id="org9c4c66c">Docker Storage Drivers</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<p>
-When you start a container, a thin writable container layer is added
-on top of the other layers. Any changes the container makes to the
-filesystem are stored here. Any files the container does not change do
-not get copied to this writable layer. This means that the writable
-layer is as small as possible.
-</p>
-
-<p>
-When an existing file in a container is modified, the storage driver
-performs a copy-on-write operation.
-</p>
-
-<p>
-A data volume is a directory or file in the Docker host’s filesystem
-that is mounted directly into a container. Data volumes are not
-controlled by the storage driver. Reads and writes to data volumes
-bypass the storage driver and operate at native host speeds. You can
-mount any number of data volumes into a container. Multiple containers
-can also share one or more data volumes.
-</p>
-
-
 </article>
 
 </slide>
