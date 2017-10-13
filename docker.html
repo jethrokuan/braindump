@@ -2,7 +2,7 @@
 <html>
 <head>
 <title></title>
-<!-- 2017-10-13 Fri 12:17 -->
+<!-- 2017-10-13 Fri 12:40 -->
 <meta  charset="utf-8" />
 <meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
 <meta  name="generator" content="Org-mode with org-ioslide" />
@@ -38,8 +38,8 @@
   
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgd28a9ec" class="outline-2">
-<h2 id="orgd28a9ec">Why Containers</h2>
+       <h2 class=" "><div id="outline-container-org025341e" class="outline-2">
+<h2 id="org025341e">Why Containers</h2>
 </div>
 </h2>
        <h3></h3>
@@ -56,8 +56,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgc25c625" class="outline-3">
-<h3 id="orgc25c625">Why Containers</h3>
+       <h2 class=" "><div id="outline-container-orgdb2761e" class="outline-3">
+<h3 id="orgdb2761e">Why Containers</h3>
 </div>
 </h2>
        <h3></h3>
@@ -83,8 +83,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfd4b566" class="outline-2">
-<h2 id="orgfd4b566">Containers in OSes</h2>
+       <h2 class=" "><div id="outline-container-org977b61e" class="outline-2">
+<h2 id="org977b61e">Containers in OSes</h2>
 </div>
 </h2>
        <h3></h3>
@@ -129,8 +129,8 @@
 </slide>
 <slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
 <aside class="gdbar right bottom"><img src="images/docker/docker.png"></aside><hgroup class="">
-       <h2 class=" "><div id="outline-container-org78694bb" class="outline-2">
-<h2 id="org78694bb">Docker Basics</h2>
+       <h2 class=" "><div id="outline-container-org20cdd4b" class="outline-2">
+<h2 id="org20cdd4b">Docker Basics</h2>
 </div>
 </h2>
        <h3></h3>
@@ -142,8 +142,8 @@
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgfcbca1f" class="outline-3">
-<h3 id="orgfcbca1f">Pulling images</h3>
+       <h2 class=" "><div id="outline-container-orgfa8d13c" class="outline-3">
+<h3 id="orgfa8d13c">Pulling images</h3>
 </div>
 </h2>
        <h3></h3>
@@ -161,8 +161,8 @@ docker pull alpine</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org3dac8c5" class="outline-4">
-<h4 id="org3dac8c5">Alpine?</h4>
+       <h2 class=" "><div id="outline-container-orge9f3f53" class="outline-4">
+<h4 id="orge9f3f53">Alpine?</h4>
 </div>
 </h2>
        <h3></h3>
@@ -193,8 +193,8 @@ thousands of images are hosted.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgf0b49c2" class="outline-3">
-<h3 id="orgf0b49c2">Starting a container</h3>
+       <h2 class=" "><div id="outline-container-orge2540ba" class="outline-3">
+<h3 id="orge2540ba">Starting a container</h3>
 </div>
 </h2>
        <h3></h3>
@@ -218,8 +218,8 @@ What is happening here?
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org4e1b5fb" class="outline-3">
-<h3 id="org4e1b5fb">Running a command</h3>
+       <h2 class=" "><div id="outline-container-org8cef943" class="outline-3">
+<h3 id="org8cef943">Running a command</h3>
 </div>
 </h2>
        <h3></h3>
@@ -239,8 +239,8 @@ docker run alpine echo "Hello from alpine!"</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb031c12" class="outline-3">
-<h3 id="orgb031c12">Docker Status</h3>
+       <h2 class=" "><div id="outline-container-orgaaba218" class="outline-3">
+<h3 id="orgaaba218">Docker Status</h3>
 </div>
 </h2>
        <h3></h3>
@@ -283,8 +283,8 @@ docker ps -a</pre>
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org4b81741" class="outline-3">
-<h3 id="org4b81741">Entering a container interactively</h3>
+       <h2 class=" "><div id="outline-container-org21cb14a" class="outline-3">
+<h3 id="org21cb14a">Entering a container interactively</h3>
 </div>
 </h2>
        <h3></h3>
@@ -315,8 +315,56 @@ id                              # uid=0(root) gid=0(root) groups=0(root),1(bin).
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orga61a54b" class="outline-2">
-<h2 id="orga61a54b">Docker Networking</h2>
+       <h2 class=" "><div id="outline-container-org57c804c" class="outline-2">
+<h2 id="org57c804c">Docker Images</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Docker images consist of multiple layers:
+</p>
+
+
+<div class="figure">
+<p><img src="images/docker/container-layers.jpg" alt="container-layers.jpg" />
+</p>
+</div>
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orge295e48" class="outline-3">
+<h3 id="orge295e48">Layers for the ubuntu image</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Observe the output for the following:
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker pull ubuntu:15.04</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga7d89d8" class="outline-2">
+<h2 id="orga7d89d8">Docker Networking</h2>
 </div>
 </h2>
        <h3></h3>
@@ -362,8 +410,8 @@ docker run -p 5001:8080 -d alpine \
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-orgb0800aa" class="outline-2">
-<h2 id="orgb0800aa">What is Docker?</h2>
+       <h2 class=" "><div id="outline-container-orgfdc26f2" class="outline-2">
+<h2 id="orgfdc26f2">What is Docker?</h2>
 </div>
 </h2>
        <h3></h3>
@@ -414,59 +462,8 @@ orchestration value.
 </slide>
 <slide id="sec-"  >
 <hgroup class="">
-       <h2 class=" "><div id="outline-container-org801f16a" class="outline-2">
-<h2 id="org801f16a">Getting Familiar with Docker</h2>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<div class="org-src-container">
-
-<pre class="prettyprint" data-lang="sh">
-docker ps</pre>
-
-</div>
-
-
-</article>
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org308aa72" class="outline-3">
-<h3 id="org308aa72">Pulling Images</h3>
-</div>
-</h2>
-       <h3></h3>
-       </hgroup>
-<article class="" id="text-">
-<div class="org-src-container">
-
-<pre class="prettyprint" data-lang="sh">
-docker pull alpine</pre>
-
-</div>
-
-<div class="org-src-container">
-
-<pre class="prettyprint" data-lang="sh">
-docker ps -a</pre>
-
-</div>
-
-
-</article>
-
-</slide>
-
-</slide>
-
-
-</slide>
-<slide id="sec-"  >
-<hgroup class="">
-       <h2 class=" "><div id="outline-container-org1887e11" class="outline-2">
-<h2 id="org1887e11">Docker Storage Drivers</h2>
+       <h2 class=" "><div id="outline-container-org9c4c66c" class="outline-2">
+<h2 id="org9c4c66c">Docker Storage Drivers</h2>
 </div>
 </h2>
        <h3></h3>

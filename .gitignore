@@ -3,3 +3,6 @@
 !*.pdf
 !*.html
 !/images/
+!/theme/
+!/js/
+!/ltximg/

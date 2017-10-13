@@ -36,6 +36,10 @@
 | 2006 | Process Containers, later renamed to cgroups                   |
 | 2008 | LXC: implemented using cgroups and kernel namespaces           |
 | 2013 | Docker: initially built on LXC, but now runs on =libcontainer= |
+* What You'll Do Today
+You'll be packaging a simple node application with Docker. You'll also
+be running Docker for both development and production environments!
+
 * Docker Basics
 :PROPERTIES:
   :SLIDE:    segue dark quote
@@ -81,7 +85,7 @@ List all docker containers (including stopped containers):
 #+BEGIN_SRC sh
   docker ps -a
 #+END_SRC
-** Entering a container interactively
+** Entering a Container Interactively
 #+BEGIN_SRC sh
   docker run -it alpine sh
 #+END_SRC
@@ -91,6 +95,19 @@ List all docker containers (including stopped containers):
   whoami                          # root
   id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
 #+END_SRC
+* Running a Simple Webserver
+#+BEGIN_SRC sh
+  nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
+#+END_SRC
+* Docker Images
+Docker images consist of multiple layers:
+
+[[file:images/docker/container-layers.jpg]]
+** Layers for the ubuntu image
+ Observe the output for the following:
+ #+BEGIN_SRC sh
+   docker pull ubuntu:15.04
+ #+END_SRC
 * Docker Networking
 #+BEGIN_SRC sh
   docker run -p 5001:8080 alpine \
@@ -102,7 +119,7 @@ As a daemon:
   docker run -p 5001:8080 -d alpine \
          nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
 #+END_SRC
-
+* Docker Volumes
 * Thank You
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
@@ -134,34 +151,6 @@ according to the OS typically 20 seconds, depending on storage speed.
 Containers have built-in and high value APIs for cloud orchestration.
 Hypervisors have lower quality APIs that have limited cloud
 orchestration value.
-* Getting Familiar with Docker
-#+BEGIN_SRC sh
-docker ps
-#+END_SRC
-
-#+RESULTS:
-: CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-** Pulling Images
-#+BEGIN_SRC sh
-  docker pull alpine
-#+END_SRC
-
-#+RESULTS:
-| Using         | default                                                                 | tag:     | latest         |     |               |
-| latest:       | Pulling                                                                 | from     | library/alpine |     |               |
-| 88286f41530e: | Pulling                                                                 | fs       | layer          |     |               |
-| 88286f41530e: | Download                                                                | complete |                |     |               |
-| 88286f41530e: | Pull                                                                    | complete |                |     |               |
-| Digest:       | sha256:f006ecbb824d87947d0b51ab8488634bf69fe4094959d935c0c103f4820a417d |          |                |     |               |
-| Status:       | Downloaded                                                              | newer    | image          | for | alpine:latest |
-
-#+BEGIN_SRC sh
-  docker ps -a
-#+END_SRC
-
-
-
-#+RESULTS:
 * Docker Storage Drivers
 When you start a container, a thin writable container layer is added
 on top of the other layers. Any changes the container makes to the
@@ -178,3 +167,5 @@ controlled by the storage driver. Reads and writes to data volumes
 bypass the storage driver and operate at native host speeds. You can
 mount any number of data volumes into a container. Multiple containers
 can also share one or more data volumes.
+* TODO Stuff
+- establish motivation for using Docker
