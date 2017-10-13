@@ -1,0 +1,180 @@
+#+TITLE: Docker 101
+#+SUBTITLE: Hackerschool, NUS Hackers
+#+DATE: 2017/10/14
+#+AUTHOR: Jethro Kuan
+#+EMAIL: jethrokuan95@gmail.com
+#+OPTIONS: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+OPTIONS: author:t c:nil creator:comment d:(not "LOGBOOK") date:t
+#+OPTIONS: e:t email:nil f:t inline:t num:nil p:nil pri:nil stat:t
+#+OPTIONS: tags:t tasks:t tex:t timestamp:t toc:nil todo:t |:t
+#+DESCRIPTION:
+#+EXCLUDE_TAGS: noexport
+#+KEYWORDS:
+#+LANGUAGE: en
+#+SELECT_TAGS: export
+
+#+WWW: http://www.nushackers.org/
+#+TWITTER: @nushackers
+
+#+FAVICON: images/docker/docker.png
+#+ICON: images/docker/docker.png
+#+HASHTAG: #hackerschool #docker
+
+* Why Containers
+[[file:images/docker/cargo.jpg]]
+** Why Containers
+#+ATTR_HTML: :class build fade
+- Containers are cheap
+- Containers are portable
+- Containers are secure
+- Containers greatly increase developer productivity
+  - Development environment exactly the same as production
+  - Much quicker to start than VMs
+* Containers in OSes
+| Year |                                                                |
+|------+----------------------------------------------------------------|
+| 2006 | Process Containers, later renamed to cgroups                   |
+| 2008 | LXC: implemented using cgroups and kernel namespaces           |
+| 2013 | Docker: initially built on LXC, but now runs on =libcontainer= |
+* Docker Basics
+:PROPERTIES:
+  :SLIDE:    segue dark quote
+  :ASIDE:    right bottom
+  :ARTICLE:  flexbox vleft auto-fadein
+:END:
+** Pulling images
+#+BEGIN_SRC sh
+  docker pull alpine
+#+END_SRC
+*** Alpine?
+=alpine= is an image for a tiny Linux distribution, used by Docker for
+most of its official images.
+
+A container image is a lightweight, stand-alone, executable package of
+a piece of software that includes everything needed to run it: code,
+runtime, system tools, system libraries, settings.
+
+=alpine= is pulled from the Docker Registry, where hundreds of
+thousands of images are hosted.
+** Starting a container
+#+BEGIN_SRC sh
+  docker run alpine
+#+END_SRC
+
+What is happening here?
+** Running a command
+#+BEGIN_SRC sh
+  docker run alpine echo "Hello from alpine!"
+#+END_SRC
+** Docker Status
+List all docker images:
+#+BEGIN_SRC sh
+  docker images
+#+END_SRC
+
+List all running docker containers:
+#+BEGIN_SRC sh
+  docker ps
+#+END_SRC
+
+List all docker containers (including stopped containers):
+#+BEGIN_SRC sh
+  docker ps -a
+#+END_SRC
+** Entering a container interactively
+#+BEGIN_SRC sh
+  docker run -it alpine sh
+#+END_SRC
+
+#+BEGIN_SRC sh
+  uname -r                        # 4.9.41-moby
+  whoami                          # root
+  id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
+#+END_SRC
+* Docker Networking
+#+BEGIN_SRC sh
+  docker run -p 5001:8080 alpine \
+         nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
+#+END_SRC
+
+As a daemon:
+#+BEGIN_SRC sh
+  docker run -p 5001:8080 -d alpine \
+         nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"
+#+END_SRC
+
+* Thank You
+:PROPERTIES:
+:SLIDE: thank-you-slide segue
+:ASIDE: right
+:ARTICLE: flexbox vleft auto-fadein
+:END:
+
+* What is Docker?
+Docker is software tool chain for managing LXC containers. Docker
+containers have an API that allow for external adminstration of the
+containers.
+
+https://www.youtube.com/watch?v=PivpCKEiQOQ
+
+Containers virtualize at the operating system level, Hypervisors
+virtualize at the hardware level.
+
+Hypervisors abstract the operating system from hardware, containers
+abstract the application from the operation system.
+
+Hypervisors consumes storage space for each instance. Containers use a
+single storage space plus smaller deltas for each layer and thus are
+much more efficient.
+
+Containers can boot and be application-ready in less than 500ms and
+creates new designs opportunities for rapid scaling. Hypervisors boot
+according to the OS typically 20 seconds, depending on storage speed.
+
+Containers have built-in and high value APIs for cloud orchestration.
+Hypervisors have lower quality APIs that have limited cloud
+orchestration value.
+* Getting Familiar with Docker
+#+BEGIN_SRC sh
+docker ps
+#+END_SRC
+
+#+RESULTS:
+: CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
+** Pulling Images
+#+BEGIN_SRC sh
+  docker pull alpine
+#+END_SRC
+
+#+RESULTS:
+| Using         | default                                                                 | tag:     | latest         |     |               |
+| latest:       | Pulling                                                                 | from     | library/alpine |     |               |
+| 88286f41530e: | Pulling                                                                 | fs       | layer          |     |               |
+| 88286f41530e: | Download                                                                | complete |                |     |               |
+| 88286f41530e: | Pull                                                                    | complete |                |     |               |
+| Digest:       | sha256:f006ecbb824d87947d0b51ab8488634bf69fe4094959d935c0c103f4820a417d |          |                |     |               |
+| Status:       | Downloaded                                                              | newer    | image          | for | alpine:latest |
+
+#+BEGIN_SRC sh
+  docker ps -a
+#+END_SRC
+
+
+
+#+RESULTS:
+* Docker Storage Drivers
+When you start a container, a thin writable container layer is added
+on top of the other layers. Any changes the container makes to the
+filesystem are stored here. Any files the container does not change do
+not get copied to this writable layer. This means that the writable
+layer is as small as possible.
+
+When an existing file in a container is modified, the storage driver
+performs a copy-on-write operation.
+
+A data volume is a directory or file in the Docker host’s filesystem
+that is mounted directly into a container. Data volumes are not
+controlled by the storage driver. Reads and writes to data volumes
+bypass the storage driver and operate at native host speeds. You can
+mount any number of data volumes into a container. Multiple containers
+can also share one or more data volumes.
