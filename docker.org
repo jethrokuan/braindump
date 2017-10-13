@@ -56,8 +56,10 @@ Docker is a toolchain for managing containers.
 #+ATTR_HTML: :width 60%
 [[file:images/docker/docker_architecture.png]]
 * What You'll Do Today
-You'll be packaging a simple node application with Docker. You'll also
-be running Docker for both development and production environments!
+You'll be packaging a simple application with Docker.
+
+If time permits, we'll cover additional things, such as passing
+environment variables.
 
 * Docker Basics
 :PROPERTIES:
@@ -115,6 +117,53 @@ List all docker containers (including stopped containers):
   whoami                          # root
   id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
 #+END_SRC
+* Inside =alpine=
+ Docker images consist of multiple layers:
+
+ #+ATTR_HTML: :width 60%
+ [[file:images/docker/container-layers.jpg]]
+** Layers for the ubuntu image
+ Observe the output for the following:
+ #+BEGIN_SRC sh
+   docker pull ubuntu:15.04
+   docker history ubuntu
+ #+END_SRC
+** Declare layers with a =Dockerfile=
+#+BEGIN_SRC docker-file
+  FROM ubuntu
+  MAINTAINER Kimbro Staken
+
+  RUN apt-get install -y software-properties-common python
+  RUN add-apt-repository ppa:chris-lea/node.js
+  RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list
+  RUN apt-get update
+  RUN apt-get install -y nodejs
+  #RUN apt-get install -y nodejs=0.6.12~dfsg1-1ubuntu1
+  RUN mkdir /var/www
+
+  ADD app.js /var/www/app.js
+
+  CMD ["/usr/bin/node", "/var/www/app.js"] 
+#+END_SRC
+** Dockerfile Cheatsheet
+   :PROPERTIES:
+   :ARTICLE:  smaller
+   :END:
+
+| Command    | Info                                                                                    |
+|------------+-----------------------------------------------------------------------------------------|
+| FROM       | Sets the Base Image for subsequent instructions.                                        |
+| RUN        | execute any commands in a new layer on top of the current image and commit the results. |
+| CMD        | provide defaults for an executing container.                                            |
+| EXPOSE     | informs Docker that the container listens on the specified network ports at runtime.    |
+| ENV        | sets environment variable.                                                              |
+| COPY       | copies new files or directories to container.                                           |
+| ENTRYPOINT | configures a container that will run as an executable.                                  |
+| VOLUME     | creates a mount point for externally mounted volumes or other containers.               |
+| WORKDIR    | sets the working directory.                                                             |
+| ARG        | defines a build-time variable.                                                          |
+| LABEL      | apply key/value metadata to your images, containers, or daemons.                        |
+
 
 * Docker Networking
 Docker creates three networks by default. We're mostly concerned with
@@ -151,35 +200,32 @@ no access to the docker containers.
    docker run -p 5001:8080 -d alpine \
           nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
  #+END_SRC
-* Deploying a Node.js Server onto Docker
-** Docker Images
- Docker images consist of multiple layers:
-
- #+ATTR_HTML: :width 60%
- [[file:images/docker/container-layers.jpg]]
-** Layers for the ubuntu image
- Observe the output for the following:
- #+BEGIN_SRC sh
-   docker pull ubuntu:15.04
-   docker history ubuntu
- #+END_SRC
-** Declare layers with a =Dockerfile=
-#+BEGIN_SRC docker-file
-  FROM ubuntu
-  MAINTAINER Kimbro Staken
-
-  RUN apt-get install -y software-properties-common python
-  RUN add-apt-repository ppa:chris-lea/node.js
-  RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" >> /etc/apt/sources.list
-  RUN apt-get update
-  RUN apt-get install -y nodejs
-  #RUN apt-get install -y nodejs=0.6.12~dfsg1-1ubuntu1
-  RUN mkdir /var/www
-
-  ADD app.js /var/www/app.js
-
-  CMD ["/usr/bin/node", "/var/www/app.js"] 
+* Exercise: package a Node.js Server with Docker
+#+BEGIN_SRC sh
+  curl -i http://localhost:5001/
 #+END_SRC
+
+#+BEGIN_SRC text
+  HTTP/1.1 200 OK
+  X-Powered-By: Express
+  Content-Type: text/html; charset=utf-8
+  Content-Length: 14
+  ETag: W/"e-ZohVPp9YwmNT/yh3111KJ3ZG6Uk"
+  Date: Fri, 13 Oct 2017 18:34:46 GMT
+  Connection: keep-alive
+
+  Hello world!!
+#+END_SRC
+** Server code
+#+BEGIN_SRC text
+  https://git.io/vdXLC
+#+END_SRC
+** General Instructions
+   1. Install the Node.js runtime (use Ubuntu)
+   2. Copy the files into the container
+   3. Get the node package manager =npm=
+   4. Run =npm install=
+   5. Run =npm start= to start server
 * But... I want to change my files!
 #+BEGIN_SRC sh
   docker run -d my/webserver
@@ -187,6 +233,26 @@ no access to the docker containers.
   docker exec -it container_name sh
   ls #WAT
 #+END_SRC
+** Mounting Volumes
+There are three types of mounts:
+
+1. *Volumes* are managed by docker. Volumes also support the use of
+   volume drivers, which allow you to store your data on remote hosts
+   or cloud providers, among other possibilities.
+2. *Bind Mounts* may be stored anywhere on the host filesystem.
+3. *tmpfs mounts* are stored in the host system's memory only.
+** Mounting the =/src= directory
+#+BEGIN_SRC sh
+  docker run -p 5000:8080 -v ~/path/to/directory:/usr/src/app/src my/webserver
+#+END_SRC
+* Beyond Docker
+Docker is the building block for many devops solutions.
+
+1. Container Orchestration: Kubernetes, Cloud Foundry etc.
+2. Monitoring: cAdvisor, InfluxDB etc.
+3. Reverse Proxies and Load Balancers: fabio etc.
+
+Docker makes microservices manageable and scalable.
 * Thank You
 :PROPERTIES:
 :SLIDE: thank-you-slide segue
