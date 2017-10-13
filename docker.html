@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+<!-- 2017-10-13 Fri 12:17 -->
+<meta  charset="utf-8" />
+<meta  htto-equiv="X-UA-Compatible" content="chrome=1" />
+<meta  name="generator" content="Org-mode with org-ioslide" />
+<meta  name="author" content="Jethro Kuan" />
+
+
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--This one seems to work all the time, but really small on ipad-->
+<!--<meta name="viewport" content="initial-scale=0.4">-->
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<link rel="stylesheet" media="all" href="theme/css/default.css" />
+<link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css" />
+<link rel="stylesheet" media="all" href="theme/css/small-icon.css" />
+<base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+<script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+
+   <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
+
+<script src="js/mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML,local/local" type="text/javascript"></script>
+</head>
+<body style="opacity: 0">
+<slides class="layout-widescreen">
+<slide class="title-slide segue nobackground">
+       <aside class="gdbar"><img src="images/docker/docker.png"></aside>
+       <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+       <hgroup class="auto-fadein">
+         <h1 data-config-title><!-- populated from slide_config.json --></h1>
+         <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+         <p data-config-presenter><!-- populated from slide_config.json --></p>
+       </hgroup>
+    </slide>
+  
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgd28a9ec" class="outline-2">
+<h2 id="orgd28a9ec">Why Containers</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+
+<div class="figure">
+<p><img src="images/docker/cargo.jpg" alt="cargo.jpg" />
+</p>
+</div>
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgc25c625" class="outline-3">
+<h3 id="orgc25c625">Why Containers</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<ul class="build fade">
+<li>Containers are cheap</li>
+<li>Containers are portable</li>
+<li>Containers are secure</li>
+<li>Containers greatly increase developer productivity
+<ul>
+<li>Development environment exactly the same as production</li>
+<li>Much quicker to start than VMs</li>
+</ul></li>
+</ul>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgfd4b566" class="outline-2">
+<h2 id="orgfd4b566">Containers in OSes</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="right">Year</th>
+<th scope="col" class="left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="right">2006</td>
+<td class="left">Process Containers, later renamed to cgroups</td>
+</tr>
+
+<tr>
+<td class="right">2008</td>
+<td class="left">LXC: implemented using cgroups and kernel namespaces</td>
+</tr>
+
+<tr>
+<td class="right">2013</td>
+<td class="left">Docker: initially built on LXC, but now runs on <code>libcontainer</code></td>
+</tr>
+</tbody>
+</table>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-" class=" segue dark quote nobackground" style="background-image: url(nil)">
+<aside class="gdbar right bottom"><img src="images/docker/docker.png"></aside><hgroup class="">
+       <h2 class=" "><div id="outline-container-org78694bb" class="outline-2">
+<h2 id="org78694bb">Docker Basics</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="flexbox vleft auto-fadein" id="text-">
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgfcbca1f" class="outline-3">
+<h3 id="orgfcbca1f">Pulling images</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker pull alpine</pre>
+
+</div>
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org3dac8c5" class="outline-4">
+<h4 id="org3dac8c5">Alpine?</h4>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+<code>alpine</code> is an image for a tiny Linux distribution, used by Docker for
+most of its official images.
+</p>
+
+<p>
+A container image is a lightweight, stand-alone, executable package of
+a piece of software that includes everything needed to run it: code,
+runtime, system tools, system libraries, settings.
+</p>
+
+<p>
+<code>alpine</code> is pulled from the Docker Registry, where hundreds of
+thousands of images are hosted.
+</p>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgf0b49c2" class="outline-3">
+<h3 id="orgf0b49c2">Starting a container</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker run alpine</pre>
+
+</div>
+
+<p>
+What is happening here?
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org4e1b5fb" class="outline-3">
+<h3 id="org4e1b5fb">Running a command</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker run alpine echo "Hello from alpine!"</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgb031c12" class="outline-3">
+<h3 id="orgb031c12">Docker Status</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+List all docker images:
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker images</pre>
+
+</div>
+
+<p>
+List all running docker containers:
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker ps</pre>
+
+</div>
+
+<p>
+List all docker containers (including stopped containers):
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker ps -a</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org4b81741" class="outline-3">
+<h3 id="org4b81741">Entering a container interactively</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker run -it alpine sh</pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+uname -r                        # 4.9.41-moby
+whoami                          # root
+id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orga61a54b" class="outline-2">
+<h2 id="orga61a54b">Docker Networking</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker run -p 5001:8080 alpine \
+       nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"</pre>
+
+</div>
+
+<p>
+As a daemon:
+</p>
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker run -p 5001:8080 -d alpine \
+       nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\nHello World\n"</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-" class=" thank-you-slide segue nobackground" style="background-image: url(nil)">
+<aside class="gdbar right"><img src="images/docker/docker.png"></aside><article class="flexbox vleft auto-fadein" id="text-">
+<h2>
+  <p>Thank You</p>
+</h2>
+<br>
+<p class="auto-fadein" data-config-contact>
+</p>
+</article>
+
+</slide>
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-orgb0800aa" class="outline-2">
+<h2 id="orgb0800aa">What is Docker?</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+Docker is software tool chain for managing LXC containers. Docker
+containers have an API that allow for external adminstration of the
+containers.
+</p>
+
+<p>
+<a href="https://www.youtube.com/watch?v=PivpCKEiQOQ">https://www.youtube.com/watch?v=PivpCKEiQOQ</a>
+</p>
+
+<p>
+Containers virtualize at the operating system level, Hypervisors
+virtualize at the hardware level.
+</p>
+
+<p>
+Hypervisors abstract the operating system from hardware, containers
+abstract the application from the operation system.
+</p>
+
+<p>
+Hypervisors consumes storage space for each instance. Containers use a
+single storage space plus smaller deltas for each layer and thus are
+much more efficient.
+</p>
+
+<p>
+Containers can boot and be application-ready in less than 500ms and
+creates new designs opportunities for rapid scaling. Hypervisors boot
+according to the OS typically 20 seconds, depending on storage speed.
+</p>
+
+<p>
+Containers have built-in and high value APIs for cloud orchestration.
+Hypervisors have lower quality APIs that have limited cloud
+orchestration value.
+</p>
+
+
+</article>
+
+</slide>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org801f16a" class="outline-2">
+<h2 id="org801f16a">Getting Familiar with Docker</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker ps</pre>
+
+</div>
+
+
+</article>
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org308aa72" class="outline-3">
+<h3 id="org308aa72">Pulling Images</h3>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker pull alpine</pre>
+
+</div>
+
+<div class="org-src-container">
+
+<pre class="prettyprint" data-lang="sh">
+docker ps -a</pre>
+
+</div>
+
+
+</article>
+
+</slide>
+
+</slide>
+
+
+</slide>
+<slide id="sec-"  >
+<hgroup class="">
+       <h2 class=" "><div id="outline-container-org1887e11" class="outline-2">
+<h2 id="org1887e11">Docker Storage Drivers</h2>
+</div>
+</h2>
+       <h3></h3>
+       </hgroup>
+<article class="" id="text-">
+<p>
+When you start a container, a thin writable container layer is added
+on top of the other layers. Any changes the container makes to the
+filesystem are stored here. Any files the container does not change do
+not get copied to this writable layer. This means that the writable
+layer is as small as possible.
+</p>
+
+<p>
+When an existing file in a container is modified, the storage driver
+performs a copy-on-write operation.
+</p>
+
+<p>
+A data volume is a directory or file in the Docker host’s filesystem
+that is mounted directly into a container. Data volumes are not
+controlled by the storage driver. Reads and writes to data volumes
+bypass the storage driver and operate at native host speeds. You can
+mount any number of data volumes into a container. Multiple containers
+can also share one or more data volumes.
+</p>
+
+
+</article>
+
+</slide>
+<slide class="backdrop"></slide>
+</slides> 
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body> 
+
+</html>
