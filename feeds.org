@@ -1,0 +1,10 @@
+* Blogs                                                              :elfeed:
+** Emacs                                                              :emacs:
+*** http://planet.emacsen.org/atom.xml
+** AI                                                                    :AI:
+*** http://feeds.dzone.com/ai
+** General                                                          :general:
+*** https://news.ycombinator.com/rss
+*** https://jvns.ca/atom.xml
+*** http://slatestarcodex.com/feed/
+
