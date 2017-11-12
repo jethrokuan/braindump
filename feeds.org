@@ -1,10 +1,14 @@
 * Blogs                                                              :elfeed:
+** Computer Science                                                      :cs:
+*** http://export.arxiv.org/rss/cs
 ** Emacs                                                              :emacs:
 *** http://planet.emacsen.org/atom.xml
 ** AI                                                                    :AI:
 *** http://feeds.dzone.com/ai
+** Programming Languages                                                 :pl:
+*** http://lambda-the-ultimate.org/rss.xml
 ** General                                                          :general:
-*** https://news.ycombinator.com/rss
+*** https://hnrss.org/newest?points=100
 *** https://jvns.ca/atom.xml
 *** http://slatestarcodex.com/feed/
-
+*** http://feeds.feedburner.com/mrmoneymustache

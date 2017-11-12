@@ -1009,15 +1009,15 @@ Using larger pages will lead to a reduction in the number of page
 entries required, and reduce the size of the page table. However, this
 leads to a lot of wastage in each page (*internal fragmentation*).
 *** Paging and Segments
-Instead of having a single page table for the entire address space of
-the process, have on per logical segment.
+ Instead of having a single page table for the entire address space of
+ the process, have on per logical segment.
 
-The virtual address now looks like this: 
+ The virtual address now looks like this: 
 
-[[file:images/operating_systems/Paging/screenshot_2017-11-05_19-55-16.png]]
+ [[file:images/operating_systems/Paging/screenshot_2017-11-05_19-55-16.png]]
 
-The downsides for segmentation apply: segmentation is not flexible,
-and if the heap is rarely used, for example, then there is wastage.
+ The downsides for segmentation apply: segmentation is not flexible,
+ and if the heap is rarely used, for example, then there is wastage.
 *** Multi-level Page Tables
 
 [[file:images/operating_systems/Paging/screenshot_2017-11-05_19-57-42.png]]
@@ -1048,4 +1048,88 @@ page table for each physical physical page of the system.
 
 Finding the correct entry is expensive via a linear scan, and hash
 tables are often built over the base structure to speed lookups.
+* Beyond Physical Memory
+Sometimes the address space of a running process does not fit into
+memory. In that case, we require an additional level in the memory
+hierachy, some place to stash portions of the address space that is
+currently not in use. We call this the *swap space*.
+** Mechanisms
+*** Swap Space
+ *Swap space* is some space on disk reserved for moving pages back and
+ forth. The OS will need to memorise the disk address of a given page.
 
+ The size of the swap space determines the number of pages it can
+ stash.
+*** The Present Bit
+  When a TLB miss occurs, the OS will have to look at the swap space
+  before to find if the page is present in physical memory.
+
+  When the hardware looks in the PTE, it may find that the page is not
+  present in physical memory. We have to add one new piece of
+  information in the PTE, called the *present bit*. If the present bit
+  is set to one, then the page is present in physical memory and
+  everything proceeds as above. If it set to 0, the page is on disk
+  somewhere. Accessing a page not in physical memory is commonly
+  referred to as a *page fault*.
+
+ Upon a *page fault*, the OS will run the *page-fault handler*, and
+ fetch the page from disk and load it into memory. The OS will then
+ update the page table to mark the page as present, and update the PFN
+ field of the PTN to record the in-memory location of the newly fetched
+ page.
+*** Page-replacement Policy
+ When memory is full, upon a page fault, the OS will have to decide
+ which page in the memory to kick out. This replacement policy is known
+ as the *page-replacement policy*.
+
+
+ Below is the page-fault control algorithm:
+
+ #+BEGIN_SRC c
+   PFN = findFreePhysicalPage();
+   if (PFN == -1) {                  /* can't find free page */
+     PFN = EvictPage();              /* Evict some old page */
+    }
+   DiskRead(PTE.diskAddr, PFN);    /* sleep, waiting for IO */
+   PTE.present = true;
+   PTE.PFN = PFN;
+   RetryInstruction();
+ #+END_SRC
+
+*** When Replacements Really Occur
+  The OS actively keeps a small portion of memory free. To do this, the
+  OS maintains a *high watermark (HW)* and a *low watermark (LW)*. When
+  the OS notices that there are fewer than LW pages available, a
+  background thread runs, freeing memory. This is sometimes called a
+  *swap daemon* or a *page daemon*.
+
+ Many systems cluster a number of pages and write them at once to the
+ swap partition.
+
+ With the addition of a *page daemon*, the control flow algorithm can
+ be changed. The thread trying to read a page would simply wait for
+ the page daemon free up enough memory if the LW threshold is hit.
+
+** Policies
+The main memory can be viewed as a cache mechanism. Knowing the number
+of cache hits and cache misses allows us to calculate the *average
+memory access time (AMAT)* of a program. An optimal page-replacement
+policy will reduce the number of cache misses overall. The approach
+would be to replace the page that will be accessed furthest in the
+future.
+
+The first few accesses when the cache begins in an empty state is a
+*cold-start miss*.
+
+*** FIFO
+In FIFO replacement, pages are placed in a queue when they enter the
+system, and when a replacement occurs, the page on the tail of the
+queue is evicted.
+
+**** Belady's anomaly
+One would normally expect the cache hit rate to increase when the
+cache gets larger. However, with FIFO, it gets worse, and this
+phenomenon is called *Belady's anomaly*. LRU has the *stack property*:
+for algorithms with this property, a cache of size N+1 naturally
+includes the contents of a cache of size N. FIFO and Random (among
+others) do not obey this stack property.
