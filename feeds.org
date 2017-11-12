@@ -3,8 +3,11 @@
 *** http://export.arxiv.org/rss/cs
 ** Emacs                                                              :emacs:
 *** http://planet.emacsen.org/atom.xml
-** AI                                                                    :AI:
+** AI/ML                                                                 :AI:
 *** http://feeds.dzone.com/ai
+*** https://reddit.com/r/MachineLearning/.rss
+*** https://medium.com/feed/mlreview/
+*** https://distill.pub/rss.xml
 ** Programming Languages                                                 :pl:
 *** http://lambda-the-ultimate.org/rss.xml
 ** General                                                          :general:
