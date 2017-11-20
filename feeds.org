@@ -1,4 +1,4 @@
-* Blogs                                                              :elfeed:
+* Feeds                                                              :elfeed:
 ** Computer Science                                                      :cs:
 *** http://export.arxiv.org/rss/cs
 ** Emacs                                                              :emacs:
@@ -15,3 +15,20 @@
 *** https://jvns.ca/atom.xml
 *** http://slatestarcodex.com/feed/
 *** http://feeds.feedburner.com/mrmoneymustache
+*** http://erikbern.com/atom.xml
+*** https://blog.acolyer.org/atom.xml
+*** https://peadarcoyle.wordpress.com/feed/
+*** http://www.inference.vc/feed/
+*** http://larahogan.me/feed.xml
+** Company Blogs                                                    :company:
+*** https://blogs.dropbox.com/tech/feed/
+*** https://codeascraft.com/feed/
+*** http://multithreaded.stitchfix.com/feed
+*** https://engineering.pinterest.com/rss.xml
+*** https://research.fb.com/feed/
+*** https://medium.com/feed/airbnb-engineering/
+*** https://tech.instacart.com/feed/
+*** http://research.baidu.com/feed/
+** Math                                                                :math:
+*** http://feeds.feedburner.com/theendeavour
+*** http://andrewgelman.com/feed/
