@@ -384,5 +384,187 @@ $\left(\frac{n\hat{\sigma}^2}{\chi_{n-1,\alpha/2}^2},
 \frac{n\hat{\sigma}^2}{\chi_{n-1,1-\alpha/2}^2}\right)$
 
 is the exact $1-\alpha$ CI for $\sigma$.
+* Fisher Information
+\begin{equation*}
+  I\left( \theta \right) = - E \left( \frac{\partial}{\partial \theta^2} \log
+    f\left( x | \theta \right) \right)
+\end{equation*}
+
+| Distribution  | MLE                                          | Variance                                                                                 |
+|---------------+----------------------------------------------+------------------------------------------------------------------------------------------|
+| Po($\lambda$) | $X$                                          | $\lambda$                                                                                |
+| Be($p$)       | $X$                                          | $p\left(1-p\right)$                                                                      |
+| Bin($n$,$p$)  | $\frac{X}{n}$                                | $\frac{p(1-p)}{n}$                                                                       |
+| HWE tri       | $\frac{X_2+2X_3}{n}$                         | $\frac{\theta(1-\theta)}{n}$                                                             |
+
+General trinomial: $\left(\frac{X_1}{n}, \frac{X_2}{n} \right)$
+
+\begin{equation*}
+\begin{bmatrix} p_1(1-p_1) & -p_1p_2 \\ -p_1p_2 & p_2(1-p_2) \end{bmatrix} \frac{1}{n}
+\end{equation*}
+
+In all the above cases, $\text{var}(\hat{\theta}) = I(\theta)^{-1}$.
+* Asymptotic Normality of MLE
+As $n \rightarrow \infty$, $\sqrt{nI(\theta)}(\hat{\theta} -
+\theta) \rightarrow N(0,1)$ in distribution, and hence $\hat{\theta}
+\sim N\left(\theta, \frac{I\left( \theta \right)^{-1}}{n}\right)$
+
+As $\hat{\theta} \xrightarrow[n]{\infty} \theta$, MLE is consistent.
+** SE
+SE of an estimate of $\theta$ is the SD of the estimator
+$\hat{\theta}$, hence $SE = SD(\hat{\theta}) =
+\sqrt{\frac{I(\theta)^{-1}}{n}} \approx
+\sqrt{\frac{I(\hat{\theta})^{-1}}{n}}$
+** Random Intervals
+\begin{equation*}
+1-\alpha \text{ CI } \approx \hat{\theta} \pm
+  z_{\alpha/2}\sqrt{\frac{I(\theta)^{-1}}{n}}
+\end{equation*}
+* Sufficiency
+** Definition                                                      :noexport:
+ Let $T(X)$ be a function of $X = (X_1, X_2, ..., X_n)$. In general,
+ the conditional distribution of $X$ given $T = t$ depends on $\theta$.
+ If the conditional distribution $\theta \in \Theta$ for every $t$, we
+ say that $T$ is sufficient for $\theta$.
+
+Theorem: If $T$ is sufficient for $\theta$, then the ML estimator is a
+function of $T$.
+** Characterisation
+Let $S_t = {x: T(x) =t=}$. The sample space of $X$, $S$ is the
+disjoint union of $S_t$ across all possible values of $T$.
+
+$T$ is sufficient for $\theta$ if $\exists q() \text{ s.t. } \forall x \in S_t,
+f_{\theta}(X\x|T=t) = q(x)$.
+** Factorisation Theorem
+$T$ is sufficient for  $\theta$ iff $\exists g(t,\theta), h(x)
+\text{ s.t. } \forall \theta \in \Theta, f_\theta(x) = g(T(x), \theta) h(x)
+\all x$
+** Rao-Blackwell Theorem
+Let $\hat{\theta}$ be an estimator of $\theta$ with finite variance,
+$T$ be sufficient for $\theta$. Let $\tilde{\theta} =
+E[\hat{\theta}|T]$. Then for every $\theta \in \Theta$,
+$E\left(\hat{\theta} - \theta\right)^2 \le
+E\left(\hat{\theta}-\theta\right)^2$. Equality holds iff
+$\hat{\theta}$ is a function of $T$.
+** Random Conditional Expectation
+1. $E(X) = E(E(X|T))$
+2. $var(X) = var(E(X|T)) + E(var(X|T))$
+3. $var(Y|X) =E(Y^2|X) - E(Y|X)^2$
+4. $E(Y) = Y, var(Y) =0$ iff $Y$ is a constant
+* Hypothesis Testing
+Let $X_1... X_n$ be IID with density $f(x|\theta)$. null $H_0: \theta
+= \theta_0$, $H-1 : \theta = \theta_1$. Let the critical region be
+$R\subsetR_n$. Then, $size = P_0(X \in R)$ and $power = P_1(X\in R)$.
+
+The likelihood ratio of $H_0 to H_1$ is $\Lambda(x) =
+\frac{f_0(x_1)...f_0(x_n)}{f_1(x_1)...f_1(x_n)}$. The smaller
+$\Lambda(x)$ the more evidence against $H_0$. We define critical
+region ${x : \Lambda(x) < c_\alpha}$, and among all tests with this
+size, it has the maximum power (Neyman-Pearson Lemma).
+
+A hypothesis is simple if it completely specifies the distibution of
+the data. In many cases, $H_1$ is composite: (B) $H_1 : \mu > \mu_0$
+(C) $H_1 : \mu \ne \mu_0$.
+
+(B) Critical region $\{\bar{x} > \mu_0 +
+z_\alpha\frac{\sigma}{\sqrt{n}}\}$, the power is a function of $\mu$,
+and this is uniformly the most powerful test for size $\le \alpha$.
+
+(C) Critical region $\{|\bar{x}-\mu_0| > c\}, c =
+z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$, but not uniformly most
+powerful.
+
+The $(1-\alpha)$ CI for $\mu$ consists of precisely the values $\mu_0$
+for which $H_0: \mu = \mu_0$ is not rejected against $H_1: \mu \ne
+\mu_0$. Exact for normal with known variance, approx. in others.
+
+** p-value
+the probability under $H_0$ that the test statistic is more extreme
+than the realisation. (A, B): $p = p_0(\bar{X} > \bar{x}) =
+P(Z>\frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}})$. (C): $p =
+P_0(|\bar{X} - \mu_0| > |\bar{x} - \mu_0|)$. The smaller the p-value,
+the more suspicious one should be about $H_0$. If size is smaller than
+p-value, do not reject $H_0$.
 
 
+* Generalized Likelihood Ratio
+$\Lambda^* = \frac{\text{max}_{\theta \in
+\omega_0}L(\theta)}{\text{max}_{\theta\in\Omega}L(\theta)}$, $\Omega =
+\omega_0 \cup \omega_1$. The closer $\Lambda$ is to 0, the stronger
+the evidence for $H_1$.
+
+** Large-sample null distribution of $\Lambda$
+Under $H_0$, when n is large, $-2\log\Lambda = \chi_k^2$, where $k =
+\text{dim}(\Omega) - \text{dim}(\omega_0)$.
+
+Normal (C): $p = P\left(\chi_1^2 > \frac{(\bar{x} -
+\mu_0)^2}{\sigma^2/n}\right)$
+
+Multinomial: $\Lambda = \prod_{i=1}^{r}
+\left(\frac{E_i}{X_i}\right)^X_i$ where $E_i = np_i(\hat{\theta})$ is
+the expected frequency of the ith event under $H_0$. $-2\log\Lambda
+\approx \sum_{i=1}^{r}\frac{(X_i-E_i)^2}{E_i}$, which is the Pearson
+chi-square statistic, written as $X^2$.
+
+** Poisson Dispersion Test
+For $i = 1 ... n$ let $X_i \sim Poisson(\lambda_i)$ are independent.
+
+$w_0 = \{ \tilde{\lambda} |  \lambda_1 = \lambda_2 = ... =
+\lambda_n\}$
+
+$w_1 = \{\tilde{\lambda} | \lambda_i \ne \lambda_j \text{ for some }
+i,j\}$
+
+$-2\log\Lambda \approx \frac{\sum_{i=1}^{n}(X_i-\bar{X})^2}{\bar{X}}$.
+For large n, the null distribution of $-2\log\Lambda$ is approximately
+$\chi_{n-1}^2$
+
+* Comparing 2 samples
+** Normal Theory: Same Variance
+$X_1, ..., X_n$ be i.i.d $N(\mu_X,\sigma^2)$ and $Y_1,...,Y_m$ be
+i.i.d $N(\mu_Y, \sigma^2)$, independent. $H_0: \mu_X - \mu_Y = d$
+*** Known Variance
+$Z := \frac{\bar{X} - \bar{Y} - (\mu_X -
+\mu_Y)}{\sigma{\sqrt{\frac{1}{n} + \frac{1}{m}}}}$ and reject $H_0$
+when $|Z| > z_{\alpha/2}$
+*** Unknown Variance
+$s_p^2 = \frac{(n-1)s_X^2 + (m-1)s_Y^2}{m+n-2}$ where $s_X^2 =
+\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2. $s_p^2$ is an unbiased
+estimator of $\sigma^2$. $s_X$ within factor of 2 from $s_Y$.
+
+$t := \frac{\bar{X} - \bar{Y} - (\mu_X -
+\mu_Y)}{s_p{\sqrt{\frac{1}{n} + \frac{1}{m}}}}$ follows a t
+distribution with $m+n-2$ d.f.
+
+If two-sided: reject $H_0$ when $|t| > t_{n+m-2,\alpha/2}$. If
+one-sided, e.g $H_1: \mu_X > \mu_Y$, reject $H_0$ when $t >
+t_{n+m-2,\alpha}$. 
+*** CI
+$\frac{\bar{X}-\bar{Y}}\pm z_{\alpha/2} \cdot \sigma
+\sqrt{\frac{1}{n} + \frac{1}{m}}$ if $\sigma$ is known, or
+$\frac{\bar{X}-\bar{Y}}\pm t_{m+n-2, \alpha/2} \cdot s_p
+\sqrt{\frac{1}{n} + \frac{1}{m}}$ if $\sigma$ is unknown.
+*** Unequal Variance
+$Z := \frac{\bar{X} - \bar{Y} - (\mu_X -
+\mu_Y)}{{\sqrt{\frac{\sigma_X^2}{n} + \frac{\sigma_Y^2}{m}}}}$
+
+$t := \frac{\bar{X} - \bar{Y} - (\mu_X -
+\mu_Y)}{{\sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}}}$, with $df =
+\frac{(a+b)^2}{\frac{a^2}{n-1} + \frac{b^2}{m-1}}$ where $a =
+\frac{s_X^2}{n}$ and $b = \frac{s_Y^2}{m}
+** Mann-Whitney Test
+We take the smaller sample of size $n_1$, and sum the ranks in that
+sample. $R' = n_1(m+n+1) -R$, and $R* = min(R',R)$, we reject $H_0: F
+= G$ if $R*$ is too small.
+
+Test works for all distributions, and is robust to outliers.
+** Paired Samples
+$(X_i, Y_i)$ are paired and related to the same individual. $(X_i,
+Y_i)$ is independent from $(X_j, Y_j)$. Compute $D_i = Y_i - X_i$, To
+test $H_0 : \mu_D = d$, $t = \frac{\bar{D} - \mu_D}{s_D/\sqrt{n}}$.
+
+$1-\alpha$ CI: $\bar{D}\pm t_{n-1,\alpha/2}S_D/\sqrt{n}$
+** Ranked Test
+$W_+$ is the sum of ranks among all positive $D_i$ and $W_i$ is the
+sum of ranks among all negative $D_i$. We want to reject $H_0$ if
+$W = min(W_+, W_-)$ is too large.
