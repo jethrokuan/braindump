@@ -1,7 +1,7 @@
 #+TITLE: Statistics
 #+AUTHOR: Jethro Kuan
 #+OPTIONS: toc:nil title:nil author:nil
-* Basic Properties
+* Basic Properties                                                 :noexport:
 1. $E(X) = \sum x p(x)$
 2. $Var(X) = \sum (x-\mu)^2f(x)$
 3. X is around $E(X)$, give or take $SD(X)$
@@ -97,7 +97,7 @@ $\text{sample variance, } S^2 = \frac{1}{n-1}\sum^{n}_{i=1}\left(X_i-\overline{X
 2. $\overline{X} \sim \mathcal{N}(\mu, \frac{\sigma^2}{n})$
 3. $\frac{(n-1)S^2}{\sigma^2} \sim \chi_{n-1}^2$
 4. $\frac{\overline{X} - \mu}{S/\sqrt{n}} \sim t_{n-1}$
-** Survey Sampling
+** Survey Sampling                                                 :noexport:
 In population of size $N$, we are interested in a variable $x$. The
 ith individual has fixed value $x_i$.
 
@@ -116,7 +116,7 @@ $\mu = p, \sigma^2 = p(1-p)$
 ** Simple Random Sampling (SRS)
 Assume $n$ random draws are made without replacement. (Not SRS, will
 be corrected for later).
-*** Lemma A
+*** Lemma A                                                       :noexport:
 The draws $X_i$ have the same distribution, and denote $\xi_1, \xi_2,
 ... \xi_n$ as values assumed by the population, and let the number
 of members with value $\xi_j$ be $n_j$
@@ -124,7 +124,7 @@ of members with value $\xi_j$ be $n_j$
 $P(X_i =\xi_j) = \frac{n_j}{N}$
 
 $E(X_i) = \mu, Var(x_i) = \sigma^2$
-*** Lemma B 
+*** Lemma B                                                       :noexport:
 For $i \ne j$, $Cov(X_i, X_j) = - \frac{\sigma^2}{N-1}$
 
 We use sample mean $\overline{X}$ to estimate $\mu$:
@@ -138,20 +138,15 @@ correction factor.
 In 0-1 population, let $\hat{p}$ be proportion of 1s in the sample:
 
 $E(\hat{p}) = p, SD(\hat{p}) = \sqrt{\frac{p(1-p)}{n}{\frac{N-n}{N-1}}}$
+*** Summary of Lemmas
+- $P(X_i =\xi_j) = \frac{n_j}{N}$: Lemma A
+- For $i \ne j$, $Cov(X_i, X_j) = - \frac{\sigma^2}{N-1}$: Lemma B
 *** Estimation Problem
 Let $X_1, X_2, ..., X_n$ be random draws with replacement. Then
 $\overline{X}$ is an estimator of $\mu$. and the observed value of
 $\overline{X}$, $\overline{x}$ is an estimate of $\mu$.
 *** Standard Error (SE)
-Since $E(\overline{X}) = \mu$, the estimator is unbiased.
-
-The error in a particular estimate $\overline{X}$ is unknown, but on
-average its size is about $SD(\overline{x}) = \frac{\sigma}{\sqrt{n}}$
-
-Standard error of an $\overline{X}$ is defined to be $SD(\overline{X})$
-
-An unbiased estimator for $\sigma^2$ is $s^2 =
-\frac{1}{n-1}\sum^{n}_{i=1}(X_i - \overline{X})^2$
+SE of an $\overline{X}$ is defined to be $SD(\overline{X})$.
 
 | param | est            | SE                        | Est. SE                                 |
 | $\mu$ | $\overline{X}$ | $\frac{\sigma}{\sqrt{n}}$ | $\frac{s}{\sqrt{n}}$                    |
@@ -163,14 +158,14 @@ $\sigma^2$: $E(\frac{N-1}{N}s^2) = \sigma^2$, but N is normally large.
 An approximate $1-\alpha$ CI for $\mu$ is
 
 $(\overline{x} - z_{\alpha/2}\frac{s}{\sqrt{n}}, \overline{x} + z_{\alpha/2}\frac{s}{\sqrt{n}})$
-** Measurement Error
+** Measurement Error                                               :noexport:
 Let $x_1, x_2, ..., x_n$ be independent measurements of unknown
 constant $\mu$. $X_i = \mu + \epsilon_i$.
 
 The errors are IID with expectation 0 , and variance $\sigma^2$. $x_i
 = \mu + e_i$, where $x_i$ and $e_i$ are realisations of the RV. Then
 $\overline{x}$ is an estimate of $\mu$, with SE $\frac{\sigma}{\sqrt{n}}$.
-*** Biased Measurements
+** Biased Measurements
 Let $X = \mu + \epsilon$, where $E(\epsilon) = 0$, $Var(\epsilon) =
 \sigma^2$
 
@@ -198,10 +193,7 @@ $Cov(\overline{X},\overline{Y}) = \frac{\sigma_{xy}}{n}$, where
 $\sigma_{xy} := \frac{1}{N}\sum^{N}_{i=1}(x_i-\mu_x)(x_i-\mu_y)$ is
 the population covariance.
 *** Properties
-With SRS, the approx variance of $R = \overline{Y}/\overline{X}$ is 
-\begin{align*}
-Var(R) &\approx \frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right) \\ &= \frac{1}{n}\frac{N-n}{N-1}\frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right)
-\end{align*}
+$Var(R) &\approx \frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right)$
 
 Population coefficient $\rho =
 \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}$
@@ -233,7 +225,7 @@ $s_{\overline{Y}_R}^2 =
 
 An approximate $1-\alpha$ C.I. for $\mu_y$ is $\overline{Y}_R \pm
 z_{\alpha/2}s_{\overline{Y}_R}$
-* Estimation
+* Estimation                                                       :noexport:
 Let $X_1, X_2, ..., X_n$ be IID random variables with density
 $f(x|\theta)$, where $\theta \in \mathcal{R}^P$ is an unknown
 constant. Realisations $x_1, x_2, ..., x_n$ will be used to estimate
@@ -247,60 +239,51 @@ Let $X_1, X_2, ..., X_n$ be IID with the same distribution as $X$.
 $\hat{\mu}_k = \frac{1}{n}\sum^{n}_{i=1}X_i^k$ is an estimator of
 $\mu_k$, where $\mu_k$ is the kth moment. An estimate is also denoted
 $\hat{\mu}_k$.
-** Method of Moments
-To estimate $\theta$, express it as a function of moments $g(\hat{\mu}_1,\hat{\mu}_2,...)$
-
+* Method of Moments
+To estimate $\theta$, express it as a function of moments
+$g(\hat{\mu}_1,\hat{\mu}_2,...)$
+** Bias and SE                                                     :noexport:
 The bias and SE in an estimate, still depends on the unknown value of
-the constant. Suppose 1.67 and 0.38 are estimates of $\lambda$ and
-$\alpha$. Data is generated from $\Gamma(1.67, 0.38)$, and the MOM
-estimators are written as $\widehat{1.67}$ and $\widehat{0.38}$. Because the
-sample size is large, $(\hat{\lambda} - \lambda, \hat{\alpha}-\alpha)
-\approx (\widehat{1.67} - 1.67, \widehat{0.38} - 0.38)$
+ the constant. Suppose 1.67 and 0.38 are estimates of $\lambda$ and
+ $\alpha$. Data is generated from $\Gamma(1.67, 0.38)$, and the MOM
+ estimators are written as $\widehat{1.67}$ and $\widehat{0.38}$. Because the
+ sample size is large, $(\hat{\lambda} - \lambda, \hat{\alpha}-\alpha)
+ \approx (\widehat{1.67} - 1.67, \widehat{0.38} - 0.38)$
+** Monte Carlo
+*Monte Carlo* is used to generate many realisations of random
+variable.
 
-*Monte Carlo* is used to generate many realisations of
- $\widehat{1.67}$ via the $\Gamma(1.67,0.38)$ distribution. With
- 10,000 realisations,
+ $\overline{X} \xrightarrow[n]{\infty} \alpha/\lambda, \hat{\sigma}^2
+ \xrightarrow[n]{\infty}\alpha/\lambda^2$, MOM estimators are
+ consistent (asymptotically unbiased).
 
-$bias(1.67) = E_{1.67,0.38}(\widehat{1.67} - 1.67) \approx 0.09$
+ $\text{Poisson}(\lambda)$: $\text{bias} = 0, SE \approx \sqrt{\frac{\overline{x}}{n}}$
 
-$SE(1.67) = SD_{1.67,0.38}(\widehat{0.38}) \approx 0.35$
+ $N(\mu, \sigma^2)$: $\mu = \mu_1$, $\sigma^2 = \mu_2 - \mu_1^2$
 
-and $\lambda$ is estimated as $1.58 \pm 0.35$
+ $\Gamma(\lambda, \alpha)$: $\hat{\lambda} =
+ \frac{\hat{\mu}_1}{\hat{\mu}_2-\hat{\mu}_1^2}=\frac{\overline{X}}{\hat{\sigma}^2}, \hat{\alpha} = \frac{\hat{\mu}_1^2}{\hat{\mu}_2-\hat{\mu}_1^2}=\frac{\overline{X}^2}{\hat{\sigma}^2}$
+* Maximum Likelihood Estimator (MLE)
+** Setup                                                         :noexport:
+ Let ${f(\cdot | \theta) : \theta \in \Theta}$ be a (identifiable)
+ parametric identity.
 
-$\overline{X} \xrightarrow[n]{\infty} \alpha/\lambda, \hat{\sigma}^2
-\xrightarrow[n]{\infty}\alpha/\lambda^2$, MOM estimators are
-consistent (asymptotically unbiased).
+ Suppose $X_1, X_2, ...,X_n$ are IID with density $f(\cdot|\theta)$,
+ where $\theta_0 \in \Theta$ is an unknown constant, we want to
+ estimate $\theta_0$ using realisations $x_1, x_2, ..., x_n$.
 
-$\text{Poisson}(\lambda)$: $\text{bias} = 0, SE \approx \sqrt{\frac{\overline{x}}{n}}$
+ $Pr(X_1=x_1, X_2=x_2,...) = \prod^{n}_{i=1}f(x_i|\theta)$ for a
+ discrete distribution.
 
-$N(\mu, \sigma^2)$: $\mu = \mu_1$, $\sigma^2 = \mu_2 - \mu_1^2$
+ $\theta \rightarrow L(\theta) = \prod^{n}_{i=1}f(x_i|\theta)$
 
-$\Gamma(\lambda, \alpha)$: $\hat{\lambda} =
-\frac{\hat{\mu}_1}{\hat{\mu}_2-\hat{\mu}_1^2}=\frac{\overline{X}}{\hat{\sigma}^2}, \hat{\alpha} = \frac{\hat{\mu}_1^2}{\hat{\mu}_2-\hat{\mu}_1^2}=\frac{\overline{X}^2}{\hat{\sigma}^2}$
-** Maximum Likelihood Estimator (MLE)
-Let ${f(\cdot | \theta) : \theta \in \Theta}$ be a (identifiable)
-parametric identity
+ The maximum likelihood (ML) estimate of $\theta_0$ is the number that
+ maximises the likelihood over $\theta$. 
 
-Suppose $X_1, X_2, ...,X_n$ are IID with density $f(\cdot|\theta)$,
-where $\theta_0 \in \Theta$ is an unknown constant, we want to
-estimate $\theta_0$ using realisations $x_1, x_2, ..., x_n$.
-
-$Pr(X_1=x_1, X_2=x_2,...) = \prod^{n}_{i=1}f(x_i|\theta)$ for a
-discrete distribution.
-
-$\theta \rightarrow L(\theta) = \prod^{n}_{i=1}f(x_i|\theta)$
-
-The maximum likelihood (ML) estimate of $\theta_0$ is the number that
-maximises the likelihood over $\theta$. 
-
-The estimate is a realisation of the ML estimator $\hat{\theta}_0$,
-which can also be found my maximising $L(\theta) =
-\prod^{n}_{i=1}f(X_i|\theta)$
-
-The bias and SE are:
-
-$\text{bias} = E_{\theta_0}(\hat{\theta}_0)-\theta_0, SE = SD(\hat{\theta}_0)$
-*** Poisson Case
+ The estimate is a realisation of the ML estimator $\hat{\theta}_0$,
+ which can also be found by maximising $L(\theta) =
+ \prod^{n}_{i=1}f(X_i|\theta)$
+** Poisson Case
 $L(\lambda) = \prod^n_{i=1}\frac{\lambda^{x_i}e^{-\lambda}}{x_i!} = \frac{\lambda\sum^n_{i=1}x_ie^{-n\lambda}}{\prod^{n}_{i=1}x_i!}$
 
 $l(\lambda) = \sum^{n}_{i=1}x_i\log\lambda - n\lambda -
@@ -308,7 +291,7 @@ $l(\lambda) = \sum^{n}_{i=1}x_i\log\lambda - n\lambda -
 
 ML estimate of $\lambda_0$ is $\overline{x}$. ML estimator is
 $\hat{\lambda}_0 = \overline{X}$
-*** Normal case
+** Normal case
 $l(\mu, \sigma) = -n\log\sigma - \frac{n\log 2\pi}{2} - \frac{\sum^{n}_{i=1}\left(X_i-\mu\right)^2}{2\sigma^2}$
 
 $\frac{\partial l}{\partial \mu} = \frac{\sum \left(X_i -
@@ -317,7 +300,7 @@ $\frac{\partial l}{\partial \mu} = \frac{\sum \left(X_i -
 $\frac{\partial l}{\partial \sigma} =
 \frac{\sum^{n}_{i=1}\left(X_i-\mu\right)^2}{\sigma^3} -
 \frac{n}{\sigma} \\ \implies \hat{\sigma^2} = \frac{1}{n}\sum^{n}_{i=1}\left(X_i-\overline{X}\right)^2$
-*** Gamma case
+** Gamma case
 $l(\theta) = n\alpha\log\lambda + (\alpha -1)\sum^{n}_{i=1}\log X_i -
 \lambda\sum^{n}_{i=1} X_i - n\log\Gamma(\alpha)$
 
@@ -328,9 +311,7 @@ $\frac{\partial l}{\partial \lambda} = \frac{n\alpha}{\lambda} -
 \sum^{n}_{i=1}X_i$
 
 $\hat{\lambda} = \frac{\hat{\alpha}}{\hat{x}}$
-
-bias and SE are estimated through Monte Carlo and Bootstrap methods.
-*** Multinomial Case
+** Multinomial Case
 $f(x_1, ..., x_r) = {n \choose {x_1, x_2, ... x_r}} \prod^{n}_{i=1}
 p_i^{X_i}$
 
@@ -355,40 +336,31 @@ $\sum^r_{i=1}\hat{p}_i = \sum^r_{i=1}\frac{x_i}{c} = 1 \\ \implies c =
 \sum^{r}_{i=1}x_i = n \implies \hat{p}_i = \frac{\overline{x}_i}{n}$
 
 same as MOM estimator.
-*** MLE vs MOM
+** MLE vs MOM                                                    :noexport:
 1. ML estimates have smaller SEs than MOM estimates
 2. In some cases bias and SE have to be computed numerically via
    methods like Newton-Rhapson, and requires bootstrap and Monte Carlo
-*** Hardy-Weinberg Equilibrium
+** Hardy-Weinberg Equilibrium                                    :noexport:
 Let a locus have two alleles A and a, where the proportion of $a$ in
 the population is $\theta$.
 
 Assuming, the population is large, and mating is random, then in the
 next generation, the proportion of a alleles is the sum of 2 Be RV,
 $Bin(2,\theta)$ and the number of $a$ alleles is $Bin(2n,\theta)$
-*** CIs in MLE
-When sample size is large, $\hat{\theta}_0$ is approximately normal.
-
+** CIs in MLE
 $\frac{\hat{X} - \mu}{s/\sqrt{n}} \sim t_{n-1}$
 
-Given the realisations $\overline{x}$ and $s$,
+Given the realisations $\overline{x}$ and $s$, $\overline{x} \pm
+t_{n-1, \alpha/2}\frac{s}{\sqrt{n}},\overline{x} + t_{n-1,
+\alpha/2}\frac{s}{\sqrt{n}}$ is the exact $1-\alpha$ CI for $\mu$.
 
-$\left(\overline{x} - t_{n-1, \alpha/2}\frac{s}{\sqrt{n}},
-\overline{x} + t_{n-1, \alpha/2}\frac{s}{\sqrt{n}}\right)$
-
-is the exact $1-\alpha$ CI for $\mu$.
-
-$\frac{n\hat{\sigma}^2}{\sigma^2} \sim \chi_{n-1}^$
-
-$\left(\frac{n\hat{\sigma}^2}{\chi_{n-1,\alpha/2}^2},
-\frac{n\hat{\sigma}^2}{\chi_{n-1,1-\alpha/2}^2}\right)$
-
-is the exact $1-\alpha$ CI for $\sigma$.
+$\frac{n\hat{\sigma}^2}{\sigma^2} \sim \chi_{n-1}^$,
+$\frac{n\hat{\sigma}^2}{\chi_{n-1,\alpha/2}^2},
+\frac{n\hat{\sigma}^2}{\chi_{n-1,1-\alpha/2}^2}$ is the exact
+$1-\alpha$ CI for $\sigma$.
 * Fisher Information
-\begin{equation*}
-  I\left( \theta \right) = - E \left( \frac{\partial}{\partial \theta^2} \log
-    f\left( x | \theta \right) \right)
-\end{equation*}
+$I\left( \theta \right) = - E \left( \frac{\partial}{\partial \theta^2} \log
+    f\left( x | \theta \right) \right)$
 
 | Distribution  | MLE                                          | Variance                                                                                 |
 |---------------+----------------------------------------------+------------------------------------------------------------------------------------------|
@@ -410,16 +382,14 @@ As $n \rightarrow \infty$, $\sqrt{nI(\theta)}(\hat{\theta} -
 \sim N\left(\theta, \frac{I\left( \theta \right)^{-1}}{n}\right)$
 
 As $\hat{\theta} \xrightarrow[n]{\infty} \theta$, MLE is consistent.
-** SE
+
 SE of an estimate of $\theta$ is the SD of the estimator
 $\hat{\theta}$, hence $SE = SD(\hat{\theta}) =
 \sqrt{\frac{I(\theta)^{-1}}{n}} \approx
 \sqrt{\frac{I(\hat{\theta})^{-1}}{n}}$
-** Random Intervals
-\begin{equation*}
-1-\alpha \text{ CI } \approx \hat{\theta} \pm
-  z_{\alpha/2}\sqrt{\frac{I(\theta)^{-1}}{n}}
-\end{equation*}
+
+$1-\alpha \text{ CI } \approx \hat{\theta} \pm
+  z_{\alpha/2}\sqrt{\frac{I(\theta)^{-1}}{n}}$
 * Sufficiency
 ** Definition                                                      :noexport:
  Let $T(X)$ be a function of $X = (X_1, X_2, ..., X_n)$. In general,
@@ -438,7 +408,7 @@ f_{\theta}(X\x|T=t) = q(x)$.
 ** Factorisation Theorem
 $T$ is sufficient for  $\theta$ iff $\exists g(t,\theta), h(x)
 \text{ s.t. } \forall \theta \in \Theta, f_\theta(x) = g(T(x), \theta) h(x)
-\all x$
+\forall x$
 ** Rao-Blackwell Theorem
 Let $\hat{\theta}$ be an estimator of $\theta$ with finite variance,
 $T$ be sufficient for $\theta$. Let $\tilde{\theta} =
@@ -453,24 +423,21 @@ $\hat{\theta}$ is a function of $T$.
 4. $E(Y) = Y, var(Y) =0$ iff $Y$ is a constant
 * Hypothesis Testing
 Let $X_1... X_n$ be IID with density $f(x|\theta)$. null $H_0: \theta
-= \theta_0$, $H-1 : \theta = \theta_1$. Let the critical region be
-$R\subsetR_n$. Then, $size = P_0(X \in R)$ and $power = P_1(X\in R)$.
+= \theta_0$, $H-1 : \theta = \theta_1$. Critical region is
+$R\subsetR_n$. $size = P_0(X \in R)$ and $power = P_1(X\in R)$.
 
-The likelihood ratio of $H_0 to H_1$ is $\Lambda(x) =
-\frac{f_0(x_1)...f_0(x_n)}{f_1(x_1)...f_1(x_n)}$. The smaller
-$\Lambda(x)$ the more evidence against $H_0$. We define critical
-region ${x : \Lambda(x) < c_\alpha}$, and among all tests with this
-size, it has the maximum power (Neyman-Pearson Lemma).
+$\Lambda(x) = \frac{f_0(x_1)...f_0(x_n)}{f_1(x_1)...f_1(x_n)}$.
+Critical region ${x : \Lambda(x) < c_\alpha}$, and among all tests
+with this size, it has the maximum power (Neyman-Pearson Lemma).
 
 A hypothesis is simple if it completely specifies the distibution of
-the data. In many cases, $H_1$ is composite: (B) $H_1 : \mu > \mu_0$
-(C) $H_1 : \mu \ne \mu_0$.
+the data.
 
-(B) Critical region $\{\bar{x} > \mu_0 +
+$H_1 : \mu > \mu_0$:  Critical region $\{\bar{x} > \mu_0 +
 z_\alpha\frac{\sigma}{\sqrt{n}}\}$, the power is a function of $\mu$,
 and this is uniformly the most powerful test for size $\le \alpha$.
 
-(C) Critical region $\{|\bar{x}-\mu_0| > c\}, c =
+$H_1 : \mu \ne \mu_0$: Critical region $\{|\bar{x}-\mu_0| > c\}, c =
 z_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}$, but not uniformly most
 powerful.
 
@@ -551,7 +518,7 @@ $Z := \frac{\bar{X} - \bar{Y} - (\mu_X -
 $t := \frac{\bar{X} - \bar{Y} - (\mu_X -
 \mu_Y)}{{\sqrt{\frac{s_X^2}{n} + \frac{s_Y^2}{m}}}}$, with $df =
 \frac{(a+b)^2}{\frac{a^2}{n-1} + \frac{b^2}{m-1}}$ where $a =
-\frac{s_X^2}{n}$ and $b = \frac{s_Y^2}{m}
+\frac{s_X^2}{n}$ and $b = \frac{s_Y^2}{m}$
 ** Mann-Whitney Test
 We take the smaller sample of size $n_1$, and sum the ranks in that
 sample. $R' = n_1(m+n+1) -R$, and $R* = min(R',R)$, we reject $H_0: F
