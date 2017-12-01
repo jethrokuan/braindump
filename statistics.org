@@ -1,7 +1,7 @@
 #+TITLE: Statistics
 #+AUTHOR: Jethro Kuan
 #+OPTIONS: toc:nil title:nil author:nil
-* Basic Properties                                                 :noexport:
+* Basic Properties
 1. $E(X) = \sum x p(x)$
 2. $Var(X) = \sum (x-\mu)^2f(x)$
 3. X is around $E(X)$, give or take $SD(X)$
@@ -9,12 +9,7 @@
 5. $Var(aX + bY) = a^2Var(X) + b^2Var(Y)$
 6. $Var(X) = E(X^2) - [E(X)]^2$
 7. $Cov(X_1, X_2) = E(X_1X_2) - E(X_1)E(X_2)$
-8. $P(A\intersect B) = P(A)P(B)$ if A and B independent
-9. RV is centered when $E(X)=0$, and any RV can be centered via $Y =
-   X - E(X)$, with SD and variance unaffected
-10. In $X = \mu + \epsilon$, $\mu$ is the unknown constant of interest,
-    and $\epsilon$ represents random measurement error.
-11. if $X$, $Y$ are independent:
+8. if $X$, $Y$ are independent:
     1. $M_{X+Y}(t) = M_X(t)M_Y(t)$ 
     2. $E(XY)=E(X)E(Y)$, converse is true if $X$ and $Y$ are bivariate
        normal, extends to multivariate normal
@@ -390,6 +385,12 @@ $\hat{\theta}$, hence $SE = SD(\hat{\theta}) =
 
 $1-\alpha \text{ CI } \approx \hat{\theta} \pm
   z_{\alpha/2}\sqrt{\frac{I(\theta)^{-1}}{n}}$
+* Efficiency
+Cramer-Rao Inequality: if $\theta$ is unbiased, then $\forall \theta
+\in \Theta$ , $var(\hat{\theta}) \ge I(\hat{\theta})^{-1}/n$, if =
+then $\hat{\theta}$ is efficient.
+
+$eff(\hat{\theta}) = \frac{I(\hat{\theta})^{-1}/n}{var(\hat{\theta})}< 1$
 * Sufficiency
 ** Definition                                                      :noexport:
  Let $T(X)$ be a function of $X = (X_1, X_2, ..., X_n)$. In general,
@@ -400,7 +401,7 @@ $1-\alpha \text{ CI } \approx \hat{\theta} \pm
 Theorem: If $T$ is sufficient for $\theta$, then the ML estimator is a
 function of $T$.
 ** Characterisation
-Let $S_t = {x: T(x) =t=}$. The sample space of $X$, $S$ is the
+Let $S_t = {x: T(x) = t}$. The sample space of $X$, $S$ is the
 disjoint union of $S_t$ across all possible values of $T$.
 
 $T$ is sufficient for $\theta$ if $\exists q() \text{ s.t. } \forall x \in S_t,
@@ -452,7 +453,6 @@ P(Z>\frac{\bar{x} - \mu_0}{\sigma/\sqrt{n}})$. (C): $p =
 P_0(|\bar{X} - \mu_0| > |\bar{x} - \mu_0|)$. The smaller the p-value,
 the more suspicious one should be about $H_0$. If size is smaller than
 p-value, do not reject $H_0$.
-
 
 * Generalized Likelihood Ratio
 $\Lambda^* = \frac{\text{max}_{\theta \in
