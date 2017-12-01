@@ -468,7 +468,7 @@ Normal (C): $p = P\left(\chi_1^2 > \frac{(\bar{x} -
 \mu_0)^2}{\sigma^2/n}\right)$
 
 Multinomial: $\Lambda = \prod_{i=1}^{r}
-\left(\frac{E_i}{X_i}\right)^X_i$ where $E_i = np_i(\hat{\theta})$ is
+\left(\frac{E_i}{X_i}\right)^{X_i}$ where $E_i = np_i(\hat{\theta})$ is
 the expected frequency of the ith event under $H_0$. $-2\log\Lambda
 \approx \sum_{i=1}^{r}\frac{(X_i-E_i)^2}{E_i}$, which is the Pearson
 chi-square statistic, written as $X^2$.
