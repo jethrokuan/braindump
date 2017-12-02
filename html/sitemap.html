@@ -6,7 +6,7 @@
 <!-- 2017-12-02 Sat 22:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Sitemap for project org-notes</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
 <style type="text/css">
@@ -229,213 +229,36 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<div id="table-of-contents">
-<h2>Table of Contents</h2>
-<div id="text-table-of-contents">
-<ul>
-<li><a href="#orgcbf97a3">1. Kubernetes</a>
-<ul>
-<li><a href="#org08aec38">1.1. Features of a COE</a></li>
-<li><a href="#orge3a9bfa">1.2. Why use kubernetes</a></li>
-<li><a href="#orgef01602">1.3. Downsides to kubernetes</a></li>
-<li><a href="#orgdb67a45">1.4. Architecture</a></li>
-<li><a href="#orgef3b9dc">1.5. Replication controller vs set</a></li>
-<li><a href="#orgfd6d82c">1.6. Selectors</a></li>
-<li><a href="#orgba2c8d8">1.7. Kubernetes Schema</a></li>
-</ul>
-</li>
-</ul>
-</div>
-</div>
-<div id="outline-container-orgcbf97a3" class="outline-2">
-<h2 id="orgcbf97a3"><span class="section-number-2">1</span> Kubernetes</h2>
-<div class="outline-text-2" id="text-1">
-<p>
-<a href="https://www.opencontainers.org/">Open Containers Initiative</a>
-</p>
-</div>
-<div id="outline-container-org08aec38" class="outline-3">
-<h3 id="org08aec38"><span class="section-number-3">1.1</span> Features of a COE</h3>
-<div class="outline-text-3" id="text-1-1">
-<ol class="org-ol">
-<li>clustering</li>
-<li>scheduling</li>
-<li>scaling</li>
-<li>load balancing (pets to cattle)
+<h1 class="title">Sitemap for project org-notes</h1>
 <ul class="org-ul">
-<li>monitoring services vs monitoring</li>
-</ul></li>
-<li>fault tolerance</li>
-<li>app deployment</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-orge3a9bfa" class="outline-3">
-<h3 id="orge3a9bfa"><span class="section-number-3">1.2</span> Why use kubernetes</h3>
-<div class="outline-text-3" id="text-1-2">
-<ol class="org-ol">
-<li>google</li>
-<li>battle hardened</li>
-<li>features</li>
-<li>open source</li>
-</ol>
-</div>
-</div>
-<div id="outline-container-orgef01602" class="outline-3">
-<h3 id="orgef01602"><span class="section-number-3">1.3</span> Downsides to kubernetes</h3>
-<div class="outline-text-3" id="text-1-3">
-<ol class="org-ol">
-<li>complex</li>
-<li>zero to dev</li>
-<li>non-native</li>
-</ol>
-
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Feature</th>
-<th scope="col" class="org-left">Concept</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">Colocation</td>
-<td class="org-left">Pods</td>
-</tr>
-
-<tr>
-<td class="org-left">Scaling/Fault Tolerance</td>
-<td class="org-left">Replication controllers, replica sets</td>
-</tr>
-
-<tr>
-<td class="org-left">Load Balancing</td>
-<td class="org-left">Services</td>
-</tr>
-
-<tr>
-<td class="org-left">App Deployment</td>
-<td class="org-left">Rolling-updates</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<div id="outline-container-orgdb67a45" class="outline-3">
-<h3 id="orgdb67a45"><span class="section-number-3">1.4</span> Architecture</h3>
-<div class="outline-text-3" id="text-1-4">
-<p>
-kubectl &lt;&#x2014; scheduler (which node is used for container launch etc.)
-             api server
-             controllers manager (replication controller etc.)
-             etcd (service discovery)
-</p>
-
-<p>
-MASTER
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgef3b9dc" class="outline-3">
-<h3 id="orgef3b9dc"><span class="section-number-3">1.5</span> Replication controller vs set</h3>
-<div class="outline-text-3" id="text-1-5">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<thead>
-<tr>
-<th scope="col" class="org-left">Controller</th>
-<th scope="col" class="org-left">Set</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="org-left">old way</td>
-<td class="org-left">new way</td>
-</tr>
-
-<tr>
-<td class="org-left">works with rolling updates</td>
-<td class="org-left">supports sets based selectors</td>
-</tr>
-
-<tr>
-<td class="org-left">imperative</td>
-<td class="org-left">part of deployments</td>
-</tr>
-
-<tr>
-<td class="org-left">&#xa0;</td>
-<td class="org-left">declarative</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-
-<div id="outline-container-orgfd6d82c" class="outline-3">
-<h3 id="orgfd6d82c"><span class="section-number-3">1.6</span> Selectors</h3>
-<div class="outline-text-3" id="text-1-6">
-<p>
-eg. I want to select these pods, add it to replication sets
-</p>
-</div>
-</div>
-
-<div id="outline-container-orgba2c8d8" class="outline-3">
-<h3 id="orgba2c8d8"><span class="section-number-3">1.7</span> Kubernetes Schema</h3>
-<div class="outline-text-3" id="text-1-7">
-<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-
-
-<colgroup>
-<col  class="org-left" />
-
-<col  class="org-left" />
-</colgroup>
-<tbody>
-<tr>
-<td class="org-left">Api Version</td>
-<td class="org-left">v1</td>
-</tr>
-
-<tr>
-<td class="org-left">Kind</td>
-<td class="org-left">Pod/ReplicaSet/ReplicaController</td>
-</tr>
-
-<tr>
-<td class="org-left">Metadata</td>
-<td class="org-left">name/labels</td>
-</tr>
-
-<tr>
-<td class="org-left">Spec</td>
-<td class="org-left">Containers</td>
-</tr>
-</tbody>
-</table>
-
-<p>
-<a href="https://github.com/schoolofdevops/course-outlines">School of Dev Ops</a>
-<a href="https://katacoda.com/">KataCoda</a>
-</p>
-</div>
-</div>
-</div>
+<li><a href="ds_algo.html">Data Structures and Algorithms</a></li>
+<li><a href="docker.html">Docker 101</a></li>
+<li><a href="haskell.html">Haskell</a></li>
+<li><a href="statistics.html">Statistics</a></li>
+<li><a href="computer_organization.html">computer<sub>organization</sub></a></li>
+<li><a href="consciousness.html">consciousness</a></li>
+<li><a href="cplusplus.html">cplusplus</a></li>
+<li><a href="deep_learning.html">deep<sub>learning</sub></a></li>
+<li><a href="devops.html">devops</a></li>
+<li><a href="emacs.html">emacs</a></li>
+<li><a href="feeds.html">feeds</a></li>
+<li><a href="ger1000.html">ger1000</a></li>
+<li><a href="ges1028.html">ges1028</a></li>
+<li><a href="http.html">http</a></li>
+<li><a href="ideas.html">ideas</a></li>
+<li><a href="ios.html">ios</a></li>
+<li><a href="is1103.html">is1103</a></li>
+<li><a href="java.html">java</a></li>
+<li><a href="operatingsystems.html">operatingsystems</a></li>
+<li><a href="productivity.html">productivity</a></li>
+<li><a href="programming_methodology.html">programming<sub>methodology</sub></a></li>
+<li><a href="ritual.html">ritual</a></li>
+<li><a href="scala.html">scala</a></li>
+<li><a href="security.html">security</a></li>
+<li><a href="sleep.html">sleep</a></li>
+<li><a href="system_design.html">system<sub>design</sub></a></li>
+<li><a href="unix.html">unix</a></li>
+</ul>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>

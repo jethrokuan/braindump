@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-12-02 Sat 21:47 -->
+<!-- 2017-12-02 Sat 22:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Structures and Algorithms</title>
@@ -413,24 +413,24 @@ Search)</li>
 <li>Binary Search \(O(\log n)\)</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-java"><span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">binarySearch</span>(<span style="color: #7CB8BB;">int</span>[] <span style="color: #DFAF8F;">arr</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">key</span>) {
-    <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">start</span> = 0, <span style="color: #DFAF8F;">end</span> = arr.length - 1;
-    <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">found</span> = -1;
-    <span style="color: #F0DFAF; font-weight: bold;">while</span>(start &lt;= end) {
-        <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">mid</span> = start + (end - start)/2;
-        <span style="color: #F0DFAF; font-weight: bold;">if</span>(arr[mid] &lt; key) {
+<pre class="src src-java">int binarySearch(int[] arr, int key) {
+    int start = 0, end = arr.length - 1;
+    int found = -1;
+    while(start &lt;= end) {
+        int mid = start + (end - start)/2;
+        if(arr[mid] &lt; key) {
             start = mid + 1;
-        } <span style="color: #F0DFAF; font-weight: bold;">else</span> <span style="color: #F0DFAF; font-weight: bold;">if</span>(arr[mid] &gt; key) {
+        } else if(arr[mid] &gt; key) {
             end = mid - 1;
-        } <span style="color: #F0DFAF; font-weight: bold;">else</span> {
+        } else {
             found = mid;
-            <span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">if we want first instance</span>
+            // if we want first instance
             end = mid - 1;
-            <span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">if we want last instance</span>
-            <span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">start = mid + 1;</span>
+            // if we want last instance
+            // start = mid + 1;
         }
     }
-    <span style="color: #F0DFAF; font-weight: bold;">return</span> found;
+    return found;
 }
 </pre>
 </div>
@@ -916,8 +916,8 @@ also O(V+E))</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org52e8a70" class="outline-3">
-<h3 id="org52e8a70"><span class="section-number-3">9.2</span> SSSP</h3>
+<div id="outline-container-orgd633da4" class="outline-3">
+<h3 id="orgd633da4"><span class="section-number-3">9.2</span> SSSP</h3>
 <div class="outline-text-3" id="text-9-2">
 </div>
 <div id="outline-container-orge921d47" class="outline-4">
@@ -1219,18 +1219,18 @@ there is only one path from any node to another</li>
 <li>Invariant: At step k, shortest path via nodes 0 to k are correct</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-java"><span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">precondition: A[i][j] contains weight</span>
-<span style="color: #5F7F5F;">//  </span><span style="color: #7F9F7F;">of edge (i,j) or inf if no edge</span>
-<span style="color: #7CB8BB;">int</span>[][] <span style="color: #93E0E3;">APSP</span>(<span style="color: #7CB8BB;">A</span>) {
-  <span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">len = # vertices</span>
-  <span style="color: #5F7F5F;">// </span><span style="color: #7F9F7F;">clone A into S</span>
-  <span style="color: #F0DFAF; font-weight: bold;">for</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">k</span> = 0; k &lt; <span style="color: #7CB8BB;">len</span>; k++)
-      <span style="color: #F0DFAF; font-weight: bold;">for</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">i</span> = 0; i &lt; <span style="color: #7CB8BB;">len</span>; i++)
-          <span style="color: #F0DFAF; font-weight: bold;">for</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">j</span> = 0; j &lt; <span style="color: #7CB8BB;">len</span>; j++)
+<pre class="src src-java">// precondition: A[i][j] contains weight
+//  of edge (i,j) or inf if no edge
+int[][] APSP(A) {
+  // len = # vertices
+  // clone A into S
+  for(int k = 0; k &lt; len; k++)
+      for(int i = 0; i &lt; len; i++)
+          for(int j = 0; j &lt; len; j++)
               S[i][j] =
                   Math.min(S[i][j],
                            S[i][k] + S[k][j]);
-  <span style="color: #F0DFAF; font-weight: bold;">return</span> S;
+  return S;
 }
 </pre>
 </div>
@@ -1298,20 +1298,20 @@ nodes connected and no other used edge. False otherwise. \(O(V)\)
 <li>only two possiblities for each vertex; taken or not</li>
 </ul>
 <div class="org-src-container">
-<pre class="src src-java"><span style="color: #7CB8BB;">int</span> <span style="color: #93E0E3;">MVC</span>(<span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">v</span>, <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">flag</span>) {
-    <span style="color: #7CB8BB;">int</span> <span style="color: #DFAF8F;">ans</span> = 0;
-    <span style="color: #F0DFAF; font-weight: bold;">if</span> (memo[v][flag] != -1)
-        <span style="color: #F0DFAF; font-weight: bold;">return</span> memo[v][flag];
-    <span style="color: #F0DFAF; font-weight: bold;">else</span> <span style="color: #F0DFAF; font-weight: bold;">if</span> (leaf[v]) <span style="color: #5F7F5F;">//</span><span style="color: #7F9F7F;">if v is leaf</span>
+<pre class="src src-java">int MVC(int v, int flag) {
+    int ans = 0;
+    if (memo[v][flag] != -1)
+        return memo[v][flag];
+    else if (leaf[v]) //if v is leaf
         ans = flag;
-    <span style="color: #F0DFAF; font-weight: bold;">else</span> <span style="color: #F0DFAF; font-weight: bold;">if</span> (flag == 0) {
+    else if (flag == 0) {
         ans = 0;
-        <span style="color: #F0DFAF; font-weight: bold;">for</span>(child : adjList[v]) {
+        for(child : adjList[v]) {
             ans+= MVC(child, 1);
         }
     }
-    <span style="color: #F0DFAF; font-weight: bold;">else</span> <span style="color: #F0DFAF; font-weight: bold;">if</span> (flag == 1) {
-        <span style="color: #F0DFAF; font-weight: bold;">for</span> (child : adjList[v]) {
+    else if (flag == 1) {
+        for (child : adjList[v]) {
             ans += min(MVC(child,1),
                        MVC(child,0));
         }
@@ -1321,8 +1321,8 @@ nodes connected and no other used edge. False otherwise. \(O(V)\)
 </div>
 </div>
 </div>
-<div id="outline-container-org9bf091b" class="outline-4">
-<h4 id="org9bf091b"><span class="section-number-4">9.7.3</span> SSSP</h4>
+<div id="outline-container-orgc9cfce2" class="outline-4">
+<h4 id="orgc9cfce2"><span class="section-number-4">9.7.3</span> SSSP</h4>
 <div class="outline-text-4" id="text-9-7-3">
 <ul class="org-ul">
 <li>On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
@@ -1472,7 +1472,7 @@ pMergeSort(A, n)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2017-12-02 Sat 21:47</p>
+<p class="date">Created: 2017-12-02 Sat 22:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

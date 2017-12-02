@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2017-12-02 Sat 21:54 -->
+<!-- 2017-12-02 Sat 22:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -301,20 +301,20 @@ for the JavaScript code in this tag.
 <li><a href="#org8d78d85">3.1. Scheduling Metrics</a></li>
 <li><a href="#orgb5325ad">3.2. First Come First Served (FCFS)</a>
 <ul>
-<li><a href="#org8322461">3.2.1. Pros</a></li>
-<li><a href="#org191e78d">3.2.2. Cons</a></li>
+<li><a href="#orgf0300c8">3.2.1. Pros</a></li>
+<li><a href="#orgd1c323c">3.2.2. Cons</a></li>
 </ul>
 </li>
 <li><a href="#org6f86609">3.3. Shortest Job First (SJF)</a>
 <ul>
-<li><a href="#org1e2cce9">3.3.1. Pros</a></li>
-<li><a href="#org99deadc">3.3.2. Cons</a></li>
+<li><a href="#org03cc318">3.3.1. Pros</a></li>
+<li><a href="#org737017f">3.3.2. Cons</a></li>
 </ul>
 </li>
 <li><a href="#org485b273">3.4. Shortest Time-to-Completion First (SRT)</a>
 <ul>
-<li><a href="#orgbaafe40">3.4.1. Pros</a></li>
-<li><a href="#org2f2174a">3.4.2. Cons</a></li>
+<li><a href="#org5976d75">3.4.1. Pros</a></li>
+<li><a href="#org7edc9da">3.4.2. Cons</a></li>
 </ul>
 </li>
 <li><a href="#orgfe1579c">3.5. Round Robin</a>
@@ -354,8 +354,8 @@ for the JavaScript code in this tag.
 <li><a href="#org7f399a0">5.5.2. Evaluating locks</a></li>
 <li><a href="#orgda69f9e">5.5.3. Approach 1: Controlling Interrupts</a>
 <ul>
-<li><a href="#orgf67d89b">5.5.3.1. Pros</a></li>
-<li><a href="#orgf377176">5.5.3.2. Cons</a></li>
+<li><a href="#org5d354e9">5.5.3.1. Pros</a></li>
+<li><a href="#orgb2ed559">5.5.3.2. Cons</a></li>
 </ul>
 </li>
 <li><a href="#orgb0b90a0">5.5.4. Approach 2: Test and Set</a>
@@ -969,16 +969,16 @@ Average Turnaround time:
 (10 + 20 + 30)/3 = 20
 </p>
 </div>
-<div id="outline-container-org8322461" class="outline-4">
-<h4 id="org8322461"><span class="section-number-4">3.2.1</span> Pros</h4>
+<div id="outline-container-orgf0300c8" class="outline-4">
+<h4 id="orgf0300c8"><span class="section-number-4">3.2.1</span> Pros</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 Easy to implement
 </p>
 </div>
 </div>
-<div id="outline-container-org191e78d" class="outline-4">
-<h4 id="org191e78d"><span class="section-number-4">3.2.2</span> Cons</h4>
+<div id="outline-container-orgd1c323c" class="outline-4">
+<h4 id="orgd1c323c"><span class="section-number-4">3.2.2</span> Cons</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 <i>Convoy effect</i>: a number of relatively-short potential consumers
@@ -1000,16 +1000,16 @@ of a resource get queued behind a heavyweight resource consumer.
 Schedule the job that takes the shortest TU.
 </p>
 </div>
-<div id="outline-container-org1e2cce9" class="outline-4">
-<h4 id="org1e2cce9"><span class="section-number-4">3.3.1</span> Pros</h4>
+<div id="outline-container-org03cc318" class="outline-4">
+<h4 id="org03cc318"><span class="section-number-4">3.3.1</span> Pros</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
 Optimizes for Turnaround time
 </p>
 </div>
 </div>
-<div id="outline-container-org99deadc" class="outline-4">
-<h4 id="org99deadc"><span class="section-number-4">3.3.2</span> Cons</h4>
+<div id="outline-container-org737017f" class="outline-4">
+<h4 id="org737017f"><span class="section-number-4">3.3.2</span> Cons</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <p>
 Relies on unrealistic assumptions. For example, if A takes 100TU, and
@@ -1028,16 +1028,16 @@ Any time a new job enters the system, it determines the job that has
 the least time left, and schedules that one first.
 </p>
 </div>
-<div id="outline-container-orgbaafe40" class="outline-4">
-<h4 id="orgbaafe40"><span class="section-number-4">3.4.1</span> Pros</h4>
+<div id="outline-container-org5976d75" class="outline-4">
+<h4 id="org5976d75"><span class="section-number-4">3.4.1</span> Pros</h4>
 <div class="outline-text-4" id="text-3-4-1">
 <p>
 Good turnaround time
 </p>
 </div>
 </div>
-<div id="outline-container-org2f2174a" class="outline-4">
-<h4 id="org2f2174a"><span class="section-number-4">3.4.2</span> Cons</h4>
+<div id="outline-container-org7edc9da" class="outline-4">
+<h4 id="org7edc9da"><span class="section-number-4">3.4.2</span> Cons</h4>
 <div class="outline-text-4" id="text-3-4-2">
 <p>
 Bad for response time and interactivity.
@@ -1485,16 +1485,16 @@ void unlock() {
 </pre>
 </div>
 </div>
-<div id="outline-container-orgf67d89b" class="outline-5">
-<h5 id="orgf67d89b"><span class="section-number-5">5.5.3.1</span> Pros</h5>
+<div id="outline-container-org5d354e9" class="outline-5">
+<h5 id="org5d354e9"><span class="section-number-5">5.5.3.1</span> Pros</h5>
 <div class="outline-text-5" id="text-5-5-3-1">
 <ol class="org-ol">
 <li>Simplicity</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf377176" class="outline-5">
-<h5 id="orgf377176"><span class="section-number-5">5.5.3.2</span> Cons</h5>
+<div id="outline-container-orgb2ed559" class="outline-5">
+<h5 id="orgb2ed559"><span class="section-number-5">5.5.3.2</span> Cons</h5>
 <div class="outline-text-5" id="text-5-5-3-2">
 <ol class="org-ol">
 <li>Requires calling thread to perform a <i>privileged</i> operation</li>
@@ -2518,7 +2518,7 @@ others) do not obey this stack property.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2017-12-02 Sat 21:54</p>
+<p class="date">Created: 2017-12-02 Sat 22:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
