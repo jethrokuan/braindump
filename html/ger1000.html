@@ -1,0 +1,1217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2017-12-02 Sat 21:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org718db47">1. Chapter 1: Design</a>
+<ul>
+<li><a href="#org31e249a">1.1. What is a study?</a></li>
+<li><a href="#org9aedabd">1.2. Confounders</a></li>
+<li><a href="#orgd2c0835">1.3. Randomized-controlled experiments</a></li>
+<li><a href="#orgc4ed47c">1.4. Observational Studies</a></li>
+<li><a href="#orgf270ec7">1.5. Variable Types</a>
+<ul>
+<li><a href="#org79ccc24">1.5.1. Discrete</a></li>
+<li><a href="#orgd53bea5">1.5.2. Continuous</a></li>
+</ul>
+</li>
+<li><a href="#orgdde3171">1.6. 2x2 contingency table</a></li>
+<li><a href="#orga1a913b">1.7. Association</a></li>
+<li><a href="#org7a7a563">1.8. Adherence</a></li>
+<li><a href="#org535567b">1.9. Simpsons Paradox</a></li>
+<li><a href="#org0d0a39d">1.10. Design</a>
+<ul>
+<li><a href="#org9239cf7">1.10.1. Theorem</a></li>
+</ul>
+</li>
+<li><a href="#orga026d51">1.11. Risk Ratio</a></li>
+<li><a href="#org7b73e26">1.12. Odds Ratio</a>
+<ul>
+<li><a href="#orged92b55">1.12.1. Population vs Estimated RR</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org56c4d0c">2. Chapter 2: Association</a>
+<ul>
+<li><a href="#org308d4e3">2.1. Categorical Variables</a>
+<ul>
+<li><a href="#org51511c3">2.1.1. Measurements of Association: RR and OR</a></li>
+</ul>
+</li>
+<li><a href="#org47415fb">2.2. Measurement Variables</a>
+<ul>
+<li><a href="#orge9e1f90">2.2.1. Bivariate data and Scatter Diagram</a></li>
+<li><a href="#orgcb2b4e0">2.2.2. Exploring relationship</a></li>
+<li><a href="#org2e8f9bb">2.2.3. Correlation Coefficient</a></li>
+<li><a href="#orga53f51c">2.2.4. Standard Unit</a></li>
+<li><a href="#org1634fa8">2.2.5. Limitations</a>
+<ul>
+<li><a href="#org71c3327">2.2.5.1. Causation</a></li>
+<li><a href="#org4ea082e">2.2.5.2. Outliers in data set</a></li>
+<li><a href="#org388e943">2.2.5.3. non-linear association</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgc52b2b2">2.3. Ecological Correlation</a>
+<ul>
+<li><a href="#org9645d89">2.3.1. Ecological Fallacy</a></li>
+<li><a href="#orgbfa35df">2.3.2. Atomistic Fallacy</a></li>
+</ul>
+</li>
+<li><a href="#org1567907">2.4. Association</a>
+<ul>
+<li><a href="#org06038a9">2.4.1. Attentuation Effect</a></li>
+<li><a href="#org0e2ee35">2.4.2. Regression fallacy</a></li>
+</ul>
+</li>
+<li><a href="#orgb71b60b">2.5. Prediction with linear regression</a></li>
+</ul>
+</li>
+<li><a href="#orge662b72">3. Chapter 3: Sampling</a>
+<ul>
+<li><a href="#org0f3724f">3.1. Definitions</a></li>
+<li><a href="#orga57c788">3.2. Sampling methods</a></li>
+<li><a href="#org5d327fe">3.3. Difficulties in Sampling</a></li>
+</ul>
+</li>
+<li><a href="#org2b42639">4. Chapter 4: Probability</a>
+<ul>
+<li><a href="#orge4240ae">4.1. Interpretations</a></li>
+<li><a href="#org94fc1e4">4.2. P-values</a></li>
+<li><a href="#org6375445">4.3. Testing rare events (Medical screening)</a></li>
+</ul>
+</li>
+<li><a href="#orgb13d529">5. Chapter 5: Networks</a>
+<ul>
+<li><a href="#orgba07f6e">5.1. Definitions</a></li>
+<li><a href="#orga0e9239">5.2. Centrality</a></li>
+</ul>
+</li>
+<li><a href="#org97d2904">6. Appendix: Answering Questions</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org718db47" class="outline-2">
+<h2 id="org718db47"><span class="section-number-2">1</span> Chapter 1: Design</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org31e249a" class="outline-3">
+<h3 id="org31e249a"><span class="section-number-3">1.1</span> What is a study?</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A study seeks to establish whether there is an <i>association</i> between a
+<i>dependent</i> and <i>independent</i> variable.
+</p>
+
+<p>
+Statisticians use the method of comparison to find the effect of
+<span class="underline">treatment/exposure</span> on a <span class="underline">disease/response</span>.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">exposure</th>
+<th scope="col" class="org-left">response</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">vaccine</td>
+<td class="org-left">polio</td>
+</tr>
+
+<tr>
+<td class="org-left">heart disease</td>
+<td class="org-left">polio</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">smoking</td>
+<td class="org-left">heart disease</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">obesity</td>
+<td class="org-left">depression</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Compare the responses of a treatment group to a control group.
+</p>
+</div>
+</div>
+<div id="outline-container-org9aedabd" class="outline-3">
+<h3 id="org9aedabd"><span class="section-number-3">1.2</span> Confounders</h3>
+<div class="outline-text-3" id="text-1-2">
+<ul class="org-ul">
+<li>If the control group is similar to the treatment group, apart from
+the treatment, the differences in response are likely to be due to
+the effect of the exposure</li>
+<li>If not, then other effects could be "confounded" with the results of
+the treatment. These are called confounders.</li>
+<li>Confounders must be associated with both the exposure and the response</li>
+<li>Minimized through randomized-control.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd2c0835" class="outline-3">
+<h3 id="orgd2c0835"><span class="section-number-3">1.3</span> Randomized-controlled experiments</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Objective: ensure similarity between treatment and control group
+</p>
+
+<ol class="org-ol">
+<li>Put subjects into treatment and control at random</li>
+<li>If possible, give control placebo:
+<ul class="org-ul">
+<li>neutral, but resembles treatment.</li>
+<li>Response should be treatment itself and not idea of it</li>
+</ul></li>
+<li>Double-blind:
+<ul class="org-ul">
+<li>Subjects and evaluators do not know whether subject is in
+treatment or control group.</li>
+<li>Prevents bias in analysis</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgc4ed47c" class="outline-3">
+<h3 id="orgc4ed47c"><span class="section-number-3">1.4</span> Observational Studies</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+In controlled experiments, investigators decide who will be in the
+treatment group and who will be in the control group.
+</p>
+
+<p>
+In observational studies, subjects assign themselves to the different
+groups. To see if confounding is a problem, look at how the exposed
+and non-exposed groups are selected.
+</p>
+
+<p>
+One way to control for confounders is to make comparisons for smaller
+and more homogeneous grups (eg. by age, sex). This is called
+"slicing" (not an official term).
+</p>
+
+<p>
+Observational studies can establish <i>association</i>. But association
+does not imply causation.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf270ec7" class="outline-3">
+<h3 id="orgf270ec7"><span class="section-number-3">1.5</span> Variable Types</h3>
+<div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org79ccc24" class="outline-4">
+<h4 id="org79ccc24"><span class="section-number-4">1.5.1</span> Discrete</h4>
+<div class="outline-text-4" id="text-1-5-1">
+<p>
+Smoking is an example of a <i>discrete</i> variable (a.k.a. categorical
+variable).
+</p>
+
+<p>
+Eg. Smoking has two categories (binary categorical): you smoke or you
+don't.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd53bea5" class="outline-4">
+<h4 id="orgd53bea5"><span class="section-number-4">1.5.2</span> Continuous</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<p>
+a.k.a. numerical, measurement
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdde3171" class="outline-3">
+<h3 id="orgdde3171"><span class="section-number-3">1.6</span> 2x2 contingency table</h3>
+<div class="outline-text-3" id="text-1-6">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">&#xa0;</th>
+<th scope="col" class="org-left">Y</th>
+<th scope="col" class="org-left">not Y</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">A</td>
+<td class="org-left">a</td>
+<td class="org-left">c</td>
+</tr>
+
+<tr>
+<td class="org-left">not A</td>
+<td class="org-left">b</td>
+<td class="org-left">d</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-orga1a913b" class="outline-3">
+<h3 id="orga1a913b"><span class="section-number-3">1.7</span> Association</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+A and Y are associated if
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">(1) rate(A|Y) != rate(A|!Y) OR
+(2) rate(Y|A) != rate(Y|!A)
+</pre>
+</div>
+
+<p>
+Consistency rule states than (1) iff (2), and vice-versa.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">a/(a+c) != b/(b+d)
+a/(a+b) != c/(c+d)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7a7a563" class="outline-3">
+<h3 id="org7a7a563"><span class="section-number-3">1.8</span> Adherence</h3>
+<div class="outline-text-3" id="text-1-8">
+<ul class="org-ul">
+<li>Assignment may be random, but adherence is not</li>
+<li>Clues in to success of blinding (eg. drug has negative side effects)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org535567b" class="outline-3">
+<h3 id="org535567b"><span class="section-number-3">1.9</span> Simpsons Paradox</h3>
+<div class="outline-text-3" id="text-1-9">
+<p>
+Relationships between percentages in subgroups can be reversed if
+subgroups are combined.
+</p>
+</div>
+</div>
+<div id="outline-container-org0d0a39d" class="outline-3">
+<h3 id="org0d0a39d"><span class="section-number-3">1.10</span> Design</h3>
+<div class="outline-text-3" id="text-1-10">
+<ul class="org-ul">
+<li>Experimental
+<ul class="org-ul">
+<li>Controlled
+<ul class="org-ul">
+<li>Randomized</li>
+</ul></li>
+<li>Not controlled</li>
+</ul></li>
+<li>Observational</li>
+</ul>
+
+<p>
+Randomized and controlled studies minimize confounding.
+</p>
+</div>
+
+<div id="outline-container-org9239cf7" class="outline-4">
+<h4 id="org9239cf7"><span class="section-number-4">1.10.1</span> Theorem</h4>
+<div class="outline-text-4" id="text-1-10-1">
+<p>
+Suppose units are randomly assigned to be exposed or not. If the
+sample size is very large, then the likelihood that a given variable C
+is not associated to exposure x tends to almost certainty.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga026d51" class="outline-3">
+<h3 id="orga026d51"><span class="section-number-3">1.11</span> Risk Ratio</h3>
+<div class="outline-text-3" id="text-1-11">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">A</td>
+<td class="org-left">not A</td>
+<td class="org-left">row Total</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">x</td>
+<td class="org-left">y</td>
+<td class="org-left">x + y</td>
+</tr>
+
+<tr>
+<td class="org-left">not B</td>
+<td class="org-left">a</td>
+<td class="org-left">b</td>
+<td class="org-left">a + b</td>
+</tr>
+</tbody>
+</table>
+
+<div class="org-src-container">
+<pre class="src src-text">risk (A | B) = x / (x+y)
+risk (A | !B) = a / (a+b)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-text">RR = risk(A|B) / risk(A|!B)
+RR = 1 means no association
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>RR &gt; 1 =&gt; first group has higher risk</li>
+<li>Population risk cannot be estimated in case-control studies, even
+with random samples.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7b73e26" class="outline-3">
+<h3 id="org7b73e26"><span class="section-number-3">1.12</span> Odds Ratio</h3>
+<div class="outline-text-3" id="text-1-12">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<tbody>
+<tr>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">A</td>
+<td class="org-left">not A</td>
+</tr>
+
+<tr>
+<td class="org-left">B</td>
+<td class="org-left">x</td>
+<td class="org-left">y</td>
+</tr>
+
+<tr>
+<td class="org-left">not B</td>
+<td class="org-left">a</td>
+<td class="org-left">b</td>
+</tr>
+</tbody>
+</table>
+
+<div class="org-src-container">
+<pre class="src src-text">odds(A|B) = x/y
+odds(A|!B)= a/b
+
+OR = bx/ay
+odds = risk/(1-risk)
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orged92b55" class="outline-4">
+<h4 id="orged92b55"><span class="section-number-4">1.12.1</span> Population vs Estimated RR</h4>
+<div class="outline-text-4" id="text-1-12-1">
+<p>
+population sample size too large, calculation done based on samples.
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Study</th>
+<th scope="col" class="org-left">Samples from</th>
+<th scope="col" class="org-left">Advantage</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Cohort</td>
+<td class="org-left">Exposure</td>
+<td class="org-left">Risk and RR can be estimated</td>
+</tr>
+
+<tr>
+<td class="org-left">Case-control</td>
+<td class="org-left">Response</td>
+<td class="org-left">Good for rare diseases</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org56c4d0c" class="outline-2">
+<h2 id="org56c4d0c"><span class="section-number-2">2</span> Chapter 2: Association</h2>
+<div class="outline-text-2" id="text-2">
+<ol class="org-ol">
+<li>Deterministic Relationship
+<ul class="org-ul">
+<li>Value of variable can be determined if we know the value of the
+other variable</li>
+</ul></li>
+<li>Statistical Relationship
+<ul class="org-ul">
+<li>Natural variability exists in measurements</li>
+<li>Average pattern of one variable can be described given the value
+of the other variable</li>
+</ul></li>
+</ol>
+</div>
+
+<div id="outline-container-org308d4e3" class="outline-3">
+<h3 id="org308d4e3"><span class="section-number-3">2.1</span> Categorical Variables</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Data that consists of group or category names. Measurements can be
+grouped too.
+</p>
+</div>
+
+<div id="outline-container-org51511c3" class="outline-4">
+<h4 id="org51511c3"><span class="section-number-4">2.1.1</span> Measurements of Association: RR and OR</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>RR and OR can be accurately estimated to a cohort study</li>
+<li>RR is intuitively clearer and can only be estimated from cohort
+studies</li>
+<li>OR applies to both cohort and case-control studies</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org47415fb" class="outline-3">
+<h3 id="org47415fb"><span class="section-number-3">2.2</span> Measurement Variables</h3>
+<div class="outline-text-3" id="text-2-2">
+</div>
+<div id="outline-container-orge9e1f90" class="outline-4">
+<h4 id="orge9e1f90"><span class="section-number-4">2.2.1</span> Bivariate data and Scatter Diagram</h4>
+</div>
+<div id="outline-container-orgcb2b4e0" class="outline-4">
+<h4 id="orgcb2b4e0"><span class="section-number-4">2.2.2</span> Exploring relationship</h4>
+<div class="outline-text-4" id="text-2-2-2">
+<p>
+Average: eg. son's average height is taller than dad
+association: positive gradient?
+linear or exponential relationship?
+Standard deviation: spread or variability of data
+</p>
+</div>
+</div>
+<div id="outline-container-org2e8f9bb" class="outline-4">
+<h4 id="org2e8f9bb"><span class="section-number-4">2.2.3</span> Correlation Coefficient</h4>
+<div class="outline-text-4" id="text-2-2-3">
+<p>
+Summarizes direction and strength of linear association: -1 &lt;= r &lt;= 1
+</p>
+
+<ul class="org-ul">
+<li>r &gt; 0 positive association</li>
+<li>r &lt; 0 negative association</li>
+<li>r = 0 no association</li>
+<li>r = 1 perfectly positive association</li>
+<li>r value close to 0 weak association</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-text">weak   moderate    strong
+0    0.3        0.7       1
+</pre>
+</div>
+
+<p>
+Not affected by:
+</p>
+<ol class="org-ol">
+<li>Interchanging two variables</li>
+<li>Adding a number to all values of a variable</li>
+<li>Multiplying a number to all values of a variable</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga53f51c" class="outline-4">
+<h4 id="orga53f51c"><span class="section-number-4">2.2.4</span> Standard Unit</h4>
+<div class="outline-text-4" id="text-2-2-4">
+<div class="org-src-container">
+<pre class="src src-text">SU = (X - X_bar) / sd_x 
+</pre>
+</div>
+
+<p>
+To obtain r, obtain the product of standard unit of father-son pairs,
+then take the average of the products
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1634fa8" class="outline-4">
+<h4 id="org1634fa8"><span class="section-number-4">2.2.5</span> Limitations</h4>
+<div class="outline-text-4" id="text-2-2-5">
+</div>
+<div id="outline-container-org71c3327" class="outline-5">
+<h5 id="org71c3327"><span class="section-number-5">2.2.5.1</span> Causation</h5>
+<div class="outline-text-5" id="text-2-2-5-1">
+<p>
+A change in one variable produces a change in the other variable.
+</p>
+</div>
+</div>
+<div id="outline-container-org4ea082e" class="outline-5">
+<h5 id="org4ea082e"><span class="section-number-5">2.2.5.2</span> Outliers in data set</h5>
+<div class="outline-text-5" id="text-2-2-5-2">
+<p>
+Data points that are unusually far away from the bulk of the data.
+Dangerous to exclude outliers without understanding the cause of the
+occurrence.
+</p>
+</div>
+</div>
+<div id="outline-container-org388e943" class="outline-5">
+<h5 id="org388e943"><span class="section-number-5">2.2.5.3</span> non-linear association</h5>
+<div class="outline-text-5" id="text-2-2-5-3">
+<ul class="org-ul">
+<li>zero correlation only says no "linear association"</li>
+<li>high correlation doesn't mean linear association</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc52b2b2" class="outline-3">
+<h3 id="orgc52b2b2"><span class="section-number-3">2.3</span> Ecological Correlation</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+Correlation based on aggregated data, such as gorup averages or rates.
+</p>
+
+<p>
+In general, when the associations for both individuals and aggregates
+are in the same direction, the ecological correlation, based on the
+aggregates, will typically overstate the strength of the association
+in individuals.
+</p>
+
+<p>
+Variability among individuals are eliminated during aggregation
+</p>
+</div>
+<div id="outline-container-org9645d89" class="outline-4">
+<h4 id="org9645d89"><span class="section-number-4">2.3.1</span> Ecological Fallacy</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+Deduction of inferences about individuals based on aggregate data
+</p>
+</div>
+</div>
+<div id="outline-container-orgbfa35df" class="outline-4">
+<h4 id="orgbfa35df"><span class="section-number-4">2.3.2</span> Atomistic Fallacy</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+Generalize the correlation based on individuals toward the aggregate
+level correlation 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org1567907" class="outline-3">
+<h3 id="org1567907"><span class="section-number-3">2.4</span> Association</h3>
+<div class="outline-text-3" id="text-2-4">
+</div>
+<div id="outline-container-org06038a9" class="outline-4">
+<h4 id="org06038a9"><span class="section-number-4">2.4.1</span> Attentuation Effect</h4>
+<div class="outline-text-4" id="text-2-4-1">
+<blockquote>
+<p>
+Due to range restriction in one variable, the correlation coefficient
+obtained tends to understate the strength of association between two
+variables.
+</p>
+</blockquote>
+<p>
+Range restriction: bivariate data set formed based on criteria on one
+variable data for the other variable is only available for a limited
+range.
+</p>
+
+<p>
+Range restriction tends to have diminishing influence on the strength
+of the association, called the attenuation effect.
+</p>
+</div>
+</div>
+<div id="outline-container-org0e2ee35" class="outline-4">
+<h4 id="org0e2ee35"><span class="section-number-4">2.4.2</span> Regression fallacy</h4>
+<div class="outline-text-4" id="text-2-4-2">
+<blockquote>
+<p>
+In virtual test-retest situations, the bottom group on the first test
+will on average show some improvement on the second test, and the top
+group will, on average, fall back.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb71b60b" class="outline-3">
+<h3 id="orgb71b60b"><span class="section-number-3">2.5</span> Prediction with linear regression</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Y = a + bX
+</p>
+
+<p>
+slope and intercept determined using least-square-method. Predicting
+"average", not exact. Also dangerous to predict beyond observed range.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orge662b72" class="outline-2">
+<h2 id="orge662b72"><span class="section-number-2">3</span> Chapter 3: Sampling</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org0f3724f" class="outline-3">
+<h3 id="org0f3724f"><span class="section-number-3">3.1</span> Definitions</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>Unit: Object/Individual</li>
+<li>Population: Collection of units</li>
+<li>Sample: Subset of a population</li>
+<li>Sampling frame: list of sampling units intended to identify all
+units in the population
+<ol class="org-ol">
+<li>Good Coverage</li>
+<li>Up-to-date and complete</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga57c788" class="outline-3">
+<h3 id="orga57c788"><span class="section-number-3">3.2</span> Sampling methods</h3>
+<div class="outline-text-3" id="text-3-2">
+<ol class="org-ol">
+<li>Probability Sampling
+<ul class="org-ul">
+<li>Every unit must have a known probability of being sampled</li>
+<li>Simple random sampling: all units have equal probability</li>
+</ul></li>
+<li>Systematic sampling
+<ul class="org-ul">
+<li>Selecting units from a list through the application of a
+selection interval K, so every Kth unit following a random start
+is included in the sample</li>
+<li>treated as simple random when sampling units are arranged randomly</li>
+<li>might obtain undesirable sample if sampling units and K have
+cyclical effect</li>
+<li>can use when # sampling units unknown</li>
+</ul></li>
+<li>Stratified
+<ul class="org-ul">
+<li>first divide population of units into strata, take a probability
+sample from each group</li>
+</ul></li>
+<li>Multi-stage</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org5d327fe" class="outline-3">
+<h3 id="org5d327fe"><span class="section-number-3">3.3</span> Difficulties in Sampling</h3>
+<div class="outline-text-3" id="text-3-3">
+<ol class="org-ol">
+<li>Imperfect sample frame
+<ul class="org-ul">
+<li>Perfect sampling frame consists of all units in population</li>
+<li>otherwise, might include unwanted units (increased cost of
+study), or exclude desired units (need to redefine target population).</li>
+</ul></li>
+<li>Non-response
+<ul class="org-ul">
+<li>not all units are contactable, willing to take part.
+Non-respondents typically differ from respondents, and this
+effect needs to be studied.</li>
+</ul></li>
+<li>Volunteer sample (biased)</li>
+<li>Convenience sample (biased)</li>
+<li>Judgement sample (uses own discretion, biased)</li>
+<li>Quota sample (Having proportions of categories dose not make
+extension of results to population better)</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org2b42639" class="outline-2">
+<h2 id="org2b42639"><span class="section-number-2">4</span> Chapter 4: Probability</h2>
+<div class="outline-text-2" id="text-4">
+</div>
+<div id="outline-container-orge4240ae" class="outline-3">
+<h3 id="orge4240ae"><span class="section-number-3">4.1</span> Interpretations</h3>
+<div class="outline-text-3" id="text-4-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Relative Frequency</th>
+<th scope="col" class="org-left">Personal Probability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Will you win the lottery</td>
+<td class="org-left">Will you be working overseas once you graduate?</td>
+</tr>
+
+<tr>
+<td class="org-left">Can be quantified exactly</td>
+<td class="org-left">Cannot be quantified exactly</td>
+</tr>
+
+<tr>
+<td class="org-left">Based on repeated observation of outcomes</td>
+<td class="org-left">Based on personal belief</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Odds of having disease = P(disease) / P(no disease)
+</p>
+
+<p>
+Average value = expected value
+</p>
+</div>
+</div>
+<div id="outline-container-org94fc1e4" class="outline-3">
+<h3 id="org94fc1e4"><span class="section-number-3">4.2</span> P-values</h3>
+<div class="outline-text-3" id="text-4-2">
+<ul class="org-ul">
+<li>p-value = the probability of obtaining an outcome <i>equivalent to or
+more extreme</i> than the observed</li>
+<li>null hypothesis: assumption used to calculate p-value (eg. coin is fair)</li>
+<li>if p-value is small, unlikely for observed to occur by chance, and
+unlikely for null hypothesis to be true. Converse for large.</li>
+<li>p-value &gt; 0.05 : do not reject NH at 5% significance level. Cannot
+conclude that it is not fair. Observed effect in sample is likely
+to reflect effect in population.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6375445" class="outline-3">
+<h3 id="org6375445"><span class="section-number-3">4.3</span> Testing rare events (Medical screening)</h3>
+<div class="outline-text-3" id="text-4-3">
+<ol class="org-ol">
+<li>Base rate: P(disease)</li>
+<li>Sensitivity: P(positive | disease)</li>
+<li>Specificity: P(negative | no disease)</li>
+</ol>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">To test</th>
+<th scope="col" class="org-left">Not to test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">no alternative test</td>
+<td class="org-left">Alternative more reliable test</td>
+</tr>
+
+<tr>
+<td class="org-left">Test is inexpensive &amp; more expensive 2nd test</td>
+<td class="org-left">Test is expensive</td>
+</tr>
+
+<tr>
+<td class="org-left">Goo chance of successful treatment</td>
+<td class="org-left">Unreliable treatment</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb13d529" class="outline-2">
+<h2 id="orgb13d529"><span class="section-number-2">5</span> Chapter 5: Networks</h2>
+<div class="outline-text-2" id="text-5">
+<ul class="org-ul">
+<li>Collection of objects and well-defined relations between objects</li>
+</ul>
+</div>
+<div id="outline-container-orgba07f6e" class="outline-3">
+<h3 id="orgba07f6e"><span class="section-number-3">5.1</span> Definitions</h3>
+<div class="outline-text-3" id="text-5-1">
+<ol class="org-ol">
+<li>Degree: number of other vertices in the network a node is adjacent to</li>
+<li>Order: number of vertices</li>
+<li>Size: number of edges</li>
+<li>Distance d(X,Y) = distance between X and Y</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga0e9239" class="outline-3">
+<h3 id="orga0e9239"><span class="section-number-3">5.2</span> Centrality</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+n vertices
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Centrality</th>
+<th scope="col" class="org-left">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Closeness</td>
+<td class="org-left">Ccen(u) = sum[d(u,vi)/ n-1 ]</td>
+</tr>
+
+<tr>
+<td class="org-left">Degree</td>
+<td class="org-left">Dcen(u) = deg(u) / n-1</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Betweeness: For a vertex Z in any graph, how many shortest paths are
+there, between any pair of 2 vertices, passing through Z?
+</p>
+
+<p>
+If 2 shortest paths between a,b, only 1 pass through z, add 1/2.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org97d2904" class="outline-2">
+<h2 id="org97d2904"><span class="section-number-2">6</span> Appendix: Answering Questions</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>exposure (potential cause)</li>
+<li>response (potential effect)</li>
+<li>design</li>
+<li>sampling</li>
+<li>unit</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2017-12-02 Sat 21:47</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

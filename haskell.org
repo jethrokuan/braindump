@@ -501,6 +501,11 @@ that we don't want to alter. That is, we want to apply the function to
 the value that is "inside" some structure, and leave the structure
 alone.
 
+Intuitively, a =Functor= represents a "container" of some sort, along
+with the ability to apply a function uniformly to every element in the
+container. Another intuition of a Functor is that it represents some
+sort of "computational context".
+
 This is why functors are generally introduced by way of fmapping over
 lists. No elements are removed or added, only transformed.
 
@@ -908,6 +913,31 @@ bring a value into the monad.
 =updateSM= allows the user to alter the state in the monad.
 
 * Do Notation
+Haskell's do notation supports an imperative style of programming by
+providing syntactic sugar for chains of monadic expressions.
+
+#+BEGIN_SRC haskell
+  a >>= \x ->
+  b >>
+  c >>= \y ->
+  d
+
+  -- becomes:
+
+  do { x <- a
+     ;      b
+     ; y <- c
+     ;      d
+     }
+#+END_SRC
+
+#+BEGIN_SRC haskell
+  do e → e
+  do { e; stmts } → e >> do { stmts }
+  do { v <- e; stmts } → e >>= \v -> do { stmts }
+  do { let decls; stmts} → let decls in do { stmts }
+#+END_SRC
+
 #+BEGIN_SRC haskell
   routine :: Maybe Pole
   routine = do
@@ -916,3 +946,4 @@ bring a value into the monad.
     second <- landRight 2 first
     landLeft 1 second
 #+END_SRC
+

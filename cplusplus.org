@@ -5,16 +5,16 @@ https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
 ** Use non-member begin and end
 non-member begin and end supports more containers, such as arrays.
 #+BEGIN_SRC c++
-vector<int> v;
-int a[100];
+  vector<int> v;
+  int a[100];
 
-// C++98
-sort( v.begin(), v.end() );
-sort( &a[0], &a[0] + sizeof(a)/sizeof(a[0]) );
+  // C++98
+  sort(v.begin(), v.end());
+  sort(&a[0], &a[0] + sizeof(a)/sizeof(a[0]));
  
-// C++11
-sort( begin(v), end(v) );
-sort( begin(a), end(a) );
+  // C++11
+  sort( begin(v), end(v) );
+  sort( begin(a), end(a) );
 #+END_SRC
 
 ** Lambda functions
@@ -66,8 +66,8 @@ http://stackoverflow.com/questions/1461432/what-is-array-decaying
 cin/cout is actually faster; but C++ slows it down to sync it with
 C-style io. If using only one style (cin), you can achieve greater IO
 speed with:
-#+BEGIN_SRC C++
-std::ios::sync_with_stdio(false);
+#+BEGIN_SRC c++
+  std::ios::sync_with_stdio(false);
 #+END_SRC
 * hypot
 hypot(x,y) -> sqrt(x^2 + y^2)
