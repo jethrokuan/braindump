@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-02 Tue 14:29 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2018-01-02 Tue 18:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deep Learning</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Jethro Kuan">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -63,26 +69,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org82f1541">1. Introduction</a></li>
-<li><a href="#orgd58ded8">2. ViSenze</a>
+<li><a href="#orge88557d">1. Introduction</a></li>
+<li><a href="#orgdefe146">2. ViSenze</a>
 <ul>
-<li><a href="#org2dc3063">2.1. Things they focused on as a company</a></li>
-<li><a href="#org6c50c0b">2.2. Visual Embeddings Used</a></li>
-<li><a href="#org93d387c">2.3. Lessons Learnt</a></li>
+<li><a href="#org93b8e0d">2.1. Things they focused on as a company</a></li>
+<li><a href="#orgef828bf">2.2. Visual Embeddings Used</a></li>
+<li><a href="#org85a3711">2.3. Lessons Learnt</a></li>
 </ul>
 </li>
-<li><a href="#orgc65286b">3. Measure Theory</a>
+<li><a href="#orgac7570c">3. Measure Theory</a>
 <ul>
-<li><a href="#org6ae3463">3.1. Kullback-Leiber (KL) divergence</a></li>
-<li><a href="#org578c132">3.2. Cross Entropy</a></li>
+<li><a href="#org8fe01fb">3.1. Kullback-Leiber (KL) divergence</a></li>
+<li><a href="#org4edc06d">3.2. Cross Entropy</a></li>
 </ul>
 </li>
-<li><a href="#org3fe1c4f">4. SVD</a></li>
+<li><a href="#org1607527">4. SVD</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org82f1541" class="outline-2">
-<h2 id="org82f1541"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-orge88557d" class="outline-2">
+<h2 id="orge88557d"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Many of the factors of variation inﬂuence every single piece of data
@@ -98,8 +104,8 @@ complex concepts out of simpler concepts.
 </div>
 </div>
 
-<div id="outline-container-orgd58ded8" class="outline-2">
-<h2 id="orgd58ded8"><span class="section-number-2">2</span> ViSenze</h2>
+<div id="outline-container-orgdefe146" class="outline-2">
+<h2 id="orgdefe146"><span class="section-number-2">2</span> ViSenze</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Visenze's primary product is their Visual Search (reverse image
@@ -147,8 +153,8 @@ Overall latency is less than 200ms.
 </p>
 </div>
 
-<div id="outline-container-org2dc3063" class="outline-3">
-<h3 id="org2dc3063"><span class="section-number-3">2.1</span> Things they focused on as a company</h3>
+<div id="outline-container-org93b8e0d" class="outline-3">
+<h3 id="org93b8e0d"><span class="section-number-3">2.1</span> Things they focused on as a company</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>Tooling:
@@ -186,8 +192,8 @@ affecting data earlier</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org6c50c0b" class="outline-3">
-<h3 id="org6c50c0b"><span class="section-number-3">2.2</span> Visual Embeddings Used</h3>
+<div id="outline-container-orgef828bf" class="outline-3">
+<h3 id="orgef828bf"><span class="section-number-3">2.2</span> Visual Embeddings Used</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 At Visenze, they use multiple embeddings in different feature spaces
@@ -214,8 +220,8 @@ state-of-the-art accuracy
 </ol>
 </div>
 </div>
-<div id="outline-container-org93d387c" class="outline-3">
-<h3 id="org93d387c"><span class="section-number-3">2.3</span> Lessons Learnt</h3>
+<div id="outline-container-org85a3711" class="outline-3">
+<h3 id="org85a3711"><span class="section-number-3">2.3</span> Lessons Learnt</h3>
 <div class="outline-text-3" id="text-2-3">
 <ol class="org-ol">
 <li>Taxonomy Coverage</li>
@@ -237,12 +243,12 @@ negative samples into training data to improve accuracy</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgc65286b" class="outline-2">
-<h2 id="orgc65286b"><span class="section-number-2">3</span> Measure Theory</h2>
+<div id="outline-container-orgac7570c" class="outline-2">
+<h2 id="orgac7570c"><span class="section-number-2">3</span> Measure Theory</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org6ae3463" class="outline-3">
-<h3 id="org6ae3463"><span class="section-number-3">3.1</span> Kullback-Leiber (KL) divergence</h3>
+<div id="outline-container-org8fe01fb" class="outline-3">
+<h3 id="org8fe01fb"><span class="section-number-3">3.1</span> Kullback-Leiber (KL) divergence</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The KL divergence is 0 iff P and Q are the same distribution in
@@ -254,8 +260,8 @@ not symmetric.
 </p>
 </div>
 </div>
-<div id="outline-container-org578c132" class="outline-3">
-<h3 id="org578c132"><span class="section-number-3">3.2</span> Cross Entropy</h3>
+<div id="outline-container-org4edc06d" class="outline-3">
+<h3 id="org4edc06d"><span class="section-number-3">3.2</span> Cross Entropy</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Minimising the cross entropy with respect to Q is equivalent to
@@ -264,8 +270,8 @@ minimising the KL divergence.
 </div>
 </div>
 </div>
-<div id="outline-container-org3fe1c4f" class="outline-2">
-<h2 id="org3fe1c4f"><span class="section-number-2">4</span> SVD</h2>
+<div id="outline-container-org1607527" class="outline-2">
+<h2 id="org1607527"><span class="section-number-2">4</span> SVD</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <a href="https://www.youtube.com/watch?v=P5mlg91as1c">https://www.youtube.com/watch?v=P5mlg91as1c</a>
@@ -279,7 +285,7 @@ minimising the KL divergence.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="date">Created: 2018-01-02 Tue 18:47</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

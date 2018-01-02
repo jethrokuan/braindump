@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-02 Tue 14:29 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2018-01-02 Tue 18:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computer Organization</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Jethro Kuan">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -63,41 +69,41 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org40b3dec">1. Pipelining</a>
+<li><a href="#org05e0d35">1. Pipelining</a>
 <ul>
-<li><a href="#org3c78ed2">1.1. Structural Hazard</a></li>
-<li><a href="#org56894a2">1.2. Data Hazard</a></li>
-<li><a href="#org00f52c3">1.3. Control Hazard</a></li>
+<li><a href="#org63e3464">1.1. Structural Hazard</a></li>
+<li><a href="#org1cf62c6">1.2. Data Hazard</a></li>
+<li><a href="#orgb0467b3">1.3. Control Hazard</a></li>
 </ul>
 </li>
-<li><a href="#org31a31e1">2. Pipelined Datapath and Control</a>
+<li><a href="#org673076e">2. Pipelined Datapath and Control</a>
 <ul>
-<li><a href="#org8003d8f">2.1. Issues</a></li>
+<li><a href="#orgb1721f3">2.1. Issues</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org40b3dec" class="outline-2">
-<h2 id="org40b3dec"><span class="section-number-2">1</span> Pipelining</h2>
+<div id="outline-container-org05e0d35" class="outline-2">
+<h2 id="org05e0d35"><span class="section-number-2">1</span> Pipelining</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Increases throughput, but not latency</li>
 </ul>
 </div>
-<div id="outline-container-org3c78ed2" class="outline-3">
-<h3 id="org3c78ed2"><span class="section-number-3">1.1</span> Structural Hazard</h3>
+<div id="outline-container-org63e3464" class="outline-3">
+<h3 id="org63e3464"><span class="section-number-3">1.1</span> Structural Hazard</h3>
 </div>
-<div id="outline-container-org56894a2" class="outline-3">
-<h3 id="org56894a2"><span class="section-number-3">1.2</span> Data Hazard</h3>
+<div id="outline-container-org1cf62c6" class="outline-3">
+<h3 id="org1cf62c6"><span class="section-number-3">1.2</span> Data Hazard</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>Resolved with extra hardware</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org00f52c3" class="outline-3">
-<h3 id="org00f52c3"><span class="section-number-3">1.3</span> Control Hazard</h3>
+<div id="outline-container-orgb0467b3" class="outline-3">
+<h3 id="orgb0467b3"><span class="section-number-3">1.3</span> Control Hazard</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
 <li>Branch instructions need to tell which branch, but have only just
@@ -107,8 +113,8 @@ read from memory</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org31a31e1" class="outline-2">
-<h2 id="org31a31e1"><span class="section-number-2">2</span> Pipelined Datapath and Control</h2>
+<div id="outline-container-org673076e" class="outline-2">
+<h2 id="org673076e"><span class="section-number-2">2</span> Pipelined Datapath and Control</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>IF: Instruction Fetch</li>
@@ -118,8 +124,8 @@ read from memory</li>
 <li>WB: Write Back</li>
 </ol>
 </div>
-<div id="outline-container-org8003d8f" class="outline-3">
-<h3 id="org8003d8f"><span class="section-number-3">2.1</span> Issues</h3>
+<div id="outline-container-orgb1721f3" class="outline-3">
+<h3 id="orgb1721f3"><span class="section-number-3">2.1</span> Issues</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>Write-back stage places the result back into the register file in
@@ -138,7 +144,7 @@ later instructions.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="date">Created: 2018-01-02 Tue 18:47</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

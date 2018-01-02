@@ -1,14 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-02 Tue 14:29 -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- 2018-01-02 Tue 18:47 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Quantitative Reasoning</title>
-<meta name="generator" content="Org mode">
-<meta name="author" content="Jethro Kuan">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -63,102 +69,102 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org0d45c1b">1. Chapter 1: Design</a>
+<li><a href="#orgbe1b192">1. Chapter 1: Design</a>
 <ul>
-<li><a href="#orgba5c5be">1.1. What is a study?</a></li>
-<li><a href="#org434793e">1.2. Confounders</a></li>
-<li><a href="#org1257b05">1.3. Randomized-controlled experiments</a></li>
-<li><a href="#org7b608df">1.4. Observational Studies</a></li>
-<li><a href="#orgac6eea9">1.5. Variable Types</a>
+<li><a href="#org95c0a44">1.1. What is a study?</a></li>
+<li><a href="#orgf1e5a8d">1.2. Confounders</a></li>
+<li><a href="#org05ff052">1.3. Randomized-controlled experiments</a></li>
+<li><a href="#org40bad69">1.4. Observational Studies</a></li>
+<li><a href="#orgf13caad">1.5. Variable Types</a>
 <ul>
-<li><a href="#orgc25bfd5">1.5.1. Discrete</a></li>
-<li><a href="#org79462c3">1.5.2. Continuous</a></li>
+<li><a href="#org5cde3ab">1.5.1. Discrete</a></li>
+<li><a href="#orgd97f0db">1.5.2. Continuous</a></li>
 </ul>
 </li>
-<li><a href="#orgbd1f732">1.6. 2x2 contingency table</a></li>
-<li><a href="#org87f7873">1.7. Association</a></li>
-<li><a href="#org9c32fee">1.8. Adherence</a></li>
-<li><a href="#org3b484c7">1.9. Simpsons Paradox</a></li>
-<li><a href="#org813e258">1.10. Design</a>
+<li><a href="#orgd6be09a">1.6. 2x2 contingency table</a></li>
+<li><a href="#orgfae2ba9">1.7. Association</a></li>
+<li><a href="#org64b9026">1.8. Adherence</a></li>
+<li><a href="#orgc8c9698">1.9. Simpsons Paradox</a></li>
+<li><a href="#orga5576ae">1.10. Design</a>
 <ul>
-<li><a href="#org87114df">1.10.1. Theorem</a></li>
+<li><a href="#orgec7501f">1.10.1. Theorem</a></li>
 </ul>
 </li>
-<li><a href="#orgfa68cb2">1.11. Risk Ratio</a></li>
-<li><a href="#org0bdbf3d">1.12. Odds Ratio</a>
+<li><a href="#org479477f">1.11. Risk Ratio</a></li>
+<li><a href="#org00fd363">1.12. Odds Ratio</a>
 <ul>
-<li><a href="#org7fda845">1.12.1. Population vs Estimated RR</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgda90bcd">2. Chapter 2: Association</a>
-<ul>
-<li><a href="#org66e5a54">2.1. Categorical Variables</a>
-<ul>
-<li><a href="#orgec5e7bc">2.1.1. Measurements of Association: RR and OR</a></li>
-</ul>
-</li>
-<li><a href="#org2416a9f">2.2. Measurement Variables</a>
-<ul>
-<li><a href="#org3062c08">2.2.1. Bivariate data and Scatter Diagram</a></li>
-<li><a href="#org54eafa5">2.2.2. Exploring relationship</a></li>
-<li><a href="#org14c89ab">2.2.3. Correlation Coefficient</a></li>
-<li><a href="#org1b7284f">2.2.4. Standard Unit</a></li>
-<li><a href="#orgb9c96c3">2.2.5. Limitations</a>
-<ul>
-<li><a href="#orgdfe0ba6">2.2.5.1. Causation</a></li>
-<li><a href="#org0a2ba1d">2.2.5.2. Outliers in data set</a></li>
-<li><a href="#org5f4d0ed">2.2.5.3. non-linear association</a></li>
+<li><a href="#org27174c5">1.12.1. Population vs Estimated RR</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org4f5acf3">2.3. Ecological Correlation</a>
+<li><a href="#org6a4485e">2. Chapter 2: Association</a>
 <ul>
-<li><a href="#org43b6d62">2.3.1. Ecological Fallacy</a></li>
-<li><a href="#org08d7d2c">2.3.2. Atomistic Fallacy</a></li>
-</ul>
-</li>
-<li><a href="#orgd480308">2.4. Association</a>
+<li><a href="#org629148b">2.1. Categorical Variables</a>
 <ul>
-<li><a href="#org7e5d7e8">2.4.1. Attentuation Effect</a></li>
-<li><a href="#orgd067e10">2.4.2. Regression fallacy</a></li>
+<li><a href="#org6c2ca3a">2.1.1. Measurements of Association: RR and OR</a></li>
 </ul>
 </li>
-<li><a href="#org8143cac">2.5. Prediction with linear regression</a></li>
-</ul>
-</li>
-<li><a href="#org2533391">3. Chapter 3: Sampling</a>
+<li><a href="#org046daf9">2.2. Measurement Variables</a>
 <ul>
-<li><a href="#org940c9e8">3.1. Definitions</a></li>
-<li><a href="#org75482b5">3.2. Sampling methods</a></li>
-<li><a href="#org341e7e5">3.3. Difficulties in Sampling</a></li>
-</ul>
-</li>
-<li><a href="#org359fb84">4. Chapter 4: Probability</a>
+<li><a href="#org73cbba8">2.2.1. Bivariate data and Scatter Diagram</a></li>
+<li><a href="#orgbcc3ffb">2.2.2. Exploring relationship</a></li>
+<li><a href="#org7caea93">2.2.3. Correlation Coefficient</a></li>
+<li><a href="#org513c0cf">2.2.4. Standard Unit</a></li>
+<li><a href="#org7df20eb">2.2.5. Limitations</a>
 <ul>
-<li><a href="#org4e7bb4d">4.1. Interpretations</a></li>
-<li><a href="#org7390cbe">4.2. P-values</a></li>
-<li><a href="#org518fd01">4.3. Testing rare events (Medical screening)</a></li>
+<li><a href="#orge9a5f8b">2.2.5.1. Causation</a></li>
+<li><a href="#org0d2352c">2.2.5.2. Outliers in data set</a></li>
+<li><a href="#org7eec99a">2.2.5.3. non-linear association</a></li>
 </ul>
 </li>
-<li><a href="#orgeb6bf88">5. Chapter 5: Networks</a>
+</ul>
+</li>
+<li><a href="#org6d6b690">2.3. Ecological Correlation</a>
 <ul>
-<li><a href="#org304ce32">5.1. Definitions</a></li>
-<li><a href="#org04d2f87">5.2. Centrality</a></li>
+<li><a href="#orgb43d076">2.3.1. Ecological Fallacy</a></li>
+<li><a href="#org513ab93">2.3.2. Atomistic Fallacy</a></li>
 </ul>
 </li>
-<li><a href="#org83d4266">6. Appendix: Answering Questions</a></li>
+<li><a href="#orged1c59c">2.4. Association</a>
+<ul>
+<li><a href="#org0919690">2.4.1. Attentuation Effect</a></li>
+<li><a href="#org45a31b3">2.4.2. Regression fallacy</a></li>
+</ul>
+</li>
+<li><a href="#org03ad746">2.5. Prediction with linear regression</a></li>
+</ul>
+</li>
+<li><a href="#org741bf41">3. Chapter 3: Sampling</a>
+<ul>
+<li><a href="#orge0f3da7">3.1. Definitions</a></li>
+<li><a href="#orgcb16204">3.2. Sampling methods</a></li>
+<li><a href="#org8c18c6f">3.3. Difficulties in Sampling</a></li>
+</ul>
+</li>
+<li><a href="#org7c348c1">4. Chapter 4: Probability</a>
+<ul>
+<li><a href="#orgccebd36">4.1. Interpretations</a></li>
+<li><a href="#orgfa3685d">4.2. P-values</a></li>
+<li><a href="#org17d35d8">4.3. Testing rare events (Medical screening)</a></li>
+</ul>
+</li>
+<li><a href="#org878ed1f">5. Chapter 5: Networks</a>
+<ul>
+<li><a href="#org84435d8">5.1. Definitions</a></li>
+<li><a href="#orgc258bd9">5.2. Centrality</a></li>
+</ul>
+</li>
+<li><a href="#orgeb0890b">6. Appendix: Answering Questions</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org0d45c1b" class="outline-2">
-<h2 id="org0d45c1b"><span class="section-number-2">1</span> Chapter 1: Design</h2>
+<div id="outline-container-orgbe1b192" class="outline-2">
+<h2 id="orgbe1b192"><span class="section-number-2">1</span> Chapter 1: Design</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orgba5c5be" class="outline-3">
-<h3 id="orgba5c5be"><span class="section-number-3">1.1</span> What is a study?</h3>
+<div id="outline-container-org95c0a44" class="outline-3">
+<h3 id="org95c0a44"><span class="section-number-3">1.1</span> What is a study?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 A study seeks to establish whether there is an <i>association</i> between a
@@ -170,13 +176,13 @@ Statisticians use the method of comparison to find the effect of
 <span class="underline">treatment/exposure</span> on a <span class="underline">disease/response</span>.
 </p>
 
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
@@ -214,8 +220,8 @@ Compare the responses of a treatment group to a control group.
 </p>
 </div>
 </div>
-<div id="outline-container-org434793e" class="outline-3">
-<h3 id="org434793e"><span class="section-number-3">1.2</span> Confounders</h3>
+<div id="outline-container-orgf1e5a8d" class="outline-3">
+<h3 id="orgf1e5a8d"><span class="section-number-3">1.2</span> Confounders</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>If the control group is similar to the treatment group, apart from
@@ -228,8 +234,8 @@ the treatment. These are called confounders.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1257b05" class="outline-3">
-<h3 id="org1257b05"><span class="section-number-3">1.3</span> Randomized-controlled experiments</h3>
+<div id="outline-container-org05ff052" class="outline-3">
+<h3 id="org05ff052"><span class="section-number-3">1.3</span> Randomized-controlled experiments</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Objective: ensure similarity between treatment and control group
@@ -251,8 +257,8 @@ treatment or control group.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org7b608df" class="outline-3">
-<h3 id="org7b608df"><span class="section-number-3">1.4</span> Observational Studies</h3>
+<div id="outline-container-org40bad69" class="outline-3">
+<h3 id="org40bad69"><span class="section-number-3">1.4</span> Observational Studies</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 In controlled experiments, investigators decide who will be in the
@@ -277,12 +283,12 @@ does not imply causation.
 </p>
 </div>
 </div>
-<div id="outline-container-orgac6eea9" class="outline-3">
-<h3 id="orgac6eea9"><span class="section-number-3">1.5</span> Variable Types</h3>
+<div id="outline-container-orgf13caad" class="outline-3">
+<h3 id="orgf13caad"><span class="section-number-3">1.5</span> Variable Types</h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-orgc25bfd5" class="outline-4">
-<h4 id="orgc25bfd5"><span class="section-number-4">1.5.1</span> Discrete</h4>
+<div id="outline-container-org5cde3ab" class="outline-4">
+<h4 id="org5cde3ab"><span class="section-number-4">1.5.1</span> Discrete</h4>
 <div class="outline-text-4" id="text-1-5-1">
 <p>
 Smoking is an example of a <i>discrete</i> variable (a.k.a. categorical
@@ -295,8 +301,8 @@ don't.
 </p>
 </div>
 </div>
-<div id="outline-container-org79462c3" class="outline-4">
-<h4 id="org79462c3"><span class="section-number-4">1.5.2</span> Continuous</h4>
+<div id="outline-container-orgd97f0db" class="outline-4">
+<h4 id="orgd97f0db"><span class="section-number-4">1.5.2</span> Continuous</h4>
 <div class="outline-text-4" id="text-1-5-2">
 <p>
 a.k.a. numerical, measurement
@@ -304,18 +310,18 @@ a.k.a. numerical, measurement
 </div>
 </div>
 </div>
-<div id="outline-container-orgbd1f732" class="outline-3">
-<h3 id="orgbd1f732"><span class="section-number-3">1.6</span> 2x2 contingency table</h3>
+<div id="outline-container-orgd6be09a" class="outline-3">
+<h3 id="orgd6be09a"><span class="section-number-3">1.6</span> 2x2 contingency table</h3>
 <div class="outline-text-3" id="text-1-6">
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
@@ -340,8 +346,8 @@ a.k.a. numerical, measurement
 </table>
 </div>
 </div>
-<div id="outline-container-org87f7873" class="outline-3">
-<h3 id="org87f7873"><span class="section-number-3">1.7</span> Association</h3>
+<div id="outline-container-orgfae2ba9" class="outline-3">
+<h3 id="orgfae2ba9"><span class="section-number-3">1.7</span> Association</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 A and Y are associated if
@@ -365,8 +371,8 @@ a/(a+b) != c/(c+d)
 </div>
 </div>
 
-<div id="outline-container-org9c32fee" class="outline-3">
-<h3 id="org9c32fee"><span class="section-number-3">1.8</span> Adherence</h3>
+<div id="outline-container-org64b9026" class="outline-3">
+<h3 id="org64b9026"><span class="section-number-3">1.8</span> Adherence</h3>
 <div class="outline-text-3" id="text-1-8">
 <ul class="org-ul">
 <li>Assignment may be random, but adherence is not</li>
@@ -374,8 +380,8 @@ a/(a+b) != c/(c+d)
 </ul>
 </div>
 </div>
-<div id="outline-container-org3b484c7" class="outline-3">
-<h3 id="org3b484c7"><span class="section-number-3">1.9</span> Simpsons Paradox</h3>
+<div id="outline-container-orgc8c9698" class="outline-3">
+<h3 id="orgc8c9698"><span class="section-number-3">1.9</span> Simpsons Paradox</h3>
 <div class="outline-text-3" id="text-1-9">
 <p>
 Relationships between percentages in subgroups can be reversed if
@@ -383,8 +389,8 @@ subgroups are combined.
 </p>
 </div>
 </div>
-<div id="outline-container-org813e258" class="outline-3">
-<h3 id="org813e258"><span class="section-number-3">1.10</span> Design</h3>
+<div id="outline-container-orga5576ae" class="outline-3">
+<h3 id="orga5576ae"><span class="section-number-3">1.10</span> Design</h3>
 <div class="outline-text-3" id="text-1-10">
 <ul class="org-ul">
 <li>Experimental
@@ -403,8 +409,8 @@ Randomized and controlled studies minimize confounding.
 </p>
 </div>
 
-<div id="outline-container-org87114df" class="outline-4">
-<h4 id="org87114df"><span class="section-number-4">1.10.1</span> Theorem</h4>
+<div id="outline-container-orgec7501f" class="outline-4">
+<h4 id="orgec7501f"><span class="section-number-4">1.10.1</span> Theorem</h4>
 <div class="outline-text-4" id="text-1-10-1">
 <p>
 Suppose units are randomly assigned to be exposed or not. If the
@@ -415,20 +421,20 @@ is not associated to exposure x tends to almost certainty.
 </div>
 </div>
 
-<div id="outline-container-orgfa68cb2" class="outline-3">
-<h3 id="orgfa68cb2"><span class="section-number-3">1.11</span> Risk Ratio</h3>
+<div id="outline-container-org479477f" class="outline-3">
+<h3 id="org479477f"><span class="section-number-3">1.11</span> Risk Ratio</h3>
 <div class="outline-text-3" id="text-1-11">
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
@@ -474,18 +480,18 @@ with random samples.</li>
 </div>
 </div>
 
-<div id="outline-container-org0bdbf3d" class="outline-3">
-<h3 id="org0bdbf3d"><span class="section-number-3">1.12</span> Odds Ratio</h3>
+<div id="outline-container-org00fd363" class="outline-3">
+<h3 id="org00fd363"><span class="section-number-3">1.12</span> Odds Ratio</h3>
 <div class="outline-text-3" id="text-1-12">
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
@@ -518,21 +524,21 @@ odds = risk/(1-risk)
 </div>
 </div>
 
-<div id="outline-container-org7fda845" class="outline-4">
-<h4 id="org7fda845"><span class="section-number-4">1.12.1</span> Population vs Estimated RR</h4>
+<div id="outline-container-org27174c5" class="outline-4">
+<h4 id="org27174c5"><span class="section-number-4">1.12.1</span> Population vs Estimated RR</h4>
 <div class="outline-text-4" id="text-1-12-1">
 <p>
 population sample size too large, calculation done based on samples.
 </p>
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
@@ -559,8 +565,8 @@ population sample size too large, calculation done based on samples.
 </div>
 </div>
 </div>
-<div id="outline-container-orgda90bcd" class="outline-2">
-<h2 id="orgda90bcd"><span class="section-number-2">2</span> Chapter 2: Association</h2>
+<div id="outline-container-org6a4485e" class="outline-2">
+<h2 id="org6a4485e"><span class="section-number-2">2</span> Chapter 2: Association</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>Deterministic Relationship
@@ -577,8 +583,8 @@ of the other variable</li>
 </ol>
 </div>
 
-<div id="outline-container-org66e5a54" class="outline-3">
-<h3 id="org66e5a54"><span class="section-number-3">2.1</span> Categorical Variables</h3>
+<div id="outline-container-org629148b" class="outline-3">
+<h3 id="org629148b"><span class="section-number-3">2.1</span> Categorical Variables</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Data that consists of group or category names. Measurements can be
@@ -586,8 +592,8 @@ grouped too.
 </p>
 </div>
 
-<div id="outline-container-orgec5e7bc" class="outline-4">
-<h4 id="orgec5e7bc"><span class="section-number-4">2.1.1</span> Measurements of Association: RR and OR</h4>
+<div id="outline-container-org6c2ca3a" class="outline-4">
+<h4 id="org6c2ca3a"><span class="section-number-4">2.1.1</span> Measurements of Association: RR and OR</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <ul class="org-ul">
 <li>RR and OR can be accurately estimated to a cohort study</li>
@@ -598,15 +604,15 @@ studies</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org2416a9f" class="outline-3">
-<h3 id="org2416a9f"><span class="section-number-3">2.2</span> Measurement Variables</h3>
+<div id="outline-container-org046daf9" class="outline-3">
+<h3 id="org046daf9"><span class="section-number-3">2.2</span> Measurement Variables</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org3062c08" class="outline-4">
-<h4 id="org3062c08"><span class="section-number-4">2.2.1</span> Bivariate data and Scatter Diagram</h4>
+<div id="outline-container-org73cbba8" class="outline-4">
+<h4 id="org73cbba8"><span class="section-number-4">2.2.1</span> Bivariate data and Scatter Diagram</h4>
 </div>
-<div id="outline-container-org54eafa5" class="outline-4">
-<h4 id="org54eafa5"><span class="section-number-4">2.2.2</span> Exploring relationship</h4>
+<div id="outline-container-orgbcc3ffb" class="outline-4">
+<h4 id="orgbcc3ffb"><span class="section-number-4">2.2.2</span> Exploring relationship</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <p>
 Average: eg. son's average height is taller than dad
@@ -616,8 +622,8 @@ Standard deviation: spread or variability of data
 </p>
 </div>
 </div>
-<div id="outline-container-org14c89ab" class="outline-4">
-<h4 id="org14c89ab"><span class="section-number-4">2.2.3</span> Correlation Coefficient</h4>
+<div id="outline-container-org7caea93" class="outline-4">
+<h4 id="org7caea93"><span class="section-number-4">2.2.3</span> Correlation Coefficient</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <p>
 Summarizes direction and strength of linear association: -1 &lt;= r &lt;= 1
@@ -647,8 +653,8 @@ Not affected by:
 </ol>
 </div>
 </div>
-<div id="outline-container-org1b7284f" class="outline-4">
-<h4 id="org1b7284f"><span class="section-number-4">2.2.4</span> Standard Unit</h4>
+<div id="outline-container-org513c0cf" class="outline-4">
+<h4 id="org513c0cf"><span class="section-number-4">2.2.4</span> Standard Unit</h4>
 <div class="outline-text-4" id="text-2-2-4">
 <div class="org-src-container">
 <pre class="src src-text">SU = (X - X_bar) / sd_x 
@@ -662,20 +668,20 @@ then take the average of the products
 </div>
 </div>
 
-<div id="outline-container-orgb9c96c3" class="outline-4">
-<h4 id="orgb9c96c3"><span class="section-number-4">2.2.5</span> Limitations</h4>
+<div id="outline-container-org7df20eb" class="outline-4">
+<h4 id="org7df20eb"><span class="section-number-4">2.2.5</span> Limitations</h4>
 <div class="outline-text-4" id="text-2-2-5">
 </div>
-<div id="outline-container-orgdfe0ba6" class="outline-5">
-<h5 id="orgdfe0ba6"><span class="section-number-5">2.2.5.1</span> Causation</h5>
+<div id="outline-container-orge9a5f8b" class="outline-5">
+<h5 id="orge9a5f8b"><span class="section-number-5">2.2.5.1</span> Causation</h5>
 <div class="outline-text-5" id="text-2-2-5-1">
 <p>
 A change in one variable produces a change in the other variable.
 </p>
 </div>
 </div>
-<div id="outline-container-org0a2ba1d" class="outline-5">
-<h5 id="org0a2ba1d"><span class="section-number-5">2.2.5.2</span> Outliers in data set</h5>
+<div id="outline-container-org0d2352c" class="outline-5">
+<h5 id="org0d2352c"><span class="section-number-5">2.2.5.2</span> Outliers in data set</h5>
 <div class="outline-text-5" id="text-2-2-5-2">
 <p>
 Data points that are unusually far away from the bulk of the data.
@@ -684,8 +690,8 @@ occurrence.
 </p>
 </div>
 </div>
-<div id="outline-container-org5f4d0ed" class="outline-5">
-<h5 id="org5f4d0ed"><span class="section-number-5">2.2.5.3</span> non-linear association</h5>
+<div id="outline-container-org7eec99a" class="outline-5">
+<h5 id="org7eec99a"><span class="section-number-5">2.2.5.3</span> non-linear association</h5>
 <div class="outline-text-5" id="text-2-2-5-3">
 <ul class="org-ul">
 <li>zero correlation only says no "linear association"</li>
@@ -695,8 +701,8 @@ occurrence.
 </div>
 </div>
 </div>
-<div id="outline-container-org4f5acf3" class="outline-3">
-<h3 id="org4f5acf3"><span class="section-number-3">2.3</span> Ecological Correlation</h3>
+<div id="outline-container-org6d6b690" class="outline-3">
+<h3 id="org6d6b690"><span class="section-number-3">2.3</span> Ecological Correlation</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 Correlation based on aggregated data, such as gorup averages or rates.
@@ -713,16 +719,16 @@ in individuals.
 Variability among individuals are eliminated during aggregation
 </p>
 </div>
-<div id="outline-container-org43b6d62" class="outline-4">
-<h4 id="org43b6d62"><span class="section-number-4">2.3.1</span> Ecological Fallacy</h4>
+<div id="outline-container-orgb43d076" class="outline-4">
+<h4 id="orgb43d076"><span class="section-number-4">2.3.1</span> Ecological Fallacy</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 Deduction of inferences about individuals based on aggregate data
 </p>
 </div>
 </div>
-<div id="outline-container-org08d7d2c" class="outline-4">
-<h4 id="org08d7d2c"><span class="section-number-4">2.3.2</span> Atomistic Fallacy</h4>
+<div id="outline-container-org513ab93" class="outline-4">
+<h4 id="org513ab93"><span class="section-number-4">2.3.2</span> Atomistic Fallacy</h4>
 <div class="outline-text-4" id="text-2-3-2">
 <p>
 Generalize the correlation based on individuals toward the aggregate
@@ -731,12 +737,12 @@ level correlation
 </div>
 </div>
 </div>
-<div id="outline-container-orgd480308" class="outline-3">
-<h3 id="orgd480308"><span class="section-number-3">2.4</span> Association</h3>
+<div id="outline-container-orged1c59c" class="outline-3">
+<h3 id="orged1c59c"><span class="section-number-3">2.4</span> Association</h3>
 <div class="outline-text-3" id="text-2-4">
 </div>
-<div id="outline-container-org7e5d7e8" class="outline-4">
-<h4 id="org7e5d7e8"><span class="section-number-4">2.4.1</span> Attentuation Effect</h4>
+<div id="outline-container-org0919690" class="outline-4">
+<h4 id="org0919690"><span class="section-number-4">2.4.1</span> Attentuation Effect</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <blockquote>
 <p>
@@ -757,8 +763,8 @@ of the association, called the attenuation effect.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd067e10" class="outline-4">
-<h4 id="orgd067e10"><span class="section-number-4">2.4.2</span> Regression fallacy</h4>
+<div id="outline-container-org45a31b3" class="outline-4">
+<h4 id="org45a31b3"><span class="section-number-4">2.4.2</span> Regression fallacy</h4>
 <div class="outline-text-4" id="text-2-4-2">
 <blockquote>
 <p>
@@ -770,8 +776,8 @@ group will, on average, fall back.
 </div>
 </div>
 </div>
-<div id="outline-container-org8143cac" class="outline-3">
-<h3 id="org8143cac"><span class="section-number-3">2.5</span> Prediction with linear regression</h3>
+<div id="outline-container-org03ad746" class="outline-3">
+<h3 id="org03ad746"><span class="section-number-3">2.5</span> Prediction with linear regression</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Y = a + bX
@@ -784,12 +790,12 @@ slope and intercept determined using least-square-method. Predicting
 </div>
 </div>
 </div>
-<div id="outline-container-org2533391" class="outline-2">
-<h2 id="org2533391"><span class="section-number-2">3</span> Chapter 3: Sampling</h2>
+<div id="outline-container-org741bf41" class="outline-2">
+<h2 id="org741bf41"><span class="section-number-2">3</span> Chapter 3: Sampling</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org940c9e8" class="outline-3">
-<h3 id="org940c9e8"><span class="section-number-3">3.1</span> Definitions</h3>
+<div id="outline-container-orge0f3da7" class="outline-3">
+<h3 id="orge0f3da7"><span class="section-number-3">3.1</span> Definitions</h3>
 <div class="outline-text-3" id="text-3-1">
 <ol class="org-ol">
 <li>Unit: Object/Individual</li>
@@ -804,8 +810,8 @@ units in the population
 </ol>
 </div>
 </div>
-<div id="outline-container-org75482b5" class="outline-3">
-<h3 id="org75482b5"><span class="section-number-3">3.2</span> Sampling methods</h3>
+<div id="outline-container-orgcb16204" class="outline-3">
+<h3 id="orgcb16204"><span class="section-number-3">3.2</span> Sampling methods</h3>
 <div class="outline-text-3" id="text-3-2">
 <ol class="org-ol">
 <li>Probability Sampling
@@ -832,8 +838,8 @@ sample from each group</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org341e7e5" class="outline-3">
-<h3 id="org341e7e5"><span class="section-number-3">3.3</span> Difficulties in Sampling</h3>
+<div id="outline-container-org8c18c6f" class="outline-3">
+<h3 id="org8c18c6f"><span class="section-number-3">3.3</span> Difficulties in Sampling</h3>
 <div class="outline-text-3" id="text-3-3">
 <ol class="org-ol">
 <li>Imperfect sample frame
@@ -857,20 +863,20 @@ extension of results to population better)</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org359fb84" class="outline-2">
-<h2 id="org359fb84"><span class="section-number-2">4</span> Chapter 4: Probability</h2>
+<div id="outline-container-org7c348c1" class="outline-2">
+<h2 id="org7c348c1"><span class="section-number-2">4</span> Chapter 4: Probability</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org4e7bb4d" class="outline-3">
-<h3 id="org4e7bb4d"><span class="section-number-3">4.1</span> Interpretations</h3>
+<div id="outline-container-orgccebd36" class="outline-3">
+<h3 id="orgccebd36"><span class="section-number-3">4.1</span> Interpretations</h3>
 <div class="outline-text-3" id="text-4-1">
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
@@ -905,8 +911,8 @@ Average value = expected value
 </p>
 </div>
 </div>
-<div id="outline-container-org7390cbe" class="outline-3">
-<h3 id="org7390cbe"><span class="section-number-3">4.2</span> P-values</h3>
+<div id="outline-container-orgfa3685d" class="outline-3">
+<h3 id="orgfa3685d"><span class="section-number-3">4.2</span> P-values</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>p-value = the probability of obtaining an outcome <i>equivalent to or
@@ -920,8 +926,8 @@ to reflect effect in population.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org518fd01" class="outline-3">
-<h3 id="org518fd01"><span class="section-number-3">4.3</span> Testing rare events (Medical screening)</h3>
+<div id="outline-container-org17d35d8" class="outline-3">
+<h3 id="org17d35d8"><span class="section-number-3">4.3</span> Testing rare events (Medical screening)</h3>
 <div class="outline-text-3" id="text-4-3">
 <ol class="org-ol">
 <li>Base rate: P(disease)</li>
@@ -929,13 +935,13 @@ to reflect effect in population.</li>
 <li>Specificity: P(negative | no disease)</li>
 </ol>
 
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
@@ -963,15 +969,15 @@ to reflect effect in population.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgeb6bf88" class="outline-2">
-<h2 id="orgeb6bf88"><span class="section-number-2">5</span> Chapter 5: Networks</h2>
+<div id="outline-container-org878ed1f" class="outline-2">
+<h2 id="org878ed1f"><span class="section-number-2">5</span> Chapter 5: Networks</h2>
 <div class="outline-text-2" id="text-5">
 <ul class="org-ul">
 <li>Collection of objects and well-defined relations between objects</li>
 </ul>
 </div>
-<div id="outline-container-org304ce32" class="outline-3">
-<h3 id="org304ce32"><span class="section-number-3">5.1</span> Definitions</h3>
+<div id="outline-container-org84435d8" class="outline-3">
+<h3 id="org84435d8"><span class="section-number-3">5.1</span> Definitions</h3>
 <div class="outline-text-3" id="text-5-1">
 <ol class="org-ol">
 <li>Degree: number of other vertices in the network a node is adjacent to</li>
@@ -981,19 +987,19 @@ to reflect effect in population.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org04d2f87" class="outline-3">
-<h3 id="org04d2f87"><span class="section-number-3">5.2</span> Centrality</h3>
+<div id="outline-container-orgc258bd9" class="outline-3">
+<h3 id="orgc258bd9"><span class="section-number-3">5.2</span> Centrality</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 n vertices
 </p>
-<table>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="org-left">
+<col  class="org-left" />
 
-<col  class="org-left">
+<col  class="org-left" />
 </colgroup>
 <thead>
 <tr>
@@ -1025,8 +1031,8 @@ If 2 shortest paths between a,b, only 1 pass through z, add 1/2.
 </div>
 </div>
 </div>
-<div id="outline-container-org83d4266" class="outline-2">
-<h2 id="org83d4266"><span class="section-number-2">6</span> Appendix: Answering Questions</h2>
+<div id="outline-container-orgeb0890b" class="outline-2">
+<h2 id="orgeb0890b"><span class="section-number-2">6</span> Appendix: Answering Questions</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>exposure (potential cause)</li>
@@ -1040,7 +1046,7 @@ If 2 shortest paths between a,b, only 1 pass through z, add 1/2.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="date">Created: 2018-01-02 Tue 18:47</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
