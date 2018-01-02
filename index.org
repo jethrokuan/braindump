@@ -3,6 +3,7 @@
 - [[file:cplusplus.org][C++]]
 - [[file:computer_organization.org][Computer Organization]]
 - [[file:consciousness.org][Consciousness]]
+- [[file:conversation.org][Conversation]]
 - [[file:ritual.org][Daily Ritual]]
 - [[file:ds_algo.org][Data Structures and Algorithms]]
 - [[file:deep_learning.org][Deep Learning]]
