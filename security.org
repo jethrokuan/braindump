@@ -1,10 +1,13 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Security
 * Exploitation (Halvar Flake)
 - Phrack
 - Stack Smashing
 - Heap Overflow
 - ASLR
 
-programming a weird state machine
+Weird machines, exploitability, and provable unexploitability:
+http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&tp=&arnumber=8226852
 
 ** Finite State Machines
  CPU States:

@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Productivity
 * Getting Things Done (GTD)
 * Zeigarnik Effect
 Interrupted tasks are better remembered than completed ones

@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: System Design
 * Basics
 1. SQL, noSQL
 2. Concurrency

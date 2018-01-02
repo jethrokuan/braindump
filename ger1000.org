@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Quantitative Reasoning
 * Chapter 1: Design
 ** What is a study?
 A study seeks to establish whether there is an /association/ between a

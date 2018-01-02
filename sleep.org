@@ -1,2 +1,4 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Sleep
 * Everyman
 https://www.polyphasicsociety.com/polyphasic-sleep/overviews/everyman/

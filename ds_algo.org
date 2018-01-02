@@ -1,3 +1,4 @@
+#+SETUPFILE: ./export_template.org
 #+TITLE: Data Structures and Algorithms
 #+OPTIONS: toc:nil
 

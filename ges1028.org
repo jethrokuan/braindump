@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Singapore Society
 * Introduction to Sociology
 ** Sociological Perspective
  Defined as seeing the general in the particular

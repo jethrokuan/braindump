@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: RSS Feeds
 * Feeds                                                              :elfeed:
 ** Computer Science                                                      :cs:
 *** http://export.arxiv.org/rss/cs
@@ -32,3 +34,9 @@
 ** Math                                                                :math:
 *** http://feeds.feedburner.com/theendeavour
 *** http://andrewgelman.com/feed/
+** Vocab                                                              :vocab:
+*** https://wordsmith.org/awad/rss1.xml
+*** https://www.merriam-webster.com/wotd/feed/rss2
+*** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd
+*** http://www.worldwidewords.org/rss/wordfile.xml
+*** http://feeds.feedburner.com/wordthink/vIYJ

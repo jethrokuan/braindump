@@ -1,3 +1,6 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Daily Ritual
+#+AUTHOR: Jethro Kuan
 | Time             | Activity                      |
 |------------------+-------------------------------|
 | 10.00pm - 1.30am | Core Nap                      |

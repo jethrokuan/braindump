@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Scala
 * Scala
 1. Multi-paradigm
 2. Scalability

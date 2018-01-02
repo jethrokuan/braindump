@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Deep Learning
 * Introduction
 Many of the factors of variation inﬂuence every single piece of data
 we are able to observe.
@@ -84,3 +86,31 @@ The 4 main embeddings are:
        negative samples into training data to improve accuracy
  6. Image quality, rotation
  7. Re-ranking based on customer requirements
+* Measure Theory
+** Kullback-Leiber (KL) divergence
+#+BEGIN_EXPORT latex
+D_{KL}(P||Q) = E_{x \sim P}\left[\log\frac{P(x)}{Q(x)}\right] = E_{x
+  \sim P} \left[\log P(x) - \log Q(x)\right]
+#+END_EXPORT
+
+The KL divergence is 0 iff P and Q are the same distribution in
+discrete variables, and equal almost everywhere in continuous
+variables. Because the KL divergence is non-negative and measures the
+difference between the two distributions, it is soften conceptualised
+as some sort of distance, but it is not a true measure, because it is
+not symmetric.
+** Cross Entropy
+#+BEGIN_EXPORT latex
+H(P,Q) = H(P) + D_{KL}(P||Q)
+#+END_EXPORT
+
+#+BEGIN_EXPORT latex
+H(P,Q) = -E_{x\sim P} \log Q(x)
+#+END_EXPORT
+
+Minimising the cross entropy with respect to Q is equivalent to
+minimising the KL divergence.
+* SVD
+https://www.youtube.com/watch?v=P5mlg91as1c
+
+https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner

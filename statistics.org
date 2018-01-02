@@ -1,6 +1,6 @@
+#+SETUPFILE: ./export_template.org
 #+TITLE: Statistics
 #+AUTHOR: Jethro Kuan
-#+OPTIONS: toc:nil title:nil author:nil
 * Basic Properties
 1. $E(X) = \sum x p(x)$
 2. $Var(X) = \sum (x-\mu)^2f(x)$
@@ -188,7 +188,7 @@ $Cov(\overline{X},\overline{Y}) = \frac{\sigma_{xy}}{n}$, where
 $\sigma_{xy} := \frac{1}{N}\sum^{N}_{i=1}(x_i-\mu_x)(x_i-\mu_y)$ is
 the population covariance.
 *** Properties
-$Var(R) &\approx \frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right)$
+$Var(R) \approx \frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right)$
 
 Population coefficient $\rho =
 \frac{\sigma_{xy}}{\sigma_{x}\sigma_{y}}$

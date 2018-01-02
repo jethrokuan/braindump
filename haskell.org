@@ -1,3 +1,4 @@
+#+SETUPFILE: ./export_template.org
 #+TITLE: Haskell
 #+OPTIONS: toc:nil
 
@@ -76,7 +77,7 @@ unnecessary if the expression was going to be evaluated anyway.
 
 One can force eager evaluation by prepending a bang(=!=) in front of
 the expression.
-* Typeclasses
+* Type classes
 Where a declaration of a type defines how that particular type is
 created, a declaration of a typeclass defines how a set of types are
 consumed or used in computations.

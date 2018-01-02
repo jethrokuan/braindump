@@ -1,0 +1,13 @@
+#+OPTIONS: html-postamble:auto html-preamble:t tex:t
+#+CREATOR: <a href="http://www.gnu.org/software/emacs/">Emacs</a> 24.3.50.3 (<a href="http://orgmode.org">Org</a> mode 8.0.3)
+#+HTML_CONTAINER: div
+#+HTML_DOCTYPE: html5
+#+HTML_HEAD: <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+#+HTML_HEAD_EXTRA: <link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+#+HTML_HTML5_FANCY:
+#+HTML_INCLUDEp_SCRIPTS:
+#+HTML_INCLUDE_STYLE:
+#+HTML_LINK_HOME:
+#+HTML_LINK_UP:
+#+HTML_MATHJAX:
+#+INFOJS_OPT:

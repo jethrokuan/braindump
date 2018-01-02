@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Computer Organization
 * Pipelining
 - Increases throughput, but not latency
 ** Structural Hazard

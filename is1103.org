@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: IS1103: Computing and Society
 #+AUTHOR: Jethro Kuan
 #+OPTIONS: toc:nil
 

@@ -1,4 +1,6 @@
 -*- mode: Org; org-download-image-dir: "./images/operating_systems/"; -*-
+#+SETUPFILE: ./export_template.org
+#+TITLE: Operating Systems
 * Operating System Key Concepts
 ** Motivation
 1. Abstraction
@@ -37,10 +39,10 @@
  process A and B wish to talk using a pipe, they must set it up in
  advance.
 
- [[file:./images/screenshot-04.png]]
+[[file:images/operating_systems/Operating%20Systems%20key%20Concepts/posix.png]]
 
 ** Process segments
- [[file:./images/screenshot-05.png]]
+[[file:images/operating_systems/process_segments.png]]
 
 ** Files in UNIX
  Every file in UNIX has a unique number, its i-number, that identifies
@@ -152,13 +154,13 @@ assigned to each process.
                 taken place, e.g. being blocked by I/O.
    - Terminated :: Process is finished, may require OS cleanup.
 
-[[file:./images/screenshot-02.png]]
+[[file:images/operating_systems/process_lifecycle.png]]
 
 ** Data structures required
    - Process Table :: keeps track of all processes
    - PCB :: contains the entire execution context for a process
 
-[[file:./images/screenshot-03.png]]
+[[file:images/operating_systems/process_ds.png]]
 
 ** Mechanism: Limited Direct Execution
 The OS must virtualize the CPU in an efficient manner, while retaining
@@ -380,8 +382,8 @@ switching from a running one (T1) to running the other (T2) requires a
 /context switch/. /Thread Control Blocks/ (TCBs) store the state of
 each thread of a process. Unlike the context switch for processes, the
 address space for threads remain the same.
+[[file:images/operating_systems/thread_add_space.png]]
 
-[[file:./images/screenshot-01.png]]
 ** Example Thread creation
 
 #+BEGIN_SRC c
@@ -891,8 +893,6 @@ of the virtual pages of the address space.
 To translate a virtual address, the address is split into 2
 components:
 
-
-#+DOWNLOADED: /tmp/screenshot.png @ 2017-11-05 16:32:30
 [[file:images/operating_systems/Paging/screenshot_2017-11-05_16-32-30.png]]
 
 1. *virtual page number (VPN)*

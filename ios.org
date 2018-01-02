@@ -1,2 +1,4 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: iOS
 * Swift
   The Swift Programming Language book

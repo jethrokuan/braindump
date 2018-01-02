@@ -1,3 +1,5 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Programming Methodology
 #+AUTHOR: Jethro Kuan
 #+LATEX_HEADER: \geometry{margin={0.3in,0.3in}, a4paper, landscape}
 #+LATEX_HEADER: \usepackage{multicol}
