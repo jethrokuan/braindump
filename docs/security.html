@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-01-02 Tue 14:29 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Security</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Jethro Kuan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Security</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orge3db125">1. Exploitation (Halvar Flake)</a>
+<ul>
+<li><a href="#org256b29d">1.1. Finite State Machines</a></li>
+<li><a href="#org7d3fc48">1.2. Exploitation Procedure</a></li>
+<li><a href="#org39ac736">1.3. Attacker Specialization</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orge3db125" class="outline-2">
+<h2 id="orge3db125"><span class="section-number-2">1</span> Exploitation (Halvar Flake)</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Phrack</li>
+<li>Stack Smashing</li>
+<li>Heap Overflow</li>
+<li>ASLR</li>
+</ul>
+
+<p>
+Weird machines, exploitability, and provable unexploitability:
+<a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&amp;tp=&amp;arnumber=8226852">http://ieeexplore.ieee.org/stamp/stamp.jsp?reload=true&amp;tp=&amp;arnumber=8226852</a>
+</p>
+</div>
+
+<div id="outline-container-org256b29d" class="outline-3">
+<h3 id="org256b29d"><span class="section-number-3">1.1</span> Finite State Machines</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+CPU States:
+</p>
+<ol class="org-ol">
+<li>Sane</li>
+<li>Transitory</li>
+<li>Weird States</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org7d3fc48" class="outline-3">
+<h3 id="org7d3fc48"><span class="section-number-3">1.2</span> Exploitation Procedure</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li>Setup (choose the right sane state)</li>
+<li>Instantiation (enter the weird state)</li>
+<li>Programming (program the weird state)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org39ac736" class="outline-3">
+<h3 id="org39ac736"><span class="section-number-3">1.3</span> Attacker Specialization</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Different version of the same "host" may create similar weird machines.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

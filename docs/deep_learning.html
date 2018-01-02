@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-01-02 Tue 14:29 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Deep Learning</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Jethro Kuan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Deep Learning</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org82f1541">1. Introduction</a></li>
+<li><a href="#orgd58ded8">2. ViSenze</a>
+<ul>
+<li><a href="#org2dc3063">2.1. Things they focused on as a company</a></li>
+<li><a href="#org6c50c0b">2.2. Visual Embeddings Used</a></li>
+<li><a href="#org93d387c">2.3. Lessons Learnt</a></li>
+</ul>
+</li>
+<li><a href="#orgc65286b">3. Measure Theory</a>
+<ul>
+<li><a href="#org6ae3463">3.1. Kullback-Leiber (KL) divergence</a></li>
+<li><a href="#org578c132">3.2. Cross Entropy</a></li>
+</ul>
+</li>
+<li><a href="#org3fe1c4f">4. SVD</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org82f1541" class="outline-2">
+<h2 id="org82f1541"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Many of the factors of variation inﬂuence every single piece of data
+we are able to observe.
+</p>
+
+<p>
+Deep learning solves this central problem in representation learning
+by introducing representations that are expressed in terms of other,
+simpler representations. Deep learning enables the computer to build
+complex concepts out of simpler concepts.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd58ded8" class="outline-2">
+<h2 id="orgd58ded8"><span class="section-number-2">2</span> ViSenze</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Visenze's primary product is their Visual Search (reverse image
+search).
+</p>
+
+<p>
+Initially, they started out with a similar model to our approach:
+Train a CNN, read encodings before the FC layer, use it to perform NN
+search.
+</p>
+
+<p>
+Now their pipeline is as follows:
+Query time -&gt; object detection -&gt; Extract Features -&gt; Nearest Neighbours -&gt; Ranked Results
+Offline training -&gt; Detection Model -&gt; Embedding models -&gt; Nearest Neighbours
+Index time -&gt; Objects -&gt; Extract Features -&gt; Search Index
+(Compression/Hash Model)
+</p>
+
+<p>
+Object detection followed the trends in research papers:
+</p>
+<ol class="org-ol">
+<li>R-CNN</li>
+<li>Fast-CNN</li>
+<li>Faster-CNN</li>
+<li>YOLO/SSD</li>
+<li>DSOD (Current)</li>
+</ol>
+
+<p>
+Model performance is based of standard IR metrics: They are using DCG
+score for evaluating their reverse image search. This requires a lot
+of manual annotation.
+</p>
+
+<p>
+Models are trained offline using physical purchased GPUs.
+</p>
+
+<p>
+Deployment: Kubernetes on AWS, with generally small CPU servers.
+Overall latency is less than 200ms.
+</p>
+</div>
+
+<div id="outline-container-org2dc3063" class="outline-3">
+<h3 id="org2dc3063"><span class="section-number-3">2.1</span> Things they focused on as a company</h3>
+<div class="outline-text-3" id="text-2-1">
+<ol class="org-ol">
+<li>Tooling:
+<ol class="org-ol">
+<li>Annotation System
+<ol class="org-ol">
+<li>Complete annotation is crucial to detection training</li>
+</ol></li>
+<li>Training System
+<ol class="org-ol">
+<li>Make it easy to change hyperparameters and retrain models</li>
+<li>Abstract away need for knowing deep learning</li>
+<li>Platform for tracking metrics</li>
+</ol></li>
+<li>Querylog pipeline
+<ol class="org-ol">
+<li>Take user input as training data</li>
+</ol></li>
+<li>Evaluation System
+<ol class="org-ol">
+<li>Both automatic evaluation via metrics and manual (AB testing)
+is done before release</li>
+<li>Visualisations via T-SNE to see if clusters remain the
+same/make sense, when new learnings are added: <b>learning
+without forgetting</b></li>
+</ol></li>
+</ol></li>
+<li>Business:
+<ol class="org-ol">
+<li>Attend to customer requirements: e.g. if a company wants to sell
+hats, model needs to be trained to detect hats, and these
+learnings need to be added to the existing model without
+affecting data earlier</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org6c50c0b" class="outline-3">
+<h3 id="org6c50c0b"><span class="section-number-3">2.2</span> Visual Embeddings Used</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+At Visenze, they use multiple embeddings in different feature spaces
+to measure similarity. The results are then combined before returned.
+The 4 main embeddings are:
+</p>
+
+<ol class="org-ol">
+<li>Exact matches (same item)
+<ol class="org-ol">
+<li>Trained with siamese network with batched triplet loss
+(typically used in face recognition, but seems to work well with
+product classification)</li>
+</ol></li>
+<li>Same Category
+<ol class="org-ol">
+<li>Domain specific labels have been most helpful in achieving
+state-of-the-art accuracy
+<ol class="org-ol">
+<li>e.g for fashion, sleeve length, jeans length etc.</li>
+</ol></li>
+</ol></li>
+<li>Similar Categories</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org93d387c" class="outline-3">
+<h3 id="org93d387c"><span class="section-number-3">2.3</span> Lessons Learnt</h3>
+<div class="outline-text-3" id="text-2-3">
+<ol class="org-ol">
+<li>Taxonomy Coverage</li>
+<li>Training Data Coverage
+<ol class="org-ol">
+<li>Obtaining training data from one source only can lead to severe
+bias (e.g. detecting watermarks and using it as feature)</li>
+</ol></li>
+<li>Overfitting</li>
+<li>Continuous Improvement (Learning Without Forgetting)</li>
+<li>Bad-case driven development
+<ol class="org-ol">
+<li>Be quick to identify hard negatives, and add in similar
+negative samples into training data to improve accuracy</li>
+</ol></li>
+<li>Image quality, rotation</li>
+<li>Re-ranking based on customer requirements</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc65286b" class="outline-2">
+<h2 id="orgc65286b"><span class="section-number-2">3</span> Measure Theory</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org6ae3463" class="outline-3">
+<h3 id="org6ae3463"><span class="section-number-3">3.1</span> Kullback-Leiber (KL) divergence</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The KL divergence is 0 iff P and Q are the same distribution in
+discrete variables, and equal almost everywhere in continuous
+variables. Because the KL divergence is non-negative and measures the
+difference between the two distributions, it is soften conceptualised
+as some sort of distance, but it is not a true measure, because it is
+not symmetric.
+</p>
+</div>
+</div>
+<div id="outline-container-org578c132" class="outline-3">
+<h3 id="org578c132"><span class="section-number-3">3.2</span> Cross Entropy</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+Minimising the cross entropy with respect to Q is equivalent to
+minimising the KL divergence.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org3fe1c4f" class="outline-2">
+<h2 id="org3fe1c4f"><span class="section-number-2">4</span> SVD</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<a href="https://www.youtube.com/watch?v=P5mlg91as1c">https://www.youtube.com/watch?v=P5mlg91as1c</a>
+</p>
+
+<p>
+<a href="https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner">https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-01-02 Tue 14:29 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>System Design</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Jethro Kuan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">System Design</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfa73e1a">1. Basics</a></li>
+<li><a href="#org835f1e7">2. Terminologies</a>
+<ul>
+<li><a href="#org73a45fb">2.1. Replication</a></li>
+<li><a href="#orge6b5ecc">2.2. Consistency</a></li>
+<li><a href="#orgf484d02">2.3. Availability</a></li>
+<li><a href="#org6f68383">2.4. Partition Tolerance</a></li>
+<li><a href="#org51c265f">2.5. Vertical scaling and Horizontal scaling</a></li>
+<li><a href="#org057f17a">2.6. Sharding</a></li>
+</ul>
+</li>
+<li><a href="#orgd79139b">3. CAP Theorem</a></li>
+<li><a href="#org72dff7d">4. Approaching System Design Questions</a></li>
+<li><a href="#org3aeb713">5. Caching</a>
+<ul>
+<li><a href="#orgb7e219c">5.1. Types</a></li>
+<li><a href="#org113b2e2">5.2. Implementing LRU caching</a></li>
+</ul>
+</li>
+<li><a href="#org13c8806">6. SAS/SSD</a></li>
+<li><a href="#orge9ade1c">7. Implementing TinyURL</a>
+<ul>
+<li><a href="#org4c72c13">7.1. Feature Clarification</a></li>
+<li><a href="#orga7d9f76">7.2. Data Estimation</a></li>
+<li><a href="#orge817dba">7.3. Design Goals</a></li>
+<li><a href="#org881fe1f">7.4. Design API</a>
+<ul>
+<li><a href="#org138c711">7.4.1. Computing the Hash</a></li>
+<li><a href="#org2db1e3d">7.4.2. Stateless application servers</a></li>
+<li><a href="#orgdbd960a">7.4.3. </a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga646d95">8. Implementing Search</a></li>
+<li><a href="#org2b5ccd8">9. Implementing a distributed key-store</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfa73e1a" class="outline-2">
+<h2 id="orgfa73e1a"><span class="section-number-2">1</span> Basics</h2>
+<div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>SQL, noSQL</li>
+<li>Concurrency
+<ul class="org-ul">
+<li>Threads, deadlock, starvation</li>
+<li>read/write locks</li>
+</ul></li>
+<li>Networking
+<ul class="org-ul">
+<li>Routers/Switches</li>
+<li>TCP vs UDP</li>
+</ul></li>
+<li>File Systems
+<ul class="org-ul">
+<li>OS, file system, database</li>
+<li>levels of caching in modern OS</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org835f1e7" class="outline-2">
+<h2 id="org835f1e7"><span class="section-number-2">2</span> Terminologies</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org73a45fb" class="outline-3">
+<h3 id="org73a45fb"><span class="section-number-3">2.1</span> Replication</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Replication refers to frequently copying the data across multiple
+machines. Post replication, multiple copies of the data exists across
+machines. This might help in case one or more of the machines die due
+to some failure.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge6b5ecc" class="outline-3">
+<h3 id="orge6b5ecc"><span class="section-number-3">2.2</span> Consistency</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Assuming you have a storage system which has more than one machine,
+consistency implies that the data is same across the cluster, so you
+can read or write to/from any node and get the same data. Eventual
+consistency : Exactly what the name suggests. In a cluster, if
+multiple machines store the same data, an eventual consistent model
+implies that all machines will have the same data eventually. Its
+possible that at a given instance, those machines have different
+versions of the same data ( temporarily inconsistent ) but they will
+eventually reach a state where they have the same data.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf484d02" class="outline-3">
+<h3 id="orgf484d02"><span class="section-number-3">2.3</span> Availability</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+In the context of a database cluster, Availability refers to the
+ability to always respond to queries ( read or write ) irrespective of
+nodes going down.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6f68383" class="outline-3">
+<h3 id="org6f68383"><span class="section-number-3">2.4</span> Partition Tolerance</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+In the context of a database cluster, cluster continues to function
+even if there is a “partition” (communications break) between two
+nodes (both nodes are up, but can’t communicate).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org51c265f" class="outline-3">
+<h3 id="org51c265f"><span class="section-number-3">2.5</span> Vertical scaling and Horizontal scaling</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+In simple terms, to scale horizontally is adding more servers. To scale
+vertically is to increase the resources of the server ( RAM, CPU,
+storage, etc. ). Example: Lets say you own a restaurant which is now
+exceeding its seating capacity. One way of accomodating more people (
+scaling ) would be to add more and more chairs (scaling vertically).
+However since the space is limited, you won’t be able to add more
+chairs once the space is full. Another way of scaling would be to open
+new branches of the restaurant ( horizontal scaling ). Source :
+<a href="http://stackoverflow.com/questions/5401992/what-does-scale-horizontally-and-scale-vertically-mean">http://stackoverflow.com/questions/5401992/what-does-scale-horizontally-and-scale-vertically-mean</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org057f17a" class="outline-3">
+<h3 id="org057f17a"><span class="section-number-3">2.6</span> Sharding</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+With most huge systems, data does not fit on a single machine. In such
+cases, sharding refers to splitting the very large database into
+smaller, faster and more manageable parts called data shards.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd79139b" class="outline-2">
+<h2 id="orgd79139b"><span class="section-number-2">3</span> CAP Theorem</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+It is impossible to simultaneously guarantee the following:
+</p>
+<ol class="org-ol">
+<li>Consistency</li>
+<li>Availability</li>
+<li>Partition Tolerance</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org72dff7d" class="outline-2">
+<h2 id="org72dff7d"><span class="section-number-2">4</span> Approaching System Design Questions</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>Feature Clarification (2 minutes)</li>
+<li>Estimations
+<ol class="org-ol">
+<li>Does the data fit in one machine/database?</li>
+<li>Can the cache fit on one machine/database?</li>
+</ol></li>
+<li>Design Goals
+<ol class="org-ol">
+<li>Can data loss be tolerated?</li>
+</ol></li>
+<li>Skeleton of design
+<ol class="org-ol">
+<li>Discuss high-level components; go into deep dive only on request</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org3aeb713" class="outline-2">
+<h2 id="org3aeb713"><span class="section-number-2">5</span> Caching</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-orgb7e219c" class="outline-3">
+<h3 id="orgb7e219c"><span class="section-number-3">5.1</span> Types</h3>
+<div class="outline-text-3" id="text-5-1">
+<ol class="org-ol">
+<li>Write-through -  write to both cache and db at the same time,
+before confirming write completion
+<ul class="org-ul">
+<li>Write latency is higher</li>
+<li>but re-reading writes and reads is fast</li>
+</ul></li>
+<li>Write-around - write to db, missing cache
+<ul class="org-ul">
+<li>cache must fetch reads from db on first try</li>
+<li>higher read latency</li>
+</ul></li>
+<li>Write-back - I/O completion sent when data written to cache
+<ul class="org-ul">
+<li>cache writes to db</li>
+<li>might lose data</li>
+<li>allieviated with replicates</li>
+</ul></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org113b2e2" class="outline-3">
+<h3 id="org113b2e2"><span class="section-number-3">5.2</span> Implementing LRU caching</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Hashtable + Doubly-linked list
+Key -&gt; Pointer to node in doubly linked list
+Each time it is accessed, move node to head of doubly-linked list
+Evicting keys:
+If adding new item, and it is full, remove tail of list, 
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org13c8806" class="outline-2">
+<h2 id="org13c8806"><span class="section-number-2">6</span> SAS/SSD</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>used for I/O over SATA (7.5krpm)</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge9ade1c" class="outline-2">
+<h2 id="orge9ade1c"><span class="section-number-2">7</span> Implementing TinyURL</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-org4c72c13" class="outline-3">
+<h3 id="org4c72c13"><span class="section-number-3">7.1</span> Feature Clarification</h3>
+<div class="outline-text-3" id="text-7-1">
+<ol class="org-ol">
+<li>Shorten a URL</li>
+<li>Expand a slug into a URL</li>
+<li>Allow users to pick a custom URL</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga7d9f76" class="outline-3">
+<h3 id="orga7d9f76"><span class="section-number-3">7.2</span> Data Estimation</h3>
+<div class="outline-text-3" id="text-7-2">
+<ol class="org-ol">
+<li>Assume tinyURL load, 100M new writes per month</li>
+<li>Then, in 5 years, 6B writes.</li>
+<li>To handle 6B slugs, assuming we're using [A-z][a-z][0-9] 62<sup>k</sup> &gt; 6*10<sup>9</sup></li>
+<li>slugs need just 6 characters, 6 bytes.
+<ol class="org-ol">
+<li>Slugs will take up 36GB.</li>
+</ol></li>
+<li>Assume 500 bytes for a URL, URLs will take up 3TB.
+<ol class="org-ol">
+<li>It is reasonable to store all of this on a single machine.</li>
+<li>But large amounts of reads and writes going to one machine can
+cause deadlock</li>
+<li>Master-slave replication</li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orge817dba" class="outline-3">
+<h3 id="orge817dba"><span class="section-number-3">7.3</span> Design Goals</h3>
+<div class="outline-text-3" id="text-7-3">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Latency</th>
+<th scope="col" class="org-left">Consistency</th>
+<th scope="col" class="org-left">Availability</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">Yes</td>
+<td class="org-left">Yes</td>
+<td class="org-left">C &gt; A</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org881fe1f" class="outline-3">
+<h3 id="org881fe1f"><span class="section-number-3">7.4</span> Design API</h3>
+<div class="outline-text-3" id="text-7-4">
+<ul class="org-ul">
+<li>shortenURL(url)</li>
+<li>expandURL(hash)</li>
+</ul>
+</div>
+<div id="outline-container-org138c711" class="outline-4">
+<h4 id="org138c711"><span class="section-number-4">7.4.1</span> Computing the Hash</h4>
+<div class="outline-text-4" id="text-7-4-1">
+<p>
+convert<sub>to</sub><sub>base</sub><sub>62</sub>(md5(url + salt))[:6]
+</p>
+</div>
+</div>
+<div id="outline-container-org2db1e3d" class="outline-4">
+<h4 id="org2db1e3d"><span class="section-number-4">7.4.2</span> Stateless application servers</h4>
+<div class="outline-text-4" id="text-7-4-2">
+<p>
+load balancers ensure application is available when a server dies, and
+client knows which server to talk to
+</p>
+</div>
+</div>
+<div id="outline-container-orgdbd960a" class="outline-4">
+<h4 id="orgdbd960a"><span class="section-number-4">7.4.3</span> </h4>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga646d95" class="outline-2">
+<h2 id="orga646d95"><span class="section-number-2">8</span> Implementing Search</h2>
+</div>
+<div id="outline-container-org2b5ccd8" class="outline-2">
+<h2 id="org2b5ccd8"><span class="section-number-2">9</span> Implementing a distributed key-store</h2>
+<div class="outline-text-2" id="text-9">
+<ol class="org-ol">
+<li>Data can't fit onto one machine</li>
+<li>So now the choice is between consistency and availability</li>
+<li>Perform some estimations
+<ul class="org-ul">
+<li></li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

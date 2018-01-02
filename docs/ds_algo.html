@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-01-02 Tue 14:29 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Data Structures and Algorithms</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Jethro Kuan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Data Structures and Algorithms</h1>
+
+<div id="outline-container-org15cfd5e" class="outline-2">
+<h2 id="org15cfd5e"><span class="section-number-2">1</span> Java</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org488ec4d" class="outline-3">
+<h3 id="org488ec4d"><span class="section-number-3">1.1</span> Access Modifier</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+C: Class; P: Package; SC: Subclass; W: World
+</p>
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Modifier</th>
+<th scope="col" class="org-left">C</th>
+<th scope="col" class="org-left">P</th>
+<th scope="col" class="org-left">SC</th>
+<th scope="col" class="org-left">W</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">public</td>
+<td class="org-left">Y</td>
+<td class="org-left">Y</td>
+<td class="org-left">Y</td>
+<td class="org-left">Y</td>
+</tr>
+
+<tr>
+<td class="org-left">protected</td>
+<td class="org-left">Y</td>
+<td class="org-left">Y</td>
+<td class="org-left">Y</td>
+<td class="org-left">N</td>
+</tr>
+
+<tr>
+<td class="org-left">none</td>
+<td class="org-left">Y</td>
+<td class="org-left">Y</td>
+<td class="org-left">N</td>
+<td class="org-left">N</td>
+</tr>
+
+<tr>
+<td class="org-left">private</td>
+<td class="org-left">Y</td>
+<td class="org-left">N</td>
+<td class="org-left">N</td>
+<td class="org-left">N</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org28616ff" class="outline-3">
+<h3 id="org28616ff"><span class="section-number-3">1.2</span> Comparable</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Implement <code>Comparable&lt;T&gt;</code>:
+</p>
+<div class="org-src-container">
+<pre class="src src-text">int compareTo(T o)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org6329617" class="outline-3">
+<h3 id="org6329617"><span class="section-number-3">1.3</span> hashCode</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>If two objects are <code>equal</code>, <code>hashCode</code> must return the same result</li>
+<li>hashCode must return the same result hen invoked on the same object
+more than once</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">int hashCode() {} 
+boolean equals(Object o) {}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge5eb20f" class="outline-3">
+<h3 id="orge5eb20f"><span class="section-number-3">1.4</span> Common Issues</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Array out of bounds; divide by zero; infinite loop; exception thrown
+but not caught; access member variable in static method
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org4596035" class="outline-2">
+<h2 id="org4596035"><span class="section-number-2">2</span> Algorithmic Analysis</h2>
+<div class="outline-text-2" id="text-2">
+<dl class="org-dl">
+<dt>Amortized Cost</dt><dd>Algo has amortized cost \(T(n)\) if &forall; k
+&isin; \mathbb{Z}, cost of k operations is \(\leq
+                    kT(n)\)</dd>
+</dl>
+</div>
+<div id="outline-container-orge29b367" class="outline-3">
+<h3 id="orge29b367"><span class="section-number-3">2.1</span> Master's Theorem</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+\(T(n) = aT(\frac{n}{b}) + f(n)\) where a &ge; 1, b &gt; 1
+</p>
+<ul class="org-ul">
+<li>\(f(n) \in O(n^c)\text{, } c < \log_ba \\ \text{ then } T(n) \in \Theta(n^{\log_ba})\)</li>
+<li>\(f(n) \in O(n^c\log^kn)\text{, } c = \log_ba \\ \text{ then } T(n) \in \Theta(n^c\log^{k+1}n)\)</li>
+<li>\(f(n) \in O(n^c), c > \log_ba \text{ and } \exists k \\ \text{ st }
+  af(\frac{n}{b})\le kf(n) \text{ then } T(n) \in \Theta(n^{\log_ba})\)</li>
+</ul>
+</div>
+<div id="outline-container-org0bd6bb1" class="outline-4">
+<h4 id="org0bd6bb1"><span class="section-number-4">2.1.1</span> Common Ones</h4>
+<div class="outline-text-4" id="text-2-1-1">
+<ul class="org-ul">
+<li>\(T(n) = T(n/2) + \Theta(1) = O(\log n)\) (Binary Search)</li>
+<li>\(T(n) = 2T(n/2) + \Theta(1) = O(n)\) (Binary Tree Traversal)</li>
+<li>\(T(n) = 2T(n/2) + \Theta(\log n) = O(n)\) (Optimal Sorted Matrix
+Search)</li>
+<li>\(T(n) = 2T(n/2) + O(n) = O(n \log n)\) (Merge Sort)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org1ebb014" class="outline-2">
+<h2 id="org1ebb014"><span class="section-number-2">3</span> Abstract Data Types</h2>
+<div class="outline-text-2" id="text-3">
+<dl class="org-dl">
+<dt>Bag</dt><dd>Insert(i); Draw()</dd>
+<dt>Stack (LIFO)</dt><dd>empty(); peek(); pop(); push(i)</dd>
+<dt>Queue (FIFO)</dt><dd>add(); offer(i); peek(); poll(); remove()</dd>
+<dt>Dequeue</dt><dd>double-ended queue</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orged3c194" class="outline-2">
+<h2 id="orged3c194"><span class="section-number-2">4</span> Searching</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Binary Search \(O(\log n)\)</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java">int binarySearch(int[] arr, int key) {
+    int start = 0, end = arr.length - 1;
+    int found = -1;
+    while(start &lt;= end) {
+        int mid = start + (end - start)/2;
+        if(arr[mid] &lt; key) {
+            start = mid + 1;
+        } else if(arr[mid] &gt; key) {
+            end = mid - 1;
+        } else {
+            found = mid;
+            // if we want first instance
+            end = mid - 1;
+            // if we want last instance
+            // start = mid + 1;
+        }
+    }
+    return found;
+}
+</pre>
+</div>
+<dl class="org-dl">
+<dt>One sided Binary Search</dt><dd>Suppose one side is bounded, eg [1,
+&infin;). Use the sequence [1,2,4,8,16&#x2026;, \(2^k\)&#x2026;] If it works for
+\(2^k\), then search on [\(2^{k-1}, 2^k\)]</dd>
+<dt>Peak Finding</dt><dd>A[j] in array A is peak if (i) A[j] &gt; A[j-1] (ii)
+A[j] &gt; A[j+1]. If only one item in array, vacously true</dd>
+<dt>1D Peak Finding \(O(\log n)\)</dt><dd>D&amp;C</dd>
+</dl>
+<div class="org-src-container">
+<pre class="src src-text">if a[n/2] &lt; a[n/2-1] look at 1..n/2-1
+else if a[n/2] &lt; a[n/2+1] look at n/2+1..n
+else return a[n/2]
+</pre>
+</div>
+<dl class="org-dl">
+<dt>2D Peak Finding \(O(m + n)\)</dt><dd>D&amp;C</dd>
+</dl>
+<div class="org-src-container">
+<pre class="src src-text">find max in border + cross O(m+n)
+if max is peak return
+else go into quadrant with higher number
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0b11efe" class="outline-2">
+<h2 id="org0b11efe"><span class="section-number-2">5</span> Sorting</h2>
+<div class="outline-text-2" id="text-5">
+<dl class="org-dl">
+<dt>Bubble Sort</dt><dd>Stable, In-place, W&amp;A \(O(n^2)\), B \(O(n)\), S \(O(1)\);
+Invariant : At iteration i , the sub-array A[1 .. i]
+is sorted and any element in A[i + 1 .. A . size] is
+greater or equal to any element in A[1 .. i]</dd>
+<dt>Selection Sort</dt><dd>In-Place, Unstable; find minimum element and swap.
+W,A,B \(O(n^2)\), S \(O(n/1)\); Invariant: a[0&#x2026;i-1] is
+sorted all entries in a[i..n-1] are larger than or
+equal to the entries in a[0..i-1]</dd>
+<dt>Insertion Sort</dt><dd>In-place, Stable; W \(O(n^2)\), B \(O(n \log n)\), S \(O(n)\);
+Invariant: The subarray a[i] consists of the
+original elements in sorted order.</dd>
+<dt>Merge Sort</dt><dd>Stable, In Place; W/B \(O(n\log n)\), S \(O(n)\)</dd>
+<dt>Quick Sort</dt><dd>In-place, Unstable; W \(O(n^2)\), A/B \(O(n\log n)\) S
+\(O(\log n)\)</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org776e91b" class="outline-2">
+<h2 id="org776e91b"><span class="section-number-2">6</span> Geometric Algorithms</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-org9732af2" class="outline-3">
+<h3 id="org9732af2"><span class="section-number-3">6.1</span> Jarvis March \(O(hn)\)</h3>
+<div class="outline-text-3" id="text-6-1">
+<ol class="org-ol">
+<li>Find somewhere to start, e.g. y-min coordinate</li>
+<li>Add point with maximum angle from horizon \(O(n)\)</li>
+<li>Keep adding points with maximum angle from previous</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org7d538c5" class="outline-3">
+<h3 id="org7d538c5"><span class="section-number-3">6.2</span> Line Intersection Algorithm \(O(n\log n)\)</h3>
+<div class="outline-text-3" id="text-6-2">
+<ol class="org-ol">
+<li>Divide into two equal size sets (along vertical line)</li>
+<li>Recursively find convex hulls (base case 3 points)</li>
+<li>Merge convex hulls
+<ol class="org-ol">
+<li>Find upper tangent lines
+<ol class="org-ol">
+<li>while \((u,v,w)\) clockwise, decrement \(v\)</li>
+<li>while \((v,w,z)\) clockwise, increment \(w\)</li>
+</ol></li>
+<li>Find lower tangent lines
+<ol class="org-ol">
+<li>while \((w,v,u)\) clockwise, increment \(v\)</li>
+<li>while \((z,v,u)\) clockwise, decrement \(w\)</li>
+</ol></li>
+</ol></li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org561a98f" class="outline-3">
+<h3 id="org561a98f"><span class="section-number-3">6.3</span> Quick Hull \(O(n \log n)\)</h3>
+<div class="outline-text-3" id="text-6-3">
+<ol class="org-ol">
+<li>Choose pivot, construct two subproblems, delete interior points</li>
+<li>recurse on subproblems</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org0f1c5fa" class="outline-2">
+<h2 id="org0f1c5fa"><span class="section-number-2">7</span> Trees</h2>
+<div class="outline-text-2" id="text-7">
+</div>
+<div id="outline-container-orgd1e1cbd" class="outline-3">
+<h3 id="orgd1e1cbd"><span class="section-number-3">7.1</span> Binary Trees (height <code>h</code>)</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+\(h(v) = max\left(h(v.left), h(v.right)\right) + 1\)
+</p>
+<ul class="org-ul">
+<li>BST: left ST &lt; key &lt; right ST</li>
+<li>traversal \(O(n)\) IN:LSR, PRE:SLR, POST:LRS</li>
+<li>insert, search, findMax, findMin: \(O(h)\)</li>
+<li>successor \(O(h)\):
+<ul class="org-ul">
+<li>if hasRightChild, smallest node in right sub-tree</li>
+<li>else, first parent node that is left child (parent of node is
+successor)</li>
+</ul></li>
+<li>delete \(O(h)\): switch numChild
+<ul class="org-ul">
+<li>0: remove v</li>
+<li>1: remove v, connect child(v) to parent(v)</li>
+<li>2: swap with successor(v), remove(v)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org8f7c6f4" class="outline-3">
+<h3 id="org8f7c6f4"><span class="section-number-3">7.2</span> AVL Trees (height \(h = \log n\))</h3>
+<div class="outline-text-3" id="text-7-2">
+<ul class="org-ul">
+<li><b>Property</b>: Every node is height-balanced</li>
+<li>\(\lvert v.left.height - v.right.height \rvert \le 1\)</li>
+</ul>
+
+<div class="figure">
+<p><img src="images/cs2020/avl_tree.png" alt="avl_tree.png">
+</p>
+</div>
+<ul class="org-ul">
+<li>insert \(O(\log n)\):
+<ul class="org-ul">
+<li>insert key in BST</li>
+<li>walk up, perform max 2 rotations if out-of-balance</li>
+</ul></li>
+<li>delete(v): (\(\log n\) rotations)
+<ul class="org-ul">
+<li>If v has 2 children, swap with successor</li>
+<li>delete v, and reconnect children</li>
+<li>for every ancestor of deleted node
+<ul class="org-ul">
+<li>rotate if out-of-balance</li>
+</ul></li>
+</ul></li>
+<li>Splay Trees: Rotate nodes that are accessed to root. consider using
+where operations are non-random.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgcc6de3a" class="outline-3">
+<h3 id="orgcc6de3a"><span class="section-number-3">7.3</span> Augmented Trees</h3>
+<div class="outline-text-3" id="text-7-3">
+</div>
+<div id="outline-container-org9100af5" class="outline-4">
+<h4 id="org9100af5"><span class="section-number-4">7.3.1</span> Rank Tree (Order Statistics)</h4>
+<div class="outline-text-4" id="text-7-3-1">
+<ul class="org-ul">
+<li>store weight of tree in each node:</li>
+<li>\(w(v) = w(v.left) + w(v.right) + 1\)</li>
+<li>select(k) \(O(\log n)\): finds node with rank \(k\)</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">rank = left.weight + 1;
+  if (k == rank)
+    return v
+  else if (k &lt; rank)
+    return left.select(k)
+  else return right.select(k-rank)
+</pre>
+</div>
+<ul class="org-ul">
+<li>rank(v) \(O(\log n)\): computes rank of node v</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">rank = v.left.weight + 1
+  while (v != null) do
+    if v is left child do nothing
+    if v is right child,
+       rank += v.parent.left.weight + 1
+    v = v.parent
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge5560de" class="outline-4">
+<h4 id="orge5560de"><span class="section-number-4">7.3.2</span> Interval Trees</h4>
+<div class="outline-text-4" id="text-7-3-2">
+<ul class="org-ul">
+<li>Each node is an interval \((m, n), m \le n\)</li>
+<li>Sort by \(m\), augment node with maximum \(n\) of children in each node</li>
+<li>search(x) \(O(\log n)\):</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">if x in c
+  return c
+else if c has no left child
+  search in right subtree
+else if x &gt; max endpoint in c.left
+  search in right subtree
+else search in left subtree
+</pre>
+</div>
+<ul class="org-ul">
+<li>findAll(x) \(O(k \log n)\) for k overlapping intervals</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">search(x)
+store it somewhere else
+remove interval
+repeat until no intervals found
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org76369df" class="outline-4">
+<h4 id="org76369df"><span class="section-number-4">7.3.3</span> Orthogonal Range Searching</h4>
+<div class="outline-text-4" id="text-7-3-3">
+</div>
+<div id="outline-container-orgb7ef4e1" class="outline-5">
+<h5 id="orgb7ef4e1"><span class="section-number-5">7.3.3.1</span> 1D</h5>
+<div class="outline-text-5" id="text-7-3-3-1">
+<ol class="org-ol">
+<li>use a binary tree search tree</li>
+<li>store all points in the leaves of the tree, internal nodes store
+only copies</li>
+<li>each internal node v stores the max of any leaf in the left subtree</li>
+<li>Query Time: \(O(k + \log n)\)</li>
+<li>Building Tree: \(O(n \log n)\)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgddc8966" class="outline-5">
+<h5 id="orgddc8966"><span class="section-number-5">7.3.3.2</span> k-dim Tree</h5>
+<div class="outline-text-5" id="text-7-3-3-2">
+<ol class="org-ol">
+<li>each node in the x-tree has a set of points in its subtree</li>
+<li>store the y-tree at each x-node containing all points</li>
+<li>Query Time: \(O(k + \log^d n)\)</li>
+<li>Building Tree: \(O(n \log^{d-1}n)\)</li>
+<li>Space: \(O(n \log^{d-1}n)\)</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgafc919a" class="outline-4">
+<h4 id="orgafc919a"><span class="section-number-4">7.3.4</span> Custom Augmentations</h4>
+<div class="outline-text-4" id="text-7-3-4">
+<ul class="org-ul">
+<li><b>Average height of people taller</b>: augment nodes to include the
+count of the number of nodes in that sub-tree, along with the sum
+of the heights of all the people in that sub-tree. To return the
+desired average, first search for the name in the hash table; assume
+it is at node v; then find the sum of the heights of: the right-child
+of v, and if w is on the path from v to the root and v is in w’s
+left-subtree, then w’s right-subtree and w.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgec56e14" class="outline-2">
+<h2 id="orgec56e14"><span class="section-number-2">8</span> Hash Tables</h2>
+<div class="outline-text-2" id="text-8">
+<ul class="org-ul">
+<li>n: #items, m: #buckets</li>
+<li><span class="underline">Simple Uniform Hashing</span>: Keys are equally likely to map to every
+bucket, and are mapped independently
+<ul class="org-ul">
+<li>\(load(ht) = \frac{n}{m}\)</li>
+<li>\(E_\text{search} = 1 + \frac{n}{m}\)</li>
+<li>Assume \(m=\Omega(n)\), \(E_\text{search} = O(1)\)</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgce0448f" class="outline-3">
+<h3 id="orgce0448f"><span class="section-number-3">8.1</span> Hash Functions</h3>
+<div class="outline-text-3" id="text-8-1">
+</div>
+<div id="outline-container-orgfbe98a4" class="outline-4">
+<h4 id="orgfbe98a4"><span class="section-number-4">8.1.1</span> Division</h4>
+<div class="outline-text-4" id="text-8-1-1">
+<ul class="org-ul">
+<li>\(h(k) = k \text{ mod } m\), choose m prime</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd649825" class="outline-4">
+<h4 id="orgd649825"><span class="section-number-4">8.1.2</span> Multiplication</h4>
+<div class="outline-text-4" id="text-8-1-2">
+<ul class="org-ul">
+<li>fix table size: \(m=2^r\), for some \(r\)</li>
+<li>fix word size: \(w\), size of key in bits</li>
+<li>fix odd constant \(A\), \(A > 2^{w-1}\)</li>
+<li>\(h(k) = (Ak) \text{ mod } 2^w >> (w - r)\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org3649385" class="outline-4">
+<h4 id="org3649385"><span class="section-number-4">8.1.3</span> Rolling Hash</h4>
+<div class="outline-text-4" id="text-8-1-3">
+<ul class="org-ul">
+<li>When key changes by single character</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org3b9af70" class="outline-3">
+<h3 id="org3b9af70"><span class="section-number-3">8.2</span> Chaining</h3>
+<div class="outline-text-3" id="text-8-2">
+<ul class="org-ul">
+<li>bucket stores linked list, containing (object, value)</li>
+<li>Worst insert \(O(1 + cost(h))\)</li>
+<li>Expected search = \(1 + \frac{n}{m} = O(1)\)</li>
+<li>Worst search \(O(n)\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7c92ebe" class="outline-3">
+<h3 id="org7c92ebe"><span class="section-number-3">8.3</span> Open Addressing</h3>
+<div class="outline-text-3" id="text-8-3">
+<ul class="org-ul">
+<li>One item per slot, probe sequence of buckets until find only one</li>
+<li>\(h(key, i) : U \mapsto {1..m}\), \(i\) is no. of collisions</li>
+<li><i>search</i>: keep probing until empty bucket, or exhausted entire table</li>
+<li><i>delete</i>: set key to tombstone value, so probe sequence still works</li>
+<li><i>insert</i>: on deleted cell, overwrite, else find next available slot</li>
+<li>good hash function:
+<ol class="org-ol">
+<li>\(h(key, i)\) enumerates all possible buckets</li>
+<li>Simple Uniform Hashing</li>
+</ol></li>
+<li><i>Linear</i>: \(h(k,i) = h(k) + i\), Clustering</li>
+<li><i>Double</i>: \(h(k,i) = f(k) + i \cdot g(k) \text{ mod } m\)</li>
+<li>Insert, Search: \(\frac{1}{1-\alpha}\) where \(\alpha = \frac{n}{m} \le
+  1\)</li>
+<li>good: saves space, rare mem alloc, better cache perf</li>
+<li>bad: sensitive to hash, load</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org58361f5" class="outline-3">
+<h3 id="org58361f5"><span class="section-number-3">8.4</span> Cuckoo Hashing</h3>
+<div class="outline-text-3" id="text-8-4">
+<ul class="org-ul">
+<li>Resolving hash collisions with worst-case constant lookup time</li>
+<li>Lookup: inspection of just two locations in the hash table</li>
+<li>Insertion: Insert into first table if empty; else kick out other
+key to second location.</li>
+<li>If infinite loop, hash function is rebuilt in place</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb09a8f5" class="outline-3">
+<h3 id="orgb09a8f5"><span class="section-number-3">8.5</span> Table resizing</h3>
+<div class="outline-text-3" id="text-8-5">
+<ul class="org-ul">
+<li>Scan old table \(O(m_1)\), create new table \(O(m_2)\), insert each
+element \(O(1)\), total \(O(m_1 + m_2 + n)\)</li>
+<li>\(O(n)\) amor: if \(n == m\), \(m = 2m\), if \(n < \frac{m}{4}\), \(m = \frac{m}{2}\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org023580f" class="outline-3">
+<h3 id="org023580f"><span class="section-number-3">8.6</span> Fingerprint Hash Table (FHT)</h3>
+<div class="outline-text-3" id="text-8-6">
+<ul class="org-ul">
+<li>Vector of 0/1 bits</li>
+<li>no false negatives, but has false positives. \(P_{\text{no FP}} = \left(\frac{1}{e}\right)^{n/m}\)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgae500b2" class="outline-3">
+<h3 id="orgae500b2"><span class="section-number-3">8.7</span> Bloom Filter</h3>
+<div class="outline-text-3" id="text-8-7">
+<ul class="org-ul">
+<li>use \(n\) hash functions. More space per item, but require \(n\)
+collisions for false positive.</li>
+<li>\(P_{\text{coll}} = \left(1- e^{-kn/m}\right)^k\)</li>
+<li>Two hash functions, \(h(k)\) and \(t(k)\), two tables \(T_1\) and \(T_2\)</li>
+<li><i>insert</i>: \(T_1[h(k)] = 1\), \(T_2[h(k)] = 1\)</li>
+<li><i>search</i>: if \(T_1[h(k)]\) and \(T_2[h(k)]\) both 1 return true</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf82e58d" class="outline-2">
+<h2 id="orgf82e58d"><span class="section-number-2">9</span> Graphs</h2>
+<div class="outline-text-2" id="text-9">
+<table>
+
+
+<colgroup>
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+
+<col  class="org-left">
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Type</th>
+<th scope="col" class="org-left">Space</th>
+<th scope="col" class="org-left">v,w</th>
+<th scope="col" class="org-left">any</th>
+<th scope="col" class="org-left">all</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">List</td>
+<td class="org-left">\(O(V+E)\)</td>
+<td class="org-left">slow</td>
+<td class="org-left">fast</td>
+<td class="org-left">fast</td>
+</tr>
+
+<tr>
+<td class="org-left">Mat</td>
+<td class="org-left">\(O(V^2)\)</td>
+<td class="org-left">fast</td>
+<td class="org-left">slow</td>
+<td class="org-left">slow</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-orgbf3e9d0" class="outline-3">
+<h3 id="orgbf3e9d0"><span class="section-number-3">9.1</span> Simple search</h3>
+<div class="outline-text-3" id="text-9-1">
+<ul class="org-ul">
+<li>BFS/DFS do not explore all paths</li>
+</ul>
+</div>
+<div id="outline-container-org390e9db" class="outline-4">
+<h4 id="org390e9db"><span class="section-number-4">9.1.1</span> BFS \(O(V+E)\)</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<div class="org-src-container">
+<pre class="src src-text">bfs(root)
+  Q.enqueue(root)
+
+  while Q is not empty:
+    current = Q.dequeue()
+    visit(current)
+    for each node n adj to current
+      if n not visited
+        n.parent = current
+        Q.enqueue(n)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org010c2b4" class="outline-4">
+<h4 id="org010c2b4"><span class="section-number-4">9.1.2</span> DFS \(O(V+E)\)</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<ul class="org-ul">
+<li>Same as BFS, but use stack instead of queue</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org472dee0" class="outline-4">
+<h4 id="org472dee0"><span class="section-number-4">9.1.3</span> Topological Sort (DAG)</h4>
+<div class="outline-text-4" id="text-9-1-3">
+<ul class="org-ul">
+<li>Post-order DFS</li>
+<li>Kahn's Algorithm (first append all nodes with no incoming edges to
+result set, remove edges connected to these nodes and repeat,
+also O(V+E))</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2407d2c" class="outline-3">
+<h3 id="org2407d2c"><span class="section-number-3">9.2</span> SSSP</h3>
+<div class="outline-text-3" id="text-9-2">
+</div>
+<div id="outline-container-orgf36ef26" class="outline-4">
+<h4 id="orgf36ef26"><span class="section-number-4">9.2.1</span> Bellman-Ford \(O(EV)\)</h4>
+<div class="outline-text-4" id="text-9-2-1">
+<ul class="org-ul">
+<li>\(O(V^3)\) if using Adj Matrix</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">do V number of times
+  for (Edge e : graph)
+    relax(e)
+</pre>
+</div>
+<ul class="org-ul">
+<li>can terminate early if no improvement</li>
+<li>can detect negative cycle: perform V times, then perform once more,
+if have changes it has negative cycle</li>
+<li>if all weights are the same, use BFS</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd8f6202" class="outline-4">
+<h4 id="orgd8f6202"><span class="section-number-4">9.2.2</span> Dijkstra \(O(E\log V)\)</h4>
+<div class="outline-text-4" id="text-9-2-2">
+<ul class="org-ul">
+<li>Doesn't work with negative edge weights</li>
+<li>can terminate once end is found</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">add start to PQ
+dist[i] = INF for all i
+dist[start] = 0
+while PQ not empty
+  w = pq.dequeue()
+  for each edge e connected to w
+    if edge is improvement
+      update pq[w] O(logn)
+      update dist[w]
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdfd20a4" class="outline-4">
+<h4 id="orgdfd20a4"><span class="section-number-4">9.2.3</span> DAG</h4>
+<div class="outline-text-4" id="text-9-2-3">
+<ul class="org-ul">
+<li>Toposort, relax in order</li>
+<li>SSSP on DAG: run topo sort, and relax edges in that order in \(O(V+E)\)</li>
+<li>Single Source Longest Path problem is easy on DAG: multiply edge
+weights by -1 and run SSSP</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org8553f8a" class="outline-3">
+<h3 id="org8553f8a"><span class="section-number-3">9.3</span> Heap</h3>
+<div class="outline-text-3" id="text-9-3">
+<ul class="org-ul">
+<li>implements priority queue, is a complete binary tree</li>
+<li>priority of parent &gt; priority of child</li>
+<li>insert: create new leaf, <code>bubbleUp</code></li>
+<li>decreaseKey: update priority, <code>bubbleDown</code></li>
+<li>delete: swap with leaf, delete, and then <code>bubble</code></li>
+<li>store in array:
+<ul class="org-ul">
+<li>\(left(x) = 2x + 1\)</li>
+<li>\(right(x) = 2x + 2\)</li>
+<li>\(parent(x) = \lfloor(x-1)/2\rfloor\)</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-orgeb8a4be" class="outline-4">
+<h4 id="orgeb8a4be"><span class="section-number-4">9.3.1</span> Heap Sort</h4>
+<div class="outline-text-4" id="text-9-3-1">
+<ol class="org-ol">
+<li>Heapify (insert n items)  O(n log n)</li>
+<li>Extract from heap n times (O(n log n))</li>
+
+<li><b>Improvement</b>: recursively join 2 heaps and bubble root down (base
+case single node) O(n)</li>
+<li>O(n log n) worst case, deterministic, in-place</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org34a00a6" class="outline-4">
+<h4 id="org34a00a6"><span class="section-number-4">9.3.2</span> UFDS (weighted)</h4>
+<div class="outline-text-4" id="text-9-3-2">
+<ul class="org-ul">
+<li>union(p,q) \(O(\log n)\)
+<ul class="org-ul">
+<li>find parent of p and q</li>
+<li>make root of smaller tree root of larger tree</li>
+</ul></li>
+<li>find(k) \(O(\log n)\)
+<ul class="org-ul">
+<li>search up the tree, return the root</li>
+<li>(PC): update all traversed nodes parent to root</li>
+</ul></li>
+
+<li>WU with PC, union and find \(O(\alpha(m,n))\)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb839e67" class="outline-3">
+<h3 id="orgb839e67"><span class="section-number-3">9.4</span> MST</h3>
+<div class="outline-text-3" id="text-9-4">
+<ul class="org-ul">
+<li>acyclic subset of edges that connects all nodes, and has minimum
+weight</li>
+</ul>
+</div>
+<div id="outline-container-org857710d" class="outline-4">
+<h4 id="org857710d"><span class="section-number-4">9.4.1</span> Properties</h4>
+<div class="outline-text-4" id="text-9-4-1">
+<ol class="org-ol">
+<li>Cutting edge in MST results in 2 MSTs</li>
+<li><b>Cycle Poperty</b>: \(\forall\) cycle, max weight edge is not in MST</li>
+<li><b>Cut Property</b>: \(\forall\) partitions, min weight edge
+across cut is in MST</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org130c9b9" class="outline-4">
+<h4 id="org130c9b9"><span class="section-number-4">9.4.2</span> Prim's \(O(E \log V)\)</h4>
+<div class="outline-text-4" id="text-9-4-2">
+<ul class="org-ul">
+<li>Uses cycle property</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-text">T = {start}
+enqueue start's edges in PQ
+while PQ not empty
+  e = PQ.dequeue()
+  if (vertex v linked with e not in T)
+    T = T U {v, e}
+  else
+    ignore edge
+MST = T
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd98853f" class="outline-4">
+<h4 id="orgd98853f"><span class="section-number-4">9.4.3</span> Kruskal's \(O(E\log V)\)</h4>
+<div class="outline-text-4" id="text-9-4-3">
+<ul class="org-ul">
+<li>Uses UFDS</li>
+<li>It is possible that some edge in the first \(V-1\) edges will form a
+cycle with pre-existing MST solution</li>
+</ul>
+
+<div class="org-src-container">
+<pre class="src src-text">Sort E edges by increasing weight
+T = {}
+for (i = 0; i &lt; edgeList.length; i++)
+  if adding e = edgelist[i] does
+  not form a cycle
+    add e to T
+    else ignore e
+MST = T
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37296da" class="outline-4">
+<h4 id="org37296da"><span class="section-number-4">9.4.4</span> Boruvka's \(O(E\log V)\)</h4>
+<div class="outline-text-4" id="text-9-4-4">
+<div class="org-src-container">
+<pre class="src src-text">T = { one-vertex trees }
+While T has more than one component:
+ For each component C of T:
+   Begin with an empty set of edges S
+   For each vertex v in C:
+     Find the cheapest edge from v
+     to a vertex outside of C, and
+     add it to S
+   Add the cheapest edge in S to T
+ Combine trees connected by edges
+MST = T
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8764188" class="outline-4">
+<h4 id="org8764188"><span class="section-number-4">9.4.5</span> Variants</h4>
+<div class="outline-text-4" id="text-9-4-5">
+<ol class="org-ol">
+<li>Same weight: BFS/DFS \(O(E)\)</li>
+<li>Edges have weight \(1..k\):
+<ul class="org-ul">
+<li>Kruskal's
+<ul class="org-ul">
+<li>Bucket sort Edges \(O(E)\)</li>
+<li>Union/check \(O(\alpha (V))\)</li>
+<li>Total cost: \(O(\alpha(V)E)\)</li>
+</ul></li>
+<li>Prim's 
+<ul class="org-ul">
+<li>Use array of size k as PQ, each slot holds linked
+list of nodes</li>
+</ul></li>
+<li>insert/remove nodes \(O(V)\)</li>
+<li>decreaseKey \(O(E)\)</li>
+</ul></li>
+<li>Directed MST
+<ul class="org-ul">
+<li>\(\forall\) node except root, add minimum incoming edge \(O(E)\)</li>
+</ul></li>
+<li>MaxST
+<ul class="org-ul">
+<li>negate all weights, run MST algo</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orga16c5a0" class="outline-4">
+<h4 id="orga16c5a0"><span class="section-number-4">9.4.6</span> MST Problems</h4>
+<div class="outline-text-4" id="text-9-4-6">
+</div>
+<div id="outline-container-org8a1f0b4" class="outline-5">
+<h5 id="org8a1f0b4"><span class="section-number-5">9.4.6.1</span> How do I add an edge (A,B) of weight k into graph G and find MST quickly?</h5>
+<div class="outline-text-5" id="text-9-4-6-1">
+<ul class="org-ul">
+<li>Use cycle property; max edge in any cycle is not in MST</li>
+<li>only add (A,B) if k is not the max weight edge</li>
+<li>O(V + E) time to find max edge along A → B with DFS</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org043d4aa" class="outline-5">
+<h5 id="org043d4aa"><span class="section-number-5">9.4.6.2</span> Given an undirected graph with \(K\) power plants, find the minimum cost to connect all other sites.</h5>
+<div class="outline-text-5" id="text-9-4-6-2">
+<ul class="org-ul">
+<li>run Prim’s, use super source</li>
+<li>weight of new edges are zero</li>
+<li>this is a single MST</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5713279" class="outline-5">
+<h5 id="org5713279"><span class="section-number-5">9.4.6.3</span> How do I make Kruskal run faster when sorting?</h5>
+<div class="outline-text-5" id="text-9-4-6-3">
+<ul class="org-ul">
+<li>Store edges in separate linked lists</li>
+<li>To process edges in increasing weight, process all edges in one
+linked list then the next</li>
+<li>Time: \(O(E)\) or \(O(E\alpha(m, n))\)</li>
+<li>Space: \(O(E)\), need to store all \(E\) edges</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org09dd8a3" class="outline-5">
+<h5 id="org09dd8a3"><span class="section-number-5">9.4.6.4</span> Minimum Bottleneck Spanning Tree (MBST)</h5>
+<div class="outline-text-5" id="text-9-4-6-4">
+<ul class="org-ul">
+<li>General idea: If I use some edge e that is not in the MST to replace
+some edge e’ in the MST, then my max. edge is max (max edge on
+original MST, e).</li>
+<li>Intuitively, my MST would then fulfill the condition of MBST.</li>
+<li>Note: Every MST is an MBST, but not every MBST is an MST</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7b295ac" class="outline-5">
+<h5 id="org7b295ac"><span class="section-number-5">9.4.6.5</span> Find maximum distance between 2 vertices in MST</h5>
+<div class="outline-text-5" id="text-9-4-6-5">
+<ul class="org-ul">
+<li>Bruteforce: perform DFS starting from every single location since
+there is only one path from any node to another</li>
+<li>DFS: \(O(V+E)\), doing it \(V\) times, \(O(V(V+E)) =O(V^2)\) since \(E =
+  V - 1\)</li>
+<li>Space: \(O(V)\), need to store all the edges in MST</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org80df020" class="outline-3">
+<h3 id="org80df020"><span class="section-number-3">9.5</span> Floyd-Warshall (APSP)</h3>
+<div class="outline-text-3" id="text-9-5">
+<ul class="org-ul">
+<li>Shortest paths have optimal substructure</li>
+<li>Shortest paths have overlapping subproblems</li>
+<li>Idea: gradually allow usage of intermediate vertices</li>
+<li>Invariant: At step k, shortest path via nodes 0 to k are correct</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java">// precondition: A[i][j] contains weight
+//  of edge (i,j) or inf if no edge
+int[][] APSP(A) {
+  // len = # vertices
+  // clone A into S
+  for(int k = 0; k &lt; len; k++)
+      for(int i = 0; i &lt; len; i++)
+          for(int j = 0; j &lt; len; j++)
+              S[i][j] =
+                  Math.min(S[i][j],
+                           S[i][k] + S[k][j]);
+  return S;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9f759a7" class="outline-3">
+<h3 id="org9f759a7"><span class="section-number-3">9.6</span> Network Flow</h3>
+<div class="outline-text-3" id="text-9-6">
+<dl class="org-dl">
+<dt>k-edge connected</dt><dd>Source and target are k-edge connected if there
+are k edge disjoint paths(don’t share edges) from source to
+target.</dd>
+<dt>Max flow</dt><dd>st-cut property with minimum capacity(outgoing from s,
+ignore incoming to s)</dd>
+<dt>Min cut</dt><dd>Let \(S\) be the nodes reachable from the source in the
+residual graph. \(T\) = all other nodes, S → T is minimum cut</dd>
+<dt>Augmenting Path</dt><dd>path in residual graph from s to t that has no 0
+weight edges</dd>
+</dl>
+</div>
+<div id="outline-container-org81d7a4b" class="outline-4">
+<h4 id="org81d7a4b"><span class="section-number-4">9.6.1</span> Ford-Fulkerson</h4>
+<div class="outline-text-4" id="text-9-6-1">
+<ol class="org-ol">
+<li>Start with 0 flow</li>
+<li>While there exists augmenting path:
+<ul class="org-ul">
+<li>find an augmenting path</li>
+<li>compute bottleneck (min edge)</li>
+<li>increase flow on the path by bottleneck capacity</li>
+</ul></li>
+</ol>
+<p>
+Time Complexity:
+</p>
+<ul class="org-ul">
+<li>DFS: \(O(|F|E)\)</li>
+<li>BFS(Edmonds-Karp, shortest augmenting path): \(O(VE^2)\)</li>
+<li>Dinitz: \(O(V^2E)\)</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org37a233a" class="outline-3">
+<h3 id="org37a233a"><span class="section-number-3">9.7</span> Graph Algorithms on Trees</h3>
+<div class="outline-text-3" id="text-9-7">
+</div>
+<div id="outline-container-orgf3e5086" class="outline-4">
+<h4 id="orgf3e5086"><span class="section-number-4">9.7.1</span> Check if connected graph is tree</h4>
+<div class="outline-text-4" id="text-9-7-1">
+<p>
+Run DFS, stop when after traversing \(V-1\) edges, return true if all
+nodes connected and no other used edge. False otherwise. \(O(V)\)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5be4f6a" class="outline-4">
+<h4 id="org5be4f6a"><span class="section-number-4">9.7.2</span> Min Vertex Cover</h4>
+<div class="outline-text-4" id="text-9-7-2">
+<ul class="org-ul">
+<li>Idea: transform tree into DAG, run DP</li>
+<li>only two possiblities for each vertex; taken or not</li>
+</ul>
+<div class="org-src-container">
+<pre class="src src-java">int MVC(int v, int flag) {
+    int ans = 0;
+    if (memo[v][flag] != -1)
+        return memo[v][flag];
+    else if (leaf[v]) //if v is leaf
+        ans = flag;
+    else if (flag == 0) {
+        ans = 0;
+        for(child : adjList[v]) {
+            ans+= MVC(child, 1);
+        }
+    }
+    else if (flag == 1) {
+        for (child : adjList[v]) {
+            ans += min(MVC(child,1),
+                       MVC(child,0));
+        }
+    }
+}
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org97ae0d4" class="outline-4">
+<h4 id="org97ae0d4"><span class="section-number-4">9.7.3</span> SSSP</h4>
+<div class="outline-text-4" id="text-9-7-3">
+<ul class="org-ul">
+<li>On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
+obtain the shortest path to any vertice in \(O(V)\)</li>
+<li>Weight of shortest path between two vertices is the sum of the
+weights of edges on the unique path</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org21e467f" class="outline-4">
+<h4 id="org21e467f"><span class="section-number-4">9.7.4</span> ASSP</h4>
+<div class="outline-text-4" id="text-9-7-4">
+<ul class="org-ul">
+<li>Run SSSP on V vertices in total \(O(V^2)\), compared to \(O(V^3)\) FW algorithm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org38c17cc" class="outline-4">
+<h4 id="org38c17cc"><span class="section-number-4">9.7.5</span> Diameter</h4>
+<div class="outline-text-4" id="text-9-7-5">
+<ul class="org-ul">
+<li>Originally, run FW in \(O(V^3)\) and do an \(O(V^2)\) all-pairs check,
+to total \(O(V^2)\).</li>
+<li>Now, only need 2 \(O(V)\) traversals: DFS/BFS from any vertex \(s\) to find
+the furthest vertex \(x\). Then do a DFS/BFS one more time from vertex
+\(x\) to find furthest vertex \(y\). Length of unique path along x to y
+is the diameter of the tree.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge3b87a5" class="outline-3">
+<h3 id="orge3b87a5"><span class="section-number-3">9.8</span> Graph Modelling Techniques</h3>
+<div class="outline-text-3" id="text-9-8">
+<ol class="org-ol">
+<li>minimum shortest path from many source to one destination: run SSSP
+treating destination as source.</li>
+<li>multiple sources to multiple destinations: consider super source
+and super sink, with edge weight 0, and run Dijkstra (if no
+negative edge weights), BF otherwise.</li>
+<li>Attempt to convert graph into a DAG and use DP techniques. Example:
+attaching a variable to a vertex that is monotonically decreasing</li>
+<li>Shortest path between X and Y that passes through node \(A\):
+Compute two shortest paths; X to A, A to Y, and join the paths.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb337bb6" class="outline-2">
+<h2 id="orgb337bb6"><span class="section-number-2">10</span> Parallel Algorithms</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org41f77ca" class="outline-3">
+<h3 id="org41f77ca"><span class="section-number-3">10.1</span> Parallel Fibonacci</h3>
+<div class="outline-text-3" id="text-10-1">
+<div class="org-src-container">
+<pre class="src src-text">parallelFib(n) {
+  if(n &lt; 2) then
+  return n;
+  x = spawn parallelFib(n - 1);
+  y = spawn parallelFib(n - 2);
+  sync;
+  return x + y;
+}
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Critical Path: \(T_\infty\), Parallelism = \(T_1/T_\infty\)</li>
+<li>\(T_\infty(n) = max(T_\infty(n - 1), T_\infty(n - 2)) + O(1) = O(n)\)</li>
+<li>\(T_p> T_1/p\)</li>
+<li>\(T_p > T_\infty\), cannot run slower on more processors</li>
+<li>Goal: \(T_p = (T_1/p) + T_\infty\), \(T_1/p\) is the parallel part,
+\(T_\infty\) is the sequential part</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5e4cd09" class="outline-3">
+<h3 id="org5e4cd09"><span class="section-number-3">10.2</span> Matrix Addition</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+Before:
+• Work analysis: \(T_1(n) = O(n^2)\)
+• critical path analysis: \(T_\infty(n) = O(n^2)\)
+After:
+</p>
+<div class="org-src-container">
+<pre class="src src-text">pMatAdd(A,B,C,i,j,n)
+  if(n == 1)
+    C[i,j] = A[i,j] + B[i,j];
+  else:
+    spawn pMatAdd(A,B,C,i,j,n/2);
+    spawn pMatAdd(A,B,C,i,j + n/2,n/2);
+    spawn pMatAdd(A,B,C,i + n/2,j,n/2);
+    spawn pMatAdd(A,B,C,i + n/2,j + n/2,n/2);
+    sync;
+</pre>
+</div>
+
+<ul class="org-ul">
+<li>Work Analysis: \(T_1(n) = 4T_1(n/2) + O(1) = O(n^2)\)</li>
+<li>Critical Path Analysis: \(T_\infty(n) = T_\infty(n/2) + O(1) = O(\log n)\)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbefd149" class="outline-3">
+<h3 id="orgbefd149"><span class="section-number-3">10.3</span> Parallelized Merge Sort \(O(\log^3n)\)</h3>
+<div class="outline-text-3" id="text-10-3">
+<div class="org-src-container">
+<pre class="src src-text">pMerge(A[1..k], B[1..m], C[1..n])
+  if (m &gt; k) then pMerge(B, A, C);
+  else if (n==1) then C[1] = A[1];
+  else if (k==1) and (m==1) then
+    if (A[1] &lt;= B[1]) then
+      C[1] = A[1]; C[2] = B[1];
+    else
+      C[1] = B[1]; C[2] = A[1];
+  else
+    // binary search for j where
+    // B[j] &lt;= A[k/2] &lt;= B[j+1]
+    spawn pMerge(A[1..k/2],
+                 B[1..j],
+                 C[1..k/2+j])
+    spawn pMerge(A[k/2+1..l],
+                 B[j+1..m],
+                 C[k/2+j+1..n])
+    synch;
+
+pMergeSort(A, n)
+  if (n=1) then return;
+  else
+    X = spawn pMergeSort(A[1..n/2], n/2)
+    Y = spawn pMergeSort(A[n/2+1, n], n/2)
+    synch;
+    A = spawn pMerge(X, Y);
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

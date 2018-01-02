@@ -2,7 +2,7 @@
 !*.org
 !*.pdf
 !*.html
-!/html/
+!/docs/
 !/images/
 !/theme/
 !/js/

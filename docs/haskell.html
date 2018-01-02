@@ -1,0 +1,1519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- 2018-01-02 Tue 14:29 -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Haskell</title>
+<meta name="generator" content="Org mode">
+<meta name="author" content="Jethro Kuan">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+<link rel="stylesheet" href="./css/orgmin.css" type="text/css">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Haskell</h1>
+
+<div id="outline-container-orgdfc8a65" class="outline-2">
+<h2 id="orgdfc8a65"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org663f1c4" class="outline-3">
+<h3 id="org663f1c4"><span class="section-number-3">1.1</span> Expressions</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Expressions include concrete values, variables, and also functions</li>
+<li>Functions are expressions that are applied to an argument, and hence
+can be <i>reduced</i> or <i>evaluated</i></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org0d134b1" class="outline-3">
+<h3 id="org0d134b1"><span class="section-number-3">1.2</span> Infix/Prefix</h3>
+<div class="outline-text-3" id="text-1-2">
+<div class="org-src-container">
+<pre class="src src-text">div (prefix) -&gt; `div` (infix)
++ (infix) -&gt; (+) (prefix)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgacf51d2" class="outline-3">
+<h3 id="orgacf51d2"><span class="section-number-3">1.3</span> Let vs Where</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Let introduces an expression, so it can be used wherever you can have
+an expression, but where is a declaration and is bound to a
+surrounding syntactic construct.
+</p>
+</div>
+</div>
+<div id="outline-container-orgde0ea1e" class="outline-3">
+<h3 id="orgde0ea1e"><span class="section-number-3">1.4</span> Typeclasses</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Typeclasses are a way of adding additional functionality that is
+reusable across all the types that have instances of that typeclass.
+<code>Num</code> is a typeclass for most numeric types, that provide the basic
+operators <code>(+)</code>, <code>(-)</code>, <code>(*)</code> , <code>(/)</code> etc.
+</p>
+</div>
+</div>
+<div id="outline-container-org48ead71" class="outline-3">
+<h3 id="org48ead71"><span class="section-number-3">1.5</span> Datatype declaration</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+A datatype declaration defines a type constructor and data
+constructors. Data constructors are the values of a particular type,
+and are also functions that let us create data, or values, of a
+particular type.
+</p>
+</div>
+</div>
+<div id="outline-container-org35706c9" class="outline-3">
+<h3 id="org35706c9"><span class="section-number-3">1.6</span> Sectioning</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Refers to the partial application of infix operators.
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">let x = 5
+let y = (2^)
+let z = (^2)
+
+y x                             -- 32
+z x                             -- 25
+
+let celebrate = (++ " woot!")
+celebrate "naptime" -- "naptime woot!"
+celebrate "dogs" -- "dogs woot!"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org44ea6e4" class="outline-3">
+<h3 id="org44ea6e4"><span class="section-number-3">1.7</span> Types</h3>
+<div class="outline-text-3" id="text-1-7">
+</div>
+<div id="outline-container-org5727842" class="outline-4">
+<h4 id="org5727842"><span class="section-number-4">1.7.1</span> Polymorphism</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<ol class="org-ol">
+<li>Parametric polymorphism
+<ul class="org-ul">
+<li>Refers to type variables, or parameters, that are fully
+polymorphic</li>
+<li>When unconstrained by a typeclass, the final concrete type could
+be anything</li>
+</ul></li>
+<li>Constrained polymorphism
+<ul class="org-ul">
+<li>Puts typeclass constraints on the variable, decreasing the number
+of concrete types it could be, but increasing what you can
+actually do with it by defining and bringing into scope a set of
+operations</li>
+</ul></li>
+</ol>
+
+<p>
+Numeric literals are polymorphic and stay so until given a more
+specific type.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb7f1e5b" class="outline-4">
+<h4 id="orgb7f1e5b"><span class="section-number-4">1.7.2</span> Parametricity</h4>
+<div class="outline-text-4" id="text-1-7-2">
+<p>
+<i>parametricity</i> means that the behaviour of a function with respect to
+the types its (parametric polymorphic) arguments is uniform. The
+behaviour cannot change just because it was applied to an argument of
+a different type.
+</p>
+</div>
+</div>
+<div id="outline-container-org7d359bd" class="outline-4">
+<h4 id="org7d359bd"><span class="section-number-4">1.7.3</span> Making things more polymorphic</h4>
+<div class="outline-text-4" id="text-1-7-3">
+<div class="org-src-container">
+<pre class="src src-haskell">-- fromIntegral :: (Num b, Integral a) =&gt; a -&gt; b
+-- e.g.
+6 / fromIntegral (length [1,2,3])
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga4c8d48" class="outline-2">
+<h2 id="orga4c8d48"><span class="section-number-2">2</span> Laziness and Performance</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Laziness can be a useful tool for improving performance, but more
+often than not it reduces performance by adding a constant overhead to
+everything. Because of laziness, the compiler can't evaluate a
+function argument and pass the value to the function, it has to record
+the expression in the heap in a suspension (or thunk) in case it is
+evaluated later. Storing and evaluating suspensions is costly, and
+unnecessary if the expression was going to be evaluated anyway.
+</p>
+
+<p>
+One can force eager evaluation by prepending a bang(<code>!</code>) in front of
+the expression.
+</p>
+</div>
+</div>
+<div id="outline-container-org8112204" class="outline-2">
+<h2 id="org8112204"><span class="section-number-2">3</span> Type classes</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Where a declaration of a type defines how that particular type is
+created, a declaration of a typeclass defines how a set of types are
+consumed or used in computations.
+</p>
+
+<p>
+As long as a type implements, or instantiates a typeclass, then
+standard functions implemented on the typeclass can be used.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">data DayOfWeek =
+  Mon | Tue | Wed | Thu | Fri | Sat | Sun
+
+-- day of week and numerical day of month
+
+data Date =
+  Date DayOfWeek Int
+</pre>
+</div>
+
+<p>
+Because Eq is not derived in the typeclass, we need to instantiate one
+of our own:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Eq DayOfWeek where
+  (==) Mon Mon = True
+  (==) Tue Tue = True
+  (==) Wed Wed = True
+  (==) Thu Thu = True
+  (==) Fri Fri = True
+  (==) Sat Sat = True
+  (==) Sun Sun = True
+  (==) _ _ = False
+
+instance Eq Date where
+  (==) (Date weekday dayOfMonth) (Date weekday' dayOfMonth') =
+    weekday == weekday' &amp;&amp; dayOfMonth = dayOfMonth'
+</pre>
+</div>
+
+<p>
+Typeclass instances are unique parings of the typeclass and a type.
+They define the ways to implement the typeclass methods for that type.
+</p>
+</div>
+
+<div id="outline-container-org84b27d1" class="outline-3">
+<h3 id="org84b27d1"><span class="section-number-3">3.1</span> IO</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+An IO action is an action that, when performed, has side effects,
+including reading from input and printing to the screen, and will
+contain a return value.
+</p>
+
+<p>
+In <code>IO ()</code>, <code>()</code> denotes an empty tuple, referred to as a <i>unit</i>. A
+unit is both a value and a type, that has only one inhabitant.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5860899" class="outline-3">
+<h3 id="org5860899"><span class="section-number-3">3.2</span> Summary</h3>
+<div class="outline-text-3" id="text-3-2">
+<ul class="org-ul">
+<li>A typeclass defines a set of functions and/or values;</li>
+<li>Types have instances of that typeclass</li>
+<li>The instances specify the ways that type uses the functions of the typeclass</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org79a058e" class="outline-2">
+<h2 id="org79a058e"><span class="section-number-2">4</span> Lists</h2>
+<div class="outline-text-2" id="text-4">
+<div class="org-src-container">
+<pre class="src src-haskell">data [] a = [] | a : [a]
+</pre>
+</div>
+</div>
+<div id="outline-container-org4674da4" class="outline-3">
+<h3 id="org4674da4"><span class="section-number-3">4.1</span> Extracting portions of lists</h3>
+<div class="outline-text-3" id="text-4-1">
+<div class="org-src-container">
+<pre class="src src-haskell">take :: Int -&gt; [a] -&gt; [a]
+drop :: Int -&gt; [a] -&gt; [a]
+splitAt :: Int -&gt; [a] -&gt; ([a], [a])
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">takeWhile :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+dropWhile :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc3b3b5e" class="outline-3">
+<h3 id="orgc3b3b5e"><span class="section-number-3">4.2</span> Transforming lists of values</h3>
+<div class="outline-text-3" id="text-4-2">
+<div class="org-src-container">
+<pre class="src src-haskell">map :: (a -&gt; b) -&gt; [a] -&gt; [b]
+fmap :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">map (+1) [1,2,3,4] -- [2,3,4,5]
+map (1-) [1,2,3,4] -- [0,-1,-2,-3]
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">filter :: (a -&gt; Bool) -&gt; [a] -&gt; [a]
+filter _ [] = []
+filter pred (x:xs)
+  | pred x = x : filter pred xs
+  | otherwise = filter pred xs
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">zip :: [a] -&gt; [b] -&gt; [(a,b)]
+zip [1,2] [3,4] -- [(1,3), (2,4)]
+
+zipWith (+) [1,2,3] [10,11,12] -- [11,13,15]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org27c4edc" class="outline-3">
+<h3 id="org27c4edc"><span class="section-number-3">4.3</span> Folding lists</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+Folds as a general concept are called <i>catamorphisms</i>.
+<i>Catamorphisms</i> are a means of deconstructing data. If the spine of
+the list is the structure of a list, then a fold is what can reduce
+that structure.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">foldr :: (a -&gt; b -&gt; b) -&gt; b -&gt; [a] -&gt; b
+foldr f z xs =
+  case xs of
+    [] -&gt; z
+    (x:xs) -&gt; f x (foldr f z xs)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org677aca1" class="outline-2">
+<h2 id="org677aca1"><span class="section-number-2">5</span> Algebraic Datatypes</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+A type can be thought of as an enumeration of constructors that have
+zero or more arguments.
+</p>
+
+<p>
+Haskell offers sum types, product types, product types with record
+syntax, type aliases, and a special datatype called a newtype that
+offers a different set of options and constraints from either type
+synonyms or data declarations.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">  data Bool = False | True
+-- [1] [2] [3] [4] [5] [6]
+
+  data [] a = [] | a : [a]
+--     [7]   [8]    [9]
+</pre>
+</div>
+
+<ol class="org-ol">
+<li>Keyword <i>data</i> to signal that what follows is a data declaration,
+or a declaration of a datatype</li>
+<li>Type constructor (with no arguments)</li>
+<li>Equals sign divides the type constructor from the data constructor</li>
+<li>Data constructor. In this case, a data constructor that takes no
+arguments, so is called a <i>nullary</i> constructor.</li>
+<li>Pipe denotes a sum type, which indicates a logical disjunction
+(colloquially <i>or</i>) in what values can have that type</li>
+<li>Constructor for the value True, another nullary constructor</li>
+<li>Type constructor with an argument. The argument is a polymorphic
+type variable, so the list's argument can be of different types</li>
+<li>Data constructor for the empty list</li>
+<li>Data constructor that takes two arguments, an a and also a [a]</li>
+</ol>
+</div>
+<div id="outline-container-org3fb258c" class="outline-3">
+<h3 id="org3fb258c"><span class="section-number-3">5.1</span> Data and type constructors</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Type constructors are used only at the type level, in type signatures
+and typeclass declarations and instances. Types are static and resolve
+at compile time.
+</p>
+
+<p>
+Data constructors construct the values at term level, values you can
+interact with at runtime.
+</p>
+
+<p>
+Type and data constructors that take no arguments are constants. They
+can only store a fixed type and amount of data.
+</p>
+</div>
+</div>
+<div id="outline-container-org3f0fe8d" class="outline-3">
+<h3 id="org3f0fe8d"><span class="section-number-3">5.2</span> Type constructors and kinds</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Kinds are types of types, or types one level up. We represent kinds in
+Haskell with <code>*</code>. We know something is a fully applied, concrete type
+when it is represented as <code>*</code>. When it is <code>* -&gt; *</code>, it is still
+waiting to be applied.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">-- :k Bool
+Bool :: *
+
+-- :k [Int]
+[Int] :: *
+
+-- :k []
+[] :: * -&gt; *
+</pre>
+</div>
+
+
+<p>
+Both <code>Bool</code> and [Int] are fully applied, concrete types, so their kind
+signatures have no function arrows.
+</p>
+</div>
+</div>
+<div id="outline-container-orgbff703d" class="outline-3">
+<h3 id="orgbff703d"><span class="section-number-3">5.3</span> Types vs Data</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+When data constructors take arguments, those arguments refer to other
+types.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">data Price =
+  --  (a)
+  Price Integer deriving (Eq, Show)
+-- (b)  [1]
+-- type constructor a
+-- data constructor b
+-- type argument [1]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd692769" class="outline-3">
+<h3 id="orgd692769"><span class="section-number-3">5.4</span> What makes these datatypes algebraic?</h3>
+<div class="outline-text-3" id="text-5-4">
+<p>
+Algebraic datatypes are so, because we can describe the patterns of
+argument structures using two basic operations: sum and product.
+</p>
+
+<p>
+The cardinality of a datatype is the number of possible values it
+defines. Knowing how many possible values inhabit a type can help
+reason about programs.
+</p>
+
+<p>
+The cardinality of <code>Bool</code> is 2, only being to take on <code>True</code> or <code>False</code>.
+</p>
+
+<p>
+Datatypes that only contains a unary constructor always have the same
+cardinality as the type they contain.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">data Goats = Goats Int deriving (Eq, Show)
+</pre>
+</div>
+
+<p>
+Here, <code>Goats</code> has the cardinality of <code>Int</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf8dcdb4" class="outline-3">
+<h3 id="orgf8dcdb4"><span class="section-number-3">5.5</span> Sum Types</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Cardinality is obtained through summation. Example, Bool:
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">data Bool = True | False
+</pre>
+</div>
+
+<p>
+In this case, the cardinality of <code>Bool</code> is the sum of the cardinality
+of <code>True</code> and <code>False</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org87f7a06" class="outline-3">
+<h3 id="org87f7a06"><span class="section-number-3">5.6</span> Record syntax</h3>
+<div class="outline-text-3" id="text-5-6">
+<div class="org-src-container">
+<pre class="src src-haskell">data Person =
+  Person { name :: String
+         , age :: Int }
+         deriving (Eq, Show)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orga1dd7b5" class="outline-2">
+<h2 id="orga1dd7b5"><span class="section-number-2">6</span> Signaling Adversity</h2>
+<div class="outline-text-2" id="text-6">
+</div>
+<div id="outline-container-orge81d1ec" class="outline-3">
+<h3 id="orge81d1ec"><span class="section-number-3">6.1</span> Maybe</h3>
+<div class="outline-text-3" id="text-6-1">
+<div class="org-src-container">
+<pre class="src src-haskell">data Maybe = Just a | Nothing
+</pre>
+</div>
+<div class="org-src-container">
+<pre class="src src-haskell">type Name = String
+type Age = Integer
+
+data Person = Person Name Age Deriving (Eq, Show)
+
+mkPerson :: Name -&gt; Age -&gt; Maybe Person
+mkPerson name age
+  | name /= "" &amp;&amp; age &gt;=0 = Just $ Person name age
+  | otherwise = Nothing
+</pre>
+</div>
+
+<p>
+mkPerson is a <i>smart constructor</i>. It allows us to construct values
+only if it meets a certain criteria.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfbab499" class="outline-3">
+<h3 id="orgfbab499"><span class="section-number-3">6.2</span> Either</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+We use an <code>either</code> to figure out which criteria is not met:
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">data Either a b = Left a | Right b
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">data Person Invalid = NameEmpty | AgeTooLow deriving (Eq, Show)
+
+mkPerson :: Name -&gt; Age -&gt; Either PersonInvalid Person
+mkPerson name age
+  | name /= "" &amp;&amp; age &gt;=0 - Right $ Person name age
+  | name == "" = Left PersonInvalid
+  | otherwise = Left AgeTooLow
+</pre>
+</div>
+
+<p>
+<code>Left</code> is used as the invalid or error constructor. <code>Functor</code> will not
+map over the left type argument because it has been applied away.
+</p>
+</div>
+<div id="outline-container-orgcdfed79" class="outline-4">
+<h4 id="orgcdfed79"><span class="section-number-4">6.2.1</span> Signalling Multiple errors</h4>
+<div class="outline-text-4" id="text-6-2-1">
+<div class="org-src-container">
+<pre class="src src-haskell">type Name = String
+type Age = Integer
+type ValidatePerson a = Either [PersonInvalid] a
+
+data Person = Person Name Age deriving Show
+
+data PersonInvalid = NameEmpty | AgeTooLow deriving (Eq, Show)
+
+ageOkay :: Age -&gt; Either [PersonInvalid] Age
+ageOkay age = case age &gt;= 0 of
+  True -&gt; Right age
+  False -&gt; Left [AgeTooLow]
+
+nameOkay :: Name -&gt; Either [PersonInvalid] Name
+nameOkay name = case name == "" of
+  True -&gt; Left [NameEmpty]
+  False -&gt; Right name
+
+mkPerson :: Name -&gt; Age -&gt; ValidatePerson Person
+mkPerson name age =
+  mkPerson' (nameOkay name) (ageOkay age)
+
+mkPerson' :: ValidatePerson Name
+          -&gt; ValidatePerson Age
+          -&gt; ValidatePerson Person
+
+mkPerson' (Right nameOk) (Right ageOk) = Right (Person nameOk ageOk)
+mkPerson' (Left badName) (Left badAge) = Left (badName ++ badAge)
+mkPerson' (Left badName) _ = Left badName
+mkPerson' _ (Left badAge) = Left badAge
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf3d1101" class="outline-3">
+<h3 id="orgf3d1101"><span class="section-number-3">6.3</span> Anamorphisms</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+<i>Anamorphisms</i> are the dual of <i>catamorphisms</i>. Catamorphisms, or
+folds, break data structures down, anamorphisms builds up data
+structures.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">-- iterate is like a very limited unfold that never ends
+iterate :: (a -&gt; a) -&gt; a -&gt; [a]
+
+take 10 $ iterate (+1) 0
+[0,1,2,3,4,5,6,7,8,9]
+
+--unfoldr is more general
+unfoldr :: (b -&gt; Maybe (a,b)) -&gt; b -&gt; [a]
+
+take 10 $ unfoldr (\b -&gt; Just (b, b+1)) 0
+[0,1,2,3,4,5,6,7,8,9]
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org79aaa93" class="outline-2">
+<h2 id="org79aaa93"><span class="section-number-2">7</span> Monoids</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+In Haskell, algebras are implemented with typeclasses; the typeclasses
+define the set of operations. When we talk about operations over a
+set, the set is the <i>type</i> the operations are for.
+</p>
+
+<p>
+One of those algebras we use in Haskell is Monoid.
+</p>
+
+<p>
+<code>A monoid is a binary associative pattern with an identity.</code>
+</p>
+
+<p>
+A monoid is a function that takes two arguments and follows two laws:
+associativity and identity.
+</p>
+
+<ol class="org-ol">
+<li>Associativity: arguments can be regrouped or paranthesised in
+different orders and give the same result</li>
+<li>Identity: there exists some value such that when it is passed as
+input to the function, the operation is rendered moot and the other
+value is returned. E.g. adding 0, multiplying by 1</li>
+</ol>
+
+<p>
+Monoids are the pattern of summation, multiplication and list
+concatenation, among other things.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">class Monoid m where
+  mempty :: m
+  mappend :: m -&gt; m -&gt; m
+  mconcat :: [m] -&gt; m
+  mconcat = foldr mappend mempty
+</pre>
+</div>
+
+<p>
+<code>mappend</code> is how any two values that inhabit the type can be joined
+together. <code>mempty</code> is the identity value for that mappend operation.
+</p>
+</div>
+<div id="outline-container-orgc89ff51" class="outline-3">
+<h3 id="orgc89ff51"><span class="section-number-3">7.1</span> Examples of Monoids</h3>
+<div class="outline-text-3" id="text-7-1">
+</div>
+<div id="outline-container-orgb7ae17c" class="outline-4">
+<h4 id="orgb7ae17c"><span class="section-number-4">7.1.1</span> List</h4>
+<div class="outline-text-4" id="text-7-1-1">
+<div class="org-src-container">
+<pre class="src src-haskell">mappend [1,2,3] [4,5,6]
+-- [1,2,3,4,5,6]
+mconcat [[1..3], [4..6]]
+-- [1,2,3,4,5,6]
+mappend "Trout" " goes well with garlic"
+-- "Trout goes well with garlic"
+
+instance Monoid [a] where
+  mempty = []
+  mappend = (++)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org720501b" class="outline-4">
+<h4 id="org720501b"><span class="section-number-4">7.1.2</span> Integers</h4>
+<div class="outline-text-4" id="text-7-1-2">
+<p>
+Integers form a monoid under summation and multiplication. Because it
+is unclear which rule is to be followed, there is no Monoid class
+under Integer, but there is the <code>Sum</code> and <code>Product</code> types that signal
+which Monoid instance is wanted.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org692c01e" class="outline-3">
+<h3 id="org692c01e"><span class="section-number-3">7.2</span> Newtype</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Using <code>newtype</code> constrains the datatype to having a single unary data
+constructor, and <code>newtype</code> guarantees no additional runtime overhead
+in "wrapping" the original type. The runtime representation of newtype
+and what it wraps are always identical.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">(&lt;&gt;) :: Monoid m =&gt; m -&gt; m -&gt; m
+</pre>
+</div>
+
+<p>
+<code>&lt;&gt;</code> is the infix version of <code>mappend</code>.
+</p>
+
+<p>
+Monoid instances must abide by the following laws:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">-- left identity
+mappend mempty x = x
+
+-- right identity
+mappend x mempty = x
+
+-- associativity
+mappend x (mappend y z) = mappend (mappend x y) z
+
+mconcat = foldr mappend mempty
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org3d2c60e" class="outline-3">
+<h3 id="org3d2c60e"><span class="section-number-3">7.3</span> Monoid instances in <code>Bool</code></h3>
+<div class="outline-text-3" id="text-7-3">
+<div class="org-src-container">
+<pre class="src src-haskell">All True &lt;&gt; All True
+-- All {getAll = True}
+
+All True &lt;&gt; All False
+-- All {getAll = False}
+
+Any True &lt;&gt; Any False
+-- Any {getAny = True}
+
+Any False &lt;&gt; Any False
+-- Any {getAny = False}
+</pre>
+</div>
+
+<p>
+<code>All</code> represents boolean <i>conjuction</i>, while <code>Any</code> represents boolean disjunction.
+</p>
+
+<p>
+For <code>Maybe</code>, <code>First</code> returns the "first" or leftmost non-Nothing
+value. <code>Last</code> returns the "last" or rightmost non-Nothing value.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">(First (Just 1)) &lt;&gt; (First (Just 2))
+-- First {getFirst = Just 1}
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Monoid b =&gt; Monoid (a -&gt; b)
+instance (Monoid a, Monoid b) =&gt; Monoid (a,b)
+instance (Monoid a, Monoid, b, Monoid c) =&gt; Monoid (a,b,c)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org3c035da" class="outline-2">
+<h2 id="org3c035da"><span class="section-number-2">8</span> Semigroups</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Semigroups are like monoids, but without the identity constraint. The
+core operation remains binary and associative.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">class Semigroup a where
+  (&lt;&gt;) :: a -&gt; a -&gt; a
+
+(a &lt;&gt; b) &lt;&gt; c = a &lt;&gt; (b &lt;&gt; c)
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">data NonEmpty a = a :| [a] deriving (Eq, Ord, Show)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgb876652" class="outline-2">
+<h2 id="orgb876652"><span class="section-number-2">9</span> Functors</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+A functor is a way to apply a function over or around some structure
+that we don't want to alter. That is, we want to apply the function to
+the value that is "inside" some structure, and leave the structure
+alone.
+</p>
+
+<p>
+Intuitively, a <code>Functor</code> represents a "container" of some sort, along
+with the ability to apply a function uniformly to every element in the
+container. Another intuition of a Functor is that it represents some
+sort of "computational context".
+</p>
+
+<p>
+This is why functors are generally introduced by way of fmapping over
+lists. No elements are removed or added, only transformed.
+</p>
+
+<p>
+The typeclass <code>Functor</code> generalises this pattern, so that this basic
+idea can be used across different structures.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">class Functor f where
+  fmap :: (a -&gt; b) -&gt; f a -&gt; f b
+</pre>
+</div>
+
+<p>
+The argument <code>f a</code> is a Functor <code>f</code> that takes a type argument <code>a</code>.
+That is, the <code>f</code> is a type that has an instance of the Functor
+typeclass.
+</p>
+
+<p>
+The return value is <code>f b</code>. It is the same <code>f</code> from <code>f a</code>, while the
+type argument b <i>possibly but not necessarily</i> refers to a different type.
+</p>
+
+<p>
+<i>fmap</i> specialises to different types as such:
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">fmap :: (a -&gt; b) -&gt; f a -&gt; f b
+fmap :: (a -&gt; b) -&gt; [] a -&gt; [] b
+fmap :: (a -&gt; b) -&gt; Maybe a -&gt; Maybe b
+fmap :: (a -&gt; b) -&gt; Just a -&gt; Just b
+fmap :: (a -&gt; b) -&gt; Either a -&gt; Either b
+fmap :: (a -&gt; b) -&gt; (e,) a -&gt; (e,) b
+fmap :: (a -&gt; b) -&gt; Identity a -&gt; Identity b
+</pre>
+</div>
+</div>
+<div id="outline-container-org3a647ce" class="outline-3">
+<h3 id="org3a647ce"><span class="section-number-3">9.1</span> Functor Laws</h3>
+<div class="outline-text-3" id="text-9-1">
+</div>
+<div id="outline-container-org8ab2495" class="outline-4">
+<h4 id="org8ab2495"><span class="section-number-4">9.1.1</span> Identity</h4>
+<div class="outline-text-4" id="text-9-1-1">
+<div class="org-src-container">
+<pre class="src src-haskell">fmap id == id
+</pre>
+</div>
+
+<p>
+If we fmap the identity function, it should have the same result as
+passing our value to identity.
+</p>
+</div>
+</div>
+<div id="outline-container-orga2ad5ca" class="outline-4">
+<h4 id="orga2ad5ca"><span class="section-number-4">9.1.2</span> Composition</h4>
+<div class="outline-text-4" id="text-9-1-2">
+<div class="org-src-container">
+<pre class="src src-haskell">fmap (f . g) == fmap f . fmap g
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org69ffa87" class="outline-4">
+<h4 id="org69ffa87"><span class="section-number-4">9.1.3</span> Structure Preservation</h4>
+<div class="outline-text-4" id="text-9-1-3">
+<div class="org-src-container">
+<pre class="src src-haskell">fmap :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
+</pre>
+</div>
+
+<p>
+The <i>f</i> is constrained by the typeclass Functor, but that is all we
+know about its type from this definition. Because the <i>f</i> persists
+through the type of <code>fmap</code>, whatever the type is, we know it must be a
+type that can take an argument, as in <code>f a</code> and <code>f b</code> and that it will
+be the "structure" we're lifting the function over when we apply it to
+the value inside.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org98a3750" class="outline-3">
+<h3 id="org98a3750"><span class="section-number-3">9.2</span> Examples</h3>
+<div class="outline-text-3" id="text-9-2">
+<div class="org-src-container">
+<pre class="src src-haskell">data WhoCares a =
+  ItDoesnt
+  | Matter a
+  | WhatThisIsCalled
+  deriving (Eq, Show)
+</pre>
+</div>
+
+<p>
+In the above datatype, only <code>Matter</code> can be <i>fmapped</i> over, because
+the others are nullary, and there is no value to work with inside the
+structure.
+</p>
+
+<p>
+Here is a law-abiding instance of Functor.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Functor WhoCares where
+  fmap _ ItDoesnt = ItDoesnt
+  fmap _ WhatThisIsCalled = WhatThisIsCalled
+  fmap f (Matter a) = Matter (f a)
+</pre>
+</div>
+
+<p>
+This is a law-breaking instance:
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">instance Functor WhoCares where
+  fmap _ ItDoesnt = WhatThisIsCalled
+  fmap f WhatThisIsCalled = ItDoesnt
+  fmap f (Matter a) = Matter (f a)
+</pre>
+</div>
+
+<p>
+In this instance, the structure &#x2013; not the values wrapped or contained
+within the structure &#x2013; change.
+</p>
+</div>
+</div>
+<div id="outline-container-org3e71637" class="outline-3">
+<h3 id="org3e71637"><span class="section-number-3">9.3</span> Maybe and Either Functors</h3>
+<div class="outline-text-3" id="text-9-3">
+<div class="org-src-container">
+<pre class="src src-haskell">data Two a b = Two a b
+</pre>
+</div>
+
+<p>
+Notice <code>Two</code> has the kind <code>* -&gt; * -&gt; *</code>, however, functors are of kind
+<code>* -&gt; *</code>, and hence functors on the type Two would be invalid. we can
+reduce the kindness by doing the following:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Functor (Two a) where
+  fmap f (Two a b) = Two a (f b)
+</pre>
+</div>
+
+<p>
+Notice that we didn't apply <code>f</code> to <code>a</code>, because <code>a</code> is now part of the
+Functor structure, and is untouchable.
+</p>
+</div>
+</div>
+<div id="outline-container-org9fa1330" class="outline-3">
+<h3 id="org9fa1330"><span class="section-number-3">9.4</span> Ignoring possibilities</h3>
+<div class="outline-text-3" id="text-9-4">
+<p>
+The Functor instances for the Maybe and Either datatypes are useful if
+you tend to ignore the left cases, which are typically the error or
+failure cases. Because fmap doesn't touch those cases, you can map
+your function right to the values that you intend to work with and
+ignore failure cases.
+</p>
+</div>
+<div id="outline-container-orgfcefc0c" class="outline-4">
+<h4 id="orgfcefc0c"><span class="section-number-4">9.4.1</span> Maybe</h4>
+<div class="outline-text-4" id="text-9-4-1">
+<div class="org-src-container">
+<pre class="src src-haskell">incIfJust :: Num a =&gt; Maybe a -&gt; Maybe a
+incIfJust (Just n) = Just $ n + 1
+incIfJust Nothing = Nothing
+
+incMaybe :: Num a =&gt; Maybe a -&gt; Maybe a
+incMaybe = fmap (+1)
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge4eba2e" class="outline-4">
+<h4 id="orge4eba2e"><span class="section-number-4">9.4.2</span> Either</h4>
+<div class="outline-text-4" id="text-9-4-2">
+<div class="org-src-container">
+<pre class="src src-haskell">incIfRight :: Num a =&gt; Either e a =&gt; Either e a
+incIfRight (Right n) = Right $ n + 1
+incIfRight (Left e) = Left e
+
+-- can be simplified to
+incEither :: Num a =&gt; Either e a =&gt; Either e a
+incEither = fmap (+1)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org7cf143a" class="outline-3">
+<h3 id="org7cf143a"><span class="section-number-3">9.5</span> Summary</h3>
+<div class="outline-text-3" id="text-9-5">
+<p>
+<code>Functor</code> is a mapping between categories. In Haskell, this manifests
+as a typeclass which lifts a function between to types over two new
+types. This conventionally implies some notion of a function which can
+be applied to a value with more structure than the unlifted function
+was originally designed for. The additional structure is represented
+by the use of a higher kinded type <i>f</i>, introduced by the definition
+of the Functor typeclass.
+</p>
+
+<p>
+To <i>lift over</i>, and later in Monad, to <i>bind over</i>, is a metaphor. One
+way to think about it is that we can lift a function into a context.
+Another is that we lift a function over some layer of structure to
+apply it.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">fmap (+1) $ Just 1 -- Just 2
+fmap (+1) [1,2,3] -- [2,3,4]
+</pre>
+</div>
+
+<p>
+In both cases, the function we're lifting is the same. In the first
+case, we lift that function into a Maybe context in order to apply it,
+in the second case, into a list context.
+</p>
+
+<p>
+The context determines how the function will get applied: the context
+is the datatype, the definition of the datatype, and the Functor
+instance we have for that datatype.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbacae47" class="outline-2">
+<h2 id="orgbacae47"><span class="section-number-2">10</span> Applicative</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+Monoid gives us a means of hashing two values of the same type
+together.
+</p>
+
+<p>
+Functor is for function application over some structure we don't want
+to have to think about.
+</p>
+
+<p>
+The Applicative typeclass is a Monoidal Functor. The Applicative
+typeclass allows for function application lifted over structure (like
+Functor). But with Applicative the function we're applying is also
+embedded in some structure. Because the function and the value it's
+being applied to both have structure, we have to smash those
+structures together.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">class Functor f =&gt; Applicative f where
+  pure :: a -&gt; f a
+  (&lt;*&gt;) :: f (a -&gt; b) -&gt; f a -&gt; f b
+</pre>
+</div>
+<p>
+The <code>pure</code> function embeds something into functorial (applicative)
+structure.
+</p>
+
+<p>
+<code>&lt;*&gt;</code> is an infix operation called 'apply'. This is very similar to
+the types of fmap.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">-- fmap
+(&lt;$&gt;) :: Functor f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
+(&lt;*&gt;) :: Applicative f =&gt; f (a -&gt; b) -&gt; f a -&gt; f b
+</pre>
+</div>
+
+<p>
+the Control.Applicative library provides some convenience functions:
+<code>liftA</code>, <code>liftA2</code> and <code>liftA3</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">liftA :: Applicative f =&gt; (a -&gt; b) -&gt; f a -&gt; f b
+liftA2 :: Appplicative f =&gt; (a -&gt; b -&gt; c) -&gt; f a -&gt; f b -&gt; f c
+liftA2 :: Appplicative f =&gt; (a -&gt; b -&gt; c -&gt; d) -&gt; f a -&gt; f b -&gt; f c -&gt; f d
+</pre>
+</div>
+
+<p>
+<code>liftA</code> is just <code>fmap</code> with an Applicative typeclass constraint as
+opposed to a Functor typeclass constraint.
+</p>
+
+<p>
+In <code>pure</code>, the left type is handled differently from the right:
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">pure 1 :: ([a], Int) -- ([], 1)
+pure 1 :: Either a Int -- Right 1
+</pre>
+</div>
+
+<p>
+The left type is part of the structure, and the structure is not
+transformed by the function application.
+</p>
+
+<p>
+In a sense, Applicative is Monoid bolted onto a Functor to be able to
+deal with functions embedded in additional structure. In another,
+we're enriching function application with the very structure we were
+previously merely mapping over with Functor.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">[(*2), (*3)] &lt;*&gt; [4,5] -- [2*4, 2*5, 3*4, 3*5]
+= [8,10,12,15]
+</pre>
+</div>
+
+<p>
+<code>&lt;*&gt;</code> takes a functor that has a function in it, and another functor
+and applies the function inside the functor. <code>&lt;*&gt;</code> is left associative.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Applicative Maybe where
+  pure = Just
+  Nothing &lt;*&gt; _ = Nothing
+  (Just f) &lt;*&gt; something = fmap f something
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Applicative [] where
+  pure x = [x]
+  fs &lt;*&gt; xs = [f x | f &lt;- fs, x &lt;- xs]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org25b6f51" class="outline-2">
+<h2 id="org25b6f51"><span class="section-number-2">11</span> Monads</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Monads are a natural extension to applicative functors. If you have a
+value with a context <code>m a</code>, how do you apply to it a function that
+takes a normal a and returns a value with a context?
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">(&gt;&gt;=) :: (Monad m) =&gt; m a -&gt; (a -&gt; m b) -&gt; m b
+</pre>
+</div>
+
+<p>
+In Prelude, <code>IO</code>, lists, and <code>Maybe</code> are members of the monadic
+classes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">-- infixl 1 &gt;&gt;=, &gt;&gt;
+class Applicative m =&gt; Monad (m :: * -&gt; *) where
+  (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b
+  (&gt;&gt;) :: m a -&gt; m b -&gt; m b
+  return :: a -&gt; m a
+  fail :: String -&gt; m a 
+</pre>
+</div>
+
+<p>
+<code>&gt;&gt;</code>, referred, to as bind, combines a Monad containing values of type
+<code>a</code>, and a function which operates on <code>a</code> and returns a monad of type
+<code>b</code>.
+</p>
+
+<p>
+<code>&gt;&gt;</code>, also sometimes called <i>Mr. Pointy</i>, is used when the function
+does not need the value of the first Monadic operator.
+</p>
+
+<p>
+The precise meaning of bind depends on the monad. For example, in the
+<code>IO</code> monad, <code>x&gt;&gt;=y</code> performs two actions sequentially, passing the
+result of the first into the second. For the lists and <code>Maybe</code> type,
+these monadic operations can be understood in terms of passing zero or
+more values from one calculation to the next.
+</p>
+
+<p>
+The <code>do</code> syntax provides a simple shorthand for chains of monadic
+operations:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">do e1 ; e2 = e1 &gt;&gt; e2
+do p &lt;- e1; e2 = e1 &gt;&gt;= (\v -&gt; case v of p -&gt; e2; _ -&gt; fail "s")
+</pre>
+</div>
+
+<p>
+The laws which govern <code>&gt;&gt;=</code> and <code>return</code> are:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">return a &gt;&gt;= k          = k a
+m &gt;&gt;= return            = m
+xs &gt;&gt;= return . f       = fmap f xs
+m &gt;&gt;= (\x -&gt; k x &gt;&gt;= h) = (m &gt;&gt;= k) &gt;&gt;= h
+</pre>
+</div>
+</div>
+<div id="outline-container-org7cd0e2a" class="outline-3">
+<h3 id="org7cd0e2a"><span class="section-number-3">11.1</span> Built in Monads</h3>
+<div class="outline-text-3" id="text-11-1">
+</div>
+<div id="outline-container-org25fb228" class="outline-4">
+<h4 id="org25fb228"><span class="section-number-4">11.1.1</span> Maybe</h4>
+<div class="outline-text-4" id="text-11-1-1">
+<div class="org-src-container">
+<pre class="src src-haskell">-- treating Maybe as unctors
+fmap (++"!") (Just "wisdom") -- Just "wisdom!"
+fmap (++"!") Nothing -- Nothing
+
+-- treating Maybe as Applicatives
+Just (+3) &lt;*&gt; Just 3 -- Just 6
+Nothing &lt;*&gt; Just "greed" -- Nothing
+max &lt;$&gt; Just 3 &lt;*&gt; Just 6 -- Just 6
+max &lt;$&gt; Just 3 &lt;*&gt; Nothing -- Nothing
+
+-- Upgrading to Monads
+(\x -&gt; Just (x + 1)) 1 -- Just 2
+applyMaybe :: Maybe a -&gt; (a -&gt; Maybe b) -&gt; Maybe b
+applyMaybe Nothing f = Nothing
+applyMaybe (Just x) f = f x
+
+Just 3 `applyMaybe` \x -&gt; Just (x + 1) -- Just 4
+Nothing `applyMaybe` \x -&gt; Just (x + 1) -- Nothing
+
+-- applyMaybe is &gt;&gt;= for the Maybe monad
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org0ec1553" class="outline-4">
+<h4 id="org0ec1553"><span class="section-number-4">11.1.2</span> Lists</h4>
+<div class="outline-text-4" id="text-11-1-2">
+<p>
+The monadic aspects of lists bring non-determinism into code in a
+clear and readable manner.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">instance Monad [] where
+  return x = [x]
+  xs &gt;&gt;= f = concat (map f xs)
+  fail _ = []
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">[3,4,5] &gt;&gt; = \x -&gt; [x, -x]
+-- [3, -3, 4, -4, 5, -5]
+</pre>
+</div>
+
+<p>
+Non-determinism also includes support for failure. Here, the empty
+list <code>[]</code> is the equivalent of <code>Nothing</code>, because it signifies the
+absence of a result.
+</p>
+
+<p>
+Just like with <code>Maybe</code> values, we can chain several lists with <code>&gt;&gt;=</code>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">[1,2] &gt;&gt;= \n -&gt; ['a', 'b'] &gt;&gt;= \ch -&gt; return (n,ch)
+-- [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]
+
+do
+  n &lt;- [1,2]
+  ch &lt;- ['a', 'b']
+  return (n,ch)
+</pre>
+</div>
+
+<p>
+The list <code>[1,2]</code> gets bound to n, and <code>["a", "b"]</code> gets bound to ch.
+<code>return (n,ch)</code>, takes the tuple, and makes the smallest possible list
+that still presents (n,ch) as the result.
+</p>
+
+<p>
+For lists, monadic binding involves joining together a set of
+calculations for each value in the list. When used with lists, the
+signature of <code>&gt;&gt;=</code> becomes:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">(&gt;&gt;=) :: [a] -&gt; (a -&gt; [b]) -&gt; [b] 
+</pre>
+</div>
+
+<p>
+Given a list of <code>a</code>'s and a function that maps an a onto a list of
+<code>b</code>'s, <code>&gt;&gt;=</code> applies this function to each of the <code>a</code>'s in the input
+and returns the generated <code>b</code>'s concatenated into a list. The return
+function creates a singleton list.
+</p>
+
+<p>
+The following two expressions are equivalent:
+</p>
+<div class="org-src-container">
+<pre class="src src-haskell">[(x,y) | x &lt;- [1,2,3] , y &lt;- [1,2,3], x /= y]
+
+do x &lt;- [1,2,3]
+   y &lt;- [1,2,3]
+   True &lt;- return (x /= y)
+   return (x,y)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa45e6c" class="outline-3">
+<h3 id="orgfa45e6c"><span class="section-number-3">11.2</span> Using Monads</h3>
+<div class="outline-text-3" id="text-11-2">
+<p>
+We first analyse this state monad, built around a state type <code>s</code> that
+looks like this:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">data SM a = SM (S -&gt; (a, S)) -- The monadic type
+
+instance Monad SM where
+  -- defines state propogation
+  SM c1 &gt;&gt;= fc2 = SM (\s0 -&gt; let (r, s1) = c1 s0
+                                 SM c2 = fc2 r
+                             in
+                               c2 s1)
+  return k = SM (\s -&gt; (k, s))
+
+-- extracts the state from the Monad
+readSM :: SM S
+readSM = SM (\s -&gt; (s, s))
+
+-- updates the state of the monad
+updateSM :: (S -&gt; S) -&gt; SM () -- alters the state
+updateSM f = SM (\s -&gt; ((), f s))
+
+-- run a computation in the SM monad
+runSM :: S -&gt; SM a -&gt; (a, S)
+runSM s0 (SM c) = c s0
+</pre>
+</div>
+
+<p>
+<code>SM</code> is defined to be a computation that implicitly carries a type
+<code>s</code>. <code>SM</code> consists of functions that take a state and produce two
+results: a returned value (of any type) and an updated state.
+</p>
+
+<p>
+The instance declaration defines the 'plumbing' of the monad: how to
+sequence two computations and the definition of an empty computation.
+</p>
+
+<p>
+Sequencing (<code>&gt;&gt;=</code>) defines a computation (denoted by the constructor
+<code>SM</code>) that passes the initial state, <code>s0</code> into <code>c1</code>, then passes the
+value coming out of this computation, <code>r</code>, to the function that
+returns the second computation, <code>c2</code>. Finally, the state coming out of
+<code>c1</code> is passed into <code>c2</code> and the overall result is the result of <code>c2</code>.
+</p>
+
+<p>
+Here <code>return</code> doesn't change the state at all; it only serves to
+bring a value into the monad.
+</p>
+
+<p>
+<code>readSM</code> brings the state out of the monad for observation while
+<code>updateSM</code> allows the user to alter the state in the monad.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgddabbca" class="outline-2">
+<h2 id="orgddabbca"><span class="section-number-2">12</span> Do Notation</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+Haskell's do notation supports an imperative style of programming by
+providing syntactic sugar for chains of monadic expressions.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-haskell">a &gt;&gt;= \x -&gt;
+b &gt;&gt;
+c &gt;&gt;= \y -&gt;
+d
+
+-- becomes:
+
+do { x &lt;- a
+   ;      b
+   ; y &lt;- c
+   ;      d
+   }
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">do e → e
+do { e; stmts } → e &gt;&gt; do { stmts }
+do { v &lt;- e; stmts } → e &gt;&gt;= \v -&gt; do { stmts }
+do { let decls; stmts} → let decls in do { stmts }
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-haskell">routine :: Maybe Pole
+routine = do
+  start &lt;- return (0,0)
+  first &lt;- landLeft 2 start
+  second &lt;- landRight 2 first
+  landLeft 1 second
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

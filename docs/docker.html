@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-01-02 Tue 14:29 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Docker 101</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Docker 101
+<br />
+<span class="subtitle">Hackerschool, NUS Hackers</span>
+</h1>
+<div id="outline-container-org0173ade" class="outline-2">
+<h2 id="org0173ade">Why Containers</h2>
+<div class="outline-text-2" id="text-org0173ade">
+</div>
+<div id="outline-container-org4ce493e" class="outline-3">
+<h3 id="org4ce493e">Containers are Cheap</h3>
+<div class="outline-text-3" id="text-org4ce493e">
+
+<div class="figure">
+<p><img src="images/docker/container_vm.png" alt="container_vm.png" />
+</p>
+</div>
+</div>
+<div id="outline-container-orgbfe055e" class="outline-4">
+<h4 id="orgbfe055e">Containers are Cheap</h4>
+<div class="outline-text-4" id="text-orgbfe055e">
+<ul class="org-ul build fade">
+<li>Docker provides lightweight virtualization with almost zero
+overhead.</li>
+<li>Start and stop containers within seconds.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc6fdcce" class="outline-3">
+<h3 id="orgc6fdcce">Containers are Portable</h3>
+<div class="outline-text-3" id="text-orgc6fdcce">
+<p>
+Containers contain all the required software dependencies to run your
+application.
+</p>
+
+<p>
+Once a container is built, you can be sure it runs "the same way" on any
+host operating system with the same Linux kernel.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd42a85b" class="outline-2">
+<h2 id="orgd42a85b">Containers in OSes</h2>
+<div class="outline-text-2" id="text-orgd42a85b">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Year</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">2006</td>
+<td class="org-left">Process Containers, later renamed to cgroups</td>
+</tr>
+
+<tr>
+<td class="org-right">2008</td>
+<td class="org-left">LXC: implemented using cgroups and kernel namespaces</td>
+</tr>
+
+<tr>
+<td class="org-right">2013</td>
+<td class="org-left">Docker: initially built on LXC, but now runs on <code>libcontainer</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="outline-container-orge04548b" class="outline-3">
+<h3 id="orge04548b">2006: Process Containers</h3>
+<div class="outline-text-3" id="text-orge04548b">
+
+<div class="figure">
+<p><img src="images/docker/cgroups.png" alt="cgroups.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org272e43b" class="outline-3">
+<h3 id="org272e43b">2008: LXC Containers, and 2013: Docker</h3>
+<div class="outline-text-3" id="text-org272e43b">
+
+<div class="figure">
+<p><img src="images/docker/lxc_docker.png" alt="lxc_docker.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd659a2d" class="outline-2">
+<h2 id="orgd659a2d">What is Docker?</h2>
+<div class="outline-text-2" id="text-orgd659a2d">
+<p>
+Docker is a toolchain for managing containers.
+</p>
+
+<div class="figure">
+<p><img src="images/docker/docker_architecture.png" alt="docker_architecture.png" width="60%" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf329308" class="outline-2">
+<h2 id="orgf329308">What You'll Do Today</h2>
+<div class="outline-text-2" id="text-orgf329308">
+<p>
+You'll be packaging a simple application with Docker.
+</p>
+
+<p>
+If time permits, we'll cover additional things, such as passing
+environment variables.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org702b8ee" class="outline-2">
+<h2 id="org702b8ee">Docker Basics</h2>
+<div class="outline-text-2" id="text-org702b8ee">
+</div>
+<div id="outline-container-org357080c" class="outline-3">
+<h3 id="org357080c">Pulling images</h3>
+<div class="outline-text-3" id="text-org357080c">
+<div class="org-src-container">
+<pre class="src src-sh">docker pull alpine
+</pre>
+</div>
+</div>
+<div id="outline-container-org8738a39" class="outline-4">
+<h4 id="org8738a39">Alpine?</h4>
+<div class="outline-text-4" id="text-org8738a39">
+<p>
+<code>alpine</code> is an image for a tiny Linux distribution, used by Docker for
+most of its official images.
+</p>
+
+<p>
+A container image is a lightweight, stand-alone, executable package of
+a piece of software that includes everything needed to run it: code,
+runtime, system tools, system libraries, settings.
+</p>
+
+<p>
+<code>alpine</code> is pulled from the Docker Registry, where hundreds of
+thousands of images are hosted.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org90d3429" class="outline-3">
+<h3 id="org90d3429">Starting a container</h3>
+<div class="outline-text-3" id="text-org90d3429">
+<div class="org-src-container">
+<pre class="src src-sh">docker run alpine
+</pre>
+</div>
+
+<p>
+What is happening here?
+</p>
+</div>
+</div>
+<div id="outline-container-org2961dba" class="outline-3">
+<h3 id="org2961dba">Running a command</h3>
+<div class="outline-text-3" id="text-org2961dba">
+<div class="org-src-container">
+<pre class="src src-sh">docker run alpine echo "Hello from alpine!"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfd0f911" class="outline-3">
+<h3 id="orgfd0f911">Docker Status</h3>
+<div class="outline-text-3" id="text-orgfd0f911">
+<p>
+List all docker images:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">docker images
+</pre>
+</div>
+
+<p>
+List all running docker containers:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">docker ps
+</pre>
+</div>
+
+<p>
+List all docker containers (including stopped containers):
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">docker ps -a
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org65eb0a7" class="outline-3">
+<h3 id="org65eb0a7">Entering a Container Interactively</h3>
+<div class="outline-text-3" id="text-org65eb0a7">
+<div class="org-src-container">
+<pre class="src src-sh">docker run -it alpine sh
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-sh">uname -r                        # 4.9.41-moby
+hostname                        # container_id
+whoami                          # root
+id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org134c8dd" class="outline-2">
+<h2 id="org134c8dd">Inside <code>alpine</code></h2>
+<div class="outline-text-2" id="text-org134c8dd">
+<p>
+Docker images consist of multiple layers:
+</p>
+
+
+<div class="figure">
+<p><img src="images/docker/container-layers.jpg" alt="container-layers.jpg" width="60%" />
+</p>
+</div>
+</div>
+<div id="outline-container-org280d685" class="outline-3">
+<h3 id="org280d685">Layers for the ubuntu image</h3>
+<div class="outline-text-3" id="text-org280d685">
+<p>
+Observe the output for the following:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">docker pull ubuntu:15.04
+docker history ubuntu
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org07c9168" class="outline-3">
+<h3 id="org07c9168">Declare layers with a <code>Dockerfile</code></h3>
+<div class="outline-text-3" id="text-org07c9168">
+<div class="org-src-container">
+<pre class="src src-docker-file">FROM ubuntu
+MAINTAINER Kimbro Staken
+
+RUN apt-get install -y software-properties-common python
+RUN add-apt-repository ppa:chris-lea/node.js
+RUN echo "deb http://us.archive.ubuntu.com/ubuntu/ precise universe" &gt;&gt; /etc/apt/sources.list
+RUN apt-get update
+RUN apt-get install -y nodejs
+#RUN apt-get install -y nodejs=0.6.12~dfsg1-1ubuntu1
+RUN mkdir /var/www
+
+ADD app.js /var/www/app.js
+
+CMD ["/usr/bin/node", "/var/www/app.js"] 
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org2c307c8" class="outline-3">
+<h3 id="org2c307c8">Dockerfile Cheatsheet</h3>
+<div class="outline-text-3" id="text-org2c307c8">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Command</th>
+<th scope="col" class="org-left">Info</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">FROM</td>
+<td class="org-left">Sets the Base Image for subsequent instructions.</td>
+</tr>
+
+<tr>
+<td class="org-left">RUN</td>
+<td class="org-left">execute any commands in a new layer on top of the current image and commit the results.</td>
+</tr>
+
+<tr>
+<td class="org-left">CMD</td>
+<td class="org-left">provide defaults for an executing container.</td>
+</tr>
+
+<tr>
+<td class="org-left">EXPOSE</td>
+<td class="org-left">informs Docker that the container listens on the specified network ports at runtime.</td>
+</tr>
+
+<tr>
+<td class="org-left">ENV</td>
+<td class="org-left">sets environment variable.</td>
+</tr>
+
+<tr>
+<td class="org-left">COPY</td>
+<td class="org-left">copies new files or directories to container.</td>
+</tr>
+
+<tr>
+<td class="org-left">ENTRYPOINT</td>
+<td class="org-left">configures a container that will run as an executable.</td>
+</tr>
+
+<tr>
+<td class="org-left">VOLUME</td>
+<td class="org-left">creates a mount point for externally mounted volumes or other containers.</td>
+</tr>
+
+<tr>
+<td class="org-left">WORKDIR</td>
+<td class="org-left">sets the working directory.</td>
+</tr>
+
+<tr>
+<td class="org-left">ARG</td>
+<td class="org-left">defines a build-time variable.</td>
+</tr>
+
+<tr>
+<td class="org-left">LABEL</td>
+<td class="org-left">apply key/value metadata to your images, containers, or daemons.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org1a5f33e" class="outline-2">
+<h2 id="org1a5f33e">Docker Networking</h2>
+<div class="outline-text-2" id="text-org1a5f33e">
+<p>
+Docker creates three networks by default. We're mostly concerned with
+<code>bridge</code>.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">$ docker network ls
+
+NETWORK ID          NAME                DRIVER
+7fca4eb8c647        bridge              bridge
+9f904ee27bf5        none                null
+cf03ee007fb4        host                host
+</pre>
+</div>
+</div>
+<div id="outline-container-orgec8cc9e" class="outline-3">
+<h3 id="orgec8cc9e">How <code>bridge</code> works</h3>
+<div class="outline-text-3" id="text-orgec8cc9e">
+<p>
+Unless specified otherwise, the docker container will connect to this
+default <code>bridge</code> network. This provides a means of Docker containers
+to access the outside world. This is achieved through rules on the
+kernel's <code>iptable</code>.
+</p>
+
+<p>
+By default, none of the ports are published and the outside world has
+no access to the docker containers.
+</p>
+</div>
+</div>
+<div id="outline-container-orged3faa0" class="outline-3">
+<h3 id="orged3faa0">Running a Simple Webserver</h3>
+<div class="outline-text-3" id="text-orged3faa0">
+<div class="org-src-container">
+<pre class="src src-sh">nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd7a9338" class="outline-3">
+<h3 id="orgd7a9338">Allowing Ingress</h3>
+<div class="outline-text-3" id="text-orgd7a9338">
+<div class="org-src-container">
+<pre class="src src-sh">docker run -p 5001:8080 alpine \
+       nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
+</pre>
+</div>
+
+<p>
+As a daemon:
+</p>
+<div class="org-src-container">
+<pre class="src src-sh">docker run -p 5001:8080 -d alpine \
+       nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf1aab84" class="outline-2">
+<h2 id="orgf1aab84">Exercise: package a Node.js Server with Docker</h2>
+<div class="outline-text-2" id="text-orgf1aab84">
+<div class="org-src-container">
+<pre class="src src-sh">curl -i http://localhost:5001/
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-text">HTTP/1.1 200 OK
+X-Powered-By: Express
+Content-Type: text/html; charset=utf-8
+Content-Length: 14
+ETag: W/"e-ZohVPp9YwmNT/yh3111KJ3ZG6Uk"
+Date: Fri, 13 Oct 2017 18:34:46 GMT
+Connection: keep-alive
+
+Hello world!!
+</pre>
+</div>
+</div>
+<div id="outline-container-orgd2eba3d" class="outline-3">
+<h3 id="orgd2eba3d">Server code</h3>
+<div class="outline-text-3" id="text-orgd2eba3d">
+<div class="org-src-container">
+<pre class="src src-text">https://git.io/vdXLC
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org4e18f9b" class="outline-3">
+<h3 id="org4e18f9b">General Instructions</h3>
+<div class="outline-text-3" id="text-org4e18f9b">
+<ol class="org-ol">
+<li>Install the Node.js runtime (use Ubuntu)</li>
+<li>Copy the files into the container</li>
+<li>Get the node package manager <code>npm</code></li>
+<li>Run <code>npm install</code></li>
+<li>Run <code>npm start</code> to start server</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orga0c52a6" class="outline-2">
+<h2 id="orga0c52a6">But&#x2026; I want to change my files!</h2>
+<div class="outline-text-2" id="text-orga0c52a6">
+<div class="org-src-container">
+<pre class="src src-sh">docker run -d my/webserver
+# Create file locally
+docker exec -it container_name sh
+ls #WAT
+</pre>
+</div>
+</div>
+<div id="outline-container-org7c8fffc" class="outline-3">
+<h3 id="org7c8fffc">Mounting Volumes</h3>
+<div class="outline-text-3" id="text-org7c8fffc">
+<p>
+There are three types of mounts:
+</p>
+
+<ol class="org-ol">
+<li><b>Volumes</b> are managed by docker. Volumes also support the use of
+volume drivers, which allow you to store your data on remote hosts
+or cloud providers, among other possibilities.</li>
+<li><b>Bind Mounts</b> may be stored anywhere on the host filesystem.</li>
+<li><b>tmpfs mounts</b> are stored in the host system's memory only.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org748d3bd" class="outline-3">
+<h3 id="org748d3bd">Mounting the <code>/src</code> directory</h3>
+<div class="outline-text-3" id="text-org748d3bd">
+<div class="org-src-container">
+<pre class="src src-sh">docker run -p 5000:8080 -v ~/path/to/directory:/usr/src/app/src my/webserver
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org004091f" class="outline-2">
+<h2 id="org004091f">Beyond Docker</h2>
+<div class="outline-text-2" id="text-org004091f">
+<p>
+Docker is the building block for many devops solutions.
+</p>
+
+<ol class="org-ol">
+<li>Container Orchestration: Kubernetes, Cloud Foundry etc.</li>
+<li>Monitoring: cAdvisor, InfluxDB etc.</li>
+<li>Reverse Proxies and Load Balancers: fabio etc.</li>
+</ol>
+
+<p>
+Docker makes microservices manageable and scalable.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd3cb752" class="outline-2">
+<h2 id="orgd3cb752">Thank You</h2>
+<div class="outline-text-2" id="text-orgd3cb752">
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: 2017/10/14</p>
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-02 Tue 14:29</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 9.1.4)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
