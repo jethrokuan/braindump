@@ -425,7 +425,7 @@ $\hat{\theta}$ is a function of $T$.
 * Hypothesis Testing
 Let $X_1... X_n$ be IID with density $f(x|\theta)$. null $H_0: \theta
 = \theta_0$, $H-1 : \theta = \theta_1$. Critical region is
-$R\subsetR_n$. $size = P_0(X \in R)$ and $power = P_1(X\in R)$.
+$R\subset R_n$. $size = P_0(X \in R)$ and $power = P_1(X\in R)$.
 
 $\Lambda(x) = \frac{f_0(x_1)...f_0(x_n)}{f_1(x_1)...f_1(x_n)}$.
 Critical region ${x : \Lambda(x) < c_\alpha}$, and among all tests
