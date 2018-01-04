@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-02 Tue 18:47 -->
+<!-- 2018-01-05 Fri 02:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Docker 101</title>
@@ -62,22 +62,22 @@ for the JavaScript code in this tag.
 <br />
 <span class="subtitle">Hackerschool, NUS Hackers</span>
 </h1>
-<div id="outline-container-org36341e9" class="outline-2">
-<h2 id="org36341e9">Why Containers</h2>
-<div class="outline-text-2" id="text-org36341e9">
+<div id="outline-container-org1da3212" class="outline-2">
+<h2 id="org1da3212">Why Containers</h2>
+<div class="outline-text-2" id="text-org1da3212">
 </div>
-<div id="outline-container-org7d100b7" class="outline-3">
-<h3 id="org7d100b7">Containers are Cheap</h3>
-<div class="outline-text-3" id="text-org7d100b7">
+<div id="outline-container-org9c23490" class="outline-3">
+<h3 id="org9c23490">Containers are Cheap</h3>
+<div class="outline-text-3" id="text-org9c23490">
 
 <div class="figure">
 <p><img src="images/docker/container_vm.png" alt="container_vm.png" />
 </p>
 </div>
 </div>
-<div id="outline-container-orge88e09a" class="outline-4">
-<h4 id="orge88e09a">Containers are Cheap</h4>
-<div class="outline-text-4" id="text-orge88e09a">
+<div id="outline-container-org0a5885c" class="outline-4">
+<h4 id="org0a5885c">Containers are Cheap</h4>
+<div class="outline-text-4" id="text-org0a5885c">
 <ul class="org-ul build fade">
 <li>Docker provides lightweight virtualization with almost zero
 overhead.</li>
@@ -86,9 +86,9 @@ overhead.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org0e33490" class="outline-3">
-<h3 id="org0e33490">Containers are Portable</h3>
-<div class="outline-text-3" id="text-org0e33490">
+<div id="outline-container-org63c0992" class="outline-3">
+<h3 id="org63c0992">Containers are Portable</h3>
+<div class="outline-text-3" id="text-org63c0992">
 <p>
 Containers contain all the required software dependencies to run your
 application.
@@ -101,9 +101,9 @@ host operating system with the same Linux kernel.
 </div>
 </div>
 </div>
-<div id="outline-container-org870fe13" class="outline-2">
-<h2 id="org870fe13">Containers in OSes</h2>
-<div class="outline-text-2" id="text-org870fe13">
+<div id="outline-container-orgf2a2144" class="outline-2">
+<h2 id="orgf2a2144">Containers in OSes</h2>
+<div class="outline-text-2" id="text-orgf2a2144">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -136,9 +136,9 @@ host operating system with the same Linux kernel.
 </tbody>
 </table>
 </div>
-<div id="outline-container-org658cb80" class="outline-3">
-<h3 id="org658cb80">2006: Process Containers</h3>
-<div class="outline-text-3" id="text-org658cb80">
+<div id="outline-container-org15b3684" class="outline-3">
+<h3 id="org15b3684">2006: Process Containers</h3>
+<div class="outline-text-3" id="text-org15b3684">
 
 <div class="figure">
 <p><img src="images/docker/cgroups.png" alt="cgroups.png" />
@@ -146,9 +146,9 @@ host operating system with the same Linux kernel.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf8e06cb" class="outline-3">
-<h3 id="orgf8e06cb">2008: LXC Containers, and 2013: Docker</h3>
-<div class="outline-text-3" id="text-orgf8e06cb">
+<div id="outline-container-org453c23d" class="outline-3">
+<h3 id="org453c23d">2008: LXC Containers, and 2013: Docker</h3>
+<div class="outline-text-3" id="text-org453c23d">
 
 <div class="figure">
 <p><img src="images/docker/lxc_docker.png" alt="lxc_docker.png" width="60%" />
@@ -157,9 +157,9 @@ host operating system with the same Linux kernel.
 </div>
 </div>
 </div>
-<div id="outline-container-orge0db33e" class="outline-2">
-<h2 id="orge0db33e">What is Docker?</h2>
-<div class="outline-text-2" id="text-orge0db33e">
+<div id="outline-container-orgb06c396" class="outline-2">
+<h2 id="orgb06c396">What is Docker?</h2>
+<div class="outline-text-2" id="text-orgb06c396">
 <p>
 Docker is a toolchain for managing containers.
 </p>
@@ -170,9 +170,9 @@ Docker is a toolchain for managing containers.
 </div>
 </div>
 </div>
-<div id="outline-container-org6628ab8" class="outline-2">
-<h2 id="org6628ab8">What You'll Do Today</h2>
-<div class="outline-text-2" id="text-org6628ab8">
+<div id="outline-container-orgf2c69dc" class="outline-2">
+<h2 id="orgf2c69dc">What You'll Do Today</h2>
+<div class="outline-text-2" id="text-orgf2c69dc">
 <p>
 You'll be packaging a simple application with Docker.
 </p>
@@ -184,21 +184,21 @@ environment variables.
 </div>
 </div>
 
-<div id="outline-container-org8e318e4" class="outline-2">
-<h2 id="org8e318e4">Docker Basics</h2>
-<div class="outline-text-2" id="text-org8e318e4">
+<div id="outline-container-orge6b61ce" class="outline-2">
+<h2 id="orge6b61ce">Docker Basics</h2>
+<div class="outline-text-2" id="text-orge6b61ce">
 </div>
-<div id="outline-container-org80565f2" class="outline-3">
-<h3 id="org80565f2">Pulling images</h3>
-<div class="outline-text-3" id="text-org80565f2">
+<div id="outline-container-org82418a0" class="outline-3">
+<h3 id="org82418a0">Pulling images</h3>
+<div class="outline-text-3" id="text-org82418a0">
 <div class="org-src-container">
 <pre class="src src-sh">docker pull alpine
 </pre>
 </div>
 </div>
-<div id="outline-container-org3f703c0" class="outline-4">
-<h4 id="org3f703c0">Alpine?</h4>
-<div class="outline-text-4" id="text-org3f703c0">
+<div id="outline-container-org2851eb9" class="outline-4">
+<h4 id="org2851eb9">Alpine?</h4>
+<div class="outline-text-4" id="text-org2851eb9">
 <p>
 <code>alpine</code> is an image for a tiny Linux distribution, used by Docker for
 most of its official images.
@@ -217,9 +217,9 @@ thousands of images are hosted.
 </div>
 </div>
 </div>
-<div id="outline-container-org0896971" class="outline-3">
-<h3 id="org0896971">Starting a container</h3>
-<div class="outline-text-3" id="text-org0896971">
+<div id="outline-container-orge3d102e" class="outline-3">
+<h3 id="orge3d102e">Starting a container</h3>
+<div class="outline-text-3" id="text-orge3d102e">
 <div class="org-src-container">
 <pre class="src src-sh">docker run alpine
 </pre>
@@ -230,18 +230,18 @@ What is happening here?
 </p>
 </div>
 </div>
-<div id="outline-container-orgd0cd24e" class="outline-3">
-<h3 id="orgd0cd24e">Running a command</h3>
-<div class="outline-text-3" id="text-orgd0cd24e">
+<div id="outline-container-org8434550" class="outline-3">
+<h3 id="org8434550">Running a command</h3>
+<div class="outline-text-3" id="text-org8434550">
 <div class="org-src-container">
 <pre class="src src-sh">docker run alpine echo "Hello from alpine!"
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org0011de7" class="outline-3">
-<h3 id="org0011de7">Docker Status</h3>
-<div class="outline-text-3" id="text-org0011de7">
+<div id="outline-container-org149a745" class="outline-3">
+<h3 id="org149a745">Docker Status</h3>
+<div class="outline-text-3" id="text-org149a745">
 <p>
 List all docker images:
 </p>
@@ -267,9 +267,9 @@ List all docker containers (including stopped containers):
 </div>
 </div>
 </div>
-<div id="outline-container-org10a1d42" class="outline-3">
-<h3 id="org10a1d42">Entering a Container Interactively</h3>
-<div class="outline-text-3" id="text-org10a1d42">
+<div id="outline-container-org22cb6d7" class="outline-3">
+<h3 id="org22cb6d7">Entering a Container Interactively</h3>
+<div class="outline-text-3" id="text-org22cb6d7">
 <div class="org-src-container">
 <pre class="src src-sh">docker run -it alpine sh
 </pre>
@@ -285,9 +285,9 @@ id                              # uid=0(root) gid=0(root) groups=0(root),1(bin).
 </div>
 </div>
 </div>
-<div id="outline-container-orgb0ef93b" class="outline-2">
-<h2 id="orgb0ef93b">Inside <code>alpine</code></h2>
-<div class="outline-text-2" id="text-orgb0ef93b">
+<div id="outline-container-orgeed0b82" class="outline-2">
+<h2 id="orgeed0b82">Inside <code>alpine</code></h2>
+<div class="outline-text-2" id="text-orgeed0b82">
 <p>
 Docker images consist of multiple layers:
 </p>
@@ -298,9 +298,9 @@ Docker images consist of multiple layers:
 </p>
 </div>
 </div>
-<div id="outline-container-orga923b58" class="outline-3">
-<h3 id="orga923b58">Layers for the ubuntu image</h3>
-<div class="outline-text-3" id="text-orga923b58">
+<div id="outline-container-org812c1e3" class="outline-3">
+<h3 id="org812c1e3">Layers for the ubuntu image</h3>
+<div class="outline-text-3" id="text-org812c1e3">
 <p>
 Observe the output for the following:
 </p>
@@ -311,9 +311,9 @@ docker history ubuntu
 </div>
 </div>
 </div>
-<div id="outline-container-org275df95" class="outline-3">
-<h3 id="org275df95">Declare layers with a <code>Dockerfile</code></h3>
-<div class="outline-text-3" id="text-org275df95">
+<div id="outline-container-org2053d6c" class="outline-3">
+<h3 id="org2053d6c">Declare layers with a <code>Dockerfile</code></h3>
+<div class="outline-text-3" id="text-org2053d6c">
 <div class="org-src-container">
 <pre class="src src-docker-file">FROM ubuntu
 MAINTAINER Kimbro Staken
@@ -333,9 +333,9 @@ CMD ["/usr/bin/node", "/var/www/app.js"]
 </div>
 </div>
 </div>
-<div id="outline-container-org4f53552" class="outline-3">
-<h3 id="org4f53552">Dockerfile Cheatsheet</h3>
-<div class="outline-text-3" id="text-org4f53552">
+<div id="outline-container-orgdb14acd" class="outline-3">
+<h3 id="orgdb14acd">Dockerfile Cheatsheet</h3>
+<div class="outline-text-3" id="text-orgdb14acd">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
@@ -412,9 +412,9 @@ CMD ["/usr/bin/node", "/var/www/app.js"]
 </div>
 
 
-<div id="outline-container-org60b8bc0" class="outline-2">
-<h2 id="org60b8bc0">Docker Networking</h2>
-<div class="outline-text-2" id="text-org60b8bc0">
+<div id="outline-container-org5a5d53f" class="outline-2">
+<h2 id="org5a5d53f">Docker Networking</h2>
+<div class="outline-text-2" id="text-org5a5d53f">
 <p>
 Docker creates three networks by default. We're mostly concerned with
 <code>bridge</code>.
@@ -430,9 +430,9 @@ cf03ee007fb4        host                host
 </pre>
 </div>
 </div>
-<div id="outline-container-orgd1c0c25" class="outline-3">
-<h3 id="orgd1c0c25">How <code>bridge</code> works</h3>
-<div class="outline-text-3" id="text-orgd1c0c25">
+<div id="outline-container-org1b33594" class="outline-3">
+<h3 id="org1b33594">How <code>bridge</code> works</h3>
+<div class="outline-text-3" id="text-org1b33594">
 <p>
 Unless specified otherwise, the docker container will connect to this
 default <code>bridge</code> network. This provides a means of Docker containers
@@ -446,18 +446,18 @@ no access to the docker containers.
 </p>
 </div>
 </div>
-<div id="outline-container-org0a2eb32" class="outline-3">
-<h3 id="org0a2eb32">Running a Simple Webserver</h3>
-<div class="outline-text-3" id="text-org0a2eb32">
+<div id="outline-container-org18e1350" class="outline-3">
+<h3 id="org18e1350">Running a Simple Webserver</h3>
+<div class="outline-text-3" id="text-org18e1350">
 <div class="org-src-container">
 <pre class="src src-sh">nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-orgde44316" class="outline-3">
-<h3 id="orgde44316">Allowing Ingress</h3>
-<div class="outline-text-3" id="text-orgde44316">
+<div id="outline-container-org4532303" class="outline-3">
+<h3 id="org4532303">Allowing Ingress</h3>
+<div class="outline-text-3" id="text-org4532303">
 <div class="org-src-container">
 <pre class="src src-sh">docker run -p 5001:8080 alpine \
        nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
@@ -475,9 +475,9 @@ As a daemon:
 </div>
 </div>
 </div>
-<div id="outline-container-org0a2cdaf" class="outline-2">
-<h2 id="org0a2cdaf">Exercise: package a Node.js Server with Docker</h2>
-<div class="outline-text-2" id="text-org0a2cdaf">
+<div id="outline-container-orgde84b29" class="outline-2">
+<h2 id="orgde84b29">Exercise: package a Node.js Server with Docker</h2>
+<div class="outline-text-2" id="text-orgde84b29">
 <div class="org-src-container">
 <pre class="src src-sh">curl -i http://localhost:5001/
 </pre>
@@ -496,18 +496,18 @@ Hello world!!
 </pre>
 </div>
 </div>
-<div id="outline-container-org3e73ac7" class="outline-3">
-<h3 id="org3e73ac7">Server code</h3>
-<div class="outline-text-3" id="text-org3e73ac7">
+<div id="outline-container-org3dd688a" class="outline-3">
+<h3 id="org3dd688a">Server code</h3>
+<div class="outline-text-3" id="text-org3dd688a">
 <div class="org-src-container">
 <pre class="src src-text">https://git.io/vdXLC
 </pre>
 </div>
 </div>
 </div>
-<div id="outline-container-org3b5e8d5" class="outline-3">
-<h3 id="org3b5e8d5">General Instructions</h3>
-<div class="outline-text-3" id="text-org3b5e8d5">
+<div id="outline-container-orged164be" class="outline-3">
+<h3 id="orged164be">General Instructions</h3>
+<div class="outline-text-3" id="text-orged164be">
 <ol class="org-ol">
 <li>Install the Node.js runtime (use Ubuntu)</li>
 <li>Copy the files into the container</li>
@@ -518,9 +518,9 @@ Hello world!!
 </div>
 </div>
 </div>
-<div id="outline-container-orgd4f03eb" class="outline-2">
-<h2 id="orgd4f03eb">But&#x2026; I want to change my files!</h2>
-<div class="outline-text-2" id="text-orgd4f03eb">
+<div id="outline-container-orgdbb03f5" class="outline-2">
+<h2 id="orgdbb03f5">But&#x2026; I want to change my files!</h2>
+<div class="outline-text-2" id="text-orgdbb03f5">
 <div class="org-src-container">
 <pre class="src src-sh">docker run -d my/webserver
 # Create file locally
@@ -529,9 +529,9 @@ ls #WAT
 </pre>
 </div>
 </div>
-<div id="outline-container-orga1f58c4" class="outline-3">
-<h3 id="orga1f58c4">Mounting Volumes</h3>
-<div class="outline-text-3" id="text-orga1f58c4">
+<div id="outline-container-org5ece855" class="outline-3">
+<h3 id="org5ece855">Mounting Volumes</h3>
+<div class="outline-text-3" id="text-org5ece855">
 <p>
 There are three types of mounts:
 </p>
@@ -545,9 +545,9 @@ or cloud providers, among other possibilities.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org9f0c47b" class="outline-3">
-<h3 id="org9f0c47b">Mounting the <code>/src</code> directory</h3>
-<div class="outline-text-3" id="text-org9f0c47b">
+<div id="outline-container-orgb3021f3" class="outline-3">
+<h3 id="orgb3021f3">Mounting the <code>/src</code> directory</h3>
+<div class="outline-text-3" id="text-orgb3021f3">
 <div class="org-src-container">
 <pre class="src src-sh">docker run -p 5000:8080 -v ~/path/to/directory:/usr/src/app/src my/webserver
 </pre>
@@ -555,9 +555,9 @@ or cloud providers, among other possibilities.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org26d37ca" class="outline-2">
-<h2 id="org26d37ca">Beyond Docker</h2>
-<div class="outline-text-2" id="text-org26d37ca">
+<div id="outline-container-org41c0393" class="outline-2">
+<h2 id="org41c0393">Beyond Docker</h2>
+<div class="outline-text-2" id="text-org41c0393">
 <p>
 Docker is the building block for many devops solutions.
 </p>
@@ -573,17 +573,17 @@ Docker makes microservices manageable and scalable.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd10c350" class="outline-2">
-<h2 id="orgd10c350">Thank You</h2>
-<div class="outline-text-2" id="text-orgd10c350">
+<div id="outline-container-org2aa80b8" class="outline-2">
+<h2 id="org2aa80b8">Thank You</h2>
+<div class="outline-text-2" id="text-org2aa80b8">
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2017/10/14</p>
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-02 Tue 18:47</p>
-<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 9.1.4)</p>
+<p class="date">Created: 2018-01-05 Fri 02:11</p>
+<p class="creator"><a href="https://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 9.1.6)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

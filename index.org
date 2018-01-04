@@ -27,5 +27,6 @@
 - [[file:statistics.org][Statistics]]
 - [[file:system_design.org][System Design]]
 - [[file:unix.org][Unix]]
+- [[file:weekly_review.org][Weekly Review]]
 - [[file:export_template.org][export_template]]
 - [[file:ios.org][iOS]]

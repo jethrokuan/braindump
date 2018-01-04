@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-02 Tue 18:47 -->
+<!-- 2018-01-05 Fri 02:11 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deep Learning</title>
@@ -69,26 +69,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orge88557d">1. Introduction</a></li>
-<li><a href="#orgdefe146">2. ViSenze</a>
+<li><a href="#orgeec8f39">1. Introduction</a></li>
+<li><a href="#org779c193">2. ViSenze</a>
 <ul>
-<li><a href="#org93b8e0d">2.1. Things they focused on as a company</a></li>
-<li><a href="#orgef828bf">2.2. Visual Embeddings Used</a></li>
-<li><a href="#org85a3711">2.3. Lessons Learnt</a></li>
+<li><a href="#orgdf09d8f">2.1. Things they focused on as a company</a></li>
+<li><a href="#orgd09cdea">2.2. Visual Embeddings Used</a></li>
+<li><a href="#org0d54a8c">2.3. Lessons Learnt</a></li>
 </ul>
 </li>
-<li><a href="#orgac7570c">3. Measure Theory</a>
+<li><a href="#org030cfff">3. Measure Theory</a>
 <ul>
-<li><a href="#org8fe01fb">3.1. Kullback-Leiber (KL) divergence</a></li>
-<li><a href="#org4edc06d">3.2. Cross Entropy</a></li>
+<li><a href="#org50c5e91">3.1. Kullback-Leiber (KL) divergence</a></li>
+<li><a href="#org1b13c79">3.2. Cross Entropy</a></li>
 </ul>
 </li>
-<li><a href="#org1607527">4. SVD</a></li>
+<li><a href="#orgb36df10">4. SVD</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orge88557d" class="outline-2">
-<h2 id="orge88557d"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-orgeec8f39" class="outline-2">
+<h2 id="orgeec8f39"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Many of the factors of variation inﬂuence every single piece of data
@@ -104,8 +104,8 @@ complex concepts out of simpler concepts.
 </div>
 </div>
 
-<div id="outline-container-orgdefe146" class="outline-2">
-<h2 id="orgdefe146"><span class="section-number-2">2</span> ViSenze</h2>
+<div id="outline-container-org779c193" class="outline-2">
+<h2 id="org779c193"><span class="section-number-2">2</span> ViSenze</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Visenze's primary product is their Visual Search (reverse image
@@ -153,8 +153,8 @@ Overall latency is less than 200ms.
 </p>
 </div>
 
-<div id="outline-container-org93b8e0d" class="outline-3">
-<h3 id="org93b8e0d"><span class="section-number-3">2.1</span> Things they focused on as a company</h3>
+<div id="outline-container-orgdf09d8f" class="outline-3">
+<h3 id="orgdf09d8f"><span class="section-number-3">2.1</span> Things they focused on as a company</h3>
 <div class="outline-text-3" id="text-2-1">
 <ol class="org-ol">
 <li>Tooling:
@@ -192,8 +192,8 @@ affecting data earlier</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgef828bf" class="outline-3">
-<h3 id="orgef828bf"><span class="section-number-3">2.2</span> Visual Embeddings Used</h3>
+<div id="outline-container-orgd09cdea" class="outline-3">
+<h3 id="orgd09cdea"><span class="section-number-3">2.2</span> Visual Embeddings Used</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 At Visenze, they use multiple embeddings in different feature spaces
@@ -220,8 +220,8 @@ state-of-the-art accuracy
 </ol>
 </div>
 </div>
-<div id="outline-container-org85a3711" class="outline-3">
-<h3 id="org85a3711"><span class="section-number-3">2.3</span> Lessons Learnt</h3>
+<div id="outline-container-org0d54a8c" class="outline-3">
+<h3 id="org0d54a8c"><span class="section-number-3">2.3</span> Lessons Learnt</h3>
 <div class="outline-text-3" id="text-2-3">
 <ol class="org-ol">
 <li>Taxonomy Coverage</li>
@@ -243,12 +243,12 @@ negative samples into training data to improve accuracy</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgac7570c" class="outline-2">
-<h2 id="orgac7570c"><span class="section-number-2">3</span> Measure Theory</h2>
+<div id="outline-container-org030cfff" class="outline-2">
+<h2 id="org030cfff"><span class="section-number-2">3</span> Measure Theory</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org8fe01fb" class="outline-3">
-<h3 id="org8fe01fb"><span class="section-number-3">3.1</span> Kullback-Leiber (KL) divergence</h3>
+<div id="outline-container-org50c5e91" class="outline-3">
+<h3 id="org50c5e91"><span class="section-number-3">3.1</span> Kullback-Leiber (KL) divergence</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 The KL divergence is 0 iff P and Q are the same distribution in
@@ -260,8 +260,8 @@ not symmetric.
 </p>
 </div>
 </div>
-<div id="outline-container-org4edc06d" class="outline-3">
-<h3 id="org4edc06d"><span class="section-number-3">3.2</span> Cross Entropy</h3>
+<div id="outline-container-org1b13c79" class="outline-3">
+<h3 id="org1b13c79"><span class="section-number-3">3.2</span> Cross Entropy</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Minimising the cross entropy with respect to Q is equivalent to
@@ -270,8 +270,8 @@ minimising the KL divergence.
 </div>
 </div>
 </div>
-<div id="outline-container-org1607527" class="outline-2">
-<h2 id="org1607527"><span class="section-number-2">4</span> SVD</h2>
+<div id="outline-container-orgb36df10" class="outline-2">
+<h2 id="orgb36df10"><span class="section-number-2">4</span> SVD</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <a href="https://www.youtube.com/watch?v=P5mlg91as1c">https://www.youtube.com/watch?v=P5mlg91as1c</a>
@@ -285,7 +285,7 @@ minimising the KL divergence.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-02 Tue 18:47</p>
+<p class="date">Created: 2018-01-05 Fri 02:11</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
