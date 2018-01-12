@@ -5,11 +5,13 @@
 *** http://export.arxiv.org/rss/cs
 ** Emacs                                                              :emacs:
 *** http://planet.emacsen.org/atom.xml
+*** https://www.reddit.com/r/emacs/
 ** AI/ML                                                                 :AI:
 *** http://feeds.dzone.com/ai
 *** https://reddit.com/r/MachineLearning/.rss
 *** https://medium.com/feed/mlreview/
 *** https://distill.pub/rss.xml
+*** http://www.datatau.com/rss
 ** Programming Languages                                                 :pl:
 *** http://lambda-the-ultimate.org/rss.xml
 ** General                                                          :general:
