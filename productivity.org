@@ -38,6 +38,7 @@ Interrupted tasks are better remembered than completed ones
    - Clock in time, take deliberate breaks in between, weigh the value
      of a pause in between work
 * Building a Second Brain
+https://praxis.fortelabs.co/building-a-second-brain-in-emacs-and-org-mode-faa20ae06fc
 ** Capturing
 Capture anything that comes to mind, and process them later on.
 ** Processing
