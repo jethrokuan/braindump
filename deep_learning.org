@@ -1,5 +1,28 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Deep Learning
+* Bayesian probability
+The quantification of the expression of uncertainty. We can make
+precise revisions of uncertainty in light of new evidence.
+
+In the example of polynomial curve fitting, it seems reasonable to
+apply the frequentist notion of probability to the random values of
+the observed variables. However, we can use probability theory to
+describe the uncertainty in model parameters, and the choice of model
+itself.
+
+We can evaluate the uncertainty in model parameters =w= after we have
+observed some data =D=. $p(D|w)$ is called the /likelihood function/.
+
+The posterior probability is proportional to =likelihood x prior=.
+Model parameters =w= are chosen to maximise the likelihood function
+$p(D|w)$. Because the negative log-likelihood is a monotonically
+decreasing function, minimising it is equivalent to maximising
+likelihood.
+* Universal Approximation Theorem
+https://en.wikipedia.org/wiki/Universal_approximation_theorem
+A feed-forward network with a single hidden layer containing a finite
+number of neurons can approximate continuous functions on compact
+subsets of the real space.
 * Introduction
 Many of the factors of variation inﬂuence every single piece of data
 we are able to observe.
@@ -9,83 +32,6 @@ by introducing representations that are expressed in terms of other,
 simpler representations. Deep learning enables the computer to build
 complex concepts out of simpler concepts.
 
-* ViSenze
-Visenze's primary product is their Visual Search (reverse image
-search).
-
-Initially, they started out with a similar model to our approach:
-Train a CNN, read encodings before the FC layer, use it to perform NN
-search.
-
-Now their pipeline is as follows:
-Query time -> object detection -> Extract Features -> Nearest Neighbours -> Ranked Results
-Offline training -> Detection Model -> Embedding models -> Nearest Neighbours
-Index time -> Objects -> Extract Features -> Search Index
-(Compression/Hash Model)
-
-Object detection followed the trends in research papers:
-1. R-CNN
-2. Fast-CNN
-3. Faster-CNN
-4. YOLO/SSD
-5. DSOD (Current)
-
-Model performance is based of standard IR metrics: They are using DCG
-score for evaluating their reverse image search. This requires a lot
-of manual annotation.
-
-Models are trained offline using physical purchased GPUs.
-
-Deployment: Kubernetes on AWS, with generally small CPU servers.
-Overall latency is less than 200ms.
-
-** Things they focused on as a company
-1. Tooling:
-   1. Annotation System
-      1. Complete annotation is crucial to detection training
-   2. Training System
-      1. Make it easy to change hyperparameters and retrain models
-      2. Abstract away need for knowing deep learning
-      3. Platform for tracking metrics
-   3. Querylog pipeline
-      1. Take user input as training data
-   4. Evaluation System
-      1. Both automatic evaluation via metrics and manual (AB testing)
-         is done before release
-      2. Visualisations via T-SNE to see if clusters remain the
-         same/make sense, when new learnings are added: *learning
-         without forgetting*
-2. Business:
-   1. Attend to customer requirements: e.g. if a company wants to sell
-      hats, model needs to be trained to detect hats, and these
-      learnings need to be added to the existing model without
-      affecting data earlier
-** Visual Embeddings Used
-At Visenze, they use multiple embeddings in different feature spaces
-to measure similarity. The results are then combined before returned.
-The 4 main embeddings are:
-
-1. Exact matches (same item)
-   1. Trained with siamese network with batched triplet loss
-      (typically used in face recognition, but seems to work well with
-      product classification)
-2. Same Category
-   1. Domain specific labels have been most helpful in achieving
-      state-of-the-art accuracy
-      1. e.g for fashion, sleeve length, jeans length etc.
-3. Similar Categories
-** Lessons Learnt
- 1. Taxonomy Coverage
- 2. Training Data Coverage
-    1. Obtaining training data from one source only can lead to severe
-       bias (e.g. detecting watermarks and using it as feature)
- 3. Overfitting
- 4. Continuous Improvement (Learning Without Forgetting)
- 5. Bad-case driven development
-    1. Be quick to identify hard negatives, and add in similar
-       negative samples into training data to improve accuracy
- 6. Image quality, rotation
- 7. Re-ranking based on customer requirements
 * Measure Theory
 ** Kullback-Leiber (KL) divergence
 #+BEGIN_EXPORT latex
@@ -114,3 +60,91 @@ minimising the KL divergence.
 https://www.youtube.com/watch?v=P5mlg91as1c
 
 https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner
+* Learning Rates
+** Learning Rate Annealing
+Decay learning rate after several iterations...
+
+Also: SGDR with cyclic learning rate, restores high learning rate
+after several iterations to try to find local minima that is largely
+flat, and doesn't change so much in any direction. (Generalises
+better)
+* Reinforcement Learning
+https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287
+* How Companies use Deep Learning
+** ViSenze
+ Visenze's primary product is their Visual Search (reverse image
+ search).
+
+ Initially, they started out with a similar model to our approach:
+ Train a CNN, read encodings before the FC layer, use it to perform NN
+ search.
+
+ Now their pipeline is as follows:
+ Query time -> object detection -> Extract Features -> Nearest Neighbours -> Ranked Results
+ Offline training -> Detection Model -> Embedding models -> Nearest Neighbours
+ Index time -> Objects -> Extract Features -> Search Index
+ (Compression/Hash Model)
+
+ Object detection followed the trends in research papers:
+ 1. R-CNN
+ 2. Fast-CNN
+ 3. Faster-CNN
+ 4. YOLO/SSD
+ 5. DSOD (Current)
+
+ Model performance is based of standard IR metrics: They are using DCG
+ score for evaluating their reverse image search. This requires a lot
+ of manual annotation.
+
+ Models are trained offline using physical purchased GPUs.
+
+ Deployment: Kubernetes on AWS, with generally small CPU servers.
+ Overall latency is less than 200ms.
+
+*** Things they focused on as a company
+ 1. Tooling:
+    1. Annotation System
+       1. Complete annotation is crucial to detection training
+    2. Training System
+       1. Make it easy to change hyperparameters and retrain models
+       2. Abstract away need for knowing deep learning
+       3. Platform for tracking metrics
+    3. Querylog pipeline
+       1. Take user input as training data
+    4. Evaluation System
+       1. Both automatic evaluation via metrics and manual (AB testing)
+          is done before release
+       2. Visualisations via T-SNE to see if clusters remain the
+          same/make sense, when new learnings are added: *learning
+          without forgetting*
+ 2. Business:
+    1. Attend to customer requirements: e.g. if a company wants to sell
+       hats, model needs to be trained to detect hats, and these
+       learnings need to be added to the existing model without
+       affecting data earlier
+*** Visual Embeddings Used
+ At Visenze, they use multiple embeddings in different feature spaces
+ to measure similarity. The results are then combined before returned.
+ The 4 main embeddings are:
+
+ 1. Exact matches (same item)
+    1. Trained with siamese network with batched triplet loss
+       (typically used in face recognition, but seems to work well with
+       product classification)
+ 2. Same Category
+    1. Domain specific labels have been most helpful in achieving
+       state-of-the-art accuracy
+       1. e.g for fashion, sleeve length, jeans length etc.
+ 3. Similar Categories
+*** Lessons Learnt
+  1. Taxonomy Coverage
+  2. Training Data Coverage
+     1. Obtaining training data from one source only can lead to severe
+        bias (e.g. detecting watermarks and using it as feature)
+  3. Overfitting
+  4. Continuous Improvement (Learning Without Forgetting)
+  5. Bad-case driven development
+     1. Be quick to identify hard negatives, and add in similar
+        negative samples into training data to improve accuracy
+  6. Image quality, rotation
+  7. Re-ranking based on customer requirements
