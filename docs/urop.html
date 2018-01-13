@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-01-13 Sat 11:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org256661d">1. Keyphrase Extraction</a>
+<ul>
+<li><a href="#org36a30ff">1.1. SurfKE</a>
+<ul>
+<li><a href="#orgdf07e78">1.1.1. Graph Construction</a></li>
+<li><a href="#org45cf9d6">1.1.2. Learning Feature Representations</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgca74f15">2. Word Embeddings</a></li>
+</ul>
+</div>
+</div>
+<ol class="org-ol">
+<li>LDA, DTM - don't work as well as deep learning model</li>
+</ol>
+
+<p>
+LDA: list of important words for n topics
+DTM: make LDA time variant
+</p>
+
+<p>
+Problems: common wworks like "computer"&#x2026; 
+</p>
+
+<p>
+HITS algo, similar to PageRank
+</p>
+
+<p>
+2 concepts, authors, keywords -&gt; important authors say important
+keywords
+</p>
+
+<p>
+modified tetrank
+</p>
+
+<p>
+&lt;NN&gt;*&lt;NN|NNS&gt;
+</p>
+
+<ol class="org-ol">
+<li>Author -&gt; keyphrases</li>
+<li>Keyphrase needs to be clustered LDA, Embedding</li>
+<li>What is a trend? (coarser grain than keyphrase), hierachical
+agglomerate clustering</li>
+</ol>
+
+<p>
+Couperin
+</p>
+<div id="outline-container-org256661d" class="outline-2">
+<h2 id="org256661d"><span class="section-number-2">1</span> Keyphrase Extraction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Keyphrase extraction (KE) is the task of automatically extracting
+descriptive phrases or concepts that represent the main topics of a
+document.
+</p>
+
+<p>
+In supervised approaches, a candidate phrase is encoded with a set of
+features, such as <i>tf-idf</i>. One problem is that many of these manual
+features are determined based on statistical information from
+documents outside the target domain. Hence, it is essential to
+automatically discover such features without relying on feature
+engineering.
+</p>
+</div>
+<div id="outline-container-org36a30ff" class="outline-3">
+<h3 id="org36a30ff"><span class="section-number-3">1.1</span> SurfKE</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-orgdf07e78" class="outline-4">
+<h4 id="orgdf07e78"><span class="section-number-4">1.1.1</span> Graph Construction</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Build an undirected word graph, with words as vertices. There is an
+edge between two words if the words co-occur within <code>w</code> contiguous
+word tokens. The weight of the edge is computed based on the
+co-occurence within a window of w successive tokens in the
+document.
+</p>
+</div>
+</div>
+<div id="outline-container-org45cf9d6" class="outline-4">
+<h4 id="org45cf9d6"><span class="section-number-4">1.1.2</span> Learning Feature Representations</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+Learn a mapping function \(f : V \rightarrow \mathbb{R}^{|V| \times d},
+d \le |V|\) where d is a parameter specifying the number of dimensions
+for the embeddings. The network feature learning model requires a
+corpus and a vocabulary in order to learn a mapping of nodes to a
+low-dimensional space of features. A biased sampled random walk
+strategy is employed.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgca74f15" class="outline-2">
+<h2 id="orgca74f15"><span class="section-number-2">2</span> Word Embeddings</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+<a class='org-ref-reference' href="#smalheiser-2018-unsup-low">smalheiser-2018-unsup-low</a>
+</p>
+
+<p>
+<a class='org-ref-reference' href="#shalaby-2018-beyon-word-embed">shalaby-2018-beyon-word-embed</a>
+</p>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-13 Sat 11:58</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

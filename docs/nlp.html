@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-01-13 Sat 11:58 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Natural Language Processing</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Natural Language Processing</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org4318c42">1. How to Represent Words</a>
+<ul>
+<li><a href="#orge5a1038">1.1. Window-based Co-occurence Matrix</a></li>
+<li><a href="#org38d14cf">1.2. Issues with SVD-based methods</a></li>
+<li><a href="#orga977dfd">1.3. Iteration-based Methods (e.g. word2vec)</a>
+<ul>
+<li><a href="#org2a39632">1.3.1. Language Models</a>
+<ul>
+<li><a href="#org0a53ef0">1.3.1.1. Continuous bag-of-words (CBOW)</a></li>
+<li><a href="#org9b6a1b1">1.3.1.2. <span class="todo TODO">TODO</span> Skipgram</a></li>
+</ul>
+</li>
+<li><a href="#org75385f6">1.3.2. Training Methods</a>
+<ul>
+<li><a href="#orgf697794">1.3.2.1. <span class="todo TODO">TODO</span> Negative Sampling</a></li>
+<li><a href="#org4b61164">1.3.2.2. <span class="todo TODO">TODO</span> Hierachical Softmax</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org4318c42" class="outline-2">
+<h2 id="org4318c42"><span class="section-number-2">1</span> How to Represent Words</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+How do we represent words as input to any of our models? There are an
+estimated <b>13 million</b> tokens for the English language, some of them
+have similar meanings.
+</p>
+
+<p>
+The simplest representation is <b>one-hot vector</b>: we can represent
+every word as a \(\mathbb{R}^{|V|x1}\) vector with all 0s and one 1 at
+the index of that word in the sorted english language.
+</p>
+
+<p>
+To reduce the size of this space, we can use SVD-based methods. For
+instance, accumulating co-occurrence count into a matrix <code>X</code>, and
+perform SVD on <code>X</code> to get a \(USV^T\) decomposition. We can then use the
+rows of <code>U</code> as the word embeddings for all words in the dictionary.
+</p>
+</div>
+<div id="outline-container-orge5a1038" class="outline-3">
+<h3 id="orge5a1038"><span class="section-number-3">1.1</span> Window-based Co-occurence Matrix</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Count the number of times each word appears inside a window of a
+particular size around the word of interest. We calculate this count
+for all words in the corpus.
+</p>
+</div>
+</div>
+<div id="outline-container-org38d14cf" class="outline-3">
+<h3 id="org38d14cf"><span class="section-number-3">1.2</span> Issues with SVD-based methods</h3>
+<div class="outline-text-3" id="text-1-2">
+<ol class="org-ol">
+<li>Dimensions of the matrix can change very often (new words added to corpus)</li>
+<li>Matrix is extremely sparse as most words don't co-occur</li>
+<li>Matrix is very high-dimensional</li>
+<li>Quadratic cost to perform SVD</li>
+</ol>
+
+<p>
+Some solutions include:
+</p>
+<ol class="org-ol">
+<li>Ignore function words (blacklist)</li>
+<li>Apply a ramp window (distance between words)</li>
+<li>Use <a href="https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php">Pearson correlation</a> and set negative counts to 0 instead of raw count.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orga977dfd" class="outline-3">
+<h3 id="orga977dfd"><span class="section-number-3">1.3</span> Iteration-based Methods (e.g. word2vec)</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Design a model whose parameters are the word vectors, and train the
+model on a certain objective. Discard the model, and use the vectors
+learnt.
+Efficient tree structure to compute probabiltiies for all the vocabulary
+</p>
+</div>
+<div id="outline-container-org2a39632" class="outline-4">
+<h4 id="org2a39632"><span class="section-number-4">1.3.1</span> Language Models</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+The model will need to assign a probability to a sequence of tokens.
+We want a high probability for a sentence that makes sense, and a low
+probability for a sentence that doesn't.
+</p>
+
+<p>
+Unigrams completely ignore this, and a nonsensical sentence might
+actually be assigned a high probability. Bigrams are a naive way of
+evaluating a whole sentence.
+</p>
+</div>
+<div id="outline-container-org0a53ef0" class="outline-5">
+<h5 id="org0a53ef0"><span class="section-number-5">1.3.1.1</span> Continuous bag-of-words (CBOW)</h5>
+<div class="outline-text-5" id="text-1-3-1-1">
+<p>
+Predicts a center word from the surrounding context in terms of word
+vectors.
+</p>
+
+<p>
+For each word, we want to learn 2 vectors:
+</p>
+<ol class="org-ol">
+<li>v: (input vector) when the word is in the context</li>
+<li>u: (output vector) when the word is in the center</li>
+</ol>
+
+
+<ul class="org-ul">
+<li>known parameters
+<dl class="org-dl">
+<dt>input</dt><dd>sentence represented by one-hot vectors</dd>
+<dt>output</dt><dd>one hot vector of the known center word</dd>
+</dl></li>
+</ul>
+
+<p>
+Create 2 matrices \(\mathbb{V} \in \mathbb{R}^{n \times |V|}\) and
+\(\mathbb{U} \in \mathbb{R}^{|V| \times n}\), where n is the arbitrary
+size which defines the size of the embedding space.
+</p>
+
+<p>
+\(V\) is the input word matrix such that the <i>i</i>-th column of \(V\) is the
+$n$-dimensional embedded vector for word \(w_i\) when it is an input to
+this model. \(U\) is the output word matrix.
+</p>
+
+<ol class="org-ol">
+<li>Generate one-hot word vectors for the input context of size m.</li>
+<li>Get our embedded word vectors for the context: (\(v_{c-m} =
+     Vx^{c-m}\), &#x2026;)</li>
+<li>Average these vectors to get \(\hat{v} = \frac{\sum v}{2m} \in \mathbb{R^n}\)</li>
+<li>Generate a score vector \(z = U\hat{v} \in \mathbb{R}^{|V|}\) As the
+dot product of similar vectors is higher, it will push simila words
+close to each other in order to achieve a high score.</li>
+<li>Turn the scores into probabilities \(\hat{y} = softmax(z) \in \mathbb{R}^{|V|}\)</li>
+</ol>
+
+<p>
+Minimise loss function (cross entropy), and use stochastic gradient
+descent to update all relevant word vectors.
+</p>
+</div>
+</div>
+<div id="outline-container-org9b6a1b1" class="outline-5">
+<h5 id="org9b6a1b1"><span class="section-number-5">1.3.1.2</span> <span class="todo TODO">TODO</span> Skipgram</h5>
+<div class="outline-text-5" id="text-1-3-1-2">
+<p>
+<a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/">http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/</a>
+Predicts the distribution of context words from a center word. This is
+very similar to the CBOW approach, wind the input and output vectors
+reversed. Here, a naive Bayes assumption is invoked: that given the
+center word, all output words are completely independent.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org75385f6" class="outline-4">
+<h4 id="org75385f6"><span class="section-number-4">1.3.2</span> Training Methods</h4>
+<div class="outline-text-4" id="text-1-3-2">
+<p>
+In practice, negative sampling works better for frequently occurring
+words and lower-dimensional vectors, and hierachical softmax works
+better for infrequent words.
+</p>
+</div>
+<div id="outline-container-orgf697794" class="outline-5">
+<h5 id="orgf697794"><span class="section-number-5">1.3.2.1</span> <span class="todo TODO">TODO</span> Negative Sampling</h5>
+</div>
+
+<div id="outline-container-org4b61164" class="outline-5">
+<h5 id="org4b61164"><span class="section-number-5">1.3.2.2</span> <span class="todo TODO">TODO</span> Hierachical Softmax</h5>
+<div class="outline-text-5" id="text-1-3-2-2">
+<p>
+Hierachical Softmax uses a binary tree to represent all words in the
+vocabulary. Each leaf of the tree is a word, and there is a unique
+path from root to leaf. The probability of a word \(w\) given a vector
+\(w_i\), \(P(w|w_i)\), is equal to the probability of a random walk
+starting from the root and ending in the leaf node corresponding to
+\(w\).
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-13 Sat 11:58</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
