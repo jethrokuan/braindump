@@ -112,21 +112,32 @@ $w$.
 
 
 ** Global Vectors for Word Representation (GloVe)
-We look at how word vectors can be evaluated intrinsically and
-extrinsically. Count-based methods of generating word embeddings rely
-on global statistical information, and do poorly on tasks such as word
-analogy, indicating a sub-optimal vector space structure.
+Count-based methods of generating word embeddings rely on global
+statistical information, and do poorly on tasks such as word analogy,
+indicating a sub-optimal vector space structure.
 
 word2vec presents a window-based method of generating word-embeddings
 by making predictions in context-based windows, demonstrating the
 capacity to capture complex linguistic patterns beyond word
 similarity.
 
-GloVe consists of a weighted least squares model that trains on global
-word-word co-occurrence counts, and produces a word vector space with
-meaningful sub-structure. It shows state-of-the-art performance on the
-word analogy task.
+GloVe consists of a weighted least-squares model that combines the
+benefits of the word2vec skip-gram model when it comes to word analogy
+tasks, but also trains on global word-word co-occurrence counts, and
+produces a word vector space with meaningful sub-structure.
 
+The appropriate starting point for word-vector learning should be with
+ratios of co-occurrence probabilities rather than the probabilities
+themselves. Since vector spaces are inherently linear structures, the
+most natural way to encode the information present in a ratio in the
+word vector space is with vector differences.
+
+The training objective of GloVe is to learn word vectors such that
+their dot product equals the logarithm of the words’ probability of
+co-occurrence. Owing to the fact that the logarithm of a ratio equals
+the difference of logarithms, this objective associates (the logarithm
+of) ratios of co-occurrence probabilities with vector differences in
+the word vector space.
 
 *** Co-occurrence Matrix
 Let $X$ denote the word-word co-occurrence matrix, where $X_{ij}$
