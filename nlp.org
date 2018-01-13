@@ -1,6 +1,8 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Natural Language Processing
 * How to Represent Words
+http://ruder.io/word-embeddings-2017/index.html
+
 How do we represent words as input to any of our models? There are an
 estimated *13 million* tokens for the English language, some of them
 have similar meanings.
@@ -74,17 +76,31 @@ Efficient tree structure to compute probabiltiies for all the vocabulary
   descent to update all relevant word vectors.
 **** TODO Skipgram
 http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
+
 Predicts the distribution of context words from a center word. This is
 very similar to the CBOW approach, wind the input and output vectors
 reversed. Here, a naive Bayes assumption is invoked: that given the
 center word, all output words are completely independent.
+
+Input vector: one-hot vectors corresponding to the vocabulary
+
+The neural network is consists of one hidden layer of $n$ units, where
+$n$ is the desired dimension of the word vector. The output layer is a
+softmax regression layer, outputting a value between 0 and 1. We want
+the value for the context words to be high, and the non-context words
+to be low.
+
+After training, the output layer is discarded, and the weights at the
+hidden layer are the word vectors we want.
 
 *** Training Methods
 In practice, negative sampling works better for frequently occurring
 words and lower-dimensional vectors, and hierachical softmax works
 better for infrequent words.
 **** TODO Negative Sampling
-
+Take $k$ negative samples, and minimise the probability of the two
+words co-occurring while also maximising the probability of the two
+words in the same window co-occur.
 **** TODO Hierachical Softmax
 Hierachical Softmax uses a binary tree to represent all words in the
 vocabulary. Each leaf of the tree is a word, and there is a unique
@@ -95,3 +111,41 @@ $w$.
 
 
 
+** Global Vectors for Word Representation (GloVe)
+We look at how word vectors can be evaluated intrinsically and
+extrinsically. Count-based methods of generating word embeddings rely
+on global statistical information, and do poorly on tasks such as word
+analogy, indicating a sub-optimal vector space structure.
+
+word2vec presents a window-based method of generating word-embeddings
+by making predictions in context-based windows, demonstrating the
+capacity to capture complex linguistic patterns beyond word
+similarity.
+
+GloVe consists of a weighted least squares model that trains on global
+word-word co-occurrence counts, and produces a word vector space with
+meaningful sub-structure. It shows state-of-the-art performance on the
+word analogy task.
+
+
+*** Co-occurrence Matrix
+Let $X$ denote the word-word co-occurrence matrix, where $X_{ij}$
+indicate the number of times word $j$ occur in the context of word
+$i$. Let $X_i = \sum_k X_{ik}$ be the number of times any word $k$
+appears in the context of word $i$. Let $P_{ij} = P(w_j|w_i) =
+\frac{X_{ij}}{X_i}$ be the probability of j appearing in the context
+of word $i$.
+
+* Word Vector Evaluation
+
+** Intrinsic
+- Evaluation on a specific/intermediate subtask
+- Fast to compute
+- Helps understand the system
+- Not clear if really helpful unless correlation to real task is established
+
+** Extrinsic
+- Evaluation on a real task
+- Can take a long time to compute accuracy
+- Unclear if the subsystem is the problem or its interaction or other subsystems
+- If replacing exactly one subsystem with another improves accuracy ➡ Winning!
