@@ -12,6 +12,8 @@
 *** https://medium.com/feed/mlreview/
 *** https://distill.pub/rss.xml
 *** http://www.datatau.com/rss
+*** https://towardsdatascience.com/feed
+
 ** Programming Languages                                                 :pl:
 *** http://lambda-the-ultimate.org/rss.xml
 ** General                                                          :general:
