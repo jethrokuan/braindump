@@ -1,0 +1,76 @@
+
+1. LDA, DTM - don't work as well as deep learning model
+
+LDA: list of important words for n topics
+DTM: make LDA time variant
+
+Problems: common wworks like "computer"... 
+
+HITS algo, similar to PageRank
+
+2 concepts, authors, keywords -> important authors say important
+keywords
+
+modified textrank
+
+<NN>*<NN|NNS>
+
+1. Author -> keyphrases
+2. Keyphrase needs to be clustered LDA, Embedding
+3. What is a trend? (coarser grain than keyphrase), hierachical
+   agglomerate clustering
+
+Couperin
+* Current Methodology
+1. Use TextRank algorithm
+** TextRank
+Prior to TextRank, use NLTK to extract noun phrases via Regex. Each
+noun phrase is split further.
+** RNN
+Basic RNN is employed to use the first k sequential years to predict
+the (k+1)th years score. The model takes the top 20 phrases for each
+year, and the top 20 based on predictions from the RNN. It is expected
+that the predicted phrases closely match the actual top 20 phrases of
+the year.
+
+A linear regression model is used as the baseline comparison.
+** Definition of Trend
+Considerations:
+
+1. Research areas should have a strong foundation, but not be the
+   most-discussed issue at the same time
+2. Research areas should be gradually studied
+
+\begin{equation*}
+trend = a \times (x\textsubscript{k+1} - max(x\textsubscript{1}, ... , x\textsubscript{k})) + (1 - a) \times max(x\textsubscript{1}, ... , x\textsubscript{k})
+\end{equation*}
+
+* Keyphrase Extraction
+Keyphrase extraction (KE) is the task of automatically extracting
+descriptive phrases or concepts that represent the main topics of a
+document.
+
+In supervised approaches, a candidate phrase is encoded with a set of
+features, such as /tf-idf/. One problem is that many of these manual
+features are determined based on statistical information from
+documents outside the target domain. Hence, it is essential to
+automatically discover such features without relying on feature
+engineering.
+** SurfKE
+*** Graph Construction
+Build an undirected word graph, with words as vertices. There is an
+edge between two words if the words co-occur within =w= contiguous
+word tokens. The weight of the edge is computed based on the
+co-occurence within a window of w successive tokens in the
+document.
+*** Learning Feature Representations
+Learn a mapping function $f : V \rightarrow \mathbb{R}^{|V| \times d},
+d \le |V|$ where d is a parameter specifying the number of dimensions
+for the embeddings. The network feature learning model requires a
+corpus and a vocabulary in order to learn a mapping of nodes to a
+low-dimensional space of features. A biased sampled random walk
+strategy is employed.
+* Word Embeddings
+[[cite:smalheiser-2018-unsup-low]]
+
+[[cite:shalaby-2018-beyon-word-embed]]
