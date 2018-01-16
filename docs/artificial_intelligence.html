@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-01-16 Tue 22:56 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Artificial Intelligence</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Artificial Intelligence</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgfb87d03">1. What is Artificial Intelligence?</a>
+<ul>
+<li><a href="#org7736bff">1.1. Acting Humanly: Turing Test</a></li>
+<li><a href="#org506e7a7">1.2. Thinking Humanly</a></li>
+<li><a href="#orga095005">1.3. Thinking rationally</a></li>
+<li><a href="#orga7c3831">1.4. Acting Rationally</a></li>
+</ul>
+</li>
+<li><a href="#org37b570b">2. Intelligent Agents</a>
+<ul>
+<li><a href="#orge155ccf">2.1. Rational Agents</a></li>
+<li><a href="#orgbdac76d">2.2. Exploration vs Exploitation</a></li>
+<li><a href="#org341966e">2.3. Specifying Task Environment (PEAS)</a></li>
+<li><a href="#orgfa2b25d">2.4. Properties of Task Environments</a></li>
+<li><a href="#org832b9a6">2.5. Table-Driven Agent</a></li>
+<li><a href="#orgef3a5d7">2.6. Reflex agents</a></li>
+<li><a href="#orgaf27839">2.7. Model-based Reflex Agents</a></li>
+<li><a href="#org726dd02">2.8. Goal-based agents</a></li>
+<li><a href="#org70fd3ae">2.9. Utility-based agents</a></li>
+<li><a href="#org1f67890">2.10. Learning agents</a></li>
+<li><a href="#org1e31e14">2.11. State representations</a>
+<ul>
+<li><a href="#org35a1f01">2.11.1. Atomic Representation</a></li>
+<li><a href="#orga34b1e7">2.11.2. Factored Representation</a></li>
+<li><a href="#orgfb94c2b">2.11.3. Structured Representations</a></li>
+<li><a href="#org0c8ab42">2.11.4. Implications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfb87d03" class="outline-2">
+<h2 id="orgfb87d03"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Designing agents that act rationally (e.g. through maximising a reward
+function).
+</p>
+
+<p>
+Humans often act in ways that do not maximise their own benefit
+(irrational).
+</p>
+</div>
+<div id="outline-container-org7736bff" class="outline-3">
+<h3 id="org7736bff"><span class="section-number-3">1.1</span> Acting Humanly: Turing Test</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A computer would require:
+</p>
+
+<ul class="org-ul">
+<li>natural language processing</li>
+<li>knowledge representation</li>
+<li>automated reasoning</li>
+<li>machine learning</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org506e7a7" class="outline-3">
+<h3 id="org506e7a7"><span class="section-number-3">1.2</span> Thinking Humanly</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Cognitive science brings together computer models and experimental
+techniques in psychology to construct testable and provable theories
+of the human mind.
+</p>
+</div>
+</div>
+<div id="outline-container-orga095005" class="outline-3">
+<h3 id="orga095005"><span class="section-number-3">1.3</span> Thinking rationally</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Taking informal knowledge and expressing it in logical terms.
+</p>
+</div>
+</div>
+<div id="outline-container-orga7c3831" class="outline-3">
+<h3 id="orga7c3831"><span class="section-number-3">1.4</span> Acting Rationally</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+A rational agent is one that acts so as to achieve the best outcome
+or,when there is uncertainty, the best expected outcome.
+</p>
+
+<p>
+An agent is a function from percept histories to actions, i.e. \(f: P^*
+\rightarrow A\). We seek the best-performing agent for a certain task;
+must consider computation limits.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org37b570b" class="outline-2">
+<h2 id="org37b570b"><span class="section-number-2">2</span> Intelligent Agents</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Agents perceive the environment through sensors</li>
+<li>Agents act upon the environment through actuators</li>
+</ul>
+</div>
+<div id="outline-container-orge155ccf" class="outline-3">
+<h3 id="orge155ccf"><span class="section-number-3">2.1</span> Rational Agents</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>For each possible percept sequence, select an action that is
+expected to maximise its performance measure. The performance
+measure is a function of a given sequence of environment states.</li>
+<li>Given the evidence provided by the percept sequence and whatever
+built-in knowledge the agent has.</li>
+<li>Agents can perform actions that help them gather useful information
+(exploration)</li>
+<li>An agent is <i>autonomous</i> if its behaviour is determined by its own
+experience (with ability to learn and adapt)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgbdac76d" class="outline-3">
+<h3 id="orgbdac76d"><span class="section-number-3">2.2</span> Exploration vs Exploitation</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Doing actions that modify future percepts (information gathering) is
+an important part of rationality. In most scenarios, agents don't know
+the entire environment <i>a priori</i>.
+</p>
+</div>
+</div>
+<div id="outline-container-org341966e" class="outline-3">
+<h3 id="org341966e"><span class="section-number-3">2.3</span> Specifying Task Environment (PEAS)</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Performance measure</li>
+<li>Environment</li>
+<li>Actuators</li>
+<li>Sensors</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgfa2b25d" class="outline-3">
+<h3 id="orgfa2b25d"><span class="section-number-3">2.4</span> Properties of Task Environments</h3>
+<div class="outline-text-3" id="text-2-4">
+<dl class="org-dl">
+<dt>Fully observable</dt><dd>whether an agent's sensors gives it access to
+the complete state of the environment at any given point in time</dd>
+<dt>Deterministic</dt><dd>if the next state is completely determined by the
+current environment. Otherwise it is <b>stochastic</b>.</dd>
+<dt>Episodic</dt><dd>whether an agents experience is divided into atomic
+episodes. In each episode, an agent receives a percept
+and performs a single action. In <b>sequential</b>
+environments short-term actions can have long-term
+consequences. For this reason, episodic environments are
+generally simpler.</dd>
+<dt>Static</dt><dd>whether the environment can change while the agent is
+deliberating.</dd>
+<dt>Discrete</dt><dd>whether the state of the environment, how time is
+handled, and the percepts and actions of the agent
+discretely quantized.</dd>
+<dt>Single agent</dt><dd>in some environments, for example chess, there are
+multiple agents acting in the same environment.
+<dl class="org-dl">
+<dt>cooperative</dt><dd>if the two agents need to work together.</dd>
+<dt>competitive</dt><dd>if the two agents are working against each other.</dd>
+</dl></dd>
+<dt>Known</dt><dd>whether the agent knows the outcome of its actions.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org832b9a6" class="outline-3">
+<h3 id="org832b9a6"><span class="section-number-3">2.5</span> Table-Driven Agent</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Simple to implement, and works. However, the number of table entries
+is exponential in time: \(\text{#percepts}^\text{time}\). Hence it is
+doomed to failure. The key challenge to AI is to produce rational
+behaviour from a small program rather than a vast table.
+</p>
+</div>
+</div>
+<div id="outline-container-orgef3a5d7" class="outline-3">
+<h3 id="orgef3a5d7"><span class="section-number-3">2.6</span> Reflex agents</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+A simple reflex agent is one that selects actions on the basis of the
+<i>current</i> percept, ignoring the rest of the percept history. A
+<i>condition-action</i> rule is triggered upon processing the current
+percept. E.g. <b>if</b> the car in front is braking, <b>then</b> brake too.
+</p>
+
+<p>
+Basing actions on only the current percept can be highly limiting, and
+can also lead to infinite loops. Randomized actions of the right kind
+can help escape these infinite loops.
+</p>
+</div>
+</div>
+<div id="outline-container-orgaf27839" class="outline-3">
+<h3 id="orgaf27839"><span class="section-number-3">2.7</span> Model-based Reflex Agents</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+The agent maintains some <b>internal state</b> that depends on percept
+history and reflects at least some of the unobserved aspects of the
+current state. Information about how the world evolves independently
+from the agent is encoded into the agent. This knowledge is called a
+<b>model</b> of the world, and this agent is hence a <b>model-based</b> agent.
+</p>
+</div>
+</div>
+<div id="outline-container-org726dd02" class="outline-3">
+<h3 id="org726dd02"><span class="section-number-3">2.8</span> Goal-based agents</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+Knowing about the current state of the environment may not be enough
+to decide on what to do. Agents may need <b>goal</b> information that
+describes situations that are desirable. Sometimes goal-based action
+selection is straightforward, but in others <b>searching</b> and <b>planning</b>
+are required to achieve the goal. Goal-based agents are flexible
+because the knowledge that supports its decisions is represented
+explicitly and can be modified, although it is less efficient.
+</p>
+</div>
+</div>
+<div id="outline-container-org70fd3ae" class="outline-3">
+<h3 id="org70fd3ae"><span class="section-number-3">2.9</span> Utility-based agents</h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+Goals provide a binary distinction between good and bad states. A more
+general performance measure should allow a comparison between world
+states according to exactly how good it is to the agent. An agent's
+<b>utility function</b> is an internalisation of the performance measure.
+An agent chooses actions to maximise its expected utility. A
+utility-based agents has to model and keep track of its environment.
+</p>
+</div>
+</div>
+<div id="outline-container-org1f67890" class="outline-3">
+<h3 id="org1f67890"><span class="section-number-3">2.10</span> Learning agents</h3>
+<div class="outline-text-3" id="text-2-10">
+<p>
+A learning agent can be divided into four conceptual components.
+</p>
+<dl class="org-dl">
+<dt>learning element</dt><dd>responsible for making improvements</dd>
+<dt>performance element</dt><dd>responsible for selecting extrenal actions</dd>
+<dt>problem generator</dt><dd>suggests actions that will lead to new and
+informative experiences</dd>
+</dl>
+
+<p>
+the learning element takes in feedback from the <b>critic</b> on how the
+agent is doing and determines show the performance element should be
+modified to do better in the future.
+</p>
+</div>
+</div>
+<div id="outline-container-org1e31e14" class="outline-3">
+<h3 id="org1e31e14"><span class="section-number-3">2.11</span> State representations</h3>
+<div class="outline-text-3" id="text-2-11">
+</div>
+<div id="outline-container-org35a1f01" class="outline-4">
+<h4 id="org35a1f01"><span class="section-number-4">2.11.1</span> Atomic Representation</h4>
+<div class="outline-text-4" id="text-2-11-1">
+<p>
+In an atomic representation each state of the world is indivisible,
+and has no internal structure. Search, game-playing, hidden Markov
+models and Markov decision processes all work with atomic
+representations.
+</p>
+</div>
+</div>
+<div id="outline-container-orga34b1e7" class="outline-4">
+<h4 id="orga34b1e7"><span class="section-number-4">2.11.2</span> Factored Representation</h4>
+<div class="outline-text-4" id="text-2-11-2">
+<p>
+A factored representation splits up each state into a fixed set of
+<b>variables</b> or <b>attributes</b>, each of which can have a <b>value</b>.
+</p>
+
+<p>
+Constraint satisfaction algorithms, propositional logic, planning,
+Bayesian networks and machine learning algorithms work with factored
+representations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfb94c2b" class="outline-4">
+<h4 id="orgfb94c2b"><span class="section-number-4">2.11.3</span> Structured Representations</h4>
+<div class="outline-text-4" id="text-2-11-3">
+<p>
+Structured representations underlie relational databases and
+first-order logic, first-order probability models, knowledge-based
+learning and much of natural language understanding.
+</p>
+</div>
+</div>
+<div id="outline-container-org0c8ab42" class="outline-4">
+<h4 id="org0c8ab42"><span class="section-number-4">2.11.4</span> Implications</h4>
+<div class="outline-text-4" id="text-2-11-4">
+<p>
+A more expressive representation can capture, at least as concisely, a
+everything a more expressive one can capture, plus more. On the other
+hand, reasoning and learning become more complex as the expressive
+power of the representation increases.
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-16 Tue 22:56</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

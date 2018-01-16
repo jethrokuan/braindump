@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-13 Sat 11:58 -->
+<!-- 2018-01-16 Tue 22:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -14,7 +14,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -84,17 +84,24 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org256661d">1. Keyphrase Extraction</a>
+<li><a href="#orgd15c386">1. Current Methodology</a>
 <ul>
-<li><a href="#org36a30ff">1.1. SurfKE</a>
+<li><a href="#org21df4bd">1.1. TextRank</a></li>
+<li><a href="#orgfb5c3d4">1.2. RNN</a></li>
+<li><a href="#orgd12ef05">1.3. Definition of Trend</a></li>
+</ul>
+</li>
+<li><a href="#orgc2d6bf3">2. Keyphrase Extraction</a>
 <ul>
-<li><a href="#orgdf07e78">1.1.1. Graph Construction</a></li>
-<li><a href="#org45cf9d6">1.1.2. Learning Feature Representations</a></li>
+<li><a href="#org4091575">2.1. SurfKE</a>
+<ul>
+<li><a href="#orgb353c62">2.1.1. Graph Construction</a></li>
+<li><a href="#org8db3a8a">2.1.2. Learning Feature Representations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgca74f15">2. Word Embeddings</a></li>
+<li><a href="#org7e9c7dc">3. Word Embeddings</a></li>
 </ul>
 </div>
 </div>
@@ -121,7 +128,7 @@ keywords
 </p>
 
 <p>
-modified tetrank
+modified textrank
 </p>
 
 <p>
@@ -138,9 +145,61 @@ agglomerate clustering</li>
 <p>
 Couperin
 </p>
-<div id="outline-container-org256661d" class="outline-2">
-<h2 id="org256661d"><span class="section-number-2">1</span> Keyphrase Extraction</h2>
+<div id="outline-container-orgd15c386" class="outline-2">
+<h2 id="orgd15c386"><span class="section-number-2">1</span> Current Methodology</h2>
 <div class="outline-text-2" id="text-1">
+<ol class="org-ol">
+<li>Use TextRank algorithm</li>
+</ol>
+</div>
+<div id="outline-container-org21df4bd" class="outline-3">
+<h3 id="org21df4bd"><span class="section-number-3">1.1</span> TextRank</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Prior to TextRank, use NLTK to extract noun phrases via Regex. Each
+noun phrase is split further.
+</p>
+</div>
+</div>
+<div id="outline-container-orgfb5c3d4" class="outline-3">
+<h3 id="orgfb5c3d4"><span class="section-number-3">1.2</span> RNN</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Basic RNN is employed to use the first k sequential years to predict
+the (k+1)th years score. The model takes the top 20 phrases for each
+year, and the top 20 based on predictions from the RNN. It is expected
+that the predicted phrases closely match the actual top 20 phrases of
+the year.
+</p>
+
+<p>
+A linear regression model is used as the baseline comparison.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd12ef05" class="outline-3">
+<h3 id="orgd12ef05"><span class="section-number-3">1.3</span> Definition of Trend</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Considerations:
+</p>
+
+<ol class="org-ol">
+<li>Research areas should have a strong foundation, but not be the
+most-discussed issue at the same time</li>
+<li>Research areas should be gradually studied</li>
+</ol>
+
+\begin{equation*}
+trend = a \times (x\textsubscript{k+1} - max(x\textsubscript{1}, ... , x\textsubscript{k})) + (1 - a) \times max(x\textsubscript{1}, ... , x\textsubscript{k})
+\end{equation*}
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc2d6bf3" class="outline-2">
+<h2 id="orgc2d6bf3"><span class="section-number-2">2</span> Keyphrase Extraction</h2>
+<div class="outline-text-2" id="text-2">
 <p>
 Keyphrase extraction (KE) is the task of automatically extracting
 descriptive phrases or concepts that represent the main topics of a
@@ -156,13 +215,13 @@ automatically discover such features without relying on feature
 engineering.
 </p>
 </div>
-<div id="outline-container-org36a30ff" class="outline-3">
-<h3 id="org36a30ff"><span class="section-number-3">1.1</span> SurfKE</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-org4091575" class="outline-3">
+<h3 id="org4091575"><span class="section-number-3">2.1</span> SurfKE</h3>
+<div class="outline-text-3" id="text-2-1">
 </div>
-<div id="outline-container-orgdf07e78" class="outline-4">
-<h4 id="orgdf07e78"><span class="section-number-4">1.1.1</span> Graph Construction</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-orgb353c62" class="outline-4">
+<h4 id="orgb353c62"><span class="section-number-4">2.1.1</span> Graph Construction</h4>
+<div class="outline-text-4" id="text-2-1-1">
 <p>
 Build an undirected word graph, with words as vertices. There is an
 edge between two words if the words co-occur within <code>w</code> contiguous
@@ -172,9 +231,9 @@ document.
 </p>
 </div>
 </div>
-<div id="outline-container-org45cf9d6" class="outline-4">
-<h4 id="org45cf9d6"><span class="section-number-4">1.1.2</span> Learning Feature Representations</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-org8db3a8a" class="outline-4">
+<h4 id="org8db3a8a"><span class="section-number-4">2.1.2</span> Learning Feature Representations</h4>
+<div class="outline-text-4" id="text-2-1-2">
 <p>
 Learn a mapping function \(f : V \rightarrow \mathbb{R}^{|V| \times d},
 d \le |V|\) where d is a parameter specifying the number of dimensions
@@ -187,9 +246,9 @@ strategy is employed.
 </div>
 </div>
 </div>
-<div id="outline-container-orgca74f15" class="outline-2">
-<h2 id="orgca74f15"><span class="section-number-2">2</span> Word Embeddings</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-org7e9c7dc" class="outline-2">
+<h2 id="org7e9c7dc"><span class="section-number-2">3</span> Word Embeddings</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 <a class='org-ref-reference' href="#smalheiser-2018-unsup-low">smalheiser-2018-unsup-low</a>
 </p>
@@ -202,7 +261,7 @@ strategy is employed.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-13 Sat 11:58</p>
+<p class="date">Created: 2018-01-16 Tue 22:55</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

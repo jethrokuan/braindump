@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-05 Fri 02:11 -->
+<!-- 2018-01-16 Tue 22:55 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Emacs</title>
@@ -20,7 +20,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -69,15 +69,87 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1b00a2b">1. Undo</a></li>
-<li><a href="#org6594383">2. iedit</a></li>
-<li><a href="#orgcf3890f">3. Deleting Windows ^M (CR) characters</a></li>
+<li><a href="#org560ca10">1. Why Emacs?</a>
+<ul>
+<li><a href="#org9e28c44">1.1. Flexibility</a></li>
+<li><a href="#org96543a7">1.2. Uniform Interface</a></li>
+<li><a href="#orgc4cf7f6">1.3. Emacs has everything you need</a></li>
+</ul>
+</li>
+<li><a href="#orgc898c69">2. How I use Emacs</a></li>
+<li><a href="#org313b16d">3. Undo</a></li>
+<li><a href="#org95e6f34">4. iedit</a></li>
+<li><a href="#orgda54f76">5. Deleting Windows ^M (CR) characters</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org1b00a2b" class="outline-2">
-<h2 id="org1b00a2b"><span class="section-number-2">1</span> Undo</h2>
+<div id="outline-container-org560ca10" class="outline-2">
+<h2 id="org560ca10"><span class="section-number-2">1</span> Why Emacs?</h2>
 <div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org9e28c44" class="outline-3">
+<h3 id="org9e28c44"><span class="section-number-3">1.1</span> Flexibility</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Emacs Lisp makes it a joy to extend, attracting a large community of
+lisp hackers. Case in point: Amazon's Customer Service application
+Mailman was built in Emacs Lisp.
+</p>
+
+<p>
+<a href="https://sites.google.com/site/steveyegge2/tour-de-babel">https://sites.google.com/site/steveyegge2/tour-de-babel</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org96543a7" class="outline-3">
+<h3 id="org96543a7"><span class="section-number-3">1.2</span> Uniform Interface</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Everything is text, everything is in a buffer. Keyboard movements work
+everywhere, no surprises.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc4cf7f6" class="outline-3">
+<h3 id="orgc4cf7f6"><span class="section-number-3">1.3</span> Emacs has everything you need</h3>
+<div class="outline-text-3" id="text-1-3">
+<ul class="org-ul">
+<li>Web Browser (eww)</li>
+<li>IRC Client (erc/irc)</li>
+<li>Email Client (mu4e/notmuch/gnus)</li>
+<li>Emacs X Window Manager (exwm)</li>
+<li>File Browser (dired)</li>
+<li>doctor?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc898c69" class="outline-2">
+<h2 id="orgc898c69"><span class="section-number-2">2</span> How I use Emacs</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Development workflow
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Magit</li>
+<li class="off"><code>[&#xa0;]</code> Wgrep</li>
+</ul></li>
+<li class="off"><code>[&#xa0;]</code> Living inside Emacs: Org-mode
+<ul class="org-ul">
+<li class="off"><code>[&#xa0;]</code> Reading Email</li>
+<li class="off"><code>[&#xa0;]</code> Keeping up with the news: RSS Feeds</li>
+<li class="off"><code>[&#xa0;]</code> Getting Things Done</li>
+<li class="off"><code>[&#xa0;]</code> Reading Papers</li>
+<li class="off"><code>[&#xa0;]</code> Writing School Notes</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org313b16d" class="outline-2">
+<h2 id="org313b16d"><span class="section-number-2">3</span> Undo</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 There is no redo. Add a non-editing command to undo the undo, eg.
 `C-g`. In that way `C-g C-_` performs a redo.
@@ -88,12 +160,12 @@ There is no redo. Add a non-editing command to undo the undo, eg.
 </p>
 </div>
 </div>
-<div id="outline-container-org6594383" class="outline-2">
-<h2 id="org6594383"><span class="section-number-2">2</span> iedit</h2>
+<div id="outline-container-org95e6f34" class="outline-2">
+<h2 id="org95e6f34"><span class="section-number-2">4</span> iedit</h2>
 </div>
-<div id="outline-container-orgcf3890f" class="outline-2">
-<h2 id="orgcf3890f"><span class="section-number-2">3</span> Deleting Windows ^M (CR) characters</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgda54f76" class="outline-2">
+<h2 id="orgda54f76"><span class="section-number-2">5</span> Deleting Windows ^M (CR) characters</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 Simply run <code>M-x delete-trailing-whitespaces</code>
 </p>
@@ -102,7 +174,7 @@ Simply run <code>M-x delete-trailing-whitespaces</code>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-05 Fri 02:11</p>
+<p class="date">Created: 2018-01-16 Tue 22:55</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

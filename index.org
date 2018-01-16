@@ -1,5 +1,6 @@
 #+TITLE: Jethro's Braindump
 
+- [[file:artificial_intelligence.org][Artificial Intelligence]]
 - [[file:cplusplus.org][C++]]
 - [[file:computer_organization.org][Computer Organization]]
 - [[file:consciousness.org][Consciousness]]
