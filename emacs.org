@@ -1,5 +1,35 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Emacs
+* Why Emacs?
+** Flexibility
+Emacs Lisp makes it a joy to extend, attracting a large community of
+lisp hackers. Case in point: Amazon's Customer Service application
+Mailman was built in Emacs Lisp.
+
+https://sites.google.com/site/steveyegge2/tour-de-babel
+
+** Uniform Interface
+Everything is text, everything is in a buffer. Keyboard movements work
+everywhere, no surprises.
+
+** Emacs has everything you need
+- Web Browser (eww)
+- IRC Client (erc/irc)
+- Email Client (mu4e/notmuch/gnus)
+- Emacs X Window Manager (exwm)
+- File Browser (dired)
+- doctor?
+
+* How I use Emacs
+- [ ] Development workflow
+  - [ ] Magit
+  - [ ] Wgrep
+- [ ] Living inside Emacs: Org-mode
+  - [ ] Reading Email
+  - [ ] Keeping up with the news: RSS Feeds
+  - [ ] Getting Things Done
+  - [ ] Reading Papers
+  - [ ] Writing School Notes
 * Undo
 There is no redo. Add a non-editing command to undo the undo, eg.
 `C-g`. In that way `C-g C-_` performs a redo.
