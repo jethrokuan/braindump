@@ -1,6 +1,17 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Deep Learning
+* Definition
+A class of machine learning algorithm that uses a cascade of multiple
+layeprs of non-linear processing units for feature extraction and
+transformation
+* Model/task categorisation
+- supervised learning :: input -> otuput, learning the pattern from
+     labeled training data
+- unsupervised learning ::  learning to differentiate/cluster
+     unlabeled data
+- reinforcement learning :: learning from trial-and-error through rewards
 * Bayesian probability
+https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner
 The quantification of the expression of uncertainty. We can make
 precise revisions of uncertainty in light of new evidence.
 
@@ -58,8 +69,6 @@ Minimising the cross entropy with respect to Q is equivalent to
 minimising the KL divergence.
 * SVD
 https://www.youtube.com/watch?v=P5mlg91as1c
-
-https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner
 * Learning Rates
 ** Learning Rate Annealing
 Decay learning rate after several iterations...
