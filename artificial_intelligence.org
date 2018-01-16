@@ -1,0 +1,136 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Artificial Intelligence
+#+PDF: [[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Stuart%20Russell,%20Peter%20Norvig-Artificial%20Intelligence.%20A%20Modern%20Approach%20%5BGlobal%20Edition%5D-Pearson%20(2016).pdf][AIMA]]
+* What is Artificial Intelligence?
+Designing agents that act rationally (e.g. through maximising a reward
+function).
+
+Humans often act in ways that do not maximise their own benefit
+(irrational).
+** Acting Humanly: Turing Test
+A computer would require:
+
+- natural language processing
+- knowledge representation
+- automated reasoning
+- machine learning
+** Thinking Humanly
+Cognitive science brings together computer models and experimental
+techniques in psychology to construct testable and provable theories
+of the human mind.
+** Thinking rationally
+Taking informal knowledge and expressing it in logical terms.
+** Acting Rationally
+A rational agent is one that acts so as to achieve the best outcome
+or,when there is uncertainty, the best expected outcome.
+
+An agent is a function from percept histories to actions, i.e. $f:
+P^* \rightarrow A$. We seek the best-performing agent for a certain
+task; must consider computation limits.
+* Intelligent Agents
+- Agents perceive the environment through sensors
+- Agents act upon the environment through actuators
+** Rational Agents
+- For each possible percept sequence, select an action that is
+  expected to maximise its performance measure. The performance
+  measure is a function of a given sequence of environment states.
+- Given the evidence provided by the percept sequence and whatever
+  built-in knowledge the agent has.
+- Agents can perform actions that help them gather useful information (exploration)
+- An agent is /autonomous/ if its behaviour is determined by its own
+  experience (with ability to learn and adapt)
+** Exploration vs Exploitation
+Doing actions that modify future percepts (information gathering) is
+an important part of rationality. In most scenarios, agents don't know
+the entire environment /a priori/. 
+** Specifying Task Environment (PEAS)
+- Performance measure
+- Environment
+- Actuators
+- Sensors
+** Properties of Task Environments
+- Fully observable :: whether an agent's sensors gives it access to
+     the complete state of the environment at any given point in time
+- Deterministic ::  if the next state is completely determined by the
+                   current environment. Otherwise it is *stochastic*.
+- Episodic :: whether an agents experience is divided into atomic
+              episodes. In each episode, an agent receives a percept
+              and performs a single action. In *sequential*
+              environments short-term actions can have long-term
+              consequences. For this reason, episodic environments are
+              generally simpler.
+- Static :: whether the environment can change while the agent is
+            deliberating.
+- Discrete :: whether the state of the environment, how time is
+              handled, and the percepts and actions of the agent
+              discretely quantized.
+- Single agent :: in some environments, for example chess, there are
+                  multiple agents acting in the same environment.
+  - cooperative :: if the two agents need to work together.
+  - competitive :: if the two agents are working against each other.
+- Known :: whether the agent knows the outcome of its actions.
+** Table-Driven Agent
+Simple to implement, and works. However, the number of table entries
+is exponential in time: $\text{#percepts}^\text{time}$. Hence it is
+doomed to failure. The key challenge to AI is to produce rational
+behaviour from a small program rather than a vast table.
+** Reflex agents
+A simple reflex agent is one that selects actions on the basis of the
+/current/ percept, ignoring the rest of the percept history. A
+/condition-action/ rule is triggered upon processing the current
+percept. E.g. *if* the car in front is braking, *then* brake too.
+
+Basing actions on only the current percept can be highly limiting, and
+can also lead to infinite loops. Randomized actions of the right kind
+can help escape these infinite loops.
+** Model-based Reflex Agents
+The agent maintains some *internal state* that depends on percept
+history and reflects at least some of the unobserved aspects of the
+current state. Information about how the world evolves independently
+from the agent is encoded into the agent. This knowledge is called a
+*model* of the world, and this agent is hence a *model-based* agent.
+** Goal-based agents
+Knowing about the current state of the environment may not be enough
+to decide on what to do. Agents may need *goal* information that
+describes situations that are desirable. Sometimes goal-based action
+selection is straightforward, but in others *searching* and *planning*
+are required to achieve the goal. Goal-based agents are flexible
+because the knowledge that supports its decisions is represented
+explicitly and can be modified, although it is less efficient.
+** Utility-based agents
+Goals provide a binary distinction between good and bad states. A more
+general performance measure should allow a comparison between world
+states according to exactly how good it is to the agent. An agent's
+*utility function* is an internalisation of the performance measure.
+An agent chooses actions to maximise its expected utility. A
+utility-based agents has to model and keep track of its environment.
+** Learning agents
+A learning agent can be divided into four conceptual components.
+- learning element :: responsible for making improvements
+- performance element :: responsible for selecting extrenal actions
+- problem generator :: suggests actions that will lead to new and
+     informative experiences
+
+the learning element takes in feedback from the *critic* on how the
+agent is doing and determines show the performance element should be
+modified to do better in the future.
+** State representations
+*** Atomic Representation
+In an atomic representation each state of the world is indivisible,
+and has no internal structure. Search, game-playing, hidden Markov
+models and Markov decision processes all work with atomic representations.
+*** Factored Representation
+A factored representation splits up each state into a fixed set of
+*variables* or *attributes*, each of which can have a *value*.
+
+Constraint satisfaction algorithms, propositional logic, planning,
+Bayesian networks and machine learning algorithms work with factored representations.
+*** Structured Representations
+Structured representations underlie relational databases and
+first-order logic, first-order probability models, knowledge-based
+learning and much of natural language understanding.
+*** Implications
+A more expressive representation can capture, at least as concisely, a
+everything a more expressive one can capture, plus more. On the other
+hand, reasoning and learning become more complex as the expressive
+power of the representation increases.
