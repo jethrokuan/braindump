@@ -1,5 +1,8 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Natural Language Processing
+
+* Reference Material                                               :noexport:
+[[file:~/Dropbox/Books/Programming/Deep%20Learning/CS224n%20Lecture%20Notes/][CS224n]]
 * How to Represent Words
 http://ruder.io/word-embeddings-2017/index.html
 
@@ -110,7 +113,6 @@ starting from the root and ending in the leaf node corresponding to
 $w$.
 
 
-
 ** Global Vectors for Word Representation (GloVe)
 Count-based methods of generating word embeddings rely on global
 statistical information, and do poorly on tasks such as word analogy,
@@ -160,3 +162,92 @@ of word $i$.
 - Can take a long time to compute accuracy
 - Unclear if the subsystem is the problem or its interaction or other subsystems
 - If replacing exactly one subsystem with another improves accuracy ➡ Winning!
+
+* Neural Networks
+Most data are not linearly separable, hence the need for non-linear
+classifiers. Neural networks are a family of classifiers with
+non-linear decision boundaries.
+
+** A neuron
+A neuron is a generic computational unit that takes $n$ inputs and
+produces a single output. The sigmoid unit takes a $n$-dimensional
+vector $x4 and produces a scalar activation (output) $a$. This neuron
+is also associated with an $n$-dimensional weight vector, $w$, and a
+bias scalar, $b$. for example, the output of this neuron is then:
+
+\begin{equation*}
+a = \frac{1}{1 + exp(-(w^Tx + b))}
+\end{equation*}
+
+This is also frequently formulated as:
+
+\begin{equation*}
+a = \frac{1}{1 + exp(-([w^T\text{ }b] \cdot [x\text{ }1]))}
+\end{equation*}
+
+** A single layer of neurons
+This idea can be extended to multiple neurons by considering the case
+where the input $x$ is fed as input to multiple such neurons.
+
+\begin{align*}
+  \sigma\left( z \right) =
+  \begin{bmatrix}
+    \frac{1}{1 + exp(z_1)} \\
+    \vdots \\
+    \frac{1}{1 + exp(z_m)}
+  \end{bmatrix}
+\end{align*}
+
+\begin{align*}
+  b =
+  \begin{bmatrix}
+    b_1 \\
+    \vdots \\
+    b_m
+  \end{bmatrix}
+  \in \mathbb{R}^m
+\end{align*}
+
+\begin{align*}
+  W =
+  \begin{bmatrix}
+    - && w^{(1)T} && - \\
+    && \hdots && \\
+    - && w^{(m)T} && -
+  \end{bmatrix}
+  \in \mathbb{R}^{m\times n}
+\end{align*}
+
+\begin{equation*}
+z = Wx + b
+\end{equation*}
+
+The activations of the sigmoid function can be written as:
+
+\begin{align*}
+  \begin{bmatrix}
+    a^{(1)} \\
+    \vdots \\
+    a^{(m)}
+  \end{bmatrix}
+  = \sigma\left( Wx + b \right)
+\end{align*}
+
+Activations indicate the presence of some weighted combination of
+features. We can use these combinations to perform classification
+tasks.
+
+
+** Feed-forward computation
+Non-linear decisions cannot be classified in by feeding inputs
+directly into a softmax function. Instead, we use another matrix $U
+\in \mathbb{R}^{m\times 1}$ to generate an unnormalized score for a
+classification task from the activations.
+
+\begin{equation*}
+s = U^Ta = U^Tf\left( Wx + b \right)
+\end{equation*}
+
+where f is the activation function.
+
+

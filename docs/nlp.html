@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-16 Tue 22:55 -->
+<!-- 2018-01-18 Thu 20:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Natural Language Processing</title>
@@ -20,7 +20,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -91,44 +91,52 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfc3374d">1. How to Represent Words</a>
+<li><a href="#org4318c42">1. How to Represent Words</a>
 <ul>
-<li><a href="#org76e752a">1.1. Window-based Co-occurence Matrix</a></li>
-<li><a href="#org4eb1265">1.2. Issues with SVD-based methods</a></li>
-<li><a href="#org43fae91">1.3. Iteration-based Methods (e.g. word2vec)</a>
+<li><a href="#orge5a1038">1.1. Window-based Co-occurence Matrix</a></li>
+<li><a href="#org38d14cf">1.2. Issues with SVD-based methods</a></li>
+<li><a href="#orga977dfd">1.3. Iteration-based Methods (e.g. word2vec)</a>
 <ul>
-<li><a href="#orga19b213">1.3.1. Language Models</a>
+<li><a href="#org2a39632">1.3.1. Language Models</a>
 <ul>
-<li><a href="#org2c7c26e">1.3.1.1. Continuous bag-of-words (CBOW)</a></li>
-<li><a href="#org89c7263">1.3.1.2. <span class="todo TODO">TODO</span> Skipgram</a></li>
+<li><a href="#org0a53ef0">1.3.1.1. Continuous bag-of-words (CBOW)</a></li>
+<li><a href="#org9b6a1b1">1.3.1.2. <span class="todo TODO">TODO</span> Skipgram</a></li>
 </ul>
 </li>
-<li><a href="#orga0f26d2">1.3.2. Training Methods</a>
+<li><a href="#org75385f6">1.3.2. Training Methods</a>
 <ul>
-<li><a href="#orgab686c4">1.3.2.1. <span class="todo TODO">TODO</span> Negative Sampling</a></li>
-<li><a href="#org9ba21f1">1.3.2.2. <span class="todo TODO">TODO</span> Hierachical Softmax</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#orgc9fecb9">1.4. Global Vectors for Word Representation (GloVe)</a>
-<ul>
-<li><a href="#org827775f">1.4.1. Co-occurrence Matrix</a></li>
+<li><a href="#orgf697794">1.3.2.1. <span class="todo TODO">TODO</span> Negative Sampling</a></li>
+<li><a href="#org4b61164">1.3.2.2. <span class="todo TODO">TODO</span> Hierachical Softmax</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgb8f832b">2. Word Vector Evaluation</a>
+<li><a href="#org581376b">1.4. Global Vectors for Word Representation (GloVe)</a>
 <ul>
-<li><a href="#org0499db1">2.1. Intrinsic</a></li>
-<li><a href="#orgcc1f6b7">2.2. Extrinsic</a></li>
+<li><a href="#orgee5dbe5">1.4.1. Co-occurrence Matrix</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org612ee8d">2. Word Vector Evaluation</a>
+<ul>
+<li><a href="#org843212a">2.1. Intrinsic</a></li>
+<li><a href="#org49c7ca3">2.2. Extrinsic</a></li>
+</ul>
+</li>
+<li><a href="#org9ac3d90">3. Neural Networks</a>
+<ul>
+<li><a href="#org394e96f">3.1. A neuron</a></li>
+<li><a href="#orgaec5564">3.2. A single layer of neurons</a></li>
+<li><a href="#org325f20e">3.3. Feed-forward computation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc3374d" class="outline-2">
-<h2 id="orgfc3374d"><span class="section-number-2">1</span> How to Represent Words</h2>
+
+<div id="outline-container-org4318c42" class="outline-2">
+<h2 id="org4318c42"><span class="section-number-2">1</span> How to Represent Words</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="http://ruder.io/word-embeddings-2017/index.html">http://ruder.io/word-embeddings-2017/index.html</a>
@@ -153,8 +161,8 @@ perform SVD on <code>X</code> to get a \(USV^T\) decomposition. We can then use 
 rows of <code>U</code> as the word embeddings for all words in the dictionary.
 </p>
 </div>
-<div id="outline-container-org76e752a" class="outline-3">
-<h3 id="org76e752a"><span class="section-number-3">1.1</span> Window-based Co-occurence Matrix</h3>
+<div id="outline-container-orge5a1038" class="outline-3">
+<h3 id="orge5a1038"><span class="section-number-3">1.1</span> Window-based Co-occurence Matrix</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Count the number of times each word appears inside a window of a
@@ -163,8 +171,8 @@ for all words in the corpus.
 </p>
 </div>
 </div>
-<div id="outline-container-org4eb1265" class="outline-3">
-<h3 id="org4eb1265"><span class="section-number-3">1.2</span> Issues with SVD-based methods</h3>
+<div id="outline-container-org38d14cf" class="outline-3">
+<h3 id="org38d14cf"><span class="section-number-3">1.2</span> Issues with SVD-based methods</h3>
 <div class="outline-text-3" id="text-1-2">
 <ol class="org-ol">
 <li>Dimensions of the matrix can change very often (new words added to corpus)</li>
@@ -183,8 +191,8 @@ Some solutions include:
 </ol>
 </div>
 </div>
-<div id="outline-container-org43fae91" class="outline-3">
-<h3 id="org43fae91"><span class="section-number-3">1.3</span> Iteration-based Methods (e.g. word2vec)</h3>
+<div id="outline-container-orga977dfd" class="outline-3">
+<h3 id="orga977dfd"><span class="section-number-3">1.3</span> Iteration-based Methods (e.g. word2vec)</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Design a model whose parameters are the word vectors, and train the
@@ -193,8 +201,8 @@ learnt.
 Efficient tree structure to compute probabiltiies for all the vocabulary
 </p>
 </div>
-<div id="outline-container-orga19b213" class="outline-4">
-<h4 id="orga19b213"><span class="section-number-4">1.3.1</span> Language Models</h4>
+<div id="outline-container-org2a39632" class="outline-4">
+<h4 id="org2a39632"><span class="section-number-4">1.3.1</span> Language Models</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 The model will need to assign a probability to a sequence of tokens.
@@ -208,8 +216,8 @@ actually be assigned a high probability. Bigrams are a naive way of
 evaluating a whole sentence.
 </p>
 </div>
-<div id="outline-container-org2c7c26e" class="outline-5">
-<h5 id="org2c7c26e"><span class="section-number-5">1.3.1.1</span> Continuous bag-of-words (CBOW)</h5>
+<div id="outline-container-org0a53ef0" class="outline-5">
+<h5 id="org0a53ef0"><span class="section-number-5">1.3.1.1</span> Continuous bag-of-words (CBOW)</h5>
 <div class="outline-text-5" id="text-1-3-1-1">
 <p>
 Predicts a center word from the surrounding context in terms of word
@@ -262,8 +270,8 @@ descent to update all relevant word vectors.
 </p>
 </div>
 </div>
-<div id="outline-container-org89c7263" class="outline-5">
-<h5 id="org89c7263"><span class="section-number-5">1.3.1.2</span> <span class="todo TODO">TODO</span> Skipgram</h5>
+<div id="outline-container-org9b6a1b1" class="outline-5">
+<h5 id="org9b6a1b1"><span class="section-number-5">1.3.1.2</span> <span class="todo TODO">TODO</span> Skipgram</h5>
 <div class="outline-text-5" id="text-1-3-1-2">
 <p>
 <a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/">http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/</a>
@@ -296,8 +304,8 @@ hidden layer are the word vectors we want.
 </div>
 </div>
 
-<div id="outline-container-orga0f26d2" class="outline-4">
-<h4 id="orga0f26d2"><span class="section-number-4">1.3.2</span> Training Methods</h4>
+<div id="outline-container-org75385f6" class="outline-4">
+<h4 id="org75385f6"><span class="section-number-4">1.3.2</span> Training Methods</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 In practice, negative sampling works better for frequently occurring
@@ -305,8 +313,8 @@ words and lower-dimensional vectors, and hierachical softmax works
 better for infrequent words.
 </p>
 </div>
-<div id="outline-container-orgab686c4" class="outline-5">
-<h5 id="orgab686c4"><span class="section-number-5">1.3.2.1</span> <span class="todo TODO">TODO</span> Negative Sampling</h5>
+<div id="outline-container-orgf697794" class="outline-5">
+<h5 id="orgf697794"><span class="section-number-5">1.3.2.1</span> <span class="todo TODO">TODO</span> Negative Sampling</h5>
 <div class="outline-text-5" id="text-1-3-2-1">
 <p>
 Take \(k\) negative samples, and minimise the probability of the two
@@ -315,8 +323,8 @@ words in the same window co-occur.
 </p>
 </div>
 </div>
-<div id="outline-container-org9ba21f1" class="outline-5">
-<h5 id="org9ba21f1"><span class="section-number-5">1.3.2.2</span> <span class="todo TODO">TODO</span> Hierachical Softmax</h5>
+<div id="outline-container-org4b61164" class="outline-5">
+<h5 id="org4b61164"><span class="section-number-5">1.3.2.2</span> <span class="todo TODO">TODO</span> Hierachical Softmax</h5>
 <div class="outline-text-5" id="text-1-3-2-2">
 <p>
 Hierachical Softmax uses a binary tree to represent all words in the
@@ -332,9 +340,8 @@ starting from the root and ending in the leaf node corresponding to
 </div>
 
 
-
-<div id="outline-container-orgc9fecb9" class="outline-3">
-<h3 id="orgc9fecb9"><span class="section-number-3">1.4</span> Global Vectors for Word Representation (GloVe)</h3>
+<div id="outline-container-org581376b" class="outline-3">
+<h3 id="org581376b"><span class="section-number-3">1.4</span> Global Vectors for Word Representation (GloVe)</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Count-based methods of generating word embeddings rely on global
@@ -374,8 +381,8 @@ the word vector space.
 </p>
 </div>
 
-<div id="outline-container-org827775f" class="outline-4">
-<h4 id="org827775f"><span class="section-number-4">1.4.1</span> Co-occurrence Matrix</h4>
+<div id="outline-container-orgee5dbe5" class="outline-4">
+<h4 id="orgee5dbe5"><span class="section-number-4">1.4.1</span> Co-occurrence Matrix</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
 Let \(X\) denote the word-word co-occurrence matrix, where \(X_{ij}\)
@@ -390,12 +397,12 @@ of word \(i\).
 </div>
 </div>
 
-<div id="outline-container-orgb8f832b" class="outline-2">
-<h2 id="orgb8f832b"><span class="section-number-2">2</span> Word Vector Evaluation</h2>
+<div id="outline-container-org612ee8d" class="outline-2">
+<h2 id="org612ee8d"><span class="section-number-2">2</span> Word Vector Evaluation</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org0499db1" class="outline-3">
-<h3 id="org0499db1"><span class="section-number-3">2.1</span> Intrinsic</h3>
+<div id="outline-container-org843212a" class="outline-3">
+<h3 id="org843212a"><span class="section-number-3">2.1</span> Intrinsic</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>Evaluation on a specific/intermediate subtask</li>
@@ -406,8 +413,8 @@ of word \(i\).
 </div>
 </div>
 
-<div id="outline-container-orgcc1f6b7" class="outline-3">
-<h3 id="orgcc1f6b7"><span class="section-number-3">2.2</span> Extrinsic</h3>
+<div id="outline-container-org49c7ca3" class="outline-3">
+<h3 id="org49c7ca3"><span class="section-number-3">2.2</span> Extrinsic</h3>
 <div class="outline-text-3" id="text-2-2">
 <ul class="org-ul">
 <li>Evaluation on a real task</li>
@@ -418,10 +425,129 @@ of word \(i\).
 </div>
 </div>
 </div>
+
+<div id="outline-container-org9ac3d90" class="outline-2">
+<h2 id="org9ac3d90"><span class="section-number-2">3</span> Neural Networks</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Most data are not linearly separable, hence the need for non-linear
+classifiers. Neural networks are a family of classifiers with
+non-linear decision boundaries.
+</p>
+</div>
+
+<div id="outline-container-org394e96f" class="outline-3">
+<h3 id="org394e96f"><span class="section-number-3">3.1</span> A neuron</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+A neuron is a generic computational unit that takes \(n\) inputs and
+produces a single output. The sigmoid unit takes a $n$-dimensional
+vector $x4 and produces a scalar activation (output) \(a\). This neuron
+is also associated with an $n$-dimensional weight vector, \(w\), and a
+bias scalar, \(b\). for example, the output of this neuron is then:
+</p>
+
+\begin{equation*}
+a = \frac{1}{1 + exp(-(w^Tx + b))}
+\end{equation*}
+
+<p>
+This is also frequently formulated as:
+</p>
+
+\begin{equation*}
+a = \frac{1}{1 + exp(-([w^T\text{ }b] \cdot [x\text{ }1]))}
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-orgaec5564" class="outline-3">
+<h3 id="orgaec5564"><span class="section-number-3">3.2</span> A single layer of neurons</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+This idea can be extended to multiple neurons by considering the case
+where the input \(x\) is fed as input to multiple such neurons.
+</p>
+
+\begin{align*}
+  \sigma\left( z \right) =
+  \begin{bmatrix}
+    \frac{1}{1 + exp(z_1)} \\
+    \vdots \\
+    \frac{1}{1 + exp(z_m)}
+  \end{bmatrix}
+\end{align*}
+
+\begin{align*}
+  b =
+  \begin{bmatrix}
+    b_1 \\
+    \vdots \\
+    b_m
+  \end{bmatrix}
+  \in \mathbb{R}^m
+\end{align*}
+
+\begin{align*}
+  W =
+  \begin{bmatrix}
+    - && w^{(1)T} && - \\
+    && \hdots && \\
+    - && w^{(m)T} && -
+  \end{bmatrix}
+  \in \mathbb{R}^{m\times n}
+\end{align*}
+
+\begin{equation*}
+z = Wx + b
+\end{equation*}
+
+<p>
+The activations of the sigmoid function can be written as:
+</p>
+
+\begin{align*}
+  \begin{bmatrix}
+    a^{(1)} \\
+    \vdots \\
+    a^{(m)}
+  \end{bmatrix}
+  = \sigma\left( Wx + b \right)
+\end{align*}
+
+<p>
+Activations indicate the presence of some weighted combination of
+features. We can use these combinations to perform classification
+tasks.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org325f20e" class="outline-3">
+<h3 id="org325f20e"><span class="section-number-3">3.3</span> Feed-forward computation</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Non-linear decisions cannot be classified in by feeding inputs
+directly into a softmax function. Instead, we use another matrix \(U
+\in \mathbb{R}^{m\times 1}\) to generate an unnormalized score for a
+classification task from the activations.
+</p>
+
+\begin{equation*}
+s = U^Ta = U^Tf\left( Wx + b \right)
+\end{equation*}
+
+<p>
+where f is the activation function.
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-16 Tue 22:55</p>
+<p class="date">Created: 2018-01-18 Thu 20:32</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

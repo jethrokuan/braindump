@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-16 Tue 22:56 -->
+<!-- 2018-01-18 Thu 20:32 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Artificial Intelligence</title>
@@ -20,7 +20,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2018 Free Software Foundation, Inc.
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -91,32 +91,32 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgfb87d03">1. What is Artificial Intelligence?</a>
+<li><a href="#org533ec48">1. What is Artificial Intelligence?</a>
 <ul>
-<li><a href="#org7736bff">1.1. Acting Humanly: Turing Test</a></li>
-<li><a href="#org506e7a7">1.2. Thinking Humanly</a></li>
-<li><a href="#orga095005">1.3. Thinking rationally</a></li>
-<li><a href="#orga7c3831">1.4. Acting Rationally</a></li>
+<li><a href="#orgff545a6">1.1. Acting Humanly: Turing Test</a></li>
+<li><a href="#orgb881d00">1.2. Thinking Humanly</a></li>
+<li><a href="#orgeda76f3">1.3. Thinking rationally</a></li>
+<li><a href="#org98014e8">1.4. Acting Rationally</a></li>
 </ul>
 </li>
-<li><a href="#org37b570b">2. Intelligent Agents</a>
+<li><a href="#orgf0d683d">2. Intelligent Agents</a>
 <ul>
-<li><a href="#orge155ccf">2.1. Rational Agents</a></li>
-<li><a href="#orgbdac76d">2.2. Exploration vs Exploitation</a></li>
-<li><a href="#org341966e">2.3. Specifying Task Environment (PEAS)</a></li>
-<li><a href="#orgfa2b25d">2.4. Properties of Task Environments</a></li>
-<li><a href="#org832b9a6">2.5. Table-Driven Agent</a></li>
-<li><a href="#orgef3a5d7">2.6. Reflex agents</a></li>
-<li><a href="#orgaf27839">2.7. Model-based Reflex Agents</a></li>
-<li><a href="#org726dd02">2.8. Goal-based agents</a></li>
-<li><a href="#org70fd3ae">2.9. Utility-based agents</a></li>
-<li><a href="#org1f67890">2.10. Learning agents</a></li>
-<li><a href="#org1e31e14">2.11. State representations</a>
+<li><a href="#orge8126a0">2.1. Rational Agents</a></li>
+<li><a href="#orgedfdac7">2.2. Exploration vs Exploitation</a></li>
+<li><a href="#org46d5020">2.3. Specifying Task Environment (PEAS)</a></li>
+<li><a href="#orgc42c669">2.4. Properties of Task Environments</a></li>
+<li><a href="#org1312789">2.5. Table-Driven Agent</a></li>
+<li><a href="#org105b037">2.6. Reflex agents</a></li>
+<li><a href="#org0808ddb">2.7. Model-based Reflex Agents</a></li>
+<li><a href="#orgd47e249">2.8. Goal-based agents</a></li>
+<li><a href="#orgda9b055">2.9. Utility-based agents</a></li>
+<li><a href="#orgf2d2103">2.10. Learning agents</a></li>
+<li><a href="#org76ab81e">2.11. State representations</a>
 <ul>
-<li><a href="#org35a1f01">2.11.1. Atomic Representation</a></li>
-<li><a href="#orga34b1e7">2.11.2. Factored Representation</a></li>
-<li><a href="#orgfb94c2b">2.11.3. Structured Representations</a></li>
-<li><a href="#org0c8ab42">2.11.4. Implications</a></li>
+<li><a href="#org2d9803d">2.11.1. Atomic Representation</a></li>
+<li><a href="#org68d347c">2.11.2. Factored Representation</a></li>
+<li><a href="#org1ee377e">2.11.3. Structured Representations</a></li>
+<li><a href="#orga6daf98">2.11.4. Implications</a></li>
 </ul>
 </li>
 </ul>
@@ -124,8 +124,8 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfb87d03" class="outline-2">
-<h2 id="orgfb87d03"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
+<div id="outline-container-org533ec48" class="outline-2">
+<h2 id="org533ec48"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Designing agents that act rationally (e.g. through maximising a reward
@@ -137,8 +137,8 @@ Humans often act in ways that do not maximise their own benefit
 (irrational).
 </p>
 </div>
-<div id="outline-container-org7736bff" class="outline-3">
-<h3 id="org7736bff"><span class="section-number-3">1.1</span> Acting Humanly: Turing Test</h3>
+<div id="outline-container-orgff545a6" class="outline-3">
+<h3 id="orgff545a6"><span class="section-number-3">1.1</span> Acting Humanly: Turing Test</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 A computer would require:
@@ -152,8 +152,8 @@ A computer would require:
 </ul>
 </div>
 </div>
-<div id="outline-container-org506e7a7" class="outline-3">
-<h3 id="org506e7a7"><span class="section-number-3">1.2</span> Thinking Humanly</h3>
+<div id="outline-container-orgb881d00" class="outline-3">
+<h3 id="orgb881d00"><span class="section-number-3">1.2</span> Thinking Humanly</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Cognitive science brings together computer models and experimental
@@ -162,16 +162,16 @@ of the human mind.
 </p>
 </div>
 </div>
-<div id="outline-container-orga095005" class="outline-3">
-<h3 id="orga095005"><span class="section-number-3">1.3</span> Thinking rationally</h3>
+<div id="outline-container-orgeda76f3" class="outline-3">
+<h3 id="orgeda76f3"><span class="section-number-3">1.3</span> Thinking rationally</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Taking informal knowledge and expressing it in logical terms.
 </p>
 </div>
 </div>
-<div id="outline-container-orga7c3831" class="outline-3">
-<h3 id="orga7c3831"><span class="section-number-3">1.4</span> Acting Rationally</h3>
+<div id="outline-container-org98014e8" class="outline-3">
+<h3 id="org98014e8"><span class="section-number-3">1.4</span> Acting Rationally</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 A rational agent is one that acts so as to achieve the best outcome
@@ -186,16 +186,16 @@ must consider computation limits.
 </div>
 </div>
 </div>
-<div id="outline-container-org37b570b" class="outline-2">
-<h2 id="org37b570b"><span class="section-number-2">2</span> Intelligent Agents</h2>
+<div id="outline-container-orgf0d683d" class="outline-2">
+<h2 id="orgf0d683d"><span class="section-number-2">2</span> Intelligent Agents</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Agents perceive the environment through sensors</li>
 <li>Agents act upon the environment through actuators</li>
 </ul>
 </div>
-<div id="outline-container-orge155ccf" class="outline-3">
-<h3 id="orge155ccf"><span class="section-number-3">2.1</span> Rational Agents</h3>
+<div id="outline-container-orge8126a0" class="outline-3">
+<h3 id="orge8126a0"><span class="section-number-3">2.1</span> Rational Agents</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>For each possible percept sequence, select an action that is
@@ -210,8 +210,8 @@ experience (with ability to learn and adapt)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbdac76d" class="outline-3">
-<h3 id="orgbdac76d"><span class="section-number-3">2.2</span> Exploration vs Exploitation</h3>
+<div id="outline-container-orgedfdac7" class="outline-3">
+<h3 id="orgedfdac7"><span class="section-number-3">2.2</span> Exploration vs Exploitation</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Doing actions that modify future percepts (information gathering) is
@@ -220,8 +220,8 @@ the entire environment <i>a priori</i>.
 </p>
 </div>
 </div>
-<div id="outline-container-org341966e" class="outline-3">
-<h3 id="org341966e"><span class="section-number-3">2.3</span> Specifying Task Environment (PEAS)</h3>
+<div id="outline-container-org46d5020" class="outline-3">
+<h3 id="org46d5020"><span class="section-number-3">2.3</span> Specifying Task Environment (PEAS)</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Performance measure</li>
@@ -231,8 +231,8 @@ the entire environment <i>a priori</i>.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfa2b25d" class="outline-3">
-<h3 id="orgfa2b25d"><span class="section-number-3">2.4</span> Properties of Task Environments</h3>
+<div id="outline-container-orgc42c669" class="outline-3">
+<h3 id="orgc42c669"><span class="section-number-3">2.4</span> Properties of Task Environments</h3>
 <div class="outline-text-3" id="text-2-4">
 <dl class="org-dl">
 <dt>Fully observable</dt><dd>whether an agent's sensors gives it access to
@@ -260,8 +260,8 @@ multiple agents acting in the same environment.
 </dl>
 </div>
 </div>
-<div id="outline-container-org832b9a6" class="outline-3">
-<h3 id="org832b9a6"><span class="section-number-3">2.5</span> Table-Driven Agent</h3>
+<div id="outline-container-org1312789" class="outline-3">
+<h3 id="org1312789"><span class="section-number-3">2.5</span> Table-Driven Agent</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Simple to implement, and works. However, the number of table entries
@@ -271,8 +271,8 @@ behaviour from a small program rather than a vast table.
 </p>
 </div>
 </div>
-<div id="outline-container-orgef3a5d7" class="outline-3">
-<h3 id="orgef3a5d7"><span class="section-number-3">2.6</span> Reflex agents</h3>
+<div id="outline-container-org105b037" class="outline-3">
+<h3 id="org105b037"><span class="section-number-3">2.6</span> Reflex agents</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 A simple reflex agent is one that selects actions on the basis of the
@@ -288,8 +288,8 @@ can help escape these infinite loops.
 </p>
 </div>
 </div>
-<div id="outline-container-orgaf27839" class="outline-3">
-<h3 id="orgaf27839"><span class="section-number-3">2.7</span> Model-based Reflex Agents</h3>
+<div id="outline-container-org0808ddb" class="outline-3">
+<h3 id="org0808ddb"><span class="section-number-3">2.7</span> Model-based Reflex Agents</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 The agent maintains some <b>internal state</b> that depends on percept
@@ -300,8 +300,8 @@ from the agent is encoded into the agent. This knowledge is called a
 </p>
 </div>
 </div>
-<div id="outline-container-org726dd02" class="outline-3">
-<h3 id="org726dd02"><span class="section-number-3">2.8</span> Goal-based agents</h3>
+<div id="outline-container-orgd47e249" class="outline-3">
+<h3 id="orgd47e249"><span class="section-number-3">2.8</span> Goal-based agents</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 Knowing about the current state of the environment may not be enough
@@ -314,8 +314,8 @@ explicitly and can be modified, although it is less efficient.
 </p>
 </div>
 </div>
-<div id="outline-container-org70fd3ae" class="outline-3">
-<h3 id="org70fd3ae"><span class="section-number-3">2.9</span> Utility-based agents</h3>
+<div id="outline-container-orgda9b055" class="outline-3">
+<h3 id="orgda9b055"><span class="section-number-3">2.9</span> Utility-based agents</h3>
 <div class="outline-text-3" id="text-2-9">
 <p>
 Goals provide a binary distinction between good and bad states. A more
@@ -327,8 +327,8 @@ utility-based agents has to model and keep track of its environment.
 </p>
 </div>
 </div>
-<div id="outline-container-org1f67890" class="outline-3">
-<h3 id="org1f67890"><span class="section-number-3">2.10</span> Learning agents</h3>
+<div id="outline-container-orgf2d2103" class="outline-3">
+<h3 id="orgf2d2103"><span class="section-number-3">2.10</span> Learning agents</h3>
 <div class="outline-text-3" id="text-2-10">
 <p>
 A learning agent can be divided into four conceptual components.
@@ -347,12 +347,12 @@ modified to do better in the future.
 </p>
 </div>
 </div>
-<div id="outline-container-org1e31e14" class="outline-3">
-<h3 id="org1e31e14"><span class="section-number-3">2.11</span> State representations</h3>
+<div id="outline-container-org76ab81e" class="outline-3">
+<h3 id="org76ab81e"><span class="section-number-3">2.11</span> State representations</h3>
 <div class="outline-text-3" id="text-2-11">
 </div>
-<div id="outline-container-org35a1f01" class="outline-4">
-<h4 id="org35a1f01"><span class="section-number-4">2.11.1</span> Atomic Representation</h4>
+<div id="outline-container-org2d9803d" class="outline-4">
+<h4 id="org2d9803d"><span class="section-number-4">2.11.1</span> Atomic Representation</h4>
 <div class="outline-text-4" id="text-2-11-1">
 <p>
 In an atomic representation each state of the world is indivisible,
@@ -362,8 +362,8 @@ representations.
 </p>
 </div>
 </div>
-<div id="outline-container-orga34b1e7" class="outline-4">
-<h4 id="orga34b1e7"><span class="section-number-4">2.11.2</span> Factored Representation</h4>
+<div id="outline-container-org68d347c" class="outline-4">
+<h4 id="org68d347c"><span class="section-number-4">2.11.2</span> Factored Representation</h4>
 <div class="outline-text-4" id="text-2-11-2">
 <p>
 A factored representation splits up each state into a fixed set of
@@ -378,8 +378,8 @@ representations.
 </div>
 </div>
 
-<div id="outline-container-orgfb94c2b" class="outline-4">
-<h4 id="orgfb94c2b"><span class="section-number-4">2.11.3</span> Structured Representations</h4>
+<div id="outline-container-org1ee377e" class="outline-4">
+<h4 id="org1ee377e"><span class="section-number-4">2.11.3</span> Structured Representations</h4>
 <div class="outline-text-4" id="text-2-11-3">
 <p>
 Structured representations underlie relational databases and
@@ -388,8 +388,8 @@ learning and much of natural language understanding.
 </p>
 </div>
 </div>
-<div id="outline-container-org0c8ab42" class="outline-4">
-<h4 id="org0c8ab42"><span class="section-number-4">2.11.4</span> Implications</h4>
+<div id="outline-container-orga6daf98" class="outline-4">
+<h4 id="orga6daf98"><span class="section-number-4">2.11.4</span> Implications</h4>
 <div class="outline-text-4" id="text-2-11-4">
 <p>
 A more expressive representation can capture, at least as concisely, a
@@ -404,7 +404,7 @@ power of the representation increases.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-16 Tue 22:56</p>
+<p class="date">Created: 2018-01-18 Thu 20:32</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

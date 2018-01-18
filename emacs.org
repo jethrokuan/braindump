@@ -21,13 +21,15 @@ everywhere, no surprises.
 - doctor?
 
 * How I use Emacs
+- [ ] emacsclient
 - [ ] Development workflow
+  - [ ] TRAMP (cte.comp.nus.edu.sg)
   - [ ] Magit
   - [ ] Wgrep
 - [ ] Living inside Emacs: Org-mode
+  - [ ] Getting Things Done
   - [ ] Reading Email
   - [ ] Keeping up with the news: RSS Feeds
-  - [ ] Getting Things Done
   - [ ] Reading Papers
   - [ ] Writing School Notes
 * Undo

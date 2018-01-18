@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-01-18 Thu 20:32 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Machine Learning</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2017 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Machine Learning</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgc9317a6">1. What is Learning?</a>
+<ul>
+<li><a href="#org0be58b0">1.1. Batch Learning</a></li>
+<li><a href="#org2657ea9">1.2. Online Learning</a></li>
+<li><a href="#org2edfd2b">1.3. Unsupervised Learning</a>
+<ul>
+<li><a href="#orgc3a0b23">1.3.1. Data Compression</a></li>
+</ul>
+</li>
+<li><a href="#org8ccf3c7">1.4. Reinforcement Learning</a></li>
+<li><a href="#org746ceba">1.5. Measure of success</a></li>
+</ul>
+</li>
+<li><a href="#org7e95520">2. Concept Learning</a>
+<ul>
+<li><a href="#org62452d1">2.1. Hypothesis</a></li>
+<li><a href="#org2c04be3">2.2. Inductive Learning</a></li>
+<li><a href="#orge60a534">2.3. Concept Learning is Search</a></li>
+<li><a href="#orgf2b1a20">2.4. Exploit Structure in Concept Learning</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc9317a6" class="outline-2">
+<h2 id="orgc9317a6"><span class="section-number-2">1</span> What is Learning?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+An agent is said to be <i>learning</i> if it improves its performance P on
+task T based on experience/observations/data E. T must be fixed, P
+must be measurable, E must exist. <a href="artificial_intelligence.html#orgf2d2103">Learning Agents</a>
+</p>
+</div>
+<div id="outline-container-org0be58b0" class="outline-3">
+<h3 id="org0be58b0"><span class="section-number-3">1.1</span> Batch Learning</h3>
+</div>
+<div id="outline-container-org2657ea9" class="outline-3">
+<h3 id="org2657ea9"><span class="section-number-3">1.2</span> Online Learning</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+The hypothesis has to be updated each time a new label is received.
+</p>
+</div>
+</div>
+<div id="outline-container-org2edfd2b" class="outline-3">
+<h3 id="org2edfd2b"><span class="section-number-3">1.3</span> Unsupervised Learning</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Given a training set \(S = \left(x_1, \hdots, x_m\right)\), without a
+labeled output, construct a "good" model/description of the data.
+</p>
+
+<ul class="org-ul">
+<li>clustering</li>
+<li>dimension reduction to ind essential parts of the data and reduce
+noise (e.g. PCA)</li>
+<li>minimises description length of data</li>
+</ul>
+</div>
+<div id="outline-container-orgc3a0b23" class="outline-4">
+<h4 id="orgc3a0b23"><span class="section-number-4">1.3.1</span> Data Compression</h4>
+<div class="outline-text-4" id="text-1-3-1">
+<p>
+In <i>lossy compression</i>, we seek to trade off code length with
+reconstruction error.
+</p>
+
+<p>
+In <i>vector quantization</i>, we seek a small set of vectors \({z_i}\) to
+describe a large dataset of vectors \({x_i}\), such that we can
+represent each \(x-i\) with its closest approximation in \({z_i}\) with
+small error. (Clustering problem)
+</p>
+
+<p>
+In <i>transform coding</i>, we transform the data, usually using a linear
+tranformation. The data in the transformed domain is quantized,
+usually discarding the small coefficients, corresponding to removing
+some of the dimensions.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org8ccf3c7" class="outline-3">
+<h3 id="org8ccf3c7"><span class="section-number-3">1.4</span> Reinforcement Learning</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Each action in a staet has an associated cost and a probability
+distribution of the next state.
+</p>
+
+<p>
+Goal is to learn a policy (mapping from state to action) that
+minimizes the sum of expected current and future costs.
+</p>
+</div>
+</div>
+<div id="outline-container-org746ceba" class="outline-3">
+<h3 id="org746ceba"><span class="section-number-3">1.5</span> Measure of success</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+A loss function helps measure our success. Given a set \(H\) of
+hypothesis of models, and a domain \(Z\), let \(l\) be a function from \(H
+\times Z\) to non-negative real numbers $l: \(H \times Z \rightarrow
+\mathbb{R}_{+}\).
+</p>
+
+<p>
+The <i>risk function</i> is the expected loss of the hypothesis,
+</p>
+
+\begin{equation*}
+  L_D(h) = E_{z \sim D}[l(h,z)]
+\end{equation*}
+
+<p>
+We are interested in finding a hypothesis \(h\) that has a small risk,
+or expected loss.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7e95520" class="outline-2">
+<h2 id="org7e95520"><span class="section-number-2">2</span> Concept Learning</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+A concept is a boolean-valued function over a set of input instances
+(each comprising input attributes). Concept learning is a form of
+supervised learning. Infer an unknown boolean-valued function from
+training-examples.
+</p>
+</div>
+<div id="outline-container-org62452d1" class="outline-3">
+<h3 id="org62452d1"><span class="section-number-3">2.1</span> Hypothesis</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+There is a trade-off between <i>expressive power</i> and smaller
+<i>hypothesis space</i>. Large hypothesis spaces are bad, because search is
+going to take a long time, and also requires more data. Humans exploit
+structure in the hypothesis space to guide search and learn faster.
+</p>
+
+<p>
+A hypothesis \(h\) is consistent with a set of training examples \(D\) iff
+\(h(x) = c(x)\) for all \(<x,c(x)> \in D\).
+</p>
+</div>
+</div>
+<div id="outline-container-org2c04be3" class="outline-3">
+<h3 id="org2c04be3"><span class="section-number-3">2.2</span> Inductive Learning</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Any hypothesis found to approximate the target function well over a
+sufficient large set of <b>training examples</b> will also approximate the
+target function well over other <b>unobserved examples</b>.
+</p>
+</div>
+</div>
+<div id="outline-container-orge60a534" class="outline-3">
+<h3 id="orge60a534"><span class="section-number-3">2.3</span> Concept Learning is Search</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+The goal is to search for a hypothesis \(h \in H\) that is consistent
+with \(D\).
+</p>
+</div>
+</div>
+<div id="outline-container-orgf2b1a20" class="outline-3">
+<h3 id="orgf2b1a20"><span class="section-number-3">2.4</span> Exploit Structure in Concept Learning</h3>
+<div class="outline-text-3" id="text-2-4">
+<p>
+\(h_j\) is more general than or equal to \(h_k\) (denoted \(h_j \ge_{g}
+h_k\)) iff any input instance \(x\) that satisfies \(h_j\) also satisfies
+\(h_k\).
+</p>
+
+<p>
+This is relation is a <b>partial order</b>.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-01-18 Thu 20:32</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

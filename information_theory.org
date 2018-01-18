@@ -1,0 +1,38 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Information Theory
+* Reference Book                                                   :noexport:
+[[file:~/Dropbox/Books/Programming/Information%20Theory/book.pdf][Information Theory, Inference, and Learning Algorithms]]
+* How to measure information
+* How to compress information
+* How to communicate securely over an insecure channel
+There is a non-zero probability that the transmitted message is
+different from the received message.
+
+/Information theory/ is concerned with the theoretical limitations and
+potentials of systems, and the best error-correcting performance we
+could achieve.
+
+/Coding theory/ is concerned with the creation of practical encoding
+and decoding systems.
+** Error-correcting codes for the binary symmetric channel
+*** Repetition Codes
+- Repeat every bit of the message a prearranged number of times. Take
+  the bit that has the majority vote.
+*** Block Codes - the (7, 4) Hamming Code
+- Add redundancy to blocks of data instead of encoding one bit at a time
+- A block code is a rule for converting a sequence of source bits =s=,
+  of length =K=, into a transmitted sequence =t= of length =N= bits.
+  - In a linear block code, the extra =N - K= bits are linear
+    functions of the original =K= bits, and are called /parity-check/
+    bits.
+
+Because the Hamming code is a linear code, it can be written compactly
+in terms of matrices:
+
+\begin{equation*}
+  \text{transmitted} = G^T \text{source}
+\end{equation*}
+
+where $G$ is the generator matrix of the code.
+
+Syndrome decoding for the Hamming code involves checking the parity bits.
