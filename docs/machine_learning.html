@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-18 Thu 20:32 -->
+<!-- 2018-01-18 Thu 21:18 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -101,7 +101,13 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#org8ccf3c7">1.4. Reinforcement Learning</a></li>
-<li><a href="#org746ceba">1.5. Measure of success</a></li>
+<li><a href="#org892b8d2">1.5. Supervised Learning</a>
+<ul>
+<li><a href="#org746ceba">1.5.1. Measure of success</a></li>
+<li><a href="#org29a1227">1.5.2. Empirical Risk Minimisation (ERM)</a></li>
+<li><a href="#org8d71aa9">1.5.3. Assumptions Made ⚠</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#org7e95520">2. Concept Learning</a>
@@ -189,14 +195,18 @@ minimizes the sum of expected current and future costs.
 </p>
 </div>
 </div>
-<div id="outline-container-org746ceba" class="outline-3">
-<h3 id="org746ceba"><span class="section-number-3">1.5</span> Measure of success</h3>
+<div id="outline-container-org892b8d2" class="outline-3">
+<h3 id="org892b8d2"><span class="section-number-3">1.5</span> Supervised Learning</h3>
 <div class="outline-text-3" id="text-1-5">
+</div>
+<div id="outline-container-org746ceba" class="outline-4">
+<h4 id="org746ceba"><span class="section-number-4">1.5.1</span> Measure of success</h4>
+<div class="outline-text-4" id="text-1-5-1">
 <p>
 A loss function helps measure our success. Given a set \(H\) of
 hypothesis of models, and a domain \(Z\), let \(l\) be a function from \(H
-\times Z\) to non-negative real numbers $l: \(H \times Z \rightarrow
-\mathbb{R}_{+}\).
+ \times Z\) to non-negative real numbers $l: \(H \times Z \rightarrow
+ \mathbb{R}_{+}\).
 </p>
 
 <p>
@@ -213,7 +223,47 @@ or expected loss.
 </p>
 </div>
 </div>
+<div id="outline-container-org29a1227" class="outline-4">
+<h4 id="org29a1227"><span class="section-number-4">1.5.2</span> Empirical Risk Minimisation (ERM)</h4>
+<div class="outline-text-4" id="text-1-5-2">
+<ul class="org-ul">
+<li>The training set error is often called the <i>empirical error</i> or
+<i>empirical risk</i>.</li>
+<li>Given a hypothesis class \(H\), finding the hypothesis \(h \in H\) that
+minimizes the empirical risk is a simple learning strategy.</li>
+</ul>
 </div>
+</div>
+<div id="outline-container-org8d71aa9" class="outline-4">
+<h4 id="org8d71aa9"><span class="section-number-4">1.5.3</span> Assumptions Made ⚠</h4>
+<div class="outline-text-4" id="text-1-5-3">
+<ol class="org-ol">
+<li>One common assumption is that the data in the data generation
+process is independently and identically distributed (IID),
+according to the distribution \(D\).</li>
+</ol>
+
+<p>
+Q: Given a large enough training set, do you expect the long term test
+error to be similar to the training error?
+</p>
+
+<ul class="org-ul">
+<li>If IID, then yes</li>
+<li>If not, there is likely dependencies, but under certain conditions,
+yes.
+<ul class="org-ul">
+<li>If sampling mixes well, it will not take long for D' to look
+like a steady set distribution.</li>
+</ul></li>
+<li>If dependencies are exploited, there is a possibility of attaining
+lower training and test error.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
 <div id="outline-container-org7e95520" class="outline-2">
 <h2 id="org7e95520"><span class="section-number-2">2</span> Concept Learning</h2>
 <div class="outline-text-2" id="text-2">
@@ -277,7 +327,7 @@ This is relation is a <b>partial order</b>.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-18 Thu 20:32</p>
+<p class="date">Created: 2018-01-18 Thu 21:18</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

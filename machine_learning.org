@@ -38,20 +38,42 @@ distribution of the next state.
 
 Goal is to learn a policy (mapping from state to action) that
 minimizes the sum of expected current and future costs.
-** Measure of success
-A loss function helps measure our success. Given a set $H$ of
-hypothesis of models, and a domain $Z$, let $l$ be a function from $H
-\times Z$ to non-negative real numbers $l: $H \times Z \rightarrow
-\mathbb{R}_{+}$.
+** Supervised Learning
+*** Measure of success
+ A loss function helps measure our success. Given a set $H$ of
+ hypothesis of models, and a domain $Z$, let $l$ be a function from $H
+ \times Z$ to non-negative real numbers $l: $H \times Z \rightarrow
+ \mathbb{R}_{+}$.
 
-The /risk function/ is the expected loss of the hypothesis,
+ The /risk function/ is the expected loss of the hypothesis,
 
-\begin{equation*}
-  L_D(h) = E_{z \sim D}[l(h,z)]
-\end{equation*}
+ \begin{equation*}
+   L_D(h) = E_{z \sim D}[l(h,z)]
+ \end{equation*}
 
-We are interested in finding a hypothesis $h$ that has a small risk,
-or expected loss.
+ We are interested in finding a hypothesis $h$ that has a small risk,
+ or expected loss.
+*** Empirical Risk Minimisation (ERM)
+ - The training set error is often called the /empirical error/ or
+   /empirical risk/.
+ - Given a hypothesis class $H$, finding the hypothesis $h \in H$ that
+   minimizes the empirical risk is a simple learning strategy.
+*** Assumptions Made ⚠
+1. One common assumption is that the data in the data generation
+   process is independently and identically distributed (IID),
+   according to the distribution $D$.
+
+Q: Given a large enough training set, do you expect the long term test
+error to be similar to the training error?
+
+- If IID, then yes
+- If not, there is likely dependencies, but under certain conditions,
+  yes.
+  - If sampling mixes well, it will not take long for D' to look
+    like a steady set distribution.
+- If dependencies are exploited, there is a possibility of attaining
+  lower training and test error.
+
 * Concept Learning
 A concept is a boolean-valued function over a set of input instances
 (each comprising input attributes). Concept learning is a form of
