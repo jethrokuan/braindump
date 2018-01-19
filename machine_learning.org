@@ -7,31 +7,33 @@
 * What is Learning?
 An agent is said to be /learning/ if it improves its performance P on
 task T based on experience/observations/data E. T must be fixed, P
-must be measurable, E must exist. [[file:artificial_intelligence.org::*Learning%20agents][Learning Agents]]
-** Batch Learning
-** Online Learning
-The hypothesis has to be updated each time a new label is received.
-** Unsupervised Learning
-Given a training set $S = \left(x_1, \hdots, x_m\right)$, without a
-labeled output, construct a "good" model/description of the data.
+must be measurable, E must exist. See [[file:artificial_intelligence.org::*Learning%20agents][Learning Agents]].
+** Inductive Bias
+The incorporation of prior knowledge biases the learning mechanism.
+This is also called /inductive bias/. The incorporation of prior
+knowledge is inevitable for the success of learning algorithms (the
+no-free-lunch theorem). The stronger the prior knowledge that one
+starts the learning process with, the easier it is to learn from
+further examples.
+* Types of Learning
+** Active vs Passive Learning
+An active learner interacts with the environment at training time,
+(e.g. by posing queries or performing experiments), while a passive
+learner only observes the information provided by the environment.
+** Online vs Batch Learning
+In online learning, the hypothesis has to be updated each time a new
+label is received.
+** Supervised vs Unsupervised Learning
+In unsupervised learning, given a training set $S = \left(x_1, \hdots,
+x_m\right)$, without a labeled output, one must construct a "good"
+model/description of the data.
 
+Example use cases include:
 - clustering
 - dimension reduction to ind essential parts of the data and reduce
   noise (e.g. PCA)
 - minimises description length of data
-*** Data Compression
-In /lossy compression/, we seek to trade off code length with
-reconstruction error.
 
-In /vector quantization/, we seek a small set of vectors ${z_i}$ to
-describe a large dataset of vectors ${x_i}$, such that we can
-represent each $x-i$ with its closest approximation in ${z_i}$ with
-small error. (Clustering problem)
-
-In /transform coding/, we transform the data, usually using a linear
-tranformation. The data in the transformed domain is quantized,
-usually discarding the small coefficients, corresponding to removing
-some of the dimensions.
 ** Reinforcement Learning
 Each action in a staet has an associated cost and a probability
 distribution of the next state.
@@ -73,7 +75,6 @@ error to be similar to the training error?
     like a steady set distribution.
 - If dependencies are exploited, there is a possibility of attaining
   lower training and test error.
-
 * Concept Learning
 A concept is a boolean-valued function over a set of input instances
 (each comprising input attributes). Concept learning is a form of
@@ -100,3 +101,18 @@ h_k$) iff any input instance $x$ that satisfies $h_j$ also satisfies
 $h_k$.
 
 This is relation is a *partial order*.
+
+
+*** TODO Data Compression (Refile)
+In /lossy compression/, we seek to trade off code length with
+reconstruction error.
+
+In /vector quantization/, we seek a small set of vectors ${z_i}$ to
+describe a large dataset of vectors ${x_i}$, such that we can
+represent each $x-i$ with its closest approximation in ${z_i}$ with
+small error. (Clustering problem)
+
+In /transform coding/, we transform the data, usually using a linear
+tranformation. The data in the transformed domain is quantized,
+usually discarding the small coefficients, corresponding to removing
+some of the dimensions.

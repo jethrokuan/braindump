@@ -249,5 +249,3 @@ s = U^Ta = U^Tf\left( Wx + b \right)
 \end{equation*}
 
 where f is the activation function.
-
-
