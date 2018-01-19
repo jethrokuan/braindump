@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-18 Thu 21:18 -->
+<!-- 2018-01-19 Fri 20:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -93,29 +93,34 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#orgc9317a6">1. What is Learning?</a>
 <ul>
-<li><a href="#org0be58b0">1.1. Batch Learning</a></li>
-<li><a href="#org2657ea9">1.2. Online Learning</a></li>
-<li><a href="#org2edfd2b">1.3. Unsupervised Learning</a>
-<ul>
-<li><a href="#orgc3a0b23">1.3.1. Data Compression</a></li>
+<li><a href="#orgdba1676">1.1. Inductive Bias</a></li>
 </ul>
 </li>
-<li><a href="#org8ccf3c7">1.4. Reinforcement Learning</a></li>
-<li><a href="#org892b8d2">1.5. Supervised Learning</a>
+<li><a href="#org1c3e95f">2. Types of Learning</a>
 <ul>
-<li><a href="#org746ceba">1.5.1. Measure of success</a></li>
-<li><a href="#org29a1227">1.5.2. Empirical Risk Minimisation (ERM)</a></li>
-<li><a href="#org8d71aa9">1.5.3. Assumptions Made ⚠</a></li>
+<li><a href="#orgeaaa62b">2.1. Active vs Passive Learning</a></li>
+<li><a href="#org64946d4">2.2. Online vs Batch Learning</a></li>
+<li><a href="#orge9dbca7">2.3. Supervised vs Unsupervised Learning</a></li>
+<li><a href="#org8ccf3c7">2.4. Reinforcement Learning</a></li>
+<li><a href="#org892b8d2">2.5. Supervised Learning</a>
+<ul>
+<li><a href="#org746ceba">2.5.1. Measure of success</a></li>
+<li><a href="#org29a1227">2.5.2. Empirical Risk Minimisation (ERM)</a></li>
+<li><a href="#org8d71aa9">2.5.3. Assumptions Made ⚠</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org7e95520">2. Concept Learning</a>
+<li><a href="#org7e95520">3. Concept Learning</a>
 <ul>
-<li><a href="#org62452d1">2.1. Hypothesis</a></li>
-<li><a href="#org2c04be3">2.2. Inductive Learning</a></li>
-<li><a href="#orge60a534">2.3. Concept Learning is Search</a></li>
-<li><a href="#orgf2b1a20">2.4. Exploit Structure in Concept Learning</a></li>
+<li><a href="#org62452d1">3.1. Hypothesis</a></li>
+<li><a href="#org2c04be3">3.2. Inductive Learning</a></li>
+<li><a href="#orge60a534">3.3. Concept Learning is Search</a></li>
+<li><a href="#orgf2b1a20">3.4. Exploit Structure in Concept Learning</a>
+<ul>
+<li><a href="#org758ebfb">3.4.1. <span class="todo TODO">TODO</span> Data Compression (Refile)</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -128,28 +133,58 @@ for the JavaScript code in this tag.
 <p>
 An agent is said to be <i>learning</i> if it improves its performance P on
 task T based on experience/observations/data E. T must be fixed, P
-must be measurable, E must exist. <a href="artificial_intelligence.html#orgf2d2103">Learning Agents</a>
+must be measurable, E must exist. See <a href="artificial_intelligence.html#orgf2d2103">Learning Agents</a>.
 </p>
 </div>
-<div id="outline-container-org0be58b0" class="outline-3">
-<h3 id="org0be58b0"><span class="section-number-3">1.1</span> Batch Learning</h3>
-</div>
-<div id="outline-container-org2657ea9" class="outline-3">
-<h3 id="org2657ea9"><span class="section-number-3">1.2</span> Online Learning</h3>
-<div class="outline-text-3" id="text-1-2">
+<div id="outline-container-orgdba1676" class="outline-3">
+<h3 id="orgdba1676"><span class="section-number-3">1.1</span> Inductive Bias</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-The hypothesis has to be updated each time a new label is received.
+The incorporation of prior knowledge biases the learning mechanism.
+This is also called <i>inductive bias</i>. The incorporation of prior
+knowledge is inevitable for the success of learning algorithms (the
+no-free-lunch theorem). The stronger the prior knowledge that one
+starts the learning process with, the easier it is to learn from
+further examples.
 </p>
 </div>
 </div>
-<div id="outline-container-org2edfd2b" class="outline-3">
-<h3 id="org2edfd2b"><span class="section-number-3">1.3</span> Unsupervised Learning</h3>
-<div class="outline-text-3" id="text-1-3">
+</div>
+<div id="outline-container-org1c3e95f" class="outline-2">
+<h2 id="org1c3e95f"><span class="section-number-2">2</span> Types of Learning</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-orgeaaa62b" class="outline-3">
+<h3 id="orgeaaa62b"><span class="section-number-3">2.1</span> Active vs Passive Learning</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
-Given a training set \(S = \left(x_1, \hdots, x_m\right)\), without a
-labeled output, construct a "good" model/description of the data.
+An active learner interacts with the environment at training time,
+(e.g. by posing queries or performing experiments), while a passive
+learner only observes the information provided by the environment.
+</p>
+</div>
+</div>
+<div id="outline-container-org64946d4" class="outline-3">
+<h3 id="org64946d4"><span class="section-number-3">2.2</span> Online vs Batch Learning</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+In online learning, the hypothesis has to be updated each time a new
+label is received.
+</p>
+</div>
+</div>
+<div id="outline-container-orge9dbca7" class="outline-3">
+<h3 id="orge9dbca7"><span class="section-number-3">2.3</span> Supervised vs Unsupervised Learning</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+In unsupervised learning, given a training set \(S = \left(x_1, \hdots,
+x_m\right)\), without a labeled output, one must construct a "good"
+model/description of the data.
 </p>
 
+<p>
+Example use cases include:
+</p>
 <ul class="org-ul">
 <li>clustering</li>
 <li>dimension reduction to ind essential parts of the data and reduce
@@ -157,33 +192,11 @@ noise (e.g. PCA)</li>
 <li>minimises description length of data</li>
 </ul>
 </div>
-<div id="outline-container-orgc3a0b23" class="outline-4">
-<h4 id="orgc3a0b23"><span class="section-number-4">1.3.1</span> Data Compression</h4>
-<div class="outline-text-4" id="text-1-3-1">
-<p>
-In <i>lossy compression</i>, we seek to trade off code length with
-reconstruction error.
-</p>
+</div>
 
-<p>
-In <i>vector quantization</i>, we seek a small set of vectors \({z_i}\) to
-describe a large dataset of vectors \({x_i}\), such that we can
-represent each \(x-i\) with its closest approximation in \({z_i}\) with
-small error. (Clustering problem)
-</p>
-
-<p>
-In <i>transform coding</i>, we transform the data, usually using a linear
-tranformation. The data in the transformed domain is quantized,
-usually discarding the small coefficients, corresponding to removing
-some of the dimensions.
-</p>
-</div>
-</div>
-</div>
 <div id="outline-container-org8ccf3c7" class="outline-3">
-<h3 id="org8ccf3c7"><span class="section-number-3">1.4</span> Reinforcement Learning</h3>
-<div class="outline-text-3" id="text-1-4">
+<h3 id="org8ccf3c7"><span class="section-number-3">2.4</span> Reinforcement Learning</h3>
+<div class="outline-text-3" id="text-2-4">
 <p>
 Each action in a staet has an associated cost and a probability
 distribution of the next state.
@@ -196,12 +209,12 @@ minimizes the sum of expected current and future costs.
 </div>
 </div>
 <div id="outline-container-org892b8d2" class="outline-3">
-<h3 id="org892b8d2"><span class="section-number-3">1.5</span> Supervised Learning</h3>
-<div class="outline-text-3" id="text-1-5">
+<h3 id="org892b8d2"><span class="section-number-3">2.5</span> Supervised Learning</h3>
+<div class="outline-text-3" id="text-2-5">
 </div>
 <div id="outline-container-org746ceba" class="outline-4">
-<h4 id="org746ceba"><span class="section-number-4">1.5.1</span> Measure of success</h4>
-<div class="outline-text-4" id="text-1-5-1">
+<h4 id="org746ceba"><span class="section-number-4">2.5.1</span> Measure of success</h4>
+<div class="outline-text-4" id="text-2-5-1">
 <p>
 A loss function helps measure our success. Given a set \(H\) of
 hypothesis of models, and a domain \(Z\), let \(l\) be a function from \(H
@@ -224,8 +237,8 @@ or expected loss.
 </div>
 </div>
 <div id="outline-container-org29a1227" class="outline-4">
-<h4 id="org29a1227"><span class="section-number-4">1.5.2</span> Empirical Risk Minimisation (ERM)</h4>
-<div class="outline-text-4" id="text-1-5-2">
+<h4 id="org29a1227"><span class="section-number-4">2.5.2</span> Empirical Risk Minimisation (ERM)</h4>
+<div class="outline-text-4" id="text-2-5-2">
 <ul class="org-ul">
 <li>The training set error is often called the <i>empirical error</i> or
 <i>empirical risk</i>.</li>
@@ -235,8 +248,8 @@ minimizes the empirical risk is a simple learning strategy.</li>
 </div>
 </div>
 <div id="outline-container-org8d71aa9" class="outline-4">
-<h4 id="org8d71aa9"><span class="section-number-4">1.5.3</span> Assumptions Made ⚠</h4>
-<div class="outline-text-4" id="text-1-5-3">
+<h4 id="org8d71aa9"><span class="section-number-4">2.5.3</span> Assumptions Made ⚠</h4>
+<div class="outline-text-4" id="text-2-5-3">
 <ol class="org-ol">
 <li>One common assumption is that the data in the data generation
 process is independently and identically distributed (IID),
@@ -263,10 +276,9 @@ lower training and test error.</li>
 </div>
 </div>
 </div>
-
 <div id="outline-container-org7e95520" class="outline-2">
-<h2 id="org7e95520"><span class="section-number-2">2</span> Concept Learning</h2>
-<div class="outline-text-2" id="text-2">
+<h2 id="org7e95520"><span class="section-number-2">3</span> Concept Learning</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 A concept is a boolean-valued function over a set of input instances
 (each comprising input attributes). Concept learning is a form of
@@ -275,8 +287,8 @@ training-examples.
 </p>
 </div>
 <div id="outline-container-org62452d1" class="outline-3">
-<h3 id="org62452d1"><span class="section-number-3">2.1</span> Hypothesis</h3>
-<div class="outline-text-3" id="text-2-1">
+<h3 id="org62452d1"><span class="section-number-3">3.1</span> Hypothesis</h3>
+<div class="outline-text-3" id="text-3-1">
 <p>
 There is a trade-off between <i>expressive power</i> and smaller
 <i>hypothesis space</i>. Large hypothesis spaces are bad, because search is
@@ -291,8 +303,8 @@ A hypothesis \(h\) is consistent with a set of training examples \(D\) iff
 </div>
 </div>
 <div id="outline-container-org2c04be3" class="outline-3">
-<h3 id="org2c04be3"><span class="section-number-3">2.2</span> Inductive Learning</h3>
-<div class="outline-text-3" id="text-2-2">
+<h3 id="org2c04be3"><span class="section-number-3">3.2</span> Inductive Learning</h3>
+<div class="outline-text-3" id="text-3-2">
 <p>
 Any hypothesis found to approximate the target function well over a
 sufficient large set of <b>training examples</b> will also approximate the
@@ -301,8 +313,8 @@ target function well over other <b>unobserved examples</b>.
 </div>
 </div>
 <div id="outline-container-orge60a534" class="outline-3">
-<h3 id="orge60a534"><span class="section-number-3">2.3</span> Concept Learning is Search</h3>
-<div class="outline-text-3" id="text-2-3">
+<h3 id="orge60a534"><span class="section-number-3">3.3</span> Concept Learning is Search</h3>
+<div class="outline-text-3" id="text-3-3">
 <p>
 The goal is to search for a hypothesis \(h \in H\) that is consistent
 with \(D\).
@@ -310,8 +322,8 @@ with \(D\).
 </div>
 </div>
 <div id="outline-container-orgf2b1a20" class="outline-3">
-<h3 id="orgf2b1a20"><span class="section-number-3">2.4</span> Exploit Structure in Concept Learning</h3>
-<div class="outline-text-3" id="text-2-4">
+<h3 id="orgf2b1a20"><span class="section-number-3">3.4</span> Exploit Structure in Concept Learning</h3>
+<div class="outline-text-3" id="text-3-4">
 <p>
 \(h_j\) is more general than or equal to \(h_k\) (denoted \(h_j \ge_{g}
 h_k\)) iff any input instance \(x\) that satisfies \(h_j\) also satisfies
@@ -322,12 +334,37 @@ h_k\)) iff any input instance \(x\) that satisfies \(h_j\) also satisfies
 This is relation is a <b>partial order</b>.
 </p>
 </div>
+
+
+<div id="outline-container-org758ebfb" class="outline-4">
+<h4 id="org758ebfb"><span class="section-number-4">3.4.1</span> <span class="todo TODO">TODO</span> Data Compression (Refile)</h4>
+<div class="outline-text-4" id="text-3-4-1">
+<p>
+In <i>lossy compression</i>, we seek to trade off code length with
+reconstruction error.
+</p>
+
+<p>
+In <i>vector quantization</i>, we seek a small set of vectors \({z_i}\) to
+describe a large dataset of vectors \({x_i}\), such that we can
+represent each \(x-i\) with its closest approximation in \({z_i}\) with
+small error. (Clustering problem)
+</p>
+
+<p>
+In <i>transform coding</i>, we transform the data, usually using a linear
+tranformation. The data in the transformed domain is quantized,
+usually discarding the small coefficients, corresponding to removing
+some of the dimensions.
+</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-18 Thu 21:18</p>
+<p class="date">Created: 2018-01-19 Fri 20:15</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
