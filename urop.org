@@ -74,3 +74,11 @@ strategy is employed.
 [[cite:smalheiser-2018-unsup-low]]
 
 [[cite:shalaby-2018-beyon-word-embed]]
+* Topical Hierachy
+[[file:~/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf][CATHY]]
+
+CATHY - co-occurrence network clustering, recursively apply
+CATHY to discover sub-topics
+
+[[http://chbrown.github.io/kdd-2013-usb/kdd/p437.pdf][Phrase Mining Framework for Recursive Construction of a Topical Hierachy]]
+

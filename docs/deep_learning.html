@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-18 Thu 20:32 -->
+<!-- 2018-01-20 Sat 15:37 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deep Learning</title>
@@ -92,10 +92,10 @@ for the JavaScript code in this tag.
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#orgfbf8bf6">1. Definition</a></li>
-<li><a href="#org50a81e6">2. Model/task categorisation</a></li>
-<li><a href="#org7a95a75">3. Bayesian probability</a></li>
-<li><a href="#org0b4594f">4. Universal Approximation Theorem</a></li>
-<li><a href="#orgeec8f39">5. Introduction</a></li>
+<li><a href="#orgeec8f39">2. Introduction</a></li>
+<li><a href="#org50a81e6">3. Model/task categorisation</a></li>
+<li><a href="#org7a95a75">4. Bayesian probability</a></li>
+<li><a href="#org0b4594f">5. Universal Approximation Theorem</a></li>
 <li><a href="#org030cfff">6. Measure Theory</a>
 <ul>
 <li><a href="#org50c5e91">6.1. Kullback-Leiber (KL) divergence</a></li>
@@ -120,9 +120,20 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
+<li><a href="#orgfa82260">11. Key Open Questions about Deep Learning Systems</a>
+<ul>
+<li><a href="#org2277030">11.1. Concrete Theoretical Questions</a></li>
+</ul>
+</li>
+<li><a href="#org5330044">12. ConvNets from First Principles</a>
+<ul>
+<li><a href="#org53f96ea">12.1. Finding a generative model</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-orgfbf8bf6" class="outline-2">
 <h2 id="orgfbf8bf6"><span class="section-number-2">1</span> Definition</h2>
 <div class="outline-text-2" id="text-1">
@@ -133,9 +144,44 @@ transformation
 </p>
 </div>
 </div>
-<div id="outline-container-org50a81e6" class="outline-2">
-<h2 id="org50a81e6"><span class="section-number-2">2</span> Model/task categorisation</h2>
+<div id="outline-container-orgeec8f39" class="outline-2">
+<h2 id="orgeec8f39"><span class="section-number-2">2</span> Introduction</h2>
 <div class="outline-text-2" id="text-2">
+<p>
+Sensory perception is plagued with large amounts of nuisance
+variation. Nuisance variables are task-dependent and can be implicit.
+How do we deal with nuisance variation in the input?
+</p>
+
+<p>
+The holy grail of machine learning is to learn a <i>disentangled
+representation</i> that factors out variation in the sensory input into
+meaningful intrinsic degrees of freedom.
+</p>
+
+<dl class="org-dl">
+<dt>selective</dt><dd>sensitive to task-relevant (target) features</dd>
+<dt>invariant</dt><dd>robust to task-irrelevant (nuisance) features</dd>
+<dt>multi-task</dt><dd>useful for many different tasks</dd>
+</dl>
+
+<p>
+Deep learning solves this central problem in representation learning
+by introducing representations that are expressed in terms of other,
+simpler representations. Deep learning enables the computer to build
+complex concepts out of simpler concepts.
+</p>
+
+<p>
+The key inspiration from neuroscience is to build up feature
+selectivity and tolerance over multiple layers in a hierarchy.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org50a81e6" class="outline-2">
+<h2 id="org50a81e6"><span class="section-number-2">3</span> Model/task categorisation</h2>
+<div class="outline-text-2" id="text-3">
 <dl class="org-dl">
 <dt>supervised learning</dt><dd>input -&gt; otuput, learning the pattern from
 labeled training data</dd>
@@ -146,8 +192,8 @@ unlabeled data</dd>
 </div>
 </div>
 <div id="outline-container-org7a95a75" class="outline-2">
-<h2 id="org7a95a75"><span class="section-number-2">3</span> Bayesian probability</h2>
-<div class="outline-text-2" id="text-3">
+<h2 id="org7a95a75"><span class="section-number-2">4</span> Bayesian probability</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 <a href="https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner">https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner</a>
 The quantification of the expression of uncertainty. We can make
@@ -177,29 +223,13 @@ likelihood.
 </div>
 </div>
 <div id="outline-container-org0b4594f" class="outline-2">
-<h2 id="org0b4594f"><span class="section-number-2">4</span> Universal Approximation Theorem</h2>
-<div class="outline-text-2" id="text-4">
+<h2 id="org0b4594f"><span class="section-number-2">5</span> Universal Approximation Theorem</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 <a href="https://en.wikipedia.org/wiki/Universal_approximation_theorem">https://en.wikipedia.org/wiki/Universal_approximation_theorem</a>
 A feed-forward network with a single hidden layer containing a finite
 number of neurons can approximate continuous functions on compact
 subsets of the real space.
-</p>
-</div>
-</div>
-<div id="outline-container-orgeec8f39" class="outline-2">
-<h2 id="orgeec8f39"><span class="section-number-2">5</span> Introduction</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-Many of the factors of variation inﬂuence every single piece of data
-we are able to observe.
-</p>
-
-<p>
-Deep learning solves this central problem in representation learning
-by introducing representations that are expressed in terms of other,
-simpler representations. Deep learning enables the computer to build
-complex concepts out of simpler concepts.
 </p>
 </div>
 </div>
@@ -405,16 +435,86 @@ bias (e.g. detecting watermarks and using it as feature)</li>
 negative samples into training data to improve accuracy</li>
 </ol></li>
 <li>Image quality, rotation</li>
-<li>Re-ranking based on customer requirements</li>
+<li>Re-ranking based on customer</li>
 </ol>
 </div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgfa82260" class="outline-2">
+<h2 id="orgfa82260"><span class="section-number-2">11</span> Key Open Questions about Deep Learning Systems</h2>
+<div class="outline-text-2" id="text-11">
+<ol class="org-ol">
+<li>How and why do they work? Can we derive their structure from first
+principles? Can we compress/explain the myriad empirical
+observations/best practices about deep nets?</li>
+<li>Can we shed new light on the hidden representations of objects? Can
+we generate new theories and testable predictions for both
+artificial/real neuroscience?</li>
+<li>Why do they fail? How to improve them? How to alleviate their
+intrinsic limitations?</li>
+<li>Can we guide the search for better
+architectures/algorithms/performance in applied DL?</li>
+</ol>
+</div>
+<div id="outline-container-org2277030" class="outline-3">
+<h3 id="org2277030"><span class="section-number-3">11.1</span> Concrete Theoretical Questions</h3>
+<div class="outline-text-3" id="text-11-1">
+<ol class="org-ol">
+<li>What are the implicit modelling assumptions?</li>
+<li>What is the inference task and algorithm?</li>
+<li>What is the learning algorithm?</li>
+<li>Can we generate new testable predictions for artificial/real nets?</li>
+<li>What modeling assumptions are being violated in failures? How can
+we improve the models, tasks and algorithms?</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-org5330044" class="outline-2">
+<h2 id="org5330044"><span class="section-number-2">12</span> ConvNets from First Principles</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+There are many architectures, but just a few key operations and
+objectives:
+</p>
+<ul class="org-ul">
+<li>2D (De)Convolution, Spatial max-(un)pooling, ReLu, Skip-connections</li>
+<li>Batch Normalization</li>
+<li>DropOut, Noise Corruption</li>
+<li>Data Augmentation</li>
+<li>Objectives: XEnt, NLL, Reconstruction Error, Mutual Information</li>
+</ul>
+
+<p>
+We focus on the properties conserved across all species of Convnets.
+</p>
+</div>
+<div id="outline-container-org53f96ea" class="outline-3">
+<h3 id="org53f96ea"><span class="section-number-3">12.1</span> Finding a generative model</h3>
+<div class="outline-text-3" id="text-12-1">
+<p>
+We reverse engineer a Convnet by building a generative model
+</p>
+
+<ol class="org-ol">
+<li>Define a generative model that captures nuisance variation</li>
+<li>Recast feed-forward propogation in a DCN as MAP inference of the
+full latent configuration -&gt; generative classifier</li>
+<li>Apply a <i>discriminative relaxation</i> -&gt; discriminative classifier</li>
+<li>Learn the parameters via Batch Hard EG Algorithm -&gt; SGD-Backprop
+Training of a DCN</li>
+<li>Use new generative model to address limitations of DCNs: top-down
+inference, learning from unlabeled data, hyperparameter
+optimization</li>
+</ol>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-18 Thu 20:32</p>
+<p class="date">Created: 2018-01-20 Sat 15:37</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
