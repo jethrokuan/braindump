@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-18 Thu 20:32 -->
+<!-- 2018-01-22 Mon 15:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Artificial Intelligence</title>
@@ -121,9 +121,32 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
+<li><a href="#org9c2be81">3. Problem-Solving</a>
+<ul>
+<li><a href="#orgc9f2f8b">3.1. Searching for Solutions</a>
+<ul>
+<li><a href="#orgf79408e">3.1.1. How Search Algorithms Work</a></li>
+<li><a href="#org5669856">3.1.2. Measuring Performance</a></li>
+<li><a href="#orgef5a053">3.1.3. Uninformed Search Strategies</a>
+<ul>
+<li><a href="#org98adbfe">3.1.3.1. Breadth-first Search</a></li>
+<li><a href="#org57e65cc">3.1.3.2. Uniform-cost Search</a></li>
+<li><a href="#org39629c8">3.1.3.3. Depth-first Search</a></li>
+<li><a href="#org8cbb4d2">3.1.3.4. Depth-limited Search</a></li>
+<li><a href="#org2366c86">3.1.3.5. Iterative Deepening Depth-first Search</a></li>
+<li><a href="#orgfd81acf">3.1.3.6. Bidirectional Search</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
+<p>
+-<b>- mode: Org; org-download-image-dir: "./images/ai/"; -</b>-
+</p>
 <div id="outline-container-org533ec48" class="outline-2">
 <h2 id="org533ec48"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
 <div class="outline-text-2" id="text-1">
@@ -401,10 +424,372 @@ power of the representation increases.
 </div>
 </div>
 </div>
+<div id="outline-container-org9c2be81" class="outline-2">
+<h2 id="org9c2be81"><span class="section-number-2">3</span> Problem-Solving</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Problem-solving agents use <i>atomic</i> representations, as compared to
+goal-based agents, which use more advanced factored or structured
+representations.
+</p>
+
+<p>
+The process of looking for a sequence of actions that reaches the goal
+is called <i>search</i>. A search algorithm takes a problem as input and
+returns a <i>solution</i> in the form of an action sequence.
+</p>
+</div>
+<div id="outline-container-orgc9f2f8b" class="outline-3">
+<h3 id="orgc9f2f8b"><span class="section-number-3">3.1</span> Searching for Solutions</h3>
+<div class="outline-text-3" id="text-3-1">
+</div>
+<div id="outline-container-orgf79408e" class="outline-4">
+<h4 id="orgf79408e"><span class="section-number-4">3.1.1</span> How Search Algorithms Work</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+Search algorithms consider various possible action sequences. The
+possible action sequences start at the initial state form a <i>search
+tree</i>.
+</p>
+
+<p>
+Search algorithms require a data structure to keep track of the search
+tree that is being constructed.
+</p>
+
+<dl class="org-dl">
+<dt>state</dt><dd>state in the state space to which the node corresponds</dd>
+<dt>parent</dt><dd>the node in the search tree that generated this node</dd>
+<dt>action</dt><dd>the action that was applied to the parent to generate this node</dd>
+<dt>path-cost</dt><dd>the cost, traditionally denoted by \(g(n)\), of the path
+from the initial state to the node, as indicated by the
+parent pointers</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org5669856" class="outline-4">
+<h4 id="org5669856"><span class="section-number-4">3.1.2</span> Measuring Performance</h4>
+<div class="outline-text-4" id="text-3-1-2">
+<dl class="org-dl">
+<dt>completeness</dt><dd>is the algorithm guaranteed to find a solution if
+it exists?</dd>
+<dt>optimality</dt><dd>does the strategy find the optimal solution?</dd>
+<dt>time complexity</dt><dd>how long does it take to find a solution?</dd>
+<dt>space complexity</dt><dd>how much memory is required to do the search?</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgef5a053" class="outline-4">
+<h4 id="orgef5a053"><span class="section-number-4">3.1.3</span> Uninformed Search Strategies</h4>
+<div class="outline-text-4" id="text-3-1-3">
+</div>
+<div id="outline-container-org98adbfe" class="outline-5">
+<h5 id="org98adbfe"><span class="section-number-5">3.1.3.1</span> Breadth-first Search</h5>
+<div class="outline-text-5" id="text-3-1-3-1">
+<p>
+The root node is expanded first, then all the successors of the root
+node are expanded next, then their successors, and so on.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^d)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^d)\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The shallowest node may not be the most optimal node.
+</p>
+
+<p>
+The space used in the <i>explored set</i> is \(O(b^{d-1})\) and the space
+used in the <i>frontier</i> is \(O(b^d)\).
+</p>
+
+<p>
+In general, exponential-complexity search problems cannot be solved by
+uninformed methods for any but the smallest instances.
+</p>
+</div>
+</div>
+<div id="outline-container-org57e65cc" class="outline-5">
+<h5 id="org57e65cc"><span class="section-number-5">3.1.3.2</span> Uniform-cost Search</h5>
+<div class="outline-text-5" id="text-3-1-3-2">
+<p>
+Uniform-cost search expands the node \(n\) with the lowest path
+cost \(g(n)\). The goal test is applied to a node when it is selected
+for expansion rather than when it is first generated.
+</p>
+
+<p>
+This is equivalent to BFS if all step costs are qual.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">MAYBE</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">time</td>
+<td class="org-left">\(O(b^{1+\lfloor{\frac{C^*}{\epsilon}}\rfloor})\), where \(C^*\) is the optimal cost.</td>
+</tr>
+
+<tr>
+<td class="org-left">space</td>
+<td class="org-left">\(O(b^{1+\lfloor{\frac{C^*}{\epsilon}}\rfloor})\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Completeness is guaranteed only if the cost of every step exceeds some
+small positive constant \(\epsilon\). an infinite loop may occur if
+there is a path with an infinite sequence of zero-cost actions.
+</p>
+</div>
+</div>
+<div id="outline-container-org39629c8" class="outline-5">
+<h5 id="org39629c8"><span class="section-number-5">3.1.3.3</span> Depth-first Search</h5>
+<div class="outline-text-5" id="text-3-1-3-3">
+<p>
+Always expands the <i>deepest</i> node in the current frontier of the
+search tree.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^m)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^m)\), \(O(m)\) if backtrack</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The time complexity of DFS may be worse than BFS: \(O(b^m)\) might be
+larger than \(O(b^d)\).
+</p>
+
+<p>
+DFS only requires storage of \(O(bm)\) nodes, where \(m\) is the maximum
+depth of any node. <b>backtracking search</b> only generates one successor
+at a time, modifying the current state description rather than copying
+it. Memory requirements reduce to one state description and \(O(m)\)
+actions.
+</p>
+</div>
+</div>
+<div id="outline-container-org8cbb4d2" class="outline-5">
+<h5 id="org8cbb4d2"><span class="section-number-5">3.1.3.4</span> Depth-limited Search</h5>
+<div class="outline-text-5" id="text-3-1-3-4">
+<p>
+In depth-limited search, nodes at depth of pre-determined limit \(l\)
+are treated as if they had no successors. This limit solves the
+infinite-path problem.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^l)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^l)\), \(O(l)\) if backtrack</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org2366c86" class="outline-5">
+<h5 id="org2366c86"><span class="section-number-5">3.1.3.5</span> Iterative Deepening Depth-first Search</h5>
+<div class="outline-text-5" id="text-3-1-3-5">
+<p>
+Key idea is to gradually increase the depth limit: first 0, then
+1, then 2&#x2026; until a goal is found.
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/ai/Problem-Solving/screenshot_2018-01-22_15-26-50.png" alt="screenshot_2018-01-22_15-26-50.png" />
+</p>
+</div>
+
+
+<p>
+\(N(IDS) = (d)b + (d-1)b^2 + \hdots + (1)b^d\), which gives a time
+complexity of \(O(b^d)\)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO (unless step cost is 1)</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^d)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^d)\), \(O(m)\) if backtrack</td>
+</tr>
+</tbody>
+</table>
+
+
+<ol class="org-ol">
+<li>BFS and IDS are complete if \(b\) is finite.</li>
+<li>UCS is complete if \(b\) is finite and step cost is \(\ge \epsilon\).</li>
+<li>BFS and IDS are optimal if all step costs are identical.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-orgfd81acf" class="outline-5">
+<h5 id="orgfd81acf"><span class="section-number-5">3.1.3.6</span> Bidirectional Search</h5>
+<div class="outline-text-5" id="text-3-1-3-6">
+<p>
+Conduct two simultaneous searches &#x2013; one forward from the initial
+state, and the other backward from the goal. This is implemented by
+replacing the goal test with a check to see whether the frontiers of
+two searches intersect. This reduces the time ad space complexity to \(O(b^{d/2})\).
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-18 Thu 20:32</p>
+<p class="date">Created: 2018-01-22 Mon 15:36</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

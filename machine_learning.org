@@ -102,8 +102,69 @@ $h_k$.
 
 This is relation is a *partial order*.
 
+** Find-S Algorithm
+Intuition: Start with the most specific hypothesis $h$. Whenever it
+wrongly classifies a positive training example, we "minimally"
+generalize it to satisfy its input instance.
+*** Limitations
+1. Can't tell whether Find-S has learnt the target concept
+2. Can't tell when training examples are /inconsistent/
+3. Picks a maximally specific $h$
+4. Depending on $H$, there may be several solutions
+** Version Space
+\begin{equation*}
+  VS_{H,D} = {h \in H | h \text{ is consistent with }D}
+\end{equation*}
+ 
+- If $c \in H$, then D can reduce $VS_{H,D}$ to ${c}$.
+- If D is insufficient, then $VS_{H,D}$ represents the /uncertainty/
+  of what the target concept is
+- $VS_{H,D}$ contains all consistent hypotheses, including maximally
+  specific hypotheses
 
-*** TODO Data Compression (Refile)
+The *general boundary* G of $VS_{H,D}$ is the set of maximally general
+members of $H$ consistent with $D$.
+
+The *specific boundary* S of $VS_{H,D}$ is the set of maximally general
+members of $H$ consistent with $D$.
+
+\begin{equation*}
+  VS_{H,D} = {h \in H | \exists s \in S \exists g \in G g \ge_g h
+    \ge_g s }
+\end{equation*}
+
+** List-Then-Eliminate Algorithm
+Iterate through all hypotheses in $H$, and eliminate any hypothesis
+found inconsistent with any training example. This algorithm is often
+prohibitively expensive.
+
+** Candidate-Elimination Algorithm
+Start with most general and specific hypotheses. Each training example
+"minimally" generalizes S and specializes G to remove inconsistent
+hypotheses from version space.
+* Density Estimation
+/Density Estimation/ refers to the problem of modeling the probability
+distribution $p(x)$ of a random variable $x$, given a finite set $x_1,
+x_2, \hdots, x_n$ of observations.
+
+We first look at parametric distributions, which are governed by a
+small number of adaptive parameters. In a frequentist treatment, we
+choose specific values for the parameters optimizing some criterion,
+such as the likelihood function. In a Bayesian treatment, we
+introduce prior distributions and then use Bayes' theorem to compute
+the corresponding posterior distribution given the observed data.
+
+An important role is played by /conjugate priors/, which yield
+posterior distributions of the same functional form.
+
+The maximum likelihood setting for parameters can give severely
+over-fitted results for small data sets. To develop a Bayesian
+treatment to this problem, we consider a form of prior distribution
+with similar form as the maximum likelihood function. this property is
+called /conjugacy/. For a binomial distribution, we can choose the
+beta distribution as the prior.
+* Refile
+** Data Compression
 In /lossy compression/, we seek to trade off code length with
 reconstruction error.
 

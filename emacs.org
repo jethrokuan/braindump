@@ -40,3 +40,6 @@ http://stackoverflow.com/questions/3527142/how-do-you-redo-changes-after-undo-wi
 * iedit
 * Deleting Windows ^M (CR) characters
 Simply run =M-x delete-trailing-whitespaces=
+* Swiper
+To enter thing-at-point into the mini-buffer, use ~M-n~. This calls
+~ivy-next-history-element~.

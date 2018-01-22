@@ -1,7 +1,8 @@
+-*- mode: Org; org-download-image-dir: "./images/ai/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Artificial Intelligence
 * Reference Books                                                  :noexport:
-[[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Stuart%20Russell,%20Peter%20Norvig-Artificial%20Intelligence.%20A%20Modern%20Approach%20%5BGlobal%20Edition%5D-Pearson%20(2016).pdf][AIMA]]
+  [[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Stuart%20Russell,%20Peter%20Norvig-Artificial%20Intelligence.%20A%20Modern%20Approach%20%5BGlobal%20Edition%5D-Pearson%20(2016).pdf][AIMA]]
 * What is Artificial Intelligence?
 Designing agents that act rationally (e.g. through maximising a reward
 function).
@@ -139,3 +140,125 @@ A more expressive representation can capture, at least as concisely, a
 everything a more expressive one can capture, plus more. On the other
 hand, reasoning and learning become more complex as the expressive
 power of the representation increases.
+* Problem-Solving
+Problem-solving agents use /atomic/ representations, as compared to
+goal-based agents, which use more advanced factored or structured
+representations.
+
+The process of looking for a sequence of actions that reaches the goal
+is called /search/. A search algorithm takes a problem as input and
+returns a /solution/ in the form of an action sequence.
+** Searching for Solutions
+*** How Search Algorithms Work
+ Search algorithms consider various possible action sequences. The
+ possible action sequences start at the initial state form a /search
+ tree/.
+
+ Search algorithms require a data structure to keep track of the search
+ tree that is being constructed.
+
+ - state :: state in the state space to which the node corresponds
+ - parent :: the node in the search tree that generated this node
+ - action :: the action that was applied to the parent to generate this node
+ - path-cost :: the cost, traditionally denoted by $g(n)$, of the path
+                from the initial state to the node, as indicated by the
+                parent pointers
+*** Measuring Performance
+ - completeness :: is the algorithm guaranteed to find a solution if
+                   it exists?
+ - optimality :: does the strategy find the optimal solution?
+ - time complexity :: how long does it take to find a solution?
+ - space complexity :: how much memory is required to do the search?
+*** Uninformed Search Strategies
+**** Breadth-first Search
+The root node is expanded first, then all the successors of the root
+node are expanded next, then their successors, and so on.
+
+| performance      | rating   |
+|------------------+----------|
+| completeness     | YES      |
+| optimal          | NO       |
+| time complexity  | $O(b^d)$ |
+| space complexity | $O(b^d)$ |
+
+The shallowest node may not be the most optimal node.
+
+The space used in the /explored set/ is $O(b^{d-1})$ and the space
+used in the /frontier/ is $O(b^d)$.
+
+In general, exponential-complexity search problems cannot be solved by
+uninformed methods for any but the smallest instances.
+**** Uniform-cost Search
+Uniform-cost search expands the node $n$ with the lowest path
+cost $g(n)$. The goal test is applied to a node when it is selected
+for expansion rather than when it is first generated.
+
+This is equivalent to BFS if all step costs are qual.
+
+| performance  | rating                                                                            |
+|--------------+-----------------------------------------------------------------------------------|
+| completeness | MAYBE                                                                             |
+| optimal      | YES                                                                               |
+| time         | $O(b^{1+\lfloor{\frac{C^*}{\epsilon}}\rfloor})$, where $C^*$ is the optimal cost. |
+| space        | $O(b^{1+\lfloor{\frac{C^*}{\epsilon}}\rfloor})$                                   |
+
+Completeness is guaranteed only if the cost of every step exceeds some
+small positive constant $\epsilon$. an infinite loop may occur if
+there is a path with an infinite sequence of zero-cost actions.
+**** Depth-first Search
+Always expands the /deepest/ node in the current frontier of the
+search tree.
+
+| performance      | rating                        |
+|------------------+-------------------------------|
+| completeness     | YES                           |
+| optimal          | NO                            |
+| time complexity  | $O(b^m)$                      |
+| space complexity | $O(b^m)$, $O(m)$ if backtrack |
+
+The time complexity of DFS may be worse than BFS: $O(b^m)$ might be
+larger than $O(b^d)$.
+
+DFS only requires storage of $O(bm)$ nodes, where $m$ is the maximum
+depth of any node. *backtracking search* only generates one successor
+at a time, modifying the current state description rather than copying
+it. Memory requirements reduce to one state description and $O(m)$
+actions.
+**** Depth-limited Search
+In depth-limited search, nodes at depth of pre-determined limit $l$
+are treated as if they had no successors. This limit solves the
+infinite-path problem.
+
+| performance      | rating                        |
+|------------------+-------------------------------|
+| completeness     | YES                           |
+| optimal          | NO                            |
+| time complexity  | $O(b^l)$                      |
+| space complexity | $O(b^l)$, $O(l)$ if backtrack |
+**** Iterative Deepening Depth-first Search
+Key idea is to gradually increase the depth limit: first 0, then
+1, then 2... until a goal is found.
+
+
+[[file:images/ai/Problem-Solving/screenshot_2018-01-22_15-26-50.png]]
+
+
+$N(IDS) = (d)b + (d-1)b^2 + \hdots + (1)b^d$, which gives a time
+complexity of $O(b^d)$
+
+| performance      | rating                        |
+|------------------+-------------------------------|
+| completeness     | YES                           |
+| optimal          | NO (unless step cost is 1)    |
+| time complexity  | $O(b^d)$                      |
+| space complexity | $O(b^d)$, $O(m)$ if backtrack |
+
+
+1. BFS and IDS are complete if $b$ is finite.
+2. UCS is complete if $b$ is finite and step cost is $\ge \epsilon$.
+3. BFS and IDS are optimal if all step costs are identical.
+**** Bidirectional Search
+Conduct two simultaneous searches -- one forward from the initial
+state, and the other backward from the goal. This is implemented by
+replacing the goal test with a check to see whether the frontiers of
+two searches intersect. This reduces the time ad space complexity to $O(b^{d/2})$.

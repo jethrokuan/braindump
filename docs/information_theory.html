@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-18 Thu 20:32 -->
+<!-- 2018-01-22 Mon 15:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Information Theory</title>
@@ -91,14 +91,18 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgde056b4">1. How to measure information</a></li>
-<li><a href="#org740395b">2. How to compress information</a></li>
-<li><a href="#orgc40d6ee">3. How to communicate securely over an insecure channel</a>
+<li><a href="#org3b6d5db">1. Introduction</a>
 <ul>
-<li><a href="#org0106d90">3.1. Error-correcting codes for the binary symmetric channel</a>
+<li><a href="#orgdefa05c">1.1. How can we achieve perfect communication over an imperfect noisy communication channel?</a></li>
+<li><a href="#org05d6fa8">1.2. Error-correcting codes for binary symmetric channels</a>
 <ul>
-<li><a href="#org0fff7ca">3.1.1. Repetition Codes</a></li>
-<li><a href="#org5ecc17f">3.1.2. Block Codes - the (7, 4) Hamming Code</a></li>
+<li><a href="#org112a84a">1.2.1. Repetition codes</a></li>
+<li><a href="#org24db7f3">1.2.2. Block codes - the (7,4) Hamming Code</a>
+<ul>
+<li><a href="#org6fbca89">1.2.2.1. Decoding for linear codes: syndrome decoding</a></li>
+</ul>
+</li>
+<li><a href="#orge0f8080">1.2.3. What performance can the best codes achieve?</a></li>
 </ul>
 </li>
 </ul>
@@ -106,61 +110,88 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgde056b4" class="outline-2">
-<h2 id="orgde056b4"><span class="section-number-2">1</span> How to measure information</h2>
+<div id="outline-container-org3b6d5db" class="outline-2">
+<h2 id="org3b6d5db"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org740395b" class="outline-2">
-<h2 id="org740395b"><span class="section-number-2">2</span> How to compress information</h2>
-</div>
-<div id="outline-container-orgc40d6ee" class="outline-2">
-<h2 id="orgc40d6ee"><span class="section-number-2">3</span> How to communicate securely over an insecure channel</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-orgdefa05c" class="outline-3">
+<h3 id="orgdefa05c"><span class="section-number-3">1.1</span> How can we achieve perfect communication over an imperfect noisy communication channel?</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-There is a non-zero probability that the transmitted message is
-different from the received message.
+The physical solution is to improve the characteristics of the
+communication channel to reduce its error probability. For example, we
+can use more reliable components in the communication device's
+circuitry.
 </p>
 
 <p>
-<i>Information theory</i> is concerned with the theoretical limitations and
-potentials of systems, and the best error-correcting performance we
-could achieve.
+Information theory and coding theory offer an alternative: we accept
+the given noisy channel as it is, and add communication systems to it
+to detect and correct errors introduced by the channel.
 </p>
 
 <p>
-<i>Coding theory</i> is concerned with the creation of practical encoding
-and decoding systems.
+An encoder encodes the source message <code>s</code> into a transmitted message
+<code>t</code>, adding <i>redundancy</i> to the original message in some way. The
+channel adds noise to the transmitted message, yielding a received
+message <code>r</code>. The decoder uses the known redundancy introduced by the
+encoding system to infer both the original signal <code>s</code> and the added
+noise.
+</p>
+
+<p>
+Information theory is concerned of the theoretical limitations and
+potentials of these systems. Coding theory is concerned with the
+creation of practical encoding and decoding systems.
 </p>
 </div>
-<div id="outline-container-org0106d90" class="outline-3">
-<h3 id="org0106d90"><span class="section-number-3">3.1</span> Error-correcting codes for the binary symmetric channel</h3>
-<div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-org0fff7ca" class="outline-4">
-<h4 id="org0fff7ca"><span class="section-number-4">3.1.1</span> Repetition Codes</h4>
-<div class="outline-text-4" id="text-3-1-1">
-<ul class="org-ul">
-<li>Repeat every bit of the message a prearranged number of times. Take
-the bit that has the majority vote.</li>
-</ul>
+<div id="outline-container-org05d6fa8" class="outline-3">
+<h3 id="org05d6fa8"><span class="section-number-3">1.2</span> Error-correcting codes for binary symmetric channels</h3>
+<div class="outline-text-3" id="text-1-2">
+</div>
+<div id="outline-container-org112a84a" class="outline-4">
+<h4 id="org112a84a"><span class="section-number-4">1.2.1</span> Repetition codes</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<p>
+Key idea: repeat every bit of the message a prearranged number of
+times, and pick the bit with the majority vote.
+</p>
+
+<p>
+We can describe the channel as adding a sparse noise vector n to the
+transmitted vector, adding in a modulo 2 arithmetic.
+</p>
+
+<p>
+One can show that this algorithm is optimal by considering the maximum
+likelihood function of <code>s</code>.
+</p>
+
+<p>
+The repetition code \(R_3\) (repeat 3 times) has reduced the probability
+of error, but has also reduced the <i>rate</i> of information by a factor
+of 3.
+</p>
 </div>
 </div>
-<div id="outline-container-org5ecc17f" class="outline-4">
-<h4 id="org5ecc17f"><span class="section-number-4">3.1.2</span> Block Codes - the (7, 4) Hamming Code</h4>
-<div class="outline-text-4" id="text-3-1-2">
-<ul class="org-ul">
-<li>Add redundancy to blocks of data instead of encoding one bit at a time</li>
-<li>A block code is a rule for converting a sequence of source bits <code>s</code>,
-of length <code>K</code>, into a transmitted sequence <code>t</code> of length <code>N</code> bits.
-<ul class="org-ul">
-<li>In a linear block code, the extra <code>N - K</code> bits are linear
-functions of the original <code>K</code> bits, and are called <i>parity-check</i>
-bits.</li>
-</ul></li>
-</ul>
+<div id="outline-container-org24db7f3" class="outline-4">
+<h4 id="org24db7f3"><span class="section-number-4">1.2.2</span> Block codes - the (7,4) Hamming Code</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+Key idea: add redundancy to blocks of data instead of encoding one bit
+at a time.
+</p>
+
+<p>
+A block code is a rule for converting a sequence of source bits <code>s</code>,
+of length <code>K</code>, into  transmitted sequence <code>t</code> of length <code>N &gt; K</code> bits.
+The Hamming code transmits <code>N=7</code> bits for every <code>K=4</code> bits.
+</p>
 
 <p>
 Because the Hamming code is a linear code, it can be written compactly
-in terms of matrices:
+as a matrix:
 </p>
 
 \begin{equation*}
@@ -170,9 +201,67 @@ in terms of matrices:
 <p>
 where \(G\) is the generator matrix of the code.
 </p>
+</div>
+<div id="outline-container-org6fbca89" class="outline-5">
+<h5 id="org6fbca89"><span class="section-number-5">1.2.2.1</span> Decoding for linear codes: syndrome decoding</h5>
+<div class="outline-text-5" id="text-1-2-2-1">
+<p>
+The decoding problem for linear codes can also be described in terms
+of matrices. We evaluate 3 parity-check bits for the received bits
+\(r_1r_2r_3r_4\), and see whether they match the three received bits
+\(r_5r_6r_7\). The differences (mod 2) between these 2 triplets are
+called the <i>syndrome</i> of the received vector. If the syndrome is 0,
+then the received vector is a code word, and the most probable
+decoding is given by reading its first four bits.
+</p>
+
+\begin{align*}
+  G^T &=
+  \begin{bmatrix}
+    I_4 \\
+    P
+  \end{bmatrix}, \\
+  H &=
+      \begin{bmatrix}
+        -P & I_3
+      \end{bmatrix}
+             =
+      \begin{bmatrix}
+        P & I_3
+      \end{bmatrix}
+            =
+      \begin{bmatrix}
+    1 & 1 & 1 & 0 & 1 & 0 & 0 \\
+    0 & 1 & 1 & 1 & 0 & 1 & 0 \\
+    1 & 0 & 1 & 1 & 0 & 0 & 1
+    \end{bmatrix}
+\end{align*}
+</div>
+</div>
+</div>
+<div id="outline-container-orge0f8080" class="outline-4">
+<h4 id="orge0f8080"><span class="section-number-4">1.2.3</span> What performance can the best codes achieve?</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<p>
+We consider the <code>(R, p_b)</code> plane, where \(R\) is the rate,
+and \(p_b\) is the decoded bit-error probability, Claude Shannon proved that the boundary between achievable and
+non-achievable points meets the \(R\) axis at a non-zero value \(R = C\).
+For any channel, there exist codes that make it possible to
+communicate with arbitrarily small probability of error $p<sub>b</sub>= at
+non-zero rates. This theorem is called the <i>noisy-channel coding
+theorem</i>.
+</p>
 
 <p>
-Syndrome decoding for the Hamming code involves checking the parity bits.
+The maximum rate at which communication is possible with arbitrarily
+small \(p_b\) is called the capacity of the channel.
+</p>
+
+\begin{equation*}
+  C(f) = 1 - H_2(f) = 1 - \left[f\log_2\frac{1}{f} + (1-f)\log_2\frac{1}{1-f}\right]
+\end{equation*}
+<p>
+n
 </p>
 </div>
 </div>
@@ -181,7 +270,7 @@ Syndrome decoding for the Hamming code involves checking the parity bits.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-18 Thu 20:32</p>
+<p class="date">Created: 2018-01-22 Mon 15:36</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

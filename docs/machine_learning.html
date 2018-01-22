@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-19 Fri 20:15 -->
+<!-- 2018-01-22 Mon 15:36 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -116,11 +116,21 @@ for the JavaScript code in this tag.
 <li><a href="#org62452d1">3.1. Hypothesis</a></li>
 <li><a href="#org2c04be3">3.2. Inductive Learning</a></li>
 <li><a href="#orge60a534">3.3. Concept Learning is Search</a></li>
-<li><a href="#orgf2b1a20">3.4. Exploit Structure in Concept Learning</a>
+<li><a href="#orgf2b1a20">3.4. Exploit Structure in Concept Learning</a></li>
+<li><a href="#orgbd89779">3.5. Find-S Algorithm</a>
 <ul>
-<li><a href="#org758ebfb">3.4.1. <span class="todo TODO">TODO</span> Data Compression (Refile)</a></li>
+<li><a href="#org3c69f82">3.5.1. Limitations</a></li>
 </ul>
 </li>
+<li><a href="#orgd48228e">3.6. Version Space</a></li>
+<li><a href="#org56435e6">3.7. List-Then-Eliminate Algorithm</a></li>
+<li><a href="#orgd66e663">3.8. Candidate-Elimination Algorithm</a></li>
+</ul>
+</li>
+<li><a href="#org7538680">4. Density Estimation</a></li>
+<li><a href="#orgf6ef7b1">5. Refile</a>
+<ul>
+<li><a href="#org05cfe76">5.1. Data Compression</a></li>
 </ul>
 </li>
 </ul>
@@ -334,11 +344,123 @@ h_k\)) iff any input instance \(x\) that satisfies \(h_j\) also satisfies
 This is relation is a <b>partial order</b>.
 </p>
 </div>
+</div>
 
+<div id="outline-container-orgbd89779" class="outline-3">
+<h3 id="orgbd89779"><span class="section-number-3">3.5</span> Find-S Algorithm</h3>
+<div class="outline-text-3" id="text-3-5">
+<p>
+Intuition: Start with the most specific hypothesis \(h\). Whenever it
+wrongly classifies a positive training example, we "minimally"
+generalize it to satisfy its input instance.
+</p>
+</div>
+<div id="outline-container-org3c69f82" class="outline-4">
+<h4 id="org3c69f82"><span class="section-number-4">3.5.1</span> Limitations</h4>
+<div class="outline-text-4" id="text-3-5-1">
+<ol class="org-ol">
+<li>Can't tell whether Find-S has learnt the target concept</li>
+<li>Can't tell when training examples are <i>inconsistent</i></li>
+<li>Picks a maximally specific \(h\)</li>
+<li>Depending on \(H\), there may be several solutions</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd48228e" class="outline-3">
+<h3 id="orgd48228e"><span class="section-number-3">3.6</span> Version Space</h3>
+<div class="outline-text-3" id="text-3-6">
+\begin{equation*}
+  VS_{H,D} = {h \in H | h \text{ is consistent with }D}
+\end{equation*}
 
-<div id="outline-container-org758ebfb" class="outline-4">
-<h4 id="org758ebfb"><span class="section-number-4">3.4.1</span> <span class="todo TODO">TODO</span> Data Compression (Refile)</h4>
-<div class="outline-text-4" id="text-3-4-1">
+<ul class="org-ul">
+<li>If \(c \in H\), then D can reduce \(VS_{H,D}\) to \({c}\).</li>
+<li>If D is insufficient, then \(VS_{H,D}\) represents the <i>uncertainty</i>
+of what the target concept is</li>
+<li>\(VS_{H,D}\) contains all consistent hypotheses, including maximally
+specific hypotheses</li>
+</ul>
+
+<p>
+The <b>general boundary</b> G of \(VS_{H,D}\) is the set of maximally general
+members of \(H\) consistent with \(D\).
+</p>
+
+<p>
+The <b>specific boundary</b> S of \(VS_{H,D}\) is the set of maximally general
+members of \(H\) consistent with \(D\).
+</p>
+
+\begin{equation*}
+  VS_{H,D} = {h \in H | \exists s \in S \exists g \in G g \ge_g h
+    \ge_g s }
+\end{equation*}
+</div>
+</div>
+
+<div id="outline-container-org56435e6" class="outline-3">
+<h3 id="org56435e6"><span class="section-number-3">3.7</span> List-Then-Eliminate Algorithm</h3>
+<div class="outline-text-3" id="text-3-7">
+<p>
+Iterate through all hypotheses in \(H\), and eliminate any hypothesis
+found inconsistent with any training example. This algorithm is often
+prohibitively expensive.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd66e663" class="outline-3">
+<h3 id="orgd66e663"><span class="section-number-3">3.8</span> Candidate-Elimination Algorithm</h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+Start with most general and specific hypotheses. Each training example
+"minimally" generalizes S and specializes G to remove inconsistent
+hypotheses from version space.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org7538680" class="outline-2">
+<h2 id="org7538680"><span class="section-number-2">4</span> Density Estimation</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+<i>Density Estimation</i> refers to the problem of modeling the probability
+distribution \(p(x)\) of a random variable \(x\), given a finite set \(x_1,
+x_2, \hdots, x_n\) of observations.
+</p>
+
+<p>
+We first look at parametric distributions, which are governed by a
+small number of adaptive parameters. In a frequentist treatment, we
+choose specific values for the parameters optimizing some criterion,
+such as the likelihood function. In a Bayesian treatment, we
+introduce prior distributions and then use Bayes' theorem to compute
+the corresponding posterior distribution given the observed data.
+</p>
+
+<p>
+An important role is played by <i>conjugate priors</i>, which yield
+posterior distributions of the same functional form.
+</p>
+
+<p>
+The maximum likelihood setting for parameters can give severely
+over-fitted results for small data sets. To develop a Bayesian
+treatment to this problem, we consider a form of prior distribution
+with similar form as the maximum likelihood function. this property is
+called <i>conjugacy</i>. For a binomial distribution, we can choose the
+beta distribution as the prior.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf6ef7b1" class="outline-2">
+<h2 id="orgf6ef7b1"><span class="section-number-2">5</span> Refile</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org05cfe76" class="outline-3">
+<h3 id="org05cfe76"><span class="section-number-3">5.1</span> Data Compression</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
 In <i>lossy compression</i>, we seek to trade off code length with
 reconstruction error.
@@ -361,10 +483,9 @@ some of the dimensions.
 </div>
 </div>
 </div>
-</div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-19 Fri 20:15</p>
+<p class="date">Created: 2018-01-22 Mon 15:36</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
