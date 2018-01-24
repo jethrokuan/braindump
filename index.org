@@ -35,5 +35,6 @@
 - [[file:weekly_review.org][Weekly Review]]
 - [[file:capture.org][capture]]
 - [[file:export_template.org][export_template]]
+- [[file:gyss.org][gyss]]
 - [[file:ios.org][iOS]]
 - [[file:urop.org][urop]]
