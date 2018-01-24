@@ -173,7 +173,7 @@ with n IID measurements, $\overline{x} = \mu + \overline{\epsilon}$
 
 $E((x - a)^2) = \frac{\sigma^2}{n} + \left(\mu - a\right)^2$
 
-$\text{MSE} = \text{\text{SE}}^2 + \text{bias}^2$, hence
+$\text{MSE} = \text{SE}^2 + \text{bias}^2$, hence
 $\sqrt{\text{MSE}}$ is a good measure of the accuracy of the estimate
 $\overline{x}$ of a.
 ** Estimation of a Ratio
@@ -405,7 +405,7 @@ Let $S_t = {x: T(x) = t}$. The sample space of $X$, $S$ is the
 disjoint union of $S_t$ across all possible values of $T$.
 
 $T$ is sufficient for $\theta$ if $\exists q() \text{ s.t. } \forall x \in S_t,
-f_{\theta}(X\x|T=t) = q(x)$.
+f_{\theta}(X\\x|T=t) = q(x)$.
 ** Factorisation Theorem
 $T$ is sufficient for  $\theta$ iff $\exists g(t,\theta), h(x)
 \text{ s.t. } \forall \theta \in \Theta, f_\theta(x) = g(T(x), \theta) h(x)
