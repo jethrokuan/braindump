@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-18 Thu 20:32 -->
+<!-- 2018-02-06 Tue 22:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>RSS Feeds</title>
@@ -20,7 +20,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -69,72 +69,71 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgbc02a8b">1. Feeds&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elfeed">elfeed</span></span></a>
+<li><a href="#org7a0d1e4">1. Feeds&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elfeed">elfeed</span></span></a>
 <ul>
-<li><a href="#org9cf9532">1.1. Computer Science&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cs">cs</span></span></a>
+<li><a href="#org780fce4">1.1. Computer Science&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cs">cs</span></span></a>
 <ul>
-<li><a href="#orge4cfe64">1.1.1. http://export.arxiv.org/rss/cs</a></li>
+<li><a href="#org80b02a5">1.1.1. http://export.arxiv.org/rss/cs</a></li>
 </ul>
 </li>
-<li><a href="#orgdc3c67d">1.2. Emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></a>
+<li><a href="#orgbcbb9ee">1.2. Emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></a>
 <ul>
-<li><a href="#org531eaeb">1.2.1. http://planet.emacsen.org/atom.xml</a></li>
-<li><a href="#orgfff1eae">1.2.2. https://www.reddit.com/r/emacs/</a></li>
+<li><a href="#org4eefa3b">1.2.1. http://planet.emacsen.org/atom.xml</a></li>
+<li><a href="#org3fa617f">1.2.2. https://www.reddit.com/r/emacs/</a></li>
 </ul>
 </li>
-<li><a href="#orgba2199f">1.3. AI/ML&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AI">AI</span></span></a>
+<li><a href="#orgc49be85">1.3. AI/ML&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AI">AI</span></span></a>
 <ul>
-<li><a href="#org8ca14b7">1.3.1. http://feeds.dzone.com/ai</a></li>
-<li><a href="#org19d71c0">1.3.2. https://reddit.com/r/MachineLearning/.rss</a></li>
-<li><a href="#orgf141e57">1.3.3. https://medium.com/feed/mlreview/</a></li>
-<li><a href="#orgb32a12c">1.3.4. https://distill.pub/rss.xml</a></li>
-<li><a href="#orgdfa387c">1.3.5. http://www.datatau.com/rss</a></li>
-<li><a href="#org3533520">1.3.6. https://towardsdatascience.com/feed</a></li>
+<li><a href="#orgb4ee1a2">1.3.1. http://feeds.dzone.com/ai</a></li>
+<li><a href="#orgc3c342c">1.3.2. https://reddit.com/r/MachineLearning/.rss</a></li>
+<li><a href="#org2e616f7">1.3.3. https://medium.com/feed/mlreview/</a></li>
+<li><a href="#orgfbb7eec">1.3.4. https://distill.pub/rss.xml</a></li>
+<li><a href="#org7009207">1.3.5. http://www.datatau.com/rss</a></li>
+<li><a href="#orgd7c8e7c">1.3.6. https://towardsdatascience.com/feed</a></li>
 </ul>
 </li>
-<li><a href="#org3546992">1.4. Programming Languages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pl">pl</span></span></a>
+<li><a href="#org36770b7">1.4. Programming Languages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pl">pl</span></span></a>
 <ul>
-<li><a href="#org3f3894e">1.4.1. http://lambda-the-ultimate.org/rss.xml</a></li>
+<li><a href="#org0e063e9">1.4.1. http://lambda-the-ultimate.org/rss.xml</a></li>
 </ul>
 </li>
-<li><a href="#org58f9d42">1.5. General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="general">general</span></span></a>
+<li><a href="#orge67997a">1.5. General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="general">general</span></span></a>
 <ul>
-<li><a href="#org1f31113">1.5.1. https://hnrss.org/newest?points=100</a></li>
-<li><a href="#orgc11d435">1.5.2. https://jvns.ca/atom.xml</a></li>
-<li><a href="#org11d1fc0">1.5.3. http://slatestarcodex.com/feed/</a></li>
-<li><a href="#orga7c9048">1.5.4. http://feeds.feedburner.com/mrmoneymustache</a></li>
-<li><a href="#org2e1a7ea">1.5.5. http://erikbern.com/atom.xml</a></li>
-<li><a href="#org1033928">1.5.6. https://blog.acolyer.org/atom.xml</a></li>
-<li><a href="#org83c0715">1.5.7. https://peadarcoyle.wordpress.com/feed/</a></li>
-<li><a href="#org6455c5e">1.5.8. http://www.inference.vc/feed/</a></li>
-<li><a href="#orgd5b7d78">1.5.9. http://larahogan.me/feed.xml</a></li>
+<li><a href="#org770fb0e">1.5.1. https://hnrss.org/newest?points=100</a></li>
+<li><a href="#orgf1b44b8">1.5.2. https://jvns.ca/atom.xml</a></li>
+<li><a href="#org9faed64">1.5.3. http://slatestarcodex.com/feed/</a></li>
+<li><a href="#org22a78b2">1.5.4. http://feeds.feedburner.com/mrmoneymustache</a></li>
+<li><a href="#org4927768">1.5.5. http://erikbern.com/atom.xml</a></li>
+<li><a href="#org5b8ffa1">1.5.6. https://blog.acolyer.org/atom.xml</a></li>
+<li><a href="#orgbb64986">1.5.7. https://peadarcoyle.wordpress.com/feed/</a></li>
+<li><a href="#orgb9bde3e">1.5.8. http://www.inference.vc/feed/</a></li>
+<li><a href="#org7823d58">1.5.9. http://larahogan.me/feed.xml</a></li>
 </ul>
 </li>
-<li><a href="#org136d19d">1.6. Company Blogs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="company">company</span></span></a>
+<li><a href="#org6d93939">1.6. Company Blogs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="company">company</span></span></a>
 <ul>
-<li><a href="#org2147e7f">1.6.1. https://blogs.dropbox.com/tech/feed/</a></li>
-<li><a href="#org644d71e">1.6.2. https://codeascraft.com/feed/</a></li>
-<li><a href="#orgde0f8cd">1.6.3. http://multithreaded.stitchfix.com/feed</a></li>
-<li><a href="#org8d8b257">1.6.4. https://engineering.pinterest.com/rss.xml</a></li>
-<li><a href="#orgaaabaf7">1.6.5. https://research.fb.com/feed/</a></li>
-<li><a href="#orgbdf527a">1.6.6. https://medium.com/feed/airbnb-engineering/</a></li>
-<li><a href="#orgb50a6db">1.6.7. https://tech.instacart.com/feed/</a></li>
-<li><a href="#orgacb8a33">1.6.8. http://research.baidu.com/feed/</a></li>
+<li><a href="#org414f0b7">1.6.1. https://blogs.dropbox.com/tech/feed/</a></li>
+<li><a href="#org6f791db">1.6.2. https://codeascraft.com/feed/</a></li>
+<li><a href="#org88add8d">1.6.3. http://multithreaded.stitchfix.com/feed</a></li>
+<li><a href="#org39d39de">1.6.4. https://engineering.pinterest.com/rss.xml</a></li>
+<li><a href="#org4f54e5c">1.6.5. https://research.fb.com/feed/</a></li>
+<li><a href="#org2ac8663">1.6.6. https://medium.com/feed/airbnb-engineering/</a></li>
+<li><a href="#org3c8f54c">1.6.7. https://tech.instacart.com/feed/</a></li>
+<li><a href="#orgbec3a9a">1.6.8. http://research.baidu.com/feed/</a></li>
 </ul>
 </li>
-<li><a href="#orgc607365">1.7. Math&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span></span></a>
+<li><a href="#org233f87c">1.7. Math&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span></span></a>
 <ul>
-<li><a href="#org338bd1a">1.7.1. http://feeds.feedburner.com/theendeavour</a></li>
-<li><a href="#org03a4187">1.7.2. http://andrewgelman.com/feed/</a></li>
+<li><a href="#orgaf1f54c">1.7.1. http://feeds.feedburner.com/theendeavour</a></li>
+<li><a href="#org9b34a9e">1.7.2. http://andrewgelman.com/feed/</a></li>
 </ul>
 </li>
-<li><a href="#orgf2fbd21">1.8. Vocab&#xa0;&#xa0;&#xa0;<span class="tag"><span class="vocab">vocab</span></span></a>
+<li><a href="#orge1000c8">1.8. Vocab&#xa0;&#xa0;&#xa0;<span class="tag"><span class="vocab">vocab</span></span></a>
 <ul>
-<li><a href="#org0025567">1.8.1. https://wordsmith.org/awad/rss1.xml</a></li>
-<li><a href="#orgb87007a">1.8.2. https://www.merriam-webster.com/wotd/feed/rss2</a></li>
-<li><a href="#org0e0626a">1.8.3. https://en.wiktionary.org/w/api.php?action=featuredfeed&amp;feed=wotd</a></li>
-<li><a href="#orgf29b812">1.8.4. http://www.worldwidewords.org/rss/wordfile.xml</a></li>
-<li><a href="#org78c53af">1.8.5. http://feeds.feedburner.com/wordthink/vIYJ</a></li>
+<li><a href="#orga84fd9e">1.8.1. https://wordsmith.org/awad/rss1.xml</a></li>
+<li><a href="#org7eac4a3">1.8.2. https://www.merriam-webster.com/wotd/feed/rss2</a></li>
+<li><a href="#org7fc52f6">1.8.3. https://en.wiktionary.org/w/api.php?action=featuredfeed&amp;feed=wotd</a></li>
+<li><a href="#orga3bf9d8">1.8.4. http://www.worldwidewords.org/rss/wordfile.xml</a></li>
 </ul>
 </li>
 </ul>
@@ -142,158 +141,155 @@ for the JavaScript code in this tag.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgbc02a8b" class="outline-2">
-<h2 id="orgbc02a8b"><span class="section-number-2">1</span> Feeds&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elfeed">elfeed</span></span></h2>
+<div id="outline-container-org7a0d1e4" class="outline-2">
+<h2 id="org7a0d1e4"><span class="section-number-2">1</span> Feeds&#xa0;&#xa0;&#xa0;<span class="tag"><span class="elfeed">elfeed</span></span></h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org9cf9532" class="outline-3">
-<h3 id="org9cf9532"><span class="section-number-3">1.1</span> Computer Science&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cs">cs</span></span></h3>
+<div id="outline-container-org780fce4" class="outline-3">
+<h3 id="org780fce4"><span class="section-number-3">1.1</span> Computer Science&#xa0;&#xa0;&#xa0;<span class="tag"><span class="cs">cs</span></span></h3>
 <div class="outline-text-3" id="text-1-1">
 </div>
-<div id="outline-container-orge4cfe64" class="outline-4">
-<h4 id="orge4cfe64"><span class="section-number-4">1.1.1</span> <a href="http://export.arxiv.org/rss/cs">http://export.arxiv.org/rss/cs</a></h4>
+<div id="outline-container-org80b02a5" class="outline-4">
+<h4 id="org80b02a5"><span class="section-number-4">1.1.1</span> <a href="http://export.arxiv.org/rss/cs">http://export.arxiv.org/rss/cs</a></h4>
 </div>
 </div>
-<div id="outline-container-orgdc3c67d" class="outline-3">
-<h3 id="orgdc3c67d"><span class="section-number-3">1.2</span> Emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
+<div id="outline-container-orgbcbb9ee" class="outline-3">
+<h3 id="orgbcbb9ee"><span class="section-number-3">1.2</span> Emacs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="emacs">emacs</span></span></h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org531eaeb" class="outline-4">
-<h4 id="org531eaeb"><span class="section-number-4">1.2.1</span> <a href="http://planet.emacsen.org/atom.xml">http://planet.emacsen.org/atom.xml</a></h4>
+<div id="outline-container-org4eefa3b" class="outline-4">
+<h4 id="org4eefa3b"><span class="section-number-4">1.2.1</span> <a href="http://planet.emacsen.org/atom.xml">http://planet.emacsen.org/atom.xml</a></h4>
 </div>
-<div id="outline-container-orgfff1eae" class="outline-4">
-<h4 id="orgfff1eae"><span class="section-number-4">1.2.2</span> <a href="https://www.reddit.com/r/emacs/">https://www.reddit.com/r/emacs/</a></h4>
+<div id="outline-container-org3fa617f" class="outline-4">
+<h4 id="org3fa617f"><span class="section-number-4">1.2.2</span> <a href="https://www.reddit.com/r/emacs/">https://www.reddit.com/r/emacs/</a></h4>
 </div>
 </div>
-<div id="outline-container-orgba2199f" class="outline-3">
-<h3 id="orgba2199f"><span class="section-number-3">1.3</span> AI/ML&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AI">AI</span></span></h3>
+<div id="outline-container-orgc49be85" class="outline-3">
+<h3 id="orgc49be85"><span class="section-number-3">1.3</span> AI/ML&#xa0;&#xa0;&#xa0;<span class="tag"><span class="AI">AI</span></span></h3>
 <div class="outline-text-3" id="text-1-3">
 </div>
-<div id="outline-container-org8ca14b7" class="outline-4">
-<h4 id="org8ca14b7"><span class="section-number-4">1.3.1</span> <a href="http://feeds.dzone.com/ai">http://feeds.dzone.com/ai</a></h4>
+<div id="outline-container-orgb4ee1a2" class="outline-4">
+<h4 id="orgb4ee1a2"><span class="section-number-4">1.3.1</span> <a href="http://feeds.dzone.com/ai">http://feeds.dzone.com/ai</a></h4>
 </div>
-<div id="outline-container-org19d71c0" class="outline-4">
-<h4 id="org19d71c0"><span class="section-number-4">1.3.2</span> <a href="https://reddit.com/r/MachineLearning/.rss">https://reddit.com/r/MachineLearning/.rss</a></h4>
+<div id="outline-container-orgc3c342c" class="outline-4">
+<h4 id="orgc3c342c"><span class="section-number-4">1.3.2</span> <a href="https://reddit.com/r/MachineLearning/.rss">https://reddit.com/r/MachineLearning/.rss</a></h4>
 </div>
-<div id="outline-container-orgf141e57" class="outline-4">
-<h4 id="orgf141e57"><span class="section-number-4">1.3.3</span> <a href="https://medium.com/feed/mlreview/">https://medium.com/feed/mlreview/</a></h4>
+<div id="outline-container-org2e616f7" class="outline-4">
+<h4 id="org2e616f7"><span class="section-number-4">1.3.3</span> <a href="https://medium.com/feed/mlreview/">https://medium.com/feed/mlreview/</a></h4>
 </div>
-<div id="outline-container-orgb32a12c" class="outline-4">
-<h4 id="orgb32a12c"><span class="section-number-4">1.3.4</span> <a href="https://distill.pub/rss.xml">https://distill.pub/rss.xml</a></h4>
+<div id="outline-container-orgfbb7eec" class="outline-4">
+<h4 id="orgfbb7eec"><span class="section-number-4">1.3.4</span> <a href="https://distill.pub/rss.xml">https://distill.pub/rss.xml</a></h4>
 </div>
-<div id="outline-container-orgdfa387c" class="outline-4">
-<h4 id="orgdfa387c"><span class="section-number-4">1.3.5</span> <a href="http://www.datatau.com/rss">http://www.datatau.com/rss</a></h4>
+<div id="outline-container-org7009207" class="outline-4">
+<h4 id="org7009207"><span class="section-number-4">1.3.5</span> <a href="http://www.datatau.com/rss">http://www.datatau.com/rss</a></h4>
 </div>
-<div id="outline-container-org3533520" class="outline-4">
-<h4 id="org3533520"><span class="section-number-4">1.3.6</span> <a href="https://towardsdatascience.com/feed">https://towardsdatascience.com/feed</a></h4>
+<div id="outline-container-orgd7c8e7c" class="outline-4">
+<h4 id="orgd7c8e7c"><span class="section-number-4">1.3.6</span> <a href="https://towardsdatascience.com/feed">https://towardsdatascience.com/feed</a></h4>
 </div>
 </div>
 
-<div id="outline-container-org3546992" class="outline-3">
-<h3 id="org3546992"><span class="section-number-3">1.4</span> Programming Languages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pl">pl</span></span></h3>
+<div id="outline-container-org36770b7" class="outline-3">
+<h3 id="org36770b7"><span class="section-number-3">1.4</span> Programming Languages&#xa0;&#xa0;&#xa0;<span class="tag"><span class="pl">pl</span></span></h3>
 <div class="outline-text-3" id="text-1-4">
 </div>
-<div id="outline-container-org3f3894e" class="outline-4">
-<h4 id="org3f3894e"><span class="section-number-4">1.4.1</span> <a href="http://lambda-the-ultimate.org/rss.xml">http://lambda-the-ultimate.org/rss.xml</a></h4>
+<div id="outline-container-org0e063e9" class="outline-4">
+<h4 id="org0e063e9"><span class="section-number-4">1.4.1</span> <a href="http://lambda-the-ultimate.org/rss.xml">http://lambda-the-ultimate.org/rss.xml</a></h4>
 </div>
 </div>
-<div id="outline-container-org58f9d42" class="outline-3">
-<h3 id="org58f9d42"><span class="section-number-3">1.5</span> General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="general">general</span></span></h3>
+<div id="outline-container-orge67997a" class="outline-3">
+<h3 id="orge67997a"><span class="section-number-3">1.5</span> General&#xa0;&#xa0;&#xa0;<span class="tag"><span class="general">general</span></span></h3>
 <div class="outline-text-3" id="text-1-5">
 </div>
-<div id="outline-container-org1f31113" class="outline-4">
-<h4 id="org1f31113"><span class="section-number-4">1.5.1</span> <a href="https://hnrss.org/newest?points=100">https://hnrss.org/newest?points=100</a></h4>
+<div id="outline-container-org770fb0e" class="outline-4">
+<h4 id="org770fb0e"><span class="section-number-4">1.5.1</span> <a href="https://hnrss.org/newest?points=100">https://hnrss.org/newest?points=100</a></h4>
 </div>
-<div id="outline-container-orgc11d435" class="outline-4">
-<h4 id="orgc11d435"><span class="section-number-4">1.5.2</span> <a href="https://jvns.ca/atom.xml">https://jvns.ca/atom.xml</a></h4>
+<div id="outline-container-orgf1b44b8" class="outline-4">
+<h4 id="orgf1b44b8"><span class="section-number-4">1.5.2</span> <a href="https://jvns.ca/atom.xml">https://jvns.ca/atom.xml</a></h4>
 </div>
-<div id="outline-container-org11d1fc0" class="outline-4">
-<h4 id="org11d1fc0"><span class="section-number-4">1.5.3</span> <a href="http://slatestarcodex.com/feed/">http://slatestarcodex.com/feed/</a></h4>
+<div id="outline-container-org9faed64" class="outline-4">
+<h4 id="org9faed64"><span class="section-number-4">1.5.3</span> <a href="http://slatestarcodex.com/feed/">http://slatestarcodex.com/feed/</a></h4>
 </div>
-<div id="outline-container-orga7c9048" class="outline-4">
-<h4 id="orga7c9048"><span class="section-number-4">1.5.4</span> <a href="http://feeds.feedburner.com/mrmoneymustache">http://feeds.feedburner.com/mrmoneymustache</a></h4>
+<div id="outline-container-org22a78b2" class="outline-4">
+<h4 id="org22a78b2"><span class="section-number-4">1.5.4</span> <a href="http://feeds.feedburner.com/mrmoneymustache">http://feeds.feedburner.com/mrmoneymustache</a></h4>
 </div>
-<div id="outline-container-org2e1a7ea" class="outline-4">
-<h4 id="org2e1a7ea"><span class="section-number-4">1.5.5</span> <a href="http://erikbern.com/atom.xml">http://erikbern.com/atom.xml</a></h4>
+<div id="outline-container-org4927768" class="outline-4">
+<h4 id="org4927768"><span class="section-number-4">1.5.5</span> <a href="http://erikbern.com/atom.xml">http://erikbern.com/atom.xml</a></h4>
 </div>
-<div id="outline-container-org1033928" class="outline-4">
-<h4 id="org1033928"><span class="section-number-4">1.5.6</span> <a href="https://blog.acolyer.org/atom.xml">https://blog.acolyer.org/atom.xml</a></h4>
+<div id="outline-container-org5b8ffa1" class="outline-4">
+<h4 id="org5b8ffa1"><span class="section-number-4">1.5.6</span> <a href="https://blog.acolyer.org/atom.xml">https://blog.acolyer.org/atom.xml</a></h4>
 </div>
-<div id="outline-container-org83c0715" class="outline-4">
-<h4 id="org83c0715"><span class="section-number-4">1.5.7</span> <a href="https://peadarcoyle.wordpress.com/feed/">https://peadarcoyle.wordpress.com/feed/</a></h4>
+<div id="outline-container-orgbb64986" class="outline-4">
+<h4 id="orgbb64986"><span class="section-number-4">1.5.7</span> <a href="https://peadarcoyle.wordpress.com/feed/">https://peadarcoyle.wordpress.com/feed/</a></h4>
 </div>
-<div id="outline-container-org6455c5e" class="outline-4">
-<h4 id="org6455c5e"><span class="section-number-4">1.5.8</span> <a href="http://www.inference.vc/feed/">http://www.inference.vc/feed/</a></h4>
+<div id="outline-container-orgb9bde3e" class="outline-4">
+<h4 id="orgb9bde3e"><span class="section-number-4">1.5.8</span> <a href="http://www.inference.vc/feed/">http://www.inference.vc/feed/</a></h4>
 </div>
-<div id="outline-container-orgd5b7d78" class="outline-4">
-<h4 id="orgd5b7d78"><span class="section-number-4">1.5.9</span> <a href="http://larahogan.me/feed.xml">http://larahogan.me/feed.xml</a></h4>
+<div id="outline-container-org7823d58" class="outline-4">
+<h4 id="org7823d58"><span class="section-number-4">1.5.9</span> <a href="http://larahogan.me/feed.xml">http://larahogan.me/feed.xml</a></h4>
 </div>
 </div>
-<div id="outline-container-org136d19d" class="outline-3">
-<h3 id="org136d19d"><span class="section-number-3">1.6</span> Company Blogs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="company">company</span></span></h3>
+<div id="outline-container-org6d93939" class="outline-3">
+<h3 id="org6d93939"><span class="section-number-3">1.6</span> Company Blogs&#xa0;&#xa0;&#xa0;<span class="tag"><span class="company">company</span></span></h3>
 <div class="outline-text-3" id="text-1-6">
 </div>
-<div id="outline-container-org2147e7f" class="outline-4">
-<h4 id="org2147e7f"><span class="section-number-4">1.6.1</span> <a href="https://blogs.dropbox.com/tech/feed/">https://blogs.dropbox.com/tech/feed/</a></h4>
+<div id="outline-container-org414f0b7" class="outline-4">
+<h4 id="org414f0b7"><span class="section-number-4">1.6.1</span> <a href="https://blogs.dropbox.com/tech/feed/">https://blogs.dropbox.com/tech/feed/</a></h4>
 </div>
-<div id="outline-container-org644d71e" class="outline-4">
-<h4 id="org644d71e"><span class="section-number-4">1.6.2</span> <a href="https://codeascraft.com/feed/">https://codeascraft.com/feed/</a></h4>
+<div id="outline-container-org6f791db" class="outline-4">
+<h4 id="org6f791db"><span class="section-number-4">1.6.2</span> <a href="https://codeascraft.com/feed/">https://codeascraft.com/feed/</a></h4>
 </div>
-<div id="outline-container-orgde0f8cd" class="outline-4">
-<h4 id="orgde0f8cd"><span class="section-number-4">1.6.3</span> <a href="http://multithreaded.stitchfix.com/feed">http://multithreaded.stitchfix.com/feed</a></h4>
+<div id="outline-container-org88add8d" class="outline-4">
+<h4 id="org88add8d"><span class="section-number-4">1.6.3</span> <a href="http://multithreaded.stitchfix.com/feed">http://multithreaded.stitchfix.com/feed</a></h4>
 </div>
-<div id="outline-container-org8d8b257" class="outline-4">
-<h4 id="org8d8b257"><span class="section-number-4">1.6.4</span> <a href="https://engineering.pinterest.com/rss.xml">https://engineering.pinterest.com/rss.xml</a></h4>
+<div id="outline-container-org39d39de" class="outline-4">
+<h4 id="org39d39de"><span class="section-number-4">1.6.4</span> <a href="https://engineering.pinterest.com/rss.xml">https://engineering.pinterest.com/rss.xml</a></h4>
 </div>
-<div id="outline-container-orgaaabaf7" class="outline-4">
-<h4 id="orgaaabaf7"><span class="section-number-4">1.6.5</span> <a href="https://research.fb.com/feed/">https://research.fb.com/feed/</a></h4>
+<div id="outline-container-org4f54e5c" class="outline-4">
+<h4 id="org4f54e5c"><span class="section-number-4">1.6.5</span> <a href="https://research.fb.com/feed/">https://research.fb.com/feed/</a></h4>
 </div>
-<div id="outline-container-orgbdf527a" class="outline-4">
-<h4 id="orgbdf527a"><span class="section-number-4">1.6.6</span> <a href="https://medium.com/feed/airbnb-engineering/">https://medium.com/feed/airbnb-engineering/</a></h4>
+<div id="outline-container-org2ac8663" class="outline-4">
+<h4 id="org2ac8663"><span class="section-number-4">1.6.6</span> <a href="https://medium.com/feed/airbnb-engineering/">https://medium.com/feed/airbnb-engineering/</a></h4>
 </div>
-<div id="outline-container-orgb50a6db" class="outline-4">
-<h4 id="orgb50a6db"><span class="section-number-4">1.6.7</span> <a href="https://tech.instacart.com/feed/">https://tech.instacart.com/feed/</a></h4>
+<div id="outline-container-org3c8f54c" class="outline-4">
+<h4 id="org3c8f54c"><span class="section-number-4">1.6.7</span> <a href="https://tech.instacart.com/feed/">https://tech.instacart.com/feed/</a></h4>
 </div>
-<div id="outline-container-orgacb8a33" class="outline-4">
-<h4 id="orgacb8a33"><span class="section-number-4">1.6.8</span> <a href="http://research.baidu.com/feed/">http://research.baidu.com/feed/</a></h4>
+<div id="outline-container-orgbec3a9a" class="outline-4">
+<h4 id="orgbec3a9a"><span class="section-number-4">1.6.8</span> <a href="http://research.baidu.com/feed/">http://research.baidu.com/feed/</a></h4>
 </div>
 </div>
-<div id="outline-container-orgc607365" class="outline-3">
-<h3 id="orgc607365"><span class="section-number-3">1.7</span> Math&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span></span></h3>
+<div id="outline-container-org233f87c" class="outline-3">
+<h3 id="org233f87c"><span class="section-number-3">1.7</span> Math&#xa0;&#xa0;&#xa0;<span class="tag"><span class="math">math</span></span></h3>
 <div class="outline-text-3" id="text-1-7">
 </div>
-<div id="outline-container-org338bd1a" class="outline-4">
-<h4 id="org338bd1a"><span class="section-number-4">1.7.1</span> <a href="http://feeds.feedburner.com/theendeavour">http://feeds.feedburner.com/theendeavour</a></h4>
+<div id="outline-container-orgaf1f54c" class="outline-4">
+<h4 id="orgaf1f54c"><span class="section-number-4">1.7.1</span> <a href="http://feeds.feedburner.com/theendeavour">http://feeds.feedburner.com/theendeavour</a></h4>
 </div>
-<div id="outline-container-org03a4187" class="outline-4">
-<h4 id="org03a4187"><span class="section-number-4">1.7.2</span> <a href="http://andrewgelman.com/feed/">http://andrewgelman.com/feed/</a></h4>
+<div id="outline-container-org9b34a9e" class="outline-4">
+<h4 id="org9b34a9e"><span class="section-number-4">1.7.2</span> <a href="http://andrewgelman.com/feed/">http://andrewgelman.com/feed/</a></h4>
 </div>
 </div>
-<div id="outline-container-orgf2fbd21" class="outline-3">
-<h3 id="orgf2fbd21"><span class="section-number-3">1.8</span> Vocab&#xa0;&#xa0;&#xa0;<span class="tag"><span class="vocab">vocab</span></span></h3>
+<div id="outline-container-orge1000c8" class="outline-3">
+<h3 id="orge1000c8"><span class="section-number-3">1.8</span> Vocab&#xa0;&#xa0;&#xa0;<span class="tag"><span class="vocab">vocab</span></span></h3>
 <div class="outline-text-3" id="text-1-8">
 </div>
-<div id="outline-container-org0025567" class="outline-4">
-<h4 id="org0025567"><span class="section-number-4">1.8.1</span> <a href="https://wordsmith.org/awad/rss1.xml">https://wordsmith.org/awad/rss1.xml</a></h4>
+<div id="outline-container-orga84fd9e" class="outline-4">
+<h4 id="orga84fd9e"><span class="section-number-4">1.8.1</span> <a href="https://wordsmith.org/awad/rss1.xml">https://wordsmith.org/awad/rss1.xml</a></h4>
 </div>
-<div id="outline-container-orgb87007a" class="outline-4">
-<h4 id="orgb87007a"><span class="section-number-4">1.8.2</span> <a href="https://www.merriam-webster.com/wotd/feed/rss2">https://www.merriam-webster.com/wotd/feed/rss2</a></h4>
+<div id="outline-container-org7eac4a3" class="outline-4">
+<h4 id="org7eac4a3"><span class="section-number-4">1.8.2</span> <a href="https://www.merriam-webster.com/wotd/feed/rss2">https://www.merriam-webster.com/wotd/feed/rss2</a></h4>
 </div>
-<div id="outline-container-org0e0626a" class="outline-4">
-<h4 id="org0e0626a"><span class="section-number-4">1.8.3</span> <a href="https://en.wiktionary.org/w/api.php?action=featuredfeed&amp;feed=wotd">https://en.wiktionary.org/w/api.php?action=featuredfeed&amp;feed=wotd</a></h4>
+<div id="outline-container-org7fc52f6" class="outline-4">
+<h4 id="org7fc52f6"><span class="section-number-4">1.8.3</span> <a href="https://en.wiktionary.org/w/api.php?action=featuredfeed&amp;feed=wotd">https://en.wiktionary.org/w/api.php?action=featuredfeed&amp;feed=wotd</a></h4>
 </div>
-<div id="outline-container-orgf29b812" class="outline-4">
-<h4 id="orgf29b812"><span class="section-number-4">1.8.4</span> <a href="http://www.worldwidewords.org/rss/wordfile.xml">http://www.worldwidewords.org/rss/wordfile.xml</a></h4>
-</div>
-<div id="outline-container-org78c53af" class="outline-4">
-<h4 id="org78c53af"><span class="section-number-4">1.8.5</span> <a href="http://feeds.feedburner.com/wordthink/vIYJ">http://feeds.feedburner.com/wordthink/vIYJ</a></h4>
+<div id="outline-container-orga3bf9d8" class="outline-4">
+<h4 id="orga3bf9d8"><span class="section-number-4">1.8.4</span> <a href="http://www.worldwidewords.org/rss/wordfile.xml">http://www.worldwidewords.org/rss/wordfile.xml</a></h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-18 Thu 20:32</p>
+<p class="date">Created: 2018-02-06 Tue 22:29</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

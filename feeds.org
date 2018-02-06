@@ -43,4 +43,3 @@
 *** https://www.merriam-webster.com/wotd/feed/rss2
 *** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd
 *** http://www.worldwidewords.org/rss/wordfile.xml
-*** http://feeds.feedburner.com/wordthink/vIYJ

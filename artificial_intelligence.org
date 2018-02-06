@@ -2,7 +2,7 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Artificial Intelligence
 * Reference Books                                                  :noexport:
-  [[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Stuart%20Russell,%20Peter%20Norvig-Artificial%20Intelligence.%20A%20Modern%20Approach%20%5BGlobal%20Edition%5D-Pearson%20(2016).pdf][AIMA]]
+  [[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Artificial%20Intelligence%20A%20Modern%20Approach%20(3rd%20Edition).pdf][AIMA]]
 * What is Artificial Intelligence?
 Designing agents that act rationally (e.g. through maximising a reward
 function).
@@ -148,29 +148,31 @@ representations.
 The process of looking for a sequence of actions that reaches the goal
 is called /search/. A search algorithm takes a problem as input and
 returns a /solution/ in the form of an action sequence.
-** Searching for Solutions
-*** How Search Algorithms Work
- Search algorithms consider various possible action sequences. The
- possible action sequences start at the initial state form a /search
- tree/.
+* Classical Search
+This addresses observable, deterministic, and known environments where
+the solution is a sequence of actions.
+** How Search Algorithms Work
+Search algorithms consider various possible action sequences. The
+possible action sequences start at the initial state form a /search
+tree/.
 
- Search algorithms require a data structure to keep track of the search
- tree that is being constructed.
+Search algorithms require a data structure to keep track of the search
+tree that is being constructed.
 
- - state :: state in the state space to which the node corresponds
- - parent :: the node in the search tree that generated this node
- - action :: the action that was applied to the parent to generate this node
- - path-cost :: the cost, traditionally denoted by $g(n)$, of the path
-                from the initial state to the node, as indicated by the
-                parent pointers
-*** Measuring Performance
- - completeness :: is the algorithm guaranteed to find a solution if
-                   it exists?
- - optimality :: does the strategy find the optimal solution?
- - time complexity :: how long does it take to find a solution?
- - space complexity :: how much memory is required to do the search?
-*** Uninformed Search Strategies
-**** Breadth-first Search
+- state :: state in the state space to which the node corresponds
+- parent :: the node in the search tree that generated this node
+- action :: the action that was applied to the parent to generate this node
+- path-cost :: the cost, traditionally denoted by $g(n)$, of the path
+               from the initial state to the node, as indicated by the
+               parent pointers
+** Measuring Performance
+- completeness :: is the algorithm guaranteed to find a solution if
+                  it exists?
+- optimality :: does the strategy find the optimal solution?
+- time complexity :: how long does it take to find a solution?
+- space complexity :: how much memory is required to do the search?
+** Uninformed Search Strategies
+*** Breadth-first Search
 The root node is expanded first, then all the successors of the root
 node are expanded next, then their successors, and so on.
 
@@ -188,7 +190,7 @@ used in the /frontier/ is $O(b^d)$.
 
 In general, exponential-complexity search problems cannot be solved by
 uninformed methods for any but the smallest instances.
-**** Uniform-cost Search
+*** Uniform-cost Search
 Uniform-cost search expands the node $n$ with the lowest path
 cost $g(n)$. The goal test is applied to a node when it is selected
 for expansion rather than when it is first generated.
@@ -205,7 +207,7 @@ This is equivalent to BFS if all step costs are qual.
 Completeness is guaranteed only if the cost of every step exceeds some
 small positive constant $\epsilon$. an infinite loop may occur if
 there is a path with an infinite sequence of zero-cost actions.
-**** Depth-first Search
+*** Depth-first Search
 Always expands the /deepest/ node in the current frontier of the
 search tree.
 
@@ -224,7 +226,7 @@ depth of any node. *backtracking search* only generates one successor
 at a time, modifying the current state description rather than copying
 it. Memory requirements reduce to one state description and $O(m)$
 actions.
-**** Depth-limited Search
+*** Depth-limited Search
 In depth-limited search, nodes at depth of pre-determined limit $l$
 are treated as if they had no successors. This limit solves the
 infinite-path problem.
@@ -235,7 +237,7 @@ infinite-path problem.
 | optimal          | NO                            |
 | time complexity  | $O(b^l)$                      |
 | space complexity | $O(b^l)$, $O(l)$ if backtrack |
-**** Iterative Deepening Depth-first Search
+*** Iterative Deepening Depth-first Search
 Key idea is to gradually increase the depth limit: first 0, then
 1, then 2... until a goal is found.
 
@@ -257,8 +259,311 @@ complexity of $O(b^d)$
 1. BFS and IDS are complete if $b$ is finite.
 2. UCS is complete if $b$ is finite and step cost is $\ge \epsilon$.
 3. BFS and IDS are optimal if all step costs are identical.
-**** Bidirectional Search
+*** Bidirectional Search
 Conduct two simultaneous searches -- one forward from the initial
 state, and the other backward from the goal. This is implemented by
 replacing the goal test with a check to see whether the frontiers of
 two searches intersect. This reduces the time ad space complexity to $O(b^{d/2})$.
+** Informed Search Strategies
+*** Greedy best-first search
+/Greedy best-first search/ tries to expand the node that is closest to
+the goal, on the grounds that this is likely to lead to a solution
+quickly. It evaluates nodes by using just the heuristic function:
+$f(n) = h(n)$.
+
+Greedy best-first tree search is incomplete even in a finite state
+space. The graph search version is complete in finite spaces, but not
+in infinite ones. The worst case time and space complexity is
+$O(b^m)$. However, with a good heuristic function, the complexity can
+be reduced substantially.
+*** A* search
+It evaluates nodes by combining $g(n)$ the cost to reach the node, and
+$h(n)$ the cost to get to the goal: $f(n) = g(n) + h(n)$. Since $g(n)$
+gives the path cost from the start node to node $n$, and $h(n)$ is the
+estimated cost of the cheapest path from $n$ to the goal,$f(n) = $
+estimated cost of the cheapest solution through $n$.
+
+$h(n)$ is an /admissible heuristic/ iff it never overestimates the
+cost to reach the goal. For A*, this means that $f(n)$ would never
+overestimate the cost of a solution along the current path.
+
+Admissible heuristics are by nature optimistic because they think the
+cost of solving the problem is less than it actually is.
+
+A second, slightly stronger condition is called /consistency/, and is
+required only for applications of A* to graph search. A heuristic
+$h(n)$ is /consistent/ iff for every node $n$ and every successor $n'$
+of $n$ generated by any action $a$, the estimated cost of reaching the
+goal from $n$ is no greater than the step cost of getting to $n'$ plus
+the estimated cost of reaching the goal from $n'$: $h(n) \le
+c(n,a,n') + h(n')$. This is a form of the general triangle inequality.
+
+A* search is complete, optimal and optimally efficient with a
+consistent heuristic. The latter means that no other optimal algorithm
+is guaranteed to expand fewer nodes than A*.
+
+However, for most problems, the number of states within the goal
+contour search space is still exponential in the length of the
+solution. 
+
+The /absolute error/ of a heuristic is defined as $\Delta = h^*-h$,
+and the /relative error/ is defined as $\epsilon = \frac{h^*-h}{h*}$.
+The complexity results depend strongly on the assumptions made about
+the state space. For constant step costs, it is $O(b^{\epsilon d})$,
+and the effective branching factor is $b^\epsilon$.
+
+A* keeps all generated nodes in memory, and hence it usually runs out
+of space  long before it runs of time. Hence, it is not practical for
+large-scale problems.
+
+Other memory-bounded heuristic searches include:
+- iterative-deepening A* (IDA*)
+- Recursive best-first search (RBFS)
+- Memory-bounded A* (MA*)
+- simplified MA* (SMA*)
+** Learning to Search Better
+Each state in a /metalevel state space/ captures the internal
+computational state of a program that is searching in an /object-level
+state space/. A /metalevel learning/ algorithm can learn from
+experiences to avoid exploring unpromising subtrees. The goal of the
+learning is to minimise the total cost of problem solving, trading off
+computational expense and path cost.
+
+* Heuristic Functions
+If for any node n $h_2(n) \ge h_1(n)$, we say that $h_2$ /dominates/
+$h_1$. Domination translates directly into efficiency: A* using $h_2$
+will never expand more nodes than $h_1$. Hence it is generally better
+to use a heuristic function with higher value, while making sure it is
+consistent, and computing the heuristic function is computationally
+feasible.
+
+** Generating Admissible Heuristics
+*** From Relaxed Problems
+Because the relaxed problem adds edges to the state space, any optimal
+solution in the original problem is, by definition, also a solution in
+the relaxed problem. Hence, the cost of an optimal solution to a
+relaxed problem is an admissible heuristic for the original problem.
+Because the derived heuristic is an exact cost for the relaxed
+problem, it must obey the triangle inequality and is therefore
+consistent.
+
+*** From Subproblems: Pattern Databases 
+/Pattern Databases/ store exact solution costs for every possible
+subproblem instance. In the case of the 8-puzzle, every possible
+configuration of the four tiles and the blank. Each pattern database
+yields an admissible heuristic, and these heuristics can be combined
+by taking the maximum value. Solutions to subproblems can overlap:
+/disjoint pattern databases/ account for this. These work by dividing
+the problem in a way that each move affects only one subproblem.
+
+*** From Experience
+Inductive learning methods work best when supplied with /features/ of
+a state that are relevant to predicting the state's value. A common
+approach to combining features would be through a linear combination:
+$h(n) = c_1x_1(n) + c_2x_2(n)$.
+
+These heuristics satisfy the requirement that $h(n) = 0$ for goal
+states, but are not necessarily admissible or consistent.
+
+* Beyond Classical Search
+Here, we cover algorithms that perform purely /local search/ in the
+state space, evaluating and modifying one or more current states
+rather than systematically exploring paths from an initial state.
+These include methods inspired by statistical physics (simulated
+annealing) and evolutionary biology (genetic algorithms).
+
+If an agent cannot predict exactly what percept it will receive, then
+it will need to consider what to do under each /contingency/ that its
+percepts may reveal.
+
+If the path to the goal doesn't matter, we giht consider a different
+class of algorithms, ones that do not worry about the paths at all.
+/Local search/ algorithms operate using a single /current node/ and
+generally move only to neighbours of that node. Its advantages
+include:
+
+1. They generally use a _constant amount of memory_
+2. They can often find _reasonable solutions in large or infinite
+   state spaces_ where systematic algorithms are not suitable.
+
+** Hill-climbing Search
+The hill-climbing search is a loop that continually moves in the
+direction of increasing value. 
+
+Consider the 8-queens problem.
+
+Local search algorithms typically use a /complete-state formation/. The
+successors of a state are all possible states generated by moving a
+single queen to another square in the same column.
+
+We could use a heuristic cost function $h$ equal to the number of
+queens that are attacking each other, either directly or indirectly.
+
+The global minimum of this function is zero, which only occurs for
+perfect solutions. Hill-climbing algorithms typically choose randomly
+among the set of best successors having the lowest $h$.
+
+Hill-climbing algorithms can get stuck for the following reasons:
+
+- local maxima
+- ridges :: sequence of local maxima
+- plateaux :: flat local maximum, or /shoulder/, from which progress
+              is possible.
+
+
+*** Variants
+- stochastic hill-climbing :: chooses at random from among the uphill
+     moves; the probability of selection can vary with the steepness
+     of the uphill move. Usually converges more slowly, but finds
+     better solutions.
+- first-choice hill-climbing :: stochastic hill-climbing with randomly
+     generated successors until one is generated that is better than
+     the current state. Good when state has many successors.
+- random-restart hill-climbing :: conducts hill-climbing searches from
+     randomly generated initial states, until a goal is found.
+     Trivially complete with probability approaching 1.
+
+** Simulated Annealing
+A hill-climbing algorithm that never makes 'downhill' moves towards
+states with lower-value is guaranteed to be incomplete, because it can
+be stuck on a local maximum.
+
+#+BEGIN_SRC text
+  function SIMULATED-ANNEALING(problem, schedule)
+    inputs: problem, a problem
+            schedule, a mapping from time to 'temperature'
+
+    current ← MAKE-NODE(problem, INITIAL-STATE)
+    for t = 1 to ∞ do
+      T ← schedule(t)
+      if T = 0 then return current
+      next ← a randomly selected successor of current
+      𝞓E ← next.VALUE - current.VALUE
+      if 𝞓E > 0 then current ← next
+      else current ← next only with probability e^(𝞓E/T)
+#+END_SRC
+
+** Local Beam Search
+Local beam search keeps track of $n$ states rather than just one. It
+begins with $n$ randomly generated states, at each step all the
+successors of all states are generated. If any one is a goal, the
+algorithm halts. 
+
+Local-beam search passes useful information between the parallel
+search threads (compared to running random-restart $n$ times), quickly
+abandoning unfruitful searches and moves its resources to where the
+most progress is being made.
+
+/Stochastic local beam search chooses $n$ successors at random, with
+the probability of choosing a given successor being an increasing
+function of its value/.
+
+
+** Genetic Algorithms
+A /genetic algorithm/ is a variant of stochastic beam search in which
+successor states are generated by combining two parent states rather
+than by modifying a single state.
+
+GA begins with a set of $n$ randomly generated states, called the
+/population/. Each state is also called an /individual/.
+
+The production of the next generation of states is rated by the
+objective function, or /fitness function/. A fitness function returns
+higher values for better states.
+
+Like stochastic beam search, genetic algorithms combine an uphill
+tendency with random exploration and exchange of information among
+parallel search threads. /crossover/ in genetic algorithms raises the
+level of granularity at which the search operates.
+
+#+BEGIN_SRC text
+  function GENETIC-ALGORITHM(population, FITNESS-FN) returns an individual
+    inputs: population, a set of individuals
+            FITNESS-FN, a function that measures the fitness of an
+    individual
+
+    repeat
+      new_population ← empty set
+      for i = 1 to SIZE(population) do
+        x ← RANDOM-SELECTION(population, FITNESS-FN)
+        y ← RANDOM-SELECTION(population, FITNESS-FN)
+        child ← REPRODUCE(x,y)
+        if (small random probability) then child ← MUTATE(child)
+        add child to new_population
+      population ← new_population
+    until some individual is fit enough, or enough has elapsed
+    return the best individual in population, according to FITNESS-FN
+
+  function REPRODUCE(x,y) returns an individual
+    inputs: x,y, parent individuals
+
+    n ← LENGTH(x); c ← random(1,n)
+    return APPEND(SUBSTRING(x,1,c), SUBSTRING(y, c+1, n))
+#+END_SRC
+
+** Local Search in Continuous Spaces
+One way to avoid continuous problems is simply to /discretize/ the
+neighbourhood of each state. Many methods attempt to use the
+/gradient/ of the landscape to find a maximum: $x \leftarrow x +
+\delta \nabla (x)$, where $\delta is a small constant called the /step
+size/. For many problems, the /Newton-Raphson/ method is effective. It
+solves the roots for equations $g(x) = 0$, by computing a new
+estimate: $x \leftarrow x - g'(x)/g(x)$. To find a maximum or minimum
+of $f$, we need to find $x$ such that the gradient is zero. In this
+case $g(\mathbf{x})$ in Newton's formula becomes $\nabla
+f(\mathbf{x})$ and the update equation can be written in matrix-vector
+form as:
+
+\begin{align*}
+\mathbf{x} \leftarrow \mathbf{x} - H_f^{-1}(\mathbf{x})\nabla f(\mathbf{x})
+\end{align*}
+
+where $H_f$ is the /Hessian/ matrix of second derivatives. For
+high-dimensional problems, computing the $n^2$ entries of the Hessian
+and inverting it may be expensive, and approximate versions have been
+developed.
+
+Local search methods suffer from local maxima, ridges and plateaux
+in continuous spaces just as much as in discrete spaces.
+
+** Searching with Non-deterministic Actions
+When the environment is either partially observable or
+non-deterministic, percepts become useful. In a partially observable
+environment, every percept helps narrow down the set of possible
+states the agent might be in. In a non-deterministic environment,
+percepts tell the agent which of the possible outcomes of its actions
+has actually occurred. Future percepts cannot be determined in
+advance, and the agent's future actions will depend on those future
+percepts. The solution to a problem is not a sequence but a
+/contingency plan/
+
+The solutions for no-deterministic problems can contain nested
+if-then-else statements, meaning they are trees and not sequences.
+
+*** AND-OR search trees
+A solution for an AND-OR search problem is a subtree that:
+
+1. includes every outcome branch leaf
+2. specifies one action at each of its OR nodes
+3. includes every outcome branch at each of its AND nodes
+
+#+BEGIN_SRC text
+  function AND-OR-GRAPH-SEARCH(problem) returns a conditional plan, or failure
+    OR-SEARCH(problem, INITIAL-STATE, problem, [])
+
+  function OR-SEARCH(state,problem,path) returns a conditional plan, or failure
+    if problem, GOAL-TEST(state) then return the empty plan
+    if state is on path then return failure
+    for each action in problem, ACTIONS(state) do
+      plan ← AND-SEARCH(RESULTS(state,action), problem, [state | path])
+      if plan ≠ failure then return [action | plan]
+    return failure
+
+  function AND-SEARCH(states,problem,path) returns a conditional plan, or failure
+    for each s_i in states do
+      plan_i ← OR-SEARCH(s_i,problem,path)
+      if plan_i = failure then return failure
+    return [if s_1 then plan_1 else if s_2 then plan_2 ...]
+#+END_SRC
+
+(stop at AIMA 4.4)

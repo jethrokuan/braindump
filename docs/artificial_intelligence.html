@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-22 Mon 15:36 -->
+<!-- 2018-02-06 Tue 22:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Artificial Intelligence</title>
@@ -20,7 +20,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -91,52 +91,85 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org533ec48">1. What is Artificial Intelligence?</a>
+<li><a href="#org33203f2">1. What is Artificial Intelligence?</a>
 <ul>
-<li><a href="#orgff545a6">1.1. Acting Humanly: Turing Test</a></li>
-<li><a href="#orgb881d00">1.2. Thinking Humanly</a></li>
-<li><a href="#orgeda76f3">1.3. Thinking rationally</a></li>
-<li><a href="#org98014e8">1.4. Acting Rationally</a></li>
+<li><a href="#org85c34fe">1.1. Acting Humanly: Turing Test</a></li>
+<li><a href="#org17ca603">1.2. Thinking Humanly</a></li>
+<li><a href="#org2a78085">1.3. Thinking rationally</a></li>
+<li><a href="#org1594477">1.4. Acting Rationally</a></li>
 </ul>
 </li>
-<li><a href="#orgf0d683d">2. Intelligent Agents</a>
+<li><a href="#org8104198">2. Intelligent Agents</a>
 <ul>
-<li><a href="#orge8126a0">2.1. Rational Agents</a></li>
-<li><a href="#orgedfdac7">2.2. Exploration vs Exploitation</a></li>
-<li><a href="#org46d5020">2.3. Specifying Task Environment (PEAS)</a></li>
-<li><a href="#orgc42c669">2.4. Properties of Task Environments</a></li>
-<li><a href="#org1312789">2.5. Table-Driven Agent</a></li>
-<li><a href="#org105b037">2.6. Reflex agents</a></li>
-<li><a href="#org0808ddb">2.7. Model-based Reflex Agents</a></li>
-<li><a href="#orgd47e249">2.8. Goal-based agents</a></li>
-<li><a href="#orgda9b055">2.9. Utility-based agents</a></li>
-<li><a href="#orgf2d2103">2.10. Learning agents</a></li>
-<li><a href="#org76ab81e">2.11. State representations</a>
+<li><a href="#orgab30572">2.1. Rational Agents</a></li>
+<li><a href="#org272ba45">2.2. Exploration vs Exploitation</a></li>
+<li><a href="#org2fc62c0">2.3. Specifying Task Environment (PEAS)</a></li>
+<li><a href="#org5923ec7">2.4. Properties of Task Environments</a></li>
+<li><a href="#orga5897cd">2.5. Table-Driven Agent</a></li>
+<li><a href="#org9976de4">2.6. Reflex agents</a></li>
+<li><a href="#org178fe95">2.7. Model-based Reflex Agents</a></li>
+<li><a href="#orgc705d9c">2.8. Goal-based agents</a></li>
+<li><a href="#org07de921">2.9. Utility-based agents</a></li>
+<li><a href="#orga930bb9">2.10. Learning agents</a></li>
+<li><a href="#org1a24dbe">2.11. State representations</a>
 <ul>
-<li><a href="#org2d9803d">2.11.1. Atomic Representation</a></li>
-<li><a href="#org68d347c">2.11.2. Factored Representation</a></li>
-<li><a href="#org1ee377e">2.11.3. Structured Representations</a></li>
-<li><a href="#orga6daf98">2.11.4. Implications</a></li>
+<li><a href="#orgc398f46">2.11.1. Atomic Representation</a></li>
+<li><a href="#org52e3269">2.11.2. Factored Representation</a></li>
+<li><a href="#org0f96ddd">2.11.3. Structured Representations</a></li>
+<li><a href="#org80eefef">2.11.4. Implications</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9c2be81">3. Problem-Solving</a>
+<li><a href="#orgf1eeb2f">3. Problem-Solving</a></li>
+<li><a href="#org35ad543">4. Classical Search</a>
 <ul>
-<li><a href="#orgc9f2f8b">3.1. Searching for Solutions</a>
+<li><a href="#orgf9cf12d">4.1. How Search Algorithms Work</a></li>
+<li><a href="#orgf27ab4d">4.2. Measuring Performance</a></li>
+<li><a href="#org4547d1d">4.3. Uninformed Search Strategies</a>
 <ul>
-<li><a href="#orgf79408e">3.1.1. How Search Algorithms Work</a></li>
-<li><a href="#org5669856">3.1.2. Measuring Performance</a></li>
-<li><a href="#orgef5a053">3.1.3. Uninformed Search Strategies</a>
-<ul>
-<li><a href="#org98adbfe">3.1.3.1. Breadth-first Search</a></li>
-<li><a href="#org57e65cc">3.1.3.2. Uniform-cost Search</a></li>
-<li><a href="#org39629c8">3.1.3.3. Depth-first Search</a></li>
-<li><a href="#org8cbb4d2">3.1.3.4. Depth-limited Search</a></li>
-<li><a href="#org2366c86">3.1.3.5. Iterative Deepening Depth-first Search</a></li>
-<li><a href="#orgfd81acf">3.1.3.6. Bidirectional Search</a></li>
+<li><a href="#orgaba8c99">4.3.1. Breadth-first Search</a></li>
+<li><a href="#org72d6b2d">4.3.2. Uniform-cost Search</a></li>
+<li><a href="#orgec8b8ce">4.3.3. Depth-first Search</a></li>
+<li><a href="#org49811b6">4.3.4. Depth-limited Search</a></li>
+<li><a href="#orge3340fc">4.3.5. Iterative Deepening Depth-first Search</a></li>
+<li><a href="#orgbe6cdbe">4.3.6. Bidirectional Search</a></li>
 </ul>
 </li>
+<li><a href="#org3f20e46">4.4. Informed Search Strategies</a>
+<ul>
+<li><a href="#orgb655b75">4.4.1. Greedy best-first search</a></li>
+<li><a href="#org2f6396f">4.4.2. A* search</a></li>
+</ul>
+</li>
+<li><a href="#orgbb6eb3d">4.5. Learning to Search Better</a></li>
+</ul>
+</li>
+<li><a href="#org2f7954b">5. Heuristic Functions</a>
+<ul>
+<li><a href="#org0d7c2c7">5.1. Generating Admissible Heuristics</a>
+<ul>
+<li><a href="#orga7d9735">5.1.1. From Relaxed Problems</a></li>
+<li><a href="#org6e55428">5.1.2. From Subproblems: Pattern Databases</a></li>
+<li><a href="#orgfe34844">5.1.3. From Experience</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9cd54d7">6. Beyond Classical Search</a>
+<ul>
+<li><a href="#orgeb5ea21">6.1. Hill-climbing Search</a>
+<ul>
+<li><a href="#org84d3693">6.1.1. Variants</a></li>
+</ul>
+</li>
+<li><a href="#org273faba">6.2. Simulated Annealing</a></li>
+<li><a href="#org12a7c68">6.3. Local Beam Search</a></li>
+<li><a href="#orgd42dbe1">6.4. Genetic Algorithms</a></li>
+<li><a href="#org4122856">6.5. Local Search in Continuous Spaces</a></li>
+<li><a href="#org99c9e87">6.6. Searching with Non-deterministic Actions</a>
+<ul>
+<li><a href="#org6e1c847">6.6.1. AND-OR search trees</a></li>
 </ul>
 </li>
 </ul>
@@ -147,8 +180,8 @@ for the JavaScript code in this tag.
 <p>
 -<b>- mode: Org; org-download-image-dir: "./images/ai/"; -</b>-
 </p>
-<div id="outline-container-org533ec48" class="outline-2">
-<h2 id="org533ec48"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
+<div id="outline-container-org33203f2" class="outline-2">
+<h2 id="org33203f2"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Designing agents that act rationally (e.g. through maximising a reward
@@ -160,8 +193,8 @@ Humans often act in ways that do not maximise their own benefit
 (irrational).
 </p>
 </div>
-<div id="outline-container-orgff545a6" class="outline-3">
-<h3 id="orgff545a6"><span class="section-number-3">1.1</span> Acting Humanly: Turing Test</h3>
+<div id="outline-container-org85c34fe" class="outline-3">
+<h3 id="org85c34fe"><span class="section-number-3">1.1</span> Acting Humanly: Turing Test</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 A computer would require:
@@ -175,8 +208,8 @@ A computer would require:
 </ul>
 </div>
 </div>
-<div id="outline-container-orgb881d00" class="outline-3">
-<h3 id="orgb881d00"><span class="section-number-3">1.2</span> Thinking Humanly</h3>
+<div id="outline-container-org17ca603" class="outline-3">
+<h3 id="org17ca603"><span class="section-number-3">1.2</span> Thinking Humanly</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Cognitive science brings together computer models and experimental
@@ -185,16 +218,16 @@ of the human mind.
 </p>
 </div>
 </div>
-<div id="outline-container-orgeda76f3" class="outline-3">
-<h3 id="orgeda76f3"><span class="section-number-3">1.3</span> Thinking rationally</h3>
+<div id="outline-container-org2a78085" class="outline-3">
+<h3 id="org2a78085"><span class="section-number-3">1.3</span> Thinking rationally</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Taking informal knowledge and expressing it in logical terms.
 </p>
 </div>
 </div>
-<div id="outline-container-org98014e8" class="outline-3">
-<h3 id="org98014e8"><span class="section-number-3">1.4</span> Acting Rationally</h3>
+<div id="outline-container-org1594477" class="outline-3">
+<h3 id="org1594477"><span class="section-number-3">1.4</span> Acting Rationally</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 A rational agent is one that acts so as to achieve the best outcome
@@ -209,16 +242,16 @@ must consider computation limits.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf0d683d" class="outline-2">
-<h2 id="orgf0d683d"><span class="section-number-2">2</span> Intelligent Agents</h2>
+<div id="outline-container-org8104198" class="outline-2">
+<h2 id="org8104198"><span class="section-number-2">2</span> Intelligent Agents</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Agents perceive the environment through sensors</li>
 <li>Agents act upon the environment through actuators</li>
 </ul>
 </div>
-<div id="outline-container-orge8126a0" class="outline-3">
-<h3 id="orge8126a0"><span class="section-number-3">2.1</span> Rational Agents</h3>
+<div id="outline-container-orgab30572" class="outline-3">
+<h3 id="orgab30572"><span class="section-number-3">2.1</span> Rational Agents</h3>
 <div class="outline-text-3" id="text-2-1">
 <ul class="org-ul">
 <li>For each possible percept sequence, select an action that is
@@ -233,8 +266,8 @@ experience (with ability to learn and adapt)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgedfdac7" class="outline-3">
-<h3 id="orgedfdac7"><span class="section-number-3">2.2</span> Exploration vs Exploitation</h3>
+<div id="outline-container-org272ba45" class="outline-3">
+<h3 id="org272ba45"><span class="section-number-3">2.2</span> Exploration vs Exploitation</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Doing actions that modify future percepts (information gathering) is
@@ -243,8 +276,8 @@ the entire environment <i>a priori</i>.
 </p>
 </div>
 </div>
-<div id="outline-container-org46d5020" class="outline-3">
-<h3 id="org46d5020"><span class="section-number-3">2.3</span> Specifying Task Environment (PEAS)</h3>
+<div id="outline-container-org2fc62c0" class="outline-3">
+<h3 id="org2fc62c0"><span class="section-number-3">2.3</span> Specifying Task Environment (PEAS)</h3>
 <div class="outline-text-3" id="text-2-3">
 <ul class="org-ul">
 <li>Performance measure</li>
@@ -254,8 +287,8 @@ the entire environment <i>a priori</i>.
 </ul>
 </div>
 </div>
-<div id="outline-container-orgc42c669" class="outline-3">
-<h3 id="orgc42c669"><span class="section-number-3">2.4</span> Properties of Task Environments</h3>
+<div id="outline-container-org5923ec7" class="outline-3">
+<h3 id="org5923ec7"><span class="section-number-3">2.4</span> Properties of Task Environments</h3>
 <div class="outline-text-3" id="text-2-4">
 <dl class="org-dl">
 <dt>Fully observable</dt><dd>whether an agent's sensors gives it access to
@@ -283,8 +316,8 @@ multiple agents acting in the same environment.
 </dl>
 </div>
 </div>
-<div id="outline-container-org1312789" class="outline-3">
-<h3 id="org1312789"><span class="section-number-3">2.5</span> Table-Driven Agent</h3>
+<div id="outline-container-orga5897cd" class="outline-3">
+<h3 id="orga5897cd"><span class="section-number-3">2.5</span> Table-Driven Agent</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Simple to implement, and works. However, the number of table entries
@@ -294,8 +327,8 @@ behaviour from a small program rather than a vast table.
 </p>
 </div>
 </div>
-<div id="outline-container-org105b037" class="outline-3">
-<h3 id="org105b037"><span class="section-number-3">2.6</span> Reflex agents</h3>
+<div id="outline-container-org9976de4" class="outline-3">
+<h3 id="org9976de4"><span class="section-number-3">2.6</span> Reflex agents</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 A simple reflex agent is one that selects actions on the basis of the
@@ -311,8 +344,8 @@ can help escape these infinite loops.
 </p>
 </div>
 </div>
-<div id="outline-container-org0808ddb" class="outline-3">
-<h3 id="org0808ddb"><span class="section-number-3">2.7</span> Model-based Reflex Agents</h3>
+<div id="outline-container-org178fe95" class="outline-3">
+<h3 id="org178fe95"><span class="section-number-3">2.7</span> Model-based Reflex Agents</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 The agent maintains some <b>internal state</b> that depends on percept
@@ -323,8 +356,8 @@ from the agent is encoded into the agent. This knowledge is called a
 </p>
 </div>
 </div>
-<div id="outline-container-orgd47e249" class="outline-3">
-<h3 id="orgd47e249"><span class="section-number-3">2.8</span> Goal-based agents</h3>
+<div id="outline-container-orgc705d9c" class="outline-3">
+<h3 id="orgc705d9c"><span class="section-number-3">2.8</span> Goal-based agents</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 Knowing about the current state of the environment may not be enough
@@ -337,8 +370,8 @@ explicitly and can be modified, although it is less efficient.
 </p>
 </div>
 </div>
-<div id="outline-container-orgda9b055" class="outline-3">
-<h3 id="orgda9b055"><span class="section-number-3">2.9</span> Utility-based agents</h3>
+<div id="outline-container-org07de921" class="outline-3">
+<h3 id="org07de921"><span class="section-number-3">2.9</span> Utility-based agents</h3>
 <div class="outline-text-3" id="text-2-9">
 <p>
 Goals provide a binary distinction between good and bad states. A more
@@ -350,8 +383,8 @@ utility-based agents has to model and keep track of its environment.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf2d2103" class="outline-3">
-<h3 id="orgf2d2103"><span class="section-number-3">2.10</span> Learning agents</h3>
+<div id="outline-container-orga930bb9" class="outline-3">
+<h3 id="orga930bb9"><span class="section-number-3">2.10</span> Learning agents</h3>
 <div class="outline-text-3" id="text-2-10">
 <p>
 A learning agent can be divided into four conceptual components.
@@ -370,12 +403,12 @@ modified to do better in the future.
 </p>
 </div>
 </div>
-<div id="outline-container-org76ab81e" class="outline-3">
-<h3 id="org76ab81e"><span class="section-number-3">2.11</span> State representations</h3>
+<div id="outline-container-org1a24dbe" class="outline-3">
+<h3 id="org1a24dbe"><span class="section-number-3">2.11</span> State representations</h3>
 <div class="outline-text-3" id="text-2-11">
 </div>
-<div id="outline-container-org2d9803d" class="outline-4">
-<h4 id="org2d9803d"><span class="section-number-4">2.11.1</span> Atomic Representation</h4>
+<div id="outline-container-orgc398f46" class="outline-4">
+<h4 id="orgc398f46"><span class="section-number-4">2.11.1</span> Atomic Representation</h4>
 <div class="outline-text-4" id="text-2-11-1">
 <p>
 In an atomic representation each state of the world is indivisible,
@@ -385,8 +418,8 @@ representations.
 </p>
 </div>
 </div>
-<div id="outline-container-org68d347c" class="outline-4">
-<h4 id="org68d347c"><span class="section-number-4">2.11.2</span> Factored Representation</h4>
+<div id="outline-container-org52e3269" class="outline-4">
+<h4 id="org52e3269"><span class="section-number-4">2.11.2</span> Factored Representation</h4>
 <div class="outline-text-4" id="text-2-11-2">
 <p>
 A factored representation splits up each state into a fixed set of
@@ -401,8 +434,8 @@ representations.
 </div>
 </div>
 
-<div id="outline-container-org1ee377e" class="outline-4">
-<h4 id="org1ee377e"><span class="section-number-4">2.11.3</span> Structured Representations</h4>
+<div id="outline-container-org0f96ddd" class="outline-4">
+<h4 id="org0f96ddd"><span class="section-number-4">2.11.3</span> Structured Representations</h4>
 <div class="outline-text-4" id="text-2-11-3">
 <p>
 Structured representations underlie relational databases and
@@ -411,8 +444,8 @@ learning and much of natural language understanding.
 </p>
 </div>
 </div>
-<div id="outline-container-orga6daf98" class="outline-4">
-<h4 id="orga6daf98"><span class="section-number-4">2.11.4</span> Implications</h4>
+<div id="outline-container-org80eefef" class="outline-4">
+<h4 id="org80eefef"><span class="section-number-4">2.11.4</span> Implications</h4>
 <div class="outline-text-4" id="text-2-11-4">
 <p>
 A more expressive representation can capture, at least as concisely, a
@@ -424,8 +457,8 @@ power of the representation increases.
 </div>
 </div>
 </div>
-<div id="outline-container-org9c2be81" class="outline-2">
-<h2 id="org9c2be81"><span class="section-number-2">3</span> Problem-Solving</h2>
+<div id="outline-container-orgf1eeb2f" class="outline-2">
+<h2 id="orgf1eeb2f"><span class="section-number-2">3</span> Problem-Solving</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Problem-solving agents use <i>atomic</i> representations, as compared to
@@ -439,13 +472,18 @@ is called <i>search</i>. A search algorithm takes a problem as input and
 returns a <i>solution</i> in the form of an action sequence.
 </p>
 </div>
-<div id="outline-container-orgc9f2f8b" class="outline-3">
-<h3 id="orgc9f2f8b"><span class="section-number-3">3.1</span> Searching for Solutions</h3>
-<div class="outline-text-3" id="text-3-1">
 </div>
-<div id="outline-container-orgf79408e" class="outline-4">
-<h4 id="orgf79408e"><span class="section-number-4">3.1.1</span> How Search Algorithms Work</h4>
-<div class="outline-text-4" id="text-3-1-1">
+<div id="outline-container-org35ad543" class="outline-2">
+<h2 id="org35ad543"><span class="section-number-2">4</span> Classical Search</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This addresses observable, deterministic, and known environments where
+the solution is a sequence of actions.
+</p>
+</div>
+<div id="outline-container-orgf9cf12d" class="outline-3">
+<h3 id="orgf9cf12d"><span class="section-number-3">4.1</span> How Search Algorithms Work</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 Search algorithms consider various possible action sequences. The
 possible action sequences start at the initial state form a <i>search
@@ -467,9 +505,9 @@ parent pointers</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org5669856" class="outline-4">
-<h4 id="org5669856"><span class="section-number-4">3.1.2</span> Measuring Performance</h4>
-<div class="outline-text-4" id="text-3-1-2">
+<div id="outline-container-orgf27ab4d" class="outline-3">
+<h3 id="orgf27ab4d"><span class="section-number-3">4.2</span> Measuring Performance</h3>
+<div class="outline-text-3" id="text-4-2">
 <dl class="org-dl">
 <dt>completeness</dt><dd>is the algorithm guaranteed to find a solution if
 it exists?</dd>
@@ -479,13 +517,13 @@ it exists?</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgef5a053" class="outline-4">
-<h4 id="orgef5a053"><span class="section-number-4">3.1.3</span> Uninformed Search Strategies</h4>
-<div class="outline-text-4" id="text-3-1-3">
+<div id="outline-container-org4547d1d" class="outline-3">
+<h3 id="org4547d1d"><span class="section-number-3">4.3</span> Uninformed Search Strategies</h3>
+<div class="outline-text-3" id="text-4-3">
 </div>
-<div id="outline-container-org98adbfe" class="outline-5">
-<h5 id="org98adbfe"><span class="section-number-5">3.1.3.1</span> Breadth-first Search</h5>
-<div class="outline-text-5" id="text-3-1-3-1">
+<div id="outline-container-orgaba8c99" class="outline-4">
+<h4 id="orgaba8c99"><span class="section-number-4">4.3.1</span> Breadth-first Search</h4>
+<div class="outline-text-4" id="text-4-3-1">
 <p>
 The root node is expanded first, then all the successors of the root
 node are expanded next, then their successors, and so on.
@@ -543,9 +581,9 @@ uninformed methods for any but the smallest instances.
 </p>
 </div>
 </div>
-<div id="outline-container-org57e65cc" class="outline-5">
-<h5 id="org57e65cc"><span class="section-number-5">3.1.3.2</span> Uniform-cost Search</h5>
-<div class="outline-text-5" id="text-3-1-3-2">
+<div id="outline-container-org72d6b2d" class="outline-4">
+<h4 id="org72d6b2d"><span class="section-number-4">4.3.2</span> Uniform-cost Search</h4>
+<div class="outline-text-4" id="text-4-3-2">
 <p>
 Uniform-cost search expands the node \(n\) with the lowest path
 cost \(g(n)\). The goal test is applied to a node when it is selected
@@ -600,9 +638,9 @@ there is a path with an infinite sequence of zero-cost actions.
 </p>
 </div>
 </div>
-<div id="outline-container-org39629c8" class="outline-5">
-<h5 id="org39629c8"><span class="section-number-5">3.1.3.3</span> Depth-first Search</h5>
-<div class="outline-text-5" id="text-3-1-3-3">
+<div id="outline-container-orgec8b8ce" class="outline-4">
+<h4 id="orgec8b8ce"><span class="section-number-4">4.3.3</span> Depth-first Search</h4>
+<div class="outline-text-4" id="text-4-3-3">
 <p>
 Always expands the <i>deepest</i> node in the current frontier of the
 search tree.
@@ -659,9 +697,9 @@ actions.
 </p>
 </div>
 </div>
-<div id="outline-container-org8cbb4d2" class="outline-5">
-<h5 id="org8cbb4d2"><span class="section-number-5">3.1.3.4</span> Depth-limited Search</h5>
-<div class="outline-text-5" id="text-3-1-3-4">
+<div id="outline-container-org49811b6" class="outline-4">
+<h4 id="org49811b6"><span class="section-number-4">4.3.4</span> Depth-limited Search</h4>
+<div class="outline-text-4" id="text-4-3-4">
 <p>
 In depth-limited search, nodes at depth of pre-determined limit \(l\)
 are treated as if they had no successors. This limit solves the
@@ -706,9 +744,9 @@ infinite-path problem.
 </table>
 </div>
 </div>
-<div id="outline-container-org2366c86" class="outline-5">
-<h5 id="org2366c86"><span class="section-number-5">3.1.3.5</span> Iterative Deepening Depth-first Search</h5>
-<div class="outline-text-5" id="text-3-1-3-5">
+<div id="outline-container-orge3340fc" class="outline-4">
+<h4 id="orge3340fc"><span class="section-number-4">4.3.5</span> Iterative Deepening Depth-first Search</h4>
+<div class="outline-text-4" id="text-4-3-5">
 <p>
 Key idea is to gradually increase the depth limit: first 0, then
 1, then 2&#x2026; until a goal is found.
@@ -772,9 +810,9 @@ complexity of \(O(b^d)\)
 </ol>
 </div>
 </div>
-<div id="outline-container-orgfd81acf" class="outline-5">
-<h5 id="orgfd81acf"><span class="section-number-5">3.1.3.6</span> Bidirectional Search</h5>
-<div class="outline-text-5" id="text-3-1-3-6">
+<div id="outline-container-orgbe6cdbe" class="outline-4">
+<h4 id="orgbe6cdbe"><span class="section-number-4">4.3.6</span> Bidirectional Search</h4>
+<div class="outline-text-4" id="text-4-3-6">
 <p>
 Conduct two simultaneous searches &#x2013; one forward from the initial
 state, and the other backward from the goal. This is implemented by
@@ -784,12 +822,481 @@ two searches intersect. This reduces the time ad space complexity to \(O(b^{d/2}
 </div>
 </div>
 </div>
+<div id="outline-container-org3f20e46" class="outline-3">
+<h3 id="org3f20e46"><span class="section-number-3">4.4</span> Informed Search Strategies</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgb655b75" class="outline-4">
+<h4 id="orgb655b75"><span class="section-number-4">4.4.1</span> Greedy best-first search</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+<i>Greedy best-first search</i> tries to expand the node that is closest to
+the goal, on the grounds that this is likely to lead to a solution
+quickly. It evaluates nodes by using just the heuristic function:
+\(f(n) = h(n)\).
+</p>
+
+<p>
+Greedy best-first tree search is incomplete even in a finite state
+space. The graph search version is complete in finite spaces, but not
+in infinite ones. The worst case time and space complexity is
+\(O(b^m)\). However, with a good heuristic function, the complexity can
+be reduced substantially.
+</p>
+</div>
+</div>
+<div id="outline-container-org2f6396f" class="outline-4">
+<h4 id="org2f6396f"><span class="section-number-4">4.4.2</span> A* search</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+It evaluates nodes by combining \(g(n)\) the cost to reach the node, and
+\(h(n)\) the cost to get to the goal: \(f(n) = g(n) + h(n)\). Since \(g(n)\)
+gives the path cost from the start node to node \(n\), and \(h(n)\) is the
+estimated cost of the cheapest path from \(n\) to the goal,$f(n) = $
+estimated cost of the cheapest solution through \(n\).
+</p>
+
+<p>
+\(h(n)\) is an <i>admissible heuristic</i> iff it never overestimates the
+cost to reach the goal. For A*, this means that \(f(n)\) would never
+overestimate the cost of a solution along the current path.
+</p>
+
+<p>
+Admissible heuristics are by nature optimistic because they think the
+cost of solving the problem is less than it actually is.
+</p>
+
+<p>
+A second, slightly stronger condition is called <i>consistency</i>, and is
+required only for applications of A* to graph search. A heuristic
+\(h(n)\) is <i>consistent</i> iff for every node \(n\) and every successor \(n'\)
+of \(n\) generated by any action \(a\), the estimated cost of reaching the
+goal from \(n\) is no greater than the step cost of getting to \(n'\) plus
+the estimated cost of reaching the goal from \(n'\): \(h(n) \le
+c(n,a,n') + h(n')\). This is a form of the general triangle inequality.
+</p>
+
+<p>
+A* search is complete, optimal and optimally efficient with a
+consistent heuristic. The latter means that no other optimal algorithm
+is guaranteed to expand fewer nodes than A*.
+</p>
+
+<p>
+However, for most problems, the number of states within the goal
+contour search space is still exponential in the length of the
+solution. 
+</p>
+
+<p>
+The <i>absolute error</i> of a heuristic is defined as \(\Delta = h^*-h\),
+and the <i>relative error</i> is defined as \(\epsilon = \frac{h^*-h}{h*}\).
+The complexity results depend strongly on the assumptions made about
+the state space. For constant step costs, it is \(O(b^{\epsilon d})\),
+and the effective branching factor is \(b^\epsilon\).
+</p>
+
+<p>
+A* keeps all generated nodes in memory, and hence it usually runs out
+of space  long before it runs of time. Hence, it is not practical for
+large-scale problems.
+</p>
+
+<p>
+Other memory-bounded heuristic searches include:
+</p>
+<ul class="org-ul">
+<li>iterative-deepening A* (IDA*)</li>
+<li>Recursive best-first search (RBFS)</li>
+<li>Memory-bounded A* (MA*)</li>
+<li>simplified MA* (SMA*)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbb6eb3d" class="outline-3">
+<h3 id="orgbb6eb3d"><span class="section-number-3">4.5</span> Learning to Search Better</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Each state in a <i>metalevel state space</i> captures the internal
+computational state of a program that is searching in an <i>object-level
+state space</i>. A <i>metalevel learning</i> algorithm can learn from
+experiences to avoid exploring unpromising subtrees. The goal of the
+learning is to minimise the total cost of problem solving, trading off
+computational expense and path cost.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2f7954b" class="outline-2">
+<h2 id="org2f7954b"><span class="section-number-2">5</span> Heuristic Functions</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+If for any node n \(h_2(n) \ge h_1(n)\), we say that \(h_2\) <i>dominates</i>
+\(h_1\). Domination translates directly into efficiency: A* using \(h_2\)
+will never expand more nodes than \(h_1\). Hence it is generally better
+to use a heuristic function with higher value, while making sure it is
+consistent, and computing the heuristic function is computationally
+feasible.
+</p>
+</div>
+
+<div id="outline-container-org0d7c2c7" class="outline-3">
+<h3 id="org0d7c2c7"><span class="section-number-3">5.1</span> Generating Admissible Heuristics</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orga7d9735" class="outline-4">
+<h4 id="orga7d9735"><span class="section-number-4">5.1.1</span> From Relaxed Problems</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+Because the relaxed problem adds edges to the state space, any optimal
+solution in the original problem is, by definition, also a solution in
+the relaxed problem. Hence, the cost of an optimal solution to a
+relaxed problem is an admissible heuristic for the original problem.
+Because the derived heuristic is an exact cost for the relaxed
+problem, it must obey the triangle inequality and is therefore
+consistent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org6e55428" class="outline-4">
+<h4 id="org6e55428"><span class="section-number-4">5.1.2</span> From Subproblems: Pattern Databases</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+<i>Pattern Databases</i> store exact solution costs for every possible
+subproblem instance. In the case of the 8-puzzle, every possible
+configuration of the four tiles and the blank. Each pattern database
+yields an admissible heuristic, and these heuristics can be combined
+by taking the maximum value. Solutions to subproblems can overlap:
+<i>disjoint pattern databases</i> account for this. These work by dividing
+the problem in a way that each move affects only one subproblem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgfe34844" class="outline-4">
+<h4 id="orgfe34844"><span class="section-number-4">5.1.3</span> From Experience</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+Inductive learning methods work best when supplied with <i>features</i> of
+a state that are relevant to predicting the state's value. A common
+approach to combining features would be through a linear combination:
+\(h(n) = c_1x_1(n) + c_2x_2(n)\).
+</p>
+
+<p>
+These heuristics satisfy the requirement that \(h(n) = 0\) for goal
+states, but are not necessarily admissible or consistent.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9cd54d7" class="outline-2">
+<h2 id="org9cd54d7"><span class="section-number-2">6</span> Beyond Classical Search</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Here, we cover algorithms that perform purely <i>local search</i> in the
+state space, evaluating and modifying one or more current states
+rather than systematically exploring paths from an initial state.
+These include methods inspired by statistical physics (simulated
+annealing) and evolutionary biology (genetic algorithms).
+</p>
+
+<p>
+If an agent cannot predict exactly what percept it will receive, then
+it will need to consider what to do under each <i>contingency</i> that its
+percepts may reveal.
+</p>
+
+<p>
+If the path to the goal doesn't matter, we giht consider a different
+class of algorithms, ones that do not worry about the paths at all.
+<i>Local search</i> algorithms operate using a single <i>current node</i> and
+generally move only to neighbours of that node. Its advantages
+include:
+</p>
+
+<ol class="org-ol">
+<li>They generally use a <span class="underline">constant amount of memory</span></li>
+<li>They can often find <span class="underline">reasonable solutions in large or infinite
+state spaces</span> where systematic algorithms are not suitable.</li>
+</ol>
+</div>
+
+<div id="outline-container-orgeb5ea21" class="outline-3">
+<h3 id="orgeb5ea21"><span class="section-number-3">6.1</span> Hill-climbing Search</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+The hill-climbing search is a loop that continually moves in the
+direction of increasing value. 
+</p>
+
+<p>
+Consider the 8-queens problem.
+</p>
+
+<p>
+Local search algorithms typically use a <i>complete-state formation</i>. The
+successors of a state are all possible states generated by moving a
+single queen to another square in the same column.
+</p>
+
+<p>
+We could use a heuristic cost function \(h\) equal to the number of
+queens that are attacking each other, either directly or indirectly.
+</p>
+
+<p>
+The global minimum of this function is zero, which only occurs for
+perfect solutions. Hill-climbing algorithms typically choose randomly
+among the set of best successors having the lowest \(h\).
+</p>
+
+<p>
+Hill-climbing algorithms can get stuck for the following reasons:
+</p>
+
+<ul class="org-ul">
+<li>local maxima</li>
+<li id="ridges">sequence of local maxima</li>
+<li id="plateaux">flat local maximum, or <i>shoulder</i>, from which progress
+is possible.</li>
+</ul>
+</div>
+
+
+<div id="outline-container-org84d3693" class="outline-4">
+<h4 id="org84d3693"><span class="section-number-4">6.1.1</span> Variants</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<dl class="org-dl">
+<dt>stochastic hill-climbing</dt><dd>chooses at random from among the uphill
+moves; the probability of selection can vary with the steepness
+of the uphill move. Usually converges more slowly, but finds
+better solutions.</dd>
+<dt>first-choice hill-climbing</dt><dd>stochastic hill-climbing with randomly
+generated successors until one is generated that is better than
+the current state. Good when state has many successors.</dd>
+<dt>random-restart hill-climbing</dt><dd>conducts hill-climbing searches from
+randomly generated initial states, until a goal is found.
+Trivially complete with probability approaching 1.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org273faba" class="outline-3">
+<h3 id="org273faba"><span class="section-number-3">6.2</span> Simulated Annealing</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+A hill-climbing algorithm that never makes 'downhill' moves towards
+states with lower-value is guaranteed to be incomplete, because it can
+be stuck on a local maximum.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function SIMULATED-ANNEALING(problem, schedule)
+  inputs: problem, a problem
+          schedule, a mapping from time to 'temperature'
+
+  current ← MAKE-NODE(problem, INITIAL-STATE)
+  for t = 1 to ∞ do
+    T ← schedule(t)
+    if T = 0 then return current
+    next ← a randomly selected successor of current
+    𝞓E ← next.VALUE - current.VALUE
+    if 𝞓E &gt; 0 then current ← next
+    else current ← next only with probability e^(𝞓E/T)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org12a7c68" class="outline-3">
+<h3 id="org12a7c68"><span class="section-number-3">6.3</span> Local Beam Search</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+Local beam search keeps track of \(n\) states rather than just one. It
+begins with \(n\) randomly generated states, at each step all the
+successors of all states are generated. If any one is a goal, the
+algorithm halts. 
+</p>
+
+<p>
+Local-beam search passes useful information between the parallel
+search threads (compared to running random-restart \(n\) times), quickly
+abandoning unfruitful searches and moves its resources to where the
+most progress is being made.
+</p>
+
+<p>
+/Stochastic local beam search chooses \(n\) successors at random, with
+the probability of choosing a given successor being an increasing
+function of its value/.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgd42dbe1" class="outline-3">
+<h3 id="orgd42dbe1"><span class="section-number-3">6.4</span> Genetic Algorithms</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+A <i>genetic algorithm</i> is a variant of stochastic beam search in which
+successor states are generated by combining two parent states rather
+than by modifying a single state.
+</p>
+
+<p>
+GA begins with a set of \(n\) randomly generated states, called the
+<i>population</i>. Each state is also called an <i>individual</i>.
+</p>
+
+<p>
+The production of the next generation of states is rated by the
+objective function, or <i>fitness function</i>. A fitness function returns
+higher values for better states.
+</p>
+
+<p>
+Like stochastic beam search, genetic algorithms combine an uphill
+tendency with random exploration and exchange of information among
+parallel search threads. <i>crossover</i> in genetic algorithms raises the
+level of granularity at which the search operates.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function GENETIC-ALGORITHM(population, FITNESS-FN) returns an individual
+  inputs: population, a set of individuals
+          FITNESS-FN, a function that measures the fitness of an
+  individual
+
+  repeat
+    new_population ← empty set
+    for i = 1 to SIZE(population) do
+      x ← RANDOM-SELECTION(population, FITNESS-FN)
+      y ← RANDOM-SELECTION(population, FITNESS-FN)
+      child ← REPRODUCE(x,y)
+      if (small random probability) then child ← MUTATE(child)
+      add child to new_population
+    population ← new_population
+  until some individual is fit enough, or enough has elapsed
+  return the best individual in population, according to FITNESS-FN
+
+function REPRODUCE(x,y) returns an individual
+  inputs: x,y, parent individuals
+
+  n ← LENGTH(x); c ← random(1,n)
+  return APPEND(SUBSTRING(x,1,c), SUBSTRING(y, c+1, n))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4122856" class="outline-3">
+<h3 id="org4122856"><span class="section-number-3">6.5</span> Local Search in Continuous Spaces</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+One way to avoid continuous problems is simply to <i>discretize</i> the
+neighbourhood of each state. Many methods attempt to use the
+<i>gradient</i> of the landscape to find a maximum: \(x \leftarrow x +
+\delta \nabla (x)\), where $&delta; is a small constant called the <i>step
+size</i>. For many problems, the <i>Newton-Raphson</i> method is effective. It
+solves the roots for equations \(g(x) = 0\), by computing a new
+estimate: \(x \leftarrow x - g'(x)/g(x)\). To find a maximum or minimum
+of \(f\), we need to find \(x\) such that the gradient is zero. In this
+case \(g(\mathbf{x})\) in Newton's formula becomes \(\nabla
+f(\mathbf{x})\) and the update equation can be written in matrix-vector
+form as:
+</p>
+
+\begin{align*}
+\mathbf{x} \leftarrow \mathbf{x} - H_f^{-1}(\mathbf{x})\nabla f(\mathbf{x})
+\end{align*}
+
+<p>
+where \(H_f\) is the <i>Hessian</i> matrix of second derivatives. For
+high-dimensional problems, computing the \(n^2\) entries of the Hessian
+and inverting it may be expensive, and approximate versions have been
+developed.
+</p>
+
+<p>
+Local search methods suffer from local maxima, ridges and plateaux
+in continuous spaces just as much as in discrete spaces.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99c9e87" class="outline-3">
+<h3 id="org99c9e87"><span class="section-number-3">6.6</span> Searching with Non-deterministic Actions</h3>
+<div class="outline-text-3" id="text-6-6">
+<p>
+When the environment is either partially observable or
+non-deterministic, percepts become useful. In a partially observable
+environment, every percept helps narrow down the set of possible
+states the agent might be in. In a non-deterministic environment,
+percepts tell the agent which of the possible outcomes of its actions
+has actually occurred. Future percepts cannot be determined in
+advance, and the agent's future actions will depend on those future
+percepts. The solution to a problem is not a sequence but a
+<i>contingency plan</i>
+</p>
+
+<p>
+The solutions for no-deterministic problems can contain nested
+if-then-else statements, meaning they are trees and not sequences.
+</p>
+</div>
+
+<div id="outline-container-org6e1c847" class="outline-4">
+<h4 id="org6e1c847"><span class="section-number-4">6.6.1</span> AND-OR search trees</h4>
+<div class="outline-text-4" id="text-6-6-1">
+<p>
+A solution for an AND-OR search problem is a subtree that:
+</p>
+
+<ol class="org-ol">
+<li>includes every outcome branch leaf</li>
+<li>specifies one action at each of its OR nodes</li>
+<li>includes every outcome branch at each of its AND nodes</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-text">function AND-OR-GRAPH-SEARCH(problem) returns a conditional plan, or failure
+  OR-SEARCH(problem, INITIAL-STATE, problem, [])
+
+function OR-SEARCH(state,problem,path) returns a conditional plan, or failure
+  if problem, GOAL-TEST(state) then return the empty plan
+  if state is on path then return failure
+  for each action in problem, ACTIONS(state) do
+    plan ← AND-SEARCH(RESULTS(state,action), problem, [state | path])
+    if plan ≠ failure then return [action | plan]
+  return failure
+
+function AND-SEARCH(states,problem,path) returns a conditional plan, or failure
+  for each s_i in states do
+    plan_i ← OR-SEARCH(s_i,problem,path)
+    if plan_i = failure then return failure
+  return [if s_1 then plan_1 else if s_2 then plan_2 ...]
+</pre>
+</div>
+
+<p>
+(stop at AIMA 4.4)
+</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-22 Mon 15:36</p>
+<p class="date">Created: 2018-02-06 Tue 22:29</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

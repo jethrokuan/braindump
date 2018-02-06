@@ -21,6 +21,19 @@ modified textrank
    agglomerate clustering
 
 Couperin
+* Connecting to SoC VPN
+use openfortivpn.
+
+#+BEGIN_SRC sh
+  sudo openfortivpn webvpn.comp.nus.edu.sg:443 -u e0036913 -p pass --trusted-cert cert
+#+END_SRC
+
+* Setting up GPU cluster
+1. Install Anaconda
+2. Setup conda environment with required packages
+3. conda env update
+4. source activate fastai
+
 * Current Methodology
 1. Use TextRank algorithm
 ** TextRank
@@ -81,4 +94,12 @@ CATHY - co-occurrence network clustering, recursively apply
 CATHY to discover sub-topics
 
 [[http://chbrown.github.io/kdd-2013-usb/kdd/p437.pdf][Phrase Mining Framework for Recursive Construction of a Topical Hierachy]]
+* Topic Modeling
+http://www.cs.columbia.edu/~blei/topicmodeling.html
+
+
+This review article provides a great overview of LDA and its shortcomings:
+http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf
+
+
 

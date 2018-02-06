@@ -99,3 +99,13 @@ small $p_b$ is called the capacity of the channel.
   C(f) = 1 - H_2(f) = 1 - \left[f\log_2\frac{1}{f} + (1-f)\log_2\frac{1}{1-f}\right]
 \end{equation*}
 n
+* Shannon Information Content
+A set of size S can be communicated with $\ceil{\log S}$ bits.
+
+
+
+* Source Coding Theorem
+We can compress N outcomes from a source $X$ into roughly $NH(X)$
+bits.
+
+This is provable by counting the typical set.

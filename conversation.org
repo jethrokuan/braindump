@@ -62,3 +62,6 @@ how conversational practices fit together in highly intricate ways.
 - What is the speaker doing in saying this and in saying it in this
   way?
 - We do not ask what it means. We ask what it does.
+* Turn taking
+We are very attuned to grammatical intonation, so we know when to
+start speaking.

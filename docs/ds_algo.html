@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-01-13 Sat 11:58 -->
+<!-- 2018-02-06 Tue 22:29 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Structures and Algorithms</title>
@@ -20,7 +20,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2017 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -88,12 +88,12 @@ for the JavaScript code in this tag.
 <div id="content">
 <h1 class="title">Data Structures and Algorithms</h1>
 
-<div id="outline-container-orgb1ee1c6" class="outline-2">
-<h2 id="orgb1ee1c6"><span class="section-number-2">1</span> Java</h2>
+<div id="outline-container-orga414b98" class="outline-2">
+<h2 id="orga414b98"><span class="section-number-2">1</span> Java</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orga6fcf72" class="outline-3">
-<h3 id="orga6fcf72"><span class="section-number-3">1.1</span> Access Modifier</h3>
+<div id="outline-container-orgfa7f0d6" class="outline-3">
+<h3 id="orgfa7f0d6"><span class="section-number-3">1.1</span> Access Modifier</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 C: Class; P: Package; SC: Subclass; W: World
@@ -157,8 +157,8 @@ C: Class; P: Package; SC: Subclass; W: World
 </table>
 </div>
 </div>
-<div id="outline-container-org0b4615a" class="outline-3">
-<h3 id="org0b4615a"><span class="section-number-3">1.2</span> Comparable</h3>
+<div id="outline-container-org3aa0493" class="outline-3">
+<h3 id="org3aa0493"><span class="section-number-3">1.2</span> Comparable</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Implement <code>Comparable&lt;T&gt;</code>:
@@ -169,8 +169,8 @@ Implement <code>Comparable&lt;T&gt;</code>:
 </div>
 </div>
 </div>
-<div id="outline-container-org3860447" class="outline-3">
-<h3 id="org3860447"><span class="section-number-3">1.3</span> hashCode</h3>
+<div id="outline-container-org213f013" class="outline-3">
+<h3 id="org213f013"><span class="section-number-3">1.3</span> hashCode</h3>
 <div class="outline-text-3" id="text-1-3">
 <ul class="org-ul">
 <li>If two objects are <code>equal</code>, <code>hashCode</code> must return the same result</li>
@@ -184,8 +184,8 @@ boolean equals(Object o) {}
 </div>
 </div>
 </div>
-<div id="outline-container-orgc3f70b4" class="outline-3">
-<h3 id="orgc3f70b4"><span class="section-number-3">1.4</span> Common Issues</h3>
+<div id="outline-container-org1e21814" class="outline-3">
+<h3 id="org1e21814"><span class="section-number-3">1.4</span> Common Issues</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Array out of bounds; divide by zero; infinite loop; exception thrown
@@ -194,8 +194,8 @@ but not caught; access member variable in static method
 </div>
 </div>
 </div>
-<div id="outline-container-org58d0d8f" class="outline-2">
-<h2 id="org58d0d8f"><span class="section-number-2">2</span> Algorithmic Analysis</h2>
+<div id="outline-container-orgc057804" class="outline-2">
+<h2 id="orgc057804"><span class="section-number-2">2</span> Algorithmic Analysis</h2>
 <div class="outline-text-2" id="text-2">
 <dl class="org-dl">
 <dt>Amortized Cost</dt><dd>Algo has amortized cost \(T(n)\) if &forall; k
@@ -203,8 +203,8 @@ but not caught; access member variable in static method
                     kT(n)\)</dd>
 </dl>
 </div>
-<div id="outline-container-org34ff9a1" class="outline-3">
-<h3 id="org34ff9a1"><span class="section-number-3">2.1</span> Master's Theorem</h3>
+<div id="outline-container-orge20f658" class="outline-3">
+<h3 id="orge20f658"><span class="section-number-3">2.1</span> Master's Theorem</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 \(T(n) = aT(\frac{n}{b}) + f(n)\) where a &ge; 1, b &gt; 1
@@ -216,8 +216,8 @@ but not caught; access member variable in static method
   af(\frac{n}{b})\le kf(n) \text{ then } T(n) \in \Theta(n^{\log_ba})\)</li>
 </ul>
 </div>
-<div id="outline-container-orgdb59068" class="outline-4">
-<h4 id="orgdb59068"><span class="section-number-4">2.1.1</span> Common Ones</h4>
+<div id="outline-container-org24428a1" class="outline-4">
+<h4 id="org24428a1"><span class="section-number-4">2.1.1</span> Common Ones</h4>
 <div class="outline-text-4" id="text-2-1-1">
 <ul class="org-ul">
 <li>\(T(n) = T(n/2) + \Theta(1) = O(\log n)\) (Binary Search)</li>
@@ -230,8 +230,8 @@ Search)</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orga938004" class="outline-2">
-<h2 id="orga938004"><span class="section-number-2">3</span> Abstract Data Types</h2>
+<div id="outline-container-org79af67e" class="outline-2">
+<h2 id="org79af67e"><span class="section-number-2">3</span> Abstract Data Types</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
 <dt>Bag</dt><dd>Insert(i); Draw()</dd>
@@ -241,8 +241,8 @@ Search)</li>
 </dl>
 </div>
 </div>
-<div id="outline-container-org67d61b4" class="outline-2">
-<h2 id="org67d61b4"><span class="section-number-2">4</span> Searching</h2>
+<div id="outline-container-org805676e" class="outline-2">
+<h2 id="org805676e"><span class="section-number-2">4</span> Searching</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>Binary Search \(O(\log n)\)</li>
@@ -294,8 +294,8 @@ else go into quadrant with higher number
 </div>
 </div>
 </div>
-<div id="outline-container-org21a22d1" class="outline-2">
-<h2 id="org21a22d1"><span class="section-number-2">5</span> Sorting</h2>
+<div id="outline-container-org43e3428" class="outline-2">
+<h2 id="org43e3428"><span class="section-number-2">5</span> Sorting</h2>
 <div class="outline-text-2" id="text-5">
 <dl class="org-dl">
 <dt>Bubble Sort</dt><dd>Stable, In-place, W&amp;A \(O(n^2)\), B \(O(n)\), S \(O(1)\);
@@ -315,12 +315,12 @@ original elements in sorted order.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org4114312" class="outline-2">
-<h2 id="org4114312"><span class="section-number-2">6</span> Geometric Algorithms</h2>
+<div id="outline-container-org284c517" class="outline-2">
+<h2 id="org284c517"><span class="section-number-2">6</span> Geometric Algorithms</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org24453b8" class="outline-3">
-<h3 id="org24453b8"><span class="section-number-3">6.1</span> Jarvis March \(O(hn)\)</h3>
+<div id="outline-container-orgc568682" class="outline-3">
+<h3 id="orgc568682"><span class="section-number-3">6.1</span> Jarvis March \(O(hn)\)</h3>
 <div class="outline-text-3" id="text-6-1">
 <ol class="org-ol">
 <li>Find somewhere to start, e.g. y-min coordinate</li>
@@ -329,8 +329,8 @@ original elements in sorted order.</dd>
 </ol>
 </div>
 </div>
-<div id="outline-container-orga76783e" class="outline-3">
-<h3 id="orga76783e"><span class="section-number-3">6.2</span> Line Intersection Algorithm \(O(n\log n)\)</h3>
+<div id="outline-container-org239b490" class="outline-3">
+<h3 id="org239b490"><span class="section-number-3">6.2</span> Line Intersection Algorithm \(O(n\log n)\)</h3>
 <div class="outline-text-3" id="text-6-2">
 <ol class="org-ol">
 <li>Divide into two equal size sets (along vertical line)</li>
@@ -351,8 +351,8 @@ original elements in sorted order.</dd>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgfba0d09" class="outline-3">
-<h3 id="orgfba0d09"><span class="section-number-3">6.3</span> Quick Hull \(O(n \log n)\)</h3>
+<div id="outline-container-orgb9cb235" class="outline-3">
+<h3 id="orgb9cb235"><span class="section-number-3">6.3</span> Quick Hull \(O(n \log n)\)</h3>
 <div class="outline-text-3" id="text-6-3">
 <ol class="org-ol">
 <li>Choose pivot, construct two subproblems, delete interior points</li>
@@ -361,12 +361,12 @@ original elements in sorted order.</dd>
 </div>
 </div>
 </div>
-<div id="outline-container-orgacba3c7" class="outline-2">
-<h2 id="orgacba3c7"><span class="section-number-2">7</span> Trees</h2>
+<div id="outline-container-org2b37d1b" class="outline-2">
+<h2 id="org2b37d1b"><span class="section-number-2">7</span> Trees</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org26ecd7e" class="outline-3">
-<h3 id="org26ecd7e"><span class="section-number-3">7.1</span> Binary Trees (height <code>h</code>)</h3>
+<div id="outline-container-org905de55" class="outline-3">
+<h3 id="org905de55"><span class="section-number-3">7.1</span> Binary Trees (height <code>h</code>)</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 \(h(v) = max\left(h(v.left), h(v.right)\right) + 1\)
@@ -390,8 +390,8 @@ successor)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgfc6a0dc" class="outline-3">
-<h3 id="orgfc6a0dc"><span class="section-number-3">7.2</span> AVL Trees (height \(h = \log n\))</h3>
+<div id="outline-container-org21b2549" class="outline-3">
+<h3 id="org21b2549"><span class="section-number-3">7.2</span> AVL Trees (height \(h = \log n\))</h3>
 <div class="outline-text-3" id="text-7-2">
 <ul class="org-ul">
 <li><b>Property</b>: Every node is height-balanced</li>
@@ -422,12 +422,12 @@ where operations are non-random.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgccbb52e" class="outline-3">
-<h3 id="orgccbb52e"><span class="section-number-3">7.3</span> Augmented Trees</h3>
+<div id="outline-container-org7238875" class="outline-3">
+<h3 id="org7238875"><span class="section-number-3">7.3</span> Augmented Trees</h3>
 <div class="outline-text-3" id="text-7-3">
 </div>
-<div id="outline-container-orgd505f27" class="outline-4">
-<h4 id="orgd505f27"><span class="section-number-4">7.3.1</span> Rank Tree (Order Statistics)</h4>
+<div id="outline-container-org52d3d08" class="outline-4">
+<h4 id="org52d3d08"><span class="section-number-4">7.3.1</span> Rank Tree (Order Statistics)</h4>
 <div class="outline-text-4" id="text-7-3-1">
 <ul class="org-ul">
 <li>store weight of tree in each node:</li>
@@ -458,8 +458,8 @@ where operations are non-random.</li>
 </div>
 </div>
 
-<div id="outline-container-org1488f8f" class="outline-4">
-<h4 id="org1488f8f"><span class="section-number-4">7.3.2</span> Interval Trees</h4>
+<div id="outline-container-orgb7d50f4" class="outline-4">
+<h4 id="orgb7d50f4"><span class="section-number-4">7.3.2</span> Interval Trees</h4>
 <div class="outline-text-4" id="text-7-3-2">
 <ul class="org-ul">
 <li>Each node is an interval \((m, n), m \le n\)</li>
@@ -488,12 +488,12 @@ repeat until no intervals found
 </div>
 </div>
 </div>
-<div id="outline-container-org4cc44e9" class="outline-4">
-<h4 id="org4cc44e9"><span class="section-number-4">7.3.3</span> Orthogonal Range Searching</h4>
+<div id="outline-container-orgbaf6e8c" class="outline-4">
+<h4 id="orgbaf6e8c"><span class="section-number-4">7.3.3</span> Orthogonal Range Searching</h4>
 <div class="outline-text-4" id="text-7-3-3">
 </div>
-<div id="outline-container-orge3073f0" class="outline-5">
-<h5 id="orge3073f0"><span class="section-number-5">7.3.3.1</span> 1D</h5>
+<div id="outline-container-orgd978dbd" class="outline-5">
+<h5 id="orgd978dbd"><span class="section-number-5">7.3.3.1</span> 1D</h5>
 <div class="outline-text-5" id="text-7-3-3-1">
 <ol class="org-ol">
 <li>use a binary tree search tree</li>
@@ -506,8 +506,8 @@ only copies</li>
 </div>
 </div>
 
-<div id="outline-container-orgf711b17" class="outline-5">
-<h5 id="orgf711b17"><span class="section-number-5">7.3.3.2</span> k-dim Tree</h5>
+<div id="outline-container-org5dc6f5c" class="outline-5">
+<h5 id="org5dc6f5c"><span class="section-number-5">7.3.3.2</span> k-dim Tree</h5>
 <div class="outline-text-5" id="text-7-3-3-2">
 <ol class="org-ol">
 <li>each node in the x-tree has a set of points in its subtree</li>
@@ -519,8 +519,8 @@ only copies</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgbacb0c5" class="outline-4">
-<h4 id="orgbacb0c5"><span class="section-number-4">7.3.4</span> Custom Augmentations</h4>
+<div id="outline-container-org08482d0" class="outline-4">
+<h4 id="org08482d0"><span class="section-number-4">7.3.4</span> Custom Augmentations</h4>
 <div class="outline-text-4" id="text-7-3-4">
 <ul class="org-ul">
 <li><b>Average height of people taller</b>: augment nodes to include the
@@ -535,8 +535,8 @@ left-subtree, then w’s right-subtree and w.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org21b9c7a" class="outline-2">
-<h2 id="org21b9c7a"><span class="section-number-2">8</span> Hash Tables</h2>
+<div id="outline-container-org1bbbd79" class="outline-2">
+<h2 id="org1bbbd79"><span class="section-number-2">8</span> Hash Tables</h2>
 <div class="outline-text-2" id="text-8">
 <ul class="org-ul">
 <li>n: #items, m: #buckets</li>
@@ -549,20 +549,20 @@ bucket, and are mapped independently
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-orgfa25772" class="outline-3">
-<h3 id="orgfa25772"><span class="section-number-3">8.1</span> Hash Functions</h3>
+<div id="outline-container-org3e0e114" class="outline-3">
+<h3 id="org3e0e114"><span class="section-number-3">8.1</span> Hash Functions</h3>
 <div class="outline-text-3" id="text-8-1">
 </div>
-<div id="outline-container-org6ddfb06" class="outline-4">
-<h4 id="org6ddfb06"><span class="section-number-4">8.1.1</span> Division</h4>
+<div id="outline-container-org1aaa37e" class="outline-4">
+<h4 id="org1aaa37e"><span class="section-number-4">8.1.1</span> Division</h4>
 <div class="outline-text-4" id="text-8-1-1">
 <ul class="org-ul">
 <li>\(h(k) = k \text{ mod } m\), choose m prime</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org69ab344" class="outline-4">
-<h4 id="org69ab344"><span class="section-number-4">8.1.2</span> Multiplication</h4>
+<div id="outline-container-orgbd12b9e" class="outline-4">
+<h4 id="orgbd12b9e"><span class="section-number-4">8.1.2</span> Multiplication</h4>
 <div class="outline-text-4" id="text-8-1-2">
 <ul class="org-ul">
 <li>fix table size: \(m=2^r\), for some \(r\)</li>
@@ -572,8 +572,8 @@ bucket, and are mapped independently
 </ul>
 </div>
 </div>
-<div id="outline-container-orgaace501" class="outline-4">
-<h4 id="orgaace501"><span class="section-number-4">8.1.3</span> Rolling Hash</h4>
+<div id="outline-container-org873b91d" class="outline-4">
+<h4 id="org873b91d"><span class="section-number-4">8.1.3</span> Rolling Hash</h4>
 <div class="outline-text-4" id="text-8-1-3">
 <ul class="org-ul">
 <li>When key changes by single character</li>
@@ -581,8 +581,8 @@ bucket, and are mapped independently
 </div>
 </div>
 </div>
-<div id="outline-container-org41a9c79" class="outline-3">
-<h3 id="org41a9c79"><span class="section-number-3">8.2</span> Chaining</h3>
+<div id="outline-container-orgca1d820" class="outline-3">
+<h3 id="orgca1d820"><span class="section-number-3">8.2</span> Chaining</h3>
 <div class="outline-text-3" id="text-8-2">
 <ul class="org-ul">
 <li>bucket stores linked list, containing (object, value)</li>
@@ -592,8 +592,8 @@ bucket, and are mapped independently
 </ul>
 </div>
 </div>
-<div id="outline-container-org103ddfe" class="outline-3">
-<h3 id="org103ddfe"><span class="section-number-3">8.3</span> Open Addressing</h3>
+<div id="outline-container-orgfe65581" class="outline-3">
+<h3 id="orgfe65581"><span class="section-number-3">8.3</span> Open Addressing</h3>
 <div class="outline-text-3" id="text-8-3">
 <ul class="org-ul">
 <li>One item per slot, probe sequence of buckets until find only one</li>
@@ -615,8 +615,8 @@ bucket, and are mapped independently
 </ul>
 </div>
 </div>
-<div id="outline-container-org8590fdf" class="outline-3">
-<h3 id="org8590fdf"><span class="section-number-3">8.4</span> Cuckoo Hashing</h3>
+<div id="outline-container-org19e9d9a" class="outline-3">
+<h3 id="org19e9d9a"><span class="section-number-3">8.4</span> Cuckoo Hashing</h3>
 <div class="outline-text-3" id="text-8-4">
 <ul class="org-ul">
 <li>Resolving hash collisions with worst-case constant lookup time</li>
@@ -627,8 +627,8 @@ key to second location.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org9f22c86" class="outline-3">
-<h3 id="org9f22c86"><span class="section-number-3">8.5</span> Table resizing</h3>
+<div id="outline-container-orga530048" class="outline-3">
+<h3 id="orga530048"><span class="section-number-3">8.5</span> Table resizing</h3>
 <div class="outline-text-3" id="text-8-5">
 <ul class="org-ul">
 <li>Scan old table \(O(m_1)\), create new table \(O(m_2)\), insert each
@@ -637,8 +637,8 @@ element \(O(1)\), total \(O(m_1 + m_2 + n)\)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd177f83" class="outline-3">
-<h3 id="orgd177f83"><span class="section-number-3">8.6</span> Fingerprint Hash Table (FHT)</h3>
+<div id="outline-container-org976ce05" class="outline-3">
+<h3 id="org976ce05"><span class="section-number-3">8.6</span> Fingerprint Hash Table (FHT)</h3>
 <div class="outline-text-3" id="text-8-6">
 <ul class="org-ul">
 <li>Vector of 0/1 bits</li>
@@ -646,8 +646,8 @@ element \(O(1)\), total \(O(m_1 + m_2 + n)\)</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orged013a4" class="outline-3">
-<h3 id="orged013a4"><span class="section-number-3">8.7</span> Bloom Filter</h3>
+<div id="outline-container-orgb96a593" class="outline-3">
+<h3 id="orgb96a593"><span class="section-number-3">8.7</span> Bloom Filter</h3>
 <div class="outline-text-3" id="text-8-7">
 <ul class="org-ul">
 <li>use \(n\) hash functions. More space per item, but require \(n\)
@@ -660,8 +660,8 @@ collisions for false positive.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgec5e5f8" class="outline-2">
-<h2 id="orgec5e5f8"><span class="section-number-2">9</span> Graphs</h2>
+<div id="outline-container-orgf79d762" class="outline-2">
+<h2 id="orgf79d762"><span class="section-number-2">9</span> Graphs</h2>
 <div class="outline-text-2" id="text-9">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -705,15 +705,15 @@ collisions for false positive.</li>
 </tbody>
 </table>
 </div>
-<div id="outline-container-org51c5a5b" class="outline-3">
-<h3 id="org51c5a5b"><span class="section-number-3">9.1</span> Simple search</h3>
+<div id="outline-container-org45c840f" class="outline-3">
+<h3 id="org45c840f"><span class="section-number-3">9.1</span> Simple search</h3>
 <div class="outline-text-3" id="text-9-1">
 <ul class="org-ul">
 <li>BFS/DFS do not explore all paths</li>
 </ul>
 </div>
-<div id="outline-container-org7c21d4b" class="outline-4">
-<h4 id="org7c21d4b"><span class="section-number-4">9.1.1</span> BFS \(O(V+E)\)</h4>
+<div id="outline-container-org04c6ac9" class="outline-4">
+<h4 id="org04c6ac9"><span class="section-number-4">9.1.1</span> BFS \(O(V+E)\)</h4>
 <div class="outline-text-4" id="text-9-1-1">
 <div class="org-src-container">
 <pre class="src src-text">bfs(root)
@@ -730,8 +730,8 @@ collisions for false positive.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org0975cdf" class="outline-4">
-<h4 id="org0975cdf"><span class="section-number-4">9.1.2</span> DFS \(O(V+E)\)</h4>
+<div id="outline-container-org11a8243" class="outline-4">
+<h4 id="org11a8243"><span class="section-number-4">9.1.2</span> DFS \(O(V+E)\)</h4>
 <div class="outline-text-4" id="text-9-1-2">
 <ul class="org-ul">
 <li>Same as BFS, but use stack instead of queue</li>
@@ -739,8 +739,8 @@ collisions for false positive.</li>
 </div>
 </div>
 
-<div id="outline-container-org9581f99" class="outline-4">
-<h4 id="org9581f99"><span class="section-number-4">9.1.3</span> Topological Sort (DAG)</h4>
+<div id="outline-container-org5829801" class="outline-4">
+<h4 id="org5829801"><span class="section-number-4">9.1.3</span> Topological Sort (DAG)</h4>
 <div class="outline-text-4" id="text-9-1-3">
 <ul class="org-ul">
 <li>Post-order DFS</li>
@@ -751,12 +751,12 @@ also O(V+E))</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org5080264" class="outline-3">
-<h3 id="org5080264"><span class="section-number-3">9.2</span> SSSP</h3>
+<div id="outline-container-org2bfb1b9" class="outline-3">
+<h3 id="org2bfb1b9"><span class="section-number-3">9.2</span> SSSP</h3>
 <div class="outline-text-3" id="text-9-2">
 </div>
-<div id="outline-container-orgff240f4" class="outline-4">
-<h4 id="orgff240f4"><span class="section-number-4">9.2.1</span> Bellman-Ford \(O(EV)\)</h4>
+<div id="outline-container-orgd59bfcd" class="outline-4">
+<h4 id="orgd59bfcd"><span class="section-number-4">9.2.1</span> Bellman-Ford \(O(EV)\)</h4>
 <div class="outline-text-4" id="text-9-2-1">
 <ul class="org-ul">
 <li>\(O(V^3)\) if using Adj Matrix</li>
@@ -775,8 +775,8 @@ if have changes it has negative cycle</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgedbe546" class="outline-4">
-<h4 id="orgedbe546"><span class="section-number-4">9.2.2</span> Dijkstra \(O(E\log V)\)</h4>
+<div id="outline-container-orgada4e1e" class="outline-4">
+<h4 id="orgada4e1e"><span class="section-number-4">9.2.2</span> Dijkstra \(O(E\log V)\)</h4>
 <div class="outline-text-4" id="text-9-2-2">
 <ul class="org-ul">
 <li>Doesn't work with negative edge weights</li>
@@ -797,8 +797,8 @@ while PQ not empty
 </div>
 </div>
 
-<div id="outline-container-org3d60484" class="outline-4">
-<h4 id="org3d60484"><span class="section-number-4">9.2.3</span> DAG</h4>
+<div id="outline-container-orgb4b4b65" class="outline-4">
+<h4 id="orgb4b4b65"><span class="section-number-4">9.2.3</span> DAG</h4>
 <div class="outline-text-4" id="text-9-2-3">
 <ul class="org-ul">
 <li>Toposort, relax in order</li>
@@ -809,8 +809,8 @@ weights by -1 and run SSSP</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgd8c893e" class="outline-3">
-<h3 id="orgd8c893e"><span class="section-number-3">9.3</span> Heap</h3>
+<div id="outline-container-org2d1dfd7" class="outline-3">
+<h3 id="org2d1dfd7"><span class="section-number-3">9.3</span> Heap</h3>
 <div class="outline-text-3" id="text-9-3">
 <ul class="org-ul">
 <li>implements priority queue, is a complete binary tree</li>
@@ -826,8 +826,8 @@ weights by -1 and run SSSP</li>
 </ul></li>
 </ul>
 </div>
-<div id="outline-container-org44bbc4b" class="outline-4">
-<h4 id="org44bbc4b"><span class="section-number-4">9.3.1</span> Heap Sort</h4>
+<div id="outline-container-org18c2258" class="outline-4">
+<h4 id="org18c2258"><span class="section-number-4">9.3.1</span> Heap Sort</h4>
 <div class="outline-text-4" id="text-9-3-1">
 <ol class="org-ol">
 <li>Heapify (insert n items)  O(n log n)</li>
@@ -840,8 +840,8 @@ case single node) O(n)</li>
 </div>
 </div>
 
-<div id="outline-container-org0baa3f1" class="outline-4">
-<h4 id="org0baa3f1"><span class="section-number-4">9.3.2</span> UFDS (weighted)</h4>
+<div id="outline-container-org597d839" class="outline-4">
+<h4 id="org597d839"><span class="section-number-4">9.3.2</span> UFDS (weighted)</h4>
 <div class="outline-text-4" id="text-9-3-2">
 <ul class="org-ul">
 <li>union(p,q) \(O(\log n)\)
@@ -861,16 +861,16 @@ case single node) O(n)</li>
 </div>
 </div>
 
-<div id="outline-container-org784dfbe" class="outline-3">
-<h3 id="org784dfbe"><span class="section-number-3">9.4</span> MST</h3>
+<div id="outline-container-org7679ca4" class="outline-3">
+<h3 id="org7679ca4"><span class="section-number-3">9.4</span> MST</h3>
 <div class="outline-text-3" id="text-9-4">
 <ul class="org-ul">
 <li>acyclic subset of edges that connects all nodes, and has minimum
 weight</li>
 </ul>
 </div>
-<div id="outline-container-org40d86d0" class="outline-4">
-<h4 id="org40d86d0"><span class="section-number-4">9.4.1</span> Properties</h4>
+<div id="outline-container-org87ef5e7" class="outline-4">
+<h4 id="org87ef5e7"><span class="section-number-4">9.4.1</span> Properties</h4>
 <div class="outline-text-4" id="text-9-4-1">
 <ol class="org-ol">
 <li>Cutting edge in MST results in 2 MSTs</li>
@@ -880,8 +880,8 @@ across cut is in MST</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-orgc19ac42" class="outline-4">
-<h4 id="orgc19ac42"><span class="section-number-4">9.4.2</span> Prim's \(O(E \log V)\)</h4>
+<div id="outline-container-org06c9c05" class="outline-4">
+<h4 id="org06c9c05"><span class="section-number-4">9.4.2</span> Prim's \(O(E \log V)\)</h4>
 <div class="outline-text-4" id="text-9-4-2">
 <ul class="org-ul">
 <li>Uses cycle property</li>
@@ -901,8 +901,8 @@ MST = T
 </div>
 </div>
 
-<div id="outline-container-org6d3ff92" class="outline-4">
-<h4 id="org6d3ff92"><span class="section-number-4">9.4.3</span> Kruskal's \(O(E\log V)\)</h4>
+<div id="outline-container-orgc5283b3" class="outline-4">
+<h4 id="orgc5283b3"><span class="section-number-4">9.4.3</span> Kruskal's \(O(E\log V)\)</h4>
 <div class="outline-text-4" id="text-9-4-3">
 <ul class="org-ul">
 <li>Uses UFDS</li>
@@ -924,8 +924,8 @@ MST = T
 </div>
 </div>
 
-<div id="outline-container-org022a183" class="outline-4">
-<h4 id="org022a183"><span class="section-number-4">9.4.4</span> Boruvka's \(O(E\log V)\)</h4>
+<div id="outline-container-orgc1984f1" class="outline-4">
+<h4 id="orgc1984f1"><span class="section-number-4">9.4.4</span> Boruvka's \(O(E\log V)\)</h4>
 <div class="outline-text-4" id="text-9-4-4">
 <div class="org-src-container">
 <pre class="src src-text">T = { one-vertex trees }
@@ -944,8 +944,8 @@ MST = T
 </div>
 </div>
 
-<div id="outline-container-org29abe03" class="outline-4">
-<h4 id="org29abe03"><span class="section-number-4">9.4.5</span> Variants</h4>
+<div id="outline-container-org23d1822" class="outline-4">
+<h4 id="org23d1822"><span class="section-number-4">9.4.5</span> Variants</h4>
 <div class="outline-text-4" id="text-9-4-5">
 <ol class="org-ol">
 <li>Same weight: BFS/DFS \(O(E)\)</li>
@@ -977,12 +977,12 @@ list of nodes</li>
 </div>
 </div>
 
-<div id="outline-container-orgd95b48e" class="outline-4">
-<h4 id="orgd95b48e"><span class="section-number-4">9.4.6</span> MST Problems</h4>
+<div id="outline-container-org04a42ad" class="outline-4">
+<h4 id="org04a42ad"><span class="section-number-4">9.4.6</span> MST Problems</h4>
 <div class="outline-text-4" id="text-9-4-6">
 </div>
-<div id="outline-container-org7c8a882" class="outline-5">
-<h5 id="org7c8a882"><span class="section-number-5">9.4.6.1</span> How do I add an edge (A,B) of weight k into graph G and find MST quickly?</h5>
+<div id="outline-container-orgb746218" class="outline-5">
+<h5 id="orgb746218"><span class="section-number-5">9.4.6.1</span> How do I add an edge (A,B) of weight k into graph G and find MST quickly?</h5>
 <div class="outline-text-5" id="text-9-4-6-1">
 <ul class="org-ul">
 <li>Use cycle property; max edge in any cycle is not in MST</li>
@@ -992,8 +992,8 @@ list of nodes</li>
 </div>
 </div>
 
-<div id="outline-container-org31e2bd7" class="outline-5">
-<h5 id="org31e2bd7"><span class="section-number-5">9.4.6.2</span> Given an undirected graph with \(K\) power plants, find the minimum cost to connect all other sites.</h5>
+<div id="outline-container-orgc3adfd2" class="outline-5">
+<h5 id="orgc3adfd2"><span class="section-number-5">9.4.6.2</span> Given an undirected graph with \(K\) power plants, find the minimum cost to connect all other sites.</h5>
 <div class="outline-text-5" id="text-9-4-6-2">
 <ul class="org-ul">
 <li>run Prim’s, use super source</li>
@@ -1003,8 +1003,8 @@ list of nodes</li>
 </div>
 </div>
 
-<div id="outline-container-org77fac92" class="outline-5">
-<h5 id="org77fac92"><span class="section-number-5">9.4.6.3</span> How do I make Kruskal run faster when sorting?</h5>
+<div id="outline-container-org718bcb0" class="outline-5">
+<h5 id="org718bcb0"><span class="section-number-5">9.4.6.3</span> How do I make Kruskal run faster when sorting?</h5>
 <div class="outline-text-5" id="text-9-4-6-3">
 <ul class="org-ul">
 <li>Store edges in separate linked lists</li>
@@ -1016,8 +1016,8 @@ linked list then the next</li>
 </div>
 </div>
 
-<div id="outline-container-orgfbe4fef" class="outline-5">
-<h5 id="orgfbe4fef"><span class="section-number-5">9.4.6.4</span> Minimum Bottleneck Spanning Tree (MBST)</h5>
+<div id="outline-container-org044bf37" class="outline-5">
+<h5 id="org044bf37"><span class="section-number-5">9.4.6.4</span> Minimum Bottleneck Spanning Tree (MBST)</h5>
 <div class="outline-text-5" id="text-9-4-6-4">
 <ul class="org-ul">
 <li>General idea: If I use some edge e that is not in the MST to replace
@@ -1029,8 +1029,8 @@ original MST, e).</li>
 </div>
 </div>
 
-<div id="outline-container-orgec37066" class="outline-5">
-<h5 id="orgec37066"><span class="section-number-5">9.4.6.5</span> Find maximum distance between 2 vertices in MST</h5>
+<div id="outline-container-org429760b" class="outline-5">
+<h5 id="org429760b"><span class="section-number-5">9.4.6.5</span> Find maximum distance between 2 vertices in MST</h5>
 <div class="outline-text-5" id="text-9-4-6-5">
 <ul class="org-ul">
 <li>Bruteforce: perform DFS starting from every single location since
@@ -1044,8 +1044,8 @@ there is only one path from any node to another</li>
 </div>
 </div>
 
-<div id="outline-container-org68c9997" class="outline-3">
-<h3 id="org68c9997"><span class="section-number-3">9.5</span> Floyd-Warshall (APSP)</h3>
+<div id="outline-container-orgb99e754" class="outline-3">
+<h3 id="orgb99e754"><span class="section-number-3">9.5</span> Floyd-Warshall (APSP)</h3>
 <div class="outline-text-3" id="text-9-5">
 <ul class="org-ul">
 <li>Shortest paths have optimal substructure</li>
@@ -1072,8 +1072,8 @@ int[][] APSP(A) {
 </div>
 </div>
 
-<div id="outline-container-orga0e7a85" class="outline-3">
-<h3 id="orga0e7a85"><span class="section-number-3">9.6</span> Network Flow</h3>
+<div id="outline-container-orgbcf844f" class="outline-3">
+<h3 id="orgbcf844f"><span class="section-number-3">9.6</span> Network Flow</h3>
 <div class="outline-text-3" id="text-9-6">
 <dl class="org-dl">
 <dt>k-edge connected</dt><dd>Source and target are k-edge connected if there
@@ -1087,8 +1087,8 @@ residual graph. \(T\) = all other nodes, S → T is minimum cut</dd>
 weight edges</dd>
 </dl>
 </div>
-<div id="outline-container-org2ce9b40" class="outline-4">
-<h4 id="org2ce9b40"><span class="section-number-4">9.6.1</span> Ford-Fulkerson</h4>
+<div id="outline-container-org3c3d904" class="outline-4">
+<h4 id="org3c3d904"><span class="section-number-4">9.6.1</span> Ford-Fulkerson</h4>
 <div class="outline-text-4" id="text-9-6-1">
 <ol class="org-ol">
 <li>Start with 0 flow</li>
@@ -1111,12 +1111,12 @@ Time Complexity:
 </div>
 </div>
 
-<div id="outline-container-org81f74fd" class="outline-3">
-<h3 id="org81f74fd"><span class="section-number-3">9.7</span> Graph Algorithms on Trees</h3>
+<div id="outline-container-org88b1020" class="outline-3">
+<h3 id="org88b1020"><span class="section-number-3">9.7</span> Graph Algorithms on Trees</h3>
 <div class="outline-text-3" id="text-9-7">
 </div>
-<div id="outline-container-org48ed592" class="outline-4">
-<h4 id="org48ed592"><span class="section-number-4">9.7.1</span> Check if connected graph is tree</h4>
+<div id="outline-container-org15300dd" class="outline-4">
+<h4 id="org15300dd"><span class="section-number-4">9.7.1</span> Check if connected graph is tree</h4>
 <div class="outline-text-4" id="text-9-7-1">
 <p>
 Run DFS, stop when after traversing \(V-1\) edges, return true if all
@@ -1125,8 +1125,8 @@ nodes connected and no other used edge. False otherwise. \(O(V)\)
 </div>
 </div>
 
-<div id="outline-container-org45dd8b8" class="outline-4">
-<h4 id="org45dd8b8"><span class="section-number-4">9.7.2</span> Min Vertex Cover</h4>
+<div id="outline-container-orgc6c60ce" class="outline-4">
+<h4 id="orgc6c60ce"><span class="section-number-4">9.7.2</span> Min Vertex Cover</h4>
 <div class="outline-text-4" id="text-9-7-2">
 <ul class="org-ul">
 <li>Idea: transform tree into DAG, run DP</li>
@@ -1156,8 +1156,8 @@ nodes connected and no other used edge. False otherwise. \(O(V)\)
 </div>
 </div>
 </div>
-<div id="outline-container-org1616573" class="outline-4">
-<h4 id="org1616573"><span class="section-number-4">9.7.3</span> SSSP</h4>
+<div id="outline-container-org094a13a" class="outline-4">
+<h4 id="org094a13a"><span class="section-number-4">9.7.3</span> SSSP</h4>
 <div class="outline-text-4" id="text-9-7-3">
 <ul class="org-ul">
 <li>On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
@@ -1168,8 +1168,8 @@ weights of edges on the unique path</li>
 </div>
 </div>
 
-<div id="outline-container-orgaec8e6b" class="outline-4">
-<h4 id="orgaec8e6b"><span class="section-number-4">9.7.4</span> ASSP</h4>
+<div id="outline-container-orgb29fe62" class="outline-4">
+<h4 id="orgb29fe62"><span class="section-number-4">9.7.4</span> ASSP</h4>
 <div class="outline-text-4" id="text-9-7-4">
 <ul class="org-ul">
 <li>Run SSSP on V vertices in total \(O(V^2)\), compared to \(O(V^3)\) FW algorithm</li>
@@ -1177,8 +1177,8 @@ weights of edges on the unique path</li>
 </div>
 </div>
 
-<div id="outline-container-orgc85fecc" class="outline-4">
-<h4 id="orgc85fecc"><span class="section-number-4">9.7.5</span> Diameter</h4>
+<div id="outline-container-orgce01ad1" class="outline-4">
+<h4 id="orgce01ad1"><span class="section-number-4">9.7.5</span> Diameter</h4>
 <div class="outline-text-4" id="text-9-7-5">
 <ul class="org-ul">
 <li>Originally, run FW in \(O(V^3)\) and do an \(O(V^2)\) all-pairs check,
@@ -1192,8 +1192,8 @@ is the diameter of the tree.</li>
 </div>
 </div>
 
-<div id="outline-container-org3beb504" class="outline-3">
-<h3 id="org3beb504"><span class="section-number-3">9.8</span> Graph Modelling Techniques</h3>
+<div id="outline-container-org4e4d866" class="outline-3">
+<h3 id="org4e4d866"><span class="section-number-3">9.8</span> Graph Modelling Techniques</h3>
 <div class="outline-text-3" id="text-9-8">
 <ol class="org-ol">
 <li>minimum shortest path from many source to one destination: run SSSP
@@ -1210,12 +1210,12 @@ Compute two shortest paths; X to A, A to Y, and join the paths.</li>
 </div>
 </div>
 
-<div id="outline-container-org16e6f5f" class="outline-2">
-<h2 id="org16e6f5f"><span class="section-number-2">10</span> Parallel Algorithms</h2>
+<div id="outline-container-org6e46e90" class="outline-2">
+<h2 id="org6e46e90"><span class="section-number-2">10</span> Parallel Algorithms</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-orgb324d0a" class="outline-3">
-<h3 id="orgb324d0a"><span class="section-number-3">10.1</span> Parallel Fibonacci</h3>
+<div id="outline-container-org41c5349" class="outline-3">
+<h3 id="org41c5349"><span class="section-number-3">10.1</span> Parallel Fibonacci</h3>
 <div class="outline-text-3" id="text-10-1">
 <div class="org-src-container">
 <pre class="src src-text">parallelFib(n) {
@@ -1240,8 +1240,8 @@ Compute two shortest paths; X to A, A to Y, and join the paths.</li>
 </div>
 </div>
 
-<div id="outline-container-org23b140c" class="outline-3">
-<h3 id="org23b140c"><span class="section-number-3">10.2</span> Matrix Addition</h3>
+<div id="outline-container-org28c1eca" class="outline-3">
+<h3 id="org28c1eca"><span class="section-number-3">10.2</span> Matrix Addition</h3>
 <div class="outline-text-3" id="text-10-2">
 <p>
 Before:
@@ -1269,8 +1269,8 @@ After:
 </div>
 </div>
 
-<div id="outline-container-orgee0cb48" class="outline-3">
-<h3 id="orgee0cb48"><span class="section-number-3">10.3</span> Parallelized Merge Sort \(O(\log^3n)\)</h3>
+<div id="outline-container-orge98c3d9" class="outline-3">
+<h3 id="orge98c3d9"><span class="section-number-3">10.3</span> Parallelized Merge Sort \(O(\log^3n)\)</h3>
 <div class="outline-text-3" id="text-10-3">
 <div class="org-src-container">
 <pre class="src src-text">pMerge(A[1..k], B[1..m], C[1..n])
@@ -1307,7 +1307,7 @@ pMergeSort(A, n)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-01-13 Sat 11:58</p>
+<p class="date">Created: 2018-02-06 Tue 22:29</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
