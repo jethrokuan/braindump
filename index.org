@@ -20,6 +20,7 @@
 - [[file:machine_learning.org][Machine Learning]]
 - [[file:nlp.org][Natural Language Processing]]
 - [[file:operatingsystems.org][Operating Systems]]
+- [[file:pgm.org][Probabilistic Graph Modelling]]
 - [[file:productivity.org][Productivity]]
 - [[file:programming_methodology.org][Programming Methodology]]
 - [[file:ger1000.org][Quantitative Reasoning]]

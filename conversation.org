@@ -63,5 +63,16 @@ how conversational practices fit together in highly intricate ways.
   way?
 - We do not ask what it means. We ask what it does.
 * Turn taking
+Turn Constructional Units (TCU)
+
+Transition Relevance place (TRP)
+
+- grammatically complete
+- intonationally complete
+- pragmatically complete
+
 We are very attuned to grammatical intonation, so we know when to
 start speaking.
+* transition Space
+- lapse :: silence that does not belong to any particular speaker
+- silence :: silence that belongs to any particular speaker
