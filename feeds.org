@@ -19,6 +19,7 @@
 ** General                                                          :general:
 *** https://www.fs.blog/feed/
 *** http://feedproxy.google.com/brainpickings/rss
+*** http://feeds.feedburner.com/MeltingAsphalt
 ** Company Blogs                                                    :company:
 *** https://blogs.dropbox.com/tech/feed/
 *** https://codeascraft.com/feed/
