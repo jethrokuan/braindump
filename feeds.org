@@ -20,6 +20,10 @@
 *** https://www.fs.blog/feed/
 *** http://feedproxy.google.com/brainpickings/rss
 *** http://feeds.feedburner.com/MeltingAsphalt
+*** https://www.artofmanliness.com/feed/
+*** https://www.bakadesuyo.com/feed/
+*** https://www.marieforleo.com/feed/
+*** http://feeds.feedburner.com/zenhabits/
 ** Company Blogs                                                    :company:
 *** https://blogs.dropbox.com/tech/feed/
 *** https://codeascraft.com/feed/
