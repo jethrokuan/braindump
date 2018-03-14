@@ -29,6 +29,7 @@
 - [[file:security.org][Security]]
 - [[file:ges1028.org][Singapore Society]]
 - [[file:sleep.org][Sleep]]
+- [[file:software_engineering.org][Software Engineering]]
 - [[file:statistics.org][Statistics]]
 - [[file:system_design.org][System Design]]
 - [[file:trigger_list.org][Trigger List]]
@@ -38,4 +39,5 @@
 - [[file:export_template.org][export_template]]
 - [[file:gyss.org][gyss]]
 - [[file:ios.org][iOS]]
+- [[file:studying.org][studying]]
 - [[file:urop.org][urop]]

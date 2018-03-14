@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-02-09 Fri 11:58 -->
+<!-- 2018-03-14 Wed 15:19 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Artificial Intelligence</title>
@@ -172,6 +172,17 @@ for the JavaScript code in this tag.
 <li><a href="#org11dd4f8">6.6.1. AND-OR search trees</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#org3602928">7. Adversarial Search</a>
+<ul>
+<li><a href="#org2b86968">7.1. Optimal Strategy</a></li>
+<li><a href="#org5fe5fac">7.2. Alpha-Beta Pruning</a></li>
+</ul>
+</li>
+<li><a href="#orge07f974">8. RANDOM</a>
+<ul>
+<li><a href="#orgfd9eff2">8.1. Simon's Ant</a></li>
 </ul>
 </li>
 </ul>
@@ -1293,10 +1304,121 @@ function AND-SEARCH(states,problem,path) returns a conditional plan, or failure
 </div>
 </div>
 </div>
+
+<div id="outline-container-org3602928" class="outline-2">
+<h2 id="org3602928"><span class="section-number-2">7</span> Adversarial Search</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Competitive environments, in which the agent's goals are in conflict,
+give rise to <i>adversarial search</i> problems.
+</p>
+
+<p>
+Game theory views any multi-agent environment as a game, provied that
+the impact of each agent on the others is significant.
+</p>
+
+<p>
+Games often have large branching factors, and require making some
+decision even before computing the optimal decision.
+</p>
+
+<p>
+<i>Pruning</i> allows us to ignore portions of the search tree that make no
+difference to the final choice, and heuristic evaluation functions
+allow us to approximate the true utility of a state without doing a
+complete search.
+</p>
+
+<p>
+A game can be formally defined as a search problem with the following
+elements:
+</p>
+
+<dl class="org-dl">
+<dt>\(S_0\)</dt><dd>the <i>initial state</i>, which specifies how the game is set up
+at the start</dd>
+<dt>\(Player(s)\)</dt><dd>Defines which player has the move in a state</dd>
+<dt>\(Actions(s)\)</dt><dd>Returns the set of legal moves in a state</dd>
+<dt>\(Result(s,a)\)</dt><dd>The transition model, which defines the result of a move</dd>
+<dt>\(TerminalTest(s)\)</dt><dd>Terminal test, which is true when the game is
+over, and false otherwise.</dd>
+<dt>\(Utility(s,p)\)</dt><dd>A utility function defines the numeric value for a
+game that ends in terminal state \(s\) for a player
+\(p\).</dd>
+</dl>
+
+
+<p>
+The initial state, \(Actions\) function and \(Result\) function define the
+game tree for the game.
+</p>
+</div>
+
+
+<div id="outline-container-org2b86968" class="outline-3">
+<h3 id="org2b86968"><span class="section-number-3">7.1</span> Optimal Strategy</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+The optimal strategy can be determined from the <i>minimax value</i> of
+each node (\(Minimax(n)\)). The minimax value of a node is the utility
+of being in the corresponding state, assuming that players play
+optimally from there to the nd of the game. The minimax value of a
+terminal state is its utility.
+</p>
+
+\begin{align}
+  Minimax(s) =
+  \begin{cases}
+    Utility(s), \text{ if } TerminalTest(s) \\
+    max_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) =
+      Max} \\
+    min_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) = Min}
+  \end{cases}
+\end{align}
+
+<p>
+Minimax uses utility function on leaf nodes, backing up through the
+tree, setting the node value to be the minimum of the children.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org5fe5fac" class="outline-3">
+<h3 id="org5fe5fac"><span class="section-number-3">7.2</span> Alpha-Beta Pruning</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Eliminate parts of the search tree that do not affect decision. 
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge07f974" class="outline-2">
+<h2 id="orge07f974"><span class="section-number-2">8</span> RANDOM</h2>
+<div class="outline-text-2" id="text-8">
+</div>
+<div id="outline-container-orgfd9eff2" class="outline-3">
+<h3 id="orgfd9eff2"><span class="section-number-3">8.1</span> Simon's Ant</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+Simon, noble prize in economics
+</p>
+
+<blockquote>
+<p>
+The complexity of the behaviour is the manifestation of the complexity
+of the environment and not the complexity of the program.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-02-09 Fri 11:58</p>
+<p class="date">Created: 2018-03-14 Wed 15:19</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
