@@ -567,3 +567,71 @@ A solution for an AND-OR search problem is a subtree that:
 #+END_SRC
 
 (stop at AIMA 4.4)
+
+* Adversarial Search
+Competitive environments, in which the agent's goals are in conflict,
+give rise to /adversarial search/ problems.
+
+Game theory views any multi-agent environment as a game, provied that
+the impact of each agent on the others is significant.
+
+Games often have large branching factors, and require making some
+decision even before computing the optimal decision.
+
+/Pruning/ allows us to ignore portions of the search tree that make no
+difference to the final choice, and heuristic evaluation functions
+allow us to approximate the true utility of a state without doing a
+complete search.
+
+A game can be formally defined as a search problem with the following
+elements:
+
+- $S_0$ :: the /initial state/, which specifies how the game is set up
+           at the start
+- $Player(s)$ :: Defines which player has the move in a state
+- $Actions(s)$ :: Returns the set of legal moves in a state
+- $Result(s,a)$ :: The transition model, which defines the result of a move
+- $TerminalTest(s)$ :: Terminal test, which is true when the game is
+     over, and false otherwise.
+- $Utility(s,p)$ :: A utility function defines the numeric value for a
+                    game that ends in terminal state $s$ for a player
+                    $p$.
+
+
+The initial state, $Actions$ function and $Result$ function define the
+game tree for the game.
+
+
+** Optimal Strategy
+The optimal strategy can be determined from the /minimax value/ of
+each node ($Minimax(n)$). The minimax value of a node is the utility
+of being in the corresponding state, assuming that players play
+optimally from there to the nd of the game. The minimax value of a
+terminal state is its utility.
+
+\begin{align}
+  Minimax(s) =
+  \begin{cases}
+    Utility(s), \text{ if } TerminalTest(s) \\
+    max_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) =
+      Max} \\
+    min_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) = Min}
+  \end{cases}
+\end{align}
+
+Minimax uses utility function on leaf nodes, backing up through the
+tree, setting the node value to be the minimum of the children.
+
+
+** Alpha-Beta Pruning
+Eliminate parts of the search tree that do not affect decision. 
+
+* RANDOM
+
+** Simon's Ant
+Simon, noble prize in economics
+
+#+BEGIN_QUOTE
+The complexity of the behaviour is the manifestation of the complexity
+of the environment and not the complexity of the program.
+#+END_QUOTE

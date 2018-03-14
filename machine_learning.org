@@ -130,6 +130,14 @@ number, even while $M$ is infinite.
 ** Growth Function
 The /growth function/ is the quantity that will formalize the
 effective number of hypotheses.
+
+Each $h \in H$ generates a dichotomy which is $h$ is $-1$ or $h$ i-
+$+1$. We then formally define dichotomies as follows:
+
+\begin{align}
+H(x_1, \hdots, x_n) = \left\{ h(x_1), h(x_2), \hdots, h(x_n) | h \in H \right\}
+\end{align}
+
 * Concept Learning
 A concept is a boolean-valued function over a set of input instances
 (each comprising input attributes). Concept learning is a form of

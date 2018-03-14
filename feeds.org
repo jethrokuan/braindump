@@ -7,7 +7,6 @@
 *** http://planet.emacsen.org/atom.xml
 *** https://www.reddit.com/r/emacs/
 ** AI/ML                                                                 :AI:
-*** http://feeds.dzone.com/ai
 *** https://reddit.com/r/MachineLearning/.rss
 *** https://medium.com/feed/mlreview/
 *** https://distill.pub/rss.xml
@@ -40,14 +39,3 @@
 *** https://wordsmith.org/awad/rss1.xml
 *** https://www.merriam-webster.com/wotd/feed/rss2
 *** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd
-*** http://www.worldwidewords.org/rss/wordfile.xml
-** Tech                                                                :tech:
-*** https://hnrss.org/newest?points=100
-*** https://jvns.ca/atom.xml
-*** http://slatestarcodex.com/feed/
-*** http://feeds.feedburner.com/mrmoneymustache
-*** http://erikbern.com/atom.xml
-*** https://blog.acolyer.org/atom.xml
-*** https://peadarcoyle.wordpress.com/feed/
-*** http://www.inference.vc/feed/
-*** http://larahogan.me/feed.xml

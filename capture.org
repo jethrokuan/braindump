@@ -1,0 +1,4 @@
+* Snippet 2018-02-19 09:31
+what is dbus for?
+* Snippet 2018-02-19 10:08
+Markovian Assumption: nth item depends on some other item
