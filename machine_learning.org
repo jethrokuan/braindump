@@ -1,3 +1,4 @@
+-*- mode: Org; org-download-image-dir: "./images/ai/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Machine Learning
 
@@ -26,17 +27,6 @@ Learning From Data
 *** Online vs Batch Learning
 In online learning, the hypothesis has to be updated each time a new
 label is received.
-*** Unsupervised Learning
- In unsupervised learning, given a training set $S = \left(x_1, \hdots,
- x_m\right)$, without a labeled output, one must construct a "good"
- model/description of the data.
-
- Example use cases include:
- - clustering
- - dimension reduction to ind essential parts of the data and reduce
-   noise (e.g. PCA)
- - minimises description length of data
-
 *** Reinforcement Learning
  Each action in a state has an associated cost and a probability
  distribution of the next state.
@@ -301,6 +291,85 @@ treatment to this problem, we consider a form of prior distribution
 with similar form as the maximum likelihood function. this property is
 called /conjugacy/. For a binomial distribution, we can choose the
 beta distribution as the prior.
+* Unsupervised Learning
+ In unsupervised learning, given a training set $S = \left(x_1, \hdots,
+ x_m\right)$, without a labeled output, one must construct a "good"
+ model/description of the data.
+
+ Example use cases include:
+ - clustering
+ - dimension reduction to ind essential parts of the data and reduce
+   noise (e.g. PCA)
+ - minimises description length of data
+** K-means Clustering
+Input: $\{x^{(1), x^{(2)}, x^{(3)}, \hdots, x^{(m)}}\}$.
+
+1. Randomly initialize cluster centroids.
+2. For all points, compute which cluster centroid is the closest.
+3. For each cluster centroid, move centroids to the average points
+   belonging to the cluster.
+4. Repeat until convergence.
+
+K-means is guaranteed to converge. To show this, we define a
+distortion function:
+
+\begin{equation}
+  J(c, \mu) = \sum_{i=1}^m || x^{(i)} - \mu_{c^{(i)}}||^2
+\end{equation}
+
+K means is coordinate ascent on J. Since $J$ always decreases, the
+algorithm converges.
+** Gaussian Mixture Model
+By Bayes' Theorem:
+
+\begin{equation}
+P(X^{(i)}, Z^{(i)}) = P(X^{(i)} | Z^{(i)})P(Z^{(i)})
+\end{equation}
+
+\begin{equation}
+Z^{(i)} \sim \text{multinomial}(\phi)
+\end{equation}
+
+\begin{equation}
+X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu_j, \Sigma_j)
+\end{equation}
+
+** Expectation Maximization
+ https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf
+
+ The EM algorithm is an efficient iterative procedure to compute the
+ Maximum Likelihood (ML) estimate in the presence of missing or hidden
+ data.
+
+ Each iteration of the EM algorithm consists of two processes: The
+ E-step, and the M-step. In the expectation, or E-step, the missing da
+ ta are estimated given the observed data and current estimate of the
+ model par ameters. This is achieved using the conditional
+ expectation, explaining the choice of terminology.
+
+ In the M-step, the likelihood function is maximized under th e
+ assumption that the missing data are known. The estimate of the
+ missing data f rom the E-step are used in lieu of the actual missing
+ data.
+
+ Convergence is assured since the algorithm is guaranteed to
+ increase the likelihood at each iteration.
+
+ #+DOWNLOADED: /tmp/screenshot.png @ 2018-04-03 10:56:25
+ [[file:images/ai/Expectation
+ Maximization/screenshot_2018-04-03_10-56-25.png]]
+
+For mixture of Gaussians:
+
+Repeat until convergence:
+1. E-step
+   - guess values of $Z^{(i)}$
+   - Let $w_j^{(i)} := P(Z^{(i)=j|X^{(i), \phi, \mu, \Sigma}})$
+2. M-step
+   - $\phi_j := \frac{1}{m}\sum_{i=1}^m w_j^{(i)}$
+   - $\mu_j := \frac{\sum_{i=1}^m w_j^{(i)}x^{(i)}}{\sum_{i=1}^m w_j^{(i)}}$
+   - ...
+
 * Refile
 ** Data Compression
 In /lossy compression/, we seek to trade off code length with
