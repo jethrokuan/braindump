@@ -1,6 +1,106 @@
+-*- mode: Org; org-download-image-dir: "./images/software-engineering/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Software Engineering
-#+AUTHOR: Derrick Chua
+#+AUTHOR: Derrick Chua, Jethro Kuan
+* Object-Oriented Programming
+- Every object has both /state/ (data) and /behaviour/ (operations on
+  data).
+- Every object has an /interface/ and an /implementation/.
+  - Interface are for other objects to interact with.
+  - Implementations support the interface, and may not be accessible
+    to other objects.
+
+** Basic UML Notation
+The class is denoted with 3 parts: The class name, its attributes, and
+its methods.
+
+[[file:images/software-engineering/Object-Oriented Programming/class_uml.png]]
+
+Instances of a class are denoted with 3 parts: its name (and class),
+and its attribute values.
+
+[[file:images/software-engineering/Object-Oriented Programming/instance_uml.png]]
+
+Class-level attributes and variables are denoted by _underlines_. In
+the class diagram below, =totalStudents= and =getTotalStudents= are
+class-level._
+
+[[file:images/software-engineering/Object-Oriented Programming/class_level_uml.png]]
+
+UML Notation for enumerations:
+
+[[file:images/software-engineering/Object-Oriented
+Programming/enumeration_uml.png]]
+** Associations
+  - A solid line indicates an association between 2 objects.
+  - The concept of /Navigability/ refers to whether the association
+    knows about the other class. Arrow heads are used to indicate the
+    navigability of the association.
+
+[[file:images/software-engineering/Object-Oriented
+Programming/navigability_uml.png]]
+
+  - Multiplicity is denoted on each end of the association.
+
+[[file:images/software-engineering/Object-Oriented Programming/multiplicity_uml.png]]
+
+  - Dependencies are weaker associations where interactions between
+    objects do not result in a long-term relationship. A dashed arrow
+    is used to show dependencies.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-04-09 11:02:16
+[[file:images/software-engineering/Object-Oriented Programming/dependencies_uml.png]]
+
+  - Composition represents a strong whole-part relationship. When the
+    whole is destroyed, parts are destroyed too. There cannot be
+    cyclical links in composition.
+
+[[file:images/software-engineering/Object-Oriented
+Programming/composition_uml.png]]
+
+  - Aggregation represents a container-contained relationship. 
+
+[[file:images/software-engineering/Object-Oriented
+Programming/aggregation_uml.png]]
+
+  - An association class represents additional information about an
+    association. It is a normal class but plays a special role from a
+    design point of view.
+
+[[file:images/software-engineering/Object-Oriented Programming/association_class_uml.png]]
+** Inheritance
+Inheritance allows you to define a new class based on an existing
+class. This helps group common parts among classes. This is denoted by
+an arrow.
+
+[[file:images/software-engineering/Object-Oriented Programming/inheritance_uml.png]]
+** Interfaces
+An /interface/ is a behaviour specification. If a class implements the
+interface, it is able to support the behaviours specified by the
+interface. A class implementing an interface results in an is-a
+relationship. In the example below, =AcademicStaff= is a
+=SalariedStaff=.
+
+[[file:images/software-engineering/Object-Oriented Programming/interface_uml.png]]
+
+An abstract method is the method interface without the implementation.
+It is denoted with the ={abstract}= annotation in the UML diagram.
+
+[[file:images/software-engineering/Object-Oriented
+Programming/abstract_uml.png]]
+** Polymorphism
+/Polymorphism/ is the ability of different objects to respond, each
+it its own way, to identical messages. The mechanisms that enable
+polymorphism are:
+
+- Substitutability :: write code that expects parent class, yet use
+     that code with objects of child classes.
+- Overriding :: Operations in the super class need to be overridden in
+                each of the subclasses.
+- Dynamic binding :: Calls to overridden methods are bound to the
+     implementation of the actual object's class dynamically during
+     runtime.
 
 * Week 4
   :PROPERTIES:
@@ -165,66 +265,6 @@
    - Prevent delivery delays
 
 2. JUnit - Automated testing
-
-** Inheritance
-   :PROPERTIES:
-   :CUSTOM_ID: inheritance
-   :END:
-
-1. Super class is more /general/ than sub class
-2. Applying inheritance on group of similar classes can result in common
-   parts among classes being extracted into more general classes
-3. Multiple inheritance not allowed in Java, but allowed in C++
-
-** Class level members
-   :PROPERTIES:
-   :CUSTOM_ID: class-level-members
-   :END:
-
-1. Static variables
-2. Accessed by class name rather than class instance
-
-** Composition
-   :PROPERTIES:
-   :CUSTOM_ID: composition
-   :END:
-
-1. Association that represents a strong whole-part relationship
-2. Implemented using a solid diamond on side of parent
-3. No cyclical links, i.e. no association to itself
-
-** Aggregation
-   :PROPERTIES:
-   :CUSTOM_ID: aggregation
-   :END:
-
-1. Container-contained relationship, i.e. if one gets deleted the other
-   still functions
-2. Implemented with a blank diamond
-3. e.g. Initialises an object it needs by taking it in as an argument
-   rather than instantiating it within the class
-
-** Overloading
-   :PROPERTIES:
-   :CUSTOM_ID: overloading
-   :END:
-
-1. Methods with different signatures(take in different type and/or
-   number of variables)
-
-** UML diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: uml-diagrams
-   :END:
-
-1. Dashed arrows show dependencies
-
-   - Weaker association as compared to composition and aggregations (not
-     long-term i.e. no object is kept as they are only received as
-     parameters)
-
-2. Constraints given within curly braces
-3. Asssociations can be shown as an attribute instead of a life
 
 ** Single responsibility principle
    :PROPERTIES:
