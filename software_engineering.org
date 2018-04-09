@@ -101,6 +101,60 @@ polymorphism are:
 - Dynamic binding :: Calls to overridden methods are bound to the
      implementation of the actual object's class dynamically during
      runtime.
+* Modelling Behaviour
+** Activity Diagrams
+- Actions :: Rectangles with rounded edges (Steps)
+- Control flows :: Lines with arrowheads (Flow of control from one
+   action to another)
+- Alternate paths :: Diamond shapes
+   - Branch or merge nodes
+   - Each control flow leaving branch node has guard condition
+   - Only 1 alernative path can be taken at any time.
+- Parallel paths :: bar
+   - Forks and join
+   - Indicate start and end of concurrent flows of control
+- Part of Activity :: rakes
+   - Indicate that part of activity is given as separate diagram
+   - In actions
+- Actor partitions :: swimlanes
+   - Partition activity diagram to show who is doing which action (Who
+     label at the top, as columns)
+
+[[file:images/software-engineering/Modelling
+Behaviour/activity_branch_uml.png]]
+
+[[file:images/software-engineering/Modelling
+Behaviour/activity_fork_join_uml.png]]
+
+
+** Sequence Diagrams
+- Method calls :: Solid arrows
+- Method returns :: Dotted arrows (optional)
+- Loops :: labeled boxes
+- Activation bar (optional)
+    - Method is running and in charge of execution
+    - Constructor is active
+    - Dotted lines after activation bar shows a lifeline, i.e. it is
+      still alive
+- Deletion :: Use a X at end of lifeline of an object
+- Self Invocation :: Draw a second bar within the activation bar for
+     inner method and an arrow to show self invocation
+- Alternative paths :: =Alt= frames (boxes) with dotted horizontal
+     lines to separate alternative paths
+- Optional paths :: =Opt= frames
+- Reference frames :: frames
+    - =ref= frame to omit details/ Show frame in another sequence
+      diagram
+    - =sd= frame to show details
+- Parallel paths :: For multi-threading, as multiple things are being
+                    done at the same time
+
+Note:
+- No underlined object names (e.g. :Object)
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-04-09 12:21:45
+[[file:images/software-engineering/Modelling Behaviour/sequence_uml.png]]
 
 * Week 4
   :PROPERTIES:
@@ -1849,124 +1903,6 @@ Elegant reusable solution to commonly recurring problem
    - Google Docs
 
 \pagebreak
-* Diagram Legends
-  :PROPERTIES:
-  :CUSTOM_ID: diagram-legends
-  :END:
-
-** Object diagrams:
-   :PROPERTIES:
-   :CUSTOM_ID: object-diagrams-1
-   :END:
-
-[[https://nus-cs2103.github.io/website/book/oopDesign/associations/basic/images/completeStructure.png]]
- 
-
-1. Associations - normal lines (e.g. between AgeList and Main)
-
-** Class diagrams:
-   :PROPERTIES:
-   :CUSTOM_ID: class-diagrams-1
-   :END:
-
-[[https://nus-cs2103.github.io/website/book/uml/classDiagrams/introduction/what/images/classDiagramExample1.png]]
- 
-
-1.  Associations - Normal lines with arrows (e.g. between ModelManager
-    and Phase)
-2.  Association labels - Arrows with text (e.g. Phase <- is for PR)
-3.  Association roles - e.g. Tutor is mentor
-4.  Multiplicity - e.g. 1-3 Teams consisting of 3-5 Students
-5.  Bi-directional associations - Arrows both ways
-6.  Composition (Whole part relationship i.e. everything is destroyed
-    together) - Solid black diamond
-7.  Aggregation (container-contained relationship) - Blank diamond
-8.  Dependencies(Weaker associations) - Dashed arrows
-9.  UML notes - Boxes
-10. Constraints - Notes within curly braces
-11. Associations - Attributes (name : type [multiplicity] = default
-    value) (Multiplicity and default values are blank)
-12. Abstract classes - (abstract) above Class name
-13. Association classes (Either draw out from association or create the
-    class in between the 2 associated classes)
-
-** Sequence diagrams:
-   :PROPERTIES:
-   :CUSTOM_ID: sequence-diagrams-2
-   :END:
-
-1.  Method calls - Solid arrows
-2.  Method returns (Can be omitted) - Dotted arrows
-3.  No underlined object names (e.g. :Object)
-4.  Loops - labelled boxes
-5.  Activation bar (Can be omitted)
-
-    - Method is running and in charge of execution
-    - Constructor is active
-    - Dotted lines after activation bar shows a lifeline, i.e. it is
-      still alive
-
-6.  Deletion - Use a X at end of lifeline of an object
-7.  Self Invocation - Draw a second bar within the activation bar for
-    inner method and an arrow to show self invocation
-8.  Alternative paths - =Alt= frames (boxes) with dotted horizontal
-    lines to separate alternative paths
-9.  Optional paths - =Opt= frames
-10. Reference frames
-
-    - =ref= frame to omit details/ Show frame in another sequence
-      diagram
-    - =sd= frame to show details
-
-11. Parallel paths - For multi-threading, as multiple things are being
-    done at the same time
-
-** Architecture diagrams:
-   :PROPERTIES:
-   :CUSTOM_ID: architecture-diagrams-1
-   :END:
-
-1. Free-form, no UML specifications
-2. Avoid bi-directional arrows, as there can be loss of information
-   e.g. bi-directional dependency
-
-** Activity diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: activity-diagrams-1
-   :END:
-
-1. Actions - Rectangles with rounded edges (Steps)
-2. Control flows : Lines with arrowheads (Flow of control from one
-   action to another)
-3. Alternate paths - Diamond shapes
-
-   - Branch or merge nodes
-   - Each control flow leaving branch node has guard condition
-   - Only 1 alernative path can be taken at any time.
-
-4. Parallel paths - Bar
-
-   - Forks and join
-   - Indicate start and end of concurrent flows of control
-
-5. Rakes
-
-   - Indicate that part of activity is given as separate diagram
-   - In actions
-
-6. Swimlanes
-
-   - Partition activity diagram to show who is doing which action (Who
-     label at the top, as columns)
-
-** OODM
-   :PROPERTIES:
-   :CUSTOM_ID: oodm
-   :END:
-
-1. No navigability
-2. No methods
-
 * Appendix A - Code Quality
   :PROPERTIES:
   :CUSTOM_ID: appendix-a---code-quality
