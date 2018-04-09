@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-03-14 Wed 15:19 -->
+<!-- 2018-04-09 Mon 11:22 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -102,13 +102,12 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#orgeaaa62b">1.2.1. Active vs Passive Learning</a></li>
 <li><a href="#org64946d4">1.2.2. Online vs Batch Learning</a></li>
-<li><a href="#org520b142">1.2.3. Unsupervised Learning</a></li>
-<li><a href="#org8ccf3c7">1.2.4. Reinforcement Learning</a></li>
-<li><a href="#org892b8d2">1.2.5. Supervised Learning</a>
+<li><a href="#org8ccf3c7">1.2.3. Reinforcement Learning</a></li>
+<li><a href="#org892b8d2">1.2.4. Supervised Learning</a>
 <ul>
-<li><a href="#org746ceba">1.2.5.1. Measure of success</a></li>
-<li><a href="#org29a1227">1.2.5.2. Empirical Risk Minimisation (ERM)</a></li>
-<li><a href="#org8d71aa9">1.2.5.3. Assumptions Made ⚠</a></li>
+<li><a href="#org746ceba">1.2.4.1. Measure of success</a></li>
+<li><a href="#org29a1227">1.2.4.2. Empirical Risk Minimisation (ERM)</a></li>
+<li><a href="#org8d71aa9">1.2.4.3. Assumptions Made ⚠</a></li>
 </ul>
 </li>
 </ul>
@@ -155,14 +154,24 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#org7538680">5. Density Estimation</a></li>
-<li><a href="#orgf6ef7b1">6. Refile</a>
+<li><a href="#org520b142">6. Unsupervised Learning</a>
 <ul>
-<li><a href="#org05cfe76">6.1. Data Compression</a></li>
+<li><a href="#orgfd82d45">6.1. K-means Clustering</a></li>
+<li><a href="#orge1d4ddc">6.2. Gaussian Mixture Model</a></li>
+<li><a href="#orge86edaa">6.3. Expectation Maximization</a></li>
+</ul>
+</li>
+<li><a href="#orgf6ef7b1">7. Refile</a>
+<ul>
+<li><a href="#org05cfe76">7.1. Data Compression</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+<p>
+-<b>- mode: Org; org-download-image-dir: "./images/ai/"; -</b>-
+</p>
 
 <div id="outline-container-org17e50d1" class="outline-2">
 <h2 id="org17e50d1"><span class="section-number-2">1</span> The Learning Problem</h2>
@@ -214,30 +223,9 @@ label is received.
 </p>
 </div>
 </div>
-<div id="outline-container-org520b142" class="outline-4">
-<h4 id="org520b142"><span class="section-number-4">1.2.3</span> Unsupervised Learning</h4>
-<div class="outline-text-4" id="text-1-2-3">
-<p>
-In unsupervised learning, given a training set \(S = \left(x_1, \hdots,
- x_m\right)\), without a labeled output, one must construct a "good"
-model/description of the data.
-</p>
-
-<p>
-Example use cases include:
-</p>
-<ul class="org-ul">
-<li>clustering</li>
-<li>dimension reduction to ind essential parts of the data and reduce
-noise (e.g. PCA)</li>
-<li>minimises description length of data</li>
-</ul>
-</div>
-</div>
-
 <div id="outline-container-org8ccf3c7" class="outline-4">
-<h4 id="org8ccf3c7"><span class="section-number-4">1.2.4</span> Reinforcement Learning</h4>
-<div class="outline-text-4" id="text-1-2-4">
+<h4 id="org8ccf3c7"><span class="section-number-4">1.2.3</span> Reinforcement Learning</h4>
+<div class="outline-text-4" id="text-1-2-3">
 <p>
 Each action in a state has an associated cost and a probability
 distribution of the next state.
@@ -250,12 +238,12 @@ minimizes the sum of expected current and future costs.
 </div>
 </div>
 <div id="outline-container-org892b8d2" class="outline-4">
-<h4 id="org892b8d2"><span class="section-number-4">1.2.5</span> Supervised Learning</h4>
-<div class="outline-text-4" id="text-1-2-5">
+<h4 id="org892b8d2"><span class="section-number-4">1.2.4</span> Supervised Learning</h4>
+<div class="outline-text-4" id="text-1-2-4">
 </div>
 <div id="outline-container-org746ceba" class="outline-5">
-<h5 id="org746ceba"><span class="section-number-5">1.2.5.1</span> Measure of success</h5>
-<div class="outline-text-5" id="text-1-2-5-1">
+<h5 id="org746ceba"><span class="section-number-5">1.2.4.1</span> Measure of success</h5>
+<div class="outline-text-5" id="text-1-2-4-1">
 <p>
 A loss function helps measure our success. Given a set \(H\) of
 hypothesis of models, and a domain \(Z\), let \(l\) be a function from \(H
@@ -278,8 +266,8 @@ or expected loss.
 </div>
 </div>
 <div id="outline-container-org29a1227" class="outline-5">
-<h5 id="org29a1227"><span class="section-number-5">1.2.5.2</span> Empirical Risk Minimisation (ERM)</h5>
-<div class="outline-text-5" id="text-1-2-5-2">
+<h5 id="org29a1227"><span class="section-number-5">1.2.4.2</span> Empirical Risk Minimisation (ERM)</h5>
+<div class="outline-text-5" id="text-1-2-4-2">
 <ul class="org-ul">
 <li>The training set error is often called the <i>empirical error</i> or
 <i>empirical risk</i>.</li>
@@ -289,8 +277,8 @@ minimizes the empirical risk is a simple learning strategy.</li>
 </div>
 </div>
 <div id="outline-container-org8d71aa9" class="outline-5">
-<h5 id="org8d71aa9"><span class="section-number-5">1.2.5.3</span> Assumptions Made ⚠</h5>
-<div class="outline-text-5" id="text-1-2-5-3">
+<h5 id="org8d71aa9"><span class="section-number-5">1.2.4.3</span> Assumptions Made ⚠</h5>
+<div class="outline-text-5" id="text-1-2-4-3">
 <ol class="org-ol">
 <li>One common assumption is that the data in the data generation
 process is independently and identically distributed (IID),
@@ -717,13 +705,146 @@ beta distribution as the prior.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf6ef7b1" class="outline-2">
-<h2 id="orgf6ef7b1"><span class="section-number-2">6</span> Refile</h2>
+<div id="outline-container-org520b142" class="outline-2">
+<h2 id="org520b142"><span class="section-number-2">6</span> Unsupervised Learning</h2>
 <div class="outline-text-2" id="text-6">
+<p>
+In unsupervised learning, given a training set \(S = \left(x_1, \hdots,
+ x_m\right)\), without a labeled output, one must construct a "good"
+model/description of the data.
+</p>
+
+<p>
+Example use cases include:
+</p>
+<ul class="org-ul">
+<li>clustering</li>
+<li>dimension reduction to ind essential parts of the data and reduce
+noise (e.g. PCA)</li>
+<li>minimises description length of data</li>
+</ul>
+</div>
+<div id="outline-container-orgfd82d45" class="outline-3">
+<h3 id="orgfd82d45"><span class="section-number-3">6.1</span> K-means Clustering</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+Input: \(\{x^{(1), x^{(2)}, x^{(3)}, \hdots, x^{(m)}}\}\).
+</p>
+
+<ol class="org-ol">
+<li>Randomly initialize cluster centroids.</li>
+<li>For all points, compute which cluster centroid is the closest.</li>
+<li>For each cluster centroid, move centroids to the average points
+belonging to the cluster.</li>
+<li>Repeat until convergence.</li>
+</ol>
+
+<p>
+K-means is guaranteed to converge. To show this, we define a
+distortion function:
+</p>
+
+\begin{equation}
+  J(c, \mu) = \sum_{i=1}^m || x^{(i)} - \mu_{c^{(i)}}||^2
+\end{equation}
+
+<p>
+K means is coordinate ascent on J. Since \(J\) always decreases, the
+algorithm converges.
+</p>
+</div>
+</div>
+<div id="outline-container-orge1d4ddc" class="outline-3">
+<h3 id="orge1d4ddc"><span class="section-number-3">6.2</span> Gaussian Mixture Model</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+By Bayes' Theorem:
+</p>
+
+\begin{equation}
+P(X^{(i)}, Z^{(i)}) = P(X^{(i)} | Z^{(i)})P(Z^{(i)})
+\end{equation}
+
+\begin{equation}
+Z^{(i)} \sim \text{multinomial}(\phi)
+\end{equation}
+
+\begin{equation}
+X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu_j, \Sigma_j)
+\end{equation}
+</div>
+</div>
+
+<div id="outline-container-orge86edaa" class="outline-3">
+<h3 id="orge86edaa"><span class="section-number-3">6.3</span> Expectation Maximization</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+<a href="https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf">https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf</a>
+</p>
+
+<p>
+The EM algorithm is an efficient iterative procedure to compute the
+Maximum Likelihood (ML) estimate in the presence of missing or hidden
+data.
+</p>
+
+<p>
+Each iteration of the EM algorithm consists of two processes: The
+E-step, and the M-step. In the expectation, or E-step, the missing da
+ta are estimated given the observed data and current estimate of the
+model par ameters. This is achieved using the conditional
+expectation, explaining the choice of terminology.
+</p>
+
+<p>
+In the M-step, the likelihood function is maximized under th e
+assumption that the missing data are known. The estimate of the
+missing data f rom the E-step are used in lieu of the actual missing
+data.
+</p>
+
+<p>
+Convergence is assured since the algorithm is guaranteed to
+increase the likelihood at each iteration.
+</p>
+
+
+<div class="figure">
+<p><img src="images/ai/Expectation Maximization/screenshot_2018-04-03_10-56-25.png" alt="screenshot_2018-04-03_10-56-25.png" />
+</p>
+</div>
+
+<p>
+For mixture of Gaussians:
+</p>
+
+<p>
+Repeat until convergence:
+</p>
+<ol class="org-ol">
+<li>E-step
+<ul class="org-ul">
+<li>guess values of \(Z^{(i)}\)</li>
+<li>Let \(w_j^{(i)} := P(Z^{(i)=j|X^{(i), \phi, \mu, \Sigma}})\)</li>
+</ul></li>
+<li>M-step
+<ul class="org-ul">
+<li>\(\phi_j := \frac{1}{m}\sum_{i=1}^m w_j^{(i)}\)</li>
+<li>\(\mu_j := \frac{\sum_{i=1}^m w_j^{(i)}x^{(i)}}{\sum_{i=1}^m w_j^{(i)}}\)</li>
+<li>&#x2026;</li>
+</ul></li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf6ef7b1" class="outline-2">
+<h2 id="orgf6ef7b1"><span class="section-number-2">7</span> Refile</h2>
+<div class="outline-text-2" id="text-7">
 </div>
 <div id="outline-container-org05cfe76" class="outline-3">
-<h3 id="org05cfe76"><span class="section-number-3">6.1</span> Data Compression</h3>
-<div class="outline-text-3" id="text-6-1">
+<h3 id="org05cfe76"><span class="section-number-3">7.1</span> Data Compression</h3>
+<div class="outline-text-3" id="text-7-1">
 <p>
 In <i>lossy compression</i>, we seek to trade off code length with
 reconstruction error.
@@ -748,7 +869,7 @@ some of the dimensions.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-03-14 Wed 15:19</p>
+<p class="date">Created: 2018-04-09 Mon 11:22</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
