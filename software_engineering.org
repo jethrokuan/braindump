@@ -14,6 +14,7 @@
 The class is denoted with 3 parts: The class name, its attributes, and
 its methods.
 
+#+ATTR_LATEX: :width 0.3\textwidth
 [[file:images/software-engineering/Object-Oriented Programming/class_uml.png]]
 
 Instances of a class are denoted with 3 parts: its name (and class),
@@ -25,10 +26,12 @@ Class-level attributes and variables are denoted by _underlines_. In
 the class diagram below, =totalStudents= and =getTotalStudents= are
 class-level._
 
+#+ATTR_LATEX: :width 0.3\textwidth
 [[file:images/software-engineering/Object-Oriented Programming/class_level_uml.png]]
 
 UML Notation for enumerations:
 
+#+ATTR_LATEX: :width 0.3\textwidth
 [[file:images/software-engineering/Object-Oriented
 Programming/enumeration_uml.png]]
 ** Associations
@@ -42,25 +45,26 @@ Programming/navigability_uml.png]]
 
   - Multiplicity is denoted on each end of the association.
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented Programming/multiplicity_uml.png]]
 
   - Dependencies are weaker associations where interactions between
     objects do not result in a long-term relationship. A dashed arrow
     is used to show dependencies.
 
-
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-04-09 11:02:16
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented Programming/dependencies_uml.png]]
 
   - Composition represents a strong whole-part relationship. When the
     whole is destroyed, parts are destroyed too. There cannot be
     cyclical links in composition.
-
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented
 Programming/composition_uml.png]]
 
   - Aggregation represents a container-contained relationship. 
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented
 Programming/aggregation_uml.png]]
 
@@ -68,6 +72,7 @@ Programming/aggregation_uml.png]]
     association. It is a normal class but plays a special role from a
     design point of view.
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented Programming/association_class_uml.png]]
 ** Inheritance
 Inheritance allows you to define a new class based on an existing
@@ -82,11 +87,13 @@ interface. A class implementing an interface results in an is-a
 relationship. In the example below, =AcademicStaff= is a
 =SalariedStaff=.
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented Programming/interface_uml.png]]
 
 An abstract method is the method interface without the implementation.
 It is denoted with the ={abstract}= annotation in the UML diagram.
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Object-Oriented
 Programming/abstract_uml.png]]
 ** Polymorphism
@@ -119,13 +126,13 @@ polymorphism are:
 - Actor partitions :: swimlanes
    - Partition activity diagram to show who is doing which action (Who
      label at the top, as columns)
-
+#+ATTR_LATEX: :width 0.7\textwidth
 [[file:images/software-engineering/Modelling
 Behaviour/activity_branch_uml.png]]
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Modelling
 Behaviour/activity_fork_join_uml.png]]
-
 
 ** Sequence Diagrams
 - Method calls :: Solid arrows
@@ -152,8 +159,7 @@ Behaviour/activity_fork_join_uml.png]]
 Note:
 - No underlined object names (e.g. :Object)
 
-
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-04-09 12:21:45
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Modelling Behaviour/sequence_uml.png]]
 * Software Requirements
 Requirements come from /stakeholders/: parties that are directly
@@ -317,6 +323,7 @@ anti-patterns, consequences and other useful information.
   internals and users of the component that access the component
   happens through the facade class.
 
+#+ATTR_LATEX: :width 0.4\textwidth
 [[file:images/software-engineering/Software Design Patterns/facade.png]]
 
 ** Command Pattern
@@ -345,6 +352,7 @@ anti-patterns, consequences and other useful information.
 - *Solution*: Force the communication through an interface know to
   both parties.
 
+#+ATTR_LATEX: :width 0.5\textwidth
 [[file:images/software-engineering/Software Design Patterns/observer.png]]
 
 * Implementation
@@ -733,7 +741,7 @@ SDLC consists of different stages such as:
   - Ready system for actual production use
   - Familiarise end users with the system
 
-** CDMI
+** CMMI (Capability Maturity Model Integration)
 - Determine if process of an organisation is at a certain maturity level
 1. Initial
    - Processes unpredictable, poorly controlled and reactive
