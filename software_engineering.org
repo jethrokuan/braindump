@@ -155,414 +155,260 @@ Note:
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-04-09 12:21:45
 [[file:images/software-engineering/Modelling Behaviour/sequence_uml.png]]
-
-* Week 4
-  :PROPERTIES:
-  :CUSTOM_ID: week-4
-  :END:
-
-** Branching
-   :PROPERTIES:
-   :CUSTOM_ID: branching
-   :END:
-
-1. Process of evolving multiple versions of the software in parallel
-
-** OOP
-   :PROPERTIES:
-   :CUSTOM_ID: oop
-   :END:
-
-1. Programming paradigm, i.e. Guides programmers to analyse programming
-   problems and structure solutions in a specific way
-2. Views the world as network of interacting objects, try to create
-   similar network in computer's memory
-3. An object has state and behaviour, interface and implementation
-4. Objects interact by sending messages
-
-** Classes
-   :PROPERTIES:
-   :CUSTOM_ID: classes
-   :END:
-
-1. Contains instructions for creating specific kinds of objects
-
-** Class diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: class-diagrams
-   :END:
-
-1. Model that represents an OOP software design and is drawn using UML
-   modeling notation
-
-** Object diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: object-diagrams
-   :END:
-
-1. Shows an object structure at a given point of time.
-
-** Exceptions
-   :PROPERTIES:
-   :CUSTOM_ID: exceptions
-   :END:
-
-1. An event, which occurs during the execution of a program, that
-   disrupts the normal flow of the program's instructionts
-2. Deal with 'unusual' but not entirely unexpected situations
-
-** Models
-   :PROPERTIES:
-   :CUSTOM_ID: models
-   :END:
-
-1. Anything used in any way to represent anything else
-2. Provides simpler view of complex entity because a model captures only
-   a selected aspect
-3. Multiple models may be required
-4. Used to:
-
-   - Analyse complex entities
-   - Communicate information among stakeholders
-   - Use as blueprint
-
-** Abstraction
-   :PROPERTIES:
-   :CUSTOM_ID: abstraction
-   :END:
-
-1. Objects are abstraction, as we work with bigger entities, and just
-   use objects as is
-
-** Encapsulation
-   :PROPERTIES:
-   :CUSTOM_ID: encapsulation
-   :END:
-
-1. Implementation from unintended actions and from inadvertent access
-2. Packaging aspect
-
-   - All data and related behaviour are stored as a self-contained unit
-     in an object
-
-3. Information hiding aspect
-
-   - Data in object is hidden from outside world, accessible only from
-     object's interface
-
-** Enumerations
-   :PROPERTIES:
-   :CUSTOM_ID: enumerations
-   :END:
-
-1. Fixed set of values that can be considered a data type
-
-   - e.g. Priority set as Low, Medium or High only
-
-* Week 5
-  :PROPERTIES:
-  :CUSTOM_ID: week-5
-  :END:
-
-** Forking Workflows
-   :PROPERTIES:
-   :CUSTOM_ID: forking-workflows
-   :END:
-
-1. Team members fork main repo, and create PRs from their fork to the
-   main repo
-
-** Revision Control Systems (RCS)
-   :PROPERTIES:
-   :CUSTOM_ID: revision-control-systems-rcs
-   :END:
-
-*** DRCS (Distributed RCS)
-    :PROPERTIES:
-    :CUSTOM_ID: drcs-distributed-rcs
-    :END:
-
-1. Multiple remote repos
-
-*** CRCS (Centralised RCS)
-    :PROPERTIES:
-    :CUSTOM_ID: crcs-centralised-rcs
-    :END:
-
-1. Central remote repo, shared by team
-
-** Feature Branch Flow
-   :PROPERTIES:
-   :CUSTOM_ID: feature-branch-flow
-   :END:
-
-1. Similar to Forking workflows, but no forks or PR
-2. Each feature done in separate branch
-
-** Centralised flow
-   :PROPERTIES:
-   :CUSTOM_ID: centralised-flow
-   :END:
-
-1. Similar to feature branch, but all changes done in master branch
-
-** Developer testing
-   :PROPERTIES:
-   :CUSTOM_ID: developer-testing
-   :END:
-
-1. To detect bugs early
-
-   - Smaller search space
-   - No need for major rework
-   - A bug might be hiding other bugs
-   - Prevent delivery delays
-
-2. JUnit - Automated testing
-
-** Single responsibility principle
-   :PROPERTIES:
-   :CUSTOM_ID: single-responsibility-principle
-   :END:
-
-1. One object should only have 1 purpose
-
-* Week 6
-  :PROPERTIES:
-  :CUSTOM_ID: week-6
-  :END:
-
-** Polymorphism
-   :PROPERTIES:
-   :CUSTOM_ID: polymorphism
-   :END:
-
-- Different behaviours to same message
-
-** Abstract classes
-   :PROPERTIES:
-   :CUSTOM_ID: abstract-classes
-   :END:
-
-- Cannot be instantiated, can be subclassed
-- Can have abstract and non-abstract methods
-
-** Interfaces
-   :PROPERTIES:
-   :CUSTOM_ID: interfaces
-   :END:
-
-- Behaviour specification
-
-** Sequence diagrams:
-   :PROPERTIES:
-   :CUSTOM_ID: sequence-diagrams
-   :END:
-
-1. Solid arrows - method calls
-2. Dotted arrows - method returns (Can be omitted)
-3. No underlined object names (e.g. :Object)
-4. Loops - labelled
-5. Activation bar (Can be omitted)
-
-   - Method is running and in charge of execution
-   - Constructor is active
-
-** Requirements
-   :PROPERTIES:
-   :CUSTOM_ID: requirements
-   :END:
-
-*** Types
-    :PROPERTIES:
-    :CUSTOM_ID: types
-    :END:
-
-- Brown-field: Develop to replace/update existing product
-- Green-field: New system, no precedent
-
-*** Key points
-    :PROPERTIES:
-    :CUSTOM_ID: key-points
-    :END:
-
-1. Come from stakeholders
-
-*** Non-functional and functional
-    :PROPERTIES:
-    :CUSTOM_ID: non-functional-and-functional
-    :END:
-
-1. Non-functional: Constraints under which system is developed
-
-   - Where supplementary requirements go under
-
-2. Functional: What system should do
-
-*** Gathering requirements
-    :PROPERTIES:
-    :CUSTOM_ID: gathering-requirements
-    :END:
-
-1. Brainstorming
-
-   - Group activity for diverse and creative ideas for the solution of a
-     problem
-
-2. Product surveys
-3. Observation
-4. User surveys
-5. Interiews
-6. Focus groups
-7. Prototyping
-
-*** Techniques for specifying requirement
-    :PROPERTIES:
-    :CUSTOM_ID: techniques-for-specifying-requirement
-    :END:
-
-1. Prose: Textual descriptions
-2. Feature lists: List of features grouped according to /some criteria/
-   e.g. aspect, priority, order of delivery
-3. User stories: Show how users can benefit e.g. I will be able to <
-   achieve > with < feature > by < how life is simpler >
-
-   - Target user
-   - Not too detailed
-
-4. Use cases: Display functional requirements
-
-   - Use target user as actor
-   - Software system
-   - Describe interaction between system and actors
-   - Only externally visible behaviour
-   - Intention of actor (/NOT/ mechanics)
-
-5. Main Success Scenario: Most straightfoward interaction, nothing goes
-   wrong
-
-   - Extensions: Exceptional/alternative flow of events
-   - Self-contained
-   - A use case can include another use case (underlined)
-
-6. Use Case diagrams
-
-   - << Include >> and << Extend >>
-   - Actor generalisation (Point from actor A to B to indicate A can do
-     everyting B can do)
-   - 
-   - Disadvantage: Not good for capturing requirements where users don't
-     interact with system
-
-7. Preconditions and Guarantees
-8. Do not use System as a user
-
-*** User Stories
-    :PROPERTIES:
-    :CUSTOM_ID: user-stories
-    :END:
-
-1. Convenient for
-
-   - Scoping
-   - Estimation
-   - Scheduling
-
-** [NOTE]
-   :PROPERTIES:
-   :CUSTOM_ID: note
-   :END:
-
-- High-level user stories are called /epics/, cover bigger functionality
-  e.g. A lecturer can monitor student participation levels
-
-  - Can be broken down in multiple user stories of normal size (view
-    forums posts of students etc)
-
-- Conditions of satisfaction can be specified (After the user story)
-- Priorities, size and urgency can also be added (optional)
-
-** Glossary
-   :PROPERTIES:
-   :CUSTOM_ID: glossary
-   :END:
-
-- Ensures that all stakeholders have a common understanding of the
-  noteworthy terms
-
-* Week 7
-  :PROPERTIES:
-  :CUSTOM_ID: week-7
-  :END:
-
-** Architecture
-   :PROPERTIES:
-   :CUSTOM_ID: architecture
-   :END:
-
-1. High-level stucture of system. Main components are GUI, TextUI, ATD,
-   Logic, Store
-2. Typically by software architects
-
-** Architecture diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: architecture-diagrams
-   :END:
-
-1. Free form, no universally adopted standard notation
-2. Split into multiple levels for big projects, where not everything can
-   be fit in one diagram
-
-** API (Application Programming Interface)
-   :PROPERTIES:
-   :CUSTOM_ID: api-application-programming-interface
-   :END:
-
-1. Specifies interface through which other programs can interact with a
-   software component
-
-** Logging
-   :PROPERTIES:
-   :CUSTOM_ID: logging
-   :END:
-
-1. Deliberate recording of certain info. during program execution for
-   future reference
-2. Logger
-
-   - Used to log
-   - Different levels: SEVERE, INFO, WARNING etc.
-   - LogManager to prevent routing to root logger
-     (e.g. LogManager.getLogManager().reset())
-   - ConsoleHandler to set which logs print out in console
-
-     - setLevel to filter logs to show
-
-   - FileHandler to log to file, 2nd arg set as true to append instead
-     of overwrite file
+* Software Requirements
+Requirements come from /stakeholders/: parties that are directly
+affected by the software project.
+
+- functional requirements :: specify what the system should do
+  - data requirements: availability etc.
+- non-functional requirements :: specify the constraints under which
+     system is developed
+  - business and domain rules: the size of the group cannot be more
+    than 5
+  - constraints: should be backwards compatible
+  - technical requirements: should work on 32/64-bit environments
+
+Good requirements are: unambiguous, testable, clear, correct,
+understandable, feasible, independent, atomic, necessary,
+implementation-free
+
+User stories follow the format: =As a _, I can _ so that _=. They
+occur on different levels, high-level stories are called epics. 
+* Design
+Software design has 2 main aspects:
+
+1. product/external design: designing the external behaviour of the
+   product to meet the user requirements.
+2. implementation/internal design: designing how the product will be
+   implemented to meet the required external behaviour.
+
+- abstraction :: technique for dealing with complexity, establishes a
+                 level of complexity we are interested in, and
+                 suppressing more complex details below that level.
+
+** Coupling
+Coupling is the *measure of the degree of dependence* between
+components. Highly coupled components are:
+
+- *harder to maintain*: change in one module can cause changes to other modules
+- *harder to integrate*: multiple components have to be integrated at
+  the same time
+- *harder to test*: dependence on other modules
+
+Coupling comes in various forms:
+
+- Content Coupling :: one module modifies or relies on the internal
+   workings of another module.
+- Common/Global Coupling :: two modules share the same global data
+- Control Coupling :: one module controls the flow of the other
+- Data Coupling :: one module sharing data with another module (e.g.
+                   passing params)
+- External Coupling :: two modules share an externally imposed convention
+- Subclass Coupling :: a class inherits from another class
+- Temporal Coupling :: two actions are bundled together because they
+     happen to occur at the same time
+
+** Cohesion
+Cohesion is a *measure of how strongly-related and focused the
+various responsibilities of a component are*. Low cohesion can:
+
+- impede the understandability of modules
+- lower maintainability because  a module can be modified due to
+  unrelated causes
+- lowers reusability because they do not represent logical units of
+  functionality
+
+Cohesion can be present in many forms:
+
+- Code related to the same concept are kept together
+- Code invoked close together in time are kept together
+- Code manipulating the same data structure are kept together
+
+* Software Architecture
+Software architecture shows the *overall organization of the system
+and can be viewed as a very high-level design*.
+
+** Architectural Styles
+1. n-tier
+   - n layer
+   - Higher layer communicates to lower tier
+   - Must be independent
+
+2. Client-server
+   - At least one client component and one server component
+   - Commonly used in distributed apps
+
+3. Event-driven Style
+   - Detect events from emitters and communicating to event consumers
+
+4. Transaction processing style
+   - Divides workload down to a number of transactions which are given
+     to a dispatcher which controls the execution for each transaction
+
+5. Service-oriented architecture (SOA)
+   - Combining functionalities packaged by programmatically accessible
+     services
+   - e.g. Creating an SOA app that uses Amazon web services
+
+6. Pipes and Filters pattern
+   - Break down processing tasks by modules (streams) into separate
+     components(filters), each into 1 task
+   - Combine them into a pipeline by standardising format of data each
+     component sends and receives
+   - Bottleneck - Slowest filter
+   - Components can be run independently
+   - Used when processing steps by an application have different
+     scalability requirements
+
+7. Broker pattern
+   - Broker component coordinates communication, such as forwarding
+     requests, as well as for transmitting results and exceptions
+   - Used to structure distributed software systems with decoupled
+     components interacting by remote service invocations
+
+8. Peer-to-peer
+   - Partitions workload between peers (both 'client' and 'server' to
+     other nodes)
+
+9. Message-driven processing
+   - Client sends service requests in specially-formatted messages to
+     request brokers(programs)
+   - Request brokers maintain queues of requests (and maybe replies) to
+     screen their details
+
+* Software Design Patterns
+Software Design Patterns are *elegant reusable solutions to commonly
+recurring problems within a given context in software design*.
+
+Design patterns are specified with: context, problem, solution,
+anti-patterns, consequences and other useful information.
+
+** Singleton
+- *Context*: certain classes should have no more than 1 instance.
+- *Problem*: a normal class can be instantiated multiple times by
+  invoking the constructor
+- *Solution*: make the constructor of the singleton class =private=,
+  provide a public class-level method to access the single instance.
+- Pros:
+  - Easy to apply
+  - Effective with minimal work
+  - Access singleton from anywhere
+- Cons:
+  - Global variable, increases coupling
+  - Hard to test as they cannot be replaced with stubs
+  - Singletons carry data from one test to another
+ 
+** Abstraction Occurrence
+- *Context*: Group of similar entities that appear to be occurrences
+  of the same thing, sharing a lot of common information, but differ
+  in many ways.
+- *Problem*: representing objects as a single class would result in
+  duplication of data, leading to inconsistencies in data.
+- *Solution*: Let a copy of the entity be represented by multiple
+  objects, separating the common and unique information into 2
+  classes.
+
+** Facade Pattern
+- *Context*: Components need access to functionality deep inside other
+  components
+- *Problem*: Access to component should be allowed without exposing
+  internal details
+- *Solution*: Create a Facade class that sits between the component
+  internals and users of the component that access the component
+  happens through the facade class.
+
+[[file:images/software-engineering/Software Design Patterns/facade.png]]
+
+** Command Pattern
+- *Context*: A system is required to execute a number of commands,s
+  each doing a different task.
+- *Problem*: Prefer to have code executing command to not have to know
+  each command type
+- *Solution*: Have  a general =Command= object that can be passed
+  around, stored and executed without knowing the type of command.
+
+** MVC Pattern
+- *Context*: applications support storage/retrieval of information,
+  display, and updating stored information
+- *Problem*: want to reduce coupling between interlinked nature of the
+  above features
+- *Solution*: /View/ displays data, interacts with the user.
+  /Controller/ detects UI events, and updates the model/view when
+  necessary. /Model/ stores and maintains the data, updates the views
+  if necessary.
+
+** Observer Pattern
+- *Context*: An object is interested in getting notified when a change
+  happens to another object
+- *Problem*: the observed object does not want to be coupled to
+  objects that are 'observing' it
+- *Solution*: Force the communication through an interface know to
+  both parties.
+
+[[file:images/software-engineering/Software Design Patterns/observer.png]]
+
+* Implementation
+- Debugging :: process of discovering defects in the program.
+  - inserting temporary print statements incur extra effort, manually
+    tracing through code is difficult and time consuming. We should
+    use a debugger tool, which allows pausing and stepping through
+    execution of the code.
+
+
+** Code Quality
+There are various dimensions of code quality, including *run-time
+efficiency, security, and robustness*. The most important perhaps is
+*readability*.
+
+Some basic guidelines:
+1. Avoid long methods
+2. Avoid deep nesting
+3. Avoid complicated expressions
+4. Avoid Magic numbers
+5. Make the code obvious, e.g. by using explicity type conversion
+6. Structure code logically
+7. Do not trip up the reader, with things like unused parameters in
+   the method signature
+8. Practice KISSing
+9. Avoid premature optimizations
+10. Make the happy path prominent
+11. SLAP (Single level of abstraction per method) hard
+12. Make the happy path prominent
+
+It is also good to follow a *coding standard*.
+
+Comments should explain the what and why, and not the how. Write
+comments minimally but sufficiently, not repeating the obvious and
+writing with the reader in mind.
+
+** Refactoring
+Refactoring *improves a program's internal structure in small steps without
+modifying its external behaviour.* It is not rewriting, and not bug-fixing.
+
+Common refactors include:
+- Consolidate duplicate conditional fragments
+- extract method
+
+** Error Handling
+Exceptions are events that occur during the execution of a program,
+that *disrupt the normal flow of the program's instructions*.
+
+Exception objects encapsulate the unusual situation so that another
+piece of code can catch it and deal with it. Exception objects
+propagate up the  method call hierarchy until it is dealt with.
 
 ** Assertions
-   :PROPERTIES:
-   :CUSTOM_ID: assertions
-   :END:
+Assertions are used to define assumptions about the program state so
+that the runtime can verify them. If the runtime detects an assertion
+failure, it typically takes some drastic action, such as terminating
+the program. Assertions can be disabled without modifying the code.
 
-1. Used to define assumptions about program state so that runtime can
-   verify them
-
-- Exceptions: Unusual condition created by user
-- Assertion failure: Programmer made mistake in his code
-
-2. Should not be used to do work as they can be disabled
-3. Suitable for verifying assumptions about Internal Invariants,
-   Control-Flow Invariants, Preconditions, Postconditions, and Class
-   Invariants
-
-** Integration
-   :PROPERTIES:
-   :CUSTOM_ID: integration
-   :END:
-
-1. Combining parts of a software product to form a whole
+** Logging
+Logging is *The deliberate recording of certain information during
+   program execution for future reference*, and is useful for
+   troubleshooting problems. Most languages come with a logging
+   mechanism, and the logger has different levels: SEVERE,
+   INFO, WARNING etc.
 
 *** Build automation
     :PROPERTIES:
@@ -600,354 +446,7 @@ Note:
 3. Continuous Deployment (CD) - Changes are integreated, and deployed to
    end-users at the same time (e.g. Travis)
 
-** Sequence Diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: sequence-diagrams-1
-   :END:
-
-1. Deletion
-
-   - Use a X at end of lifetime
-
-2. Self Invocation
-
-   - Draw a second bar within the activation bar for inner method and an
-     arrow to show self invocation
-
-3. Alternative paths
-
-   - alt frames with dotted horizontal lines to separate alternative
-     paths
-
-4. Optional paths
-
-   - opt frames
-
-5. Reference frames
-
-   - ref frame to omit details/ Show frame in another sequence diagram
-   - sd frame to show details
-
-6. Parallel path
-
-   - For multi-threading, as multiple things are being done at the same
-     time
-
-* Week 8
-  :PROPERTIES:
-  :CUSTOM_ID: week-8
-  :END:
-
-** Architecural styles
-   :PROPERTIES:
-   :CUSTOM_ID: architecural-styles
-   :END:
-
-1. n-tier
-
-   - n layer
-   - Higher layer communicates to lower tier
-   - Must be independent
-
-2. Client-server
-
-   - At least one client component and one server component
-   - Commonly used in distributed apps
-
-3. Event-driven Style
-
-   - Detect events from emitters and communicating to event consumers
-
-4. Transaction processing style
-
-   - Divides workload down to a number of transactions which are given
-     to a dispatcher which controls the execution for each transaction
-
-5. Service-oriented architecture (SOA)
-
-   - Combining functionalities packaged by programmatically accessible
-     services
-   - e.g. Creating an SOA app that uses Amazon web services
-
-6. Pipes and Filters pattern
-
-   - Break down processing tasks by modules (streams) into separate
-     components(filters), each into 1 task
-   - Combine them into a pipeline by standardising format of data each
-     component sends and receives
-   - Bottleneck - Slowest filter
-   - Components can be run independently
-   - Used when processing steps by an application have different
-     scalability requirements
-
-7. Broker pattern
-
-   - Broker component coordinates communication, such as forwarding
-     requests, as well as for transmitting results and exceptions
-   - Used to structure distributed software systems with decoupled
-     components interacting by remote service invocations
-
-8. Peer-to-peer
-
-   - Partitions workload between peers (both 'client' and 'server' to
-     other nodes)
-
-9. Message-driven processing
-
-   - Client sends service requests in specially-formatted messages to
-     request brokers(programs)
-   - Request brokers maintain queues of requests (and maybe replies) to
-     screen their details
-
-** Integration Approaches
-   :PROPERTIES:
-   :CUSTOM_ID: integration-approaches
-   :END:
-
-1. Late and one-time
-
-   - Wait till all components are completed and integrate all finished
-     components near end of project
-   - Not recommended due to possible component incompatabilities, which
-     can lead to delivery delays
-
-2. Early and frequent
-
-   - Integrate early and evolve each part in parallel, in small steps,
-     re-integrating frequently
-
-3. Big-Bang vs Incremental Integration
-
-   - Big-bang can lead to many problems at the same time
-
-4. Top-Down vs Bottom-Up
-
-   - Top-Down require stubs
-   - Bottom-up require drivers
-   - Sandwich for both to 'meet' in the middle
-
-** Software design principles
-   :PROPERTIES:
-   :CUSTOM_ID: software-design-principles
-   :END:
-
-1. Abstraction
-
-   - Hide complex implementation
-   - Black box
-
-     - Data abstraction
-
-       - Ignore lower level data items
-
-     - Control abstraction
-
-       - Abstract away details of control flow
-
-2. Coupling
-
-   - Measure of degree of dependence between components
-   - High coupling leads to:
-
-     - Harder maintenance : Hard to change just one module
-     - Harder integration : Integration for modules have to be done
-       together
-     - Harder testing and reuse of module : Dependence on other modules
-
-   - Types:
-
-     - Content coupling - One module relies on inner workings of another
-     - Common/Global coupling - share same global data
-     - Control coupling - One module controls flow of another
-     - External coupling - Two modules share externally imposed
-       convention
-     - Subclass coupling - Inheritance, i.e. only child class is coupled
-       to parent class
-     - Temporal coupling - Two actions bundled together because they
-       happen at same time
-
-3. Cohesion
-
-   - Measure of how strongly-related and focused the responsibilites of
-     a component are, i.e. how related the tasks of a component are
-   - Higher is better
-
-4. Separation of Concerns Principle
-
-   - Achieve modularity by separating code into distinct sections, such
-     that one section addresses a separate concern
-   - Reduces functional overlaps
-   - Applied at class levels or higher
-   - Lead to higher cohesion and less coupling
-   - Single Responsibility Principles
-
-5. Open-closed principle
-
-   - Modules should be opened for extension but closed for modification
-   - Done by abstraction, encapsulation, polymorphism and inheritance
-
-** Association classses
-   :PROPERTIES:
-   :CUSTOM_ID: association-classses
-   :END:
-
-1. Additional information about an association, e.g. Marriage class
-   between Man and Woman
-
-** Unit Testing
-   :PROPERTIES:
-   :CUSTOM_ID: unit-testing
-   :END:
-
-1. Stubs
-
-   - Testing the unit in isolation so that dependencies do not matter
-   - Gives expected output
-   - Dummy object
-
-2. Dependency injection
-
-   - Inject stubs to remove dependencies
-   - Create method for stubs to be injected
-
-3. Integration testing
-
-   - Test compatability between components
-
-     1. Test child classes separately
-     2. Test parent class in isolation
-     3. Test all together, i.e. integration test
-
-   - Hybrid unit + integration test - Merge step b and c
-
-     1. No stubs for child classes
-
-4. System testing
-
-   - Normally done by testing/QA team
-   - Test according to system specifications (specified external
-     behaviour), including NFRs
-   - Test against NFRs e.g. Performance, Load, Security, Compatability,
-     Usability, Portability
-   - Both positive and negative test cases
-   - Done on development environment or test bed
-
-5. GUI testing
-
-   - Hard to automate because:
-
-     - Large number of operations
-     - GUI operations are hard to verify
-     - Can be different across platoforms
-     - Overcome by minimising logic aspects
-
-   - Done by tools such as TestFx and VisualStudio
-
-6. Acceptance testing
-
-   - Meet user requirements
-   - Done by team that represents customer
-   - Done on deployment site or close simulation
-   - Focus on positive test cases
-
-7. Requirement Specification vs System Specification
-
-   - how system behaves in normal working conditions vs how it will fail
-     gracefully when pushed beyond limits
-   - problems that need to be solved (e.g. locate email quickly) vs how
-     system solves problems (the email search feature)
-   - Interface available for end users vs Additional APIs not available
-     for end-users
-
-8. Alpha and beta testing
-
-   - Alpha by users, under controlled conditions set by software
-     development team
-   - Beta by subset
-
-* Week 9
-  :PROPERTIES:
-  :CUSTOM_ID: week-9
-  :END:
-
-** Object Oriented modelling
-   :PROPERTIES:
-   :CUSTOM_ID: object-oriented-modelling
-   :END:
-
-1. Use sequence and class diagrams
-
-** Substitutability
-   :PROPERTIES:
-   :CUSTOM_ID: substitutability
-   :END:
-
-1. Subclass is instance of superclass, not vice versa
-
-** Polymorphism mechanism
-   :PROPERTIES:
-   :CUSTOM_ID: polymorphism-mechanism
-   :END:
-
-1. Substitutability - Treat objects of different types as 1 type
-2. Overriding - Objects of different subclasses display different
-   behaviours in response to same method call
-3. Dynamic binding - Allow for calling of parent method but child method
-   is executed instead
-
-** Dynamic and static binding
-   :PROPERTIES:
-   :CUSTOM_ID: dynamic-and-static-binding
-   :END:
-
-1. Dynamic: Method calls in code are resolved at runtime, rather than at
-   compile time
-
-   - e.g. Overriden methods
-
-2. Static: Method call is resolved at compile time
-
-   - e.g. Overloaded methods (i.e. methods with multiple signatures)
-
-** Agile design
-   :PROPERTIES:
-   :CUSTOM_ID: agile-design
-   :END:
-
-1. Not defined up front, emergent
-
-   - i.e. Overal system design evolves, hence a fully documented set of
-     models is not needed before coding
-
-** Liskov Substitution Principle (LSP)
-   :PROPERTIES:
-   :CUSTOM_ID: liskov-substitution-principle-lsp
-   :END:
-
-1. Subclass should not be more restrictive than superclass
-2. Child classes can be substituted for parent classes
-
-** Interface Segregation Principle
-   :PROPERTIES:
-   :CUSTOM_ID: interface-segregation-principle
-   :END:
-
-1. No client should be forced to depend on methods it does not use
-
-** Dependency Inversion Principle
-   :PROPERTIES:
-   :CUSTOM_ID: dependency-inversion-principle
-   :END:
-
-1. High level modules should not depend on low level modules. Both
-   depend on abstraction
-2. Details depend on abstractions, and not the other way
-
-** Defensive programming
-   :PROPERTIES:
-   :CUSTOM_ID: defensive-programming
-   :END:
-
+** Defensive Programming
 - Leave no room for things to go wrong
 
 1. Enforce compulsory associations(perform checks for null)
@@ -956,215 +455,160 @@ Note:
 3. Enforce referential integrity (Inconsistency in object references)
    (invoke the peer method when one is called)
 
-** Design by contract
-   :PROPERTIES:
-   :CUSTOM_ID: design-by-contract
-   :END:
-
-- Approach for designing software that requires defining formal, precise
-  and verifiable interface specifications for software components
+** Design-by-Contract
+DbC is an *approach for designing software that requires defining
+  formal, precise and verifiable interface specifications for software
+  components*.
 
   - Meet interface specifications for different components
     (preconditions must be met) to fulfil contract
 
-** Developer documents
-   :PROPERTIES:
-   :CUSTOM_ID: developer-documents
-   :END:
+** Integration Approaches
+1. Late and one-time
+   - Wait till all components are completed and integrate all finished
+     components near end of project
+   - Not recommended due to possible component incompatabilities, which
+     can lead to delivery delays
+2. Early and frequent
+   - Integrate early and evolve each part in parallel, in small steps,
+     re-integrating frequently
+3. Big-Bang vs Incremental Integration
+   - Big-bang can lead to many problems at the same time
+4. Top-Down vs Bottom-Up
+   - Top-Down require stubs
+   - Bottom-up require drivers
+   - Sandwich for both to 'meet' in the middle
 
-1. Developer-as-user
-2. Developer-as-maintainer
+** Reuse
+By reusing tried and tested components, the robustness of a new
+software system can be enhanced while reducing the manpower and time
+requirement. There are costs associated with reuse.
 
-*** How?
-    :PROPERTIES:
-    :CUSTOM_ID: how
-    :END:
+** APIs
+An Application  Programming Interface (API) specifies the interface
+through which other programs can interact with a software component.
 
-- Diagrams
-- Examples
-- Simple and direct explanations
-- No unnecessary statements
-- Use diagrams only when needed, else in appendix as a reference
-- Minimal and sufficient (Higher level info not readily visible in code)
+** Libraries and Frameworks
+A library is a collection of modular code that is general and can be
+used by other programs. A software framework is a reusable
+implementation of a software providing generic functionality that can
+be selectively customized to produce a specific application. Libraries
+are meant to be used 'as is' while frameworks are meant to be
+customized/extended. Your code calls the library code while the
+framework code calls your code.
 
-*** Top-down vs bottom-up
-    :PROPERTIES:
-    :CUSTOM_ID: top-down-vs-bottom-up
-    :END:
+** Platforms
+ A platform provides a runtime environment for applications. A
+ platform is often bundled with libraries, tools and frameworks.
 
-- Top-down is easier to understand
-- Reader can travel down a path until he/she reaches the component
-  he/she is interested to learn about
+* Quality Assurance
+QA ensures that the software being built has the required levels of
+quality. This is achieved through:
 
-** Testing techniques
-   :PROPERTIES:
-   :CUSTOM_ID: testing-techniques
-   :END:
+- code reviews :: the systematic examination of code with the
+                  intention of finding where the code can be improved
+- static analysis :: analysis of the code without actually executing
+     the code (e.g. Linters)
+- formal verification :: mathematical techniques, used to prove the
+     correctness of a program. it can only be used to prove the
+     absence of errors, but only proves compliance with the
+     specification, and not the actual utility of the software.
 
-*** Testability
-    :PROPERTIES:
-    :CUSTOM_ID: testability
-    :END:
 
-- How easy it is to test a SUT
+** Testing
+When testing, we execute a set of test cases, containing the *input*
+and the *expected behaviour*. Test cases can be determined based on
+the specification.
 
-*** Test coverage
-    :PROPERTIES:
-    :CUSTOM_ID: test-coverage
-    :END:
+*** Unit Testing
+- testing individual units to ensure each piece works correctly. In
+  OOP, this includes writing one or more unit tests for each public
+  method of a class.
+- A proper unit test requires the unit to be testing in isolation,
+  hence stubs are created for the dependencies.
+- *Dependency injection* is the process of replacing current
+  dependencies with another object, commonly seen with stubs.
+  Polymorphism can be used to implement this.
 
-- Function coverage
-- Statement(no. of lines) coverage
-- Decision/branch coverage(different decision points)
-- Condition coverage
-- Path coverage (All possible paths in a part of code executed)
-- Entry/exit coverage (calls and exits from operations in SUT)
+*** Integration Testing
+- testing whether different parts of the software work together as
+  expected. It aims to discover bugs in the "glue code" related to how
+  components interact with each other.
 
-*** Test-Driven Development (TDD)
-    :PROPERTIES:
-    :CUSTOM_ID: test-driven-development-tdd
-    :END:
+*** System Testing
+- Takes the whole system and tests it against the system specification
+- System test cases are based on the specified external behaviour of
+  the system
+- System testing includes testing against non-functional requirements
 
-- Writing tests before writing SUT, and evolve both functionality and
-  tests in small increments
+*** Others
+- alpha testing is performed by the users, under controlled conditions
+  set by the software development team
+- beta testing is performed by a selected subset of users of the
+  system in their natural work setting
+- dogfooding is the creators of the product using their own product
+- developer testing is done by the developers themselves, so as to
+  locate the cause of test case failure or fixing bugs
+- regression testing is the retesting the SUT to detect regressions when a system is modified.
 
-** QA
-   :PROPERTIES:
-   :CUSTOM_ID: qa
-   :END:
+*** Exploratory vs Scripted Testing
+- Exploratory testing devises test cases on-the-fly, creating new test
+  cases based on the results of past test cases
+  - dependent on the tester's prior experience and intuition
+- Scripted testing is a set of test cases based on the expected
+  behaviour of the SUT
+  - more systematic, and hence likely to discover more bugs given
+    sufficient time
 
-*** Validation
-    :PROPERTIES:
-    :CUSTOM_ID: validation
-    :END:
+*** Acceptance Testing
+- test the delivered system to ensure it meets the user requirements
+| System Testing                        | Acceptance Testing                                 |
+|---------------------------------------+----------------------------------------------------|
+| done against the system specification | Done against the requirements specification        |
+| done by testers on the project team   | done by a team that represents the customer        |
+| done on the development environment   | done on the deployment site, or a close simulation |
+| both negative and positive test cases | focus on positive test cases                       |
 
-- Are the requirements correct?
+*** Coverage
+Coverage is the metric used to measure the extent to which  testing
+exercises the code.
 
-*** Verification
-    :PROPERTIES:
-    :CUSTOM_ID: verification
-    :END:
+- function/method coverage :: based on the functions executed
+- statement coverage :: based on the number of lines of code executed
+- decision/branch coverage :: based on the decision points exercised
+- condition coverage :: based on the boolean sub-expressions
+- path coverage :: in terms of possible paths through a given part of
+                   the code executed
+- entry/exit coverage :: in terms of possible calls to and exits from
+     the operations in the SUT
 
-- Are the requirements implemented correctly?
+*** Test Case Design
+- black-box :: designed exclusively based on the SUT's specified
+               external behaviour
+- white-box :: test cases are designed based on what is known about
+               the SUT's implementation
+- gray-box ::  uses some important information about the
+              implementation.
 
-*** Code reviews
-    :PROPERTIES:
-    :CUSTOM_ID: code-reviews
-    :END:
+Equivalence partitions are *groups of test inputs that are likely to
+be processed by the SUTs in the same way*. This can be determined by
+identifying:
 
-- Pair programming
-- PR reviews
-- Formal inspections
+1. target object of method call
+2. input parameters of method call
+3. other data objects accessed by the method, such as global
+   variables.
 
-*** Static analysis
-    :PROPERTIES:
-    :CUSTOM_ID: static-analysis
-    :END:
+Boundary Value analysis is a *test case design heuristic that is
+based on the observation that bugs often result from incorrect
+handling of boundaries of equivalence partitions*.
 
-- Analysis of code without execution
+Other heuristics include:
 
-*** Formal verification
-    :PROPERTIES:
-    :CUSTOM_ID: formal-verification
-    :END:
-
-- Mathematical techniques to prove correctness
-- Used to prove absence of errors
-- Doesn't prove actual utility of software
-- Highly specialised notations and knowledge, hence expensive to
-  administer
-
-**** Advantages
-     :PROPERTIES:
-     :CUSTOM_ID: advantages
-     :END:
-
-- Prove absence of errors
-
-**** Disadvantages
-     :PROPERTIES:
-     :CUSTOM_ID: disadvantages
-     :END:
-
-- Does not prove actual utility of software
-- Highly specialised knowledge required
-- Used in safety-critical software e.g. Flight control systems
-
-** Project Management
-   :PROPERTIES:
-   :CUSTOM_ID: project-management
-   :END:
-
-*** Milestones
-    :PROPERTIES:
-    :CUSTOM_ID: milestones
-    :END:
-
-- End of stage indicating signifcant progress
-
-*** Buffers
-    :PROPERTIES:
-    :CUSTOM_ID: buffers
-    :END:
-
-- Time for unforeseen delays
-- Inflating/Padding - No downtime (Include delays)
-
-*** Issue trackers
-    :PROPERTIES:
-    :CUSTOM_ID: issue-trackers
-    :END:
-
-- Track task assignment and progress
-
-*** Work Breakdown Structure (WBS)
-    :PROPERTIES:
-    :CUSTOM_ID: work-breakdown-structure-wbs
-    :END:
-
-- Info about tasks and their details in terms of subtasks
-- Measured in man hours
-
-*** GANTT Charts
-    :PROPERTIES:
-    :CUSTOM_ID: gantt-charts
-    :END:
-
-- 2d bar chart, time vs tasks
-
-*** Program Evaluation Review Technique (PERT) chart
-    :PROPERTIES:
-    :CUSTOM_ID: program-evaluation-review-technique-pert-chart
-    :END:
-
-- Shows order/sequence of tasks (sort of like to-do list with sequence)
-- Show concurrent tasks
-- Critical path (Shortest possible path)
-
-*** Team Structures
-    :PROPERTIES:
-    :CUSTOM_ID: team-structures
-    :END:
-
-1. Egoless team
-2. Chief programmer team
-3. Strict hierarchy team
-
-* Week 10
-  :PROPERTIES:
-  :CUSTOM_ID: week-10
-  :END:
-
-** SE Principles
-   :PROPERTIES:
-   :CUSTOM_ID: se-principles
-   :END:
-
+- each valid input at least once in a positive test case
+- no more than 1 invalid input in a test case
+* Software Engineering Principles
 *** Law of Demeter
-    :PROPERTIES:
-    :CUSTOM_ID: law-of-demeter
-    :END:
-
 1. An object should have limited knowledge of another object
 2. An object should have limited interaction with closely related
    classes, if foo is coupled to bar, which is coupled to goo, foo
@@ -1172,9 +616,6 @@ Note:
 3. Reduces coupling
 
 *** SOLID
-    :PROPERTIES:
-    :CUSTOM_ID: solid
-    :END:
 - Single Responsibility Principle ::  every module or class should
      have responsibility over a single part of the functionality
      provided by the software, and that responsibility should be
@@ -1191,463 +632,25 @@ Note:
      depend on low level modules; both should depend on abstractions.
      Abstractions should not depend on details.
 
-
 - YAGNI :: a principle of extreme programming (XP) that states a
            programmer should not add functionality until deemed
            necessary.
 - DRY :: Don't repeat yourself, i.e. No duplicate implementations
 - Brook's Law ::  Adding people to a late project makes it later
+                 
 
-** Activity diagrams
-   :PROPERTIES:
-   :CUSTOM_ID: activity-diagrams
-   :END:
 
-- Model workflow
 
-*** Linear paths
-    :PROPERTIES:
-    :CUSTOM_ID: linear-paths
-    :END:
+* Software Development Life Cycles
+SDLC consists of different stages such as:
 
-1. Actions are rectangles with rounded edges (Steps)
-2. Control flows are lines with arrowheads (Flow of control from one
-   action to another)
-
-*** Alternate Paths
-    :PROPERTIES:
-    :CUSTOM_ID: alternate-paths
-    :END:
-
-1. Diamond shapes
-
-   - Branch or merge nodes
-   - Each control flow leaving node has guard condition
-   - Only 1 alernative path can be taken at any time.
-
-*** Parallel paths
-    :PROPERTIES:
-    :CUSTOM_ID: parallel-paths
-    :END:
-
-1. Bar
-
-   - Forks and join
-   - Indicate start and end of concurrent flows of control
-
-*** Rakes
-    :PROPERTIES:
-    :CUSTOM_ID: rakes
-    :END:
-
-1. Indicate that part of activity is given as separate diagram
-2. In actions
-
-*** Swimlanes
-    :PROPERTIES:
-    :CUSTOM_ID: swimlanes
-    :END:
-
-1. Partition activity diagram to show who is doing which action (Who
-   label at the top, as columns)
-
-** Design patterns
-   :PROPERTIES:
-   :CUSTOM_ID: design-patterns
-   :END:
-
-Elegant reusable solution to commonly recurring problem
-
-1. Context
-2. Problem
-3. Solution
-
-(Optional)
-
-4. Anti-patterns: Common wrong solutions
-5. Consequences: Pros and cons
-6. Other useful information: Code exmaples, known uses, other related
-   patterns
-
-*** Singleton design pattern
-    :PROPERTIES:
-    :CUSTOM_ID: singleton-design-pattern
-    :END:
-
-1. Certain classes only have max of 1 instance
-
-- Pros
-
-  - Easy to apply
-  - Effective with minimal work
-  - Access singleton from anywhere
-
-- Cons
-
-  - Global variable, increases coupling
-  - Hard to test as they cannot be replaced with stubs
-  - Singletons carry data from one test to another
-
-*** Facade Pattern
-    :PROPERTIES:
-    :CUSTOM_ID: facade-pattern
-    :END:
-
-1. Facade class that enables access to a component's internals by the
-   other component users
-
-*** Command pattern
-    :PROPERTIES:
-    :CUSTOM_ID: command-pattern
-    :END:
-
-1. General command object as a system is required to execute commands
-2. Command Implementation is not known
-
-** Reuse
-   :PROPERTIES:
-   :CUSTOM_ID: reuse
-   :END:
-
-*** Intro
-    :PROPERTIES:
-    :CUSTOM_ID: intro
-    :END:
-
-1. Reusing increases robustness (tried and tested), while reducing
-   manpower and time
-
-*** Costs
-    :PROPERTIES:
-    :CUSTOM_ID: costs
-    :END:
-
-1. Overkill
-2. May not be mature/stable enough (Risk of dying off)
-3. License of reused software may be restricting
-4. Malicious code
-
-** Libraries
-   :PROPERTIES:
-   :CUSTOM_ID: libraries
-   :END:
-
-1. Collection of modular code that is general
-
-- Usage
-
-  1. Read documentation
-  2. Check license for reuse
-  3. Download and make accessible
-  4. Call library API
-
-** Frameworks
-   :PROPERTIES:
-   :CUSTOM_ID: frameworks
-   :END:
-
-1. Reusable implementation of a software, providing generic
-   functionality that can be selectively customised to produce a
-   specific application
-2. Can be complete implementation of a default behaviour, and is
-   immediately usable e.g. Eclipse
-3. Facilitates adaptation and customization of some desired
-   functionality
-
-*** Difference between libraries and frameworks
-    :PROPERTIES:
-    :CUSTOM_ID: difference-between-libraries-and-frameworks
-    :END:
-
-1. Libraries are not meant to be modified, frameworks meant to be
-   customised and extended
-2. Code calls libaries, framework calls your code, i.e. inversion of
-   control
-
-*** Platforms
-    :PROPERTIES:
-    :CUSTOM_ID: platforms
-    :END:
-
-1. Runtime environment for applications
-
-   - OSes
-   - JavaEE
-   - .NET
-
-** Testing
-   :PROPERTIES:
-   :CUSTOM_ID: testing
-   :END:
-
-*** Deliberate test case design
-    :PROPERTIES:
-    :CUSTOM_ID: deliberate-test-case-design
-    :END:
-
-1. Exhaustive testing is not practical
-2. Hence, only add new tests targeting potential uncovered faults
-3. Effective(high % of existing bugs) and efficient(high rate of
-   success) (E&E)
-
-*** Exploratory testing
-    :PROPERTIES:
-    :CUSTOM_ID: exploratory-testing
-    :END:
-
-1. Test cases on-the-fly, based on results of past test cases
-
-*** Scripted testing
-    :PROPERTIES:
-    :CUSTOM_ID: scripted-testing
-    :END:
-
-1. Test based on written expected behaviour
-
-*** Exploratory and scripted testing
-    :PROPERTIES:
-    :CUSTOM_ID: exploratory-and-scripted-testing
-    :END:
-
-1. Use a mixture
-2. Exploratory depends on tester's experience and intuition
-3. Scripted testing is more systematic
-
-*** Positive vs negative test cases
-    :PROPERTIES:
-    :CUSTOM_ID: positive-vs-negative-test-cases
-    :END:
-
-1. Positive: Expected/valid behaviour
-2. Negative: Produce behaviour that indicates an invalid/unexpected
-   situation e.g. error
-
-*** Black box, white box and gray box
-    :PROPERTIES:
-    :CUSTOM_ID: black-box-white-box-and-gray-box
-    :END:
-
-1. Black: Test on SUT's specified external behaviour
-2. White: Test on code, i.e. SUT's implementation
-3. Gray: Test on important information about implementation,
-   e.g. conditions
-
-*** Testing based on use cases
-    :PROPERTIES:
-    :CUSTOM_ID: testing-based-on-use-cases
-    :END:
-
-1. Can create many test cases
-2. Use more high priority use cases
-
-** Equivalence Partitions (EP)
-   :PROPERTIES:
-   :CUSTOM_ID: equivalence-partitions-ep
-   :END:
-
-1. Test inputs can be grouped based on how they will be processed by SUT
-2. Same partition = same processing
-3. Effective - Catch all partitions
-4. Efficient - Only test among partitions, not within
-5. For OOP, consider object null vs not null
-
-   - Target object
-   - Input parameter
-   - Global variables accessed by method
-
-** Boundary Value Analysis
-   :PROPERTIES:
-   :CUSTOM_ID: boundary-value-analysis
-   :END:
-
-1. Boundary values between EPs
-
-   - Boundary value, 1 below, 1 above
-
-2. Corner cases
-
-* Week 11
-  :PROPERTIES:
-  :CUSTOM_ID: week-11
-  :END:
-
-** Object oriented domain models
-   :PROPERTIES:
-   :CUSTOM_ID: object-oriented-domain-models
-   :END:
-
-1. Class diagrams used to model problem domain (object interactions in
-   real world)
-2. Do not contain solution-specific classes
-3. Represents class structure of problem domain and NOT behaviour
-
-*** Difference between OODM and class diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: difference-between-oodm-and-class-diagrams
-    :END:
-
-1. Exact implementation not shown
-2. Solution domains not presented in OODM
-
-** Model View Controller Pattern
-   :PROPERTIES:
-   :CUSTOM_ID: model-view-controller-pattern
-   :END:
-
-1. Storage of info: Model (Stores and maintains data)
-2. Displaying of info: View
-3. Changing stored info based on external inputs: Controller(Detects UI
-   events, updates Model and View when necessary)
-
-** Observer pattern
-   :PROPERTIES:
-   :CUSTOM_ID: observer-pattern
-   :END:
-
-1. Observer gets notified when observable changes
-
-** Abstraction Occurrence
-   :PROPERTIES:
-   :CUSTOM_ID: abstraction-occurrence
-   :END:
-
-1. Share common information, but differ significantly
-
-   - e.g. books with same titles, same book title, author etc., but have
-     different purchase dates and barcode number
-   - e.g. Episodes of a TV series
-
-2. Cannot represent as a single class
-3. Split common and unique info into 2 classes
-
-   - Common would be abstraction
-   - Unique would be occurrence
-
-4. Anti-pattern
-
-   - 1 class for every slightly different object
-
-** GoF (Gang of Four)
-   :PROPERTIES:
-   :CUSTOM_ID: gof-gang-of-four
-   :END:
-
-1. 23 Design Patterns ### Creational
-2. Object creation. Operation of application is separated from how
-   objects are created
-3. Abstract Factory, Builder, Factory Method, Prototype, Singletons ###
-   Structural
-4. Composite objects into larger structures while catering for future
-   extension in structure
-5. Adapter, Bridge, Composite, Decorator, Facade, Flyweight, Proxy ###
-   Behavioral
-6. How ojects interact and how responsibility is distributed
-7. Chain of Responsibility, Command, Interpreter, Template Method,
-   Iterator, Mediator, Memento, Observer, State, Strategy, Visitor
-
-** Design patterns
-   :PROPERTIES:
-   :CUSTOM_ID: design-patterns-1
-   :END:
-
-1. Embedded in larger design
-2. Sometimes used in combinations
-
-*** Pros and cons
-    :PROPERTIES:
-    :CUSTOM_ID: pros-and-cons
-    :END:
-
-1. Gain experience
-2. Domain-specific
-3. Be careful not to overuse patterns
-
-*** Difference between design patterns and principles
-    :PROPERTIES:
-    :CUSTOM_ID: difference-between-design-patterns-and-principles
-    :END:
-
-1. Principles have varying degrees of formality, e.g. rules, opinions,
-   rule of thumbs, observations and axioms
-2. Principles are more general, have wider applicability, with greater
-   overlap among them
-
-*** How patterns exist beyond software design domain
-    :PROPERTIES:
-    :CUSTOM_ID: how-patterns-exist-beyond-software-design-domain
-    :END:
-
-1. Found in any domain
-2. e.g. Abstraction occurence pattern is an analysis pattern, MVC is
-   architectural pattern
-
-** Heuristics to combine test inputs
-   :PROPERTIES:
-   :CUSTOM_ID: heuristics-to-combine-test-inputs
-   :END:
-
-*** Why?
-    :PROPERTIES:
-    :CUSTOM_ID: why
-    :END:
-
-1. SUT can take multiple inputs e.g. boundary values
-
-   - Must combine inputs that are both effective and efficient
-
-*** How?
-    :PROPERTIES:
-    :CUSTOM_ID: how-1
-    :END:
-
-1. All unique combinations
-2. Test each value at least once
-3. All pairs - Pair inputs that can influence each other, test all
-   combinations between the pair
-4. Random
-
-*** 'Each valid input at least once in a positive test case'
-    :PROPERTIES:
-    :CUSTOM_ID: each-valid-input-at-least-once-in-a-positive-test-case
-    :END:
-
-1. Ensure that input is valid
-2. Ensure that it is a positive test case, i.e. not error message being
-   thrown
-
-*** 'No more than one invalid input in a test case'
-    :PROPERTIES:
-    :CUSTOM_ID: no-more-than-one-invalid-input-in-a-test-case
-    :END:
-
-*** Combination
-    :PROPERTIES:
-    :CUSTOM_ID: combination
-    :END:
-
-1. Normally combine at least once, valid input at least once in
-   positive, and no more than 1 invalid input in a test case
-
-** SDLC process models
-   :PROPERTIES:
-   :CUSTOM_ID: sdlc-process-models
-   :END:
-
-1. Software development life cycle
-
-   - Different stages such as:
-
-     - Requirements
-     - Analysis
-     - Design
-     - Implementation
-     - Testing
+- Requirements
+- Analysis
+- Design
+- Implementation
+- Testing
 
 *** Sequential models
-    :PROPERTIES:
-    :CUSTOM_ID: sequential-models
-    :END:
-
 1. Software development as linear process
 2. Useful for problems that are well-understood and stable
 
@@ -1670,9 +673,6 @@ Elegant reusable solution to commonly recurring problem
 4. Most projects use both, i.e. iterative and incremental process
 
 *** Agile models
-    :PROPERTIES:
-    :CUSTOM_ID: agile-models
-    :END:
 
 - Individuals and interactions over processes and tools
 - Working software over comprehensive documentation
@@ -1687,41 +687,25 @@ Elegant reusable solution to commonly recurring problem
    members
 
 ** Popular SDLC process models
-   :PROPERTIES:
-   :CUSTOM_ID: popular-sdlc-process-models
-   :END:
-
 *** Scrum
-    :PROPERTIES:
-    :CUSTOM_ID: scrum
-    :END:
-
 - Scrum master
 - Development team
 - Product Owner
 
 1. Divided into Sprints (basic unit of development)
-
    - Preceded by planning meeting
    - Potentially deliverable product increment is done during Sprint
    - Creates self-organising teams by encouraging co-location of team
      members
    - Customers can change their minds about their wants and needs
    - Sprint backlog
-
      - To do
-
-2. Daily scrums every day
-
+2. Daily scrums
    - What did you do?
    - What will you do?
    - Are there any impediments?
 
 *** Extreme Programming (XP)
-    :PROPERTIES:
-    :CUSTOM_ID: extreme-programming-xp
-    :END:
-
 1. Stresses customer satisfaction
 2. Empowers developers to respond to changing customer requirements
 3. Emphasises teamwork
@@ -1734,474 +718,30 @@ Elegant reusable solution to commonly recurring problem
    - Courage
 
 *** Unified process
-    :PROPERTIES:
-    :CUSTOM_ID: unified-process
-    :END:
-
 - Inception
-
   - Understand problem and requirements
   - Communicate
   - Plan
-
 - Elaboration
-
   - Refine and expands requirements
-
 - Construction
-
   - Major implementation to support use cases
   - Refine and flesh out design models
   - Testing of all levels
   - Multiple releases
-
 - Transition
-
   - Ready system for actual production use
   - Familiarise end users with the system
 
 ** CDMI
-   :PROPERTIES:
-   :CUSTOM_ID: cdmi
-   :END:
-
 - Determine if process of an organisation is at a certain maturity level
-
 1. Initial
-
    - Processes unpredictable, poorly controlled and reactive
-
 2. Managed
-
    - Processes characterized for projects and reactive
-
 3. Defined
-
    - Processes characterized for organisations and proactive
-
 4. Quantitatively Managed
-
    - Processes measured and controllers
-
 5. Optimized
-
    - Focus on process improvement
-
-* Week 12
-  :PROPERTIES:
-  :CUSTOM_ID: week-12
-  :END:
-
-** UML Models
-   :PROPERTIES:
-   :CUSTOM_ID: uml-models
-   :END:
-
-*** Deployment Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: deployment-diagrams
-    :END:
-
-1. Physical layout
-
-   - Which software run on which hardware
-
-*** Component Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: component-diagrams
-    :END:
-
-1. How a system is divided into components and how they are connected
-   via interfaces
-
-*** Package Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: package-diagrams
-    :END:
-
-1. Packages and dependencies
-
-*** Composite Structure Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: composite-structure-diagrams
-    :END:
-
-1. Hierachically decomposes class into internal structure
-
-*** Timing Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: timing-diagrams
-    :END:
-
-1. Focus on timing
-2. Shows what happens to objects over time
-
-*** Interaction Overview Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: interaction-overview-diagrams
-    :END:
-
-1. Combination of activity and sequence diagrams
-
-*** Communication Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: communication-diagrams
-    :END:
-
-1. Like sequence diagrams, but emphasise data links between participants
-   rather than sequence
-
-*** State Machine Diagrams
-    :PROPERTIES:
-    :CUSTOM_ID: state-machine-diagrams
-    :END:
-
-1. State-dependent behaviours - Based on current state of components
-2. SMD views life-cycle of objects as finite number of states, each
-   having unique behaviour pattern
-3. States of objects, how it responds to various events in each state,
-   and how it transits between states
-4. Capture object's behaviour over full life cycle, as compared to
-   sequence diagram's one scenario at a time
-
-** Cloud Computing
-   :PROPERTIES:
-   :CUSTOM_ID: cloud-computing
-   :END:
-
-1. Delivery of computing as service over network
-2. Maintenance of hardware and software paid for by cloud provider
-3. Users pay for service
-
-*** Differentiations
-    :PROPERTIES:
-    :CUSTOM_ID: differentiations
-    :END:
-
-1. Infrastructure as a service (IaaS)
-
-   - Delivers computer infrastructure as a service
-
-     1. Deploy virtual servers
-     2. Using cloud storage
-
-2. Platform as a service (PaaS)
-
-   - For developers to build applications
-   - No deploying of servers or load balancing
-   - E.g. Google App Engine
-   - Reduced flexibility, limited to platform facilities
-
-3. Software as a service (SaaS)
-
-   - Allows applications be accessed over network
-   - Google Docs
-
-\pagebreak
-* Appendix A - Code Quality
-  :PROPERTIES:
-  :CUSTOM_ID: appendix-a---code-quality
-  :END:
-
-** Readability
-   :PROPERTIES:
-   :CUSTOM_ID: readability
-   :END:
-
-*** Basic
-    :PROPERTIES:
-    :CUSTOM_ID: basic
-    :END:
-
-- Avoid
-
-  1. Long Methods
-  2. Deep Nesting (arrowhead style code)
-  3. Complicated (boolean) expressions
-  4. Magic Numbers
-
-- Make code obvious
-
-  1. Explicit type conversion (declare type during type conversion)
-
-*** Intermediate
-    :PROPERTIES:
-    :CUSTOM_ID: intermediate
-    :END:
-
-1. Structure code logically
-
-   1. Blank lines to group related statements
-   2. Order of statements
-
-2. Do not 'trip up' reader
-
-   1. Unused parameteres in signature
-   2. Different things look similar, or similar things look different
-   3. Multiple statements in same line
-   4. Data flow anomalies e.g. pre-assigning values to variables and
-      modifying them without use of pre-assigned value
-
-3. KISS-ing
-
-   1. Keep It Simple, Stupid (KISS)
-
-4. Avoid Premature Optimisations
-
-   1. May be optimising parts unnecessarily as they are not bottlenecks
-   2. Can complicate code
-   3. Hand-optimised code can be harder for compiler to optimise
-   4. /make it work, make it right, make it fast/
-   5. There are exceptions to this rule
-
-5. SLAP
-
-   - Single Level of Abstraction Per method (SLAP)
-   - Abstract everything in a code fragment to the same level
-
-*** Advanced
-    :PROPERTIES:
-    :CUSTOM_ID: advanced
-    :END:
-
-1. Make the Happy Path prominent
-
-   1. Don't indent happy path (MSS)
-
-** Guidelines
-   :PROPERTIES:
-   :CUSTOM_ID: guidelines
-   :END:
-
-*** Follow a standard
-    :PROPERTIES:
-    :CUSTOM_ID: follow-a-standard
-    :END:
-
-** 1. To make entire code base look like it was written by 1 person
-   :PROPERTIES:
-   :CUSTOM_ID: to-make-entire-code-base-look-like-it-was-written-by-1-person
-   :END:
-
-*** Name Well
-    :PROPERTIES:
-    :CUSTOM_ID: name-well
-    :END:
-
-1. Reduces ambiguity
-
-**** Basic
-     :PROPERTIES:
-     :CUSTOM_ID: basic-1
-     :END:
-
-1. Nouns for classes/variables and Verbs for methods/functions
-2. Distinguish clearly between single valued and multivalued variables
-   (plural for arrays etc.)
-3. Use Standard Words
-
-   - Proper english words
-
-**** Intermediate
-     :PROPERTIES:
-     :CUSTOM_ID: intermediate-1
-     :END:
-
-1. Names should explain the variable/method to the reader
-
-   - Sensible Order (orderBySize instead of bySizeOrder)
-   - No numbers to distinguish values, oldValue and NewValue instead of
-     value1 and value2
-
-2. Names that aren't too lengthy
-
-   - Abbrievate or use acronyms /consistently/ if there is a need
-
-3. Avoid Misleading names
-
-   - ** Only have similar names for related things
-        :PROPERTIES:
-        :CUSTOM_ID: only-have-similar-names-for-related-things
-        :END:
-
-     *** Avoid Unsafe Shortcuts
-         :PROPERTIES:
-         :CUSTOM_ID: avoid-unsafe-shortcuts
-         :END:
-
-***** Basic
-      :PROPERTIES:
-      :CUSTOM_ID: basic-2
-      :END:
-
-1. Use Default Branch
-
-   - For =case= and =if else= statements
-
-2. Don't recycle variables or parameters
-
-   - No reusing variables for different purposes
-   - No reusing of formal parameters as local variables inside the
-     method
-
-3. No empty =catch= blcks
-
-   - Comment if =catch= block is empty
-
-4. Delete dead code
-
-   - Just recover from revision control
-
-**** Intermediate
-     :PROPERTIES:
-     :CUSTOM_ID: intermediate-2
-     :END:
-
-1. Minimise variable scopes
-
-   - Minimise global variables
-   - Limit scope of variable to which it is used in
-   - Declare variables where they are first used
-
-2. Minimise code duplication
-
-   - Don't Repeat Yourself (DRY) Principle
-
---------------
-
-*** Comment Minimally, But Sufficiently
-    :PROPERTIES:
-    :CUSTOM_ID: comment-minimally-but-sufficiently
-    :END:
-
-**** Basic
-     :PROPERTIES:
-     :CUSTOM_ID: basic-3
-     :END:
-
-1. Do not repeat the obvious
-2. Write to the Reader
-
-   - NOT private notes for the coder
-
-**** Intermediate
-     :PROPERTIES:
-     :CUSTOM_ID: intermediate-3
-     :END:
-
-1. WHAT and WHY, not HOW
-
-   - What - Specification of code usage
-   - Why - Rationale for implementation
-   - How - How the code works (Should be apparent from code)
-
---------------
-
-** Refactoring
-   :PROPERTIES:
-   :CUSTOM_ID: refactoring
-   :END:
-
-1. Improving a program's internal structure in small steps without
-   modifying its external behaviour
-2. Benefits must justify the cost, otherwise it's too much refactoring
-
-*** Consolidate Duplicate Conditional Fragments
-    :PROPERTIES:
-    :CUSTOM_ID: consolidate-duplicate-conditional-fragments
-    :END:
-
-- *Situation:* Code that is consistent in all branches (=if else= cases)
-- *Solution:* Move them out of the branches
-
-*** Extract Method
-    :PROPERTIES:
-    :CUSTOM_ID: extract-method
-    :END:
-
-- *Sitn:* Code that can be grouped together
-- *Soln:* Group them into method
-
-*** Consolidate Conditional Expression
-    :PROPERTIES:
-    :CUSTOM_ID: consolidate-conditional-expression
-    :END:
-
-- *Sitn:* Sequence of conditional tests
-- *Soln:* Group into method
-
-*** Decompose Conditional
-    :PROPERTIES:
-    :CUSTOM_ID: decompose-conditional
-    :END:
-
-- *Sitn:* Complicated conditional (boolean) expressions
-- *Soln:* Extract into methods
-
-*** Inline methods
-    :PROPERTIES:
-    :CUSTOM_ID: inline-methods
-    :END:
-
-- *Sitn:* Methods that are too simple (just do exactly what their names
-  imply)
-- *Soln:* Remove them, and put the method's body into the caller's body
-  instead
-
-*** No Double Negatives
-    :PROPERTIES:
-    :CUSTOM_ID: no-double-negatives
-    :END:
-
-*** No Magic Numbers
-    :PROPERTIES:
-    :CUSTOM_ID: no-magic-numbers
-    :END:
-
-- Use symbolic constants or constant methods
-
-*** Replace Nested Conditional with Guard Clauses
-    :PROPERTIES:
-    :CUSTOM_ID: replace-nested-conditional-with-guard-clauses
-    :END:
-
-- Ensure that MSS is clear
-- Guard Clauses are just =if= statements that have to be cleared before
-  main code e.g. requireNonNull()
-
-*** Replace Parameter with Explicit Methods
-    :PROPERTIES:
-    :CUSTOM_ID: replace-parameter-with-explicit-methods
-    :END:
-
-- *Sitn:* Parameter is used to run different code, e.g. if (name = "sth"
-  do /this/; else do /that/\\
-- *Soln:* Separate method for each value of the parameter
-
-  - Must be few values
-
-*** Reverse Conditionals
-    :PROPERTIES:
-    :CUSTOM_ID: reverse-conditionals
-    :END:
-
-- *Sitn:* It makes more sense if the conditional is reversed
-- *Soln:* Reverse it .\_.
-
-*** Split Loop
-    :PROPERTIES:
-    :CUSTOM_ID: split-loop
-    :END:
-
-- *Sitn:* Loop does multiple things
-- *Soln:* Split into separate loops (don't actually understand the point
-  of this)
-
-*** Split Temporary Variables
-    :PROPERTIES:
-    :CUSTOM_ID: split-temporary-variables
-    :END:
-
-- *Sitn:* Temporary variable is assigned more than once, but not loop
-  variable or collecting temporary variable
-- *Soln:* Make separate temporary variables for each assignment
