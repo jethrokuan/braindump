@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-02-06 Tue 22:29 -->
+<!-- 2018-05-02 Wed 15:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Statistics</title>
@@ -91,100 +91,100 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf9bbebb">1. Basic Properties</a></li>
-<li><a href="#org4c2bb8c">2. Approximations</a>
+<li><a href="#orgbf310e3">1. Basic Properties</a></li>
+<li><a href="#orge07aca9">2. Approximations</a>
 <ul>
-<li><a href="#orgd8bd428">2.1. Law of Large Numbers</a></li>
-<li><a href="#orgde72ffa">2.2. Central Limit Theorem</a></li>
+<li><a href="#org42c52e0">2.1. Law of Large Numbers</a></li>
+<li><a href="#orgaed7180">2.2. Central Limit Theorem</a></li>
 </ul>
 </li>
-<li><a href="#orgd6317ec">3. Distributions</a>
+<li><a href="#orgffddc55">3. Distributions</a>
 <ul>
-<li><a href="#org7cc3210">3.1. Poisson(\(\lambda\))</a></li>
-<li><a href="#org9301a5a">3.2. Normal \(X \sim \mathcal{N}(\mu, \sigma^2)\)</a></li>
-<li><a href="#orgf0c61ea">3.3. Gamma \(\Gamma\)</a></li>
-<li><a href="#orgaf2fd2f">3.4. \(\chi^2\) Distribution</a></li>
-<li><a href="#org6387368">3.5. t-distribution</a></li>
-<li><a href="#orgc0ddb98">3.6. F-distribution</a></li>
+<li><a href="#orga0014b7">3.1. Poisson(\(\lambda\))</a></li>
+<li><a href="#orge98e5cd">3.2. Normal \(X \sim \mathcal{N}(\mu, \sigma^2)\)</a></li>
+<li><a href="#org9177fbf">3.3. Gamma \(\Gamma\)</a></li>
+<li><a href="#org34a1962">3.4. \(\chi^2\) Distribution</a></li>
+<li><a href="#org077a704">3.5. t-distribution</a></li>
+<li><a href="#orge191ce4">3.6. F-distribution</a></li>
 </ul>
 </li>
-<li><a href="#orgc15a673">4. Sampling</a>
+<li><a href="#org5139f60">4. Sampling</a>
 <ul>
-<li><a href="#orgb5b576f">4.1. Properties of \(\overline{X}\) and \(S^2\)</a></li>
-<li><a href="#org9c75695">4.2. Simple Random Sampling (SRS)</a>
+<li><a href="#org1e072e1">4.1. Properties of \(\overline{X}\) and \(S^2\)</a></li>
+<li><a href="#org8cf1da2">4.2. Simple Random Sampling (SRS)</a>
 <ul>
-<li><a href="#orgd8be278">4.2.1. Summary of Lemmas</a></li>
-<li><a href="#org155b538">4.2.2. Estimation Problem</a></li>
-<li><a href="#org958c7ef">4.2.3. Standard Error (SE)</a></li>
-<li><a href="#org9161565">4.2.4. Without Replacement</a></li>
-<li><a href="#org040481d">4.2.5. Confidence Interval</a></li>
+<li><a href="#org61fb6e3">4.2.1. Summary of Lemmas</a></li>
+<li><a href="#orgee5f218">4.2.2. Estimation Problem</a></li>
+<li><a href="#org58873a3">4.2.3. Standard Error (SE)</a></li>
+<li><a href="#orgc0ef21f">4.2.4. Without Replacement</a></li>
+<li><a href="#org79be1ef">4.2.5. Confidence Interval</a></li>
 </ul>
 </li>
-<li><a href="#org621a1ba">4.3. Biased Measurements</a></li>
-<li><a href="#orgbdf0e55">4.4. Estimation of a Ratio</a>
+<li><a href="#org9e2785f">4.3. Biased Measurements</a></li>
+<li><a href="#org1ecf8c0">4.4. Estimation of a Ratio</a>
 <ul>
-<li><a href="#org5e1f44f">4.4.1. Properties</a></li>
-<li><a href="#org7f479fe">4.4.2. Ratio Estimates</a></li>
+<li><a href="#org599516b">4.4.1. Properties</a></li>
+<li><a href="#orgf1c4019">4.4.2. Ratio Estimates</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org8c5dcfd">5. Method of Moments</a>
+<li><a href="#org9b48ad7">5. Method of Moments</a>
 <ul>
-<li><a href="#orgaaad904">5.1. Monte Carlo</a></li>
+<li><a href="#org32dc4cd">5.1. Monte Carlo</a></li>
 </ul>
 </li>
-<li><a href="#org3785d6f">6. Maximum Likelihood Estimator (MLE)</a>
+<li><a href="#orge2caf0f">6. Maximum Likelihood Estimator (MLE)</a>
 <ul>
-<li><a href="#orga77dd60">6.1. Poisson Case</a></li>
-<li><a href="#orgaff777c">6.2. Normal case</a></li>
-<li><a href="#orgbc7b01d">6.3. Gamma case</a></li>
-<li><a href="#org09f956e">6.4. Multinomial Case</a></li>
-<li><a href="#org5ad2ecf">6.5. CIs in MLE</a></li>
+<li><a href="#orge600519">6.1. Poisson Case</a></li>
+<li><a href="#org012b4eb">6.2. Normal case</a></li>
+<li><a href="#orgae67dd5">6.3. Gamma case</a></li>
+<li><a href="#org70eb4a0">6.4. Multinomial Case</a></li>
+<li><a href="#org2af3803">6.5. CIs in MLE</a></li>
 </ul>
 </li>
-<li><a href="#org1b5fb70">7. Fisher Information</a></li>
-<li><a href="#orga14c9ac">8. Asymptotic Normality of MLE</a></li>
-<li><a href="#orgc95f64c">9. Efficiency</a></li>
-<li><a href="#orgf36b037">10. Sufficiency</a>
+<li><a href="#org7420c42">7. Fisher Information</a></li>
+<li><a href="#orged8fef3">8. Asymptotic Normality of MLE</a></li>
+<li><a href="#org1f6355c">9. Efficiency</a></li>
+<li><a href="#org43ce09c">10. Sufficiency</a>
 <ul>
-<li><a href="#org8748975">10.1. Characterisation</a></li>
-<li><a href="#orgc02eab0">10.2. Factorisation Theorem</a></li>
-<li><a href="#org0cb5427">10.3. Rao-Blackwell Theorem</a></li>
-<li><a href="#orgd40079d">10.4. Random Conditional Expectation</a></li>
+<li><a href="#orgcd5befe">10.1. Characterisation</a></li>
+<li><a href="#org10d78ea">10.2. Factorisation Theorem</a></li>
+<li><a href="#org0035d73">10.3. Rao-Blackwell Theorem</a></li>
+<li><a href="#orge8440f0">10.4. Random Conditional Expectation</a></li>
 </ul>
 </li>
-<li><a href="#org3866d57">11. Hypothesis Testing</a>
+<li><a href="#orga9047af">11. Hypothesis Testing</a>
 <ul>
-<li><a href="#orge7a87a2">11.1. p-value</a></li>
+<li><a href="#orgff3e69f">11.1. p-value</a></li>
 </ul>
 </li>
-<li><a href="#orgc5aaf2a">12. Generalized Likelihood Ratio</a>
+<li><a href="#org8b49f0a">12. Generalized Likelihood Ratio</a>
 <ul>
-<li><a href="#org5b14ed6">12.1. Large-sample null distribution of \(\Lambda\)</a></li>
-<li><a href="#orgfce157f">12.2. Poisson Dispersion Test</a></li>
+<li><a href="#org231ea7b">12.1. Large-sample null distribution of \(\Lambda\)</a></li>
+<li><a href="#org0936de2">12.2. Poisson Dispersion Test</a></li>
 </ul>
 </li>
-<li><a href="#orgefd3a8a">13. Comparing 2 samples</a>
+<li><a href="#orge502df6">13. Comparing 2 samples</a>
 <ul>
-<li><a href="#org9ef5276">13.1. Normal Theory: Same Variance</a>
+<li><a href="#orge4f5de0">13.1. Normal Theory: Same Variance</a>
 <ul>
-<li><a href="#org95e3bd6">13.1.1. Known Variance</a></li>
-<li><a href="#orgc8d4d03">13.1.2. Unknown Variance</a></li>
-<li><a href="#orgfde9804">13.1.3. CI</a></li>
-<li><a href="#org7fa2ca6">13.1.4. Unequal Variance</a></li>
+<li><a href="#org14ac3fc">13.1.1. Known Variance</a></li>
+<li><a href="#orgb305f07">13.1.2. Unknown Variance</a></li>
+<li><a href="#org9e54900">13.1.3. CI</a></li>
+<li><a href="#org0a57931">13.1.4. Unequal Variance</a></li>
 </ul>
 </li>
-<li><a href="#org82688fd">13.2. Mann-Whitney Test</a></li>
-<li><a href="#org3452c40">13.3. Paired Samples</a></li>
-<li><a href="#orgeeaf45f">13.4. Ranked Test</a></li>
+<li><a href="#orgdb224a7">13.2. Mann-Whitney Test</a></li>
+<li><a href="#org511a507">13.3. Paired Samples</a></li>
+<li><a href="#org8242034">13.4. Ranked Test</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf9bbebb" class="outline-2">
-<h2 id="orgf9bbebb"><span class="section-number-2">1</span> Basic Properties</h2>
+<div id="outline-container-orgbf310e3" class="outline-2">
+<h2 id="orgbf310e3"><span class="section-number-2">1</span> Basic Properties</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>\(E(X) = \sum x p(x)\)</li>
@@ -203,12 +203,12 @@ normal, extends to multivariate normal</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org4c2bb8c" class="outline-2">
-<h2 id="org4c2bb8c"><span class="section-number-2">2</span> Approximations</h2>
+<div id="outline-container-orge07aca9" class="outline-2">
+<h2 id="orge07aca9"><span class="section-number-2">2</span> Approximations</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgd8bd428" class="outline-3">
-<h3 id="orgd8bd428"><span class="section-number-3">2.1</span> Law of Large Numbers</h3>
+<div id="outline-container-org42c52e0" class="outline-3">
+<h3 id="org42c52e0"><span class="section-number-3">2.1</span> Law of Large Numbers</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Let \(X_1, X_2, ..., X_n\) be IID, with expectation \(\mu\) and variance
@@ -220,8 +220,8 @@ then \(\overline{x_n} = \frac{1}{n}\sum^{n}_{i=1}x_n
 </p>
 </div>
 </div>
-<div id="outline-container-orgde72ffa" class="outline-3">
-<h3 id="orgde72ffa"><span class="section-number-3">2.2</span> Central Limit Theorem</h3>
+<div id="outline-container-orgaed7180" class="outline-3">
+<h3 id="orgaed7180"><span class="section-number-3">2.2</span> Central Limit Theorem</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Let \(S_n = \sum^{n}_{i=1}X_i\) where \(X_1, X_2, ..., X_n\) IID.
@@ -230,20 +230,20 @@ Let \(S_n = \sum^{n}_{i=1}X_i\) where \(X_1, X_2, ..., X_n\) IID.
 </div>
 </div>
 </div>
-<div id="outline-container-orgd6317ec" class="outline-2">
-<h2 id="orgd6317ec"><span class="section-number-2">3</span> Distributions</h2>
+<div id="outline-container-orgffddc55" class="outline-2">
+<h2 id="orgffddc55"><span class="section-number-2">3</span> Distributions</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org7cc3210" class="outline-3">
-<h3 id="org7cc3210"><span class="section-number-3">3.1</span> Poisson(\(\lambda\))</h3>
+<div id="outline-container-orga0014b7" class="outline-3">
+<h3 id="orga0014b7"><span class="section-number-3">3.1</span> Poisson(\(\lambda\))</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 \(E(X) = Var(X) = \lambda\)
 </p>
 </div>
 </div>
-<div id="outline-container-org9301a5a" class="outline-3">
-<h3 id="org9301a5a"><span class="section-number-3">3.2</span> Normal \(X \sim \mathcal{N}(\mu, \sigma^2)\)</h3>
+<div id="outline-container-orge98e5cd" class="outline-3">
+<h3 id="orge98e5cd"><span class="section-number-3">3.2</span> Normal \(X \sim \mathcal{N}(\mu, \sigma^2)\)</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 \(f(x) = \frac{1}{\sqrt{2\pi}\sigma} exp
@@ -256,8 +256,8 @@ Let \(S_n = \sum^{n}_{i=1}X_i\) where \(X_1, X_2, ..., X_n\) IID.
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf0c61ea" class="outline-3">
-<h3 id="orgf0c61ea"><span class="section-number-3">3.3</span> Gamma \(\Gamma\)</h3>
+<div id="outline-container-org9177fbf" class="outline-3">
+<h3 id="org9177fbf"><span class="section-number-3">3.3</span> Gamma \(\Gamma\)</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 \(g(t) = \frac{\lambda^\alpha}{\Gamma(\alpha)}t^{\alpha-1}e^{-\lambda
@@ -270,8 +270,8 @@ t}, t \ge 0\)
 </div>
 </div>
 
-<div id="outline-container-orgaf2fd2f" class="outline-3">
-<h3 id="orgaf2fd2f"><span class="section-number-3">3.4</span> \(\chi^2\) Distribution</h3>
+<div id="outline-container-org34a1962" class="outline-3">
+<h3 id="org34a1962"><span class="section-number-3">3.4</span> \(\chi^2\) Distribution</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Let \(\mathcal{Z} \sim \mathcal{N}(0,1)\), \(\mathcal{U} =
@@ -302,8 +302,8 @@ is \(\chi_n^2\) with n degree freedom, \(V \sim
 </p>
 </div>
 </div>
-<div id="outline-container-org6387368" class="outline-3">
-<h3 id="org6387368"><span class="section-number-3">3.5</span> t-distribution</h3>
+<div id="outline-container-org077a704" class="outline-3">
+<h3 id="org077a704"><span class="section-number-3">3.5</span> t-distribution</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Let \(\mathcal{Z} \sim \mathcal{N}(0,1)\), \(\mathcal{U}_n \sim
@@ -320,8 +320,8 @@ Let \(\mathcal{Z} \sim \mathcal{N}(0,1)\), \(\mathcal{U}_n \sim
 </ol>
 </div>
 </div>
-<div id="outline-container-orgc0ddb98" class="outline-3">
-<h3 id="orgc0ddb98"><span class="section-number-3">3.6</span> F-distribution</h3>
+<div id="outline-container-orge191ce4" class="outline-3">
+<h3 id="orge191ce4"><span class="section-number-3">3.6</span> F-distribution</h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 Let \(U \sim \chi_m^2, V \sim \chi_n^2\) be independent, \(W =
@@ -339,8 +339,8 @@ For \(n > 2\), \(E(W) = \frac{n}{n-2}\)
 </div>
 </div>
 </div>
-<div id="outline-container-orgc15a673" class="outline-2">
-<h2 id="orgc15a673"><span class="section-number-2">4</span> Sampling</h2>
+<div id="outline-container-org5139f60" class="outline-2">
+<h2 id="org5139f60"><span class="section-number-2">4</span> Sampling</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Let \(X_1, X_2, ..., X_n\) be IID \(\mathcal{N}(\mu, \sigma^2)\).
@@ -354,8 +354,8 @@ Let \(X_1, X_2, ..., X_n\) be IID \(\mathcal{N}(\mu, \sigma^2)\).
 \(\text{sample variance, } S^2 = \frac{1}{n-1}\sum^{n}_{i=1}\left(X_i-\overline{X}\right)^2\)
 </p>
 </div>
-<div id="outline-container-orgb5b576f" class="outline-3">
-<h3 id="orgb5b576f"><span class="section-number-3">4.1</span> Properties of \(\overline{X}\) and \(S^2\)</h3>
+<div id="outline-container-org1e072e1" class="outline-3">
+<h3 id="org1e072e1"><span class="section-number-3">4.1</span> Properties of \(\overline{X}\) and \(S^2\)</h3>
 <div class="outline-text-3" id="text-4-1">
 <ol class="org-ol">
 <li>\(\overline{X}\) and \(S^2\) are independent</li>
@@ -365,16 +365,16 @@ Let \(X_1, X_2, ..., X_n\) be IID \(\mathcal{N}(\mu, \sigma^2)\).
 </ol>
 </div>
 </div>
-<div id="outline-container-org9c75695" class="outline-3">
-<h3 id="org9c75695"><span class="section-number-3">4.2</span> Simple Random Sampling (SRS)</h3>
+<div id="outline-container-org8cf1da2" class="outline-3">
+<h3 id="org8cf1da2"><span class="section-number-3">4.2</span> Simple Random Sampling (SRS)</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Assume \(n\) random draws are made without replacement. (Not SRS, will
 be corrected for later).
 </p>
 </div>
-<div id="outline-container-orgd8be278" class="outline-4">
-<h4 id="orgd8be278"><span class="section-number-4">4.2.1</span> Summary of Lemmas</h4>
+<div id="outline-container-org61fb6e3" class="outline-4">
+<h4 id="org61fb6e3"><span class="section-number-4">4.2.1</span> Summary of Lemmas</h4>
 <div class="outline-text-4" id="text-4-2-1">
 <ul class="org-ul">
 <li>\(P(X_i =\xi_j) = \frac{n_j}{N}\): Lemma A</li>
@@ -382,8 +382,8 @@ be corrected for later).
 </ul>
 </div>
 </div>
-<div id="outline-container-org155b538" class="outline-4">
-<h4 id="org155b538"><span class="section-number-4">4.2.2</span> Estimation Problem</h4>
+<div id="outline-container-orgee5f218" class="outline-4">
+<h4 id="orgee5f218"><span class="section-number-4">4.2.2</span> Estimation Problem</h4>
 <div class="outline-text-4" id="text-4-2-2">
 <p>
 Let \(X_1, X_2, ..., X_n\) be random draws with replacement. Then
@@ -392,8 +392,8 @@ Let \(X_1, X_2, ..., X_n\) be random draws with replacement. Then
 </p>
 </div>
 </div>
-<div id="outline-container-org958c7ef" class="outline-4">
-<h4 id="org958c7ef"><span class="section-number-4">4.2.3</span> Standard Error (SE)</h4>
+<div id="outline-container-org58873a3" class="outline-4">
+<h4 id="org58873a3"><span class="section-number-4">4.2.3</span> Standard Error (SE)</h4>
 <div class="outline-text-4" id="text-4-2-3">
 <p>
 SE of an \(\overline{X}\) is defined to be \(SD(\overline{X})\).
@@ -436,8 +436,8 @@ SE of an \(\overline{X}\) is defined to be \(SD(\overline{X})\).
 </table>
 </div>
 </div>
-<div id="outline-container-org9161565" class="outline-4">
-<h4 id="org9161565"><span class="section-number-4">4.2.4</span> Without Replacement</h4>
+<div id="outline-container-orgc0ef21f" class="outline-4">
+<h4 id="orgc0ef21f"><span class="section-number-4">4.2.4</span> Without Replacement</h4>
 <div class="outline-text-4" id="text-4-2-4">
 <p>
 SE is multiplied by \(\frac{N-n}{N-1}\), because \(s^2\) is biased for
@@ -445,8 +445,8 @@ SE is multiplied by \(\frac{N-n}{N-1}\), because \(s^2\) is biased for
 </p>
 </div>
 </div>
-<div id="outline-container-org040481d" class="outline-4">
-<h4 id="org040481d"><span class="section-number-4">4.2.5</span> Confidence Interval</h4>
+<div id="outline-container-org79be1ef" class="outline-4">
+<h4 id="org79be1ef"><span class="section-number-4">4.2.5</span> Confidence Interval</h4>
 <div class="outline-text-4" id="text-4-2-5">
 <p>
 An approximate \(1-\alpha\) CI for \(\mu\) is
@@ -458,8 +458,8 @@ An approximate \(1-\alpha\) CI for \(\mu\) is
 </div>
 </div>
 </div>
-<div id="outline-container-org621a1ba" class="outline-3">
-<h3 id="org621a1ba"><span class="section-number-3">4.3</span> Biased Measurements</h3>
+<div id="outline-container-org9e2785f" class="outline-3">
+<h3 id="org9e2785f"><span class="section-number-3">4.3</span> Biased Measurements</h3>
 <div class="outline-text-3" id="text-4-3">
 <p>
 Let \(X = \mu + \epsilon\), where \(E(\epsilon) = 0\), \(Var(\epsilon) =
@@ -490,8 +490,8 @@ with n IID measurements, \(\overline{x} = \mu + \overline{\epsilon}\)
 </p>
 </div>
 </div>
-<div id="outline-container-orgbdf0e55" class="outline-3">
-<h3 id="orgbdf0e55"><span class="section-number-3">4.4</span> Estimation of a Ratio</h3>
+<div id="outline-container-org1ecf8c0" class="outline-3">
+<h3 id="org1ecf8c0"><span class="section-number-3">4.4</span> Estimation of a Ratio</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 Consider a population of \(N\) members, and two characteristics are
@@ -512,8 +512,8 @@ An obvious estimator of r is \(R = \frac{\overline{Y}}{\overline{X}}\)
 the population covariance.
 </p>
 </div>
-<div id="outline-container-org5e1f44f" class="outline-4">
-<h4 id="org5e1f44f"><span class="section-number-4">4.4.1</span> Properties</h4>
+<div id="outline-container-org599516b" class="outline-4">
+<h4 id="org599516b"><span class="section-number-4">4.4.1</span> Properties</h4>
 <div class="outline-text-4" id="text-4-4-1">
 <p>
 \(Var(R) \approx \frac{1}{\mu_x^2}\left(r^2\sigma_{\overline{X}}^2 + \sigma_{\overline{Y}}^2 - 2r\sigma_{\overline{X}\overline{Y}}\right)\)
@@ -534,8 +534,8 @@ Population coefficient \(\rho =
 </p>
 </div>
 </div>
-<div id="outline-container-org7f479fe" class="outline-4">
-<h4 id="org7f479fe"><span class="section-number-4">4.4.2</span> Ratio Estimates</h4>
+<div id="outline-container-orgf1c4019" class="outline-4">
+<h4 id="orgf1c4019"><span class="section-number-4">4.4.2</span> Ratio Estimates</h4>
 <div class="outline-text-4" id="text-4-4-2">
 <p>
 \(\overline{Y}_R = \frac{\mu_x}{\overline{X}}\overline{Y} = \mu_xR\)
@@ -579,16 +579,16 @@ z_{\alpha/2}s_{\overline{Y}_R}\)
 </div>
 </div>
 </div>
-<div id="outline-container-org8c5dcfd" class="outline-2">
-<h2 id="org8c5dcfd"><span class="section-number-2">5</span> Method of Moments</h2>
+<div id="outline-container-org9b48ad7" class="outline-2">
+<h2 id="org9b48ad7"><span class="section-number-2">5</span> Method of Moments</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 To estimate \(\theta\), express it as a function of moments
 \(g(\hat{\mu}_1,\hat{\mu}_2,...)\)
 </p>
 </div>
-<div id="outline-container-orgaaad904" class="outline-3">
-<h3 id="orgaaad904"><span class="section-number-3">5.1</span> Monte Carlo</h3>
+<div id="outline-container-org32dc4cd" class="outline-3">
+<h3 id="org32dc4cd"><span class="section-number-3">5.1</span> Monte Carlo</h3>
 <div class="outline-text-3" id="text-5-1">
 <p>
 <b>Monte Carlo</b> is used to generate many realisations of random
@@ -616,12 +616,12 @@ consistent (asymptotically unbiased).
 </div>
 </div>
 </div>
-<div id="outline-container-org3785d6f" class="outline-2">
-<h2 id="org3785d6f"><span class="section-number-2">6</span> Maximum Likelihood Estimator (MLE)</h2>
+<div id="outline-container-orge2caf0f" class="outline-2">
+<h2 id="orge2caf0f"><span class="section-number-2">6</span> Maximum Likelihood Estimator (MLE)</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orga77dd60" class="outline-3">
-<h3 id="orga77dd60"><span class="section-number-3">6.1</span> Poisson Case</h3>
+<div id="outline-container-orge600519" class="outline-3">
+<h3 id="orge600519"><span class="section-number-3">6.1</span> Poisson Case</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 \(L(\lambda) = \prod^n_{i=1}\frac{\lambda^{x_i}e^{-\lambda}}{x_i!} = \frac{\lambda\sum^n_{i=1}x_ie^{-n\lambda}}{\prod^{n}_{i=1}x_i!}\)
@@ -638,8 +638,8 @@ ML estimate of \(\lambda_0\) is \(\overline{x}\). ML estimator is
 </p>
 </div>
 </div>
-<div id="outline-container-orgaff777c" class="outline-3">
-<h3 id="orgaff777c"><span class="section-number-3">6.2</span> Normal case</h3>
+<div id="outline-container-org012b4eb" class="outline-3">
+<h3 id="org012b4eb"><span class="section-number-3">6.2</span> Normal case</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 \(l(\mu, \sigma) = -n\log\sigma - \frac{n\log 2\pi}{2} - \frac{\sum^{n}_{i=1}\left(X_i-\mu\right)^2}{2\sigma^2}\)
@@ -657,8 +657,8 @@ ML estimate of \(\lambda_0\) is \(\overline{x}\). ML estimator is
 </p>
 </div>
 </div>
-<div id="outline-container-orgbc7b01d" class="outline-3">
-<h3 id="orgbc7b01d"><span class="section-number-3">6.3</span> Gamma case</h3>
+<div id="outline-container-orgae67dd5" class="outline-3">
+<h3 id="orgae67dd5"><span class="section-number-3">6.3</span> Gamma case</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 \(l(\theta) = n\alpha\log\lambda + (\alpha -1)\sum^{n}_{i=1}\log X_i -
@@ -680,8 +680,8 @@ X_i - \sum^{n}_{i=1}X_i - \frac{n}{\Gamma(\alpha)}\Gamma '(\alpha)\)
 </p>
 </div>
 </div>
-<div id="outline-container-org09f956e" class="outline-3">
-<h3 id="org09f956e"><span class="section-number-3">6.4</span> Multinomial Case</h3>
+<div id="outline-container-org70eb4a0" class="outline-3">
+<h3 id="org70eb4a0"><span class="section-number-3">6.4</span> Multinomial Case</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 \(f(x_1, ..., x_r) = {n \choose {x_1, x_2, ... x_r}} \prod^{n}_{i=1}
@@ -727,8 +727,8 @@ same as MOM estimator.
 </p>
 </div>
 </div>
-<div id="outline-container-org5ad2ecf" class="outline-3">
-<h3 id="org5ad2ecf"><span class="section-number-3">6.5</span> CIs in MLE</h3>
+<div id="outline-container-org2af3803" class="outline-3">
+<h3 id="org2af3803"><span class="section-number-3">6.5</span> CIs in MLE</h3>
 <div class="outline-text-3" id="text-6-5">
 <p>
 \(\frac{\hat{X} - \mu}{s/\sqrt{n}} \sim t_{n-1}\)
@@ -749,8 +749,8 @@ t_{n-1, \alpha/2}\frac{s}{\sqrt{n}},\overline{x} + t_{n-1,
 </div>
 </div>
 </div>
-<div id="outline-container-org1b5fb70" class="outline-2">
-<h2 id="org1b5fb70"><span class="section-number-2">7</span> Fisher Information</h2>
+<div id="outline-container-org7420c42" class="outline-2">
+<h2 id="org7420c42"><span class="section-number-2">7</span> Fisher Information</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 \(I\left( \theta \right) = - E \left( \frac{\partial}{\partial \theta^2} \log
@@ -814,8 +814,8 @@ In all the above cases, \(\text{var}(\hat{\theta}) = I(\theta)^{-1}\).
 </p>
 </div>
 </div>
-<div id="outline-container-orga14c9ac" class="outline-2">
-<h2 id="orga14c9ac"><span class="section-number-2">8</span> Asymptotic Normality of MLE</h2>
+<div id="outline-container-orged8fef3" class="outline-2">
+<h2 id="orged8fef3"><span class="section-number-2">8</span> Asymptotic Normality of MLE</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 As \(n \rightarrow \infty\), \(\sqrt{nI(\theta)}(\hat{\theta} -
@@ -840,8 +840,8 @@ SE of an estimate of \(\theta\) is the SD of the estimator
 </p>
 </div>
 </div>
-<div id="outline-container-orgc95f64c" class="outline-2">
-<h2 id="orgc95f64c"><span class="section-number-2">9</span> Efficiency</h2>
+<div id="outline-container-org1f6355c" class="outline-2">
+<h2 id="org1f6355c"><span class="section-number-2">9</span> Efficiency</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Cramer-Rao Inequality: if \(\theta\) is unbiased, then \(\forall \theta
@@ -854,12 +854,12 @@ then \(\hat{\theta}\) is efficient.
 </p>
 </div>
 </div>
-<div id="outline-container-orgf36b037" class="outline-2">
-<h2 id="orgf36b037"><span class="section-number-2">10</span> Sufficiency</h2>
+<div id="outline-container-org43ce09c" class="outline-2">
+<h2 id="org43ce09c"><span class="section-number-2">10</span> Sufficiency</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-org8748975" class="outline-3">
-<h3 id="org8748975"><span class="section-number-3">10.1</span> Characterisation</h3>
+<div id="outline-container-orgcd5befe" class="outline-3">
+<h3 id="orgcd5befe"><span class="section-number-3">10.1</span> Characterisation</h3>
 <div class="outline-text-3" id="text-10-1">
 <p>
 Let \(S_t = {x: T(x) = t}\). The sample space of \(X\), \(S\) is the
@@ -872,8 +872,8 @@ f_{\theta}(X\\x|T=t) = q(x)\).
 </p>
 </div>
 </div>
-<div id="outline-container-orgc02eab0" class="outline-3">
-<h3 id="orgc02eab0"><span class="section-number-3">10.2</span> Factorisation Theorem</h3>
+<div id="outline-container-org10d78ea" class="outline-3">
+<h3 id="org10d78ea"><span class="section-number-3">10.2</span> Factorisation Theorem</h3>
 <div class="outline-text-3" id="text-10-2">
 <p>
 \(T\) is sufficient for  \(\theta\) iff \(\exists g(t,\theta), h(x)
@@ -882,8 +882,8 @@ f_{\theta}(X\\x|T=t) = q(x)\).
 </p>
 </div>
 </div>
-<div id="outline-container-org0cb5427" class="outline-3">
-<h3 id="org0cb5427"><span class="section-number-3">10.3</span> Rao-Blackwell Theorem</h3>
+<div id="outline-container-org0035d73" class="outline-3">
+<h3 id="org0035d73"><span class="section-number-3">10.3</span> Rao-Blackwell Theorem</h3>
 <div class="outline-text-3" id="text-10-3">
 <p>
 Let \(\hat{\theta}\) be an estimator of \(\theta\) with finite variance,
@@ -895,8 +895,8 @@ E\left(\hat{\theta}-\theta\right)^2\). Equality holds iff
 </p>
 </div>
 </div>
-<div id="outline-container-orgd40079d" class="outline-3">
-<h3 id="orgd40079d"><span class="section-number-3">10.4</span> Random Conditional Expectation</h3>
+<div id="outline-container-orge8440f0" class="outline-3">
+<h3 id="orge8440f0"><span class="section-number-3">10.4</span> Random Conditional Expectation</h3>
 <div class="outline-text-3" id="text-10-4">
 <ol class="org-ol">
 <li>\(E(X) = E(E(X|T))\)</li>
@@ -907,8 +907,8 @@ E\left(\hat{\theta}-\theta\right)^2\). Equality holds iff
 </div>
 </div>
 </div>
-<div id="outline-container-org3866d57" class="outline-2">
-<h2 id="org3866d57"><span class="section-number-2">11</span> Hypothesis Testing</h2>
+<div id="outline-container-orga9047af" class="outline-2">
+<h2 id="orga9047af"><span class="section-number-2">11</span> Hypothesis Testing</h2>
 <div class="outline-text-2" id="text-11">
 <p>
 Let \(X_1... X_n\) be IID with density \(f(x|\theta)\). null \(H_0: \theta
@@ -946,8 +946,8 @@ for which \(H_0: \mu = \mu_0\) is not rejected against \(H_1: \mu \ne
 </p>
 </div>
 
-<div id="outline-container-orge7a87a2" class="outline-3">
-<h3 id="orge7a87a2"><span class="section-number-3">11.1</span> p-value</h3>
+<div id="outline-container-orgff3e69f" class="outline-3">
+<h3 id="orgff3e69f"><span class="section-number-3">11.1</span> p-value</h3>
 <div class="outline-text-3" id="text-11-1">
 <p>
 the probability under \(H_0\) that the test statistic is more extreme
@@ -961,8 +961,8 @@ p-value, do not reject \(H_0\).
 </div>
 </div>
 
-<div id="outline-container-orgc5aaf2a" class="outline-2">
-<h2 id="orgc5aaf2a"><span class="section-number-2">12</span> Generalized Likelihood Ratio</h2>
+<div id="outline-container-org8b49f0a" class="outline-2">
+<h2 id="org8b49f0a"><span class="section-number-2">12</span> Generalized Likelihood Ratio</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 \(\Lambda^* = \frac{\text{max}_{\theta \in
@@ -972,8 +972,8 @@ the evidence for \(H_1\).
 </p>
 </div>
 
-<div id="outline-container-org5b14ed6" class="outline-3">
-<h3 id="org5b14ed6"><span class="section-number-3">12.1</span> Large-sample null distribution of \(\Lambda\)</h3>
+<div id="outline-container-org231ea7b" class="outline-3">
+<h3 id="org231ea7b"><span class="section-number-3">12.1</span> Large-sample null distribution of \(\Lambda\)</h3>
 <div class="outline-text-3" id="text-12-1">
 <p>
 Under \(H_0\), when n is large, \(-2\log\Lambda = \chi_k^2\), where \(k =
@@ -995,8 +995,8 @@ chi-square statistic, written as \(X^2\).
 </div>
 </div>
 
-<div id="outline-container-orgfce157f" class="outline-3">
-<h3 id="orgfce157f"><span class="section-number-3">12.2</span> Poisson Dispersion Test</h3>
+<div id="outline-container-org0936de2" class="outline-3">
+<h3 id="org0936de2"><span class="section-number-3">12.2</span> Poisson Dispersion Test</h3>
 <div class="outline-text-3" id="text-12-2">
 <p>
 For \(i = 1 ... n\) let \(X_i \sim Poisson(\lambda_i)\) are independent.
@@ -1021,20 +1021,20 @@ For large n, the null distribution of \(-2\log\Lambda\) is approximately
 </div>
 </div>
 
-<div id="outline-container-orgefd3a8a" class="outline-2">
-<h2 id="orgefd3a8a"><span class="section-number-2">13</span> Comparing 2 samples</h2>
+<div id="outline-container-orge502df6" class="outline-2">
+<h2 id="orge502df6"><span class="section-number-2">13</span> Comparing 2 samples</h2>
 <div class="outline-text-2" id="text-13">
 </div>
-<div id="outline-container-org9ef5276" class="outline-3">
-<h3 id="org9ef5276"><span class="section-number-3">13.1</span> Normal Theory: Same Variance</h3>
+<div id="outline-container-orge4f5de0" class="outline-3">
+<h3 id="orge4f5de0"><span class="section-number-3">13.1</span> Normal Theory: Same Variance</h3>
 <div class="outline-text-3" id="text-13-1">
 <p>
 \(X_1, ..., X_n\) be i.i.d \(N(\mu_X,\sigma^2)\) and \(Y_1,...,Y_m\) be
 i.i.d \(N(\mu_Y, \sigma^2)\), independent. \(H_0: \mu_X - \mu_Y = d\)
 </p>
 </div>
-<div id="outline-container-org95e3bd6" class="outline-4">
-<h4 id="org95e3bd6"><span class="section-number-4">13.1.1</span> Known Variance</h4>
+<div id="outline-container-org14ac3fc" class="outline-4">
+<h4 id="org14ac3fc"><span class="section-number-4">13.1.1</span> Known Variance</h4>
 <div class="outline-text-4" id="text-13-1-1">
 <p>
 \(Z := \frac{\bar{X} - \bar{Y} - (\mu_X -
@@ -1043,8 +1043,8 @@ when \(|Z| > z_{\alpha/2}\)
 </p>
 </div>
 </div>
-<div id="outline-container-orgc8d4d03" class="outline-4">
-<h4 id="orgc8d4d03"><span class="section-number-4">13.1.2</span> Unknown Variance</h4>
+<div id="outline-container-orgb305f07" class="outline-4">
+<h4 id="orgb305f07"><span class="section-number-4">13.1.2</span> Unknown Variance</h4>
 <div class="outline-text-4" id="text-13-1-2">
 <p>
 \(s_p^2 = \frac{(n-1)s_X^2 + (m-1)s_Y^2}{m+n-2}\) where $s<sub>X</sub><sup>2</sup> =
@@ -1065,8 +1065,8 @@ t_{n+m-2,\alpha}\).
 </p>
 </div>
 </div>
-<div id="outline-container-orgfde9804" class="outline-4">
-<h4 id="orgfde9804"><span class="section-number-4">13.1.3</span> CI</h4>
+<div id="outline-container-org9e54900" class="outline-4">
+<h4 id="org9e54900"><span class="section-number-4">13.1.3</span> CI</h4>
 <div class="outline-text-4" id="text-13-1-3">
 <p>
 \(\frac{\bar{X}-\bar{Y}}\pm z_{\alpha/2} \cdot \sigma
@@ -1076,8 +1076,8 @@ t_{n+m-2,\alpha}\).
 </p>
 </div>
 </div>
-<div id="outline-container-org7fa2ca6" class="outline-4">
-<h4 id="org7fa2ca6"><span class="section-number-4">13.1.4</span> Unequal Variance</h4>
+<div id="outline-container-org0a57931" class="outline-4">
+<h4 id="org0a57931"><span class="section-number-4">13.1.4</span> Unequal Variance</h4>
 <div class="outline-text-4" id="text-13-1-4">
 <p>
 \(Z := \frac{\bar{X} - \bar{Y} - (\mu_X -
@@ -1093,8 +1093,8 @@ t_{n+m-2,\alpha}\).
 </div>
 </div>
 </div>
-<div id="outline-container-org82688fd" class="outline-3">
-<h3 id="org82688fd"><span class="section-number-3">13.2</span> Mann-Whitney Test</h3>
+<div id="outline-container-orgdb224a7" class="outline-3">
+<h3 id="orgdb224a7"><span class="section-number-3">13.2</span> Mann-Whitney Test</h3>
 <div class="outline-text-3" id="text-13-2">
 <p>
 We take the smaller sample of size \(n_1\), and sum the ranks in that
@@ -1107,8 +1107,8 @@ Test works for all distributions, and is robust to outliers.
 </p>
 </div>
 </div>
-<div id="outline-container-org3452c40" class="outline-3">
-<h3 id="org3452c40"><span class="section-number-3">13.3</span> Paired Samples</h3>
+<div id="outline-container-org511a507" class="outline-3">
+<h3 id="org511a507"><span class="section-number-3">13.3</span> Paired Samples</h3>
 <div class="outline-text-3" id="text-13-3">
 <p>
 \((X_i, Y_i)\) are paired and related to the same individual. \((X_i,
@@ -1121,8 +1121,8 @@ test \(H_0 : \mu_D = d\), \(t = \frac{\bar{D} - \mu_D}{s_D/\sqrt{n}}\).
 </p>
 </div>
 </div>
-<div id="outline-container-orgeeaf45f" class="outline-3">
-<h3 id="orgeeaf45f"><span class="section-number-3">13.4</span> Ranked Test</h3>
+<div id="outline-container-org8242034" class="outline-3">
+<h3 id="org8242034"><span class="section-number-3">13.4</span> Ranked Test</h3>
 <div class="outline-text-3" id="text-13-4">
 <p>
 \(W_+\) is the sum of ranks among all positive \(D_i\) and \(W_i\) is the
@@ -1135,7 +1135,7 @@ sum of ranks among all negative \(D_i\). We want to reject \(H_0\) if
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-02-06 Tue 22:29</p>
+<p class="date">Created: 2018-05-02 Wed 15:45</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

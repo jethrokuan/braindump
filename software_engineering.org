@@ -1175,33 +1175,28 @@ Note:
     :PROPERTIES:
     :CUSTOM_ID: solid
     :END:
+- Single Responsibility Principle ::  every module or class should
+     have responsibility over a single part of the functionality
+     provided by the software, and that responsibility should be
+     entirely encapsulated by the class.
+- Open-Closed Principle :: software entities (classes, modules,
+     functions, etc.) should be open for extension, but closed for
+     modification"; that is, such an entity can allow its behaviour to
+     be extended without modifying its source code.
+-  Liskov Substitution Principle :: Functions that use pointers or
+     references to base classes must be able to use objects of derived
+     classes without knowing it.- Interface Segregation Principle ::  no client should be forced to
+     depend on methods it does not use.
+- Dependency Inversion Principle :: high level modules should not
+     depend on low level modules; both should depend on abstractions.
+     Abstractions should not depend on details.
 
-1. Single Responsibility Principle
-2. Open-Closed Principle
-3. Liskov Substitution Principle
-4. Interface Segregation Principle
-5. Dependency Inversion Principle
 
-*** YAGNI
-    :PROPERTIES:
-    :CUSTOM_ID: yagni
-    :END:
-
-- You Are't Gonna Need It! : Do not add code for future use
-
-*** DRY
-    :PROPERTIES:
-    :CUSTOM_ID: dry
-    :END:
-
-- Don't repeat yourself, i.e. No duplicate implementations
-
-*** Brooks' Law
-    :PROPERTIES:
-    :CUSTOM_ID: brooks-law
-    :END:
-
-- Adding people to a late project makes it later
+- YAGNI :: a principle of extreme programming (XP) that states a
+           programmer should not add functionality until deemed
+           necessary.
+- DRY :: Don't repeat yourself, i.e. No duplicate implementations
+- Brook's Law ::  Adding people to a late project makes it later
 
 ** Activity diagrams
    :PROPERTIES:

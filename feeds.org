@@ -2,7 +2,6 @@
 #+TITLE: RSS Feeds
 * Feeds                                                              :elfeed:
 ** Computer Science                                                      :cs:
-*** http://export.arxiv.org/rss/cs
 ** Emacs                                                              :emacs:
 *** http://planet.emacsen.org/atom.xml
 *** https://www.reddit.com/r/emacs/
