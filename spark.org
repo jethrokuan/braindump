@@ -1,0 +1,146 @@
+-*- mode: Org; org-download-image-dir: "./images/spark/"; -*-
+#+SETUPFILE: ./export_template.org
+#+TITLE: Spark
+* What is Apache Spark?
+A cluster computing platform designed to be fast and general-purpose.
+It extends the MapReduce to support more types of computations, and
+covers a wide range of workloads that previously required separate
+distributed systems.
+
+Spark is a computational engine that is responsible for scheduling,
+distributing and monitoring applications consisting of many
+computational tasks across many worker machines.
+* The Spark Stack
+- Spark Core :: contains basic functionality, including memory
+                management, scheduling, fault recovery and interacting
+                with storage systems. It contains the API for =RDD=s,
+                which represent a collection of items distributed
+                across many nodes that can be manipulated in parallel.
+- Spark SQL :: allows querying of data via SQL, and supports many
+               sources of data.
+- Spark Streaming :: Provides support for processing live streams of data.
+- MLLib ::  Contains basic ML functionality, such as classification
+           and regression.
+- GraphX :: Library for manipulating graphs, and contains common graph
+            algorithms like PageRank.
+- Cluster Managers :: Library that enables auto-scaling via cluster
+     managers such as Hadoop YARN, Apache Mesos, and its own
+     Standalone Scheduler.
+
+For Data Scientists, Spark's builtin libraries help them visualize
+results of queries in the least amount of time. For Data Processing,
+Spark allows Software Engineers to build distributed applications,
+while hiding the complexity of distributed systems programming and
+fault tolerance.
+
+While Spark supports all files stored in the Hahoop distributed
+filesystem (HDFS), it does not require Hadoop.
+
+* Getting Started
+Enter the shell with =spark-shell=, or =pyspark=. 
+
+#+BEGIN_SRC python
+  lines = sc.textFile("README.md")
+  lines.count()
+  lines.first()
+#+END_SRC
+
+* Core Spark Concepts
+Every Spark application consists of a /driver program/ that launches
+various parallel operations on a cluster. The driver program contains
+the application's =main= function and defines distributed datasets on
+the cluster.
+
+Driver programs access Spark thorugh a =SparkContext= object, which
+represents a connection to a computing cluster.
+
+Once we have a SparkContext, we use it to create RDDs. Driver programs
+typically manage a number of nodes called /executors/. A lot of
+Spark's API revolves around passing functions to its operators to run
+them on the cluster.
+
+#+BEGIN_SRC python
+  lines = sc.textFile("README.md")
+  lines.filter(lambda line: "Machine" in line)
+#+END_SRC
+
+* Running a Python script on Spark
+=bin/spark-submit= includes the Spark dependencies, setting up the
+environment for Spark's Python API to function. To run a python
+script, simply run =spark-submit script.py=.
+
+After linking an application to Spark, we need to create a
+SparkContext.
+
+#+BEGIN_SRC python
+  from pyspark import SparkConf, SparkContext
+
+  conf = SparkConf().setMaster("local").setAppName("My app")
+  sc = SparkContext(conf=conf)
+#+END_SRC
+
+* Programming with RDDs
+An RDD is a distributed collection of elements. All work is expressed
+as either creating new RDDs, transforming existing RDDs or calling
+operations on RDDs to compute a result.
+
+RDDs are created by: (1) loading an external dataset, or (2) creating
+a collection of objects in the driver program.
+
+Spark's RDDs are by default recomputed every time an action is run. To
+reuse an RDD in multiple actions,  we can use =rdd.persist=. In
+practice, =persist()= is often used to load a subset of data into
+memory to be queried repeatedly.
+
+#+BEGIN_SRC python
+  lines = sc.parallelize(["pandas", "i like pandas"])
+#+END_SRC
+
+** RDD Operations
+RDDs support /transformations/ and /actions/. Transformations are
+operations on RDDs that return a new RDD (e.g. =map= and =filter=).
+Actions are operations that return a result to the driver program, or
+write it to storage,and kick off a computation.
+
+#+BEGIN_SRC python
+  errorsRDD = inputRDD.filter(lambda x: "error" in x)
+  warningsRDD = inputRDD.filter(lambda x: "warning" in x)
+  badLinesRDD = errorsRDD.union(warningsRDD)
+#+END_SRC
+
+Spark keeps track of RDD dependencies from various transformations in
+a /lineage graph/, that way if a RDD is lost, it can be recreated from
+its dependencies.
+
+Transformations on RDDs are /lazily evaluated/, so Spark will not
+execute until an action is seen.
+
+When passing a function that is a member of an object, or contains
+references to fields in an object, Spark sends the entire object to
+worker nodes, which can be larger than the information you need.  This
+can also cause the program to fail, if the class contains objects that
+Python cannot pickle.
+
+Basic Transformations:
+- =map()=, =flatMap()=
+- pseudo-set operations: =distinct()=, =union()=, =intersection()=,
+  =subtract()=
+- =cartesian()=
+
+Actions:
+- =reduce(lambda x, y: f(x,y))=
+- =fold(zero)(fn)=  is reduce, but takes an additional zeroth-value parameter
+- ==take(n)==, ==top(n)==, =takeOrdered(n)(ordering)=,
+  =takeSample(withReplacement, num, [seed])=
+- =aggregate(zero)(seqOp, combOp)= is similar reduce, but used to return
+  a different type
+- =foreach(fn)=
+
+** Persistence
+Different level of persistence helps with making Spark jobs faster. If
+a node with persisted data goes down, Spark will recreate the RDD from
+the /lineage graph./
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-07-12 18:20:33
+[[file:images/spark/Programming with
+RDDs/screenshot_2018-07-12_18-20-33.png]]
