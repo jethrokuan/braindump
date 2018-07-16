@@ -12,6 +12,7 @@
 *** http://www.datatau.com/rss
 *** https://towardsdatascience.com/feed
 
+*** https://thegradient.pub/rss/
 ** Programming Languages                                                 :pl:
 *** http://lambda-the-ultimate.org/rss.xml
 ** General                                                          :general:
