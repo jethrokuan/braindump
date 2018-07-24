@@ -11,7 +11,7 @@
 *** https://distill.pub/rss.xml
 *** http://www.datatau.com/rss
 *** https://towardsdatascience.com/feed
-
+*** http://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss
 *** https://thegradient.pub/rss/
 ** Programming Languages                                                 :pl:
 *** http://lambda-the-ultimate.org/rss.xml
