@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-11 Sat 14:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Data Visualization</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Data Visualization</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf2e269a">1. References</a></li>
+<li><a href="#org190d3f3">2. Program</a></li>
+<li><a href="#orgf0b0c45">3. Tools</a></li>
+<li><a href="#orgbf03692">4. How do people use visualization?</a></li>
+<li><a href="#org4b3c7b2">5. Provenance</a></li>
+<li><a href="#orgb55b55a">6. Visual Interaction Techniques</a></li>
+<li><a href="#orgb6633f1">7. A well-designed interactive visualization interface should show the following</a></li>
+<li><a href="#org55b0bd7">8. Visual Design and Encoding - Westermann</a>
+<ul>
+<li><a href="#org01f5e82">8.1. Why use Interactivity?</a></li>
+<li><a href="#org1f55ce4">8.2. Why depend on vision?</a></li>
+<li><a href="#orge1b22de">8.3. Pre-attentive Processing</a></li>
+<li><a href="#org038f735">8.4. Gestalt Principles</a></li>
+<li><a href="#org116fe31">8.5. Visual Design</a>
+<ul>
+<li><a href="#org63c4a12">8.5.1. Steven's Psychological Power Law</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org9278b8f">9. Scientific Data Visualization - Stefan Bruckner</a>
+<ul>
+<li><a href="#org38aa57a">9.1. Types of Visualization</a></li>
+<li><a href="#org8315eba">9.2. Data Representation</a></li>
+<li><a href="#orgdf09a9b">9.3. Grids</a>
+<ul>
+<li><a href="#orgfca2c94">9.3.1. Regular Grid</a></li>
+<li><a href="#orgfef5915">9.3.2. Rectilinear Grid</a></li>
+<li><a href="#org0d5620c">9.3.3. Curvilinear Grid</a></li>
+<li><a href="#orga869bc1">9.3.4. Block-structured Grid</a></li>
+<li><a href="#org175f36b">9.3.5. Unstructured Grid</a></li>
+<li><a href="#org0ee772d">9.3.6. <span class="todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES</a></li>
+<li><a href="#orgf11e740">9.3.7. Scattered Data</a></li>
+<li><a href="#org48e34fd">9.3.8. Data Enhancement</a></li>
+<li><a href="#org7227a25">9.3.9. Data, Visualization, Interaction</a></li>
+<li><a href="#org26b34ee">9.3.10. Interactive Steering</a></li>
+<li><a href="#orgd9c4550">9.3.11. Volume Visualization</a>
+<ul>
+<li><a href="#org2aa696e">9.3.11.1. Organization of Volume Data</a></li>
+</ul>
+</li>
+<li><a href="#org3a125ed">9.3.12. Challenges</a></li>
+<li><a href="#orgd8e3626">9.3.13. Voxels vs Cells</a></li>
+<li><a href="#org4e91e98">9.3.14. Linear Interpolation</a></li>
+<li><a href="#org36e0416">9.3.15. Evaluating Quality of Reconstruction</a></li>
+<li><a href="#orga0858a9">9.3.16. Classification</a></li>
+<li><a href="#org9744994">9.3.17. Visualization Approaches</a></li>
+<li><a href="#org7409849">9.3.18. <span class="todo TODO">TODO</span> Isosurface Similarity</a></li>
+<li><a href="#orgd9b126b">9.3.19. Visualization in the Spatial Domain</a>
+<ul>
+<li><a href="#org6d16872">9.3.19.1. Slicing</a></li>
+<li><a href="#org5cd9f4e">9.3.19.2. Direct Volume Rendering</a></li>
+<li><a href="#org6c11bab">9.3.19.3. Ray Tracing vs Ray Casting</a></li>
+<li><a href="#org20c941d">9.3.19.4. Shading</a></li>
+</ul>
+</li>
+<li><a href="#orgd66a16e">9.3.20. Indirect Volume Rendering</a></li>
+</ul>
+</li>
+<li><a href="#orgdff1022">9.4. Flow Visualization</a></li>
+</ul>
+</li>
+<li><a href="#org612495b">10. Data Visualization of Text Data - Jaegul Choo</a>
+<ul>
+<li><a href="#org38605ac">10.1. Overview</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+-<b>- mode: Org; org-download-image-dir: "./images/data<sub>viz</sub>/"; -</b>-
+</p>
+
+<div id="outline-container-orgf2e269a" class="outline-2">
+<h2 id="orgf2e269a"><span class="section-number-2">1</span> References</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li><a href="http://www.cad.zju.edu.cn/home/vis-summer-school-2018/">Course website</a></li>
+<li><a href="https://book.douban.com/subject/10123863/">The Grammar of Graphics</a></li>
+<li><a href="https://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098">A Layered Grammar Of Graphics</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org190d3f3" class="outline-2">
+<h2 id="org190d3f3"><span class="section-number-2">2</span> Program</h2>
+<div class="outline-text-2" id="text-2">
+
+<div class="figure">
+<p><img src="images/data_viz/Program/program2_2018-07-30_09-16-28.png" alt="program2_2018-07-30_09-16-28.png" />
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgf0b0c45" class="outline-2">
+<h2 id="orgf0b0c45"><span class="section-number-2">3</span> Tools</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+<a href="http://antv.alipay.com">http://antv.alipay.com</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbf03692" class="outline-2">
+<h2 id="orgbf03692"><span class="section-number-2">4</span> How do people use visualization?</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>verification</li>
+<li>analysis</li>
+<li>exploration/discovery</li>
+<li>presentation/storytelling</li>
+<li>art/aesthetics</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4b3c7b2" class="outline-2">
+<h2 id="org4b3c7b2"><span class="section-number-2">5</span> Provenance</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The steps the user take in the process of visual exploration/analysis
+and the resulting visualizations and findings
+</p>
+
+<p>
+We use provenance for:
+</p>
+<ul class="org-ul">
+<li>recall</li>
+<li>reuse and replicate</li>
+<li>Sharing</li>
+<li>Meta-analysis</li>
+</ul>
+
+<p>
+Capture:
+</p>
+<ul class="org-ul">
+<li>datasets</li>
+<li>visualization and insight</li>
+<li>interaction</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb55b55a" class="outline-2">
+<h2 id="orgb55b55a"><span class="section-number-2">6</span> Visual Interaction Techniques</h2>
+<div class="outline-text-2" id="text-6">
+<ul class="org-ul">
+<li>Selecting/Highlighting/Brushing</li>
+<li>Using Lasso to update linked views</li>
+<li>sidebars for interactive filtering</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb6633f1" class="outline-2">
+<h2 id="orgb6633f1"><span class="section-number-2">7</span> A well-designed interactive visualization interface should show the following</h2>
+<div class="outline-text-2" id="text-7">
+<dl class="org-dl">
+<dt>Visualize</dt><dd>use effective visual encodings</dd>
+<dt>Filter</dt><dd>reduce visible data to relevant items</dd>
+<dt>Select</dt><dd>Retrieve details about interesting items</dd>
+<dt>Navigate</dt><dd>Pan, zoom, change view</dd>
+</dl>
+
+<p>
+<a href="https://github.com/juba/scatterD3">https://github.com/juba/scatterD3</a>
+DeepTree
+<a href="http://www.visualcomplexity.com/vc/">http://www.visualcomplexity.com/vc/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org55b0bd7" class="outline-2">
+<h2 id="org55b0bd7"><span class="section-number-2">8</span> Visual Design and Encoding - Westermann</h2>
+<div class="outline-text-2" id="text-8">
+<blockquote>
+<p>
+The purpose of visualization is <b>insight</b>, not pictures. - Schneiderman
+</p>
+</blockquote>
+</div>
+
+<div id="outline-container-org01f5e82" class="outline-3">
+<h3 id="org01f5e82"><span class="section-number-3">8.1</span> Why use Interactivity?</h3>
+<div class="outline-text-3" id="text-8-1">
+<ol class="org-ol">
+<li>Handle data complexity</li>
+<li>A single static view can show only one aspect of data</li>
+</ol>
+
+<blockquote>
+<p>
+Overview first, zoom and filter, then details-on-demand
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org1f55ce4" class="outline-3">
+<h3 id="org1f55ce4"><span class="section-number-3">8.2</span> Why depend on vision?</h3>
+<div class="outline-text-3" id="text-8-2">
+<ol class="org-ol">
+<li>Visual system is high-bandwidth channel to brain</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orge1b22de" class="outline-3">
+<h3 id="orge1b22de"><span class="section-number-3">8.3</span> Pre-attentive Processing</h3>
+<div class="outline-text-3" id="text-8-3">
+<ul class="org-ul">
+<li>Sequential vs. Parallel processing (popout)</li>
+<li>Combination of channels usually requires serial search</li>
+<li>Difficult if no unique visual property of the target</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org038f735" class="outline-3">
+<h3 id="org038f735"><span class="section-number-3">8.4</span> Gestalt Principles</h3>
+<div class="outline-text-3" id="text-8-4">
+
+<div class="figure">
+<p><img src="images/data_viz/Visual Design and Encoding - Westermann/th_2018-07-30_09-47-57.jpeg" alt="th_2018-07-30_09-47-57.jpeg" />
+</p>
+</div>
+
+<p>
+Representations should be <i>correct</i>, <i>accurate</i> and <i>truthful</i>.
+</p>
+
+<p>
+To bring up a change, you must attend to it. (Change blindness)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org116fe31" class="outline-3">
+<h3 id="org116fe31"><span class="section-number-3">8.5</span> Visual Design</h3>
+<div class="outline-text-3" id="text-8-5">
+<p>
+A good visualization depends on:
+</p>
+
+<ol class="org-ol">
+<li>data types</li>
+<li>context of the data</li>
+<li>tasks to perform e.g. identify trends</li>
+<li>questions to answer</li>
+<li>messages to deliver</li>
+</ol>
+
+\begin{equation}
+  \text{Lie Factor} = \frac{\text{Size of effect shown in
+      graphic}}{\text{Size of effect in data}}
+\end{equation}
+
+<p>
+Bad visualizations do not allow you to recover original data from the
+visualization. Keep proportions and relative sizes.
+</p>
+
+<p>
+maximize data-ink ratio
+</p>
+</div>
+<div id="outline-container-org63c4a12" class="outline-4">
+<h4 id="org63c4a12"><span class="section-number-4">8.5.1</span> Steven's Psychological Power Law</h4>
+<div class="outline-text-4" id="text-8-5-1">
+<p>
+<a href="https://en.wikipedia.org/wiki/Stevens's_power_law">https://en.wikipedia.org/wiki/Stevens's_power_law</a>
+</p>
+
+<p>
+<img src="images/data_viz/Visual Design and Encoding - Westermann/th_2018-07-30_11-04-03.jpeg" alt="th_2018-07-30_11-04-03.jpeg" />
+Steven's psychophysical power law: 
+</p>
+
+\begin{equation}
+\text{Perceived sensation} = \text{Physical Intensity}^T
+\end{equation}
+
+<p>
+Compensating for human's over/underestimation:
+</p>
+
+
+<div class="figure">
+<p><img src="images/data_viz/Steven's Psychological Power Law/screenshot_2018-07-30_11-09-25.png" alt="screenshot_2018-07-30_11-09-25.png" />
+</p>
+</div>
+
+<p>
+Difficult to focus on one channel when multiple channels are
+presented. (Redudancy is bad!)
+</p>
+
+<p>
+Visual mapping - Separable vs integral visual channels
+</p>
+<ul class="org-ul">
+<li>Color + position</li>
+<li>Color + size</li>
+<li>Width + height</li>
+<li>Red + green* Unfiled</li>
+<li><a href="https://en.wikipedia.org/wiki/Tutte_embedding">https://en.wikipedia.org/wiki/Tutte_embedding</a></li>
+<li>Reingold-Tilford Algorithm
+<ul class="org-ul">
+<li><a href="https://stackoverflow.com/questions/13128750/what-are-the-step-to-the-reingold-tilford-algorithm-and-how-might-i-program-it">https://stackoverflow.com/questions/13128750/what-are-the-step-to-the-reingold-tilford-algorithm-and-how-might-i-program-it</a></li>
+</ul></li>
+<li></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9278b8f" class="outline-2">
+<h2 id="org9278b8f"><span class="section-number-2">9</span> Scientific Data Visualization - Stefan Bruckner</h2>
+<div class="outline-text-2" id="text-9">
+</div>
+<div id="outline-container-org38aa57a" class="outline-3">
+<h3 id="org38aa57a"><span class="section-number-3">9.1</span> Types of Visualization</h3>
+<div class="outline-text-3" id="text-9-1">
+<ol class="org-ol">
+<li>Volume Visualization
+<ul class="org-ul">
+<li>Visualization of scalar fields</li>
+<li>Important in medicine, biology, geoscience, engineering, &#x2026;</li>
+</ul></li>
+<li>Flow Visualization
+<ul class="org-ul">
+<li>Visualization of Vector Fields</li>
+<li>Data typically from computational fluid dynamics (CFD)
+simulations</li>
+</ul></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org8315eba" class="outline-3">
+<h3 id="org8315eba"><span class="section-number-3">9.2</span> Data Representation</h3>
+<div class="outline-text-3" id="text-9-2">
+<ul class="org-ul">
+<li>Inherent Spatial Domain?
+<ul class="org-ul">
+<li>Yes: Do we  recycle data space or not</li>
+<li>No: Select which representation space</li>
+</ul></li>
+<li>What dimension is used for what?
+<ul class="org-ul">
+<li>Relationship data space &lt;=&gt; data attributes</li>
+<li>Available display space (2D/3D)</li>
+<li>Where is the focus?</li>
+<li>Where can you abstract?</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdf09a9b" class="outline-3">
+<h3 id="orgdf09a9b"><span class="section-number-3">9.3</span> Grids</h3>
+<div class="outline-text-3" id="text-9-3">
+<ul class="org-ul">
+<li>Common way of storing datasets of field type (scalar, vector, tensor
+fields)</li>
+<li>Typically a high-performance, space-efficient representation</li>
+<li>Data is organized in <b>cells</b> which contain <b>samples</b>.</li>
+<li>Often used to define an interpolation function that defines data
+values between samples leading to a <b>continuous representation</b>.</li>
+
+<li>Which data orginazation is optimal?</li>
+<li>Where does the data come from?</li>
+<li>Is there an explicit neighbourhood relationship?</li>
+<li>How is the neighborhood information stored?</li>
+<li>How is navigation within the data possible?</li>
+<li>Calculations within the data possible?</li>
+<li>Are the data structured?</li>
+</ul>
+</div>
+
+<div id="outline-container-orgfca2c94" class="outline-4">
+<h4 id="orgfca2c94"><span class="section-number-4">9.3.1</span> Regular Grid</h4>
+<div class="outline-text-4" id="text-9-3-1">
+<ul class="org-ul">
+<li>Orthogonal, equidistant grid</li>
+<li>Sample distances not equal</li>
+<li>Implicit neighborhood-relationship</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfef5915" class="outline-4">
+<h4 id="orgfef5915"><span class="section-number-4">9.3.2</span> Rectilinear Grid</h4>
+<div class="outline-text-4" id="text-9-3-2">
+<ul class="org-ul">
+<li>Orthogonal grid</li>
+<li>Varying sample distances (\(x[i], y[j]\) given)</li>
+<li>Allows you to place more samples in areas that are more important to
+you, not wasting storage in uninterested areas</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0d5620c" class="outline-4">
+<h4 id="org0d5620c"><span class="section-number-4">9.3.3</span> Curvilinear Grid</h4>
+<div class="outline-text-4" id="text-9-3-3">
+<ul class="org-ul">
+<li>Non-orthogonal grid</li>
+<li>Grid-points explicitly given (\(x[i,j]\))</li>
+<li>Implicit neighborhood relationship</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-orga869bc1" class="outline-4">
+<h4 id="orga869bc1"><span class="section-number-4">9.3.4</span> Block-structured Grid</h4>
+<div class="outline-text-4" id="text-9-3-4">
+<ul class="org-ul">
+<li>Combination of structured grids</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org175f36b" class="outline-4">
+<h4 id="org175f36b"><span class="section-number-4">9.3.5</span> Unstructured Grid</h4>
+<div class="outline-text-4" id="text-9-3-5">
+<ul class="org-ul">
+<li>Grid-points and connections arbitrary</li>
+<li>Grid-points and neighborhood explicitly given</li>
+<li>Cells: tetrahedra</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0ee772d" class="outline-4">
+<h4 id="org0ee772d"><span class="section-number-4">9.3.6</span> <span class="todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES</h4>
+<div class="outline-text-4" id="text-9-3-6">
+<ul class="org-ul">
+<li>Non-cartesian Coordinates</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf11e740" class="outline-4">
+<h4 id="orgf11e740"><span class="section-number-4">9.3.7</span> Scattered Data</h4>
+<div class="outline-text-4" id="text-9-3-7">
+<ul class="org-ul">
+<li>Grid-free data</li>
+</ul>
+
+
+<blockquote>
+<p>
+Interesting to look at dimensionality of data space, vs dimensionality
+of data attributes
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-org48e34fd" class="outline-4">
+<h4 id="org48e34fd"><span class="section-number-4">9.3.8</span> Data Enhancement</h4>
+<div class="outline-text-4" id="text-9-3-8">
+<ul class="org-ul">
+<li>Filtering</li>
+<li>Resampling</li>
+<li>Data derivation</li>
+<li>Data interpolation</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7227a25" class="outline-4">
+<h4 id="org7227a25"><span class="section-number-4">9.3.9</span> Data, Visualization, Interaction</h4>
+<div class="outline-text-4" id="text-9-3-9">
+<ul class="org-ul">
+<li>Coupling varies considerably
+<ul class="org-ul">
+<li>Data Generation (data acquisition)
+<ul class="org-ul">
+<li>Mesaurement, simulation, modelling</li>
+<li>Can take very long, and be very costly</li>
+</ul></li>
+<li>Visualization (rest of visualization pipeline)
+<ul class="org-ul">
+<li>Data enhancement, viz mapping, rendering</li>
+<li>Depending on implementation, fast/slow</li>
+</ul></li>
+<li>Interaction
+<ul class="org-ul">
+<li>How can the user intervene, vary parameters</li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org26b34ee" class="outline-4">
+<h4 id="org26b34ee"><span class="section-number-4">9.3.10</span> Interactive Steering</h4>
+<div class="outline-text-4" id="text-9-3-10">
+<ul class="org-ul">
+<li>Simulation and modelling generate data "on the fly"</li>
+<li>Allows real-time insight of the data</li>
+<li>User can interfere with the simulation, and change the design of the
+simulations</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd9c4550" class="outline-4">
+<h4 id="orgd9c4550"><span class="section-number-4">9.3.11</span> Volume Visualization</h4>
+<div class="outline-text-4" id="text-9-3-11">
+<ul class="org-ul">
+<li>the visualization of 3D scalar fields</li>
+<li>Mapping 3D -&gt; 2D</li>
+<li>Projection (e.g. MIP), slicing, volume rendering</li>
+<li>Volume data is 3Dx1D data</li>
+<li>Scalar data, 3D data space, space filling</li>
+<li>User wants to gain insight into 3D data, find structures of special
+interest + context</li>
+</ul>
+</div>
+
+<div id="outline-container-org2aa696e" class="outline-5">
+<h5 id="org2aa696e"><span class="section-number-5">9.3.11.1</span> Organization of Volume Data</h5>
+<div class="outline-text-5" id="text-9-3-11-1">
+<ol class="org-ol">
+<li>Cartesian or Regular grid
+<ol class="org-ol">
+<li>CT/MR, often dx=dy&lt;dz</li>
+<li>Data enhancement: iso-stack-calculation</li>
+</ol></li>
+<li>Curvilinear, unstructured grid</li>
+</ol>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3a125ed" class="outline-4">
+<h4 id="org3a125ed"><span class="section-number-4">9.3.12</span> Challenges</h4>
+<div class="outline-text-4" id="text-9-3-12">
+<ul class="org-ul">
+<li>So much information, so few pixels</li>
+<li>How to identify and enhance relevant features in the data.</li>
+<li>Speed and interaction very important</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd8e3626" class="outline-4">
+<h4 id="orgd8e3626"><span class="section-number-4">9.3.13</span> Voxels vs Cells</h4>
+<div class="outline-text-4" id="text-9-3-13">
+<ul class="org-ul">
+<li>pixels = picture element, voxels = volume element</li>
+<li>A voxel is a point sample in 3D, not necessarily interpolated</li>
+<li>Cell is a cube primitive, and the corners are 8 voxels. Values in
+cell use interpolation.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4e91e98" class="outline-4">
+<h4 id="org4e91e98"><span class="section-number-4">9.3.14</span> Linear Interpolation</h4>
+<div class="outline-text-4" id="text-9-3-14">
+<ul class="org-ul">
+<li>Current GPUs automatically do trilinear interpolation of 3D textures</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36e0416" class="outline-4">
+<h4 id="org36e0416"><span class="section-number-4">9.3.15</span> Evaluating Quality of Reconstruction</h4>
+<div class="outline-text-4" id="text-9-3-15">
+<ul class="org-ul">
+<li>Marshner-Lobb function is a common test signal to evaluate the
+quality of reconstruction filters</li>
+<li>Signal has a high amount of energy near its Nyquist frequency</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga0858a9" class="outline-4">
+<h4 id="orga0858a9"><span class="section-number-4">9.3.16</span> Classification</h4>
+<div class="outline-text-4" id="text-9-3-16">
+<ul class="org-ul">
+<li>Using data values, gradiant and curvature, segment data into
+multiple semantic regions</li>
+<li>Often semi-automatic or fully manual</li>
+<li>Automatic approximation: transfer functions
+<ul class="org-ul">
+<li>Simplest example of 1D transfer function: data value -&gt; color</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9744994" class="outline-4">
+<h4 id="org9744994"><span class="section-number-4">9.3.17</span> Visualization Approaches</h4>
+<div class="outline-text-4" id="text-9-3-17">
+<dl class="org-dl">
+<dt>Slicing</dt><dd>display of 2D cross sections</dd>
+<dt>Indirect Volume Rendering</dt><dd>Extraction of an intermediate representation</dd>
+<dt>Direct Volume Rendering</dt><dd>Direct display of representation</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org7409849" class="outline-4">
+<h4 id="org7409849"><span class="section-number-4">9.3.18</span> <span class="todo TODO">TODO</span> Isosurface Similarity</h4>
+</div>
+
+<div id="outline-container-orgd9b126b" class="outline-4">
+<h4 id="orgd9b126b"><span class="section-number-4">9.3.19</span> Visualization in the Spatial Domain</h4>
+<div class="outline-text-4" id="text-9-3-19">
+</div>
+<div id="outline-container-org6d16872" class="outline-5">
+<h5 id="org6d16872"><span class="section-number-5">9.3.19.1</span> Slicing</h5>
+<div class="outline-text-5" id="text-9-3-19-1">
+<ul class="org-ul">
+<li>Reduce the dimensionality of 3D t o2D by showing a cross section</li>
+<li>Usually without a transfer function</li>
+<li>Orthogonal slicing often used to slice along anatomical planes
+in medical imagery</li>
+<li>Oblique slicing has arbitrary slice orientation, often used in
+an multi-planar reformation (MPR) setup.</li>
+<li>Curved slices often tailored towards specific applications,
+e.g. visualization of blood vessels.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5cd9f4e" class="outline-5">
+<h5 id="org5cd9f4e"><span class="section-number-5">9.3.19.2</span> Direct Volume Rendering</h5>
+<div class="outline-text-5" id="text-9-3-19-2">
+<ul class="org-ul">
+<li>Dense representation of underlying scalar field: transfer function
+defines visible structure.</li>
+<li>Image order (ray casting) fast and easy to implement, and are well
+supported by current GPUs</li>
+<li>Object order (splatting, texture slicing) also supported by older
+GPUs, but difficult to skip non-visible regions. Easy to skip&#x2026;(?)</li>
+<li>Nowadays: shading/classification after interpolation/resampling</li>
+<li>post/pre-interpolative classification order</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6c11bab" class="outline-5">
+<h5 id="org6c11bab"><span class="section-number-5">9.3.19.3</span> Ray Tracing vs Ray Casting</h5>
+<div class="outline-text-5" id="text-9-3-19-3">
+<dl class="org-dl">
+<dt>Ray tracing</dt><dd>method from image generation, usig ray-object
+intersection and tracing secondary rays.</dd>
+<dt>Ray casting</dt><dd>no objects, density values in 3D, only viewing rays.</dd>
+</dl>
+</div>
+</div>
+
+<div id="outline-container-org20c941d" class="outline-5">
+<h5 id="org20c941d"><span class="section-number-5">9.3.19.4</span> Shading</h5>
+<div class="outline-text-5" id="text-9-3-19-4">
+<dl class="org-dl">
+<dt>lambertian reflection</dt><dd>light reflected equally in all directions</dd>
+<dt>specular reflection</dt><dd>light reflected more in one direction</dd>
+</dl>
+
+<p>
+Make structures in volume data sets more realistic by applying an
+illumination model
+</p>
+<ul class="org-ul">
+<li>Shade each sample in the volume like a surface: <a href="https://en.wikipedia.org/wiki/Blinn%E2%80%93Phong_shading_model">Blinn-Phong
+illumination model</a> commonly used.</li>
+<li>Use normalized gradient vector as estimation for surface normal.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd66a16e" class="outline-4">
+<h4 id="orgd66a16e"><span class="section-number-4">9.3.20</span> Indirect Volume Rendering</h4>
+<div class="outline-text-4" id="text-9-3-20">
+<ul class="org-ul">
+<li>Extract an intermediate representation from the volume (geometric
+surface), then use traditional rendering methods</li>
+<li>Cuberille regards each xovel as a little cube, classify as either
+part of the object or not.</li>
+</ul>
+
+<div class="figure">
+<p><img src="images/Scientific Data Visualization - Stefan Bruckner/th_2018-07-31_11-00-07.jpeg" alt="th_2018-07-31_11-00-07.jpeg" />
+</p>
+</div>
+
+<p>
+<a href="https://en.wikipedia.org/wiki/Marching_cubes">Marching Cubes</a> is a standard method for the extraction of isosurfaces
+from volume data
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdff1022" class="outline-3">
+<h3 id="orgdff1022"><span class="section-number-3">9.4</span> Flow Visualization</h3>
+<div class="outline-text-3" id="text-9-4">
+<ul class="org-ul">
+<li>Airplane/ship/car design</li>
+<li>Weather simulation</li>
+<li>Medicine (blood flows etc.)</li>
+<li>Gaseous, liquid flow</li>
+<li>Flow models: Differential Equation Systems (ODEs)</li>
+<li>Common techniques for solving Navier-Stokes equations:
+<ol class="org-ol">
+<li>Lagrangian approach (particle-based)
+<ol class="org-ol">
+<li>Treat the fluid as discrete particles, and apply interaction
+forces.</li>
+<li>Pros: momentum conservation/more intuitive, and fast, no
+linear equation solving</li>
+<li>Cons: connectivity information/surface reconstruction</li>
+</ol></li>
+<li>Eulerian approach
+<ol class="org-ol">
+<li>Discretize the domain using finite differences</li>
+<li>Use the operator splitting technique to solve each term separately</li>
+<li>Pros: derivative approximation, adaptive time step/solver</li>
+<li>Cons: memory usage &amp; speed, grid artifact/resolution limitation.</li>
+</ol></li>
+</ol></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org612495b" class="outline-2">
+<h2 id="org612495b"><span class="section-number-2">10</span> Data Visualization of Text Data - Jaegul Choo</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org38605ac" class="outline-3">
+<h3 id="org38605ac"><span class="section-number-3">10.1</span> Overview</h3>
+<div class="outline-text-3" id="text-10-1">
+<ol class="org-ol">
+<li>Vector encoding techniques of text
+<ol class="org-ol">
+<li>Bag-of-words vectors and word embedding</li>
+</ol></li>
+<li>Basic text visualization techniques
+<ol class="org-ol">
+<li>Word cloud, wordle, word tree, phrase nets, ThemeRiver</li>
+</ol></li>
+<li>Topic Modeling
+<ol class="org-ol">
+<li>Non-negative matrix factorization</li>
+<li>UTOPIAN and visual analytic systems</li>
+</ol></li>
+<li>Dimension reduction
+<ol class="org-ol">
+<li>Multidimensional scaling and tSNE</li>
+<li>Interactive dimension reduction techniques and systems</li>
+</ol></li>
+<li>Interactive visualization of deep learning
+<ol class="org-ol">
+<li>Toolkits: Tensorboard, Embedding Projector, Visdom</li>
+<li>Advanced visual analytics systems: CNNVis, LSTMVis, DeepEyes</li>
+</ol></li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-08-11 Sat 14:06</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

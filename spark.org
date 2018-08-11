@@ -144,3 +144,189 @@ the /lineage graph./
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-07-12 18:20:33
 [[file:images/spark/Programming with
 RDDs/screenshot_2018-07-12_18-20-33.png]]
+
+* Working with Key/Value Pairs
+Spark provides special operations on RDDs with KV pairs, called pair
+RDDs.
+
+For Python and Scala, the RDD needs to be composed of tuples:
+
+#+BEGIN_SRC python
+  pairs = lines.map(lambda x: (x.split(" ")[0], x))
+#+END_SRC
+
+#+BEGIN_SRC scala
+  val pairs = lines.map(x => (x.split(" ")(0), x))
+#+END_SRC
+
+Java does not have a built-in tuple type, so it uses the
+=scala.Tuple2= class.
+
+** Transformations on Pair RDDs
+| Function              | Purpose                                                                |
+|-----------------------+------------------------------------------------------------------------|
+| reduceByKey(func)     | Combines values with the same key                                      |
+| groupByKey()          | Group values with the same key                                         |
+| combineByKey(a,b,c,d) | Combine values with the same key using a different result type         |
+| mapValues(func)       | Apply a function to each value of a pair RDD without changing the key  |
+| flatMapValues(func)   | Apply a function that returns an iterator to each value of a pair RDD. |
+| keys()                | Returns an RDD for just the keys.                                      |
+| values()              | Returns an RDD of just the values                                      |
+| sortByKey()           | Returns an RDD sorted by the key.                                      |
+
+Set transformations:
+| Function       | Purpose                                                                        |
+|----------------+--------------------------------------------------------------------------------|
+| subtractByKey  | Remove elements with a key present in the other RDD.                           |
+| join           | Perform an inner join between the 2 RDDs                                       |
+| rightOuterJoin | Performs a join between 2 RDDs where the key must be present in the first RDD. |
+| leftOuterJoin  | Perform a join between 2 RDDs where the key must be in the other RDD.          |
+| cogroup        | Group data from both RDDs sharing the same key.                                |
+
+Actions:
+| Function       | Purpose                                             |
+|----------------+-----------------------------------------------------|
+| countByKey()   | Count the number of elements for each key.          |
+| collectAsMap() | Collect the result as a map to provide easy lookup  |
+| lookup(key)    | Return all values associated with the provided key. |
+
+** Data Partitioning
+Spark programs can choose to control their RDDs' partition to reduce
+communication. Sparks's partitioning is available on all RDDs of
+key/value pairs, and cause the system to group elements based on a
+function of each key.
+
+We use =partitionBy()= to return a new RDD that partitions the Spark
+frame efficiently. Below are the operations that benefit from
+partitioning:
+
+- cogroup
+- groupWith
+- join
+- leftOuterJoin
+- rightOuterJoin
+- groupByKey
+- reduceByKey
+- combineByKey
+- lookup
+
+Implementing a custom partitioner in Python is relatively simple:
+
+#+BEGIN_SRC python
+  import urlparse
+
+  def hash_domain(url):
+      return hash(urlparse.urlparse(url).netloc)
+
+  rdd.partitionBy(20, hash_domain)
+#+END_SRC
+
+The hash function will be compared by identity to that of other RDDs,
+so a global function object needs to be passed, rather than creating a
+new lambda.
+
+* Loading and Saving Your Data
+  For data stored in a local or distributed filesystem such as NFS,
+  HDFS, or S3, Spark can access a variety of file formats including
+  text, JSON, SequenceFiles and protocol buffers. Spark also provides
+  structured data sources through SparkSQL, and allows connections to
+  databases like Cassandra, HBase, Elasticsearch and JDBC databases.
+
+SequenceFiles are a popular Hadoop format composed of flat files with
+key/value pairs. They have sync markers that allow Spark to seek to a
+point in the file and then resynchronize with the record boundaries,
+allowing Spark to efficiently read them in parallel from multiple nodes.
+
+#+BEGIN_SRC python
+  data = sc.sequenceFile(inFile, # input file
+                         "org.apache.hadoop.io.Text", # key Class
+                         "org.apache.hadoop.io.IntWritable", # value Class
+                         10 # min partitions
+  ) 
+#+END_SRC
+
+#+BEGIN_SRC python
+  data = sc.parallelize((("Panda", 3), ("Kay", 6)))
+  data.saveAsSequenceFile(outputFile)
+#+END_SRC
+
+
+** SparkSQL
+SparkSQL can load any table supported by Apache Hive.
+
+#+BEGIN_SRC python
+  from pyspark.sql import HiveContext
+
+  hiveCtx = HiveContext(sc)
+  rows = hiveCtx.sql("SELECT name, age FROM users")
+  firstRow = rows.first()
+
+  print firstRow.name
+#+END_SRC
+
+It even supports loading JSON files, if the JSON data has a consistent
+schema cross records.
+
+#+BEGIN_SRC python
+  # {"user": {"name": "Holden", "location": "SF"}, "text": "Nice"}
+
+  tweets = hiveCtx.jsonFile("tweets.json")
+  tweets.registerTempTable("tweets")
+  results = hiveCtx.sql("SELECT user.name, text FROM tweets")
+#+END_SRC
+
+* Advanced Spark Programming
+  In this section, we look at some techniques that were not previously
+  covered, in particular /shared variables/: /accumulators/ to aggregate
+  information and /broadcast variables/ to efficiently distribute large
+  values.
+
+#+BEGIN_SRC json
+  {
+    "address": "address here",
+    "band": "40m",
+    "callsign": "KK6JLK",
+    "city": "SUNNYVALE",
+    "contactlat": "37.384733",
+    "contactlong": "-122.032164",
+    "county": "Santa Clara",
+    "dxcc": "291",
+    "fullname": "MATTHEW McPherrin",
+    "id": 57779,
+    "mode": "FM",
+    "mylat": "37.751952821",
+    "mylong": "-122.4208688735"
+  }
+#+END_SRC
+
+** Accumulators
+When we normally pass functions to Spark, they can use variables
+defined outside of them in the Spark program, but updates to these
+variables are not progagated to the driver. Spark's shared variables
+relax this restriction for two common typess of communication
+patterns: aggregation of results and broadcasts.
+
+#+BEGIN_SRC python
+  file = sc.textFile(inputFile)
+
+  blankLines = sc.accumulator(0)
+
+  def extractCallSigns(line):
+      global blankLines # Make the global variable accessible
+      if (line == ""):
+          blankLines += 1
+      return line.split(" ")
+
+  callSigns = file.flatMap(extractCallSigns)
+#+END_SRC
+
+Tasks on worker nodes cannot access the accumulator's value. This
+allows accumulators to be implemented efficiently without having to
+communicate every update.
+
+For accumulators used in actions, Spark applies each task's update to
+each accumulator only once. Thus, for a reliable absolute value
+counter, the accumulator should be in an action such as =foreach()=. For
+accumulators used in RDD tarnsformations instead of actions, this
+guarantee does not exist.
+

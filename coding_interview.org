@@ -1,0 +1,69 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Coding Interview Preparation
+
+* Data Structures Review
+  Integers in Python
+** TODO How Primitive Types are represented in
+1. Python
+2. C++
+
+** Primitive Types
+Integers in Python 3 are unbounded -- the maximum integer
+representable is a function of available memory. The constant
+=sys.maxsize= can be used to find the word-size. Bounds on floats are
+specified in =sys.float_info=.
+
+**** Bit Manipulation
+Computing the parity of a word.
+#+BEGIN_SRC python
+  def parity(x):
+      result = 0
+      while x:
+          result ^= x & 1
+          x >>= 1
+      return result
+#+END_SRC
+
+=x &= x - 1= Drops the lowest set bit of x. 
+
+The parity of 11011111 is the same as the parity of 1101 XORed with 1111.
+#+BEGIN_SRC python
+  def parity(x):
+      x ^= x >> 32
+      x ^= x >> 16
+      x ^= x >> 8
+      x ^= x >> 4
+      x ^= x >> 2
+      x ^= x >> 1
+      return x & 0x1
+#+END_SRC
+
+With time complexity of $O(\log n)$.
+
+**** Swapping Bits
+#+BEGIN_SRC python
+  def swap_bits(x, i, j):
+      if (x >> i) & 1 != (x >> j) & 1: # if ith and jth bits differ
+          bit_mask = (1 << i) | (1 << j)
+          x ^= bit_mask
+      return x
+        
+#+END_SRC
+**** Cheatsheet
+
+| expression | output                           |
+|------------+----------------------------------|
+| x & x - 1  | clears the lowest set bit of x   |
+| x & ~(x-1) | extracts the lowest set bit of x |
+
+
+** Arrays
+
+Arrays are contiguous blocks of memory, usually used to represent
+sequences.
+
+Insertion into a full array can be handled by resizing, allocating a
+new array with additional memory and copying over the entries from the
+original array.
+
+

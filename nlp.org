@@ -4,6 +4,7 @@
 
 * Reference Material                                               :noexport:
 [[file:~/Dropbox/Books/Programming/Deep%20Learning/CS224n%20Lecture%20Notes/][CS224n]]
+
 * How to Represent Words
 http://ruder.io/word-embeddings-2017/index.html
 
@@ -12,17 +13,19 @@ estimated *13 million* tokens for the English language, some of them
 have similar meanings.
 
 The simplest representation is *one-hot vector*: we can represent
-every word as a $\mathbb{R}^{|V|x1}$ vector with all 0s and one 1 at
+every word as a $\mathbb{R}^{|V|x}$ vector with all 0s and one 1 at
 the index of that word in the sorted english language.
 
 To reduce the size of this space, we can use SVD-based methods. For
 instance, accumulating co-occurrence count into a matrix =X=, and
 perform SVD on =X= to get a $USV^T$ decomposition. We can then use the
 rows of =U= as the word embeddings for all words in the dictionary.
+
 ** Window-based Co-occurence Matrix
 Count the number of times each word appears inside a window of a
 particular size around the word of interest. We calculate this count
 for all words in the corpus.
+
 ** Issues with SVD-based methods
 1. Dimensions of the matrix can change very often (new words added to corpus)
 2. Matrix is extremely sparse as most words don't co-occur
@@ -33,11 +36,14 @@ Some solutions include:
 1. Ignore function words (blacklist)
 2. Apply a ramp window (distance between words)
 3. Use [[https://statistics.laerd.com/statistical-guides/pearson-correlation-coefficient-statistical-guide.php][Pearson correlation]] and set negative counts to 0 instead of raw count.
+
 ** Iteration-based Methods (e.g. word2vec)
 Design a model whose parameters are the word vectors, and train the
 model on a certain objective. Discard the model, and use the vectors
 learnt.
+
 Efficient tree structure to compute probabiltiies for all the vocabulary
+
 *** Language Models
   The model will need to assign a probability to a sequence of tokens.
   We want a high probability for a sentence that makes sense, and a low
@@ -46,6 +52,7 @@ Efficient tree structure to compute probabiltiies for all the vocabulary
   Unigrams completely ignore this, and a nonsensical sentence might
   actually be assigned a high probability. Bigrams are a naive way of
   evaluating a whole sentence.
+
 **** Continuous bag-of-words (CBOW)
   Predicts a center word from the surrounding context in terms of word
   vectors.
@@ -53,7 +60,6 @@ Efficient tree structure to compute probabiltiies for all the vocabulary
   For each word, we want to learn 2 vectors:
   1. v: (input vector) when the word is in the context
   2. u: (output vector) when the word is in the center
-
 
   - known parameters
     - input :: sentence represented by one-hot vectors
@@ -78,6 +84,7 @@ Efficient tree structure to compute probabiltiies for all the vocabulary
 
   Minimise loss function (cross entropy), and use stochastic gradient
   descent to update all relevant word vectors.
+
 **** TODO Skipgram
 http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 
@@ -101,10 +108,12 @@ hidden layer are the word vectors we want.
 In practice, negative sampling works better for frequently occurring
 words and lower-dimensional vectors, and hierachical softmax works
 better for infrequent words.
+
 **** TODO Negative Sampling
 Take $k$ negative samples, and minimise the probability of the two
 words co-occurring while also maximising the probability of the two
 words in the same window co-occur.
+
 **** TODO Hierachical Softmax
 Hierachical Softmax uses a binary tree to represent all words in the
 vocabulary. Each leaf of the tree is a word, and there is a unique
@@ -150,6 +159,22 @@ appears in the context of word $i$. Let $P_{ij} = P(w_j|w_i) =
 \frac{X_{ij}}{X_i}$ be the probability of j appearing in the context
 of word $i$.
 
+* Topic Modeling
+- Topics are distributions over keywords
+- Documents are distributions over topics
+
+Topic summaries are NOT perfect. UTOPIAN allows user interactions for
+improving them.
+
+Topic Lens https://ieeexplore.ieee.org/document/7539597/
+UTOPIAN
+http://xueshu.baidu.com/s?wd=paperuri%3A%2809451ca1aa2a439f5b6e0c6c768fcd9a%29&filter=sc_long_sign&tn=SE_xueshusource_2kduw22v&sc_vurl=http%3A%2F%2Fieeexplore.ieee.org%2Fdocument%2F6634167%2F&ie=utf-8&sc_us=618112135367870968
+
+
+* Dimension Reduction
+
+** Multidimensional Scaling
+   - Tries to preserve given pairwise distances in a low-dimensional space.
 * Word Vector Evaluation
 
 ** Intrinsic
@@ -164,6 +189,8 @@ of word $i$.
 - Unclear if the subsystem is the problem or its interaction or other subsystems
 - If replacing exactly one subsystem with another improves accuracy ➡ Winning!
 
+* Visualizing Word Embeddings
+http://ronxin.github.io/wevi/
 * Neural Networks
 Most data are not linearly separable, hence the need for non-linear
 classifiers. Neural networks are a family of classifiers with
@@ -268,9 +295,8 @@ derivatives.
   f'(\theta) = \frac{J(\theta^{i+}) - J(\theta^{i-})}{2\epsilon}
 \end{equation*}
 
-*** 
-
 * Dependency Parsing
+
 ** Dependency Grammar and Dependency Structure
 Parse trees in NLP are used to analyse the syntatic structure of
 sentences.
@@ -283,6 +309,7 @@ or are arguments of) other words. These binary assymetric relations
 between words are called dependencies and are depicted as arrows
 going from the *head* to the *dependent*. Usually these dependencies
 form a tree structure.
+
 ** Dependency Parsing
 Dependency parsing is the task of analysing the syntactic dependency
 structure of a given input sentence S. The output of a dependency
@@ -300,12 +327,14 @@ The two subproblems are:
               be used to parse new sentences.
 - Parsing :: Given a parsing model $M$, and a sentence $S$, derive the
              optimal dependency graph $D$ for $S$ according to $M$.
+
 ** Transition-based Parsing
 This relies on a state machine which defines the possible transitions
 to create the mapping from the input sentence to the dependency tree.
 The learning problem involves predicting the next transition in the
 state machine. The parsing problem constructs the optimal sequence of
 transitions for the input sentence, given the previously induced model.
+
 *** Greedy Deterministic Transition-based Parsing
 The transition system is a state machine, which consists of /states/
 and /transitions/ between those states. The model induces a sequence
@@ -364,3 +393,46 @@ dimension).
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-01-20 15:36:45
 [[file:images/nlp/Dependency Parsing/screenshot_2018-01-20_15-36-45.png]]
 
+* Basic Visualization Techniques of Text Data
+
+** Word Cloud
+#+DOWNLOADED: http://www.sensightsurveys.com/wp-content/uploads/2015/05/word-cloud.png @ 2018-08-02 10:16:54
+[[file:images/nlp/Basic Visualization Techniques of Text
+Data/word-cloud_2018-08-02_10-16-54.png]]
+
+In word cloud, it is difficult to determine optimal placing of words.
+In addition, word clouds do not show relation between words.
+
+** Word Tree
+
+** ThemeRiver
+
+#+DOWNLOADED: http://www.vizinsight.com/blog/wp-content/uploads/2011/08/VizInsight0808_05.jpg @ 2018-08-02 10:19:46
+[[file:images/nlp/Basic Visualization Techniques of Text
+Data/VizInsight0808_05_2018-08-02_10-19-46.jpg]]
+
+Time-series representation: view which keywords occur more frequently
+over time. It is a type of visualization known as a /stacked linegraph/.
+
+** TIARA Visualization
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-02 10:23:34
+[[file:images/nlp/Basic Visualization Techniques of Text
+Data/screenshot_2018-08-02_10-23-34.png]]
+
+** Phrase Nets
+#+DOWNLOADED: https://www.betterevaluation.org/sites/default/files/phrase_net_eg1.jpg @ 2018-08-02 10:36:47
+[[file:images/nlp/Basic Visualization Techniques of Text Data/phrase_net_eg1_2018-08-02_10-36-47.jpg]]
+
+Phrasenets are useful for exploring how words are linked in a text and
+like word clouds and word trees can be informative for early data
+analysis.
+
+** For more...
+http://textvis.lnu.se/
+http://www.shixialiu.com
+
+* Deep Visualization Techniques
+***  [[https://ieeexplore.ieee.org/document/8019872/][ DeepEyes]]
+
+** Dimensionality Reduction (aka [[https://link.springer.com/chapter/10.1007/978-1-84882-312-9_4][Manifold Learning]])
+*** [[https://arxiv.org/abs/1805.10817][Linear tSNE optimization for the Web]]

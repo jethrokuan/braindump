@@ -1,0 +1,704 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-11 Sat 14:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Spark</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Spark</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgf8c699b">1. What is Apache Spark?</a></li>
+<li><a href="#orgf83d251">2. The Spark Stack</a></li>
+<li><a href="#org184afe5">3. Getting Started</a></li>
+<li><a href="#org7af940d">4. Core Spark Concepts</a></li>
+<li><a href="#orgdff0636">5. Running a Python script on Spark</a></li>
+<li><a href="#orgc90152e">6. Programming with RDDs</a>
+<ul>
+<li><a href="#orgd85691d">6.1. RDD Operations</a></li>
+<li><a href="#orgd69b956">6.2. Persistence</a></li>
+</ul>
+</li>
+<li><a href="#org2904808">7. Working with Key/Value Pairs</a>
+<ul>
+<li><a href="#org60fd7a9">7.1. Transformations on Pair RDDs</a></li>
+<li><a href="#org795050d">7.2. Data Partitioning</a></li>
+</ul>
+</li>
+<li><a href="#org347e6ef">8. Loading and Saving Your Data</a>
+<ul>
+<li><a href="#org3b4965b">8.1. SparkSQL</a></li>
+</ul>
+</li>
+<li><a href="#org8443744">9. Advanced Spark Programming</a>
+<ul>
+<li><a href="#org027b7f8">9.1. Accumulators</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<p>
+-<b>- mode: Org; org-download-image-dir: "./images/spark/"; -</b>-
+</p>
+<div id="outline-container-orgf8c699b" class="outline-2">
+<h2 id="orgf8c699b"><span class="section-number-2">1</span> What is Apache Spark?</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+A cluster computing platform designed to be fast and general-purpose.
+It extends the MapReduce to support more types of computations, and
+covers a wide range of workloads that previously required separate
+distributed systems.
+</p>
+
+<p>
+Spark is a computational engine that is responsible for scheduling,
+distributing and monitoring applications consisting of many
+computational tasks across many worker machines.
+</p>
+</div>
+</div>
+<div id="outline-container-orgf83d251" class="outline-2">
+<h2 id="orgf83d251"><span class="section-number-2">2</span> The Spark Stack</h2>
+<div class="outline-text-2" id="text-2">
+<dl class="org-dl">
+<dt>Spark Core</dt><dd>contains basic functionality, including memory
+management, scheduling, fault recovery and interacting
+with storage systems. It contains the API for =RDD=s,
+which represent a collection of items distributed
+across many nodes that can be manipulated in parallel.</dd>
+<dt>Spark SQL</dt><dd>allows querying of data via SQL, and supports many
+sources of data.</dd>
+<dt>Spark Streaming</dt><dd>Provides support for processing live streams of data.</dd>
+<dt>MLLib</dt><dd>Contains basic ML functionality, such as classification
+and regression.</dd>
+<dt>GraphX</dt><dd>Library for manipulating graphs, and contains common graph
+algorithms like PageRank.</dd>
+<dt>Cluster Managers</dt><dd>Library that enables auto-scaling via cluster
+managers such as Hadoop YARN, Apache Mesos, and its own
+Standalone Scheduler.</dd>
+</dl>
+
+<p>
+For Data Scientists, Spark's builtin libraries help them visualize
+results of queries in the least amount of time. For Data Processing,
+Spark allows Software Engineers to build distributed applications,
+while hiding the complexity of distributed systems programming and
+fault tolerance.
+</p>
+
+<p>
+While Spark supports all files stored in the Hahoop distributed
+filesystem (HDFS), it does not require Hadoop.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org184afe5" class="outline-2">
+<h2 id="org184afe5"><span class="section-number-2">3</span> Getting Started</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Enter the shell with <code>spark-shell</code>, or <code>pyspark</code>. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">lines = sc.textFile("README.md")
+lines.count()
+lines.first()
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7af940d" class="outline-2">
+<h2 id="org7af940d"><span class="section-number-2">4</span> Core Spark Concepts</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Every Spark application consists of a <i>driver program</i> that launches
+various parallel operations on a cluster. The driver program contains
+the application's <code>main</code> function and defines distributed datasets on
+the cluster.
+</p>
+
+<p>
+Driver programs access Spark thorugh a <code>SparkContext</code> object, which
+represents a connection to a computing cluster.
+</p>
+
+<p>
+Once we have a SparkContext, we use it to create RDDs. Driver programs
+typically manage a number of nodes called <i>executors</i>. A lot of
+Spark's API revolves around passing functions to its operators to run
+them on the cluster.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">lines = sc.textFile("README.md")
+lines.filter(lambda line: "Machine" in line)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgdff0636" class="outline-2">
+<h2 id="orgdff0636"><span class="section-number-2">5</span> Running a Python script on Spark</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+<code>bin/spark-submit</code> includes the Spark dependencies, setting up the
+environment for Spark's Python API to function. To run a python
+script, simply run <code>spark-submit script.py</code>.
+</p>
+
+<p>
+After linking an application to Spark, we need to create a
+SparkContext.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">from pyspark import SparkConf, SparkContext
+
+conf = SparkConf().setMaster("local").setAppName("My app")
+sc = SparkContext(conf=conf)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc90152e" class="outline-2">
+<h2 id="orgc90152e"><span class="section-number-2">6</span> Programming with RDDs</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+An RDD is a distributed collection of elements. All work is expressed
+as either creating new RDDs, transforming existing RDDs or calling
+operations on RDDs to compute a result.
+</p>
+
+<p>
+RDDs are created by: (1) loading an external dataset, or (2) creating
+a collection of objects in the driver program.
+</p>
+
+<p>
+Spark's RDDs are by default recomputed every time an action is run. To
+reuse an RDD in multiple actions,  we can use <code>rdd.persist</code>. In
+practice, <code>persist()</code> is often used to load a subset of data into
+memory to be queried repeatedly.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">lines = sc.parallelize(["pandas", "i like pandas"])
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgd85691d" class="outline-3">
+<h3 id="orgd85691d"><span class="section-number-3">6.1</span> RDD Operations</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+RDDs support <i>transformations</i> and <i>actions</i>. Transformations are
+operations on RDDs that return a new RDD (e.g. <code>map</code> and <code>filter</code>).
+Actions are operations that return a result to the driver program, or
+write it to storage,and kick off a computation.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">errorsRDD = inputRDD.filter(lambda x: "error" in x)
+warningsRDD = inputRDD.filter(lambda x: "warning" in x)
+badLinesRDD = errorsRDD.union(warningsRDD)
+</pre>
+</div>
+
+<p>
+Spark keeps track of RDD dependencies from various transformations in
+a <i>lineage graph</i>, that way if a RDD is lost, it can be recreated from
+its dependencies.
+</p>
+
+<p>
+Transformations on RDDs are <i>lazily evaluated</i>, so Spark will not
+execute until an action is seen.
+</p>
+
+<p>
+When passing a function that is a member of an object, or contains
+references to fields in an object, Spark sends the entire object to
+worker nodes, which can be larger than the information you need.  This
+can also cause the program to fail, if the class contains objects that
+Python cannot pickle.
+</p>
+
+<p>
+Basic Transformations:
+</p>
+<ul class="org-ul">
+<li><code>map()</code>, <code>flatMap()</code></li>
+<li>pseudo-set operations: <code>distinct()</code>, <code>union()</code>, <code>intersection()</code>,
+<code>subtract()</code></li>
+<li><code>cartesian()</code></li>
+</ul>
+
+<p>
+Actions:
+</p>
+<ul class="org-ul">
+<li><code>reduce(lambda x, y: f(x,y))</code></li>
+<li><code>fold(zero)(fn)</code>  is reduce, but takes an additional zeroth-value parameter</li>
+<li><code>=take(n)=</code>, <code>=top(n)=</code>, <code>takeOrdered(n)(ordering)</code>,
+<code>takeSample(withReplacement, num, [seed])</code></li>
+<li><code>aggregate(zero)(seqOp, combOp)</code> is similar reduce, but used to return
+a different type</li>
+<li><code>foreach(fn)</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd69b956" class="outline-3">
+<h3 id="orgd69b956"><span class="section-number-3">6.2</span> Persistence</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+Different level of persistence helps with making Spark jobs faster. If
+a node with persisted data goes down, Spark will recreate the RDD from
+the <i>lineage graph.</i>
+</p>
+
+
+<div class="figure">
+<p><img src="images/spark/Programming with RDDs/screenshot_2018-07-12_18-20-33.png" alt="screenshot_2018-07-12_18-20-33.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2904808" class="outline-2">
+<h2 id="org2904808"><span class="section-number-2">7</span> Working with Key/Value Pairs</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Spark provides special operations on RDDs with KV pairs, called pair
+RDDs.
+</p>
+
+<p>
+For Python and Scala, the RDD needs to be composed of tuples:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">pairs = lines.map(lambda x: (x.split(" ")[0], x))
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-scala">val pairs = lines.map(x =&gt; (x.split(" ")(0), x))
+</pre>
+</div>
+
+<p>
+Java does not have a built-in tuple type, so it uses the
+<code>scala.Tuple2</code> class.
+</p>
+</div>
+
+<div id="outline-container-org60fd7a9" class="outline-3">
+<h3 id="org60fd7a9"><span class="section-number-3">7.1</span> Transformations on Pair RDDs</h3>
+<div class="outline-text-3" id="text-7-1">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Function</th>
+<th scope="col" class="org-left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">reduceByKey(func)</td>
+<td class="org-left">Combines values with the same key</td>
+</tr>
+
+<tr>
+<td class="org-left">groupByKey()</td>
+<td class="org-left">Group values with the same key</td>
+</tr>
+
+<tr>
+<td class="org-left">combineByKey(a,b,c,d)</td>
+<td class="org-left">Combine values with the same key using a different result type</td>
+</tr>
+
+<tr>
+<td class="org-left">mapValues(func)</td>
+<td class="org-left">Apply a function to each value of a pair RDD without changing the key</td>
+</tr>
+
+<tr>
+<td class="org-left">flatMapValues(func)</td>
+<td class="org-left">Apply a function that returns an iterator to each value of a pair RDD.</td>
+</tr>
+
+<tr>
+<td class="org-left">keys()</td>
+<td class="org-left">Returns an RDD for just the keys.</td>
+</tr>
+
+<tr>
+<td class="org-left">values()</td>
+<td class="org-left">Returns an RDD of just the values</td>
+</tr>
+
+<tr>
+<td class="org-left">sortByKey()</td>
+<td class="org-left">Returns an RDD sorted by the key.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Set transformations:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Function</th>
+<th scope="col" class="org-left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">subtractByKey</td>
+<td class="org-left">Remove elements with a key present in the other RDD.</td>
+</tr>
+
+<tr>
+<td class="org-left">join</td>
+<td class="org-left">Perform an inner join between the 2 RDDs</td>
+</tr>
+
+<tr>
+<td class="org-left">rightOuterJoin</td>
+<td class="org-left">Performs a join between 2 RDDs where the key must be present in the first RDD.</td>
+</tr>
+
+<tr>
+<td class="org-left">leftOuterJoin</td>
+<td class="org-left">Perform a join between 2 RDDs where the key must be in the other RDD.</td>
+</tr>
+
+<tr>
+<td class="org-left">cogroup</td>
+<td class="org-left">Group data from both RDDs sharing the same key.</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Actions:
+</p>
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Function</th>
+<th scope="col" class="org-left">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">countByKey()</td>
+<td class="org-left">Count the number of elements for each key.</td>
+</tr>
+
+<tr>
+<td class="org-left">collectAsMap()</td>
+<td class="org-left">Collect the result as a map to provide easy lookup</td>
+</tr>
+
+<tr>
+<td class="org-left">lookup(key)</td>
+<td class="org-left">Return all values associated with the provided key.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org795050d" class="outline-3">
+<h3 id="org795050d"><span class="section-number-3">7.2</span> Data Partitioning</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Spark programs can choose to control their RDDs' partition to reduce
+communication. Sparks's partitioning is available on all RDDs of
+key/value pairs, and cause the system to group elements based on a
+function of each key.
+</p>
+
+<p>
+We use <code>partitionBy()</code> to return a new RDD that partitions the Spark
+frame efficiently. Below are the operations that benefit from
+partitioning:
+</p>
+
+<ul class="org-ul">
+<li>cogroup</li>
+<li>groupWith</li>
+<li>join</li>
+<li>leftOuterJoin</li>
+<li>rightOuterJoin</li>
+<li>groupByKey</li>
+<li>reduceByKey</li>
+<li>combineByKey</li>
+<li>lookup</li>
+</ul>
+
+<p>
+Implementing a custom partitioner in Python is relatively simple:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">import urlparse
+
+def hash_domain(url):
+    return hash(urlparse.urlparse(url).netloc)
+
+rdd.partitionBy(20, hash_domain)
+</pre>
+</div>
+
+<p>
+The hash function will be compared by identity to that of other RDDs,
+so a global function object needs to be passed, rather than creating a
+new lambda.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org347e6ef" class="outline-2">
+<h2 id="org347e6ef"><span class="section-number-2">8</span> Loading and Saving Your Data</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+For data stored in a local or distributed filesystem such as NFS,
+HDFS, or S3, Spark can access a variety of file formats including
+text, JSON, SequenceFiles and protocol buffers. Spark also provides
+structured data sources through SparkSQL, and allows connections to
+databases like Cassandra, HBase, Elasticsearch and JDBC databases.
+</p>
+
+<p>
+SequenceFiles are a popular Hadoop format composed of flat files with
+key/value pairs. They have sync markers that allow Spark to seek to a
+point in the file and then resynchronize with the record boundaries,
+allowing Spark to efficiently read them in parallel from multiple nodes.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">data = sc.sequenceFile(inFile, # input file
+                       "org.apache.hadoop.io.Text", # key Class
+                       "org.apache.hadoop.io.IntWritable", # value Class
+                       10 # min partitions
+) 
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">data = sc.parallelize((("Panda", 3), ("Kay", 6)))
+data.saveAsSequenceFile(outputFile)
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org3b4965b" class="outline-3">
+<h3 id="org3b4965b"><span class="section-number-3">8.1</span> SparkSQL</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+SparkSQL can load any table supported by Apache Hive.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">from pyspark.sql import HiveContext
+
+hiveCtx = HiveContext(sc)
+rows = hiveCtx.sql("SELECT name, age FROM users")
+firstRow = rows.first()
+
+print firstRow.name
+</pre>
+</div>
+
+<p>
+It even supports loading JSON files, if the JSON data has a consistent
+schema cross records.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># {"user": {"name": "Holden", "location": "SF"}, "text": "Nice"}
+
+tweets = hiveCtx.jsonFile("tweets.json")
+tweets.registerTempTable("tweets")
+results = hiveCtx.sql("SELECT user.name, text FROM tweets")
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org8443744" class="outline-2">
+<h2 id="org8443744"><span class="section-number-2">9</span> Advanced Spark Programming</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+In this section, we look at some techniques that were not previously
+covered, in particular <i>shared variables</i>: <i>accumulators</i> to aggregate
+information and <i>broadcast variables</i> to efficiently distribute large
+values.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-json">{
+  "address": "address here",
+  "band": "40m",
+  "callsign": "KK6JLK",
+  "city": "SUNNYVALE",
+  "contactlat": "37.384733",
+  "contactlong": "-122.032164",
+  "county": "Santa Clara",
+  "dxcc": "291",
+  "fullname": "MATTHEW McPherrin",
+  "id": 57779,
+  "mode": "FM",
+  "mylat": "37.751952821",
+  "mylong": "-122.4208688735"
+}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org027b7f8" class="outline-3">
+<h3 id="org027b7f8"><span class="section-number-3">9.1</span> Accumulators</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+When we normally pass functions to Spark, they can use variables
+defined outside of them in the Spark program, but updates to these
+variables are not progagated to the driver. Spark's shared variables
+relax this restriction for two common typess of communication
+patterns: aggregation of results and broadcasts.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">file = sc.textFile(inputFile)
+
+blankLines = sc.accumulator(0)
+
+def extractCallSigns(line):
+    global blankLines # Make the global variable accessible
+    if (line == ""):
+        blankLines += 1
+    return line.split(" ")
+
+callSigns = file.flatMap(extractCallSigns)
+</pre>
+</div>
+
+<p>
+Tasks on worker nodes cannot access the accumulator's value. This
+allows accumulators to be implemented efficiently without having to
+communicate every update.
+</p>
+
+<p>
+For accumulators used in actions, Spark applies each task's update to
+each accumulator only once. Thus, for a reliable absolute value
+counter, the accumulator should be in an action such as <code>foreach()</code>. For
+accumulators used in RDD tarnsformations instead of actions, this
+guarantee does not exist.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-08-11 Sat 14:06</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

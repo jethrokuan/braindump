@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-11 Sat 14:06 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>&lrm;</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org832047c">1. AliNLP: the Text Processing Engine that Powers Alibaba's Business Applications</a>
+<ul>
+<li><a href="#org45320b9">1.1. Machine Reading Comprehension</a></li>
+</ul>
+</li>
+<li><a href="#org2108135">2. Ido Dagan:</a></li>
+<li><a href="#orge717a73">3. Noah Smith: Synchretizing Structured and Learned Representations</a>
+<ul>
+<li><a href="#orga4a4202">3.1. NL Semantics : Two Operationalizations</a></li>
+<li><a href="#orgd2abccd">3.2. Linguistic Structure Prediction</a></li>
+</ul>
+</li>
+<li><a href="#org9dfb1cf">4. Automatic Essay Scoring</a></li>
+<li><a href="#orgf269b24">5. Question Answering &amp; QANet</a>
+<ul>
+<li><a href="#orga038ddc">5.1. Base Model</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org832047c" class="outline-2">
+<h2 id="org832047c"><span class="section-number-2">1</span> AliNLP: the Text Processing Engine that Powers Alibaba's Business Applications</h2>
+<div class="outline-text-2" id="text-1">
+<ul class="org-ul">
+<li>Linlin Li</li>
+</ul>
+
+<p>
+AliNLP is a large-scale NLP technology platform for the entire Alibaba
+ecosystem.
+</p>
+
+<ul class="org-ul">
+<li>Utilizes behaviour data instead of demanding human annotations of
+NLP algorithms</li>
+<li>Utilizing multiple correlated tasks for improving effectiveness of
+individual tasks of the complex Alibaba eco-system</li>
+</ul>
+
+<p>
+NLP Data:
+</p>
+<ul class="org-ul">
+<li>language dictionary</li>
+<li>token &amp; POS corpus</li>
+<li>Entity Corpus</li>
+<li>Treebank</li>
+<li>Sentiment Corpus</li>
+<li>News Category Corpus</li>
+<li>Word Relation Graph</li>
+<li>Knowledge Graph</li>
+</ul>
+
+<p>
+NLP Foundations:
+</p>
+<ul class="org-ul">
+<li>Lexical Analysis</li>
+<li>Syntactical Analysis</li>
+<li>Semantic Analysis</li>
+<li>text Analysis</li>
+<li>Deep Learning
+<ul class="org-ul">
+<li>Word2vec</li>
+<li>Graph2vec</li>
+</ul></li>
+</ul>
+
+<p>
+Challenges in Chinese word segmentation application
+</p>
+<ul class="org-ul">
+<li>Limited amount of human annotated training data</li>
+<li>Frequent appearance of out-of-vocabulary words</li>
+
+<li>Taobao has billions of user search logs available
+<ul class="org-ul">
+<li>auto semi-annotated data</li>
+</ul></li>
+</ul>
+
+<p>
+Multi-task learning : Combine human annotated data and automatically
+</p>
+</div>
+<div id="outline-container-org45320b9" class="outline-3">
+<h3 id="org45320b9"><span class="section-number-3">1.1</span> Machine Reading Comprehension</h3>
+<div class="outline-text-3" id="text-1-1">
+<ul class="org-ul">
+<li>Aim at answering a question about a given domain/paragraph</li>
+<li>Using IR based selection method to choose the relevant document/paragraph</li>
+<li>No Pre-knowledge or FAQ needed</li>
+</ul>
+
+<p>
+Encode Layer (BiLSTM) -&gt; Attention Layer -&gt; Match Layer (Bilinear
+Match) -&gt; Output Layer (Pointer Network)
+</p>
+
+<p>
+Used in AliMe, Timi, Lazada Chatbot
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org2108135" class="outline-2">
+<h2 id="org2108135"><span class="section-number-2">2</span> Ido Dagan:</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+News Tweet Illustration: What is being said here?
+</p>
+
+<p>
+Structured Knowledge Graphs (freebase knowledge graph)
+</p>
+
+<p>
+"Natural Representations": Open IE - isolates propositions as
+predicate&#x2013;argument tuple
+</p>
+
+<p>
+QA-SRL: Question answering - semantic role labeling
+</p>
+
+<p>
+Each QA pair represents one predicate-argument relation
+QA roles: Gunman takes own life after killing thrtee in Wisconsin spa
+shooting. Form QASemDep Graph.
+</p>
+
+<p>
+co-referring nodes/edges collapsed. 
+</p>
+</div>
+</div>
+<div id="outline-container-orge717a73" class="outline-2">
+<h2 id="orge717a73"><span class="section-number-2">3</span> Noah Smith: Synchretizing Structured and Learned Representations</h2>
+<div class="outline-text-2" id="text-3">
+<ul class="org-ul">
+<li>Broad-coverage semantic parsing: baselines</li>
+<li>Building SCAFFOLD from alternative tasks</li>
+<li>Putting a SPIGOT on the pipeline</li>
+</ul>
+</div>
+
+<div id="outline-container-orga4a4202" class="outline-3">
+<h3 id="orga4a4202"><span class="section-number-3">3.1</span> NL Semantics : Two Operationalizations</h3>
+<div class="outline-text-3" id="text-3-1">
+<ol class="org-ol">
+<li>dependencies: a graph, entities/concepts/events as nodes,
+relations as edges
+<ul class="org-ul">
+<li>Turboparser (Martins et al)</li>
+<li>JAMR (Flanigan et. al)</li>
+</ul></li>
+<li>spans: segmentation into labeled parts</li>
+</ol>
+
+<p>
+Both associate words with predicates and arguments
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2abccd" class="outline-3">
+<h3 id="orgd2abccd"><span class="section-number-3">3.2</span> Linguistic Structure Prediction</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+x -&gt; differentiable -&gt; y (conventional NN)
+x -&gt; differentiable -&gt; \(argmax_{y\in Y}S^Ty\) -&gt; structured output
+(input text) -&gt; (part representations) -&gt; dynamic programming/spanning
+tree/inference method (trained with loss e.g. hinge loss)
+</p>
+
+<p>
+<a href="https://github.com/Noahs-ARK/NeurboParser">Neurboparser</a>
+Open SESAME
+</p>
+
+<p>
+joint learning
+Use low-rank, sparse tensors
+Promoting sparsity : 
+</p>
+\begin{equation}
+  \lambda \sum_{y_i, z_j \in C} \left|S\left( y_i, z_j \right) \right|
+\end{equation}
+
+<p>
+gave 14x speedup
+</p>
+
+<p>
+<a href="https://arxiv.org/abs/1606.08954">Greedy, Joint Syntactic-Semantic Parsing with Stack LSTMs</a>
+</p>
+
+<p>
+Structured Attention, Straight-through estimator (Hinton 2012)
+</p>
+
+<p>
+SPIGOT (structured projection of intermediate gradients)
+</p>
+
+<p>
+\(\hat{Z}\), the convex hull of intermediate parses
+</p>
+
+<p>
+Sentence as graph vs sentence as sequence
+</p>
+
+<p>
+dependency tree vs dependency semantics
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9dfb1cf" class="outline-2">
+<h2 id="org9dfb1cf"><span class="section-number-2">4</span> Automatic Essay Scoring</h2>
+<div class="outline-text-2" id="text-4">
+<ul class="org-ul">
+<li>Regression, classification, preference ranking
+<ul class="org-ul">
+<li>Prompt Independent Features
+<ul class="org-ul">
+<li>length, syntax, style etc.</li>
+</ul></li>
+<li>Argumentation Features
+<ul class="org-ul">
+<li>argument components</li>
+<li>argument relations</li>
+</ul></li>
+</ul></li>
+<li>Neural Models
+<ul class="org-ul">
+<li>No need for feature engineering: word (vectors) as features</li>
+<li>Hard to interpret results</li>
+</ul></li>
+</ul>
+
+<p>
+Essay scoring engines provides no feedback to the student on how to
+improve the essay.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf269b24" class="outline-2">
+<h2 id="orgf269b24"><span class="section-number-2">5</span> Question Answering &amp; QANet</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+-end-to-end models
+</p>
+
+<p>
+SQuAD dataset
+</p>
+
+<p>
+<a href="https://github.com/facebookresearch/DrQA">https://github.com/facebookresearch/DrQA</a>
+</p>
+</div>
+
+<div id="outline-container-orga038ddc" class="outline-3">
+<h3 id="orga038ddc"><span class="section-number-3">5.1</span> Base Model</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+<a href="https://allenai.github.io/bi-att-flow/">BiDAF</a>
+</p>
+<ul class="org-ul">
+<li>Idea #1: Combine Convolution and Self-Attention</li>
+<li>Convolution: Captures local context
+<ul class="org-ul">
+<li>But Global interaction requires \(O(\log_kN)\) layers, and
+interactions become weaker as it goes deeper</li>
+</ul></li>
+</ul>
+
+<p>
+Position Encoding -&gt; repeat(Separable Convolution) -&gt; Self Attention
+-&gt; Feed Forward
+</p>
+
+<p>
+Augmentation:
+</p>
+<ul class="org-ul">
+<li>NMT, en - de -en  to get new QA pair</li>
+</ul>
+
+<p>
+Deep Embedding through transfer learning:
+</p>
+<ul class="org-ul">
+<li><a href="https://thegradient.pub/nlp-imagenet/">https://thegradient.pub/nlp-imagenet/</a></li>
+<li>ELMo (words have different embeddings depending on context)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-08-11 Sat 14:06</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

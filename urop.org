@@ -83,10 +83,6 @@ for the embeddings. The network feature learning model requires a
 corpus and a vocabulary in order to learn a mapping of nodes to a
 low-dimensional space of features. A biased sampled random walk
 strategy is employed.
-* Word Embeddings
-[[cite:smalheiser-2018-unsup-low]]
-
-[[cite:shalaby-2018-beyon-word-embed]]
 * Topical Hierarchy
 [[file:~/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf][CATHY]]
 
@@ -99,7 +95,6 @@ http://www.cs.columbia.edu/~blei/topicmodeling.html
 ** LDA
 https://www.youtube.com/watch?v=FkckgwMHP2s
 http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf
-[[cite:blei2009topic]]
 *** Dirichlet Distribution
 https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf
 
@@ -171,3 +166,5 @@ http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf
 In TopicRNN, latent topic models are used to capture global semantic
 dependencies so that the RNN can focus its modeling capacity on the
 local dynamics of the sequences
+
+** TODO Visualization of Perplexity for topic models as a potential topic?

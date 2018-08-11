@@ -1,0 +1,7 @@
+* Python Nifty Tricks
+1. =for= loop has =else= clause, that runs when the for loop successfully
+   completes without =break.=
+2. =str.maketrans= creates a translation table that makes string
+   substitution quick.
+3. s.index(x) == s.rindex(x) to check if character is only one in the string
+

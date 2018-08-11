@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-05-02 Wed 15:45 -->
+<!-- 2018-08-11 Sat 14:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -103,23 +103,23 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li><a href="#orgc7465fe">5. Word Embeddings</a></li>
-<li><a href="#orgdcabd6a">6. Topical Hierarchy</a></li>
-<li><a href="#org89d416d">7. Topic Modeling</a>
+<li><a href="#orgdcabd6a">5. Topical Hierarchy</a></li>
+<li><a href="#org89d416d">6. Topic Modeling</a>
 <ul>
-<li><a href="#org050b3bd">7.1. LDA</a>
+<li><a href="#org050b3bd">6.1. LDA</a>
 <ul>
-<li><a href="#orgeb6198c">7.1.1. Dirichlet Distribution</a></li>
-<li><a href="#org7a1d7e5">7.1.2. Exploring a Corpus with the posterior distribution</a></li>
-<li><a href="#orged304fb">7.1.3. Posterior Inference</a>
+<li><a href="#orgeb6198c">6.1.1. Dirichlet Distribution</a></li>
+<li><a href="#org7a1d7e5">6.1.2. Exploring a Corpus with the posterior distribution</a></li>
+<li><a href="#orged304fb">6.1.3. Posterior Inference</a>
 <ul>
-<li><a href="#orgad9bc06">7.1.3.1. Mean Field Variational Inference</a></li>
+<li><a href="#orgad9bc06">6.1.3.1. Mean Field Variational Inference</a></li>
 </ul>
 </li>
-<li><a href="#orgac28c68">7.1.4. Shortcomings</a></li>
+<li><a href="#orgac28c68">6.1.4. Shortcomings</a></li>
 </ul>
 </li>
-<li><a href="#org4f999e7">7.2. TopicRNN</a></li>
+<li><a href="#org4f999e7">6.2. TopicRNN</a></li>
+<li><a href="#org955aeb8">6.3. <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</a></li>
 </ul>
 </li>
 </ul>
@@ -292,21 +292,9 @@ strategy is employed.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc7465fe" class="outline-2">
-<h2 id="orgc7465fe"><span class="section-number-2">5</span> Word Embeddings</h2>
-<div class="outline-text-2" id="text-5">
-<p>
-<a class='org-ref-reference' href="#smalheiser-2018-unsup-low">smalheiser-2018-unsup-low</a>
-</p>
-
-<p>
-<a class='org-ref-reference' href="#shalaby-2018-beyon-word-embed">shalaby-2018-beyon-word-embed</a>
-</p>
-</div>
-</div>
 <div id="outline-container-orgdcabd6a" class="outline-2">
-<h2 id="orgdcabd6a"><span class="section-number-2">6</span> Topical Hierarchy</h2>
-<div class="outline-text-2" id="text-6">
+<h2 id="orgdcabd6a"><span class="section-number-2">5</span> Topical Hierarchy</h2>
+<div class="outline-text-2" id="text-5">
 <p>
 <a href="file:///home/jethro/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf">CATHY</a>
 </p>
@@ -322,24 +310,23 @@ CATHY to discover sub-topics
 </div>
 </div>
 <div id="outline-container-org89d416d" class="outline-2">
-<h2 id="org89d416d"><span class="section-number-2">7</span> Topic Modeling</h2>
-<div class="outline-text-2" id="text-7">
+<h2 id="org89d416d"><span class="section-number-2">6</span> Topic Modeling</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 <a href="http://www.cs.columbia.edu/~blei/topicmodeling.html">http://www.cs.columbia.edu/~blei/topicmodeling.html</a>
 </p>
 </div>
 <div id="outline-container-org050b3bd" class="outline-3">
-<h3 id="org050b3bd"><span class="section-number-3">7.1</span> LDA</h3>
-<div class="outline-text-3" id="text-7-1">
+<h3 id="org050b3bd"><span class="section-number-3">6.1</span> LDA</h3>
+<div class="outline-text-3" id="text-6-1">
 <p>
 <a href="https://www.youtube.com/watch?v=FkckgwMHP2s">https://www.youtube.com/watch?v=FkckgwMHP2s</a>
 <a href="http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf">http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf</a>
-<a class='org-ref-reference' href="#blei2009topic">blei2009topic</a>
 </p>
 </div>
 <div id="outline-container-orgeb6198c" class="outline-4">
-<h4 id="orgeb6198c"><span class="section-number-4">7.1.1</span> Dirichlet Distribution</h4>
-<div class="outline-text-4" id="text-7-1-1">
+<h4 id="orgeb6198c"><span class="section-number-4">6.1.1</span> Dirichlet Distribution</h4>
+<div class="outline-text-4" id="text-6-1-1">
 <p>
 <a href="https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf">https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf</a>
 </p>
@@ -370,8 +357,8 @@ Dirichlet.
 </div>
 </div>
 <div id="outline-container-org7a1d7e5" class="outline-4">
-<h4 id="org7a1d7e5"><span class="section-number-4">7.1.2</span> Exploring a Corpus with the posterior distribution</h4>
-<div class="outline-text-4" id="text-7-1-2">
+<h4 id="org7a1d7e5"><span class="section-number-4">6.1.2</span> Exploring a Corpus with the posterior distribution</h4>
+<div class="outline-text-4" id="text-6-1-2">
 <p>
 Quantities needed for exploring a corpus are the posterior
 expectations of hidden variables. Each of these quantities are
@@ -400,12 +387,12 @@ distance</i>:
 </div>
 </div>
 <div id="outline-container-orged304fb" class="outline-4">
-<h4 id="orged304fb"><span class="section-number-4">7.1.3</span> Posterior Inference</h4>
-<div class="outline-text-4" id="text-7-1-3">
+<h4 id="orged304fb"><span class="section-number-4">6.1.3</span> Posterior Inference</h4>
+<div class="outline-text-4" id="text-6-1-3">
 </div>
 <div id="outline-container-orgad9bc06" class="outline-5">
-<h5 id="orgad9bc06"><span class="section-number-5">7.1.3.1</span> Mean Field Variational Inference</h5>
-<div class="outline-text-5" id="text-7-1-3-1">
+<h5 id="orgad9bc06"><span class="section-number-5">6.1.3.1</span> Mean Field Variational Inference</h5>
+<div class="outline-text-5" id="text-6-1-3-1">
 <p>
 Approximate intractable posterior distribution with a simpler
 distribution containing free variational parameters. These parameters
@@ -435,8 +422,8 @@ family.
 </div>
 </div>
 <div id="outline-container-orgac28c68" class="outline-4">
-<h4 id="orgac28c68"><span class="section-number-4">7.1.4</span> Shortcomings</h4>
-<div class="outline-text-4" id="text-7-1-4">
+<h4 id="orgac28c68"><span class="section-number-4">6.1.4</span> Shortcomings</h4>
+<div class="outline-text-4" id="text-6-1-4">
 <ul class="org-ul">
 <li>strong, potentially invalid statistical assumptions:
 <ul class="org-ul">
@@ -456,8 +443,8 @@ evolving over time</li>
 </div>
 </div>
 <div id="outline-container-org4f999e7" class="outline-3">
-<h3 id="org4f999e7"><span class="section-number-3">7.2</span> TopicRNN</h3>
-<div class="outline-text-3" id="text-7-2">
+<h3 id="org4f999e7"><span class="section-number-3">6.2</span> TopicRNN</h3>
+<div class="outline-text-3" id="text-6-2">
 <p>
 <a href="http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf">http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf</a> 
 </p>
@@ -469,11 +456,15 @@ local dynamics of the sequences
 </p>
 </div>
 </div>
+
+<div id="outline-container-org955aeb8" class="outline-3">
+<h3 id="org955aeb8"><span class="section-number-3">6.3</span> <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</h3>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-05-02 Wed 15:45</p>
+<p class="date">Created: 2018-08-11 Sat 14:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
