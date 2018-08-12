@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-11 Sat 14:07 -->
+<!-- 2018-08-12 Sun 21:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -62,7 +62,16 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9803ab7">1. Python Nifty Tricks</a></li>
+<li><a href="#org9803ab7">1. Python Nifty Tricks</a>
+<ul>
+<li><a href="#org260f1b2">1.1. Data Structures</a>
+<ul>
+<li><a href="#org61941db">1.1.1. Heap</a></li>
+<li><a href="#orgf4c23aa">1.1.2. Priority Queue</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -74,14 +83,75 @@ for the JavaScript code in this tag.
 completes without <code>break.</code></li>
 <li><code>str.maketrans</code> creates a translation table that makes string
 substitution quick.</li>
-<li>s.index(x) == s.rindex(x) to check if character is only one in the string</li>
+<li><code>s.index(x) == s.rindex(x)</code> to check if character is only one in the string</li>
 </ol>
+</div>
+
+<div id="outline-container-org260f1b2" class="outline-3">
+<h3 id="org260f1b2"><span class="section-number-3">1.1</span> Data Structures</h3>
+<div class="outline-text-3" id="text-1-1">
+</div>
+<div id="outline-container-org61941db" class="outline-4">
+<h4 id="org61941db"><span class="section-number-4">1.1.1</span> Heap</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Heaps are provided by the <code>heapq</code> library in python.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">import heapq
+
+a = [1,2,3,4,5,6]
+# Heapq defaults to min heap
+heapq.heapify(a) # makes a into a min heap object
+heapq.heappop(a)
+
+heapq._heapify_max(a) # Makes a into max heap
+heapq._heappop_max(a)
+
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf4c23aa" class="outline-4">
+<h4 id="orgf4c23aa"><span class="section-number-4">1.1.2</span> Priority Queue</h4>
+<div class="outline-text-4" id="text-1-1-2">
+<p>
+<a href="https://docs.python.org/3/library/queue.html">Reference</a>
+</p>
+
+<p>
+The <code>queue</code> module provides FIFO, LIFO and Priority Queues. Among them,
+<code>queue.PriorityQueue</code> is perhaps the most commonly used in interview
+questions.
+</p>
+
+<p>
+<code>class queue.PriorityQueue(maxsize=0)</code>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">import queue
+pq = queue.PriorityQueue()
+
+pq.put((10, 'ten'))
+pq.put((1, 'one'))
+pq.put((5, 'five'))
+
+x = []
+while not pq.empty():
+    print(pq.get())
+</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-11 Sat 14:07</p>
+<p class="date">Created: 2018-08-12 Sun 21:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

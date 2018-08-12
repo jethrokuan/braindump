@@ -3,5 +3,49 @@
    completes without =break.=
 2. =str.maketrans= creates a translation table that makes string
    substitution quick.
-3. s.index(x) == s.rindex(x) to check if character is only one in the string
+3. ~s.index(x) == s.rindex(x)~ to check if character is only one in the string
 
+** Data Structures
+
+*** Heap
+Heaps are provided by the =heapq= library in python.
+
+#+BEGIN_SRC python
+  import heapq
+
+  a = [1,2,3,4,5,6]
+  # Heapq defaults to min heap
+  heapq.heapify(a) # makes a into a min heap object
+  heapq.heappop(a)
+
+  heapq._heapify_max(a) # Makes a into max heap
+  heapq._heappop_max(a)
+
+#+END_SRC
+
+*** Priority Queue
+[[https://docs.python.org/3/library/queue.html][Reference]]
+
+The ~queue~ module provides FIFO, LIFO and Priority Queues. Among them,
+~queue.PriorityQueue~ is perhaps the most commonly used in interview
+questions.
+
+ ~class queue.PriorityQueue(maxsize=0)~
+
+#+BEGIN_SRC python :results output
+  import queue
+  pq = queue.PriorityQueue()
+
+  pq.put((10, 'ten'))
+  pq.put((1, 'one'))
+  pq.put((5, 'five'))
+
+  x = []
+  while not pq.empty():
+      print(pq.get())
+#+END_SRC
+
+#+RESULTS:
+: (1, 'one')
+: (5, 'five')
+: (10, 'ten')

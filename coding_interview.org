@@ -65,5 +65,3 @@ sequences.
 Insertion into a full array can be handled by resizing, allocating a
 new array with additional memory and copying over the entries from the
 original array.
-
-
