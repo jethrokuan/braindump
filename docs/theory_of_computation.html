@@ -3,18 +3,13 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-14 Tue 12:57 -->
+<!-- 2018-08-14 Tue 13:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/oxalorg/sakura/master/css/sakura.css"/>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -111,6 +106,11 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#org845fcde">3.2. Language of a DFA</a></li>
+</ul>
+</li>
+<li><a href="#org3491a30">4. Nondeterministic Finite Automata</a>
+<ul>
+<li><a href="#org34b2745">4.1. Definition</a></li>
 </ul>
 </li>
 </ul>
@@ -320,10 +320,36 @@ state \(q_0\) to one of the accepting states.
 </div>
 </div>
 </div>
+
+<div id="outline-container-org3491a30" class="outline-2">
+<h2 id="org3491a30"><span class="section-number-2">4</span> Nondeterministic Finite Automata</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+A NFA has can be in several states at once, and this ability is
+expressed as an ability to "guess" something about its input. It can
+be shown that NFAs accept exactly the regular languages, just as DFAs
+do. We can always convert an NFA to a DFA, although the latter may
+have exponentially more states than the NFA.
+</p>
+</div>
+
+<div id="outline-container-org34b2745" class="outline-3">
+<h3 id="org34b2745"><span class="section-number-3">4.1</span> Definition</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+An NFA has:
+</p>
+
+<ol class="org-ol">
+<li>A set of</li>
+</ol>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-14 Tue 12:57</p>
+<p class="date">Created: 2018-08-14 Tue 13:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -113,4 +113,14 @@ L(A) = \{ w | \delta(q_0, w) \text{ is in } F\}
 The language of $A$ is the set of strings $w$ that take the start
 state $q_0$ to one of the accepting states.
 
+* Nondeterministic Finite Automata
+A NFA has can be in several states at once, and this ability is
+expressed as an ability to "guess" something about its input. It can
+be shown that NFAs accept exactly the regular languages, just as DFAs
+do. We can always convert an NFA to a DFA, although the latter may
+have exponentially more states than the NFA.
 
+** Definition
+An NFA has:
+
+1. A set of 
