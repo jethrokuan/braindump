@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-14 Tue 12:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Theory Of Computation</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Theory Of Computation</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#org1a1e785">1. Introduction</a>
+<ul>
+<li><a href="#org224ab96">1.1. Formal Proofs</a></li>
+<li><a href="#org9840e38">1.2. Inductive Proofs</a></li>
+<li><a href="#org1398769">1.3. Structural Inductions</a></li>
+</ul>
+</li>
+<li><a href="#org6abb417">2. Automata Theory</a>
+<ul>
+<li><a href="#org85efa25">2.1. Definitions</a></li>
+</ul>
+</li>
+<li><a href="#org4936033">3. Finite Automata</a>
+<ul>
+<li><a href="#orgd17e582">3.1. Deterministic Finite Automata</a>
+<ul>
+<li><a href="#org2e46f48">3.1.1. Simpler Notations</a></li>
+</ul>
+</li>
+<li><a href="#org845fcde">3.2. Language of a DFA</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1a1e785" class="outline-2">
+<h2 id="org1a1e785"><span class="section-number-2">1</span> Introduction</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Finite automata are a useful model for many kinds of important
+software and hardware. Automatas are found in compilers, software for
+designing digital circuits, and many more systems.
+</p>
+
+<p>
+<i>Grammars</i> provide useful models when designing software that processes
+data with a recursive structure. The compiler's parser deals with
+recursively nested features. Regular Expressions also denote the
+structure of data, especially in text strings.
+</p>
+
+<p>
+The study of automata addresses the following questions:
+</p>
+
+<ol class="org-ol">
+<li>What can a computer do?</li>
+<li>What can a computer do efficiently?</li>
+</ol>
+
+<p>
+Automata theory also provides a tool for making formal proofs, of both
+the inductive and deductive type.
+</p>
+</div>
+
+<div id="outline-container-org224ab96" class="outline-3">
+<h3 id="org224ab96"><span class="section-number-3">1.1</span> Formal Proofs</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+Here the more common proof requirements are here:
+</p>
+
+<ol class="org-ol">
+<li>Proving set equivalence: we can approach this by rephrasing it into
+an iff statement.
+<ol class="org-ol">
+<li>Prove that if <code>x</code> is in <code>E</code>, then <code>x</code>  is in <code>F.</code></li>
+<li>Prove that if <code>x</code> is in <code>F</code>, then <code>x</code> is in <code>E</code>.</li>
+</ol></li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org9840e38" class="outline-3">
+<h3 id="org9840e38"><span class="section-number-3">1.2</span> Inductive Proofs</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Suppose we are given a statement \(S(n)\) to prove. The inductive
+approach involves:
+</p>
+<ol class="org-ol">
+<li>The <i>basis</i>: where we show \(S(i)\) for a particular \(i\).</li>
+<li>The <i>inductive step</i>: where we show if \(S(k)\) (or \(S(i), S(i+1),
+   \hdots, S(k)\)) then \(S(k+1)\).</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-org1398769" class="outline-3">
+<h3 id="org1398769"><span class="section-number-3">1.3</span> Structural Inductions</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+We can sometimes prove statements by construction. This is often the
+case with recursively defined structures, such as with trees and
+expressions. This works because we the recursive definition is invoked
+at each step, so we are guaranteed that at each step of the
+construction, the construction \(X_i\) is valid.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6abb417" class="outline-2">
+<h2 id="org6abb417"><span class="section-number-2">2</span> Automata Theory</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org85efa25" class="outline-3">
+<h3 id="org85efa25"><span class="section-number-3">2.1</span> Definitions</h3>
+<div class="outline-text-3" id="text-2-1">
+<dl class="org-dl">
+<dt>alphabet</dt><dd>An <i>alphabet</i> is a finite, nonempty set of symbols. E.g.
+\(\Sigma = \{0, 1\}\) represents the binary alphabet</dd>
+<dt>string</dt><dd>A <i>string</i> is a finite sequence of symbols chosen from some
+alphabet. For example, \(01101\) is a string from the binary
+alphabet. The empty string is represented by \(\epsilon\), and
+sometimes \(\Lambda\). The
+<i>length</i> of a string is denoted as such: \(|001| = 3\)</dd>
+<dt>Powers</dt><dd>\(\Sigma^k\) represents strings of length \(k\).</dd>
+<dt>Concatenation</dt><dd>\(xy\) denotes the concatenation of strings \(x\) and
+\(y\).</dd>
+<dt>Problem</dt><dd>a <i>problem</i> is the question of deciding whether a given
+string is a member of some particular language.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4936033" class="outline-2">
+<h2 id="org4936033"><span class="section-number-2">3</span> Finite Automata</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+An automata has:
+</p>
+<ul class="org-ul">
+<li>a set of states</li>
+<li>its "control" moves from state to state in response to external inputs</li>
+</ul>
+
+<p>
+A finite automata is one where the automaton can only be in a single
+state at once (it is deterministic). Non-determinism allows us to
+program solutions to problems using a higher-level language.
+</p>
+
+<p>
+Determinism refers to the fact that on each input there is one and
+only one state to which the automaton can transition from its current
+state. Deterministic Finite Automata is often abbrieviated with <i>DFA</i>.
+</p>
+</div>
+
+<div id="outline-container-orgd17e582" class="outline-3">
+<h3 id="orgd17e582"><span class="section-number-3">3.1</span> Deterministic Finite Automata</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+A <i>dfa</i> consists of:
+</p>
+
+<ol class="org-ol">
+<li>A finite set of <i>states</i>, often denoted \(Q\).</li>
+<li>A finite set of <i>input symbols</i>, often denoted \(\Sigma\).</li>
+<li>A <i>transition function</i> that takes as arguments a state and an input
+symbol and returns a state, often denoted \(\delta\). If \(q\) is a state,
+and \(a\) is an input symbol, then \(\delta(q,a)\) is that state \(p\) such
+that there is an arc labeled \(a\) from \(q\) to \(p\).</li>
+<li>A <i>start state</i>, one of the states in \(Q\).</li>
+<li>A set of <i>final</i> or <i>accepting</i> states \(F\). The set \(F\) is a subset of
+\(Q\).</li>
+</ol>
+
+<p>
+In proofs, we often talk about a DFA in "five-tuple" notation:
+</p>
+
+\begin{equation}
+  A = \left(Q, \Sigma, \delta, q_0, F \right)
+\end{equation}
+</div>
+
+<div id="outline-container-org2e46f48" class="outline-4">
+<h4 id="org2e46f48"><span class="section-number-4">3.1.1</span> Simpler Notations</h4>
+<div class="outline-text-4" id="text-3-1-1">
+<p>
+The two preferred notation for describing automata are:
+</p>
+<dl class="org-dl">
+<dt>transition diagrams</dt><dd>a graph</dd>
+</dl>
+
+
+<div class="figure">
+<p><img src="images/Finite Automata/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" alt="subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" />
+</p>
+</div>
+
+<dl class="org-dl">
+<dt>transition table</dt><dd>a tubular listing of the \(\delta\) function, which by
+implication tells us the states and the input alphabet.</dd>
+</dl>
+
+
+<div class="figure">
+<p><img src="images/Finite Automata/jTETt_2018-08-14_12-49-00.png" alt="jTETt_2018-08-14_12-49-00.png" />
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org845fcde" class="outline-3">
+<h3 id="org845fcde"><span class="section-number-3">3.2</span> Language of a DFA</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+We can define the <i>language</i> of a DFA $A = \left(Q, &Sigma;, q<sub>0</sub>, F\right).
+This language is denoted \(L(A)\), and is defined by:
+</p>
+
+\begin{equation}
+L(A) = \{ w | \delta(q_0, w) \text{ is in } F\}
+\end{equation}
+
+<p>
+The language of \(A\) is the set of strings \(w\) that take the start
+state \(q_0\) to one of the accepting states.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-08-14 Tue 12:57</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

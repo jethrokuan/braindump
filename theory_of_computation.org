@@ -1,0 +1,116 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Theory Of Computation
+* Introduction
+Finite automata are a useful model for many kinds of important
+software and hardware. Automatas are found in compilers, software for
+designing digital circuits, and many more systems.
+
+/Grammars/ provide useful models when designing software that processes
+data with a recursive structure. The compiler's parser deals with
+recursively nested features. Regular Expressions also denote the
+structure of data, especially in text strings.
+
+The study of automata addresses the following questions:
+
+1. What can a computer do?
+2. What can a computer do efficiently?
+
+Automata theory also provides a tool for making formal proofs, of both
+the inductive and deductive type.
+
+** Formal Proofs
+Here the more common proof requirements are here:
+
+1. Proving set equivalence: we can approach this by rephrasing it into
+   an iff statement.
+   1. Prove that if ~x~ is in ~E~, then ~x~  is in ~F.~
+   2. Prove that if ~x~ is in ~F~, then ~x~ is in ~E~.
+
+** Inductive Proofs
+Suppose we are given a statement $S(n)$ to prove. The inductive
+approach involves:
+1. The /basis/: where we show $S(i)$ for a particular $i$.
+2. The /inductive step/: where we show if $S(k)$ (or $S(i), S(i+1),
+   \hdots, S(k)$) then $S(k+1)$.
+
+** Structural Inductions
+We can sometimes prove statements by construction. This is often the
+case with recursively defined structures, such as with trees and
+expressions. This works because we the recursive definition is invoked
+at each step, so we are guaranteed that at each step of the
+construction, the construction $X_i$ is valid.
+
+* Automata Theory
+
+** Definitions
+- alphabet :: An /alphabet/ is a finite, nonempty set of symbols. E.g.
+              $\Sigma = \{0, 1\}$ represents the binary alphabet
+- string :: A /string/ is a finite sequence of symbols chosen from some
+            alphabet. For example, $01101$ is a string from the binary
+            alphabet. The empty string is represented by $\epsilon$, and
+            sometimes $\Lambda$. The
+            /length/ of a string is denoted as such: $|001| = 3$
+- Powers :: $\Sigma^k$ represents strings of length $k$.
+- Concatenation :: $xy$ denotes the concatenation of strings $x$ and
+                   $y$.
+- Problem :: a /problem/ is the question of deciding whether a given
+             string is a member of some particular language.
+
+* Finite Automata
+An automata has:
+- a set of states
+- its "control" moves from state to state in response to external inputs
+
+A finite automata is one where the automaton can only be in a single
+state at once (it is deterministic). Non-determinism allows us to
+program solutions to problems using a higher-level language.
+
+Determinism refers to the fact that on each input there is one and
+only one state to which the automaton can transition from its current
+state. Deterministic Finite Automata is often abbrieviated with /DFA/.
+
+** Deterministic Finite Automata
+A /dfa/ consists of:
+
+1. A finite set of /states/, often denoted $Q$.
+2. A finite set of /input symbols/, often denoted $\Sigma$.
+3. A /transition function/ that takes as arguments a state and an input
+   symbol and returns a state, often denoted $\delta$. If $q$ is a state,
+   and $a$ is an input symbol, then $\delta(q,a)$ is that state $p$ such
+   that there is an arc labeled $a$ from $q$ to $p$.
+4. A /start state/, one of the states in $Q$.
+5. A set of /final/ or /accepting/ states $F$. The set $F$ is a subset of
+   $Q$.
+
+In proofs, we often talk about a DFA in "five-tuple" notation:
+
+\begin{equation}
+  A = \left(Q, \Sigma, \delta, q_0, F \right)
+\end{equation}
+
+*** Simpler Notations
+The two preferred notation for describing automata are:
+- transition diagrams :: a graph
+
+#+DOWNLOADED: https://quickgrid.files.wordpress.com/2015/10/subset-construction-nfa-from-transition-table.jpg @ 2018-08-14 12:47:06
+[[file:images/Finite
+Automata/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg]]
+
+- transition table :: a tubular listing of the $\delta$ function, which by
+     implication tells us the states and the input alphabet.
+
+#+DOWNLOADED: https://i.stack.imgur.com/jTETt.png @ 2018-08-14 12:49:00
+[[file:images/Finite Automata/jTETt_2018-08-14_12-49-00.png]]
+
+** Language of a DFA
+We can define the /language/ of a DFA $A = \left(Q, \Sigma, q_0, F\right).
+This language is denoted $L(A)$, and is defined by:
+
+\begin{equation}
+L(A) = \{ w | \delta(q_0, w) \text{ is in } F\}
+\end{equation}
+
+The language of $A$ is the set of strings $w$ that take the start
+state $q_0$ to one of the accepting states.
+
+
