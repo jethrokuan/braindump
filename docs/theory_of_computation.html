@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-14 Tue 13:16 -->
+<!-- 2018-08-14 Tue 13:45 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
@@ -107,11 +107,14 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#org845fcde">3.2. Language of a DFA</a></li>
+<li><a href="#org84f98ce">3.3. Extending Transition Function to Strings</a></li>
 </ul>
 </li>
 <li><a href="#org3491a30">4. Nondeterministic Finite Automata</a>
 <ul>
 <li><a href="#org34b2745">4.1. Definition</a></li>
+<li><a href="#org669f68d">4.2. The Language of an NFA</a></li>
+<li><a href="#org3b9afd5">4.3. The Equivalence of DFA and NFA</a></li>
 </ul>
 </li>
 </ul>
@@ -306,7 +309,7 @@ implication tells us the states and the input alphabet.</dd>
 <h3 id="org845fcde"><span class="section-number-3">3.2</span> Language of a DFA</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
-We can define the <i>language</i> of a DFA $A = \left(Q, &Sigma;, q<sub>0</sub>, F\right).
+We can define the <i>language</i> of a DFA \(A = \left(Q, \Sigma, q_0, F\right)\).
 This language is denoted \(L(A)\), and is defined by:
 </p>
 
@@ -318,6 +321,24 @@ L(A) = \{ w | \delta(q_0, w) \text{ is in } F\}
 The language of \(A\) is the set of strings \(w\) that take the start
 state \(q_0\) to one of the accepting states.
 </p>
+</div>
+</div>
+
+<div id="outline-container-org84f98ce" class="outline-3">
+<h3 id="org84f98ce"><span class="section-number-3">3.3</span> Extending Transition Function to Strings</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+Basis:
+</p>
+\begin{equation}
+\hat{\delta}\left(q, \epsilon\right) = q
+\end{equation}
+<p>
+Induction:
+</p>
+\begin{equation}
+\hat{\delta}\left(q, xa\right) = \delta \left(\hat{\delta}\left(q, x\right), a \right)
+\end{equation}
 </div>
 </div>
 </div>
@@ -342,15 +363,49 @@ An NFA has:
 </p>
 
 <ol class="org-ol">
-<li>A set of</li>
+<li>A finite set of states \(Q\).</li>
+<li>A finite set of input symbols \(\Sigma\).</li>
+<li>A starting state \(q_0 \in Q\),</li>
+<li>A set of final states \(F \subset Q\).</li>
+<li>A transition function that takes a state in \(Q\) and an input symbol
+in \(\Sigma\) as arguments and returns a <b>subset</b> of \(Q\).</li>
 </ol>
+</div>
+</div>
+
+<div id="outline-container-org669f68d" class="outline-3">
+<h3 id="org669f68d"><span class="section-number-3">4.2</span> The Language of an NFA</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+if \(A = (Q, \Sigma, \delta, q_0, F)\) is an NFA, then
+</p>
+
+\begin{equation}
+L(A) = \{w | \hat{\delta}(q_0, w) \cap F \neq \emptyset\}
+\end{equation}
+
+<p>
+That is, \(L(A)\) is the set of strings \(w\) in \(\Sigma^*\) such that
+\(\hat{\delta}(q_0, w)\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3b9afd5" class="outline-3">
+<h3 id="org3b9afd5"><span class="section-number-3">4.3</span> The Equivalence of DFA and NFA</h3>
+<div class="outline-text-3" id="text-4-3">
+
+<div class="figure">
+<p><img src="images/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png" alt="screenshot_2018-08-14_13-44-15.png" />
+</p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-14 Tue 13:16</p>
+<p class="date">Created: 2018-08-14 Tue 13:45</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

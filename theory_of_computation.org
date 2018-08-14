@@ -103,7 +103,7 @@ Automata/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg]]
 [[file:images/Finite Automata/jTETt_2018-08-14_12-49-00.png]]
 
 ** Language of a DFA
-We can define the /language/ of a DFA $A = \left(Q, \Sigma, q_0, F\right).
+We can define the /language/ of a DFA $A = \left(Q, \Sigma, q_0, F\right)$.
 This language is denoted $L(A)$, and is defined by:
 
 \begin{equation}
@@ -112,6 +112,16 @@ L(A) = \{ w | \delta(q_0, w) \text{ is in } F\}
 
 The language of $A$ is the set of strings $w$ that take the start
 state $q_0$ to one of the accepting states.
+
+** Extending Transition Function to Strings
+Basis:
+\begin{equation}
+\hat{\delta}\left(q, \epsilon\right) = q
+\end{equation}
+Induction:
+\begin{equation}
+\hat{\delta}\left(q, xa\right) = \delta \left(\hat{\delta}\left(q, x\right), a \right)
+\end{equation}
 
 * Nondeterministic Finite Automata
 A NFA has can be in several states at once, and this ability is
@@ -123,4 +133,25 @@ have exponentially more states than the NFA.
 ** Definition
 An NFA has:
 
-1. A set of 
+1. A finite set of states $Q$.
+2. A finite set of input symbols $\Sigma$.
+3. A starting state $q_0 \in Q$,
+4. A set of final states $F \subset Q$.
+5. A transition function that takes a state in $Q$ and an input symbol
+   in $\Sigma$ as arguments and returns a *subset* of $Q$.
+
+** The Language of an NFA
+if $A = (Q, \Sigma, \delta, q_0, F)$ is an NFA, then
+
+\begin{equation}
+L(A) = \{w | \hat{\delta}(q_0, w) \cap F \neq \emptyset\}
+\end{equation}
+
+That is, $L(A)$ is the set of strings $w$ in $\Sigma^*$ such that
+$\hat{\delta}(q_0, w)$.
+
+** The Equivalence of DFA and NFA
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-14 13:44:15
+[[file:images/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png]]
