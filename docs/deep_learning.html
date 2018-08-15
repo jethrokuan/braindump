@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 11:02 -->
+<!-- 2018-08-15 Wed 11:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deep Learning</title>
@@ -91,51 +91,51 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgb4ef7e4">1. Definition</a></li>
-<li><a href="#orgebd7c30">2. Introduction</a></li>
-<li><a href="#orgf67b91a">3. Model/task categorisation</a></li>
-<li><a href="#orgb6380b8">4. Bayesian probability</a></li>
-<li><a href="#orga9f4354">5. Universal Approximation Theorem</a></li>
-<li><a href="#orgf989938">6. Measure Theory</a>
+<li><a href="#orgbebb5a0">1. Definition</a></li>
+<li><a href="#orga9d7a25">2. Introduction</a></li>
+<li><a href="#orgbb954ec">3. Model/task categorisation</a></li>
+<li><a href="#org75abecc">4. Bayesian probability</a></li>
+<li><a href="#org3e39197">5. Universal Approximation Theorem</a></li>
+<li><a href="#org9e12115">6. Measure Theory</a>
 <ul>
-<li><a href="#org96520e0">6.1. Kullback-Leiber (KL) divergence</a></li>
-<li><a href="#org8c64005">6.2. Cross Entropy</a></li>
+<li><a href="#orgbbfc6e2">6.1. Kullback-Leiber (KL) divergence</a></li>
+<li><a href="#orgf1944ee">6.2. Cross Entropy</a></li>
 </ul>
 </li>
-<li><a href="#org8379257">7. SVD</a></li>
-<li><a href="#org25c0b3c">8. Learning Rates</a>
+<li><a href="#org0ab1e1d">7. SVD</a></li>
+<li><a href="#org93c0aa0">8. Learning Rates</a>
 <ul>
-<li><a href="#org041afb4">8.1. Learning Rate Annealing</a></li>
+<li><a href="#orga17bb38">8.1. Learning Rate Annealing</a></li>
 </ul>
 </li>
-<li><a href="#orgdf1615d">9. Reinforcement Learning</a></li>
-<li><a href="#org3091f06">10. How Companies use Deep Learning</a>
+<li><a href="#org361fd4b">9. Reinforcement Learning</a></li>
+<li><a href="#orge386070">10. How Companies use Deep Learning</a>
 <ul>
-<li><a href="#org0e7caab">10.1. ViSenze</a>
+<li><a href="#org0452bc7">10.1. ViSenze</a>
 <ul>
-<li><a href="#orgb4e7f18">10.1.1. Things they focused on as a company</a></li>
-<li><a href="#org80a4235">10.1.2. Visual Embeddings Used</a></li>
-<li><a href="#orgf75b449">10.1.3. Lessons Learnt</a></li>
+<li><a href="#orgbb26845">10.1.1. Things they focused on as a company</a></li>
+<li><a href="#org4fa74d6">10.1.2. Visual Embeddings Used</a></li>
+<li><a href="#org87c5a9e">10.1.3. Lessons Learnt</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgacb2ab8">11. Key Open Questions about Deep Learning Systems</a>
+<li><a href="#org3e58fdc">11. Key Open Questions about Deep Learning Systems</a>
 <ul>
-<li><a href="#orgbf0cb36">11.1. Concrete Theoretical Questions</a></li>
+<li><a href="#org143a6d4">11.1. Concrete Theoretical Questions</a></li>
 </ul>
 </li>
-<li><a href="#orgcd15bd4">12. ConvNets from First Principles</a>
+<li><a href="#org637d6e2">12. ConvNets from First Principles</a>
 <ul>
-<li><a href="#orgbfedb58">12.1. Finding a generative model</a></li>
+<li><a href="#org6464b8f">12.1. Finding a generative model</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgb4ef7e4" class="outline-2">
-<h2 id="orgb4ef7e4"><span class="section-number-2">1</span> Definition</h2>
+<div id="outline-container-orgbebb5a0" class="outline-2">
+<h2 id="orgbebb5a0"><span class="section-number-2">1</span> Definition</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A class of machine learning algorithm that uses a cascade of multiple
@@ -144,8 +144,8 @@ transformation
 </p>
 </div>
 </div>
-<div id="outline-container-orgebd7c30" class="outline-2">
-<h2 id="orgebd7c30"><span class="section-number-2">2</span> Introduction</h2>
+<div id="outline-container-orga9d7a25" class="outline-2">
+<h2 id="orga9d7a25"><span class="section-number-2">2</span> Introduction</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Sensory perception is plagued with large amounts of nuisance
@@ -179,8 +179,8 @@ selectivity and tolerance over multiple layers in a hierarchy.
 </div>
 </div>
 
-<div id="outline-container-orgf67b91a" class="outline-2">
-<h2 id="orgf67b91a"><span class="section-number-2">3</span> Model/task categorisation</h2>
+<div id="outline-container-orgbb954ec" class="outline-2">
+<h2 id="orgbb954ec"><span class="section-number-2">3</span> Model/task categorisation</h2>
 <div class="outline-text-2" id="text-3">
 <dl class="org-dl">
 <dt>supervised learning</dt><dd>input -&gt; otuput, learning the pattern from
@@ -191,8 +191,8 @@ unlabeled data</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgb6380b8" class="outline-2">
-<h2 id="orgb6380b8"><span class="section-number-2">4</span> Bayesian probability</h2>
+<div id="outline-container-org75abecc" class="outline-2">
+<h2 id="org75abecc"><span class="section-number-2">4</span> Bayesian probability</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <a href="https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner">https://www.quora.com/For-a-non-expert-what-is-the-difference-between-Bayesian-and-frequentist-approaches/answer/Jason-Eisner</a>
@@ -222,8 +222,8 @@ likelihood.
 </p>
 </div>
 </div>
-<div id="outline-container-orga9f4354" class="outline-2">
-<h2 id="orga9f4354"><span class="section-number-2">5</span> Universal Approximation Theorem</h2>
+<div id="outline-container-org3e39197" class="outline-2">
+<h2 id="org3e39197"><span class="section-number-2">5</span> Universal Approximation Theorem</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="https://en.wikipedia.org/wiki/Universal_approximation_theorem">https://en.wikipedia.org/wiki/Universal_approximation_theorem</a>
@@ -234,12 +234,12 @@ subsets of the real space.
 </div>
 </div>
 
-<div id="outline-container-orgf989938" class="outline-2">
-<h2 id="orgf989938"><span class="section-number-2">6</span> Measure Theory</h2>
+<div id="outline-container-org9e12115" class="outline-2">
+<h2 id="org9e12115"><span class="section-number-2">6</span> Measure Theory</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-org96520e0" class="outline-3">
-<h3 id="org96520e0"><span class="section-number-3">6.1</span> Kullback-Leiber (KL) divergence</h3>
+<div id="outline-container-orgbbfc6e2" class="outline-3">
+<h3 id="orgbbfc6e2"><span class="section-number-3">6.1</span> Kullback-Leiber (KL) divergence</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 The KL divergence is 0 iff P and Q are the same distribution in
@@ -251,8 +251,8 @@ not symmetric.
 </p>
 </div>
 </div>
-<div id="outline-container-org8c64005" class="outline-3">
-<h3 id="org8c64005"><span class="section-number-3">6.2</span> Cross Entropy</h3>
+<div id="outline-container-orgf1944ee" class="outline-3">
+<h3 id="orgf1944ee"><span class="section-number-3">6.2</span> Cross Entropy</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Minimising the cross entropy with respect to Q is equivalent to
@@ -261,20 +261,20 @@ minimising the KL divergence.
 </div>
 </div>
 </div>
-<div id="outline-container-org8379257" class="outline-2">
-<h2 id="org8379257"><span class="section-number-2">7</span> SVD</h2>
+<div id="outline-container-org0ab1e1d" class="outline-2">
+<h2 id="org0ab1e1d"><span class="section-number-2">7</span> SVD</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 <a href="https://www.youtube.com/watch?v=P5mlg91as1c">https://www.youtube.com/watch?v=P5mlg91as1c</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org25c0b3c" class="outline-2">
-<h2 id="org25c0b3c"><span class="section-number-2">8</span> Learning Rates</h2>
+<div id="outline-container-org93c0aa0" class="outline-2">
+<h2 id="org93c0aa0"><span class="section-number-2">8</span> Learning Rates</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-org041afb4" class="outline-3">
-<h3 id="org041afb4"><span class="section-number-3">8.1</span> Learning Rate Annealing</h3>
+<div id="outline-container-orga17bb38" class="outline-3">
+<h3 id="orga17bb38"><span class="section-number-3">8.1</span> Learning Rate Annealing</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 Decay learning rate after several iterations&#x2026;
@@ -289,20 +289,20 @@ better)
 </div>
 </div>
 </div>
-<div id="outline-container-orgdf1615d" class="outline-2">
-<h2 id="orgdf1615d"><span class="section-number-2">9</span> Reinforcement Learning</h2>
+<div id="outline-container-org361fd4b" class="outline-2">
+<h2 id="org361fd4b"><span class="section-number-2">9</span> Reinforcement Learning</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 <a href="https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287">https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org3091f06" class="outline-2">
-<h2 id="org3091f06"><span class="section-number-2">10</span> How Companies use Deep Learning</h2>
+<div id="outline-container-orge386070" class="outline-2">
+<h2 id="orge386070"><span class="section-number-2">10</span> How Companies use Deep Learning</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-org0e7caab" class="outline-3">
-<h3 id="org0e7caab"><span class="section-number-3">10.1</span> ViSenze</h3>
+<div id="outline-container-org0452bc7" class="outline-3">
+<h3 id="org0452bc7"><span class="section-number-3">10.1</span> ViSenze</h3>
 <div class="outline-text-3" id="text-10-1">
 <p>
 Visenze's primary product is their Visual Search (reverse image
@@ -350,8 +350,8 @@ Overall latency is less than 200ms.
 </p>
 </div>
 
-<div id="outline-container-orgb4e7f18" class="outline-4">
-<h4 id="orgb4e7f18"><span class="section-number-4">10.1.1</span> Things they focused on as a company</h4>
+<div id="outline-container-orgbb26845" class="outline-4">
+<h4 id="orgbb26845"><span class="section-number-4">10.1.1</span> Things they focused on as a company</h4>
 <div class="outline-text-4" id="text-10-1-1">
 <ol class="org-ol">
 <li>Tooling:
@@ -389,8 +389,8 @@ affecting data earlier</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org80a4235" class="outline-4">
-<h4 id="org80a4235"><span class="section-number-4">10.1.2</span> Visual Embeddings Used</h4>
+<div id="outline-container-org4fa74d6" class="outline-4">
+<h4 id="org4fa74d6"><span class="section-number-4">10.1.2</span> Visual Embeddings Used</h4>
 <div class="outline-text-4" id="text-10-1-2">
 <p>
 At Visenze, they use multiple embeddings in different feature spaces
@@ -417,8 +417,8 @@ state-of-the-art accuracy
 </ol>
 </div>
 </div>
-<div id="outline-container-orgf75b449" class="outline-4">
-<h4 id="orgf75b449"><span class="section-number-4">10.1.3</span> Lessons Learnt</h4>
+<div id="outline-container-org87c5a9e" class="outline-4">
+<h4 id="org87c5a9e"><span class="section-number-4">10.1.3</span> Lessons Learnt</h4>
 <div class="outline-text-4" id="text-10-1-3">
 <ol class="org-ol">
 <li>Taxonomy Coverage</li>
@@ -441,8 +441,8 @@ negative samples into training data to improve accuracy</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgacb2ab8" class="outline-2">
-<h2 id="orgacb2ab8"><span class="section-number-2">11</span> Key Open Questions about Deep Learning Systems</h2>
+<div id="outline-container-org3e58fdc" class="outline-2">
+<h2 id="org3e58fdc"><span class="section-number-2">11</span> Key Open Questions about Deep Learning Systems</h2>
 <div class="outline-text-2" id="text-11">
 <ol class="org-ol">
 <li>How and why do they work? Can we derive their structure from first
@@ -457,8 +457,8 @@ intrinsic limitations?</li>
 architectures/algorithms/performance in applied DL?</li>
 </ol>
 </div>
-<div id="outline-container-orgbf0cb36" class="outline-3">
-<h3 id="orgbf0cb36"><span class="section-number-3">11.1</span> Concrete Theoretical Questions</h3>
+<div id="outline-container-org143a6d4" class="outline-3">
+<h3 id="org143a6d4"><span class="section-number-3">11.1</span> Concrete Theoretical Questions</h3>
 <div class="outline-text-3" id="text-11-1">
 <ol class="org-ol">
 <li>What are the implicit modelling assumptions?</li>
@@ -471,8 +471,8 @@ we improve the models, tasks and algorithms?</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd15bd4" class="outline-2">
-<h2 id="orgcd15bd4"><span class="section-number-2">12</span> ConvNets from First Principles</h2>
+<div id="outline-container-org637d6e2" class="outline-2">
+<h2 id="org637d6e2"><span class="section-number-2">12</span> ConvNets from First Principles</h2>
 <div class="outline-text-2" id="text-12">
 <p>
 There are many architectures, but just a few key operations and
@@ -490,8 +490,8 @@ objectives:
 We focus on the properties conserved across all species of Convnets.
 </p>
 </div>
-<div id="outline-container-orgbfedb58" class="outline-3">
-<h3 id="orgbfedb58"><span class="section-number-3">12.1</span> Finding a generative model</h3>
+<div id="outline-container-org6464b8f" class="outline-3">
+<h3 id="org6464b8f"><span class="section-number-3">12.1</span> Finding a generative model</h3>
 <div class="outline-text-3" id="text-12-1">
 <p>
 We reverse engineer a Convnet by building a generative model
@@ -514,7 +514,7 @@ optimization</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 11:02</p>
+<p class="date">Created: 2018-08-15 Wed 11:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

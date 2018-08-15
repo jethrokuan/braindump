@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 11:02 -->
+<!-- 2018-08-15 Wed 11:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Dev Ops</title>
@@ -69,29 +69,29 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgce91f63">1. Kubernetes</a>
+<li><a href="#orgd945a20">1. Kubernetes</a>
 <ul>
-<li><a href="#org1e29674">1.1. Features of a COE</a></li>
-<li><a href="#org419e3e4">1.2. Why use kubernetes</a></li>
-<li><a href="#org789113a">1.3. Downsides to kubernetes</a></li>
-<li><a href="#org541fa1a">1.4. Architecture</a></li>
-<li><a href="#orga8cceb4">1.5. Replication controller vs set</a></li>
-<li><a href="#org1c50d12">1.6. Selectors</a></li>
-<li><a href="#org9784df3">1.7. Kubernetes Schema</a></li>
+<li><a href="#org4facabb">1.1. Features of a COE</a></li>
+<li><a href="#orgd3fde2e">1.2. Why use kubernetes</a></li>
+<li><a href="#orgd4329b6">1.3. Downsides to kubernetes</a></li>
+<li><a href="#orgc226c6b">1.4. Architecture</a></li>
+<li><a href="#org7bf7780">1.5. Replication controller vs set</a></li>
+<li><a href="#org823b996">1.6. Selectors</a></li>
+<li><a href="#org9d00192">1.7. Kubernetes Schema</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgce91f63" class="outline-2">
-<h2 id="orgce91f63"><span class="section-number-2">1</span> Kubernetes</h2>
+<div id="outline-container-orgd945a20" class="outline-2">
+<h2 id="orgd945a20"><span class="section-number-2">1</span> Kubernetes</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://www.opencontainers.org/">Open Containers Initiative</a>
 </p>
 </div>
-<div id="outline-container-org1e29674" class="outline-3">
-<h3 id="org1e29674"><span class="section-number-3">1.1</span> Features of a COE</h3>
+<div id="outline-container-org4facabb" class="outline-3">
+<h3 id="org4facabb"><span class="section-number-3">1.1</span> Features of a COE</h3>
 <div class="outline-text-3" id="text-1-1">
 <ol class="org-ol">
 <li>clustering</li>
@@ -106,8 +106,8 @@ for the JavaScript code in this tag.
 </ol>
 </div>
 </div>
-<div id="outline-container-org419e3e4" class="outline-3">
-<h3 id="org419e3e4"><span class="section-number-3">1.2</span> Why use kubernetes</h3>
+<div id="outline-container-orgd3fde2e" class="outline-3">
+<h3 id="orgd3fde2e"><span class="section-number-3">1.2</span> Why use kubernetes</h3>
 <div class="outline-text-3" id="text-1-2">
 <ol class="org-ol">
 <li>google</li>
@@ -117,8 +117,8 @@ for the JavaScript code in this tag.
 </ol>
 </div>
 </div>
-<div id="outline-container-org789113a" class="outline-3">
-<h3 id="org789113a"><span class="section-number-3">1.3</span> Downsides to kubernetes</h3>
+<div id="outline-container-orgd4329b6" class="outline-3">
+<h3 id="orgd4329b6"><span class="section-number-3">1.3</span> Downsides to kubernetes</h3>
 <div class="outline-text-3" id="text-1-3">
 <ol class="org-ol">
 <li>complex</li>
@@ -164,8 +164,8 @@ for the JavaScript code in this tag.
 </table>
 </div>
 </div>
-<div id="outline-container-org541fa1a" class="outline-3">
-<h3 id="org541fa1a"><span class="section-number-3">1.4</span> Architecture</h3>
+<div id="outline-container-orgc226c6b" class="outline-3">
+<h3 id="orgc226c6b"><span class="section-number-3">1.4</span> Architecture</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 kubectl &lt;&#x2014; scheduler (which node is used for container launch etc.)
@@ -180,8 +180,8 @@ MASTER
 </div>
 </div>
 
-<div id="outline-container-orga8cceb4" class="outline-3">
-<h3 id="orga8cceb4"><span class="section-number-3">1.5</span> Replication controller vs set</h3>
+<div id="outline-container-org7bf7780" class="outline-3">
+<h3 id="org7bf7780"><span class="section-number-3">1.5</span> Replication controller vs set</h3>
 <div class="outline-text-3" id="text-1-5">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -222,8 +222,8 @@ MASTER
 </div>
 </div>
 
-<div id="outline-container-org1c50d12" class="outline-3">
-<h3 id="org1c50d12"><span class="section-number-3">1.6</span> Selectors</h3>
+<div id="outline-container-org823b996" class="outline-3">
+<h3 id="org823b996"><span class="section-number-3">1.6</span> Selectors</h3>
 <div class="outline-text-3" id="text-1-6">
 <p>
 eg. I want to select these pods, add it to replication sets
@@ -231,8 +231,8 @@ eg. I want to select these pods, add it to replication sets
 </div>
 </div>
 
-<div id="outline-container-org9784df3" class="outline-3">
-<h3 id="org9784df3"><span class="section-number-3">1.7</span> Kubernetes Schema</h3>
+<div id="outline-container-org9d00192" class="outline-3">
+<h3 id="org9d00192"><span class="section-number-3">1.7</span> Kubernetes Schema</h3>
 <div class="outline-text-3" id="text-1-7">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -275,7 +275,7 @@ eg. I want to select these pods, add it to replication sets
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 11:02</p>
+<p class="date">Created: 2018-08-15 Wed 11:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

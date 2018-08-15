@@ -155,3 +155,63 @@ $\hat{\delta}(q_0, w)$.
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-08-14 13:44:15
 [[file:images/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png]]
 
+** Finite Automata with Epsilon-Transitions
+Transitions on $\epsilon$, the empty string, allow NFAs to make a transition
+spontaneously. This is sometimes referred to as $\epsilon$-NFAs, and are
+closely related to regular expressions.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-15 11:45:07
+[[file:images/Nondeterministic Finite
+Automata/screenshot_2018-08-15_11-45-07.png]]
+
+Of particular interest is the transition from $q_0$ to $q_1$, where the
+$+$ and $-$ sign is optional.
+
+** Epsilon-Closures
+We $\epsilon$-close a state $q$ by following all transitions out of $q$ that
+are labelled $\epsilon$, eventually finding all states that can be reached
+from $q$ along any path whose arcs are all labelled $\epsilon$.
+
+$\epsilon$-closure allows us to explain easily what the transitions of an
+$\epsilon$-NFA look like when given a sequence of (non-$\epsilon$) inputs. Suppose
+that $E = (Q, \Sigma, \delta, q_0, F)$ is an $\epsilon$-NFA. We first define $\hat{\delta}$,
+the extended transition function, to reflect what happens on a
+sequence of inputs.
+
+*BASIS*: $\hat{\delta}(q, \epsilon) = ECLOSE(q)$. If the label of the path is $\epsilon$,
+then we can follow only $\epsilon$-labeled arcs extending from state $q$.
+
+*INDUCTION*: Suppose $w$ is of the form $xa$, where $a$ is the last
+symbol of $w$. Note that $a$ is a member of $\Sigma$; it cannot be $\epsilon$.
+Then:
+
+\begin{align}
+  \text{Let } & \hat{\delta}(q, x) = \{p_1, p_2, \hdots, p_k\} \\
+   & \bigcup\limits_{i=1}^k \delta(p_i, a) = \{r_1, r_2, \hdots, r_m\} \\
+  \text{Then } & \hat{\delta}(q,w) = \bigcup\limits_{j=1}^m ECLOSE(r_j)
+\end{align}
+
+** Eliminating $\epsilon$-Transitions
+Given any $\epsilon$-NFA $E$, we can find a DFA $D$ that accepts the same
+language as $E$.
+
+Let $E = (Q_E, \Sigma, \delta_E, q_0, F_E)$, then the equivalent DFA $D = (Q_D, \Sigma,
+\delta_D, q_D, F_D)$ is defined as follows:
+
+1. $Q_D$ is the set of subsets of $Q_E$. All accessible states of $D$
+   are $\epsilon$-closed subsets of $Q_E$, i.e. $S \subseteq Q_K s.t. S =
+   ECLOSE(S)$. Any $\epsilon$-transition out of one of the states in $S$
+   leads to another state in $S$.
+2. $q_D = ECLOSE(q_0)$, we get the start state of $D$ by closing the set
+   consisting of only the start state of $E$.
+3. $F_D$ is those set of states that contain at least one accepting
+   state of $E$. $F_D = \{S | S \text{ is in } Q_D \text{ and } S \cap F_E
+   \neq \emptyset \}
+4. $\delta_D(S,a)$ is computed for all $a$ in $\Sigma$ and sets $S$ in $Q_D$ by:
+   1. Let $S = \{p_1, p_2, \hdots, p_k\}$
+   2. Compute $\bigcup\limits_{i=1}^{k}\delta_E(p_i, a) = \{r_1, r_2, \hdots, r_m\}$
+   3. Then $\delta_D(S, a) = \bigcup\limits_{j=1}^{m}ECLOSE(r_j)$
+
+
+
