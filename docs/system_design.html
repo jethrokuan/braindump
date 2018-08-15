@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 11:12 -->
+<!-- 2018-08-15 Wed 12:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>System Design</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -69,47 +69,47 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgd911dc0">1. Basics</a></li>
-<li><a href="#org2d5c278">2. Terminologies</a>
+<li><a href="#orgcea981a">1. Basics</a></li>
+<li><a href="#orgd5b93f5">2. Terminologies</a>
 <ul>
-<li><a href="#org56a4e67">2.1. Replication</a></li>
-<li><a href="#orgacd1606">2.2. Consistency</a></li>
-<li><a href="#orgad7b6c5">2.3. Availability</a></li>
-<li><a href="#org9bcdc21">2.4. Partition Tolerance</a></li>
-<li><a href="#org27c4a6b">2.5. Vertical scaling and Horizontal scaling</a></li>
-<li><a href="#orgfe89264">2.6. Sharding</a></li>
+<li><a href="#org21a8dd2">2.1. Replication</a></li>
+<li><a href="#orgffd9419">2.2. Consistency</a></li>
+<li><a href="#orgb89910a">2.3. Availability</a></li>
+<li><a href="#org8ddd893">2.4. Partition Tolerance</a></li>
+<li><a href="#orgbc72b8e">2.5. Vertical scaling and Horizontal scaling</a></li>
+<li><a href="#orge9a1c7e">2.6. Sharding</a></li>
 </ul>
 </li>
-<li><a href="#orgbfe2e8b">3. CAP Theorem</a></li>
-<li><a href="#orgc4b2956">4. Approaching System Design Questions</a></li>
-<li><a href="#orgf717c4f">5. Caching</a>
+<li><a href="#org60a4b96">3. CAP Theorem</a></li>
+<li><a href="#org5b97dd2">4. Approaching System Design Questions</a></li>
+<li><a href="#org164db61">5. Caching</a>
 <ul>
-<li><a href="#org834dc95">5.1. Types</a></li>
-<li><a href="#orgcc2fe35">5.2. Implementing LRU caching</a></li>
+<li><a href="#orgcd8e3fb">5.1. Types</a></li>
+<li><a href="#org412017c">5.2. Implementing LRU caching</a></li>
 </ul>
 </li>
-<li><a href="#org08fcd8e">6. SAS/SSD</a></li>
-<li><a href="#org161294b">7. Implementing TinyURL</a>
+<li><a href="#org5712cea">6. SAS/SSD</a></li>
+<li><a href="#org110e54e">7. Implementing TinyURL</a>
 <ul>
-<li><a href="#org3cc9265">7.1. Feature Clarification</a></li>
-<li><a href="#org3d7d434">7.2. Data Estimation</a></li>
-<li><a href="#org0d606a2">7.3. Design Goals</a></li>
-<li><a href="#orga445f03">7.4. Design API</a>
+<li><a href="#orgb93c456">7.1. Feature Clarification</a></li>
+<li><a href="#org3db06f4">7.2. Data Estimation</a></li>
+<li><a href="#orgeb4f85b">7.3. Design Goals</a></li>
+<li><a href="#org3014e32">7.4. Design API</a>
 <ul>
-<li><a href="#orgf147852">7.4.1. Computing the Hash</a></li>
-<li><a href="#org96ef9d4">7.4.2. Stateless application servers</a></li>
-<li><a href="#org30bcb51">7.4.3. </a></li>
+<li><a href="#orge0f5a61">7.4.1. Computing the Hash</a></li>
+<li><a href="#org92860d5">7.4.2. Stateless application servers</a></li>
+<li><a href="#org9c2432e">7.4.3. </a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org273c5d3">8. Implementing Search</a></li>
-<li><a href="#org6b802b3">9. Implementing a distributed key-store</a></li>
+<li><a href="#orgce2f410">8. Implementing Search</a></li>
+<li><a href="#orgd4d7f5b">9. Implementing a distributed key-store</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgd911dc0" class="outline-2">
-<h2 id="orgd911dc0"><span class="section-number-2">1</span> Basics</h2>
+<div id="outline-container-orgcea981a" class="outline-2">
+<h2 id="orgcea981a"><span class="section-number-2">1</span> Basics</h2>
 <div class="outline-text-2" id="text-1">
 <ol class="org-ol">
 <li>SQL, noSQL</li>
@@ -131,12 +131,12 @@ for the JavaScript code in this tag.
 </ol>
 </div>
 </div>
-<div id="outline-container-org2d5c278" class="outline-2">
-<h2 id="org2d5c278"><span class="section-number-2">2</span> Terminologies</h2>
+<div id="outline-container-orgd5b93f5" class="outline-2">
+<h2 id="orgd5b93f5"><span class="section-number-2">2</span> Terminologies</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org56a4e67" class="outline-3">
-<h3 id="org56a4e67"><span class="section-number-3">2.1</span> Replication</h3>
+<div id="outline-container-org21a8dd2" class="outline-3">
+<h3 id="org21a8dd2"><span class="section-number-3">2.1</span> Replication</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Replication refers to frequently copying the data across multiple
@@ -147,8 +147,8 @@ to some failure.
 </div>
 </div>
 
-<div id="outline-container-orgacd1606" class="outline-3">
-<h3 id="orgacd1606"><span class="section-number-3">2.2</span> Consistency</h3>
+<div id="outline-container-orgffd9419" class="outline-3">
+<h3 id="orgffd9419"><span class="section-number-3">2.2</span> Consistency</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 Assuming you have a storage system which has more than one machine,
@@ -164,8 +164,8 @@ eventually reach a state where they have the same data.
 </div>
 </div>
 
-<div id="outline-container-orgad7b6c5" class="outline-3">
-<h3 id="orgad7b6c5"><span class="section-number-3">2.3</span> Availability</h3>
+<div id="outline-container-orgb89910a" class="outline-3">
+<h3 id="orgb89910a"><span class="section-number-3">2.3</span> Availability</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 In the context of a database cluster, Availability refers to the
@@ -175,8 +175,8 @@ nodes going down.
 </div>
 </div>
 
-<div id="outline-container-org9bcdc21" class="outline-3">
-<h3 id="org9bcdc21"><span class="section-number-3">2.4</span> Partition Tolerance</h3>
+<div id="outline-container-org8ddd893" class="outline-3">
+<h3 id="org8ddd893"><span class="section-number-3">2.4</span> Partition Tolerance</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 In the context of a database cluster, cluster continues to function
@@ -186,8 +186,8 @@ nodes (both nodes are up, but can’t communicate).
 </div>
 </div>
 
-<div id="outline-container-org27c4a6b" class="outline-3">
-<h3 id="org27c4a6b"><span class="section-number-3">2.5</span> Vertical scaling and Horizontal scaling</h3>
+<div id="outline-container-orgbc72b8e" class="outline-3">
+<h3 id="orgbc72b8e"><span class="section-number-3">2.5</span> Vertical scaling and Horizontal scaling</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 In simple terms, to scale horizontally is adding more servers. To scale
@@ -203,8 +203,8 @@ new branches of the restaurant ( horizontal scaling ). Source :
 </div>
 </div>
 
-<div id="outline-container-orgfe89264" class="outline-3">
-<h3 id="orgfe89264"><span class="section-number-3">2.6</span> Sharding</h3>
+<div id="outline-container-orge9a1c7e" class="outline-3">
+<h3 id="orge9a1c7e"><span class="section-number-3">2.6</span> Sharding</h3>
 <div class="outline-text-3" id="text-2-6">
 <p>
 With most huge systems, data does not fit on a single machine. In such
@@ -215,8 +215,8 @@ smaller, faster and more manageable parts called data shards.
 </div>
 </div>
 
-<div id="outline-container-orgbfe2e8b" class="outline-2">
-<h2 id="orgbfe2e8b"><span class="section-number-2">3</span> CAP Theorem</h2>
+<div id="outline-container-org60a4b96" class="outline-2">
+<h2 id="org60a4b96"><span class="section-number-2">3</span> CAP Theorem</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 It is impossible to simultaneously guarantee the following:
@@ -229,8 +229,8 @@ It is impossible to simultaneously guarantee the following:
 </div>
 </div>
 
-<div id="outline-container-orgc4b2956" class="outline-2">
-<h2 id="orgc4b2956"><span class="section-number-2">4</span> Approaching System Design Questions</h2>
+<div id="outline-container-org5b97dd2" class="outline-2">
+<h2 id="org5b97dd2"><span class="section-number-2">4</span> Approaching System Design Questions</h2>
 <div class="outline-text-2" id="text-4">
 <ol class="org-ol">
 <li>Feature Clarification (2 minutes)</li>
@@ -251,12 +251,12 @@ It is impossible to simultaneously guarantee the following:
 </div>
 </div>
 
-<div id="outline-container-orgf717c4f" class="outline-2">
-<h2 id="orgf717c4f"><span class="section-number-2">5</span> Caching</h2>
+<div id="outline-container-org164db61" class="outline-2">
+<h2 id="org164db61"><span class="section-number-2">5</span> Caching</h2>
 <div class="outline-text-2" id="text-5">
 </div>
-<div id="outline-container-org834dc95" class="outline-3">
-<h3 id="org834dc95"><span class="section-number-3">5.1</span> Types</h3>
+<div id="outline-container-orgcd8e3fb" class="outline-3">
+<h3 id="orgcd8e3fb"><span class="section-number-3">5.1</span> Types</h3>
 <div class="outline-text-3" id="text-5-1">
 <ol class="org-ol">
 <li>Write-through -  write to both cache and db at the same time,
@@ -279,8 +279,8 @@ before confirming write completion
 </ol>
 </div>
 </div>
-<div id="outline-container-orgcc2fe35" class="outline-3">
-<h3 id="orgcc2fe35"><span class="section-number-3">5.2</span> Implementing LRU caching</h3>
+<div id="outline-container-org412017c" class="outline-3">
+<h3 id="org412017c"><span class="section-number-3">5.2</span> Implementing LRU caching</h3>
 <div class="outline-text-3" id="text-5-2">
 <p>
 Hashtable + Doubly-linked list
@@ -292,20 +292,20 @@ If adding new item, and it is full, remove tail of list,
 </div>
 </div>
 </div>
-<div id="outline-container-org08fcd8e" class="outline-2">
-<h2 id="org08fcd8e"><span class="section-number-2">6</span> SAS/SSD</h2>
+<div id="outline-container-org5712cea" class="outline-2">
+<h2 id="org5712cea"><span class="section-number-2">6</span> SAS/SSD</h2>
 <div class="outline-text-2" id="text-6">
 <ol class="org-ol">
 <li>used for I/O over SATA (7.5krpm)</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org161294b" class="outline-2">
-<h2 id="org161294b"><span class="section-number-2">7</span> Implementing TinyURL</h2>
+<div id="outline-container-org110e54e" class="outline-2">
+<h2 id="org110e54e"><span class="section-number-2">7</span> Implementing TinyURL</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org3cc9265" class="outline-3">
-<h3 id="org3cc9265"><span class="section-number-3">7.1</span> Feature Clarification</h3>
+<div id="outline-container-orgb93c456" class="outline-3">
+<h3 id="orgb93c456"><span class="section-number-3">7.1</span> Feature Clarification</h3>
 <div class="outline-text-3" id="text-7-1">
 <ol class="org-ol">
 <li>Shorten a URL</li>
@@ -314,8 +314,8 @@ If adding new item, and it is full, remove tail of list,
 </ol>
 </div>
 </div>
-<div id="outline-container-org3d7d434" class="outline-3">
-<h3 id="org3d7d434"><span class="section-number-3">7.2</span> Data Estimation</h3>
+<div id="outline-container-org3db06f4" class="outline-3">
+<h3 id="org3db06f4"><span class="section-number-3">7.2</span> Data Estimation</h3>
 <div class="outline-text-3" id="text-7-2">
 <ol class="org-ol">
 <li>Assume tinyURL load, 100M new writes per month</li>
@@ -335,8 +335,8 @@ cause deadlock</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org0d606a2" class="outline-3">
-<h3 id="org0d606a2"><span class="section-number-3">7.3</span> Design Goals</h3>
+<div id="outline-container-orgeb4f85b" class="outline-3">
+<h3 id="orgeb4f85b"><span class="section-number-3">7.3</span> Design Goals</h3>
 <div class="outline-text-3" id="text-7-3">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -365,24 +365,24 @@ cause deadlock</li>
 </table>
 </div>
 </div>
-<div id="outline-container-orga445f03" class="outline-3">
-<h3 id="orga445f03"><span class="section-number-3">7.4</span> Design API</h3>
+<div id="outline-container-org3014e32" class="outline-3">
+<h3 id="org3014e32"><span class="section-number-3">7.4</span> Design API</h3>
 <div class="outline-text-3" id="text-7-4">
 <ul class="org-ul">
 <li>shortenURL(url)</li>
 <li>expandURL(hash)</li>
 </ul>
 </div>
-<div id="outline-container-orgf147852" class="outline-4">
-<h4 id="orgf147852"><span class="section-number-4">7.4.1</span> Computing the Hash</h4>
+<div id="outline-container-orge0f5a61" class="outline-4">
+<h4 id="orge0f5a61"><span class="section-number-4">7.4.1</span> Computing the Hash</h4>
 <div class="outline-text-4" id="text-7-4-1">
 <p>
 convert<sub>to</sub><sub>base</sub><sub>62</sub>(md5(url + salt))[:6]
 </p>
 </div>
 </div>
-<div id="outline-container-org96ef9d4" class="outline-4">
-<h4 id="org96ef9d4"><span class="section-number-4">7.4.2</span> Stateless application servers</h4>
+<div id="outline-container-org92860d5" class="outline-4">
+<h4 id="org92860d5"><span class="section-number-4">7.4.2</span> Stateless application servers</h4>
 <div class="outline-text-4" id="text-7-4-2">
 <p>
 load balancers ensure application is available when a server dies, and
@@ -390,17 +390,17 @@ client knows which server to talk to
 </p>
 </div>
 </div>
-<div id="outline-container-org30bcb51" class="outline-4">
-<h4 id="org30bcb51"><span class="section-number-4">7.4.3</span> </h4>
+<div id="outline-container-org9c2432e" class="outline-4">
+<h4 id="org9c2432e"><span class="section-number-4">7.4.3</span> </h4>
 </div>
 </div>
 </div>
 
-<div id="outline-container-org273c5d3" class="outline-2">
-<h2 id="org273c5d3"><span class="section-number-2">8</span> Implementing Search</h2>
+<div id="outline-container-orgce2f410" class="outline-2">
+<h2 id="orgce2f410"><span class="section-number-2">8</span> Implementing Search</h2>
 </div>
-<div id="outline-container-org6b802b3" class="outline-2">
-<h2 id="org6b802b3"><span class="section-number-2">9</span> Implementing a distributed key-store</h2>
+<div id="outline-container-orgd4d7f5b" class="outline-2">
+<h2 id="orgd4d7f5b"><span class="section-number-2">9</span> Implementing a distributed key-store</h2>
 <div class="outline-text-2" id="text-9">
 <ol class="org-ol">
 <li>Data can't fit onto one machine</li>
@@ -415,7 +415,7 @@ client knows which server to talk to
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 11:12</p>
+<p class="date">Created: 2018-08-15 Wed 12:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

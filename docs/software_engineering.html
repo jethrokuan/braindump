@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 11:12 -->
+<!-- 2018-08-15 Wed 12:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Software Engineering</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Derrick Chua, Jethro Kuan" />
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -69,107 +69,107 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org82a8f42">1. Object-Oriented Programming</a>
+<li><a href="#orga435340">1. Object-Oriented Programming</a>
 <ul>
-<li><a href="#org7be1850">1.1. Basic UML Notation</a></li>
-<li><a href="#org513f8c8">1.2. Associations</a></li>
-<li><a href="#orgfd16477">1.3. Inheritance</a></li>
-<li><a href="#orgc09918b">1.4. Interfaces</a></li>
-<li><a href="#org464e381">1.5. Polymorphism</a></li>
+<li><a href="#orga0cc8c0">1.1. Basic UML Notation</a></li>
+<li><a href="#org1610c38">1.2. Associations</a></li>
+<li><a href="#org9b8e893">1.3. Inheritance</a></li>
+<li><a href="#orgcf82f39">1.4. Interfaces</a></li>
+<li><a href="#org0fec53a">1.5. Polymorphism</a></li>
 </ul>
 </li>
-<li><a href="#orgcd56145">2. Modelling Behaviour</a>
+<li><a href="#org9569c55">2. Modelling Behaviour</a>
 <ul>
-<li><a href="#orgb9a8b23">2.1. Activity Diagrams</a></li>
-<li><a href="#orgb502ea3">2.2. Sequence Diagrams</a></li>
+<li><a href="#orgc8fb359">2.1. Activity Diagrams</a></li>
+<li><a href="#orgcf37e4c">2.2. Sequence Diagrams</a></li>
 </ul>
 </li>
-<li><a href="#orgab108dd">3. Software Requirements</a></li>
-<li><a href="#org2e9fc8f">4. Design</a>
+<li><a href="#orgff300bb">3. Software Requirements</a></li>
+<li><a href="#org1c02c1d">4. Design</a>
 <ul>
-<li><a href="#orgc73fc5f">4.1. Coupling</a></li>
-<li><a href="#orgd0a9170">4.2. Cohesion</a></li>
+<li><a href="#org1e7ce6f">4.1. Coupling</a></li>
+<li><a href="#orge70216f">4.2. Cohesion</a></li>
 </ul>
 </li>
-<li><a href="#org7a54c27">5. Software Architecture</a>
+<li><a href="#org1a8ed7f">5. Software Architecture</a>
 <ul>
-<li><a href="#org40a0748">5.1. Architectural Styles</a></li>
+<li><a href="#orga820808">5.1. Architectural Styles</a></li>
 </ul>
 </li>
-<li><a href="#org286590c">6. Software Design Patterns</a>
+<li><a href="#org19da497">6. Software Design Patterns</a>
 <ul>
-<li><a href="#orga88e9ce">6.1. Singleton</a></li>
-<li><a href="#org2624420">6.2. Abstraction Occurrence</a></li>
-<li><a href="#org0caa6c0">6.3. Facade Pattern</a></li>
-<li><a href="#org9691de1">6.4. Command Pattern</a></li>
-<li><a href="#org06684ac">6.5. MVC Pattern</a></li>
-<li><a href="#org44c65eb">6.6. Observer Pattern</a></li>
+<li><a href="#org5129cca">6.1. Singleton</a></li>
+<li><a href="#org1020875">6.2. Abstraction Occurrence</a></li>
+<li><a href="#org0de2594">6.3. Facade Pattern</a></li>
+<li><a href="#org7a2c315">6.4. Command Pattern</a></li>
+<li><a href="#orgc3639ee">6.5. MVC Pattern</a></li>
+<li><a href="#orge1ddb16">6.6. Observer Pattern</a></li>
 </ul>
 </li>
-<li><a href="#org7d8dce0">7. Implementation</a>
+<li><a href="#org9deff98">7. Implementation</a>
 <ul>
-<li><a href="#orge8ee772">7.1. Code Quality</a></li>
-<li><a href="#orgf5dde97">7.2. Refactoring</a></li>
-<li><a href="#orge6374dd">7.3. Error Handling</a></li>
-<li><a href="#orgee1e9db">7.4. Assertions</a></li>
-<li><a href="#org855c5db">7.5. Logging</a>
+<li><a href="#org878359c">7.1. Code Quality</a></li>
+<li><a href="#orgd11e4a9">7.2. Refactoring</a></li>
+<li><a href="#org84097f0">7.3. Error Handling</a></li>
+<li><a href="#orge02de4e">7.4. Assertions</a></li>
+<li><a href="#orge33e14c">7.5. Logging</a>
 <ul>
 <li><a href="#build-automation">7.5.1. Build automation</a></li>
 <li><a href="#continuous-integration-ci">7.5.2. Continuous Integration (CI)</a></li>
 </ul>
 </li>
-<li><a href="#orgd85eafe">7.6. Defensive Programming</a></li>
-<li><a href="#org12f98cc">7.7. Design-by-Contract</a></li>
-<li><a href="#org01916dc">7.8. Integration Approaches</a></li>
-<li><a href="#org1a01197">7.9. Reuse</a></li>
-<li><a href="#orge894496">7.10. APIs</a></li>
-<li><a href="#orgc95cace">7.11. Libraries and Frameworks</a></li>
-<li><a href="#org316cdcd">7.12. Platforms</a></li>
+<li><a href="#org1e1a955">7.6. Defensive Programming</a></li>
+<li><a href="#org6fd8338">7.7. Design-by-Contract</a></li>
+<li><a href="#org522a2ea">7.8. Integration Approaches</a></li>
+<li><a href="#org4e0fd57">7.9. Reuse</a></li>
+<li><a href="#orgab1ce3f">7.10. APIs</a></li>
+<li><a href="#org81dd12a">7.11. Libraries and Frameworks</a></li>
+<li><a href="#org783a43f">7.12. Platforms</a></li>
 </ul>
 </li>
-<li><a href="#orgccf99cb">8. Quality Assurance</a>
+<li><a href="#orgdbf5190">8. Quality Assurance</a>
 <ul>
-<li><a href="#orga189290">8.1. Testing</a>
+<li><a href="#orgfc101cf">8.1. Testing</a>
 <ul>
-<li><a href="#org3f18af3">8.1.1. Unit Testing</a></li>
-<li><a href="#orgb799003">8.1.2. Integration Testing</a></li>
-<li><a href="#org7d9875e">8.1.3. System Testing</a></li>
-<li><a href="#orgffd19f8">8.1.4. Others</a></li>
-<li><a href="#org5ccadee">8.1.5. Exploratory vs Scripted Testing</a></li>
-<li><a href="#org71745e5">8.1.6. Acceptance Testing</a></li>
-<li><a href="#org74d45f9">8.1.7. Coverage</a></li>
-<li><a href="#org0995d98">8.1.8. Test Case Design</a></li>
+<li><a href="#org0755463">8.1.1. Unit Testing</a></li>
+<li><a href="#org4bb8763">8.1.2. Integration Testing</a></li>
+<li><a href="#org77f08f4">8.1.3. System Testing</a></li>
+<li><a href="#org44b1ea5">8.1.4. Others</a></li>
+<li><a href="#orgc32a6ea">8.1.5. Exploratory vs Scripted Testing</a></li>
+<li><a href="#orgbc9add8">8.1.6. Acceptance Testing</a></li>
+<li><a href="#orgcc78c90">8.1.7. Coverage</a></li>
+<li><a href="#org3e9a936">8.1.8. Test Case Design</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgcbea78d">9. Software Engineering Principles</a>
+<li><a href="#org8306e46">9. Software Engineering Principles</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org411c821">9.0.1. Law of Demeter</a></li>
-<li><a href="#org61c7749">9.0.2. SOLID</a></li>
+<li><a href="#org4c6af28">9.0.1. Law of Demeter</a></li>
+<li><a href="#orgf486e1b">9.0.2. SOLID</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orga642c5a">10. Software Development Life Cycles</a>
+<li><a href="#orgcd075bb">10. Software Development Life Cycles</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org98c43a3">10.0.1. Sequential models</a></li>
+<li><a href="#orgcd3361f">10.0.1. Sequential models</a></li>
 <li><a href="#iterative-models">10.0.2. Iterative models</a></li>
-<li><a href="#org1493365">10.0.3. Agile models</a></li>
+<li><a href="#org6c1159f">10.0.3. Agile models</a></li>
 </ul>
 </li>
-<li><a href="#orgecb55d1">10.1. Popular SDLC process models</a>
+<li><a href="#org61cae5a">10.1. Popular SDLC process models</a>
 <ul>
-<li><a href="#orgfcc90f2">10.1.1. Scrum</a></li>
-<li><a href="#orgf4d0c42">10.1.2. Extreme Programming (XP)</a></li>
-<li><a href="#org0077da2">10.1.3. Unified process</a></li>
+<li><a href="#org59cfeb9">10.1.1. Scrum</a></li>
+<li><a href="#orgfdb5672">10.1.2. Extreme Programming (XP)</a></li>
+<li><a href="#org71b8279">10.1.3. Unified process</a></li>
 </ul>
 </li>
-<li><a href="#org474e207">10.2. CMMI (Capability Maturity Model Integration)</a></li>
+<li><a href="#org7819681">10.2. CMMI (Capability Maturity Model Integration)</a></li>
 </ul>
 </li>
 </ul>
@@ -178,8 +178,8 @@ for the JavaScript code in this tag.
 <p>
 -<b>- mode: Org; org-download-image-dir: "./images/software-engineering/"; -</b>-
 </p>
-<div id="outline-container-org82a8f42" class="outline-2">
-<h2 id="org82a8f42"><span class="section-number-2">1</span> Object-Oriented Programming</h2>
+<div id="outline-container-orga435340" class="outline-2">
+<h2 id="orga435340"><span class="section-number-2">1</span> Object-Oriented Programming</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li>Every object has both <i>state</i> (data) and <i>behaviour</i> (operations on
@@ -193,8 +193,8 @@ to other objects.</li>
 </ul>
 </div>
 
-<div id="outline-container-org7be1850" class="outline-3">
-<h3 id="org7be1850"><span class="section-number-3">1.1</span> Basic UML Notation</h3>
+<div id="outline-container-orga0cc8c0" class="outline-3">
+<h3 id="orga0cc8c0"><span class="section-number-3">1.1</span> Basic UML Notation</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 The class is denoted with 3 parts: The class name, its attributes, and
@@ -241,8 +241,8 @@ UML Notation for enumerations:
 </div>
 </div>
 </div>
-<div id="outline-container-org513f8c8" class="outline-3">
-<h3 id="org513f8c8"><span class="section-number-3">1.2</span> Associations</h3>
+<div id="outline-container-org1610c38" class="outline-3">
+<h3 id="org1610c38"><span class="section-number-3">1.2</span> Associations</h3>
 <div class="outline-text-3" id="text-1-2">
 <ul class="org-ul">
 <li>A solid line indicates an association between 2 objects.</li>
@@ -313,8 +313,8 @@ design point of view.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfd16477" class="outline-3">
-<h3 id="orgfd16477"><span class="section-number-3">1.3</span> Inheritance</h3>
+<div id="outline-container-org9b8e893" class="outline-3">
+<h3 id="org9b8e893"><span class="section-number-3">1.3</span> Inheritance</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Inheritance allows you to define a new class based on an existing
@@ -329,8 +329,8 @@ an arrow.
 </div>
 </div>
 </div>
-<div id="outline-container-orgc09918b" class="outline-3">
-<h3 id="orgc09918b"><span class="section-number-3">1.4</span> Interfaces</h3>
+<div id="outline-container-orgcf82f39" class="outline-3">
+<h3 id="orgcf82f39"><span class="section-number-3">1.4</span> Interfaces</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 An <i>interface</i> is a behaviour specification. If a class implements the
@@ -358,8 +358,8 @@ It is denoted with the <code>{abstract}</code> annotation in the UML diagram.
 </div>
 </div>
 </div>
-<div id="outline-container-org464e381" class="outline-3">
-<h3 id="org464e381"><span class="section-number-3">1.5</span> Polymorphism</h3>
+<div id="outline-container-org0fec53a" class="outline-3">
+<h3 id="org0fec53a"><span class="section-number-3">1.5</span> Polymorphism</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 <i>Polymorphism</i> is the ability of different objects to respond, each
@@ -379,12 +379,12 @@ runtime.</dd>
 </div>
 </div>
 </div>
-<div id="outline-container-orgcd56145" class="outline-2">
-<h2 id="orgcd56145"><span class="section-number-2">2</span> Modelling Behaviour</h2>
+<div id="outline-container-org9569c55" class="outline-2">
+<h2 id="org9569c55"><span class="section-number-2">2</span> Modelling Behaviour</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgb9a8b23" class="outline-3">
-<h3 id="orgb9a8b23"><span class="section-number-3">2.1</span> Activity Diagrams</h3>
+<div id="outline-container-orgc8fb359" class="outline-3">
+<h3 id="orgc8fb359"><span class="section-number-3">2.1</span> Activity Diagrams</h3>
 <div class="outline-text-3" id="text-2-1">
 <dl class="org-dl">
 <dt>Actions</dt><dd>Rectangles with rounded edges (Steps)</dd>
@@ -426,8 +426,8 @@ label at the top, as columns)</li>
 </div>
 </div>
 
-<div id="outline-container-orgb502ea3" class="outline-3">
-<h3 id="orgb502ea3"><span class="section-number-3">2.2</span> Sequence Diagrams</h3>
+<div id="outline-container-orgcf37e4c" class="outline-3">
+<h3 id="orgcf37e4c"><span class="section-number-3">2.2</span> Sequence Diagrams</h3>
 <div class="outline-text-3" id="text-2-2">
 <dl class="org-dl">
 <dt>Method calls</dt><dd>Solid arrows</dd>
@@ -471,8 +471,8 @@ Note:
 </div>
 </div>
 </div>
-<div id="outline-container-orgab108dd" class="outline-2">
-<h2 id="orgab108dd"><span class="section-number-2">3</span> Software Requirements</h2>
+<div id="outline-container-orgff300bb" class="outline-2">
+<h2 id="orgff300bb"><span class="section-number-2">3</span> Software Requirements</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Requirements come from <i>stakeholders</i>: parties that are directly
@@ -506,8 +506,8 @@ occur on different levels, high-level stories are called epics.
 </p>
 </div>
 </div>
-<div id="outline-container-org2e9fc8f" class="outline-2">
-<h2 id="org2e9fc8f"><span class="section-number-2">4</span> Design</h2>
+<div id="outline-container-org1c02c1d" class="outline-2">
+<h2 id="org1c02c1d"><span class="section-number-2">4</span> Design</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Software design has 2 main aspects:
@@ -525,8 +525,8 @@ suppressing more complex details below that level.</li>
 </ol>
 </div>
 
-<div id="outline-container-orgc73fc5f" class="outline-3">
-<h3 id="orgc73fc5f"><span class="section-number-3">4.1</span> Coupling</h3>
+<div id="outline-container-org1e7ce6f" class="outline-3">
+<h3 id="org1e7ce6f"><span class="section-number-3">4.1</span> Coupling</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 Coupling is the <b>measure of the degree of dependence</b> between
@@ -559,8 +559,8 @@ happen to occur at the same time</dd>
 </div>
 </div>
 
-<div id="outline-container-orgd0a9170" class="outline-3">
-<h3 id="orgd0a9170"><span class="section-number-3">4.2</span> Cohesion</h3>
+<div id="outline-container-orge70216f" class="outline-3">
+<h3 id="orge70216f"><span class="section-number-3">4.2</span> Cohesion</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 Cohesion is a <b>measure of how strongly-related and focused the
@@ -588,8 +588,8 @@ Cohesion can be present in many forms:
 </div>
 </div>
 
-<div id="outline-container-org7a54c27" class="outline-2">
-<h2 id="org7a54c27"><span class="section-number-2">5</span> Software Architecture</h2>
+<div id="outline-container-org1a8ed7f" class="outline-2">
+<h2 id="org1a8ed7f"><span class="section-number-2">5</span> Software Architecture</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 Software architecture shows the <b>overall organization of the system
@@ -597,8 +597,8 @@ and can be viewed as a very high-level design</b>.
 </p>
 </div>
 
-<div id="outline-container-org40a0748" class="outline-3">
-<h3 id="org40a0748"><span class="section-number-3">5.1</span> Architectural Styles</h3>
+<div id="outline-container-orga820808" class="outline-3">
+<h3 id="orga820808"><span class="section-number-3">5.1</span> Architectural Styles</h3>
 <div class="outline-text-3" id="text-5-1">
 <ol class="org-ol">
 <li>n-tier
@@ -670,8 +670,8 @@ screen their details</li>
 </div>
 </div>
 
-<div id="outline-container-org286590c" class="outline-2">
-<h2 id="org286590c"><span class="section-number-2">6</span> Software Design Patterns</h2>
+<div id="outline-container-org19da497" class="outline-2">
+<h2 id="org19da497"><span class="section-number-2">6</span> Software Design Patterns</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Software Design Patterns are <b>elegant reusable solutions to commonly
@@ -684,8 +684,8 @@ anti-patterns, consequences and other useful information.
 </p>
 </div>
 
-<div id="outline-container-orga88e9ce" class="outline-3">
-<h3 id="orga88e9ce"><span class="section-number-3">6.1</span> Singleton</h3>
+<div id="outline-container-org5129cca" class="outline-3">
+<h3 id="org5129cca"><span class="section-number-3">6.1</span> Singleton</h3>
 <div class="outline-text-3" id="text-6-1">
 <ul class="org-ul">
 <li><b>Context</b>: certain classes should have no more than 1 instance.</li>
@@ -709,8 +709,8 @@ provide a public class-level method to access the single instance.</li>
 </div>
 </div>
 
-<div id="outline-container-org2624420" class="outline-3">
-<h3 id="org2624420"><span class="section-number-3">6.2</span> Abstraction Occurrence</h3>
+<div id="outline-container-org1020875" class="outline-3">
+<h3 id="org1020875"><span class="section-number-3">6.2</span> Abstraction Occurrence</h3>
 <div class="outline-text-3" id="text-6-2">
 <ul class="org-ul">
 <li><b>Context</b>: Group of similar entities that appear to be occurrences
@@ -725,8 +725,8 @@ classes.</li>
 </div>
 </div>
 
-<div id="outline-container-org0caa6c0" class="outline-3">
-<h3 id="org0caa6c0"><span class="section-number-3">6.3</span> Facade Pattern</h3>
+<div id="outline-container-org0de2594" class="outline-3">
+<h3 id="org0de2594"><span class="section-number-3">6.3</span> Facade Pattern</h3>
 <div class="outline-text-3" id="text-6-3">
 <ul class="org-ul">
 <li><b>Context</b>: Components need access to functionality deep inside other
@@ -746,8 +746,8 @@ happens through the facade class.</li>
 </div>
 </div>
 
-<div id="outline-container-org9691de1" class="outline-3">
-<h3 id="org9691de1"><span class="section-number-3">6.4</span> Command Pattern</h3>
+<div id="outline-container-org7a2c315" class="outline-3">
+<h3 id="org7a2c315"><span class="section-number-3">6.4</span> Command Pattern</h3>
 <div class="outline-text-3" id="text-6-4">
 <ul class="org-ul">
 <li><b>Context</b>: A system is required to execute a number of commands,s
@@ -760,8 +760,8 @@ around, stored and executed without knowing the type of command.</li>
 </div>
 </div>
 
-<div id="outline-container-org06684ac" class="outline-3">
-<h3 id="org06684ac"><span class="section-number-3">6.5</span> MVC Pattern</h3>
+<div id="outline-container-orgc3639ee" class="outline-3">
+<h3 id="orgc3639ee"><span class="section-number-3">6.5</span> MVC Pattern</h3>
 <div class="outline-text-3" id="text-6-5">
 <ul class="org-ul">
 <li><b>Context</b>: applications support storage/retrieval of information,
@@ -776,8 +776,8 @@ if necessary.</li>
 </div>
 </div>
 
-<div id="outline-container-org44c65eb" class="outline-3">
-<h3 id="org44c65eb"><span class="section-number-3">6.6</span> Observer Pattern</h3>
+<div id="outline-container-orge1ddb16" class="outline-3">
+<h3 id="orge1ddb16"><span class="section-number-3">6.6</span> Observer Pattern</h3>
 <div class="outline-text-3" id="text-6-6">
 <ul class="org-ul">
 <li><b>Context</b>: An object is interested in getting notified when a change
@@ -797,8 +797,8 @@ both parties.</li>
 </div>
 </div>
 
-<div id="outline-container-org7d8dce0" class="outline-2">
-<h2 id="org7d8dce0"><span class="section-number-2">7</span> Implementation</h2>
+<div id="outline-container-org9deff98" class="outline-2">
+<h2 id="org9deff98"><span class="section-number-2">7</span> Implementation</h2>
 <div class="outline-text-2" id="text-7">
 <dl class="org-dl">
 <dt>Debugging</dt><dd>process of discovering defects in the program.
@@ -812,8 +812,8 @@ execution of the code.</li>
 </div>
 
 
-<div id="outline-container-orge8ee772" class="outline-3">
-<h3 id="orge8ee772"><span class="section-number-3">7.1</span> Code Quality</h3>
+<div id="outline-container-org878359c" class="outline-3">
+<h3 id="org878359c"><span class="section-number-3">7.1</span> Code Quality</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 There are various dimensions of code quality, including <b>run-time
@@ -852,8 +852,8 @@ writing with the reader in mind.
 </div>
 </div>
 
-<div id="outline-container-orgf5dde97" class="outline-3">
-<h3 id="orgf5dde97"><span class="section-number-3">7.2</span> Refactoring</h3>
+<div id="outline-container-orgd11e4a9" class="outline-3">
+<h3 id="orgd11e4a9"><span class="section-number-3">7.2</span> Refactoring</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 Refactoring <b>improves a program's internal structure in small steps without
@@ -870,8 +870,8 @@ Common refactors include:
 </div>
 </div>
 
-<div id="outline-container-orge6374dd" class="outline-3">
-<h3 id="orge6374dd"><span class="section-number-3">7.3</span> Error Handling</h3>
+<div id="outline-container-org84097f0" class="outline-3">
+<h3 id="org84097f0"><span class="section-number-3">7.3</span> Error Handling</h3>
 <div class="outline-text-3" id="text-7-3">
 <p>
 Exceptions are events that occur during the execution of a program,
@@ -886,8 +886,8 @@ propagate up the  method call hierarchy until it is dealt with.
 </div>
 </div>
 
-<div id="outline-container-orgee1e9db" class="outline-3">
-<h3 id="orgee1e9db"><span class="section-number-3">7.4</span> Assertions</h3>
+<div id="outline-container-orge02de4e" class="outline-3">
+<h3 id="orge02de4e"><span class="section-number-3">7.4</span> Assertions</h3>
 <div class="outline-text-3" id="text-7-4">
 <p>
 Assertions are used to define assumptions about the program state so
@@ -898,8 +898,8 @@ the program. Assertions can be disabled without modifying the code.
 </div>
 </div>
 
-<div id="outline-container-org855c5db" class="outline-3">
-<h3 id="org855c5db"><span class="section-number-3">7.5</span> Logging</h3>
+<div id="outline-container-orge33e14c" class="outline-3">
+<h3 id="orge33e14c"><span class="section-number-3">7.5</span> Logging</h3>
 <div class="outline-text-3" id="text-7-5">
 <p>
 Logging is <b>The deliberate recording of certain information during
@@ -910,8 +910,8 @@ Logging is <b>The deliberate recording of certain information during
 </p>
 </div>
 
-<div id="outline-container-org5229033" class="outline-4">
-<h4 id="build-automation"><a id="org5229033"></a><span class="section-number-4">7.5.1</span> Build automation</h4>
+<div id="outline-container-org4a37d1f" class="outline-4">
+<h4 id="build-automation"><a id="org4a37d1f"></a><span class="section-number-4">7.5.1</span> Build automation</h4>
 <div class="outline-text-4" id="text-build-automation">
 <ol class="org-ol">
 <li>Gradle
@@ -943,8 +943,8 @@ tasks</li>
 </div>
 </div>
 
-<div id="outline-container-org069f3cb" class="outline-4">
-<h4 id="continuous-integration-ci"><a id="org069f3cb"></a><span class="section-number-4">7.5.2</span> Continuous Integration (CI)</h4>
+<div id="outline-container-orgec228dc" class="outline-4">
+<h4 id="continuous-integration-ci"><a id="orgec228dc"></a><span class="section-number-4">7.5.2</span> Continuous Integration (CI)</h4>
 <div class="outline-text-4" id="text-continuous-integration-ci">
 <ol class="org-ol">
 <li>Integration, building and testing happens automatically after code
@@ -957,8 +957,8 @@ end-users at the same time (e.g. Travis)</li>
 </div>
 </div>
 
-<div id="outline-container-orgd85eafe" class="outline-3">
-<h3 id="orgd85eafe"><span class="section-number-3">7.6</span> Defensive Programming</h3>
+<div id="outline-container-org1e1a955" class="outline-3">
+<h3 id="org1e1a955"><span class="section-number-3">7.6</span> Defensive Programming</h3>
 <div class="outline-text-3" id="text-7-6">
 <ul class="org-ul">
 <li>Leave no room for things to go wrong</li>
@@ -972,8 +972,8 @@ object first, before assignment)</li>
 </div>
 </div>
 
-<div id="outline-container-org12f98cc" class="outline-3">
-<h3 id="org12f98cc"><span class="section-number-3">7.7</span> Design-by-Contract</h3>
+<div id="outline-container-org6fd8338" class="outline-3">
+<h3 id="org6fd8338"><span class="section-number-3">7.7</span> Design-by-Contract</h3>
 <div class="outline-text-3" id="text-7-7">
 <p>
 DbC is an *approach for designing software that requires defining
@@ -988,8 +988,8 @@ DbC is an *approach for designing software that requires defining
 </div>
 </div>
 
-<div id="outline-container-org01916dc" class="outline-3">
-<h3 id="org01916dc"><span class="section-number-3">7.8</span> Integration Approaches</h3>
+<div id="outline-container-org522a2ea" class="outline-3">
+<h3 id="org522a2ea"><span class="section-number-3">7.8</span> Integration Approaches</h3>
 <div class="outline-text-3" id="text-7-8">
 <ol class="org-ol">
 <li>Late and one-time
@@ -1018,8 +1018,8 @@ re-integrating frequently</li>
 </div>
 </div>
 
-<div id="outline-container-org1a01197" class="outline-3">
-<h3 id="org1a01197"><span class="section-number-3">7.9</span> Reuse</h3>
+<div id="outline-container-org4e0fd57" class="outline-3">
+<h3 id="org4e0fd57"><span class="section-number-3">7.9</span> Reuse</h3>
 <div class="outline-text-3" id="text-7-9">
 <p>
 By reusing tried and tested components, the robustness of a new
@@ -1029,8 +1029,8 @@ requirement. There are costs associated with reuse.
 </div>
 </div>
 
-<div id="outline-container-orge894496" class="outline-3">
-<h3 id="orge894496"><span class="section-number-3">7.10</span> APIs</h3>
+<div id="outline-container-orgab1ce3f" class="outline-3">
+<h3 id="orgab1ce3f"><span class="section-number-3">7.10</span> APIs</h3>
 <div class="outline-text-3" id="text-7-10">
 <p>
 An Application  Programming Interface (API) specifies the interface
@@ -1039,8 +1039,8 @@ through which other programs can interact with a software component.
 </div>
 </div>
 
-<div id="outline-container-orgc95cace" class="outline-3">
-<h3 id="orgc95cace"><span class="section-number-3">7.11</span> Libraries and Frameworks</h3>
+<div id="outline-container-org81dd12a" class="outline-3">
+<h3 id="org81dd12a"><span class="section-number-3">7.11</span> Libraries and Frameworks</h3>
 <div class="outline-text-3" id="text-7-11">
 <p>
 A library is a collection of modular code that is general and can be
@@ -1054,8 +1054,8 @@ framework code calls your code.
 </div>
 </div>
 
-<div id="outline-container-org316cdcd" class="outline-3">
-<h3 id="org316cdcd"><span class="section-number-3">7.12</span> Platforms</h3>
+<div id="outline-container-org783a43f" class="outline-3">
+<h3 id="org783a43f"><span class="section-number-3">7.12</span> Platforms</h3>
 <div class="outline-text-3" id="text-7-12">
 <p>
 A platform provides a runtime environment for applications. A
@@ -1065,8 +1065,8 @@ platform is often bundled with libraries, tools and frameworks.
 </div>
 </div>
 
-<div id="outline-container-orgccf99cb" class="outline-2">
-<h2 id="orgccf99cb"><span class="section-number-2">8</span> Quality Assurance</h2>
+<div id="outline-container-orgdbf5190" class="outline-2">
+<h2 id="orgdbf5190"><span class="section-number-2">8</span> Quality Assurance</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 QA ensures that the software being built has the required levels of
@@ -1086,8 +1086,8 @@ specification, and not the actual utility of the software.</dd>
 </div>
 
 
-<div id="outline-container-orga189290" class="outline-3">
-<h3 id="orga189290"><span class="section-number-3">8.1</span> Testing</h3>
+<div id="outline-container-orgfc101cf" class="outline-3">
+<h3 id="orgfc101cf"><span class="section-number-3">8.1</span> Testing</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 When testing, we execute a set of test cases, containing the <b>input</b>
@@ -1096,8 +1096,8 @@ the specification.
 </p>
 </div>
 
-<div id="outline-container-org3f18af3" class="outline-4">
-<h4 id="org3f18af3"><span class="section-number-4">8.1.1</span> Unit Testing</h4>
+<div id="outline-container-org0755463" class="outline-4">
+<h4 id="org0755463"><span class="section-number-4">8.1.1</span> Unit Testing</h4>
 <div class="outline-text-4" id="text-8-1-1">
 <ul class="org-ul">
 <li>testing individual units to ensure each piece works correctly. In
@@ -1112,8 +1112,8 @@ Polymorphism can be used to implement this.</li>
 </div>
 </div>
 
-<div id="outline-container-orgb799003" class="outline-4">
-<h4 id="orgb799003"><span class="section-number-4">8.1.2</span> Integration Testing</h4>
+<div id="outline-container-org4bb8763" class="outline-4">
+<h4 id="org4bb8763"><span class="section-number-4">8.1.2</span> Integration Testing</h4>
 <div class="outline-text-4" id="text-8-1-2">
 <ul class="org-ul">
 <li>testing whether different parts of the software work together as
@@ -1123,8 +1123,8 @@ components interact with each other.</li>
 </div>
 </div>
 
-<div id="outline-container-org7d9875e" class="outline-4">
-<h4 id="org7d9875e"><span class="section-number-4">8.1.3</span> System Testing</h4>
+<div id="outline-container-org77f08f4" class="outline-4">
+<h4 id="org77f08f4"><span class="section-number-4">8.1.3</span> System Testing</h4>
 <div class="outline-text-4" id="text-8-1-3">
 <ul class="org-ul">
 <li>Takes the whole system and tests it against the system specification</li>
@@ -1135,8 +1135,8 @@ the system</li>
 </div>
 </div>
 
-<div id="outline-container-orgffd19f8" class="outline-4">
-<h4 id="orgffd19f8"><span class="section-number-4">8.1.4</span> Others</h4>
+<div id="outline-container-org44b1ea5" class="outline-4">
+<h4 id="org44b1ea5"><span class="section-number-4">8.1.4</span> Others</h4>
 <div class="outline-text-4" id="text-8-1-4">
 <ul class="org-ul">
 <li>alpha testing is performed by the users, under controlled conditions
@@ -1151,8 +1151,8 @@ locate the cause of test case failure or fixing bugs</li>
 </div>
 </div>
 
-<div id="outline-container-org5ccadee" class="outline-4">
-<h4 id="org5ccadee"><span class="section-number-4">8.1.5</span> Exploratory vs Scripted Testing</h4>
+<div id="outline-container-orgc32a6ea" class="outline-4">
+<h4 id="orgc32a6ea"><span class="section-number-4">8.1.5</span> Exploratory vs Scripted Testing</h4>
 <div class="outline-text-4" id="text-8-1-5">
 <ul class="org-ul">
 <li>Exploratory testing devises test cases on-the-fly, creating new test
@@ -1170,8 +1170,8 @@ sufficient time</li>
 </div>
 </div>
 
-<div id="outline-container-org71745e5" class="outline-4">
-<h4 id="org71745e5"><span class="section-number-4">8.1.6</span> Acceptance Testing</h4>
+<div id="outline-container-orgbc9add8" class="outline-4">
+<h4 id="orgbc9add8"><span class="section-number-4">8.1.6</span> Acceptance Testing</h4>
 <div class="outline-text-4" id="text-8-1-6">
 <ul class="org-ul">
 <li>test the delivered system to ensure it meets the user requirements</li>
@@ -1215,8 +1215,8 @@ sufficient time</li>
 </div>
 </div>
 
-<div id="outline-container-org74d45f9" class="outline-4">
-<h4 id="org74d45f9"><span class="section-number-4">8.1.7</span> Coverage</h4>
+<div id="outline-container-orgcc78c90" class="outline-4">
+<h4 id="orgcc78c90"><span class="section-number-4">8.1.7</span> Coverage</h4>
 <div class="outline-text-4" id="text-8-1-7">
 <p>
 Coverage is the metric used to measure the extent to which  testing
@@ -1236,8 +1236,8 @@ the operations in the SUT</dd>
 </div>
 </div>
 
-<div id="outline-container-org0995d98" class="outline-4">
-<h4 id="org0995d98"><span class="section-number-4">8.1.8</span> Test Case Design</h4>
+<div id="outline-container-org3e9a936" class="outline-4">
+<h4 id="org3e9a936"><span class="section-number-4">8.1.8</span> Test Case Design</h4>
 <div class="outline-text-4" id="text-8-1-8">
 <dl class="org-dl">
 <dt>black-box</dt><dd>designed exclusively based on the SUT's specified
@@ -1279,12 +1279,12 @@ Other heuristics include:
 </div>
 </div>
 </div>
-<div id="outline-container-orgcbea78d" class="outline-2">
-<h2 id="orgcbea78d"><span class="section-number-2">9</span> Software Engineering Principles</h2>
+<div id="outline-container-org8306e46" class="outline-2">
+<h2 id="org8306e46"><span class="section-number-2">9</span> Software Engineering Principles</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org411c821" class="outline-4">
-<h4 id="org411c821"><span class="section-number-4">9.0.1</span> Law of Demeter</h4>
+<div id="outline-container-org4c6af28" class="outline-4">
+<h4 id="org4c6af28"><span class="section-number-4">9.0.1</span> Law of Demeter</h4>
 <div class="outline-text-4" id="text-9-0-1">
 <ol class="org-ol">
 <li>An object should have limited knowledge of another object</li>
@@ -1296,8 +1296,8 @@ should not be coupled to goo</li>
 </div>
 </div>
 
-<div id="outline-container-org61c7749" class="outline-4">
-<h4 id="org61c7749"><span class="section-number-4">9.0.2</span> SOLID</h4>
+<div id="outline-container-orgf486e1b" class="outline-4">
+<h4 id="orgf486e1b"><span class="section-number-4">9.0.2</span> SOLID</h4>
 <div class="outline-text-4" id="text-9-0-2">
 <dl class="org-dl">
 <dt>Single Responsibility Principle</dt><dd>every module or class should
@@ -1329,8 +1329,8 @@ necessary.</dd>
 
 
 
-<div id="outline-container-orga642c5a" class="outline-2">
-<h2 id="orga642c5a"><span class="section-number-2">10</span> Software Development Life Cycles</h2>
+<div id="outline-container-orgcd075bb" class="outline-2">
+<h2 id="orgcd075bb"><span class="section-number-2">10</span> Software Development Life Cycles</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 SDLC consists of different stages such as:
@@ -1345,8 +1345,8 @@ SDLC consists of different stages such as:
 </ul>
 </div>
 
-<div id="outline-container-org98c43a3" class="outline-4">
-<h4 id="org98c43a3"><span class="section-number-4">10.0.1</span> Sequential models</h4>
+<div id="outline-container-orgcd3361f" class="outline-4">
+<h4 id="orgcd3361f"><span class="section-number-4">10.0.1</span> Sequential models</h4>
 <div class="outline-text-4" id="text-10-0-1">
 <ol class="org-ol">
 <li>Software development as linear process</li>
@@ -1361,8 +1361,8 @@ SDLC consists of different stages such as:
 </div>
 </div>
 
-<div id="outline-container-org146c739" class="outline-4">
-<h4 id="iterative-models"><a id="org146c739"></a><span class="section-number-4">10.0.2</span> Iterative models</h4>
+<div id="outline-container-org3c7f75d" class="outline-4">
+<h4 id="iterative-models"><a id="org3c7f75d"></a><span class="section-number-4">10.0.2</span> Iterative models</h4>
 <div class="outline-text-4" id="text-iterative-models">
 <ol class="org-ol">
 <li>Several iterations</li>
@@ -1379,8 +1379,8 @@ depth-first (Flesh out some components at a time)</li>
 </div>
 </div>
 
-<div id="outline-container-org1493365" class="outline-4">
-<h4 id="org1493365"><span class="section-number-4">10.0.3</span> Agile models</h4>
+<div id="outline-container-org6c1159f" class="outline-4">
+<h4 id="org6c1159f"><span class="section-number-4">10.0.3</span> Agile models</h4>
 <div class="outline-text-4" id="text-10-0-3">
 <ul class="org-ul">
 <li>Individuals and interactions over processes and tools</li>
@@ -1398,12 +1398,12 @@ members</li>
 </div>
 </div>
 
-<div id="outline-container-orgecb55d1" class="outline-3">
-<h3 id="orgecb55d1"><span class="section-number-3">10.1</span> Popular SDLC process models</h3>
+<div id="outline-container-org61cae5a" class="outline-3">
+<h3 id="org61cae5a"><span class="section-number-3">10.1</span> Popular SDLC process models</h3>
 <div class="outline-text-3" id="text-10-1">
 </div>
-<div id="outline-container-orgfcc90f2" class="outline-4">
-<h4 id="orgfcc90f2"><span class="section-number-4">10.1.1</span> Scrum</h4>
+<div id="outline-container-org59cfeb9" class="outline-4">
+<h4 id="org59cfeb9"><span class="section-number-4">10.1.1</span> Scrum</h4>
 <div class="outline-text-4" id="text-10-1-1">
 <ul class="org-ul">
 <li>Scrum master</li>
@@ -1432,8 +1432,8 @@ members</li>
 </div>
 </div>
 
-<div id="outline-container-orgf4d0c42" class="outline-4">
-<h4 id="orgf4d0c42"><span class="section-number-4">10.1.2</span> Extreme Programming (XP)</h4>
+<div id="outline-container-orgfdb5672" class="outline-4">
+<h4 id="orgfdb5672"><span class="section-number-4">10.1.2</span> Extreme Programming (XP)</h4>
 <div class="outline-text-4" id="text-10-1-2">
 <ol class="org-ol">
 <li>Stresses customer satisfaction</li>
@@ -1452,8 +1452,8 @@ members</li>
 </div>
 </div>
 
-<div id="outline-container-org0077da2" class="outline-4">
-<h4 id="org0077da2"><span class="section-number-4">10.1.3</span> Unified process</h4>
+<div id="outline-container-org71b8279" class="outline-4">
+<h4 id="org71b8279"><span class="section-number-4">10.1.3</span> Unified process</h4>
 <div class="outline-text-4" id="text-10-1-3">
 <ul class="org-ul">
 <li>Inception
@@ -1483,8 +1483,8 @@ members</li>
 </div>
 </div>
 
-<div id="outline-container-org474e207" class="outline-3">
-<h3 id="org474e207"><span class="section-number-3">10.2</span> CMMI (Capability Maturity Model Integration)</h3>
+<div id="outline-container-org7819681" class="outline-3">
+<h3 id="org7819681"><span class="section-number-3">10.2</span> CMMI (Capability Maturity Model Integration)</h3>
 <div class="outline-text-3" id="text-10-2">
 <ul class="org-ul">
 <li>Determine if process of an organisation is at a certain maturity level</li>
@@ -1515,7 +1515,7 @@ members</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Derrick Chua, Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 11:12</p>
+<p class="date">Created: 2018-08-15 Wed 12:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 11:12 -->
+<!-- 2018-08-15 Wed 12:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Information Theory</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -91,33 +91,33 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf103623">1. Introduction</a>
+<li><a href="#org79577bf">1. Introduction</a>
 <ul>
-<li><a href="#org3a4f547">1.1. How can we achieve perfect communication over an imperfect noisy communication channel?</a></li>
-<li><a href="#orgaafdea3">1.2. Error-correcting codes for binary symmetric channels</a>
+<li><a href="#org32137d6">1.1. How can we achieve perfect communication over an imperfect noisy communication channel?</a></li>
+<li><a href="#orgedda667">1.2. Error-correcting codes for binary symmetric channels</a>
 <ul>
-<li><a href="#orgc4cbdc3">1.2.1. Repetition codes</a></li>
-<li><a href="#org44f181f">1.2.2. Block codes - the (7,4) Hamming Code</a>
+<li><a href="#orgdf9ba79">1.2.1. Repetition codes</a></li>
+<li><a href="#orgcfe7390">1.2.2. Block codes - the (7,4) Hamming Code</a>
 <ul>
-<li><a href="#org36492a5">1.2.2.1. Decoding for linear codes: syndrome decoding</a></li>
+<li><a href="#orge9b3980">1.2.2.1. Decoding for linear codes: syndrome decoding</a></li>
 </ul>
 </li>
-<li><a href="#org9a76f41">1.2.3. What performance can the best codes achieve?</a></li>
+<li><a href="#orgadcadfc">1.2.3. What performance can the best codes achieve?</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orge4ab638">2. Shannon Information Content</a></li>
-<li><a href="#orgd9550e2">3. Source Coding Theorem</a></li>
+<li><a href="#org3b264e8">2. Shannon Information Content</a></li>
+<li><a href="#org421a20d">3. Source Coding Theorem</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgf103623" class="outline-2">
-<h2 id="orgf103623"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-org79577bf" class="outline-2">
+<h2 id="org79577bf"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org3a4f547" class="outline-3">
-<h3 id="org3a4f547"><span class="section-number-3">1.1</span> How can we achieve perfect communication over an imperfect noisy communication channel?</h3>
+<div id="outline-container-org32137d6" class="outline-3">
+<h3 id="org32137d6"><span class="section-number-3">1.1</span> How can we achieve perfect communication over an imperfect noisy communication channel?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 The physical solution is to improve the characteristics of the
@@ -148,12 +148,12 @@ creation of practical encoding and decoding systems.
 </p>
 </div>
 </div>
-<div id="outline-container-orgaafdea3" class="outline-3">
-<h3 id="orgaafdea3"><span class="section-number-3">1.2</span> Error-correcting codes for binary symmetric channels</h3>
+<div id="outline-container-orgedda667" class="outline-3">
+<h3 id="orgedda667"><span class="section-number-3">1.2</span> Error-correcting codes for binary symmetric channels</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-orgc4cbdc3" class="outline-4">
-<h4 id="orgc4cbdc3"><span class="section-number-4">1.2.1</span> Repetition codes</h4>
+<div id="outline-container-orgdf9ba79" class="outline-4">
+<h4 id="orgdf9ba79"><span class="section-number-4">1.2.1</span> Repetition codes</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
 Key idea: repeat every bit of the message a prearranged number of
@@ -177,8 +177,8 @@ of 3.
 </p>
 </div>
 </div>
-<div id="outline-container-org44f181f" class="outline-4">
-<h4 id="org44f181f"><span class="section-number-4">1.2.2</span> Block codes - the (7,4) Hamming Code</h4>
+<div id="outline-container-orgcfe7390" class="outline-4">
+<h4 id="orgcfe7390"><span class="section-number-4">1.2.2</span> Block codes - the (7,4) Hamming Code</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 Key idea: add redundancy to blocks of data instead of encoding one bit
@@ -204,8 +204,8 @@ as a matrix:
 where \(G\) is the generator matrix of the code.
 </p>
 </div>
-<div id="outline-container-org36492a5" class="outline-5">
-<h5 id="org36492a5"><span class="section-number-5">1.2.2.1</span> Decoding for linear codes: syndrome decoding</h5>
+<div id="outline-container-orge9b3980" class="outline-5">
+<h5 id="orge9b3980"><span class="section-number-5">1.2.2.1</span> Decoding for linear codes: syndrome decoding</h5>
 <div class="outline-text-5" id="text-1-2-2-1">
 <p>
 The decoding problem for linear codes can also be described in terms
@@ -241,8 +241,8 @@ decoding is given by reading its first four bits.
 </div>
 </div>
 </div>
-<div id="outline-container-org9a76f41" class="outline-4">
-<h4 id="org9a76f41"><span class="section-number-4">1.2.3</span> What performance can the best codes achieve?</h4>
+<div id="outline-container-orgadcadfc" class="outline-4">
+<h4 id="orgadcadfc"><span class="section-number-4">1.2.3</span> What performance can the best codes achieve?</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
 We consider the <code>(R, p_b)</code> plane, where \(R\) is the rate,
@@ -269,8 +269,8 @@ n
 </div>
 </div>
 </div>
-<div id="outline-container-orge4ab638" class="outline-2">
-<h2 id="orge4ab638"><span class="section-number-2">2</span> Shannon Information Content</h2>
+<div id="outline-container-org3b264e8" class="outline-2">
+<h2 id="org3b264e8"><span class="section-number-2">2</span> Shannon Information Content</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A set of size S can be communicated with \(\ceil{\log S}\) bits.
@@ -280,8 +280,8 @@ A set of size S can be communicated with \(\ceil{\log S}\) bits.
 
 
 
-<div id="outline-container-orgd9550e2" class="outline-2">
-<h2 id="orgd9550e2"><span class="section-number-2">3</span> Source Coding Theorem</h2>
+<div id="outline-container-org421a20d" class="outline-2">
+<h2 id="org421a20d"><span class="section-number-2">3</span> Source Coding Theorem</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 We can compress N outcomes from a source \(X\) into roughly \(NH(X)\)
@@ -296,7 +296,7 @@ This is provable by counting the typical set.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 11:12</p>
+<p class="date">Created: 2018-08-15 Wed 12:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

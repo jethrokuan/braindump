@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 12:05 -->
+<!-- 2018-08-15 Wed 12:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -91,44 +91,44 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3b906b9">1. Introduction</a>
+<li><a href="#org2a4dfc2">1. Introduction</a>
 <ul>
-<li><a href="#org858fd2e">1.1. Formal Proofs</a></li>
-<li><a href="#orgccf482f">1.2. Inductive Proofs</a></li>
-<li><a href="#org2a8cb84">1.3. Structural Inductions</a></li>
+<li><a href="#org67b4e2c">1.1. Formal Proofs</a></li>
+<li><a href="#org92484ef">1.2. Inductive Proofs</a></li>
+<li><a href="#org58354f5">1.3. Structural Inductions</a></li>
 </ul>
 </li>
-<li><a href="#org8b1e884">2. Automata Theory</a>
+<li><a href="#org89729e9">2. Automata Theory</a>
 <ul>
-<li><a href="#org97a9e21">2.1. Definitions</a></li>
+<li><a href="#org6db36ec">2.1. Definitions</a></li>
 </ul>
 </li>
-<li><a href="#org2b03b35">3. Finite Automata</a>
+<li><a href="#org722e711">3. Finite Automata</a>
 <ul>
-<li><a href="#org7b1857d">3.1. Deterministic Finite Automata</a>
+<li><a href="#org85c2601">3.1. Deterministic Finite Automata</a>
 <ul>
-<li><a href="#org97cefd1">3.1.1. Simpler Notations</a></li>
+<li><a href="#org2f9988e">3.1.1. Simpler Notations</a></li>
 </ul>
 </li>
-<li><a href="#org935332d">3.2. Language of a DFA</a></li>
-<li><a href="#org0da2808">3.3. Extending Transition Function to Strings</a></li>
+<li><a href="#org7538d73">3.2. Language of a DFA</a></li>
+<li><a href="#orga570119">3.3. Extending Transition Function to Strings</a></li>
 </ul>
 </li>
-<li><a href="#org68d30bc">4. Nondeterministic Finite Automata</a>
+<li><a href="#org321d4ec">4. Nondeterministic Finite Automata</a>
 <ul>
-<li><a href="#org5ec770f">4.1. Definition</a></li>
-<li><a href="#org55dede1">4.2. The Language of an NFA</a></li>
-<li><a href="#orgdb7941f">4.3. The Equivalence of DFA and NFA</a></li>
-<li><a href="#org1ab69d8">4.4. Finite Automata with Epsilon-Transitions</a></li>
-<li><a href="#orga20e363">4.5. Epsilon-Closures</a></li>
-<li><a href="#org4985c9e">4.6. Eliminating $&epsilon;$-Transitions</a></li>
+<li><a href="#org62fab09">4.1. Definition</a></li>
+<li><a href="#org44c81bc">4.2. The Language of an NFA</a></li>
+<li><a href="#org23ae0bf">4.3. The Equivalence of DFA and NFA</a></li>
+<li><a href="#org482e44b">4.4. Finite Automata with Epsilon-Transitions</a></li>
+<li><a href="#orgb9296f7">4.5. Epsilon-Closures</a></li>
+<li><a href="#orgebc5666">4.6. Eliminating $&epsilon;$-Transitions</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org3b906b9" class="outline-2">
-<h2 id="org3b906b9"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-org2a4dfc2" class="outline-2">
+<h2 id="org2a4dfc2"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Finite automata are a useful model for many kinds of important
@@ -158,8 +158,8 @@ the inductive and deductive type.
 </p>
 </div>
 
-<div id="outline-container-org858fd2e" class="outline-3">
-<h3 id="org858fd2e"><span class="section-number-3">1.1</span> Formal Proofs</h3>
+<div id="outline-container-org67b4e2c" class="outline-3">
+<h3 id="org67b4e2c"><span class="section-number-3">1.1</span> Formal Proofs</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Here the more common proof requirements are here:
@@ -176,8 +176,8 @@ an iff statement.
 </div>
 </div>
 
-<div id="outline-container-orgccf482f" class="outline-3">
-<h3 id="orgccf482f"><span class="section-number-3">1.2</span> Inductive Proofs</h3>
+<div id="outline-container-org92484ef" class="outline-3">
+<h3 id="org92484ef"><span class="section-number-3">1.2</span> Inductive Proofs</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 Suppose we are given a statement \(S(n)\) to prove. The inductive
@@ -191,8 +191,8 @@ approach involves:
 </div>
 </div>
 
-<div id="outline-container-org2a8cb84" class="outline-3">
-<h3 id="org2a8cb84"><span class="section-number-3">1.3</span> Structural Inductions</h3>
+<div id="outline-container-org58354f5" class="outline-3">
+<h3 id="org58354f5"><span class="section-number-3">1.3</span> Structural Inductions</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 We can sometimes prove statements by construction. This is often the
@@ -205,12 +205,12 @@ construction, the construction \(X_i\) is valid.
 </div>
 </div>
 
-<div id="outline-container-org8b1e884" class="outline-2">
-<h2 id="org8b1e884"><span class="section-number-2">2</span> Automata Theory</h2>
+<div id="outline-container-org89729e9" class="outline-2">
+<h2 id="org89729e9"><span class="section-number-2">2</span> Automata Theory</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org97a9e21" class="outline-3">
-<h3 id="org97a9e21"><span class="section-number-3">2.1</span> Definitions</h3>
+<div id="outline-container-org6db36ec" class="outline-3">
+<h3 id="org6db36ec"><span class="section-number-3">2.1</span> Definitions</h3>
 <div class="outline-text-3" id="text-2-1">
 <dl class="org-dl">
 <dt>alphabet</dt><dd>An <i>alphabet</i> is a finite, nonempty set of symbols. E.g.
@@ -230,8 +230,8 @@ string is a member of some particular language.</dd>
 </div>
 </div>
 
-<div id="outline-container-org2b03b35" class="outline-2">
-<h2 id="org2b03b35"><span class="section-number-2">3</span> Finite Automata</h2>
+<div id="outline-container-org722e711" class="outline-2">
+<h2 id="org722e711"><span class="section-number-2">3</span> Finite Automata</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 An automata has:
@@ -254,8 +254,8 @@ state. Deterministic Finite Automata is often abbrieviated with <i>DFA</i>.
 </p>
 </div>
 
-<div id="outline-container-org7b1857d" class="outline-3">
-<h3 id="org7b1857d"><span class="section-number-3">3.1</span> Deterministic Finite Automata</h3>
+<div id="outline-container-org85c2601" class="outline-3">
+<h3 id="org85c2601"><span class="section-number-3">3.1</span> Deterministic Finite Automata</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 A <i>dfa</i> consists of:
@@ -282,8 +282,8 @@ In proofs, we often talk about a DFA in "five-tuple" notation:
 \end{equation}
 </div>
 
-<div id="outline-container-org97cefd1" class="outline-4">
-<h4 id="org97cefd1"><span class="section-number-4">3.1.1</span> Simpler Notations</h4>
+<div id="outline-container-org2f9988e" class="outline-4">
+<h4 id="org2f9988e"><span class="section-number-4">3.1.1</span> Simpler Notations</h4>
 <div class="outline-text-4" id="text-3-1-1">
 <p>
 The two preferred notation for describing automata are:
@@ -312,8 +312,8 @@ implication tells us the states and the input alphabet.</dd>
 </div>
 </div>
 
-<div id="outline-container-org935332d" class="outline-3">
-<h3 id="org935332d"><span class="section-number-3">3.2</span> Language of a DFA</h3>
+<div id="outline-container-org7538d73" class="outline-3">
+<h3 id="org7538d73"><span class="section-number-3">3.2</span> Language of a DFA</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 We can define the <i>language</i> of a DFA \(A = \left(Q, \Sigma, q_0, F\right)\).
@@ -331,8 +331,8 @@ state \(q_0\) to one of the accepting states.
 </div>
 </div>
 
-<div id="outline-container-org0da2808" class="outline-3">
-<h3 id="org0da2808"><span class="section-number-3">3.3</span> Extending Transition Function to Strings</h3>
+<div id="outline-container-orga570119" class="outline-3">
+<h3 id="orga570119"><span class="section-number-3">3.3</span> Extending Transition Function to Strings</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Basis:
@@ -350,8 +350,8 @@ Induction:
 </div>
 </div>
 
-<div id="outline-container-org68d30bc" class="outline-2">
-<h2 id="org68d30bc"><span class="section-number-2">4</span> Nondeterministic Finite Automata</h2>
+<div id="outline-container-org321d4ec" class="outline-2">
+<h2 id="org321d4ec"><span class="section-number-2">4</span> Nondeterministic Finite Automata</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 A NFA has can be in several states at once, and this ability is
@@ -362,8 +362,8 @@ have exponentially more states than the NFA.
 </p>
 </div>
 
-<div id="outline-container-org5ec770f" class="outline-3">
-<h3 id="org5ec770f"><span class="section-number-3">4.1</span> Definition</h3>
+<div id="outline-container-org62fab09" class="outline-3">
+<h3 id="org62fab09"><span class="section-number-3">4.1</span> Definition</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 An NFA has:
@@ -380,8 +380,8 @@ in \(\Sigma\) as arguments and returns a <b>subset</b> of \(Q\).</li>
 </div>
 </div>
 
-<div id="outline-container-org55dede1" class="outline-3">
-<h3 id="org55dede1"><span class="section-number-3">4.2</span> The Language of an NFA</h3>
+<div id="outline-container-org44c81bc" class="outline-3">
+<h3 id="org44c81bc"><span class="section-number-3">4.2</span> The Language of an NFA</h3>
 <div class="outline-text-3" id="text-4-2">
 <p>
 if \(A = (Q, \Sigma, \delta, q_0, F)\) is an NFA, then
@@ -398,8 +398,8 @@ That is, \(L(A)\) is the set of strings \(w\) in \(\Sigma^*\) such that
 </div>
 </div>
 
-<div id="outline-container-orgdb7941f" class="outline-3">
-<h3 id="orgdb7941f"><span class="section-number-3">4.3</span> The Equivalence of DFA and NFA</h3>
+<div id="outline-container-org23ae0bf" class="outline-3">
+<h3 id="org23ae0bf"><span class="section-number-3">4.3</span> The Equivalence of DFA and NFA</h3>
 <div class="outline-text-3" id="text-4-3">
 
 <div class="figure">
@@ -409,8 +409,8 @@ That is, \(L(A)\) is the set of strings \(w\) in \(\Sigma^*\) such that
 </div>
 </div>
 
-<div id="outline-container-org1ab69d8" class="outline-3">
-<h3 id="org1ab69d8"><span class="section-number-3">4.4</span> Finite Automata with Epsilon-Transitions</h3>
+<div id="outline-container-org482e44b" class="outline-3">
+<h3 id="org482e44b"><span class="section-number-3">4.4</span> Finite Automata with Epsilon-Transitions</h3>
 <div class="outline-text-3" id="text-4-4">
 <p>
 Transitions on \(\epsilon\), the empty string, allow NFAs to make a transition
@@ -432,8 +432,8 @@ Of particular interest is the transition from \(q_0\) to \(q_1\), where the
 </div>
 </div>
 
-<div id="outline-container-orga20e363" class="outline-3">
-<h3 id="orga20e363"><span class="section-number-3">4.5</span> Epsilon-Closures</h3>
+<div id="outline-container-orgb9296f7" class="outline-3">
+<h3 id="orgb9296f7"><span class="section-number-3">4.5</span> Epsilon-Closures</h3>
 <div class="outline-text-3" id="text-4-5">
 <p>
 We $&epsilon;$-close a state \(q\) by following all transitions out of \(q\) that
@@ -468,8 +468,8 @@ Then:
 </div>
 </div>
 
-<div id="outline-container-org4985c9e" class="outline-3">
-<h3 id="org4985c9e"><span class="section-number-3">4.6</span> Eliminating $&epsilon;$-Transitions</h3>
+<div id="outline-container-orgebc5666" class="outline-3">
+<h3 id="orgebc5666"><span class="section-number-3">4.6</span> Eliminating $&epsilon;$-Transitions</h3>
 <div class="outline-text-3" id="text-4-6">
 <p>
 Given any $&epsilon;$-NFA \(E\), we can find a DFA \(D\) that accepts the same
@@ -504,7 +504,7 @@ state of \(E\). $F<sub>D</sub> = \{S | S \text{ is in } Q<sub>D</sub> \text{ and
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 12:05</p>
+<p class="date">Created: 2018-08-15 Wed 12:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

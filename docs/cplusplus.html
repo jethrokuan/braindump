@@ -3,18 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 11:12 -->
+<!-- 2018-08-15 Wed 12:12 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>C++</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
-<link rel="stylesheet" type="text/css" href="http://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
-<script type="text/javascript" src="http://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -91,26 +91,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgab1c84b">1. Modern C++</a>
+<li><a href="#orga7aab12">1. Modern C++</a>
 <ul>
-<li><a href="#org270f198">1.1. Use non-member begin and end</a></li>
-<li><a href="#org63500ae">1.2. Lambda functions</a></li>
-<li><a href="#org73d6259">1.3. using</a></li>
-<li><a href="#org15df731">1.4. avoid <code>endl</code></a></li>
-<li><a href="#org56014ad">1.5. Prefer using STL array or vector instead of a C array</a></li>
+<li><a href="#org266ee94">1.1. Use non-member begin and end</a></li>
+<li><a href="#org0de0db9">1.2. Lambda functions</a></li>
+<li><a href="#org4ed1832">1.3. using</a></li>
+<li><a href="#org0289f35">1.4. avoid <code>endl</code></a></li>
+<li><a href="#org1102832">1.5. Prefer using STL array or vector instead of a C array</a></li>
 </ul>
 </li>
-<li><a href="#org58f1f62">2. Array Decaying</a></li>
-<li><a href="#org33897be">3. cin/cout vs scanf/printf</a></li>
-<li><a href="#orge90b3e1">4. hypot</a></li>
-<li><a href="#org032e4ed">5. fgets</a></li>
-<li><a href="#orgfd127e6">6. Algorithms in C++</a></li>
-<li><a href="#org012338d">7. Books to read</a></li>
+<li><a href="#org747fe71">2. Array Decaying</a></li>
+<li><a href="#org2bf203a">3. cin/cout vs scanf/printf</a></li>
+<li><a href="#org2ee6f8e">4. hypot</a></li>
+<li><a href="#org0442b90">5. fgets</a></li>
+<li><a href="#org3a5defa">6. Algorithms in C++</a></li>
+<li><a href="#orgdeb458c">7. Books to read</a></li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgab1c84b" class="outline-2">
-<h2 id="orgab1c84b"><span class="section-number-2">1</span> Modern C++</h2>
+<div id="outline-container-orga7aab12" class="outline-2">
+<h2 id="orga7aab12"><span class="section-number-2">1</span> Modern C++</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Follow the guidelines:
@@ -118,8 +118,8 @@ Follow the guidelines:
 </p>
 </div>
 
-<div id="outline-container-org270f198" class="outline-3">
-<h3 id="org270f198"><span class="section-number-3">1.1</span> Use non-member begin and end</h3>
+<div id="outline-container-org266ee94" class="outline-3">
+<h3 id="org266ee94"><span class="section-number-3">1.1</span> Use non-member begin and end</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 non-member begin and end supports more containers, such as arrays.
@@ -140,8 +140,8 @@ sort( begin(a), end(a) );
 </div>
 </div>
 
-<div id="outline-container-org63500ae" class="outline-3">
-<h3 id="org63500ae"><span class="section-number-3">1.2</span> Lambda functions</h3>
+<div id="outline-container-org0de0db9" class="outline-3">
+<h3 id="org0de0db9"><span class="section-number-3">1.2</span> Lambda functions</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 variables get passed through the square brackets.
@@ -157,8 +157,8 @@ std::for_each(myVec.begin(), myVec.end(), [factor](int&amp; elem){
 </div>
 </div>
 
-<div id="outline-container-org73d6259" class="outline-3">
-<h3 id="org73d6259"><span class="section-number-3">1.3</span> using</h3>
+<div id="outline-container-org4ed1832" class="outline-3">
+<h3 id="org4ed1832"><span class="section-number-3">1.3</span> using</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 using is like typedef, but has less quirks.
@@ -177,8 +177,8 @@ public:
 </div>
 </div>
 </div>
-<div id="outline-container-org15df731" class="outline-3">
-<h3 id="org15df731"><span class="section-number-3">1.4</span> avoid <code>endl</code></h3>
+<div id="outline-container-org0289f35" class="outline-3">
+<h3 id="org0289f35"><span class="section-number-3">1.4</span> avoid <code>endl</code></h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 The endl manipulator is mostly equivalent to '\n' and "\n"; as most
@@ -188,8 +188,8 @@ This slowdown can be significant compared to printf-style output.
 </div>
 </div>
 
-<div id="outline-container-org56014ad" class="outline-3">
-<h3 id="org56014ad"><span class="section-number-3">1.5</span> Prefer using STL array or vector instead of a C array</h3>
+<div id="outline-container-org1102832" class="outline-3">
+<h3 id="org1102832"><span class="section-number-3">1.5</span> Prefer using STL array or vector instead of a C array</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 C arrays are less safe, and have no advantages over array and vector.
@@ -203,8 +203,8 @@ additionally can change its size and handles memory allocation.
 </div>
 </div>
 
-<div id="outline-container-org58f1f62" class="outline-2">
-<h2 id="org58f1f62"><span class="section-number-2">2</span> Array Decaying</h2>
+<div id="outline-container-org747fe71" class="outline-2">
+<h2 id="org747fe71"><span class="section-number-2">2</span> Array Decaying</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 It's said that arrays "decay" into pointers. A C++ array declared as
@@ -220,8 +220,8 @@ dimension; numbers decay into int* by losing the dimension information
 </div>
 </div>
 
-<div id="outline-container-org33897be" class="outline-2">
-<h2 id="org33897be"><span class="section-number-2">3</span> cin/cout vs scanf/printf</h2>
+<div id="outline-container-org2bf203a" class="outline-2">
+<h2 id="org2bf203a"><span class="section-number-2">3</span> cin/cout vs scanf/printf</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 cin/cout is actually faster; but C++ slows it down to sync it with
@@ -234,16 +234,16 @@ speed with:
 </div>
 </div>
 </div>
-<div id="outline-container-orge90b3e1" class="outline-2">
-<h2 id="orge90b3e1"><span class="section-number-2">4</span> hypot</h2>
+<div id="outline-container-org2ee6f8e" class="outline-2">
+<h2 id="org2ee6f8e"><span class="section-number-2">4</span> hypot</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 hypot(x,y) -&gt; sqrt(x<sup>2</sup> + y<sup>2</sup>)
 </p>
 </div>
 </div>
-<div id="outline-container-org032e4ed" class="outline-2">
-<h2 id="org032e4ed"><span class="section-number-2">5</span> fgets</h2>
+<div id="outline-container-org0442b90" class="outline-2">
+<h2 id="org0442b90"><span class="section-number-2">5</span> fgets</h2>
 <div class="outline-text-2" id="text-5">
 <div class="org-src-container">
 <pre class="src src-c++">char *fgets(char *str, int n, FILE *stream)
@@ -257,16 +257,16 @@ fgets(str, 100, stdin);
 </div>
 </div>
 </div>
-<div id="outline-container-orgfd127e6" class="outline-2">
-<h2 id="orgfd127e6"><span class="section-number-2">6</span> Algorithms in C++</h2>
+<div id="outline-container-org3a5defa" class="outline-2">
+<h2 id="org3a5defa"><span class="section-number-2">6</span> Algorithms in C++</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <a href="http://www.techiedelight.com/data-structures-and-algorithms-interview-questions-stl/">http://www.techiedelight.com/data-structures-and-algorithms-interview-questions-stl/</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org012338d" class="outline-2">
-<h2 id="org012338d"><span class="section-number-2">7</span> Books to read</h2>
+<div id="outline-container-orgdeb458c" class="outline-2">
+<h2 id="orgdeb458c"><span class="section-number-2">7</span> Books to read</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 <a href="http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list">http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list</a>
@@ -276,7 +276,7 @@ fgets(str, 100, stdin);
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 11:12</p>
+<p class="date">Created: 2018-08-15 Wed 12:12</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
