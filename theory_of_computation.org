@@ -152,6 +152,6 @@ $\hat{\delta}(q_0, w)$.
 
 ** The Equivalence of DFA and NFA
 
-
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-08-14 13:44:15
 [[file:images/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png]]
+

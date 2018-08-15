@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-14 Tue 12:57 -->
+<!-- 2018-08-15 Wed 11:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Machine Learning</title>
@@ -91,79 +91,79 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org77fdf92">1. The Learning Problem</a>
+<li><a href="#org7931b63">1. The Learning Problem</a>
 <ul>
-<li><a href="#orge08cdec">1.1. What is Learning?</a>
+<li><a href="#org59b6c5f">1.1. What is Learning?</a>
 <ul>
-<li><a href="#org2ac22a5">1.1.1. Inductive Bias</a></li>
+<li><a href="#org56e07dc">1.1.1. Inductive Bias</a></li>
 </ul>
 </li>
-<li><a href="#orgce440d9">1.2. Types of Learning</a>
+<li><a href="#org6bc7cf0">1.2. Types of Learning</a>
 <ul>
-<li><a href="#org93029d0">1.2.1. Active vs Passive Learning</a></li>
-<li><a href="#orgb19428b">1.2.2. Online vs Batch Learning</a></li>
-<li><a href="#orge6e4975">1.2.3. Reinforcement Learning</a></li>
-<li><a href="#org5bf03e4">1.2.4. Supervised Learning</a>
+<li><a href="#org39cad50">1.2.1. Active vs Passive Learning</a></li>
+<li><a href="#org470a9cf">1.2.2. Online vs Batch Learning</a></li>
+<li><a href="#org359d579">1.2.3. Reinforcement Learning</a></li>
+<li><a href="#org9375360">1.2.4. Supervised Learning</a>
 <ul>
-<li><a href="#org2a2a551">1.2.4.1. Measure of success</a></li>
-<li><a href="#org002947c">1.2.4.2. Empirical Risk Minimisation (ERM)</a></li>
-<li><a href="#org6220876">1.2.4.3. Assumptions Made ⚠</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org0eee623">1.3. Is Learning Feasible?</a>
-<ul>
-<li><a href="#orga5b9000">1.3.1. Probabilistic View</a></li>
+<li><a href="#org4579094">1.2.4.1. Measure of success</a></li>
+<li><a href="#orgd89341c">1.2.4.2. Empirical Risk Minimisation (ERM)</a></li>
+<li><a href="#orgb7be907">1.2.4.3. Assumptions Made ⚠</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org4524d91">2. Training vs Testing</a>
+<li><a href="#org0f35298">1.3. Is Learning Feasible?</a>
 <ul>
-<li><a href="#orgff9d183">2.1. Generalisation Error</a></li>
-<li><a href="#org0d42254">2.2. Growth Function</a></li>
-</ul>
-</li>
-<li><a href="#orgd3a6464">3. Concept Learning</a>
-<ul>
-<li><a href="#orgc10b837">3.1. Hypothesis</a></li>
-<li><a href="#org90c2392">3.2. Inductive Learning</a></li>
-<li><a href="#org0a7bb3f">3.3. Concept Learning is Search</a></li>
-<li><a href="#org821ff31">3.4. Exploit Structure in Concept Learning</a></li>
-<li><a href="#orgea155ad">3.5. Find-S Algorithm</a>
-<ul>
-<li><a href="#orgb4b33c3">3.5.1. Limitations</a></li>
-</ul>
-</li>
-<li><a href="#org7c44d61">3.6. Version Space</a></li>
-<li><a href="#org236d151">3.7. List-Then-Eliminate Algorithm</a></li>
-<li><a href="#org7d2011a">3.8. Candidate-Elimination Algorithm</a></li>
-</ul>
-</li>
-<li><a href="#org1599255">4. Decision Tree Learning</a>
-<ul>
-<li><a href="#org592e514">4.1. ID3 algorithm</a>
-<ul>
-<li><a href="#orgd513fac">4.1.1. Which is the best attribute?</a></li>
-<li><a href="#org0d5576c">4.1.2. Hypothesis Space Search</a></li>
-<li><a href="#orgcf6945f">4.1.3. Inductive bias</a></li>
-<li><a href="#org2e719f1">4.1.4. Why Prefer Shorter Hypotheses?</a></li>
+<li><a href="#org4b5840f">1.3.1. Probabilistic View</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org849e715">5. Density Estimation</a></li>
-<li><a href="#orgce7edda">6. Unsupervised Learning</a>
+<li><a href="#org97bad81">2. Training vs Testing</a>
 <ul>
-<li><a href="#orgfc15585">6.1. K-means Clustering</a></li>
-<li><a href="#orgc5e7250">6.2. Gaussian Mixture Model</a></li>
-<li><a href="#orga3140f3">6.3. Expectation Maximization</a></li>
+<li><a href="#orge3469a7">2.1. Generalisation Error</a></li>
+<li><a href="#orgd1f5a3a">2.2. Growth Function</a></li>
 </ul>
 </li>
-<li><a href="#orgcbddfde">7. Refile</a>
+<li><a href="#org0f76a45">3. Concept Learning</a>
 <ul>
-<li><a href="#orgadbedb4">7.1. Data Compression</a></li>
+<li><a href="#org5587dac">3.1. Hypothesis</a></li>
+<li><a href="#org910880f">3.2. Inductive Learning</a></li>
+<li><a href="#orgb48f9f2">3.3. Concept Learning is Search</a></li>
+<li><a href="#org90a65e3">3.4. Exploit Structure in Concept Learning</a></li>
+<li><a href="#org919e0b0">3.5. Find-S Algorithm</a>
+<ul>
+<li><a href="#orge64b48c">3.5.1. Limitations</a></li>
+</ul>
+</li>
+<li><a href="#org88977a4">3.6. Version Space</a></li>
+<li><a href="#orged36301">3.7. List-Then-Eliminate Algorithm</a></li>
+<li><a href="#org4a8a246">3.8. Candidate-Elimination Algorithm</a></li>
+</ul>
+</li>
+<li><a href="#orgca5b044">4. Decision Tree Learning</a>
+<ul>
+<li><a href="#org0a1dc84">4.1. ID3 algorithm</a>
+<ul>
+<li><a href="#orgef10ce5">4.1.1. Which is the best attribute?</a></li>
+<li><a href="#orgcac952d">4.1.2. Hypothesis Space Search</a></li>
+<li><a href="#orgeeb0e05">4.1.3. Inductive bias</a></li>
+<li><a href="#orgd45b72f">4.1.4. Why Prefer Shorter Hypotheses?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org399347d">5. Density Estimation</a></li>
+<li><a href="#orga191766">6. Unsupervised Learning</a>
+<ul>
+<li><a href="#orgc4fca96">6.1. K-means Clustering</a></li>
+<li><a href="#orgf5409aa">6.2. Gaussian Mixture Model</a></li>
+<li><a href="#org505f209">6.3. Expectation Maximization</a></li>
+</ul>
+</li>
+<li><a href="#orga59f865">7. Refile</a>
+<ul>
+<li><a href="#org2827fce">7.1. Data Compression</a></li>
 </ul>
 </li>
 </ul>
@@ -173,21 +173,21 @@ for the JavaScript code in this tag.
 -<b>- mode: Org; org-download-image-dir: "./images/ai/"; -</b>-
 </p>
 
-<div id="outline-container-org77fdf92" class="outline-2">
-<h2 id="org77fdf92"><span class="section-number-2">1</span> The Learning Problem</h2>
+<div id="outline-container-org7931b63" class="outline-2">
+<h2 id="org7931b63"><span class="section-number-2">1</span> The Learning Problem</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-orge08cdec" class="outline-3">
-<h3 id="orge08cdec"><span class="section-number-3">1.1</span> What is Learning?</h3>
+<div id="outline-container-org59b6c5f" class="outline-3">
+<h3 id="org59b6c5f"><span class="section-number-3">1.1</span> What is Learning?</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 An agent is said to be <i>learning</i> if it improves its performance P on
 task T based on experience/observations/data E. T must be fixed, P
-must be measurable, E must exist. See <a href="artificial_intelligence.html#orgbb92f0d">Learning Agents</a>.
+must be measurable, E must exist. See <a href="artificial_intelligence.html#org56e9ff6">Learning Agents</a>.
 </p>
 </div>
-<div id="outline-container-org2ac22a5" class="outline-4">
-<h4 id="org2ac22a5"><span class="section-number-4">1.1.1</span> Inductive Bias</h4>
+<div id="outline-container-org56e07dc" class="outline-4">
+<h4 id="org56e07dc"><span class="section-number-4">1.1.1</span> Inductive Bias</h4>
 <div class="outline-text-4" id="text-1-1-1">
 <p>
 The incorporation of prior knowledge biases the learning mechanism.
@@ -200,12 +200,12 @@ further examples.
 </div>
 </div>
 </div>
-<div id="outline-container-orgce440d9" class="outline-3">
-<h3 id="orgce440d9"><span class="section-number-3">1.2</span> Types of Learning</h3>
+<div id="outline-container-org6bc7cf0" class="outline-3">
+<h3 id="org6bc7cf0"><span class="section-number-3">1.2</span> Types of Learning</h3>
 <div class="outline-text-3" id="text-1-2">
 </div>
-<div id="outline-container-org93029d0" class="outline-4">
-<h4 id="org93029d0"><span class="section-number-4">1.2.1</span> Active vs Passive Learning</h4>
+<div id="outline-container-org39cad50" class="outline-4">
+<h4 id="org39cad50"><span class="section-number-4">1.2.1</span> Active vs Passive Learning</h4>
 <div class="outline-text-4" id="text-1-2-1">
 <p>
 An active learner interacts with the environment at training time,
@@ -214,8 +214,8 @@ learner only observes the information provided by the environment.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb19428b" class="outline-4">
-<h4 id="orgb19428b"><span class="section-number-4">1.2.2</span> Online vs Batch Learning</h4>
+<div id="outline-container-org470a9cf" class="outline-4">
+<h4 id="org470a9cf"><span class="section-number-4">1.2.2</span> Online vs Batch Learning</h4>
 <div class="outline-text-4" id="text-1-2-2">
 <p>
 In online learning, the hypothesis has to be updated each time a new
@@ -223,8 +223,8 @@ label is received.
 </p>
 </div>
 </div>
-<div id="outline-container-orge6e4975" class="outline-4">
-<h4 id="orge6e4975"><span class="section-number-4">1.2.3</span> Reinforcement Learning</h4>
+<div id="outline-container-org359d579" class="outline-4">
+<h4 id="org359d579"><span class="section-number-4">1.2.3</span> Reinforcement Learning</h4>
 <div class="outline-text-4" id="text-1-2-3">
 <p>
 Each action in a state has an associated cost and a probability
@@ -237,12 +237,12 @@ minimizes the sum of expected current and future costs.
 </p>
 </div>
 </div>
-<div id="outline-container-org5bf03e4" class="outline-4">
-<h4 id="org5bf03e4"><span class="section-number-4">1.2.4</span> Supervised Learning</h4>
+<div id="outline-container-org9375360" class="outline-4">
+<h4 id="org9375360"><span class="section-number-4">1.2.4</span> Supervised Learning</h4>
 <div class="outline-text-4" id="text-1-2-4">
 </div>
-<div id="outline-container-org2a2a551" class="outline-5">
-<h5 id="org2a2a551"><span class="section-number-5">1.2.4.1</span> Measure of success</h5>
+<div id="outline-container-org4579094" class="outline-5">
+<h5 id="org4579094"><span class="section-number-5">1.2.4.1</span> Measure of success</h5>
 <div class="outline-text-5" id="text-1-2-4-1">
 <p>
 A loss function helps measure our success. Given a set \(H\) of
@@ -265,8 +265,8 @@ or expected loss.
 </p>
 </div>
 </div>
-<div id="outline-container-org002947c" class="outline-5">
-<h5 id="org002947c"><span class="section-number-5">1.2.4.2</span> Empirical Risk Minimisation (ERM)</h5>
+<div id="outline-container-orgd89341c" class="outline-5">
+<h5 id="orgd89341c"><span class="section-number-5">1.2.4.2</span> Empirical Risk Minimisation (ERM)</h5>
 <div class="outline-text-5" id="text-1-2-4-2">
 <ul class="org-ul">
 <li>The training set error is often called the <i>empirical error</i> or
@@ -276,8 +276,8 @@ minimizes the empirical risk is a simple learning strategy.</li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org6220876" class="outline-5">
-<h5 id="org6220876"><span class="section-number-5">1.2.4.3</span> Assumptions Made ⚠</h5>
+<div id="outline-container-orgb7be907" class="outline-5">
+<h5 id="orgb7be907"><span class="section-number-5">1.2.4.3</span> Assumptions Made ⚠</h5>
 <div class="outline-text-5" id="text-1-2-4-3">
 <ol class="org-ol">
 <li>One common assumption is that the data in the data generation
@@ -305,8 +305,8 @@ lower training and test error.</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org0eee623" class="outline-3">
-<h3 id="org0eee623"><span class="section-number-3">1.3</span> Is Learning Feasible?</h3>
+<div id="outline-container-org0f35298" class="outline-3">
+<h3 id="org0f35298"><span class="section-number-3">1.3</span> Is Learning Feasible?</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 The target function \(f\) that we want to learn is unknown. The
@@ -319,8 +319,8 @@ As long as \(f\) is unknown, knowing \(D\) cannot exclude any patterns of
 \(f\) outside of \(D\), and the predictions of \(g\) would be meaningless.
 </p>
 </div>
-<div id="outline-container-orga5b9000" class="outline-4">
-<h4 id="orga5b9000"><span class="section-number-4">1.3.1</span> Probabilistic View</h4>
+<div id="outline-container-org4b5840f" class="outline-4">
+<h4 id="org4b5840f"><span class="section-number-4">1.3.1</span> Probabilistic View</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 If we accept a probabilistic answer, that is \(D\) tells us something
@@ -339,12 +339,12 @@ Therefore, we still need to ensure \(E_{in}(g) \approx 0\).
 </div>
 </div>
 
-<div id="outline-container-org4524d91" class="outline-2">
-<h2 id="org4524d91"><span class="section-number-2">2</span> Training vs Testing</h2>
+<div id="outline-container-org97bad81" class="outline-2">
+<h2 id="org97bad81"><span class="section-number-2">2</span> Training vs Testing</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-orgff9d183" class="outline-3">
-<h3 id="orgff9d183"><span class="section-number-3">2.1</span> Generalisation Error</h3>
+<div id="outline-container-orge3469a7" class="outline-3">
+<h3 id="orge3469a7"><span class="section-number-3">2.1</span> Generalisation Error</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 We can define generalisation error as the discrepancy between \(E_in\)
@@ -388,8 +388,8 @@ number, even while \(M\) is infinite.
 </p>
 </div>
 </div>
-<div id="outline-container-org0d42254" class="outline-3">
-<h3 id="org0d42254"><span class="section-number-3">2.2</span> Growth Function</h3>
+<div id="outline-container-orgd1f5a3a" class="outline-3">
+<h3 id="orgd1f5a3a"><span class="section-number-3">2.2</span> Growth Function</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 The <i>growth function</i> is the quantity that will formalize the
@@ -408,8 +408,8 @@ H(x_1, \hdots, x_n) = \left\{ h(x_1), h(x_2), \hdots, h(x_n) | h \in H \right\}
 </div>
 </div>
 
-<div id="outline-container-orgd3a6464" class="outline-2">
-<h2 id="orgd3a6464"><span class="section-number-2">3</span> Concept Learning</h2>
+<div id="outline-container-org0f76a45" class="outline-2">
+<h2 id="org0f76a45"><span class="section-number-2">3</span> Concept Learning</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 A concept is a boolean-valued function over a set of input instances
@@ -418,8 +418,8 @@ supervised learning. Infer an unknown boolean-valued function from
 training-examples.
 </p>
 </div>
-<div id="outline-container-orgc10b837" class="outline-3">
-<h3 id="orgc10b837"><span class="section-number-3">3.1</span> Hypothesis</h3>
+<div id="outline-container-org5587dac" class="outline-3">
+<h3 id="org5587dac"><span class="section-number-3">3.1</span> Hypothesis</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 There is a trade-off between <i>expressive power</i> and smaller
@@ -434,8 +434,8 @@ A hypothesis \(h\) is consistent with a set of training examples \(D\) iff
 </p>
 </div>
 </div>
-<div id="outline-container-org90c2392" class="outline-3">
-<h3 id="org90c2392"><span class="section-number-3">3.2</span> Inductive Learning</h3>
+<div id="outline-container-org910880f" class="outline-3">
+<h3 id="org910880f"><span class="section-number-3">3.2</span> Inductive Learning</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Any hypothesis found to approximate the target function well over a
@@ -444,8 +444,8 @@ target function well over other <b>unobserved examples</b>.
 </p>
 </div>
 </div>
-<div id="outline-container-org0a7bb3f" class="outline-3">
-<h3 id="org0a7bb3f"><span class="section-number-3">3.3</span> Concept Learning is Search</h3>
+<div id="outline-container-orgb48f9f2" class="outline-3">
+<h3 id="orgb48f9f2"><span class="section-number-3">3.3</span> Concept Learning is Search</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 The goal is to search for a hypothesis \(h \in H\) that is consistent
@@ -453,8 +453,8 @@ with \(D\).
 </p>
 </div>
 </div>
-<div id="outline-container-org821ff31" class="outline-3">
-<h3 id="org821ff31"><span class="section-number-3">3.4</span> Exploit Structure in Concept Learning</h3>
+<div id="outline-container-org90a65e3" class="outline-3">
+<h3 id="org90a65e3"><span class="section-number-3">3.4</span> Exploit Structure in Concept Learning</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 \(h_j\) is more general than or equal to \(h_k\) (denoted \(h_j \ge_{g}
@@ -468,8 +468,8 @@ This is relation is a <b>partial order</b>.
 </div>
 </div>
 
-<div id="outline-container-orgea155ad" class="outline-3">
-<h3 id="orgea155ad"><span class="section-number-3">3.5</span> Find-S Algorithm</h3>
+<div id="outline-container-org919e0b0" class="outline-3">
+<h3 id="org919e0b0"><span class="section-number-3">3.5</span> Find-S Algorithm</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Intuition: Start with the most specific hypothesis \(h\). Whenever it
@@ -477,8 +477,8 @@ wrongly classifies a positive training example, we "minimally"
 generalize it to satisfy its input instance.
 </p>
 </div>
-<div id="outline-container-orgb4b33c3" class="outline-4">
-<h4 id="orgb4b33c3"><span class="section-number-4">3.5.1</span> Limitations</h4>
+<div id="outline-container-orge64b48c" class="outline-4">
+<h4 id="orge64b48c"><span class="section-number-4">3.5.1</span> Limitations</h4>
 <div class="outline-text-4" id="text-3-5-1">
 <ol class="org-ol">
 <li>Can't tell whether Find-S has learnt the target concept</li>
@@ -489,8 +489,8 @@ generalize it to satisfy its input instance.
 </div>
 </div>
 </div>
-<div id="outline-container-org7c44d61" class="outline-3">
-<h3 id="org7c44d61"><span class="section-number-3">3.6</span> Version Space</h3>
+<div id="outline-container-org88977a4" class="outline-3">
+<h3 id="org88977a4"><span class="section-number-3">3.6</span> Version Space</h3>
 <div class="outline-text-3" id="text-3-6">
 \begin{equation*}
   VS_{H,D} = {h \in H | h \text{ is consistent with }D}
@@ -521,8 +521,8 @@ members of \(H\) consistent with \(D\).
 </div>
 </div>
 
-<div id="outline-container-org236d151" class="outline-3">
-<h3 id="org236d151"><span class="section-number-3">3.7</span> List-Then-Eliminate Algorithm</h3>
+<div id="outline-container-orged36301" class="outline-3">
+<h3 id="orged36301"><span class="section-number-3">3.7</span> List-Then-Eliminate Algorithm</h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 Iterate through all hypotheses in \(H\), and eliminate any hypothesis
@@ -532,8 +532,8 @@ prohibitively expensive.
 </div>
 </div>
 
-<div id="outline-container-org7d2011a" class="outline-3">
-<h3 id="org7d2011a"><span class="section-number-3">3.8</span> Candidate-Elimination Algorithm</h3>
+<div id="outline-container-org4a8a246" class="outline-3">
+<h3 id="org4a8a246"><span class="section-number-3">3.8</span> Candidate-Elimination Algorithm</h3>
 <div class="outline-text-3" id="text-3-8">
 <p>
 Start with most general and specific hypotheses. Each training example
@@ -543,8 +543,8 @@ hypotheses from version space.
 </div>
 </div>
 </div>
-<div id="outline-container-org1599255" class="outline-2">
-<h2 id="org1599255"><span class="section-number-2">4</span> Decision Tree Learning</h2>
+<div id="outline-container-orgca5b044" class="outline-2">
+<h2 id="orgca5b044"><span class="section-number-2">4</span> Decision Tree Learning</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 <i>Decision Tree Learning</i> is a method of learning which approximates
@@ -563,8 +563,8 @@ It is most appropriate when:
 <li>The training data may contain missing attribute values</li>
 </ol>
 </div>
-<div id="outline-container-org592e514" class="outline-3">
-<h3 id="org592e514"><span class="section-number-3">4.1</span> ID3 algorithm</h3>
+<div id="outline-container-org0a1dc84" class="outline-3">
+<h3 id="org0a1dc84"><span class="section-number-3">4.1</span> ID3 algorithm</h3>
 <div class="outline-text-3" id="text-4-1">
 <p>
 ID3 learns decision trees by constructing them top down. Each instance
@@ -573,8 +573,8 @@ it alone classifies the examples. The best attribute is selected and
 used as the test at the root node of the tree.
 </p>
 </div>
-<div id="outline-container-orgd513fac" class="outline-4">
-<h4 id="orgd513fac"><span class="section-number-4">4.1.1</span> Which is the best attribute?</h4>
+<div id="outline-container-orgef10ce5" class="outline-4">
+<h4 id="orgef10ce5"><span class="section-number-4">4.1.1</span> Which is the best attribute?</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
 A statistical property called <i>information gain</i> measures how well a
@@ -606,8 +606,8 @@ For example:
 \end{align}
 </div>
 </div>
-<div id="outline-container-org0d5576c" class="outline-4">
-<h4 id="org0d5576c"><span class="section-number-4">4.1.2</span> Hypothesis Space Search</h4>
+<div id="outline-container-orgcac952d" class="outline-4">
+<h4 id="orgcac952d"><span class="section-number-4">4.1.2</span> Hypothesis Space Search</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <p>
 ID3 can be characterised as searching a space of hypotheses for one
@@ -640,8 +640,8 @@ based decisions, unlike other algorithms that make decisions incrementally.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcf6945f" class="outline-4">
-<h4 id="orgcf6945f"><span class="section-number-4">4.1.3</span> Inductive bias</h4>
+<div id="outline-container-orgeeb0e05" class="outline-4">
+<h4 id="orgeeb0e05"><span class="section-number-4">4.1.3</span> Inductive bias</h4>
 <div class="outline-text-4" id="text-4-1-3">
 <p>
 The inductive bias of decision tree learning is that shorter trees are
@@ -661,8 +661,8 @@ the definition of its search space. (<i>restriction bias</i>).
 </p>
 </div>
 </div>
-<div id="outline-container-org2e719f1" class="outline-4">
-<h4 id="org2e719f1"><span class="section-number-4">4.1.4</span> Why Prefer Shorter Hypotheses?</h4>
+<div id="outline-container-orgd45b72f" class="outline-4">
+<h4 id="orgd45b72f"><span class="section-number-4">4.1.4</span> Why Prefer Shorter Hypotheses?</h4>
 <div class="outline-text-4" id="text-4-1-4">
 <ol class="org-ol">
 <li>fewer shorter hypothesis than larger ones, means it's less likely
@@ -672,8 +672,8 @@ to over-generalise</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org849e715" class="outline-2">
-<h2 id="org849e715"><span class="section-number-2">5</span> Density Estimation</h2>
+<div id="outline-container-org399347d" class="outline-2">
+<h2 id="org399347d"><span class="section-number-2">5</span> Density Estimation</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <i>Density Estimation</i> refers to the problem of modeling the probability
@@ -705,8 +705,8 @@ beta distribution as the prior.
 </p>
 </div>
 </div>
-<div id="outline-container-orgce7edda" class="outline-2">
-<h2 id="orgce7edda"><span class="section-number-2">6</span> Unsupervised Learning</h2>
+<div id="outline-container-orga191766" class="outline-2">
+<h2 id="orga191766"><span class="section-number-2">6</span> Unsupervised Learning</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 In unsupervised learning, given a training set \(S = \left(x_1, \hdots,
@@ -724,8 +724,8 @@ noise (e.g. PCA)</li>
 <li>minimises description length of data</li>
 </ul>
 </div>
-<div id="outline-container-orgfc15585" class="outline-3">
-<h3 id="orgfc15585"><span class="section-number-3">6.1</span> K-means Clustering</h3>
+<div id="outline-container-orgc4fca96" class="outline-3">
+<h3 id="orgc4fca96"><span class="section-number-3">6.1</span> K-means Clustering</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Input: \(\{x^{(1), x^{(2)}, x^{(3)}, \hdots, x^{(m)}}\}\).
@@ -754,8 +754,8 @@ algorithm converges.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc5e7250" class="outline-3">
-<h3 id="orgc5e7250"><span class="section-number-3">6.2</span> Gaussian Mixture Model</h3>
+<div id="outline-container-orgf5409aa" class="outline-3">
+<h3 id="orgf5409aa"><span class="section-number-3">6.2</span> Gaussian Mixture Model</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 By Bayes' Theorem:
@@ -775,8 +775,8 @@ X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu_j, \Sigma_j)
 </div>
 </div>
 
-<div id="outline-container-orga3140f3" class="outline-3">
-<h3 id="orga3140f3"><span class="section-number-3">6.3</span> Expectation Maximization</h3>
+<div id="outline-container-org505f209" class="outline-3">
+<h3 id="org505f209"><span class="section-number-3">6.3</span> Expectation Maximization</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 <a href="https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf">https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf</a>
@@ -838,12 +838,12 @@ Repeat until convergence:
 </div>
 </div>
 
-<div id="outline-container-orgcbddfde" class="outline-2">
-<h2 id="orgcbddfde"><span class="section-number-2">7</span> Refile</h2>
+<div id="outline-container-orga59f865" class="outline-2">
+<h2 id="orga59f865"><span class="section-number-2">7</span> Refile</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-orgadbedb4" class="outline-3">
-<h3 id="orgadbedb4"><span class="section-number-3">7.1</span> Data Compression</h3>
+<div id="outline-container-org2827fce" class="outline-3">
+<h3 id="org2827fce"><span class="section-number-3">7.1</span> Data Compression</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 In <i>lossy compression</i>, we seek to trade off code length with
@@ -869,7 +869,7 @@ some of the dimensions.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-14 Tue 12:57</p>
+<p class="date">Created: 2018-08-15 Wed 11:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

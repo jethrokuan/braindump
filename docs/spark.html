@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-14 Tue 12:57 -->
+<!-- 2018-08-15 Wed 11:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Spark</title>
@@ -69,31 +69,31 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org3e21e23">1. What is Apache Spark?</a></li>
-<li><a href="#org07077ce">2. The Spark Stack</a></li>
-<li><a href="#org3869296">3. Getting Started</a></li>
-<li><a href="#orga61a643">4. Core Spark Concepts</a></li>
-<li><a href="#orgdf54265">5. Running a Python script on Spark</a></li>
-<li><a href="#org75aa42c">6. Programming with RDDs</a>
+<li><a href="#org98fb35b">1. What is Apache Spark?</a></li>
+<li><a href="#orgdd39aa7">2. The Spark Stack</a></li>
+<li><a href="#org2c79e27">3. Getting Started</a></li>
+<li><a href="#orgbc2d78b">4. Core Spark Concepts</a></li>
+<li><a href="#orgd5d1e23">5. Running a Python script on Spark</a></li>
+<li><a href="#orgf7ff096">6. Programming with RDDs</a>
 <ul>
-<li><a href="#org6fb0bc5">6.1. RDD Operations</a></li>
-<li><a href="#orge6a2dd4">6.2. Persistence</a></li>
+<li><a href="#org4d2940c">6.1. RDD Operations</a></li>
+<li><a href="#org34b67c7">6.2. Persistence</a></li>
 </ul>
 </li>
-<li><a href="#org1117cd4">7. Working with Key/Value Pairs</a>
+<li><a href="#orgd7d9089">7. Working with Key/Value Pairs</a>
 <ul>
-<li><a href="#org593edd9">7.1. Transformations on Pair RDDs</a></li>
-<li><a href="#org0738869">7.2. Data Partitioning</a></li>
+<li><a href="#org3b767b1">7.1. Transformations on Pair RDDs</a></li>
+<li><a href="#orgb74f5c6">7.2. Data Partitioning</a></li>
 </ul>
 </li>
-<li><a href="#orge222c8b">8. Loading and Saving Your Data</a>
+<li><a href="#orgd780e0f">8. Loading and Saving Your Data</a>
 <ul>
-<li><a href="#org76e1238">8.1. SparkSQL</a></li>
+<li><a href="#orgec6e845">8.1. SparkSQL</a></li>
 </ul>
 </li>
-<li><a href="#org2ac65fd">9. Advanced Spark Programming</a>
+<li><a href="#org03c8088">9. Advanced Spark Programming</a>
 <ul>
-<li><a href="#org5c2d3cb">9.1. Accumulators</a></li>
+<li><a href="#orgbc38b1a">9.1. Accumulators</a></li>
 </ul>
 </li>
 </ul>
@@ -102,8 +102,8 @@ for the JavaScript code in this tag.
 <p>
 -<b>- mode: Org; org-download-image-dir: "./images/spark/"; -</b>-
 </p>
-<div id="outline-container-org3e21e23" class="outline-2">
-<h2 id="org3e21e23"><span class="section-number-2">1</span> What is Apache Spark?</h2>
+<div id="outline-container-org98fb35b" class="outline-2">
+<h2 id="org98fb35b"><span class="section-number-2">1</span> What is Apache Spark?</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 A cluster computing platform designed to be fast and general-purpose.
@@ -119,8 +119,8 @@ computational tasks across many worker machines.
 </p>
 </div>
 </div>
-<div id="outline-container-org07077ce" class="outline-2">
-<h2 id="org07077ce"><span class="section-number-2">2</span> The Spark Stack</h2>
+<div id="outline-container-orgdd39aa7" class="outline-2">
+<h2 id="orgdd39aa7"><span class="section-number-2">2</span> The Spark Stack</h2>
 <div class="outline-text-2" id="text-2">
 <dl class="org-dl">
 <dt>Spark Core</dt><dd>contains basic functionality, including memory
@@ -155,8 +155,8 @@ filesystem (HDFS), it does not require Hadoop.
 </div>
 </div>
 
-<div id="outline-container-org3869296" class="outline-2">
-<h2 id="org3869296"><span class="section-number-2">3</span> Getting Started</h2>
+<div id="outline-container-org2c79e27" class="outline-2">
+<h2 id="org2c79e27"><span class="section-number-2">3</span> Getting Started</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Enter the shell with <code>spark-shell</code>, or <code>pyspark</code>. 
@@ -171,8 +171,8 @@ lines.first()
 </div>
 </div>
 
-<div id="outline-container-orga61a643" class="outline-2">
-<h2 id="orga61a643"><span class="section-number-2">4</span> Core Spark Concepts</h2>
+<div id="outline-container-orgbc2d78b" class="outline-2">
+<h2 id="orgbc2d78b"><span class="section-number-2">4</span> Core Spark Concepts</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Every Spark application consists of a <i>driver program</i> that launches
@@ -201,8 +201,8 @@ lines.filter(lambda line: "Machine" in line)
 </div>
 </div>
 
-<div id="outline-container-orgdf54265" class="outline-2">
-<h2 id="orgdf54265"><span class="section-number-2">5</span> Running a Python script on Spark</h2>
+<div id="outline-container-orgd5d1e23" class="outline-2">
+<h2 id="orgd5d1e23"><span class="section-number-2">5</span> Running a Python script on Spark</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <code>bin/spark-submit</code> includes the Spark dependencies, setting up the
@@ -225,8 +225,8 @@ sc = SparkContext(conf=conf)
 </div>
 </div>
 
-<div id="outline-container-org75aa42c" class="outline-2">
-<h2 id="org75aa42c"><span class="section-number-2">6</span> Programming with RDDs</h2>
+<div id="outline-container-orgf7ff096" class="outline-2">
+<h2 id="orgf7ff096"><span class="section-number-2">6</span> Programming with RDDs</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 An RDD is a distributed collection of elements. All work is expressed
@@ -252,8 +252,8 @@ memory to be queried repeatedly.
 </div>
 </div>
 
-<div id="outline-container-org6fb0bc5" class="outline-3">
-<h3 id="org6fb0bc5"><span class="section-number-3">6.1</span> RDD Operations</h3>
+<div id="outline-container-org4d2940c" class="outline-3">
+<h3 id="org4d2940c"><span class="section-number-3">6.1</span> RDD Operations</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 RDDs support <i>transformations</i> and <i>actions</i>. Transformations are
@@ -313,8 +313,8 @@ a different type</li>
 </div>
 </div>
 
-<div id="outline-container-orge6a2dd4" class="outline-3">
-<h3 id="orge6a2dd4"><span class="section-number-3">6.2</span> Persistence</h3>
+<div id="outline-container-org34b67c7" class="outline-3">
+<h3 id="org34b67c7"><span class="section-number-3">6.2</span> Persistence</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Different level of persistence helps with making Spark jobs faster. If
@@ -331,8 +331,8 @@ the <i>lineage graph.</i>
 </div>
 </div>
 
-<div id="outline-container-org1117cd4" class="outline-2">
-<h2 id="org1117cd4"><span class="section-number-2">7</span> Working with Key/Value Pairs</h2>
+<div id="outline-container-orgd7d9089" class="outline-2">
+<h2 id="orgd7d9089"><span class="section-number-2">7</span> Working with Key/Value Pairs</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 Spark provides special operations on RDDs with KV pairs, called pair
@@ -359,8 +359,8 @@ Java does not have a built-in tuple type, so it uses the
 </p>
 </div>
 
-<div id="outline-container-org593edd9" class="outline-3">
-<h3 id="org593edd9"><span class="section-number-3">7.1</span> Transformations on Pair RDDs</h3>
+<div id="outline-container-org3b767b1" class="outline-3">
+<h3 id="org3b767b1"><span class="section-number-3">7.1</span> Transformations on Pair RDDs</h3>
 <div class="outline-text-3" id="text-7-1">
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
@@ -501,8 +501,8 @@ Actions:
 </div>
 </div>
 
-<div id="outline-container-org0738869" class="outline-3">
-<h3 id="org0738869"><span class="section-number-3">7.2</span> Data Partitioning</h3>
+<div id="outline-container-orgb74f5c6" class="outline-3">
+<h3 id="orgb74f5c6"><span class="section-number-3">7.2</span> Data Partitioning</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 Spark programs can choose to control their RDDs' partition to reduce
@@ -552,8 +552,8 @@ new lambda.
 </div>
 </div>
 
-<div id="outline-container-orge222c8b" class="outline-2">
-<h2 id="orge222c8b"><span class="section-number-2">8</span> Loading and Saving Your Data</h2>
+<div id="outline-container-orgd780e0f" class="outline-2">
+<h2 id="orgd780e0f"><span class="section-number-2">8</span> Loading and Saving Your Data</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 For data stored in a local or distributed filesystem such as NFS,
@@ -587,8 +587,8 @@ data.saveAsSequenceFile(outputFile)
 </div>
 
 
-<div id="outline-container-org76e1238" class="outline-3">
-<h3 id="org76e1238"><span class="section-number-3">8.1</span> SparkSQL</h3>
+<div id="outline-container-orgec6e845" class="outline-3">
+<h3 id="orgec6e845"><span class="section-number-3">8.1</span> SparkSQL</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 SparkSQL can load any table supported by Apache Hive.
@@ -622,8 +622,8 @@ results = hiveCtx.sql("SELECT user.name, text FROM tweets")
 </div>
 </div>
 
-<div id="outline-container-org2ac65fd" class="outline-2">
-<h2 id="org2ac65fd"><span class="section-number-2">9</span> Advanced Spark Programming</h2>
+<div id="outline-container-org03c8088" class="outline-2">
+<h2 id="org03c8088"><span class="section-number-2">9</span> Advanced Spark Programming</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 In this section, we look at some techniques that were not previously
@@ -652,8 +652,8 @@ values.
 </div>
 </div>
 
-<div id="outline-container-org5c2d3cb" class="outline-3">
-<h3 id="org5c2d3cb"><span class="section-number-3">9.1</span> Accumulators</h3>
+<div id="outline-container-orgbc38b1a" class="outline-3">
+<h3 id="orgbc38b1a"><span class="section-number-3">9.1</span> Accumulators</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 When we normally pass functions to Spark, they can use variables
@@ -697,7 +697,7 @@ guarantee does not exist.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-14 Tue 12:57</p>
+<p class="date">Created: 2018-08-15 Wed 11:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

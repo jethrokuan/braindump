@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-14 Tue 12:57 -->
+<!-- 2018-08-15 Wed 11:02 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Natural Language Processing</title>
@@ -91,92 +91,92 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org235efa5">1. How to Represent Words</a>
+<li><a href="#org49ad217">1. How to Represent Words</a>
 <ul>
-<li><a href="#org4fcf6a0">1.1. Window-based Co-occurence Matrix</a></li>
-<li><a href="#orga98554a">1.2. Issues with SVD-based methods</a></li>
-<li><a href="#org4fc6ef5">1.3. Iteration-based Methods (e.g. word2vec)</a>
+<li><a href="#org5822473">1.1. Window-based Co-occurence Matrix</a></li>
+<li><a href="#org52a8df7">1.2. Issues with SVD-based methods</a></li>
+<li><a href="#org10c2006">1.3. Iteration-based Methods (e.g. word2vec)</a>
 <ul>
-<li><a href="#orgaf9805e">1.3.1. Language Models</a>
+<li><a href="#org39cc9bf">1.3.1. Language Models</a>
 <ul>
-<li><a href="#org91a4b92">1.3.1.1. Continuous bag-of-words (CBOW)</a></li>
-<li><a href="#org73776fb">1.3.1.2. <span class="todo TODO">TODO</span> Skipgram</a></li>
+<li><a href="#orgc4be76c">1.3.1.1. Continuous bag-of-words (CBOW)</a></li>
+<li><a href="#org665c60e">1.3.1.2. <span class="todo TODO">TODO</span> Skipgram</a></li>
 </ul>
 </li>
-<li><a href="#org4fdf264">1.3.2. Training Methods</a>
+<li><a href="#org6b32eb7">1.3.2. Training Methods</a>
 <ul>
-<li><a href="#org8ccf6c6">1.3.2.1. <span class="todo TODO">TODO</span> Negative Sampling</a></li>
-<li><a href="#org338db1b">1.3.2.2. <span class="todo TODO">TODO</span> Hierachical Softmax</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org957ba6e">1.4. Global Vectors for Word Representation (GloVe)</a>
-<ul>
-<li><a href="#org6024f00">1.4.1. Co-occurrence Matrix</a></li>
+<li><a href="#org0674ec9">1.3.2.1. <span class="todo TODO">TODO</span> Negative Sampling</a></li>
+<li><a href="#org279ae97">1.3.2.2. <span class="todo TODO">TODO</span> Hierachical Softmax</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgd7716f4">2. Topic Modeling</a></li>
-<li><a href="#orgf849abd">3. Dimension Reduction</a>
+<li><a href="#org3a5de0c">1.4. Global Vectors for Word Representation (GloVe)</a>
 <ul>
-<li><a href="#org3560d65">3.1. Multidimensional Scaling</a></li>
-</ul>
-</li>
-<li><a href="#orgecee0fe">4. Word Vector Evaluation</a>
-<ul>
-<li><a href="#org630d017">4.1. Intrinsic</a></li>
-<li><a href="#orgd3d0306">4.2. Extrinsic</a></li>
-</ul>
-</li>
-<li><a href="#org1b98994">5. Visualizing Word Embeddings</a></li>
-<li><a href="#orgc26c8d8">6. Neural Networks</a>
-<ul>
-<li><a href="#orga60c1a7">6.1. A neuron</a></li>
-<li><a href="#org3ff6f4c">6.2. A single layer of neurons</a></li>
-<li><a href="#orga88dbb7">6.3. Feed-forward computation</a></li>
-<li><a href="#org5b692df">6.4. Maximum Margin Objective Function</a></li>
-<li><a href="#orgf69343e">6.5. Gradient Checks</a></li>
-</ul>
-</li>
-<li><a href="#org84c5b8c">7. Dependency Parsing</a>
-<ul>
-<li><a href="#org3b401a4">7.1. Dependency Grammar and Dependency Structure</a></li>
-<li><a href="#org07c605e">7.2. Dependency Parsing</a></li>
-<li><a href="#orgaf45a55">7.3. Transition-based Parsing</a>
-<ul>
-<li><a href="#org0ed1aad">7.3.1. Greedy Deterministic Transition-based Parsing</a></li>
-<li><a href="#org3fb7658">7.3.2. Neural Dependency Parsing</a>
-<ul>
-<li><a href="#orgcf19c98">7.3.2.1. Feature Selection</a></li>
-<li><a href="#org52b64e7">7.3.2.2. The network</a></li>
+<li><a href="#org2a4fad9">1.4.1. Co-occurrence Matrix</a></li>
 </ul>
 </li>
 </ul>
 </li>
-</ul>
-</li>
-<li><a href="#org5aaee94">8. Basic Visualization Techniques of Text Data</a>
+<li><a href="#org74a8dd5">2. Topic Modeling</a></li>
+<li><a href="#org114c6d3">3. Dimension Reduction</a>
 <ul>
-<li><a href="#org1a93bc6">8.1. Word Cloud</a></li>
-<li><a href="#org45f8002">8.2. Word Tree</a></li>
-<li><a href="#orged2e9de">8.3. ThemeRiver</a></li>
-<li><a href="#org42577b2">8.4. TIARA Visualization</a></li>
-<li><a href="#org0dd8f94">8.5. Phrase Nets</a></li>
-<li><a href="#orgf24cb39">8.6. For more&#x2026;</a></li>
+<li><a href="#orgfba60b3">3.1. Multidimensional Scaling</a></li>
 </ul>
 </li>
-<li><a href="#org848efe1">9. Deep Visualization Techniques</a>
+<li><a href="#org02233f1">4. Word Vector Evaluation</a>
+<ul>
+<li><a href="#org04aef6a">4.1. Intrinsic</a></li>
+<li><a href="#orgcfd5546">4.2. Extrinsic</a></li>
+</ul>
+</li>
+<li><a href="#org35983ab">5. Visualizing Word Embeddings</a></li>
+<li><a href="#orgb9a02f1">6. Neural Networks</a>
+<ul>
+<li><a href="#org43b3472">6.1. A neuron</a></li>
+<li><a href="#org88a5d37">6.2. A single layer of neurons</a></li>
+<li><a href="#orgf790b55">6.3. Feed-forward computation</a></li>
+<li><a href="#org8bd9e1d">6.4. Maximum Margin Objective Function</a></li>
+<li><a href="#orgd1db4e9">6.5. Gradient Checks</a></li>
+</ul>
+</li>
+<li><a href="#org50129ea">7. Dependency Parsing</a>
+<ul>
+<li><a href="#orgde45bbd">7.1. Dependency Grammar and Dependency Structure</a></li>
+<li><a href="#org54e3f74">7.2. Dependency Parsing</a></li>
+<li><a href="#org45ac22a">7.3. Transition-based Parsing</a>
+<ul>
+<li><a href="#orgf54e67b">7.3.1. Greedy Deterministic Transition-based Parsing</a></li>
+<li><a href="#orgc239ab0">7.3.2. Neural Dependency Parsing</a>
+<ul>
+<li><a href="#org3a3f4d9">7.3.2.1. Feature Selection</a></li>
+<li><a href="#org6b270cb">7.3.2.2. The network</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orga20d671">8. Basic Visualization Techniques of Text Data</a>
+<ul>
+<li><a href="#org0428df9">8.1. Word Cloud</a></li>
+<li><a href="#org618224f">8.2. Word Tree</a></li>
+<li><a href="#org655ec7a">8.3. ThemeRiver</a></li>
+<li><a href="#org80cae0f">8.4. TIARA Visualization</a></li>
+<li><a href="#org9133a70">8.5. Phrase Nets</a></li>
+<li><a href="#orgfdc3ded">8.6. For more&#x2026;</a></li>
+</ul>
+</li>
+<li><a href="#orgcb6ba32">9. Deep Visualization Techniques</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org5073659">9.0.1.  DeepEyes</a></li>
+<li><a href="#org0c84aca">9.0.1.  DeepEyes</a></li>
 </ul>
 </li>
-<li><a href="#org0c69c61">9.1. Dimensionality Reduction (aka Manifold Learning)</a>
+<li><a href="#org3f2adec">9.1. Dimensionality Reduction (aka Manifold Learning)</a>
 <ul>
-<li><a href="#orgfdee0e6">9.1.1. Linear tSNE optimization for the Web</a></li>
+<li><a href="#org8cdc59b">9.1.1. Linear tSNE optimization for the Web</a></li>
 </ul>
 </li>
 </ul>
@@ -188,8 +188,8 @@ for the JavaScript code in this tag.
 -<b>- mode: Org; org-download-image-dir: "./images/nlp/"; -</b>-
 </p>
 
-<div id="outline-container-org235efa5" class="outline-2">
-<h2 id="org235efa5"><span class="section-number-2">1</span> How to Represent Words</h2>
+<div id="outline-container-org49ad217" class="outline-2">
+<h2 id="org49ad217"><span class="section-number-2">1</span> How to Represent Words</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="http://ruder.io/word-embeddings-2017/index.html">http://ruder.io/word-embeddings-2017/index.html</a>
@@ -215,8 +215,8 @@ rows of <code>U</code> as the word embeddings for all words in the dictionary.
 </p>
 </div>
 
-<div id="outline-container-org4fcf6a0" class="outline-3">
-<h3 id="org4fcf6a0"><span class="section-number-3">1.1</span> Window-based Co-occurence Matrix</h3>
+<div id="outline-container-org5822473" class="outline-3">
+<h3 id="org5822473"><span class="section-number-3">1.1</span> Window-based Co-occurence Matrix</h3>
 <div class="outline-text-3" id="text-1-1">
 <p>
 Count the number of times each word appears inside a window of a
@@ -226,8 +226,8 @@ for all words in the corpus.
 </div>
 </div>
 
-<div id="outline-container-orga98554a" class="outline-3">
-<h3 id="orga98554a"><span class="section-number-3">1.2</span> Issues with SVD-based methods</h3>
+<div id="outline-container-org52a8df7" class="outline-3">
+<h3 id="org52a8df7"><span class="section-number-3">1.2</span> Issues with SVD-based methods</h3>
 <div class="outline-text-3" id="text-1-2">
 <ol class="org-ol">
 <li>Dimensions of the matrix can change very often (new words added to corpus)</li>
@@ -247,8 +247,8 @@ Some solutions include:
 </div>
 </div>
 
-<div id="outline-container-org4fc6ef5" class="outline-3">
-<h3 id="org4fc6ef5"><span class="section-number-3">1.3</span> Iteration-based Methods (e.g. word2vec)</h3>
+<div id="outline-container-org10c2006" class="outline-3">
+<h3 id="org10c2006"><span class="section-number-3">1.3</span> Iteration-based Methods (e.g. word2vec)</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Design a model whose parameters are the word vectors, and train the
@@ -261,8 +261,8 @@ Efficient tree structure to compute probabiltiies for all the vocabulary
 </p>
 </div>
 
-<div id="outline-container-orgaf9805e" class="outline-4">
-<h4 id="orgaf9805e"><span class="section-number-4">1.3.1</span> Language Models</h4>
+<div id="outline-container-org39cc9bf" class="outline-4">
+<h4 id="org39cc9bf"><span class="section-number-4">1.3.1</span> Language Models</h4>
 <div class="outline-text-4" id="text-1-3-1">
 <p>
 The model will need to assign a probability to a sequence of tokens.
@@ -277,8 +277,8 @@ evaluating a whole sentence.
 </p>
 </div>
 
-<div id="outline-container-org91a4b92" class="outline-5">
-<h5 id="org91a4b92"><span class="section-number-5">1.3.1.1</span> Continuous bag-of-words (CBOW)</h5>
+<div id="outline-container-orgc4be76c" class="outline-5">
+<h5 id="orgc4be76c"><span class="section-number-5">1.3.1.1</span> Continuous bag-of-words (CBOW)</h5>
 <div class="outline-text-5" id="text-1-3-1-1">
 <p>
 Predicts a center word from the surrounding context in terms of word
@@ -329,8 +329,8 @@ descent to update all relevant word vectors.
 </div>
 </div>
 
-<div id="outline-container-org73776fb" class="outline-5">
-<h5 id="org73776fb"><span class="section-number-5">1.3.1.2</span> <span class="todo TODO">TODO</span> Skipgram</h5>
+<div id="outline-container-org665c60e" class="outline-5">
+<h5 id="org665c60e"><span class="section-number-5">1.3.1.2</span> <span class="todo TODO">TODO</span> Skipgram</h5>
 <div class="outline-text-5" id="text-1-3-1-2">
 <p>
 <a href="http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/">http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/</a>
@@ -363,8 +363,8 @@ hidden layer are the word vectors we want.
 </div>
 </div>
 
-<div id="outline-container-org4fdf264" class="outline-4">
-<h4 id="org4fdf264"><span class="section-number-4">1.3.2</span> Training Methods</h4>
+<div id="outline-container-org6b32eb7" class="outline-4">
+<h4 id="org6b32eb7"><span class="section-number-4">1.3.2</span> Training Methods</h4>
 <div class="outline-text-4" id="text-1-3-2">
 <p>
 In practice, negative sampling works better for frequently occurring
@@ -373,8 +373,8 @@ better for infrequent words.
 </p>
 </div>
 
-<div id="outline-container-org8ccf6c6" class="outline-5">
-<h5 id="org8ccf6c6"><span class="section-number-5">1.3.2.1</span> <span class="todo TODO">TODO</span> Negative Sampling</h5>
+<div id="outline-container-org0674ec9" class="outline-5">
+<h5 id="org0674ec9"><span class="section-number-5">1.3.2.1</span> <span class="todo TODO">TODO</span> Negative Sampling</h5>
 <div class="outline-text-5" id="text-1-3-2-1">
 <p>
 Take \(k\) negative samples, and minimise the probability of the two
@@ -384,8 +384,8 @@ words in the same window co-occur.
 </div>
 </div>
 
-<div id="outline-container-org338db1b" class="outline-5">
-<h5 id="org338db1b"><span class="section-number-5">1.3.2.2</span> <span class="todo TODO">TODO</span> Hierachical Softmax</h5>
+<div id="outline-container-org279ae97" class="outline-5">
+<h5 id="org279ae97"><span class="section-number-5">1.3.2.2</span> <span class="todo TODO">TODO</span> Hierachical Softmax</h5>
 <div class="outline-text-5" id="text-1-3-2-2">
 <p>
 Hierachical Softmax uses a binary tree to represent all words in the
@@ -401,8 +401,8 @@ starting from the root and ending in the leaf node corresponding to
 </div>
 
 
-<div id="outline-container-org957ba6e" class="outline-3">
-<h3 id="org957ba6e"><span class="section-number-3">1.4</span> Global Vectors for Word Representation (GloVe)</h3>
+<div id="outline-container-org3a5de0c" class="outline-3">
+<h3 id="org3a5de0c"><span class="section-number-3">1.4</span> Global Vectors for Word Representation (GloVe)</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Count-based methods of generating word embeddings rely on global
@@ -442,8 +442,8 @@ the word vector space.
 </p>
 </div>
 
-<div id="outline-container-org6024f00" class="outline-4">
-<h4 id="org6024f00"><span class="section-number-4">1.4.1</span> Co-occurrence Matrix</h4>
+<div id="outline-container-org2a4fad9" class="outline-4">
+<h4 id="org2a4fad9"><span class="section-number-4">1.4.1</span> Co-occurrence Matrix</h4>
 <div class="outline-text-4" id="text-1-4-1">
 <p>
 Let \(X\) denote the word-word co-occurrence matrix, where \(X_{ij}\)
@@ -458,8 +458,8 @@ of word \(i\).
 </div>
 </div>
 
-<div id="outline-container-orgd7716f4" class="outline-2">
-<h2 id="orgd7716f4"><span class="section-number-2">2</span> Topic Modeling</h2>
+<div id="outline-container-org74a8dd5" class="outline-2">
+<h2 id="org74a8dd5"><span class="section-number-2">2</span> Topic Modeling</h2>
 <div class="outline-text-2" id="text-2">
 <ul class="org-ul">
 <li>Topics are distributions over keywords</li>
@@ -480,12 +480,12 @@ UTOPIAN
 </div>
 
 
-<div id="outline-container-orgf849abd" class="outline-2">
-<h2 id="orgf849abd"><span class="section-number-2">3</span> Dimension Reduction</h2>
+<div id="outline-container-org114c6d3" class="outline-2">
+<h2 id="org114c6d3"><span class="section-number-2">3</span> Dimension Reduction</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org3560d65" class="outline-3">
-<h3 id="org3560d65"><span class="section-number-3">3.1</span> Multidimensional Scaling</h3>
+<div id="outline-container-orgfba60b3" class="outline-3">
+<h3 id="orgfba60b3"><span class="section-number-3">3.1</span> Multidimensional Scaling</h3>
 <div class="outline-text-3" id="text-3-1">
 <ul class="org-ul">
 <li>Tries to preserve given pairwise distances in a low-dimensional space.</li>
@@ -493,12 +493,12 @@ UTOPIAN
 </div>
 </div>
 </div>
-<div id="outline-container-orgecee0fe" class="outline-2">
-<h2 id="orgecee0fe"><span class="section-number-2">4</span> Word Vector Evaluation</h2>
+<div id="outline-container-org02233f1" class="outline-2">
+<h2 id="org02233f1"><span class="section-number-2">4</span> Word Vector Evaluation</h2>
 <div class="outline-text-2" id="text-4">
 </div>
-<div id="outline-container-org630d017" class="outline-3">
-<h3 id="org630d017"><span class="section-number-3">4.1</span> Intrinsic</h3>
+<div id="outline-container-org04aef6a" class="outline-3">
+<h3 id="org04aef6a"><span class="section-number-3">4.1</span> Intrinsic</h3>
 <div class="outline-text-3" id="text-4-1">
 <ul class="org-ul">
 <li>Evaluation on a specific/intermediate subtask</li>
@@ -509,8 +509,8 @@ UTOPIAN
 </div>
 </div>
 
-<div id="outline-container-orgd3d0306" class="outline-3">
-<h3 id="orgd3d0306"><span class="section-number-3">4.2</span> Extrinsic</h3>
+<div id="outline-container-orgcfd5546" class="outline-3">
+<h3 id="orgcfd5546"><span class="section-number-3">4.2</span> Extrinsic</h3>
 <div class="outline-text-3" id="text-4-2">
 <ul class="org-ul">
 <li>Evaluation on a real task</li>
@@ -522,16 +522,16 @@ UTOPIAN
 </div>
 </div>
 
-<div id="outline-container-org1b98994" class="outline-2">
-<h2 id="org1b98994"><span class="section-number-2">5</span> Visualizing Word Embeddings</h2>
+<div id="outline-container-org35983ab" class="outline-2">
+<h2 id="org35983ab"><span class="section-number-2">5</span> Visualizing Word Embeddings</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 <a href="http://ronxin.github.io/wevi/">http://ronxin.github.io/wevi/</a>
 </p>
 </div>
 </div>
-<div id="outline-container-orgc26c8d8" class="outline-2">
-<h2 id="orgc26c8d8"><span class="section-number-2">6</span> Neural Networks</h2>
+<div id="outline-container-orgb9a02f1" class="outline-2">
+<h2 id="orgb9a02f1"><span class="section-number-2">6</span> Neural Networks</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 Most data are not linearly separable, hence the need for non-linear
@@ -540,8 +540,8 @@ non-linear decision boundaries.
 </p>
 </div>
 
-<div id="outline-container-orga60c1a7" class="outline-3">
-<h3 id="orga60c1a7"><span class="section-number-3">6.1</span> A neuron</h3>
+<div id="outline-container-org43b3472" class="outline-3">
+<h3 id="org43b3472"><span class="section-number-3">6.1</span> A neuron</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 A neuron is a generic computational unit that takes \(n\) inputs and
@@ -565,8 +565,8 @@ a = \frac{1}{1 + exp(-([w^T\text{ }b] \cdot [x\text{ }1]))}
 </div>
 </div>
 
-<div id="outline-container-org3ff6f4c" class="outline-3">
-<h3 id="org3ff6f4c"><span class="section-number-3">6.2</span> A single layer of neurons</h3>
+<div id="outline-container-org88a5d37" class="outline-3">
+<h3 id="org88a5d37"><span class="section-number-3">6.2</span> A single layer of neurons</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 This idea can be extended to multiple neurons by considering the case
@@ -627,8 +627,8 @@ tasks.
 </div>
 </div>
 
-<div id="outline-container-orga88dbb7" class="outline-3">
-<h3 id="orga88dbb7"><span class="section-number-3">6.3</span> Feed-forward computation</h3>
+<div id="outline-container-orgf790b55" class="outline-3">
+<h3 id="orgf790b55"><span class="section-number-3">6.3</span> Feed-forward computation</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Non-linear decisions cannot be classified in by feeding inputs
@@ -647,8 +647,8 @@ where f is the activation function.
 </div>
 </div>
 
-<div id="outline-container-org5b692df" class="outline-3">
-<h3 id="org5b692df"><span class="section-number-3">6.4</span> Maximum Margin Objective Function</h3>
+<div id="outline-container-org8bd9e1d" class="outline-3">
+<h3 id="org8bd9e1d"><span class="section-number-3">6.4</span> Maximum Margin Objective Function</h3>
 <div class="outline-text-3" id="text-6-4">
 <p>
 Neural networks also need an optimisation objective. the maximum
@@ -661,8 +661,8 @@ backpropagation and gradient descent.
 </div>
 </div>
 
-<div id="outline-container-orgf69343e" class="outline-3">
-<h3 id="orgf69343e"><span class="section-number-3">6.5</span> Gradient Checks</h3>
+<div id="outline-container-orgd1db4e9" class="outline-3">
+<h3 id="orgd1db4e9"><span class="section-number-3">6.5</span> Gradient Checks</h3>
 <div class="outline-text-3" id="text-6-5">
 <p>
 One can numerically approximate these gradients, allowing us to
@@ -678,12 +678,12 @@ derivatives.
 </div>
 </div>
 
-<div id="outline-container-org84c5b8c" class="outline-2">
-<h2 id="org84c5b8c"><span class="section-number-2">7</span> Dependency Parsing</h2>
+<div id="outline-container-org50129ea" class="outline-2">
+<h2 id="org50129ea"><span class="section-number-2">7</span> Dependency Parsing</h2>
 <div class="outline-text-2" id="text-7">
 </div>
-<div id="outline-container-org3b401a4" class="outline-3">
-<h3 id="org3b401a4"><span class="section-number-3">7.1</span> Dependency Grammar and Dependency Structure</h3>
+<div id="outline-container-orgde45bbd" class="outline-3">
+<h3 id="orgde45bbd"><span class="section-number-3">7.1</span> Dependency Grammar and Dependency Structure</h3>
 <div class="outline-text-3" id="text-7-1">
 <p>
 Parse trees in NLP are used to analyse the syntatic structure of
@@ -705,8 +705,8 @@ form a tree structure.
 </div>
 </div>
 
-<div id="outline-container-org07c605e" class="outline-3">
-<h3 id="org07c605e"><span class="section-number-3">7.2</span> Dependency Parsing</h3>
+<div id="outline-container-org54e3f74" class="outline-3">
+<h3 id="org54e3f74"><span class="section-number-3">7.2</span> Dependency Parsing</h3>
 <div class="outline-text-3" id="text-7-2">
 <p>
 Dependency parsing is the task of analysing the syntactic dependency
@@ -735,8 +735,8 @@ optimal dependency graph \(D\) for \(S\) according to \(M\).</dd>
 </div>
 </div>
 
-<div id="outline-container-orgaf45a55" class="outline-3">
-<h3 id="orgaf45a55"><span class="section-number-3">7.3</span> Transition-based Parsing</h3>
+<div id="outline-container-org45ac22a" class="outline-3">
+<h3 id="org45ac22a"><span class="section-number-3">7.3</span> Transition-based Parsing</h3>
 <div class="outline-text-3" id="text-7-3">
 <p>
 This relies on a state machine which defines the possible transitions
@@ -747,8 +747,8 @@ transitions for the input sentence, given the previously induced model.
 </p>
 </div>
 
-<div id="outline-container-org0ed1aad" class="outline-4">
-<h4 id="org0ed1aad"><span class="section-number-4">7.3.1</span> Greedy Deterministic Transition-based Parsing</h4>
+<div id="outline-container-orgf54e67b" class="outline-4">
+<h4 id="orgf54e67b"><span class="section-number-4">7.3.1</span> Greedy Deterministic Transition-based Parsing</h4>
 <div class="outline-text-4" id="text-7-3-1">
 <p>
 The transition system is a state machine, which consists of <i>states</i>
@@ -786,12 +786,12 @@ and \(w_j\) is the word at the top of the stack. Remove
 </dl>
 </div>
 </div>
-<div id="outline-container-org3fb7658" class="outline-4">
-<h4 id="org3fb7658"><span class="section-number-4">7.3.2</span> Neural Dependency Parsing</h4>
+<div id="outline-container-orgc239ab0" class="outline-4">
+<h4 id="orgc239ab0"><span class="section-number-4">7.3.2</span> Neural Dependency Parsing</h4>
 <div class="outline-text-4" id="text-7-3-2">
 </div>
-<div id="outline-container-orgcf19c98" class="outline-5">
-<h5 id="orgcf19c98"><span class="section-number-5">7.3.2.1</span> Feature Selection</h5>
+<div id="outline-container-org3a3f4d9" class="outline-5">
+<h5 id="org3a3f4d9"><span class="section-number-5">7.3.2.1</span> Feature Selection</h5>
 <div class="outline-text-5" id="text-7-3-2-1">
 <dl class="org-dl">
 <dt>\(S_{word}\)</dt><dd>vector representation of the words in 4s$</dd>
@@ -816,8 +816,8 @@ distinct POS tags and arc labels respectively.
 </p>
 </div>
 </div>
-<div id="outline-container-org52b64e7" class="outline-5">
-<h5 id="org52b64e7"><span class="section-number-5">7.3.2.2</span> The network</h5>
+<div id="outline-container-org6b270cb" class="outline-5">
+<h5 id="org6b270cb"><span class="section-number-5">7.3.2.2</span> The network</h5>
 <div class="outline-text-5" id="text-7-3-2-2">
 <p>
 The network contains an input layer \([x^w, x^t, x_l]\), a hidden layer,
@@ -846,12 +846,12 @@ dimension).
 </div>
 </div>
 
-<div id="outline-container-org5aaee94" class="outline-2">
-<h2 id="org5aaee94"><span class="section-number-2">8</span> Basic Visualization Techniques of Text Data</h2>
+<div id="outline-container-orga20d671" class="outline-2">
+<h2 id="orga20d671"><span class="section-number-2">8</span> Basic Visualization Techniques of Text Data</h2>
 <div class="outline-text-2" id="text-8">
 </div>
-<div id="outline-container-org1a93bc6" class="outline-3">
-<h3 id="org1a93bc6"><span class="section-number-3">8.1</span> Word Cloud</h3>
+<div id="outline-container-org0428df9" class="outline-3">
+<h3 id="org0428df9"><span class="section-number-3">8.1</span> Word Cloud</h3>
 <div class="outline-text-3" id="text-8-1">
 
 <div class="figure">
@@ -866,12 +866,12 @@ In addition, word clouds do not show relation between words.
 </div>
 </div>
 
-<div id="outline-container-org45f8002" class="outline-3">
-<h3 id="org45f8002"><span class="section-number-3">8.2</span> Word Tree</h3>
+<div id="outline-container-org618224f" class="outline-3">
+<h3 id="org618224f"><span class="section-number-3">8.2</span> Word Tree</h3>
 </div>
 
-<div id="outline-container-orged2e9de" class="outline-3">
-<h3 id="orged2e9de"><span class="section-number-3">8.3</span> ThemeRiver</h3>
+<div id="outline-container-org655ec7a" class="outline-3">
+<h3 id="org655ec7a"><span class="section-number-3">8.3</span> ThemeRiver</h3>
 <div class="outline-text-3" id="text-8-3">
 
 <div class="figure">
@@ -886,8 +886,8 @@ over time. It is a type of visualization known as a <i>stacked linegraph</i>.
 </div>
 </div>
 
-<div id="outline-container-org42577b2" class="outline-3">
-<h3 id="org42577b2"><span class="section-number-3">8.4</span> TIARA Visualization</h3>
+<div id="outline-container-org80cae0f" class="outline-3">
+<h3 id="org80cae0f"><span class="section-number-3">8.4</span> TIARA Visualization</h3>
 <div class="outline-text-3" id="text-8-4">
 
 <div class="figure">
@@ -897,8 +897,8 @@ over time. It is a type of visualization known as a <i>stacked linegraph</i>.
 </div>
 </div>
 
-<div id="outline-container-org0dd8f94" class="outline-3">
-<h3 id="org0dd8f94"><span class="section-number-3">8.5</span> Phrase Nets</h3>
+<div id="outline-container-org9133a70" class="outline-3">
+<h3 id="org9133a70"><span class="section-number-3">8.5</span> Phrase Nets</h3>
 <div class="outline-text-3" id="text-8-5">
 
 <div class="figure">
@@ -914,8 +914,8 @@ analysis.
 </div>
 </div>
 
-<div id="outline-container-orgf24cb39" class="outline-3">
-<h3 id="orgf24cb39"><span class="section-number-3">8.6</span> For more&#x2026;</h3>
+<div id="outline-container-orgfdc3ded" class="outline-3">
+<h3 id="orgfdc3ded"><span class="section-number-3">8.6</span> For more&#x2026;</h3>
 <div class="outline-text-3" id="text-8-6">
 <p>
 <a href="http://textvis.lnu.se/">http://textvis.lnu.se/</a>
@@ -925,27 +925,27 @@ analysis.
 </div>
 </div>
 
-<div id="outline-container-org848efe1" class="outline-2">
-<h2 id="org848efe1"><span class="section-number-2">9</span> Deep Visualization Techniques</h2>
+<div id="outline-container-orgcb6ba32" class="outline-2">
+<h2 id="orgcb6ba32"><span class="section-number-2">9</span> Deep Visualization Techniques</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org5073659" class="outline-4">
-<h4 id="org5073659"><span class="section-number-4">9.0.1</span> <a href="https://ieeexplore.ieee.org/document/8019872/"> DeepEyes</a></h4>
+<div id="outline-container-org0c84aca" class="outline-4">
+<h4 id="org0c84aca"><span class="section-number-4">9.0.1</span> <a href="https://ieeexplore.ieee.org/document/8019872/"> DeepEyes</a></h4>
 </div>
 
-<div id="outline-container-org0c69c61" class="outline-3">
-<h3 id="org0c69c61"><span class="section-number-3">9.1</span> Dimensionality Reduction (aka <a href="https://link.springer.com/chapter/10.1007/978-1-84882-312-9_4">Manifold Learning</a>)</h3>
+<div id="outline-container-org3f2adec" class="outline-3">
+<h3 id="org3f2adec"><span class="section-number-3">9.1</span> Dimensionality Reduction (aka <a href="https://link.springer.com/chapter/10.1007/978-1-84882-312-9_4">Manifold Learning</a>)</h3>
 <div class="outline-text-3" id="text-9-1">
 </div>
-<div id="outline-container-orgfdee0e6" class="outline-4">
-<h4 id="orgfdee0e6"><span class="section-number-4">9.1.1</span> <a href="https://arxiv.org/abs/1805.10817">Linear tSNE optimization for the Web</a></h4>
+<div id="outline-container-org8cdc59b" class="outline-4">
+<h4 id="org8cdc59b"><span class="section-number-4">9.1.1</span> <a href="https://arxiv.org/abs/1805.10817">Linear tSNE optimization for the Web</a></h4>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-14 Tue 12:57</p>
+<p class="date">Created: 2018-08-15 Wed 11:02</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
