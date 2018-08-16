@@ -98,9 +98,27 @@ http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf
 *** Dirichlet Distribution
 https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf
 
-Dirchilet distribution is a family of continuous multivariate
+Dirichlet distribution is a family of continuous multivariate
 probability distributions parameterized by a vector α of positive
 reals.
+
+\begin{equation}
+  \theta \sim Dir(\alpha)
+\end{equation}
+
+\begin{equation}
+  p(\theta) = \frac{1}{\beta(\alpha)} \prod_{i=1}^n \theta_i^{\alpha_i-1} I(\theta \in S)
+\end{equation}
+
+Where $\theta = (\theta_1, \theta_2, \hdots, \theta_n), \alpha = (\alpha_1, \alpha_2, \hdots, \alpha_n), \alpha_i > 0$ and
+
+\begin{equation}
+  S = \left\{x \in \mathbb{R}^n : x_i \ge 0, \sum_{i=1}^{n} x_i = 1 \right\}
+\end{equation}
+
+and 
+$\frac{1}{\beta(\alpha)} =
+\frac{\Gamma(\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_2)\hdots\Gamma(\alpha_n)}$
 
 The infinite-dimensional generalization of the Dirichlet distribution
 is the Dirichlet process.

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 12:12 -->
+<!-- 2018-08-16 Thu 14:16 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -84,42 +84,42 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9bded1c">1. Connecting to SoC VPN</a></li>
-<li><a href="#orgee388ca">2. Setting up GPU cluster</a></li>
-<li><a href="#org12925a1">3. Current Methodology</a>
+<li><a href="#org974cb2a">1. Connecting to SoC VPN</a></li>
+<li><a href="#org7449423">2. Setting up GPU cluster</a></li>
+<li><a href="#org16f3d9b">3. Current Methodology</a>
 <ul>
-<li><a href="#orgd3f58d4">3.1. TextRank</a></li>
-<li><a href="#org93b453b">3.2. RNN</a></li>
-<li><a href="#orgbcfa756">3.3. Definition of Trend</a></li>
+<li><a href="#org29ff081">3.1. TextRank</a></li>
+<li><a href="#org6191f33">3.2. RNN</a></li>
+<li><a href="#org8aa35c3">3.3. Definition of Trend</a></li>
 </ul>
 </li>
-<li><a href="#org1679dc3">4. Keyphrase Extraction</a>
+<li><a href="#orga9f010a">4. Keyphrase Extraction</a>
 <ul>
-<li><a href="#org56a2195">4.1. SurfKE</a>
+<li><a href="#orga775329">4.1. SurfKE</a>
 <ul>
-<li><a href="#org37c8764">4.1.1. Graph Construction</a></li>
-<li><a href="#org56c1265">4.1.2. Learning Feature Representations</a></li>
+<li><a href="#org233399c">4.1.1. Graph Construction</a></li>
+<li><a href="#orgca5c196">4.1.2. Learning Feature Representations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org61294f7">5. Topical Hierarchy</a></li>
-<li><a href="#org59ca2cb">6. Topic Modeling</a>
+<li><a href="#orgdcabd6a">5. Topical Hierarchy</a></li>
+<li><a href="#org89d416d">6. Topic Modeling</a>
 <ul>
-<li><a href="#org3d724b2">6.1. LDA</a>
+<li><a href="#org050b3bd">6.1. LDA</a>
 <ul>
-<li><a href="#org499bfec">6.1.1. Dirichlet Distribution</a></li>
-<li><a href="#orgd64ea23">6.1.2. Exploring a Corpus with the posterior distribution</a></li>
-<li><a href="#org8d2edb1">6.1.3. Posterior Inference</a>
+<li><a href="#orgeb6198c">6.1.1. Dirichlet Distribution</a></li>
+<li><a href="#org7a1d7e5">6.1.2. Exploring a Corpus with the posterior distribution</a></li>
+<li><a href="#orged304fb">6.1.3. Posterior Inference</a>
 <ul>
-<li><a href="#org969e76c">6.1.3.1. Mean Field Variational Inference</a></li>
+<li><a href="#orgad9bc06">6.1.3.1. Mean Field Variational Inference</a></li>
 </ul>
 </li>
-<li><a href="#org22d6e85">6.1.4. Shortcomings</a></li>
+<li><a href="#orgac28c68">6.1.4. Shortcomings</a></li>
 </ul>
 </li>
-<li><a href="#org91064eb">6.2. TopicRNN</a></li>
-<li><a href="#org547f821">6.3. <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</a></li>
+<li><a href="#org4f999e7">6.2. TopicRNN</a></li>
+<li><a href="#org955aeb8">6.3. <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</a></li>
 </ul>
 </li>
 </ul>
@@ -165,8 +165,8 @@ agglomerate clustering</li>
 <p>
 Couperin
 </p>
-<div id="outline-container-org9bded1c" class="outline-2">
-<h2 id="org9bded1c"><span class="section-number-2">1</span> Connecting to SoC VPN</h2>
+<div id="outline-container-org974cb2a" class="outline-2">
+<h2 id="org974cb2a"><span class="section-number-2">1</span> Connecting to SoC VPN</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 use openfortivpn.
@@ -179,8 +179,8 @@ use openfortivpn.
 </div>
 </div>
 
-<div id="outline-container-orgee388ca" class="outline-2">
-<h2 id="orgee388ca"><span class="section-number-2">2</span> Setting up GPU cluster</h2>
+<div id="outline-container-org7449423" class="outline-2">
+<h2 id="org7449423"><span class="section-number-2">2</span> Setting up GPU cluster</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>Install Anaconda</li>
@@ -191,15 +191,15 @@ use openfortivpn.
 </div>
 </div>
 
-<div id="outline-container-org12925a1" class="outline-2">
-<h2 id="org12925a1"><span class="section-number-2">3</span> Current Methodology</h2>
+<div id="outline-container-org16f3d9b" class="outline-2">
+<h2 id="org16f3d9b"><span class="section-number-2">3</span> Current Methodology</h2>
 <div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>Use TextRank algorithm</li>
 </ol>
 </div>
-<div id="outline-container-orgd3f58d4" class="outline-3">
-<h3 id="orgd3f58d4"><span class="section-number-3">3.1</span> TextRank</h3>
+<div id="outline-container-org29ff081" class="outline-3">
+<h3 id="org29ff081"><span class="section-number-3">3.1</span> TextRank</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Prior to TextRank, use NLTK to extract noun phrases via Regex. Each
@@ -207,8 +207,8 @@ noun phrase is split further.
 </p>
 </div>
 </div>
-<div id="outline-container-org93b453b" class="outline-3">
-<h3 id="org93b453b"><span class="section-number-3">3.2</span> RNN</h3>
+<div id="outline-container-org6191f33" class="outline-3">
+<h3 id="org6191f33"><span class="section-number-3">3.2</span> RNN</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Basic RNN is employed to use the first k sequential years to predict
@@ -223,8 +223,8 @@ A linear regression model is used as the baseline comparison.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbcfa756" class="outline-3">
-<h3 id="orgbcfa756"><span class="section-number-3">3.3</span> Definition of Trend</h3>
+<div id="outline-container-org8aa35c3" class="outline-3">
+<h3 id="org8aa35c3"><span class="section-number-3">3.3</span> Definition of Trend</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Considerations:
@@ -243,8 +243,8 @@ trend = a \times (x\textsubscript{k+1} - max(x\textsubscript{1}, ... , x\textsub
 </div>
 </div>
 
-<div id="outline-container-org1679dc3" class="outline-2">
-<h2 id="org1679dc3"><span class="section-number-2">4</span> Keyphrase Extraction</h2>
+<div id="outline-container-orga9f010a" class="outline-2">
+<h2 id="orga9f010a"><span class="section-number-2">4</span> Keyphrase Extraction</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Keyphrase extraction (KE) is the task of automatically extracting
@@ -261,12 +261,12 @@ automatically discover such features without relying on feature
 engineering.
 </p>
 </div>
-<div id="outline-container-org56a2195" class="outline-3">
-<h3 id="org56a2195"><span class="section-number-3">4.1</span> SurfKE</h3>
+<div id="outline-container-orga775329" class="outline-3">
+<h3 id="orga775329"><span class="section-number-3">4.1</span> SurfKE</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org37c8764" class="outline-4">
-<h4 id="org37c8764"><span class="section-number-4">4.1.1</span> Graph Construction</h4>
+<div id="outline-container-org233399c" class="outline-4">
+<h4 id="org233399c"><span class="section-number-4">4.1.1</span> Graph Construction</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
 Build an undirected word graph, with words as vertices. There is an
@@ -277,8 +277,8 @@ document.
 </p>
 </div>
 </div>
-<div id="outline-container-org56c1265" class="outline-4">
-<h4 id="org56c1265"><span class="section-number-4">4.1.2</span> Learning Feature Representations</h4>
+<div id="outline-container-orgca5c196" class="outline-4">
+<h4 id="orgca5c196"><span class="section-number-4">4.1.2</span> Learning Feature Representations</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <p>
 Learn a mapping function \(f : V \rightarrow \mathbb{R}^{|V| \times d},
@@ -292,11 +292,11 @@ strategy is employed.
 </div>
 </div>
 </div>
-<div id="outline-container-org61294f7" class="outline-2">
-<h2 id="org61294f7"><span class="section-number-2">5</span> Topical Hierarchy</h2>
+<div id="outline-container-orgdcabd6a" class="outline-2">
+<h2 id="orgdcabd6a"><span class="section-number-2">5</span> Topical Hierarchy</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-<a href="file:///Users/jethrokuan/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf">CATHY</a>
+<a href="file:///home/jethro/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf">CATHY</a>
 </p>
 
 <p>
@@ -309,32 +309,54 @@ CATHY to discover sub-topics
 </p>
 </div>
 </div>
-<div id="outline-container-org59ca2cb" class="outline-2">
-<h2 id="org59ca2cb"><span class="section-number-2">6</span> Topic Modeling</h2>
+<div id="outline-container-org89d416d" class="outline-2">
+<h2 id="org89d416d"><span class="section-number-2">6</span> Topic Modeling</h2>
 <div class="outline-text-2" id="text-6">
 <p>
 <a href="http://www.cs.columbia.edu/~blei/topicmodeling.html">http://www.cs.columbia.edu/~blei/topicmodeling.html</a>
 </p>
 </div>
-<div id="outline-container-org3d724b2" class="outline-3">
-<h3 id="org3d724b2"><span class="section-number-3">6.1</span> LDA</h3>
+<div id="outline-container-org050b3bd" class="outline-3">
+<h3 id="org050b3bd"><span class="section-number-3">6.1</span> LDA</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 <a href="https://www.youtube.com/watch?v=FkckgwMHP2s">https://www.youtube.com/watch?v=FkckgwMHP2s</a>
 <a href="http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf">http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf</a>
 </p>
 </div>
-<div id="outline-container-org499bfec" class="outline-4">
-<h4 id="org499bfec"><span class="section-number-4">6.1.1</span> Dirichlet Distribution</h4>
+<div id="outline-container-orgeb6198c" class="outline-4">
+<h4 id="orgeb6198c"><span class="section-number-4">6.1.1</span> Dirichlet Distribution</h4>
 <div class="outline-text-4" id="text-6-1-1">
 <p>
 <a href="https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf">https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf</a>
 </p>
 
 <p>
-Dirchilet distribution is a family of continuous multivariate
+Dirichlet distribution is a family of continuous multivariate
 probability distributions parameterized by a vector α of positive
 reals.
+</p>
+
+\begin{equation}
+  \theta \sim Dir(\alpha)
+\end{equation}
+
+\begin{equation}
+  p(\theta) = \frac{1}{\beta(\alpha)} \prod_{i=1}^n \theta_i^{\alpha_i-1} I(\theta \in S)
+\end{equation}
+
+<p>
+Where \(\theta = (\theta_1, \theta_2, \hdots, \theta_n), \alpha = (\alpha_1, \alpha_2, \hdots, \alpha_n), \alpha_i > 0\) and
+</p>
+
+\begin{equation}
+  S = \left\{x \in \mathbb{R}^n : x_i \ge 0, \sum_{i=1}^{n} x_i = 1 \right\}
+\end{equation}
+
+<p>
+and 
+\(\frac{1}{\beta(\alpha)} =
+\frac{\Gamma(\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_2)\hdots\Gamma(\alpha_n)}\)
 </p>
 
 <p>
@@ -356,8 +378,8 @@ Dirichlet.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd64ea23" class="outline-4">
-<h4 id="orgd64ea23"><span class="section-number-4">6.1.2</span> Exploring a Corpus with the posterior distribution</h4>
+<div id="outline-container-org7a1d7e5" class="outline-4">
+<h4 id="org7a1d7e5"><span class="section-number-4">6.1.2</span> Exploring a Corpus with the posterior distribution</h4>
 <div class="outline-text-4" id="text-6-1-2">
 <p>
 Quantities needed for exploring a corpus are the posterior
@@ -386,12 +408,12 @@ distance</i>:
 \end{align*}
 </div>
 </div>
-<div id="outline-container-org8d2edb1" class="outline-4">
-<h4 id="org8d2edb1"><span class="section-number-4">6.1.3</span> Posterior Inference</h4>
+<div id="outline-container-orged304fb" class="outline-4">
+<h4 id="orged304fb"><span class="section-number-4">6.1.3</span> Posterior Inference</h4>
 <div class="outline-text-4" id="text-6-1-3">
 </div>
-<div id="outline-container-org969e76c" class="outline-5">
-<h5 id="org969e76c"><span class="section-number-5">6.1.3.1</span> Mean Field Variational Inference</h5>
+<div id="outline-container-orgad9bc06" class="outline-5">
+<h5 id="orgad9bc06"><span class="section-number-5">6.1.3.1</span> Mean Field Variational Inference</h5>
 <div class="outline-text-5" id="text-6-1-3-1">
 <p>
 Approximate intractable posterior distribution with a simpler
@@ -421,8 +443,8 @@ family.
 </div>
 </div>
 </div>
-<div id="outline-container-org22d6e85" class="outline-4">
-<h4 id="org22d6e85"><span class="section-number-4">6.1.4</span> Shortcomings</h4>
+<div id="outline-container-orgac28c68" class="outline-4">
+<h4 id="orgac28c68"><span class="section-number-4">6.1.4</span> Shortcomings</h4>
 <div class="outline-text-4" id="text-6-1-4">
 <ul class="org-ul">
 <li>strong, potentially invalid statistical assumptions:
@@ -442,8 +464,8 @@ evolving over time</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org91064eb" class="outline-3">
-<h3 id="org91064eb"><span class="section-number-3">6.2</span> TopicRNN</h3>
+<div id="outline-container-org4f999e7" class="outline-3">
+<h3 id="org4f999e7"><span class="section-number-3">6.2</span> TopicRNN</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 <a href="http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf">http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf</a> 
@@ -457,14 +479,14 @@ local dynamics of the sequences
 </div>
 </div>
 
-<div id="outline-container-org547f821" class="outline-3">
-<h3 id="org547f821"><span class="section-number-3">6.3</span> <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</h3>
+<div id="outline-container-org955aeb8" class="outline-3">
+<h3 id="org955aeb8"><span class="section-number-3">6.3</span> <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 12:12</p>
+<p class="date">Created: 2018-08-16 Thu 14:16</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
