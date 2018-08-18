@@ -1,0 +1,40 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Computer Vision
+* Introduction
+Despite the advances in research in computer vision, the dream of
+having a computer interpret an image at the same level of a human is
+still far away. Computer vision is inherently a difficult problem, for
+many reasons. First, it is an /inverse problem/, in which we seek to
+recover some unknowns given insufficient information to specify the
+solution. Hence, we resort to physics-based and probabilistic models
+to disambiguate between potential solutions.
+
+Forward models that we use in computer vision are usually grounded in
+physics and computer graphics. Both these fields model how objects
+move and animate, how light reflects off their surfaces, is scattered
+by the atmosphere, refracted through camera lenses and finally
+projected onto a flat image plane.
+
+In computer vision, we want to describe the world that we see in one
+or more images and to reconstruct its properties, such as shape,
+illumination and color distributions. Some examples of computer vision
+being used in real-world applications include Optical Character
+Recognition (OCR) , machine inspection, retail, medical imaging, and
+automotive safety.
+
+In many applications, it is better to think back from the problem at
+hand to suitable techniques, typical of an engineering approach. A
+heavy emphasis will be placed on algorithms that are robust to noise,
+and are reasonably efficient.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-18 21:17:41
+[[file:images/computer_vision/screenshot_2018-08-18_21-17-41.png]]
+
+The above figure shows a rough layout of the content of computer
+vision, and we see that from top to bottom, there are increasing
+levels of modeling and abstraction.
+* COMMENT Org Local Variables
+# Local Variables:
+# org-download-image-dir: "./images/computer_vision/"
+# End:

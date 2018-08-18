@@ -1,4 +1,3 @@
--*- mode: Org; org-download-image-dir: "./images/ai/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Artificial Intelligence
 * Reference Books                                                  :noexport:
@@ -770,3 +769,9 @@ Simon, noble prize in economics
 The complexity of the behaviour is the manifestation of the complexity
 of the environment and not the complexity of the program.
 #+END_QUOTE
+
+* COMMENT Local Org Variables
+# Local Variables:
+# org-download-image-dir: "./images/ai/"
+# End:
+

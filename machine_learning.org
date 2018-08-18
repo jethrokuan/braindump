@@ -1,4 +1,3 @@
--*- mode: Org; org-download-image-dir: "./images/ai/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Machine Learning
 
@@ -384,3 +383,7 @@ In /transform coding/, we transform the data, usually using a linear
 tranformation. The data in the transformed domain is quantized,
 usually discarding the small coefficients, corresponding to removing
 some of the dimensions.
+* COMMENT Local Org Variables
+# Local Variables:
+# org-download-image-dir: "./images/ai/"
+# End:

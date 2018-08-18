@@ -1,4 +1,3 @@
--*- mode: Org; org-download-image-dir: "./images/nlp/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Natural Language Processing
 
@@ -436,3 +435,8 @@ http://www.shixialiu.com
 
 ** Dimensionality Reduction (aka [[https://link.springer.com/chapter/10.1007/978-1-84882-312-9_4][Manifold Learning]])
 *** [[https://arxiv.org/abs/1805.10817][Linear tSNE optimization for the Web]]
+* COMMENT Local Org Variables
+# Local Variables:
+# org-download-image-dir: "./images/nlp/"
+# End:
+

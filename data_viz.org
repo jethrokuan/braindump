@@ -1,4 +1,3 @@
--*- mode: Org; org-download-image-dir: "./images/data_viz/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Data Visualization
 
@@ -358,3 +357,9 @@ illumination model
 5. Interactive visualization of deep learning
    1. Toolkits: Tensorboard, Embedding Projector, Visdom
    2. Advanced visual analytics systems: CNNVis, LSTMVis, DeepEyes
+
+* COMMENT Local Org Variables
+# Local Variables:
+# org-download-image-dir: "./images/data_viz/"
+# End:
+

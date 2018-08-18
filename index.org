@@ -3,6 +3,7 @@
 - [[file:artificial_intelligence.org][Artificial Intelligence]]
 - [[file:cplusplus.org][C++]]
 - [[file:computer_organization.org][Computer Organization]]
+- [[file:computer_vision.org][Computer Vision]]
 - [[file:consciousness.org][Consciousness]]
 - [[file:conversation.org][Conversation]]
 - [[file:critical_thinking.org][Critical Thinking]]

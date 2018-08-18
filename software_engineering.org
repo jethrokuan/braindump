@@ -1,7 +1,7 @@
--*- mode: Org; org-download-image-dir: "./images/software-engineering/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Software Engineering
 #+AUTHOR: Derrick Chua, Jethro Kuan
+
 * Object-Oriented Programming
 - Every object has both /state/ (data) and /behaviour/ (operations on
   data).
@@ -753,3 +753,8 @@ SDLC consists of different stages such as:
    - Processes measured and controllers
 5. Optimized
    - Focus on process improvement
+
+* COMMENT Org Local Variables
+# Local Variables:
+# org-download-image-dir: "./images/software-engineering/"
+# End:

@@ -1,6 +1,6 @@
--*- mode: Org; org-download-image-dir: "./images/spark/"; -*-
 #+SETUPFILE: ./export_template.org
 #+TITLE: Spark
+
 * What is Apache Spark?
 A cluster computing platform designed to be fast and general-purpose.
 It extends the MapReduce to support more types of computations, and
@@ -329,4 +329,9 @@ each accumulator only once. Thus, for a reliable absolute value
 counter, the accumulator should be in an action such as =foreach()=. For
 accumulators used in RDD tarnsformations instead of actions, this
 guarantee does not exist.
+
+* COMMENT Local Org Variables
+# Local Variables:
+# org-download-image-dir: "./images/spark/"
+# End:
 
