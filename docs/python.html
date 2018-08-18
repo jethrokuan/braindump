@@ -3,12 +3,18 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-16 Thu 14:16 -->
+<!-- 2018-08-18 Sat 17:54 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>&lrm;</title>
+<title>Python</title>
 <meta name="generator" content="Org mode" />
 <meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -55,45 +61,62 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
+<h1 class="title">Python</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org9803ab7">1. Python Nifty Tricks</a>
+<li><a href="#orgc50417e">1. Python  Data Structure Libraries</a>
 <ul>
-<li><a href="#org260f1b2">1.1. Data Structures</a>
-<ul>
-<li><a href="#org61941db">1.1.1. Heap</a></li>
-<li><a href="#orgf4c23aa">1.1.2. Priority Queue</a></li>
+<li><a href="#org61941db">1.1. Heap</a></li>
+<li><a href="#orgf4c23aa">1.2. Priority Queue</a></li>
 </ul>
 </li>
+<li><a href="#org9464628">2. Strings</a></li>
+<li><a href="#org9803ab7">3. Python Nifty Tricks</a>
+<ul>
+<li><a href="#org1de3310">3.1. Tilde Operator</a></li>
+<li><a href="#orgc161272">3.2. For loop else clause</a></li>
+<li><a href="#orgc7e937b">3.3. String translation tables</a></li>
+<li><a href="#org00ecc48">3.4. Checking if character unique in string</a></li>
 </ul>
 </li>
 </ul>
 </div>
-</div>
-<div id="outline-container-org9803ab7" class="outline-2">
-<h2 id="org9803ab7"><span class="section-number-2">1</span> Python Nifty Tricks</h2>
-<div class="outline-text-2" id="text-1">
-<ol class="org-ol">
-<li><code>for</code> loop has <code>else</code> clause, that runs when the for loop successfully
-completes without <code>break.</code></li>
-<li><code>str.maketrans</code> creates a translation table that makes string
-substitution quick.</li>
-<li><code>s.index(x) == s.rindex(x)</code> to check if character is only one in the string</li>
-</ol>
 </div>
 
-<div id="outline-container-org260f1b2" class="outline-3">
-<h3 id="org260f1b2"><span class="section-number-3">1.1</span> Data Structures</h3>
-<div class="outline-text-3" id="text-1-1">
+<div id="outline-container-orgc50417e" class="outline-2">
+<h2 id="orgc50417e"><span class="section-number-2">1</span> Python  Data Structure Libraries</h2>
+<div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org61941db" class="outline-4">
-<h4 id="org61941db"><span class="section-number-4">1.1.1</span> Heap</h4>
-<div class="outline-text-4" id="text-1-1-1">
+<div id="outline-container-org61941db" class="outline-3">
+<h3 id="org61941db"><span class="section-number-3">1.1</span> Heap</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
 Heaps are provided by the <code>heapq</code> library in python.
 </p>
@@ -114,9 +137,9 @@ heapq._heappop_max(a)
 </div>
 </div>
 
-<div id="outline-container-orgf4c23aa" class="outline-4">
-<h4 id="orgf4c23aa"><span class="section-number-4">1.1.2</span> Priority Queue</h4>
-<div class="outline-text-4" id="text-1-1-2">
+<div id="outline-container-orgf4c23aa" class="outline-3">
+<h3 id="orgf4c23aa"><span class="section-number-3">1.2</span> Priority Queue</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
 <a href="https://docs.python.org/3/library/queue.html">Reference</a>
 </p>
@@ -147,11 +170,91 @@ while not pq.empty():
 </div>
 </div>
 </div>
+
+<div id="outline-container-org9464628" class="outline-2">
+<h2 id="org9464628"><span class="section-number-2">2</span> Strings</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Some important string operators and functions are:
+</p>
+
+<ul class="org-ul">
+<li>s[3]</li>
+<li>len(s)</li>
+<li>s + t</li>
+<li>s[2:4]</li>
+<li>s in t</li>
+<li>s.strip()</li>
+<li>s.startswith(prefix)</li>
+<li>s.endswith(prefix)</li>
+<li>s.split(',')</li>
+<li>3 * '01'</li>
+<li>','.join(["A","B","C"])</li>
+<li>s.tolower()</li>
+</ul>
+
+<p>
+Strings are immutable, so operations create new array of characters
+that are then assigned back to s.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9803ab7" class="outline-2">
+<h2 id="org9803ab7"><span class="section-number-2">3</span> Python Nifty Tricks</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org1de3310" class="outline-3">
+<h3 id="org1de3310"><span class="section-number-3">3.1</span> Tilde Operator</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+The tilde operator <code>~</code> is the bit-wise complement operator, and it
+essentially calculates the <code>-x-1.</code> This comes in useful in arrays, where
+\(s[~x] = s[-x-1]\). An example usage would be the \(O(n)\) time
+palindrome function:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">def is_palindrome(s):
+    return all(s[i] == s[~i] for i in range(len(s) // 2))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc161272" class="outline-3">
+<h3 id="orgc161272"><span class="section-number-3">3.2</span> For loop else clause</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<code>for</code> loop has <code>else</code> clause, that runs when the for loop successfully
+completes without <code>break</code>.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc7e937b" class="outline-3">
+<h3 id="orgc7e937b"><span class="section-number-3">3.3</span> String translation tables</h3>
+<div class="outline-text-3" id="text-3-3">
+<p>
+<code>str.maketrans</code> creates a translation table that makes string
+substitution quick.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org00ecc48" class="outline-3">
+<h3 id="org00ecc48"><span class="section-number-3">3.4</span> Checking if character unique in string</h3>
+<div class="outline-text-3" id="text-3-4">
+<p>
+<code>s.index(x) == s.rindex(x)</code> to check if character is only one in the string
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-16 Thu 14:16</p>
+<p class="date">Created: 2018-08-18 Sat 17:54</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

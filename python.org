@@ -1,13 +1,8 @@
-* Python Nifty Tricks
-1. =for= loop has =else= clause, that runs when the for loop successfully
-   completes without =break.=
-2. =str.maketrans= creates a translation table that makes string
-   substitution quick.
-3. ~s.index(x) == s.rindex(x)~ to check if character is only one in the string
+#+SETUPFILE: ./export_template.org
+#+TITLE: Python
 
-** Data Structures
-
-*** Heap
+* Python  Data Structure Libraries
+** Heap
 Heaps are provided by the =heapq= library in python.
 
 #+BEGIN_SRC python
@@ -23,7 +18,7 @@ Heaps are provided by the =heapq= library in python.
 
 #+END_SRC
 
-*** Priority Queue
+** Priority Queue
 [[https://docs.python.org/3/library/queue.html][Reference]]
 
 The ~queue~ module provides FIFO, LIFO and Priority Queues. Among them,
@@ -49,3 +44,46 @@ questions.
 : (1, 'one')
 : (5, 'five')
 : (10, 'ten')
+
+* Strings
+
+Some important string operators and functions are:
+
+- s[3]
+- len(s)
+- s + t
+- s[2:4]
+- s in t
+- s.strip()
+- s.startswith(prefix)
+- s.endswith(prefix)
+- s.split(',')
+- 3 * '01'
+- ','.join(["A","B","C"])
+- s.tolower()
+
+Strings are immutable, so operations create new array of characters
+that are then assigned back to s.
+
+* Python Nifty Tricks
+** Tilde Operator
+The tilde operator =~= is the bit-wise complement operator, and it
+essentially calculates the ~-x-1.~ This comes in useful in arrays, where
+$s[~x] = s[-x-1]$. An example usage would be the $O(n)$ time
+palindrome function:
+
+#+BEGIN_SRC python
+  def is_palindrome(s):
+      return all(s[i] == s[~i] for i in range(len(s) // 2))
+#+END_SRC
+
+** For loop else clause
+=for= loop has =else= clause, that runs when the for loop successfully
+completes without =break=.
+
+** String translation tables
+=str.maketrans= creates a translation table that makes string
+substitution quick.
+
+** Checking if character unique in string
+ ~s.index(x) == s.rindex(x)~ to check if character is only one in the string

@@ -2,7 +2,9 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Artificial Intelligence
 * Reference Books                                                  :noexport:
-  [[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Artificial%20Intelligence%20A%20Modern%20Approach%20(3rd%20Edition).pdf][AIMA]]
+[[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Artificial%20Intelligence%20A%20Modern%20Approach%20(3rd%20Edition).pdf][AIMA]]
+[[file:~/Dropbox/NUS/CS4246/Reinforcement%20Learning%20_%20Sutton.pdf][Reinforcement Learning - Sutton]]
+
 * What is Artificial Intelligence?
 Designing agents that act rationally (e.g. through maximising a reward
 function).
@@ -625,6 +627,139 @@ tree, setting the node value to be the minimum of the children.
 
 ** Alpha-Beta Pruning
 Eliminate parts of the search tree that do not affect decision. 
+
+
+* Classical Planning
+Problem-solving agents that deal with atomic representations of states
+require good domain-specific heuristics to perform well. The hybrid
+propositional logical agent can find plans without domain-specific
+heuristics because it uses domain-independent heuristics based on the
+logical structure of the problem. However, it relies on ground
+propositional inference, and suffers when there are large numbers of
+actions and states.
+
+*Planning Domain Definition Language (PDDL)* was created in response to
+these deficiencies.
+
+Each state is represented as a conjunction of fluents that are ground,
+functionless atoms. Database semantics is used, which involves:
+
+- closed-world assumption :: all fluents not mentioned are false
+- unique names assumption :: fluents with different names are distinct
+
+State representations are carefully designed so that they can be
+manipulated by set operations or logical inference.
+
+Actions are defined in terms of the *preconditions* and *effects*.
+Preconditions and effects are described in terms of a conjunction of
+literals.
+
+** Complexities of classical planning
+
+*PlanSAT* is the question of whether there exists any plan that solves a
+planning problem. *Bounded PlanSAT* asks whether there is a solution of
+length k or less.
+
+While the number of states is finite, adding function symbols make
+them infinite, making these problems semi-decidable at best. Certain
+restrictions can reduce the questions into a P class problem.
+
+However, most agents would not be asked to derive plans for worst-case
+problem instances. For many problem domains, bounded PlanSAT is
+NP-complete, while PlanSAT is in P.
+
+** State-space search for planning
+The first approach is forward (propogation) state-space search, which
+searches forward from the initial state. However, it is inefficient,
+for the following reasons:
+
+1. It tends to explore irrelevant actions
+2. Planning problems tend to have large state spaces, and relatively
+   small problems will be an issue without a good heuristic
+
+It turn out that good domain-independent heuristics can be derived for
+forward search, which makes it feasible.
+
+Alternatively, we can do a backward (regression) state-space search,
+which looks for actions that can lead to the goal. Unlike forward
+search, backward search only explores relevant actions, hence has a
+low branching factor. However, backward search deals with sets, which
+are make it harder to derive good domain-independent heuristics.
+
+** Heuristics for planning
+
+Framing the search problem as a graph where the nodes are states and
+the edges are actions. We can think of a number of ways to relax the
+problem, generating admissible heuristics:
+
+1. Add more edges to the graph, making it easier to find a path
+
+The *ignore preconditions heuristic* drops all preconditions from
+actions, and every action becomes applicable in every state. We count
+the number of actions required such that the union of the action's
+effects satisfy the goal. This is called the set-cover problem, which
+is unfortunately NP-hard. We can also ignore selected preconditions of
+actions.
+
+The ignore delete list heuristic, drops all negative literals in goals
+and preconditions. This way, an action cannot undo progress towards
+the goal, and each action taken would monotonically progress towards
+it.
+
+2. Grouping multiple nodes together, shrinking the size of the graph
+
+We can reduce the number of states by forming a *state abstraction* -- a
+many-to-one mapping from states in the ground representation of the
+problem to the abstract representation. For example, one can ignore
+some fluents.
+
+The key idea in defining heuristics is *decomposition*: diving a problem
+into parts. *Subgoal independence* is the assumption that the cost
+of solving a conjunction of subgoals is approximated by the sum of the
+costs of solving a subgoal independently.
+
+** Other classical planning approaches
+We can translate a problem description in PDDL to  a form that can be
+processed by SATPlan. The steps are below:
+
+1. Propositionalize the actions: replace each action schema with a set
+   of ground actions formed by substituting constants for each of the
+   variables. These ground actions are not part of the translation,
+   but will be used in subsequent steps.
+2. Define the initial state: assert $F^0$ for every fluent $F$ in the
+   problem's initial state, and $\neg F^0$ for every fluent not mentioned
+   in the final state.
+3. Propositionalize the goal: the goal becomes a disjunction over all
+   of its ground instances, where variables are replaced by constants.
+4. Add successor-state axioms: For each fluent $F$, add an axiom of
+   the form:
+
+\begin{equation}
+  F^{t+1} \iff ActionCausesF^t \vee \left( F^t \wedge \neg ActionCausesNotF^t \right)
+\end{equation}
+
+Where $ActionCausesF$ is a disjunction of all the ground actions that
+have $F$ in their add list, and $ActionCausesNotF$ is a disjunction of
+all ground actions that have $F$ in their delete list.
+
+5. Add precondition axioms: for each ground action $A$, add the axiom
+   $A^t \iff PRE(A)^t$, i.e. if an action is taken at time $t$, then the
+   preconditions must be true.
+6. Add action exclusion axioms: say that exactly one ground action can
+   occur at each step.
+
+#+BEGIN_SRC text
+  function SATPLAN(init, transition, goal, Tmax) returns solution or failure
+    ""inputs: init, transition, goal constitute the problem
+      description
+      Tmax: upper limit for plan length""
+    for t = 0 to Tmax do
+      cnf <- translate-to-sat(init, transition, goal, t)
+      model <- SATSolver(cnf)
+      if model is not null then
+        return extract-solution(model)
+    return failure
+#+END_SRC
 
 * RANDOM
 

@@ -66,6 +66,34 @@ Insertion into a full array can be handled by resizing, allocating a
 new array with additional memory and copying over the entries from the
 original array.
 
+** Linked List
+#+BEGIN_SRC python
+  class ListNode(object):
+      def __init__(self, data=0, next_node=None):
+          self.data = data
+          self.next = next_node
+#+END_SRC
+
+#+BEGIN_SRC python
+  def search_list(L, key):
+      while L and L.data != key:
+          L = L.next
+      return L
+#+END_SRC
+
+#+BEGIN_SRC python
+  def insert_after(node, new_node):
+      new_node.next = node.next
+      node.next = new_node
+#+END_SRC
+
+#+BEGIN_SRC python
+  def delete_after(node):
+      # Need to make sure there is something after to delete
+      if node.next:
+          node.next = node.next.next
+#+END_SRC
+
 * Common Questions
 
 ** Find kth largest in array
@@ -137,3 +165,75 @@ becomes a match (b) ~p~ moves past mismatched character
 
 *Good suffix rule*: Let ~t~ = matched by inner loop; skip until (a) there
 are no mismatches between ~p~ and ~t~, or (b) ~p~ moves past ~t~
+
+Another linear-time string search algorithm is the [[https://en.wikipedia.org/wiki/Rabin%25E2%2580%2593Karp_algorithm][Rabin-Karp
+algorithm]], which uses a rolling hash.
+
+** Delete Duplicates in Linked List
+#+BEGIN_SRC python
+  def deleteDuplicates(A):
+      head = A
+      while A:
+          while A.next and A.next.val == A.val:
+              A.next = A.next.next
+          A = A.next
+      return head
+#+END_SRC
+
+** Longest Increasing Subsequence (LIS)
+
+$O(n^2)$ solution involves dynamic programming. Let $L[i]$ be the
+length of the LIS ending at index $i$, such that $arr[i]$ is the last
+element of the LIS.
+
+Then $L(i) = 1 + max(L[j])$ where $0 < j < i$ and $arr[j] < arr[i]$ or
+$L[i] = 1$ if no such $j$ exists.
+
+#+BEGIN_SRC python
+  def longest_increasing_subsequence(arr):
+      l = len(arr)
+      # Initialize LIS
+      lis = [1] * l
+
+      for i in range(1, l):
+          for j in range(0, i):
+              if arr[i] > arr[j]:
+                  lis[i] = max(lis[i], lis[j] + 1)
+
+      return max(lis)
+#+END_SRC
+
+** Generating a Random Sample
+#+BEGIN_SRC python
+  import random
+
+  def random_sample(k, A):
+      """Generates a rondom subset of size k from array A."""
+      for i in range(k):
+          r = random.randint(i, len(A)-1)
+          A[i], A[r] = A[r], A[i]
+      return A[:k]
+#+END_SRC
+
+** Generate a random sample from a stream
+
+The basic idea is that given the ~n+1~ element, and a random subset of
+size ~k~, where ~k<n~, then that element should belong to that new subset
+with probability ~k/(n+1)~.
+
+#+BEGIN_SRC python
+  import random
+
+  def online_random_sample(it, A):
+      # Stores the first k elements
+      sampling_results = list(itertools.islice(it, k))
+
+      num_seen_so_far = k
+      for x in it:
+          num_seen_so_far += 1
+          idx_to_replace = random.randrange(num_seen_so_far)
+          if idx_to_replace < k:
+              sampling_results[idx_to_replace] = x
+
+      return sampling_results
+#+END_SRC

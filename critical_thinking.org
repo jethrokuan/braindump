@@ -1,0 +1,43 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Critical Thinking
+
+Critical thinking is reasonable and reflective thinking focused on
+deciding what to believe or do.
+
+Ideal critical thinkers are disposed to:
+
+1. Care that their beliefs be true, and their decisions be justified
+   1. Seek alternate hypotheses and explanations
+   2. Consider seriously other points of view
+   3. Try to be well informed
+2. Care to understand and present a position honestly and clearly.
+   1. Discover and listen to others' view and reasons
+   2. Be clear about the intended meaning of what is said
+   3. Determine and focus on the conclusion or question
+   4. Seek and offer reasons
+   5. Take into account the total situation
+   6. Be reflectively aware of basic beliefs
+3. Care about every person
+   1. Avoid intimidating or confusing others, account for others'
+      feelings and level of understanding
+ 
+Critical thinkers are able to do the following:
+
+1. Focus on a question
+2. Analyze arguments
+3. Ask and answer clarification or challenge questions
+4. Judge the credibility of a source
+5. Observe and judge observation reports
+6. Deduce and judge deduction
+7. Make material inferences
+   1. To generalizations, and explanatory hypotheses
+8. Make and judge value judgments
+9. Define terms and judge definitions, using appropriate criteria
+10. Attribute unstated assumptions that belong under both basic
+    clarification and inference
+11. Consider and reason from premises
+12. Integrate the dispositions in making and defending a decision
+13. Be sensitive to feelings, level of knowledge and degree of
+    sophistication of others
+14. Employ appropriate rhetorical strategies, reacting to fallacy
+    labels in an appropriate manner.
