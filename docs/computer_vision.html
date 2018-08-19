@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-19 Sun 13:07 -->
+<!-- 2018-08-19 Sun 14:27 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computer Vision</title>
@@ -95,6 +95,14 @@ for the JavaScript code in this tag.
 <li><a href="#org1e4cc08">2. Image Formation</a>
 <ul>
 <li><a href="#org1754238">2.1. Geometric Primitives</a></li>
+<li><a href="#org9c74fb8">2.2. 2D Transformations</a></li>
+<li><a href="#org61357e7">2.3. 3D Rotations</a>
+<ul>
+<li><a href="#org230a180">2.3.1. Euler Angles</a></li>
+<li><a href="#orge235f67">2.3.2. Axis/angle (exponential twist)</a></li>
+<li><a href="#org56c7059">2.3.3. Unit Quarternions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -255,11 +263,259 @@ combination of these 2 points.
 \end{equation}
 </div>
 </div>
+
+<div id="outline-container-org9c74fb8" class="outline-3">
+<h3 id="org9c74fb8"><span class="section-number-3">2.2</span> 2D Transformations</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+The basic primitives introduced above can be transformed, the simplest
+of which occur in the 2D plane.
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/computer_vision/Image Formation/screenshot_2018-08-19_13-49-15.png" alt="screenshot_2018-08-19_13-49-15.png" />
+</p>
+</div>
+
+<p>
+2D translations can be written as \(\mathbf{x}' = \mathbf{x} +
+\mathbf{t}\), or:
+</p>
+
+\begin{align}
+  \mathbf{x}' &= \begin{bmatrix}
+              \mathbf{I} & \mathbf{t}
+              \end{bmatrix}\bar{\mathbf{x}} \\
+              &= \begin{bmatrix}
+                 \mathbf{I} & \mathbf{t} \\
+                 \mathbf{0}^T & 1
+              \end{bmatrix}\bar{\mathbf{x}}
+\end{align}
+
+<p>
+where \(\mathbf{0}\) is the zero vector.
+</p>
+
+<p>
+The combination of rotation and translation is known as 2D <i>rigid body
+motion</i>, or the 2D Euclidean transformation, since Euclidean distances
+are preserved. It can be written as \(\mathbf{x}' =
+\mathbf{R}\mathbf{x} + \mathbf{t}\) or:
+</p>
+
+\begin{equation}
+  \mathbf{x}' = \begin{bmatrix}
+              \mathbf{R} & \mathbf{t}
+              \end{bmatrix}\bar{\mathbf{x}}
+\end{equation}
+
+<p>
+where
+</p>
+
+\begin{equation}
+  \mathbf{R} = \begin{bmatrix}
+    \cos \theta & - \sin \theta \\
+    \sin \theta & \cos \theta
+  \end{bmatrix}
+\end{equation}
+
+<p>
+is an orthonormal rotation matrix with
+\(\mathbf{R}\mathbf{R}^T=\mathbf{I}\) and \(\lVert R \rVert = 1\).
+</p>
+
+<p>
+The <b>similarity transform</b>, or scaled rotation, can be expressed as
+\(\mathbf{x}' = s\mathbf{R}\mathbf{x} + \mathbf{t}\). This preserves
+angles between lines.
+</p>
+
+<p>
+The <b>affine transformation</b> is written as \(\mathbf{x}' =
+\mathbf{A}\hat{\mathbf{x}}\), where \(\mathbf{A}\) is an arbitrary \(2 \times
+3\) matrix.
+</p>
+
+<p>
+Parallel lines remain parallel under affine transformations.
+</p>
+
+<p>
+The <b>projective transformation</b>, also known as the perspective transform
+or homography, operates on homogeneous coordinates:
+</p>
+
+\begin{equation}
+  \hat{\mathbf{x}}' = \tilde{\mathbf{H}}\tilde{\mathbf{x}}
+\end{equation}
+
+<p>
+where \(\tilde{\mathbf{H}}\) is an arbitrary \(3 \times 3\) matrix. Note that
+\(\tilde{\mathbf{H}}\) is homogeneous.
+</p>
+
+<p>
+Each of these transformation preserves some properties, and can be
+presented in a hierarchy.
+</p>
+
+
+<div class="figure">
+<p><img src="images/computer_vision/Image Formation/screenshot_2018-08-19_14-02-51.png" alt="screenshot_2018-08-19_14-02-51.png" />
+</p>
+</div>
+
+<p>
+Some transformations that cannot be classified so easily include:
+</p>
+
+<ol class="org-ol">
+<li>Stretching and Squashing</li>
+<li>Planar surface flow</li>
+<li>Bilinear interpolant</li>
+</ol>
+
+<p>
+The set of 3D transformations are very similar to the 2D
+transformations.
+</p>
+
+
+<div class="figure">
+<p><img src="images/computer_vision/Image Formation/screenshot_2018-08-19_14-05-15.png" alt="screenshot_2018-08-19_14-05-15.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org61357e7" class="outline-3">
+<h3 id="org61357e7"><span class="section-number-3">2.3</span> 3D Rotations</h3>
+<div class="outline-text-3" id="text-2-3">
+<p>
+The biggest difference between 2D and 3D coordinate transformations is
+that the parameterization of the 3D rotation matrix \(\mathbf{R}\) is
+not as straightforward.
+</p>
+</div>
+
+<div id="outline-container-org230a180" class="outline-4">
+<h4 id="org230a180"><span class="section-number-4">2.3.1</span> Euler Angles</h4>
+<div class="outline-text-4" id="text-2-3-1">
+<p>
+A rotation matrix can be formed as the product of three rotations
+around three cardinal axes, e.g. \(x\), \(y\), and \(z\). This is generally
+a bad idea, because the result depends on the order of
+transformations, and it is not always possible to move smoothly in a
+parameter space.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge235f67" class="outline-4">
+<h4 id="orge235f67"><span class="section-number-4">2.3.2</span> Axis/angle (exponential twist)</h4>
+<div class="outline-text-4" id="text-2-3-2">
+<p>
+A rotation can be represented by a rotation axis \(\hat{\mathbf{n}}\)
+and an angle \(\theta\), or equivalently by a 3D vector \(\mathbf{\omega} =
+\theta\hat{\mathbf{n}}\). We can write the rotation matrix corresponding to
+a rotation by \(\theta\) around an axis \(\hat{\mathbf{n}}\) as:
+</p>
+
+\begin{equation}
+  \mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + \sin \theta
+  [\hat{\mathbf{n}}]_\times + \left(1-\cos\theta\right)[\hat{\mathbf{n}}]^2_\times
+\end{equation}
+
+<p>
+Also known as <i>Rodriguez's formula</i>.
+</p>
+
+<p>
+For small rotations, this is an excellent choice, as it simplifies to:
+</p>
+
+\begin{equation}
+  \mathbf{R}(\mathbf{\omega}) \approx \mathbf{I} + \sin\theta[\hat{\mathbf{n}}]_\times = \begin{bmatrix}
+    1 & -\omega_x & -\omega_y \\
+    \omega_z & 1 & -\omega_x \\
+    -\omega_y & \omega_x & 1
+  \end{bmatrix}
+\end{equation}
+
+<p>
+This gives a nice linearized relationship between the rotation
+parameters \(\omega\) and \(\mathbf{R}\).  We can also compute the derivative
+of \(\mathbf{R}v\) with respect to \(\omega\),
+</p>
+
+\begin{equation}
+\frac{\partial \mathbf{R}v}{\partial \omega^T} = -[\mathbf{v}]_\times = \begin{bmatrix}
+  0 & z & -y \\
+  -z & 0 & x \\
+  y & -x & 0
+\end{bmatrix}
+\end{equation}
+</div>
+</div>
+
+<div id="outline-container-org56c7059" class="outline-4">
+<h4 id="org56c7059"><span class="section-number-4">2.3.3</span> Unit Quarternions</h4>
+<div class="outline-text-4" id="text-2-3-3">
+<p>
+A unit quarternion is a unit length 4-vector whose components can be
+written as \(\mathbf{q} = (x, y, z, w)\). Unit quarternions live on the
+unit sphere \(\lVert q \rVert = 1\) and antipodal quartenions, \(q\) and
+\(-q\) represent the same rotation. This representation is continuous
+and are very popular representations for pose and for pose
+interpolation.
+</p>
+
+<p>
+Quarternions can be derived from the axis/angle representation through
+the formula:
+</p>
+
+\begin{equation}
+  \mathbf{q} = (\mathbf{v}, w) = \left(\sin\frac{\theta}{2}\hat{\mathbf{n}}, \cos\frac{\theta}{2}\right)
+\end{equation}
+
+<p>
+where \(\hat{\mathbf{n}}\) and \(\theta\) are the rotation axis and angle.
+Rodriguez's formula can be converted to:
+</p>
+
+\begin{equation}
+  \mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + 2w[\mathbf{v}]_\times + 2[\mathbf{v}]^2_\times
+\end{equation}
+
+<p>
+The nicest aspect of unit quarternions is that there is a simple
+algebra for composing rotations expressed as unit quartenions:
+</p>
+
+\begin{equation}
+  \mathbf{q}_2 = \mathbf{q}_0 \mathbf{q}_1 = (\mathbf{v}_0 \times \mathbf{v}_1 + w_0 \mathbf{v}_1 + w_1 \mathbf{v}_0, w_0 w_1 - \mathbf{v}_0 \cdot \mathbf{v}_1)
+\end{equation}
+
+<p>
+The inverse of a quarternion is just flipping the sign of \(\mathbf{v}\)
+or \(w\), but not both. Then quarternion division can be defined as:
+</p>
+
+\begin{equation}
+  \mathbf{q}_2 = \mathbf{q}_0 / \mathbf{q}_1 = (\mathbf{v}_0 \times \mathbf{v}_1 + w_0 \mathbf{v}_1 - w_1 \mathbf{v}_0, - w_0 w_1 - \mathbf{v}_0 \cdot \mathbf{v}_1)
+\end{equation}
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-19 Sun 13:07</p>
+<p class="date">Created: 2018-08-19 Sun 14:27</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

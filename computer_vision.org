@@ -116,6 +116,175 @@ combination of these 2 points.
   \mathbf{r} = (1 - \lambda)\mathbf{p} + \lambda \mathbf{q}
 \end{equation}
 
+** 2D Transformations
+
+The basic primitives introduced above can be transformed, the simplest
+of which occur in the 2D plane.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-19 13:49:15
+[[file:images/computer_vision/Image Formation/screenshot_2018-08-19_13-49-15.png]]
+
+2D translations can be written as $\mathbf{x}' = \mathbf{x} +
+\mathbf{t}$, or:
+
+\begin{align}
+  \mathbf{x}' &= \begin{bmatrix}
+              \mathbf{I} & \mathbf{t}
+              \end{bmatrix}\bar{\mathbf{x}} \\
+              &= \begin{bmatrix}
+                 \mathbf{I} & \mathbf{t} \\
+                 \mathbf{0}^T & 1
+              \end{bmatrix}\bar{\mathbf{x}}
+\end{align}
+
+where $\mathbf{0}$ is the zero vector.
+
+The combination of rotation and translation is known as 2D /rigid body
+motion/, or the 2D Euclidean transformation, since Euclidean distances
+are preserved. It can be written as $\mathbf{x}' =
+\mathbf{R}\mathbf{x} + \mathbf{t}$ or:
+
+\begin{equation}
+  \mathbf{x}' = \begin{bmatrix}
+              \mathbf{R} & \mathbf{t}
+              \end{bmatrix}\bar{\mathbf{x}}
+\end{equation}
+
+where
+
+\begin{equation}
+  \mathbf{R} = \begin{bmatrix}
+    \cos \theta & - \sin \theta \\
+    \sin \theta & \cos \theta
+  \end{bmatrix}
+\end{equation}
+
+is an orthonormal rotation matrix with
+$\mathbf{R}\mathbf{R}^T=\mathbf{I}$ and $\lVert R \rVert = 1$.
+
+The *similarity transform*, or scaled rotation, can be expressed as
+$\mathbf{x}' = s\mathbf{R}\mathbf{x} + \mathbf{t}$. This preserves
+angles between lines.
+
+The *affine transformation* is written as $\mathbf{x}' =
+\mathbf{A}\hat{\mathbf{x}}$, where $\mathbf{A}$ is an arbitrary $2 \times
+3$ matrix.
+
+Parallel lines remain parallel under affine transformations.
+
+The *projective transformation*, also known as the perspective transform
+or homography, operates on homogeneous coordinates:
+
+\begin{equation}
+  \hat{\mathbf{x}}' = \tilde{\mathbf{H}}\tilde{\mathbf{x}}
+\end{equation}
+
+where $\tilde{\mathbf{H}}$ is an arbitrary $3 \times 3$ matrix. Note that
+$\tilde{\mathbf{H}}$ is homogeneous.
+
+Each of these transformation preserves some properties, and can be
+presented in a hierarchy.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-19 14:02:51
+[[file:images/computer_vision/Image Formation/screenshot_2018-08-19_14-02-51.png]]
+
+Some transformations that cannot be classified so easily include:
+
+1. Stretching and Squashing
+2. Planar surface flow
+3. Bilinear interpolant
+
+The set of 3D transformations are very similar to the 2D
+transformations.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-19 14:05:15
+[[file:images/computer_vision/Image
+Formation/screenshot_2018-08-19_14-05-15.png]]
+
+** 3D Rotations
+The biggest difference between 2D and 3D coordinate transformations is
+that the parameterization of the 3D rotation matrix $\mathbf{R}$ is
+not as straightforward.
+
+*** Euler Angles
+A rotation matrix can be formed as the product of three rotations
+around three cardinal axes, e.g. $x$, $y$, and $z$. This is generally
+a bad idea, because the result depends on the order of
+transformations, and it is not always possible to move smoothly in a
+parameter space.
+
+*** Axis/angle (exponential twist)
+A rotation can be represented by a rotation axis $\hat{\mathbf{n}}$
+and an angle $\theta$, or equivalently by a 3D vector $\mathbf{\omega} =
+\theta\hat{\mathbf{n}}$. We can write the rotation matrix corresponding to
+a rotation by $\theta$ around an axis $\hat{\mathbf{n}}$ as:
+
+\begin{equation}
+  \mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + \sin \theta
+  [\hat{\mathbf{n}}]_\times + \left(1-\cos\theta\right)[\hat{\mathbf{n}}]^2_\times
+\end{equation}
+
+Also known as /Rodriguez's formula/.
+
+For small rotations, this is an excellent choice, as it simplifies to:
+
+\begin{equation}
+  \mathbf{R}(\mathbf{\omega}) \approx \mathbf{I} + \sin\theta[\hat{\mathbf{n}}]_\times = \begin{bmatrix}
+    1 & -\omega_x & -\omega_y \\
+    \omega_z & 1 & -\omega_x \\
+    -\omega_y & \omega_x & 1
+  \end{bmatrix}
+\end{equation}
+
+This gives a nice linearized relationship between the rotation
+parameters $\omega$ and $\mathbf{R}$.  We can also compute the derivative
+of $\mathbf{R}v$ with respect to $\omega$,
+
+\begin{equation}
+\frac{\partial \mathbf{R}v}{\partial \omega^T} = -[\mathbf{v}]_\times = \begin{bmatrix}
+  0 & z & -y \\
+  -z & 0 & x \\
+  y & -x & 0
+\end{bmatrix}
+\end{equation}
+
+*** Unit Quarternions
+A unit quarternion is a unit length 4-vector whose components can be
+written as $\mathbf{q} = (x, y, z, w)$. Unit quarternions live on the
+unit sphere $\lVert q \rVert = 1$ and antipodal quartenions, $q$ and
+$-q$ represent the same rotation. This representation is continuous
+and are very popular representations for pose and for pose
+interpolation.
+
+Quarternions can be derived from the axis/angle representation through
+the formula:
+
+\begin{equation}
+  \mathbf{q} = (\mathbf{v}, w) = \left(\sin\frac{\theta}{2}\hat{\mathbf{n}}, \cos\frac{\theta}{2}\right)
+\end{equation}
+
+where $\hat{\mathbf{n}}$ and $\theta$ are the rotation axis and angle.
+Rodriguez's formula can be converted to:
+
+\begin{equation}
+  \mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + 2w[\mathbf{v}]_\times + 2[\mathbf{v}]^2_\times
+\end{equation}
+
+The nicest aspect of unit quarternions is that there is a simple
+algebra for composing rotations expressed as unit quartenions:
+
+\begin{equation}
+  \mathbf{q}_2 = \mathbf{q}_0 \mathbf{q}_1 = (\mathbf{v}_0 \times \mathbf{v}_1 + w_0 \mathbf{v}_1 + w_1 \mathbf{v}_0, w_0 w_1 - \mathbf{v}_0 \cdot \mathbf{v}_1)
+\end{equation}
+
+The inverse of a quarternion is just flipping the sign of $\mathbf{v}$
+or $w$, but not both. Then quarternion division can be defined as:
+
+\begin{equation}
+  \mathbf{q}_2 = \mathbf{q}_0 / \mathbf{q}_1 = (\mathbf{v}_0 \times \mathbf{v}_1 + w_0 \mathbf{v}_1 - w_1 \mathbf{v}_0, - w_0 w_1 - \mathbf{v}_0 \cdot \mathbf{v}_1)
+\end{equation}
+
 
 * COMMENT Org Local Variables
 # Local Variables:
