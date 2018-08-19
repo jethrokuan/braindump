@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-18 Sat 21:28 -->
+<!-- 2018-08-19 Sun 13:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computer Vision</title>
@@ -61,6 +61,28 @@ for the JavaScript code in this tag.
  }
 /*]]>*///-->
 </script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        displayAlign: "center",
+        displayIndent: "0em",
+
+        "HTML-CSS": { scale: 100,
+                        linebreaks: { automatic: "false" },
+                        webFont: "TeX"
+                       },
+        SVG: {scale: 100,
+              linebreaks: { automatic: "false" },
+              font: "TeX"},
+        NativeMML: {scale: 100},
+        TeX: { equationNumbers: {autoNumber: "AMS"},
+               MultLineWidth: "85%",
+               TagSide: "right",
+               TagIndent: ".8em"
+             }
+});
+</script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_HTML"></script>
 </head>
 <body>
 <div id="content">
@@ -70,9 +92,15 @@ for the JavaScript code in this tag.
 <div id="text-table-of-contents">
 <ul>
 <li><a href="#orga7e0ed0">1. Introduction</a></li>
+<li><a href="#org1e4cc08">2. Image Formation</a>
+<ul>
+<li><a href="#org1754238">2.1. Geometric Primitives</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-orga7e0ed0" class="outline-2">
 <h2 id="orga7e0ed0"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
@@ -124,10 +152,114 @@ levels of modeling and abstraction.
 </p>
 </div>
 </div>
+
+<div id="outline-container-org1e4cc08" class="outline-2">
+<h2 id="org1e4cc08"><span class="section-number-2">2</span> Image Formation</h2>
+<div class="outline-text-2" id="text-2">
+</div>
+<div id="outline-container-org1754238" class="outline-3">
+<h3 id="org1754238"><span class="section-number-3">2.1</span> Geometric Primitives</h3>
+<div class="outline-text-3" id="text-2-1">
+<p>
+Geometric primitives form the basic building blocks used to describe
+three-dimensional shapes.
+</p>
+
+<p>
+2D points can be denoted using a pair of values, \(x = (x, y) \in
+\mathbb{R}^2\):
+</p>
+
+\begin{equation}
+  x = \begin{bmatrix}
+    x \\
+    y
+  \end{bmatrix}
+\end{equation}
+
+<p>
+2D points can also be represented using homogeneous coordinates,
+ \(\tilde{\mathbf{x}} = (\tilde{x}, \tilde{y}, \tilde{w}) \in \mathbb{P}^2\), where vectors
+ that differ only by scale are considered to be equivalent.
+ \(\mathbb{P}^2 = \mathbb{R}^3 - (0, 0, 0)\) is called the <i>2D projective
+ space</i>.
+</p>
+
+<p>
+A homogeneous vector \(\tilde{\mathbf{x}}\) can be converted back into an
+inhomogeneous vector \(\mathbf{x}\) by diving through the last element
+\(\tilde{w}\).
+</p>
+
+<p>
+2D lines can be represented using homogeneous coordinates
+\(\tilde{\mathbf{l}} = (a, b, c)\). The corresponding line equation is:
+</p>
+
+\begin{equation}
+  \bar{\mathbf{x}} \cdot \tilde{\mathbf{l}} = ax + by + c = 0
+\end{equation}
+
+<p>
+The line equation vector can be normalized so that \(\mathbf{l} =
+(\hat{n}_x, \hat{n}_y, d) = (\hat{\mathbf{n}}, d)\)
+ with \(\lvert
+\hat{\mathbf{n}} \rvert = 1\). When using homogeneous coordinates, we
+can compute the intersection of two lines as 
+</p>
+
+\begin{equation}
+  \tilde{\mathbf{x}} = \tilde{\mathbf{l}}_1 \times \tilde{\mathbf{l}}_2
+\end{equation}
+
+<p>
+Similarly, the line joining two points can be written as:
+</p>
+
+\begin{equation}
+  \tilde{\mathbf{l}} = \tilde{\mathbf{x}}_1 \times \tilde{\mathbf{x}}_2
+\end{equation}
+
+<p>
+Conic sections (which arise from the intersection of a plane and a 3d
+cone) can be written using a quadric equation
+</p>
+
+\begin{equation}
+  \tilde{\mathbf{x}}^T\mathbf{Q}\tilde{\mathbf{x}} = 0
+\end{equation}
+
+<p>
+3D points can be written using inhomogeneous coordinates \(\mathbf{x} =
+(x,y,z) \in \mathbb{R}^3\), or homogeneous coordinates \(\tilde{\mathbf{x}} =
+(\tilde{x}, \tilde{y}, \tilde{z}, \tilde{w}) \in \mathbb{P}^3\).
+</p>
+
+<p>
+3D planes can be represented as homogeneous coordinates \(\tilde{\mathbf{m}}
+= (a, b, c, d)\) with the equation:
+</p>
+
+\begin{equation}
+\bar{\mathbf{x}} \cdot \tilde{\mathbf{m}} = ax + by + cz + d = 0
+\end{equation}
+
+<p>
+3D lines can be represented using 2 points on the line \((\mathbf{p},
+\mathbf{q})\). Any other point on the line can be expressed as a linear
+combination of these 2 points.
+</p>
+
+\begin{equation}
+  \mathbf{r} = (1 - \lambda)\mathbf{p} + \lambda \mathbf{q}
+\end{equation}
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-18 Sat 21:28</p>
+<p class="date">Created: 2018-08-19 Sun 13:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

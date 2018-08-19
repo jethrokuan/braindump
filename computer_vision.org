@@ -1,6 +1,11 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Computer Vision
+
+* COMMENT References
+[[file:~/Dropbox/NUS/CS4243/SzeliskiBook_20100903_draft.pdf][Computer Vision]]
+
 * Introduction
+
 Despite the advances in research in computer vision, the dream of
 having a computer interpret an image at the same level of a human is
 still far away. Computer vision is inherently a difficult problem, for
@@ -34,6 +39,84 @@ and are reasonably efficient.
 The above figure shows a rough layout of the content of computer
 vision, and we see that from top to bottom, there are increasing
 levels of modeling and abstraction.
+
+* Image Formation
+
+** Geometric Primitives
+
+Geometric primitives form the basic building blocks used to describe
+three-dimensional shapes.
+
+2D points can be denoted using a pair of values, $x = (x, y) \in
+\mathbb{R}^2$:
+
+\begin{equation}
+  x = \begin{bmatrix}
+    x \\
+    y
+  \end{bmatrix}
+\end{equation}
+
+2D points can also be represented using homogeneous coordinates,
+ $\tilde{\mathbf{x}} = (\tilde{x}, \tilde{y}, \tilde{w}) \in \mathbb{P}^2$, where vectors
+ that differ only by scale are considered to be equivalent.
+ $\mathbb{P}^2 = \mathbb{R}^3 - (0, 0, 0)$ is called the /2D projective
+ space/.
+
+A homogeneous vector $\tilde{\mathbf{x}}$ can be converted back into an
+inhomogeneous vector $\mathbf{x}$ by diving through the last element
+$\tilde{w}$.
+
+2D lines can be represented using homogeneous coordinates
+$\tilde{\mathbf{l}} = (a, b, c)$. The corresponding line equation is:
+
+\begin{equation}
+  \bar{\mathbf{x}} \cdot \tilde{\mathbf{l}} = ax + by + c = 0
+\end{equation}
+
+The line equation vector can be normalized so that $\mathbf{l} =
+(\hat{n}_x, \hat{n}_y, d) = (\hat{\mathbf{n}}, d)$
+ with $\lvert
+\hat{\mathbf{n}} \rvert = 1$. When using homogeneous coordinates, we
+can compute the intersection of two lines as 
+
+\begin{equation}
+  \tilde{\mathbf{x}} = \tilde{\mathbf{l}}_1 \times \tilde{\mathbf{l}}_2
+\end{equation}
+
+Similarly, the line joining two points can be written as:
+
+\begin{equation}
+  \tilde{\mathbf{l}} = \tilde{\mathbf{x}}_1 \times \tilde{\mathbf{x}}_2
+\end{equation}
+
+Conic sections (which arise from the intersection of a plane and a 3d
+cone) can be written using a quadric equation
+
+\begin{equation}
+  \tilde{\mathbf{x}}^T\mathbf{Q}\tilde{\mathbf{x}} = 0
+\end{equation}
+
+3D points can be written using inhomogeneous coordinates $\mathbf{x} =
+(x,y,z) \in \mathbb{R}^3$, or homogeneous coordinates $\tilde{\mathbf{x}} =
+(\tilde{x}, \tilde{y}, \tilde{z}, \tilde{w}) \in \mathbb{P}^3$.
+
+3D planes can be represented as homogeneous coordinates $\tilde{\mathbf{m}}
+= (a, b, c, d)$ with the equation:
+
+\begin{equation}
+\bar{\mathbf{x}} \cdot \tilde{\mathbf{m}} = ax + by + cz + d = 0
+\end{equation}
+
+3D lines can be represented using 2 points on the line $(\mathbf{p},
+\mathbf{q})$. Any other point on the line can be expressed as a linear
+combination of these 2 points.
+
+\begin{equation}
+  \mathbf{r} = (1 - \lambda)\mathbf{p} + \lambda \mathbf{q}
+\end{equation}
+
+
 * COMMENT Org Local Variables
 # Local Variables:
 # org-download-image-dir: "./images/computer_vision/"
