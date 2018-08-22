@@ -286,6 +286,227 @@ or $w$, but not both. Then quarternion division can be defined as:
 \end{equation}
 
 
+** 3D to 2D projections
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-20 17:35:43
+[[file:images/computer_vision/Image Formation/screenshot_2018-08-20_17-35-43.png]]
+
+We need to specify how 3D primitives are projected onto the image
+plane. The simplest model is orthography, which requires no division
+to get the final (inhomogeneous) result. The more commonly used model
+is perspective, since this more accurately models the behaviour of
+real cameras.
+
+*** Orthography
+
+An orthographic projection simply drops the $z$ component of the
+three-dimensional coordinate $\mathbf{p}$ to obtain the 2D point
+$\mathbf{x}$.
+
+\begin{equation}
+  \mathbf{x} = \left[\mathbf{I}_{2\times 2} | \mathbf{0} \right] \mathbf{p}
+\end{equation}
+
+In practice, world coordinates need to be scaled to fit onto an image
+sensor, for this reason, /scaled orthography/ is actually more commonly
+used:
+
+\begin{equation}
+\mathbf{x} = \left[s\mathbf{I}_{2 \times 2}\right | \mathbf{0}]\mathbf{p}
+\end{equation}
+
+This model is equivalent to first projecting the world poitns onto a
+local fronto-parallel image plane, and then scaling this image using
+regular perspective projection.
+
+A closely related model is called /para-perspective/, which projects the
+object points onto a local reference plane parallel to the image
+plane. However, rather than being projected orthogonally to this
+plane, they are projected parallel to the line of sight to the object
+center. This is followed by the usual projection onto the final image
+plane, and the combination of these two projections is affine.
+
+\begin{equation}
+\tilde{\mathbf{x}} = \begin{bmatrix}
+  a_{00} & a_{01} & a_{02} & a_{03} \\
+  a_{10} & a_{11} & a_{12} & a_{13} \\
+  0 & 0 & 0 & 1
+\end{bmatrix}
+\tilde{\mathbf{p}}
+\end{equation}
+
+*** Perspective
+
+Points are projected onto the image plane by dividing them by their
+$z$ component. Using homogeneous coordinates, this can be written as:
+
+\begin{equation}
+\tilde{\mathbf{x}} = \mathcal{P}_z(\mathbf{p}) = \begin{bmatrix}
+x / z \\
+y / z \\
+1
+\end{bmatrix}
+\end{equation}
+
+In homogeneous coordinates, the projection has a simple linear form,
+
+\begin{equation}
+\tilde{\mathbf{x}} = \begin{bmatrix}
+  1 & 0 & 0 & 0 \\
+  0 & 1 & 0 & 0 \\
+  0 & 0 & 1 & 0 \\
+\end{bmatrix}\tilde{\mathbf{p}}
+\end{equation}
+
+we drop the $w$ component of $\mathbf{p}$. Thus after projection, we
+are unable to recover the distance of the 3D point from the image.
+
+*** Camera Instrinsics
+
+Once we have projected a 3D point through an ideal pinhole using a
+projection matrix, we must still transform the resulting coordinates
+according to the pixel sensor spacing and the relative position of the
+sensor plane to the origin.
+
+Image sensors return /pixel values/ indexed by integer pixel coordinates
+$(x_s, y_s)$. To map pixel centers to 3D coordinates, we first scalet he
+$(x_s, y_s)$ values by the pixel spacings $(s_x, s_y)$, and then describe
+the orientation of the sensor array relative to the camera projection
+center $\mathbf{O}_c$ with an origin $\mathbf{c}_s$ and a 3D rotation
+$\mathbf{R}_s$.
+
+\begin{equation}
+\mathbf{p} = \left[\mathbf{R}_s | \mathbf{c}_s \right] \begin{bmatrix}
+s_x & 0 & 0 \\
+0 & s_y & 0 \\
+0 & 0 & 0 \\
+0 & 0 & 1
+\end{bmatrix} \begin{bmatrix}
+x_s \\
+y_s \\
+1
+\end{bmatrix} = \mathbf{M}_s \hat{\mathbf{x}}_s
+\end{equation}
+
+The first 2 columns of the $3 \times 3$ matrix $\mathbf{M}_s$ are the 3D vectors
+corresponding to the unit steps in the image pixel array along the
+$x_s$ and $y_s$ directions, while the third column is the 3D image array
+origin $\mathbf{c}_s$.
+
+The matrix $\mathbf{M}_s$ is parameterized by 8 unknowns, and that
+makes estimating the camera model impractical, even though there are
+really only 7 degrees of freedom. Most practitioners assume a general
+$3 \times 3$ homogeneous matrix form.
+
+*** Lens distortion
+
+Thus far, it has been assumed that the cameras obey a linear
+projection model. In reality, many wide-angled lens suffer heavily
+from radial distortion, which manifests itself as a visible curvature
+in the projection of straight lines. Fortunately, compensating for
+radial distortion  is not that difficult in practice. The radial
+distortion model says that the coordinates in the observed images are
+displaced away (barrel distortion) or towards (pincushion distortion)
+the image center by an amount proportional to their radial distance.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-20 18:17:31
+[[file:images/computer_vision/Image Formation/screenshot_2018-08-20_18-17-31.png]]
+
+** Photometric image formation
+
+Images are not composed of 2D features, but of discrete color or
+intensity values. Where do these values come from, and how do they
+relate to the lighting in the environment, surface properties and
+geometry, camera optics and sensor properties?
+
+*** Lighting
+To produce an image, a scene must be illuminated with one or more
+light sources.
+
+A point light source originates at a single location in space. In
+addition to its location, a point light source has an intensity and a
+color spectrum (a distribution over wavelengths).
+
+An area light source with a diffuser can be modeled as a finite
+rectangular area emitting light equally in all directions. When the
+distribution is strongly directional, a four-dimensional lightfield
+can be used instead.
+
+*** Reflectance and shading
+When light hits an object surface, it is scattered and reflected. We
+look at some more specialised models, including the diffuse, specular
+and Phong shading models.
+
+**** The Bidirectional Reflectance Distribution Function (BRDF)
+
+Relative to some local coordinate frame on the surface, the BRDF is a
+four-dimensional function that describes how much of each wavelength
+arriving at an incident direction $\hat{\mathbf{v}}_i$ is emitted in a
+reflected direction $\hat{\mathbf{v}}_r$. The function can be written
+in terms of the angles of the incident and reflected directions
+relative to the surface frame as $f_r(\theta_i, \phi_i, \theta_r,
+\phi_r;\lambda)$.
+
+BRDFs for a given surface can be obtained through physical modeling,
+heuristic modeling or empirical observation. Typical BRDFs can be
+split into their diffuse and specular components.
+
+**** Diffuse Reflection
+The diffuse component scatters light uniformly in all directions and
+is the phenomenon we most normally associate with shading. Diffuse
+reflection also often imparts a strong body color to the light.
+
+When light is scattered uniformly in all directions, the BRDF is
+constant:
+
+\begin{equation}
+f_d(\hat{\mathbf{v}}_i, \mathbf{v}}_r, \mathbf{n}};\lambda) = f_d(\lambda)
+\end{equation}
+
+and the amount of light depends on the angle between the incident
+light direction and the surface normal $\theta_i$.
+
+**** Specular Reflection
+The specular reflection component heavily depends on the direction of
+the outgoing light. Incident light rays are reflected in a direction
+that is rotated by 180^\deg around the surface normal
+$\hat{\mathbf{n}}$.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-21 11:16:05
+[[file:images/computer_vision/Image Formation/screenshot_2018-08-21_11-16-05.png]]
+
+**** Phong Shading
+Phong combined the diffuse and specular components of reflection with
+another term, which he called the ambient illumination. This term
+accounts for the fact that objects are generally illuminated not only
+by point light sources but also by a general diffuse illumination
+corresponding to inter-reflection or distance sources. In the Phong
+model, the ambient term does not depend on surface orientation, but
+depends on the color of both the ambient illumination $L_a(\lambda)$
+and the object $k_a(\lambda)$,
+
+\begin{equation}
+f_a(\lambda) = k_a(\lambda) L_a(\lambda)
+\end{equation}
+
+The Phong shading model can then be fully specified as:
+
+\begin{equation}
+L_r(\hat{\mathbf{v}}_r ; \lambda) = k_a(\lambda) L_a(\lambda)
++ k_d(\lambda) \sum_i L_i(\lambda) [\hat{\mathbf{v}}_i \cdot \hat{\mathbf{n}}]^+
++ k_s(\lambda) \sum_i L_i(\lambda) (\hat{\mathbf{v}}_r \cdot \hat{\mathbf{s}}_i)^{k_e}
+\end{equation}
+
+The Phong model has been superseded by other models in terms of
+physical accuracy. These models include the di-chromatic reflection
+model.
+
+**** Optics
+Once the light from a scene reaches a camera, it must still pass
+through the lens before reaching the sensor.
 * COMMENT Org Local Variables
 # Local Variables:
 # org-download-image-dir: "./images/computer_vision/"
