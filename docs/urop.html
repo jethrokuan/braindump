@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-18 Sat 17:54 -->
+<!-- 2018-08-23 Thu 15:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>&lrm;</title>
@@ -84,26 +84,26 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org974cb2a">1. Connecting to SoC VPN</a></li>
-<li><a href="#org7449423">2. Setting up GPU cluster</a></li>
-<li><a href="#org16f3d9b">3. Current Methodology</a>
+<li><a href="#org9bded1c">1. Connecting to SoC VPN</a></li>
+<li><a href="#orgee388ca">2. Setting up GPU cluster</a></li>
+<li><a href="#org12925a1">3. Current Methodology</a>
 <ul>
-<li><a href="#org29ff081">3.1. TextRank</a></li>
-<li><a href="#org6191f33">3.2. RNN</a></li>
-<li><a href="#org8aa35c3">3.3. Definition of Trend</a></li>
+<li><a href="#orgd3f58d4">3.1. TextRank</a></li>
+<li><a href="#org93b453b">3.2. RNN</a></li>
+<li><a href="#orgbcfa756">3.3. Definition of Trend</a></li>
 </ul>
 </li>
-<li><a href="#orga9f010a">4. Keyphrase Extraction</a>
+<li><a href="#org1679dc3">4. Keyphrase Extraction</a>
 <ul>
-<li><a href="#orga775329">4.1. SurfKE</a>
+<li><a href="#org56a2195">4.1. SurfKE</a>
 <ul>
-<li><a href="#org233399c">4.1.1. Graph Construction</a></li>
-<li><a href="#orgca5c196">4.1.2. Learning Feature Representations</a></li>
+<li><a href="#org37c8764">4.1.1. Graph Construction</a></li>
+<li><a href="#org56c1265">4.1.2. Learning Feature Representations</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#orgdcabd6a">5. Topical Hierarchy</a></li>
+<li><a href="#org61294f7">5. Topical Hierarchy</a></li>
 </ul>
 </div>
 </div>
@@ -147,8 +147,8 @@ agglomerate clustering</li>
 <p>
 Couperin
 </p>
-<div id="outline-container-org974cb2a" class="outline-2">
-<h2 id="org974cb2a"><span class="section-number-2">1</span> Connecting to SoC VPN</h2>
+<div id="outline-container-org9bded1c" class="outline-2">
+<h2 id="org9bded1c"><span class="section-number-2">1</span> Connecting to SoC VPN</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 use openfortivpn.
@@ -161,8 +161,8 @@ use openfortivpn.
 </div>
 </div>
 
-<div id="outline-container-org7449423" class="outline-2">
-<h2 id="org7449423"><span class="section-number-2">2</span> Setting up GPU cluster</h2>
+<div id="outline-container-orgee388ca" class="outline-2">
+<h2 id="orgee388ca"><span class="section-number-2">2</span> Setting up GPU cluster</h2>
 <div class="outline-text-2" id="text-2">
 <ol class="org-ol">
 <li>Install Anaconda</li>
@@ -173,15 +173,15 @@ use openfortivpn.
 </div>
 </div>
 
-<div id="outline-container-org16f3d9b" class="outline-2">
-<h2 id="org16f3d9b"><span class="section-number-2">3</span> Current Methodology</h2>
+<div id="outline-container-org12925a1" class="outline-2">
+<h2 id="org12925a1"><span class="section-number-2">3</span> Current Methodology</h2>
 <div class="outline-text-2" id="text-3">
 <ol class="org-ol">
 <li>Use TextRank algorithm</li>
 </ol>
 </div>
-<div id="outline-container-org29ff081" class="outline-3">
-<h3 id="org29ff081"><span class="section-number-3">3.1</span> TextRank</h3>
+<div id="outline-container-orgd3f58d4" class="outline-3">
+<h3 id="orgd3f58d4"><span class="section-number-3">3.1</span> TextRank</h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Prior to TextRank, use NLTK to extract noun phrases via Regex. Each
@@ -189,8 +189,8 @@ noun phrase is split further.
 </p>
 </div>
 </div>
-<div id="outline-container-org6191f33" class="outline-3">
-<h3 id="org6191f33"><span class="section-number-3">3.2</span> RNN</h3>
+<div id="outline-container-org93b453b" class="outline-3">
+<h3 id="org93b453b"><span class="section-number-3">3.2</span> RNN</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Basic RNN is employed to use the first k sequential years to predict
@@ -205,8 +205,8 @@ A linear regression model is used as the baseline comparison.
 </p>
 </div>
 </div>
-<div id="outline-container-org8aa35c3" class="outline-3">
-<h3 id="org8aa35c3"><span class="section-number-3">3.3</span> Definition of Trend</h3>
+<div id="outline-container-orgbcfa756" class="outline-3">
+<h3 id="orgbcfa756"><span class="section-number-3">3.3</span> Definition of Trend</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Considerations:
@@ -225,8 +225,8 @@ trend = a \times (x\textsubscript{k+1} - max(x\textsubscript{1}, ... , x\textsub
 </div>
 </div>
 
-<div id="outline-container-orga9f010a" class="outline-2">
-<h2 id="orga9f010a"><span class="section-number-2">4</span> Keyphrase Extraction</h2>
+<div id="outline-container-org1679dc3" class="outline-2">
+<h2 id="org1679dc3"><span class="section-number-2">4</span> Keyphrase Extraction</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Keyphrase extraction (KE) is the task of automatically extracting
@@ -243,12 +243,12 @@ automatically discover such features without relying on feature
 engineering.
 </p>
 </div>
-<div id="outline-container-orga775329" class="outline-3">
-<h3 id="orga775329"><span class="section-number-3">4.1</span> SurfKE</h3>
+<div id="outline-container-org56a2195" class="outline-3">
+<h3 id="org56a2195"><span class="section-number-3">4.1</span> SurfKE</h3>
 <div class="outline-text-3" id="text-4-1">
 </div>
-<div id="outline-container-org233399c" class="outline-4">
-<h4 id="org233399c"><span class="section-number-4">4.1.1</span> Graph Construction</h4>
+<div id="outline-container-org37c8764" class="outline-4">
+<h4 id="org37c8764"><span class="section-number-4">4.1.1</span> Graph Construction</h4>
 <div class="outline-text-4" id="text-4-1-1">
 <p>
 Build an undirected word graph, with words as vertices. There is an
@@ -259,8 +259,8 @@ document.
 </p>
 </div>
 </div>
-<div id="outline-container-orgca5c196" class="outline-4">
-<h4 id="orgca5c196"><span class="section-number-4">4.1.2</span> Learning Feature Representations</h4>
+<div id="outline-container-org56c1265" class="outline-4">
+<h4 id="org56c1265"><span class="section-number-4">4.1.2</span> Learning Feature Representations</h4>
 <div class="outline-text-4" id="text-4-1-2">
 <p>
 Learn a mapping function \(f : V \rightarrow \mathbb{R}^{|V| \times d},
@@ -274,11 +274,11 @@ strategy is employed.
 </div>
 </div>
 </div>
-<div id="outline-container-orgdcabd6a" class="outline-2">
-<h2 id="orgdcabd6a"><span class="section-number-2">5</span> Topical Hierarchy</h2>
+<div id="outline-container-org61294f7" class="outline-2">
+<h2 id="org61294f7"><span class="section-number-2">5</span> Topical Hierarchy</h2>
 <div class="outline-text-2" id="text-5">
 <p>
-<a href="file:///home/jethro/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf">CATHY</a>
+<a href="file:///Users/jethrokuan/Dropbox/NUS/UROP/CATHY_-_Construction_of_Topical_Hierarch.pdf">CATHY</a>
 </p>
 
 <p>
@@ -294,7 +294,7 @@ CATHY to discover sub-topics
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-18 Sat 17:54</p>
+<p class="date">Created: 2018-08-23 Thu 15:20</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

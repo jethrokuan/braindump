@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-18 Sat 21:28 -->
+<!-- 2018-08-23 Thu 15:20 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Data Visualization</title>
@@ -91,79 +91,79 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgf2e269a">1. References</a></li>
-<li><a href="#org190d3f3">2. Program</a></li>
-<li><a href="#orgf0b0c45">3. Tools</a></li>
-<li><a href="#orgbf03692">4. How do people use visualization?</a></li>
-<li><a href="#org4b3c7b2">5. Provenance</a></li>
-<li><a href="#orgb55b55a">6. Visual Interaction Techniques</a></li>
-<li><a href="#orgb6633f1">7. A well-designed interactive visualization interface should show the following</a></li>
-<li><a href="#org55b0bd7">8. Visual Design and Encoding - Westermann</a>
+<li><a href="#org85d5999">1. References</a></li>
+<li><a href="#orgd0f289d">2. Program</a></li>
+<li><a href="#orgcbd02c1">3. Tools</a></li>
+<li><a href="#orgc2f680f">4. How do people use visualization?</a></li>
+<li><a href="#org275d7ed">5. Provenance</a></li>
+<li><a href="#org89407ee">6. Visual Interaction Techniques</a></li>
+<li><a href="#org0f8661a">7. A well-designed interactive visualization interface should show the following</a></li>
+<li><a href="#org72ca0e6">8. Visual Design and Encoding - Westermann</a>
 <ul>
-<li><a href="#org01f5e82">8.1. Why use Interactivity?</a></li>
-<li><a href="#org1f55ce4">8.2. Why depend on vision?</a></li>
-<li><a href="#orge1b22de">8.3. Pre-attentive Processing</a></li>
-<li><a href="#org038f735">8.4. Gestalt Principles</a></li>
-<li><a href="#org116fe31">8.5. Visual Design</a>
+<li><a href="#org16930e3">8.1. Why use Interactivity?</a></li>
+<li><a href="#orgffa8225">8.2. Why depend on vision?</a></li>
+<li><a href="#org198b0a1">8.3. Pre-attentive Processing</a></li>
+<li><a href="#org1be5f11">8.4. Gestalt Principles</a></li>
+<li><a href="#org8b7c2bd">8.5. Visual Design</a>
 <ul>
-<li><a href="#org63c4a12">8.5.1. Steven's Psychological Power Law</a></li>
+<li><a href="#org9ce370e">8.5.1. Steven's Psychological Power Law</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org9278b8f">9. Scientific Data Visualization - Stefan Bruckner</a>
+<li><a href="#org0572f58">9. Scientific Data Visualization - Stefan Bruckner</a>
 <ul>
-<li><a href="#org38aa57a">9.1. Types of Visualization</a></li>
-<li><a href="#org8315eba">9.2. Data Representation</a></li>
-<li><a href="#orgdf09a9b">9.3. Grids</a>
+<li><a href="#org13fe3d4">9.1. Types of Visualization</a></li>
+<li><a href="#org207aaab">9.2. Data Representation</a></li>
+<li><a href="#org6a74106">9.3. Grids</a>
 <ul>
-<li><a href="#orgfca2c94">9.3.1. Regular Grid</a></li>
-<li><a href="#orgfef5915">9.3.2. Rectilinear Grid</a></li>
-<li><a href="#org0d5620c">9.3.3. Curvilinear Grid</a></li>
-<li><a href="#orga869bc1">9.3.4. Block-structured Grid</a></li>
-<li><a href="#org175f36b">9.3.5. Unstructured Grid</a></li>
-<li><a href="#org0ee772d">9.3.6. <span class="todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES</a></li>
-<li><a href="#orgf11e740">9.3.7. Scattered Data</a></li>
-<li><a href="#org48e34fd">9.3.8. Data Enhancement</a></li>
-<li><a href="#org7227a25">9.3.9. Data, Visualization, Interaction</a></li>
-<li><a href="#org26b34ee">9.3.10. Interactive Steering</a></li>
-<li><a href="#orgd9c4550">9.3.11. Volume Visualization</a>
+<li><a href="#orgb903504">9.3.1. Regular Grid</a></li>
+<li><a href="#org7c7ff9b">9.3.2. Rectilinear Grid</a></li>
+<li><a href="#orgc59f8b0">9.3.3. Curvilinear Grid</a></li>
+<li><a href="#org0f60294">9.3.4. Block-structured Grid</a></li>
+<li><a href="#org9b98e90">9.3.5. Unstructured Grid</a></li>
+<li><a href="#orgebc55e9">9.3.6. <span class="todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES</a></li>
+<li><a href="#org2597d6c">9.3.7. Scattered Data</a></li>
+<li><a href="#orga8a700b">9.3.8. Data Enhancement</a></li>
+<li><a href="#org3023393">9.3.9. Data, Visualization, Interaction</a></li>
+<li><a href="#orge0a9787">9.3.10. Interactive Steering</a></li>
+<li><a href="#orgef95082">9.3.11. Volume Visualization</a>
 <ul>
-<li><a href="#org2aa696e">9.3.11.1. Organization of Volume Data</a></li>
+<li><a href="#orge7d94db">9.3.11.1. Organization of Volume Data</a></li>
 </ul>
 </li>
-<li><a href="#org3a125ed">9.3.12. Challenges</a></li>
-<li><a href="#orgd8e3626">9.3.13. Voxels vs Cells</a></li>
-<li><a href="#org4e91e98">9.3.14. Linear Interpolation</a></li>
-<li><a href="#org36e0416">9.3.15. Evaluating Quality of Reconstruction</a></li>
-<li><a href="#orga0858a9">9.3.16. Classification</a></li>
-<li><a href="#org9744994">9.3.17. Visualization Approaches</a></li>
-<li><a href="#org7409849">9.3.18. <span class="todo TODO">TODO</span> Isosurface Similarity</a></li>
-<li><a href="#orgd9b126b">9.3.19. Visualization in the Spatial Domain</a>
+<li><a href="#org205f5cc">9.3.12. Challenges</a></li>
+<li><a href="#org8bc5460">9.3.13. Voxels vs Cells</a></li>
+<li><a href="#org7a8a443">9.3.14. Linear Interpolation</a></li>
+<li><a href="#org4485f67">9.3.15. Evaluating Quality of Reconstruction</a></li>
+<li><a href="#org19e281b">9.3.16. Classification</a></li>
+<li><a href="#org21f4c8b">9.3.17. Visualization Approaches</a></li>
+<li><a href="#orga762ca9">9.3.18. <span class="todo TODO">TODO</span> Isosurface Similarity</a></li>
+<li><a href="#org3ee813c">9.3.19. Visualization in the Spatial Domain</a>
 <ul>
-<li><a href="#org6d16872">9.3.19.1. Slicing</a></li>
-<li><a href="#org5cd9f4e">9.3.19.2. Direct Volume Rendering</a></li>
-<li><a href="#org6c11bab">9.3.19.3. Ray Tracing vs Ray Casting</a></li>
-<li><a href="#org20c941d">9.3.19.4. Shading</a></li>
+<li><a href="#orgb085939">9.3.19.1. Slicing</a></li>
+<li><a href="#orgad5c9f9">9.3.19.2. Direct Volume Rendering</a></li>
+<li><a href="#org9f71c85">9.3.19.3. Ray Tracing vs Ray Casting</a></li>
+<li><a href="#org7292f09">9.3.19.4. Shading</a></li>
 </ul>
 </li>
-<li><a href="#orgd66a16e">9.3.20. Indirect Volume Rendering</a></li>
+<li><a href="#orgc718d12">9.3.20. Indirect Volume Rendering</a></li>
 </ul>
 </li>
-<li><a href="#orgdff1022">9.4. Flow Visualization</a></li>
+<li><a href="#orga0a9518">9.4. Flow Visualization</a></li>
 </ul>
 </li>
-<li><a href="#org612495b">10. Data Visualization of Text Data - Jaegul Choo</a>
+<li><a href="#orgd291a4d">10. Data Visualization of Text Data - Jaegul Choo</a>
 <ul>
-<li><a href="#org38605ac">10.1. Overview</a></li>
+<li><a href="#org279476b">10.1. Overview</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-orgf2e269a" class="outline-2">
-<h2 id="orgf2e269a"><span class="section-number-2">1</span> References</h2>
+<div id="outline-container-org85d5999" class="outline-2">
+<h2 id="org85d5999"><span class="section-number-2">1</span> References</h2>
 <div class="outline-text-2" id="text-1">
 <ul class="org-ul">
 <li><a href="http://www.cad.zju.edu.cn/home/vis-summer-school-2018/">Course website</a></li>
@@ -173,8 +173,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org190d3f3" class="outline-2">
-<h2 id="org190d3f3"><span class="section-number-2">2</span> Program</h2>
+<div id="outline-container-orgd0f289d" class="outline-2">
+<h2 id="orgd0f289d"><span class="section-number-2">2</span> Program</h2>
 <div class="outline-text-2" id="text-2">
 
 <div class="figure">
@@ -183,8 +183,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf0b0c45" class="outline-2">
-<h2 id="orgf0b0c45"><span class="section-number-2">3</span> Tools</h2>
+<div id="outline-container-orgcbd02c1" class="outline-2">
+<h2 id="orgcbd02c1"><span class="section-number-2">3</span> Tools</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 <a href="http://antv.alipay.com">http://antv.alipay.com</a>
@@ -192,8 +192,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-orgbf03692" class="outline-2">
-<h2 id="orgbf03692"><span class="section-number-2">4</span> How do people use visualization?</h2>
+<div id="outline-container-orgc2f680f" class="outline-2">
+<h2 id="orgc2f680f"><span class="section-number-2">4</span> How do people use visualization?</h2>
 <div class="outline-text-2" id="text-4">
 <ul class="org-ul">
 <li>verification</li>
@@ -205,8 +205,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org4b3c7b2" class="outline-2">
-<h2 id="org4b3c7b2"><span class="section-number-2">5</span> Provenance</h2>
+<div id="outline-container-org275d7ed" class="outline-2">
+<h2 id="org275d7ed"><span class="section-number-2">5</span> Provenance</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 The steps the user take in the process of visual exploration/analysis
@@ -234,8 +234,8 @@ Capture:
 </div>
 </div>
 
-<div id="outline-container-orgb55b55a" class="outline-2">
-<h2 id="orgb55b55a"><span class="section-number-2">6</span> Visual Interaction Techniques</h2>
+<div id="outline-container-org89407ee" class="outline-2">
+<h2 id="org89407ee"><span class="section-number-2">6</span> Visual Interaction Techniques</h2>
 <div class="outline-text-2" id="text-6">
 <ul class="org-ul">
 <li>Selecting/Highlighting/Brushing</li>
@@ -245,8 +245,8 @@ Capture:
 </div>
 </div>
 
-<div id="outline-container-orgb6633f1" class="outline-2">
-<h2 id="orgb6633f1"><span class="section-number-2">7</span> A well-designed interactive visualization interface should show the following</h2>
+<div id="outline-container-org0f8661a" class="outline-2">
+<h2 id="org0f8661a"><span class="section-number-2">7</span> A well-designed interactive visualization interface should show the following</h2>
 <div class="outline-text-2" id="text-7">
 <dl class="org-dl">
 <dt>Visualize</dt><dd>use effective visual encodings</dd>
@@ -263,8 +263,8 @@ DeepTree
 </div>
 </div>
 
-<div id="outline-container-org55b0bd7" class="outline-2">
-<h2 id="org55b0bd7"><span class="section-number-2">8</span> Visual Design and Encoding - Westermann</h2>
+<div id="outline-container-org72ca0e6" class="outline-2">
+<h2 id="org72ca0e6"><span class="section-number-2">8</span> Visual Design and Encoding - Westermann</h2>
 <div class="outline-text-2" id="text-8">
 <blockquote>
 <p>
@@ -273,8 +273,8 @@ The purpose of visualization is <b>insight</b>, not pictures. - Schneiderman
 </blockquote>
 </div>
 
-<div id="outline-container-org01f5e82" class="outline-3">
-<h3 id="org01f5e82"><span class="section-number-3">8.1</span> Why use Interactivity?</h3>
+<div id="outline-container-org16930e3" class="outline-3">
+<h3 id="org16930e3"><span class="section-number-3">8.1</span> Why use Interactivity?</h3>
 <div class="outline-text-3" id="text-8-1">
 <ol class="org-ol">
 <li>Handle data complexity</li>
@@ -289,8 +289,8 @@ Overview first, zoom and filter, then details-on-demand
 </div>
 </div>
 
-<div id="outline-container-org1f55ce4" class="outline-3">
-<h3 id="org1f55ce4"><span class="section-number-3">8.2</span> Why depend on vision?</h3>
+<div id="outline-container-orgffa8225" class="outline-3">
+<h3 id="orgffa8225"><span class="section-number-3">8.2</span> Why depend on vision?</h3>
 <div class="outline-text-3" id="text-8-2">
 <ol class="org-ol">
 <li>Visual system is high-bandwidth channel to brain</li>
@@ -298,8 +298,8 @@ Overview first, zoom and filter, then details-on-demand
 </div>
 </div>
 
-<div id="outline-container-orge1b22de" class="outline-3">
-<h3 id="orge1b22de"><span class="section-number-3">8.3</span> Pre-attentive Processing</h3>
+<div id="outline-container-org198b0a1" class="outline-3">
+<h3 id="org198b0a1"><span class="section-number-3">8.3</span> Pre-attentive Processing</h3>
 <div class="outline-text-3" id="text-8-3">
 <ul class="org-ul">
 <li>Sequential vs. Parallel processing (popout)</li>
@@ -309,8 +309,8 @@ Overview first, zoom and filter, then details-on-demand
 </div>
 </div>
 
-<div id="outline-container-org038f735" class="outline-3">
-<h3 id="org038f735"><span class="section-number-3">8.4</span> Gestalt Principles</h3>
+<div id="outline-container-org1be5f11" class="outline-3">
+<h3 id="org1be5f11"><span class="section-number-3">8.4</span> Gestalt Principles</h3>
 <div class="outline-text-3" id="text-8-4">
 
 <div class="figure">
@@ -328,8 +328,8 @@ To bring up a change, you must attend to it. (Change blindness)
 </div>
 </div>
 
-<div id="outline-container-org116fe31" class="outline-3">
-<h3 id="org116fe31"><span class="section-number-3">8.5</span> Visual Design</h3>
+<div id="outline-container-org8b7c2bd" class="outline-3">
+<h3 id="org8b7c2bd"><span class="section-number-3">8.5</span> Visual Design</h3>
 <div class="outline-text-3" id="text-8-5">
 <p>
 A good visualization depends on:
@@ -357,8 +357,8 @@ visualization. Keep proportions and relative sizes.
 maximize data-ink ratio
 </p>
 </div>
-<div id="outline-container-org63c4a12" class="outline-4">
-<h4 id="org63c4a12"><span class="section-number-4">8.5.1</span> Steven's Psychological Power Law</h4>
+<div id="outline-container-org9ce370e" class="outline-4">
+<h4 id="org9ce370e"><span class="section-number-4">8.5.1</span> Steven's Psychological Power Law</h4>
 <div class="outline-text-4" id="text-8-5-1">
 <p>
 <a href="https://en.wikipedia.org/wiki/Stevens's_power_law">https://en.wikipedia.org/wiki/Stevens's_power_law</a>
@@ -408,12 +408,12 @@ Visual mapping - Separable vs integral visual channels
 </div>
 </div>
 
-<div id="outline-container-org9278b8f" class="outline-2">
-<h2 id="org9278b8f"><span class="section-number-2">9</span> Scientific Data Visualization - Stefan Bruckner</h2>
+<div id="outline-container-org0572f58" class="outline-2">
+<h2 id="org0572f58"><span class="section-number-2">9</span> Scientific Data Visualization - Stefan Bruckner</h2>
 <div class="outline-text-2" id="text-9">
 </div>
-<div id="outline-container-org38aa57a" class="outline-3">
-<h3 id="org38aa57a"><span class="section-number-3">9.1</span> Types of Visualization</h3>
+<div id="outline-container-org13fe3d4" class="outline-3">
+<h3 id="org13fe3d4"><span class="section-number-3">9.1</span> Types of Visualization</h3>
 <div class="outline-text-3" id="text-9-1">
 <ol class="org-ol">
 <li>Volume Visualization
@@ -431,8 +431,8 @@ simulations</li>
 </div>
 </div>
 
-<div id="outline-container-org8315eba" class="outline-3">
-<h3 id="org8315eba"><span class="section-number-3">9.2</span> Data Representation</h3>
+<div id="outline-container-org207aaab" class="outline-3">
+<h3 id="org207aaab"><span class="section-number-3">9.2</span> Data Representation</h3>
 <div class="outline-text-3" id="text-9-2">
 <ul class="org-ul">
 <li>Inherent Spatial Domain?
@@ -451,8 +451,8 @@ simulations</li>
 </div>
 </div>
 
-<div id="outline-container-orgdf09a9b" class="outline-3">
-<h3 id="orgdf09a9b"><span class="section-number-3">9.3</span> Grids</h3>
+<div id="outline-container-org6a74106" class="outline-3">
+<h3 id="org6a74106"><span class="section-number-3">9.3</span> Grids</h3>
 <div class="outline-text-3" id="text-9-3">
 <ul class="org-ul">
 <li>Common way of storing datasets of field type (scalar, vector, tensor
@@ -472,8 +472,8 @@ values between samples leading to a <b>continuous representation</b>.</li>
 </ul>
 </div>
 
-<div id="outline-container-orgfca2c94" class="outline-4">
-<h4 id="orgfca2c94"><span class="section-number-4">9.3.1</span> Regular Grid</h4>
+<div id="outline-container-orgb903504" class="outline-4">
+<h4 id="orgb903504"><span class="section-number-4">9.3.1</span> Regular Grid</h4>
 <div class="outline-text-4" id="text-9-3-1">
 <ul class="org-ul">
 <li>Orthogonal, equidistant grid</li>
@@ -483,8 +483,8 @@ values between samples leading to a <b>continuous representation</b>.</li>
 </div>
 </div>
 
-<div id="outline-container-orgfef5915" class="outline-4">
-<h4 id="orgfef5915"><span class="section-number-4">9.3.2</span> Rectilinear Grid</h4>
+<div id="outline-container-org7c7ff9b" class="outline-4">
+<h4 id="org7c7ff9b"><span class="section-number-4">9.3.2</span> Rectilinear Grid</h4>
 <div class="outline-text-4" id="text-9-3-2">
 <ul class="org-ul">
 <li>Orthogonal grid</li>
@@ -495,8 +495,8 @@ you, not wasting storage in uninterested areas</li>
 </div>
 </div>
 
-<div id="outline-container-org0d5620c" class="outline-4">
-<h4 id="org0d5620c"><span class="section-number-4">9.3.3</span> Curvilinear Grid</h4>
+<div id="outline-container-orgc59f8b0" class="outline-4">
+<h4 id="orgc59f8b0"><span class="section-number-4">9.3.3</span> Curvilinear Grid</h4>
 <div class="outline-text-4" id="text-9-3-3">
 <ul class="org-ul">
 <li>Non-orthogonal grid</li>
@@ -507,8 +507,8 @@ you, not wasting storage in uninterested areas</li>
 </div>
 
 
-<div id="outline-container-orga869bc1" class="outline-4">
-<h4 id="orga869bc1"><span class="section-number-4">9.3.4</span> Block-structured Grid</h4>
+<div id="outline-container-org0f60294" class="outline-4">
+<h4 id="org0f60294"><span class="section-number-4">9.3.4</span> Block-structured Grid</h4>
 <div class="outline-text-4" id="text-9-3-4">
 <ul class="org-ul">
 <li>Combination of structured grids</li>
@@ -516,8 +516,8 @@ you, not wasting storage in uninterested areas</li>
 </div>
 </div>
 
-<div id="outline-container-org175f36b" class="outline-4">
-<h4 id="org175f36b"><span class="section-number-4">9.3.5</span> Unstructured Grid</h4>
+<div id="outline-container-org9b98e90" class="outline-4">
+<h4 id="org9b98e90"><span class="section-number-4">9.3.5</span> Unstructured Grid</h4>
 <div class="outline-text-4" id="text-9-3-5">
 <ul class="org-ul">
 <li>Grid-points and connections arbitrary</li>
@@ -527,8 +527,8 @@ you, not wasting storage in uninterested areas</li>
 </div>
 </div>
 
-<div id="outline-container-org0ee772d" class="outline-4">
-<h4 id="org0ee772d"><span class="section-number-4">9.3.6</span> <span class="todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES</h4>
+<div id="outline-container-orgebc55e9" class="outline-4">
+<h4 id="orgebc55e9"><span class="section-number-4">9.3.6</span> <span class="todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES</h4>
 <div class="outline-text-4" id="text-9-3-6">
 <ul class="org-ul">
 <li>Non-cartesian Coordinates</li>
@@ -536,8 +536,8 @@ you, not wasting storage in uninterested areas</li>
 </div>
 </div>
 
-<div id="outline-container-orgf11e740" class="outline-4">
-<h4 id="orgf11e740"><span class="section-number-4">9.3.7</span> Scattered Data</h4>
+<div id="outline-container-org2597d6c" class="outline-4">
+<h4 id="org2597d6c"><span class="section-number-4">9.3.7</span> Scattered Data</h4>
 <div class="outline-text-4" id="text-9-3-7">
 <ul class="org-ul">
 <li>Grid-free data</li>
@@ -553,8 +553,8 @@ of data attributes
 </div>
 </div>
 
-<div id="outline-container-org48e34fd" class="outline-4">
-<h4 id="org48e34fd"><span class="section-number-4">9.3.8</span> Data Enhancement</h4>
+<div id="outline-container-orga8a700b" class="outline-4">
+<h4 id="orga8a700b"><span class="section-number-4">9.3.8</span> Data Enhancement</h4>
 <div class="outline-text-4" id="text-9-3-8">
 <ul class="org-ul">
 <li>Filtering</li>
@@ -565,8 +565,8 @@ of data attributes
 </div>
 </div>
 
-<div id="outline-container-org7227a25" class="outline-4">
-<h4 id="org7227a25"><span class="section-number-4">9.3.9</span> Data, Visualization, Interaction</h4>
+<div id="outline-container-org3023393" class="outline-4">
+<h4 id="org3023393"><span class="section-number-4">9.3.9</span> Data, Visualization, Interaction</h4>
 <div class="outline-text-4" id="text-9-3-9">
 <ul class="org-ul">
 <li>Coupling varies considerably
@@ -590,8 +590,8 @@ of data attributes
 </div>
 </div>
 
-<div id="outline-container-org26b34ee" class="outline-4">
-<h4 id="org26b34ee"><span class="section-number-4">9.3.10</span> Interactive Steering</h4>
+<div id="outline-container-orge0a9787" class="outline-4">
+<h4 id="orge0a9787"><span class="section-number-4">9.3.10</span> Interactive Steering</h4>
 <div class="outline-text-4" id="text-9-3-10">
 <ul class="org-ul">
 <li>Simulation and modelling generate data "on the fly"</li>
@@ -602,8 +602,8 @@ simulations</li>
 </div>
 </div>
 
-<div id="outline-container-orgd9c4550" class="outline-4">
-<h4 id="orgd9c4550"><span class="section-number-4">9.3.11</span> Volume Visualization</h4>
+<div id="outline-container-orgef95082" class="outline-4">
+<h4 id="orgef95082"><span class="section-number-4">9.3.11</span> Volume Visualization</h4>
 <div class="outline-text-4" id="text-9-3-11">
 <ul class="org-ul">
 <li>the visualization of 3D scalar fields</li>
@@ -616,8 +616,8 @@ interest + context</li>
 </ul>
 </div>
 
-<div id="outline-container-org2aa696e" class="outline-5">
-<h5 id="org2aa696e"><span class="section-number-5">9.3.11.1</span> Organization of Volume Data</h5>
+<div id="outline-container-orge7d94db" class="outline-5">
+<h5 id="orge7d94db"><span class="section-number-5">9.3.11.1</span> Organization of Volume Data</h5>
 <div class="outline-text-5" id="text-9-3-11-1">
 <ol class="org-ol">
 <li>Cartesian or Regular grid
@@ -631,8 +631,8 @@ interest + context</li>
 </div>
 </div>
 
-<div id="outline-container-org3a125ed" class="outline-4">
-<h4 id="org3a125ed"><span class="section-number-4">9.3.12</span> Challenges</h4>
+<div id="outline-container-org205f5cc" class="outline-4">
+<h4 id="org205f5cc"><span class="section-number-4">9.3.12</span> Challenges</h4>
 <div class="outline-text-4" id="text-9-3-12">
 <ul class="org-ul">
 <li>So much information, so few pixels</li>
@@ -642,8 +642,8 @@ interest + context</li>
 </div>
 </div>
 
-<div id="outline-container-orgd8e3626" class="outline-4">
-<h4 id="orgd8e3626"><span class="section-number-4">9.3.13</span> Voxels vs Cells</h4>
+<div id="outline-container-org8bc5460" class="outline-4">
+<h4 id="org8bc5460"><span class="section-number-4">9.3.13</span> Voxels vs Cells</h4>
 <div class="outline-text-4" id="text-9-3-13">
 <ul class="org-ul">
 <li>pixels = picture element, voxels = volume element</li>
@@ -654,8 +654,8 @@ cell use interpolation.</li>
 </div>
 </div>
 
-<div id="outline-container-org4e91e98" class="outline-4">
-<h4 id="org4e91e98"><span class="section-number-4">9.3.14</span> Linear Interpolation</h4>
+<div id="outline-container-org7a8a443" class="outline-4">
+<h4 id="org7a8a443"><span class="section-number-4">9.3.14</span> Linear Interpolation</h4>
 <div class="outline-text-4" id="text-9-3-14">
 <ul class="org-ul">
 <li>Current GPUs automatically do trilinear interpolation of 3D textures</li>
@@ -663,8 +663,8 @@ cell use interpolation.</li>
 </div>
 </div>
 
-<div id="outline-container-org36e0416" class="outline-4">
-<h4 id="org36e0416"><span class="section-number-4">9.3.15</span> Evaluating Quality of Reconstruction</h4>
+<div id="outline-container-org4485f67" class="outline-4">
+<h4 id="org4485f67"><span class="section-number-4">9.3.15</span> Evaluating Quality of Reconstruction</h4>
 <div class="outline-text-4" id="text-9-3-15">
 <ul class="org-ul">
 <li>Marshner-Lobb function is a common test signal to evaluate the
@@ -674,8 +674,8 @@ quality of reconstruction filters</li>
 </div>
 </div>
 
-<div id="outline-container-orga0858a9" class="outline-4">
-<h4 id="orga0858a9"><span class="section-number-4">9.3.16</span> Classification</h4>
+<div id="outline-container-org19e281b" class="outline-4">
+<h4 id="org19e281b"><span class="section-number-4">9.3.16</span> Classification</h4>
 <div class="outline-text-4" id="text-9-3-16">
 <ul class="org-ul">
 <li>Using data values, gradiant and curvature, segment data into
@@ -689,8 +689,8 @@ multiple semantic regions</li>
 </div>
 </div>
 
-<div id="outline-container-org9744994" class="outline-4">
-<h4 id="org9744994"><span class="section-number-4">9.3.17</span> Visualization Approaches</h4>
+<div id="outline-container-org21f4c8b" class="outline-4">
+<h4 id="org21f4c8b"><span class="section-number-4">9.3.17</span> Visualization Approaches</h4>
 <div class="outline-text-4" id="text-9-3-17">
 <dl class="org-dl">
 <dt>Slicing</dt><dd>display of 2D cross sections</dd>
@@ -700,16 +700,16 @@ multiple semantic regions</li>
 </div>
 </div>
 
-<div id="outline-container-org7409849" class="outline-4">
-<h4 id="org7409849"><span class="section-number-4">9.3.18</span> <span class="todo TODO">TODO</span> Isosurface Similarity</h4>
+<div id="outline-container-orga762ca9" class="outline-4">
+<h4 id="orga762ca9"><span class="section-number-4">9.3.18</span> <span class="todo TODO">TODO</span> Isosurface Similarity</h4>
 </div>
 
-<div id="outline-container-orgd9b126b" class="outline-4">
-<h4 id="orgd9b126b"><span class="section-number-4">9.3.19</span> Visualization in the Spatial Domain</h4>
+<div id="outline-container-org3ee813c" class="outline-4">
+<h4 id="org3ee813c"><span class="section-number-4">9.3.19</span> Visualization in the Spatial Domain</h4>
 <div class="outline-text-4" id="text-9-3-19">
 </div>
-<div id="outline-container-org6d16872" class="outline-5">
-<h5 id="org6d16872"><span class="section-number-5">9.3.19.1</span> Slicing</h5>
+<div id="outline-container-orgb085939" class="outline-5">
+<h5 id="orgb085939"><span class="section-number-5">9.3.19.1</span> Slicing</h5>
 <div class="outline-text-5" id="text-9-3-19-1">
 <ul class="org-ul">
 <li>Reduce the dimensionality of 3D t o2D by showing a cross section</li>
@@ -724,8 +724,8 @@ e.g. visualization of blood vessels.</li>
 </div>
 </div>
 
-<div id="outline-container-org5cd9f4e" class="outline-5">
-<h5 id="org5cd9f4e"><span class="section-number-5">9.3.19.2</span> Direct Volume Rendering</h5>
+<div id="outline-container-orgad5c9f9" class="outline-5">
+<h5 id="orgad5c9f9"><span class="section-number-5">9.3.19.2</span> Direct Volume Rendering</h5>
 <div class="outline-text-5" id="text-9-3-19-2">
 <ul class="org-ul">
 <li>Dense representation of underlying scalar field: transfer function
@@ -740,8 +740,8 @@ GPUs, but difficult to skip non-visible regions. Easy to skip&#x2026;(?)</li>
 </div>
 </div>
 
-<div id="outline-container-org6c11bab" class="outline-5">
-<h5 id="org6c11bab"><span class="section-number-5">9.3.19.3</span> Ray Tracing vs Ray Casting</h5>
+<div id="outline-container-org9f71c85" class="outline-5">
+<h5 id="org9f71c85"><span class="section-number-5">9.3.19.3</span> Ray Tracing vs Ray Casting</h5>
 <div class="outline-text-5" id="text-9-3-19-3">
 <dl class="org-dl">
 <dt>Ray tracing</dt><dd>method from image generation, usig ray-object
@@ -751,8 +751,8 @@ intersection and tracing secondary rays.</dd>
 </div>
 </div>
 
-<div id="outline-container-org20c941d" class="outline-5">
-<h5 id="org20c941d"><span class="section-number-5">9.3.19.4</span> Shading</h5>
+<div id="outline-container-org7292f09" class="outline-5">
+<h5 id="org7292f09"><span class="section-number-5">9.3.19.4</span> Shading</h5>
 <div class="outline-text-5" id="text-9-3-19-4">
 <dl class="org-dl">
 <dt>lambertian reflection</dt><dd>light reflected equally in all directions</dd>
@@ -772,8 +772,8 @@ illumination model</a> commonly used.</li>
 </div>
 </div>
 
-<div id="outline-container-orgd66a16e" class="outline-4">
-<h4 id="orgd66a16e"><span class="section-number-4">9.3.20</span> Indirect Volume Rendering</h4>
+<div id="outline-container-orgc718d12" class="outline-4">
+<h4 id="orgc718d12"><span class="section-number-4">9.3.20</span> Indirect Volume Rendering</h4>
 <div class="outline-text-4" id="text-9-3-20">
 <ul class="org-ul">
 <li>Extract an intermediate representation from the volume (geometric
@@ -795,8 +795,8 @@ from volume data
 </div>
 </div>
 
-<div id="outline-container-orgdff1022" class="outline-3">
-<h3 id="orgdff1022"><span class="section-number-3">9.4</span> Flow Visualization</h3>
+<div id="outline-container-orga0a9518" class="outline-3">
+<h3 id="orga0a9518"><span class="section-number-3">9.4</span> Flow Visualization</h3>
 <div class="outline-text-3" id="text-9-4">
 <ul class="org-ul">
 <li>Airplane/ship/car design</li>
@@ -827,12 +827,12 @@ linear equation solving</li>
 </div>
 </div>
 
-<div id="outline-container-org612495b" class="outline-2">
-<h2 id="org612495b"><span class="section-number-2">10</span> Data Visualization of Text Data - Jaegul Choo</h2>
+<div id="outline-container-orgd291a4d" class="outline-2">
+<h2 id="orgd291a4d"><span class="section-number-2">10</span> Data Visualization of Text Data - Jaegul Choo</h2>
 <div class="outline-text-2" id="text-10">
 </div>
-<div id="outline-container-org38605ac" class="outline-3">
-<h3 id="org38605ac"><span class="section-number-3">10.1</span> Overview</h3>
+<div id="outline-container-org279476b" class="outline-3">
+<h3 id="org279476b"><span class="section-number-3">10.1</span> Overview</h3>
 <div class="outline-text-3" id="text-10-1">
 <ol class="org-ol">
 <li>Vector encoding techniques of text
@@ -865,7 +865,7 @@ linear equation solving</li>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-18 Sat 21:28</p>
+<p class="date">Created: 2018-08-23 Thu 15:20</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
