@@ -2,6 +2,9 @@
 #+TITLE: RSS Feeds
 * Feeds                                                              :elfeed:
 ** Computer Science                                                      :cs:
+** News                                                               :news:
+*** https://hnrss.org/newest?points=100
+*** https://news.google.com/news/rss/headlines/section/topic/WORLD
 ** Emacs                                                              :emacs:
 *** http://planet.emacsen.org/atom.xml
 *** https://www.reddit.com/r/emacs/
@@ -23,6 +26,7 @@
 *** https://www.bakadesuyo.com/feed/
 *** https://www.marieforleo.com/feed/
 *** http://feeds.feedburner.com/zenhabits/
+
 ** Company Blogs                                                    :company:
 *** https://blogs.dropbox.com/tech/feed/
 *** https://codeascraft.com/feed/
