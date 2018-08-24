@@ -211,3 +211,85 @@ We reverse engineer a Convnet by building a generative model
 5. Use new generative model to address limitations of DCNs: top-down
    inference, learning from unlabeled data, hyperparameter
    optimization
+* Variational Inference and Deep Learning
+https://www.youtube.com/watch?v=h0UE8FzdE8U
+
+Optimizers work well with sums, not products. We want to be able to
+calculate gradients on a subset of examples and have reasonable
+confidence for convergence.
+
+Latent variables give our model structure and can make training more
+tractable. With latent variables $\bar{z}$, we have:
+
+\begin{equation}
+  p(x) = \sum_z p(x,z) =  \sum_z p(x | z)p(z)
+\end{equation}
+
+Putting log-likelihood and latent variables together, we get:
+
+\begin{equation}
+L = \sum_i \log \left( \sum_z p(x_i, z)\right)
+\end{equation}
+
+Usually, we want to sample one example and one value for the latent
+variable at a time, for tractable optimization. This only works for a sum.
+
+We compare the above structure with this equation:
+
+\begin{equation}
+L = \sum_i \left( \sum_z \log p(x_i, z)\right)
+\end{equation}
+
+Intuitively the new equation says that every latent variable value
+needs to do a good job of explaining the data
+
+** Derivation of the Variational Bound
+\begin{equation}
+  p(x) = \sum_i \log (\sum_z p(x_i, z))
+\end{equation}
+
+\begin{equation}
+p(x) = \sum_i \log(\sum_z \frac{q(z|x_i) p(x_i, z)}{q(z|x_i)})
+\end{equation}
+
+By Jensen's Inequality (concavity of the log function),
+
+\begin{equation}
+p(x) \ge \sum_i \sum_z q(z|x_i) \log \frac{p(x_i, z)}{q(z|x_i)}
+\end{equation}
+
+\begin{equation}
+  p(x) \ge \sum_i q(z|x_i) \sum_z \log (p(x_i | z)) + \log \frac{p(z)}{q(z|x_i)}
+\end{equation}
+
+\begin{equation}
+  p(x) \ge \mathbb{E}_{z \sim q(z|x_i)} \log (p(x_i | z)) - KL(q(z|x_i) || p(z))
+\end{equation}
+
+The first term is the conditional likelihood of our observation if we
+used a sampled z value from the approximated posterior $q(z | x)$. The
+second term is a divergence between the approximate posterior and the
+prior. This is often well defined.
+
+** Variational Autoencoder
+We can show that a special type of autoencoder corresponds to this
+lower bound, where $q(z | x)$ is the encoder and $p(x|z)$ is the
+decoder. The first term is the usual reconstruction objective for
+autoencoders. The second term is a special KL term which pulls the
+bottleneck closer to a prior.
+
+In the simplest case, we make both $q(z|x)$ and $p(z)$ independent
+Gaussians:
+
+\begin{equation}
+  KL(q(z|x_i) || p(z)) = \sum_j \mu_j^2 + \sigma_j^2 - \log(\sigma_j^2)
+\end{equation}
+
+$q(z|x)$ has parameters $\mu$ and $\sigma$ which are just outputs from our
+encoder. $p(z)$ is a prior distribution with $\mu = 0$ and $\sigma = 1$.
+
+The bottleneck can't remember spatial information, and optimizing for
+$p(x|z)$ puts heavy emphasis on exact recovery of spatial information.
+Solutions involve removing the bottleneck, or replacing the prior
+$p(z)$ with one that has more structure.
+

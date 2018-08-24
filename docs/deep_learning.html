@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-15 Wed 12:12 -->
+<!-- 2018-08-24 Fri 15:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deep Learning</title>
@@ -128,6 +128,12 @@ for the JavaScript code in this tag.
 <li><a href="#org4a9bf23">12. ConvNets from First Principles</a>
 <ul>
 <li><a href="#orgd1edff9">12.1. Finding a generative model</a></li>
+</ul>
+</li>
+<li><a href="#org67a3e87">13. Variational Inference and Deep Learning</a>
+<ul>
+<li><a href="#org9245748">13.1. Derivation of the Variational Bound</a></li>
+<li><a href="#org7752580">13.2. Variational Autoencoder</a></li>
 </ul>
 </li>
 </ul>
@@ -511,10 +517,129 @@ optimization</li>
 </div>
 </div>
 </div>
+<div id="outline-container-org67a3e87" class="outline-2">
+<h2 id="org67a3e87"><span class="section-number-2">13</span> Variational Inference and Deep Learning</h2>
+<div class="outline-text-2" id="text-13">
+<p>
+<a href="https://www.youtube.com/watch?v=h0UE8FzdE8U">https://www.youtube.com/watch?v=h0UE8FzdE8U</a>
+</p>
+
+<p>
+Optimizers work well with sums, not products. We want to be able to
+calculate gradients on a subset of examples and have reasonable
+confidence for convergence.
+</p>
+
+<p>
+Latent variables give our model structure and can make training more
+tractable. With latent variables \(\bar{z}\), we have:
+</p>
+
+\begin{equation}
+  p(x) = \sum_z p(x,z) =  \sum_z p(x | z)p(z)
+\end{equation}
+
+<p>
+Putting log-likelihood and latent variables together, we get:
+</p>
+
+\begin{equation}
+L = \sum_i \log \left( \sum_z p(x_i, z)\right)
+\end{equation}
+
+<p>
+Usually, we want to sample one example and one value for the latent
+variable at a time, for tractable optimization. This only works for a sum.
+</p>
+
+<p>
+We compare the above structure with this equation:
+</p>
+
+\begin{equation}
+L = \sum_i \left( \sum_z \log p(x_i, z)\right)
+\end{equation}
+
+<p>
+Intuitively the new equation says that every latent variable value
+needs to do a good job of explaining the data
+</p>
+</div>
+
+<div id="outline-container-org9245748" class="outline-3">
+<h3 id="org9245748"><span class="section-number-3">13.1</span> Derivation of the Variational Bound</h3>
+<div class="outline-text-3" id="text-13-1">
+\begin{equation}
+  p(x) = \sum_i \log (\sum_z p(x_i, z))
+\end{equation}
+
+\begin{equation}
+p(x) = \sum_i \log(\sum_z \frac{q(z|x_i) p(x_i, z)}{q(z|x_i)})
+\end{equation}
+
+<p>
+By Jensen's Inequality (concavity of the log function),
+</p>
+
+\begin{equation}
+p(x) \ge \sum_i \sum_z q(z|x_i) \log \frac{p(x_i, z)}{q(z|x_i)}
+\end{equation}
+
+\begin{equation}
+  p(x) \ge \sum_i q(z|x_i) \sum_z \log (p(x_i | z)) + \log \frac{p(z)}{q(z|x_i)}
+\end{equation}
+
+\begin{equation}
+  p(x) \ge \mathbb{E}_{z \sim q(z|x_i)} \log (p(x_i | z)) - KL(q(z|x_i) || p(z))
+\end{equation}
+
+<p>
+The first term is the conditional likelihood of our observation if we
+used a sampled z value from the approximated posterior \(q(z | x)\). The
+second term is a divergence between the approximate posterior and the
+prior. This is often well defined.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org7752580" class="outline-3">
+<h3 id="org7752580"><span class="section-number-3">13.2</span> Variational Autoencoder</h3>
+<div class="outline-text-3" id="text-13-2">
+<p>
+We can show that a special type of autoencoder corresponds to this
+lower bound, where \(q(z | x)\) is the encoder and \(p(x|z)\) is the
+decoder. The first term is the usual reconstruction objective for
+autoencoders. The second term is a special KL term which pulls the
+bottleneck closer to a prior.
+</p>
+
+<p>
+In the simplest case, we make both \(q(z|x)\) and \(p(z)\) independent
+Gaussians:
+</p>
+
+\begin{equation}
+  KL(q(z|x_i) || p(z)) = \sum_j \mu_j^2 + \sigma_j^2 - \log(\sigma_j^2)
+\end{equation}
+
+<p>
+\(q(z|x)\) has parameters \(\mu\) and \(\sigma\) which are just outputs from our
+encoder. \(p(z)\) is a prior distribution with \(\mu = 0\) and \(\sigma = 1\).
+</p>
+
+<p>
+The bottleneck can't remember spatial information, and optimizing for
+\(p(x|z)\) puts heavy emphasis on exact recovery of spatial information.
+Solutions involve removing the bottleneck, or replacing the prior
+\(p(z)\) with one that has more structure.
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-15 Wed 12:12</p>
+<p class="date">Created: 2018-08-24 Fri 15:35</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
