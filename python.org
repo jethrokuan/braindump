@@ -1,6 +1,36 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Python
 
+* Python Default Values
+http://effbot.org/zone/default-values.htm
+
+Python executes some very interesting behaviour with regards to
+default values:
+
+#+BEGIN_SRC python :results output
+  def a(v=[]):
+      v.append(1)
+      print(v)
+
+  a()
+  a()
+  a()
+  a()
+#+END_SRC
+
+#+RESULTS:
+: [1]
+: [1, 1]
+: [1, 1, 1]
+: [1, 1, 1, 1]
+
+Why does this happen? Default parameter values are always evaluated
+when, and only when, the “def” statement they belong to is executed.
+Also note that “def” is an executable statement in Python, and that
+default arguments are evaluated in the “def” statement’s environment.
+If you execute “def” multiple times, it’ll create a new function
+object (with freshly calculated default values) each time.
+
 * Python  Data Structure Libraries
 ** Heap
 Heaps are provided by the =heapq= library in python.

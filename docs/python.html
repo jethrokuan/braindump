@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-23 Thu 15:20 -->
+<!-- 2018-08-24 Fri 15:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Python</title>
@@ -91,32 +91,68 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org993bdf8">1. Python  Data Structure Libraries</a>
+<li><a href="#orgd74e53c">1. Python Default Values</a></li>
+<li><a href="#org993bdf8">2. Python  Data Structure Libraries</a>
 <ul>
-<li><a href="#org1d82514">1.1. Heap</a></li>
-<li><a href="#org6f090fd">1.2. Priority Queue</a></li>
+<li><a href="#org1d82514">2.1. Heap</a></li>
+<li><a href="#org6f090fd">2.2. Priority Queue</a></li>
 </ul>
 </li>
-<li><a href="#orgfbd5a62">2. Strings</a></li>
-<li><a href="#org97e52ae">3. Python Nifty Tricks</a>
+<li><a href="#orgfbd5a62">3. Strings</a></li>
+<li><a href="#org97e52ae">4. Python Nifty Tricks</a>
 <ul>
-<li><a href="#orgf0b43da">3.1. Tilde Operator</a></li>
-<li><a href="#orge139cd9">3.2. For loop else clause</a></li>
-<li><a href="#org6be32bf">3.3. String translation tables</a></li>
-<li><a href="#org514e9b0">3.4. Checking if character unique in string</a></li>
+<li><a href="#orgf0b43da">4.1. Tilde Operator</a></li>
+<li><a href="#orge139cd9">4.2. For loop else clause</a></li>
+<li><a href="#org6be32bf">4.3. String translation tables</a></li>
+<li><a href="#org514e9b0">4.4. Checking if character unique in string</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
 
-<div id="outline-container-org993bdf8" class="outline-2">
-<h2 id="org993bdf8"><span class="section-number-2">1</span> Python  Data Structure Libraries</h2>
+<div id="outline-container-orgd74e53c" class="outline-2">
+<h2 id="orgd74e53c"><span class="section-number-2">1</span> Python Default Values</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+<a href="http://effbot.org/zone/default-values.htm">http://effbot.org/zone/default-values.htm</a>
+</p>
+
+<p>
+Python executes some very interesting behaviour with regards to
+default values:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">def a(v=[]):
+    v.append(1)
+    print(v)
+
+a()
+a()
+a()
+a()
+</pre>
+</div>
+
+<p>
+Why does this happen? Default parameter values are always evaluated
+when, and only when, the “def” statement they belong to is executed.
+Also note that “def” is an executable statement in Python, and that
+default arguments are evaluated in the “def” statement’s environment.
+If you execute “def” multiple times, it’ll create a new function
+object (with freshly calculated default values) each time.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org993bdf8" class="outline-2">
+<h2 id="org993bdf8"><span class="section-number-2">2</span> Python  Data Structure Libraries</h2>
+<div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-org1d82514" class="outline-3">
-<h3 id="org1d82514"><span class="section-number-3">1.1</span> Heap</h3>
-<div class="outline-text-3" id="text-1-1">
+<h3 id="org1d82514"><span class="section-number-3">2.1</span> Heap</h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 Heaps are provided by the <code>heapq</code> library in python.
 </p>
@@ -138,8 +174,8 @@ heapq._heappop_max(a)
 </div>
 
 <div id="outline-container-org6f090fd" class="outline-3">
-<h3 id="org6f090fd"><span class="section-number-3">1.2</span> Priority Queue</h3>
-<div class="outline-text-3" id="text-1-2">
+<h3 id="org6f090fd"><span class="section-number-3">2.2</span> Priority Queue</h3>
+<div class="outline-text-3" id="text-2-2">
 <p>
 <a href="https://docs.python.org/3/library/queue.html">Reference</a>
 </p>
@@ -172,8 +208,8 @@ while not pq.empty():
 </div>
 
 <div id="outline-container-orgfbd5a62" class="outline-2">
-<h2 id="orgfbd5a62"><span class="section-number-2">2</span> Strings</h2>
-<div class="outline-text-2" id="text-2">
+<h2 id="orgfbd5a62"><span class="section-number-2">3</span> Strings</h2>
+<div class="outline-text-2" id="text-3">
 <p>
 Some important string operators and functions are:
 </p>
@@ -201,12 +237,12 @@ that are then assigned back to s.
 </div>
 
 <div id="outline-container-org97e52ae" class="outline-2">
-<h2 id="org97e52ae"><span class="section-number-2">3</span> Python Nifty Tricks</h2>
-<div class="outline-text-2" id="text-3">
+<h2 id="org97e52ae"><span class="section-number-2">4</span> Python Nifty Tricks</h2>
+<div class="outline-text-2" id="text-4">
 </div>
 <div id="outline-container-orgf0b43da" class="outline-3">
-<h3 id="orgf0b43da"><span class="section-number-3">3.1</span> Tilde Operator</h3>
-<div class="outline-text-3" id="text-3-1">
+<h3 id="orgf0b43da"><span class="section-number-3">4.1</span> Tilde Operator</h3>
+<div class="outline-text-3" id="text-4-1">
 <p>
 The tilde operator <code>~</code> is the bit-wise complement operator, and it
 essentially calculates the <code>-x-1.</code> This comes in useful in arrays, where
@@ -223,8 +259,8 @@ palindrome function:
 </div>
 
 <div id="outline-container-orge139cd9" class="outline-3">
-<h3 id="orge139cd9"><span class="section-number-3">3.2</span> For loop else clause</h3>
-<div class="outline-text-3" id="text-3-2">
+<h3 id="orge139cd9"><span class="section-number-3">4.2</span> For loop else clause</h3>
+<div class="outline-text-3" id="text-4-2">
 <p>
 <code>for</code> loop has <code>else</code> clause, that runs when the for loop successfully
 completes without <code>break</code>.
@@ -233,8 +269,8 @@ completes without <code>break</code>.
 </div>
 
 <div id="outline-container-org6be32bf" class="outline-3">
-<h3 id="org6be32bf"><span class="section-number-3">3.3</span> String translation tables</h3>
-<div class="outline-text-3" id="text-3-3">
+<h3 id="org6be32bf"><span class="section-number-3">4.3</span> String translation tables</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
 <code>str.maketrans</code> creates a translation table that makes string
 substitution quick.
@@ -243,8 +279,8 @@ substitution quick.
 </div>
 
 <div id="outline-container-org514e9b0" class="outline-3">
-<h3 id="org514e9b0"><span class="section-number-3">3.4</span> Checking if character unique in string</h3>
-<div class="outline-text-3" id="text-3-4">
+<h3 id="org514e9b0"><span class="section-number-3">4.4</span> Checking if character unique in string</h3>
+<div class="outline-text-3" id="text-4-4">
 <p>
 <code>s.index(x) == s.rindex(x)</code> to check if character is only one in the string
 </p>
@@ -254,7 +290,7 @@ substitution quick.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-23 Thu 15:20</p>
+<p class="date">Created: 2018-08-24 Fri 15:35</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
