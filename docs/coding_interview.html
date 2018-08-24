@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-23 Thu 15:20 -->
+<!-- 2018-08-24 Fri 15:35 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Coding Interview Preparation</title>
@@ -117,6 +117,7 @@ for the JavaScript code in this tag.
 <li><a href="#org18a8b58">2.4. Longest Increasing Subsequence (LIS)</a></li>
 <li><a href="#orgff34d5d">2.5. Generating a Random Sample</a></li>
 <li><a href="#org095d0f8">2.6. Generate a random sample from a stream</a></li>
+<li><a href="#orgf421b7b">2.7. Checking sub-sequence</a></li>
 </ul>
 </li>
 </ul>
@@ -480,11 +481,26 @@ def online_random_sample(it, A):
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgf421b7b" class="outline-3">
+<h3 id="orgf421b7b"><span class="section-number-3">2.7</span> Checking sub-sequence</h3>
+<div class="outline-text-3" id="text-2-7">
+<div class="org-src-container">
+<pre class="src src-python">def is_subsequence(st, seq):
+    it = iter(st)
+    return all(c in it for c in seq)
+
+print(is_subsequence("hello", "el"))
+print(is_subsequence("hello", "no"))
+</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-23 Thu 15:20</p>
+<p class="date">Created: 2018-08-24 Fri 15:35</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

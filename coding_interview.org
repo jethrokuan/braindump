@@ -237,3 +237,17 @@ with probability ~k/(n+1)~.
 
       return sampling_results
 #+END_SRC
+
+** Checking sub-sequence
+#+BEGIN_SRC python :results output
+  def is_subsequence(st, seq):
+      it = iter(st)
+      return all(c in it for c in seq)
+
+  print(is_subsequence("hello", "el"))
+  print(is_subsequence("hello", "no"))
+#+END_SRC
+
+#+RESULTS:
+: True
+: False
