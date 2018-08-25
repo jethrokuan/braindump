@@ -43,6 +43,201 @@ Hence, we can think about matrix multiplication as computing where the
 final basis vectors land.
 
 * Determinant
+The fact that linear transformations leave grid lines parallel and
+evenly spaced, means that the area of each unit square is scaled by the
+same amount.
+
+The determinant of a transformation is the amount of scaling of area
+of a unit square. If the determinant is negative, then the orientation
+of the resulting grid space is reversed.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 15:28:49
+[[file:images/linear_algebra/Determinant/screenshot_2018-08-25_15-28-49.png]]
+
+In 3D space, the determinant is the volume of the parallelpiped. 
+
+\begin{equation}
+det \left( \begin{bmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i \\
+\end{bmatrix} \right)  = a \cdot det \left( \begin{bmatrix}
+  e & f \\
+  h & i
+\end{bmatrix} \right)
+- b \cdot det \left( \begin{bmatrix}
+  d & f \\
+  g & i
+\end{bmatrix}  \right)
++ c \cdot det \left( \begin{bmatrix}
+  d & e \\
+  g & h
+\end{bmatrix} \right)
+\end{equation}
+
+* Matrices for solving linear equations
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 15:40:10
+[[file:images/linear_algebra/Matrices for solving linear
+equations/screenshot_2018-08-25_15-40-10.png]]
+
+Suppose we want to compute $\vec{x}$ such that $A\vec{x} = \vec{v}$.
+Then we can compute the inverse of the matrix $A$, which corresponds
+to the inverse transformation. For example if $A$ were to rotate the
+grid space clockwise 90 degrees, then the inverse of $A$ would be to
+rotate the grid space anti-clockwise 90 degrees: $\vec{x} = A^{^{-1}}
+\vec{v}$.
+
+Suppose the determinant of the transformation is 0. Then we know that
+it does not have an inverse. However, solutions can still exist. 
+
+* Rank
+The rank is the number of dimensions of the output of the
+transformation. It is easy to see that the maximum rank of the
+transformation is the original dimensions of the matrix. Rank
+corresponds to the maximal number of linearly independent columns of
+$A$.
+
+* Column Space
+The column space of the matrix $A$ is the set of all possible outputs of
+$A \vec{v}$. It is also the span of all the columns.
+
+* Dot Product
+The dot product $\vec{w} \cdot \vec{v}$ can be viewed as the
+$(\text{length of projected vector }\vec{x}) \cdot (\text{length of
+}\vec{x})$.
+
+We can think of $1 \times 2$ matrices as projection matrices, where the
+first column indicates where $\hat{i}$ lands, and the second column
+indicates where $\hat{j}$ lands. Suppose we have a vector $\hat{i}$,
+and we want to project it onto $\hat{\mu}$. By symmetry, it's the same
+value as when $\hat{\mu}$ is projected onto $\hat{i}$. However, this is
+just the $x$ coordinate value of $\hat{\mu}$.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:03:15
+[[file:images/linear_algebra/Dot
+Product/screenshot_2018-08-25_16-03-15.png]]
+
+Hence, $\hat{i}$ and $\hat{j}$ land at $\mu_x$ and $\mu_y$ respectively. We
+can easily see the duality between matrix-vector product and dot
+product here.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:05:08
+[[file:images/linear_algebra/Dot
+Product/screenshot_2018-08-25_16-05-08.png]]
+
+* Cross Product
+The cross product of $\vec{v}$ and $\vec{w}$, denoted $\vec{v} \times
+\vec{w}$ is a vector. The vector has length equal to the area of a
+parallelogram obtained by duplicating and shifting the two vectors.
+The sign of the cross product is determined using the right-hand rule.
+This vector is perpendicular to the parallelogram.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:29:46
+[[file:images/linear_algebra/Cross
+Product/screenshot_2018-08-25_16-29-46.png]]
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:33:08
+[[file:images/linear_algebra/Cross
+Product/screenshot_2018-08-25_16-33-08.png]]
+
+We want to find the dual vector $\hat{p}$ that corresponds to the
+cross product.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:39:00
+[[file:images/linear_algebra/Cross
+Product/screenshot_2018-08-25_16-39-00.png]]
+
+* How to translate a matrix
+Suppose someone uses a different coordinate system (i.e. different
+basis vectors), which we can represent with a matrix:
+
+\begin{equation}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+\end{equation}
+
+Suppose then that we want to apply a linear transformation to a vector
+in her coordinate system. In the case of a rotation 90 degrees
+anti-clockwise, it would be represented in a matrix as:
+
+\begin{equation}
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+\end{equation}
+
+In the "default" basis vector coordinate system. What does this
+transformation look like in the new coordinate system? Given some
+vector $\hat{v}$ in the other language. First, we translate the
+vector into one in the default language:
+
+\begin{equation}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
+\end{equation}
+
+Then, we apply the transformation to the vector in the default
+language:
+
+\begin{equation}
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
+\end{equation}
+
+Then, we apply to the inverse of the change in basis matrix, to return
+the vector to the other language:
+
+\begin{equation}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}^{-1}
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
+\end{equation}
+
+This form $A^{{-1}}MA$ is frequently encountered when dealing with
+eigenvectors and eigenvalues.
+
+* Eigenvectors and eigenvalues
+Consider the span of a particular vector, that is, the set of vectors
+obtainable by applying a scaling constant to it. Some vectors remain
+on their own span, even with linear transformations.
+
+These vectors are called /eigenvectors/, and the value of the scaling
+constant is called the /eigenvalue/. Mathematically, this is expressed
+as:
+
+\begin{equation}
+  A \hat{v} = \lambda \hat{v}
+\end{equation}
+
+Consider a 3D rotation. If we can find an eigenvector for this 3D
+transformation, then we have found the axis of rotation.
 
 * References
 [[https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab][Essence of Linear Algebra]]

@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-25 Sat 15:04 -->
+<!-- 2018-08-25 Sat 17:13 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Linear Algebra</title>
@@ -96,7 +96,14 @@ for the JavaScript code in this tag.
 <li><a href="#orge1136e8">3. Matrices as Linear Transformations</a></li>
 <li><a href="#org0ec2f71">4. Matrix Multiplication as Composition</a></li>
 <li><a href="#org5e82856">5. Determinant</a></li>
-<li><a href="#orgdc23293">6. References</a></li>
+<li><a href="#orgbd29e76">6. Matrices for solving linear equations</a></li>
+<li><a href="#org11077f4">7. Rank</a></li>
+<li><a href="#org06c6585">8. Column Space</a></li>
+<li><a href="#orgded891b">9. Dot Product</a></li>
+<li><a href="#orgc2a6654">10. Cross Product</a></li>
+<li><a href="#org85f5c6f">11. How to translate a matrix</a></li>
+<li><a href="#orgf22e5aa">12. Eigenvectors and eigenvalues</a></li>
+<li><a href="#orgdc23293">13. References</a></li>
 </ul>
 </div>
 </div>
@@ -181,11 +188,292 @@ final basis vectors land.
 
 <div id="outline-container-org5e82856" class="outline-2">
 <h2 id="org5e82856"><span class="section-number-2">5</span> Determinant</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+The fact that linear transformations leave grid lines parallel and
+evenly spaced, means that the area of each unit square is scaled by the
+same amount.
+</p>
+
+<p>
+The determinant of a transformation is the amount of scaling of area
+of a unit square. If the determinant is negative, then the orientation
+of the resulting grid space is reversed.
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/linear_algebra/Determinant/screenshot_2018-08-25_15-28-49.png" alt="screenshot_2018-08-25_15-28-49.png" />
+</p>
+</div>
+
+<p>
+In 3D space, the determinant is the volume of the parallelpiped. 
+</p>
+
+\begin{equation}
+det \left( \begin{bmatrix}
+  a & b & c \\
+  d & e & f \\
+  g & h & i \\
+\end{bmatrix} \right)  = a \cdot det \left( \begin{bmatrix}
+  e & f \\
+  h & i
+\end{bmatrix} \right)
+- b \cdot det \left( \begin{bmatrix}
+  d & f \\
+  g & i
+\end{bmatrix}  \right)
++ c \cdot det \left( \begin{bmatrix}
+  d & e \\
+  g & h
+\end{bmatrix} \right)
+\end{equation}
+</div>
+</div>
+
+<div id="outline-container-orgbd29e76" class="outline-2">
+<h2 id="orgbd29e76"><span class="section-number-2">6</span> Matrices for solving linear equations</h2>
+<div class="outline-text-2" id="text-6">
+
+<div class="figure">
+<p><img src="images/linear_algebra/Matrices for solving linear equations/screenshot_2018-08-25_15-40-10.png" alt="screenshot_2018-08-25_15-40-10.png" />
+</p>
+</div>
+
+<p>
+Suppose we want to compute \(\vec{x}\) such that \(A\vec{x} = \vec{v}\).
+Then we can compute the inverse of the matrix \(A\), which corresponds
+to the inverse transformation. For example if \(A\) were to rotate the
+grid space clockwise 90 degrees, then the inverse of \(A\) would be to
+rotate the grid space anti-clockwise 90 degrees: \(\vec{x} = A^{^{-1}}
+\vec{v}\).
+</p>
+
+<p>
+Suppose the determinant of the transformation is 0. Then we know that
+it does not have an inverse. However, solutions can still exist. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org11077f4" class="outline-2">
+<h2 id="org11077f4"><span class="section-number-2">7</span> Rank</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+The rank is the number of dimensions of the output of the
+transformation. It is easy to see that the maximum rank of the
+transformation is the original dimensions of the matrix. Rank
+corresponds to the maximal number of linearly independent columns of
+\(A\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org06c6585" class="outline-2">
+<h2 id="org06c6585"><span class="section-number-2">8</span> Column Space</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+The column space of the matrix \(A\) is the set of all possible outputs of
+\(A \vec{v}\). It is also the span of all the columns.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgded891b" class="outline-2">
+<h2 id="orgded891b"><span class="section-number-2">9</span> Dot Product</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+The dot product \(\vec{w} \cdot \vec{v}\) can be viewed as the
+\((\text{length of projected vector }\vec{x}) \cdot (\text{length of
+}\vec{x})\).
+</p>
+
+<p>
+We can think of \(1 \times 2\) matrices as projection matrices, where the
+first column indicates where \(\hat{i}\) lands, and the second column
+indicates where \(\hat{j}\) lands. Suppose we have a vector \(\hat{i}\),
+and we want to project it onto \(\hat{\mu}\). By symmetry, it's the same
+value as when \(\hat{\mu}\) is projected onto \(\hat{i}\). However, this is
+just the \(x\) coordinate value of \(\hat{\mu}\).
+</p>
+
+
+<div class="figure">
+<p><img src="images/linear_algebra/Dot Product/screenshot_2018-08-25_16-03-15.png" alt="screenshot_2018-08-25_16-03-15.png" />
+</p>
+</div>
+
+<p>
+Hence, \(\hat{i}\) and \(\hat{j}\) land at \(\mu_x\) and \(\mu_y\) respectively. We
+can easily see the duality between matrix-vector product and dot
+product here.
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/linear_algebra/Dot Product/screenshot_2018-08-25_16-05-08.png" alt="screenshot_2018-08-25_16-05-08.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc2a6654" class="outline-2">
+<h2 id="orgc2a6654"><span class="section-number-2">10</span> Cross Product</h2>
+<div class="outline-text-2" id="text-10">
+<p>
+The cross product of \(\vec{v}\) and \(\vec{w}\), denoted \(\vec{v} \times
+\vec{w}\) is a vector. The vector has length equal to the area of a
+parallelogram obtained by duplicating and shifting the two vectors.
+The sign of the cross product is determined using the right-hand rule.
+This vector is perpendicular to the parallelogram.
+</p>
+
+
+<div class="figure">
+<p><img src="images/linear_algebra/Cross Product/screenshot_2018-08-25_16-29-46.png" alt="screenshot_2018-08-25_16-29-46.png" />
+</p>
+</div>
+
+
+
+<div class="figure">
+<p><img src="images/linear_algebra/Cross Product/screenshot_2018-08-25_16-33-08.png" alt="screenshot_2018-08-25_16-33-08.png" />
+</p>
+</div>
+
+<p>
+We want to find the dual vector \(\hat{p}\) that corresponds to the
+cross product.
+</p>
+
+
+<div class="figure">
+<p><img src="images/linear_algebra/Cross Product/screenshot_2018-08-25_16-39-00.png" alt="screenshot_2018-08-25_16-39-00.png" />
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org85f5c6f" class="outline-2">
+<h2 id="org85f5c6f"><span class="section-number-2">11</span> How to translate a matrix</h2>
+<div class="outline-text-2" id="text-11">
+<p>
+Suppose someone uses a different coordinate system (i.e. different
+basis vectors), which we can represent with a matrix:
+</p>
+
+\begin{equation}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+\end{equation}
+
+<p>
+Suppose then that we want to apply a linear transformation to a vector
+in her coordinate system. In the case of a rotation 90 degrees
+anti-clockwise, it would be represented in a matrix as:
+</p>
+
+\begin{equation}
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+\end{equation}
+
+<p>
+In the "default" basis vector coordinate system. What does this
+transformation look like in the new coordinate system? Given some
+vector \(\hat{v}\) in the other language. First, we translate the
+vector into one in the default language:
+</p>
+
+\begin{equation}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
+\end{equation}
+
+<p>
+Then, we apply the transformation to the vector in the default
+language:
+</p>
+
+\begin{equation}
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
+\end{equation}
+
+<p>
+Then, we apply to the inverse of the change in basis matrix, to return
+the vector to the other language:
+</p>
+
+\begin{equation}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}^{-1}
+  \begin{bmatrix}
+    0 & -1 \\
+    1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
+\end{equation}
+
+<p>
+This form \(A^{{-1}}MA\) is frequently encountered when dealing with
+eigenvectors and eigenvalues.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf22e5aa" class="outline-2">
+<h2 id="orgf22e5aa"><span class="section-number-2">12</span> Eigenvectors and eigenvalues</h2>
+<div class="outline-text-2" id="text-12">
+<p>
+Consider the span of a particular vector, that is, the set of vectors
+obtainable by applying a scaling constant to it. Some vectors remain
+on their own span, even with linear transformations.
+</p>
+
+<p>
+These vectors are called <i>eigenvectors</i>, and the value of the scaling
+constant is called the <i>eigenvalue</i>. Mathematically, this is expressed
+as:
+</p>
+
+\begin{equation}
+  A \hat{v} = \lambda \hat{v}
+\end{equation}
+
+<p>
+Consider a 3D rotation. If we can find an eigenvector for this 3D
+transformation, then we have found the axis of rotation.
+</p>
+</div>
 </div>
 
 <div id="outline-container-orgdc23293" class="outline-2">
-<h2 id="orgdc23293"><span class="section-number-2">6</span> References</h2>
-<div class="outline-text-2" id="text-6">
+<h2 id="orgdc23293"><span class="section-number-2">13</span> References</h2>
+<div class="outline-text-2" id="text-13">
 <p>
 <a href="https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab">Essence of Linear Algebra</a>
 </p>
@@ -194,7 +482,7 @@ final basis vectors land.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-25 Sat 15:04</p>
+<p class="date">Created: 2018-08-25 Sat 17:13</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
