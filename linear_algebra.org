@@ -239,5 +239,35 @@ as:
 Consider a 3D rotation. If we can find an eigenvector for this 3D
 transformation, then we have found the axis of rotation.
 
+* Singular Value Decomposition
+
+Given an input data matrix $A$ consisting of $m$ documents and $n$
+terms, we can decompose it into 3 matrices.
+
+\begin{equation}
+  A_{[m \times n]} = U_{[m \times r]} \Sigma_{[r \times r]} V_{[n
+    \times r]}^T
+\end{equation}
+
+$U$ are left singular vectors of size $m \times r$, which we can think of
+as $m$ documents and $r$ concepts. $\Sigma$ is a $r \times r$ diagonal matrix,
+representing the strength of each concept, where $r$ is the rank of
+the matrix $A$. $V$ stores the right singular vectors, consisting of
+$n$ terms and $r$ concepts.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 17:26:42
+[[file:images/linear_algebra/Singular Value
+Decomposition/screenshot_2018-08-25_17-26-42.png]]
+
+It is always possible to decompose a real matrix $A$ into $A = U \Sigma
+V^T$, where:
+
+1. $U$, $\Sigma$, and $V$ are unique
+2. $U$ and $V$ are column orthonormal: $U^T U = I$, $V^T V = I$
+3. $\Sigma$ is diagonal, and entries are positive, sorted in decreasing
+   order.
+
+
 * References
-[[https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab][Essence of Linear Algebra]]
+1. [[https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab][Essence of Linear Algebra]]
+2. [[https://www.youtube.com/watch?v=P5mlg91as1c][Lecture 47 - Singular Value Decomposition | Stanford University]]
