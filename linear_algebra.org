@@ -1,0 +1,48 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Linear Algebra
+* Span
+The "span" of $\hat{v}$ and $\hat{w}$ is the set of all their linear
+combinations:
+
+\begin{equation}
+ a \hat{v} + b \hat{w}
+\end{equation}
+
+* Basis
+The basis of a vector space is a set of linearly independent vectors
+that span the full space.
+
+* Matrices as Linear Transformations
+
+A transformation is linear if it fulfills two properties:
+
+1. All lines remain lines (they don't get curved)
+2. The origin is fixed.
+
+Under a linear transformation, grid lines remain parallel and evenly
+spaced. This property allows us to compute the transformed vector,
+only by recording how the basis vectors are transformed.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 14:32:57
+[[file:images/linear_algebra/Matrices%20as%20Linear%20Transformations/screenshot_2018-08-25_14-32-57.png]]
+
+* Matrix Multiplication as Composition
+Often, we want to describe the effects of multiple linear
+transformations composed together, for example, a rotation, followed
+by a shear. The composition of linear transformations is also a linear
+transformation, and can be described with a single matrix (see above).
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 14:36:56
+[[file:images/linear_algebra/Matrix%20Multiplication%20as%20Composition/screenshot_2018-08-25_14-36-56.png]]
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 14:41:53
+[[file:images/linear_algebra/Matrix Multiplication as
+Composition/screenshot_2018-08-25_14-41-53.png]]
+
+Hence, we can think about matrix multiplication as computing where the
+final basis vectors land.
+
+* Determinant
+
+* References
+[[https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab][Essence of Linear Algebra]]
