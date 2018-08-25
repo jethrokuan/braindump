@@ -316,7 +316,7 @@ illumination model
 - Cuberille regards each xovel as a little cube, classify as either
   part of the object or not.
 #+DOWNLOADED: https://tse2.mm.bing.net/th?id=OIP.b6y8lI8JJa0FBYoH-7OPugHaHJ&pid=Api @ 2018-07-31 11:00:07
-[[file:images/Scientific Data Visualization - Stefan Bruckner/th_2018-07-31_11-00-07.jpeg]]
+[[file:images/data_viz/Scientific Data Visualization - Stefan Bruckner/th_2018-07-31_11-00-07.jpeg]]
 
  [[https://en.wikipedia.org/wiki/Marching_cubes][Marching Cubes]] is a standard method for the extraction of isosurfaces
  from volume data
@@ -357,9 +357,3 @@ illumination model
 5. Interactive visualization of deep learning
    1. Toolkits: Tensorboard, Embedding Projector, Visdom
    2. Advanced visual analytics systems: CNNVis, LSTMVis, DeepEyes
-
-* COMMENT Local Org Variables
-# Local Variables:
-# org-download-image-dir: "./images/data_viz/"
-# End:
-

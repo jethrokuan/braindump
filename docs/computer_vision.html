@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-23 Thu 15:20 -->
+<!-- 2018-08-25 Sat 15:04 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computer Vision</title>
@@ -91,36 +91,36 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org1de0f7e">1. Introduction</a></li>
-<li><a href="#org8c8e680">2. Image Formation</a>
+<li><a href="#orga7e0ed0">1. Introduction</a></li>
+<li><a href="#org1e4cc08">2. Image Formation</a>
 <ul>
-<li><a href="#org3fe13e2">2.1. Geometric Primitives</a></li>
-<li><a href="#orgf8fae29">2.2. 2D Transformations</a></li>
-<li><a href="#org7ee3bc6">2.3. 3D Rotations</a>
+<li><a href="#org1754238">2.1. Geometric Primitives</a></li>
+<li><a href="#org9c74fb8">2.2. 2D Transformations</a></li>
+<li><a href="#org61357e7">2.3. 3D Rotations</a>
 <ul>
-<li><a href="#orgded4ca8">2.3.1. Euler Angles</a></li>
-<li><a href="#orgd959924">2.3.2. Axis/angle (exponential twist)</a></li>
-<li><a href="#org329c966">2.3.3. Unit Quarternions</a></li>
+<li><a href="#org230a180">2.3.1. Euler Angles</a></li>
+<li><a href="#orge235f67">2.3.2. Axis/angle (exponential twist)</a></li>
+<li><a href="#org56c7059">2.3.3. Unit Quarternions</a></li>
 </ul>
 </li>
-<li><a href="#org6331a3f">2.4. 3D to 2D projections</a>
+<li><a href="#org2ed3feb">2.4. 3D to 2D projections</a>
 <ul>
-<li><a href="#org7abdb3a">2.4.1. Orthography</a></li>
-<li><a href="#orgee505a5">2.4.2. Perspective</a></li>
-<li><a href="#orgae21fd2">2.4.3. Camera Instrinsics</a></li>
-<li><a href="#orgf572c77">2.4.4. Lens distortion</a></li>
+<li><a href="#orga085c11">2.4.1. Orthography</a></li>
+<li><a href="#org8256be7">2.4.2. Perspective</a></li>
+<li><a href="#orgf14df1f">2.4.3. Camera Instrinsics</a></li>
+<li><a href="#orgebdeb0b">2.4.4. Lens distortion</a></li>
 </ul>
 </li>
-<li><a href="#org2a810c9">2.5. Photometric image formation</a>
+<li><a href="#orgb9a89cf">2.5. Photometric image formation</a>
 <ul>
-<li><a href="#orgf87538b">2.5.1. Lighting</a></li>
-<li><a href="#orge5059c9">2.5.2. Reflectance and shading</a>
+<li><a href="#orgcd07261">2.5.1. Lighting</a></li>
+<li><a href="#org61a7b1a">2.5.2. Reflectance and shading</a>
 <ul>
-<li><a href="#org04425f1">2.5.2.1. The Bidirectional Reflectance Distribution Function (BRDF)</a></li>
-<li><a href="#org2056090">2.5.2.2. Diffuse Reflection</a></li>
-<li><a href="#org3eea508">2.5.2.3. Specular Reflection</a></li>
-<li><a href="#org9f34077">2.5.2.4. Phong Shading</a></li>
-<li><a href="#org4d09fb9">2.5.2.5. Optics</a></li>
+<li><a href="#orgb1c1607">2.5.2.1. The Bidirectional Reflectance Distribution Function (BRDF)</a></li>
+<li><a href="#org8551a0c">2.5.2.2. Diffuse Reflection</a></li>
+<li><a href="#org2942664">2.5.2.3. Specular Reflection</a></li>
+<li><a href="#orgad88c5d">2.5.2.4. Phong Shading</a></li>
+<li><a href="#org981ec01">2.5.2.5. Optics</a></li>
 </ul>
 </li>
 </ul>
@@ -131,8 +131,8 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org1de0f7e" class="outline-2">
-<h2 id="org1de0f7e"><span class="section-number-2">1</span> Introduction</h2>
+<div id="outline-container-orga7e0ed0" class="outline-2">
+<h2 id="orga7e0ed0"><span class="section-number-2">1</span> Introduction</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Despite the advances in research in computer vision, the dream of
@@ -183,12 +183,12 @@ levels of modeling and abstraction.
 </div>
 </div>
 
-<div id="outline-container-org8c8e680" class="outline-2">
-<h2 id="org8c8e680"><span class="section-number-2">2</span> Image Formation</h2>
+<div id="outline-container-org1e4cc08" class="outline-2">
+<h2 id="org1e4cc08"><span class="section-number-2">2</span> Image Formation</h2>
 <div class="outline-text-2" id="text-2">
 </div>
-<div id="outline-container-org3fe13e2" class="outline-3">
-<h3 id="org3fe13e2"><span class="section-number-3">2.1</span> Geometric Primitives</h3>
+<div id="outline-container-org1754238" class="outline-3">
+<h3 id="org1754238"><span class="section-number-3">2.1</span> Geometric Primitives</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Geometric primitives form the basic building blocks used to describe
@@ -286,8 +286,8 @@ combination of these 2 points.
 </div>
 </div>
 
-<div id="outline-container-orgf8fae29" class="outline-3">
-<h3 id="orgf8fae29"><span class="section-number-3">2.2</span> 2D Transformations</h3>
+<div id="outline-container-org9c74fb8" class="outline-3">
+<h3 id="org9c74fb8"><span class="section-number-3">2.2</span> 2D Transformations</h3>
 <div class="outline-text-3" id="text-2-2">
 <p>
 The basic primitives introduced above can be transformed, the simplest
@@ -413,8 +413,8 @@ transformations.
 </div>
 </div>
 
-<div id="outline-container-org7ee3bc6" class="outline-3">
-<h3 id="org7ee3bc6"><span class="section-number-3">2.3</span> 3D Rotations</h3>
+<div id="outline-container-org61357e7" class="outline-3">
+<h3 id="org61357e7"><span class="section-number-3">2.3</span> 3D Rotations</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 The biggest difference between 2D and 3D coordinate transformations is
@@ -423,8 +423,8 @@ not as straightforward.
 </p>
 </div>
 
-<div id="outline-container-orgded4ca8" class="outline-4">
-<h4 id="orgded4ca8"><span class="section-number-4">2.3.1</span> Euler Angles</h4>
+<div id="outline-container-org230a180" class="outline-4">
+<h4 id="org230a180"><span class="section-number-4">2.3.1</span> Euler Angles</h4>
 <div class="outline-text-4" id="text-2-3-1">
 <p>
 A rotation matrix can be formed as the product of three rotations
@@ -436,8 +436,8 @@ parameter space.
 </div>
 </div>
 
-<div id="outline-container-orgd959924" class="outline-4">
-<h4 id="orgd959924"><span class="section-number-4">2.3.2</span> Axis/angle (exponential twist)</h4>
+<div id="outline-container-orge235f67" class="outline-4">
+<h4 id="orge235f67"><span class="section-number-4">2.3.2</span> Axis/angle (exponential twist)</h4>
 <div class="outline-text-4" id="text-2-3-2">
 <p>
 A rotation can be represented by a rotation axis \(\hat{\mathbf{n}}\)
@@ -483,8 +483,8 @@ of \(\mathbf{R}v\) with respect to \(\omega\),
 </div>
 </div>
 
-<div id="outline-container-org329c966" class="outline-4">
-<h4 id="org329c966"><span class="section-number-4">2.3.3</span> Unit Quarternions</h4>
+<div id="outline-container-org56c7059" class="outline-4">
+<h4 id="org56c7059"><span class="section-number-4">2.3.3</span> Unit Quarternions</h4>
 <div class="outline-text-4" id="text-2-3-3">
 <p>
 A unit quarternion is a unit length 4-vector whose components can be
@@ -535,8 +535,8 @@ or \(w\), but not both. Then quarternion division can be defined as:
 </div>
 
 
-<div id="outline-container-org6331a3f" class="outline-3">
-<h3 id="org6331a3f"><span class="section-number-3">2.4</span> 3D to 2D projections</h3>
+<div id="outline-container-org2ed3feb" class="outline-3">
+<h3 id="org2ed3feb"><span class="section-number-3">2.4</span> 3D to 2D projections</h3>
 <div class="outline-text-3" id="text-2-4">
 
 <div class="figure">
@@ -553,8 +553,8 @@ real cameras.
 </p>
 </div>
 
-<div id="outline-container-org7abdb3a" class="outline-4">
-<h4 id="org7abdb3a"><span class="section-number-4">2.4.1</span> Orthography</h4>
+<div id="outline-container-orga085c11" class="outline-4">
+<h4 id="orga085c11"><span class="section-number-4">2.4.1</span> Orthography</h4>
 <div class="outline-text-4" id="text-2-4-1">
 <p>
 An orthographic projection simply drops the \(z\) component of the
@@ -602,8 +602,8 @@ plane, and the combination of these two projections is affine.
 </div>
 </div>
 
-<div id="outline-container-orgee505a5" class="outline-4">
-<h4 id="orgee505a5"><span class="section-number-4">2.4.2</span> Perspective</h4>
+<div id="outline-container-org8256be7" class="outline-4">
+<h4 id="org8256be7"><span class="section-number-4">2.4.2</span> Perspective</h4>
 <div class="outline-text-4" id="text-2-4-2">
 <p>
 Points are projected onto the image plane by dividing them by their
@@ -637,8 +637,8 @@ are unable to recover the distance of the 3D point from the image.
 </div>
 </div>
 
-<div id="outline-container-orgae21fd2" class="outline-4">
-<h4 id="orgae21fd2"><span class="section-number-4">2.4.3</span> Camera Instrinsics</h4>
+<div id="outline-container-orgf14df1f" class="outline-4">
+<h4 id="orgf14df1f"><span class="section-number-4">2.4.3</span> Camera Instrinsics</h4>
 <div class="outline-text-4" id="text-2-4-3">
 <p>
 Once we have projected a 3D point through an ideal pinhole using a
@@ -685,8 +685,8 @@ really only 7 degrees of freedom. Most practitioners assume a general
 </div>
 </div>
 
-<div id="outline-container-orgf572c77" class="outline-4">
-<h4 id="orgf572c77"><span class="section-number-4">2.4.4</span> Lens distortion</h4>
+<div id="outline-container-orgebdeb0b" class="outline-4">
+<h4 id="orgebdeb0b"><span class="section-number-4">2.4.4</span> Lens distortion</h4>
 <div class="outline-text-4" id="text-2-4-4">
 <p>
 Thus far, it has been assumed that the cameras obey a linear
@@ -709,8 +709,8 @@ the image center by an amount proportional to their radial distance.
 </div>
 </div>
 
-<div id="outline-container-org2a810c9" class="outline-3">
-<h3 id="org2a810c9"><span class="section-number-3">2.5</span> Photometric image formation</h3>
+<div id="outline-container-orgb9a89cf" class="outline-3">
+<h3 id="orgb9a89cf"><span class="section-number-3">2.5</span> Photometric image formation</h3>
 <div class="outline-text-3" id="text-2-5">
 <p>
 Images are not composed of 2D features, but of discrete color or
@@ -720,8 +720,8 @@ geometry, camera optics and sensor properties?
 </p>
 </div>
 
-<div id="outline-container-orgf87538b" class="outline-4">
-<h4 id="orgf87538b"><span class="section-number-4">2.5.1</span> Lighting</h4>
+<div id="outline-container-orgcd07261" class="outline-4">
+<h4 id="orgcd07261"><span class="section-number-4">2.5.1</span> Lighting</h4>
 <div class="outline-text-4" id="text-2-5-1">
 <p>
 To produce an image, a scene must be illuminated with one or more
@@ -743,8 +743,8 @@ can be used instead.
 </div>
 </div>
 
-<div id="outline-container-orge5059c9" class="outline-4">
-<h4 id="orge5059c9"><span class="section-number-4">2.5.2</span> Reflectance and shading</h4>
+<div id="outline-container-org61a7b1a" class="outline-4">
+<h4 id="org61a7b1a"><span class="section-number-4">2.5.2</span> Reflectance and shading</h4>
 <div class="outline-text-4" id="text-2-5-2">
 <p>
 When light hits an object surface, it is scattered and reflected. We
@@ -753,8 +753,8 @@ and Phong shading models.
 </p>
 </div>
 
-<div id="outline-container-org04425f1" class="outline-5">
-<h5 id="org04425f1"><span class="section-number-5">2.5.2.1</span> The Bidirectional Reflectance Distribution Function (BRDF)</h5>
+<div id="outline-container-orgb1c1607" class="outline-5">
+<h5 id="orgb1c1607"><span class="section-number-5">2.5.2.1</span> The Bidirectional Reflectance Distribution Function (BRDF)</h5>
 <div class="outline-text-5" id="text-2-5-2-1">
 <p>
 Relative to some local coordinate frame on the surface, the BRDF is a
@@ -774,8 +774,8 @@ split into their diffuse and specular components.
 </div>
 </div>
 
-<div id="outline-container-org2056090" class="outline-5">
-<h5 id="org2056090"><span class="section-number-5">2.5.2.2</span> Diffuse Reflection</h5>
+<div id="outline-container-org8551a0c" class="outline-5">
+<h5 id="org8551a0c"><span class="section-number-5">2.5.2.2</span> Diffuse Reflection</h5>
 <div class="outline-text-5" id="text-2-5-2-2">
 <p>
 The diffuse component scatters light uniformly in all directions and
@@ -799,8 +799,8 @@ light direction and the surface normal \(\theta_i\).
 </div>
 </div>
 
-<div id="outline-container-org3eea508" class="outline-5">
-<h5 id="org3eea508"><span class="section-number-5">2.5.2.3</span> Specular Reflection</h5>
+<div id="outline-container-org2942664" class="outline-5">
+<h5 id="org2942664"><span class="section-number-5">2.5.2.3</span> Specular Reflection</h5>
 <div class="outline-text-5" id="text-2-5-2-3">
 <p>
 The specular reflection component heavily depends on the direction of
@@ -818,8 +818,8 @@ that is rotated by 180^&deg; around the surface normal
 </div>
 </div>
 
-<div id="outline-container-org9f34077" class="outline-5">
-<h5 id="org9f34077"><span class="section-number-5">2.5.2.4</span> Phong Shading</h5>
+<div id="outline-container-orgad88c5d" class="outline-5">
+<h5 id="orgad88c5d"><span class="section-number-5">2.5.2.4</span> Phong Shading</h5>
 <div class="outline-text-5" id="text-2-5-2-4">
 <p>
 Phong combined the diffuse and specular components of reflection with
@@ -854,8 +854,8 @@ model.
 </div>
 </div>
 
-<div id="outline-container-org4d09fb9" class="outline-5">
-<h5 id="org4d09fb9"><span class="section-number-5">2.5.2.5</span> Optics</h5>
+<div id="outline-container-org981ec01" class="outline-5">
+<h5 id="org981ec01"><span class="section-number-5">2.5.2.5</span> Optics</h5>
 <div class="outline-text-5" id="text-2-5-2-5">
 <p>
 Once the light from a scene reaches a camera, it must still pass
@@ -869,7 +869,7 @@ through the lens before reaching the sensor.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-23 Thu 15:20</p>
+<p class="date">Created: 2018-08-25 Sat 15:04</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

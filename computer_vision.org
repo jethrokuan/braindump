@@ -507,7 +507,3 @@ model.
 **** Optics
 Once the light from a scene reaches a camera, it must still pass
 through the lens before reaching the sensor.
-* COMMENT Org Local Variables
-# Local Variables:
-# org-download-image-dir: "./images/computer_vision/"
-# End:

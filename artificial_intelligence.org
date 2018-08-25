@@ -242,9 +242,7 @@ infinite-path problem.
 Key idea is to gradually increase the depth limit: first 0, then
 1, then 2... until a goal is found.
 
-
-[[file:images/ai/Problem-Solving/screenshot_2018-01-22_15-26-50.png]]
-
+[[file:images/artificial_intelligence/Problem-Solving/screenshot_2018-01-22_15-26-50.png]]
 
 $N(IDS) = (d)b + (d-1)b^2 + \hdots + (1)b^d$, which gives a time
 complexity of $O(b^d)$
@@ -769,9 +767,3 @@ Simon, noble prize in economics
 The complexity of the behaviour is the manifestation of the complexity
 of the environment and not the complexity of the program.
 #+END_QUOTE
-
-* COMMENT Local Org Variables
-# Local Variables:
-# org-download-image-dir: "./images/ai/"
-# End:
-

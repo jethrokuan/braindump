@@ -355,7 +355,7 @@ X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu_j, \Sigma_j)
  increase the likelihood at each iteration.
 
  #+DOWNLOADED: /tmp/screenshot.png @ 2018-04-03 10:56:25
- [[file:images/ai/Expectation
+ [[file:images/machine_learning/Expectation
  Maximization/screenshot_2018-04-03_10-56-25.png]]
 
 For mixture of Gaussians:
@@ -383,7 +383,3 @@ In /transform coding/, we transform the data, usually using a linear
 tranformation. The data in the transformed domain is quantized,
 usually discarding the small coefficients, corresponding to removing
 some of the dimensions.
-* COMMENT Local Org Variables
-# Local Variables:
-# org-download-image-dir: "./images/ai/"
-# End:

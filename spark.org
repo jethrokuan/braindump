@@ -329,9 +329,3 @@ each accumulator only once. Thus, for a reliable absolute value
 counter, the accumulator should be in an action such as =foreach()=. For
 accumulators used in RDD tarnsformations instead of actions, this
 guarantee does not exist.
-
-* COMMENT Local Org Variables
-# Local Variables:
-# org-download-image-dir: "./images/spark/"
-# End:
-

@@ -15,24 +15,24 @@ The class is denoted with 3 parts: The class name, its attributes, and
 its methods.
 
 #+ATTR_LATEX: :width 0.3\textwidth
-[[file:images/software-engineering/Object-Oriented Programming/class_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/class_uml.png]]
 
 Instances of a class are denoted with 3 parts: its name (and class),
 and its attribute values.
 
-[[file:images/software-engineering/Object-Oriented Programming/instance_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/instance_uml.png]]
 
 Class-level attributes and variables are denoted by _underlines_. In
 the class diagram below, =totalStudents= and =getTotalStudents= are
 class-level._
 
 #+ATTR_LATEX: :width 0.3\textwidth
-[[file:images/software-engineering/Object-Oriented Programming/class_level_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/class_level_uml.png]]
 
 UML Notation for enumerations:
 
 #+ATTR_LATEX: :width 0.3\textwidth
-[[file:images/software-engineering/Object-Oriented
+[[file:images/software_engineering/Object-Oriented
 Programming/enumeration_uml.png]]
 ** Associations
   - A solid line indicates an association between 2 objects.
@@ -40,32 +40,32 @@ Programming/enumeration_uml.png]]
     knows about the other class. Arrow heads are used to indicate the
     navigability of the association.
 
-[[file:images/software-engineering/Object-Oriented
+[[file:images/software_engineering/Object-Oriented
 Programming/navigability_uml.png]]
 
   - Multiplicity is denoted on each end of the association.
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented Programming/multiplicity_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/multiplicity_uml.png]]
 
   - Dependencies are weaker associations where interactions between
     objects do not result in a long-term relationship. A dashed arrow
     is used to show dependencies.
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented Programming/dependencies_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/dependencies_uml.png]]
 
   - Composition represents a strong whole-part relationship. When the
     whole is destroyed, parts are destroyed too. There cannot be
     cyclical links in composition.
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented
+[[file:images/software_engineering/Object-Oriented
 Programming/composition_uml.png]]
 
   - Aggregation represents a container-contained relationship. 
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented
+[[file:images/software_engineering/Object-Oriented
 Programming/aggregation_uml.png]]
 
   - An association class represents additional information about an
@@ -73,13 +73,13 @@ Programming/aggregation_uml.png]]
     design point of view.
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented Programming/association_class_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/association_class_uml.png]]
 ** Inheritance
 Inheritance allows you to define a new class based on an existing
 class. This helps group common parts among classes. This is denoted by
 an arrow.
 
-[[file:images/software-engineering/Object-Oriented Programming/inheritance_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/inheritance_uml.png]]
 ** Interfaces
 An /interface/ is a behaviour specification. If a class implements the
 interface, it is able to support the behaviours specified by the
@@ -88,13 +88,13 @@ relationship. In the example below, =AcademicStaff= is a
 =SalariedStaff=.
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented Programming/interface_uml.png]]
+[[file:images/software_engineering/Object-Oriented Programming/interface_uml.png]]
 
 An abstract method is the method interface without the implementation.
 It is denoted with the ={abstract}= annotation in the UML diagram.
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Object-Oriented
+[[file:images/software_engineering/Object-Oriented
 Programming/abstract_uml.png]]
 ** Polymorphism
 /Polymorphism/ is the ability of different objects to respond, each
@@ -127,11 +127,11 @@ polymorphism are:
    - Partition activity diagram to show who is doing which action (Who
      label at the top, as columns)
 #+ATTR_LATEX: :width 0.7\textwidth
-[[file:images/software-engineering/Modelling
+[[file:images/software_engineering/Modelling
 Behaviour/activity_branch_uml.png]]
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Modelling
+[[file:images/software_engineering/Modelling
 Behaviour/activity_fork_join_uml.png]]
 
 ** Sequence Diagrams
@@ -160,7 +160,7 @@ Note:
 - No underlined object names (e.g. :Object)
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Modelling Behaviour/sequence_uml.png]]
+[[file:images/software_engineering/Modelling Behaviour/sequence_uml.png]]
 * Software Requirements
 Requirements come from /stakeholders/: parties that are directly
 affected by the software project.
@@ -324,7 +324,7 @@ anti-patterns, consequences and other useful information.
   happens through the facade class.
 
 #+ATTR_LATEX: :width 0.4\textwidth
-[[file:images/software-engineering/Software Design Patterns/facade.png]]
+[[file:images/software_engineering/Software Design Patterns/facade.png]]
 
 ** Command Pattern
 - *Context*: A system is required to execute a number of commands,s
@@ -353,7 +353,7 @@ anti-patterns, consequences and other useful information.
   both parties.
 
 #+ATTR_LATEX: :width 0.5\textwidth
-[[file:images/software-engineering/Software Design Patterns/observer.png]]
+[[file:images/software_engineering/Software Design Patterns/observer.png]]
 
 * Implementation
 - Debugging :: process of discovering defects in the program.
@@ -646,9 +646,6 @@ Other heuristics include:
 - DRY :: Don't repeat yourself, i.e. No duplicate implementations
 - Brook's Law ::  Adding people to a late project makes it later
                  
-
-
-
 * Software Development Life Cycles
 SDLC consists of different stages such as:
 
@@ -753,8 +750,3 @@ SDLC consists of different stages such as:
    - Processes measured and controllers
 5. Optimized
    - Focus on process improvement
-
-* COMMENT Org Local Variables
-# Local Variables:
-# org-download-image-dir: "./images/software-engineering/"
-# End:

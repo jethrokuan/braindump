@@ -1133,8 +1133,3 @@ phenomenon is called *Belady's anomaly*. LRU has the *stack property*:
 for algorithms with this property, a cache of size N+1 naturally
 includes the contents of a cache of size N. FIFO and Random (among
 others) do not obey this stack property.
-* COMMENT Local Org Variables
-# Local Variables:
-# org-download-image-dir: "./images/operating_systems/"
-# End:
-
