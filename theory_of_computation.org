@@ -318,7 +318,7 @@ the regular expression $R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}$. Then, w
 combine the expressions for the paths of the two above:
 
 \begin{equation}
-R_{ij}^{(k)} = R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}
+R_{ij}^{(k)} = R_{ij}^{(k-1)} + R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}
 \end{equation}
 
 We can compute $R_{ij}^{(n)}$ for all $i$ and $j$, and the language of the
