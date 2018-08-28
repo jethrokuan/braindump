@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-28 Tue 17:18 -->
+<!-- 2018-08-28 Tue 23:44 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
@@ -130,9 +130,10 @@ for the JavaScript code in this tag.
 <li><a href="#orgf0fb408">5.2. Equivalence of DFA and Regular Expressions</a>
 <ul>
 <li><a href="#org24537d7">5.2.1. From DFA to Regular Expression</a></li>
-<li><a href="#orgddb326a">5.2.2. <span class="todo TODO">TODO</span> Converting DFAs to regular expressions by eliminating states</a></li>
-<li><a href="#org3a25b88">5.2.3. <span class="todo TODO">TODO</span> Converting regular expressions to automata</a></li>
+<li><a href="#orgddb326a">5.2.2. Converting DFAs to regular expressions by eliminating states</a></li>
+<li><a href="#org3a25b88">5.2.3. Converting regular expressions to automata</a></li>
 <li><a href="#orgccdda3d">5.2.4. Algebraic law for regular expressions</a></li>
+<li><a href="#org9323c9b">5.2.5. Discovering laws for regular expressions</a></li>
 </ul>
 </li>
 </ul>
@@ -689,13 +690,114 @@ automaton is then the sum of all expressions \(R_{ij}^{(n)}\) such that state
 </div>
 </div>
 
-
 <div id="outline-container-orgddb326a" class="outline-4">
-<h4 id="orgddb326a"><span class="section-number-4">5.2.2</span> <span class="todo TODO">TODO</span> Converting DFAs to regular expressions by eliminating states</h4>
+<h4 id="orgddb326a"><span class="section-number-4">5.2.2</span> Converting DFAs to regular expressions by eliminating states</h4>
+<div class="outline-text-4" id="text-5-2-2">
+<p>
+The above method of conversation always works, but is expensive. \(n^3\)
+expressions have to be constructed for an n-state automaton, but the
+length of the expression can grow by a factor of 4 on the average,
+with each of the \(n\) inductive steps, and the expressions themselves
+could reach on the order of \(4^n\) symbols.
+</p>
+
+<p>
+The approach introduced here avoids duplicating work at some points,
+by eliminating states. If we eliminate a state \(s\), then all paths
+that went through \(s\) no longer exist in the automaton. To preserve
+the language, we must include on an arc that goes directly from \(q\) to
+\(p\), the labels of paths that went from some state \(q\) to \(p\) through
+\(s\). This label now includes strings, but we can use a regular
+expression to represent all such strings.
+</p>
+
+<p>
+Hence, we can construct a regular expression from a finite automaton
+as follows:
+</p>
+
+<ol class="org-ol">
+<li>For each accepting state \(q\), apply the reduction process to
+produce an equivalent automaton with regular-expression labels on
+the arcs. Eliminate all states except \(q\) and the start state \(q_0\).</li>
+<li>If \(q \neq q_0\), then a two-state automaton remains, as depicted. The
+regular expression for the automaton is \((R + SU^*T)^*SU^*\).</li>
+</ol>
+
+
+
+<div class="figure">
+<p><img src="images/theory_of_computation/Regular Expressions/screenshot_2018-08-28_23-30-02.png" alt="screenshot_2018-08-28_23-30-02.png" />
+</p>
+</div>
+
+<ol class="org-ol">
+<li>If the start state is also an accepting state, then we must perform
+a state-elimination from the original automaton that gets rid of
+every state but the start state, leaving a one-state automaton,
+which accepts \(R^*\).</li>
+</ol>
+
+
+
+<div class="figure">
+<p><img src="images/theory_of_computation/Regular Expressions/screenshot_2018-08-28_23-30-48.png" alt="screenshot_2018-08-28_23-30-48.png" />
+</p>
+</div>
+</div>
 </div>
 
 <div id="outline-container-org3a25b88" class="outline-4">
-<h4 id="org3a25b88"><span class="section-number-4">5.2.3</span> <span class="todo TODO">TODO</span> Converting regular expressions to automata</h4>
+<h4 id="org3a25b88"><span class="section-number-4">5.2.3</span> Converting regular expressions to automata</h4>
+<div class="outline-text-4" id="text-5-2-3">
+<p>
+We can show every language defined by a regular expression is also
+defined by a finite automaton, and we do so by converting any regular
+expression \(R\) to an $&epsilon;$-NFA \(E\) with:
+</p>
+
+<ol class="org-ol">
+<li>Exactly one accepting state</li>
+<li>No arcs into initial state</li>
+<li>No arcs out of the accepting state</li>
+</ol>
+
+<p>
+The proof is conducted by structural induction on R, following the
+recursive definition of regular expressions.
+</p>
+
+<p>
+The basis of the induction involves constructing automatons for
+regular expressions (a) \(\epsilon\), (b) \(\emptyset\) and (c) \(\mathbb{a}\). They are displayed
+below:
+</p>
+
+
+<div class="figure">
+<p><img src="images/theory_of_computation/Regular Expressions/screenshot_2018-08-28_23-36-18.png" alt="screenshot_2018-08-28_23-36-18.png" />
+</p>
+</div>
+
+<p>
+The inductive step consists of 4 cases: (a) The expression is \(R + S\)
+for some smaller expressions \(R\) and \(S\). (b) The expression is \(RS\)
+for smaller expressions \(R\) and \(S\). (c) The expression is \(R*\) for
+some smaller expression \(R\). (d) The expression is (R) for some
+expression R. The automatons for (a), (b), and (c) are shown below:
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/theory_of_computation/Regular Expressions/screenshot_2018-08-28_23-39-41.png" alt="screenshot_2018-08-28_23-39-41.png" />
+</p>
+</div>
+
+<p>
+The automaton for \(R\) also serves as the automaton for \((R)\).
+</p>
+</div>
 </div>
 
 <div id="outline-container-orgccdda3d" class="outline-4">
@@ -725,12 +827,23 @@ automaton is then the sum of all expressions \(R_{ij}^{(n)}\) such that state
 </ul>
 </div>
 </div>
+
+<div id="outline-container-org9323c9b" class="outline-4">
+<h4 id="org9323c9b"><span class="section-number-4">5.2.5</span> Discovering laws for regular expressions</h4>
+<div class="outline-text-4" id="text-5-2-5">
+<p>
+The truth of a law reduces to the question of the equality of two
+languages. We show set equivalence: a string in one language must be
+in another, and vice-versa.
+</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-28 Tue 17:18</p>
+<p class="date">Created: 2018-08-28 Tue 23:44</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
