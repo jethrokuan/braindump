@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2018-08-28 Tue 16:57 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Tensorflow</title>
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jethro Kuan" />
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://www.pirilampo.org/styles/readtheorg/css/readtheorg.css"/>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/lib/js/jquery.stickytableheaders.js"></script>
+<script type="text/javascript" src="https://www.pirilampo.org/styles/readtheorg/js/readtheorg.js"></script>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Tensorflow</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#orgeb3da25">1. TF Slim</a>
+<ul>
+<li><a href="#org65474cc">1.1. <code>arg_scope</code></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgeb3da25" class="outline-2">
+<h2 id="orgeb3da25"><span class="section-number-2">1</span> TF Slim</h2>
+<div class="outline-text-2" id="text-1">
+</div>
+<div id="outline-container-org65474cc" class="outline-3">
+<h3 id="org65474cc"><span class="section-number-3">1.1</span> <code>arg_scope</code></h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+<a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg_scope.py">https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg_scope.py</a>
+</p>
+
+<p>
+Example of how to use tf.contrib.framework.arg<sub>scope</sub>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">from third_party.tensorflow.contrib.layers.python import layers
+
+arg_scope = tf.contrib.framework.arg_scope
+
+with arg_scope([layers.conv2d], padding='SAME',
+               initializer=layers.variance_scaling_initializer(),
+               regularizer=layers.l2_regularizer(0.05)):
+  net = layers.conv2d(inputs, 64, [11, 11], 4, padding='VALID', scope='conv1')
+  net = layers.conv2d(net, 256, [5, 5], scope='conv2')
+</pre>
+</div>
+
+<p>
+The first call to conv2d will behave as follows:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">layers.conv2d(inputs, 64, [11, 11], 4, padding='VALID',
+              initializer=layers.variance_scaling_initializer(),
+              regularizer=layers.l2_regularizer(0.05), scope='conv1')
+</pre>
+</div>
+<p>
+The second call to conv2d will also use the arg<sub>scope</sub>'s default for
+padding:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">layers.conv2d(inputs, 256, [5, 5], padding='SAME',
+              initializer=layers.variance_scaling_initializer(),
+              regularizer=layers.l2_regularizer(0.05), scope='conv2')
+</pre>
+</div>
+
+<p>
+Example of how to reuse an arg<sub>scope</sub>:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">with arg_scope([layers.conv2d], padding='SAME',
+               initializer=layers.variance_scaling_initializer(),
+               regularizer=layers.l2_regularizer(0.05)) as sc:
+    net = layers.conv2d(net, 256, [5, 5], scope='conv1')
+    # ...
+
+with arg_scope(sc):
+    net = layers.conv2d(net, 256, [5, 5], scope='conv2')
+</pre>
+</div>
+
+<p>
+Example of how to use tf.contrib.framework.add<sub>arg</sub><sub>scope</sub> to enable your
+function to be called within an arg<sub>scope</sub> later:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">@tf.contrib.framework.add_arg_scope
+def conv2d(*args, **kwargs)
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jethro Kuan</p>
+<p class="date">Created: 2018-08-28 Tue 16:57</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

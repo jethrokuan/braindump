@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-25 Sat 15:04 -->
+<!-- 2018-08-28 Tue 16:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deep Learning</title>
@@ -102,7 +102,11 @@ for the JavaScript code in this tag.
 <li><a href="#orgeba40bb">6.2. Cross Entropy</a></li>
 </ul>
 </li>
-<li><a href="#org515fda3">7. SVD</a></li>
+<li><a href="#org52dd666">7. Object Detection</a>
+<ul>
+<li><a href="#org341ff73">7.1. Detection Without Proposals: YOLO / SSD</a></li>
+</ul>
+</li>
 <li><a href="#org6e5e475">8. Learning Rates</a>
 <ul>
 <li><a href="#orgf07f3c2">8.1. Learning Rate Annealing</a></li>
@@ -267,14 +271,54 @@ minimising the KL divergence.
 </div>
 </div>
 </div>
-<div id="outline-container-org515fda3" class="outline-2">
-<h2 id="org515fda3"><span class="section-number-2">7</span> SVD</h2>
+<div id="outline-container-org52dd666" class="outline-2">
+<h2 id="org52dd666"><span class="section-number-2">7</span> Object Detection</h2>
 <div class="outline-text-2" id="text-7">
+<ul class="org-ul">
+<li>Region Proposal Networks find blobby regions that are likely to
+contain objects, and are relatively fast to run
+<ul class="org-ul">
+<li>e.g. Selective Search, gives about 2000 region proposals in a few
+seconds on CPU.</li>
+<li><a href="https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&amp;bib=all.bib">https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&amp;bib=all.bib</a></li>
+</ul></li>
+<li>R-CNN uses a RPN like selective search to generate region proposals,
+followed by a convnet and an SVM on top to predict image labels.
+There is also a bounding box regression loss, which predicts
+correction to the proposals generated.</li>
+<li>Fast R-CNN passes the image through a convnet, and run the RPN to
+generate image proposals on a particular feature map of the image.
+These crops go through a RoI pooling layer.</li>
+<li>Faster R-CNN trains the region proposal network, and is jointly
+trained with 4 losses:
+<ul class="org-ul">
+<li>RPN classify object/not object</li>
+<li>RPN regress box coordinates</li>
+<li>Final classification score (object classes)</li>
+<li>Final object coordinates</li>
+</ul></li>
+</ul>
+</div>
+<div id="outline-container-org341ff73" class="outline-3">
+<h3 id="org341ff73"><span class="section-number-3">7.1</span> Detection Without Proposals: YOLO / SSD</h3>
+<div class="outline-text-3" id="text-7-1">
 <p>
-<a href="https://www.youtube.com/watch?v=P5mlg91as1c">https://www.youtube.com/watch?v=P5mlg91as1c</a>
+Within each grid cell:
+</p>
+<ul class="org-ul">
+<li>Regress from each of the B base boxes to a final box with 5 numbers:
+dx, dy, dh, dw, confidence</li>
+<li>Predict scores for each of C classes (including background as a
+class)</li>
+</ul>
+
+<p>
+Output: \(7 * 7 *(5*B + C)\)
 </p>
 </div>
 </div>
+</div>
+
 <div id="outline-container-org6e5e475" class="outline-2">
 <h2 id="org6e5e475"><span class="section-number-2">8</span> Learning Rates</h2>
 <div class="outline-text-2" id="text-8">
@@ -639,7 +683,7 @@ Solutions involve removing the bottleneck, or replacing the prior
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-25 Sat 15:04</p>
+<p class="date">Created: 2018-08-28 Tue 16:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

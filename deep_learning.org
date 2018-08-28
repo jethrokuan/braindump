@@ -81,8 +81,34 @@ H(P,Q) = -E_{x\sim P} \log Q(x)
 
 Minimising the cross entropy with respect to Q is equivalent to
 minimising the KL divergence.
-* SVD
-https://www.youtube.com/watch?v=P5mlg91as1c
+* Object Detection
+- Region Proposal Networks find blobby regions that are likely to
+  contain objects, and are relatively fast to run
+  - e.g. Selective Search, gives about 2000 region proposals in a few
+    seconds on CPU.
+  - https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib
+- R-CNN uses a RPN like selective search to generate region proposals,
+  followed by a convnet and an SVM on top to predict image labels.
+  There is also a bounding box regression loss, which predicts
+  correction to the proposals generated.
+- Fast R-CNN passes the image through a convnet, and run the RPN to
+  generate image proposals on a particular feature map of the image.
+  These crops go through a RoI pooling layer.
+- Faster R-CNN trains the region proposal network, and is jointly
+  trained with 4 losses:
+  - RPN classify object/not object
+  - RPN regress box coordinates
+  - Final classification score (object classes)
+  - Final object coordinates
+** Detection Without Proposals: YOLO / SSD
+Within each grid cell:
+- Regress from each of the B base boxes to a final box with 5 numbers:
+  dx, dy, dh, dw, confidence
+- Predict scores for each of C classes (including background as a
+  class)
+
+Output: $7 * 7 *(5*B + C)$
+
 * Learning Rates
 ** Learning Rate Annealing
 Decay learning rate after several iterations...

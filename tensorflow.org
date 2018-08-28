@@ -1,0 +1,57 @@
+#+SETUPFILE: ./export_template.org
+#+TITLE: Tensorflow
+* TF Slim
+** ~arg_scope~
+https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg_scope.py
+
+Example of how to use tf.contrib.framework.arg_scope:
+
+#+BEGIN_SRC python
+  from third_party.tensorflow.contrib.layers.python import layers
+
+  arg_scope = tf.contrib.framework.arg_scope
+
+  with arg_scope([layers.conv2d], padding='SAME',
+                 initializer=layers.variance_scaling_initializer(),
+                 regularizer=layers.l2_regularizer(0.05)):
+    net = layers.conv2d(inputs, 64, [11, 11], 4, padding='VALID', scope='conv1')
+    net = layers.conv2d(net, 256, [5, 5], scope='conv2')
+#+END_SRC
+
+The first call to conv2d will behave as follows:
+
+#+BEGIN_SRC python
+  layers.conv2d(inputs, 64, [11, 11], 4, padding='VALID',
+                initializer=layers.variance_scaling_initializer(),
+                regularizer=layers.l2_regularizer(0.05), scope='conv1')
+#+END_SRC
+The second call to conv2d will also use the arg_scope's default for
+padding:
+
+#+BEGIN_SRC python
+  layers.conv2d(inputs, 256, [5, 5], padding='SAME',
+                initializer=layers.variance_scaling_initializer(),
+                regularizer=layers.l2_regularizer(0.05), scope='conv2')
+#+END_SRC
+
+  Example of how to reuse an arg_scope:
+
+#+BEGIN_SRC python
+  with arg_scope([layers.conv2d], padding='SAME',
+                 initializer=layers.variance_scaling_initializer(),
+                 regularizer=layers.l2_regularizer(0.05)) as sc:
+      net = layers.conv2d(net, 256, [5, 5], scope='conv1')
+      # ...
+
+  with arg_scope(sc):
+      net = layers.conv2d(net, 256, [5, 5], scope='conv2')
+#+END_SRC
+
+  Example of how to use tf.contrib.framework.add_arg_scope to enable your
+  function to be called within an arg_scope later:
+
+#+BEGIN_SRC python
+  @tf.contrib.framework.add_arg_scope
+  def conv2d(*args, **kwargs)
+#+END_SRC
+

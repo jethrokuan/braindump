@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-25 Sat 15:04 -->
+<!-- 2018-08-28 Tue 16:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Coding Interview Preparation</title>
@@ -118,6 +118,8 @@ for the JavaScript code in this tag.
 <li><a href="#org6b7704b">2.5. Generating a Random Sample</a></li>
 <li><a href="#orge4a5de9">2.6. Generate a random sample from a stream</a></li>
 <li><a href="#org519bdb0">2.7. Checking sub-sequence</a></li>
+<li><a href="#orgb279643">2.8. Flatten a List</a></li>
+<li><a href="#org1372373">2.9. has two sum</a></li>
 </ul>
 </li>
 </ul>
@@ -496,11 +498,44 @@ print(is_subsequence("hello", "no"))
 </div>
 </div>
 </div>
+<div id="outline-container-orgb279643" class="outline-3">
+<h3 id="orgb279643"><span class="section-number-3">2.8</span> Flatten a List</h3>
+<div class="outline-text-3" id="text-2-8">
+<div class="org-src-container">
+<pre class="src src-python">def flatten(arr):
+    return [item for sublist in l for item in sublist]
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org1372373" class="outline-3">
+<h3 id="org1372373"><span class="section-number-3">2.9</span> has two sum</h3>
+<div class="outline-text-3" id="text-2-9">
+<div class="org-src-container">
+<pre class="src src-python">def has_two_sum(A, t):
+    i, j = 0, len(A) - 1
+
+    while i &lt;= j:
+        if A[i] + A[j] == t:
+            return True
+        elif A[i] + A[j] &lt; t:
+            i += 1
+        else:  # A[i] + A[j] &gt; t.
+            j -= 1
+    return False
+</pre>
+</div>
+
+<p>
+has three sum is the same, sort the array and run has two sum.
+</p>
+</div>
+</div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-25 Sat 15:04</p>
+<p class="date">Created: 2018-08-28 Tue 16:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

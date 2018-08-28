@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-16 Thu 14:16 -->
+<!-- 2018-08-28 Tue 16:57 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
@@ -122,6 +122,19 @@ for the JavaScript code in this tag.
 <li><a href="#orge9012e8">4.4. Finite Automata with Epsilon-Transitions</a></li>
 <li><a href="#org4f614d0">4.5. Epsilon-Closures</a></li>
 <li><a href="#orga0855e6">4.6. Eliminating &epsilon;-Transitions</a></li>
+</ul>
+</li>
+<li><a href="#org0edb414">5. Regular Expressions</a>
+<ul>
+<li><a href="#org60d2f6b">5.1. Precedence of regular expression operators</a></li>
+<li><a href="#orgf0fb408">5.2. Equivalence of DFA and Regular Expressions</a>
+<ul>
+<li><a href="#org24537d7">5.2.1. From DFA to Regular Expression</a></li>
+<li><a href="#orgddb326a">5.2.2. <span class="todo TODO">TODO</span> Converting DFAs to regular expressions by eliminating states</a></li>
+<li><a href="#org3a25b88">5.2.3. <span class="todo TODO">TODO</span> Converting regular expressions to automata</a></li>
+<li><a href="#orgccdda3d">5.2.4. Algebraic law for regular expressions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -294,7 +307,7 @@ The two preferred notation for describing automata are:
 
 
 <div class="figure">
-<p><img src="images/Finite Automata/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" alt="subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" />
+<p><img src="images/theory_of_computation/Finite Automata/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" alt="subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" />
 </p>
 </div>
 
@@ -305,7 +318,7 @@ implication tells us the states and the input alphabet.</dd>
 
 
 <div class="figure">
-<p><img src="images/Finite Automata/jTETt_2018-08-14_12-49-00.png" alt="jTETt_2018-08-14_12-49-00.png" />
+<p><img src="images/theory_of_computation/Finite Automata/jTETt_2018-08-14_12-49-00.png" alt="jTETt_2018-08-14_12-49-00.png" />
 </p>
 </div>
 </div>
@@ -403,7 +416,7 @@ That is, \(L(A)\) is the set of strings \(w\) in \(\Sigma^*\) such that
 <div class="outline-text-3" id="text-4-3">
 
 <div class="figure">
-<p><img src="images/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png" alt="screenshot_2018-08-14_13-44-15.png" />
+<p><img src="images/theory_of_computation/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png" alt="screenshot_2018-08-14_13-44-15.png" />
 </p>
 </div>
 </div>
@@ -419,9 +432,8 @@ closely related to regular expressions.
 </p>
 
 
-
 <div class="figure">
-<p><img src="images/Nondeterministic Finite Automata/screenshot_2018-08-15_11-45-07.png" alt="screenshot_2018-08-15_11-45-07.png" />
+<p><img src="images/theory_of_computation/Nondeterministic Finite Automata/screenshot_2018-08-15_11-45-07.png" alt="screenshot_2018-08-15_11-45-07.png" />
 </p>
 </div>
 
@@ -501,10 +513,224 @@ state of \(E\). \(F_D = \{S | S \text{ is in } Q_D \text{ and } S \cap F_E
 </div>
 </div>
 </div>
+
+
+<div id="outline-container-org0edb414" class="outline-2">
+<h2 id="org0edb414"><span class="section-number-2">5</span> Regular Expressions</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Regular expressions may be thought of as a "programming language", in
+which many important applications like text search applications or
+compiler components can be expressed in.
+</p>
+
+<p>
+Regular expressions can define the exact same languages that various
+forms of automata describe: the regular languages. Regular expressions
+denote languages. We define 3 operations on languages that the
+operators of regular expressions represent.
+</p>
+
+<ol class="org-ol">
+<li>The <i>union</i> of two languages \(L \bigcup M\), is the set of strings
+that are either in \(L\) or \(M\).</li>
+<li>The <i>concatenation</i> of languages \(L\) and \(M\) is the set of strings
+that can be formed by taking any string in \(L\) and concatenating it
+with any string in \(M\).</li>
+<li>The closure (or star, or <i>Kleene closure</i>) is denoted \(L^*\) and
+represents the set of those strings that can be formed by taking
+any number of strings from \(L\), possibly with repetitions, and
+concatenating all of them.</li>
+</ol>
+
+<p>
+We can describe regular expressions recursively. For each expression
+\(E\), we denote the language it represents with \(L(E)\).
+</p>
+
+<p>
+<b>BASIS</b>:
+</p>
+
+<ol class="org-ol">
+<li>The constants \(\epsilon\) and \(\emptyset\) are regular expressions, denoting the
+languages \(\{\epsilon\}\) and \(\emptyset\) respectively.</li>
+<li>If \(a\) is a symbol, then \(\mathbb{a}\) is a regular expression. This
+expression denotes the language \(\{a\}\).</li>
+</ol>
+
+<p>
+<b>INDUCTION</b>:
+</p>
+
+<ol class="org-ol">
+<li>\(L(E) + L(F) = L(E) \bigcup L(F)\)</li>
+<li>\(L(EF) = L(E)L(F)\)</li>
+<li>\(L(E^*) = (L(E))^*\)</li>
+<li>\(L((E)) = L(E)\)</li>
+</ol>
+</div>
+
+<div id="outline-container-org60d2f6b" class="outline-3">
+<h3 id="org60d2f6b"><span class="section-number-3">5.1</span> Precedence of regular expression operators</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+The precedence in order of highest to lowest, is:
+</p>
+<ol class="org-ol">
+<li>star</li>
+<li>dot (note that this operation is associative)</li>
+<li>union (\(\plus\) operator)</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-orgf0fb408" class="outline-3">
+<h3 id="orgf0fb408"><span class="section-number-3">5.2</span> Equivalence of DFA and Regular Expressions</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+We show this by showing that:
+</p>
+<ol class="org-ol">
+<li>Every language defined by a DFA is also defined by a regular
+expression.</li>
+<li>Every language defined by a regular expression is also defined by a
+$\epilon$-NFA, which we have already shown is equivalent to a DFA.</li>
+</ol>
+
+
+<div class="figure">
+<p><img src="images/theory_of_computation/Regular Expressions/screenshot_2018-08-28_12-46-13.png" alt="screenshot_2018-08-28_12-46-13.png" />
+</p>
+</div>
+</div>
+
+<div id="outline-container-org24537d7" class="outline-4">
+<h4 id="org24537d7"><span class="section-number-4">5.2.1</span> From DFA to Regular Expression</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+We can number the finite states in a DFA \(A\) with \(1, 2, \hdots, n\).
+</p>
+
+<p>
+Let \(R_{ij}^{(k)}\) be the name of a regular expression whose language is the
+set of strings \(w\) such that \(w\) is the label of a path from state \(i\)
+to state \(j\) in a DFA \(A\), and the path has no intermediate node whose
+number is greater than \(k\).
+To construct the expression \(R_{ij}^{(k)}\), we use the following inductive
+definition, starting at \(k= 0\), and finally reaching \(k=n\).
+</p>
+
+<p>
+BASIS: \(k=0\).
+Since the states are numbered \(1\) or above, the restriction on paths
+is that the paths have no intermediate states at all. There are only 2
+kinds of paths that meet such a condition:
+</p>
+
+<ol class="org-ol">
+<li>An arc from node (state) \(i\) to node \(j\).</li>
+<li>A path of length \(0\) that consists only of some node \(i\).</li>
+</ol>
+
+<p>
+If \(i \ne j\), then only case \(1\) is possible. We must examine DFA \(A\)
+and find input symbols \(a\) such that there is a transition from state
+\(i\) to state \(j\) on symbol \(a\).
+</p>
+
+<ol class="org-ol">
+<li>If there is no such symbol \(a\), then \(R_{ij}^{(0)} = \emptyset\).</li>
+<li>If there is exactly one such symbol \(a\), then \(R_{ij}^{(0)} = \mathbb{a}\)</li>
+<li>If there are symbols \(a_1, a_2, \hdots, a_k\) that label arcs from
+state \(i\) to state \(j\), then \(R_{ij}^{(0)} = \mathbb{a_1} + \mathbb{a_2} +
+   \hdots + \mathbb{a_k}\)</li>
+</ol>
+
+<p>
+In case (a), the expression becomes \(\epsilon\), in case (c), the expression
+becomes \(\epsilon + \mathbb{a_1} + \mathbb{a_2} + \hdots + \mathbb{a_k}\).
+</p>
+
+<p>
+INDUCTION: Suppose there is a path from state \(i\) to state \(j\) that
+goes through no state higher than \(k\). Then either:
+</p>
+
+<ol class="org-ol">
+<li>The path does not go through state \(k\) at all. In this case, the
+label of the path is \(R_{ij}^{(k-1)}\).</li>
+<li>The path goes through state \(k\) at least once. We can break the
+path into several pieces:</li>
+</ol>
+
+
+
+<div class="figure">
+<p><img src="images/theory_of_computation/Regular Expressions/screenshot_2018-08-28_12-58-35.png" alt="screenshot_2018-08-28_12-58-35.png" />
+</p>
+</div>
+
+<p>
+Then the set of labels for all paths of this type is represented by
+the regular expression \(R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}\). Then, we can
+combine the expressions for the paths of the two above:
+</p>
+
+\begin{equation}
+R_{ij}^{(k)} = R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}
+\end{equation}
+
+<p>
+We can compute \(R_{ij}^{(n)}\) for all \(i\) and \(j\), and the language of the
+automaton is then the sum of all expressions \(R_{ij}^{(n)}\) such that state
+\(j\) is an accepting state.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgddb326a" class="outline-4">
+<h4 id="orgddb326a"><span class="section-number-4">5.2.2</span> <span class="todo TODO">TODO</span> Converting DFAs to regular expressions by eliminating states</h4>
+</div>
+
+<div id="outline-container-org3a25b88" class="outline-4">
+<h4 id="org3a25b88"><span class="section-number-4">5.2.3</span> <span class="todo TODO">TODO</span> Converting regular expressions to automata</h4>
+</div>
+
+<div id="outline-container-orgccdda3d" class="outline-4">
+<h4 id="orgccdda3d"><span class="section-number-4">5.2.4</span> Algebraic law for regular expressions</h4>
+<div class="outline-text-4" id="text-5-2-4">
+<dl class="org-dl">
+<dt>commutativity</dt><dd>\(x + y = y + x\).</dd>
+<dt>associativity</dt><dd>\((x \times y) \times z = x \times (y \times z)\).</dd>
+<dt>distributive</dt><dd>\(x \times (y + z) = x \times y + x \times z\)</dd>
+</dl>
+<ul class="org-ul">
+<li>\(L + M = M + L\)</li>
+<li>\((L + M) + N = L + (M + N)\)</li>
+<li>\((LM)N = L(MN)\)</li>
+<li>\(\emptyset + L = L + \emptyset = L\). \(\emptyset\) is the identity for union.</li>
+<li>\(\epsilon L = L \epsilon = L\). \(\epsilon\) is the identity for concatenation.</li>
+<li>\(\emptyset L = L\emptyset = \emptyset\). \(\emptyset\) is the annihilator for concatenation.</li>
+<li>\(L(M + N) = LM + LN\) (left distributive)</li>
+<li>\((M + N)L  = ML + NL\) (right distributive)</li>
+<li>\(L + L = L\) (idempotence law)</li>
+<li>\((L^*)^* = L^*\).</li>
+<li>\(\emptyset^* = \epsilon\)</li>
+<li>\(\epsilon^* = \epsilon\)</li>
+<li>\(L^{+} = LL^* = L^*L\).</li>
+<li>\(L^* = L^{+} + \epsilon\)</li>
+<li>\(L? = \epsilon + L\)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-16 Thu 14:16</p>
+<p class="date">Created: 2018-08-28 Tue 16:57</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

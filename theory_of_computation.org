@@ -93,14 +93,14 @@ The two preferred notation for describing automata are:
 - transition diagrams :: a graph
 
 #+DOWNLOADED: https://quickgrid.files.wordpress.com/2015/10/subset-construction-nfa-from-transition-table.jpg @ 2018-08-14 12:47:06
-[[file:images/Finite
+[[file:images/theory_of_computation/Finite
 Automata/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg]]
 
 - transition table :: a tubular listing of the $\delta$ function, which by
      implication tells us the states and the input alphabet.
 
 #+DOWNLOADED: https://i.stack.imgur.com/jTETt.png @ 2018-08-14 12:49:00
-[[file:images/Finite Automata/jTETt_2018-08-14_12-49-00.png]]
+[[file:images/theory_of_computation/Finite Automata/jTETt_2018-08-14_12-49-00.png]]
 
 ** Language of a DFA
 We can define the /language/ of a DFA $A = \left(Q, \Sigma, q_0, F\right)$.
@@ -153,16 +153,15 @@ $\hat{\delta}(q_0, w)$.
 ** The Equivalence of DFA and NFA
 
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-08-14 13:44:15
-[[file:images/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png]]
+[[file:images/theory_of_computation/Nondeterministic Finite Automata/screenshot_2018-08-14_13-44-15.png]]
 
 ** Finite Automata with Epsilon-Transitions
 Transitions on \epsilon, the empty string, allow NFAs to make a transition
 spontaneously. This is sometimes referred to as \epsilon-NFAs, and are
 closely related to regular expressions.
 
-
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-08-15 11:45:07
-[[file:images/Nondeterministic Finite
+[[file:images/theory_of_computation/Nondeterministic Finite
 Automata/screenshot_2018-08-15_11-45-07.png]]
 
 Of particular interest is the transition from $q_0$ to $q_1$, where the
@@ -214,4 +213,140 @@ Let $E = (Q_E, \Sigma, \delta_E, q_0, F_E)$, then the equivalent DFA $D = (Q_D, 
    3. Then $\delta_D(S, a) = \bigcup\limits_{j=1}^{m}ECLOSE(r_j)$
 
 
+* Regular Expressions
+Regular expressions may be thought of as a "programming language", in
+which many important applications like text search applications or
+compiler components can be expressed in.
 
+Regular expressions can define the exact same languages that various
+forms of automata describe: the regular languages. Regular expressions
+denote languages. We define 3 operations on languages that the
+operators of regular expressions represent.
+
+1. The /union/ of two languages $L \bigcup M$, is the set of strings
+   that are either in $L$ or $M$.
+2. The /concatenation/ of languages $L$ and $M$ is the set of strings
+   that can be formed by taking any string in $L$ and concatenating it
+   with any string in $M$.
+3. The closure (or star, or /Kleene closure/) is denoted $L^*$ and
+   represents the set of those strings that can be formed by taking
+   any number of strings from $L$, possibly with repetitions, and
+   concatenating all of them.
+
+We can describe regular expressions recursively. For each expression
+$E$, we denote the language it represents with $L(E)$.
+
+*BASIS*:
+
+1. The constants $\epsilon$ and $\emptyset$ are regular expressions, denoting the
+   languages $\{\epsilon\}$ and $\emptyset$ respectively.
+2. If $a$ is a symbol, then $\mathbb{a}$ is a regular expression. This
+   expression denotes the language $\{a\}$.
+
+*INDUCTION*:
+
+1. $L(E) + L(F) = L(E) \bigcup L(F)$
+2. $L(EF) = L(E)L(F)$
+3. $L(E^*) = (L(E))^*$
+4. $L((E)) = L(E)$
+
+** Precedence of regular expression operators
+
+The precedence in order of highest to lowest, is:
+1. star
+2. dot (note that this operation is associative)
+3. union ($\plus$ operator)
+
+** Equivalence of DFA and Regular Expressions
+
+We show this by showing that:
+1. Every language defined by a DFA is also defined by a regular
+  expression.
+2. Every language defined by a regular expression is also defined by a
+   $\epilon$-NFA, which we have already shown is equivalent to a DFA.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 12:46:13
+[[file:images/theory_of_computation/Regular
+Expressions/screenshot_2018-08-28_12-46-13.png]]
+
+*** From DFA to Regular Expression
+We can number the finite states in a DFA $A$ with $1, 2, \hdots, n$.
+
+Let $R_{ij}^{(k)}$ be the name of a regular expression whose language is the
+set of strings $w$ such that $w$ is the label of a path from state $i$
+to state $j$ in a DFA $A$, and the path has no intermediate node whose
+number is greater than $k$.
+To construct the expression $R_{ij}^{(k)}$, we use the following inductive
+definition, starting at $k= 0$, and finally reaching $k=n$.
+
+BASIS: $k=0$.
+Since the states are numbered $1$ or above, the restriction on paths
+is that the paths have no intermediate states at all. There are only 2
+kinds of paths that meet such a condition:
+
+1. An arc from node (state) $i$ to node $j$.
+2. A path of length $0$ that consists only of some node $i$.
+
+If $i \ne j$, then only case $1$ is possible. We must examine DFA $A$
+and find input symbols $a$ such that there is a transition from state
+$i$ to state $j$ on symbol $a$.
+
+1. If there is no such symbol $a$, then $R_{ij}^{(0)} = \emptyset$.
+2. If there is exactly one such symbol $a$, then $R_{ij}^{(0)} = \mathbb{a}$
+3. If there are symbols $a_1, a_2, \hdots, a_k$ that label arcs from
+   state $i$ to state $j$, then $R_{ij}^{(0)} = \mathbb{a_1} + \mathbb{a_2} +
+   \hdots + \mathbb{a_k}$
+
+In case (a), the expression becomes $\epsilon$, in case (c), the expression
+becomes $\epsilon + \mathbb{a_1} + \mathbb{a_2} + \hdots + \mathbb{a_k}$.
+
+INDUCTION: Suppose there is a path from state $i$ to state $j$ that
+goes through no state higher than $k$. Then either:
+
+1. The path does not go through state $k$ at all. In this case, the
+   label of the path is $R_{ij}^{(k-1)}$.
+2. The path goes through state $k$ at least once. We can break the
+   path into several pieces:
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 12:58:35
+[[file:images/theory_of_computation/Regular
+Expressions/screenshot_2018-08-28_12-58-35.png]]
+
+Then the set of labels for all paths of this type is represented by
+the regular expression $R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}$. Then, we can
+combine the expressions for the paths of the two above:
+
+\begin{equation}
+R_{ij}^{(k)} = R_{ik}^{(k-1)}(R_{kk}^{(k-1)})^*R_{kj}^{(k-1)}
+\end{equation}
+
+We can compute $R_{ij}^{(n)}$ for all $i$ and $j$, and the language of the
+automaton is then the sum of all expressions $R_{ij}^{(n)}$ such that state
+$j$ is an accepting state.
+
+
+*** TODO Converting DFAs to regular expressions by eliminating states
+
+*** TODO Converting regular expressions to automata
+
+*** Algebraic law for regular expressions
+ - commutativity :: $x + y = y + x$.
+ - associativity :: $(x \times y) \times z = x \times (y \times z)$.
+ - distributive :: $x \times (y + z) = x \times y + x \times z$
+
+- $L + M = M + L$
+- $(L + M) + N = L + (M + N)$
+- $(LM)N = L(MN)$
+- $\emptyset + L = L + \emptyset = L$. $\emptyset$ is the identity for union.
+- $\epsilon L = L \epsilon = L$. $\epsilon$ is the identity for concatenation.
+- $\emptyset L = L\emptyset = \emptyset$. $\emptyset$ is the annihilator for concatenation.   
+- $L(M + N) = LM + LN$ (left distributive)
+- $(M + N)L  = ML + NL$ (right distributive)
+- $L + L = L$ (idempotence law)
+- $(L^*)^* = L^*$.
+- $\emptyset^* = \epsilon$
+- $\epsilon^* = \epsilon$
+- $L^{+} = LL^* = L^*L$.
+- $L^* = L^{+} + \epsilon$
+- $L? = \epsilon + L$

@@ -14,6 +14,7 @@
 - [[file:devops.org][Dev Ops]]
 - [[file:docker.org][Docker 101]]
 - [[file:emacs.org][Emacs]]
+- [[file:google_cloud_platform.org][Google Cloud Platform]]
 - [[file:http.org][HTTP]]
 - [[file:haskell.org][Haskell]]
 - [[file:is1103.org][IS1103: Computing and Society]]
@@ -51,4 +52,5 @@
 - [[file:python.org][python]]
 - [[file:ssnlp.org][ssnlp]]
 - [[file:studying.org][studying]]
+- [[file:tensorflow.org][tensorflow]]
 - [[file:urop.org][urop]]
