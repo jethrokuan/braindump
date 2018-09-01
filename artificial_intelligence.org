@@ -801,11 +801,11 @@ The axioms of utility theory are:
 
 - orderability :: Exactly one of $A \succ B$, $B \succ A$ or $A \sim B$ holds.
 - transitivity :: $(A \succ B) \wedge (B \succ C) \Rightarrow A \succ C$
-- continuity :: $A \succ B \succ C \Rightarrow \existp [p, A; 1-p, C] \sim B$
+- continuity :: $A \succ B \succ C \Rightarrow \exist p [p, A; 1-p, C] \sim B$
 - substitutability :: $A \sim B \Rightarrow [p, A; 1-p, C] \sim [p, B; 1-p, C]$
-- monotonicity :: $A \succ B \Rightarrow (p > q) \iff [p, A; 1-p B] \succ [q, A: 1-q,
+- monotonicity :: $A \succ B \Rightarrow (p > q) \iff [p, A; 1-p B] \succ [q, A; 1-q,
                   B]$
-- Decomposability :: $[p, A; 1-p, [q, B; 1-q, C]] \sim[p, A:;(1-p)q, B;
+- Decomposability :: $[p, A; 1-p, [q, B; 1-q, C]] \sim[p, A;(1-p)q, B;
      (1-p)q, C]$
 
 von Neumann and Morgenstern showed that following these axioms, it can
