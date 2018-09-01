@@ -124,7 +124,7 @@ Each $h \in H$ generates a dichotomy which is $h$ is $-1$ or $h$ i-
 $+1$. We then formally define dichotomies as follows:
 
 \begin{align}
-H(x_1, \hdots, x_n) = \left\{ h(x_1), h(x_2), \hdots, h(x_n) | h \in H \right\}
+H(x_1, \dots, x_n) = \left\{ h(x_1), h(x_2), \dots, h(x_n) | h \in H \right\}
 \end{align}
 
 * Concept Learning
@@ -272,7 +272,7 @@ the definition of its search space. (/restriction bias/).
 * Density Estimation
 /Density Estimation/ refers to the problem of modeling the probability
 distribution $p(x)$ of a random variable $x$, given a finite set $x_1,
-x_2, \hdots, x_n$ of observations.
+x_2, \dots, x_n$ of observations.
 
 We first look at parametric distributions, which are governed by a
 small number of adaptive parameters. In a frequentist treatment, we
@@ -291,7 +291,7 @@ with similar form as the maximum likelihood function. this property is
 called /conjugacy/. For a binomial distribution, we can choose the
 beta distribution as the prior.
 * Unsupervised Learning
- In unsupervised learning, given a training set $S = \left(x_1, \hdots,
+ In unsupervised learning, given a training set $S = \left(x_1, \dots,
  x_m\right)$, without a labeled output, one must construct a "good"
  model/description of the data.
 
@@ -301,7 +301,7 @@ beta distribution as the prior.
    noise (e.g. PCA)
  - minimises description length of data
 ** K-means Clustering
-Input: $\{x^{(1), x^{(2)}, x^{(3)}, \hdots, x^{(m)}}\}$.
+Input: $\{x^{(1), x^{(2)}, x^{(3)}, \dots, x^{(m)}}\}$.
 
 1. Randomly initialize cluster centroids.
 2. For all points, compute which cluster centroid is the closest.

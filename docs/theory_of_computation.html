@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-09-01 Sat 17:07 -->
+<!-- 2018-09-01 Sat 17:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
@@ -206,7 +206,7 @@ approach involves:
 <ol class="org-ol">
 <li>The <i>basis</i>: where we show \(S(i)\) for a particular \(i\).</li>
 <li>The <i>inductive step</i>: where we show if \(S(k)\) (or \(S(i), S(i+1),
-   \hdots, S(k)\)) then \(S(k+1)\).</li>
+   \dots, S(k)\)) then \(S(k+1)\).</li>
 </ol>
 </div>
 </div>
@@ -480,8 +480,8 @@ Then:
 </p>
 
 \begin{align}
-  \text{Let } & \hat{\delta}(q, x) = \{p_1, p_2, \hdots, p_k\} \\
-   & \bigcup\limits_{i=1}^k \delta(p_i, a) = \{r_1, r_2, \hdots, r_m\} \\
+  \text{Let } & \hat{\delta}(q, x) = \{p_1, p_2, \dots, p_k\} \\
+   & \bigcup\limits_{i=1}^k \delta(p_i, a) = \{r_1, r_2, \dots, r_m\} \\
   \text{Then } & \hat{\delta}(q,w) = \bigcup\limits_{j=1}^m ECLOSE(r_j)
 \end{align}
 </div>
@@ -512,8 +512,8 @@ state of \(E\). \(F_D = \{S | S \text{ is in } Q_D \text{ and } S \cap F_E
    \neq \emptyset \}\)</li>
 <li>\(\delta_D(S,a)\) is computed for all \(a\) in \(\Sigma\) and sets \(S\) in \(Q_D\) by:
 <ol class="org-ol">
-<li>Let \(S = \{p_1, p_2, \hdots, p_k\}\)</li>
-<li>Compute \(\bigcup\limits_{i=1}^{k}\delta_E(p_i, a) = \{r_1, r_2, \hdots, r_m\}\)</li>
+<li>Let \(S = \{p_1, p_2, \dots, p_k\}\)</li>
+<li>Compute \(\bigcup\limits_{i=1}^{k}\delta_E(p_i, a) = \{r_1, r_2, \dots, r_m\}\)</li>
 <li>Then \(\delta_D(S, a) = \bigcup\limits_{j=1}^{m}ECLOSE(r_j)\)</li>
 </ol></li>
 </ol>
@@ -616,7 +616,7 @@ $\epilon$-NFA, which we have already shown is equivalent to a DFA.</li>
 <h4 id="org24537d7"><span class="section-number-4">5.2.1</span> From DFA to Regular Expression</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <p>
-We can number the finite states in a DFA \(A\) with \(1, 2, \hdots, n\).
+We can number the finite states in a DFA \(A\) with \(1, 2, \dots, n\).
 </p>
 
 <p>
@@ -649,14 +649,14 @@ and find input symbols \(a\) such that there is a transition from state
 <ol class="org-ol">
 <li>If there is no such symbol \(a\), then \(R_{ij}^{(0)} = \emptyset\).</li>
 <li>If there is exactly one such symbol \(a\), then \(R_{ij}^{(0)} = \mathbb{a}\)</li>
-<li>If there are symbols \(a_1, a_2, \hdots, a_k\) that label arcs from
+<li>If there are symbols \(a_1, a_2, \dots, a_k\) that label arcs from
 state \(i\) to state \(j\), then \(R_{ij}^{(0)} = \mathbb{a_1} + \mathbb{a_2} +
-   \hdots + \mathbb{a_k}\)</li>
+   \dots + \mathbb{a_k}\)</li>
 </ol>
 
 <p>
 In case (a), the expression becomes \(\epsilon\), in case (c), the expression
-becomes \(\epsilon + \mathbb{a_1} + \mathbb{a_2} + \hdots + \mathbb{a_k}\).
+becomes \(\epsilon + \mathbb{a_1} + \mathbb{a_2} + \dots + \mathbb{a_k}\).
 </p>
 
 <p>
@@ -935,7 +935,7 @@ The above are all regular.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-09-01 Sat 17:07</p>
+<p class="date">Created: 2018-09-01 Sat 17:15</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

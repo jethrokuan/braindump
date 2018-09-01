@@ -244,7 +244,7 @@ Key idea is to gradually increase the depth limit: first 0, then
 
 [[file:images/artificial_intelligence/Problem-Solving/screenshot_2018-01-22_15-26-50.png]]
 
-$N(IDS) = (d)b + (d-1)b^2 + \hdots + (1)b^d$, which gives a time
+$N(IDS) = (d)b + (d-1)b^2 + \dots + (1)b^d$, which gives a time
 complexity of $O(b^d)$
 
 | performance      | rating                        |
@@ -815,7 +815,7 @@ be shown that.
    \iff A \sim B)$.
 2. *The utility of a lottery*, can be represented as the sum of
    probability of each outcome, multiplied by the utility of that
-   outcome: $U([p_1, S_1; \hdots; p_n, S_n]) = \sum_i p_iU(S_i)$.
+   outcome: $U([p_1, S_1; \dots; p_n, S_n]) = \sum_i p_iU(S_i)$.
 
 Utility functions are not unique: in fact, that are not changed with
 affine transformations, of the form $U'(s) = aU(s) + b$. This is
@@ -876,7 +876,7 @@ If all attributes are mutually preferentially independent, then an
 agent's preference can be described by maximising the function:
 
 \begin{equation}
-  V(x_1, x_2, \hdots, x_n) = \sum_i V_i(x_i)
+  V(x_1, x_2, \dots, x_n) = \sum_i V_i(x_i)
 \end{equation}
 
 An example is:

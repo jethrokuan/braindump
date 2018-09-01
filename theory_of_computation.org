@@ -31,7 +31,7 @@ Suppose we are given a statement $S(n)$ to prove. The inductive
 approach involves:
 1. The /basis/: where we show $S(i)$ for a particular $i$.
 2. The /inductive step/: where we show if $S(k)$ (or $S(i), S(i+1),
-   \hdots, S(k)$) then $S(k+1)$.
+   \dots, S(k)$) then $S(k+1)$.
 
 ** Structural Inductions
 We can sometimes prove statements by construction. This is often the
@@ -186,8 +186,8 @@ symbol of $w$. Note that $a$ is a member of $\Sigma$; it cannot be \epsilon.
 Then:
 
 \begin{align}
-  \text{Let } & \hat{\delta}(q, x) = \{p_1, p_2, \hdots, p_k\} \\
-   & \bigcup\limits_{i=1}^k \delta(p_i, a) = \{r_1, r_2, \hdots, r_m\} \\
+  \text{Let } & \hat{\delta}(q, x) = \{p_1, p_2, \dots, p_k\} \\
+   & \bigcup\limits_{i=1}^k \delta(p_i, a) = \{r_1, r_2, \dots, r_m\} \\
   \text{Then } & \hat{\delta}(q,w) = \bigcup\limits_{j=1}^m ECLOSE(r_j)
 \end{align}
 
@@ -208,8 +208,8 @@ Let $E = (Q_E, \Sigma, \delta_E, q_0, F_E)$, then the equivalent DFA $D = (Q_D, 
    state of $E$. $F_D = \{S | S \text{ is in } Q_D \text{ and } S \cap F_E
    \neq \emptyset \}$
 4. $\delta_D(S,a)$ is computed for all $a$ in $\Sigma$ and sets $S$ in $Q_D$ by:
-   1. Let $S = \{p_1, p_2, \hdots, p_k\}$
-   2. Compute $\bigcup\limits_{i=1}^{k}\delta_E(p_i, a) = \{r_1, r_2, \hdots, r_m\}$
+   1. Let $S = \{p_1, p_2, \dots, p_k\}$
+   2. Compute $\bigcup\limits_{i=1}^{k}\delta_E(p_i, a) = \{r_1, r_2, \dots, r_m\}$
    3. Then $\delta_D(S, a) = \bigcup\limits_{j=1}^{m}ECLOSE(r_j)$
 
 
@@ -270,7 +270,7 @@ We show this by showing that:
 Expressions/screenshot_2018-08-28_12-46-13.png]]
 
 *** From DFA to Regular Expression
-We can number the finite states in a DFA $A$ with $1, 2, \hdots, n$.
+We can number the finite states in a DFA $A$ with $1, 2, \dots, n$.
 
 Let $R_{ij}^{(k)}$ be the name of a regular expression whose language is the
 set of strings $w$ such that $w$ is the label of a path from state $i$
@@ -293,12 +293,12 @@ $i$ to state $j$ on symbol $a$.
 
 1. If there is no such symbol $a$, then $R_{ij}^{(0)} = \emptyset$.
 2. If there is exactly one such symbol $a$, then $R_{ij}^{(0)} = \mathbb{a}$
-3. If there are symbols $a_1, a_2, \hdots, a_k$ that label arcs from
+3. If there are symbols $a_1, a_2, \dots, a_k$ that label arcs from
    state $i$ to state $j$, then $R_{ij}^{(0)} = \mathbb{a_1} + \mathbb{a_2} +
-   \hdots + \mathbb{a_k}$
+   \dots + \mathbb{a_k}$
 
 In case (a), the expression becomes $\epsilon$, in case (c), the expression
-becomes $\epsilon + \mathbb{a_1} + \mathbb{a_2} + \hdots + \mathbb{a_k}$.
+becomes $\epsilon + \mathbb{a_1} + \mathbb{a_2} + \dots + \mathbb{a_k}$.
 
 INDUCTION: Suppose there is a path from state $i$ to state $j$ that
 goes through no state higher than $k$. Then either:

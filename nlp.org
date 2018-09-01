@@ -239,7 +239,7 @@ where the input $x$ is fed as input to multiple such neurons.
   W =
   \begin{bmatrix}
     - && w^{(1)T} && - \\
-    && \hdots && \\
+    && \dots && \\
     - && w^{(m)T} && -
   \end{bmatrix}
   \in \mathbb{R}^{m\times n}
@@ -316,7 +316,7 @@ parser is a dependency tree where the words of the input sentence are
 connected by typed dependency relations.
 
 Formally, the dependency parsing problem asks to create a mapping from
-the input sentence with words $S = w_0w_1\hdots w_n$ (where $w_0$ is
+the input sentence with words $S = w_0w_1\dots w_n$ (where $w_0$ is
 the /ROOT/) to its dependency graph $G$.
 
 The two subproblems are:
@@ -338,7 +338,7 @@ transitions for the input sentence, given the previously induced model.
 The transition system is a state machine, which consists of /states/
 and /transitions/ between those states. The model induces a sequence
 of transitions from some initial state to one of several terminal
-states. For any sentence $S = w_0w_1\hdots w_n$ a state can be
+states. For any sentence $S = w_0w_1\dots w_n$ a state can be
 described with a triple $c = \left(\sigma, \beta, A)$:
 
 1. a stack $\sigma$ of words $w_i$ from S,
@@ -363,7 +363,7 @@ There are three types of transitions:
 **** Feature Selection
 - $S_{word}$ :: vector representation of the words in 4s$
 - $S_{tag}$ :: Part-of-Speech (POS) tags, comprising of a small
-               discrete set $P = {NN, NP, \hdots}$
+               discrete set $P = {NN, NP, \dots}$
 - $S_{label}$ :: Arc-labels, comprising of a small discrete set,
                  describing the dependency relation.
 
