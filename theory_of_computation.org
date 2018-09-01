@@ -421,3 +421,58 @@ The automaton for $R$ also serves as the automaton for $(R)$.
 The truth of a law reduces to the question of the equality of two
 languages. We show set equivalence: a string in one language must be
 in another, and vice-versa.
+
+* Properties of Regular Languages
+
+Regular languages exhibit the "closure" property. These properties let
+us build recognizers for languages that are constructed from other
+languages by certain operations. Regular languages also exhibit
+"decision properties", which allow us to make decisions about whether
+two automata define the same language. This means that we can always
+minimize an automata to have as few states as possible for a
+particular language.
+
+** Pumping Lemma
+We have established that the class of languages known as regular
+languages are accepted by DFAs, NFAs and by $\epsilon$-NFAs.
+
+However, not every language is a regular language. An easy way to see
+this is that the number of languages is infinite, but DFAs have finite
+number of states, and are finite.
+
+The pumping lemma lets us show that certain languages are not regular.
+
+#+ATTR_LATEX: :options [Pumping Lemma]
+#+BEGIN_theorem
+<<pumping-lemma>>
+Let $L$ be a regular language. Then there exists a constant $n$ (which
+depends on $L$) such that for every string $w$ in $L$ such that
+$| w |  \ge n$, we can break $w$ into three strings $w = xyz$
+such that:
+
+1. $y \ne \epsilon$
+2. $| xy | \le n$
+3. For all $k \ge 0$, the string $xy^k z$ is also in $L$
+#+END_theorem
+
+That is, we can always find a non-empty string $y$ not too far from
+the beginning of $w$ that can be "pumped". This means repeating $y$
+any number of times, or deleting it, keeps the resulting string in the
+language $L$.
+
+** Closure of Regular Languages
+If certain languages are regular, then languages formed from them by
+certain operations are also regular. These are referred to as the
+closure properties of regular languages. Below is a summary:
+
+1. Union of 2 regular languages
+2. Intersection of 2 regular languages
+3. Complement of 2 regular languages
+4. Difference of 2 regular languages
+5. Reversal of a regular language
+6. Closure (star) of a regular language
+7. The concatenation of regular languages
+8. A homomorphism (substitution of strings for symbols) of a regular language
+9. The inverse homomorphism of a regular language
+
+The above are all regular.

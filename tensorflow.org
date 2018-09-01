@@ -1,5 +1,20 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Tensorflow
+* What is Tensorflow
+TensorFlow is open-source software library for numerical computation.
+A graph of computations is defined, and TensorFlow builds an optimized
+graph from that.
+
+TensorFlow breaks up the graph into several chunks and run them in
+parallel across multiple CPUs or GPUs where possible, and also
+supports distributed computing.
+** Glossary
+- tensor :: A tf.Tensor object represents a partially defined
+            computation that will eventually produce a value.
+            TensorFlow programs work by first building a graph of
+            tf.Tensor objects, detailing how each tensor is computed
+            based on the other available tensors and then by running
+            parts of this graph to achieve the desired results.
 * TF Slim
 ** ~arg_scope~
 https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg_scope.py

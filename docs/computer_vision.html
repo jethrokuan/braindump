@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-25 Sat 17:13 -->
+<!-- 2018-09-01 Sat 17:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computer Vision</title>
@@ -125,6 +125,12 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#org259ca6c">3. Image Processing</a>
+<ul>
+<li><a href="#org3a94655">3.1. Point Operators</a></li>
+<li><a href="#org5883772">3.2. Histogram Equalization</a></li>
 </ul>
 </li>
 </ul>
@@ -866,10 +872,66 @@ through the lens before reaching the sensor.
 </div>
 </div>
 </div>
+
+<div id="outline-container-org259ca6c" class="outline-2">
+<h2 id="org259ca6c"><span class="section-number-2">3</span> Image Processing</h2>
+<div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-org3a94655" class="outline-3">
+<h3 id="org3a94655"><span class="section-number-3">3.1</span> Point Operators</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+Point operators are image processing transforms where each output
+pixel's value depends only on the corresponding input pixel value.
+Examples of such operators include:
+</p>
+
+<ul class="org-ul">
+<li>brightness and contrast adjustments</li>
+<li>color correction and transformations</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org5883772" class="outline-3">
+<h3 id="org5883772"><span class="section-number-3">3.2</span> Histogram Equalization</h3>
+<div class="outline-text-3" id="text-3-2">
+<p>
+<a href="https://www.math.uci.edu/icamp/courses/math77c/demos/hist_eq.pdf">https://www.math.uci.edu/icamp/courses/math77c/demos/hist_eq.pdf</a>
+</p>
+
+<p>
+The underlying math behind histogram equalization involves mapping one
+distribution (the given histogram of intensity values) to another
+distribution (a wider and, ideally, uniform distribution of intensity
+values).
+</p>
+
+
+<div class="figure">
+<p><img src="images/computer_vision/Image Processing/screenshot_2018-08-30_16-43-39.png" alt="screenshot_2018-08-30_16-43-39.png" />
+</p>
+</div>
+
+<p>
+We may use the cumulative distribution function to remap the original
+distribution as an equally spread distribution simply by looking up
+each y-value in the original distribution and seeing where it should
+go in the equalized distribution.
+</p>
+
+\begin{equation}
+  g_{i,j} = \left\lfloor \left( L - 1 \right) \sum_{n = 0}^{f_{i,j}}
+  p_n  \right\rfloor
+\end{equation}
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-25 Sat 17:13</p>
+<p class="date">Created: 2018-09-01 Sat 17:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

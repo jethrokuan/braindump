@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-28 Tue 23:44 -->
+<!-- 2018-09-01 Sat 17:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Theory Of Computation</title>
@@ -136,6 +136,12 @@ for the JavaScript code in this tag.
 <li><a href="#org9323c9b">5.2.5. Discovering laws for regular expressions</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li><a href="#org35ca0e5">6. Properties of Regular Languages</a>
+<ul>
+<li><a href="#orgcfc9708">6.1. Pumping Lemma</a></li>
+<li><a href="#org10bfad9">6.2. Closure of Regular Languages</a></li>
 </ul>
 </li>
 </ul>
@@ -840,10 +846,96 @@ in another, and vice-versa.
 </div>
 </div>
 </div>
+
+<div id="outline-container-org35ca0e5" class="outline-2">
+<h2 id="org35ca0e5"><span class="section-number-2">6</span> Properties of Regular Languages</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Regular languages exhibit the "closure" property. These properties let
+us build recognizers for languages that are constructed from other
+languages by certain operations. Regular languages also exhibit
+"decision properties", which allow us to make decisions about whether
+two automata define the same language. This means that we can always
+minimize an automata to have as few states as possible for a
+particular language.
+</p>
+</div>
+
+<div id="outline-container-orgcfc9708" class="outline-3">
+<h3 id="orgcfc9708"><span class="section-number-3">6.1</span> Pumping Lemma</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+We have established that the class of languages known as regular
+languages are accepted by DFAs, NFAs and by $&epsilon;$-NFAs.
+</p>
+
+<p>
+However, not every language is a regular language. An easy way to see
+this is that the number of languages is infinite, but DFAs have finite
+number of states, and are finite.
+</p>
+
+<p>
+The pumping lemma lets us show that certain languages are not regular.
+</p>
+
+<div class="theorem">
+<p>
+<a id="org792f7b8"></a>
+Let \(L\) be a regular language. Then there exists a constant \(n\) (which
+depends on \(L\)) such that for every string \(w\) in \(L\) such that
+\(| w |  \ge n\), we can break \(w\) into three strings \(w = xyz\)
+such that:
+</p>
+
+<ol class="org-ol">
+<li>\(y \ne \epsilon\)</li>
+<li>\(| xy | \le n\)</li>
+<li>For all \(k \ge 0\), the string \(xy^k z\) is also in \(L\)</li>
+</ol>
+
+</div>
+
+<p>
+That is, we can always find a non-empty string \(y\) not too far from
+the beginning of \(w\) that can be "pumped". This means repeating \(y\)
+any number of times, or deleting it, keeps the resulting string in the
+language \(L\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org10bfad9" class="outline-3">
+<h3 id="org10bfad9"><span class="section-number-3">6.2</span> Closure of Regular Languages</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+If certain languages are regular, then languages formed from them by
+certain operations are also regular. These are referred to as the
+closure properties of regular languages. Below is a summary:
+</p>
+
+<ol class="org-ol">
+<li>Union of 2 regular languages</li>
+<li>Intersection of 2 regular languages</li>
+<li>Complement of 2 regular languages</li>
+<li>Difference of 2 regular languages</li>
+<li>Reversal of a regular language</li>
+<li>Closure (star) of a regular language</li>
+<li>The concatenation of regular languages</li>
+<li>A homomorphism (substitution of strings for symbols) of a regular language</li>
+<li>The inverse homomorphism of a regular language</li>
+</ol>
+
+<p>
+The above are all regular.
+</p>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-28 Tue 23:44</p>
+<p class="date">Created: 2018-09-01 Sat 17:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

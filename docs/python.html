@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-25 Sat 15:04 -->
+<!-- 2018-09-01 Sat 17:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Python</title>
@@ -98,13 +98,18 @@ for the JavaScript code in this tag.
 <li><a href="#orgf4c23aa">2.2. Priority Queue</a></li>
 </ul>
 </li>
-<li><a href="#org9464628">3. Strings</a></li>
-<li><a href="#org9803ab7">4. Python Nifty Tricks</a>
+<li><a href="#orged4debf">3. Python Libraries</a>
 <ul>
-<li><a href="#org1de3310">4.1. Tilde Operator</a></li>
-<li><a href="#orgc161272">4.2. For loop else clause</a></li>
-<li><a href="#orgc7e937b">4.3. String translation tables</a></li>
-<li><a href="#org00ecc48">4.4. Checking if character unique in string</a></li>
+<li><a href="#orgb131398">3.1. Bisect</a></li>
+</ul>
+</li>
+<li><a href="#org9464628">4. Strings</a></li>
+<li><a href="#org9803ab7">5. Python Nifty Tricks</a>
+<ul>
+<li><a href="#org1de3310">5.1. Tilde Operator</a></li>
+<li><a href="#orgc161272">5.2. For loop else clause</a></li>
+<li><a href="#orgc7e937b">5.3. String translation tables</a></li>
+<li><a href="#org00ecc48">5.4. Checking if character unique in string</a></li>
 </ul>
 </li>
 </ul>
@@ -207,9 +212,24 @@ while not pq.empty():
 </div>
 </div>
 
-<div id="outline-container-org9464628" class="outline-2">
-<h2 id="org9464628"><span class="section-number-2">3</span> Strings</h2>
+<div id="outline-container-orged4debf" class="outline-2">
+<h2 id="orged4debf"><span class="section-number-2">3</span> Python Libraries</h2>
 <div class="outline-text-2" id="text-3">
+</div>
+<div id="outline-container-orgb131398" class="outline-3">
+<h3 id="orgb131398"><span class="section-number-3">3.1</span> Bisect</h3>
+<div class="outline-text-3" id="text-3-1">
+<p>
+<a href="https://docs.python.org/2/library/bisect.html">https://docs.python.org/2/library/bisect.html</a>
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org9464628" class="outline-2">
+<h2 id="org9464628"><span class="section-number-2">4</span> Strings</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 Some important string operators and functions are:
 </p>
@@ -237,12 +257,12 @@ that are then assigned back to s.
 </div>
 
 <div id="outline-container-org9803ab7" class="outline-2">
-<h2 id="org9803ab7"><span class="section-number-2">4</span> Python Nifty Tricks</h2>
-<div class="outline-text-2" id="text-4">
+<h2 id="org9803ab7"><span class="section-number-2">5</span> Python Nifty Tricks</h2>
+<div class="outline-text-2" id="text-5">
 </div>
 <div id="outline-container-org1de3310" class="outline-3">
-<h3 id="org1de3310"><span class="section-number-3">4.1</span> Tilde Operator</h3>
-<div class="outline-text-3" id="text-4-1">
+<h3 id="org1de3310"><span class="section-number-3">5.1</span> Tilde Operator</h3>
+<div class="outline-text-3" id="text-5-1">
 <p>
 The tilde operator <code>~</code> is the bit-wise complement operator, and it
 essentially calculates the <code>-x-1.</code> This comes in useful in arrays, where
@@ -259,8 +279,8 @@ palindrome function:
 </div>
 
 <div id="outline-container-orgc161272" class="outline-3">
-<h3 id="orgc161272"><span class="section-number-3">4.2</span> For loop else clause</h3>
-<div class="outline-text-3" id="text-4-2">
+<h3 id="orgc161272"><span class="section-number-3">5.2</span> For loop else clause</h3>
+<div class="outline-text-3" id="text-5-2">
 <p>
 <code>for</code> loop has <code>else</code> clause, that runs when the for loop successfully
 completes without <code>break</code>.
@@ -269,8 +289,8 @@ completes without <code>break</code>.
 </div>
 
 <div id="outline-container-orgc7e937b" class="outline-3">
-<h3 id="orgc7e937b"><span class="section-number-3">4.3</span> String translation tables</h3>
-<div class="outline-text-3" id="text-4-3">
+<h3 id="orgc7e937b"><span class="section-number-3">5.3</span> String translation tables</h3>
+<div class="outline-text-3" id="text-5-3">
 <p>
 <code>str.maketrans</code> creates a translation table that makes string
 substitution quick.
@@ -279,8 +299,8 @@ substitution quick.
 </div>
 
 <div id="outline-container-org00ecc48" class="outline-3">
-<h3 id="org00ecc48"><span class="section-number-3">4.4</span> Checking if character unique in string</h3>
-<div class="outline-text-3" id="text-4-4">
+<h3 id="org00ecc48"><span class="section-number-3">5.4</span> Checking if character unique in string</h3>
+<div class="outline-text-3" id="text-5-4">
 <p>
 <code>s.index(x) == s.rindex(x)</code> to check if character is only one in the string
 </p>
@@ -290,7 +310,7 @@ substitution quick.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-25 Sat 15:04</p>
+<p class="date">Created: 2018-09-01 Sat 17:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

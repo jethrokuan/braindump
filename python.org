@@ -75,6 +75,11 @@ questions.
 : (5, 'five')
 : (10, 'ten')
 
+* Python Libraries
+** Bisect
+https://docs.python.org/2/library/bisect.html
+
+
 * Strings
 
 Some important string operators and functions are:

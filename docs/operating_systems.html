@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-25 Sat 15:04 -->
+<!-- 2018-08-30 Thu 15:33 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Operating Systems</title>
@@ -91,193 +91,193 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org589a399">1. Operating System Key Concepts</a>
+<li><a href="#org87f4218">1. Operating System Key Concepts</a>
 <ul>
-<li><a href="#org8b54ce7">1.1. Motivation</a></li>
-<li><a href="#org43fab50">1.2. Alarm signal</a></li>
-<li><a href="#orgcf1fdd1">1.3. Identification</a></li>
-<li><a href="#orgb434337">1.4. File systems</a></li>
-<li><a href="#org815a818">1.5. Pipe</a></li>
-<li><a href="#org1b9518d">1.6. Process segments</a></li>
-<li><a href="#orgc792c72">1.7. Files in UNIX</a></li>
-<li><a href="#orgbc73ac5">1.8. Hypervisors</a></li>
+<li><a href="#org0dc5d0a">1.1. Motivation</a></li>
+<li><a href="#org46eacf3">1.2. Alarm signal</a></li>
+<li><a href="#orgb8419da">1.3. Identification</a></li>
+<li><a href="#orgc1b9540">1.4. File systems</a></li>
+<li><a href="#orgdcd8b01">1.5. Pipe</a></li>
+<li><a href="#org28d68bf">1.6. Process segments</a></li>
+<li><a href="#org8e897d7">1.7. Files in UNIX</a></li>
+<li><a href="#org2ab7bc9">1.8. Hypervisors</a></li>
 </ul>
 </li>
-<li><a href="#orgadb42bf">2. Process</a>
+<li><a href="#orgde84e5d">2. Process</a>
 <ul>
-<li><a href="#org8d00378">2.1. Process Creation</a></li>
-<li><a href="#orgca64ef8">2.2. Function Call</a>
+<li><a href="#orge88c45a">2.1. Process Creation</a></li>
+<li><a href="#org94013b8">2.2. Function Call</a>
 <ul>
-<li><a href="#org335f830">2.2.1. Control Flow issues</a></li>
-<li><a href="#org61c1138">2.2.2. Data Storage issues</a></li>
-<li><a href="#org5f030da">2.2.3. Stack Memory</a></li>
-<li><a href="#orgb9f05e7">2.2.4. Stack Frame</a></li>
-<li><a href="#org9237e71">2.2.5. Function Call Convention (FCC)</a></li>
-<li><a href="#orgca5cdaa">2.2.6. Frame Pointer</a></li>
+<li><a href="#orge3dbae0">2.2.1. Control Flow issues</a></li>
+<li><a href="#orgf7ac0aa">2.2.2. Data Storage issues</a></li>
+<li><a href="#org7f79141">2.2.3. Stack Memory</a></li>
+<li><a href="#orgea95b00">2.2.4. Stack Frame</a></li>
+<li><a href="#org0a7b964">2.2.5. Function Call Convention (FCC)</a></li>
+<li><a href="#org5e2ddfc">2.2.6. Frame Pointer</a></li>
 </ul>
 </li>
-<li><a href="#orgbfdc1d2">2.3. Dynamic Memory Allocation</a></li>
-<li><a href="#orgceeb155">2.4. Process Identification</a></li>
-<li><a href="#orgad78f57">2.5. 5-state Process Model</a></li>
-<li><a href="#orgbb722da">2.6. Data structures required</a></li>
-<li><a href="#orgb7e0743">2.7. Mechanism: Limited Direct Execution</a></li>
-<li><a href="#org9721c5f">2.8. Access Control</a></li>
-<li><a href="#orgdd45a67">2.9. General System Call Mechanism</a></li>
-<li><a href="#orgf57a0d6">2.10. Switching between processes</a>
+<li><a href="#orgd94b4ee">2.3. Dynamic Memory Allocation</a></li>
+<li><a href="#orga6a1453">2.4. Process Identification</a></li>
+<li><a href="#org11a6ecd">2.5. 5-state Process Model</a></li>
+<li><a href="#org6492821">2.6. Data structures required</a></li>
+<li><a href="#org182bf46">2.7. Mechanism: Limited Direct Execution</a></li>
+<li><a href="#orgb642de2">2.8. Access Control</a></li>
+<li><a href="#org2cc9529">2.9. General System Call Mechanism</a></li>
+<li><a href="#org42160db">2.10. Switching between processes</a>
 <ul>
-<li><a href="#org21ec7d3">2.10.1. Cooperative Approach</a></li>
-<li><a href="#org1bf3ebe">2.10.2. Non-cooperative Approach</a></li>
+<li><a href="#org3f9cc5e">2.10.1. Cooperative Approach</a></li>
+<li><a href="#orgc9ccc30">2.10.2. Non-cooperative Approach</a></li>
 </ul>
 </li>
-<li><a href="#org1d85960">2.11. Exception and Interrupts</a></li>
+<li><a href="#orgaa704e9">2.11. Exception and Interrupts</a></li>
 </ul>
 </li>
-<li><a href="#org36a38d5">3. Scheduling</a>
+<li><a href="#org1077fd6">3. Scheduling</a>
 <ul>
-<li><a href="#orgb14f89e">3.1. Scheduling Metrics</a></li>
-<li><a href="#org260bb30">3.2. First Come First Served (FCFS)</a>
+<li><a href="#orge8bbb83">3.1. Scheduling Metrics</a></li>
+<li><a href="#org5bb517e">3.2. First Come First Served (FCFS)</a>
 <ul>
-<li><a href="#orgb0ad224">3.2.1. Pros</a></li>
-<li><a href="#org1e2ce72">3.2.2. Cons</a></li>
+<li><a href="#orgc77552e">3.2.1. Pros</a></li>
+<li><a href="#org57b489a">3.2.2. Cons</a></li>
 </ul>
 </li>
-<li><a href="#orgf134d83">3.3. Shortest Job First (SJF)</a>
+<li><a href="#orgc0544d6">3.3. Shortest Job First (SJF)</a>
 <ul>
-<li><a href="#orge9bf204">3.3.1. Pros</a></li>
-<li><a href="#orga75084c">3.3.2. Cons</a></li>
+<li><a href="#orgf71bc2b">3.3.1. Pros</a></li>
+<li><a href="#org2adaf3b">3.3.2. Cons</a></li>
 </ul>
 </li>
-<li><a href="#orgb2245dd">3.4. Shortest Time-to-Completion First (SRT)</a>
+<li><a href="#orgf613c61">3.4. Shortest Time-to-Completion First (SRT)</a>
 <ul>
-<li><a href="#org4b1bd32">3.4.1. Pros</a></li>
-<li><a href="#org16438a2">3.4.2. Cons</a></li>
+<li><a href="#org58ae0f8">3.4.1. Pros</a></li>
+<li><a href="#orgb6467a9">3.4.2. Cons</a></li>
 </ul>
 </li>
-<li><a href="#org7a480d8">3.5. Round Robin</a>
+<li><a href="#orgd8678e0">3.5. Round Robin</a>
 <ul>
-<li><a href="#orgbbae15f">3.5.1. Incorporating I/O</a></li>
+<li><a href="#org187958c">3.5.1. Incorporating I/O</a></li>
 </ul>
 </li>
-<li><a href="#org1642cd0">3.6. Multi-level Feedback Queue (MLFQ)</a>
+<li><a href="#orga9e6d4f">3.6. Multi-level Feedback Queue (MLFQ)</a>
 <ul>
-<li><a href="#orgc18cc50">3.6.1. Tuning MLFQ</a></li>
+<li><a href="#org65815ad">3.6.1. Tuning MLFQ</a></li>
 </ul>
 </li>
-<li><a href="#org0d8901f">3.7. Lottery Scheduling</a></li>
+<li><a href="#org3ba7991">3.7. Lottery Scheduling</a></li>
 </ul>
 </li>
-<li><a href="#orgd508217">4. Concurrency</a></li>
-<li><a href="#org7cdcfa8">5. Thread</a>
+<li><a href="#org2265665">4. Concurrency</a></li>
+<li><a href="#org64fce02">5. Thread</a>
 <ul>
-<li><a href="#orga56e6e1">5.1. Example Thread creation</a></li>
-<li><a href="#orgde42ddb">5.2. Issues with Uncontrolled Scheduling</a>
+<li><a href="#org6c686c9">5.1. Example Thread creation</a></li>
+<li><a href="#orgf06f8d9">5.2. Issues with Uncontrolled Scheduling</a>
 <ul>
-<li><a href="#org9017983">5.2.1. Race Condition</a></li>
-<li><a href="#orgd6876cf">5.2.2. Key Terms</a></li>
-<li><a href="#org3d754fe">5.2.3. The wish for atomicity</a></li>
+<li><a href="#org219ee4b">5.2.1. Race Condition</a></li>
+<li><a href="#org401734c">5.2.2. Key Terms</a></li>
+<li><a href="#org7d71058">5.2.3. The wish for atomicity</a></li>
 </ul>
 </li>
-<li><a href="#orgdffd7c9">5.3. Thread API</a>
+<li><a href="#orged322cb">5.3. Thread API</a>
 <ul>
-<li><a href="#org3e38003">5.3.1. Locks API</a></li>
-<li><a href="#orgfd0da30">5.3.2. Condition Variables</a></li>
+<li><a href="#org3a3b39b">5.3.1. Locks API</a></li>
+<li><a href="#orgf431df3">5.3.2. Condition Variables</a></li>
 </ul>
 </li>
-<li><a href="#org4a20766">5.4. Properties of Correct CS Implementation</a></li>
-<li><a href="#orgdb404b5">5.5. Locks</a>
+<li><a href="#orgfaa41d4">5.4. Properties of Correct CS Implementation</a></li>
+<li><a href="#orgc01d316">5.5. Locks</a>
 <ul>
-<li><a href="#org4a2942a">5.5.1. Pthread Locks</a></li>
-<li><a href="#orgfc61960">5.5.2. Evaluating locks</a></li>
-<li><a href="#org74d347f">5.5.3. Approach 1: Controlling Interrupts</a>
+<li><a href="#orgd78a801">5.5.1. Pthread Locks</a></li>
+<li><a href="#orgb4a1d57">5.5.2. Evaluating locks</a></li>
+<li><a href="#org5452b06">5.5.3. Approach 1: Controlling Interrupts</a>
 <ul>
-<li><a href="#org4a4664d">5.5.3.1. Pros</a></li>
-<li><a href="#org4e72d27">5.5.3.2. Cons</a></li>
+<li><a href="#org88a1745">5.5.3.1. Pros</a></li>
+<li><a href="#org75f9f16">5.5.3.2. Cons</a></li>
 </ul>
 </li>
-<li><a href="#org62718ab">5.5.4. Approach 2: Test and Set</a>
+<li><a href="#orgd693595">5.5.4. Approach 2: Test and Set</a>
 <ul>
-<li><a href="#org8183202">5.5.4.1. Evaluating the spin lock:</a></li>
+<li><a href="#org5769fe5">5.5.4.1. Evaluating the spin lock:</a></li>
 </ul>
 </li>
-<li><a href="#orgbd92a3e">5.5.5. Two Phase Locks</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#org8744f1e">6. Classical Synchronization Problems</a>
-<ul>
-<li><a href="#orgb67cae9">6.1. Producer/Consumer</a></li>
-<li><a href="#org5d9e077">6.2. Readers/Writers</a></li>
-<li><a href="#orgc9c129a">6.3. Dining Philosophers</a>
-<ul>
-<li><a href="#orgc42b519">6.3.1. Tanenbaum Solution</a></li>
+<li><a href="#org456057f">5.5.5. Two Phase Locks</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org47e0b67">7. Address Spaces</a>
+<li><a href="#org3b9670e">6. Classical Synchronization Problems</a>
 <ul>
-<li><a href="#orgb5638ea">7.1. Goals of Virtual Memory</a></li>
-<li><a href="#org664acbf">7.2. Types of Memory</a></li>
-<li><a href="#org4f8f4d3">7.3. Address translation</a></li>
-<li><a href="#orgc0e26fa">7.4. 1950's <b>base and bounds</b> technique</a></li>
-<li><a href="#org6d789c4">7.5. Segmentation</a></li>
-<li><a href="#orgb14e634">7.6. Sharing</a></li>
-<li><a href="#org24805ea">7.7. OS support</a></li>
-</ul>
-</li>
-<li><a href="#org9a39210">8. Free Space Management</a>
+<li><a href="#orga554269">6.1. Producer/Consumer</a></li>
+<li><a href="#org19e7473">6.2. Readers/Writers</a></li>
+<li><a href="#orge36009d">6.3. Dining Philosophers</a>
 <ul>
-<li><a href="#orgc4ea29c">8.1. Growing the Heap</a></li>
-<li><a href="#orgd46b73e">8.2. Free Space Allocation Strategies</a>
-<ul>
-<li><a href="#orgb229a58">8.2.1. Best fit</a></li>
-<li><a href="#org40d541e">8.2.2. Worst fit</a></li>
-<li><a href="#org38403f3">8.2.3. Next Fit</a></li>
-<li><a href="#org7de9a2a">8.2.4. Segregated Lists</a></li>
-<li><a href="#org0166783">8.2.5. Buddy Allocation</a></li>
+<li><a href="#orgf46f0b8">6.3.1. Tanenbaum Solution</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org4b8162c">9. Paging</a>
+<li><a href="#org3a8f805">7. Address Spaces</a>
 <ul>
-<li><a href="#orgc7800ba">9.1. Address Translation</a></li>
-<li><a href="#orgbb9a94a">9.2. Inside Page Tables</a></li>
-<li><a href="#orgfc791ef">9.3. How Paging Works</a></li>
-<li><a href="#org4e12994">9.4. Speeding up Paging with TLBs</a>
-<ul>
-<li><a href="#orgf75c455">9.4.1. TLB Basic Algorithm</a></li>
-<li><a href="#org22808fd">9.4.2. Managing TLB Misses</a></li>
-<li><a href="#orga5d96ed">9.4.3. Handling Context Switches</a></li>
-<li><a href="#org2ec2096">9.4.4. TLB Replacement Policies</a></li>
+<li><a href="#org8674b80">7.1. Goals of Virtual Memory</a></li>
+<li><a href="#org2fd59e4">7.2. Types of Memory</a></li>
+<li><a href="#org8c2c7f0">7.3. Address translation</a></li>
+<li><a href="#org4cc85dd">7.4. 1950's <b>base and bounds</b> technique</a></li>
+<li><a href="#org7d5ce9b">7.5. Segmentation</a></li>
+<li><a href="#orgbda2939">7.6. Sharing</a></li>
+<li><a href="#orgbe8859a">7.7. OS support</a></li>
 </ul>
 </li>
-<li><a href="#org4550d2c">9.5. Making Page Tables Smaller</a>
+<li><a href="#org4858ab8">8. Free Space Management</a>
 <ul>
-<li><a href="#orga8e8467">9.5.1. Bigger Pages</a></li>
-<li><a href="#org785ab78">9.5.2. Paging and Segments</a></li>
-<li><a href="#org781155e">9.5.3. Multi-level Page Tables</a></li>
-<li><a href="#org6cf1c98">9.5.4. Inverted Page Tables</a></li>
+<li><a href="#org32b563f">8.1. Growing the Heap</a></li>
+<li><a href="#org5693c2f">8.2. Free Space Allocation Strategies</a>
+<ul>
+<li><a href="#org5ddeb37">8.2.1. Best fit</a></li>
+<li><a href="#org62e9e63">8.2.2. Worst fit</a></li>
+<li><a href="#org7a33354">8.2.3. Next Fit</a></li>
+<li><a href="#orga43474d">8.2.4. Segregated Lists</a></li>
+<li><a href="#orga4e2b76">8.2.5. Buddy Allocation</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org826208f">10. Beyond Physical Memory</a>
+<li><a href="#orgb072c89">9. Paging</a>
 <ul>
-<li><a href="#org2ebf450">10.1. Mechanisms</a>
+<li><a href="#orgd903102">9.1. Address Translation</a></li>
+<li><a href="#org7af8848">9.2. Inside Page Tables</a></li>
+<li><a href="#org1ff0623">9.3. How Paging Works</a></li>
+<li><a href="#org855911c">9.4. Speeding up Paging with TLBs</a>
 <ul>
-<li><a href="#orgbc69999">10.1.1. Swap Space</a></li>
-<li><a href="#org5bce792">10.1.2. The Present Bit</a></li>
-<li><a href="#orgff7d3d4">10.1.3. Page-replacement Policy</a></li>
-<li><a href="#org1b5d57a">10.1.4. When Replacements Really Occur</a></li>
+<li><a href="#org67f77f0">9.4.1. TLB Basic Algorithm</a></li>
+<li><a href="#orgbd4ffa7">9.4.2. Managing TLB Misses</a></li>
+<li><a href="#orgf220bf2">9.4.3. Handling Context Switches</a></li>
+<li><a href="#orgf20fddd">9.4.4. TLB Replacement Policies</a></li>
 </ul>
 </li>
-<li><a href="#orgba3c821">10.2. Policies</a>
+<li><a href="#orgba4f5c0">9.5. Making Page Tables Smaller</a>
 <ul>
-<li><a href="#orgb1f1b16">10.2.1. FIFO</a>
+<li><a href="#org81e1842">9.5.1. Bigger Pages</a></li>
+<li><a href="#orgd6b1fa0">9.5.2. Paging and Segments</a></li>
+<li><a href="#org896e172">9.5.3. Multi-level Page Tables</a></li>
+<li><a href="#org69989d6">9.5.4. Inverted Page Tables</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#org51cb05a">10. Beyond Physical Memory</a>
 <ul>
-<li><a href="#org1690dc3">10.2.1.1. Belady's anomaly</a></li>
+<li><a href="#org8ceb966">10.1. Mechanisms</a>
+<ul>
+<li><a href="#orgdbd5bec">10.1.1. Swap Space</a></li>
+<li><a href="#org97c249c">10.1.2. The Present Bit</a></li>
+<li><a href="#org0f9f3a9">10.1.3. Page-replacement Policy</a></li>
+<li><a href="#org33529f8">10.1.4. When Replacements Really Occur</a></li>
+</ul>
+</li>
+<li><a href="#orgaebbafe">10.2. Policies</a>
+<ul>
+<li><a href="#org2ceea40">10.2.1. FIFO</a>
+<ul>
+<li><a href="#orgec99e53">10.2.1.1. Belady's anomaly</a></li>
 </ul>
 </li>
 </ul>
@@ -288,12 +288,12 @@ for the JavaScript code in this tag.
 </div>
 </div>
 
-<div id="outline-container-org589a399" class="outline-2">
-<h2 id="org589a399"><span class="section-number-2">1</span> Operating System Key Concepts</h2>
+<div id="outline-container-org87f4218" class="outline-2">
+<h2 id="org87f4218"><span class="section-number-2">1</span> Operating System Key Concepts</h2>
 <div class="outline-text-2" id="text-1">
 </div>
-<div id="outline-container-org8b54ce7" class="outline-3">
-<h3 id="org8b54ce7"><span class="section-number-3">1.1</span> Motivation</h3>
+<div id="outline-container-org0dc5d0a" class="outline-3">
+<h3 id="org0dc5d0a"><span class="section-number-3">1.1</span> Motivation</h3>
 <div class="outline-text-3" id="text-1-1">
 <ol class="org-ol">
 <li>Abstraction
@@ -309,8 +309,8 @@ for the JavaScript code in this tag.
 </ol>
 </div>
 </div>
-<div id="outline-container-org43fab50" class="outline-3">
-<h3 id="org43fab50"><span class="section-number-3">1.2</span> Alarm signal</h3>
+<div id="outline-container-org46eacf3" class="outline-3">
+<h3 id="org46eacf3"><span class="section-number-3">1.2</span> Alarm signal</h3>
 <div class="outline-text-3" id="text-1-2">
 <p>
 The alarm signal causes the operating system to suspend whatever it is
@@ -319,8 +319,8 @@ signal-handling procedure.
 </p>
 </div>
 </div>
-<div id="outline-container-orgcf1fdd1" class="outline-3">
-<h3 id="orgcf1fdd1"><span class="section-number-3">1.3</span> Identification</h3>
+<div id="outline-container-orgb8419da" class="outline-3">
+<h3 id="orgb8419da"><span class="section-number-3">1.3</span> Identification</h3>
 <div class="outline-text-3" id="text-1-3">
 <p>
 Each person authorized to use the OS is assigned a UID (User
@@ -331,8 +331,8 @@ can also be members of groups, each with a GID (Group Identification).
 </div>
 </div>
 
-<div id="outline-container-orgb434337" class="outline-3">
-<h3 id="orgb434337"><span class="section-number-3">1.4</span> File systems</h3>
+<div id="outline-container-orgc1b9540" class="outline-3">
+<h3 id="orgc1b9540"><span class="section-number-3">1.4</span> File systems</h3>
 <div class="outline-text-3" id="text-1-4">
 <p>
 Before a file can be read or written, it must be opened, at which time
@@ -354,8 +354,8 @@ accept or output a character stream.
 </div>
 </div>
 
-<div id="outline-container-org815a818" class="outline-3">
-<h3 id="org815a818"><span class="section-number-3">1.5</span> Pipe</h3>
+<div id="outline-container-orgdcd8b01" class="outline-3">
+<h3 id="orgdcd8b01"><span class="section-number-3">1.5</span> Pipe</h3>
 <div class="outline-text-3" id="text-1-5">
 <p>
 A sort of pseudofile that can be used to connect two processes. If
@@ -371,8 +371,8 @@ advance.
 </div>
 </div>
 
-<div id="outline-container-org1b9518d" class="outline-3">
-<h3 id="org1b9518d"><span class="section-number-3">1.6</span> Process segments</h3>
+<div id="outline-container-org28d68bf" class="outline-3">
+<h3 id="org28d68bf"><span class="section-number-3">1.6</span> Process segments</h3>
 <div class="outline-text-3" id="text-1-6">
 
 <div class="figure">
@@ -382,8 +382,8 @@ advance.
 </div>
 </div>
 
-<div id="outline-container-orgc792c72" class="outline-3">
-<h3 id="orgc792c72"><span class="section-number-3">1.7</span> Files in UNIX</h3>
+<div id="outline-container-org8e897d7" class="outline-3">
+<h3 id="org8e897d7"><span class="section-number-3">1.7</span> Files in UNIX</h3>
 <div class="outline-text-3" id="text-1-7">
 <p>
 Every file in UNIX has a unique number, its i-number, that identifies
@@ -394,8 +394,8 @@ directory is a file containing a set of (i-number, ASCII name) pairs.
 </div>
 </div>
 
-<div id="outline-container-orgbc73ac5" class="outline-3">
-<h3 id="orgbc73ac5"><span class="section-number-3">1.8</span> Hypervisors</h3>
+<div id="outline-container-org2ab7bc9" class="outline-3">
+<h3 id="org2ab7bc9"><span class="section-number-3">1.8</span> Hypervisors</h3>
 <div class="outline-text-3" id="text-1-8">
 <p>
 In practice, the real distinction between a type 1 hypervisor and a
@@ -408,8 +408,8 @@ all these functions itself.
 </div>
 </div>
 
-<div id="outline-container-orgadb42bf" class="outline-2">
-<h2 id="orgadb42bf"><span class="section-number-2">2</span> Process</h2>
+<div id="outline-container-orgde84e5d" class="outline-2">
+<h2 id="orgde84e5d"><span class="section-number-2">2</span> Process</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 A program in execution. Associated with each process is a <b>address
@@ -429,8 +429,8 @@ the process table, which contains the contents of the registers and
 other items required to resume the process later on.
 </p>
 </div>
-<div id="outline-container-org8d00378" class="outline-3">
-<h3 id="org8d00378"><span class="section-number-3">2.1</span> Process Creation</h3>
+<div id="outline-container-orge88c45a" class="outline-3">
+<h3 id="orge88c45a"><span class="section-number-3">2.1</span> Process Creation</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 OS needs to load its code and any static data (e.g. initialized
@@ -456,12 +456,12 @@ calling <code>malloc()</code> and free it explicitly using <code>free()</code></
 </ol>
 </div>
 </div>
-<div id="outline-container-orgca64ef8" class="outline-3">
-<h3 id="orgca64ef8"><span class="section-number-3">2.2</span> Function Call</h3>
+<div id="outline-container-org94013b8" class="outline-3">
+<h3 id="org94013b8"><span class="section-number-3">2.2</span> Function Call</h3>
 <div class="outline-text-3" id="text-2-2">
 </div>
-<div id="outline-container-org335f830" class="outline-4">
-<h4 id="org335f830"><span class="section-number-4">2.2.1</span> Control Flow issues</h4>
+<div id="outline-container-orge3dbae0" class="outline-4">
+<h4 id="orge3dbae0"><span class="section-number-4">2.2.1</span> Control Flow issues</h4>
 <div class="outline-text-4" id="text-2-2-1">
 <ol class="org-ol">
 <li>Need to jump to the function body</li>
@@ -470,8 +470,8 @@ calling <code>malloc()</code> and free it explicitly using <code>free()</code></
 </ol>
 </div>
 </div>
-<div id="outline-container-org61c1138" class="outline-4">
-<h4 id="org61c1138"><span class="section-number-4">2.2.2</span> Data Storage issues</h4>
+<div id="outline-container-orgf7ac0aa" class="outline-4">
+<h4 id="orgf7ac0aa"><span class="section-number-4">2.2.2</span> Data Storage issues</h4>
 <div class="outline-text-4" id="text-2-2-2">
 <ol class="org-ol">
 <li>Need to pass parameters to the function</li>
@@ -480,8 +480,8 @@ calling <code>malloc()</code> and free it explicitly using <code>free()</code></
 </ol>
 </div>
 </div>
-<div id="outline-container-org5f030da" class="outline-4">
-<h4 id="org5f030da"><span class="section-number-4">2.2.3</span> Stack Memory</h4>
+<div id="outline-container-org7f79141" class="outline-4">
+<h4 id="org7f79141"><span class="section-number-4">2.2.3</span> Stack Memory</h4>
 <div class="outline-text-4" id="text-2-2-3">
 <p>
 Define new region of memory, called <b>stack memory</b>, for function
@@ -495,8 +495,8 @@ from bottom up. This is true for most architectures.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb9f05e7" class="outline-4">
-<h4 id="orgb9f05e7"><span class="section-number-4">2.2.4</span> Stack Frame</h4>
+<div id="outline-container-orgea95b00" class="outline-4">
+<h4 id="orgea95b00"><span class="section-number-4">2.2.4</span> Stack Frame</h4>
 <div class="outline-text-4" id="text-2-2-4">
 <p>
 The stack memory stores a bunch of stack frames, one stack frame for
@@ -513,8 +513,8 @@ each function invocation. The stack frame stores:
 </ol>
 </div>
 </div>
-<div id="outline-container-org9237e71" class="outline-4">
-<h4 id="org9237e71"><span class="section-number-4">2.2.5</span> Function Call Convention (FCC)</h4>
+<div id="outline-container-org0a7b964" class="outline-4">
+<h4 id="org0a7b964"><span class="section-number-4">2.2.5</span> Function Call Convention (FCC)</h4>
 <div class="outline-text-4" id="text-2-2-5">
 <p>
 There are different ways to setup stack frames. An example scheme is
@@ -542,8 +542,8 @@ Teardown:
 </div>
 </div>
 
-<div id="outline-container-orgca5cdaa" class="outline-4">
-<h4 id="orgca5cdaa"><span class="section-number-4">2.2.6</span> Frame Pointer</h4>
+<div id="outline-container-org5e2ddfc" class="outline-4">
+<h4 id="org5e2ddfc"><span class="section-number-4">2.2.6</span> Frame Pointer</h4>
 <div class="outline-text-4" id="text-2-2-6">
 <p>
 Stack Pointer is hard to use as it can change. Frame pointer points to
@@ -553,8 +553,8 @@ offsets from the frame pointer.
 </div>
 </div>
 </div>
-<div id="outline-container-orgbfdc1d2" class="outline-3">
-<h3 id="orgbfdc1d2"><span class="section-number-3">2.3</span> Dynamic Memory Allocation</h3>
+<div id="outline-container-orgd94b4ee" class="outline-3">
+<h3 id="orgd94b4ee"><span class="section-number-3">2.3</span> Dynamic Memory Allocation</h3>
 <div class="outline-text-3" id="text-2-3">
 <p>
 High Level Languages allow dynamic allocation of memory space, e.g.
@@ -571,8 +571,8 @@ is not known before hand.
 </p>
 </div>
 </div>
-<div id="outline-container-orgceeb155" class="outline-3">
-<h3 id="orgceeb155"><span class="section-number-3">2.4</span> Process Identification</h3>
+<div id="outline-container-orga6a1453" class="outline-3">
+<h3 id="orga6a1453"><span class="section-number-3">2.4</span> Process Identification</h3>
 <div class="outline-text-3" id="text-2-4">
 <p>
 To distinguish processes from each other, a process ID (PID) is
@@ -580,8 +580,8 @@ assigned to each process.
 </p>
 </div>
 </div>
-<div id="outline-container-orgad78f57" class="outline-3">
-<h3 id="orgad78f57"><span class="section-number-3">2.5</span> 5-state Process Model</h3>
+<div id="outline-container-org11a6ecd" class="outline-3">
+<h3 id="org11a6ecd"><span class="section-number-3">2.5</span> 5-state Process Model</h3>
 <div class="outline-text-3" id="text-2-5">
 <dl class="org-dl">
 <dt>New</dt><dd>The process creation is started, but has not been
@@ -604,8 +604,8 @@ taken place, e.g. being blocked by I/O.</dd>
 </div>
 </div>
 
-<div id="outline-container-orgbb722da" class="outline-3">
-<h3 id="orgbb722da"><span class="section-number-3">2.6</span> Data structures required</h3>
+<div id="outline-container-org6492821" class="outline-3">
+<h3 id="org6492821"><span class="section-number-3">2.6</span> Data structures required</h3>
 <div class="outline-text-3" id="text-2-6">
 <dl class="org-dl">
 <dt>Process Table</dt><dd>keeps track of all processes</dd>
@@ -620,8 +620,8 @@ taken place, e.g. being blocked by I/O.</dd>
 </div>
 </div>
 
-<div id="outline-container-orgb7e0743" class="outline-3">
-<h3 id="orgb7e0743"><span class="section-number-3">2.7</span> Mechanism: Limited Direct Execution</h3>
+<div id="outline-container-org182bf46" class="outline-3">
+<h3 id="org182bf46"><span class="section-number-3">2.7</span> Mechanism: Limited Direct Execution</h3>
 <div class="outline-text-3" id="text-2-7">
 <p>
 The OS must virtualize the CPU in an efficient manner, while retaining
@@ -631,8 +631,8 @@ hardware support in order to accomplish its work effectively.
 </p>
 </div>
 </div>
-<div id="outline-container-org9721c5f" class="outline-3">
-<h3 id="org9721c5f"><span class="section-number-3">2.8</span> Access Control</h3>
+<div id="outline-container-orgb642de2" class="outline-3">
+<h3 id="orgb642de2"><span class="section-number-3">2.8</span> Access Control</h3>
 <div class="outline-text-3" id="text-2-8">
 <p>
 In <i>user mode</i>, applications do not have full access to hardware
@@ -655,8 +655,8 @@ events occur. One such example is the hard-disk interrupt.
 </p>
 </div>
 </div>
-<div id="outline-container-orgdd45a67" class="outline-3">
-<h3 id="orgdd45a67"><span class="section-number-3">2.9</span> General System Call Mechanism</h3>
+<div id="outline-container-org2cc9529" class="outline-3">
+<h3 id="org2cc9529"><span class="section-number-3">2.9</span> General System Call Mechanism</h3>
 <div class="outline-text-3" id="text-2-9">
 <ol class="org-ol">
 <li>User program invokes the library call, using the normal function
@@ -678,12 +678,12 @@ return mechanism</li>
 </div>
 </div>
 
-<div id="outline-container-orgf57a0d6" class="outline-3">
-<h3 id="orgf57a0d6"><span class="section-number-3">2.10</span> Switching between processes</h3>
+<div id="outline-container-org42160db" class="outline-3">
+<h3 id="org42160db"><span class="section-number-3">2.10</span> Switching between processes</h3>
 <div class="outline-text-3" id="text-2-10">
 </div>
-<div id="outline-container-org21ec7d3" class="outline-4">
-<h4 id="org21ec7d3"><span class="section-number-4">2.10.1</span> Cooperative Approach</h4>
+<div id="outline-container-org3f9cc5e" class="outline-4">
+<h4 id="org3f9cc5e"><span class="section-number-4">2.10.1</span> Cooperative Approach</h4>
 <div class="outline-text-4" id="text-2-10-1">
 <p>
 Processes transfer control of the CPU to the OS by making system
@@ -693,8 +693,8 @@ or an illegal operation of some kind to take place.
 </div>
 </div>
 
-<div id="outline-container-org1bf3ebe" class="outline-4">
-<h4 id="org1bf3ebe"><span class="section-number-4">2.10.2</span> Non-cooperative Approach</h4>
+<div id="outline-container-orgc9ccc30" class="outline-4">
+<h4 id="orgc9ccc30"><span class="section-number-4">2.10.2</span> Non-cooperative Approach</h4>
 <div class="outline-text-4" id="text-2-10-2">
 <p>
 The question is: what ca the OS do to ensure that a rogue process
@@ -728,8 +728,8 @@ executing process. This includes:
 </div>
 </div>
 
-<div id="outline-container-org1d85960" class="outline-3">
-<h3 id="org1d85960"><span class="section-number-3">2.11</span> Exception and Interrupts</h3>
+<div id="outline-container-orgaa704e9" class="outline-3">
+<h3 id="orgaa704e9"><span class="section-number-3">2.11</span> Exception and Interrupts</h3>
 <div class="outline-text-3" id="text-2-11">
 <p>
 Executing a machine level instruction can lead to exceptions, for
@@ -765,8 +765,8 @@ A handler does the following:
 </div>
 </div>
 
-<div id="outline-container-org36a38d5" class="outline-2">
-<h2 id="org36a38d5"><span class="section-number-2">3</span> Scheduling</h2>
+<div id="outline-container-org1077fd6" class="outline-2">
+<h2 id="org1077fd6"><span class="section-number-2">3</span> Scheduling</h2>
 <div class="outline-text-2" id="text-3">
 <p>
 Assumptions made:
@@ -779,8 +779,8 @@ Assumptions made:
 </ol>
 </div>
 
-<div id="outline-container-orgb14f89e" class="outline-3">
-<h3 id="orgb14f89e"><span class="section-number-3">3.1</span> Scheduling Metrics</h3>
+<div id="outline-container-orge8bbb83" class="outline-3">
+<h3 id="orge8bbb83"><span class="section-number-3">3.1</span> Scheduling Metrics</h3>
 <div class="outline-text-3" id="text-3-1">
 <ol class="org-ol">
 <li>Turn-around time</li>
@@ -788,8 +788,8 @@ Assumptions made:
 </div>
 </div>
 
-<div id="outline-container-org260bb30" class="outline-3">
-<h3 id="org260bb30"><span class="section-number-3">3.2</span> First Come First Served (FCFS)</h3>
+<div id="outline-container-org5bb517e" class="outline-3">
+<h3 id="org5bb517e"><span class="section-number-3">3.2</span> First Come First Served (FCFS)</h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Example:
@@ -803,16 +803,16 @@ Average Turnaround time:
 (10 + 20 + 30)/3 = 20
 </p>
 </div>
-<div id="outline-container-orgb0ad224" class="outline-4">
-<h4 id="orgb0ad224"><span class="section-number-4">3.2.1</span> Pros</h4>
+<div id="outline-container-orgc77552e" class="outline-4">
+<h4 id="orgc77552e"><span class="section-number-4">3.2.1</span> Pros</h4>
 <div class="outline-text-4" id="text-3-2-1">
 <p>
 Easy to implement
 </p>
 </div>
 </div>
-<div id="outline-container-org1e2ce72" class="outline-4">
-<h4 id="org1e2ce72"><span class="section-number-4">3.2.2</span> Cons</h4>
+<div id="outline-container-org57b489a" class="outline-4">
+<h4 id="org57b489a"><span class="section-number-4">3.2.2</span> Cons</h4>
 <div class="outline-text-4" id="text-3-2-2">
 <p>
 <i>Convoy effect</i>: a number of relatively-short potential consumers
@@ -827,23 +827,23 @@ of a resource get queued behind a heavyweight resource consumer.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf134d83" class="outline-3">
-<h3 id="orgf134d83"><span class="section-number-3">3.3</span> Shortest Job First (SJF)</h3>
+<div id="outline-container-orgc0544d6" class="outline-3">
+<h3 id="orgc0544d6"><span class="section-number-3">3.3</span> Shortest Job First (SJF)</h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Schedule the job that takes the shortest TU.
 </p>
 </div>
-<div id="outline-container-orge9bf204" class="outline-4">
-<h4 id="orge9bf204"><span class="section-number-4">3.3.1</span> Pros</h4>
+<div id="outline-container-orgf71bc2b" class="outline-4">
+<h4 id="orgf71bc2b"><span class="section-number-4">3.3.1</span> Pros</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
 Optimizes for Turnaround time
 </p>
 </div>
 </div>
-<div id="outline-container-orga75084c" class="outline-4">
-<h4 id="orga75084c"><span class="section-number-4">3.3.2</span> Cons</h4>
+<div id="outline-container-org2adaf3b" class="outline-4">
+<h4 id="org2adaf3b"><span class="section-number-4">3.3.2</span> Cons</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <p>
 Relies on unrealistic assumptions. For example, if A takes 100TU, and
@@ -854,24 +854,24 @@ problem again)
 </div>
 </div>
 </div>
-<div id="outline-container-orgb2245dd" class="outline-3">
-<h3 id="orgb2245dd"><span class="section-number-3">3.4</span> Shortest Time-to-Completion First (SRT)</h3>
+<div id="outline-container-orgf613c61" class="outline-3">
+<h3 id="orgf613c61"><span class="section-number-3">3.4</span> Shortest Time-to-Completion First (SRT)</h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Any time a new job enters the system, it determines the job that has
 the least time left, and schedules that one first.
 </p>
 </div>
-<div id="outline-container-org4b1bd32" class="outline-4">
-<h4 id="org4b1bd32"><span class="section-number-4">3.4.1</span> Pros</h4>
+<div id="outline-container-org58ae0f8" class="outline-4">
+<h4 id="org58ae0f8"><span class="section-number-4">3.4.1</span> Pros</h4>
 <div class="outline-text-4" id="text-3-4-1">
 <p>
 Good turnaround time
 </p>
 </div>
 </div>
-<div id="outline-container-org16438a2" class="outline-4">
-<h4 id="org16438a2"><span class="section-number-4">3.4.2</span> Cons</h4>
+<div id="outline-container-orgb6467a9" class="outline-4">
+<h4 id="orgb6467a9"><span class="section-number-4">3.4.2</span> Cons</h4>
 <div class="outline-text-4" id="text-3-4-2">
 <p>
 Bad for response time and interactivity.
@@ -879,8 +879,8 @@ Bad for response time and interactivity.
 </div>
 </div>
 </div>
-<div id="outline-container-org7a480d8" class="outline-3">
-<h3 id="org7a480d8"><span class="section-number-3">3.5</span> Round Robin</h3>
+<div id="outline-container-orgd8678e0" class="outline-3">
+<h3 id="orgd8678e0"><span class="section-number-3">3.5</span> Round Robin</h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Instead of running jobs to completion, RR runs a job for a <i>time
@@ -897,8 +897,8 @@ will be a lot of overhead, and the cost of context switching will
 dominate the overall performance.
 </p>
 </div>
-<div id="outline-container-orgbbae15f" class="outline-4">
-<h4 id="orgbbae15f"><span class="section-number-4">3.5.1</span> Incorporating I/O</h4>
+<div id="outline-container-org187958c" class="outline-4">
+<h4 id="org187958c"><span class="section-number-4">3.5.1</span> Incorporating I/O</h4>
 <div class="outline-text-4" id="text-3-5-1">
 <p>
 By treating each CPU burst as a job, the scheduler makes sure
@@ -908,8 +908,8 @@ processes that are "interactive" get run frequently.
 </div>
 </div>
 
-<div id="outline-container-org1642cd0" class="outline-3">
-<h3 id="org1642cd0"><span class="section-number-3">3.6</span> Multi-level Feedback Queue (MLFQ)</h3>
+<div id="outline-container-orga9e6d4f" class="outline-3">
+<h3 id="orga9e6d4f"><span class="section-number-3">3.6</span> Multi-level Feedback Queue (MLFQ)</h3>
 <div class="outline-text-3" id="text-3-6">
 <ol class="org-ol">
 <li>Optimise <i>turnaround time</i>.</li>
@@ -993,8 +993,8 @@ is reduced</li>
 </ul>
 </div>
 
-<div id="outline-container-orgc18cc50" class="outline-4">
-<h4 id="orgc18cc50"><span class="section-number-4">3.6.1</span> Tuning MLFQ</h4>
+<div id="outline-container-org65815ad" class="outline-4">
+<h4 id="org65815ad"><span class="section-number-4">3.6.1</span> Tuning MLFQ</h4>
 <div class="outline-text-4" id="text-3-6-1">
 <ol class="org-ol">
 <li>Varying time-slice length across different queues. Shorter time
@@ -1006,8 +1006,8 @@ between them makes sense</li>
 </div>
 </div>
 
-<div id="outline-container-org0d8901f" class="outline-3">
-<h3 id="org0d8901f"><span class="section-number-3">3.7</span> Lottery Scheduling</h3>
+<div id="outline-container-org3ba7991" class="outline-3">
+<h3 id="org3ba7991"><span class="section-number-3">3.7</span> Lottery Scheduling</h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 Tickets are used to represent the share of a resource that a process
@@ -1018,8 +1018,8 @@ of the CPU resources.
 </div>
 </div>
 
-<div id="outline-container-orgd508217" class="outline-2">
-<h2 id="orgd508217"><span class="section-number-2">4</span> Concurrency</h2>
+<div id="outline-container-org2265665" class="outline-2">
+<h2 id="org2265665"><span class="section-number-2">4</span> Concurrency</h2>
 <div class="outline-text-2" id="text-4">
 <p>
 Processes take a single physical CPU and turn it into multiple virtual
@@ -1033,8 +1033,8 @@ that of a thread.
 </p>
 </div>
 </div>
-<div id="outline-container-org7cdcfa8" class="outline-2">
-<h2 id="org7cdcfa8"><span class="section-number-2">5</span> Thread</h2>
+<div id="outline-container-org64fce02" class="outline-2">
+<h2 id="org64fce02"><span class="section-number-2">5</span> Thread</h2>
 <div class="outline-text-2" id="text-5">
 <p>
 The state of a single thread is similar to that of a process. It has a
@@ -1049,8 +1049,8 @@ address space for threads remain the same.
 </p>
 </div>
 
-<div id="outline-container-orga56e6e1" class="outline-3">
-<h3 id="orga56e6e1"><span class="section-number-3">5.1</span> Example Thread creation</h3>
+<div id="outline-container-org6c686c9" class="outline-3">
+<h3 id="org6c686c9"><span class="section-number-3">5.1</span> Example Thread creation</h3>
 <div class="outline-text-3" id="text-5-1">
 <div class="org-src-container">
 <pre class="src src-c">#include &lt;stdio.h&gt;
@@ -1079,12 +1079,12 @@ int main (int argc, char* argv[]) {
 </div>
 </div>
 
-<div id="outline-container-orgde42ddb" class="outline-3">
-<h3 id="orgde42ddb"><span class="section-number-3">5.2</span> Issues with Uncontrolled Scheduling</h3>
+<div id="outline-container-orgf06f8d9" class="outline-3">
+<h3 id="orgf06f8d9"><span class="section-number-3">5.2</span> Issues with Uncontrolled Scheduling</h3>
 <div class="outline-text-3" id="text-5-2">
 </div>
-<div id="outline-container-org9017983" class="outline-4">
-<h4 id="org9017983"><span class="section-number-4">5.2.1</span> Race Condition</h4>
+<div id="outline-container-org219ee4b" class="outline-4">
+<h4 id="org219ee4b"><span class="section-number-4">5.2.1</span> Race Condition</h4>
 <div class="outline-text-4" id="text-5-2-1">
 <p>
 Context switches that occur at untimely points in the execution can
@@ -1096,8 +1096,8 @@ within the critical section, others will be prevented from doing so.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd6876cf" class="outline-4">
-<h4 id="orgd6876cf"><span class="section-number-4">5.2.2</span> Key Terms</h4>
+<div id="outline-container-org401734c" class="outline-4">
+<h4 id="org401734c"><span class="section-number-4">5.2.2</span> Key Terms</h4>
 <div class="outline-text-4" id="text-5-2-2">
 <dl class="org-dl">
 <dt>Critical Section</dt><dd>piece of code that accesses a <i>shared</i> resource,
@@ -1115,8 +1115,8 @@ avoid the problems that concurrency yields, such as race conditions</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org3d754fe" class="outline-4">
-<h4 id="org3d754fe"><span class="section-number-4">5.2.3</span> The wish for atomicity</h4>
+<div id="outline-container-org7d71058" class="outline-4">
+<h4 id="org7d71058"><span class="section-number-4">5.2.3</span> The wish for atomicity</h4>
 <div class="outline-text-4" id="text-5-2-3">
 <p>
 What if we had a super-instruction like this:
@@ -1142,8 +1142,8 @@ primitives</i>.
 </div>
 </div>
 </div>
-<div id="outline-container-orgdffd7c9" class="outline-3">
-<h3 id="orgdffd7c9"><span class="section-number-3">5.3</span> Thread API</h3>
+<div id="outline-container-orged322cb" class="outline-3">
+<h3 id="orged322cb"><span class="section-number-3">5.3</span> Thread API</h3>
 <div class="outline-text-3" id="text-5-3">
 <div class="org-src-container">
 <pre class="src src-c">#include &lt;pthread.h&gt;
@@ -1174,8 +1174,8 @@ thread. We can usually pass NULL in.</li>
 <code>pthread_join</code> waits for the thread's completion.
 </p>
 </div>
-<div id="outline-container-org3e38003" class="outline-4">
-<h4 id="org3e38003"><span class="section-number-4">5.3.1</span> Locks API</h4>
+<div id="outline-container-org3a3b39b" class="outline-4">
+<h4 id="org3a3b39b"><span class="section-number-4">5.3.1</span> Locks API</h4>
 <div class="outline-text-4" id="text-5-3-1">
 <div class="org-src-container">
 <pre class="src src-c">int pthread_mutex_lock(pthread_mutex_t *mutex);
@@ -1210,8 +1210,8 @@ timeout or after acquiring the lock, whichever happens first.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfd0da30" class="outline-4">
-<h4 id="orgfd0da30"><span class="section-number-4">5.3.2</span> Condition Variables</h4>
+<div id="outline-container-orgf431df3" class="outline-4">
+<h4 id="orgf431df3"><span class="section-number-4">5.3.2</span> Condition Variables</h4>
 <div class="outline-text-4" id="text-5-3-2">
 <div class="org-src-container">
 <pre class="src src-c">int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);
@@ -1245,8 +1245,8 @@ pthread_mutex_unlock(&amp;lock);
 </div>
 </div>
 </div>
-<div id="outline-container-org4a20766" class="outline-3">
-<h3 id="org4a20766"><span class="section-number-3">5.4</span> Properties of Correct CS Implementation</h3>
+<div id="outline-container-orgfaa41d4" class="outline-3">
+<h3 id="orgfaa41d4"><span class="section-number-3">5.4</span> Properties of Correct CS Implementation</h3>
 <div class="outline-text-3" id="text-5-4">
 <dl class="org-dl">
 <dt>Mutual Exclusion</dt><dd>If process P1 is executing in critical section,
@@ -1261,8 +1261,8 @@ never block other process</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-orgdb404b5" class="outline-3">
-<h3 id="orgdb404b5"><span class="section-number-3">5.5</span> Locks</h3>
+<div id="outline-container-orgc01d316" class="outline-3">
+<h3 id="orgc01d316"><span class="section-number-3">5.5</span> Locks</h3>
 <div class="outline-text-3" id="text-5-5">
 <p>
 Calling the routine <code>lock()</code> tries to acquire the lock; if no other
@@ -1275,8 +1275,8 @@ the lock is simply changed to free, if thee are waiting threads, one
 of them will acquire the lock.
 </p>
 </div>
-<div id="outline-container-org4a2942a" class="outline-4">
-<h4 id="org4a2942a"><span class="section-number-4">5.5.1</span> Pthread Locks</h4>
+<div id="outline-container-orgd78a801" class="outline-4">
+<h4 id="orgd78a801"><span class="section-number-4">5.5.1</span> Pthread Locks</h4>
 <div class="outline-text-4" id="text-5-5-1">
 <p>
 The name that the POSIX library uses for a lock is a <b>mutex</b>, as it is
@@ -1285,8 +1285,8 @@ can be initialized to protect different critical sections.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfc61960" class="outline-4">
-<h4 id="orgfc61960"><span class="section-number-4">5.5.2</span> Evaluating locks</h4>
+<div id="outline-container-orgb4a1d57" class="outline-4">
+<h4 id="orgb4a1d57"><span class="section-number-4">5.5.2</span> Evaluating locks</h4>
 <div class="outline-text-4" id="text-5-5-2">
 <dl class="org-dl">
 <dt>mutual exclusion</dt><dd>does the lock work, preventing multiple threads
@@ -1296,8 +1296,8 @@ from entering a critical section?</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org74d347f" class="outline-4">
-<h4 id="org74d347f"><span class="section-number-4">5.5.3</span> Approach 1: Controlling Interrupts</h4>
+<div id="outline-container-org5452b06" class="outline-4">
+<h4 id="org5452b06"><span class="section-number-4">5.5.3</span> Approach 1: Controlling Interrupts</h4>
 <div class="outline-text-4" id="text-5-5-3">
 <p>
 Using a special hardware instruction, turn off all interrupts during
@@ -1315,16 +1315,16 @@ void unlock() {
 </pre>
 </div>
 </div>
-<div id="outline-container-org4a4664d" class="outline-5">
-<h5 id="org4a4664d"><span class="section-number-5">5.5.3.1</span> Pros</h5>
+<div id="outline-container-org88a1745" class="outline-5">
+<h5 id="org88a1745"><span class="section-number-5">5.5.3.1</span> Pros</h5>
 <div class="outline-text-5" id="text-5-5-3-1">
 <ol class="org-ol">
 <li>Simplicity</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org4e72d27" class="outline-5">
-<h5 id="org4e72d27"><span class="section-number-5">5.5.3.2</span> Cons</h5>
+<div id="outline-container-org75f9f16" class="outline-5">
+<h5 id="org75f9f16"><span class="section-number-5">5.5.3.2</span> Cons</h5>
 <div class="outline-text-5" id="text-5-5-3-2">
 <ol class="org-ol">
 <li>Requires calling thread to perform a <i>privileged</i> operation</li>
@@ -1333,8 +1333,8 @@ void unlock() {
 </div>
 </div>
 </div>
-<div id="outline-container-org62718ab" class="outline-4">
-<h4 id="org62718ab"><span class="section-number-4">5.5.4</span> Approach 2: Test and Set</h4>
+<div id="outline-container-orgd693595" class="outline-4">
+<h4 id="orgd693595"><span class="section-number-4">5.5.4</span> Approach 2: Test and Set</h4>
 <div class="outline-text-4" id="text-5-5-4">
 <p>
 Hardware support for atomicity was created. This is known as the
@@ -1363,8 +1363,8 @@ preemptive scheduler, one that will interrupt a thread via  atimer, in
 order to run a different thread, from time to time.
 </p>
 </div>
-<div id="outline-container-org8183202" class="outline-5">
-<h5 id="org8183202"><span class="section-number-5">5.5.4.1</span> Evaluating the spin lock:</h5>
+<div id="outline-container-org5769fe5" class="outline-5">
+<h5 id="org5769fe5"><span class="section-number-5">5.5.4.1</span> Evaluating the spin lock:</h5>
 <div class="outline-text-5" id="text-5-5-4-1">
 <dl class="org-dl">
 <dt>correctness</dt><dd>YES</dd>
@@ -1382,8 +1382,8 @@ Other hardware primitives one can use to write locks:
 </div>
 </div>
 </div>
-<div id="outline-container-orgbd92a3e" class="outline-4">
-<h4 id="orgbd92a3e"><span class="section-number-4">5.5.5</span> Two Phase Locks</h4>
+<div id="outline-container-org456057f" class="outline-4">
+<h4 id="org456057f"><span class="section-number-4">5.5.5</span> Two Phase Locks</h4>
 <div class="outline-text-4" id="text-5-5-5">
 <p>
 A two-phase lock realises that spinning can be useful, particularly if
@@ -1397,12 +1397,12 @@ becomes free later.
 </div>
 </div>
 </div>
-<div id="outline-container-org8744f1e" class="outline-2">
-<h2 id="org8744f1e"><span class="section-number-2">6</span> Classical Synchronization Problems</h2>
+<div id="outline-container-org3b9670e" class="outline-2">
+<h2 id="org3b9670e"><span class="section-number-2">6</span> Classical Synchronization Problems</h2>
 <div class="outline-text-2" id="text-6">
 </div>
-<div id="outline-container-orgb67cae9" class="outline-3">
-<h3 id="orgb67cae9"><span class="section-number-3">6.1</span> Producer/Consumer</h3>
+<div id="outline-container-orga554269" class="outline-3">
+<h3 id="orga554269"><span class="section-number-3">6.1</span> Producer/Consumer</h3>
 <div class="outline-text-3" id="text-6-1">
 <p>
 Producers and Consumers share a bounded buffer K
@@ -1446,8 +1446,8 @@ while (TRUE) {
 </div>
 </div>
 </div>
-<div id="outline-container-org5d9e077" class="outline-3">
-<h3 id="org5d9e077"><span class="section-number-3">6.2</span> Readers/Writers</h3>
+<div id="outline-container-org19e7473" class="outline-3">
+<h3 id="org19e7473"><span class="section-number-3">6.2</span> Readers/Writers</h3>
 <div class="outline-text-3" id="text-6-2">
 <p>
 Processes share a data structure D
@@ -1486,16 +1486,16 @@ while (true) {
 </div>
 </div>
 </div>
-<div id="outline-container-orgc9c129a" class="outline-3">
-<h3 id="orgc9c129a"><span class="section-number-3">6.3</span> Dining Philosophers</h3>
+<div id="outline-container-orge36009d" class="outline-3">
+<h3 id="orge36009d"><span class="section-number-3">6.3</span> Dining Philosophers</h3>
 <div class="outline-text-3" id="text-6-3">
 <p>
 Philosophers sitting in a circle, requiring resource from both left
 and right side.
 </p>
 </div>
-<div id="outline-container-orgc42b519" class="outline-4">
-<h4 id="orgc42b519"><span class="section-number-4">6.3.1</span> Tanenbaum Solution</h4>
+<div id="outline-container-orgf46f0b8" class="outline-4">
+<h4 id="orgf46f0b8"><span class="section-number-4">6.3.1</span> Tanenbaum Solution</h4>
 <div class="outline-text-4" id="text-6-3-1">
 <div class="org-src-container">
 <pre class="src src-C">#define N 5
@@ -1546,8 +1546,8 @@ void putChpStcks(i) {
 </div>
 </div>
 </div>
-<div id="outline-container-org47e0b67" class="outline-2">
-<h2 id="org47e0b67"><span class="section-number-2">7</span> Address Spaces</h2>
+<div id="outline-container-org3a8f805" class="outline-2">
+<h2 id="org3a8f805"><span class="section-number-2">7</span> Address Spaces</h2>
 <div class="outline-text-2" id="text-7">
 <p>
 While saving and storing register-level state is relatively fast,
@@ -1561,8 +1561,8 @@ The OS will need to create an <b>easy to use</b> abstraction of physical
 memory. This abstraction is called the <i>address space</i>.
 </p>
 </div>
-<div id="outline-container-orgb5638ea" class="outline-3">
-<h3 id="orgb5638ea"><span class="section-number-3">7.1</span> Goals of Virtual Memory</h3>
+<div id="outline-container-org8674b80" class="outline-3">
+<h3 id="org8674b80"><span class="section-number-3">7.1</span> Goals of Virtual Memory</h3>
 <div class="outline-text-3" id="text-7-1">
 <dl class="org-dl">
 <dt>transparency</dt><dd>invisible to the running program, and the program
@@ -1574,8 +1574,8 @@ property of <b>isolation</b> among processes.</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org664acbf" class="outline-3">
-<h3 id="org664acbf"><span class="section-number-3">7.2</span> Types of Memory</h3>
+<div id="outline-container-org2fd59e4" class="outline-3">
+<h3 id="org2fd59e4"><span class="section-number-3">7.2</span> Types of Memory</h3>
 <div class="outline-text-3" id="text-7-2">
 <dl class="org-dl">
 <dt>stack memory</dt><dd>allocations and de-allocations are handled
@@ -1585,8 +1585,8 @@ handled by programmer</dd>
 </dl>
 </div>
 </div>
-<div id="outline-container-org4f8f4d3" class="outline-3">
-<h3 id="org4f8f4d3"><span class="section-number-3">7.3</span> Address translation</h3>
+<div id="outline-container-org8c2c7f0" class="outline-3">
+<h3 id="org8c2c7f0"><span class="section-number-3">7.3</span> Address translation</h3>
 <div class="outline-text-3" id="text-7-3">
 <p>
 The hardware transforms each memory access, changing the virtual
@@ -1595,8 +1595,8 @@ desired information is actually located.
 </p>
 </div>
 </div>
-<div id="outline-container-orgc0e26fa" class="outline-3">
-<h3 id="orgc0e26fa"><span class="section-number-3">7.4</span> 1950's <b>base and bounds</b> technique</h3>
+<div id="outline-container-org4cc85dd" class="outline-3">
+<h3 id="org4cc85dd"><span class="section-number-3">7.4</span> 1950's <b>base and bounds</b> technique</h3>
 <div class="outline-text-3" id="text-7-4">
 <p>
 2 hardware registers in each CPU: the <i>base register</i>, and the <i>bounds
@@ -1642,8 +1642,8 @@ fragmentation</b>.
 </p>
 </div>
 </div>
-<div id="outline-container-org6d789c4" class="outline-3">
-<h3 id="org6d789c4"><span class="section-number-3">7.5</span> Segmentation</h3>
+<div id="outline-container-org7d5ce9b" class="outline-3">
+<h3 id="org7d5ce9b"><span class="section-number-3">7.5</span> Segmentation</h3>
 <div class="outline-text-3" id="text-7-5">
 <p>
 A segment is a contiguous portion of the address space of a particular
@@ -1682,8 +1682,8 @@ offset is added to the base to calculate the correct physical address.
 </p>
 </div>
 </div>
-<div id="outline-container-orgb14e634" class="outline-3">
-<h3 id="orgb14e634"><span class="section-number-3">7.6</span> Sharing</h3>
+<div id="outline-container-orgbda2939" class="outline-3">
+<h3 id="orgbda2939"><span class="section-number-3">7.6</span> Sharing</h3>
 <div class="outline-text-3" id="text-7-6">
 <p>
 To save memory, it useful to share certain memory segments, like
@@ -1703,8 +1703,8 @@ segment.
 </div>
 </div>
 </div>
-<div id="outline-container-org24805ea" class="outline-3">
-<h3 id="org24805ea"><span class="section-number-3">7.7</span> OS support</h3>
+<div id="outline-container-orgbe8859a" class="outline-3">
+<h3 id="orgbe8859a"><span class="section-number-3">7.7</span> OS support</h3>
 <div class="outline-text-3" id="text-7-7">
 <p>
 Physical memory quickly becomes full of little holes of free space,
@@ -1732,8 +1732,8 @@ keep large extents of memory for allocation. Algorithms include:
 </div>
 </div>
 </div>
-<div id="outline-container-org9a39210" class="outline-2">
-<h2 id="org9a39210"><span class="section-number-2">8</span> Free Space Management</h2>
+<div id="outline-container-org4858ab8" class="outline-2">
+<h2 id="org4858ab8"><span class="section-number-2">8</span> Free Space Management</h2>
 <div class="outline-text-2" id="text-8">
 <p>
 A free list contains a set of elements that describe the free space
@@ -1749,8 +1749,8 @@ the header contains the size of the allocated region.
 </pre>
 </div>
 </div>
-<div id="outline-container-orgc4ea29c" class="outline-3">
-<h3 id="orgc4ea29c"><span class="section-number-3">8.1</span> Growing the Heap</h3>
+<div id="outline-container-org32b563f" class="outline-3">
+<h3 id="org32b563f"><span class="section-number-3">8.1</span> Growing the Heap</h3>
 <div class="outline-text-3" id="text-8-1">
 <p>
 Traditional allocators start of with a small heap. When more memory is
@@ -1760,12 +1760,12 @@ the requesting process, and returns the value of the end of the new heap.
 </p>
 </div>
 </div>
-<div id="outline-container-orgd46b73e" class="outline-3">
-<h3 id="orgd46b73e"><span class="section-number-3">8.2</span> Free Space Allocation Strategies</h3>
+<div id="outline-container-org5693c2f" class="outline-3">
+<h3 id="org5693c2f"><span class="section-number-3">8.2</span> Free Space Allocation Strategies</h3>
 <div class="outline-text-3" id="text-8-2">
 </div>
-<div id="outline-container-orgb229a58" class="outline-4">
-<h4 id="orgb229a58"><span class="section-number-4">8.2.1</span> Best fit</h4>
+<div id="outline-container-org5ddeb37" class="outline-4">
+<h4 id="org5ddeb37"><span class="section-number-4">8.2.1</span> Best fit</h4>
 <div class="outline-text-4" id="text-8-2-1">
 <ol class="org-ol">
 <li>Search the free list and find chunks of free memory that are as big
@@ -1779,8 +1779,8 @@ required to find the correct free block.
 </p>
 </div>
 </div>
-<div id="outline-container-org40d541e" class="outline-4">
-<h4 id="org40d541e"><span class="section-number-4">8.2.2</span> Worst fit</h4>
+<div id="outline-container-org62e9e63" class="outline-4">
+<h4 id="org62e9e63"><span class="section-number-4">8.2.2</span> Worst fit</h4>
 <div class="outline-text-4" id="text-8-2-2">
 <ol class="org-ol">
 <li>Find the largest chunk</li>
@@ -1794,8 +1794,8 @@ studies have shown this still leads to excess fragmentation.
 </p>
 </div>
 </div>
-<div id="outline-container-org38403f3" class="outline-4">
-<h4 id="org38403f3"><span class="section-number-4">8.2.3</span> Next Fit</h4>
+<div id="outline-container-org7a33354" class="outline-4">
+<h4 id="org7a33354"><span class="section-number-4">8.2.3</span> Next Fit</h4>
 <div class="outline-text-4" id="text-8-2-3">
 <ol class="org-ol">
 <li>Keep an extra pointer to the location within the list where one was
@@ -1808,8 +1808,8 @@ Performance similar to first fit.
 </p>
 </div>
 </div>
-<div id="outline-container-org7de9a2a" class="outline-4">
-<h4 id="org7de9a2a"><span class="section-number-4">8.2.4</span> Segregated Lists</h4>
+<div id="outline-container-orga43474d" class="outline-4">
+<h4 id="orga43474d"><span class="section-number-4">8.2.4</span> Segregated Lists</h4>
 <div class="outline-text-4" id="text-8-2-4">
 <p>
 If a particular application has one (or a few) popular-size requests
@@ -1824,8 +1824,8 @@ kernel objects that are likely to be requested frequently.
 </p>
 </div>
 </div>
-<div id="outline-container-org0166783" class="outline-4">
-<h4 id="org0166783"><span class="section-number-4">8.2.5</span> Buddy Allocation</h4>
+<div id="outline-container-orga4e2b76" class="outline-4">
+<h4 id="orga4e2b76"><span class="section-number-4">8.2.5</span> Buddy Allocation</h4>
 <div class="outline-text-4" id="text-8-2-5">
 <p>
 Free memory is conceptually thought of as one big space of size
@@ -1858,8 +1858,8 @@ free. If so, it can coalesce the 2 blocks.
 </div>
 </div>
 </div>
-<div id="outline-container-org4b8162c" class="outline-2">
-<h2 id="org4b8162c"><span class="section-number-2">9</span> Paging</h2>
+<div id="outline-container-orgb072c89" class="outline-2">
+<h2 id="orgb072c89"><span class="section-number-2">9</span> Paging</h2>
 <div class="outline-text-2" id="text-9">
 <p>
 Instead of splitting the address space into logical segments, we
@@ -1878,8 +1878,8 @@ a <b>page table</b>. The page table stores <b>address translations</b> for each
 of the virtual pages of the address space.
 </p>
 </div>
-<div id="outline-container-orgc7800ba" class="outline-3">
-<h3 id="orgc7800ba"><span class="section-number-3">9.1</span> Address Translation</h3>
+<div id="outline-container-orgd903102" class="outline-3">
+<h3 id="orgd903102"><span class="section-number-3">9.1</span> Address Translation</h3>
 <div class="outline-text-3" id="text-9-1">
 <p>
 To translate a virtual address, the address is split into 2
@@ -1904,8 +1904,8 @@ do just that, giving us a 2 bit VPN.
 </p>
 </div>
 </div>
-<div id="outline-container-orgbb9a94a" class="outline-3">
-<h3 id="orgbb9a94a"><span class="section-number-3">9.2</span> Inside Page Tables</h3>
+<div id="outline-container-org7af8848" class="outline-3">
+<h3 id="org7af8848"><span class="section-number-3">9.2</span> Inside Page Tables</h3>
 <div class="outline-text-3" id="text-9-2">
 <p>
 The simplest form of a page table is the <b>linear page table</b>, which is
@@ -1939,8 +1939,8 @@ swapping out the least popular pages).</dd>
 </div>
 </div>
 </div>
-<div id="outline-container-orgfc791ef" class="outline-3">
-<h3 id="orgfc791ef"><span class="section-number-3">9.3</span> How Paging Works</h3>
+<div id="outline-container-org1ff0623" class="outline-3">
+<h3 id="org1ff0623"><span class="section-number-3">9.3</span> How Paging Works</h3>
 <div class="outline-text-3" id="text-9-3">
 <p>
 Examine the following instruction: <code>movl 21, %eax</code>. We assume the
@@ -1974,8 +1974,8 @@ reference, which is very costly.
 </p>
 </div>
 </div>
-<div id="outline-container-org4e12994" class="outline-3">
-<h3 id="org4e12994"><span class="section-number-3">9.4</span> Speeding up Paging with TLBs</h3>
+<div id="outline-container-org855911c" class="outline-3">
+<h3 id="org855911c"><span class="section-number-3">9.4</span> Speeding up Paging with TLBs</h3>
 <div class="outline-text-3" id="text-9-4">
 <p>
 Paging alone shows high performance overheads. This is because the
@@ -1993,8 +1993,8 @@ A TLB is a part of the chip's <b>memory management unit (MMU)</b>, and is a
 hardware cache of popular virtual-to-physical address translations.
 </p>
 </div>
-<div id="outline-container-orgf75c455" class="outline-4">
-<h4 id="orgf75c455"><span class="section-number-4">9.4.1</span> TLB Basic Algorithm</h4>
+<div id="outline-container-org67f77f0" class="outline-4">
+<h4 id="org67f77f0"><span class="section-number-4">9.4.1</span> TLB Basic Algorithm</h4>
 <div class="outline-text-4" id="text-9-4-1">
 <p>
 We first look up the virtual address in the TLB. If it exists in the
@@ -2019,8 +2019,8 @@ accessed again.</li>
 </ol>
 </div>
 </div>
-<div id="outline-container-org22808fd" class="outline-4">
-<h4 id="org22808fd"><span class="section-number-4">9.4.2</span> Managing TLB Misses</h4>
+<div id="outline-container-orgbd4ffa7" class="outline-4">
+<h4 id="orgbd4ffa7"><span class="section-number-4">9.4.2</span> Managing TLB Misses</h4>
 <div class="outline-text-4" id="text-9-4-2">
 <p>
 Old architectures had hardware -managed TLBs, where the hardware new
@@ -2045,8 +2045,8 @@ the rest.
 </p>
 </div>
 </div>
-<div id="outline-container-orga5d96ed" class="outline-4">
-<h4 id="orga5d96ed"><span class="section-number-4">9.4.3</span> Handling Context Switches</h4>
+<div id="outline-container-orgf220bf2" class="outline-4">
+<h4 id="orgf220bf2"><span class="section-number-4">9.4.3</span> Handling Context Switches</h4>
 <div class="outline-text-4" id="text-9-4-3">
 <p>
 The VPN-PFN mapping for different processes are different, and the TLB
@@ -2071,8 +2071,8 @@ identifier, like the PID but with fewer bits.
 </div>
 </div>
 </div>
-<div id="outline-container-org2ec2096" class="outline-4">
-<h4 id="org2ec2096"><span class="section-number-4">9.4.4</span> TLB Replacement Policies</h4>
+<div id="outline-container-orgf20fddd" class="outline-4">
+<h4 id="orgf20fddd"><span class="section-number-4">9.4.4</span> TLB Replacement Policies</h4>
 <div class="outline-text-4" id="text-9-4-4">
 <ol class="org-ol">
 <li>Least Recently Used (LRU)
@@ -2087,16 +2087,16 @@ identifier, like the PID but with fewer bits.
 </div>
 </div>
 </div>
-<div id="outline-container-org4550d2c" class="outline-3">
-<h3 id="org4550d2c"><span class="section-number-3">9.5</span> Making Page Tables Smaller</h3>
+<div id="outline-container-orgba4f5c0" class="outline-3">
+<h3 id="orgba4f5c0"><span class="section-number-3">9.5</span> Making Page Tables Smaller</h3>
 <div class="outline-text-3" id="text-9-5">
 <p>
 Simple array-based page tables are too big, taking up too much memory
 on physical systems.
 </p>
 </div>
-<div id="outline-container-orga8e8467" class="outline-4">
-<h4 id="orga8e8467"><span class="section-number-4">9.5.1</span> Bigger Pages</h4>
+<div id="outline-container-org81e1842" class="outline-4">
+<h4 id="org81e1842"><span class="section-number-4">9.5.1</span> Bigger Pages</h4>
 <div class="outline-text-4" id="text-9-5-1">
 <p>
 Using larger pages will lead to a reduction in the number of page
@@ -2105,8 +2105,8 @@ leads to a lot of wastage in each page (<b>internal fragmentation</b>).
 </p>
 </div>
 </div>
-<div id="outline-container-org785ab78" class="outline-4">
-<h4 id="org785ab78"><span class="section-number-4">9.5.2</span> Paging and Segments</h4>
+<div id="outline-container-orgd6b1fa0" class="outline-4">
+<h4 id="orgd6b1fa0"><span class="section-number-4">9.5.2</span> Paging and Segments</h4>
 <div class="outline-text-4" id="text-9-5-2">
 <p>
 Instead of having a single page table for the entire address space of
@@ -2129,8 +2129,8 @@ and if the heap is rarely used, for example, then there is wastage.
 </p>
 </div>
 </div>
-<div id="outline-container-org781155e" class="outline-4">
-<h4 id="org781155e"><span class="section-number-4">9.5.3</span> Multi-level Page Tables</h4>
+<div id="outline-container-org896e172" class="outline-4">
+<h4 id="org896e172"><span class="section-number-4">9.5.3</span> Multi-level Page Tables</h4>
 <div class="outline-text-4" id="text-9-5-3">
 
 <div class="figure">
@@ -2176,8 +2176,8 @@ VPN even further:
 </div>
 </div>
 </div>
-<div id="outline-container-org6cf1c98" class="outline-4">
-<h4 id="org6cf1c98"><span class="section-number-4">9.5.4</span> Inverted Page Tables</h4>
+<div id="outline-container-org69989d6" class="outline-4">
+<h4 id="org69989d6"><span class="section-number-4">9.5.4</span> Inverted Page Tables</h4>
 <div class="outline-text-4" id="text-9-5-4">
 <p>
 Instead of having one page table per process, we can have a single
@@ -2192,8 +2192,8 @@ tables are often built over the base structure to speed lookups.
 </div>
 </div>
 </div>
-<div id="outline-container-org826208f" class="outline-2">
-<h2 id="org826208f"><span class="section-number-2">10</span> Beyond Physical Memory</h2>
+<div id="outline-container-org51cb05a" class="outline-2">
+<h2 id="org51cb05a"><span class="section-number-2">10</span> Beyond Physical Memory</h2>
 <div class="outline-text-2" id="text-10">
 <p>
 Sometimes the address space of a running process does not fit into
@@ -2202,12 +2202,12 @@ hierachy, some place to stash portions of the address space that is
 currently not in use. We call this the <b>swap space</b>.
 </p>
 </div>
-<div id="outline-container-org2ebf450" class="outline-3">
-<h3 id="org2ebf450"><span class="section-number-3">10.1</span> Mechanisms</h3>
+<div id="outline-container-org8ceb966" class="outline-3">
+<h3 id="org8ceb966"><span class="section-number-3">10.1</span> Mechanisms</h3>
 <div class="outline-text-3" id="text-10-1">
 </div>
-<div id="outline-container-orgbc69999" class="outline-4">
-<h4 id="orgbc69999"><span class="section-number-4">10.1.1</span> Swap Space</h4>
+<div id="outline-container-orgdbd5bec" class="outline-4">
+<h4 id="orgdbd5bec"><span class="section-number-4">10.1.1</span> Swap Space</h4>
 <div class="outline-text-4" id="text-10-1-1">
 <p>
 <b>Swap space</b> is some space on disk reserved for moving pages back and
@@ -2220,8 +2220,8 @@ stash.
 </p>
 </div>
 </div>
-<div id="outline-container-org5bce792" class="outline-4">
-<h4 id="org5bce792"><span class="section-number-4">10.1.2</span> The Present Bit</h4>
+<div id="outline-container-org97c249c" class="outline-4">
+<h4 id="org97c249c"><span class="section-number-4">10.1.2</span> The Present Bit</h4>
 <div class="outline-text-4" id="text-10-1-2">
 <p>
 When a TLB miss occurs, the OS will have to look at the swap space
@@ -2247,8 +2247,8 @@ page.
 </p>
 </div>
 </div>
-<div id="outline-container-orgff7d3d4" class="outline-4">
-<h4 id="orgff7d3d4"><span class="section-number-4">10.1.3</span> Page-replacement Policy</h4>
+<div id="outline-container-org0f9f3a9" class="outline-4">
+<h4 id="org0f9f3a9"><span class="section-number-4">10.1.3</span> Page-replacement Policy</h4>
 <div class="outline-text-4" id="text-10-1-3">
 <p>
 When memory is full, upon a page fault, the OS will have to decide
@@ -2275,8 +2275,8 @@ RetryInstruction();
 </div>
 </div>
 
-<div id="outline-container-org1b5d57a" class="outline-4">
-<h4 id="org1b5d57a"><span class="section-number-4">10.1.4</span> When Replacements Really Occur</h4>
+<div id="outline-container-org33529f8" class="outline-4">
+<h4 id="org33529f8"><span class="section-number-4">10.1.4</span> When Replacements Really Occur</h4>
 <div class="outline-text-4" id="text-10-1-4">
 <p>
 The OS actively keeps a small portion of memory free. To do this, the
@@ -2300,8 +2300,8 @@ the page daemon free up enough memory if the LW threshold is hit.
 </div>
 </div>
 
-<div id="outline-container-orgba3c821" class="outline-3">
-<h3 id="orgba3c821"><span class="section-number-3">10.2</span> Policies</h3>
+<div id="outline-container-orgaebbafe" class="outline-3">
+<h3 id="orgaebbafe"><span class="section-number-3">10.2</span> Policies</h3>
 <div class="outline-text-3" id="text-10-2">
 <p>
 The main memory can be viewed as a cache mechanism. Knowing the number
@@ -2318,8 +2318,8 @@ The first few accesses when the cache begins in an empty state is a
 </p>
 </div>
 
-<div id="outline-container-orgb1f1b16" class="outline-4">
-<h4 id="orgb1f1b16"><span class="section-number-4">10.2.1</span> FIFO</h4>
+<div id="outline-container-org2ceea40" class="outline-4">
+<h4 id="org2ceea40"><span class="section-number-4">10.2.1</span> FIFO</h4>
 <div class="outline-text-4" id="text-10-2-1">
 <p>
 In FIFO replacement, pages are placed in a queue when they enter the
@@ -2328,8 +2328,8 @@ queue is evicted.
 </p>
 </div>
 
-<div id="outline-container-org1690dc3" class="outline-5">
-<h5 id="org1690dc3"><span class="section-number-5">10.2.1.1</span> Belady's anomaly</h5>
+<div id="outline-container-orgec99e53" class="outline-5">
+<h5 id="orgec99e53"><span class="section-number-5">10.2.1.1</span> Belady's anomaly</h5>
 <div class="outline-text-5" id="text-10-2-1-1">
 <p>
 One would normally expect the cache hit rate to increase when the
@@ -2347,7 +2347,7 @@ others) do not obey this stack property.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-25 Sat 15:04</p>
+<p class="date">Created: 2018-08-30 Thu 15:33</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

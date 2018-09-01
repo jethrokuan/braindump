@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-08-28 Tue 16:57 -->
+<!-- 2018-09-01 Sat 17:07 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tensorflow</title>
@@ -69,21 +69,55 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgeb3da25">1. TF Slim</a>
+<li><a href="#org81096aa">1. What is Tensorflow</a>
 <ul>
-<li><a href="#org65474cc">1.1. <code>arg_scope</code></a></li>
+<li><a href="#org567b406">1.1. Glossary</a></li>
+</ul>
+</li>
+<li><a href="#orgeb3da25">2. TF Slim</a>
+<ul>
+<li><a href="#org65474cc">2.1. <code>arg_scope</code></a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-orgeb3da25" class="outline-2">
-<h2 id="orgeb3da25"><span class="section-number-2">1</span> TF Slim</h2>
+<div id="outline-container-org81096aa" class="outline-2">
+<h2 id="org81096aa"><span class="section-number-2">1</span> What is Tensorflow</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+TensorFlow is open-source software library for numerical computation.
+A graph of computations is defined, and TensorFlow builds an optimized
+graph from that.
+</p>
+
+<p>
+TensorFlow breaks up the graph into several chunks and run them in
+parallel across multiple CPUs or GPUs where possible, and also
+supports distributed computing.
+</p>
+</div>
+<div id="outline-container-org567b406" class="outline-3">
+<h3 id="org567b406"><span class="section-number-3">1.1</span> Glossary</h3>
+<div class="outline-text-3" id="text-1-1">
+<dl class="org-dl">
+<dt>tensor</dt><dd>A tf.Tensor object represents a partially defined
+computation that will eventually produce a value.
+TensorFlow programs work by first building a graph of
+tf.Tensor objects, detailing how each tensor is computed
+based on the other available tensors and then by running
+parts of this graph to achieve the desired results.</dd>
+</dl>
+</div>
+</div>
+</div>
+<div id="outline-container-orgeb3da25" class="outline-2">
+<h2 id="orgeb3da25"><span class="section-number-2">2</span> TF Slim</h2>
+<div class="outline-text-2" id="text-2">
 </div>
 <div id="outline-container-org65474cc" class="outline-3">
-<h3 id="org65474cc"><span class="section-number-3">1.1</span> <code>arg_scope</code></h3>
-<div class="outline-text-3" id="text-1-1">
+<h3 id="org65474cc"><span class="section-number-3">2.1</span> <code>arg_scope</code></h3>
+<div class="outline-text-3" id="text-2-1">
 <p>
 <a href="https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg_scope.py">https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg_scope.py</a>
 </p>
@@ -159,7 +193,7 @@ def conv2d(*args, **kwargs)
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-08-28 Tue 16:57</p>
+<p class="date">Created: 2018-09-01 Sat 17:07</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
