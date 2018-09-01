@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-09-01 Sat 17:07 -->
+<!-- 2018-09-01 Sat 17:09 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Artificial Intelligence</title>
@@ -91,20 +91,1754 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#org10f1572">1. Decision Networks</a></li>
-<li><a href="#orgb473de0">2. </a></li>
-<li><a href="#orgd7c4b89">3. Information Value Theory</a>
+<li><a href="#orgb729600">1. What is Artificial Intelligence?</a>
 <ul>
-<li><a href="#org93ada95">3.1. Properties of the value of information</a></li>
-<li><a href="#org1145a92">3.2. Information Gathering Agents</a></li>
+<li><a href="#org09cf127">1.1. Acting Humanly: Turing Test</a></li>
+<li><a href="#org66769c0">1.2. Thinking Humanly</a></li>
+<li><a href="#orgacade4c">1.3. Thinking rationally</a></li>
+<li><a href="#org2458aff">1.4. Acting Rationally</a></li>
+</ul>
+</li>
+<li><a href="#org25569b5">2. Intelligent Agents</a>
+<ul>
+<li><a href="#orgbace678">2.1. Rational Agents</a></li>
+<li><a href="#org1d4e91b">2.2. Exploration vs Exploitation</a></li>
+<li><a href="#org1a9102d">2.3. Specifying Task Environment (PEAS)</a></li>
+<li><a href="#org88b0ec8">2.4. Properties of Task Environments</a></li>
+<li><a href="#org3374065">2.5. Table-Driven Agent</a></li>
+<li><a href="#org1ba25a2">2.6. Reflex agents</a></li>
+<li><a href="#org8b4443c">2.7. Model-based Reflex Agents</a></li>
+<li><a href="#orgb3328ee">2.8. Goal-based agents</a></li>
+<li><a href="#org7b2d55d">2.9. Utility-based agents</a></li>
+<li><a href="#org3546d1f">2.10. Learning agents</a></li>
+<li><a href="#org18e7bca">2.11. State representations</a>
+<ul>
+<li><a href="#org1405789">2.11.1. Atomic Representation</a></li>
+<li><a href="#org6a10e7c">2.11.2. Factored Representation</a></li>
+<li><a href="#orgd97f7a6">2.11.3. Structured Representations</a></li>
+<li><a href="#orgcab0e15">2.11.4. Implications</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgccdfe89">3. Problem-Solving</a></li>
+<li><a href="#org1d56d03">4. Classical Search</a>
+<ul>
+<li><a href="#orgfc141dd">4.1. How Search Algorithms Work</a></li>
+<li><a href="#org3ef2508">4.2. Measuring Performance</a></li>
+<li><a href="#orgb9fae86">4.3. Uninformed Search Strategies</a>
+<ul>
+<li><a href="#org464730e">4.3.1. Breadth-first Search</a></li>
+<li><a href="#orgc7fedfd">4.3.2. Uniform-cost Search</a></li>
+<li><a href="#org1cc7963">4.3.3. Depth-first Search</a></li>
+<li><a href="#org344370f">4.3.4. Depth-limited Search</a></li>
+<li><a href="#org090f16b">4.3.5. Iterative Deepening Depth-first Search</a></li>
+<li><a href="#org1ffd1fa">4.3.6. Bidirectional Search</a></li>
+</ul>
+</li>
+<li><a href="#org5916326">4.4. Informed Search Strategies</a>
+<ul>
+<li><a href="#orgd4cd612">4.4.1. Greedy best-first search</a></li>
+<li><a href="#org006e118">4.4.2. A* search</a></li>
+</ul>
+</li>
+<li><a href="#org2e40a8f">4.5. Learning to Search Better</a></li>
+</ul>
+</li>
+<li><a href="#orgaffd399">5. Heuristic Functions</a>
+<ul>
+<li><a href="#orgc19bc8b">5.1. Generating Admissible Heuristics</a>
+<ul>
+<li><a href="#orga017bbd">5.1.1. From Relaxed Problems</a></li>
+<li><a href="#orge46b55f">5.1.2. From Subproblems: Pattern Databases</a></li>
+<li><a href="#org9f57aef">5.1.3. From Experience</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgd1fc00e">6. Beyond Classical Search</a>
+<ul>
+<li><a href="#orgd17220c">6.1. Hill-climbing Search</a>
+<ul>
+<li><a href="#org2774388">6.1.1. Variants</a></li>
+</ul>
+</li>
+<li><a href="#org0defdf3">6.2. Simulated Annealing</a></li>
+<li><a href="#org42b32b0">6.3. Local Beam Search</a></li>
+<li><a href="#orgb67a6a4">6.4. Genetic Algorithms</a></li>
+<li><a href="#org1d9086c">6.5. Local Search in Continuous Spaces</a></li>
+<li><a href="#orgefd92a2">6.6. Searching with Non-deterministic Actions</a>
+<ul>
+<li><a href="#org9eef900">6.6.1. AND-OR search trees</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgf7b3cb0">7. Adversarial Search</a>
+<ul>
+<li><a href="#org3c56b12">7.1. Optimal Strategy</a></li>
+<li><a href="#org971eb5b">7.2. Alpha-Beta Pruning</a></li>
+</ul>
+</li>
+<li><a href="#org226e3a6">8. Classical Planning</a>
+<ul>
+<li><a href="#org000f5b2">8.1. Complexities of classical planning</a></li>
+<li><a href="#org0882257">8.2. State-space search for planning</a></li>
+<li><a href="#orgf80bdeb">8.3. Heuristics for planning</a></li>
+<li><a href="#orgcbd5953">8.4. Other classical planning approaches</a></li>
+</ul>
+</li>
+<li><a href="#org71cf213">9. Decision Theory</a>
+<ul>
+<li><a href="#org9622df5">9.1. Combining beliefs and desires under uncertainty</a></li>
+<li><a href="#orgeed246f">9.2. Axioms of Utility Theory</a></li>
+<li><a href="#org216e92c">9.3. Utility assessment and utility scales</a></li>
+<li><a href="#org09bfbc7">9.4. Multi-attribute utility functions</a>
+<ul>
+<li><a href="#org8697d13">9.4.1. Dominance</a></li>
+<li><a href="#org86c519f">9.4.2. Preference structure and multi-attribute utility</a></li>
+<li><a href="#org10f1572">9.4.3. Decision Networks</a></li>
+<li><a href="#orgd7c4b89">9.4.4. Information Value Theory</a>
+<ul>
+<li><a href="#org93ada95">9.4.4.1. Properties of the value of information</a></li>
+<li><a href="#org1145a92">9.4.4.2. Information Gathering Agents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#orgb713dd4">10. RANDOM</a>
+<ul>
+<li><a href="#org659484b">10.1. Simon's Ant</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-<div id="outline-container-org10f1572" class="outline-2">
-<h2 id="org10f1572"><span class="section-number-2">1</span> Decision Networks</h2>
+<div id="outline-container-orgb729600" class="outline-2">
+<h2 id="orgb729600"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
 <div class="outline-text-2" id="text-1">
+<p>
+Designing agents that act rationally (e.g. through maximising a reward
+function).
+</p>
+
+<p>
+Humans often act in ways that do not maximise their own benefit
+(irrational).
+</p>
+</div>
+<div id="outline-container-org09cf127" class="outline-3">
+<h3 id="org09cf127"><span class="section-number-3">1.1</span> Acting Humanly: Turing Test</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+A computer would require:
+</p>
+
+<ul class="org-ul">
+<li>natural language processing</li>
+<li>knowledge representation</li>
+<li>automated reasoning</li>
+<li>machine learning</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org66769c0" class="outline-3">
+<h3 id="org66769c0"><span class="section-number-3">1.2</span> Thinking Humanly</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Cognitive science brings together computer models and experimental
+techniques in psychology to construct testable and provable theories
+of the human mind.
+</p>
+</div>
+</div>
+<div id="outline-container-orgacade4c" class="outline-3">
+<h3 id="orgacade4c"><span class="section-number-3">1.3</span> Thinking rationally</h3>
+<div class="outline-text-3" id="text-1-3">
+<p>
+Taking informal knowledge and expressing it in logical terms.
+</p>
+</div>
+</div>
+<div id="outline-container-org2458aff" class="outline-3">
+<h3 id="org2458aff"><span class="section-number-3">1.4</span> Acting Rationally</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+A rational agent is one that acts so as to achieve the best outcome
+or,when there is uncertainty, the best expected outcome.
+</p>
+
+<p>
+An agent is a function from percept histories to actions, i.e. \(f: P^*
+\rightarrow A\). We seek the best-performing agent for a certain task;
+must consider computation limits.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org25569b5" class="outline-2">
+<h2 id="org25569b5"><span class="section-number-2">2</span> Intelligent Agents</h2>
+<div class="outline-text-2" id="text-2">
+<ul class="org-ul">
+<li>Agents perceive the environment through sensors</li>
+<li>Agents act upon the environment through actuators</li>
+</ul>
+</div>
+<div id="outline-container-orgbace678" class="outline-3">
+<h3 id="orgbace678"><span class="section-number-3">2.1</span> Rational Agents</h3>
+<div class="outline-text-3" id="text-2-1">
+<ul class="org-ul">
+<li>For each possible percept sequence, select an action that is
+expected to maximise its performance measure. The performance
+measure is a function of a given sequence of environment states.</li>
+<li>Given the evidence provided by the percept sequence and whatever
+built-in knowledge the agent has.</li>
+<li>Agents can perform actions that help them gather useful information
+(exploration)</li>
+<li>An agent is <i>autonomous</i> if its behaviour is determined by its own
+experience (with ability to learn and adapt)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org1d4e91b" class="outline-3">
+<h3 id="org1d4e91b"><span class="section-number-3">2.2</span> Exploration vs Exploitation</h3>
+<div class="outline-text-3" id="text-2-2">
+<p>
+Doing actions that modify future percepts (information gathering) is
+an important part of rationality. In most scenarios, agents don't know
+the entire environment <i>a priori</i>.
+</p>
+</div>
+</div>
+<div id="outline-container-org1a9102d" class="outline-3">
+<h3 id="org1a9102d"><span class="section-number-3">2.3</span> Specifying Task Environment (PEAS)</h3>
+<div class="outline-text-3" id="text-2-3">
+<ul class="org-ul">
+<li>Performance measure</li>
+<li>Environment</li>
+<li>Actuators</li>
+<li>Sensors</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org88b0ec8" class="outline-3">
+<h3 id="org88b0ec8"><span class="section-number-3">2.4</span> Properties of Task Environments</h3>
+<div class="outline-text-3" id="text-2-4">
+<dl class="org-dl">
+<dt>Fully observable</dt><dd>whether an agent's sensors gives it access to
+the complete state of the environment at any given point in time</dd>
+<dt>Deterministic</dt><dd>if the next state is completely determined by the
+current environment. Otherwise it is <b>stochastic</b>.</dd>
+<dt>Episodic</dt><dd>whether an agents experience is divided into atomic
+episodes. In each episode, an agent receives a percept
+and performs a single action. In <b>sequential</b>
+environments short-term actions can have long-term
+consequences. For this reason, episodic environments are
+generally simpler.</dd>
+<dt>Static</dt><dd>whether the environment can change while the agent is
+deliberating.</dd>
+<dt>Discrete</dt><dd>whether the state of the environment, how time is
+handled, and the percepts and actions of the agent
+discretely quantized.</dd>
+<dt>Single agent</dt><dd>in some environments, for example chess, there are
+multiple agents acting in the same environment.
+<dl class="org-dl">
+<dt>cooperative</dt><dd>if the two agents need to work together.</dd>
+<dt>competitive</dt><dd>if the two agents are working against each other.</dd>
+</dl></dd>
+<dt>Known</dt><dd>whether the agent knows the outcome of its actions.</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org3374065" class="outline-3">
+<h3 id="org3374065"><span class="section-number-3">2.5</span> Table-Driven Agent</h3>
+<div class="outline-text-3" id="text-2-5">
+<p>
+Simple to implement, and works. However, the number of table entries
+is exponential in time: \(\text{#percepts}^\text{time}\). Hence it is
+doomed to failure. The key challenge to AI is to produce rational
+behaviour from a small program rather than a vast table.
+</p>
+</div>
+</div>
+<div id="outline-container-org1ba25a2" class="outline-3">
+<h3 id="org1ba25a2"><span class="section-number-3">2.6</span> Reflex agents</h3>
+<div class="outline-text-3" id="text-2-6">
+<p>
+A simple reflex agent is one that selects actions on the basis of the
+<i>current</i> percept, ignoring the rest of the percept history. A
+<i>condition-action</i> rule is triggered upon processing the current
+percept. E.g. <b>if</b> the car in front is braking, <b>then</b> brake too.
+</p>
+
+<p>
+Basing actions on only the current percept can be highly limiting, and
+can also lead to infinite loops. Randomized actions of the right kind
+can help escape these infinite loops.
+</p>
+</div>
+</div>
+<div id="outline-container-org8b4443c" class="outline-3">
+<h3 id="org8b4443c"><span class="section-number-3">2.7</span> Model-based Reflex Agents</h3>
+<div class="outline-text-3" id="text-2-7">
+<p>
+The agent maintains some <b>internal state</b> that depends on percept
+history and reflects at least some of the unobserved aspects of the
+current state. Information about how the world evolves independently
+from the agent is encoded into the agent. This knowledge is called a
+<b>model</b> of the world, and this agent is hence a <b>model-based</b> agent.
+</p>
+</div>
+</div>
+<div id="outline-container-orgb3328ee" class="outline-3">
+<h3 id="orgb3328ee"><span class="section-number-3">2.8</span> Goal-based agents</h3>
+<div class="outline-text-3" id="text-2-8">
+<p>
+Knowing about the current state of the environment may not be enough
+to decide on what to do. Agents may need <b>goal</b> information that
+describes situations that are desirable. Sometimes goal-based action
+selection is straightforward, but in others <b>searching</b> and <b>planning</b>
+are required to achieve the goal. Goal-based agents are flexible
+because the knowledge that supports its decisions is represented
+explicitly and can be modified, although it is less efficient.
+</p>
+</div>
+</div>
+<div id="outline-container-org7b2d55d" class="outline-3">
+<h3 id="org7b2d55d"><span class="section-number-3">2.9</span> Utility-based agents</h3>
+<div class="outline-text-3" id="text-2-9">
+<p>
+Goals provide a binary distinction between good and bad states. A more
+general performance measure should allow a comparison between world
+states according to exactly how good it is to the agent. An agent's
+<b>utility function</b> is an internalisation of the performance measure.
+An agent chooses actions to maximise its expected utility. A
+utility-based agents has to model and keep track of its environment.
+</p>
+</div>
+</div>
+<div id="outline-container-org3546d1f" class="outline-3">
+<h3 id="org3546d1f"><span class="section-number-3">2.10</span> Learning agents</h3>
+<div class="outline-text-3" id="text-2-10">
+<p>
+A learning agent can be divided into four conceptual components.
+</p>
+<dl class="org-dl">
+<dt>learning element</dt><dd>responsible for making improvements</dd>
+<dt>performance element</dt><dd>responsible for selecting extrenal actions</dd>
+<dt>problem generator</dt><dd>suggests actions that will lead to new and
+informative experiences</dd>
+</dl>
+
+<p>
+the learning element takes in feedback from the <b>critic</b> on how the
+agent is doing and determines show the performance element should be
+modified to do better in the future.
+</p>
+</div>
+</div>
+<div id="outline-container-org18e7bca" class="outline-3">
+<h3 id="org18e7bca"><span class="section-number-3">2.11</span> State representations</h3>
+<div class="outline-text-3" id="text-2-11">
+</div>
+<div id="outline-container-org1405789" class="outline-4">
+<h4 id="org1405789"><span class="section-number-4">2.11.1</span> Atomic Representation</h4>
+<div class="outline-text-4" id="text-2-11-1">
+<p>
+In an atomic representation each state of the world is indivisible,
+and has no internal structure. Search, game-playing, hidden Markov
+models and Markov decision processes all work with atomic
+representations.
+</p>
+</div>
+</div>
+<div id="outline-container-org6a10e7c" class="outline-4">
+<h4 id="org6a10e7c"><span class="section-number-4">2.11.2</span> Factored Representation</h4>
+<div class="outline-text-4" id="text-2-11-2">
+<p>
+A factored representation splits up each state into a fixed set of
+<b>variables</b> or <b>attributes</b>, each of which can have a <b>value</b>.
+</p>
+
+<p>
+Constraint satisfaction algorithms, propositional logic, planning,
+Bayesian networks and machine learning algorithms work with factored
+representations.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd97f7a6" class="outline-4">
+<h4 id="orgd97f7a6"><span class="section-number-4">2.11.3</span> Structured Representations</h4>
+<div class="outline-text-4" id="text-2-11-3">
+<p>
+Structured representations underlie relational databases and
+first-order logic, first-order probability models, knowledge-based
+learning and much of natural language understanding.
+</p>
+</div>
+</div>
+<div id="outline-container-orgcab0e15" class="outline-4">
+<h4 id="orgcab0e15"><span class="section-number-4">2.11.4</span> Implications</h4>
+<div class="outline-text-4" id="text-2-11-4">
+<p>
+A more expressive representation can capture, at least as concisely, a
+everything a more expressive one can capture, plus more. On the other
+hand, reasoning and learning become more complex as the expressive
+power of the representation increases.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-orgccdfe89" class="outline-2">
+<h2 id="orgccdfe89"><span class="section-number-2">3</span> Problem-Solving</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Problem-solving agents use <i>atomic</i> representations, as compared to
+goal-based agents, which use more advanced factored or structured
+representations.
+</p>
+
+<p>
+The process of looking for a sequence of actions that reaches the goal
+is called <i>search</i>. A search algorithm takes a problem as input and
+returns a <i>solution</i> in the form of an action sequence.
+</p>
+</div>
+</div>
+<div id="outline-container-org1d56d03" class="outline-2">
+<h2 id="org1d56d03"><span class="section-number-2">4</span> Classical Search</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+This addresses observable, deterministic, and known environments where
+the solution is a sequence of actions.
+</p>
+</div>
+<div id="outline-container-orgfc141dd" class="outline-3">
+<h3 id="orgfc141dd"><span class="section-number-3">4.1</span> How Search Algorithms Work</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+Search algorithms consider various possible action sequences. The
+possible action sequences start at the initial state form a <i>search
+tree</i>.
+</p>
+
+<p>
+Search algorithms require a data structure to keep track of the search
+tree that is being constructed.
+</p>
+
+<dl class="org-dl">
+<dt>state</dt><dd>state in the state space to which the node corresponds</dd>
+<dt>parent</dt><dd>the node in the search tree that generated this node</dd>
+<dt>action</dt><dd>the action that was applied to the parent to generate this node</dd>
+<dt>path-cost</dt><dd>the cost, traditionally denoted by \(g(n)\), of the path
+from the initial state to the node, as indicated by the
+parent pointers</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-org3ef2508" class="outline-3">
+<h3 id="org3ef2508"><span class="section-number-3">4.2</span> Measuring Performance</h3>
+<div class="outline-text-3" id="text-4-2">
+<dl class="org-dl">
+<dt>completeness</dt><dd>is the algorithm guaranteed to find a solution if
+it exists?</dd>
+<dt>optimality</dt><dd>does the strategy find the optimal solution?</dd>
+<dt>time complexity</dt><dd>how long does it take to find a solution?</dd>
+<dt>space complexity</dt><dd>how much memory is required to do the search?</dd>
+</dl>
+</div>
+</div>
+<div id="outline-container-orgb9fae86" class="outline-3">
+<h3 id="orgb9fae86"><span class="section-number-3">4.3</span> Uninformed Search Strategies</h3>
+<div class="outline-text-3" id="text-4-3">
+</div>
+<div id="outline-container-org464730e" class="outline-4">
+<h4 id="org464730e"><span class="section-number-4">4.3.1</span> Breadth-first Search</h4>
+<div class="outline-text-4" id="text-4-3-1">
+<p>
+The root node is expanded first, then all the successors of the root
+node are expanded next, then their successors, and so on.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^d)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^d)\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The shallowest node may not be the most optimal node.
+</p>
+
+<p>
+The space used in the <i>explored set</i> is \(O(b^{d-1})\) and the space
+used in the <i>frontier</i> is \(O(b^d)\).
+</p>
+
+<p>
+In general, exponential-complexity search problems cannot be solved by
+uninformed methods for any but the smallest instances.
+</p>
+</div>
+</div>
+<div id="outline-container-orgc7fedfd" class="outline-4">
+<h4 id="orgc7fedfd"><span class="section-number-4">4.3.2</span> Uniform-cost Search</h4>
+<div class="outline-text-4" id="text-4-3-2">
+<p>
+Uniform-cost search expands the node \(n\) with the lowest path
+cost \(g(n)\). The goal test is applied to a node when it is selected
+for expansion rather than when it is first generated.
+</p>
+
+<p>
+This is equivalent to BFS if all step costs are qual.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">MAYBE</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">time</td>
+<td class="org-left">\(O(b^{1+\lfloor{\frac{C^*}{\epsilon}}\rfloor})\), where \(C^*\) is the optimal cost.</td>
+</tr>
+
+<tr>
+<td class="org-left">space</td>
+<td class="org-left">\(O(b^{1+\lfloor{\frac{C^*}{\epsilon}}\rfloor})\)</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+Completeness is guaranteed only if the cost of every step exceeds some
+small positive constant \(\epsilon\). an infinite loop may occur if
+there is a path with an infinite sequence of zero-cost actions.
+</p>
+</div>
+</div>
+<div id="outline-container-org1cc7963" class="outline-4">
+<h4 id="org1cc7963"><span class="section-number-4">4.3.3</span> Depth-first Search</h4>
+<div class="outline-text-4" id="text-4-3-3">
+<p>
+Always expands the <i>deepest</i> node in the current frontier of the
+search tree.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^m)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^m)\), \(O(m)\) if backtrack</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+The time complexity of DFS may be worse than BFS: \(O(b^m)\) might be
+larger than \(O(b^d)\).
+</p>
+
+<p>
+DFS only requires storage of \(O(bm)\) nodes, where \(m\) is the maximum
+depth of any node. <b>backtracking search</b> only generates one successor
+at a time, modifying the current state description rather than copying
+it. Memory requirements reduce to one state description and \(O(m)\)
+actions.
+</p>
+</div>
+</div>
+<div id="outline-container-org344370f" class="outline-4">
+<h4 id="org344370f"><span class="section-number-4">4.3.4</span> Depth-limited Search</h4>
+<div class="outline-text-4" id="text-4-3-4">
+<p>
+In depth-limited search, nodes at depth of pre-determined limit \(l\)
+are treated as if they had no successors. This limit solves the
+infinite-path problem.
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^l)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^l)\), \(O(l)\) if backtrack</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="outline-container-org090f16b" class="outline-4">
+<h4 id="org090f16b"><span class="section-number-4">4.3.5</span> Iterative Deepening Depth-first Search</h4>
+<div class="outline-text-4" id="text-4-3-5">
+<p>
+Key idea is to gradually increase the depth limit: first 0, then
+1, then 2&#x2026; until a goal is found.
+</p>
+
+
+<div class="figure">
+<p><img src="images/artificial_intelligence/Problem-Solving/screenshot_2018-01-22_15-26-50.png" alt="screenshot_2018-01-22_15-26-50.png" />
+</p>
+</div>
+
+<p>
+\(N(IDS) = (d)b + (d-1)b^2 + \hdots + (1)b^d\), which gives a time
+complexity of \(O(b^d)\)
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">performance</th>
+<th scope="col" class="org-left">rating</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">completeness</td>
+<td class="org-left">YES</td>
+</tr>
+
+<tr>
+<td class="org-left">optimal</td>
+<td class="org-left">NO (unless step cost is 1)</td>
+</tr>
+
+<tr>
+<td class="org-left">time complexity</td>
+<td class="org-left">\(O(b^d)\)</td>
+</tr>
+
+<tr>
+<td class="org-left">space complexity</td>
+<td class="org-left">\(O(b^d)\), \(O(m)\) if backtrack</td>
+</tr>
+</tbody>
+</table>
+
+
+<ol class="org-ol">
+<li>BFS and IDS are complete if \(b\) is finite.</li>
+<li>UCS is complete if \(b\) is finite and step cost is \(\ge \epsilon\).</li>
+<li>BFS and IDS are optimal if all step costs are identical.</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-org1ffd1fa" class="outline-4">
+<h4 id="org1ffd1fa"><span class="section-number-4">4.3.6</span> Bidirectional Search</h4>
+<div class="outline-text-4" id="text-4-3-6">
+<p>
+Conduct two simultaneous searches &#x2013; one forward from the initial
+state, and the other backward from the goal. This is implemented by
+replacing the goal test with a check to see whether the frontiers of
+two searches intersect. This reduces the time ad space complexity to \(O(b^{d/2})\).
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org5916326" class="outline-3">
+<h3 id="org5916326"><span class="section-number-3">4.4</span> Informed Search Strategies</h3>
+<div class="outline-text-3" id="text-4-4">
+</div>
+<div id="outline-container-orgd4cd612" class="outline-4">
+<h4 id="orgd4cd612"><span class="section-number-4">4.4.1</span> Greedy best-first search</h4>
+<div class="outline-text-4" id="text-4-4-1">
+<p>
+<i>Greedy best-first search</i> tries to expand the node that is closest to
+the goal, on the grounds that this is likely to lead to a solution
+quickly. It evaluates nodes by using just the heuristic function:
+\(f(n) = h(n)\).
+</p>
+
+<p>
+Greedy best-first tree search is incomplete even in a finite state
+space. The graph search version is complete in finite spaces, but not
+in infinite ones. The worst case time and space complexity is
+\(O(b^m)\). However, with a good heuristic function, the complexity can
+be reduced substantially.
+</p>
+</div>
+</div>
+<div id="outline-container-org006e118" class="outline-4">
+<h4 id="org006e118"><span class="section-number-4">4.4.2</span> A* search</h4>
+<div class="outline-text-4" id="text-4-4-2">
+<p>
+It evaluates nodes by combining \(g(n)\) the cost to reach the node, and
+\(h(n)\) the cost to get to the goal: \(f(n) = g(n) + h(n)\). Since \(g(n)\)
+gives the path cost from the start node to node \(n\), and \(h(n)\) is the
+estimated cost of the cheapest path from \(n\) to the goal,$f(n) = $
+estimated cost of the cheapest solution through \(n\).
+</p>
+
+<p>
+\(h(n)\) is an <i>admissible heuristic</i> iff it never overestimates the
+cost to reach the goal. For A*, this means that \(f(n)\) would never
+overestimate the cost of a solution along the current path.
+</p>
+
+<p>
+Admissible heuristics are by nature optimistic because they think the
+cost of solving the problem is less than it actually is.
+</p>
+
+<p>
+A second, slightly stronger condition is called <i>consistency</i>, and is
+required only for applications of A* to graph search. A heuristic
+\(h(n)\) is <i>consistent</i> iff for every node \(n\) and every successor \(n'\)
+of \(n\) generated by any action \(a\), the estimated cost of reaching the
+goal from \(n\) is no greater than the step cost of getting to \(n'\) plus
+the estimated cost of reaching the goal from \(n'\): \(h(n) \le
+c(n,a,n') + h(n')\). This is a form of the general triangle inequality.
+</p>
+
+<p>
+A* search is complete, optimal and optimally efficient with a
+consistent heuristic. The latter means that no other optimal algorithm
+is guaranteed to expand fewer nodes than A*.
+</p>
+
+<p>
+However, for most problems, the number of states within the goal
+contour search space is still exponential in the length of the
+solution. 
+</p>
+
+<p>
+The <i>absolute error</i> of a heuristic is defined as \(\Delta = h^*-h\),
+and the <i>relative error</i> is defined as \(\epsilon = \frac{h^*-h}{h*}\).
+The complexity results depend strongly on the assumptions made about
+the state space. For constant step costs, it is \(O(b^{\epsilon d})\),
+and the effective branching factor is \(b^\epsilon\).
+</p>
+
+<p>
+A* keeps all generated nodes in memory, and hence it usually runs out
+of space  long before it runs of time. Hence, it is not practical for
+large-scale problems.
+</p>
+
+<p>
+Other memory-bounded heuristic searches include:
+</p>
+<ul class="org-ul">
+<li>iterative-deepening A* (IDA*)</li>
+<li>Recursive best-first search (RBFS)</li>
+<li>Memory-bounded A* (MA*)</li>
+<li>simplified MA* (SMA*)</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org2e40a8f" class="outline-3">
+<h3 id="org2e40a8f"><span class="section-number-3">4.5</span> Learning to Search Better</h3>
+<div class="outline-text-3" id="text-4-5">
+<p>
+Each state in a <i>metalevel state space</i> captures the internal
+computational state of a program that is searching in an <i>object-level
+state space</i>. A <i>metalevel learning</i> algorithm can learn from
+experiences to avoid exploring unpromising subtrees. The goal of the
+learning is to minimise the total cost of problem solving, trading off
+computational expense and path cost.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgaffd399" class="outline-2">
+<h2 id="orgaffd399"><span class="section-number-2">5</span> Heuristic Functions</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+If for any node n \(h_2(n) \ge h_1(n)\), we say that \(h_2\) <i>dominates</i>
+\(h_1\). Domination translates directly into efficiency: A* using \(h_2\)
+will never expand more nodes than \(h_1\). Hence it is generally better
+to use a heuristic function with higher value, while making sure it is
+consistent, and computing the heuristic function is computationally
+feasible.
+</p>
+</div>
+
+<div id="outline-container-orgc19bc8b" class="outline-3">
+<h3 id="orgc19bc8b"><span class="section-number-3">5.1</span> Generating Admissible Heuristics</h3>
+<div class="outline-text-3" id="text-5-1">
+</div>
+<div id="outline-container-orga017bbd" class="outline-4">
+<h4 id="orga017bbd"><span class="section-number-4">5.1.1</span> From Relaxed Problems</h4>
+<div class="outline-text-4" id="text-5-1-1">
+<p>
+Because the relaxed problem adds edges to the state space, any optimal
+solution in the original problem is, by definition, also a solution in
+the relaxed problem. Hence, the cost of an optimal solution to a
+relaxed problem is an admissible heuristic for the original problem.
+Because the derived heuristic is an exact cost for the relaxed
+problem, it must obey the triangle inequality and is therefore
+consistent.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge46b55f" class="outline-4">
+<h4 id="orge46b55f"><span class="section-number-4">5.1.2</span> From Subproblems: Pattern Databases</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+<i>Pattern Databases</i> store exact solution costs for every possible
+subproblem instance. In the case of the 8-puzzle, every possible
+configuration of the four tiles and the blank. Each pattern database
+yields an admissible heuristic, and these heuristics can be combined
+by taking the maximum value. Solutions to subproblems can overlap:
+<i>disjoint pattern databases</i> account for this. These work by dividing
+the problem in a way that each move affects only one subproblem.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f57aef" class="outline-4">
+<h4 id="org9f57aef"><span class="section-number-4">5.1.3</span> From Experience</h4>
+<div class="outline-text-4" id="text-5-1-3">
+<p>
+Inductive learning methods work best when supplied with <i>features</i> of
+a state that are relevant to predicting the state's value. A common
+approach to combining features would be through a linear combination:
+\(h(n) = c_1x_1(n) + c_2x_2(n)\).
+</p>
+
+<p>
+These heuristics satisfy the requirement that \(h(n) = 0\) for goal
+states, but are not necessarily admissible or consistent.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd1fc00e" class="outline-2">
+<h2 id="orgd1fc00e"><span class="section-number-2">6</span> Beyond Classical Search</h2>
+<div class="outline-text-2" id="text-6">
+<p>
+Here, we cover algorithms that perform purely <i>local search</i> in the
+state space, evaluating and modifying one or more current states
+rather than systematically exploring paths from an initial state.
+These include methods inspired by statistical physics (simulated
+annealing) and evolutionary biology (genetic algorithms).
+</p>
+
+<p>
+If an agent cannot predict exactly what percept it will receive, then
+it will need to consider what to do under each <i>contingency</i> that its
+percepts may reveal.
+</p>
+
+<p>
+If the path to the goal doesn't matter, we giht consider a different
+class of algorithms, ones that do not worry about the paths at all.
+<i>Local search</i> algorithms operate using a single <i>current node</i> and
+generally move only to neighbours of that node. Its advantages
+include:
+</p>
+
+<ol class="org-ol">
+<li>They generally use a <span class="underline">constant amount of memory</span></li>
+<li>They can often find <span class="underline">reasonable solutions in large or infinite
+state spaces</span> where systematic algorithms are not suitable.</li>
+</ol>
+</div>
+
+<div id="outline-container-orgd17220c" class="outline-3">
+<h3 id="orgd17220c"><span class="section-number-3">6.1</span> Hill-climbing Search</h3>
+<div class="outline-text-3" id="text-6-1">
+<p>
+The hill-climbing search is a loop that continually moves in the
+direction of increasing value. 
+</p>
+
+<p>
+Consider the 8-queens problem.
+</p>
+
+<p>
+Local search algorithms typically use a <i>complete-state formation</i>. The
+successors of a state are all possible states generated by moving a
+single queen to another square in the same column.
+</p>
+
+<p>
+We could use a heuristic cost function \(h\) equal to the number of
+queens that are attacking each other, either directly or indirectly.
+</p>
+
+<p>
+The global minimum of this function is zero, which only occurs for
+perfect solutions. Hill-climbing algorithms typically choose randomly
+among the set of best successors having the lowest \(h\).
+</p>
+
+<p>
+Hill-climbing algorithms can get stuck for the following reasons:
+</p>
+
+<ul class="org-ul">
+<li>local maxima</li>
+<li id="ridges">sequence of local maxima</li>
+<li id="plateaux">flat local maximum, or <i>shoulder</i>, from which progress
+is possible.</li>
+</ul>
+</div>
+
+
+<div id="outline-container-org2774388" class="outline-4">
+<h4 id="org2774388"><span class="section-number-4">6.1.1</span> Variants</h4>
+<div class="outline-text-4" id="text-6-1-1">
+<dl class="org-dl">
+<dt>stochastic hill-climbing</dt><dd>chooses at random from among the uphill
+moves; the probability of selection can vary with the steepness
+of the uphill move. Usually converges more slowly, but finds
+better solutions.</dd>
+<dt>first-choice hill-climbing</dt><dd>stochastic hill-climbing with randomly
+generated successors until one is generated that is better than
+the current state. Good when state has many successors.</dd>
+<dt>random-restart hill-climbing</dt><dd>conducts hill-climbing searches from
+randomly generated initial states, until a goal is found.
+Trivially complete with probability approaching 1.</dd>
+</dl>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0defdf3" class="outline-3">
+<h3 id="org0defdf3"><span class="section-number-3">6.2</span> Simulated Annealing</h3>
+<div class="outline-text-3" id="text-6-2">
+<p>
+A hill-climbing algorithm that never makes 'downhill' moves towards
+states with lower-value is guaranteed to be incomplete, because it can
+be stuck on a local maximum.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function SIMULATED-ANNEALING(problem, schedule)
+  inputs: problem, a problem
+          schedule, a mapping from time to 'temperature'
+
+  current ← MAKE-NODE(problem, INITIAL-STATE)
+  for t = 1 to ∞ do
+    T ← schedule(t)
+    if T = 0 then return current
+    next ← a randomly selected successor of current
+    𝞓E ← next.VALUE - current.VALUE
+    if 𝞓E &gt; 0 then current ← next
+    else current ← next only with probability e^(𝞓E/T)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org42b32b0" class="outline-3">
+<h3 id="org42b32b0"><span class="section-number-3">6.3</span> Local Beam Search</h3>
+<div class="outline-text-3" id="text-6-3">
+<p>
+Local beam search keeps track of \(n\) states rather than just one. It
+begins with \(n\) randomly generated states, at each step all the
+successors of all states are generated. If any one is a goal, the
+algorithm halts. 
+</p>
+
+<p>
+Local-beam search passes useful information between the parallel
+search threads (compared to running random-restart \(n\) times), quickly
+abandoning unfruitful searches and moves its resources to where the
+most progress is being made.
+</p>
+
+<p>
+/Stochastic local beam search chooses \(n\) successors at random, with
+the probability of choosing a given successor being an increasing
+function of its value/.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgb67a6a4" class="outline-3">
+<h3 id="orgb67a6a4"><span class="section-number-3">6.4</span> Genetic Algorithms</h3>
+<div class="outline-text-3" id="text-6-4">
+<p>
+A <i>genetic algorithm</i> is a variant of stochastic beam search in which
+successor states are generated by combining two parent states rather
+than by modifying a single state.
+</p>
+
+<p>
+GA begins with a set of \(n\) randomly generated states, called the
+<i>population</i>. Each state is also called an <i>individual</i>.
+</p>
+
+<p>
+The production of the next generation of states is rated by the
+objective function, or <i>fitness function</i>. A fitness function returns
+higher values for better states.
+</p>
+
+<p>
+Like stochastic beam search, genetic algorithms combine an uphill
+tendency with random exploration and exchange of information among
+parallel search threads. <i>crossover</i> in genetic algorithms raises the
+level of granularity at which the search operates.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function GENETIC-ALGORITHM(population, FITNESS-FN) returns an individual
+  inputs: population, a set of individuals
+          FITNESS-FN, a function that measures the fitness of an
+  individual
+
+  repeat
+    new_population ← empty set
+    for i = 1 to SIZE(population) do
+      x ← RANDOM-SELECTION(population, FITNESS-FN)
+      y ← RANDOM-SELECTION(population, FITNESS-FN)
+      child ← REPRODUCE(x,y)
+      if (small random probability) then child ← MUTATE(child)
+      add child to new_population
+    population ← new_population
+  until some individual is fit enough, or enough has elapsed
+  return the best individual in population, according to FITNESS-FN
+
+function REPRODUCE(x,y) returns an individual
+  inputs: x,y, parent individuals
+
+  n ← LENGTH(x); c ← random(1,n)
+  return APPEND(SUBSTRING(x,1,c), SUBSTRING(y, c+1, n))
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1d9086c" class="outline-3">
+<h3 id="org1d9086c"><span class="section-number-3">6.5</span> Local Search in Continuous Spaces</h3>
+<div class="outline-text-3" id="text-6-5">
+<p>
+One way to avoid continuous problems is simply to <i>discretize</i> the
+neighbourhood of each state. Many methods attempt to use the
+<i>gradient</i> of the landscape to find a maximum: \(x \leftarrow x +
+\delta \nabla (x)\), where $&delta; is a small constant called the <i>step
+size</i>. For many problems, the <i>Newton-Raphson</i> method is effective. It
+solves the roots for equations \(g(x) = 0\), by computing a new
+estimate: \(x \leftarrow x - g'(x)/g(x)\). To find a maximum or minimum
+of \(f\), we need to find \(x\) such that the gradient is zero. In this
+case \(g(\mathbf{x})\) in Newton's formula becomes \(\nabla
+f(\mathbf{x})\) and the update equation can be written in matrix-vector
+form as:
+</p>
+
+\begin{align*}
+\mathbf{x} \leftarrow \mathbf{x} - H_f^{-1}(\mathbf{x})\nabla f(\mathbf{x})
+\end{align*}
+
+<p>
+where \(H_f\) is the <i>Hessian</i> matrix of second derivatives. For
+high-dimensional problems, computing the \(n^2\) entries of the Hessian
+and inverting it may be expensive, and approximate versions have been
+developed.
+</p>
+
+<p>
+Local search methods suffer from local maxima, ridges and plateaux
+in continuous spaces just as much as in discrete spaces.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgefd92a2" class="outline-3">
+<h3 id="orgefd92a2"><span class="section-number-3">6.6</span> Searching with Non-deterministic Actions</h3>
+<div class="outline-text-3" id="text-6-6">
+<p>
+When the environment is either partially observable or
+non-deterministic, percepts become useful. In a partially observable
+environment, every percept helps narrow down the set of possible
+states the agent might be in. In a non-deterministic environment,
+percepts tell the agent which of the possible outcomes of its actions
+has actually occurred. Future percepts cannot be determined in
+advance, and the agent's future actions will depend on those future
+percepts. The solution to a problem is not a sequence but a
+<i>contingency plan</i>
+</p>
+
+<p>
+The solutions for no-deterministic problems can contain nested
+if-then-else statements, meaning they are trees and not sequences.
+</p>
+</div>
+
+<div id="outline-container-org9eef900" class="outline-4">
+<h4 id="org9eef900"><span class="section-number-4">6.6.1</span> AND-OR search trees</h4>
+<div class="outline-text-4" id="text-6-6-1">
+<p>
+A solution for an AND-OR search problem is a subtree that:
+</p>
+
+<ol class="org-ol">
+<li>includes every outcome branch leaf</li>
+<li>specifies one action at each of its OR nodes</li>
+<li>includes every outcome branch at each of its AND nodes</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-text">function AND-OR-GRAPH-SEARCH(problem) returns a conditional plan, or failure
+  OR-SEARCH(problem, INITIAL-STATE, problem, [])
+
+function OR-SEARCH(state,problem,path) returns a conditional plan, or failure
+  if problem, GOAL-TEST(state) then return the empty plan
+  if state is on path then return failure
+  for each action in problem, ACTIONS(state) do
+    plan ← AND-SEARCH(RESULTS(state,action), problem, [state | path])
+    if plan ≠ failure then return [action | plan]
+  return failure
+
+function AND-SEARCH(states,problem,path) returns a conditional plan, or failure
+  for each s_i in states do
+    plan_i ← OR-SEARCH(s_i,problem,path)
+    if plan_i = failure then return failure
+  return [if s_1 then plan_1 else if s_2 then plan_2 ...]
+</pre>
+</div>
+
+<p>
+(stop at AIMA 4.4)
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf7b3cb0" class="outline-2">
+<h2 id="orgf7b3cb0"><span class="section-number-2">7</span> Adversarial Search</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+Competitive environments, in which the agent's goals are in conflict,
+give rise to <i>adversarial search</i> problems.
+</p>
+
+<p>
+Game theory views any multi-agent environment as a game, provied that
+the impact of each agent on the others is significant.
+</p>
+
+<p>
+Games often have large branching factors, and require making some
+decision even before computing the optimal decision.
+</p>
+
+<p>
+<i>Pruning</i> allows us to ignore portions of the search tree that make no
+difference to the final choice, and heuristic evaluation functions
+allow us to approximate the true utility of a state without doing a
+complete search.
+</p>
+
+<p>
+A game can be formally defined as a search problem with the following
+elements:
+</p>
+
+<dl class="org-dl">
+<dt>\(S_0\)</dt><dd>the <i>initial state</i>, which specifies how the game is set up
+at the start</dd>
+<dt>\(Player(s)\)</dt><dd>Defines which player has the move in a state</dd>
+<dt>\(Actions(s)\)</dt><dd>Returns the set of legal moves in a state</dd>
+<dt>\(Result(s,a)\)</dt><dd>The transition model, which defines the result of a move</dd>
+<dt>\(TerminalTest(s)\)</dt><dd>Terminal test, which is true when the game is
+over, and false otherwise.</dd>
+<dt>\(Utility(s,p)\)</dt><dd>A utility function defines the numeric value for a
+game that ends in terminal state \(s\) for a player
+\(p\).</dd>
+</dl>
+
+
+<p>
+The initial state, \(Actions\) function and \(Result\) function define the
+game tree for the game.
+</p>
+</div>
+
+
+<div id="outline-container-org3c56b12" class="outline-3">
+<h3 id="org3c56b12"><span class="section-number-3">7.1</span> Optimal Strategy</h3>
+<div class="outline-text-3" id="text-7-1">
+<p>
+The optimal strategy can be determined from the <i>minimax value</i> of
+each node (\(Minimax(n)\)). The minimax value of a node is the utility
+of being in the corresponding state, assuming that players play
+optimally from there to the nd of the game. The minimax value of a
+terminal state is its utility.
+</p>
+
+\begin{align}
+  Minimax(s) =
+  \begin{cases}
+    Utility(s), \text{ if } TerminalTest(s) \\
+    max_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) =
+      Max} \\
+    min_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) = Min}
+  \end{cases}
+\end{align}
+
+<p>
+Minimax uses utility function on leaf nodes, backing up through the
+tree, setting the node value to be the minimum of the children.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-org971eb5b" class="outline-3">
+<h3 id="org971eb5b"><span class="section-number-3">7.2</span> Alpha-Beta Pruning</h3>
+<div class="outline-text-3" id="text-7-2">
+<p>
+Eliminate parts of the search tree that do not affect decision. 
+</p>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-org226e3a6" class="outline-2">
+<h2 id="org226e3a6"><span class="section-number-2">8</span> Classical Planning</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+Problem-solving agents that deal with atomic representations of states
+require good domain-specific heuristics to perform well. The hybrid
+propositional logical agent can find plans without domain-specific
+heuristics because it uses domain-independent heuristics based on the
+logical structure of the problem. However, it relies on ground
+propositional inference, and suffers when there are large numbers of
+actions and states.
+</p>
+
+<p>
+<b>Planning Domain Definition Language (PDDL)</b> was created in response to
+these deficiencies.
+</p>
+
+<p>
+Each state is represented as a conjunction of fluents that are ground,
+functionless atoms. Database semantics is used, which involves:
+</p>
+
+<dl class="org-dl">
+<dt>closed-world assumption</dt><dd>all fluents not mentioned are false</dd>
+<dt>unique names assumption</dt><dd>fluents with different names are distinct</dd>
+</dl>
+
+<p>
+State representations are carefully designed so that they can be
+manipulated by set operations or logical inference.
+</p>
+
+<p>
+Actions are defined in terms of the <b>preconditions</b> and <b>effects</b>.
+Preconditions and effects are described in terms of a conjunction of
+literals.
+</p>
+</div>
+
+<div id="outline-container-org000f5b2" class="outline-3">
+<h3 id="org000f5b2"><span class="section-number-3">8.1</span> Complexities of classical planning</h3>
+<div class="outline-text-3" id="text-8-1">
+<p>
+<b>PlanSAT</b> is the question of whether there exists any plan that solves a
+planning problem. <b>Bounded PlanSAT</b> asks whether there is a solution of
+length k or less.
+</p>
+
+<p>
+While the number of states is finite, adding function symbols make
+them infinite, making these problems semi-decidable at best. Certain
+restrictions can reduce the questions into a P class problem.
+</p>
+
+<p>
+However, most agents would not be asked to derive plans for worst-case
+problem instances. For many problem domains, bounded PlanSAT is
+NP-complete, while PlanSAT is in P.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org0882257" class="outline-3">
+<h3 id="org0882257"><span class="section-number-3">8.2</span> State-space search for planning</h3>
+<div class="outline-text-3" id="text-8-2">
+<p>
+The first approach is forward (propogation) state-space search, which
+searches forward from the initial state. However, it is inefficient,
+for the following reasons:
+</p>
+
+<ol class="org-ol">
+<li>It tends to explore irrelevant actions</li>
+<li>Planning problems tend to have large state spaces, and relatively
+small problems will be an issue without a good heuristic</li>
+</ol>
+
+<p>
+It turn out that good domain-independent heuristics can be derived for
+forward search, which makes it feasible.
+</p>
+
+<p>
+Alternatively, we can do a backward (regression) state-space search,
+which looks for actions that can lead to the goal. Unlike forward
+search, backward search only explores relevant actions, hence has a
+low branching factor. However, backward search deals with sets, which
+are make it harder to derive good domain-independent heuristics.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf80bdeb" class="outline-3">
+<h3 id="orgf80bdeb"><span class="section-number-3">8.3</span> Heuristics for planning</h3>
+<div class="outline-text-3" id="text-8-3">
+<p>
+Framing the search problem as a graph where the nodes are states and
+the edges are actions. We can think of a number of ways to relax the
+problem, generating admissible heuristics:
+</p>
+
+<ol class="org-ol">
+<li>Add more edges to the graph, making it easier to find a path</li>
+</ol>
+
+<p>
+The <b>ignore preconditions heuristic</b> drops all preconditions from
+actions, and every action becomes applicable in every state. We count
+the number of actions required such that the union of the action's
+effects satisfy the goal. This is called the set-cover problem, which
+is unfortunately NP-hard. We can also ignore selected preconditions of
+actions.
+</p>
+
+<p>
+The ignore delete list heuristic, drops all negative literals in goals
+and preconditions. This way, an action cannot undo progress towards
+the goal, and each action taken would monotonically progress towards
+it.
+</p>
+
+<ol class="org-ol">
+<li>Grouping multiple nodes together, shrinking the size of the graph</li>
+</ol>
+
+<p>
+We can reduce the number of states by forming a <b>state abstraction</b> &#x2013; a
+many-to-one mapping from states in the ground representation of the
+problem to the abstract representation. For example, one can ignore
+some fluents.
+</p>
+
+<p>
+The key idea in defining heuristics is <b>decomposition</b>: diving a problem
+into parts. <b>Subgoal independence</b> is the assumption that the cost
+of solving a conjunction of subgoals is approximated by the sum of the
+costs of solving a subgoal independently.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgcbd5953" class="outline-3">
+<h3 id="orgcbd5953"><span class="section-number-3">8.4</span> Other classical planning approaches</h3>
+<div class="outline-text-3" id="text-8-4">
+<p>
+We can translate a problem description in PDDL to  a form that can be
+processed by SATPlan. The steps are below:
+</p>
+
+<ol class="org-ol">
+<li>Propositionalize the actions: replace each action schema with a set
+of ground actions formed by substituting constants for each of the
+variables. These ground actions are not part of the translation,
+but will be used in subsequent steps.</li>
+<li>Define the initial state: assert \(F^0\) for every fluent \(F\) in the
+problem's initial state, and \(\neg F^0\) for every fluent not mentioned
+in the final state.</li>
+<li>Propositionalize the goal: the goal becomes a disjunction over all
+of its ground instances, where variables are replaced by constants.</li>
+<li>Add successor-state axioms: For each fluent \(F\), add an axiom of
+the form:</li>
+</ol>
+
+\begin{equation}
+  F^{t+1} \iff ActionCausesF^t \vee \left( F^t \wedge \neg ActionCausesNotF^t \right)
+\end{equation}
+
+<p>
+Where \(ActionCausesF\) is a disjunction of all the ground actions that
+have \(F\) in their add list, and \(ActionCausesNotF\) is a disjunction of
+all ground actions that have \(F\) in their delete list.
+</p>
+
+<ol class="org-ol">
+<li>Add precondition axioms: for each ground action \(A\), add the axiom
+\(A^t \iff PRE(A)^t\), i.e. if an action is taken at time \(t\), then the
+preconditions must be true.</li>
+<li>Add action exclusion axioms: say that exactly one ground action can
+occur at each step.</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-text">function SATPLAN(init, transition, goal, Tmax) returns solution or failure
+  ""inputs: init, transition, goal constitute the problem
+    description
+    Tmax: upper limit for plan length""
+  for t = 0 to Tmax do
+    cnf &lt;- translate-to-sat(init, transition, goal, t)
+    model &lt;- SATSolver(cnf)
+    if model is not null then
+      return extract-solution(model)
+  return failure
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org71cf213" class="outline-2">
+<h2 id="org71cf213"><span class="section-number-2">9</span> Decision Theory</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Reference: AIMA Chapter 16
+</p>
+
+<p>
+Utility theory combines with probability theory to yield a
+decision-making agent, that can make rational decisions based on what
+it believes and what it wants. This is opposed to goal-based agents,
+that make binary decisions between good and bad states.
+</p>
+</div>
+
+<div id="outline-container-org9622df5" class="outline-3">
+<h3 id="org9622df5"><span class="section-number-3">9.1</span> Combining beliefs and desires under uncertainty</h3>
+<div class="outline-text-3" id="text-9-1">
+<p>
+Under nondeterministic, partially observable environments, the result
+of an action cannot be represented by a single number. \(RESULT(\alpha)\) is
+now expressed as a random variable, whose values are the possible
+outcome states with corresponding probabilities of occurrence. The
+probability of an outcome \(s'\), given evidence observations
+\(\mathbb{e}\), is written \(P(RESULT(\alpha) = s' | a, \mathbb{e})\).
+</p>
+
+<p>
+The agent's preferences are captured by a <b>utility function</b> \(U(s)\),
+which expresses the desirability of a state. We can calculate the
+expected utility of a function as follows:
+</p>
+
+\begin{equation}
+  EU(a | \mathbb{e}) = \sum_{s'} P(RESULT(\alpha) = s' | a,  \mathbb{e}) U(s')
+\end{equation}
+
+<p>
+The principle of maximum expected utility (MEU) says that a rational
+agent should choose the action that maximizes the expected utility. If
+an agent acts to maximise a utility function that correctly reflects
+all possible outcomes, then it will achieve the highest possible
+performance score (averaged across all environments).
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgeed246f" class="outline-3">
+<h3 id="orgeed246f"><span class="section-number-3">9.2</span> Axioms of Utility Theory</h3>
+<div class="outline-text-3" id="text-9-2">
+<p>
+To show why MEU is a rational choice, we turn to utility theory.
+First, we define notation:
+</p>
+
+<ol class="org-ol">
+<li>\(A \succ B\): the agent prefers \(A\) over \(B\).</li>
+<li>\(A \sim B\): the agent is indifferent between \(A\) and \(B\).</li>
+<li>\(A \succeq B\): the agent prefers \(A\) over \(B\), or is indifferent.</li>
+</ol>
+
+<p>
+The axioms of utility theory are:
+</p>
+
+<dl class="org-dl">
+<dt>orderability</dt><dd>Exactly one of \(A \succ B\), \(B \succ A\) or \(A \sim B\) holds.</dd>
+<dt>transitivity</dt><dd>\((A \succ B) \wedge (B \succ C) \Rightarrow A \succ C\)</dd>
+<dt>continuity</dt><dd>\(A \succ B \succ C \Rightarrow \existp [p, A; 1-p, C] \sim B\)</dd>
+<dt>substitutability</dt><dd>\(A \sim B \Rightarrow [p, A; 1-p, C] \sim [p, B; 1-p, C]\)</dd>
+<dt>monotonicity</dt><dd>\(A \succ B \Rightarrow (p > q) \iff [p, A; 1-p B] \succ [q, A: 1-q,
+                  B]\)</dd>
+<dt>Decomposability</dt><dd>\([p, A; 1-p, [q, B; 1-q, C]] \sim[p, A:;(1-p)q, B;
+     (1-p)q, C]\)</dd>
+</dl>
+
+<p>
+von Neumann and Morgenstern showed that following these axioms, it can
+be shown that.
+</p>
+
+<ol class="org-ol">
+<li><b>Utility functions exist</b>. \(U(A) > U(B) \iff A \succ B\) and \((U(A) = U(B)
+   \iff A \sim B)\).</li>
+<li><b>The utility of a lottery</b>, can be represented as the sum of
+probability of each outcome, multiplied by the utility of that
+outcome: \(U([p_1, S_1; \hdots; p_n, S_n]) = \sum_i p_iU(S_i)\).</li>
+</ol>
+
+<p>
+Utility functions are not unique: in fact, that are not changed with
+affine transformations, of the form \(U'(s) = aU(s) + b\). This is
+because the agent only needs a preference on the ranking of states,
+and the actual value of the utility does not matter.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org216e92c" class="outline-3">
+<h3 id="org216e92c"><span class="section-number-3">9.3</span> Utility assessment and utility scales</h3>
+<div class="outline-text-3" id="text-9-3">
+<p>
+To build a decision-theoretic system, we must first work out what the
+agent's utility function is. This process is called <b>preference
+elicitation</b>, which involves presenting choices to the agent and using
+the observed preferences to pin down the underlying utility function.
+</p>
+
+<p>
+We have established above that utility functions are not unique, but
+it helps to have a <b>normalized utility</b>. Normalized utilities fix the
+utility of a "best possible prize" at \(u_\top = 1\) and the "worst possible
+prize" at \(u_\bot = 0\).
+</p>
+
+<p>
+Given this utility scale, we can assess the utility of a prize \(S\), by
+asking the agent to choose between \(S\) and the standard lottery \([p,
+u_\top;1-p, u_\bot]\). \(p\) is adjusted until the agent is indifferent
+between \(S\) and the lottery. This is done for each prize \(S\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org09bfbc7" class="outline-3">
+<h3 id="org09bfbc7"><span class="section-number-3">9.4</span> Multi-attribute utility functions</h3>
+<div class="outline-text-3" id="text-9-4">
+<p>
+When outcomes are characterized by two or more attributes, we need a
+multi-attribute utility function.
+</p>
+</div>
+
+<div id="outline-container-org8697d13" class="outline-4">
+<h4 id="org8697d13"><span class="section-number-4">9.4.1</span> Dominance</h4>
+<div class="outline-text-4" id="text-9-4-1">
+<p>
+We say that there is strict dominance of \(S_1\) over \(S_2\) if \(S_2\) is
+lower on all attributes as compared to \(S_1\). Under uncertainty, we use
+a more useful generalization: <b>stochastic dominance</b>.
+</p>
+
+<p>
+If \(A_1\) stochastically dominates \(A_2\), then for any monotonically
+increasing utility function \(U(x)\), the expected utility of \(A_1\) is at
+least as high as the expected utility of \(A_2\). We can understand this
+via the cumulative distribution. For any action \(A_1\) and \(A_2\), that
+lead to probability distributions \(p_1(x)\) and \(p_2(x)\) on the random
+variable \(X\):
+</p>
+
+\begin{equation}
+  \forall x \int_{-\infty}^{x} p_1(x')dx' \le \int_{-\infty}^{x} p_2(x')dx'
+\end{equation}
+</div>
+</div>
+
+
+<div id="outline-container-org86c519f" class="outline-4">
+<h4 id="org86c519f"><span class="section-number-4">9.4.2</span> Preference structure and multi-attribute utility</h4>
+<div class="outline-text-4" id="text-9-4-2">
+<p>
+Multi-attribute utility theory is based on the supposition that
+preferences of typical agents have structure. This alleviates the
+difficulty in expressing a utility function with many attributes and
+possible distinct values.
+</p>
+
+<p>
+One simple regularity in preference structures is called preference
+independence. Two attributes \(X_1\) and \(X_2\) are preferentially
+independent if the preference between outcomes \((x_1, x_2, x_3)\) and
+\((x_1', x_2', x_3)\) does not depend on the value of the value \(x_3\) of
+attribute \(X_3\).
+</p>
+
+<p>
+If all attributes are mutually preferentially independent, then an
+agent's preference can be described by maximising the function:
+</p>
+
+\begin{equation}
+  V(x_1, x_2, \hdots, x_n) = \sum_i V_i(x_i)
+\end{equation}
+
+<p>
+An example is:
+</p>
+
+\begin{equation}
+V(noise, cost, deaths) = - noise \times 10^4 - cost - deaths \times 10^{12}
+\end{equation}
+
+<p>
+Under uncertainty, the mathematics gets a bit more complicated.
+Utility independence extends preference independence to cover
+lotteries: a set of attributes \(\mathbb{X}\) is utility independent of
+a set of attributes \(\mathbb{Y}\) if preference between lotteries on
+the attributes in \(\mathbb{X}\) are independent of the particular
+values of the attributes in \(\mathbb{Y}\).
+</p>
+
+<p>
+Mutual utility independence implies that the agent's behaviour can be
+described using a multiplicative utility function. If we denote \(U_i\)
+to be \(U_i(x_i)\), then a 3 attribute utility function can be expressed
+as:
+</p>
+
+\begin{equation}
+ U = k_1U_1 + k_2U_2 + k_3U_3 + k_1k_2U_1U_2 + k_1k_3U_1U_3 +
+ k_2k_3U_2U_3 + k_1k_2k_3U_1U_2U_3
+\end{equation}
+</div>
+</div>
+
+
+
+<div id="outline-container-org10f1572" class="outline-4">
+<h4 id="org10f1572"><span class="section-number-4">9.4.3</span> Decision Networks</h4>
+<div class="outline-text-4" id="text-9-4-3">
 <p>
 Decision networks extend Bayesian networks with nodes for actions and
 utilities. An example of a decision network is below:
@@ -137,12 +1871,10 @@ known as Q-function).
 </p>
 </div>
 </div>
-<div id="outline-container-orgb473de0" class="outline-2">
-<h2 id="orgb473de0"><span class="section-number-2">2</span> </h2>
-</div>
-<div id="outline-container-orgd7c4b89" class="outline-2">
-<h2 id="orgd7c4b89"><span class="section-number-2">3</span> Information Value Theory</h2>
-<div class="outline-text-2" id="text-3">
+
+<div id="outline-container-orgd7c4b89" class="outline-4">
+<h4 id="orgd7c4b89"><span class="section-number-4">9.4.4</span> Information Value Theory</h4>
+<div class="outline-text-4" id="text-9-4-4">
 <p>
 The value of a given piece of information is defined to be the
 difference in expected value between the best action before and after
@@ -171,9 +1903,9 @@ beliefs of its value.
 </p>
 </div>
 
-<div id="outline-container-org93ada95" class="outline-3">
-<h3 id="org93ada95"><span class="section-number-3">3.1</span> Properties of the value of information</h3>
-<div class="outline-text-3" id="text-3-1">
+<div id="outline-container-org93ada95" class="outline-5">
+<h5 id="org93ada95"><span class="section-number-5">9.4.4.1</span> Properties of the value of information</h5>
+<div class="outline-text-5" id="text-9-4-4-1">
 <p>
 First, the expected value of information is non-negative. 
 </p>
@@ -208,9 +1940,9 @@ VPI is order independent. That is:
 </div>
 </div>
 
-<div id="outline-container-org1145a92" class="outline-3">
-<h3 id="org1145a92"><span class="section-number-3">3.2</span> Information Gathering Agents</h3>
-<div class="outline-text-3" id="text-3-2">
+<div id="outline-container-org1145a92" class="outline-5">
+<h5 id="org1145a92"><span class="section-number-5">9.4.4.2</span> Information Gathering Agents</h5>
+<div class="outline-text-5" id="text-9-4-4-2">
 <p>
 we can implement a myopic information-gathering agent, by using the
 VPI formula shortsightedly.
@@ -237,9 +1969,33 @@ value it provides.
 </div>
 </div>
 </div>
+</div>
+
+
+<div id="outline-container-orgb713dd4" class="outline-2">
+<h2 id="orgb713dd4"><span class="section-number-2">10</span> RANDOM</h2>
+<div class="outline-text-2" id="text-10">
+</div>
+<div id="outline-container-org659484b" class="outline-3">
+<h3 id="org659484b"><span class="section-number-3">10.1</span> Simon's Ant</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+Simon, noble prize in economics
+</p>
+
+<blockquote>
+<p>
+The complexity of the behaviour is the manifestation of the complexity
+of the environment and not the complexity of the program.
+</p>
+</blockquote>
+</div>
+</div>
+</div>
+</div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-09-01 Sat 17:07</p>
+<p class="date">Created: 2018-09-01 Sat 17:09</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

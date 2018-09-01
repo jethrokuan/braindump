@@ -926,7 +926,7 @@ omitted. Rather than representing a utility function on outcome states,
 the utility node represents the expected utility associated with each
 action. This node is associated with an action-utility function (also
 known as Q-function). 
-*** 
+
 *** Information Value Theory
 The value of a given piece of information is defined to be the
 difference in expected value between the best action before and after
