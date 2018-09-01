@@ -507,3 +507,35 @@ model.
 **** Optics
 Once the light from a scene reaches a camera, it must still pass
 through the lens before reaching the sensor.
+
+* Image Processing
+
+** Point Operators
+Point operators are image processing transforms where each output
+pixel's value depends only on the corresponding input pixel value.
+Examples of such operators include:
+
+- brightness and contrast adjustments
+- color correction and transformations
+
+
+** Histogram Equalization
+https://www.math.uci.edu/icamp/courses/math77c/demos/hist_eq.pdf
+
+The underlying math behind histogram equalization involves mapping one
+distribution (the given histogram of intensity values) to another
+distribution (a wider and, ideally, uniform distribution of intensity
+values).
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-30 16:43:39
+[[file:images/computer_vision/Image Processing/screenshot_2018-08-30_16-43-39.png]]
+
+We may use the cumulative distribution function to remap the original
+distribution as an equally spread distribution simply by looking up
+each y-value in the original distribution and seeing where it should
+go in the equalized distribution.
+
+\begin{equation}
+  g_{i,j} = \left\lfloor \left( L - 1 \right) \sum_{n = 0}^{f_{i,j}}
+  p_n  \right\rfloor
+\end{equation}
