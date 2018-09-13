@@ -370,3 +370,10 @@ Critical thinkers are able to do the following:
                   field, but is so vague that there is no possibility
                   of checking the credibility of sources. The use of
                   such words weakens an argument.
+
+* Critical Thinking Components
+1. Summary of specific information set
+2. synthesis of relevant other information
+3. CT Value add (analysis, hypothesis, counter argument, refutation,
+   conclusion, application, inference)
+4. nuanced language use

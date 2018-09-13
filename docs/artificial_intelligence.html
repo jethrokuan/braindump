@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-09-01 Sat 17:15 -->
+<!-- 2018-09-13 Thu 23:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Artificial Intelligence</title>
@@ -208,14 +208,27 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li><a href="#orgb713dd4">10. RANDOM</a>
+<li><a href="#org122c18e">10. Making Complex Decisions</a>
 <ul>
-<li><a href="#org659484b">10.1. Simon's Ant</a></li>
+<li><a href="#orgcab9fe0">10.1. Markov Decision Process (MDP)</a></li>
+<li><a href="#org8fd6858">10.2. Utilities over time</a></li>
+<li><a href="#org9def1bb">10.3. Optimal policies and the utilities of states</a></li>
+<li><a href="#org69aaa4e">10.4. Value Iteration</a></li>
+<li><a href="#orge8b93ac">10.5. Policy Iteration</a></li>
+<li><a href="#org81e1afb">10.6. Partially Observable MDPs (POMDPs)</a></li>
+<li><a href="#org5b37df7">10.7. Value iteration for POMDPs</a></li>
+<li><a href="#org4619282">10.8. <span class="todo TODO">TODO</span> Online agents for POMDPs</a></li>
+</ul>
+</li>
+<li><a href="#orgb713dd4">11. RANDOM</a>
+<ul>
+<li><a href="#org659484b">11.1. Simon's Ant</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
+
 <div id="outline-container-orgb729600" class="outline-2">
 <h2 id="orgb729600"><span class="section-number-2">1</span> What is Artificial Intelligence?</h2>
 <div class="outline-text-2" id="text-1">
@@ -1972,13 +1985,418 @@ value it provides.
 </div>
 
 
-<div id="outline-container-orgb713dd4" class="outline-2">
-<h2 id="orgb713dd4"><span class="section-number-2">10</span> RANDOM</h2>
+<div id="outline-container-org122c18e" class="outline-2">
+<h2 id="org122c18e"><span class="section-number-2">10</span> Making Complex Decisions</h2>
 <div class="outline-text-2" id="text-10">
+<p>
+Earlier, we were concerned with environments with one-shot, episodic
+decision problems. Sequential decision problems incorporate utilities,
+uncertainty and sensing. These include searching and planning problems
+as special cases.
+</p>
+</div>
+
+<div id="outline-container-orgcab9fe0" class="outline-3">
+<h3 id="orgcab9fe0"><span class="section-number-3">10.1</span> Markov Decision Process (MDP)</h3>
+<div class="outline-text-3" id="text-10-1">
+<p>
+A sequential decision problem for a fully observable, stochastic
+environment with a Markovian transition model and additive rewards is
+called a Markov decision process. It consists of a set of states, with
+initial state \(s_0\), a set \(ACTIONS(s)\) of actions in each state, a
+transition model \(P(s'|s, a)\), and a reward function \(R(s)\).
+</p>
+
+<p>
+A policy, denoted \(\pi\), specifies what the agent should do in any state
+\(s\). This action is denoted by \(\pi(s)\). The optimal policy $&pi;<sup>*</sup>$*yields the
+highest expected utility.
+</p>
+
+<p>
+The careful balancing of risk and reward is a characteristic of MDPs
+that does not arise in deterministic search problems.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8fd6858" class="outline-3">
+<h3 id="org8fd6858"><span class="section-number-3">10.2</span> Utilities over time</h3>
+<div class="outline-text-3" id="text-10-2">
+<p>
+A finite horizon for decision making means that there is a fixed time
+\(N\) after which nothing matters. In these scenarios, the optimal
+action in a given state could change over time, i.e. the optimal
+policy is non-stationary.
+</p>
+
+<p>
+It turns out that under stationarity, there are only 2 coherent ways
+to assign utilities to sequences:
+</p>
+
+<dl class="org-dl">
+<dt>additive rewards</dt><dd>\(U_h([s_0, s_1, \dots, s_n]) = R(s_0) + R(s_1) + \dots + R(s_n)\)</dd>
+<dt>discounted rewards</dt><dd>\(U_h([s_0, s_1, \dots, s_n]) = R(s_0) + \gamma \cdot R(s_1) + \dots +
+     \gamma^2 \cdot R(s_n)\)</dd>
+</dl>
+
+<p>
+This discount factor \(\gamma\) is a number between 0 and 1. Assuming
+stationarity has several problems. First, if the environment does not
+contain a terminal state, then utilities of undiscounted rewards go to
+infinite, and comparing two infinitely state sequences would be
+impossible. With discounted rewards, the utility of an infinite
+sequence can be made finite.
+</p>
+
+<p>
+However, if the environment contains a terminal state, and the agent
+is guaranteed to reach a terminal state eventually, then this policy
+is called a <b>proper policy</b>, and the above issue goes away. Infinite
+sequences can be compared in terms of the average reward obtained per
+time step. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9def1bb" class="outline-3">
+<h3 id="org9def1bb"><span class="section-number-3">10.3</span> Optimal policies and the utilities of states</h3>
+<div class="outline-text-3" id="text-10-3">
+<p>
+First, we can derive the expected utility of executing a policy \(\pi\) in
+\(s\):
+</p>
+
+\begin{equation}
+U^\pi (s) = E\left[ \sum_{t=0}^\inf \gamma^t R(S_t) \right]
+\end{equation}
+
+<p>
+where the expectation is with respect to the probability distribution
+over state sequences. determined by \(s\) and \(\pi\). Then $&pi;<sup>*</sup>(s) =
+argmax<sub>&pi;</sub> U^&pi; (s)*.
+</p>
+
+<p>
+A consequence of using discounted utilities with infinite horizons is
+that the optimal policy is independent of the starting state. This
+allows us to compute the true utility of the state as \(U^{\pi^*} (s)\).
+The utility function allows the agent to select actions by using the
+principle of maximum expected utility from the earlier chapter: \(\pi^*(s)
+= argmax_{a \in A(s) } \sum_{s^'} P(s' |s, a)U(s')\).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org69aaa4e" class="outline-3">
+<h3 id="org69aaa4e"><span class="section-number-3">10.4</span> Value Iteration</h3>
+<div class="outline-text-3" id="text-10-4">
+<p>
+The bellman equation illustrates that the utility of a state is the
+immediate reward for that state plus the expected discounted utility
+of the next state:
+</p>
+
+\begin{equation}
+U(s) = R(s) + \gamma max_{a \in A(s)} \sum_{s'} P(s' | s, a)U(s')
+\end{equation}
+
+<p>
+If there are \(n\) possible states, there are \(n\) Bellman equations to
+solve. However, these equations are non-linear, and cannot be solved
+using linear algebra techniques.
+</p>
+
+<p>
+Value iteration is an algorithm that is guaranteed to converge to an
+equilibrium. The basic idea is to start with arbitrary initial values
+for the utilities. We compute the right hand side of the equation, and
+update the utility on the left hand side of the equation.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function VALUE-ITERATION(mdp, e) returns a utility function
+  inputs: mdp, an MDP with states S, actions A(s), transition model P(s' | s, a), discount \gamma
+          e, the maximium error allowed in the utility of any state
+  locals: U, U', vectors of utilities for states in S, initially zero
+          \delta, the maximum change in utility for any state
+  repeat
+    U &lt;- U'; \delta &lt;- 0
+    for each state s in S do
+      U'[s] &lt;- R(s) + \gamma max_{a \in A(s)} \sum_{s'} P(s' | s, a) U[s']
+      if |U'[s] - U[s] | &gt; \delta then \delta &lt;- |U'[s] - U[s]|
+    until \delta &lt; e(1-\gamma) / \gamma
+  return U
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge8b93ac" class="outline-3">
+<h3 id="orge8b93ac"><span class="section-number-3">10.5</span> Policy Iteration</h3>
+<div class="outline-text-3" id="text-10-5">
+<p>
+We have already observed that it is possible to get an optimal policy,
+without having accurate utility function estimates.
+</p>
+
+<p>
+The policy iteration algorithm exploits this. The algorithm alternates
+between 2 steps, beginning at some policy \(\pi_0\):
+</p>
+
+<ol class="org-ol">
+<li><b>Policy evaluation</b>: given a policy \(\pi_i\), calculate \(U_i = U^{\pi_i}\),
+the utility of each state if \(\pi_i\) were to be executed</li>
+<li><b>Policy improvement</b>: calculate a new MEU policy \(\pi_{i+1}\), using
+one-step look ahead based on \(U_i\):</li>
+</ol>
+
+\begin{equation}
+\pi^* (s) = argmax_{a \in A(s)} P(s' | s, a) U(s')
+\end{equation}
+
+<p>
+Policy evaluation is simple, because the policy \(\pi_i\) specifies the
+action \(\pi_i(s)\) in state \(s\). This means we have a simplified version
+of the Bellman equation relating the utility of \(s\) to the utility of
+its neighbours:
+</p>
+
+\begin{equation}
+  U(s) = R(s) + \gamma  \sum_{s'} P(s' | s, a)U(s')
+\end{equation}
+
+<p>
+These equations are linear and can be quickly solved (in \(O(n^3)\) time)
+with linear algebra techniques. We can further speed up this process
+by performing an approximate policy evaluation. We do this by
+performing some number of value iteration steps to update the
+utilities:
+</p>
+
+\begin{equation}
+U_{i+1}(s) \leftarrow R(s) + \gamma \sum_{s'}P(s'|s, \pi_i(s))U_i(s')
+\end{equation}
+
+<p>
+The resulting algorithm is called modified policy iteration, and is
+often much more efficient.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function POLICY-ITERATION(mdp) returns a policy
+  inputs: mdp, an MDP
+  locals: U, vector of utilities for states in S
+          \pi, a policy vector indexed by state, initially random
+  repeat
+    U &lt;- POLICY-EVALUATION(\pi, U, mdp)
+    unchanged? &lt;- true
+    for each state s in S do
+      if max_{a \in A(s)} \sum_{s'} P(s'|s, a) U[s'] &gt; \sum_{s'} P(s'|s, \pi[s])U[s'] then do
+        \pi[s] \leftarrow argmax_{a \in A(s)} P(s'|s, a) U[s']
+        unchanged &lt;- false
+  until
+    unchanged?
+  return \pi
+</pre>
+</div>
+
+<p>
+<b>Asynchronous policy iteration</b> involves picking a subset of states and
+applying either kind of updating (policy improvement or simplified
+value iteration) on that subset. Given certain conditions, this is
+guaranteed to converge, and the freedom to choose any subset of states
+gives us a means to design efficient heuristic algorithms.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org81e1afb" class="outline-3">
+<h3 id="org81e1afb"><span class="section-number-3">10.6</span> Partially Observable MDPs (POMDPs)</h3>
+<div class="outline-text-3" id="text-10-6">
+<p>
+The assumption of full observability, accompanied with the Markov
+assumption for the transition model means that the optimal policy
+depends only on the current state. When the environment is partially
+observable, the agent does not know which state it is in. The agent
+then cannot execute \(\pi(s)\). The utility of a state \(s\) and the optimal
+action in \(s\) does not only depend on \(s\), but also how much the agent
+knows when it is in \(s\).
+</p>
+
+<p>
+In addition to the elements of the MDP &#x2013; the transition model
+\(P(s'|s, a)\), actions \(A(s)\), and reward function \(R(s)\), it also has
+a sensor model \(P(e|s)\). The sensor model specifies the probability of
+perceiving evidence \(e\) in state \(s\). For example, a sensor might
+measure the number of adjacent walls. A noisy sensor might return the
+wrong value with some probability.
+</p>
+
+<p>
+Belief states are the set of actual states the agent might be in. In
+POMDPs, these belief states are probability distributions over all
+possible states. The agent can calculate its current belief state as
+the conditional probability distribution over the actual states given
+the sequences of percepts and actions so far.
+</p>
+
+<p>
+If the previous belief state is \(b(s)\), and the agent performs some
+action \(a\) and perceives evidence \(e\), then the new belief state is
+given by:
+</p>
+
+\begin{equation}
+b'(s') = \alpha P(e | s') \sum_s P(s' | s, a) b(s)
+\end{equation}
+
+<p>
+where \(\alpha\) is a normalizing constant that makes the belief state sum
+to 1.
+</p>
+
+<p>
+<b>The optimal action in a POMDP depends only on the agent's belief
+state</b>. The optimal policy can be described by a mapping \(\pi^* (b)\) from
+belief states to actions. 
+</p>
+
+<p>
+The decision cycle of a POMDP can be broken down into 3 steps:
+</p>
+
+<ol class="org-ol">
+<li>Given the current belief state \(b\), execute the action \(a = \pi^* (b)\).</li>
+<li>Receive percept \(e\).</li>
+<li>Update the belief state to \(b'\) and repeat.</li>
+</ol>
+
+<p>
+If we knew the action and the subsequent percept, then the update to
+the belief state would be a deterministic one, following the update
+equation. The subsequent percept is not yet known, so the agent will
+arrive in one of several possible belief states. The probability of
+perceiving \(e\), given that \(a\) is was the action taken from belief
+state \(b\), is given by:
+</p>
+
+\begin{align}
+  P(e | a,b) &= \sum_{s'} P(e | a, s', b) P(s' | a, b) \\
+             &= \sum_{s'} P(e|s')P(s'|a, b) \\
+             &= \sum_{s'} P(e | s')\sum_{s'}P(s'|s, a)b(s)
+\end{align}
+
+\begin{align}
+  P(b' | a, b) &= \sum_eP(b' | e, a, b) P(e | a, b) \\
+               &= \sum_eP(b' | e, a, b)\sum_{s'} P(e|s')\sum_{s'} P(s'
+                 | s, a)b(s)
+\end{align}
+
+<p>
+Where \(P(b' | e, a, b) = 1\) if \(b' = FORWARD(b,a,e)\) and \(0\)
+otherwise.
+</p>
+
+<p>
+Because POMDPs have continuous state space, new algorithms for
+computing or approximating the optimal policies for MDPs do not apply here.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org5b37df7" class="outline-3">
+<h3 id="org5b37df7"><span class="section-number-3">10.7</span> Value iteration for POMDPs</h3>
+<div class="outline-text-3" id="text-10-7">
+<p>
+The value iteration algorithm for the MDP computed one utility value
+for each state. With infinitely many belief states, we need to be more
+creative.
+</p>
+
+<p>
+Consider conditional plans, and how the expected utility of executing
+a fixed conditional plan varies with the initial belief state.
+</p>
+
+<ol class="org-ol">
+<li>Let the utility of executing a fixed conditional plan \(p\) starting
+in physical state \(s\) be \(\alpha_p(s)\). Then the expected utility of
+executing \(p\) in belief state \(b\) is \(\sum_s b(s) \alpha_p (s)\) Hence the
+expected utility of a fixed conditional plan varies linearly with
+\(b\).</li>
+<li>At any given belief state \(b\), the optimal policy will choose to
+execute the conditional plan with the highest expected utility, and
+the expected utility is just the utility of that conditional plan:</li>
+</ol>
+
+\begin{equation}
+  U(b) = U^{\pi^*}(b) = max_{p} b \cdot \alpha_p
+\end{equation}
+
+<p>
+If the optimal policy \(\pi^*\) chooses to execute \(p\) starting at \(b\),
+then it is reasonable to expect that it might choose to execute \(p\) in
+belief states that are close to \(b\).
+</p>
+
+<p>
+From these 2 observations, we see that the utility function \(U(b)\) on
+belief states, being the maximum of a collection of hyperplanes, will
+be piecewise linear and convex.
+</p>
+
+<p>
+Let \(p\) be a depth-d conditional plan whose initial action is \(a\) and
+whose depth-d-1 subplan for percept \(e\) is \(p.e\), then
+</p>
+
+\begin{equation}
+  \alpha_p{s} = R(s) + \gamma \left( \sum_{s'} P(s' | s,a)\sum_e P(e|s')\alpha_{p.e}(s') \right)
+\end{equation}
+
+<p>
+This recursion gives rise to a value iteration algorithm:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-text">function POMDP-VALUE-ITERATION returns a utility function
+  inputs: pomdp
+          e, the maximum error allowed for utility
+  locals: U, U' sets of plans p
+
+  U' &lt;- set containing the empty plan [], with \alpha_[](s) = R(s)
+  repeat
+    U &lt;- U'
+    U' &lt;- set of all plans computed with above equation
+    U' &lt;- REMOVE-DOMINATED-PLANS(U')
+  until MAX-DIFFERENCE(U, U') &lt; e(1-\gamma) / \gamma
+  return U
+</pre>
+</div>
+
+<p>
+The algorithm's complexity is dominated by the number of plans
+generated: given \(|A|\) possible actions and \(|E|\) possible
+observations, there are \(|A|^{O(|E|^{d-1})}\) distinct depth-d plans,
+making the algorithm hopelessly inefficient for larger problems.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4619282" class="outline-3">
+<h3 id="org4619282"><span class="section-number-3">10.8</span> <span class="todo TODO">TODO</span> Online agents for POMDPs</h3>
+</div>
+</div>
+<div id="outline-container-orgb713dd4" class="outline-2">
+<h2 id="orgb713dd4"><span class="section-number-2">11</span> RANDOM</h2>
+<div class="outline-text-2" id="text-11">
 </div>
 <div id="outline-container-org659484b" class="outline-3">
-<h3 id="org659484b"><span class="section-number-3">10.1</span> Simon's Ant</h3>
-<div class="outline-text-3" id="text-10-1">
+<h3 id="org659484b"><span class="section-number-3">11.1</span> Simon's Ant</h3>
+<div class="outline-text-3" id="text-11-1">
 <p>
 Simon, noble prize in economics
 </p>
@@ -1995,7 +2413,7 @@ of the environment and not the complexity of the program.
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-09-01 Sat 17:15</p>
+<p class="date">Created: 2018-09-13 Thu 23:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

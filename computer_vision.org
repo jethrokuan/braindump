@@ -539,3 +539,136 @@ go in the equalized distribution.
   g_{i,j} = \left\lfloor \left( L - 1 \right) \sum_{n = 0}^{f_{i,j}}
   p_n  \right\rfloor
 \end{equation}
+
+* Change Detection
+To detect change between 2 video frames, it is straightforward to
+compute differences in pixel intensities across the two frames:
+
+\begin{equation}
+  D_t(x, y) = | I(x,y,t+1)  - I(x,y,t)|
+\end{equation}
+
+It is common to use a threshold for $D_t(x,y)$ to declare if a pixel
+has changed.
+
+To detect positional changes, the method used must be immune to
+positional change. This requires motion tracking.
+
+At the same time, to detect illumination change, the method must be
+immune to positional change. In the case of a stationary scene and
+camera, the straightforward method can be used. However, in the non
+trivial case, motion tracking will be required.
+
+* Motion Tracking
+
+** Feature-based
+Feature-based motion tracking utilises distinct features that changes
+positions. For each feature, we search for the matching feature in the
+next frame, to check if there is a displacement.
+
+Good features are called "corners". The two popular corner detectors
+are the Harris corner detector and the Tomasi corner detector.
+
+*** TODO Harris corner detector
+
+*** TODO Tomasi corner detector
+
+Examples of feature detectors include SIFT and SURF.
+
+** Gradient-based
+Gradient-based motion tracking makes 2 basic assumptions:
+
+1. Intensity changes smoothly within image
+2. Pixel intensities of a given object does not change over time
+
+Suppose that an object is in motion. Then the position of the object
+is given by $(dx, dy)$ over time $dt$. From the brightness constancy
+assumption,
+
+\begin{equation}
+I(x + dx, y + yd, t + dt) = I(x,y,t)
+\end{equation}
+
+If we apply the Taylor series expansion on the left hand side, we get:
+
+\begin{equation}
+  I(x + dx, y + dy, t + dt) = I(x,y,t) + \frac{\partial I}{\partial
+    x}dx + \frac{\partial I}{\partial y} dy + \frac{\partial
+    I}{\partial t}dt + \dots
+\end{equation}
+
+Omitting higher-order terms, we get
+
+\begin{equation}
+  \frac{\partial I}{\partial
+    x}dx + \frac{\partial I}{\partial y} dy + \frac{\partial
+    I}{\partial t}dt = 0
+\end{equation}
+
+We denote this as $I_x u + I_y v + I_t = 0$, but this has 2 unknowns, and
+is unsolvable.
+
+*** Lucas-Kanade method
+Suppose an object moves by displacement $\mathbb{d} = (dx, dy)^T$. Then
+$J(x+d) = I(x)$, or $J(x) = I(x-d)$.
+
+Due to noise, there is some error at position $x$:
+
+\begin{equation}
+e(x) = I(x - d) - J(x)
+\end{equation}
+
+We sum the errors over some window $W$ at position $x$:
+
+\begin{equation}
+E(x) = \sum_{x \in W} w(x) \left[ I(x-d) - J(x) \right]^2
+\end{equation}
+
+If $E$ is small, then the patterns in $I$ and $J$ match well. We find
+the $d$ that minimises $E$. If we expand $I(x-d)$ with Taylor
+expansion:
+
+\begin{equation}
+I(x-dx, y-dy) = I(x,y) - dx I_x(x,y) - dy I_y (x,y) + \dots
+\end{equation}
+
+Then,
+
+\begin{equation}
+  J(x) = I(x - d) = I(x) - d^T g(x), g(x) = \begin{bmatrix}
+    I_x(x) \\
+    I_y(x)
+  \end{bmatrix}
+\end{equation}
+
+Where g(x) is the intensity gradient. Substituting the above equation,
+and setting $\frac{\partial E}{\partial d} = 0$:
+
+\begin{equation}
+\frac{\partial E}{\partial d} = -2 \sum_{x \in W} w(x) \left[ I(x) -
+  J(x) - d^T g(x) \right] g(x)
+\end{equation}
+
+
+\begin{equation}
+\sum_{x \in W} w(x)\left[ I(x) - J(x) \right] g(x) = \sum_{x \in W}
+w(x) g(x) g^T(x) d
+\end{equation}
+
+We denote this as:
+
+\begin{equation}
+  Z d = b
+\end{equation}
+
+where
+
+\begin{equation}
+Z = \begin{bmatrix}
+  \sum_{x \in W} w I_x^2 & \sum_{x \in W} w I_x I_y \\
+  \sum_{x \in W} wI_x I_y & \sum_{x \in W} w I_y^2
+\end{bmatrix}, b = \begin{bmatrix}
+  \sum_{x \in W} w(I-J)I_x \\
+  \sum_{x \in W} w(I-J)I_y
+\end{bmatrix}
+\end{equation}

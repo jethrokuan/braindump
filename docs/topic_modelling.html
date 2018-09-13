@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-09-01 Sat 17:15 -->
+<!-- 2018-09-11 Tue 13:15 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Topic Modeling</title>
@@ -91,27 +91,27 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#orgac6ed36">1. LDA</a>
+<li><a href="#orgfbe20d1">1. LDA</a>
 <ul>
 <li>
 <ul>
-<li><a href="#org0986dd1">1.0.1. Dirichlet Distribution</a></li>
-<li><a href="#orgfb48973">1.0.2. Exploring a Corpus with the posterior distribution</a></li>
-<li><a href="#orgba9077d">1.0.3. Posterior Inference</a>
+<li><a href="#org124888d">1.0.1. Dirichlet Distribution</a></li>
+<li><a href="#orga952c81">1.0.2. Exploring a Corpus with the posterior distribution</a></li>
+<li><a href="#org6fe0379">1.0.3. Posterior Inference</a>
 <ul>
-<li><a href="#org0f1c15c">1.0.3.1. Mean Field Variational Inference</a></li>
+<li><a href="#org51223a9">1.0.3.1. Mean Field Variational Inference</a></li>
 </ul>
 </li>
-<li><a href="#orgf650d1b">1.0.4. Markov Chains</a></li>
-<li><a href="#org85a2d09">1.0.5. Shortcomings</a></li>
+<li><a href="#orgd0c40fa">1.0.4. Markov Chains</a></li>
+<li><a href="#orgf15a5d9">1.0.5. Shortcomings</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#org0359608">2. TopicRNN</a></li>
-<li><a href="#orgc3dfc7b">3. Potential Research Topics</a>
+<li><a href="#orgb38acb8">2. TopicRNN</a></li>
+<li><a href="#org9b5a786">3. Potential Research Topics</a>
 <ul>
-<li><a href="#org71d401e">3.1. <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</a></li>
+<li><a href="#orgfa1305b">3.1. <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</a></li>
 </ul>
 </li>
 </ul>
@@ -122,8 +122,8 @@ for the JavaScript code in this tag.
 <a href="https://github.com/jethrokuan/lda-survey">LDA survey - Github</a>
 </p>
 
-<div id="outline-container-orgac6ed36" class="outline-2">
-<h2 id="orgac6ed36"><span class="section-number-2">1</span> LDA</h2>
+<div id="outline-container-orgfbe20d1" class="outline-2">
+<h2 id="orgfbe20d1"><span class="section-number-2">1</span> LDA</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 <a href="https://ldabook.com/">The Little Book on LDA</a>
@@ -131,8 +131,8 @@ for the JavaScript code in this tag.
 <a href="http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf">http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf</a>
 </p>
 </div>
-<div id="outline-container-org0986dd1" class="outline-4">
-<h4 id="org0986dd1"><span class="section-number-4">1.0.1</span> Dirichlet Distribution</h4>
+<div id="outline-container-org124888d" class="outline-4">
+<h4 id="org124888d"><span class="section-number-4">1.0.1</span> Dirichlet Distribution</h4>
 <div class="outline-text-4" id="text-1-0-1">
 <p>
 <a href="https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf">https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf</a>
@@ -185,8 +185,8 @@ Dirichlet.
 </p>
 </div>
 </div>
-<div id="outline-container-orgfb48973" class="outline-4">
-<h4 id="orgfb48973"><span class="section-number-4">1.0.2</span> Exploring a Corpus with the posterior distribution</h4>
+<div id="outline-container-orga952c81" class="outline-4">
+<h4 id="orga952c81"><span class="section-number-4">1.0.2</span> Exploring a Corpus with the posterior distribution</h4>
 <div class="outline-text-4" id="text-1-0-2">
 <p>
 Quantities needed for exploring a corpus are the posterior
@@ -215,12 +215,12 @@ distance</i>:
 \end{align*}
 </div>
 </div>
-<div id="outline-container-orgba9077d" class="outline-4">
-<h4 id="orgba9077d"><span class="section-number-4">1.0.3</span> Posterior Inference</h4>
+<div id="outline-container-org6fe0379" class="outline-4">
+<h4 id="org6fe0379"><span class="section-number-4">1.0.3</span> Posterior Inference</h4>
 <div class="outline-text-4" id="text-1-0-3">
 </div>
-<div id="outline-container-org0f1c15c" class="outline-5">
-<h5 id="org0f1c15c"><span class="section-number-5">1.0.3.1</span> Mean Field Variational Inference</h5>
+<div id="outline-container-org51223a9" class="outline-5">
+<h5 id="org51223a9"><span class="section-number-5">1.0.3.1</span> Mean Field Variational Inference</h5>
 <div class="outline-text-5" id="text-1-0-3-1">
 <p>
 Approximate intractable posterior distribution with a simpler
@@ -250,16 +250,16 @@ family.
 </div>
 </div>
 </div>
-<div id="outline-container-orgf650d1b" class="outline-4">
-<h4 id="orgf650d1b"><span class="section-number-4">1.0.4</span> Markov Chains</h4>
+<div id="outline-container-orgd0c40fa" class="outline-4">
+<h4 id="orgd0c40fa"><span class="section-number-4">1.0.4</span> Markov Chains</h4>
 <div class="outline-text-4" id="text-1-0-4">
 <p>
 <a href="http://setosa.io/ev/markov-chains/">http://setosa.io/ev/markov-chains/</a>
 </p>
 </div>
 </div>
-<div id="outline-container-org85a2d09" class="outline-4">
-<h4 id="org85a2d09"><span class="section-number-4">1.0.5</span> Shortcomings</h4>
+<div id="outline-container-orgf15a5d9" class="outline-4">
+<h4 id="orgf15a5d9"><span class="section-number-4">1.0.5</span> Shortcomings</h4>
 <div class="outline-text-4" id="text-1-0-5">
 <ul class="org-ul">
 <li>strong, potentially invalid statistical assumptions:
@@ -279,8 +279,8 @@ evolving over time</li>
 </div>
 </div>
 </div>
-<div id="outline-container-org0359608" class="outline-2">
-<h2 id="org0359608"><span class="section-number-2">2</span> TopicRNN</h2>
+<div id="outline-container-orgb38acb8" class="outline-2">
+<h2 id="orgb38acb8"><span class="section-number-2">2</span> TopicRNN</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 <a href="http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf">http://www.columbia.edu/~jwp2128/Papers/DiengWangetal2017.pdf</a> 
@@ -293,18 +293,18 @@ local dynamics of the sequences
 </p>
 </div>
 </div>
-<div id="outline-container-orgc3dfc7b" class="outline-2">
-<h2 id="orgc3dfc7b"><span class="section-number-2">3</span> Potential Research Topics</h2>
+<div id="outline-container-org9b5a786" class="outline-2">
+<h2 id="org9b5a786"><span class="section-number-2">3</span> Potential Research Topics</h2>
 <div class="outline-text-2" id="text-3">
 </div>
-<div id="outline-container-org71d401e" class="outline-3">
-<h3 id="org71d401e"><span class="section-number-3">3.1</span> <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</h3>
+<div id="outline-container-orgfa1305b" class="outline-3">
+<h3 id="orgfa1305b"><span class="section-number-3">3.1</span> <span class="todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic?</h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-09-01 Sat 17:15</p>
+<p class="date">Created: 2018-09-11 Tue 13:15</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

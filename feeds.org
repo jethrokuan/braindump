@@ -16,6 +16,7 @@
 *** https://towardsdatascience.com/feed
 *** http://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss
 *** https://thegradient.pub/rss/
+*** https://lilianweng.github.io/lil-log/feed.xml
 ** Programming Languages                                                 :pl:
 *** http://lambda-the-ultimate.org/rss.xml
 ** General                                                          :general:
@@ -42,4 +43,3 @@
 ** Vocab                                                              :vocab:
 *** https://wordsmith.org/awad/rss1.xml
 *** https://www.merriam-webster.com/wotd/feed/rss2
-*** https://en.wiktionary.org/w/api.php?action=featuredfeed&feed=wotd

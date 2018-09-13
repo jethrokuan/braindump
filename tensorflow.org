@@ -69,4 +69,5 @@ padding:
   @tf.contrib.framework.add_arg_scope
   def conv2d(*args, **kwargs)
 #+END_SRC
-
+* TF Serve
+https://towardsdatascience.com/introducing-tfserve-simple-and-easy-http-server-for-tensorflow-model-inference-582ea1b07da8?source=rss----7f60cf5620c9---4

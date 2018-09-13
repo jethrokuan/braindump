@@ -1,5 +1,6 @@
 #+SETUPFILE: ./export_template.org
 #+TITLE: Artificial Intelligence
+
 * Reference Books                                                  :noexport:
 [[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Artificial%20Intelligence%20A%20Modern%20Approach%20(3rd%20Edition).pdf][AIMA]]
 [[file:~/Dropbox/NUS/CS4246/Reinforcement%20Learning%20_%20Sutton.pdf][Reinforcement Learning - Sutton]]
@@ -994,6 +995,292 @@ retrieves the evidence if the cost of observing it is less than the
 value it provides.
 
 
+* Making Complex Decisions
+Earlier, we were concerned with environments with one-shot, episodic
+decision problems. Sequential decision problems incorporate utilities,
+uncertainty and sensing. These include searching and planning problems
+as special cases.
+
+** Markov Decision Process (MDP)
+A sequential decision problem for a fully observable, stochastic
+environment with a Markovian transition model and additive rewards is
+called a Markov decision process. It consists of a set of states, with
+initial state $s_0$, a set $ACTIONS(s)$ of actions in each state, a
+transition model $P(s'|s, a)$, and a reward function $R(s)$.
+
+A policy, denoted $\pi$, specifies what the agent should do in any state
+$s$. This action is denoted by $\pi(s)$. The optimal policy $\pi^*$*yields the
+highest expected utility.
+
+The careful balancing of risk and reward is a characteristic of MDPs
+that does not arise in deterministic search problems.
+
+** Utilities over time
+A finite horizon for decision making means that there is a fixed time
+$N$ after which nothing matters. In these scenarios, the optimal
+action in a given state could change over time, i.e. the optimal
+policy is non-stationary.
+
+It turns out that under stationarity, there are only 2 coherent ways
+to assign utilities to sequences:
+
+- additive rewards :: $U_h([s_0, s_1, \dots, s_n]) = R(s_0) + R(s_1) + \dots + R(s_n)$
+- discounted rewards :: $U_h([s_0, s_1, \dots, s_n]) = R(s_0) + \gamma \cdot R(s_1) + \dots +
+     \gamma^2 \cdot R(s_n)$
+
+This discount factor $\gamma$ is a number between 0 and 1. Assuming
+stationarity has several problems. First, if the environment does not
+contain a terminal state, then utilities of undiscounted rewards go to
+infinite, and comparing two infinitely state sequences would be
+impossible. With discounted rewards, the utility of an infinite
+sequence can be made finite.
+
+However, if the environment contains a terminal state, and the agent
+is guaranteed to reach a terminal state eventually, then this policy
+is called a *proper policy*, and the above issue goes away. Infinite
+sequences can be compared in terms of the average reward obtained per
+time step. 
+
+** Optimal policies and the utilities of states
+First, we can derive the expected utility of executing a policy $\pi$ in
+$s$:
+
+\begin{equation}
+U^\pi (s) = E\left[ \sum_{t=0}^\inf \gamma^t R(S_t) \right]
+\end{equation}
+
+where the expectation is with respect to the probability distribution
+over state sequences. determined by $s$ and $\pi$. Then $\pi^*(s) =
+argmax_\pi U^\pi (s)*.
+
+A consequence of using discounted utilities with infinite horizons is
+that the optimal policy is independent of the starting state. This
+allows us to compute the true utility of the state as $U^{\pi^*} (s)$.
+The utility function allows the agent to select actions by using the
+principle of maximum expected utility from the earlier chapter: $\pi^*(s)
+= argmax_{a \in A(s) } \sum_{s^'} P(s' |s, a)U(s')$.
+
+** Value Iteration
+The bellman equation illustrates that the utility of a state is the
+immediate reward for that state plus the expected discounted utility
+of the next state:
+
+\begin{equation}
+U(s) = R(s) + \gamma max_{a \in A(s)} \sum_{s'} P(s' | s, a)U(s')
+\end{equation}
+
+If there are $n$ possible states, there are $n$ Bellman equations to
+solve. However, these equations are non-linear, and cannot be solved
+using linear algebra techniques.
+
+Value iteration is an algorithm that is guaranteed to converge to an
+equilibrium. The basic idea is to start with arbitrary initial values
+for the utilities. We compute the right hand side of the equation, and
+update the utility on the left hand side of the equation.
+
+#+BEGIN_SRC text
+  function VALUE-ITERATION(mdp, e) returns a utility function
+    inputs: mdp, an MDP with states S, actions A(s), transition model P(s' | s, a), discount \gamma
+            e, the maximium error allowed in the utility of any state
+    locals: U, U', vectors of utilities for states in S, initially zero
+            \delta, the maximum change in utility for any state
+    repeat
+      U <- U'; \delta <- 0
+      for each state s in S do
+        U'[s] <- R(s) + \gamma max_{a \in A(s)} \sum_{s'} P(s' | s, a) U[s']
+        if |U'[s] - U[s] | > \delta then \delta <- |U'[s] - U[s]|
+      until \delta < e(1-\gamma) / \gamma
+    return U
+#+END_SRC
+
+** Policy Iteration
+We have already observed that it is possible to get an optimal policy,
+without having accurate utility function estimates.
+
+The policy iteration algorithm exploits this. The algorithm alternates
+between 2 steps, beginning at some policy $\pi_0$:
+
+1. *Policy evaluation*: given a policy $\pi_i$, calculate $U_i = U^{\pi_i}$,
+   the utility of each state if $\pi_i$ were to be executed
+2. *Policy improvement*: calculate a new MEU policy $\pi_{i+1}$, using
+   one-step look ahead based on $U_i$: 
+
+\begin{equation}
+\pi^* (s) = argmax_{a \in A(s)} P(s' | s, a) U(s')
+\end{equation}
+
+Policy evaluation is simple, because the policy $\pi_i$ specifies the
+action $\pi_i(s)$ in state $s$. This means we have a simplified version
+of the Bellman equation relating the utility of $s$ to the utility of
+its neighbours:
+
+\begin{equation}
+  U(s) = R(s) + \gamma  \sum_{s'} P(s' | s, a)U(s')
+\end{equation}
+
+These equations are linear and can be quickly solved (in $O(n^3)$ time)
+with linear algebra techniques. We can further speed up this process
+by performing an approximate policy evaluation. We do this by
+performing some number of value iteration steps to update the
+utilities:
+
+\begin{equation}
+U_{i+1}(s) \leftarrow R(s) + \gamma \sum_{s'}P(s'|s, \pi_i(s))U_i(s')
+\end{equation}
+
+The resulting algorithm is called modified policy iteration, and is
+often much more efficient.
+
+#+BEGIN_SRC text
+  function POLICY-ITERATION(mdp) returns a policy
+    inputs: mdp, an MDP
+    locals: U, vector of utilities for states in S
+            \pi, a policy vector indexed by state, initially random
+    repeat
+      U <- POLICY-EVALUATION(\pi, U, mdp)
+      unchanged? <- true
+      for each state s in S do
+        if max_{a \in A(s)} \sum_{s'} P(s'|s, a) U[s'] > \sum_{s'} P(s'|s, \pi[s])U[s'] then do
+          \pi[s] \leftarrow argmax_{a \in A(s)} P(s'|s, a) U[s']
+          unchanged <- false
+    until
+      unchanged?
+    return \pi
+#+END_SRC
+
+*Asynchronous policy iteration* involves picking a subset of states and
+applying either kind of updating (policy improvement or simplified
+value iteration) on that subset. Given certain conditions, this is
+guaranteed to converge, and the freedom to choose any subset of states
+gives us a means to design efficient heuristic algorithms.
+
+** Partially Observable MDPs (POMDPs)
+The assumption of full observability, accompanied with the Markov
+assumption for the transition model means that the optimal policy
+depends only on the current state. When the environment is partially
+observable, the agent does not know which state it is in. The agent
+then cannot execute $\pi(s)$. The utility of a state $s$ and the optimal
+action in $s$ does not only depend on $s$, but also how much the agent
+knows when it is in $s$.
+
+In addition to the elements of the MDP -- the transition model
+$P(s'|s, a)$, actions $A(s)$, and reward function $R(s)$, it also has
+a sensor model $P(e|s)$. The sensor model specifies the probability of
+perceiving evidence $e$ in state $s$. For example, a sensor might
+measure the number of adjacent walls. A noisy sensor might return the
+wrong value with some probability.
+
+Belief states are the set of actual states the agent might be in. In
+POMDPs, these belief states are probability distributions over all
+possible states. The agent can calculate its current belief state as
+the conditional probability distribution over the actual states given
+the sequences of percepts and actions so far.
+
+If the previous belief state is $b(s)$, and the agent performs some
+action $a$ and perceives evidence $e$, then the new belief state is
+given by:
+
+\begin{equation}
+b'(s') = \alpha P(e | s') \sum_s P(s' | s, a) b(s)
+\end{equation}
+
+where $\alpha$ is a normalizing constant that makes the belief state sum
+to 1.
+
+*The optimal action in a POMDP depends only on the agent's belief
+state*. The optimal policy can be described by a mapping $\pi^* (b)$ from
+belief states to actions. 
+
+The decision cycle of a POMDP can be broken down into 3 steps:
+
+1. Given the current belief state $b$, execute the action $a = \pi^* (b)$.
+2. Receive percept $e$.
+3. Update the belief state to $b'$ and repeat.
+
+If we knew the action and the subsequent percept, then the update to
+the belief state would be a deterministic one, following the update
+equation. The subsequent percept is not yet known, so the agent will
+arrive in one of several possible belief states. The probability of
+perceiving $e$, given that $a$ is was the action taken from belief
+state $b$, is given by:
+
+\begin{align}
+  P(e | a,b) &= \sum_{s'} P(e | a, s', b) P(s' | a, b) \\
+             &= \sum_{s'} P(e|s')P(s'|a, b) \\
+             &= \sum_{s'} P(e | s')\sum_{s'}P(s'|s, a)b(s)
+\end{align}
+
+\begin{align}
+  P(b' | a, b) &= \sum_eP(b' | e, a, b) P(e | a, b) \\
+               &= \sum_eP(b' | e, a, b)\sum_{s'} P(e|s')\sum_{s'} P(s'
+                 | s, a)b(s)
+\end{align}
+
+Where $P(b' | e, a, b) = 1$ if $b' = FORWARD(b,a,e)$ and $0$
+otherwise.
+
+Because POMDPs have continuous state space, new algorithms for
+computing or approximating the optimal policies for MDPs do not apply here.
+
+** Value iteration for POMDPs
+The value iteration algorithm for the MDP computed one utility value
+for each state. With infinitely many belief states, we need to be more
+creative.
+
+Consider conditional plans, and how the expected utility of executing
+a fixed conditional plan varies with the initial belief state.
+
+1. Let the utility of executing a fixed conditional plan $p$ starting
+   in physical state $s$ be $\alpha_p(s)$. Then the expected utility of
+   executing $p$ in belief state $b$ is $\sum_s b(s) \alpha_p (s)$ Hence the
+   expected utility of a fixed conditional plan varies linearly with
+   $b$.
+2. At any given belief state $b$, the optimal policy will choose to
+   execute the conditional plan with the highest expected utility, and
+   the expected utility is just the utility of that conditional plan:
+
+\begin{equation}
+  U(b) = U^{\pi^*}(b) = max_{p} b \cdot \alpha_p
+\end{equation}
+
+If the optimal policy $\pi^*$ chooses to execute $p$ starting at $b$,
+then it is reasonable to expect that it might choose to execute $p$ in
+belief states that are close to $b$.
+
+From these 2 observations, we see that the utility function $U(b)$ on
+belief states, being the maximum of a collection of hyperplanes, will
+be piecewise linear and convex.
+
+Let $p$ be a depth-d conditional plan whose initial action is $a$ and
+whose depth-d-1 subplan for percept $e$ is $p.e$, then
+
+\begin{equation}
+  \alpha_p{s} = R(s) + \gamma \left( \sum_{s'} P(s' | s,a)\sum_e P(e|s')\alpha_{p.e}(s') \right)
+\end{equation}
+
+This recursion gives rise to a value iteration algorithm:
+
+#+BEGIN_SRC text
+  function POMDP-VALUE-ITERATION returns a utility function
+    inputs: pomdp
+            e, the maximum error allowed for utility
+    locals: U, U' sets of plans p
+
+    U' <- set containing the empty plan [], with \alpha_[](s) = R(s)
+    repeat
+      U <- U'
+      U' <- set of all plans computed with above equation
+      U' <- REMOVE-DOMINATED-PLANS(U')
+    until MAX-DIFFERENCE(U, U') < e(1-\gamma) / \gamma
+    return U
+#+END_SRC
+
+The algorithm's complexity is dominated by the number of plans
+generated: given $|A|$ possible actions and $|E|$ possible
+observations, there are $|A|^{O(|E|^{d-1})}$ distinct depth-d plans,
+making the algorithm hopelessly inefficient for larger problems.
+
+** TODO Online agents for POMDPs
 * RANDOM
 
 ** Simon's Ant

@@ -4,3 +4,5 @@ what is dbus for?
 Markovian Assumption: nth item depends on some other item
 * Snippet 2018-08-02 09:49
 http://conceptvector.org/#/
+* Snippet 2018-09-09 11:18
+Check out computer vision api

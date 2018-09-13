@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-09-01 Sat 17:07 -->
+<!-- 2018-09-13 Thu 23:28 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Computer Vision</title>
@@ -131,6 +131,22 @@ for the JavaScript code in this tag.
 <ul>
 <li><a href="#org3a94655">3.1. Point Operators</a></li>
 <li><a href="#org5883772">3.2. Histogram Equalization</a></li>
+</ul>
+</li>
+<li><a href="#orgb46cca5">4. Change Detection</a></li>
+<li><a href="#org3944902">5. Motion Tracking</a>
+<ul>
+<li><a href="#org0b4a308">5.1. Feature-based</a>
+<ul>
+<li><a href="#org1a13c8f">5.1.1. <span class="todo TODO">TODO</span> Harris corner detector</a></li>
+<li><a href="#org656134f">5.1.2. <span class="todo TODO">TODO</span> Tomasi corner detector</a></li>
+</ul>
+</li>
+<li><a href="#org79a1b6a">5.2. Gradient-based</a>
+<ul>
+<li><a href="#orgcb12734">5.2.1. Lucas-Kanade method</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -928,10 +944,209 @@ go in the equalized distribution.
 </div>
 </div>
 </div>
+
+<div id="outline-container-orgb46cca5" class="outline-2">
+<h2 id="orgb46cca5"><span class="section-number-2">4</span> Change Detection</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+To detect change between 2 video frames, it is straightforward to
+compute differences in pixel intensities across the two frames:
+</p>
+
+\begin{equation}
+  D_t(x, y) = | I(x,y,t+1)  - I(x,y,t)|
+\end{equation}
+
+<p>
+It is common to use a threshold for \(D_t(x,y)\) to declare if a pixel
+has changed.
+</p>
+
+<p>
+To detect positional changes, the method used must be immune to
+positional change. This requires motion tracking.
+</p>
+
+<p>
+At the same time, to detect illumination change, the method must be
+immune to positional change. In the case of a stationary scene and
+camera, the straightforward method can be used. However, in the non
+trivial case, motion tracking will be required.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3944902" class="outline-2">
+<h2 id="org3944902"><span class="section-number-2">5</span> Motion Tracking</h2>
+<div class="outline-text-2" id="text-5">
+</div>
+<div id="outline-container-org0b4a308" class="outline-3">
+<h3 id="org0b4a308"><span class="section-number-3">5.1</span> Feature-based</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+Feature-based motion tracking utilises distinct features that changes
+positions. For each feature, we search for the matching feature in the
+next frame, to check if there is a displacement.
+</p>
+
+<p>
+Good features are called "corners". The two popular corner detectors
+are the Harris corner detector and the Tomasi corner detector.
+</p>
+</div>
+
+<div id="outline-container-org1a13c8f" class="outline-4">
+<h4 id="org1a13c8f"><span class="section-number-4">5.1.1</span> <span class="todo TODO">TODO</span> Harris corner detector</h4>
+</div>
+
+<div id="outline-container-org656134f" class="outline-4">
+<h4 id="org656134f"><span class="section-number-4">5.1.2</span> <span class="todo TODO">TODO</span> Tomasi corner detector</h4>
+<div class="outline-text-4" id="text-5-1-2">
+<p>
+Examples of feature detectors include SIFT and SURF.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org79a1b6a" class="outline-3">
+<h3 id="org79a1b6a"><span class="section-number-3">5.2</span> Gradient-based</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Gradient-based motion tracking makes 2 basic assumptions:
+</p>
+
+<ol class="org-ol">
+<li>Intensity changes smoothly within image</li>
+<li>Pixel intensities of a given object does not change over time</li>
+</ol>
+
+<p>
+Suppose that an object is in motion. Then the position of the object
+is given by \((dx, dy)\) over time \(dt\). From the brightness constancy
+assumption,
+</p>
+
+\begin{equation}
+I(x + dx, y + yd, t + dt) = I(x,y,t)
+\end{equation}
+
+<p>
+If we apply the Taylor series expansion on the left hand side, we get:
+</p>
+
+\begin{equation}
+  I(x + dx, y + dy, t + dt) = I(x,y,t) + \frac{\partial I}{\partial
+    x}dx + \frac{\partial I}{\partial y} dy + \frac{\partial
+    I}{\partial t}dt + \dots
+\end{equation}
+
+<p>
+Omitting higher-order terms, we get
+</p>
+
+\begin{equation}
+  \frac{\partial I}{\partial
+    x}dx + \frac{\partial I}{\partial y} dy + \frac{\partial
+    I}{\partial t}dt = 0
+\end{equation}
+
+<p>
+We denote this as \(I_x u + I_y v + I_t = 0\), but this has 2 unknowns, and
+is unsolvable.
+</p>
+</div>
+
+<div id="outline-container-orgcb12734" class="outline-4">
+<h4 id="orgcb12734"><span class="section-number-4">5.2.1</span> Lucas-Kanade method</h4>
+<div class="outline-text-4" id="text-5-2-1">
+<p>
+Suppose an object moves by displacement \(\mathbb{d} = (dx, dy)^T\). Then
+\(J(x+d) = I(x)\), or \(J(x) = I(x-d)\).
+</p>
+
+<p>
+Due to noise, there is some error at position \(x\):
+</p>
+
+\begin{equation}
+e(x) = I(x - d) - J(x)
+\end{equation}
+
+<p>
+We sum the errors over some window \(W\) at position \(x\):
+</p>
+
+\begin{equation}
+E(x) = \sum_{x \in W} w(x) \left[ I(x-d) - J(x) \right]^2
+\end{equation}
+
+<p>
+If \(E\) is small, then the patterns in \(I\) and \(J\) match well. We find
+the \(d\) that minimises \(E\). If we expand \(I(x-d)\) with Taylor
+expansion:
+</p>
+
+\begin{equation}
+I(x-dx, y-dy) = I(x,y) - dx I_x(x,y) - dy I_y (x,y) + \dots
+\end{equation}
+
+<p>
+Then,
+</p>
+
+\begin{equation}
+  J(x) = I(x - d) = I(x) - d^T g(x), g(x) = \begin{bmatrix}
+    I_x(x) \\
+    I_y(x)
+  \end{bmatrix}
+\end{equation}
+
+<p>
+Where g(x) is the intensity gradient. Substituting the above equation,
+and setting \(\frac{\partial E}{\partial d} = 0\):
+</p>
+
+\begin{equation}
+\frac{\partial E}{\partial d} = -2 \sum_{x \in W} w(x) \left[ I(x) -
+  J(x) - d^T g(x) \right] g(x)
+\end{equation}
+
+
+\begin{equation}
+\sum_{x \in W} w(x)\left[ I(x) - J(x) \right] g(x) = \sum_{x \in W}
+w(x) g(x) g^T(x) d
+\end{equation}
+
+<p>
+We denote this as:
+</p>
+
+\begin{equation}
+  Z d = b
+\end{equation}
+
+<p>
+where
+</p>
+
+\begin{equation}
+Z = \begin{bmatrix}
+  \sum_{x \in W} w I_x^2 & \sum_{x \in W} w I_x I_y \\
+  \sum_{x \in W} wI_x I_y & \sum_{x \in W} w I_y^2
+\end{bmatrix}, b = \begin{bmatrix}
+  \sum_{x \in W} w(I-J)I_x \\
+  \sum_{x \in W} w(I-J)I_y
+\end{bmatrix}
+\end{equation}
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-09-01 Sat 17:07</p>
+<p class="date">Created: 2018-09-13 Thu 23:28</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
