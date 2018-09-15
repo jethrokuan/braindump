@@ -3,7 +3,7 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<!-- 2018-09-13 Thu 23:28 -->
+<!-- 2018-09-15 Sat 15:40 -->
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Tensorflow</title>
@@ -80,6 +80,23 @@ for the JavaScript code in this tag.
 </ul>
 </li>
 <li><a href="#org0ee3872">3. TF Serve</a></li>
+<li><a href="#org4836153">4. TF Estimator API</a>
+<ul>
+<li><a href="#org87ace93">4.1. Predict</a></li>
+<li><a href="#org9b4f03e">4.2. Eval</a></li>
+<li><a href="#org446e65e">4.3. Train</a></li>
+</ul>
+</li>
+<li><a href="#org676da8b">5. TF Feature Columns</a>
+<ul>
+<li><a href="#org2c6fe00">5.1. Numeric column</a></li>
+<li><a href="#orga716910">5.2. Bucketized column</a></li>
+<li><a href="#orgbba71f9">5.3. Categorical Identity Column</a></li>
+<li><a href="#org29b7bc8">5.4. Categorical vocabulary column</a></li>
+<li><a href="#org7581b1a">5.5. Feature Crosses</a></li>
+<li><a href="#org1030526">5.6. Indicator and Embedding columns</a></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>
@@ -97,7 +114,14 @@ TensorFlow breaks up the graph into several chunks and run them in
 parallel across multiple CPUs or GPUs where possible, and also
 supports distributed computing.
 </p>
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Estimator API/image6_2018-09-15_14-26-09.png" alt="image6_2018-09-15_14-26-09.png" />
+</p>
 </div>
+</div>
+
 <div id="outline-container-org567b406" class="outline-3">
 <h3 id="org567b406"><span class="section-number-3">1.1</span> Glossary</h3>
 <div class="outline-text-3" id="text-1-1">
@@ -199,10 +223,410 @@ def conv2d(*args, **kwargs)
 </p>
 </div>
 </div>
+<div id="outline-container-org4836153" class="outline-2">
+<h2 id="org4836153"><span class="section-number-2">4</span> TF Estimator API</h2>
+<div class="outline-text-2" id="text-4">
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Estimator API/image2_2018-09-15_14-42-49.jpg" alt="image2_2018-09-15_14-42-49.jpg" />
+</p>
+</div>
+
+<p>
+References:
+</p>
+<ul class="org-ul">
+<li><a href="http://ruder.io/text-classification-tensorflow-estimators/">http://ruder.io/text-classification-tensorflow-estimators/</a></li>
+<li><a href="https://developers.googleblog.com/2017/12/creating-custom-estimators-in-tensorflow.html">https://developers.googleblog.com/2017/12/creating-custom-estimators-in-tensorflow.html</a></li>
+</ul>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Estimator method</th>
+<th scope="col" class="org-left">Mode parameter set</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left">train()</td>
+<td class="org-left">ModeKeys.TRAIN</td>
+</tr>
+
+<tr>
+<td class="org-left">evaluate()</td>
+<td class="org-left">ModeKeys.EVAL</td>
+</tr>
+
+<tr>
+<td class="org-left">predict()</td>
+<td class="org-left">ModeKeys.PREDICT</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org87ace93" class="outline-3">
+<h3 id="org87ace93"><span class="section-number-3">4.1</span> Predict</h3>
+<div class="outline-text-3" id="text-4-1">
+<p>
+ When <code>model_fn</code> is called with <code>mode == ModeKeys.PREDICT</code>, the model
+function must return a <code>tf.estimator.EstimatorSpec</code> containing the
+following information:
+</p>
+
+<ol class="org-ol">
+<li>the mode, which is <code>tf.estimator.ModeKeys.PREDICT</code></li>
+<li>the prediction</li>
+</ol>
+
+<div class="org-src-container">
+<pre class="src src-python"># class_ids will be the model prediction for the class (Iris flower type)
+# The output node with the highest value is our prediction
+predictions = { 'class_ids': tf.argmax(input=logits, axis=1) }
+
+# Return our prediction
+if mode == tf.estimator.ModeKeys.PREDICT:
+   return tf.estimator.EstimatorSpec(mode, predictions=predictions)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9b4f03e" class="outline-3">
+<h3 id="org9b4f03e"><span class="section-number-3">4.2</span> Eval</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+When <code>model_fn</code> is called with <code>mode == ModeKeys.EVAL</code>, the model function must evaluate the model, returning loss. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># To calculate the loss, we need to convert our labels
+# Our input labels have shape: [batch_size, 1]
+labels = tf.squeeze(labels, 1)          # Convert to shape [batch_size]
+loss = tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
+</pre>
+</div>
+
+<p>
+We can also compute and return additional metrics.
+</p>
+<div class="org-src-container">
+<pre class="src src-python"># Calculate the accuracy between the true labels, and our predictions
+accuracy = tf.metrics.accuracy(labels, predictions['class_ids'])
+</pre>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">if mode == tf.estimator.ModeKeys.EVAL:
+   return tf.estimator.EstimatorSpec(
+       mode,
+       loss=loss,
+       eval_metric_ops={'my_accuracy': accuracy})
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org446e65e" class="outline-3">
+<h3 id="org446e65e"><span class="section-number-3">4.3</span> Train</h3>
+<div class="outline-text-3" id="text-4-3">
+<p>
+When <code>model_fn</code> is called with <code>mode == ModeKeys.TRAIN</code>, the model
+function must train the model. 
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">optimizer = tf.train.AdagradOptimizer(0.05)
+train_op = optimizer.minimize(
+   loss,
+   global_step=tf.train.get_global_step())
+
+# Set the TensorBoard scalar my_accuracy to the accuracy
+tf.summary.scalar('my_accuracy', accuracy[1])
+
+return tf.estimator.EstimatorSpec(
+   mode,
+   loss=loss,
+   train_op=train_op)
+</pre>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org676da8b" class="outline-2">
+<h2 id="org676da8b"><span class="section-number-2">5</span> TF Feature Columns</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Reference:
+<a href="https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html">https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html</a>
+</p>
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/2_2018-09-15_15-03-18.jpg" alt="2_2018-09-15_15-03-18.jpg" />
+</p>
+</div>
+
+<p>
+Feature columns bridge raw data with the data your model needs. 
+</p>
+
+<p>
+There are nine functions in the <code>tf.feature_column</code> api.
+</p>
+</div>
+<div id="outline-container-org2c6fe00" class="outline-3">
+<h3 id="org2c6fe00"><span class="section-number-3">5.1</span> Numeric column</h3>
+<div class="outline-text-3" id="text-5-1">
+<div class="org-src-container">
+<pre class="src src-python">numeric_feature_column = tf.feature_column.numeric_column(key="SepalLength",
+                                                          dtype=tf.float64)
+
+vector_feature_column = tf.feature_column.numeric_column(key="Bowling",
+                                                         shape=10)
+
+matrix_feature_column = tf.feature_column.numeric_column(key="MyMatrix",
+                                                         shape=[10,5]) 
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga716910" class="outline-3">
+<h3 id="orga716910"><span class="section-number-3">5.2</span> Bucketized column</h3>
+<div class="outline-text-3" id="text-5-2">
+<p>
+Often, you don't want to feed a number directly into the model, but
+instead split its value into different categories based on numerical
+ranges. Consider the following bucketing scheme:
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/4_2018-09-15_15-09-59.jpg" alt="4_2018-09-15_15-09-59.jpg" />
+</p>
+</div>
+
+<p>
+We create the bucketized column from a numeric column:
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># A numeric column for the raw input.
+numeric_feature_column = tf.feature_column.numeric_column("Year")
+
+# Bucketize the numeric column on the years 1960, 1980, and 2000
+bucketized_feature_column = tf.feature_column.bucketized_column(
+    source_column = numeric_feature_column,
+    boundaries = [1960, 1980, 2000])
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbba71f9" class="outline-3">
+<h3 id="orgbba71f9"><span class="section-number-3">5.3</span> Categorical Identity Column</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Categorical identity columns are a special case of bucketized columns.
+In a categorical identity column, each bucket represents a single,
+unique integer.
+</p>
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/5_2018-09-15_15-20-10.jpg" alt="5_2018-09-15_15-20-10.jpg" />
+</p>
+</div>
+
+<p>
+This is a one-hot encoding, not a binary numerical encoding.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># Create a categorical output for input "feature_name_from_input_fn",
+# which must be of integer type. Value is expected to be &gt;= 0 and &lt; num_buckets
+identity_feature_column = tf.feature_column.categorical_column_with_identity(
+    key='feature_name_from_input_fn', 
+    num_buckets=4) # Values [0, 4)
+
+# The 'feature_name_from_input_fn' above needs to match an integer key that is 
+# returned from input_fn (see below). So for this case, 'Integer_1' or
+# 'Integer_2' would be valid strings instead of 'feature_name_from_input_fn'.
+# For more information, please check out Part 1 of this blog series.
+def input_fn():
+    ...&lt;code&gt;...
+    return ({ 'Integer_1':[values], ..&lt;etc&gt;.., 'Integer_2':[values] },
+            [Label_values])
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org29b7bc8" class="outline-3">
+<h3 id="org29b7bc8"><span class="section-number-3">5.4</span> Categorical vocabulary column</h3>
+<div class="outline-text-3" id="text-5-4">
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/6_2018-09-15_15-20-30.jpg" alt="6_2018-09-15_15-20-30.jpg" />
+</p>
+</div>
+
+<p>
+We cannot input strings directly to a model. Instead, we must first
+map strings to numeric or categorical values. Categorical vocabulary
+columns provide a good way to represent strings as a one-hot vector.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># Given input "feature_name_from_input_fn" which is a string,
+# create a categorical feature to our model by mapping the input to one of
+# the elements in the vocabulary list.
+vocabulary_feature_column =
+    tf.feature_column.categorical_column_with_vocabulary_list(
+        key="feature_name_from_input_fn",
+        vocabulary_list=["kitchenware", "electronics", "sports"])
+
+# Given input "feature_name_from_input_fn" which is a string,
+# create a categorical feature to our model by mapping the input to one of 
+# the elements in the vocabulary list.
+vocabulary_feature_column =
+    tf.feature_column.categorical_column_with_vocabulary_list(
+        key="feature_name_from_input_fn",
+        vocabulary_list=["kitchenware", "electronics", "sports"]) 
+</pre>
+</div>
+
+<p>
+In many cases, the number of categories is large, and we can limit it
+via hashing:
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/7_2018-09-15_15-20-51.jpg" alt="7_2018-09-15_15-20-51.jpg" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python"># Create categorical output for input "feature_name_from_input_fn".
+# Category becomes: hash_value("feature_name_from_input_fn") % hash_bucket_size
+hashed_feature_column =
+    tf.feature_column.categorical_column_with_hash_bucket(
+        key = "feature_name_from_input_fn",
+        hash_buckets_size = 100) # The number of categories
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org7581b1a" class="outline-3">
+<h3 id="org7581b1a"><span class="section-number-3">5.5</span> Feature Crosses</h3>
+<div class="outline-text-3" id="text-5-5">
+<p>
+Combining features allows the model to learn separate weights
+specifically for whatever that feature combination means.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python"># In our input_fn, we convert input longitude and latitude to integer values
+# in the range [0, 100)
+def input_fn():
+    # Using Datasets, read the input values for longitude and latitude
+    latitude = ...   # A tf.float32 value
+    longitude = ...  # A tf.float32 value
+
+    # In our example we just return our lat_int, long_int features.
+    # The dictionary of a complete program would probably have more keys.
+    return { "latitude": latitude, "longitude": longitude, ...}, labels
+
+# As can be see from the map, we want to split the latitude range
+# [33.641336, 33.887157] into 100 buckets. To do this we use np.linspace
+# to get a list of 99 numbers between min and max of this range.
+# Using this list we can bucketize latitude into 100 buckets.
+latitude_buckets = list(np.linspace(33.641336, 33.887157, 99))
+latitude_fc = tf.feature_column.bucketized_column(
+    tf.feature_column.numeric_column('latitude'),
+    latitude_buckets)
+
+# Do the same bucketization for longitude as done for latitude.
+longitude_buckets = list(np.linspace(-84.558798, -84.287259, 99))
+longitude_fc = tf.feature_column.bucketized_column(
+    tf.feature_column.numeric_column('longitude'), longitude_buckets)
+
+# Create a feature cross of fc_longitude x fc_latitude.
+fc_san_francisco_boxed = tf.feature_column.crossed_column(
+    keys=[latitude_fc, longitude_fc],
+    hash_bucket_size=1000) # No precise rule, maybe 1000 buckets will be good?
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1030526" class="outline-3">
+<h3 id="org1030526"><span class="section-number-3">5.6</span> Indicator and Embedding columns</h3>
+<div class="outline-text-3" id="text-5-6">
+<p>
+Indicator columns treat each category as an element in a one-hot
+vector, where the matching category has value 1 and the rest have 0s.
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/6_2018-09-15_15-21-01.jpg" alt="6_2018-09-15_15-21-01.jpg" />
+</p>
+</div>
+
+<div class="org-src-container">
+<pre class="src src-python">indicator_column = tf.feature_column.indicator_column(categorical_column)
+</pre>
+</div>
+
+<p>
+An embedding column represents data as a lower-dimensional, ordinary
+vector in which each cell can contain any number.
+</p>
+
+
+
+<div class="figure">
+<p><img src="images/tensorflow/TF Feature Columns/image9_2018-09-15_15-22-02.jpg" alt="image9_2018-09-15_15-22-02.jpg" />
+</p>
+</div>
+
+<p>
+As a guideline, the embedding vector dimension should be the 4th root
+of the number of categories.
+</p>
+
+<div class="org-src-container">
+<pre class="src src-python">categorical_column = ... # Create any categorical column
+
+# Represent the categorical column as an embedding column.
+# This means creating a one-hot vector with one element for each category.
+embedding_column = tf.feature_column.embedding_column(
+    categorical_column=categorical_column,
+    dimension=dimension_of_embedding_vector)
+</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div id="postamble" class="status">
 <p class="author">Author: Jethro Kuan</p>
-<p class="date">Created: 2018-09-13 Thu 23:28</p>
+<p class="date">Created: 2018-09-15 Sat 15:40</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>
