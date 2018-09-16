@@ -476,3 +476,118 @@ closure properties of regular languages. Below is a summary:
 9. The inverse homomorphism of a regular language
 
 The above are all regular.
+
+* Context-free Grammars and Languages
+Context-free languages are a larger class of languages, that have
+context-free grammars. We show how these grammars are defined, and how
+they define languages.
+
+Context-free grammars are recursive definitions. For example, the
+context-free grammar for palindromes can be defined as:
+
+1. $P \rightarrow \epsilon$
+2. $P \rightarrow 0$
+3. $P \rightarrow 1$
+4. $P \rightarrow 0P0$
+5. $P \rightarrow 1P1$
+
+There are four important components in a grammatical description of a
+language:
+
+1. There is a finite set of symbols that form the strings of the
+   language. These alphabets are called the /terminals/, or /terminal
+   symbols/.
+2. There is a finite set of variables, or /nonterminals/ or /syntactic
+   categories/. Each variable represents a language. In the language
+   above, the only variable is $P$.
+3. One of the variables represents the language being defined, called
+   the /start symbol/.
+4. There is a finite set of productions or rules that represent the
+   recursive definition of a language. Each production rule consists:
+   1. A variable that is being defined by the production (called the /head/).
+   2. The production symbol $\rightarrow$.
+   3. A string of zero or more terminals and variables.
+
+We can represent any CFG as these 4 components, we denote CFG $G = (V,
+T, P, S)$.
+
+** Derivations using a Grammar
+We can apply the productions of a CFG to infer that certain strings
+are in the language of a certain variable.
+
+The process of deriving strings by applying productions from head to
+body requires the definition of a new relation symbol, $\Rightarrow$. Suppose $G
+= (V, T, P, S)$ is a CFG> Let $\alpha A \beta$ be a string of terminals and
+variables, with $A$ a variable. That is $\alpha$ and $\beta$ are strings in $(V
+\cup T)^*$, and $A$ is in $V$. Let $A \rightarrow \gamma$ be a production of $G$. We say
+that $\alpha A \beta \Rightarrow_{G} \alpha \gamma B$. If $G$ is understood, we can omit the
+subscript.
+
+We may extend the $\Rightarrow$ relationship to represent zero, one or many
+derivation steps, similar to the extended transition function.
+
+** Leftmost and Rightmost Derivations
+In order to restrict the number of choices we have in deriving a
+string, it is often useful to require that at each step, we replace
+the leftmost variable by one of its production bodies. Such a
+derivation is called a /leftmost derivation/. Leftmost derivations are
+indicated with $\Rightarrow_{lm}$ and $\Rightarrow_{lm}^*$.
+
+Similarly, it is possible to require that at each step the rightmost
+variable is replaced by one of its bodies. These are called /rightmost
+derivations/. These are similarly denoted $\Rightarrow_{rm}$ and $\Rightarrow_{rm}^*$.
+
+** The language of a Grammar
+If $G = (V, T, P, S)$ is a CFG, then the language of $G$, denoted
+$L(G)$ is the set of terminal strings that have derivations from the
+start symbol:
+
+\begin{equation}
+  L(G) = \right\{w in T^* | S \Rightarrow_{G}^* w \left\}
+\end{equation}
+
+** Sentential Forms
+Derivations from the start symbol produce strings that have a special
+role. These are called /sentential forms/. We also denote
+left-sentential and right-sentential forms for leftmost derivations
+and rightmost derivations respectively.
+
+** Parse Trees
+There is a tree representation of derivations, that clearly show how
+symbols of a terminal string are grouped into substrings, each of
+which belongs to the language of one of the variables of the grammar.
+This tree is the data structure of choice when representing the source
+of a program.
+
+
+*** Construction
+The parse trees for a CFG $G$ are trees with the following conditions:
+
+1. Each interior node is labeled by variable in $V$.
+2. Each leaf is labeled by either a variable, a terminal, or $\epsilon$.
+   However, if the leaf is labeled $\epsilon$, then it must be the only child
+   of its parent.
+3. If an interior node is labeled $A$, and its children are labeled
+   $X_1, X_2, \dots, X_k$, respectively from the left, then $A \rightarrow X_1 X_2 \dots
+   X_k$ is a production in $P$.
+
+*** The yield
+The yield of the tree is the concatenation of the leaves of the parse
+tree from the left. This yield is a terminal string (all leaves are
+labeled either with a terminal or with $\epsilon$). The root is labeled by
+the start symbol.
+
+*** Inferences and derivations
+The following statements are equivalent:
+
+1. The recursive inference procedure determines that terminal string
+   $w$ is in the language of variable $A$.
+2. $A \Rightarrow^* w$
+3. $A \Rightarrow_{lm}^* w$
+4. $A \Rightarrow_{rm}^* w$
+5. There is a parse tree with root $A$ and yield $w$.
+
+We can prove these equivalences using the following arcs:
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-16 16:21:01
+[[file:images/theory_of_computation/Context-free Grammars and Languages/screenshot_2018-09-16_16-21-01.png]]
