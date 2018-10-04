@@ -75,19 +75,42 @@ padding:
 #+END_SRC
 * TF Serve
 https://towardsdatascience.com/introducing-tfserve-simple-and-easy-http-server-for-tensorflow-model-inference-582ea1b07da8?source=rss----7f60cf5620c9---4
-* TF Estimator API
+* TF Estimator
 #+DOWNLOADED: https://1.bp.blogspot.com/-njTtnjOq_cE/Wbe772URrgI/AAAAAAAAD1Y/h1mWj6MGSzYg_KDuVXWBYeNqA4z5WRSpACLcBGAs/s1600/image2.jpg @ 2018-09-15 14:42:49
 [[file:images/tensorflow/TF Estimator API/image2_2018-09-15_14-42-49.jpg]]
 
 References:
 - http://ruder.io/text-classification-tensorflow-estimators/
 - https://developers.googleblog.com/2017/12/creating-custom-estimators-in-tensorflow.html
+- https://arxiv.org/abs/1708.02637
+
+At the heart of our framework is Estimator, a class that both provides
+an interface for downstream infrastructure, as well as a convenient
+harness for developers. Te interface for users of Estimator is loosely
+modeled afer Scikit-learn and consists of only four methods: ~train~
+trains the model, given training data. ~evaluate~ computes evaluation
+metrics over test data, ~predict~ performs inference on new data given a
+trained model, and fnally, ~export_savedmodel~ exports a SavedModel, a
+serialization format which allows the model to be used in TensorFlow
+Serving, a prebuilt production server for TensorFlow models.
 
 | Estimator method | Mode parameter set |
 |------------------+--------------------|
 | train()          | ModeKeys.TRAIN     |
 | evaluate()       | ModeKeys.EVAL      |
 | predict()        | ModeKeys.PREDICT   |
+
+Estimators receive a configuration object called ~RunConfig~ which
+communicates everything that the Estimator needs to know about the
+environment in which the model will be run: how many workers are
+available,, how to save intermediate checkpoints etc.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-16 22:17:13
+[[file:images/tensorflow/TF Estimator/screenshot_2018-09-16_22-17-13.png]]
+
+~train~, ~evaluate~ and ~predict~ take an input function, which is expected
+to produce two dictionaries: one containing Tensors with inputs
+(features), and one containing Tensors with labels.
 
 ** Predict
  When ~model_fn~ is called with ~mode == ModeKeys.PREDICT~, the model
@@ -334,4 +357,36 @@ of the number of categories.
       categorical_column=categorical_column,
       dimension=dimension_of_embedding_vector)
 #+END_SRC
+* Hooks
+Hooks are useful for custom processing that has to happen alongside
+the main loop. For example, we can use hooks for recordkeeping,
+debugging, monitoring or reporting. Hooks are activated by passing
+them to the ~train~ call. Estimators use hooks internally to implement
+checkpointing, summaries and more.
+
+#+BEGIN_SRC python
+  class TimeBasedStopHook(tf.train.SessionRunHook):
+      def begin(self):
+          self.started_at = time.time()
+
+      def after_run(self, run_context, run_values):
+          if time.time() - self.started_at >= TRAIN_TIME:
+              run_context.request_stop()
+#+END_SRC
+* Experiment
+The core of the distributed execution support is provided with the
+~Experiment~ class.
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-16 22:26:07
+[[file:images/tensorflow/Experiment/screenshot_2018-09-16_22-26-07.png]]
+
+In each TensorFlow cluster, there are several parameter servers, and
+several worker tasks. Most workers are handling the training process,
+which basically calls the Estimator ~train~ method with the training
+~input_fn~.
+
+The primary mode of replica training in Estimators is between-graph
+replication and asynchronous training.
+
 
