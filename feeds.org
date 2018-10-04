@@ -27,7 +27,7 @@
 *** https://www.bakadesuyo.com/feed/
 *** https://www.marieforleo.com/feed/
 *** http://feeds.feedburner.com/zenhabits/
-
+*** https://commoncog.com/blog/rss/
 ** Company Blogs                                                    :company:
 *** https://blogs.dropbox.com/tech/feed/
 *** https://codeascraft.com/feed/
