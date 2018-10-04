@@ -307,4 +307,49 @@ with probability ~k/(n+1)~.
 #+END_SRC
 
 has three sum is the same, sort the array and run has two sum.
+** Big Integer Multiply
+#+BEGIN_SRC python
+  def multiply(num1, num2):
+      sign = -1 if (num1[0] < 0) ^ (num2[0] < 0) else 1
+      num1[0] = abs(num1[0])
+      num2[0] = abs(num2[0])
+      result = [0] * (len(num1) + len(num2))
+      for i in reversed(range(len(num1))):
+          for j in reversed(range(len(num2))):
+              result[i + j + 1] += num1[i] * num2[j]
+              result[i + j] += result[i + j + 1] // 10
+              result[i + j + 1] %= 10
 
+      # remove starting 0s
+      result = result[next((
+          i for i, x in enumerate(result) if x != 0), len(result)):] or [0]
+      result[0] *= sign
+      return result
+#+END_SRC
+** Next Permutation
+#+BEGIN_SRC python
+  def next_permutation(perm):
+
+      # Find the first entry from the right that is smaller than the entry
+      # immediately after it.
+      inversion_point = len(perm) - 2
+      while (inversion_point >= 0
+             and perm[inversion_point] >= perm[inversion_point + 1]):
+          inversion_point -= 1
+      if inversion_point == -1:
+          return []  # perm is the last permutation.
+
+      # Swap the smallest entry after index inversion_point that is greater than
+      # perm[inversion_point]. Since entries in perm are decreasing after
+      # inversion_point, if we search in reverse order, the first entry that is
+      # greater than perm[inversion_point] is the entry to swap with.
+      for i in reversed(range(inversion_point + 1, len(perm))):
+          if perm[i] > perm[inversion_point]:
+              perm[inversion_point], perm[i] = perm[i], perm[inversion_point]
+              break
+
+      # Entries in perm must appear in decreasing order after inversion_point,
+      # so we simply reverse these entries to get the smallest dictionary order.
+      perm[inversion_point + 1:] = reversed(perm[inversion_point + 1:])
+      return perm
+#+END_SRC
