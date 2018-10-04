@@ -903,8 +903,6 @@ as:
  k_2k_3U_2U_3 + k_1k_2k_3U_1U_2U_3
 \end{equation}
 
-
-
 *** Decision Networks
 
 Decision networks extend Bayesian networks with nodes for actions and
