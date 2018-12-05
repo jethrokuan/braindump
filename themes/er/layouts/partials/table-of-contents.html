@@ -1,0 +1,9 @@
+ <!-- ignore empty links with + -->
+{{ $headers := findRE "<h[1-6].*?>(.|\n])+?</h[1-6]>" .Content }}
+<!-- at least one header to link to -->
+{{ $has_headers := ge (len $headers) 1 }}
+<!-- a post can explicitly disable Table of Contents with toc: false -->
+{{ $show_toc := and (ne .Params.toc false) (ne .Site.Params.showtoc false) }}
+{{ if and $has_headers $show_toc }}
+<div class="tl fixed list-pages lh-copy" id="contents-list"></div>
+{{ end }}

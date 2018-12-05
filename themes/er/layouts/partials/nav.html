@@ -1,0 +1,12 @@
+<nav class="{{ with .Site.Menus.main }}{{ if lt (len .) 3 }} flex {{ else }} flex-ns{{ end }}{{ end }} justify-between border-box pa3 pl3-l pr2-l mt1 mt0-ns" id="navbar">
+  <div class="flex">
+    <a class="f4 fw6 ttu no-underline dim bg-main-color pv1 ph2 br2" id="site-title" href='{{ "" | relURL }}' title="Home">{{ .Site.Title }}</a>
+  </div>
+  {{ with .Site.Menus.main }}
+  <div class="{{ if lt (len . ) 3 }} flex-grow {{ else }} flex-ns mt2 mt0-ns{{ end }} pv1">
+    {{ range . }}
+      <a class="link dim dark-gray f6 dib mr2 mr3-l ttu tracked" href='{{.URL}}' title="{{ .Name }}">{{ .Name }}</a>
+    {{ end }}
+  </div>
+  {{ end }}
+</nav>

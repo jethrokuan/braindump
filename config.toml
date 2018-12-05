@@ -1,0 +1,7 @@
+baseURL = "http://braindump.jethrokuan.com/"
+languageCode = "en-us"
+title = "Jethro's Braindump"
+theme = "er"
+
+[params]
+showTagCloud = false

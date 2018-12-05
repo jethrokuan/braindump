@@ -1,0 +1,122 @@
+html { font-size: 16px; }
+body { color: var(--body-text-color); background-color: var(--background-color);}
+.main-color { color: var(--main-color); }
+.secondary-color { color: var(--secondary-color); }
+.bg-main-color { background-color: var(--main-color); color: var(--logo-text-color); }
+.heading-font, .global-font { font-family: "Source Sans Pro"; }
+.heading-color { color: var(--heading-text-color); }
+.post-content a, .list-pages a, .pagination a {
+  border-bottom: 1px solid rgba(0,0,0,0.4);
+  text-decoration: none;
+  color: inherit;
+}
+main a:hover, .list-pages a:hover, .pagination a:hover, #tag-cloud a:hover { 
+  border-bottom: 1px solid var(--body-text-color);
+  color: var(--body-text-color);
+}
+.content-width { max-width: 650px; }
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 0px;
+  color: var(--main-color);
+  font-weight: 600;
+}
+
+pre {
+  font-size: 0.9em;
+  padding: 10px 20px 10px 20px;
+  overflow: auto;
+  line-height: 1.25em;
+}
+
+p code {
+  padding: .25rem .5rem;
+  font-size: 0.9em;
+  background-color: #f8f8f8;
+}
+
+#tag-cloud { max-width: 250px; }
+#contents-list>.toc-list { 
+  max-width: 250px; 
+  overflow: hidden;
+  position: fixed;
+  right: 2rem;
+}
+@media (min-width: 1200px) {
+  #contents-list>.toc-list, #tag-cloud  { 
+    display: block; 
+    top: 100px;
+  }
+  #tag-cloud {
+    -webkit-transition: opacity .5s, visibility .5s;
+    transition: opacity .5s, visibility .5s;
+  }
+}
+@media (min-width: 1330px) { #contents-list>.toc-list { max-width: 300px; right: 3rem;}}
+#contents-list ol { list-style: none; }
+
+figure {
+  margin: 2em 1em;
+}
+img { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 1px 1px 2px 2px #bbb;
+}
+figcaption { 
+  text-align: center;
+  margin-top: 0.5em;
+}
+
+blockquote {
+  border-left-style: solid;
+  border-left-width: 1px;
+  border-color: var(--secondary-color);
+  border-width: .25rem;
+  margin-left: 0;
+  margin-top: 0;
+  margin-right: 0;
+  padding-left: 1rem;
+}
+
+blockquote p {
+  color: #666;
+  margin-top: 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+blockquote p>cite {
+  text-transform: uppercase;
+  font-style: normal;
+  letter-spacing: .1em;
+  font-size: .875rem;
+  display: block;
+}
+
+table {
+  font-size: 14px;
+  border-collapse:collapse;
+  margin: 2rem auto;
+  padding:0;
+}
+
+table tr {
+  border-top:1px solid #ccc;
+  background-color:#fff;
+  margin:0;
+  padding:0;
+}
+
+table tr:nth-child(2n) {
+  background-color:#f8f8f8;
+}
+table tr th[align="center"], table tr td[align="center"] {
+  text-align:center;
+}
+table tr th, table tr td {
+  border:1px solid #ccc;
+  text-align:left;
+  margin:0;
+  padding:6px 13px;
+}

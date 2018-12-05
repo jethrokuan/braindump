@@ -1,0 +1,9 @@
+{{ $maxtags := .Site.Params.maxTags | default 50 }}
+{{ if .Site.Params.showTagCloud | default true }}
+<div class="dn tr fixed right-2" id="tag-cloud">
+    tags <br>
+    {{ range first $maxtags .Site.Taxonomies.tags.ByCount }}
+    <a class="silver no-underline" href="{{ "/tags/" | relLangURL }}{{ .Name | urlize }}">{{ .Name }}</a></li>
+  {{ end }}
+</div>
+{{ end }}

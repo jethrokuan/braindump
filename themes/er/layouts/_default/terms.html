@@ -1,0 +1,15 @@
+{{ define "main" }}
+<main class="center mv4 content-width ph3">
+  {{ $type := .Type }}
+  <h1 class="f2 fw6 heading-font">{{ .Title }}</h1>
+  {{ .Content }}
+  <ul class="list-pages list pl0">
+    {{ range $key, $value := .Data.Terms }}
+      <li class="lh-copy di bg-light-gray ph1"><a href="{{ $key | urlize }}" class="link f5">{{ $key }}&nbsp;({{ len $value }})</a></li>
+    {{ end }}
+  </ul>
+</main>
+<div class="pagination tc db fixed-l bottom-2-l right-2-l mb3 mb0-l">
+{{ partial "back-to-top.html" . }}
+</div>
+{{ end }}
