@@ -1,7 +1,7 @@
 +++
 title = "Programming Methodology"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:31+08:00
+lastmod = 2018-12-05T21:49:12+08:00
 draft = false
 math = true
 +++
@@ -442,10 +442,10 @@ w(50);                          // Pic 3
 // Pic 4
 ```
 
-![](/ox-hugo/1.png)
-![](/ox-hugo/2.png)
-![](/ox-hugo/3.png)
-![](/ox-hugo/4.png)
+![](images/programming_methodology/1.png)
+![](images/programming_methodology/2.png)
+![](images/programming_methodology/3.png)
+![](images/programming_methodology/4.png)
 
 
 ## Metacircular Interpreter {#metacircular-interpreter}

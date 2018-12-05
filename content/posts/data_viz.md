@@ -1,7 +1,7 @@
 +++
 title = "Data Visualization"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:48:48+08:00
+lastmod = 2018-12-05T21:51:49+08:00
 draft = false
 math = true
 +++
@@ -15,7 +15,7 @@ math = true
 
 ## Program {#program}
 
-{{< figure src="/ox-hugo/program2_2018-07-30_09-16-28.png" >}}
+{{< figure src="images/data_viz/program2_2018-07-30_09-16-28.png" >}}
 
 
 ## Tools {#tools}
@@ -104,7 +104,7 @@ DeepTree
 
 ### Gestalt Principles {#gestalt-principles}
 
-{{< figure src="/ox-hugo/th_2018-07-30_09-47-57.jpeg" >}}
+{{< figure src="images/data_viz/th_2018-07-30_09-47-57.jpeg" >}}
 
 Representations should be _correct_, _accurate_ and _truthful_.
 
@@ -136,7 +136,7 @@ maximize data-ink ratio
 
 <https://en.wikipedia.org/wiki/Stevens%27s%5Fpower%5Flaw>
 
-![](/ox-hugo/th_2018-07-30_11-04-03.jpeg)
+![](images/data_viz/th_2018-07-30_11-04-03.jpeg)
 Steven's psychophysical power law:
 
 \begin{equation}
@@ -145,7 +145,7 @@ Steven's psychophysical power law:
 
 Compensating for human's over/underestimation:
 
-{{< figure src="/ox-hugo/screenshot_2018-07-30_11-09-25.png" >}}
+{{< figure src="images/data_viz/screenshot_2018-07-30_11-09-25.png" >}}
 
 Difficult to focus on one channel when multiple channels are
 presented. (Redudancy is bad!)
@@ -407,7 +407,7 @@ Direct Volume Rendering
 -   Cuberille regards each xovel as a little cube, classify as either
     part of the object or not.
 
-{{< figure src="/ox-hugo/th_2018-07-31_11-00-07.jpeg" >}}
+{{< figure src="images/data_viz/th_2018-07-31_11-00-07.jpeg" >}}
 
 [Marching Cubes](https://en.wikipedia.org/wiki/Marching%5Fcubes) is a standard method for the extraction of isosurfaces
 from volume data

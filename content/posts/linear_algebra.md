@@ -1,7 +1,7 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:26+08:00
+lastmod = 2018-12-05T21:54:51+08:00
 draft = false
 math = true
 +++
@@ -106,7 +106,7 @@ Under a linear transformation, grid lines remain parallel and evenly
 spaced. This property allows us to compute the transformed vector,
 only by recording how the basis vectors are transformed.
 
-{{< figure src="images/linear_algebra/Matrices%20as%20Linear%20Transformations/screenshot_2018-08-25_14-32-57.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-08-25_14-32-57.png" >}}
 
 
 ## Matrix Multiplication as Composition {#matrix-multiplication-as-composition}
@@ -116,7 +116,7 @@ transformations composed together, for example, a rotation, followed
 by a shear. The composition of linear transformations is also a linear
 transformation, and can be described with a single matrix (see above).
 
-{{< figure src="images/linear_algebra/Matrix%20Multiplication%20as%20Composition/screenshot_2018-08-25_14-36-56.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-08-25_14-36-56.png" >}}
 
 {{< figure src="/ox-hugo/screenshot_2018-08-25_14-41-53.png" >}}
 
@@ -386,7 +386,7 @@ If A is full-rank, then \\(x\\) must be the zero-vector. Else, \\(x\\) has a
 non-zero solution equal to the linear combination of the last few rows
 of \\(V^T\\) corresponding to zero singular values.
 
-{{< figure src="images/linear_algebra/Singular%20Value%20Decomposition/screenshot_2018-11-18_17-32-26.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-11-18_17-32-26.png" >}}
 
 
 ## References {#references}

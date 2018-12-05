@@ -1,7 +1,7 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:26+08:00
+lastmod = 2018-12-05T21:57:58+08:00
 draft = false
 math = true
 +++
@@ -463,7 +463,7 @@ right-arc
     probabilities to the number of possible transitions (the output
     dimension).
 
-    {{< figure src="/ox-hugo/screenshot_2018-01-20_15-36-45.png" >}}
+    {{< figure src="images/nlp/screenshot_2018-01-20_15-36-45.png" >}}
 
 
 ## Basic Visualization Techniques of Text Data {#basic-visualization-techniques-of-text-data}
@@ -471,7 +471,7 @@ right-arc
 
 ### Word Cloud {#word-cloud}
 
-{{< figure src="/ox-hugo/word-cloud_2018-08-02_10-16-54.png" >}}
+{{< figure src="images/nlp/word-cloud_2018-08-02_10-16-54.png" >}}
 
 In word cloud, it is difficult to determine optimal placing of words.
 In addition, word clouds do not show relation between words.
@@ -482,7 +482,7 @@ In addition, word clouds do not show relation between words.
 
 ### ThemeRiver {#themeriver}
 
-{{< figure src="/ox-hugo/VizInsight0808_05_2018-08-02_10-19-46.jpg" >}}
+{{< figure src="images/nlp/VizInsight0808_05_2018-08-02_10-19-46.jpg" >}}
 
 Time-series representation: view which keywords occur more frequently
 over time. It is a type of visualization known as a _stacked linegraph_.
@@ -490,12 +490,12 @@ over time. It is a type of visualization known as a _stacked linegraph_.
 
 ### TIARA Visualization {#tiara-visualization}
 
-{{< figure src="/ox-hugo/screenshot_2018-08-02_10-23-34.png" >}}
+{{< figure src="images/nlp/screenshot_2018-08-02_10-23-34.png" >}}
 
 
 ### Phrase Nets {#phrase-nets}
 
-{{< figure src="/ox-hugo/phrase_net_eg1_2018-08-02_10-36-47.jpg" >}}
+{{< figure src="images/nlp/phrase_net_eg1_2018-08-02_10-36-47.jpg" >}}
 
 Phrasenets are useful for exploring how words are linked in a text and
 like word clouds and word trees can be informative for early data

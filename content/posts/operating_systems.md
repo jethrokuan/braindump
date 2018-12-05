@@ -1,7 +1,7 @@
 +++
 title = "Operating Systems"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:32+08:00
+lastmod = 2018-12-05T21:59:49+08:00
 draft = false
 math = true
 +++
@@ -57,7 +57,7 @@ A sort of pseudofile that can be used to connect two processes. If
 process A and B wish to talk using a pipe, they must set it up in
 advance.
 
-{{< figure src="images/operating_systems/Operating%20Systems%20key%20Concepts/posix.png" >}}
+{{< figure src="images/operating_systems/posix.png" >}}
 
 
 ### Process segments {#process-segments}
@@ -1045,7 +1045,7 @@ with a segmentation fault.
 To figure out which segment to use, bits in the virtual address are
 often reserved. This is the virtual address 4200 in binary form:
 
-{{< figure src="/ox-hugo/screenshot_2017-11-04_20-51-42.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-04_20-51-42.png" >}}
 
 The hardware would need to know how the segments grow to translate
 virtual address differently. In the case of the stack, a negative
@@ -1061,7 +1061,7 @@ To support sharing in a safe way, **protection bits** are added per
 segment, indicating whether or not a program can read or write to a
 segment.
 
-{{< figure src="/ox-hugo/screenshot_2017-11-04_20-57-25.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-04_20-57-25.png" >}}
 
 
 ### OS support {#os-support}
@@ -1160,7 +1160,7 @@ found.
 Here is an example of a 64KB free space getting divided in the search
 for a 7KB block:
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_16-27-35.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_16-27-35.png" >}}
 
 This scheme can suffer from **internal fragmentation**. Upon freeing a
 block, the allocator checks its buddy and sees if the block is still
@@ -1186,7 +1186,7 @@ of the virtual pages of the address space.
 To translate a virtual address, the address is split into 2
 components:
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_16-32-30.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_16-32-30.png" >}}
 
 1.  **virtual page number (VPN)**
 2.  **offset** within the page
@@ -1226,7 +1226,7 @@ reference bit
     useful in deciding which pages to swap out (e.g.
     swapping out the least popular pages).
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_16-38-47.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_16-38-47.png" >}}
 
 
 ### How Paging Works {#how-paging-works}
@@ -1315,7 +1315,7 @@ To reduce this overhead, some systems provide an **address space
 identifier (ASID)** in the TLB. the **ASID** acts as a process
 identifier, like the PID but with fewer bits.
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_19-43-58.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_19-43-58.png" >}}
 
 
 #### TLB Replacement Policies {#tlb-replacement-policies}
@@ -1346,7 +1346,7 @@ the process, have on per logical segment.
 
 The virtual address now looks like this:
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_19-55-16.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_19-55-16.png" >}}
 
 The downsides for segmentation apply: segmentation is not flexible,
 and if the heap is rarely used, for example, then there is wastage.
@@ -1354,7 +1354,7 @@ and if the heap is rarely used, for example, then there is wastage.
 
 #### Multi-level Page Tables {#multi-level-page-tables}
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_19-57-42.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_19-57-42.png" >}}
 
 A new data structure called the **page directory** is introduced. the
 page directory consists of a number of **page directory entries (PDE)**.
@@ -1370,12 +1370,12 @@ loads from memory will be required to get the right translation
 information from the page table. Hence, there is a **time-space**
 tradeoff.
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_20-02-30.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_20-02-30.png" >}}
 
 To extend this idea to multi-level page tables, we can partition the
 VPN even further:
 
-{{< figure src="/ox-hugo/screenshot_2017-11-05_20-03-35.png" >}}
+{{< figure src="images/operating_systems/screenshot_2017-11-05_20-03-35.png" >}}
 
 
 #### Inverted Page Tables {#inverted-page-tables}

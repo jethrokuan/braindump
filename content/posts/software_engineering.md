@@ -1,7 +1,7 @@
 +++
 title = "Software Engineering"
 author = ["Derrick Chua", "Jethro Kuan"]
-lastmod = 2018-12-05T19:39:26+08:00
+lastmod = 2018-12-05T22:06:33+08:00
 draft = false
 math = true
 +++
