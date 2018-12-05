@@ -1,7 +1,7 @@
 +++
 title = "Computer Vision"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T22:09:30+08:00
+lastmod = 2018-12-05T22:12:18+08:00
 draft = false
 math = true
 +++
@@ -1256,7 +1256,7 @@ H \begin{bmatrix}
 The homography is a \\(3 \times 3\\) matrix with 8 degrees of freedom, as it is
 estimated up to a scale.
 
-{{< figure src="images/homography_perspective_correction_chessboard_matches_2018-10-19_11-08-50.jpg" >}}
+{{< figure src="/ox-hugo/homography_perspective_correction_chessboard_matches_2018-10-19_11-08-50.jpg" >}}
 
 Homographies are used in:
 
