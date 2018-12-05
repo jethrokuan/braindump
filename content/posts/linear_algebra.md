@@ -1,7 +1,7 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T21:54:51+08:00
+lastmod = 2018-12-05T22:13:40+08:00
 draft = false
 math = true
 +++
@@ -77,7 +77,7 @@ skew symmetric matrix
 -   \\((AB)^-1 = B^-1 A^{-1}\\)
 -   \\((AB)^T = B^T A^T\\)
 -   \\((A^{-1})^T = (A^T)^{-1}\\)
--   \\(A^{-1}^{}A = I\\)
+-   \\(A^{-1}A = I\\)
 -   \\((AB)C = A(BC)\\)
 -   \\(A(B+C) = AB + AC\\)
 -   \\((B+C)D = BD + CD\\)
