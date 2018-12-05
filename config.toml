@@ -1,4 +1,4 @@
-baseURL = "http://braindump.jethrokuan.com/"
+baseURL = "https://braindump.jethrokuan.com/"
 languageCode = "en-us"
 title = "Jethro's Braindump"
 theme = "er"
