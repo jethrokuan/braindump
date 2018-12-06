@@ -1,7 +1,7 @@
 +++
-title = "Talks"
+title = "General Talks"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:28+08:00
+lastmod = 2018-12-06T19:12:23+08:00
 draft = false
 math = true
 +++
