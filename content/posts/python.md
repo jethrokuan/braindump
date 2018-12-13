@@ -1,7 +1,7 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:34+08:00
+lastmod = 2018-12-13T13:14:56+08:00
 draft = false
 math = true
 +++
@@ -137,3 +137,9 @@ substitution quick.
 ### Checking if character unique in string {#checking-if-character-unique-in-string}
 
 `s.index(x) == s.rindex(x)` to check if character is only one in the string
+
+
+## Numpy {#numpy}
+
+[rougier/from-python-to-numpy](https://github.com/rougier/from-python-to-numpy/) is a great reference to see how to speed
+up programs through vectorization.
