@@ -1,7 +1,7 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-13T13:14:56+08:00
+lastmod = 2018-12-24T00:20:39+08:00
 draft = false
 math = true
 +++
@@ -143,3 +143,8 @@ substitution quick.
 
 [rougier/from-python-to-numpy](https://github.com/rougier/from-python-to-numpy/) is a great reference to see how to speed
 up programs through vectorization.
+
+
+## Reference Python Applications {#reference-python-applications}
+
+[mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications)
