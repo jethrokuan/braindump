@@ -1,7 +1,7 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T22:13:40+08:00
+lastmod = 2018-12-23T20:49:54+08:00
 draft = false
 math = true
 +++
@@ -393,3 +393,4 @@ of \\(V^T\\) corresponding to zero singular values.
 
 1.  [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE%5Fab)
 2.  [Lecture 47 - Singular Value Decomposition | Stanford University](https://www.youtube.com/watch?v=P5mlg91as1c)
+3.  [Immersive Linear Algebra](http://immersivemath.com/ila)
