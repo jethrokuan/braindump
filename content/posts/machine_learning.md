@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T21:56:50+08:00
+lastmod = 2019-01-03T16:30:22+08:00
 draft = false
 math = true
 +++
@@ -782,3 +782,64 @@ Meta supervised learning: {x, y} to {x, t, y}
 -   Curriculum learning doesn't work
 -   Anti-curriculum training works instead
     -   Start with a really hard task
+
+
+## Structuring Data Science Projects {#structuring-data-science-projects}
+
+Cookiecutter Data Science&nbsp;[^fn:1] provides a decent project structure.
+I particularly like the use of Make, a ubiquitous build tool.
+
+```text
+├── LICENSE
+├── Makefile           <- Makefile with commands like `make data` or `make train`
+├── README.md          <- The top-level README for developers using this project.
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
+│
+├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+│
+├── models             <- Trained and serialized models, model predictions, or model summaries
+│
+├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+│                         the creator's initials, and a short `-` delimited description, e.g.
+│                         `1.0-jqp-initial-data-exploration`.
+│
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        <- Generated graphics and figures to be used in reporting
+│
+├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze > requirements.txt`
+│
+├── setup.py           <- Make this project pip installable with `pip install -e`
+├── src                <- Source code for use in this project.
+│   ├── __init__.py    <- Makes src a Python module
+│   │
+│   ├── data           <- Scripts to download or generate data
+│   │   └── make_dataset.py
+│   │
+│   ├── features       <- Scripts to turn raw data into features for modeling
+│   │   └── build_features.py
+│   │
+│   ├── models         <- Scripts to train models and then use trained models to make
+│   │   │                 predictions
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   │
+│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│       └── visualize.py
+│
+└── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+```
+
+Stripe's approach&nbsp;[^fn:2] still primarily uses Jupyter notebooks, but
+has 2 main points. First, they strip the results from the Jupyter
+notebooks before committing. Second, they ensure that the notebooks
+can be reproduced on the work laptops and on their cloud infrastructure.
+
+[^fn:1]: See [Home - Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/).
+[^fn:2]: See [Reproducible research: Stripe’s approach to data science](https://stripe.com/blog/reproducible-research)
