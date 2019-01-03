@@ -1,7 +1,7 @@
 +++
 title = "Theory Of Computation"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T22:02:47+08:00
+lastmod = 2019-01-03T16:37:53+08:00
 draft = false
 math = true
 +++
@@ -505,7 +505,7 @@ The pumping lemma lets us show that certain languages are not regular.
 <div class="theorem">
   <div></div>
 
-<a id="org3ce7690"></a>
+<a id="orgd3abc4e"></a>
 Let \\(L\\) be a regular language. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(w\\) in \\(L\\) such that
 \\(| w |  \ge n\\), we can break \\(w\\) into three strings \\(w = xyz\\)
@@ -521,6 +521,8 @@ That is, we can always find a non-empty string \\(y\\) not too far from
 the beginning of \\(w\\) that can be "pumped". This means repeating \\(y\\)
 any number of times, or deleting it, keeps the resulting string in the
 language \\(L\\).
+
+Note that there [has been other ways to prove irregularity of languages](https://bosker.wordpress.com/2013/08/18/i-hate-the-pumping-lemma/).
 
 
 ### Closure of Regular Languages {#closure-of-regular-languages}
@@ -1015,7 +1017,7 @@ use several results, that we will state below.
 <div class="theorem">
   <div></div>
 
-<a id="orga388d98"></a>
+<a id="org79f7b3a"></a>
 Let \\(L\\) be a CFL. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(z\\) in \\(L\\) such that
 \\(| z |  \ge n\\), we can break \\(z\\) into three strings \\(z = uvwxy\\)
@@ -1499,7 +1501,7 @@ to its right. The \\(\*\\) on the leftmost cell bottom track serves as an
 end marker and prevents the head of the semi-infinite TM from falling
 off the end of the tape.
 
-{{< figure src="Turing%20Machines/screenshot_2018-10-30_09-22-16.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-10-30_09-22-16.png" >}}
 
 Another restriction we make is to never write a blank. This combined
 with the semi-infinite tape restriction means that the tape is at all
@@ -1580,7 +1582,7 @@ counter, by either dividing or multiplying a count by \\(r\\), where
     amount of time that is at most some polynomial in the number of
     steps taken by the computer
 
-{{< figure src="Turing%20Machines/screenshot_2018-10-30_10-13-41.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-10-30_10-13-41.png" >}}
 
 We can prove the latter by using a TM to simulate the instruction
 cycle of the computer, as follows:
