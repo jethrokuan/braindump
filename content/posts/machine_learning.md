@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-03T16:30:22+08:00
+lastmod = 2019-01-06T23:47:29+08:00
 draft = false
 math = true
 +++
@@ -786,8 +786,15 @@ Meta supervised learning: {x, y} to {x, t, y}
 
 ## Structuring Data Science Projects {#structuring-data-science-projects}
 
-Cookiecutter Data Science&nbsp;[^fn:1] provides a decent project structure.
-I particularly like the use of Make, a ubiquitous build tool.
+Cookiecutter Data Science provides a decent project structure, and
+uses the ubiquitous build tool `Make` to build data projects. <sup id="e0ca383893600291ac5eca0f379984fb"><a href="#home_cookiec_data_scien" title="@misc{home_cookiec_data_scien,
+  author =       {DrivenData},
+  howpublished =
+                  {https://drivendata.github.io/cookiecutter-data-science/},
+  note =         {Online; accessed 06 January 2019},
+  title =        {Home - Cookiecutter Data Science},
+  year =         {2019},
+}">home_cookiec_data_scien</a></sup>
 
 ```text
 ├── LICENSE
@@ -836,10 +843,19 @@ I particularly like the use of Make, a ubiquitous build tool.
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-Stripe's approach&nbsp;[^fn:2] still primarily uses Jupyter notebooks, but
+Stripe's approach <sup id="77ac83a13ddf56f053f1ba225873677d"><a href="#dan_reprod" title="@misc{dan_reprod,
+  author =       {Dan Frank},
+  howpublished = {https://stripe.com/blog/reproducible-research},
+  note =         {Online; accessed 06 January 2019},
+  title =        {Reproducible research: Stripe's approach to data
+                  science},
+  year =         {2016},
+}">dan_reprod</a></sup> still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
-[^fn:1]: See [Home - Cookiecutter Data Science](https://drivendata.github.io/cookiecutter-data-science/).
-[^fn:2]: See [Reproducible research: Stripe’s approach to data science](https://stripe.com/blog/reproducible-research)
+# Bibliography
+<a id="home_cookiec_data_scien"></a>DrivenData,  (2019). *Home - cookiecutter data science*. Retrieved from [https://drivendata.github.io/cookiecutter-data-science/](https://drivendata.github.io/cookiecutter-data-science/). Online; accessed 06 January 2019. [↩](#e0ca383893600291ac5eca0f379984fb)
+
+<a id="dan_reprod"></a>Frank, D. (2016). *Reproducible research: stripe's approach to data science*. Retrieved from [https://stripe.com/blog/reproducible-research](https://stripe.com/blog/reproducible-research). Online; accessed 06 January 2019. [↩](#77ac83a13ddf56f053f1ba225873677d)
