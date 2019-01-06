@@ -1,15 +1,12 @@
 +++
 title = "RSS Feeds"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:33+08:00
+lastmod = 2019-01-06T13:16:38+08:00
 draft = false
 math = true
 +++
 
 ## Feeds {#feeds}
-
-
-### Computer Science {#computer-science}
 
 
 ### Tech {#tech}
@@ -19,6 +16,9 @@ math = true
 
 
 #### <https://increment.com/feed.xml> {#https-increment-dot-com-feed-dot-xml}
+
+
+#### <https://lobste.rs/rss> {#https-lobste-dot-rs-rss}
 
 
 ### Emacs {#emacs}
