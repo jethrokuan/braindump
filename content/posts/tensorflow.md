@@ -1,7 +1,7 @@
 +++
 title = "Tensorflow"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T22:08:01+08:00
+lastmod = 2019-01-07T17:06:20+08:00
 draft = false
 math = true
 +++
@@ -487,3 +487,20 @@ with/without graphs.
 
 1.  Use `prefetch` to overlap the work of a producer and consumer
 2.  Cache the dataset into memory if it can fit
+
+
+## Transitioning to TF 2.0 {#transitioning-to-tf-2-dot-0}
+
+If you are working on custom architectures, we suggest using tf.keras
+to build your models instead of Estimator. <sup id="d02320ed14e4169a0e5a7cf353c1ae86"><a href="#tensorflow_stand_keras" title="@misc{tensorflow_stand_keras,
+  author =       {Tensorflow},
+  howpublished =
+                  {https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a},
+  note =         {Online; accessed 07 January 2019},
+  title =        {Standardizing on Keras: Guidance on High-level APIs
+                  in TensorFlow 2.0},
+  year =         {2018},
+}">tensorflow_stand_keras</a></sup>
+
+# Bibliography
+<a id="tensorflow_stand_keras"></a>Tensorflow,  (2018). *Standardizing on keras: guidance on high-level apis in tensorflow 2.0*. Retrieved from [https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a](https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a). Online; accessed 07 January 2019. [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
