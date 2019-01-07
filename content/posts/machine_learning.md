@@ -1,10 +1,24 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-06T23:47:29+08:00
+lastmod = 2019-01-07T15:31:09+08:00
 draft = false
 math = true
 +++
+
+## When do we need machine learning? {#when-do-we-need-machine-learning}
+
+Two aspects of a given problem may call for the use of programs that
+learn and improve on the basis of their "experience":
+
+1.  **The problem's complexity**: some tasks that require elaborate
+    introspection that cannot be well-defined in programs, such as
+    driving, are ill-suited for coding by hand. Tasks that are beyond
+    human capabilities such as the analysis of large datasets also fall
+    in this category.
+2.  **Adaptivity**: Programmed tools are rigid, while machine learning
+    tools allows for adaptation to the environment they interact with.
+
 
 ## The Learning Problem {#the-learning-problem}
 
@@ -52,6 +66,16 @@ minimizes the sum of expected current and future costs.
 
 
 #### Supervised Learning {#supervised-learning}
+
+Since learning involves an interaction between the learner and the
+environment, one can divide tasks according to the nature of that
+interaction.
+
+Supervised learning describes a scenario in which the training
+examples contain significant information that is missing in the unseen
+"test examples". In unsupervised learning, there is no distinction
+between the training and test data. The goal is to come up with some
+summary, or compressed version of that data.
 
 -    Measure of success
 

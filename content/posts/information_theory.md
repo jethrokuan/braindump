@@ -1,7 +1,7 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:49+08:00
+lastmod = 2019-01-07T14:36:59+08:00
 draft = false
 math = true
 +++
@@ -119,12 +119,32 @@ small \\(p\_b\\) is called the capacity of the channel.
   C(f) = 1 - H\_2(f) = 1 - \left[f\log\_2\frac{1}{f} + (1-f)\log\_2\frac{1}{1-f}\right]
 \end{equation\*}
 
-n
 
+## Measuring Information Content {#measuring-information-content}
 
-## Shannon Information Content {#shannon-information-content}
+We view information content as the "degree of surprise" on learning
+the value of \\(x\\), for some random variable \\(x\\). This content will
+therefore depend on \\(p(x)\\), and we're looking for a monotonic function
+\\(h(x)\\) that expresses information content.
 
-A set of size S can be communicated with \\(\ceil{\log S}\\) bits.
+We would also like some desirable properties from our function \\(h(x)\\):
+\\(h(x, y) = h(x) + h(y)\\) if random variables \\(x\\) and \\(y\\) are
+statistically independent, since the information gained from the
+realization of both random variables must be additive. Since \\(p(x, y) =
+p(x)p(y)\\), it's easy to see that \\(h(\cdot)\\) must be given by the
+logarithm of \\(h(x)\\). Thus, we have:
+
+\begin{equation} \label{eqn:inf\_content}
+  h(x) = -\log\_2 p(x)
+\end{equation}
+
+Then the average information a random variable transmits in the
+process is obtained by taking the expectation of Eq. [eqn:inf_content](#eqn:inf_content)
+with respect to the distribution \\(p(x)\\):
+
+\begin{equation} \label{eqn:entropy}
+ H[x] = - \sum\_{x} p(x) \log\_2p(x)
+\end{equation}
 
 
 ## Source Coding Theorem {#source-coding-theorem}
