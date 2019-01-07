@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-07T17:16:25+08:00
+lastmod = 2019-01-07T18:38:32+08:00
 draft = false
 math = true
 +++
@@ -66,6 +66,98 @@ example of a non-parametric model is the [thin-plate spline](https://en.wikipedi
 ### The Trade-Off Between Prediction Accuracy and Model Interpretability {#the-trade-off-between-prediction-accuracy-and-model-interpretability}
 
 {{< figure src="/ox-hugo/screenshot_2019-01-07_16-19-48.png" caption="Figure 1: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">james2013introduction</a></sup>" >}}
+
+There are several reasons to choose a restrictive model over a
+flexible approach. First, if the interest is mainly in inference,
+restrictive models tend to be much more interpretable. For example
+linear models make it easy to understand the associations between
+individual predictors and the response. Even when predictions are the
+only concern, highly flexible models are susceptible to overfitting,
+and restrictive models can often outperform them.
+
+
+### Measuring Quality of Fit {#measuring-quality-of-fit}
+
+In order to evaluate the performance of a statistical learning method
+on a given data set, we need some way to measure how well its
+predictions actually match the observed data.
+
+In the regression setting, the most commonly-used measure is the mean
+squared error (MSE), given by:
+
+\begin{equation} \label{eqn:dfn:mse}
+  \mathrm{MSE} = \frac{1}{n} \mathop{\sum}\_{i=1}^{n} (y\_i - \hat{f}(x\_i))^2
+\end{equation}
+
+The MSE will be small if the predicted responses are very close to the
+true responses.
+
+
+### Bias-Variance Trade-Off {#bias-variance-trade-off}
+
+It can be shown taht the expected test MSE, for a given value \\(x\_0\\),
+can always be decomposed into the sum of 3 fundamental qualities: the
+variance of \\(\hat{f}(x\_0)\\), the squared bias of \\(\hat{f}(x\_0)\\), and
+the variance of the error terms \\(\epsilon\\):
+
+\begin{equation} \label{eqn:bvtrade}
+  \mathrm{E} (y\_0 - \hat{f}(x\_0))^2 = \mathrm{Var}(\hat{f}(x\_0)) + \left[
+  \mathrm{Bias}(\hat{f}(x\_0)) \right]^2 + \mathrm{Var}(\epsilon)
+\end{equation}
+
+The expected test MSE refers to the average test MSE that we would
+obtain if we repeatedly estimated \\(f\\) using a large number of training
+sets, and tested each at \\(x\_0\\).
+
+The variance of a statistical learning method refers to the amount by
+which \\(\hat{f}\\) would change if we estimated it using a different
+training data set. Since the training data are used to fit the
+statistical learning method, different training data sets will result
+in a different \\(\hat{f}\\). In general, more flexible statistical
+methods have higher variance.
+
+Bias refers to the error that is introduced by approximating a
+real-life problem, which may be extremely complicated, by a much
+simpler model. In general, more flexible approaches have lower bias.
+
+
+### The Bayes Classifier {#the-bayes-classifier}
+
+When the test error rate is minimized, the classifier assigns each
+observation to the most likely class, given its predictor values. This
+is known as the Bayes classifier. The Bayes classifier produces the
+lowest possible error rate, known as the Bayes error rate, given by:
+
+\begin{equation} \label{eqn:bayes\_error\_rate}
+  1 - \mathrm{E} \left( \mathop{\mathrm{max}}\_{j} \mathrm{Pr}(Y = j | X) \right)
+\end{equation}
+
+In theory, we would always like to predict qualitative responses using
+the Bayes classifier. However, for real data, we do not know the
+conditional distribution of \\(Y\\) given \\(X\\), and computing the Bayes
+classifier would be impossible.
+
+
+### K-Nearest Neighbours {#k-nearest-neighbours}
+
+The Bayes classifier serves as the unattainable gold standard against
+which to compare other methods. Many approaches attempt to estimate
+the conditional distribution of \\(Y\\) given \\(X\\), and then classify the
+given observation to the class with highest estimated probability. One
+such method is the K-nearest neighbours classifier.
+
+Given a positive integer \\(K\\) and a test observation \\(x\_0\\), the KNN
+classifier first identifies the K points in the training data that are
+closest to \\(x\_0\\), represented by \\(N\_0\\). It then estimates the
+conditional probability for class \\(j\\) as the fraction of points in
+\\(N\_0\\) whose response values equal \\(j\\):
+
+\begin{equation} \label{eqn:knn}
+  \mathrm{Pr}(Y=j | X = x\_0) = \frac{1}{K} \sum\_{i\in N\_0}I(y\_i = j)
+\end{equation}
+
+Finally, KNN applies Bayes rule and classifies the test observation
+\\(x\_0\\) to the class with the largest probability.
 
 
 ## The Statistical Learning Framework {#the-statistical-learning-framework}
