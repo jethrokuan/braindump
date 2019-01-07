@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-07T15:25:54+08:00
+lastmod = 2019-01-07T17:16:25+08:00
 draft = false
 math = true
 +++
@@ -11,6 +11,61 @@ math = true
 Statistical learning refers to a vast set of tools for _understanding
 data_. It involves building a statistical model for predicting, or
 estimating, an output based on one or more input.
+
+Our goal is to apply a statistical learning method to the training data
+in order to estimate the unknown function \\(f\\). Broadly speaking, most
+statistical learning methods for this task can be characterized as
+either parametric or non-parametric.
+
+
+### Parametric Methods {#parametric-methods}
+
+Parametric methods involve a two-step model-based approach:
+
+1.  First, we make an assumption about the functional form, or shape,
+    of \\(f\\). For example, one simple assumption is that \\(f\\) is linear in
+    \\(X\\):
+
+\begin{equation}
+f(X) = \beta\_0 + \beta\_1X\_1 + \dots + \beta\_p X\_p
+\end{equation}
+
+This is a linear model, and with this assumption the problem of
+estimating \\(f\\) is greatly simplified. Instead of estimating an
+arbitrary p-dimensional function \\(f(X)\\), one only needs to estimate
+the \\(p+1\\) coefficients \\(\beta\_0, \dots, \beta\_p\\).
+
+After a model has been selected, we need a procedure that uses the
+training data to fit or train the model. In the case of the linear
+model, we need to estimate the parameters \\(\beta\_0, \beta\_1, \dots,
+\beta\_p\\). The most common approach to fitting the model is referred to
+as the _(ordinary) least squares_.
+
+The model-based approach just described is referred to as _parametric_;
+it reduces the problem of estimating \\(f\\) down to one of estimating a
+set of parameters. The potential disadvantage of a parametric approach
+is that the model we choose will usually not match the true unknown
+form of \\(f\\). If the chosen model is too far from the true \\(f\\), then
+our estimate will be poor. Flexible models require a large amount of
+parameters, and complex models are also susceptible to overfitting.
+
+
+### Non-parametric Methods {#non-parametric-methods}
+
+Non-parametric methods do not make explicit assumptions about the
+functional form of \\(f\\). Instead, they seek an estimate of \\(f\\) that
+gets as close to the data points as possible without being too rough
+or wiggly. By avoiding assumptions of a particular form of \\(f\\),
+non-parametric approaches can possibly fit the wider range of possible
+shapes of \\(f\\). However, they do not reduce the problem of estimating
+\\(f\\) to a small number of parameters, and a large number of
+observations is required to obtain an accurate estimate for \\(f\\). An
+example of a non-parametric model is the [thin-plate spline](https://en.wikipedia.org/wiki/Thin%5Fplate%5Fspline).
+
+
+### The Trade-Off Between Prediction Accuracy and Model Interpretability {#the-trade-off-between-prediction-accuracy-and-model-interpretability}
+
+{{< figure src="/ox-hugo/screenshot_2019-01-07_16-19-48.png" caption="Figure 1: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">james2013introduction</a></sup>" >}}
 
 
 ## The Statistical Learning Framework {#the-statistical-learning-framework}
@@ -62,3 +117,14 @@ The learner's input consists of:
 The learner is blind to the underlying probability distribution
 \\(\mathcal{D}\\) over the world, and to the labelling function \\(f\\). The
 learner can only interact with the environment through the training set.
+
+
+## Reference Textbooks {#reference-textbooks}
+
+1.  An introduction to statistical learning <sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">james2013introduction</a></sup>
+2.  Understanding Machine Learning <sup id="63e0a08c15f1a264659ec7862354748b"><a href="#Shalev-Shwartz:2014:UML:2621980" title="Shalev-Shwartz \&amp; Ben-David, Understanding Machine Learning: From Theory to Algorithms, Cambridge University Press (2014).">Shalev-Shwartz:2014:UML:2621980</a></sup>
+
+# Bibliography
+<a id="james2013introduction"></a>James, G., Witten, D., Hastie, T., & Tibshirani, R., *An introduction to statistical learning* (2013), : Springer. [↩](#47f776a94d6687b2efebf468b22650cb)
+
+<a id="Shalev-Shwartz:2014:UML:2621980"></a>Shalev-Shwartz, S., & Ben-David, S., *Understanding machine learning: from theory to algorithms* (2014), New York, NY, USA: Cambridge University Press. [↩](#63e0a08c15f1a264659ec7862354748b)
