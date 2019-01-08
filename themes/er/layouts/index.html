@@ -1,5 +1,8 @@
 {{ define "main" }}
 <main class="center mv4 content-width ph3">
+  <p class="i">{{ .Site.Params.Description }}</p>
+  <p class="i">Contact me at: <a href="mailto:{{ .Site.Params.Email }}">{{ .Site.Params.Email }}</a></p>
+  <hr/>
   <ul class="list pa0">
     {{ range .Pages }}
     <li class="mb2">

@@ -1,6 +1,7 @@
 {{ define "main" }}
 <main class="center mv4 content-width ph3">
   <div class="f3 fw6 heading-color heading-font post-title">{{ .Title }}</div>
+
   <p class="silver f6 mt1 mb4 post-meta">
     {{ if not .Date.IsZero }}<time>{{ .Date.Format "02 Jan 2006" }}</time> {{ end }}
     {{ if or .Params.tags .Params.categories .Params.series }} | {{ end }}
@@ -11,6 +12,7 @@
     tags: [ {{ range .Params.tags }}<a href='{{ "/tags/" | relLangURL }}{{ . | urlize }}' class="link silver">{{ . }}</a> {{ end }} ]
     {{ end }}
   </p>
+  <hr class="silver"/>
   <div class="lh-copy post-content">{{ .Content }}</div>
 </main>
 {{ partial "table-of-contents" . }}
