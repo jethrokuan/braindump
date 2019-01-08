@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-07T18:38:32+08:00
+lastmod = 2019-01-08T15:29:21+08:00
 draft = false
 math = true
 +++
@@ -209,6 +209,447 @@ The learner's input consists of:
 The learner is blind to the underlying probability distribution
 \\(\mathcal{D}\\) over the world, and to the labelling function \\(f\\). The
 learner can only interact with the environment through the training set.
+
+
+## Linear Regression {#linear-regression}
+
+Simple linear regression is a straightforward approach for predicting
+a quantitative response \\(Y\\) on the basis of a single predictor
+variable \\(X\\). Mathematically, we write this linear relationship as:
+
+\begin{equation} \label{eqn:slr}
+  Y \approx \beta\_0 + \beta\_1 X
+\end{equation}
+
+We describe this as regressing \\(Y\\) on \\(X\\). We use our training data to
+produce estimates \\(\hat{\beta\_0}\\) and \\(\hat{\beta\_1}\\) for the model
+coefficients, and we can predict outputs by computing:
+
+\begin{equation}
+  \hat{y} = \hat{\beta\_0} + \hat{\beta\_1} X
+\end{equation}
+
+Let \\(\hat{y\_i} = \hat{\beta\_0} + \hat{\beta\_1}\\) be the prediction of
+\\(Y\\) based on the ith value of \\(X\\). Then \\(e\_i = y\_i - \hat{y\_i}\\)
+represents the ith _residual_. We can define the residual sum of squares
+(RSS) as:
+
+\begin{equation} \label{eqn:dfn:rss}
+  \mathrm{RSS} = e\_1^2 + e\_2^2 + \dots + \e\_n^2
+\end{equation}
+
+The least squares approach chooses \\(\hat{\beta\_0}\\) and \\(\hat{\beta\_1}\\)
+to minimise the RSS.
+
+If \\(f\\) is to be approximated by a linear function, then we can write
+the relationship as:
+
+\begin{equation}
+  Y = \beta\_0 + \beta\_1 X + \epsilon
+\end{equation}
+
+where \\(\epsilon\\) is an error term -- the catch-all for what we miss
+with this simple model. For example, the true relationship is probably
+not linear, and other variables cause variation in \\(Y\\). It is
+typically assumed that the error term is independent of \\(X\\).
+
+We need to assess the accuracy of our estimates. How far off will a
+single estimation of \\(\hat{\mu}\\) be? In general, we can answer this
+question by computing the standard error of \\(\hat{\mu}\\), written as
+\\(\mathrm{SE}(\hat{\mu})\\). This is given by:
+
+\begin{equation} \label{eqn:dfn:se}
+  \mathrm{Var}(\hat{\mu}) = \mathrm{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}
+\end{equation}
+
+where \\(\sigma\\) is the standard deviation of each of the realizations
+\\(y\_i\\) of \\(Y\\).
+
+Standard errors can be used to compute _confidence intervals_. A 95%
+confidence interval is defined as a range of values such that with 95%
+probability, the range will contain the true unknown value of the
+parameter. For linear regression, the 95% confidence interval for
+\\(\beta\_1\\) approximately takes the form:
+
+\begin{equation}
+  \hat{\beta\_1} \pm 2 \cdot SE(\hat{\beta\_1})
+\end{equation}
+
+Standard errors can also be used to perform hypothesis tests on the
+coefficients. The most common hypothesis test involves testing the
+null hypothesis of:
+
+\begin{equation} \label{eqn:dfn:null\_hyp}
+  H\_0 : \mathrm{There is no relationship between X and Y} (\beta\_1 = 0)
+\end{equation}
+
+versus the alternative hypothesis:
+
+\begin{equation} \label{eqn:dfn:alt\_hyp}
+  H\_a : \mathrm{There is a relationship between X and Y} (\beta\_1 \ne 0)
+\end{equation}
+
+To test the null hypothesis, we need to determine whether
+\\(\hat{\beta\_1}\\) is sufficiently far from zero that we can be
+confident that \\(\beta\_1\\) is non-zero. How far is far enough? This
+depends on the accuracy of \\(\hat{\beta\_1}\\), or
+\\(\mathrm{SE}(\hat{\beta\_1})\\). In practice, we compute a _t-statistic_,
+given by:
+
+\begin{equation} \label{eqn:dfn:t-statistic}
+  t = \frac{\hat{\beta\_1} - 0}{\mathrm{SE}(\hat{\beta\_1})}
+\end{equation}
+
+which measures the number of standard deviations that \\(\hat{\beta\_1}\\)
+is away from 0. If there really is no relationship between \\(X\\) and
+\\(Y\\), then we expect that Eq. <a name="eqn:dfn:t-statistic"></a> will have a
+t-distribution with \\(n-2\\) degrees of freedom. The t-distribution has a
+bell shape and for values of \\(n\\) greater than approximately 30 it is
+similar to the normal distribution.
+
+It is a simple matter to compute the probability of observing any
+number equal to \\(\lVert t \rVert\\) or larger in absolute value,
+assuming \\(\beta\_1 = 0\\). We call this probability the _p-value_. A small
+p-value indicates that it is unlikely to observe such a substantial
+association between the predictor and the response due to chance.
+
+
+### Assessing the accuracy of the model {#assessing-the-accuracy-of-the-model}
+
+Once we have rejected the null hypothesis in favour of the alternative
+hypothesis, it is natural to want to quantify the extent to which the
+model fits the data.
+
+
+#### Residual Standard Error (RSE) {#residual-standard-error--rse}
+
+The RSE is an estimate of the standard deviation of \\(\epsilon\\). It is
+the average amount that the response will deviate from the true
+regression line.
+
+\begin{equation} \label{eqn:dfn:rse}
+  \mathrm{RSE} = \sqrt{\frac{1}{n-2}\mathrm{RSS}} =
+  \sqrt{\frac{1}{n-2} \sum\_{i=1}^{n}(y\_i - \hat{y\_i})^2}
+\end{equation}
+
+
+#### \\(R^2\\) statistic {#r-2--statistic}
+
+The RSE provides an absolute measure of lack of fit of the model to
+the data. But since it is measured in the units of \\(Y\\), it is not
+always clear what constitutes a good RSE. The \\(R^2\\) statistic provides
+an alternative measure of fit. It takes a form of a proportion, and
+takes values between 0 and 1, independent of the scale of \\(Y\\).
+
+\begin{equation} \label{eqn:dfn:r\_squared}
+  R^2 = \frac{\mathrm{TSS} - \mathrm{RSS}}{\mathrm{TSS}} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}}
+\end{equation}
+
+where \\(\mathrm{TSS} = \sum(y\_i - \bar{y})^2\\) is the _total sum of
+squares_. TSS measures the total variance in the response \\(Y\\), and can
+be thought of as the amount of variability inherent in the response
+before the regression is performed. Hence, \\(R^2\\) measures the
+proportion of variability in \\(Y\\) that can be explained using \\(X\\).
+
+Note that the correlation coefficient \\(r = \mathrm{Cor}(X, Y)\\) is
+related to the \\(R^2\\) is the simple linear regression setting: \\(r^2 = R^2\\).
+
+
+### Multiple Linear Regression {#multiple-linear-regression}
+
+We can extend the simple linear regression model to accommodate
+multiple predictors:
+
+\begin{equation}
+  Y = \beta\_0 + \beta\_1 X\_1 + \beta\_2 X\_2 + \dots + \beta\_p X\_p + \epsilon
+\end{equation}
+
+We choose \\(\beta\_0, \beta\_1, \dots, \beta\_p\\) to minimise the sum of
+squared residuals:
+
+\begin{equation}
+  \mathrm{RSS} = \sum\_{i=1}^{n} (y\_i - \hat{y\_i})^2
+\end{equation}
+
+Unlike the simple regression estimates, the multiple regression
+coefficient estimates have complicated forms that are most easily
+represented using matrix algebra.
+
+We can answer some important questions using the multiple regression
+model:
+
+**1. Is there a relationship between the response and the predictors?**
+
+We are comparing \\(H\_0\\) <a name="eqn:dfn:null_hyp"></a> and \\(H\_a\\)
+<a name="eqn:dfn:alt_hyp"></a>, and we do so by computing the _F-statistic_:
+
+\begin{equation} \label{eqn:dfn:f-statistic}
+  F = \frac{(\mathrm{TSS} - \mathrm{RSS})/p}{\mathrm{RSS}/(n-p-1)}
+\end{equation}
+
+If the linear model is correct, one can show that:
+
+\begin{equation}
+E \{RSS/(n-p-1)\} = \sigma^2
+\end{equation}
+
+and that provided \\(H\_0\\) is true,
+
+\begin{equation}
+E \{(\mathrm{TSS}-\mathrm{RSS})/p\} = \sigma^2
+\end{equation}
+
+Hence, when there is no relationship between the response and the
+predictors, one would expect the F-statistic to be close to 1. if
+\\(H\_a\\) is true, then we expect \\(F\\) to be greater than 1.
+
+**2. Deciding on important variables**
+
+It is possible that all of the predictors are associated with the
+response, but it is more often the case that the response is only
+related to a subset of the predictors. The task of determining which
+predictors are associated is referred to as _variable selection_.
+Various statistics can be used to judge the quality of a model. These
+include Mallow's \\(C\_p\\), Akaike information criterion (AIC), Bayesian
+information criterion (BIC), and adjusted \\(R^2\\).
+
+There are \\(2^p\\) models that contains a subset of \\(p\\) variables. Unless
+\\(p\\) is small, we cannot consider all \\(2^p\\) models, and we need an
+efficient approach to choosing a smaller set of models to consider.
+There are 3 classical approaches for this task:
+
+1.  _Forward selection_: We begin with the null model -- a model that
+    contains an intercept but no predictors. We then fit p simple
+    linear regressions and add to the null model the variable that
+    results in the lowest RSS. We then add to that model the variable
+    that results in the lowest RSS for the new two-variable model, and
+    repeat.
+2.  _Backward selection_: We start with all variables in the model, andd
+    remove the variable with the largest p-value -- that is the
+    variable that is the least statistically significant. The new
+    (p-1)-variable model is fit, and the variable with the largest
+    p-value is removed, and repeat.
+3.  Mixed selection. This is a combination of forward and
+    backward-selection. We once again start with the null model. The
+    p-values of the variables can become larger as new variables are
+    added to the model. Once the p-value of one of the variables in the
+    model rises above a certain threshold, they are removed.
+
+**3. Model Fit**
+
+Two of the most common numerical measures of model fit are the RSE
+and \\(R^2\\), the fraction of variance explained.
+
+It turns out that \\(R^2\\) will always increase when more variables are
+added to the model, even if those variables are only weakly associated
+with the response. This is because adding another variable to the
+least squares equations must allow us to fit the training data more
+accurately. Models with more variables can have higher RSE if the
+decrease in RSS is small relative to the increase in \\(p\\).
+
+**4. Predictions**
+
+Once we have fit the multiple regression model, it is straightforward
+to predict the response \\(Y\\) on the basis of a set of values for
+predictors \\(X\_1, X\_2, \dots, X\_p\\). However, there are 3 sorts of
+uncertainty associated with this prediction:
+
+1.  The coefficient estimates \\(\hat{\beta\_0}, \hat{\beta\_1}, \dots,
+       \hat{\beta\_p}\\) are estimates for \\(\beta\_0, \beta\_1, \dots,
+       \beta\_p\\).
+
+That is, the least squares plane:
+
+\begin{equation}
+  \hat{Y} = \hat{\beta\_0} + \hat{\beta\_1}X\_1 + \dots + \hat{\beta\_p}X\_p
+\end{equation}
+
+ is only an estimate for the true
+population regression plane:
+
+\begin{equation}
+  f(X) = \beta\_0 + \beta\_1 X\_1 + \dots + \beta\_p X\_p
+\end{equation}
+
+ This inaccuracy is related to the reducible error. We can compute a
+confidence interval in order to determine how close \\(\hat{Y}\\) will be
+to \\(f(X)\\).
+
+1.  In practice, assuming a linear model for \\(f(X)\\) is almost always an
+    approximation of reality, so there is an additional source of
+    potentially reducible error which we call _model bias_.
+
+2.  Even if we knew \\(f(X)\\), the response value cannot be predicted
+    perfectly because of the random error \\(\epsilon\\) is the model. How
+    mich will \\(Y\\) vary from \\(\hat{Y}\\)? We use prediction intervals to
+    answer the question. Prediction intervals are always wider than
+    confidence intervals, because they incorporate both the error in
+    the estimate for \\(f(X)\\), and the irreducible error.
+
+
+### Qualitative Variables {#qualitative-variables}
+
+Thus far our discussion had been limited to quantitative variables.
+How can we incorporate qualitative variables such as gender into our
+regression model?
+
+For variables that take on only two values, we can create a dummy
+variable of the form (for example in gender):
+
+\begin{equation}
+  x\_i = \begin{cases}
+    1 & \text{if ith person is female} \\\\\\
+    0 & \text{if ith person is male}
+    \end{cases}
+\end{equation}
+
+and use this variable as a predictor in the equation. We can also use
+the {-1, 1} encoding. For qualitative variables that take on more than
+2 values, a single dummy variable cannot represent all values. We can
+add additional variables, essentially performing a one-hot encoding.
+
+
+### Extending the Linear Model {#extending-the-linear-model}
+
+The standard linear regression model provides interpretable results
+and works quite well on many real-world problems. However, it makes
+highly restrictive assumptions that are often violated in practice.
+
+The two most important assumptions of the linear regression model are
+that the relationship between the response and the predictors are:
+
+1.  _additive_: the effect of changes in a predictor \\(X\_j\\) on the
+    response \\(Y\\) are independent of the values of the other predictors.
+2.  _linear_: the change in the response \\(Y\\) due to a one-unit change in
+    \\(X\_j\\) is constant, regardless of the value of \\(X\_j\\)
+
+How can we remove the additive assumption? We can add an interaction
+term for two variables \\(X\_i\\) and \\(X\_j\\) as follows:
+
+\begin{equation}
+\hat{Y\_2} = \hat{Y\_1} + \beta\_{p+1} X\_i X\_j
+\end{equation}
+
+We can analyze the importance of the interaction term by looking at
+its p-value. The hierarchical principle states that if we include an
+interaction in a model, we should also include the main effects, even
+if the p-values associated with their coefficients are not
+significant.
+
+How can we remove the assumption of linearity? A simple way is to use
+polynomial regression.
+
+
+### Potential Problems {#potential-problems}
+
+When we fit a linear regression model to a particular data set, many
+problems may occur. Most common among these are the following:
+
+1.  Non-linearity of the response-predictor relationships
+2.  Correlation of error terms
+3.  Non-constant variance of error terms
+4.  Outliers
+5.  High-leverage points
+6.  Collinearity
+
+
+#### Non-linearity of the Data {#non-linearity-of-the-data}
+
+The assumption of a linear relationship between response and
+predictors aren't always true. _Residual plots_ are a useful graphical
+tool for identifying non-linearity. This is obtained by plotting the
+residuals \\(e\_i = y\_i - \hat{y\_i}\\) versus the predictor \\(x\_i\\). Ideally
+the residual plot will show no discernible pattern. The presence of a
+pattern may indicate a problem with some aspect of the linear model.
+
+If the residual plots show that there are non-linear associations in
+the data, then a simple approach is to use non-linear transformations
+of the predictors, such as \\(\log X\\), \\(\sqrt{X}\\) and \\(X^2\\).
+
+
+#### Correlation of Error Terms {#correlation-of-error-terms}
+
+An important assumption of the linear regression model is that the
+error terms, \\(\epsilon\_1, \epsilon\_2, \dots, \epsilon\_p\\) are
+uncorrelated.  The standard errors for the estimated regression
+coefficients are computed based on this assumption. This is mostly
+mitigated by proper experiment design.
+
+
+#### Non-constant Variance of Error Terms {#non-constant-variance-of-error-terms}
+
+Variances of the error terms may increase with the value of the
+response. One can identify non-constant variances in the errors, or
+heteroscedasticity, from the presence of a funnel shape in the
+residual plot.
+
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" >}}
+
+
+#### Outliers {#outliers}
+
+An outlier is a point from which \\(y\_i\\) is far from the value predicted
+by the model.  It is atypical for an outlier that does not have an
+unusual predictor value to have little effect on the least squares
+fit. However, it can cause other problems, such as dramatically
+altering the computed values of RSE, \\(R^2\\) and p-values.
+
+Residual plots can clearly identify outliers. One solution is to
+simply remove the observation, but care must be taken to first
+identify whether the outlier is indicative of a deficiency with the
+model, such as a missing predictor.
+
+
+#### High Leverage Points {#high-leverage-points}
+
+Observations with high leverage have an unusual value for \\(x\_i\\).
+High leverage observations typically have a substantial impact on the
+regression line. These are easy to identify, by looking for values
+outside the normal range of the observations. We can also compute the
+leverage statistic. for a simple linear regression:
+
+\begin{equation}
+  h\_i = \frac{1}{n} + \frac{(x\_i - \bar{x\_i})^2}{\sum\_{i' =
+      1}^n(x\_{i'} - \bar{x})^2}
+\end{equation}
+
+
+#### Collinearity {#collinearity}
+
+Collinearity refers to the situation in which two or more predictor
+variables are closely related to one another. The presence of
+collinearity can pose problems in the regression context: it can be
+difficult to separate out the individual effects of collinear
+variables on the response. A contour plot of the RSS associated with
+different possible coefficient estimates can show collinearity.
+
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" >}}
+
+Another way to detect collinearity is to look at the correlation
+matrix of the predictors. An element of this matrix that is large in
+absolute value indicates a pair of highly correlated variables, and
+therefore a collinearity problem in the data.
+
+Not all collinearity problems can be detected by inspection of the
+correlation matrix: it is possible for collinearity to exist between
+three or more variables even if no pairs of variables has a
+particularly high correlation. This situation is called
+_multicollinearity_. We instead compute the _variance inflation factor_
+(VIF). The VIF is the ratio of the variance of \\(\hat{\beta\_j}\\) when
+fitting the full model divided by the variance of \\(\hat{\beta\_j}\\) if
+fit on its own. The smallest possible value for VIF is 1, indicating a
+complete absence of collinearity. As a rule of thumb, a VIF exceeding
+values of 5 or 10 indicates a problematic amount of collinearity.
+
+\begin{equation} \label{eqn:dfn:vif}
+  \mathrm{VIF}(\hat{\beta\_j}) = \frac{1}{1-R^2\_{X\_j|X\_{-j}}}
+\end{equation}
+
+where \\(R^2\_{X\_j|X\_{-j}}\\) is the regression of \\(X\_j\\) onto all of the
+other predictors.
+
+
+### <span class="org-todo todo TODO">TODO</span> Comparison with K-nearest Neighbours {#comparison-with-k-nearest-neighbours}
 
 
 ## Reference Textbooks {#reference-textbooks}
