@@ -1,12 +1,15 @@
 +++
-title = "Tensorflow"
+title = "Deep Learning Tools"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-07T17:06:20+08:00
+lastmod = 2019-01-08T17:44:42+08:00
 draft = false
 math = true
 +++
 
-## What is Tensorflow {#what-is-tensorflow}
+## Tensorflow {#tensorflow}
+
+
+### What is Tensorflow {#what-is-tensorflow}
 
 TensorFlow is open-source software library for numerical computation.
 A graph of computations is defined, and TensorFlow builds an optimized
@@ -30,10 +33,10 @@ tensor
     parts of this graph to achieve the desired results.
 
 
-## TF Slim {#tf-slim}
+### TF Slim {#tf-slim}
 
 
-### `arg_scope` {#arg-scope}
+#### `arg_scope` {#arg-scope}
 
 <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg%5Fscope.py>
 
@@ -90,12 +93,12 @@ def conv2d(*args, **kwargs)
 ```
 
 
-## TF Serve {#tf-serve}
+### TF Serve {#tf-serve}
 
 <https://towardsdatascience.com/introducing-tfserve-simple-and-easy-http-server-for-tensorflow-model-inference-582ea1b07da8?source=rss----7f60cf5620c9---4>
 
 
-## TF Estimator {#tf-estimator}
+### TF Estimator {#tf-estimator}
 
 {{< figure src="/ox-hugo/image2_2018-09-15_14-42-49.jpg" >}}
 
@@ -133,7 +136,7 @@ to produce two dictionaries: one containing Tensors with inputs
 (features), and one containing Tensors with labels.
 
 
-### Predict {#predict}
+#### Predict {#predict}
 
  When `model_fn` is called with `mode == ModeKeys.PREDICT`, the model
 function must return a `tf.estimator.EstimatorSpec` containing the
@@ -153,7 +156,7 @@ if mode == tf.estimator.ModeKeys.PREDICT:
 ```
 
 
-### Eval {#eval}
+#### Eval {#eval}
 
 When `model_fn` is called with `mode == ModeKeys.EVAL`, the model function must evaluate the model, returning loss.
 
@@ -180,7 +183,7 @@ if mode == tf.estimator.ModeKeys.EVAL:
 ```
 
 
-### Train {#train}
+#### Train {#train}
 
 When `model_fn` is called with `mode == ModeKeys.TRAIN`, the model
 function must train the model.
@@ -201,7 +204,7 @@ return tf.estimator.EstimatorSpec(
 ```
 
 
-## TF Feature Columns {#tf-feature-columns}
+### TF Feature Columns {#tf-feature-columns}
 
 Reference:
 <https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html>
@@ -213,7 +216,7 @@ Feature columns bridge raw data with the data your model needs.
 There are nine functions in the `tf.feature_column` api.
 
 
-### Numeric column {#numeric-column}
+#### Numeric column {#numeric-column}
 
 ```python
 numeric_feature_column = tf.feature_column.numeric_column(key="SepalLength",
@@ -227,7 +230,7 @@ matrix_feature_column = tf.feature_column.numeric_column(key="MyMatrix",
 ```
 
 
-### Bucketized column {#bucketized-column}
+#### Bucketized column {#bucketized-column}
 
 Often, you don't want to feed a number directly into the model, but
 instead split its value into different categories based on numerical
@@ -248,7 +251,7 @@ bucketized_feature_column = tf.feature_column.bucketized_column(
 ```
 
 
-### Categorical Identity Column {#categorical-identity-column}
+#### Categorical Identity Column {#categorical-identity-column}
 
 Categorical identity columns are a special case of bucketized columns.
 In a categorical identity column, each bucket represents a single,
@@ -276,7 +279,7 @@ def input_fn():
 ```
 
 
-### Categorical vocabulary column {#categorical-vocabulary-column}
+#### Categorical vocabulary column {#categorical-vocabulary-column}
 
 {{< figure src="/ox-hugo/6_2018-09-15_15-20-30.jpg" >}}
 
@@ -317,7 +320,7 @@ hashed_feature_column =
 ```
 
 
-### Feature Crosses {#feature-crosses}
+#### Feature Crosses {#feature-crosses}
 
 Combining features allows the model to learn separate weights
 specifically for whatever that feature combination means.
@@ -355,7 +358,7 @@ fc_san_francisco_boxed = tf.feature_column.crossed_column(
 ```
 
 
-### Indicator and Embedding columns {#indicator-and-embedding-columns}
+#### Indicator and Embedding columns {#indicator-and-embedding-columns}
 
 Indicator columns treat each category as an element in a one-hot
 vector, where the matching category has value 1 and the rest have 0s.
@@ -385,7 +388,7 @@ embedding_column = tf.feature_column.embedding_column(
 ```
 
 
-## Hooks {#hooks}
+### Hooks {#hooks}
 
 Hooks are useful for custom processing that has to happen alongside
 the main loop. For example, we can use hooks for recordkeeping,
@@ -404,7 +407,7 @@ class TimeBasedStopHook(tf.train.SessionRunHook):
 ```
 
 
-## Experiment {#experiment}
+### Experiment {#experiment}
 
 The core of the distributed execution support is provided with the
 `Experiment` class.
@@ -420,7 +423,7 @@ The primary mode of replica training in Estimators is between-graph
 replication and asynchronous training.
 
 
-## Partial Run {#partial-run}
+### Partial Run {#partial-run}
 
 <https://www.tensorflow.org/api%5Fdocs/python/tf/Session#partial%5Frun>
 
@@ -449,19 +452,19 @@ To use partial execution, a user first calls `partial_run_setup()` and then a se
 The optional `feed_dict` argument allows the caller to override the value of tensors in the graph.
 
 
-## Debugging Memory Leaks {#debugging-memory-leaks}
+### Debugging Memory Leaks {#debugging-memory-leaks}
 
 <https://dantkz.github.io/How-To-Debug-A-Memory-Leak-In-TensorFlow/>
 
 
-### Finalize the session graph {#finalize-the-session-graph}
+#### Finalize the session graph {#finalize-the-session-graph}
 
 Finalizing the graph ensures that no new nodes are being added to the
 graph on each session run, by marking the graph as read-only. Anything
 that tries to modify the graph will raise an Exception.
 
 
-### Use [tcmalloc](https://goog-perftools.sourceforge.net/) {#use-tcmalloc}
+#### Use [tcmalloc](https://goog-perftools.sourceforge.net/) {#use-tcmalloc}
 
 tcmalloc suffers less from fragmentation when allocating and
 deallocating large objects (such as tensors). Some memory-intensive
@@ -472,7 +475,7 @@ tcmalloc also has a heap profiler, which can be analyzed with the
 google-pprof tool.
 
 
-## <span class="org-todo todo TODO">TODO</span> What happens when a session is created? {#what-happens-when-a-session-is-created}
+### <span class="org-todo todo TODO">TODO</span> What happens when a session is created? {#what-happens-when-a-session-is-created}
 
 Context: created a dataflow job that created one session each run,
 which was really slow: 200 workers 1 prediction/s.
@@ -481,7 +484,7 @@ Figure out what a tf.Session contains, and how they are initialized
 with/without graphs.
 
 
-## Optimizing the Input Pipeline {#optimizing-the-input-pipeline}
+### Optimizing the Input Pipeline {#optimizing-the-input-pipeline}
 
 <https://www.tensorflow.org/performance/datasets%5Fperformance>
 
@@ -489,7 +492,7 @@ with/without graphs.
 2.  Cache the dataset into memory if it can fit
 
 
-## Transitioning to TF 2.0 {#transitioning-to-tf-2-dot-0}
+### Transitioning to TF 2.0 {#transitioning-to-tf-2-dot-0}
 
 If you are working on custom architectures, we suggest using tf.keras
 to build your models instead of Estimator. <sup id="d02320ed14e4169a0e5a7cf353c1ae86"><a href="#tensorflow_stand_keras" title="@misc{tensorflow_stand_keras,
@@ -502,5 +505,49 @@ to build your models instead of Estimator. <sup id="d02320ed14e4169a0e5a7cf353c1
   year =         {2018},
 }">tensorflow_stand_keras</a></sup>
 
+
+## Keras {#keras}
+
+Keras is a high-level neural networks API, compatible with multiple
+backends. <sup id="2906663214b6eb9261d265af3a5c5b39"><a href="#home_keras_docum" title="@misc{home_keras_docum,
+  author =       {Keras},
+  howpublished = {https://keras.io/},
+  note =         {Online; accessed 08 January 2019},
+  title =        {Home Keras Documentation},
+  year =         {2019},
+}">home_keras_docum</a></sup> As of Tensorflow 2.0, Keras will be
+the primary API for building neural networks.
+
+The `Sequential` model is a simple model consisting of a linear stack of
+layers.
+
+```python
+from keras.models import Sequential
+from keras.layers import Dense
+
+model = Sequential()
+model.add(Dense(units=64, activation='relu', input_dim=100))
+model.add(Dense(units=10, activation='softmax'))
+
+model.compile(loss='categorical_crossentropy',
+              optimizer='sgd',
+              metrics=['accuracy'])
+
+
+# x_train and y_train are Numpy arrays --just like in the Scikit-Learn API.
+model.fit(x_train, y_train, epochs=5, batch_size=32)
+
+# Evaluate performance:
+loss_and_metrics = model.evaluate(x_test, y_test, batch_size=128)
+
+# Generate predictions on new data:
+classes = model.predict(x_test, batch_size=128)
+```
+
+
+####  {#}
+
 # Bibliography
 <a id="tensorflow_stand_keras"></a>Tensorflow,  (2018). *Standardizing on keras: guidance on high-level apis in tensorflow 2.0*. Retrieved from [https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a](https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a). Online; accessed 07 January 2019. [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
+
+<a id="home_keras_docum"></a>Keras,  (2019). *Home Keras Documentation*. Retrieved from [https://keras.io/](https://keras.io/). Online; accessed 08 January 2019. [↩](#2906663214b6eb9261d265af3a5c5b39)
