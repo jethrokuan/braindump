@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-08T15:29:21+08:00
+lastmod = 2019-01-08T18:18:11+08:00
 draft = false
 math = true
 +++
@@ -583,7 +583,7 @@ response. One can identify non-constant variances in the errors, or
 heteroscedasticity, from the presence of a funnel shape in the
 residual plot.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">james2013introduction</a></sup>" >}}
 
 
 #### Outliers {#outliers}
