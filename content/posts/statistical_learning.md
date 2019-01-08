@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-08T18:18:11+08:00
+lastmod = 2019-01-08T19:36:41+08:00
 draft = false
 math = true
 +++
@@ -623,7 +623,7 @@ difficult to separate out the individual effects of collinear
 variables on the response. A contour plot of the RSS associated with
 different possible coefficient estimates can show collinearity.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">james2013introduction</a></sup>" >}}
 
 Another way to detect collinearity is to look at the correlation
 matrix of the predictors. An element of this matrix that is large in
