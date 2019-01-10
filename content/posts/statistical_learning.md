@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-08T19:36:41+08:00
+lastmod = 2019-01-10T22:23:13+08:00
 draft = false
 math = true
 +++
@@ -650,6 +650,282 @@ other predictors.
 
 
 ### <span class="org-todo todo TODO">TODO</span> Comparison with K-nearest Neighbours {#comparison-with-k-nearest-neighbours}
+
+
+## Classification {#classification}
+
+The linear regression model assumes that the response variable \\(Y\\) is
+quantitative. However, in many cases the response variable is
+qualitative. Classification encompasses approaches that predict
+qualitative responses. 3 of the most widely-used classifiers include:
+logistic regression, linear discriminant analysis, and K-nearest
+neighbours. More computer-intensive methods include generalized
+additive models, trees, random forests, boosting, and support vector
+machines.
+
+
+### Why not Linear Regression? {#why-not-linear-regression}
+
+Encoding non-binary categorical variables as a dummy variable using
+integers can lead to a unwanted encoding of a relationship between the
+different options. With binary outcomes, linear regression does do a
+good job as a classifier: in fact, it is equivalent to linear
+discriminant analysis.
+
+Suppose we encode the outcome \\(Y\\) as follows:
+
+\begin{equation}
+  Y = \begin{cases}
+    0 & \text{if No} \\\\\\
+    1 & \text{if Yes} \\\\\\
+    \end{cases}
+\end{equation}
+
+Then the population \\(E(Y|X = x) = \mathrm{Pr}(Y=1|X=x)\\), which may
+seem to imply that regression is perfect for the task. However, linear
+regression may produce probabilities less than zero or bigger than
+one, hence logistic regression is more appropriate.
+
+
+### Logistic Regression {#logistic-regression}
+
+Rather than modelling the response \\(Y\\) directly, logistic regression
+models the probability that \\(Y\\) belongs to a particular category.
+
+How should we model the relationship between \\(p(X) =
+\mathrm{Pr}(Y=1|X)\\) and \\(X\\)? In the linear regression model, we used
+the formula:
+
+\begin{equation}
+p(X) = \beta\_0 + \beta\_1 X
+\end{equation}
+
+This model for \\(p(X)\\) is not suitable because any time a straight line
+is fit to a binary response that is coded as a 0 or 1, in principle we
+can always predict \\(p(X) < 0\\) for some values of \\(X\\), and \\(p(X) > 1\\)
+for others.
+
+In logistic regression, we use the logistic function:
+
+\begin{equation}
+  p(X) = \frac{e^{\beta\_0 + \beta\_1 X}}{1 + e^{\beta\_0 + \beta\_1 X}}
+\end{equation}
+
+This restricts values of \\(p(X)\\) to be between 0 and 1. A bit of
+rearrangement gives:
+
+\begin{equation}
+\log \left( \frac{p(X)}{1-p(X)} \right) = \beta\_0 + \beta\_1 X
+\end{equation}
+
+And this monotone transformation is called the _log odds_ or _logit_
+ transformation of \\(p(X)\\).
+
+We use maximum likelihood to estimate the parameters:
+
+\begin{equation}
+  l(\beta\_0, \beta) = \prod\_{i:y\_i=1} p(x\_i) \prod\_{i:y\_i=0} (1 - p(x\_i))
+\end{equation}
+
+This likelihood gives the probability of the observed zeros and ones
+in the data. We pick \\(\beta\_0\\) and \\(\beta\_1\\) to maximize the
+likelihood of the observed data.
+
+As with linear regression, we can compute the coefficient values, the
+standard error of the coefficients, the z-statistic, and the p-value.
+The z-statistic plays the same role as the t-statistic. A large
+absolute value of the z-statistic indicates evidence against the null
+hypothesis.
+
+
+### Multiple Logistic Regression {#multiple-logistic-regression}
+
+It is easy to generalize the formula to multiple logistic regression:
+
+\begin{equation}
+\log \left( \frac{p(X)}{1-p(X)} \right) = \beta\_0 + \beta\_1 X\_1 +
+\dots + \beta\_p X\_p
+\end{equation}
+
+\begin{equation}
+p(X) = \frac{e^{\beta\_0 + \beta\_1X\_1 + \dots + \beta\_pX\_p}}{1 + e^{\beta\_0 + \beta\_1X\_1 + \dots + \beta\_pX\_p}}
+\end{equation}
+
+Similarly, we use the maximum likelihood method to estimate the
+coefficient.
+
+
+### <span class="org-todo todo TODO">TODO</span> Case Control Sampling {#case-control-sampling}
+
+Case control sampling is most effective when the prior probabilities of the classes are very unequal.
+
+
+### Linear Discriminant Analysis {#linear-discriminant-analysis}
+
+Logistic regression involves directly modelling \\(\mathrm{Pr}(Y=k|X=x)\\)
+using the logistic function. We now consider an alternative and less
+direct approach to estimating these probabilities. We model the
+distribution of the predictors \\(X\\) separately in each of the response
+classes (i.e. given \\(Y\\)), and then use Bayes' theorem to flip these
+around into estimates for \\(\mathrm{Pr}(Y=k|X=x)\\).
+
+When these distributions are assumed to be normal, it turns out that
+the model is very similar in form to logistic regression.
+
+Why do we need another method?
+
+1.  When the classes are well-separated, the parameter estimates for
+    the logistic regression model are surprisingly unstable. LDA does
+    not suffer from this issue.
+2.  If n is small, and the distribution of the predictors \\(X\\) is
+    approximately normal in each of the classes, the LDA model is more
+    stable than the logistic regression model.
+3.  LDA is more popular when we have more than 2 response classes.
+
+We first state Bayes' theorem, and write it differently for
+discriminant analysis:
+
+\begin{equation} {eqn:dfn:bayes}
+  \mathrm{Pr}(Y=k|X=x) = \frac{\mathrm{Pr}(X=x|Y=k) \cdot \mathrm{Pr}(Y=k)}{\mathrm{Pr}(X=x)}
+\end{equation}
+
+\begin{equation}
+  \mathrm{Pr}(Y=k|X=x) = \frac{\pi\_k f\_k(x)}{\sum\_{l=1}^{K}\pi\_lf\_l(x)}
+\end{equation}
+
+where \\(f\_k(x) = \mathrm{Pr}(X=x|Y=k)\\) is the density for \\(X\\) in class \\(k\\), and
+\\(\pi\_k = \mathrm{Pr}(Y=k)\\) is the prior probability for class \\(k\\).
+
+We first discuss LDA when \\(p = 1\\). The Gaussian density has the form:
+
+\begin{equation}
+  f\_k(x) = \frac{1}{\sqrt{2\pi}\sigma\_k}e^{2\frac{1}{2}\left( \frac{x-\mu\_k}{\sigma\_k} \right)^2}
+\end{equation}
+
+We can plug this into Bayes formula and get a complicated expression
+for \\(p(x)\\). To classify at the value \\(X = x\\), we just need to see
+which of \\(p\_k(x)\\) is largest. Taking logs, and discarding terms that
+do not depend on \\(k\\), we see that this is equivalent to assigning \\(x\\)
+to the class with the largest _discriminant score_:
+
+\begin{equation}
+  \partial\_k(x) = x \cdot \frac{numerator}{\mu\_k}{\sigma^2} -
+  \frac{\mu\_k^2}{2\sigma^2}+ \log(\pi\_k)
+\end{equation}
+
+Note that \\(\partial\_k(x)\\) is a linear function of \\(x\\). If there are
+\\(K=2\\) classes, and \\(\pi\_1 = \pi\_2 = 0.5\\), we can see that the decision
+boundary becomes \\(x = \frac{\mu\_1 + \mu\_2}{2}\\).
+
+We can estimate the parameters:
+
+\begin{equation}
+  \hat{\pi\_k} = \frac{n\_k}{n}
+\end{equation}
+
+\begin{equation}
+  \hat{\mu\_k} = \frac{1}{n\_k}\sum\_{i:y\_i=k}x\_i
+\end{equation}
+
+\begin{equation}
+  \hat{\sigma}^2 = \frac{1}{n-K}\sum\_{k=1}^{K}\sum\_{i:y\_i=k} (x\_i - \hat{\mu\_k})^2
+\end{equation}
+
+We can extend Linear Discriminant Analysis to the case of multiple
+predictors. To do that, we will assume that \\(X = (X\_1, X\_2, \dots,
+X\_p)\\) is drawn from a multivariate Gaussian distribution, with a
+class-specific mean vector and a common covariance matrix.
+
+The multivariate Gaussian distribution assumes that each individual
+predictor follows a one-dimensional normal distribution, with some
+correlation between each pair of predictors. Formally, the
+multivariate Gaussian density is defined as:
+
+\begin{equation}
+  f(x) = \frac{1}{(2\pi)^{p/2|\Sigma|^{1/2}}} \mathrm{exp} \left( -\frac{1}{2}(x
+    - \mu)^T \Sigma^{-1}(x - \mu) \right)
+\end{equation}
+
+In the case of \\(p > 1\\) predictors, the LDA classifier assumes that the
+observations in the kith class are drawn from a multivariate Gaussian
+distribution \\(N(\mu\_k, \Sigma)\\), where \\(\Sigma\\) is common to all
+classes. With find that the Bayes classifier assigns an observation
+\\(X = x\\) to the class for which:
+
+\begin{equation}
+  \sigma\_k(x) = x^T \Sigma^{-1}\mu\_k -
+  \frac{1}{2}\mu\_k^T\Sigma^{-1}\mu\_k + \log \pi\_k
+\end{equation}
+
+The LDA model has the lowest error rate the Gaussian model is correct,
+since it approximates the Bayes classifier. However,
+misclassifications can still happen, and a good way to visualize them
+is through a confusion matrix. The probability threshold can also be
+tweaked to reduce the error rates for incorrect classification to a
+single class.
+
+The ROC (Receiver Operating Characteristics) curve is a popular
+graphic for simultaneously displaying the two types of errors for all
+possible thresholds. An ideal ROC curve will hug the top left corner,
+so the larger the AUC (Area Under Curve) the better the classifier.
+The overall performance of a classifier, summarized over all possible
+thresholds, is given by this value.
+
+Varying the classifier threshold also changes its true positive and
+false negative rate. These are also called the sensitivity, and 1 -
+specificity of the classifier.
+
+
+### Quadratic Discriminant Analysis {#quadratic-discriminant-analysis}
+
+In LDA with multiple predictors, we assumed that observations are
+drawn from a multivariate Gaussian distribution with a class-specific
+mean vector and a common covariance matrix. Quadratic Discriminant
+Analysis (QDA) assumes that each class has its own covariance matrix.
+Under this assumption, the Bayes classifier assigns an observation
+\\(X = x\\) to the class for which:
+
+\begin{equation}
+  \partial\_k(x) = -\frac{1}{2}(x-\mu\_k)^T \Sigma\_k^{-1}(x - \mu\_k) -
+  \frac{1}{2} \log |\Sigma\_k| + \log \pi\_k
+\end{equation}
+
+When would one prefer LDA to QDA, or vice-versa? The answer lies in
+the bias-variance trade-off. When there are \\(p\\) predictors, estimating
+a covariance matrix requires estimating \\(p(p+1)/2\\) variables. In QDA
+with \\(K\\) predictors, we need to estimate \\(Kp(p+1)/2\\) parameters, which
+can quickly get big. Hence LDA is much less flexible, and has a lower
+variance. On the other hand, if the assumption of a common covariance
+matrix is bad, then LDA will perform poorly.
+
+
+### Comparison of Classification Methods {#comparison-of-classification-methods}
+
+Logistic Regression and LDA produce linear decision boundaries. The
+only difference between the two approaches is that in logistic
+regression the coefficients are estimated using maximum likelihood,
+while in LDA the coefficients are approximated via the estimated mean
+and variance from a normal distribution.
+
+Since logistic regression and LDA differ only in their fitting
+procedures, one might expect the two approaches to give similar
+results. Logistic regression can outperform LDA if the Gaussian
+assumptions are not met. On the other hand, LDA can show improvements
+over logistic regression if they are.
+
+KNN takes a completely different approach from the classifiers seen in
+this chapter. In order to make a prediction for an observation \\(X = x\\)
+, the \\(K\\) training observations that are closest to \\(x\\) are
+identified. Then \\(X\\) is assigned to the class to which the plurality
+of these observations belong. Hence KNN is a completely non-parametric
+approach: no assumptions are made about the shape of the decision
+boundary. KNN does not tell us which predictors are important, but can
+outperform LDA and logistic regression if the decision boundary is
+highly non-linear.
+
+Though not as flexible as the KNN, QDA can perform better in the
+presence of a limited number of training observations, because it does
+make some assumptions about the form of the decision boundary.
 
 
 ## Reference Textbooks {#reference-textbooks}
