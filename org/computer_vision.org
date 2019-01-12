@@ -961,7 +961,7 @@ $S$. The second method is to do incremental averaging:
 \end{equation}
 
 *** Digital Cameras sensing colour
-TODO: Bayer filter
+[[https://en.wikipedia.org/wiki/Bayer_filter][Bayer filter]]
 * Change Detection
 Detecting change between 2 video frames is straightforward -- compute
 the differences in pixel intensities across the two frames:

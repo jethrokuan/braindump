@@ -1,7 +1,7 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T21:57:58+08:00
+lastmod = 2019-01-13T02:00:25+08:00
 draft = false
 math = true
 +++
@@ -98,7 +98,7 @@ evaluating a whole sentence.
     Minimise loss function (cross entropy), and use stochastic gradient
     descent to update all relevant word vectors.
 
--   TODO Skipgram
+-    Skipgram
 
     <http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/>
 
@@ -125,15 +125,15 @@ In practice, negative sampling works better for frequently occurring
 words and lower-dimensional vectors, and hierachical softmax works
 better for infrequent words.
 
--   TODO Negative Sampling
+-    Negative Sampling
 
     Take \\(k\\) negative samples, and minimise the probability of the two
     words co-occurring while also maximising the probability of the two
     words in the same window co-occur.
 
--   TODO Hierachical Softmax
+-    Hierarchical Softmax
 
-    Hierachical Softmax uses a binary tree to represent all words in the
+    Hierarchical Softmax uses a binary tree to represent all words in the
     vocabulary. Each leaf of the tree is a word, and there is a unique
     path from root to leaf. The probability of a word \\(w\\) given a vector
     \\(w\_i\\), \\(P(w|w\_i)\\), is equal to the probability of a random walk
@@ -463,7 +463,7 @@ right-arc
     probabilities to the number of possible transitions (the output
     dimension).
 
-    {{< figure src="images/nlp/screenshot_2018-01-20_15-36-45.png" >}}
+    {{< figure src="/ox-hugo/screenshot_2018-01-20_15-36-45.png" >}}
 
 
 ## Basic Visualization Techniques of Text Data {#basic-visualization-techniques-of-text-data}
@@ -471,7 +471,7 @@ right-arc
 
 ### Word Cloud {#word-cloud}
 
-{{< figure src="images/nlp/word-cloud_2018-08-02_10-16-54.png" >}}
+{{< figure src="/ox-hugo/word-cloud_2018-08-02_10-16-54.png" >}}
 
 In word cloud, it is difficult to determine optimal placing of words.
 In addition, word clouds do not show relation between words.
@@ -482,7 +482,7 @@ In addition, word clouds do not show relation between words.
 
 ### ThemeRiver {#themeriver}
 
-{{< figure src="images/nlp/VizInsight0808_05_2018-08-02_10-19-46.jpg" >}}
+{{< figure src="/ox-hugo/VizInsight0808_05_2018-08-02_10-19-46.jpg" >}}
 
 Time-series representation: view which keywords occur more frequently
 over time. It is a type of visualization known as a _stacked linegraph_.
@@ -490,12 +490,12 @@ over time. It is a type of visualization known as a _stacked linegraph_.
 
 ### TIARA Visualization {#tiara-visualization}
 
-{{< figure src="images/nlp/screenshot_2018-08-02_10-23-34.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-08-02_10-23-34.png" >}}
 
 
 ### Phrase Nets {#phrase-nets}
 
-{{< figure src="images/nlp/phrase_net_eg1_2018-08-02_10-36-47.jpg" >}}
+{{< figure src="/ox-hugo/phrase_net_eg1_2018-08-02_10-36-47.jpg" >}}
 
 Phrasenets are useful for exploring how words are linked in a text and
 like word clouds and word trees can be informative for early data

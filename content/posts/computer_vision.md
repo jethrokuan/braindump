@@ -1,7 +1,7 @@
 +++
 title = "Computer Vision"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T22:12:18+08:00
+lastmod = 2019-01-13T01:59:21+08:00
 draft = false
 math = true
 +++
@@ -1007,7 +1007,7 @@ One way to get around it is to use a floating point representation for
 
 #### Digital Cameras sensing colour {#digital-cameras-sensing-colour}
 
-TODO: Bayer filter
+[Bayer filter](https://en.wikipedia.org/wiki/Bayer%5Ffilter)
 
 
 ## Change Detection {#change-detection}

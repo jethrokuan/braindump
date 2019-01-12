@@ -84,7 +84,7 @@ Efficient tree structure to compute probabiltiies for all the vocabulary
   Minimise loss function (cross entropy), and use stochastic gradient
   descent to update all relevant word vectors.
 
-**** TODO Skipgram
+**** Skipgram
 http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/
 
 Predicts the distribution of context words from a center word. This is
@@ -108,13 +108,13 @@ In practice, negative sampling works better for frequently occurring
 words and lower-dimensional vectors, and hierachical softmax works
 better for infrequent words.
 
-**** TODO Negative Sampling
+**** Negative Sampling
 Take $k$ negative samples, and minimise the probability of the two
 words co-occurring while also maximising the probability of the two
 words in the same window co-occur.
 
-**** TODO Hierachical Softmax
-Hierachical Softmax uses a binary tree to represent all words in the
+**** Hierarchical Softmax
+Hierarchical Softmax uses a binary tree to represent all words in the
 vocabulary. Each leaf of the tree is a word, and there is a unique
 path from root to leaf. The probability of a word $w$ given a vector
 $w_i$, $P(w|w_i)$, is equal to the probability of a random walk
