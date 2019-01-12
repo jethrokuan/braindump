@@ -1,0 +1,11 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Scala
+* Scala
+1. Multi-paradigm
+2. Scalability
+3. Type Soundness
+4. JVM
+* Syntax
+#+BEGIN_SRC scala
+
+#+END_SRC

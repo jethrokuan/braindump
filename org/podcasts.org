@@ -1,0 +1,10 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Podcasts
+* Podcasts
+- [[https://www.npr.org/sections/money/][Planet Money]]
+- [[https://www.indiehackers.com/podcast][The Indie Hackers Podcast]]
+- [[https://fs.blog/the-knowledge-project/][The Knowledge Project]]
+- [[http://omegataupodcast.net/][Omega Tau]]
+- [[https://audioboom.com/channel/nosuchthingasafish][No Such Thing As A Fish]]
+- [[https://www.dancarlin.com/hardcore-history-series/][Hardcore History]]
+

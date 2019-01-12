@@ -1,0 +1,16 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: General Links
+
+* 12 Factor CLI Apps                                                   :tech:
+https://medium.com/@jdxcode/12-factor-cli-apps-dd3c227a0e46
+
+Interesting best practices to follow. Especially about reading the [[https://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html][XDG
+Spec]].
+
+* Tech Yaks                                                            :tech:
+https://techyaks.com/
+
+* Netflix's Culture                                                    :tech:
+Something to look back at:
+
+https://jobs.netflix.com/culture

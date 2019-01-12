@@ -1,0 +1,41 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: RSS Feeds
+* Feeds                                                                :elfeed:
+** Tech                                                               :tech:
+*** https://hnrss.org/newest?points=100
+*** https://increment.com/feed.xml
+*** https://lobste.rs/rss
+** Emacs                                                              :emacs:
+*** http://planet.emacsen.org/atom.xml
+*** https://www.reddit.com/r/emacs/
+** AI/ML                                                                 :AI:
+*** https://reddit.com/r/MachineLearning/.rss
+*** https://medium.com/feed/mlreview/
+*** https://distill.pub/rss.xml
+*** http://www.datatau.com/rss
+*** https://towardsdatascience.com/feed
+*** http://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss
+*** https://thegradient.pub/rss/
+*** https://lilianweng.github.io/lil-log/feed.xml
+** Programming Languages                                                 :pl:
+*** http://lambda-the-ultimate.org/rss.xml
+** General                                                          :general:
+*** https://www.fs.blog/feed/
+*** http://feedproxy.google.com/brainpickings/rss
+*** http://feeds.feedburner.com/MeltingAsphalt
+*** https://commoncog.com/blog/rss/
+** Company Blogs                                                    :company:
+*** https://blogs.dropbox.com/tech/feed/
+*** https://codeascraft.com/feed/
+*** http://multithreaded.stitchfix.com/feed
+*** https://engineering.pinterest.com/rss.xml
+*** https://research.fb.com/feed/
+*** https://medium.com/feed/airbnb-engineering/
+*** https://tech.instacart.com/feed/
+*** http://research.baidu.com/feed/
+** Math                                                                :math:
+*** http://feeds.feedburner.com/theendeavour
+*** http://andrewgelman.com/feed/
+** Vocab                                                              :vocab:
+*** https://wordsmith.org/awad/rss1.xml
+*** https://www.merriam-webster.com/wotd/feed/rss2

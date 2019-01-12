@@ -1,0 +1,719 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Machine Learning
+#+HUGO_TAGS: machine_learning
+
+* Reference Book                                                   :noexport:
+Learning From Data
+[[file:~/Dropbox/Books/Programming/Machine%20Learning/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf][Pattern Recognition and Machine Learning]]
+[[file:~/Dropbox/Books/Programming/Machine%20Learning/understanding-machine-learning-theory-algorithms.pdf][Understanding Machine Learning]]
+
+* When do we need machine learning?
+Two aspects of a given problem may call for the use of programs that
+learn and improve on the basis of their "experience":
+
+1. *The problem's complexity*: some tasks that require elaborate
+   introspection that cannot be well-defined in programs, such as
+   driving, are ill-suited for coding by hand. Tasks that are beyond
+   human capabilities such as the analysis of large datasets also fall
+   in this category.
+2. *Adaptivity*: Programmed tools are rigid, while machine learning
+   tools allows for adaptation to the environment they interact with.
+
+* The Learning Problem
+** What is Learning?
+ An agent is said to be /learning/ if it improves its performance P on
+ task T based on experience/observations/data E. T must be fixed, P
+ must be measurable, E must exist. See [[file:artificial_intelligence.org::*Learning%20agents][Learning Agents]].
+*** Inductive Bias
+ The incorporation of prior knowledge biases the learning mechanism.
+ This is also called /inductive bias/. The incorporation of prior
+ knowledge is inevitable for the success of learning algorithms (the
+ no-free-lunch theorem). The stronger the prior knowledge that one
+ starts the learning process with, the easier it is to learn from
+ further examples.
+** Types of Learning
+*** Active vs Passive Learning
+
+ An active learner interacts with the environment at training time,
+ (e.g. by posing queries or performing experiments), while a passive
+ learner only observes the information provided by the environment.
+
+*** Online vs Batch Learning
+In online learning, the hypothesis has to be updated each time a new
+label is received.
+*** Reinforcement Learning
+ Each action in a state has an associated cost and a probability
+ distribution of the next state.
+
+ Goal is to learn a policy (mapping from state to action) that
+ minimizes the sum of expected current and future costs.
+*** Supervised Learning
+
+Since learning involves an interaction between the learner and the
+environment, one can divide tasks according to the nature of that
+interaction.
+
+Supervised learning describes a scenario in which the training
+examples contain significant information that is missing in the unseen
+"test examples". In unsupervised learning, there is no distinction
+between the training and test data. The goal is to come up with some
+summary, or compressed version of that data.
+
+**** Measure of success
+  A loss function helps measure our success. Given a set $H$ of
+  hypothesis of models, and a domain $Z$, let $l$ be a function from $H
+  \times Z$ to non-negative real numbers $l: $H \times Z \rightarrow
+  \mathbb{R}_{+}$.
+
+  The /risk function/ is the expected loss of the hypothesis,
+
+  \begin{equation*}
+    L_D(h) = E_{z \sim D}[l(h,z)]
+  \end{equation*}
+
+  We are interested in finding a hypothesis $h$ that has a small risk,
+  or expected loss.
+**** Empirical Risk Minimisation (ERM)
+  - The training set error is often called the /empirical error/ or
+    /empirical risk/.
+  - Given a hypothesis class $H$, finding the hypothesis $h \in H$ that
+    minimizes the empirical risk is a simple learning strategy.
+**** Assumptions Made ⚠
+ 1. One common assumption is that the data in the data generation
+    process is independently and identically distributed (IID),
+    according to the distribution $D$.
+
+ Q: Given a large enough training set, do you expect the long term test
+ error to be similar to the training error?
+
+ - If IID, then yes
+ - If not, there is likely dependencies, but under certain conditions,
+   yes.
+   - If sampling mixes well, it will not take long for D' to look
+     like a steady set distribution.
+ - If dependencies are exploited, there is a possibility of attaining
+   lower training and test error.
+** Is Learning Feasible?
+The target function $f$ that we want to learn is unknown. The
+performance of a hypothesis on the training set $D$ tells us nothing
+about the performance on the data outside of $D$.
+
+As long as $f$ is unknown, knowing $D$ cannot exclude any patterns of
+$f$ outside of $D$, and the predictions of $g$ would be meaningless.
+*** Probabilistic View
+If we accept a probabilistic answer, that is $D$ tells us something
+likely about $f$ outside of $D$, then learning is feasible, only with
+a small price.
+
+Learning a hypothesis $g$ approximates the target function $f$ well,
+i.e. $E_{out}(g) \approx 0$. However, probabilistic analysis via
+Hoeffding's Inequality gives $E_{out}(g) \approx E_{in}(g)$.
+Therefore, we still need to ensure $E_{in}(g) \approx 0$.
+
+* Training vs Testing
+** Generalisation Error
+We can define generalisation error as the discrepancy between $E_in$
+and $E_out$. The Hoeffding Inequality characterises the generalization
+error with a probabilistic bound:
+
+\begin{align}
+P[|E_{in}(g) - E_{out}(g)| > \epsilon] \le 2Me^{-2\epsilon^2N}
+\end{align}
+
+Pick a tolerance level $\delta$, and assert with probability
+$1-\delta$ that
+
+\begin{align}
+  E_{out}(g) \le E_{in}(g) + \sqrt{\frac{1}{2N}\ln \frac{2M}{\delta}}
+\end{align}
+
+Notice the error bound depends on $M$, the size of the hypothesis
+set $H$. Most learning models have infinite $H$, including the simple
+perceptron. Hence, to study generalisation in such models, we need to
+derive a counterpart that deals with infinite $H$.
+
+Notice that the $M$ factor was obtained by taking the disjunction of
+events. Let $B_m$ be the bad event that $|E_{in}(h_m) - E_{out}(h_m)|
+> \epsilon$. Notice that these bad events are often strongly
+overlapping, and the disjunction of these events form a much smaller
+area.
+
+The mathematical theory of generalisation hinges on this observation.
+Upon accounting for the overlaps of different hypotheses, we will be
+able to replace the number of hypotheses $M$ with an effective finite
+number, even while $M$ is infinite.
+** Growth Function
+The /growth function/ is the quantity that will formalize the
+effective number of hypotheses.
+
+Each $h \in H$ generates a dichotomy which is $h$ is $-1$ or $h$ i-
+$+1$. We then formally define dichotomies as follows:
+
+\begin{align}
+H(x_1, \dots, x_n) = \left\{ h(x_1), h(x_2), \dots, h(x_n) | h \in H \right\}
+\end{align}
+
+* Concept Learning
+A concept is a boolean-valued function over a set of input instances
+(each comprising input attributes). Concept learning is a form of
+supervised learning. Infer an unknown boolean-valued function from
+training-examples.
+** Hypothesis
+There is a trade-off between /expressive power/ and smaller
+/hypothesis space/. Large hypothesis spaces are bad, because search is
+going to take a long time, and also requires more data. Humans exploit
+structure in the hypothesis space to guide search and learn faster.
+
+A hypothesis $h$ is consistent with a set of training examples $D$ iff
+$h(x) = c(x)$ for all $<x,c(x)> \in D$.
+** Inductive Learning
+Any hypothesis found to approximate the target function well over a
+sufficient large set of *training examples* will also approximate the
+target function well over other *unobserved examples*.
+** Concept Learning is Search
+The goal is to search for a hypothesis $h \in H$ that is consistent
+with $D$.
+** Exploit Structure in Concept Learning
+$h_j$ is more general than or equal to $h_k$ (denoted $h_j \ge_{g}
+h_k$) iff any input instance $x$ that satisfies $h_j$ also satisfies
+$h_k$.
+
+This is relation is a *partial order*.
+
+** Find-S Algorithm
+Intuition: Start with the most specific hypothesis $h$. Whenever it
+wrongly classifies a positive training example, we "minimally"
+generalize it to satisfy its input instance.
+*** Limitations
+1. Can't tell whether Find-S has learnt the target concept
+2. Can't tell when training examples are /inconsistent/
+3. Picks a maximally specific $h$
+4. Depending on $H$, there may be several solutions
+** Version Space
+\begin{equation*}
+  VS_{H,D} = {h \in H | h \text{ is consistent with }D}
+\end{equation*}
+ 
+- If $c \in H$, then D can reduce $VS_{H,D}$ to ${c}$.
+- If D is insufficient, then $VS_{H,D}$ represents the /uncertainty/
+  of what the target concept is
+- $VS_{H,D}$ contains all consistent hypotheses, including maximally
+  specific hypotheses
+
+The *general boundary* G of $VS_{H,D}$ is the set of maximally general
+members of $H$ consistent with $D$.
+
+The *specific boundary* S of $VS_{H,D}$ is the set of maximally general
+members of $H$ consistent with $D$.
+
+\begin{equation*}
+  VS_{H,D} = {h \in H | \exists s \in S \exists g \in G g \ge_g h
+    \ge_g s }
+\end{equation*}
+
+** List-Then-Eliminate Algorithm
+Iterate through all hypotheses in $H$, and eliminate any hypothesis
+found inconsistent with any training example. This algorithm is often
+prohibitively expensive.
+
+** Candidate-Elimination Algorithm
+Start with most general and specific hypotheses. Each training example
+"minimally" generalizes S and specializes G to remove inconsistent
+hypotheses from version space.
+* Decision Tree Learning
+/Decision Tree Learning/ is a method of learning which approximates
+discrete-valued functions that is robust to noisy data, and is capable
+of learning disjunctive expressions
+
+It is most appropriate when:
+1. instances are represented as attribute pairs
+2. the target function has discrete output values
+3. Disjunctive descriptions may be required
+4. The training data may contain errors
+5. The training data may contain missing attribute values
+** ID3 algorithm
+ID3 learns decision trees by constructing them top down. Each instance
+attribute is evaluated using a statistical test to determine how well
+it alone classifies the examples. The best attribute is selected and
+used as the test at the root node of the tree.
+*** Which is the best attribute?
+A statistical property called /information gain/ measures how well a
+given attribute separates the training examples according to their
+target classification.
+
+Information gain is the expected reduction in entropy caused by
+partitioning the examples according to this attribute:
+
+\begin{align}
+  Gain(S,A) = Entropy(S) - \sum_{v\in Values(A)}\frac{|S_v|}{|S|}Entropy(S_v)
+\end{align}
+
+For example:
+
+\begin{align}
+  Values(Wind) &= Weak, Strong \\
+  S &= [9+, 5-] \\
+  S_{Weak} &\leftarrow [6+, 2-] \\
+  S_{Strong} &\leftarrow [3+, 3-] \\
+  Gain(S, Wind) &= Entropy(S) - \frac{8}{14}Entropy(S_{Weak}) -
+                  \frac{6}{14}Entropy(S_{Strong}) \\
+               &=0.048
+\end{align}
+*** Hypothesis Space Search
+ID3 can be characterised as searching a space of hypotheses for one
+that fits the training examples. The hypothesis space searched is the
+set of possible decision trees. ID3 performs a simple-to-complex,
+hill-climbing search. The evaluation measure that guides the search is
+the information gain measure.
+
+Because ID3's hypothesis space of all decision trees is a complete
+space of finite discrete-valued functions, it avoids the risk that the
+hypothesis space might not contain the target function.
+
+ID3 maintains only a single hypothesis as it searches through the
+space of decision trees. ID3 loses the capabilities that follow from
+explicitly representing all consistent hypothesis.
+
+ID3 in its pure form performs no backtracking in its search, and can
+result in locally but not globally optimal target functions.
+
+ID3 uses all training examples at each step to make statistically
+based decisions, unlike other algorithms that make decisions incrementally.
+*** Inductive bias
+The inductive bias of decision tree learning is that shorter trees are
+preferred over larger trees (Occam's razor). Trees that place high
+information gain attributes close to the root are preferred over those
+that do not. ID3 can be viewed as a greedy heuristic search for the
+shortest tree without conducting the entire breadth-first search
+through the hypothesis space.
+
+Notice that ID3 searches a complete hypothesis space incompletely, and
+candidate-elimination searches an incomplete hypothesis space
+completely. The inductive bias of ID3 follows from its search strategy
+(/preference bias/), while that of candidate elimination follows from
+the definition of its search space. (/restriction bias/).
+*** Why Prefer Shorter Hypotheses?
+1. fewer shorter hypothesis than larger ones, means it's less likely
+   to over-generalise
+* Density Estimation
+/Density Estimation/ refers to the problem of modeling the probability
+distribution $p(x)$ of a random variable $x$, given a finite set $x_1,
+x_2, \dots, x_n$ of observations.
+
+We first look at parametric distributions, which are governed by a
+small number of adaptive parameters. In a frequentist treatment, we
+choose specific values for the parameters optimizing some criterion,
+such as the likelihood function. In a Bayesian treatment, we
+introduce prior distributions and then use Bayes' theorem to compute
+the corresponding posterior distribution given the observed data.
+
+An important role is played by /conjugate priors/, which yield
+posterior distributions of the same functional form.
+
+The maximum likelihood setting for parameters can give severely
+over-fitted results for small data sets. To develop a Bayesian
+treatment to this problem, we consider a form of prior distribution
+with similar form as the maximum likelihood function. this property is
+called /conjugacy/. For a binomial distribution, we can choose the
+beta distribution as the prior.
+* Unsupervised Learning
+ In unsupervised learning, given a training set $S = \left(x_1, \dots,
+ x_m\right)$, without a labeled output, one must construct a "good"
+ model/description of the data.
+
+ Example use cases include:
+ - clustering
+ - dimension reduction to ind essential parts of the data and reduce
+   noise (e.g. PCA)
+ - minimises description length of data
+** K-means Clustering
+Input: $\{x^{(1), x^{(2)}, x^{(3)}, \dots, x^{(m)}}\}$.
+
+1. Randomly initialize cluster centroids.
+2. For all points, compute which cluster centroid is the closest.
+3. For each cluster centroid, move centroids to the average points
+   belonging to the cluster.
+4. Repeat until convergence.
+
+K-means is guaranteed to converge. To show this, we define a
+distortion function:
+
+\begin{equation}
+  J(c, \mu) = \sum_{i=1}^m || x^{(i)} - \mu_{c^{(i)}}||^2
+\end{equation}
+
+K means is coordinate ascent on J. Since $J$ always decreases, the
+algorithm converges.
+** Gaussian Mixture Model
+By Bayes' Theorem:
+
+\begin{equation}
+P(X^{(i)}, Z^{(i)}) = P(X^{(i)} | Z^{(i)})P(Z^{(i)})
+\end{equation}
+
+\begin{equation}
+Z^{(i)} \sim \text{multinomial}(\phi)
+\end{equation}
+
+\begin{equation}
+X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu_j, \Sigma_j)
+\end{equation}
+
+** Expectation Maximization
+ https://www.cs.utah.edu/~piyush/teaching/EM_algorithm.pdf
+
+ The EM algorithm is an efficient iterative procedure to compute the
+ Maximum Likelihood (ML) estimate in the presence of missing or hidden
+ data.
+
+ Each iteration of the EM algorithm consists of two processes: The
+ E-step, and the M-step. In the expectation, or E-step, the missing da
+ ta are estimated given the observed data and current estimate of the
+ model par ameters. This is achieved using the conditional
+ expectation, explaining the choice of terminology.
+
+ In the M-step, the likelihood function is maximized under th e
+ assumption that the missing data are known. The estimate of the
+ missing data f rom the E-step are used in lieu of the actual missing
+ data.
+
+ Convergence is assured since the algorithm is guaranteed to
+ increase the likelihood at each iteration.
+
+ #+DOWNLOADED: /tmp/screenshot.png @ 2018-04-03 10:56:25
+ [[file:images/machine_learning/screenshot_2018-04-03_10-56-25.png]]
+
+For mixture of Gaussians:
+
+Repeat until convergence:
+1. E-step
+   - guess values of $Z^{(i)}$
+   - Let $w_j^{(i)} := P(Z^{(i)=j|X^{(i), \phi, \mu, \Sigma}})$
+2. M-step
+   - $\phi_j := \frac{1}{m}\sum_{i=1}^m w_j^{(i)}$
+   - $\mu_j := \frac{\sum_{i=1}^m w_j^{(i)}x^{(i)}}{\sum_{i=1}^m w_j^{(i)}}$
+   - ...
+
+* Refile
+** Data Compression
+In /lossy compression/, we seek to trade off code length with
+reconstruction error.
+
+In /vector quantization/, we seek a small set of vectors ${z_i}$ to
+describe a large dataset of vectors ${x_i}$, such that we can
+represent each $x-i$ with its closest approximation in ${z_i}$ with
+small error. (Clustering problem)
+
+In /transform coding/, we transform the data, usually using a linear
+tranformation. The data in the transformed domain is quantized,
+usually discarding the small coefficients, corresponding to removing
+some of the dimensions.
+** Generative Learning Algorithms
+Discriminative algorithms model $p(y | x)$ directly from the training
+set.
+
+Generative algorithms model $p(y | x)$ and $p(y)$. Then $argmax_y
+p(y|x) = argmax_y \frac{p(x|y)p(y)}{p(x)} = argmax_y p(x|y)p(y)$.
+
+
+*** Multivariate Normal Distribution
+A multivariate normal distribution is parameterized by a mean vector
+$\mu \in R^n$ and a covariance matrix $\Sigma \in R^{n \times n}$, where $\Sigma \ge
+0$ is symmetric and positive semi-definite.
+
+*** TODO Gaussian Discriminant Analysis
+In Gaussian Discriminant Analysis, p(x | y) is distributed to a
+[[*Multivariate Normal Distribution][multivariate normal distribution]].
+
+\begin{align}
+  y &\sim Bernoulli(\phi) \\
+  x|y = 0 &\sim N(\mu_0, \Sigma) \\
+  x|y = 1 &\sim N(\mu_1, \Sigma)
+\end{align}
+
+We can write out the distributions:
+
+\begin{align}
+  p(y) &= \phi^y (1 - \phi)^{1-y} \\
+  p(x | y = 0) &= \frac{1}{(2\pi)^{n/2}|\Sigma|^{n/2}} exp \left( - \frac{1}{2} (x - \mu_0)^T \Sigma^{-1}(x - \mu_0) \right) \\
+  p(x | y = 1) &= \frac{1}{(2\pi)^{n/2}|\Sigma|^{n/2}} exp \left( - \frac{1}{2} (x - \mu_1)^T \Sigma^{-1}(x - \mu_1) \right)
+\end{align}
+
+Then, the log-likelihood of the data is:
+
+\begin{align}
+  l(\phi, \mu_0, \mu_1, \Sigma) &= \log \prod_{i=1}^m p(x^{(i)}, y^{(i)}; \mu_0, \mu_1, \Sigma) \\
+  &= \log \prod_{i=1}^m p(x^{(i) }| y^{(i)}; \mu_0, \mu_1, \Sigma)p(y^{(i)}; \phi)
+\end{align}
+
+We maximize $l$ with respect to the parameters.
+
+* Riken AIP Workshop
+** Weakly Supervised Classification
+
+*** Motivation
+- Machine learning from big data is already successful
+- In some cases, massive labelled data is not available
+- Classification from limited information
+
+*** Supervised Classification
+A large number of labeled samples yield better classification
+performance.
+Optimal convergence rate is $O(n^{-\frac{1}{2}})$.
+
+*** Unsupervised Classification
+Since collecting labelled samples is costly, we can learn a classifier
+from unlabelled data. This is equivalent to clustering 
+
+*** Semi-supervised Classification
+- Use a large number of unlabelled samples and a small number of
+  labelled samples.
+- Find a decision boundary along cluster structure induced by
+  unlabelled samples.
+
+*** Positive Unlabelled Classification
+Given positive and unlabelled samples:
+
+\begin{equation}
+{x_i^P}_{i=1}^{n_P} \sim P(x | y = + 1)
+\end{equation}
+
+\begin{equation}
+  {x_i^U}_{i=1}^{n_U} \sim P(x)
+\end{equation}
+
+Risk of classifier can be decomposed into two terms:
+
+1. Risk for positive data
+2. Risk for negative data
+
+Since we do not have negative data in the positive unlabelled data in
+the PU setting, the risk cannot be directly estimated.
+
+U-density is a mixture of positive and negative densities:
+
+\begin{equation}
+  R(f) = \pi E_{p(x|y=+1)} \left[ l(f(x)) \right] + (1-\pi) E_{p(x|y=-1)}\left[ l(-f(x)) \right]
+\end{equation}
+
+Through this we can find an unbiased risk estimator.
+
+Estimating error bounds, we can show that PU learning can be better
+than PN provided a large number of PU data.
+
+*** PNU Classification
+- Train PU, PN, and NU classification, and combine them.
+- Unlabelled data always helps without cluster assumptions
+- Use unlabelled data for loss evaluation (reducing the bias), not for
+  regularisation.
+
+*** Pconf Classification
+Only positive data is available:
+1. data from rival companies cannot be obtained
+2. Only successful examples are available
+
+If we have positive data with confidence, we can train a classifier.
+
+Others: Similar-unlabelled etc.
+
+** Fast Computation of Uncertainty in Deep Learning
+Emtiyaz Khan
+
+Uncertainty quantifies the confidence in the prediction of a model,
+i.e., how much it does not know.
+
+*** Uncertainty in Deep Learning
+https://emtiyaz.github.io/
+
+\begin{equation}
+  p(D|\theta) = \prod_{i=1}^{N} p(y_i | f_\theta (x_i))
+\end{equation}
+Data given parameters,  output given NN(input)
+
+1. Generate a prior distribution $\theta \sim p(\theta)$
+
+*** Approximating Inference with Gradients
+
+\begin{equation}
+  p(\theta | D) \approx q(\theta) = N(\theta | \mu, \sigma^2)
+\end{equation}
+
+Find the $\mu$ and $\sigma^2$ such that $q$ is close to the posterior distribution.
+
+
+\begin{equation}
+  max L(\mu, \sigma^2) = E_q\left[ \log \frac{p(\theta)}{q(\theta)} \right] +
+  \sum_{i=1}^N E_q \left[ \log p(D_i|\theta) \right]
+\end{equation}
+
+Using natural-gradients leads to faster and simpler algorithm than
+gradients methods.
+
+** Data-efficient Probabilistic Machine Learning
+Bryan Low
+
+Gaussian Process (GP) Models for Big Data.
+
+*** Gaussian Process
+- Is a rich class of Bayesian, non-parametric models
+- A GP is a collection of rvs any finite subset of which belongs to a
+  univariate 
+
+*** Task Setting
+- Agent explores unknown environment modelled by GP
+- Every location has a reward
+
+*** Lipschitz Continuous Reward Functions
+
+\begin{equation}
+  R(z_t, s_t) \overset{\Delta}{=}  R_1(z_t) + R_2(z_t) + R_3(s_t)
+\end{equation}
+
+- R_1 Lipschitz continuous (current measurement)
+- R_2 Lipschitz continuous after convolution with Gaussian kernel (current measurement)
+- R_3 Location History, independent of current measurement
+
+* The Natural Language Decathlon: Multitask Learning as Question Answering: Richard Socher
+[[https://einstein.ai/static/images/pages/research/decaNLP/decaNLP.pdf][pawper]]
+
+- Joint work with Bryan McCann, Nitish Keskar and Caiming Xiong
+
+** Limits of Single-task Learning
+
+- We can hill climb to local optima if $|dataset| > 100 \times C$
+- For more general model, we need continuous learning in a single model
+
+For pre-training in NLP, we're still stuck at the word vector level.
+This compared to vision, where most of the model can be pre-trained,
+only retraining the final few layers.
+
+** Why has weight & model sharing not happened so much in NLP?
+1. NLP requires many types of reasoning: logical, linguistic etc.
+2. Requires short and long-term memory
+3. NLP has been divided into intermediate and separate tasks to make
+   progress (Benchmark chasing in each community)
+5. Can a single unsupervised task solve it all? No, language clearly
+   requires supervision in nature.
+
+** Motivation for Single Multitask model
+
+1. Step towards AGI
+2. Important building block for:
+   1. Sharing weights
+   2. Transfer learning
+   3. Zero-shot learning
+   4. Domain adaptation
+3. Easier deployment in production
+4. Lowering the bar for anybody to solve their NLP task
+
+End2end model vs parsing as intermediate step (e.g. running POS tagger
+first).
+
+** The 3 equivalent supertasks of NLP
+
+Any NLP task can be mapped to these 3 super tasks:
+
+1. Language Modeling
+2. Question Answering
+3. Dialogue
+
+** Multitask learning as QA
+- Question Answering
+- Machine Translation
+- Summarization
+- NLI
+- Sentiment Classification
+- Semantic Role Labeling
+- Relation Extraction
+
+Meta supervised learning: {x, y} to {x, t, y}
+
+** Designing a model for decaNLP
+- No task-specific modules or parameters because task ID assumed to be unavailable
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-02 14:52:23
+[[file:images/machine_learning/screenshot_2018-10-02_14-52-23.png]]
+
+1. Start with a context
+2. Ask a question
+3. Generate answer one at a time by
+   1. Pointing to context
+   2. Pointing to question
+   3. Choosing a word 
+
+** Learnings
+- Transformer Layers yield benefits in single-task and multitask
+  setting
+- QA and SRL have strong connections
+- Pointing to the question is essential, despite the task being just
+  classification for some subtasks
+- Mulitasking helps a lot with zero-shot tasks
+
+(Latest version of the paper coming out soon -- ICLR 2018)
+
+** Training Strategies
+- Fully Joint
+- Curriculum learning doesn't work
+- Anti-curriculum training works instead
+  - Start with a really hard task
+
+* Structuring Data Science Projects
+Cookiecutter Data Science provides a decent project structure, and
+uses the ubiquitous build tool ~Make~ to build data projects. cite:home_cookiec_data_scien 
+
+#+BEGIN_SRC text
+├── LICENSE
+├── Makefile           <- Makefile with commands like `make data` or `make train`
+├── README.md          <- The top-level README for developers using this project.
+├── data
+│   ├── external       <- Data from third party sources.
+│   ├── interim        <- Intermediate data that has been transformed.
+│   ├── processed      <- The final, canonical data sets for modeling.
+│   └── raw            <- The original, immutable data dump.
+│
+├── docs               <- A default Sphinx project; see sphinx-doc.org for details
+│
+├── models             <- Trained and serialized models, model predictions, or model summaries
+│
+├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
+│                         the creator's initials, and a short `-` delimited description, e.g.
+│                         `1.0-jqp-initial-data-exploration`.
+│
+├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+│
+├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+│   └── figures        <- Generated graphics and figures to be used in reporting
+│
+├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+│                         generated with `pip freeze > requirements.txt`
+│
+├── setup.py           <- Make this project pip installable with `pip install -e`
+├── src                <- Source code for use in this project.
+│   ├── __init__.py    <- Makes src a Python module
+│   │
+│   ├── data           <- Scripts to download or generate data
+│   │   └── make_dataset.py
+│   │
+│   ├── features       <- Scripts to turn raw data into features for modeling
+│   │   └── build_features.py
+│   │
+│   ├── models         <- Scripts to train models and then use trained models to make
+│   │   │                 predictions
+│   │   ├── predict_model.py
+│   │   └── train_model.py
+│   │
+│   └── visualization  <- Scripts to create exploratory and results oriented visualizations
+│       └── visualize.py
+│
+└── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
+#+END_SRC
+
+Stripe's approach cite:dan_reprod still primarily uses Jupyter notebooks, but
+has 2 main points. First, they strip the results from the Jupyter
+notebooks before committing. Second, they ensure that the notebooks
+can be reproduced on the work laptops and on their cloud infrastructure.
+
+bibliography:ml.bib
+
+* Footnotes
+[fn:1] See [[https://drivendata.github.io/cookiecutter-data-science/][Home - Cookiecutter Data Science]].

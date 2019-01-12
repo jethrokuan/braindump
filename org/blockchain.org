@@ -1,0 +1,31 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Blockchain
+
+* Stellar
+- Payment-focused crypto-currency.
+- open-source, non-profit organization.
+
+* Consensus Protocols
+
+** Proof of Work (POW)
+- 1 CPU 1 vote.
+- susceptible to 51% attack
+
+** Proof of S(?)
+- 1 token 1 vote
+- Rich dominate the network
+
+** Delegated Proof of S
+- Like POS, but can borrow, in exchange for incentives
+
+** RCP
+- Ripple protocol
+- Permissions-based
+- Uses Byzantine Fault Tolerance (BFT)
+
+*** TODO See 2 General Problem
+
+** Stellar
+- Fork of Ripple
+- PBFT
+  - Tiered permissions

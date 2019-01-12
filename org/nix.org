@@ -1,0 +1,6 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Nix/NixOS
+#+AUTHOR: Jethro Kuan
+* Links
+- [[https://weekly.nixos.org/][NixOS Weekly Newsletter]]
+- [[https://nixos.org/nixos/nix-pills/][Nix Pills]]

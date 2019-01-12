@@ -1,0 +1,19 @@
+#+TITLE: Probabilistic Graph Modelling
+#+SETUPFILE: ./hugo_setup.org
+** Bayesian Networks
+A Bayesian network is a directed graph $G = (V,E)$ together with a
+random variable $x_i$ for each node $i \in V$, one conditional
+probability distribution (CPD) p(x_i | x_{A_i}) per node, specifying
+the probability of $x_i$ conditioned on its parent's values.
+
+We say that Q, W are /d-separated/ when variables $O$ are observed if
+they are not connected by an /active path/. An undirected path in the
+Bayesian network $G$ is called /active/ given observed variables $O$
+if for every triple of variables $X, Y, Z$ on the path, one of the
+following holds:
+
+- $X \leftarrow Y \leftarrow Z, Y \not\in O$
+- $X \rightarrow Y \rightarrow Z, Y \not\in O$
+- $X \leftarrow Y \rightarrow Z, Y \not\in O$
+- $X \rightarrow Y \leftarrow Z, Y \text{ or any descendents} \in O$
+

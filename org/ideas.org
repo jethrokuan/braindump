@@ -1,0 +1,9 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Ideas
+* Realtime plotting of safe bike routes given traffic data
+* CANCELLED App to enable deep focus, by blocking websites temporarily :CANCELLED:
+  - State "CANCELLED"  from              [2017-01-14 Sat 10:29]
+  - Note taken on [2017-01-14 Sat 10:29] \\
+    Solved by Leechblock in Firefox
+* Org-mode as a service
+* NUS Street view
