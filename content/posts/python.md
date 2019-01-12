@@ -1,7 +1,8 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-24T00:20:39+08:00
+lastmod = 2019-01-13T01:20:45+08:00
+tags = ["python", "programming_languages"]
 draft = false
 math = true
 +++
@@ -148,3 +149,19 @@ up programs through vectorization.
 ## Reference Python Applications {#reference-python-applications}
 
 [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications)
+
+
+## Google Python Style Guide {#google-python-style-guide}
+
+<https://google.github.io/styleguide/pyguide.html>
+
+
+## Optimizing Python {#optimizing-python}
+
+[Gregory Szorc's Digital Home | What I've Learned About Optimizing
+Python](https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/)
+
+
+## Profiling Python {#profiling-python}
+
+[benfred/py-spy: Sampling profiler for Python programs](https://github.com/benfred/py-spy)
