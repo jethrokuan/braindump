@@ -498,7 +498,7 @@ $Z := \frac{\bar{X} - \bar{Y} - (\mu_X -
 when $|Z| > z_{\alpha/2}$
 *** Unknown Variance
 $s_p^2 = \frac{(n-1)s_X^2 + (m-1)s_Y^2}{m+n-2}$ where $s_X^2 =
-\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2. $s_p^2$ is an unbiased
+\frac{1}{n-1}\sum_{i=1}^{n}(X_i-\bar{X})^2$. $s_p^2$ is an unbiased
 estimator of $\sigma^2$. $s_X$ within factor of 2 from $s_Y$.
 
 $t := \frac{\bar{X} - \bar{Y} - (\mu_X -

@@ -1,7 +1,7 @@
 +++
 title = "Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:35+08:00
+lastmod = 2019-01-14T15:27:31+08:00
 draft = false
 math = true
 +++
@@ -522,8 +522,8 @@ when \\(|Z| > z\_{\alpha/2}\\)
 
 #### Unknown Variance {#unknown-variance}
 
-\\(s\_p^2 = \frac{(n-1)s\_X^2 + (m-1)s\_Y^2}{m+n-2}\\) where $s\_X^2 =
-\frac{1}{n-1}&sum;<sub>i=1</sub><sup>n</sup>(X\_i-\bar{X})^2. \\(s\_p^2\\) is an unbiased
+\\(s\_p^2 = \frac{(n-1)s\_X^2 + (m-1)s\_Y^2}{m+n-2}\\) where \\(s\_X^2 =
+\frac{1}{n-1}\sum\_{i=1}^{n}(X\_i-\bar{X})^2\\). \\(s\_p^2\\) is an unbiased
 estimator of \\(\sigma^2\\). \\(s\_X\\) within factor of 2 from \\(s\_Y\\).
 
 \\(t := \frac{\bar{X} - \bar{Y} - (\mu\_X -
