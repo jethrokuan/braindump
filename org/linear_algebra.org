@@ -1,5 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Linear Algebra
+
 * Definitions
 A matrix of dimensions M-by-N looks like:
 
@@ -179,9 +180,19 @@ Hence, $\hat{i}$ and $\hat{j}$ land at $\mu_x$ and $\mu_y$ respectively. We
 can easily see the duality between matrix-vector product and dot
 product here.
 
-
 #+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:05:08
 [[file:images/linear_algebra/screenshot_2018-08-25_16-05-08.png]]
+
+
+\begin{equation}
+  a \cdot b = |a||b| \cos \theta
+\end{equation}
+
+sometimes, this is also notated as
+
+\begin{equation}
+ \langle u, v \rangle = \sum_{i=1}^{d}u_i v_i = u^T v
+\end{equation}
 
 * Cross Product
 The cross product of $\vec{v}$ and $\vec{w}$, denoted $\vec{v} \times

@@ -24,6 +24,7 @@
 *** http://feedproxy.google.com/brainpickings/rss
 *** http://feeds.feedburner.com/MeltingAsphalt
 *** https://commoncog.com/blog/rss/
+*** https://weekly.nixos.org/feeds/all.rss.xml
 ** Company Blogs                                                    :company:
 *** https://blogs.dropbox.com/tech/feed/
 *** https://codeascraft.com/feed/

@@ -1,7 +1,7 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-23T20:49:54+08:00
+lastmod = 2019-01-14T08:50:31+08:00
 draft = false
 math = true
 +++
@@ -212,6 +212,16 @@ can easily see the duality between matrix-vector product and dot
 product here.
 
 {{< figure src="/ox-hugo/screenshot_2018-08-25_16-05-08.png" >}}
+
+\begin{equation}
+  a \cdot b = |a||b| \cos \theta
+\end{equation}
+
+sometimes, this is also notated as
+
+\begin{equation}
+ \langle u, v \rangle = \sum\_{i=1}^{d}u\_i v\_i = u^T v
+\end{equation}
 
 
 ## Cross Product {#cross-product}

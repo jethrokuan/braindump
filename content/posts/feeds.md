@@ -1,7 +1,7 @@
 +++
 title = "RSS Feeds"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-06T13:16:38+08:00
+lastmod = 2019-01-13T22:40:56+08:00
 draft = false
 math = true
 +++
@@ -76,6 +76,9 @@ math = true
 
 
 #### <https://commoncog.com/blog/rss/> {#https-commoncog-dot-com-blog-rss}
+
+
+#### <https://weekly.nixos.org/feeds/all.rss.xml> {#https-weekly-dot-nixos-dot-org-feeds-all-dot-rss-dot-xml}
 
 
 ### Company Blogs {#company-blogs}
