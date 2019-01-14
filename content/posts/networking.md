@@ -1,7 +1,7 @@
 +++
 title = "Computer Networking"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-14T15:27:45+08:00
+lastmod = 2019-01-14T15:30:56+08:00
 tags = ["networking"]
 draft = false
 math = true
@@ -73,8 +73,7 @@ are concentric rather than parallel. These achieve high data
 transmission rates, and can be used as a guided shared medium. They
 are common in cable television systems.
 
-+CAPTION: A Coaxial cable
-![](/ox-hugo/SW-33020-6_3_2019-01-14_11-25-43.jpg)
+{{< figure src="/ox-hugo/SW-33020-6_3_2019-01-14_11-25-43.jpg" caption="Figure 2: A Coaxial cable" >}}
 
 
 ### The Network Core {#the-network-core}
@@ -143,7 +142,7 @@ from a third-party telecommunications provider to directly connect one
 of its routers to a router at the PoP. Any ISP may choose to
 multi-home, that is, to connect to two or more provider ISPs.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-14_12-14-13.png" caption="Figure 2: Interconnection of ISPs" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-14_12-14-13.png" caption="Figure 3: Interconnection of ISPs" >}}
 
 
 ### Delays in Packet-Switched Networks {#delays-in-packet-switched-networks}
@@ -184,7 +183,7 @@ The Internet Protocol stack consists of 5 layers: the physical link,
 network, transport, and application layers. The OSI reference model
 consists of 7 layers.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-14_12-23-06.png" caption="Figure 3: IP stack and ISO OSI reference model" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-14_12-23-06.png" caption="Figure 4: IP stack and ISO OSI reference model" >}}
 
 Application layer
 : network applications and application layer

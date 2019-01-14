@@ -66,7 +66,7 @@ are concentric rather than parallel. These achieve high data
 transmission rates, and can be used as a guided shared medium. They
 are common in cable television systems.
 
-+CAPTION: A Coaxial cable
+#+CAPTION: A Coaxial cable
 [[file:images/networking/SW-33020-6_3_2019-01-14_11-25-43.jpg]]
 
 
