@@ -1,15 +1,66 @@
 +++
 title = "C++"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:25+08:00
+lastmod = 2019-01-15T21:44:49+08:00
 draft = false
 math = true
 +++
+
+## Introduction {#introduction}
+
+C++ is a compiled language. For a program to run, its source text has
+to be processed by a compiler, producing object files, which are
+combined by a linker yielding an executable program. An executable
+program is created for a specific hardware/system combination, and is
+not portable.
+
+The ISO C++ standard defines 2 kinds of entities:
+
+1.  Core language features, such as built-in types and loops
+2.  Standard-library components, such as containers (vector and map)
+    and IO operations
+
+C++ is statically typed: the type of each entity must be known to the
+compiler at its point of use.
+
+
+## References vs Pointers {#references-vs-pointers}
+
+A reference is similar to a pointer, except that you don't need to use
+a prefix \* to access the value referred to by the reference. In
+addition, a reference cannot be made to refer to a different object
+after its initialization.
+
+```c++
+int count_x(const char* p, char x) {
+  if (p == nullptr) return 0;
+  int count = 0;
+  for (; *p != 0; ++p) {
+    if (*p == x) {
+      ++count;
+    }
+  }
+  return count;
+}
+```
+
 
 ## Modern C++ {#modern-c}
 
 Follow the guidelines:
 <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md>
+
+
+### Use General `{}` style declarations {#use-general-style-declarations}
+
+```c++
+int i1 = 7.8; // i1 becomes 7
+int i2 {7.8}; // error: floating-point to integer conversion
+```
+
+The old `=` style is traditional and dates back to C. Conversions that
+lose information, are allowed and implicitly applied. These are the
+price paid for C compatibility.
 
 
 ### Use non-member begin and end {#use-non-member-begin-and-end}

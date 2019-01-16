@@ -1,0 +1,53 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Stochastic Processes
+
+Focus: /Discrete time, discrete state space Markov Chain/
+
+- Stochastic = random
+- A stochastic process describes random phenomena that change over
+  time
+
+- states :: values that $X_t$'s take
+- state space :: set of all possible states, denoted by $\mathcal{S}$.
+- index set :: can be thought of as time. If $T = \{0, 1, 2, \dots \}$
+               then it is a discrete-time process. If $T$ is an
+               interval, it is a continuous time process.
+
+Each $X_t$ is a random variable.
+
+Example of stochastic process: Gambler's ruin
+
+1. A gambler starts with an initial fortune of $k$ dollars.
+2. The gambler plays against $B$ with an initial fortune of $N-k$ dollars.
+3. Each game he bets $1, wins with probability $p$
+4. Let $\{X_t = t = 0,1,2 \dots\}$ represent his fortune as the
+   betting goes on.
+5. Game only stops when either gambler or $B$ is ruined.
+6. Here $\mathcal{S} = \{0,1,\dots,N\}$
+7. For a realization of the results of the first 10 games, (here
+   $p=1/2$):
+
+#+begin_src R
+  sample(c(-1, 1), 10, replace=T)
+#+end_src
+
+#+RESULTS:
+| -1 |
+| -1 |
+| -1 |
+| -1 |
+|  1 |
+| -1 |
+|  1 |
+|  1 |
+| -1 |
+| -1 |
+
+* Reference Textbooks
+cite:ross2014introduction,pinsky2010introduction
+
+bibliography:slt.bib
+
+# Local Variables:
+# nix-buffer-root-file: "statistics.nix"
+# End:
