@@ -1,10 +1,20 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-16T08:58:24+08:00
+lastmod = 2019-01-17T14:24:18+08:00
 draft = false
 math = true
 +++
+
+A stochastic process \\(X(t), t \in T\\) is a collection of random
+variables. For each \\(t \in T\\), \\(X(t)\\) is a random variable. The index
+\\(t\\) is often interpreted as time, and as a result, we refer to \\(X(t)\\)
+as the state of the process at time \\(t\\).
+
+The set \\(T\\) is called the index set of the process. When \\(T\\) is a
+countable set, the stochastic is a discrete-time process. If \\(T\\) is an
+interval of the real line, the process is said to be a continuous-time
+process.
 
 Focus: _Discrete time, discrete state space Markov Chain_
 
