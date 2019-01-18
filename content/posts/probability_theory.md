@@ -1,7 +1,7 @@
 +++
 title = "Probability Theory"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-16T08:25:39+08:00
+lastmod = 2019-01-18T15:23:45+08:00
 tags = ["statistics"]
 draft = false
 math = true

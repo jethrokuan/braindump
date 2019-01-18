@@ -4,5 +4,5 @@ This braindump is generated via
 [ox-hugo](https://github.com/kaushalmodi/ox-hugo) and uses an adapted
 version of the [er](https://github.com/lingxz/er) theme.
 
-I used to host the org files here and the same setup can still be
-found [here](https://github.com/jethrokuan/braindump-archive/).
+The org files used to generate the markdown files are also hosted here
+for posterity. They can be found in [the org folder](https://github.com/jethrokuan/braindump/tree/master/org).

@@ -1,7 +1,8 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-17T14:24:18+08:00
+lastmod = 2019-01-18T15:18:42+08:00
+tags = ["statistics"]
 draft = false
 math = true
 +++
@@ -49,7 +50,7 @@ sample(c(-1, 1), 10, replace=T)
 
 ## Reference Textbooks {#reference-textbooks}
 
-<sup id="f5bf9e00e58b91654e7db48e02402403"><a href="#ross2014introduction" title="Ross, Introduction to probability models, Academic press (2014).">ross2014introduction</a></sup><sup>,</sup><sup id="685088059011ecabed3f6b757f8161de"><a href="#pinsky2010introduction" title="Pinsky \&amp; Karlin, An introduction to stochastic modeling, Academic press (2010).">pinsky2010introduction</a></sup>
+<sup id="f5bf9e00e58b91654e7db48e02402403"><a href="#ross2014introduction" title="Ross, Introduction to probability models, Academic press (2014).">(Ross, 2014)</a></sup><sup>,</sup><sup id="685088059011ecabed3f6b757f8161de"><a href="#pinsky2010introduction" title="Pinsky \&amp; Karlin, An introduction to stochastic modeling, Academic press (2010).">(Pinsky, 2010)</a></sup>
 
 # Bibliography
 <a id="ross2014introduction"></a>Ross, S. M., *Introduction to probability models* (2014), : Academic press. [↩](#f5bf9e00e58b91654e7db48e02402403)

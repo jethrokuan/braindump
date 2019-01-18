@@ -1,5 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Stochastic Processes
+#+HUGO_TAGS: statistics
 
 A stochastic process $X(t), t \in T$ is a collection of random
 variables. For each $t \in T$, $X(t)$ is a random variable. The index
