@@ -1,5 +1,14 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Formulation
+#+HUGO_TAGS: machine_learning ipython
+
+In this experiment, the training and test examples are generated with
+the function $y=x$ with Gaussian noise added. We fit a linear function
+and a 10th degree polynomial.
+
+For the 10th degree polynomial, we fit using polynomial regression and
+then with ridge regression. In scikit learn, ridge regression finds
+$\min_w ||Xw - y||_2^2 +\alpha||w||_2^2$.
 
 #+BEGIN_SRC ipython :session :results raw drawer :exports both
   %matplotlib inline
@@ -117,8 +126,9 @@
 #+RESULTS:
 :results:
 # Out[2]:
-[[file:./obipy-resources/wW3PsC.png]]
+[[file:./obipy-resources/4Tzjjm.png]]
 :end:
+
 
 # Local Variables:
 # nix-buffer-root-file: "formulation.nix"

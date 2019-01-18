@@ -1,10 +1,19 @@
 +++
 title = "Formulation"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T20:51:12+08:00
+lastmod = 2019-01-18T21:08:13+08:00
+tags = ["machine_learning", "ipython"]
 draft = false
 math = true
 +++
+
+In this experiment, the training and test examples are generated with
+the function \\(y=x\\) with Gaussian noise added. We fit a linear function
+and a 10th degree polynomial.
+
+For the 10th degree polynomial, we fit using polynomial regression and
+then with ridge regression. In scikit learn, ridge regression finds
+\\(\min\_w ||Xw - y||\_2^2 +\alpha||w||\_2^2\\).
 
 ```ipython
 %matplotlib inline
@@ -114,4 +123,4 @@ print("Poly test set error: " + "{0:.2f}".format(polyerror))
 print("Ridge poly test set error: " + "{0:.2f}".format(ridgepolyerror))
 ```
 
-{{< figure src="/ox-hugo/nbpQwX.png" >}}
+{{< figure src="/ox-hugo/4Tzjjm.png" >}}
