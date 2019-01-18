@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Regression
 #+HUGO_TAGS: statistics
+#+STARTUP: latexpreview
 
 * Introduction
 
@@ -528,7 +529,28 @@ values of 5 or 10 indicates a problematic amount of collinearity.
 where $R^2_{X_j|X_{-j}}$ is the regression of $X_j$ onto all of the
 other predictors.
 
-** TODO Comparison with K-nearest Neighbours
+
+* Linear Basis Function Models
+  We can extend the class of models by considering linear combinations of fixed non-linear functions of the input variables, of the form:
+
+\begin{equation}
+  y(\mathbf{x}, \mathbf{w}) = w_0 + \sum_{j=1}^{M-1} w_j
+  \phi_j(\mathbf{x}) = \mathbf{w}^T\mathbf{\phi}(\mathbf{x})
+\end{equation}
+
+There are many choices on non-linear basis functions, such as the
+Gaussian basis function:
+
+\begin{equation}
+  \phi_j(x) = \mathrm{exp}\left\{ - \frac{(x - \mu_j)^2}{2s^2} \right\}
+\end{equation}
+
+or the sigmoidal basis function:
+
+\begin{equation}
+\phi_j(x) = \sigma\left( \frac{x - \mu_j}{s} \right)
+\end{equation}
+
 
 
 * References

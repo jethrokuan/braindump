@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-15T14:16:49+08:00
+lastmod = 2019-01-18T19:50:33+08:00
 tags = ["statistics"]
 draft = false
 math = true
@@ -483,7 +483,7 @@ response. One can identify non-constant variances in the errors, or
 heteroscedasticity, from the presence of a funnel shape in the
 residual plot.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">james2013introduction</a></sup>" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James, 2013)</a></sup>" >}}
 
 
 #### Outliers {#outliers}
@@ -523,7 +523,7 @@ difficult to separate out the individual effects of collinear
 variables on the response. A contour plot of the RSS associated with
 different possible coefficient estimates can show collinearity.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">james2013introduction</a></sup>" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James, 2013)</a></sup>" >}}
 
 Another way to detect collinearity is to look at the correlation
 matrix of the predictors. An element of this matrix that is large in
@@ -549,12 +549,32 @@ where \\(R^2\_{X\_j|X\_{-j}}\\) is the regression of \\(X\_j\\) onto all of the
 other predictors.
 
 
-### <span class="org-todo todo TODO">TODO</span> Comparison with K-nearest Neighbours {#comparison-with-k-nearest-neighbours}
+## Linear Basis Function Models {#linear-basis-function-models}
+
+We can extend the class of models by considering linear combinations of fixed non-linear functions of the input variables, of the form:
+
+\begin{equation}
+  y(\mathbf{x}, \mathbf{w}) = w\_0 + \sum\_{j=1}^{M-1} w\_j
+  \phi\_j(\mathbf{x}) = \mathbf{w}^T\mathbf{\phi}(\mathbf{x})
+\end{equation}
+
+There are many choices on non-linear basis functions, such as the
+Gaussian basis function:
+
+\begin{equation}
+  \phi\_j(x) = \mathrm{exp}\left\{ - \frac{(x - \mu\_j)^2}{2s^2} \right\}
+\end{equation}
+
+or the sigmoidal basis function:
+
+\begin{equation}
+\phi\_j(x) = \sigma\left( \frac{x - \mu\_j}{s} \right)
+\end{equation}
 
 
 ## References {#references}
 
-<sup id="a6f25d8e3790a685481657d76f53a002"><a href="#chatterjee06_regres_analy_examp" title="Samprit Chatterjee \&amp; Ali Hadi, Regression Analysis by Example, John Wiley \&amp; Sons, Inc. (2006).">chatterjee06_regres_analy_examp</a></sup><sup>,</sup><sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">james2013introduction</a></sup>
+<sup id="a6f25d8e3790a685481657d76f53a002"><a href="#chatterjee06_regres_analy_examp" title="Samprit Chatterjee \&amp; Ali Hadi, Regression Analysis by Example, John Wiley \&amp; Sons, Inc. (2006).">(Samprit Chatterjee, 2006)</a></sup><sup>,</sup><sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">(James, 2013)</a></sup>
 
 
 ####  {#}
