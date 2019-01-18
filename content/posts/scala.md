@@ -1,7 +1,8 @@
 +++
 title = "Scala"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:27+08:00
+lastmod = 2019-01-18T15:41:32+08:00
+tags = ["proglang", "scala"]
 draft = false
 math = true
 +++
@@ -12,10 +13,3 @@ math = true
 2.  Scalability
 3.  Type Soundness
 4.  JVM
-
-
-## Syntax {#syntax}
-
-```scala
-
-```

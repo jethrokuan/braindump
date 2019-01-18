@@ -1,7 +1,8 @@
 +++
 title = "OCaml"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-22T20:33:55+08:00
+lastmod = 2019-01-18T15:40:48+08:00
+tags = ["proglang"]
 draft = false
 math = true
 +++

@@ -1,5 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
-#+HUGO_TAGS: python programming_languages
+#+HUGO_TAGS: python proglang
 #+TITLE: Python
 
 * Python Default Values

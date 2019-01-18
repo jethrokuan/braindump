@@ -1,7 +1,8 @@
 +++
 title = "General Talks"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-06T19:12:23+08:00
+lastmod = 2019-01-18T15:40:28+08:00
+tags = ["talks"]
 draft = false
 math = true
 +++
@@ -39,3 +40,229 @@ Feedback is important. Active listening is important.
 
  Accountability is important. Do what you say you're going to do. 3
 words women want to hear from men: I got this (not I love you).
+
+
+## Hopcroft, Parkins - Preparing for the Fourth Industrial Revolution {#hopcroft-parkins-preparing-for-the-fourth-industrial-revolution}
+
+The industrial revolutions:
+
+1.  Water/steam engine
+2.  Electricity
+3.  Electronics and Information Technology
+4.  9 areas of technologies: 3D printing, quantum computing...???
+
+
+### John Hopcroft {#john-hopcroft}
+
+-   Automate intellectual jobs, reducing the percentage of population
+    required to produce the goods and services we need, to 25%
+    -   3.5m truck drivers in the US
+        -   those jobs are going to disappear the same way elevator
+            operators disappear
+    -   Employees in China checked it via face recognition
+-   We need to figure out how to engage the rest of the population in
+    meaningful activities
+-   Universal guaranteed income?!
+
+
+#### On Change {#on-change}
+
+-   Positive aspects and negative aspects to major change
+-   Typically, the positive aspects dominate the negative aspects
+-   2012 ImageNet competition. Up until 2012, the best error rate was
+    25%, but AlexNet brought this error rate down to 15%.
+
+
+#### Is AI really artificial intelligence? {#is-ai-really-artificial-intelligence}
+
+-   No? The state-of-the-art is really pattern recognition in high
+    dimensional space.
+    -   Computer can recognise a bicycle, but can't recognise its
+        function.
+
+
+#### How to choose the problems you work on? {#how-to-choose-the-problems-you-work-on}
+
+-   "you get one life to live, and you ought to enjoy the entire lifetime"
+-   "make a little investment for the future years"
+-   could switch jobs because he was working in a non-experimental area
+
+
+#### Does the degree matter? {#does-the-degree-matter}
+
+-   "degree is a union card"
+-   optimal vs have-to-do
+    -   to get admission to top phd programs, some universities start
+        counting publications
+
+
+#### What does it mean for a computer to be more intelligent than a human being? {#what-does-it-mean-for-a-computer-to-be-more-intelligent-than-a-human-being}
+
+-   what is a good definition of intelligence?
+    -   his old definition: "the ability to solve problems"
+-   computers only have the ability to solve a certain class of
+    problems, given a large amount of computing power
+
+
+#### Privacy as a trade-off {#privacy-as-a-trade-off}
+
+-   Privacy is going to be a big issue in the 4th industrial revolution
+-   We will change a little bit about what we allow companies and
+    corporations know about us
+-   We can play back wherever the car have driven
+    -   Use this data to improve route guidance systems
+    -   but they can figure out things like where you work, where you shop
+    -   Solutions:
+        -   0-knowledge proof???
+        -   <https://en.wikipedia.org/wiki/Zero-knowledge%5Fproof>
+        -   e.g. prove that i can fill a sudoku puzzle without any
+            information of how to do it
+        -   importance, e.g.;
+            -   insurance companies get a rigorous mathematical proof about
+                how much money to pay the person
+            -   giving hospitals complete medical records, and not insurance
+                companies becomes a possibility
+
+
+#### Can computers formulate problems that humans want to work with? {#can-computers-formulate-problems-that-humans-want-to-work-with}
+
+-   Supervised learning vs unsupervised learning
+
+
+#### Concentration of power {#concentration-of-power}
+
+-   Companies have only existed for 200 years, society can change and
+    nations evolved at some point, it's not clear if even nations can continue.
+    -   Many companies are far more powerful than countries -- could they
+        begin to take the role of nations today?
+
+
+#### Working on a healthy way towards the 4th Industrial Revolution? {#working-on-a-healthy-way-towards-the-4th-industrial-revolution}
+
+-   A century ago, people work 70 hours a week, and start working at 10
+-   There's been a drastic reduction to a fraction of work power that's
+    actually being used
+-   There are some countries looking at how to provide a guaranteed
+    financial income to people, and engage people in meaningful activity
+-   Some people believe that only two countries will benefit from the AI
+    revolution: China and United States (nani??)
+    -   China is worried about the poor, how do we restructure society?
+
+
+#### Computers and morality {#computers-and-morality}
+
+-   I work on simpler problems...
+-   Self driving cars in the US cannot be programmed to go beyond the
+    speed limit and violate the law
+    -   normal speed limit is 65 miles an hour, but most drive at 71-72
+        miles per hour
+
+
+#### Anything that scares you about the 4th Industrial Revolution? {#anything-that-scares-you-about-the-4th-industrial-revolution}
+
+-   optimistic, on average it's going to be a better world to live in
+
+
+#### What area of research would you want to work on? {#what-area-of-research-would-you-want-to-work-on}
+
+-   Why does deep learning work?
+
+
+#### Advice {#advice}
+
+-   pick an assistant professor
+-   career was built on the graduate students, APs are a better choice
+    typically.
+-   <http://www.pgbovine.net/early-stage-PhD-advice.htm>
+
+
+### Stuart Parkins {#stuart-parkins}
+
+-   Bella likes his voice (mellow and deep, resonant, calming) 🎤
+-   Our ability to compute has improved a thousandfold each decade
+-   Humans are very poor at looking at the future and predicting what happens
+
+
+#### Drivers for 4th Industrial Revolution that are non-computing related {#drivers-for-4th-industrial-revolution-that-are-non-computing-related}
+
+-   draw conclusions using algorithms that were developed 10-20 years
+    ago, because of huge computing power
+-   computers, built on silicon, don't think the way humans think
+    -   systems that can model the human brain
+-   **silicon increased in performance has slowed down considerably**
+    -   _is there an alternative to silicon in research right now?_
+-   **"lateral thinking"**
+    -   How do you pick the problems to work on?
+
+
+#### How to choose the problems you work on? {#how-to-choose-the-problems-you-work-on}
+
+-   choose an interesting challenge, that is exciting and interesting
+
+
+#### Does the degree matter? {#does-the-degree-matter}
+
+-   no you don't need a degree.
+-   it's crazy that scientific journals can keep knowledge proprietary
+    when the research is largely funded by the government
+
+
+#### Jethro - Why is this guy so controversial? {#jethro-why-is-this-guy-so-controversial}
+
+
+#### Computers vs Human Beings {#computers-vs-human-beings}
+
+-   We're limited in the number of neurons and synapses we have
+    -   observable from biology
+-   Computers are already more intelligent than humans in that sense
+
+
+#### Can computers formulate problems that humans want to work with? {#can-computers-formulate-problems-that-humans-want-to-work-with}
+
+-   Material discovery, taking a certain mix of elements you can
+    calculate their properties
+-   Compute the inverse: given certain properties, can you give me a
+    material that works?
+
+
+#### Concentration of Power {#concentration-of-power}
+
+-   IBM was the largest compute power in the world
+    -   only lasted a few decades, getting overwhelmed by pace of change
+-   Can already see signs of Google's mortality
+
+
+#### Working on a healthy way towards the 4th Industrial Revolution? {#working-on-a-healthy-way-towards-the-4th-industrial-revolution}
+
+-   In silicon valley, people do work 70 hours a week
+-   Maybe it will be a world where people will want to work!
+    -   Automate the mundane jobs, leaving the jobs that require creativity
+-   How do you want to distribute wealth, in Europe, people are already
+    are working a lot less than in the US and they are choosing
+    different models of a wealth distribution, so it boils down to a
+    question of society and what people choose.
+
+
+#### Computers and Morality {#computers-and-morality}
+
+-   Humans are programmed to preserve ourselves
+-   E.g. car is programmed to save your own life than other people's lives
+
+
+#### Anything that scares you about the 4th Industrial Revolution? {#anything-that-scares-you-about-the-4th-industrial-revolution}
+
+-   super optimistic
+-   systems would know how to auto-correct itself.
+
+
+#### What area of research would you want to work on? {#what-area-of-research-would-you-want-to-work-on}
+
+-   How do human's think?
+
+
+#### Regulation of AI {#regulation-of-ai}
+
+-   How to regulate AI when not sure how it'll evolve?
+
+
+#### Augmented Intelligence {#augmented-intelligence}

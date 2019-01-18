@@ -1,7 +1,8 @@
 +++
 title = "C++"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-15T21:44:49+08:00
+lastmod = 2019-01-18T15:42:33+08:00
+tags = ["proglang", "c++"]
 draft = false
 math = true
 +++

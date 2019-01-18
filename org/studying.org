@@ -1,3 +1,7 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Studying
+#+HUGO_TAGS: meta learning
+
 * The optimal studying strategy
 1. Glance at past year paper questions
 Rationale: understand the kind of questions to be asked, prime the
@@ -23,3 +27,4 @@ different location. Try to solve the problem without referencing
 solution.
 
 Rework this problem after the break.
+

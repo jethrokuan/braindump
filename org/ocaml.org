@@ -1,6 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
-
 #+TITLE: OCaml
+#+HUGO_TAGS: proglang
 
 * Pattern Matching
 Patterns cannot be used to expressed arbitrary conditions. this is a

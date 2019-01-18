@@ -1,8 +1,8 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-13T01:20:45+08:00
-tags = ["python", "programming_languages"]
+lastmod = 2019-01-18T15:40:58+08:00
+tags = ["python", "proglang"]
 draft = false
 math = true
 +++

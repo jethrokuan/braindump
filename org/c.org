@@ -1,4 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: The C Language
+#+HUGO_TAGS: proglang c
 
 * TODO  Read [[http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf][Modern C]]
