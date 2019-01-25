@@ -193,4 +193,189 @@ consists of 7 layers.
 - Physical Layer :: responsible of moving individual bits across
                     physical mediums.
 
+* Application Layer
 
+Networking applications have application-layer protocols that define
+the format and order of the messages exchanged between processes, as
+well as define the actions taken on the transmission or receipt of a
+message.
+
+Example of application-layer protocols include:
+
+1. HTTP (HyperText Transfer Protocol [RFC 2616]), which defines how
+   messages are passed between browser and web-server
+2. SMTP (Simple mail Transfer Protocol [RFC 821]), a protocol for mail
+   exchange
+
+** Client and Servers
+
+A network application protocol typically has 2 parts, a client side
+and a server side. The host that initiates the session is often
+labeled the client. A host can act as both a client and server at the
+same time. As a concrete example, a mail server host runs the client
+side of SMTP (for sending email), and the server side of SMTP (for
+receiving email).
+
+** Sockets
+
+Applications communicate by sending messages over a socket. A
+process's socket can be thought of as the process's door: it sends
+messages into, and receives messages from the network through this
+socket. It is the interface between the application layer and
+transport layer within a host.
+
+
+#+CAPTION: Application processes, sockets, and underlying transport protocol
+[[file:images/networking/screenshot_2019-01-25_10-53-43.png]]
+
+** Addressing Processes
+
+In order for a process on one host to send a message to a process on
+another host, the sending process must identify the receiving process.
+To identify the receiving process, one must specify these 2 pieces of
+information:
+
+1. The name or address of the host machine
+2. An identifier that specifies the identity of the receiving process
+   on the destination host
+
+In Internet applications, the destination host is specified by its IP
+address. The *IP address* is a 32-bit quantity that uniquely identifies
+the interface that connects to the internet. These need to be globally
+unique. A receive-side *port number* serves the purpose of identifying
+the correct process on the system.
+
+The user agent is an interface between the user and the network
+application. For example, user agents for browsing the Web include
+Firefox and Chrome.
+
+** Transmission Control Protocol (TCP)
+
+The Internet makes available 2 transport protocols to applications,
+namely UDP and TCP. When a developer creates a new application for the
+Internet, they must choose between the two protocols. Each protocol
+offers a different service model.
+
+TCP includes a connection-oriented service and a reliable data
+transfer service.
+
+TCP has the client and server exchange transport-layer control
+information with each other before the application-level messages
+begin to flow. This hand-shaking procedure alerts the client and
+server, and a TCP connection is said to exist between the sockets of
+the 2 processes. When the application is done with sending messages,
+it must tear down the connection. 
+
+The communicating processes can rely on TCP to deliver all data sent
+without error, and in proper order. TCP also includes a
+congestion-control mechanism. The mechanism throttles a process when
+the network is congested, attempting to limit each TCP connection to
+its fair share of network bandwidth. This control mechanism benefits
+the Internet, rather than the direct benefit of the communicating
+processes.
+
+TCP does not provide:
+
+1. A guaranteed minimum transmission rate
+2. Any delay guarantees
+
+
+** User Datagram Protocol (UDP)
+
+UDP is connectionless, so there is no handshaking before the 2
+processes start to communicate. It provides an unreliable data
+transfer service. Hence, it provides no guarantee that a message will
+ever reach the receiving socket. Messages that do arrive may arrive
+out-of-order.
+
+On the other hand, UDP does not include a congestion-control
+mechanism, so a sending process can pump data into a UDP socket at any
+rate. 
+
+This protocol is largely used by real-time applications.
+
+** HTTP
+
+HTTP is implemented in 2 programs: a client program and a server
+program. Clients and servers talk to each other by exchanging HTTP
+messages. HTTP defines the structure of these messages.
+
+HTTP use TCP as their underlying transport protocol. The HTTP client
+first initiates a TCP connection with the server. Once the connection
+is established, the browser and server processes access TCP through
+their socket interfaces. The client sends HTTP request messages
+through the socket interface, and receives HTTP response messages from
+its socket interface.
+
+HTTP can use both nonpersistent and persistent connections. The use of
+persistent connections is the default mode for HTTP/1.1.
+
+With non-persistent connections, each TCP connection is closed after
+the server sends the object. T he response time for a new HTTP request
+is 2 round-trip times plus the transmission time at the server of the
+HTML file.
+
+With persistent connections, the server leaves the TCP connection open
+after sending a response. Subsequent requests and responses between
+the same client and server can be sent over the same connection.
+
+Here's an exmple of the HTTP Request message:
+
+#+begin_src text
+  GET /somedir/page.html HTTP/1.1
+  Host: www.someschool.edu
+  Connection: close
+  User-agent: Mozilla/4.0
+  Accept-language: fr
+  (extra carriage return, line feed)
+#+end_src
+
+The general form of a request message looks like this:
+
+#+CAPTION: Format of a HTTP request message
+[[file:images/networking/screenshot_2019-01-25_11-21-44.png]]
+
+The response message looks like this:
+
+#+begin_src text
+  HTTP/1.1 200 OK
+  Connection: close
+  Date: Thu, 06 Aug 1998 12:00:15 GMT
+  Server: Apache/1.3.0 (Unix)
+  Last-Modified: Mon, 22 Jun 1998 09:23:24 GMT
+  Content-Length: 6821
+  Content-Type: text/html
+
+  (data data ...)
+#+end_src
+
+
+#+CAPTION: Format of a HTTP response message
+[[file:images/networking/screenshot_2019-01-25_11-26-41.png]]
+
+** User-server Interaction: Cookies
+
+The HTTP server is stateless. This simplifies server design, and
+permits engineers to develop high-performance web servers that can
+handle thousands of simultaneous TCP connections. For a website to
+identify users, HTTP uses cookies. Cookies, defined in [RFC 6265],
+allows sites to keep track of users.
+
+Cookie consists of 4 components:
+
+1. A cookie header line in the HTTP response message
+2. A cookie header line in the HTTP request message
+3. A cookie file kept on the user's end system, and is managed by the
+   user's web browser
+4. A back-end database at the Web site
+
+#+CAPTION: Keeping user state with cookies
+[[file:images/networking/screenshot_2019-01-25_11-29-28.png]]
+
+
+** Web Caching 
+
+A web cache -- also called a proxy server -- may satisfy HTTP requests
+on behalf of an origin Web server.
+
+bibliography:networking.bib
