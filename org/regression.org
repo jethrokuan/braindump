@@ -1,7 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Regression
 #+HUGO_TAGS: statistics
-#+STARTUP: latexpreview
 
 * Introduction
 
@@ -132,7 +131,7 @@ represents the ith /residual/. We can define the residual sum of squares
 (RSS) as:
 
 \begin{equation} \label{eqn:dfn:rss}
-  \mathrm{RSS} = e_1^2 + e_2^2 + \dots + \e_n^2
+  \mathrm{RSS} = e_1^2 + e_2^2 + \dots + e_n^2
 \end{equation}
 
 The least squares approach chooses $\hat{\beta_0}$ and $\hat{\beta_1}$
@@ -550,7 +549,6 @@ or the sigmoidal basis function:
 \begin{equation}
 \phi_j(x) = \sigma\left( \frac{x - \mu_j}{s} \right)
 \end{equation}
-
 
 
 * References

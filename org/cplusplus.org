@@ -2,7 +2,7 @@
 #+TITLE: C++
 #+HUGO_TAGS: proglang c++
 
-* Introduction
+* What is C++
 C++ is a compiled language. For a program to run, its source text has
 to be processed by a compiler, producing object files, which are
 combined by a linker yielding an executable program. An executable
@@ -37,7 +37,7 @@ after its initialization.
   }
 #+end_src
 
-* Modern C++
+* C++ Guidelines
 Follow the guidelines:
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
 
@@ -102,6 +102,31 @@ a built-in array, a stack-allocated std::array keeps its elements on
 the stack. For a variable-length array, use std::vector, which
 additionally can change its size and handles memory allocation.
 
+** On Namespacing
+[[https://stackoverflow.com/questions/41590/how-do-you-properly-use-namespaces-in-c][How do you properly use namespaces in C++? - Stack Overflow]]
+
+** RAII
+Resource Acquisition Is Initialization or RAII, is a C++ programming
+technique which binds the life cycle of a resource that must be
+acquired before use (allocated heap memory, thread of execution, open
+socket, open file, locked mutex, disk space, database
+connection—anything that exists in limited supply) to the lifetime of
+an object. cite:cppref_raii
+
+The basic idea is that class destructors are always called when a
+particular instance of an object goes out of scope. This allows for
+automatic releasing of resources that will never be referenced.
+
+For ~shared_ptr~, the class object contains a pointer to the object, and
+a reference count for the number of pointers with access to the object
+at the pointer. Once this reference count hits 0, the object is
+released.
+
+For ~unique_ptr~, there is no reference count within the class. once
+this unique_ptr goes out of scope, the object at the pointer is
+released. For this reason, ~unique_ptr~ are more lightweight than
+~shared_ptr~, and cannot be copied. ~unique_ptr~ can only be moved.
+
 * Array Decaying
 It's said that arrays "decay" into pointers. A C++ array declared as
 int numbers [5] cannot be re-pointed, i.e. you can't say numbers =
@@ -118,18 +143,9 @@ speed with:
 #+BEGIN_SRC c++
   std::ios::sync_with_stdio(false);
 #+END_SRC
-* hypot
-hypot(x,y) -> sqrt(x^2 + y^2)
-* fgets
-#+BEGIN_SRC c++
-char *fgets(char *str, int n, FILE *stream)
-#+END_SRC
-
-#+BEGIN_SRC c++
-char str[100];
-fgets(str, 100, stdin);
-#+END_SRC
-* Algorithms in C++
-http://www.techiedelight.com/data-structures-and-algorithms-interview-questions-stl/
 * Books to read
 http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
+* Links
+- [[https://cpppatterns.com/][C++ Patterns]]
+
+bibliography:cpp.bib

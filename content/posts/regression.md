@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T19:50:33+08:00
+lastmod = 2019-01-18T21:25:31+08:00
 tags = ["statistics"]
 draft = false
 math = true
@@ -135,7 +135,7 @@ represents the ith _residual_. We can define the residual sum of squares
 (RSS) as:
 
 \begin{equation} \label{eqn:dfn:rss}
-  \mathrm{RSS} = e\_1^2 + e\_2^2 + \dots + \e\_n^2
+  \mathrm{RSS} = e\_1^2 + e\_2^2 + \dots + e\_n^2
 \end{equation}
 
 The least squares approach chooses \\(\hat{\beta\_0}\\) and \\(\hat{\beta\_1}\\)

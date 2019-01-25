@@ -32,3 +32,7 @@ to be created by choosing a particular project file generator.
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-01-18 02:52:58
 [[file:images/cmake/screenshot_2019-01-18_02-52-58.png]]
 
+* Best Practices
+
+1. [[https://stackoverflow.com/questions/1027247/is-it-better-to-specify-source-files-with-glob-or-each-file-individually-in-cmak][Avoid globbing for listing source files]]
+

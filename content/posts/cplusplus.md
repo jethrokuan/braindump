@@ -1,13 +1,13 @@
 +++
 title = "C++"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:42:33+08:00
+lastmod = 2019-01-25T08:26:05+08:00
 tags = ["proglang", "c++"]
 draft = false
 math = true
 +++
 
-## Introduction {#introduction}
+## What is C++ {#what-is-c}
 
 C++ is a compiled language. For a program to run, its source text has
 to be processed by a compiler, producing object files, which are
@@ -46,7 +46,7 @@ int count_x(const char* p, char x) {
 ```
 
 
-## Modern C++ {#modern-c}
+## C++ Guidelines {#c-guidelines}
 
 Follow the guidelines:
 <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md>
@@ -129,6 +129,47 @@ the stack. For a variable-length array, use std::vector, which
 additionally can change its size and handles memory allocation.
 
 
+### On Namespacing {#on-namespacing}
+
+[How do you properly use namespaces in C++? - Stack Overflow](https://stackoverflow.com/questions/41590/how-do-you-properly-use-namespaces-in-c)
+
+
+### RAII {#raii}
+
+Resource Acquisition Is Initialization or RAII, is a C++ programming
+technique which binds the life cycle of a resource that must be
+acquired before use (allocated heap memory, thread of execution, open
+socket, open file, locked mutex, disk space, database
+connection—anything that exists in limited supply) to the lifetime of
+an object. <sup id="f0a899f30af8b1c819a39ca7a6c5c42b"><a href="#cppref_raii" title="@misc{cppref_raii,
+  author =       {nil},
+  howpublished = {https://en.cppreference.com/w/cpp/language/raii},
+  note =         {Online; accessed 25 January 2019},
+  title =        {RAII - cppreference.com},
+  year =         {nil},
+}">@misc{cppref_raii,
+  author =       {nil},
+  howpublished = {https://en.cppreference.com/w/cpp/language/raii},
+  note =         {Online; accessed 25 January 2019},
+  title =        {RAII - cppreference.com},
+  year =         {nil},
+}</a></sup>
+
+The basic idea is that class destructors are always called when a
+particular instance of an object goes out of scope. This allows for
+automatic releasing of resources that will never be referenced.
+
+For `shared_ptr`, the class object contains a pointer to the object, and
+a reference count for the number of pointers with access to the object
+at the pointer. Once this reference count hits 0, the object is
+released.
+
+For `unique_ptr`, there is no reference count within the class. once
+this unique\_ptr goes out of scope, the object at the pointer is
+released. For this reason, `unique_ptr` are more lightweight than
+`shared_ptr`, and cannot be copied. `unique_ptr` can only be moved.
+
+
 ## Array Decaying {#array-decaying}
 
 It's said that arrays "decay" into pointers. A C++ array declared as
@@ -151,28 +192,14 @@ std::ios::sync_with_stdio(false);
 ```
 
 
-## hypot {#hypot}
-
-hypot(x,y) -> sqrt(x^2 + y^2)
-
-
-## fgets {#fgets}
-
-```c++
-char *fgets(char *str, int n, FILE *stream)
-```
-
-```c++
-char str[100];
-fgets(str, 100, stdin);
-```
-
-
-## Algorithms in C++ {#algorithms-in-c}
-
-<http://www.techiedelight.com/data-structures-and-algorithms-interview-questions-stl/>
-
-
 ## Books to read {#books-to-read}
 
 <http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list>
+
+
+## Links {#links}
+
+-   [C++ Patterns](https://cpppatterns.com/)
+
+# Bibliography
+<a id="cppref_raii"></a>nil,  (nil). *Raii - cppreference.com*. Retrieved from [https://en.cppreference.com/w/cpp/language/raii](https://en.cppreference.com/w/cpp/language/raii). Online; accessed 25 January 2019. [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)

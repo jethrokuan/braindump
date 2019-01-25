@@ -1,7 +1,7 @@
 +++
 title = "CMake"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T02:55:06+08:00
+lastmod = 2019-01-24T14:35:27+08:00
 tags = ["c", "c++"]
 draft = false
 math = true
@@ -36,3 +36,8 @@ in the build directory. The developer selects the type of project file
 to be created by choosing a particular project file generator.
 
 {{< figure src="/ox-hugo/screenshot_2019-01-18_02-52-58.png" >}}
+
+
+## Best Practices {#best-practices}
+
+1.  [Avoid globbing for listing source files](https://stackoverflow.com/questions/1027247/is-it-better-to-specify-source-files-with-glob-or-each-file-individually-in-cmak)
