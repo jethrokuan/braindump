@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-12T22:06:53+08:00
+lastmod = 2019-02-01T08:11:48+08:00
 tags = ["machine_learning"]
 draft = false
 math = true
@@ -819,7 +819,7 @@ uses the ubiquitous build tool `Make` to build data projects. <sup id="e0ca38389
   note =         {Online; accessed 06 January 2019},
   title =        {Home - Cookiecutter Data Science},
   year =         {2019},
-}">home_cookiec_data_scien</a></sup>
+}">(DrivenData, 2019)</a></sup>
 
 ```text
 ├── LICENSE
@@ -875,7 +875,7 @@ Stripe's approach <sup id="77ac83a13ddf56f053f1ba225873677d"><a href="#dan_repro
   title =        {Reproducible research: Stripe's approach to data
                   science},
   year =         {2016},
-}">dan_reprod</a></sup> still primarily uses Jupyter notebooks, but
+}">(Dan Frank, 2016)</a></sup> still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.

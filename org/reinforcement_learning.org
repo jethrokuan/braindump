@@ -365,9 +365,8 @@ their win count incremented.
 Some great references for productionized implementations of MCTS
 include:
 
-** - [[https://github.com/tensorflow/minigo/blob/master/strategies.py][minigo/strategies.py]]
+- [[https://github.com/tensorflow/minigo/blob/master/strategies.py][minigo/strategies.py]]
 - [[https://github.com/tensorflow/minigo/blob/master/mcts.py][minigo/mcts.py]]
-
 
 
 * Passive Reinforcement Learning
@@ -640,5 +639,4 @@ exploration policy. On the other hand, SARSA is more realistic: for
 example if the overall policy is even partly controlled by other
 agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
-
 

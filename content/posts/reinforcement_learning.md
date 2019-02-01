@@ -1,7 +1,7 @@
 +++
 title = "Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-14T12:12:09+08:00
+lastmod = 2019-02-01T08:12:07+08:00
 draft = false
 math = true
 +++
@@ -399,9 +399,7 @@ their win count incremented.
 Some great references for productionized implementations of MCTS
 include:
 
-
-### - [minigo/strategies.py](https://github.com/tensorflow/minigo/blob/master/strategies.py) {#minigo-strategies-dot-py}
-
+-   [minigo/strategies.py](https://github.com/tensorflow/minigo/blob/master/strategies.py)
 -   [minigo/mcts.py](https://github.com/tensorflow/minigo/blob/master/mcts.py)
 
 
@@ -446,7 +444,7 @@ utility, then neighbouring states should also have high expected
 utility.
 
 The utility of each state equals its own reward plus the expected
-utility of its successor states: i.e. it obeys the [Bellman Equation](#orgc411212)
+utility of its successor states: i.e. it obeys the [Bellman Equation](#org5fa6e71)
 for a fixed policy.
 
 We can view directed utility estimation as searching for \\(U\\) in a
@@ -573,7 +571,7 @@ policy. The learning mechanism for the passive ADP agent will work for
 this
 
 Next, the agent has a choice of actions. The utilities it learns are
-defined by the optimal policy, governed by the [Bellman equations](#orgc411212).
+defined by the optimal policy, governed by the [Bellman equations](#org5fa6e71).
 Having obtained a utility function for the given  model, the agent can
 extract an optimal action by one-step look-ahead to maximise the
 expected utility.
@@ -623,7 +621,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#org4adfa2e) remains unchanged. IT can be shown that the TD
+[update rule for TD](#orgf5ec1d1) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
