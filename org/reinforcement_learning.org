@@ -1,6 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Reinforcement Learning
-#HUGO_TAGS: machine_learning
+#+HUGO_TAGS: machine_learning
 
 * Making Complex Decisions
 Earlier, we were concerned with environments with one-shot, episodic
@@ -639,4 +639,12 @@ exploration policy. On the other hand, SARSA is more realistic: for
 example if the overall policy is even partly controlled by other
 agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
+
+* Deep Reinforcement Learning
+
+** Actor Critic
+cite:sutton2000policy,mnih16_async_method_deep_reinf_learn,gu16_q_prop
+
+bibliography:rl.bib
+
 
