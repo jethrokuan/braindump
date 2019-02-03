@@ -20,6 +20,6 @@
 Understanding the three classical ~JOIN~ algorithms – ~NestedLoop~,
 ~HashJoin~, ~MergeJoin~ – how they take advantage of different indexes and
 how they behave when there is no index can give you a lot of insight
-on how databases run queries.
+on how databases run queries. cite:felipe_demys_join_algor
 
 bibliography:db.bib
