@@ -1,0 +1,164 @@
+
+@article{pati17_statis_optim_variat_bayes,
+  author =       {Pati, Debdeep and Bhattacharya, Anirban and Yang,
+                  Yun},
+  title =        {On Statistical Optimality of Variational Bayes},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1712.08983v1},
+  abstract =     {The article addresses a long-standing open problem
+                  on the justification of using variational Bayes
+                  methods for parameter estimation. We provide general
+                  conditions for obtaining optimal risk bounds for
+                  point estimates acquired from mean-field variational
+                  Bayesian inference. The conditions pertain to the
+                  existence of certain test functions for the distance
+                  metric on the parameter space and minimal
+                  assumptions on the prior. A general recipe for
+                  verification of the conditions is outlined which is
+                  broadly applicable to existing Bayesian models with
+                  or without latent variables. As illustrations,
+                  specific applications to Latent Dirichlet Allocation
+                  and Gaussian mixture models are discussed.},
+  archivePrefix ={arXiv},
+  eprint =       {1712.08983},
+  primaryClass = {math.ST},
+}
+
+
+
+@InProceedings{pmlr-v38-srivastava15,
+  title = 	 {{WASP: Scalable Bayes via barycenters of subset posteriors}},
+  author = 	 {Sanvesh Srivastava and Volkan Cevher and Quoc Dinh and David Dunson},
+  booktitle = 	 {Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics},
+  pages = 	 {912--920},
+  year = 	 {2015},
+  editor = 	 {Guy Lebanon and S. V. N. Vishwanathan},
+  volume = 	 {38},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {San Diego, California, USA},
+  month = 	 {09--12 May},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v38/srivastava15.pdf},
+  url = 	 {http://proceedings.mlr.press/v38/srivastava15.html},
+  abstract = 	 {The promise of Bayesian methods for big data sets has not fully been realized due to the lack of scalable computational algorithms. For massive data, it is necessary to store and process subsets on different machines in a distributed manner. We propose a simple, general, and highly efficient approach, which first runs a posterior sampling algorithm in parallel on different machines for subsets of a large data set. To combine these subset posteriors, we calculate the Wasserstein barycenter via a highly efficient linear program. The resulting estimate for the Wasserstein posterior (WASP) has an atomic form, facilitating straightforward estimation of posterior summaries of functionals of interest. The WASP approach allows posterior sampling algorithms for smaller data sets to be trivially scaled to huge data. We provide theoretical justification in terms of posterior consistency and algorithm efficiency.  Examples are provided in complex settings including Gaussian process regression and nonparametric Bayes mixture models.}
+}
+
+@article{li16_simpl_scalab_accur_poster_inter_estim,
+  author =       {Li, Cheng and Srivastava, Sanvesh and Dunson, David
+                  B.},
+  title =        {Simple, Scalable and Accurate Posterior Interval
+                  Estimation},
+  journal =      {CoRR},
+  year =         2016,
+  url =          {http://arxiv.org/abs/1605.04029v2},
+  abstract =     {There is a lack of simple and scalable algorithms
+                  for uncertainty quantification. Bayesian methods
+                  quantify uncertainty through posterior and
+                  predictive distributions, but it is difficult to
+                  rapidly estimate summaries of these distributions,
+                  such as quantiles and intervals. Variational Bayes
+                  approximations are widely used, but may badly
+                  underestimate posterior covariance. Typically, the
+                  focus of Bayesian inference is on point and interval
+                  estimates for one-dimensional functionals of
+                  interest. In small scale problems, Markov chain
+                  Monte Carlo algorithms remain the gold standard, but
+                  such algorithms face major problems in scaling up to
+                  big data. Various modifications have been proposed
+                  based on parallelization and approximations based on
+                  subsamples, but such approaches are either highly
+                  complex or lack theoretical support and/or good
+                  performance outside of narrow settings. We propose a
+                  very simple and general posterior interval
+                  estimation algorithm, which is based on running
+                  Markov chain Monte Carlo in parallel for subsets of
+                  the data and averaging quantiles estimated from each
+                  subset. We provide strong theoretical guarantees and
+                  illustrate performance in several applications.},
+  archivePrefix ={arXiv},
+  eprint =       {1605.04029},
+  primaryClass = {stat.CO},
+}
+
+@article{johndrow15_optim_approx_markov_chain_bayes_infer,
+  author =       {Johndrow, James E. and Mattingly, Jonathan C. and
+                  Mukherjee, Sayan and Dunson, David},
+  title =        {Optimal Approximating Markov Chains for Bayesian
+                  Inference},
+  journal =      {CoRR},
+  year =         2015,
+  url =          {http://arxiv.org/abs/1508.03387v3},
+  abstract =     {The Markov Chain Monte Carlo method is the dominant
+                  paradigm for posterior computation in Bayesian
+                  analysis. It is common to control computation time
+                  by making approximations to the Markov transition
+                  kernel. Comparatively little attention has been paid
+                  to computational optimality in these approximating
+                  Markov Chains, or when such approximations are
+                  justified relative to obtaining shorter paths from
+                  the exact kernel. We give simple, sharp bounds for
+                  uniform approximations of uniformly mixing Markov
+                  chains. We then suggest a notion of optimality that
+                  incorporates computation time and approximation
+                  error, and use our bounds to make generalizations
+                  about properties of good approximations in the
+                  uniformly mixing setting. The relevance of these
+                  properties is demonstrated in applications to a
+                  minibatching-based approximate MCMC algorithm for
+                  large $n$ logistic regression and low-rank
+                  approximations for Gaussian processes.},
+  archivePrefix ={arXiv},
+  eprint =       {1508.03387},
+  primaryClass = {stat.CO},
+}
+
+@article{johndrow17_bayes_shrin_at_gwas_scale,
+  author =       {Johndrow, James E. and Orenstein, Paulo and
+                  Bhattacharya, Anirban},
+  title =        {Bayes Shrinkage At Gwas Scale: Convergence and
+                  Approximation Theory of a Scalable Mcmc Algorithm
+                  for the Horseshoe Prior},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1705.00841v3},
+  abstract =     {The horseshoe prior is frequently employed in
+                  Bayesian analysis of high-dimensional models, and
+                  has been shown to achieve minimax optimal risk
+                  properties when the truth is sparse. While
+                  optimization-based algorithms for the extremely
+                  popular Lasso and elastic net procedures can scale
+                  to dimension in the hundreds of thousands,
+                  algorithms for the horseshoe that use Markov chain
+                  Monte Carlo (MCMC) for computation are limited to
+                  problems an order of magnitude smaller. This is due
+                  to high computational cost per step and growth of
+                  the variance of time-averaging estimators as a
+                  function of dimension. We propose two new MCMC
+                  algorithms for computation in these models that have
+                  improved performance compared to existing
+                  alternatives. One of the algorithms also
+                  approximates an expensive matrix product to give
+                  orders of magnitude speedup in high-dimensional
+                  applications. We prove that the exact algorithm is
+                  geometrically ergodic, and give guarantees for the
+                  accuracy of the approximate algorithm using
+                  perturbation theory. Versions of the approximation
+                  algorithm that gradually decrease the approximation
+                  error as the chain extends are shown to be exact.
+                  The scalability of the algorithm is illustrated in
+                  simulations with problem size as large as $N=5,000$
+                  observations and $p=50,000$ predictors, and an
+                  application to a genome-wide association study with
+                  $N=2,267$ and $p=98,385$. The empirical results also
+                  show that the new algorithm yields estimates with
+                  lower mean squared error, intervals with better
+                  coverage, and elucidates features of the posterior
+                  that were often missed by previous algorithms in
+                  high dimensions, including bimodality of posterior
+                  marginals indicating uncertainty about which
+                  covariates belong in the model.},
+  archivePrefix ={arXiv},
+  eprint =       {1705.00841},
+  primaryClass = {stat.CO},
+}

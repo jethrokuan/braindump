@@ -1,0 +1,81 @@
+@inproceedings{sutton2000policy,
+  title={Policy gradient methods for reinforcement learning with function approximation},
+  author={Sutton, Richard S and McAllester, David A and Singh, Satinder P and Mansour, Yishay},
+  booktitle={Advances in neural information processing systems},
+  pages={1057--1063},
+  year={2000}
+}
+
+@article{mnih16_async_method_deep_reinf_learn,
+  author =       {Mnih, Volodymyr and Badia, Adri{\`a}
+                  Puigdom{\`e}nech and Mirza, Mehdi and Graves, Alex
+                  and Lillicrap, Timothy P. and Harley, Tim and
+                  Silver, David and Kavukcuoglu, Koray},
+  title =        {Asynchronous Methods for Deep Reinforcement
+                  Learning},
+  journal =      {CoRR},
+  year =         2016,
+  url =          {http://arxiv.org/abs/1602.01783v2},
+  abstract =     {We propose a conceptually simple and lightweight
+                  framework for deep reinforcement learning that uses
+                  asynchronous gradient descent for optimization of
+                  deep neural network controllers. We present
+                  asynchronous variants of four standard reinforcement
+                  learning algorithms and show that parallel
+                  actor-learners have a stabilizing effect on training
+                  allowing all four methods to successfully train
+                  neural network controllers. The best performing
+                  method, an asynchronous variant of actor-critic,
+                  surpasses the current state-of-the-art on the Atari
+                  domain while training for half the time on a single
+                  multi-core CPU instead of a GPU. Furthermore, we
+                  show that asynchronous actor-critic succeeds on a
+                  wide variety of continuous motor control problems as
+                  well as on a new task of navigating random 3D mazes
+                  using a visual input.},
+  archivePrefix ={arXiv},
+  eprint =       {1602.01783},
+  primaryClass = {cs.LG},
+}
+
+@article{gu16_q_prop,
+  author =       {Gu, Shixiang and Lillicrap, Timothy and Ghahramani,
+                  Zoubin and Turner, Richard E. and Levine, Sergey},
+  title =        {Q-Prop: Sample-Efficient Policy Gradient With an
+                  Off-Policy Critic},
+  journal =      {CoRR},
+  year =         2016,
+  url =          {http://arxiv.org/abs/1611.02247v3},
+  abstract =     {Model-free deep reinforcement learning (RL) methods
+                  have been successful in a wide variety of simulated
+                  domains. However, a major obstacle facing deep RL in
+                  the real world is their high sample complexity.
+                  Batch policy gradient methods offer stable learning,
+                  but at the cost of high variance, which often
+                  requires large batches. TD-style methods, such as
+                  off-policy actor-critic and Q-learning, are more
+                  sample-efficient but biased, and often require
+                  costly hyperparameter sweeps to stabilize. In this
+                  work, we aim to develop methods that combine the
+                  stability of policy gradients with the efficiency of
+                  off-policy RL. We present Q-Prop, a policy gradient
+                  method that uses a Taylor expansion of the
+                  off-policy critic as a control variate. Q-Prop is
+                  both sample efficient and stable, and effectively
+                  combines the benefits of on-policy and off-policy
+                  methods. We analyze the connection between Q-Prop
+                  and existing model-free algorithms, and use control
+                  variate theory to derive two variants of Q-Prop with
+                  conservative and aggressive adaptation. We show that
+                  conservative Q-Prop provides substantial gains in
+                  sample efficiency over trust region policy
+                  optimization (TRPO) with generalized advantage
+                  estimation (GAE), and improves stability over deep
+                  deterministic policy gradient (DDPG), the
+                  state-of-the-art on-policy and off-policy methods,
+                  on OpenAI Gym's MuJoCo continuous control
+                  environments.},
+  archivePrefix ={arXiv},
+  eprint =       {1611.02247},
+  primaryClass = {cs.LG},
+}
