@@ -101,7 +101,7 @@ the data and the model. We need to address the following questions:
 [[file:images/regression/screenshot_2019-01-15_13-10-29.png]]
 
 
-* Linear Regression
+* Simple Linear Regression
 
 Simple linear regression is a straightforward approach for predicting
 a quantitative response $Y$ on the basis of a single predictor
@@ -217,14 +217,19 @@ model fits the data.
 
 *** Residual Standard Error (RSE)
 
-The RSE is an estimate of the standard deviation of $\epsilon$. It is
-the average amount that the response will deviate from the true
-regression line.
+After we compute the least square estimates of the parameters of a
+linear model, we can compute the following quantities:
 
-\begin{equation} \label{eqn:dfn:rse}
-  \mathrm{RSE} = \sqrt{\frac{1}{n-2}\mathrm{RSS}} =
-  \sqrt{\frac{1}{n-2} \sum_{i=1}^{n}(y_i - \hat{y_i})^2}
-\end{equation}
+\begin{align}
+\mathrm{SST} &= \sum(y_i - \bar{y})^2 \\
+\mathrm{SSR} &= \sum(\hat{y_i} - \bar{y})^2 \\
+\mathrm{SSE} &= \sum(y_i - \hat{y_i})^2
+\end{align}
+
+A fundamental equality in both simple and multiple regressions is
+given by $\mathrm{SST} = \mathrm{SSR} + \mathrm{SSE}$. This can be
+interpreted as: The deviation from the mean is equal to the deviation
+due to fit, plus the residual.
 
 *** $R^2$ statistic
 
@@ -235,19 +240,20 @@ an alternative measure of fit. It takes a form of a proportion, and
 takes values between 0 and 1, independent of the scale of $Y$.
 
 \begin{equation} \label{eqn:dfn:r_squared}
-  R^2 = \frac{\mathrm{TSS} - \mathrm{RSS}}{\mathrm{TSS}} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}}
+  R^2 = \frac{\mathrm{SSR}}{\mathrm{SST}} = 1 - \frac{\mathrm{SSE}}{\mathrm{SST}}
 \end{equation}
 
-where $\mathrm{TSS} = \sum(y_i - \bar{y})^2$ is the /total sum of
-squares/. TSS measures the total variance in the response $Y$, and can
+where $\mathrm{SST} = \sum(y_i - \bar{y})^2$ is the /total sum of
+squares/. SST measures the total variance in the response $Y$, and can
 be thought of as the amount of variability inherent in the response
 before the regression is performed. Hence, $R^2$ measures the
 proportion of variability in $Y$ that can be explained using $X$.
 
 Note that the correlation coefficient $r = \mathrm{Cor}(X, Y)$ is
-related to the $R^2$ is the simple linear regression setting: $r^2 = R^2$.
+related to the $R^2$ is the simple linear regression setting: $r^2 =
+R^2$.
 
-** Multiple Linear Regression
+* Multiple Linear Regression
 
 We can extend the simple linear regression model to accommodate
 multiple predictors:
@@ -267,12 +273,144 @@ Unlike the simple regression estimates, the multiple regression
 coefficient estimates have complicated forms that are most easily
 represented using matrix algebra.
 
+** Interpreting Regression Coefficients
+
+$\beta_0$, the constant coefficient, is the value of $Y$ when $X_1 =
+X_2 \dots = X_p = 0$, as in simple regression. The regression
+coefficient $\beta_j$ has several interpretations.
+
+First, it may be interpreted as the change in $Y$ corresponding to a
+unit change in $X_j$ when all other predictor variables are held
+constant. In practice, predictor variables may be inherently related,
+and it is impossible to hold some of them constant while varying
+others. The regression coefficient $\beta_j$ is also called the
+partial regression coefficient, because $\beta_j$ represents the
+contribution of $X_j$ to the response variable $Y$ adjusted for other
+predictor variables.
+
+** Centering and Scaling
+
+The magnitudes of the regression coefficients in a regression equation
+depend on the unit of measurements of the variables. To make the
+regression coefficients unit-less, one may first center or scale the
+variables before performing regression computations.
+
+When dealing with constant term models, it is convenient to center and
+scale the variables, but when dealing with no-intercept models, we
+need only to scale the variables.
+
+A centered variable is obtained by subtracting from each observation
+the mean of all observations. For example, the centered response
+variable is $(Y - \bar{y})$, and the centered jth predictor variable
+is $(X_j - \bar{x}_j)$. The mean of a centered variable is 0.
+
+The centered variables can also be scaled. Two types of scaling are
+usually performed: unit-length scaling and standardizing.
+
+Unit-length scaling of response variable $Y$ and the jth predictor
+variable $X_j$ is obtained as follows:
+
+\begin{align}
+  \tilde{Z}_y &= (Y - \bar{y})/L_y \\
+  \tilde{Z}_j &= (X - \bar{x}_j)/L_j \\
+\end{align}
+where:
+
+\begin{equation}
+  L_y = \sqrt{\sum_{i=1}^{n}(y_i - \bar{y})^2} \text{ and } L_j =
+  \sqrt{\sum_{i=1}^{n}(x_{ij} - \bar{x}_j)^2}\text{ , } j = 1,2,\dots,p
+\end{equation}
+
+The quantities $L_y$ is referred to as the length of the centered
+variable $Y_\bar{y}$ because it measures the size or the magnitudes of
+the observations in $Y - \bar{y}$. $L_j$ has a similar interpretation.
+
+Unit length scaling has the following property:
+
+\begin{equation}
+  \mathrm{Cor}(X_j, X_k) = \sum_{i=1}^{n}z_{ij}z_{ik}
+\end{equation}
+
+The second type of scaling is called standardizing, which is defined
+by:
+
+\begin{align}
+  \tilde{Y} &= \frac{Y - \bar{y}}{s_y} \\
+  \tilde{X}_j &= \frac{X_j - \bar{x}_j}{s_j} \text{ , } j = 1, \dots, p
+\end{align}
+
+where $s_y$ and $s_j$ are the standard deviations of the response and
+jth predictor variable respectively. The standardized variables have
+mean zero and unit standard deviations. 
+
+Since correlations are unaffected by centering or scaling, it is
+sufficient and convenient to deal with either unit-length scaled or
+standardized models.
+
+** Properties of Least-square Estimators
+
+Under certain regression assumptions, the least-square estimators have
+the following properties:
+
+1. The estimator $\hat{\beta}_j$ is an unbiased estimate of
+   $\hat{\beta_j}$ and has a variance of $\sigma^2 c_{jj}$, where
+   $c_{jj}$ is the jth diagonal element of the inverse of a matrix
+   known as the corrected sums of squares and products matrix. The
+   covariance between $\hat{\beta}_i$ and $\hat{\beta}_j$ is $\sigma^2
+   c_{ij}$. For all unbiased estimates that are linear in the
+   observations the least squares estimators have the smallest
+   variance.
+
+2. The estimator $\hat{\beta}_j$, is normally distributed with mean
+   $\beta_j$ and variance $\sigma^2 c_{jj}$.
+
+3. $W = SSE/\sigma^2$ has a $\chi^2$ distribution with $n - p -1$
+   degrees of freedom, and $\hat{\beta}_j$ and $\hat{\sigma}^2$ are
+   distributed independently from each other.
+
+4. The vector $\hat{\beta} = (\hat{\beta}_0, \hat{\beta_1}, \dots,
+   \hat{\beta_p})$ has a $(p+1)$-dimensional normal distribution with
+   mean vector $\beta = (\beta_0, \beta_1, \dots, \beta_p)$ and
+   variance-covariance matrix with elements $\sigma^2  c_{ij}$.
+
+** Important Questions in Multiple Regression Models
 We can answer some important questions using the multiple regression
 model:
 
 *1. Is there a relationship between the response and the predictors?*
 
-We are comparing $H_0$ label:eqn:dfn:null_hyp and $H_a$
+The strength of the linear relationship between $Y$ and the set of
+predictors $X_1, X_2, \dots X_p$ can be assessed through the
+examination of the scatter plot of $Y$ versus $\hat{Y}$, and the
+correlation coefficient $\mathrm{Cor}(Y, \hat{Y})$. The coefficient of
+determination $R^2 = [\mathrm{Cor}(Y, \hat{Y})]^2$ may be interpreted
+as the proportion of total variability in the response variables $Y$
+that can be accounted for by the set of predictor variables $X_1, X_2,
+\dots, X_p$. 
+
+A quantity related to $R^2$ knows as the adjusted R-squared, $R_a^2$,
+is also used for judging the goodness of fit. It is defined as:
+
+\begin{align}
+  R_a^2 &= 1 - \frac{SSE/(n-p-1)}{SST/(n-1)} \\
+        &= 1 - \frac{n-1}{n-p-1}(1-R^2)
+\end{align}
+
+$R_a^2$ is sometimes used to compared models having different numbers
+of predictor variables.
+
+If we do a hypothesis test on $H_1 : \beta_j \ne \beta_j^0$, we can do
+a t-test:
+
+\begin{equation}
+  t_j = \frac{\hat{\beta_j} - \beta_j^0}{s.e.(\hat{\beta}_j)}
+\end{equation}
+
+which has a Stundent's t-distribution with $n-p-1$ degrees of freedom.
+The test is carried out by comparing the observed value with the
+appropriate critical value $t_{(n-p-1), \alpha/2}$.
+
+If we are comparing $H_0$ label:eqn:dfn:null_hyp and $H_a$
 label:eqn:dfn:alt_hyp, and we do so by computing the /F-statistic/:
 
 \begin{equation} \label{eqn:dfn:f-statistic}
@@ -527,6 +665,13 @@ values of 5 or 10 indicates a problematic amount of collinearity.
 
 where $R^2_{X_j|X_{-j}}$ is the regression of $X_j$ onto all of the
 other predictors.
+
+
+The data consists of $n$ observations on a dependent or response
+variable $Y$, and $p$ predictor or explanatory variables. The
+relationship between $Y$ and $X_1, X_2, \dots, X_p$ is represented by:
+
+
 
 
 * Linear Basis Function Models

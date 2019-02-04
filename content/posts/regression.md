@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T21:25:31+08:00
+lastmod = 2019-02-04T18:16:53+08:00
 tags = ["statistics"]
 draft = false
 math = true
@@ -105,7 +105,7 @@ the data and the model. We need to address the following questions:
 {{< figure src="/ox-hugo/screenshot_2019-01-15_13-10-29.png" caption="Figure 1: Flowchart illustrating the dynamic iterative regression process" >}}
 
 
-## Linear Regression {#linear-regression}
+## Simple Linear Regression {#simple-linear-regression}
 
 Simple linear regression is a straightforward approach for predicting
 a quantitative response \\(Y\\) on the basis of a single predictor
@@ -223,14 +223,19 @@ model fits the data.
 
 #### Residual Standard Error (RSE) {#residual-standard-error--rse}
 
-The RSE is an estimate of the standard deviation of \\(\epsilon\\). It is
-the average amount that the response will deviate from the true
-regression line.
+After we compute the least square estimates of the parameters of a
+linear model, we can compute the following quantities:
 
-\begin{equation} \label{eqn:dfn:rse}
-  \mathrm{RSE} = \sqrt{\frac{1}{n-2}\mathrm{RSS}} =
-  \sqrt{\frac{1}{n-2} \sum\_{i=1}^{n}(y\_i - \hat{y\_i})^2}
-\end{equation}
+\begin{align}
+\mathrm{SST} &= \sum(y\_i - \bar{y})^2 \\\\\\
+\mathrm{SSR} &= \sum(\hat{y\_i} - \bar{y})^2 \\\\\\
+\mathrm{SSE} &= \sum(y\_i - \hat{y\_i})^2
+\end{align}
+
+A fundamental equality in both simple and multiple regressions is
+given by \\(\mathrm{SST} = \mathrm{SSR} + \mathrm{SSE}\\). This can be
+interpreted as: The deviation from the mean is equal to the deviation
+due to fit, plus the residual.
 
 
 #### \\(R^2\\) statistic {#r-2--statistic}
@@ -242,20 +247,21 @@ an alternative measure of fit. It takes a form of a proportion, and
 takes values between 0 and 1, independent of the scale of \\(Y\\).
 
 \begin{equation} \label{eqn:dfn:r\_squared}
-  R^2 = \frac{\mathrm{TSS} - \mathrm{RSS}}{\mathrm{TSS}} = 1 - \frac{\mathrm{RSS}}{\mathrm{TSS}}
+  R^2 = \frac{\mathrm{SSR}}{\mathrm{SST}} = 1 - \frac{\mathrm{SSE}}{\mathrm{SST}}
 \end{equation}
 
-where \\(\mathrm{TSS} = \sum(y\_i - \bar{y})^2\\) is the _total sum of
-squares_. TSS measures the total variance in the response \\(Y\\), and can
+where \\(\mathrm{SST} = \sum(y\_i - \bar{y})^2\\) is the _total sum of
+squares_. SST measures the total variance in the response \\(Y\\), and can
 be thought of as the amount of variability inherent in the response
 before the regression is performed. Hence, \\(R^2\\) measures the
 proportion of variability in \\(Y\\) that can be explained using \\(X\\).
 
 Note that the correlation coefficient \\(r = \mathrm{Cor}(X, Y)\\) is
-related to the \\(R^2\\) is the simple linear regression setting: \\(r^2 = R^2\\).
+related to the \\(R^2\\) is the simple linear regression setting: \\(r^2 =
+R^2\\).
 
 
-### Multiple Linear Regression {#multiple-linear-regression}
+## Multiple Linear Regression {#multiple-linear-regression}
 
 We can extend the simple linear regression model to accommodate
 multiple predictors:
@@ -275,12 +281,150 @@ Unlike the simple regression estimates, the multiple regression
 coefficient estimates have complicated forms that are most easily
 represented using matrix algebra.
 
+
+### Interpreting Regression Coefficients {#interpreting-regression-coefficients}
+
+\\(\beta\_0\\), the constant coefficient, is the value of \\(Y\\) when \\(X\_1 =
+X\_2 \dots = X\_p = 0\\), as in simple regression. The regression
+coefficient \\(\beta\_j\\) has several interpretations.
+
+First, it may be interpreted as the change in \\(Y\\) corresponding to a
+unit change in \\(X\_j\\) when all other predictor variables are held
+constant. In practice, predictor variables may be inherently related,
+and it is impossible to hold some of them constant while varying
+others. The regression coefficient \\(\beta\_j\\) is also called the
+partial regression coefficient, because \\(\beta\_j\\) represents the
+contribution of \\(X\_j\\) to the response variable \\(Y\\) adjusted for other
+predictor variables.
+
+
+### Centering and Scaling {#centering-and-scaling}
+
+The magnitudes of the regression coefficients in a regression equation
+depend on the unit of measurements of the variables. To make the
+regression coefficients unit-less, one may first center or scale the
+variables before performing regression computations.
+
+When dealing with constant term models, it is convenient to center and
+scale the variables, but when dealing with no-intercept models, we
+need only to scale the variables.
+
+A centered variable is obtained by subtracting from each observation
+the mean of all observations. For example, the centered response
+variable is \\((Y - \bar{y})\\), and the centered jth predictor variable
+is \\((X\_j - \bar{x}\_j)\\). The mean of a centered variable is 0.
+
+The centered variables can also be scaled. Two types of scaling are
+usually performed: unit-length scaling and standardizing.
+
+Unit-length scaling of response variable \\(Y\\) and the jth predictor
+variable \\(X\_j\\) is obtained as follows:
+
+\begin{align}
+  \tilde{Z}\_y &= (Y - \bar{y})/L\_y \\\\\\
+  \tilde{Z}\_j &= (X - \bar{x}\_j)/L\_j \\\\\\
+\end{align}
+
+where:
+
+\begin{equation}
+  L\_y = \sqrt{\sum\_{i=1}^{n}(y\_i - \bar{y})^2} \text{ and } L\_j =
+  \sqrt{\sum\_{i=1}^{n}(x\_{ij} - \bar{x}\_j)^2}\text{ , } j = 1,2,\dots,p
+\end{equation}
+
+The quantities \\(L\_y\\) is referred to as the length of the centered
+variable \\(Y\_\bar{y}\\) because it measures the size or the magnitudes of
+the observations in \\(Y - \bar{y}\\). \\(L\_j\\) has a similar interpretation.
+
+Unit length scaling has the following property:
+
+\begin{equation}
+  \mathrm{Cor}(X\_j, X\_k) = \sum\_{i=1}^{n}z\_{ij}z\_{ik}
+\end{equation}
+
+The second type of scaling is called standardizing, which is defined
+by:
+
+\begin{align}
+  \tilde{Y} &= \frac{Y - \bar{y}}{s\_y} \\\\\\
+  \tilde{X}\_j &= \frac{X\_j - \bar{x}\_j}{s\_j} \text{ , } j = 1, \dots, p
+\end{align}
+
+where \\(s\_y\\) and \\(s\_j\\) are the standard deviations of the response and
+jth predictor variable respectively. The standardized variables have
+mean zero and unit standard deviations.
+
+Since correlations are unaffected by centering or scaling, it is
+sufficient and convenient to deal with either unit-length scaled or
+standardized models.
+
+
+### Properties of Least-square Estimators {#properties-of-least-square-estimators}
+
+Under certain regression assumptions, the least-square estimators have
+the following properties:
+
+1.  The estimator \\(\hat{\beta}\_j\\) is an unbiased estimate of
+    \\(\hat{\beta\_j}\\) and has a variance of \\(\sigma^2 c\_{jj}\\), where
+    \\(c\_{jj}\\) is the jth diagonal element of the inverse of a matrix
+    known as the corrected sums of squares and products matrix. The
+    covariance between \\(\hat{\beta}\_i\\) and \\(\hat{\beta}\_j\\) is \\(\sigma^2
+       c\_{ij}\\). For all unbiased estimates that are linear in the
+    observations the least squares estimators have the smallest
+    variance.
+
+2.  The estimator \\(\hat{\beta}\_j\\), is normally distributed with mean
+    \\(\beta\_j\\) and variance \\(\sigma^2 c\_{jj}\\).
+
+3.  \\(W = SSE/\sigma^2\\) has a \\(\chi^2\\) distribution with \\(n - p -1\\)
+    degrees of freedom, and \\(\hat{\beta}\_j\\) and \\(\hat{\sigma}^2\\) are
+    distributed independently from each other.
+
+4.  The vector \\(\hat{\beta} = (\hat{\beta}\_0, \hat{\beta\_1}, \dots,
+       \hat{\beta\_p})\\) has a $(p+1)$-dimensional normal distribution with
+    mean vector \\(\beta = (\beta\_0, \beta\_1, \dots, \beta\_p)\\) and
+    variance-covariance matrix with elements \\(\sigma^2  c\_{ij}\\).
+
+
+### Important Questions in Multiple Regression Models {#important-questions-in-multiple-regression-models}
+
 We can answer some important questions using the multiple regression
 model:
 
 **1. Is there a relationship between the response and the predictors?**
 
-We are comparing \\(H\_0\\) <a name="eqn:dfn:null_hyp"></a> and \\(H\_a\\)
+The strength of the linear relationship between \\(Y\\) and the set of
+predictors \\(X\_1, X\_2, \dots X\_p\\) can be assessed through the
+examination of the scatter plot of \\(Y\\) versus \\(\hat{Y}\\), and the
+correlation coefficient \\(\mathrm{Cor}(Y, \hat{Y})\\). The coefficient of
+determination \\(R^2 = [\mathrm{Cor}(Y, \hat{Y})]^2\\) may be interpreted
+as the proportion of total variability in the response variables \\(Y\\)
+that can be accounted for by the set of predictor variables \\(X\_1, X\_2,
+\dots, X\_p\\).
+
+A quantity related to \\(R^2\\) knows as the adjusted R-squared, \\(R\_a^2\\),
+is also used for judging the goodness of fit. It is defined as:
+
+\begin{align}
+  R\_a^2 &= 1 - \frac{SSE/(n-p-1)}{SST/(n-1)} \\\\\\
+        &= 1 - \frac{n-1}{n-p-1}(1-R^2)
+\end{align}
+
+\\(R\_a^2\\) is sometimes used to compared models having different numbers
+of predictor variables.
+
+If we do a hypothesis test on \\(H\_1 : \beta\_j \ne \beta\_j^0\\), we can do
+a t-test:
+
+\begin{equation}
+  t\_j = \frac{\hat{\beta\_j} - \beta\_j^0}{s.e.(\hat{\beta}\_j)}
+\end{equation}
+
+which has a Stundent's t-distribution with \\(n-p-1\\) degrees of freedom.
+The test is carried out by comparing the observed value with the
+appropriate critical value \\(t\_{(n-p-1), \alpha/2}\\).
+
+If we are comparing \\(H\_0\\) <a name="eqn:dfn:null_hyp"></a> and \\(H\_a\\)
 <a name="eqn:dfn:alt_hyp"></a>, and we do so by computing the _F-statistic_:
 
 \begin{equation} \label{eqn:dfn:f-statistic}
@@ -483,7 +627,7 @@ response. One can identify non-constant variances in the errors, or
 heteroscedasticity, from the presence of a funnel shape in the
 residual plot.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James, 2013)</a></sup>" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James {\it et al.}, 2013)</a></sup>" >}}
 
 
 #### Outliers {#outliers}
@@ -523,7 +667,7 @@ difficult to separate out the individual effects of collinear
 variables on the response. A contour plot of the RSS associated with
 different possible coefficient estimates can show collinearity.
 
-{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James, 2013)</a></sup>" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James {\it et al.}, 2013)</a></sup>" >}}
 
 Another way to detect collinearity is to look at the correlation
 matrix of the predictors. An element of this matrix that is large in
@@ -547,6 +691,10 @@ values of 5 or 10 indicates a problematic amount of collinearity.
 
 where \\(R^2\_{X\_j|X\_{-j}}\\) is the regression of \\(X\_j\\) onto all of the
 other predictors.
+
+The data consists of \\(n\\) observations on a dependent or response
+variable \\(Y\\), and \\(p\\) predictor or explanatory variables. The
+relationship between \\(Y\\) and \\(X\_1, X\_2, \dots, X\_p\\) is represented by:
 
 
 ## Linear Basis Function Models {#linear-basis-function-models}
@@ -574,7 +722,7 @@ or the sigmoidal basis function:
 
 ## References {#references}
 
-<sup id="a6f25d8e3790a685481657d76f53a002"><a href="#chatterjee06_regres_analy_examp" title="Samprit Chatterjee \&amp; Ali Hadi, Regression Analysis by Example, John Wiley \&amp; Sons, Inc. (2006).">(Samprit Chatterjee, 2006)</a></sup><sup>,</sup><sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">(James, 2013)</a></sup>
+<sup id="a6f25d8e3790a685481657d76f53a002"><a href="#chatterjee06_regres_analy_examp" title="Samprit Chatterjee \&amp; Ali Hadi, Regression Analysis by Example, John Wiley \&amp; Sons, Inc. (2006).">(Samprit Chatterjee \& Ali Hadi, 2006)</a></sup><sup>,</sup><sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">(James {\it et al.}, 2013)</a></sup>
 
 
 ####  {#}
