@@ -250,7 +250,7 @@ before the regression is performed. Hence, $R^2$ measures the
 proportion of variability in $Y$ that can be explained using $X$.
 
 Note that the correlation coefficient $r = \mathrm{Cor}(X, Y)$ is
-related to the $R^2$ is the simple linear regression setting: $r^2 =
+related to the $R^2$ in the simple linear regression setting: $r^2 =
 R^2$.
 
 * Multiple Linear Regression

@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-01T08:11:48+08:00
+lastmod = 2019-02-08T12:09:35+08:00
 tags = ["machine_learning"]
 draft = false
 math = true
@@ -187,7 +187,7 @@ Each \\(h \in H\\) generates a dichotomy which is \\(h\\) is \\(-1\\) or \\(h\\)
 \\(+1\\). We then formally define dichotomies as follows:
 
 \begin{align}
-H(x\_1, \dots, x\_n) = \left\{ h(x\_1), h(x\_2), \dots, h(x\_n) | h \in H \right\}
+H(x\_1, \dots, x\_n) = \left\\{ h(x\_1), h(x\_2), \dots, h(x\_n) | h \in H \right\\}
 \end{align}
 
 
@@ -419,7 +419,7 @@ Example use cases include:
 
 ### K-means Clustering {#k-means-clustering}
 
-Input: \\(\{x^{(1), x^{(2)}, x^{(3)}, \dots, x^{(m)}}\}\\).
+Input: \\(\\{x^{(1), x^{(2)}, x^{(3)}, \dots, x^{(m)}}\\}\\).
 
 1.  Randomly initialize cluster centroids.
 2.  For all points, compute which cluster centroid is the closest.

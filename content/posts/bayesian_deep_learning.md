@@ -1,7 +1,7 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-03T20:23:22+08:00
+lastmod = 2019-02-08T12:09:08+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
 math = true
@@ -22,7 +22,7 @@ Bayes theorem:
 The assumption of a Gaussian prior for \\(P(w;M)\\) leads to a posterior
 density of the parameter given the new training data \\(P(w|y;x;M)
 \propto \sqrt{\lambda/2\pi}e^{-C(w;M)}\\), where \\(C(w;M) = H(w;M) +
-\lambda w^2/2\\), which is the L2 regularized cross-entropy.
+\lambda w^2 / 2\\), which is the L2 regularized cross-entropy.
 
 We can evaluate the normalizing constant, \\(P(y|x;M) =
 \sqrt{\frac{\lambda}{2\pi}} \int dw e^{-C(w;M)}\\). Assuming that the
@@ -31,13 +31,14 @@ estimate the evidence by Taylor expanding \\(C(w;M) \approx C(w\_0) +
 C''(w\_0)(w-w\_0)^2\\).
 
 \begin{equation}
-P(y|x;M) = exp\left(-\left( C(w\_0) + \frac{1}{2}ln(C''(w\_0)/\lambda) \right) \right)
+  P(y|x;M) = \mathrm{exp} \left\\{ -\left( C(w\_0) +
+      \frac{1}{2}ln(C''(w\_0)/\lambda) \right) \right\\}
 \end{equation}
 
-In models with many parameters, \\(P(y|x;M) \approx \lambda^{p/2}
-e^{-C(w\_0)} / | \nabla \nabla C(w) |\_{w\_0}^{1/2}\\), where the
-denominator can be thought of as an "Occam factor", causing the
-network to prefer broad minima.
+In models with many parameters, \\(P(y|x;M) \approx
+\frac{\lambda^{p/2}f^{-C(w\_0)}} {| \nabla \nabla C(w) |\_{w\_0}^{1 / 2}}\\),
+where the denominator can be thought of as an "Occam factor", causing
+the network to prefer broad minima.
 
 # Bibliography
 <a id="smith_quoc_bayes_generalization_sgd"></a>Smith, S., & Le, Q. V., *A bayesian perspective on generalization and stochastic gradient descent*, In ,  (pp. ) (2018). : . [↩](#b9a995db75df332d755d4fb40282c70d)

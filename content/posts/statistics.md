@@ -1,7 +1,7 @@
 +++
 title = "Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-14T15:27:31+08:00
+lastmod = 2019-02-08T12:09:44+08:00
 draft = false
 math = true
 +++
@@ -443,11 +443,11 @@ with this size, it has the maximum power (Neyman-Pearson Lemma).
 A hypothesis is simple if it completely specifies the distibution of
 the data.
 
-\\(H\_1 : \mu > \mu\_0\\):  Critical region \\(\{\bar{x} > \mu\_0 +
-z\_\alpha\frac{\sigma}{\sqrt{n}}\}\\), the power is a function of \\(\mu\\),
+\\(H\_1 : \mu > \mu\_0\\):  Critical region \\(\\{\bar{x} > \mu\_0 +
+z\_\alpha\frac{\sigma}{\sqrt{n}}\\}\\), the power is a function of \\(\mu\\),
 and this is uniformly the most powerful test for size \\(\le \alpha\\).
 
-\\(H\_1 : \mu \ne \mu\_0\\): Critical region \\(\{|\bar{x}-\mu\_0| > c\}, c =
+\\(H\_1 : \mu \ne \mu\_0\\): Critical region \\(\\{|\bar{x}-\mu\_0| > c\\}, c =
 z\_{\frac{\alpha}{2}}\frac{\sigma}{\sqrt{n}}\\), but not uniformly most
 powerful.
 
@@ -493,11 +493,11 @@ chi-square statistic, written as \\(X^2\\).
 
 For \\(i = 1 ... n\\) let \\(X\_i \sim Poisson(\lambda\_i)\\) are independent.
 
-\\(w\_0 = \{ \tilde{\lambda} |  \lambda\_1 = \lambda\_2 = ... =
-\lambda\_n\}\\)
+\\(w\_0 = \\{ \tilde{\lambda} |  \lambda\_1 = \lambda\_2 = ... =
+\lambda\_n\\}\\)
 
-\\(w\_1 = \{\tilde{\lambda} | \lambda\_i \ne \lambda\_j \text{ for some }
-i,j\}\\)
+\\(w\_1 = \\{\tilde{\lambda} | \lambda\_i \ne \lambda\_j \text{ for some }
+i,j\\}\\)
 
 \\(-2\log\Lambda \approx \frac{\sum\_{i=1}^{n}(X\_i-\bar{X})^2}{\bar{X}}\\).
 For large n, the null distribution of \\(-2\log\Lambda\\) is approximately

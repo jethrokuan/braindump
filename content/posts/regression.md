@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-04T18:16:53+08:00
+lastmod = 2019-02-08T11:32:12+08:00
 tags = ["statistics"]
 draft = false
 math = true
@@ -257,7 +257,7 @@ before the regression is performed. Hence, \\(R^2\\) measures the
 proportion of variability in \\(Y\\) that can be explained using \\(X\\).
 
 Note that the correlation coefficient \\(r = \mathrm{Cor}(X, Y)\\) is
-related to the \\(R^2\\) is the simple linear regression setting: \\(r^2 =
+related to the \\(R^2\\) in the simple linear regression setting: \\(r^2 =
 R^2\\).
 
 
@@ -434,13 +434,13 @@ If we are comparing \\(H\_0\\) <a name="eqn:dfn:null_hyp"></a> and \\(H\_a\\)
 If the linear model is correct, one can show that:
 
 \begin{equation}
-E \{RSS/(n-p-1)\} = \sigma^2
+E \\{RSS/(n-p-1)\\} = \sigma^2
 \end{equation}
 
 and that provided \\(H\_0\\) is true,
 
 \begin{equation}
-E \{(\mathrm{TSS}-\mathrm{RSS})/p\} = \sigma^2
+E \\{(\mathrm{TSS}-\mathrm{RSS})/p\\} = \sigma^2
 \end{equation}
 
 Hence, when there is no relationship between the response and the
@@ -710,7 +710,7 @@ There are many choices on non-linear basis functions, such as the
 Gaussian basis function:
 
 \begin{equation}
-  \phi\_j(x) = \mathrm{exp}\left\{ - \frac{(x - \mu\_j)^2}{2s^2} \right\}
+  \phi\_j(x) = \mathrm{exp}\left\\{ - \frac{(x - \mu\_j)^2}{2s^2} \right\\}
 \end{equation}
 
 or the sigmoidal basis function:
