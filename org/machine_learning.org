@@ -1,6 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Machine Learning
-#+HUGO_TAGS: machine_learning
+#+HUGO_TAGS: machine-learning
 
 * Reference Book                                                   :noexport:
 Learning From Data

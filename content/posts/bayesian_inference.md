@@ -1,8 +1,8 @@
 +++
 title = "Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:17:56+08:00
-tags = ["machine_learning"]
+lastmod = 2019-02-09T16:21:03+08:00
+tags = ["machine-learning"]
 draft = false
 math = true
 +++
@@ -59,7 +59,7 @@ von Mises). This relies on:
 
 See [ICML 2018 Tutorial](http://www.tamarabroderick.com/tutorial%5F2018%5Ficml.html) by Tamara Broderick for an overview. In
 general, we have no clue how accurate the approximation is. See also
-<sup id="2c492bb886c456a5902b643d9a6547e6"><a href="#pati17_statis_optim_variat_bayes" title="Pati, Bhattacharya, Yang \&amp; Yun, On Statistical Optimality of Variational Bayes, {CoRR}, v(), (2017).">(Pati, 2017)</a></sup>.
+<sup id="2c492bb886c456a5902b643d9a6547e6"><a href="#pati17_statis_optim_variat_bayes" title="Pati, Bhattacharya, Yang \&amp; Yun, On Statistical Optimality of Variational Bayes, {CoRR}, v(), (2017).">(Pati {\it et al.}, 2017)</a></sup>.
 
 
 ### Markov Chain Monte Carlo {#markov-chain-monte-carlo}
@@ -120,9 +120,9 @@ autocorrelated draws.
 A well designed MCMC algorithm with a good proposal should ideally
 exhibit rapid convergence and mixing.
 
-Embarrassingly Parallel MCMC e.g. <sup id="fe703421bbe5a5c7e4c07c7126a629f3"><a href="#pmlr-v38-srivastava15" title="Sanvesh Srivastava, Volkan Cevher, Quoc Dinh \&amp; David Dunson, {WASP: Scalable Bayes via barycenters of subset posteriors}, 912--920, in in: {Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics}, edited by Guy Lebanon \&amp; Vishwanathan, PMLR (2015)">(Sanvesh Srivastava, 2015)</a></sup><sup>,</sup><sup id="3c24d71d7ae6f354df816d37ea172f1a"><a href="#li16_simpl_scalab_accur_poster_inter_estim" title="Li, Srivastava, Dunson \&amp; , Simple, Scalable and Accurate Posterior Interval  Estimation, {CoRR}, v(), (2016).">(Li, 2016)</a></sup>
+Embarrassingly Parallel MCMC e.g. <sup id="fe703421bbe5a5c7e4c07c7126a629f3"><a href="#pmlr-v38-srivastava15" title="Sanvesh Srivastava, Volkan Cevher, Quoc Dinh \&amp; David Dunson, {WASP: Scalable Bayes via barycenters of subset posteriors}, 912--920, in in: {Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics}, edited by Guy Lebanon \&amp; Vishwanathan, PMLR (2015)">(Sanvesh Srivastava {\it et al.}, 2015)</a></sup><sup>,</sup><sup id="3c24d71d7ae6f354df816d37ea172f1a"><a href="#li16_simpl_scalab_accur_poster_inter_estim" title="Li, Srivastava, Dunson \&amp; , Simple, Scalable and Accurate Posterior Interval  Estimation, {CoRR}, v(), (2016).">(Li {\it et al.}, 2016)</a></sup>
 
-We can replace expensive transition kernels with approximations <sup id="ab108353672c4542f6a76b91c9eebcbc"><a href="#johndrow15_optim_approx_markov_chain_bayes_infer" title="Johndrow, Mattingly, , Mukherjee \&amp; Dunson, Optimal Approximating Markov Chains for Bayesian  Inference, {CoRR}, v(), (2015).">(Johndrow, 2015)</a></sup>. for
+We can replace expensive transition kernels with approximations <sup id="ab108353672c4542f6a76b91c9eebcbc"><a href="#johndrow15_optim_approx_markov_chain_bayes_infer" title="Johndrow, Mattingly, , Mukherjee \&amp; Dunson, Optimal Approximating Markov Chains for Bayesian  Inference, {CoRR}, v(), (2015).">(Johndrow {\it et al.}, 2015)</a></sup>. for
 example, we approximate a conditional distribution in Gibbs sampler
 with a Gaussian or using a subsample of data, vastly speeding up MCMC
 sampling in high-dimensional settings.
@@ -149,7 +149,7 @@ tweaking the Bayesian paradigm to be inherently more robust.
 
 What's an appropriate \\(\pi(\beta)\\) for the high dimensional vector of
 coefficients? Most commonly used is a local-global scale mixture of
-Gaussians. <sup id="c5f035041f058fd1352e35f072c0a5d4"><a href="#johndrow17_bayes_shrin_at_gwas_scale" title="Johndrow, Orenstein, \&amp; Bhattacharya, Bayes Shrinkage At Gwas Scale: Convergence and  Approximation Theory of a Scalable Mcmc Algorithm  for the Horseshoe Prior, {CoRR}, v(), (2017).">(Johndrow, 2017)</a></sup>
+Gaussians. <sup id="c5f035041f058fd1352e35f072c0a5d4"><a href="#johndrow17_bayes_shrin_at_gwas_scale" title="Johndrow, Orenstein, \&amp; Bhattacharya, Bayes Shrinkage At Gwas Scale: Convergence and  Approximation Theory of a Scalable Mcmc Algorithm  for the Horseshoe Prior, {CoRR}, v(), (2017).">(Johndrow {\it et al.}, 2017)</a></sup>
 
 
 ###  {#}

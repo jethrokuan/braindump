@@ -1,6 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Bayesian Inference
-#+HUGO_TAGS: machine_learning
+#+HUGO_TAGS: machine-learning
 
 * [[https://videoken.com/embed/0HXpnG_WnlI][Scalable Bayesian Inference]]
 

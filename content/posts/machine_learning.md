@@ -1,8 +1,8 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-08T12:09:35+08:00
-tags = ["machine_learning"]
+lastmod = 2019-02-09T16:20:59+08:00
+tags = ["machine-learning"]
 draft = false
 math = true
 +++

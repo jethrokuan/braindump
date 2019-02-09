@@ -1,6 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Reinforcement Learning
-#+HUGO_TAGS: machine_learning
+#+HUGO_TAGS: machine-learning
 
 * Making Complex Decisions
 Earlier, we were concerned with environments with one-shot, episodic
