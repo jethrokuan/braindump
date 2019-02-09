@@ -1,17 +1,166 @@
 +++
-title = "Probabilistic Graph Modelling"
+title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:35+08:00
+lastmod = 2019-02-09T17:40:59+08:00
 draft = false
 math = true
 +++
 
+## Motivation {#motivation}
+
+Most tasks require a person or an automated system to _reason_: to take
+the available information and reach conclusions, both about what might
+be true in the world and about how to act. Probabilistic graphical
+models represent a general framework that can be used to allow a
+computer system to reason.
+
+Using this approach of declarative representation, we construct,
+within the computer, a model of the system about which we would like
+to reason. This model encodes our knowledge of how the system works in
+a computer-readable form. This representation can then be manipulated
+by various algorithms that can answer questions based on the model.
+
+The key property of a declarative representation is the separation of
+knowledge and reasoning. The representation has its own clear
+semantics, separate from the algorithms that one can apply to it.
+Thus, we can develop a general suite of algorithms that apply any
+model within a broad class, whether in the domain of medical diagnosis
+or speech recognition. Conversely, we can improve our model for a
+specific application domain without having to modify our reasoning
+algorithms constantly.
+
+Uncertainty is a fundamental quantity in many real-world situations.
+To obtain meaningful conclusions, we need to reason not just about
+what is possible, but what is probable.
+
+The calculus of probability theory provides us with a formal framework
+for considering multiple outcomes and their likelihood. This
+frameworks allows us to consider options that are unlikely, yet not
+impossible, without reducing our conclusions to content-free lists of
+every possibility.
+
+One finds that probabilistic models are very liberating. Where in a
+more rigid formalism, we might find it necessary to enumerate every
+possibility, here we can often sweep a multitude of annoying
+exceptions and special cases under the probabilistic rug, by
+introducing outcomes that roughly correspond to "something unusual
+happens". This type of approximation is often inevitable, as we can
+only rarely provide a deterministic specification of the behaviour of
+a complex system. Probabilistic models allow us to make this explicit,
+and therefore provide a model that is more faithful to reality.
+
+
+## Graphical Representation {#graphical-representation}
+
+Probabilistic graphical models use a graph-based representation as the
+basis for compactly encoding a complex distribution over a
+high-dimensional space. In this graphical representation, the nodes
+correspond to the variables in our domain, and the edges correspond to
+direct probabilistic interactions between them.
+
+{{< figure src="/ox-hugo/screenshot_2019-02-09_17-01-23.png" caption="Figure 1: Different perspectives on probabilistic graphical models" >}}
+
+
 ## Bayesian Networks {#bayesian-networks}
 
-A Bayesian network is a directed graph \\(G = (V,E)\\) together with a
-random variable \\(x\_i\\) for each node \\(i \in V\\), one conditional
-probability distribution (CPD) p(x\_i | x<sub>A\_i</sub>) per node, specifying
-the probability of \\(x\_i\\) conditioned on its parent's values.
+The goal is to represent a joint distribution \\(P\\) over some set of
+random variables \\(\left\\{X\_1, \dots, X\_n\right\\}\\). Even in the
+simplest case where these numbers are binary-valued, a joint
+distribution requires the specification of \\(2^n-1\\) numbers. For all
+but the smallest \\(n\\), the joint distribution in unmanageable from
+every perspective. Computationally, it is expensive to manipulate and
+generally too large to store in memory. Cognitively, it is impossible
+to acquire so many numbers from a human expect, moreover, the numbers
+are very small and do not correspond to events that people can
+reasonably contemplate. Statistically, if we want to learn the
+distribution from data, we would need ridiculously large amounts of
+data to estimate many parameters robustly. These problems have been
+the main barrier to the adoption of probabilistic methods for expert
+systems until the development of the methodologies presented below.
+
+The compact representations explored are based on two key ideas: the
+representation of independence properties of the distribution, and the
+use of an alternative parameterization that allows us to exploit these
+fine-grained independencies.
+
+Bayesian networks build on the same intuitions as the naive Bayes
+model by exploiting conditional independence properties of the
+distribution in order to allow a compact and natural representation.
+The core of the Bayesian network representation is the directed graph
+\\(G = (V,E)\\) together with a random variable \\(x\_i\\) for each node \\(i \in
+V\\), one conditional probability distribution (CPD) p(x\_i | x<sub>A\_i</sub>)
+per node, specifying the probability of \\(x\_i\\) conditioned on its
+parent's values.
+
+{{< figure src="/ox-hugo/screenshot_2019-02-09_17-26-56.png" caption="Figure 2: Example of a Bayesian Network graph" >}}
+
+This graph \\(G\\) can be viewed in two very different ways:
+
+1.  as a data structure that provides the skeleton for representing a
+    joint distribution compactly in a factorized way;
+2.  as a compact representation for a set of conditional independence
+    assumptions about a distribution.
+
+These two views, are in a strong sense, equivalent.
+
+
+### Bayesian Network Semantics {#bayesian-network-semantics}
+
+We can formally define the Bayesian network structure as follows:
+
+Let \\(\mathrm{Pa}\_{X\_i}^G\\) denote the parents of \\(X\_i\\) in G, and
+\\(\mathrm{NonDescendants}\_{X\_i}\\) denote the variables in the graph that
+are not descendants of \\(X\_i\\). Then \\(G\\) encodes the following set of
+independence assumptions, called the local independencies, denoted by
+\\(I\_l(G)\\):
+
+\begin{equation}
+  \text{ For each variable } X\_i: \left( X\_i \perp \mathrm{NonDescendants}\_{X\_i}
+         | \mathrm{Pa}\_{X\_i}^G \right)
+\end{equation}
+
+In other words, the local independencies state that each node \\(X\_i\\) is
+conditionally independent of its nondescendants given its parents.
+
+The formal semantics of a Bayesian network graph is as a set of
+independence assertions. On the other hand, our representation was a
+graph annotated with conditional probability distributions (CPDs).
+Here, we show that these two definitions are, in fact equivalent. A
+distribution \\(P\\) satisfies the local independencies associated with a
+graph \\(G\\) if and only if \\(P\\) is representable as a set of CPDs
+associated with the graph \\(G\\). We begin by formalizing the basic
+concepts.
+
+
+#### I-Maps {#i-maps}
+
+Let \\(P\\) be a distribution over \\(\mathcal{X}\\). We define
+\\(\mathcal{I}(P)\\) to be the set of independence assertions of the form
+\\((X \perp Y | Z)\\) that hold in \\(P\\).
+
+Now, we need to show that \\(\mathcal{I}\_l(G) \subseteq \mathcal{I}(P)\\).
+
+Let \\(K\\) be any graph object associated with a set of independencies
+\\(\mathcal{I}(K)\\). We say that \\(K\\) is an I-map for a set of
+independencies \\(\mathcal{I}\\) if $\mathcal{I}(K) \subseteq
+\\(\mathcal{I}\\).
+
+Now, we can say we need to show that \\(G\\) is an I-map for \\(P\\).
+
+For \\(G\\) to be an I-map for \\(P\\), it is necessary that \\(G\\) does not
+mislead us regarding independencies of \\(P\\): any independence that \\(G\\)
+asserts must also hold in \\(P\\). Conversely, \\(P\\) may have additional
+independencies not reflected in \\(G\\).
+
+
+#### I-Map to Factorization {#i-map-to-factorization}
+
+A BN structure \\(G\\) encodes a set of conditional independence
+assumptions; every distribution for which \\(G\\) is an I-map must
+satisfy these assumptions.
+
+
+### D-separation {#d-separation}
 
 We say that Q, W are _d-separated_ when variables \\(O\\) are observed if
 they are not connected by an _active path_. An undirected path in the
