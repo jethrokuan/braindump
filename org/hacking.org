@@ -1,0 +1,18 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Hacking
+
+* Search engines for Hackers
+cite:trimstray_se_hackers
+
+- https://censys.io/
+- https://www.shodan.io/
+- https://viz.greynoise.io/table
+- https://www.zoomeye.org/
+- https://fofa.so/
+- https://www.onyphe.io/
+- https://app.binaryedge.io/
+- https://hunter.io/
+- https://wigle.net/
+
+
+bibliography:hacking.bib

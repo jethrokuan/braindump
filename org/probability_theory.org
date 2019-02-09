@@ -38,9 +38,54 @@ satisfies 3 conditions:
 \end{equation}
 
 * Conditional Probabilities
+
+Conditional probabilities are a powerful and useful concept. First, we
+are often interested in calculating probabilities and expectations
+when some partial information is available. Second, in calculating a
+desired probability or expectation, it is often extremely useful to
+first "condition" on some appropriate random variable.
+
 We denote $P(E|F)$ the conditional probability that $E$ occurs given
 that $F$ has occurred. This is valid for all events $E$ and $F$ that
 satisfy the 3 conditions above.
+
+Recall that for any 2 events $E$ and $F$, the conditional probability
+of $E$ given $F$ is defined, as long as $P(F) > 0$, by:
+
+\begin{equation}
+  P(E|F) = \frac{P(EF)}{P(F)}
+\end{equation}
+
+If $X$ and $Y$ are discrete random variables, it is natural to define
+the conditional probability mass function of $X$ given that $Y = y$,
+by:
+
+\begin{align}
+  p_{X|Y}(x|y) &= P\left\{ X=x | Y=y \right\} \\
+               &= \frac{P(X = x, Y = y)}{P( Y = y)} \\
+               &= \frac{p(x,y)}{p_Y(y)}
+\end{align}
+
+for all values of $y$ such that $P(Y = y) > 0$. Similarly, we can
+define $F_{X|Y}(x|y) = \sum_{a\le x}p_{X|Y}(x|y)$.
+
+Finally, the conditional expectation of $X$ given that $Y = y$ is
+defined by:
+
+\begin{align}
+  E[X|Y = y] &= \sum_{x} P\left\{ X = x | Y = y \right\} \\
+             &= \sum_{x} x p_{X|Y} (x|y)
+\end{align}
+
+** Computing Expectations by Conditioning
+
+Let us denote by $E[X|Y]$ that function of the random variable $Y$
+whose value at $Y=y$ is $E[X|Y=y]$. An extremely important property of
+conditional expectation is that for all random variables $X$ and $Y$:
+
+\begin{equation}
+  E[X] = E\left[ E[X|Y] \right]
+\end{equation}
 
 * Independent Events
 
@@ -62,4 +107,5 @@ Since $EF$ and $EF^c$ are mutually exclusive, we have:
        &= P(E|F)P(F) + P(E|F^c)P(F^c) \\
   &= P(E|F)P(F) + P(E|F^c)\left( 1 - P(F) \right)
 \end{align}
+
 

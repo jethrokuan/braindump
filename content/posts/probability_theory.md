@@ -1,7 +1,7 @@
 +++
 title = "Probability Theory"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:23:45+08:00
+lastmod = 2019-02-09T14:31:30+08:00
 tags = ["statistics"]
 draft = false
 math = true
@@ -46,9 +46,54 @@ satisfies 3 conditions:
 
 ## Conditional Probabilities {#conditional-probabilities}
 
+Conditional probabilities are a powerful and useful concept. First, we
+are often interested in calculating probabilities and expectations
+when some partial information is available. Second, in calculating a
+desired probability or expectation, it is often extremely useful to
+first "condition" on some appropriate random variable.
+
 We denote \\(P(E|F)\\) the conditional probability that \\(E\\) occurs given
 that \\(F\\) has occurred. This is valid for all events \\(E\\) and \\(F\\) that
 satisfy the 3 conditions above.
+
+Recall that for any 2 events \\(E\\) and \\(F\\), the conditional probability
+of \\(E\\) given \\(F\\) is defined, as long as \\(P(F) > 0\\), by:
+
+\begin{equation}
+  P(E|F) = \frac{P(EF)}{P(F)}
+\end{equation}
+
+If \\(X\\) and \\(Y\\) are discrete random variables, it is natural to define
+the conditional probability mass function of \\(X\\) given that \\(Y = y\\),
+by:
+
+\begin{align}
+  p\_{X|Y}(x|y) &= P\left\\{ X=x | Y=y \right\\} \\\\\\
+               &= \frac{P(X = x, Y = y)}{P( Y = y)} \\\\\\
+               &= \frac{p(x,y)}{p\_Y(y)}
+\end{align}
+
+for all values of \\(y\\) such that \\(P(Y = y) > 0\\). Similarly, we can
+define \\(F\_{X|Y}(x|y) = \sum\_{a\le x}p\_{X|Y}(x|y)\\).
+
+Finally, the conditional expectation of \\(X\\) given that \\(Y = y\\) is
+defined by:
+
+\begin{align}
+  E[X|Y = y] &= \sum\_{x} P\left\\{ X = x | Y = y \right\\} \\\\\\
+             &= \sum\_{x} x p\_{X|Y} (x|y)
+\end{align}
+
+
+### Computing Expectations by Conditioning {#computing-expectations-by-conditioning}
+
+Let us denote by \\(E[X|Y]\\) that function of the random variable \\(Y\\)
+whose value at \\(Y=y\\) is \\(E[X|Y=y]\\). An extremely important property of
+conditional expectation is that for all random variables \\(X\\) and \\(Y\\):
+
+\begin{equation}
+  E[X] = E\left[ E[X|Y] \right]
+\end{equation}
 
 
 ## Independent Events {#independent-events}
