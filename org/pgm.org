@@ -1,6 +1,8 @@
 #+TITLE: Probabilistic Graph Models
 #+SETUPFILE: ./hugo_setup.org
 
+bibliographystyle:unsrt
+
 * Motivation
 Most tasks require a person or an automated system to /reason/: to take
 the available information and reach conclusions, both about what might
@@ -159,3 +161,8 @@ following holds:
 - $X \leftarrow Y \rightarrow Z, Y \not\in O$
 - $X \rightarrow Y \leftarrow Z, Y \text{ or any descendents} \in O$
 
+A nice tutorial on d-separation can be found here.
+cite:ucla_causal_discus
+
+
+bibliography:pgm.bib

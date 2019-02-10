@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-10T13:17:37+08:00
+lastmod = 2019-02-11T00:51:23+08:00
 draft = false
 math = true
 +++
@@ -172,3 +172,15 @@ following holds:
 -   \\(X \rightarrow Y \rightarrow Z, Y \not\in O\\)
 -   \\(X \leftarrow Y \rightarrow Z, Y \not\in O\\)
 -   \\(X \rightarrow Y \leftarrow Z, Y \text{ or any descendents} \in O\\)
+
+A nice tutorial on d-separation can be found here.
+<sup id="151bdec7a43a27209babe151afa6228e"><a href="#ucla_causal_discus" title="@misc{ucla_causal_discus,
+  author =       {UCLSA},
+  howpublished = {http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html},
+  note =         {Online; accessed 11 February 2019},
+  title =        {CAUSALITY - Discussion},
+  year =         {nil},
+}">(UCLSA, nil)</a></sup>
+
+# Bibliography
+<a id="ucla_causal_discus"></a>UCLSA,  (nil). *Causality - discussion*. Retrieved from [http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html). Online; accessed 11 February 2019. [↩](#151bdec7a43a27209babe151afa6228e)
