@@ -1,7 +1,7 @@
 +++
 title = "Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-09T16:21:08+08:00
+lastmod = 2019-02-10T21:05:15+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -442,7 +442,7 @@ utility, then neighbouring states should also have high expected
 utility.
 
 The utility of each state equals its own reward plus the expected
-utility of its successor states: i.e. it obeys the [Bellman Equation](#org38a3332)
+utility of its successor states: i.e. it obeys the [Bellman Equation](#orgc06107a)
 for a fixed policy.
 
 We can view directed utility estimation as searching for \\(U\\) in a
@@ -569,7 +569,7 @@ policy. The learning mechanism for the passive ADP agent will work for
 this
 
 Next, the agent has a choice of actions. The utilities it learns are
-defined by the optimal policy, governed by the [Bellman equations](#org38a3332).
+defined by the optimal policy, governed by the [Bellman equations](#orgc06107a).
 Having obtained a utility function for the given  model, the agent can
 extract an optimal action by one-step look-ahead to maximise the
 expected utility.
@@ -619,7 +619,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#org9dd50f5) remains unchanged. IT can be shown that the TD
+[update rule for TD](#orgbe8bf9b) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
@@ -692,7 +692,45 @@ happen rather than what the agent would like to happen.
 
 ### Actor Critic {#actor-critic}
 
+Batch actor-critic algorithm:
+
+1.  sample \\(\left\\{ s\_i, a\_i \right\\}\\) from \\(\pi\_\theta (a|s)\\) (run it
+    on the robot)
+2.  fit \\(\hat{V}\_\phi^\pi (s)\\) to sample reward sums
+3.  evaluate \\(\hat{A}^\pi (s\_i, a\_i) = r(s\_i, a\_i) +
+       \hat{V}\_\phi^\pi(s\_i') - \hat{V}\_\phi^\pi (s\_i)\\)
+4.  \\(\nabla\_\theta J(\theta) \approx \sum\_i \nabla\_\theta \log
+       \pi\_\theta(a\_i|s\_i) \hat{A}^\pi (s\_i|a\_i)\\)
+5.  \\(\theta \leftarrow \theta + \alpha \nabla\_\theta J(\theta)\\)
+
 <sup id="38c18a560d20d4d8d46b43c7dc375d47"><a href="#sutton2000policy" title="Sutton, McAllester, Singh \&amp; Mansour, Policy gradient methods for reinforcement learning with function approximation, 1057--1063, in in: {Advances in neural information processing systems}, edited by (2000)">(Sutton {\it et al.}, 2000)</a></sup><sup>,</sup><sup id="5ee60195703614202558f73eaeb64891"><a href="#mnih16_async_method_deep_reinf_learn" title="Mnih, Badia, Puigdom\`enech, Mirza, Graves, , Lillicrap, Harley, , Silver \&amp; Kavukcuoglu, Asynchronous Methods for Deep Reinforcement  Learning, {CoRR}, v(), (2016).">(Mnih {\it et al.}, 2016)</a></sup><sup>,</sup><sup id="23ad5881923885616b0afd34dad9df52"><a href="#gu16_q_prop" title="Gu, Lillicrap, Ghahramani, Zoubin, Turner \&amp; Levine, Q-Prop: Sample-Efficient Policy Gradient With an  Off-Policy Critic, {CoRR}, v(), (2016).">(Gu {\it et al.}, 2016)</a></sup>
+
+
+### Deep RL with Q-functions {#deep-rl-with-q-functions}
+
+-   What happens if we Just use a critic without an actor?
+-   Extracting a policy from a value function
+-   Q-learning algorithm
+-   Extension to Q-learning algorithms
+
+Full fitted Q-iteration algorithm:
+
+1.  collect dataset \\(\left\\{ (s\_i, a\_i, s\_i', r\_i)\right\\}\\) using some
+    policy
+2.  set \\(y\_i \leftarrow r(s\_i, a\_i) + \gamma \mathrm{max}\_{a\_i'}
+       Q\_\phi(s\_i', a\_i')\\)
+3.  set \\(\phi \leftarrow \mathrm{argmin}\_\phi \frac{1}{2} \sum\_i \lVert
+       Q\_\phi (s\_i, a\_i) - y\_i \rVert ^2\\)
+
+Online Q-iteration algorithm:
+
+1.  take some action \\(a\_i\\) and observe \\((s\_i, a\_i, s\_i', r\_i)\\)
+2.  \\(y\_i = r(s\_i, a\_i) + \gamma \mathrm{max}\_{a'}Q\_\phi(s\_i', a\_i')\\)
+3.  \\(\phi \leftarrow \phi - \alpha \frac{dQ\_\phi}{d\phi} (s\_i, a\_i)
+       (Q\_\phi (s\_i, a\_i) - y\_i)\\)
+
+Q-learning is not gradient descent, and does not converge in general,
+because there are no gradients through target value.
 
 # Bibliography
 <a id="sutton2000policy"></a>Sutton, R. S., McAllester, D. A., Singh, S. P., & Mansour, Y., *Policy gradient methods for reinforcement learning with function approximation*, In , Advances in neural information processing systems (pp. 1057–1063) (2000). : . [↩](#38c18a560d20d4d8d46b43c7dc375d47)

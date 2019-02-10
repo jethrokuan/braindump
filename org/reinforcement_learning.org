@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Reinforcement Learning
 #+HUGO_TAGS: machine-learning
+bibliographystyle:unsrt
 
 * Making Complex Decisions
 Earlier, we were concerned with environments with one-shot, episodic
@@ -643,8 +644,47 @@ happen rather than what the agent would like to happen.
 * Deep Reinforcement Learning
 
 ** Actor Critic
+
+Batch actor-critic algorithm:
+
+1. sample $\left\{ s_i, a_i \right\}$ from $\pi_\theta (a|s)$ (run it
+   on the robot)
+2. fit $\hat{V}_\phi^\pi (s)$ to sample reward sums
+3. evaluate $\hat{A}^\pi (s_i, a_i) = r(s_i, a_i) +
+   \hat{V}_\phi^\pi(s_i') - \hat{V}_\phi^\pi (s_i)$
+4. $\nabla_\theta J(\theta) \approx \sum_i \nabla_\theta \log
+   \pi_\theta(a_i|s_i) \hat{A}^\pi (s_i|a_i)$
+5. $\theta \leftarrow \theta + \alpha \nabla_\theta J(\theta)$
+
 cite:sutton2000policy,mnih16_async_method_deep_reinf_learn,gu16_q_prop
 
+
+
+** Deep RL with Q-functions
+
+- What happens if we Just use a critic without an actor?
+- Extracting a policy from a value function
+- Q-learning algorithm
+- Extension to Q-learning algorithms
+
+Full fitted Q-iteration algorithm:
+
+1. collect dataset $\left\{ (s_i, a_i, s_i', r_i)\right\}$ using some
+   policy
+2. set $y_i \leftarrow r(s_i, a_i) + \gamma \mathrm{max}_{a_i'}
+   Q_\phi(s_i', a_i')$
+3. set $\phi \leftarrow \mathrm{argmin}_\phi \frac{1}{2} \sum_i \lVert
+   Q_\phi (s_i, a_i) - y_i \rVert ^2$
+
+Online Q-iteration algorithm:
+
+1. take some action $a_i$ and observe $(s_i, a_i, s_i', r_i)$
+2. $y_i = r(s_i, a_i) + \gamma \mathrm{max}_{a'}Q_\phi(s_i', a_i')$
+3. $\phi \leftarrow \phi - \alpha \frac{dQ_\phi}{d\phi} (s_i, a_i)
+   (Q_\phi (s_i, a_i) - y_i)$
+
+Q-learning is not gradient descent, and does not converge in general,
+because there are no gradients through target value.
+
+
 bibliography:rl.bib
-
-

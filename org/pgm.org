@@ -132,7 +132,7 @@ Now, we need to show that $\mathcal{I}_l(G) \subseteq \mathcal{I}(P)$.
 Let $K$ be any graph object associated with a set of independencies
 $\mathcal{I}(K)$. We say that $K$ is an I-map for a set of
 independencies $\mathcal{I}$ if $\mathcal{I}(K) \subseteq
-$\mathcal{I}$.
+\mathcal{I}$.
 
 Now, we can say we need to show that $G$ is an I-map for $P$.
 

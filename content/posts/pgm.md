@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-09T17:40:59+08:00
+lastmod = 2019-02-10T13:17:37+08:00
 draft = false
 math = true
 +++
@@ -142,8 +142,8 @@ Now, we need to show that \\(\mathcal{I}\_l(G) \subseteq \mathcal{I}(P)\\).
 
 Let \\(K\\) be any graph object associated with a set of independencies
 \\(\mathcal{I}(K)\\). We say that \\(K\\) is an I-map for a set of
-independencies \\(\mathcal{I}\\) if $\mathcal{I}(K) \subseteq
-\\(\mathcal{I}\\).
+independencies \\(\mathcal{I}\\) if \\(\mathcal{I}(K) \subseteq
+\mathcal{I}\\).
 
 Now, we can say we need to show that \\(G\\) is an I-map for \\(P\\).
 
