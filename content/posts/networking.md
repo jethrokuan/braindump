@@ -1,7 +1,7 @@
 +++
 title = "Computer Networking"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-25T13:03:10+08:00
+lastmod = 2019-02-11T13:32:59+08:00
 tags = ["networking"]
 draft = false
 math = true
@@ -397,5 +397,49 @@ Cookie consists of 4 components:
 
 A web cache -- also called a proxy server -- may satisfy HTTP requests
 on behalf of an origin Web server.
+
+
+### DNS {#dns}
+
+People prefer the more mnemonic hostname identifier (e.g.
+`www.google.com`), whil emrouters prefer fixed-length, hierarchically
+structured IP addresses.
+
+In order to reconcile these different preferences, we need a directory
+service that translates hostnames to IP addresses. This is the main
+task of the Internet's Domain Name System (DNS).
+
+The DNS is (1) a distributed database implemented in a hierarchy of
+name servers and (2) an application-layer protocol that allows hosts
+and name servers to communicate in order to provide the translation
+service. The DNS protocol runs over UDP and uses port 53.
+
+DNS is commonly employed by other application-layer protocols, such as
+HTTP, to translate user-supplied host names to IP addresses.
+
+No one name server has all of the mappings of all of the hosts in the
+internet. DNS uses a large number of name servers organized in a
+hierarchical fashion and distributed around the world.
+
+Local name servers
+: Each ISP -- such as a university -- has a
+    local name server. when a host issues a DNS query message, the
+    message is first sent to the host's local name server.
+
+Root name servers
+: There are a dozen or so root name servers,
+    situated primarily in North America. When a local name server is
+    unable to respond to a DNS query, it acts as a DNS client and
+    makes a DNS query to a root name server.
+
+Authoritative name servers
+: The root name server may not know the
+    IP address of a particular host. Instead the root name server
+    knows the IP address of the authoritative name server that has
+    the desired mapping. A name server is authoritative for a host if
+    it always has a DNS record that translates the host's hostname to
+    that host's IP address. When an authoritative name server is
+    queried by a root server, the authoritative name server responds
+    with a reply containing the desired mapping.
 
 <networking.bib>
