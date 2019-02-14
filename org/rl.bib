@@ -79,3 +79,84 @@
   eprint =       {1611.02247},
   primaryClass = {cs.LG},
 }
+
+@Article{Mnih_2015,
+  author       = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver,
+                  David and Rusu, Andrei A. and Veness, Joel and
+                  Bellemare, Marc G. and Graves, Alex and Riedmiller,
+                  Martin and Fidjeland, Andreas K. and Ostrovski,
+                  Georg and et al.},
+  title        = {Human-level control through deep reinforcement
+                  learning},
+  year         = 2015,
+  volume       = 518,
+  number       = 7540,
+  month        = {Feb},
+  pages        = {529–533},
+  issn         = {1476-4687},
+  doi          = {10.1038/nature14236},
+  url          = {http://dx.doi.org/10.1038/nature14236},
+  journal      = {Nature},
+  publisher    = {Springer Nature}
+}
+
+@article{andrychowicz17_hinds_exper_replay,
+  author =       {Andrychowicz, Marcin and Wolski, Filip and Ray, Alex
+                  and Schneider, Jonas and Fong, Rachel and Welinder,
+                  Peter and McGrew, Bob and Tobin, Josh and Abbeel,
+                  Pieter and Zaremba, Wojciech},
+  title =        {Hindsight Experience Replay},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1707.01495v3},
+  abstract =     {Dealing with sparse rewards is one of the biggest
+                  challenges in Reinforcement Learning (RL). We
+                  present a novel technique called Hindsight
+                  Experience Replay which allows sample-efficient
+                  learning from rewards which are sparse and binary
+                  and therefore avoid the need for complicated reward
+                  engineering. It can be combined with an arbitrary
+                  off-policy RL algorithm and may be seen as a form of
+                  implicit curriculum. We demonstrate our approach on
+                  the task of manipulating objects with a robotic arm.
+                  In particular, we run experiments on three different
+                  tasks: pushing, sliding, and pick-and-place, in each
+                  case using only binary rewards indicating whether or
+                  not the task is completed. Our ablation studies show
+                  that Hindsight Experience Replay is a crucial
+                  ingredient which makes training possible in these
+                  challenging environments. We show that our policies
+                  trained on a physics simulation can be deployed on a
+                  physical robot and successfully complete the task.},
+  archivePrefix ={arXiv},
+  eprint =       {1707.01495},
+  primaryClass = {cs.LG},
+}
+
+@article{schaul15_prior_exper_replay,
+  author =       {Schaul, Tom and Quan, John and Antonoglou, Ioannis
+                  and Silver, David},
+  title =        {Prioritized Experience Replay},
+  journal =      {CoRR},
+  year =         2015,
+  url =          {http://arxiv.org/abs/1511.05952v4},
+  abstract =     {Experience replay lets online reinforcement learning
+                  agents remember and reuse experiences from the past.
+                  In prior work, experience transitions were uniformly
+                  sampled from a replay memory. However, this approach
+                  simply replays transitions at the same frequency
+                  that they were originally experienced, regardless of
+                  their significance. In this paper we develop a
+                  framework for prioritizing experience, so as to
+                  replay important transitions more frequently, and
+                  therefore learn more efficiently. We use prioritized
+                  experience replay in Deep Q-Networks (DQN), a
+                  reinforcement learning algorithm that achieved
+                  human-level performance across many Atari games. DQN
+                  with prioritized experience replay achieves a new
+                  state-of-the-art, outperforming DQN with uniform
+                  replay on 41 out of 49 games.},
+  archivePrefix ={arXiv},
+  eprint =       {1511.05952},
+  primaryClass = {cs.LG},
+}

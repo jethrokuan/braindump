@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-11T00:51:23+08:00
+lastmod = 2019-02-14T13:49:22+08:00
 draft = false
 math = true
 +++
@@ -159,8 +159,100 @@ A BN structure \\(G\\) encodes a set of conditional independence
 assumptions; every distribution for which \\(G\\) is an I-map must
 satisfy these assumptions.
 
+Consider the joint distribution \\(P(I, D, G, L, S)\\); from the chain
+rule for probability, we can decompose the distribution in the
+following way:
 
-### D-separation {#d-separation}
+\begin{equation}
+  P(I, D, G, L, S) = P(I) P(D|I) P(G|I, D) P(L | I, D, G) P(S | I, D,
+  G, L)
+\end{equation}
+
+This decomposition requires no assumptions. We may however be able to
+apply our conditional independence assumptions induced from the BN.
+
+We say that a distribution \\(P\\) over the same space factorizes
+according to a BN graph \\(G\\) if \\(P\\) can be expressed as a product:
+
+\begin{equation}
+  P(X\_1, \dots, X\_n) = \prod\_{i=1}^{n} P(X\_i | \mathrm{Pa}\_{X\_i}^G).
+\end{equation}
+
+This equation is called the chain rule for BNs. The individual factors
+\\(P(X\_i | \mathrm{Pa}\_{X\_i}^G)\\) are called conditional probability
+distributions (CPDs) or local probabilistic models.
+
+We can now show that if \\(G\\) is a BN structure over a set of random
+variables \\(X\\), and \\(P\\) be a joint distribution over the same space,
+then if \\(G\\) is an I-map for \\(P\\), \\(P\\) factorizes according to \\(G\\).
+
+**Proof**:
+
+Assume, without loss of generality, that \\(X\_1, \dots, X\_n\\) is a
+topological ordering of the variables in \\(X\\) relative to \\(G\\). First,
+we use the chain rule for probabilities:
+
+\begin{equation}
+  P(X\_1, \dots, X\_n) = \prod\_{i=1}^{n}P(X\_i | X\_1, \dots, X\_{i-1}).
+\end{equation}
+
+Now consider one of the factors \\(P(X\_i|X\_1, \dots, X\_{i-1})\\). As \\(G\\)
+is an I-map for \\(P\\), we have \\((X\_i \perp \mathrm{ND}\_{X\_i} |
+\mathrm{Pa}\_{X\_i}^G) \in I(P)\\). By assumption, all of \\(X\_i\\)'s parents
+are in the set \\(X\_1, \dots, X\_{i-1}\\). Furthermore, none of \\(X\_i\\)'s
+descendants can possibly be in the set. Hence
+
+\begin{equation}
+  \left\\{ X\_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X\_i} \in \mathbb{Z}
+\end{equation}
+
+where \\(\mathbb{Z} \in \mathrm{ND}\_{X\_i}\\). Form the local
+independencies for \\(X\_i\\) and from the position property it follows
+that \\(X\_i \perp \mathbb{Z} | \mathrm{Pa}\_{X\_i}\\). Hence \\(P(X\_i| X\_1,
+\dots X\_{i-1}) = P(X\_i | \mathrm{Pa}\_{X\_i})\\).
+
+Applying this transformation to all of the factors in the chain rule
+decomposition gives the desired result.
+
+
+#### Factorization to I-map {#factorization-to-i-map}
+
+This is simple to prove, by manipulation of probabilities.
+
+
+### Independencies in Graphs {#independencies-in-graphs}
+
+Dependencies and independencies are crucial for understanding the
+behaviour of a distribution. Independency properties are also
+important for answering queries: they can be exploited to reduce
+substantially the computational cost of inference. Therefore, it is
+important that our representations make these properties clearly
+visible both to a user and to algorithms that manipulate the BN data
+structure.
+
+The immediate question that arises is whether there exist independence
+properties that we can read off directly from \\(G\\).n
+
+
+#### D-separation {#d-separation}
+
+We want to be able to guarantee that an independence \\((\mathbb{X}
+\perp \mathbb{Y} | \mathbb{Z})\\), holds in a distribution associated
+with a BN structure \\(G\\). It helps to consider its converse: "Can we
+imagine a case where it does not?"
+
+**Direct Connection**
+
+If \\(X \rightarrow Y\\), then we can construct a distribution such that
+\\(X\\) and \\(Y\\) are correlated regardless of any evidence about of the
+other variables in the network. (e.g. \\(Val(X) = Val(Y)\\))
+
+**Indirect Connection**
+
+Consider a 3-node network where \\(X\\) and \\(Z\\) are not directly connected
+but through \\(Y\\). There are four possible 2-edge trails:
+
+{{< figure src="/ox-hugo/screenshot_2019-02-14_13-04-30.png" >}}
 
 We say that Q, W are _d-separated_ when variables \\(O\\) are observed if
 they are not connected by an _active path_. An undirected path in the
@@ -168,10 +260,49 @@ Bayesian network \\(G\\) is called _active_ given observed variables \\(O\\)
 if for every triple of variables \\(X, Y, Z\\) on the path, one of the
 following holds:
 
--   \\(X \leftarrow Y \leftarrow Z, Y \not\in O\\)
--   \\(X \rightarrow Y \rightarrow Z, Y \not\in O\\)
--   \\(X \leftarrow Y \rightarrow Z, Y \not\in O\\)
--   \\(X \rightarrow Y \leftarrow Z, Y \text{ or any descendents} \in O\\)
+Casual trail
+: \\(X \leftarrow Y \leftarrow Z, Y \not\in O\\) active
+    iff \\(Y\\) is not observed
+
+Evidential trail
+: \\(X \rightarrow Y \rightarrow Z, Y \not\in O\\)
+    active iff \\(Y\\) is not observed
+
+Common cause
+: \\(X \leftarrow Y \rightarrow Z, Y \not\in O\\) active
+    iff \\(Y\\) is not observed
+
+Common effect
+: \\(X \rightarrow Y \leftarrow Z, Y \text{ or any
+                       descendants} \in O\\) active iff either \\(Y\\) or one of
+    \\(Y\\)'s descendants is observed
+
+Consider the general trail \\(X\_1 \rightleftharpoons X\_2
+\rightleftharpoons \dots \rightleftharpoons X\_n\\). Let \\(\matbb{Z}\\) be a
+subset of observed variables. Then the trail is active given
+\\(\mathbb{Z}\\) if:
+
+-   Whenever we have a v-structure \\(X\_{i-1} \rightarrow X\_i \leftarrow
+      X\_{i+1}\\), then \\(X\_i\\) or one of its descendants are in \\(\mathbb{Z}\\);
+-   no other node along the trail is in \\(\mathbb{Z}\\).
+
+Let \\(\mathbb{X}, \mathbb{Y}, \mathbb{Z}\\) be three sets of nodes in
+\\(\mathcal{G}\\). We say that \\(\mathbb{X}\\) and \\(\mathbb{Y}\\) are
+d-separated given \\(\mathbb{Z}\\), denoted
+\\(\mathrm{d-sep}\_{\mathcal{G}}(\mathbb{X}; \mathbb{Y} | \mathbb{Z})\\),
+if there is no active trail between any node \\(X \in \mathbb{X}\\), and
+$Y &isin; \mathbb{Y} $ given \\(\mathbb{Z}\\). We use
+\\(\mathcal{I}(\mathcal{G})\\) to denote this set of independencies that
+correspond to d-separation:
+
+\begin{equation}
+  \mathcal{I}(\mathcal{G}) = \left\\{ (\mathbb{X} \perp \mathbb{Y} |
+    \mathbb{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbb{X}; \mathbb{Y} | \mathbb{Z}) \right\\}
+\end{equation}
+
+This set is also called the set of _global Markov independencies_. These
+independencies are precisely those that are guaranteed to hold for
+every distribution over \\(G\\).
 
 A nice tutorial on d-separation can be found here.
 <sup id="151bdec7a43a27209babe151afa6228e"><a href="#ucla_causal_discus" title="@misc{ucla_causal_discus,
@@ -182,5 +313,143 @@ A nice tutorial on d-separation can be found here.
   year =         {nil},
 }">(UCLSA, nil)</a></sup>
 
+
+### Soundness and Completeness {#soundness-and-completeness}
+
+Soundness
+: If a distribution \\(P\\) factorizes according to \\(G\\), then
+    \\(\mathcal{I}(G) \subseteq \mathcal{I}(P)\\).
+
+Completeness
+: If we have 2 variables \\(X\\) and \\(Y\\) that are
+    independent given \\(\mathbb{Z}\\), then \\(X\\) and \\(Y\\) are
+    d-separated. We find that this is ill-defined,
+    because it does not specify the distribution in
+    which \\(X\\) and \\(Y\\) are independent.
+
+Faithful
+: A distribution \\(P\\) is faithful to \\(G\\) if, whenever \\((X
+                  \perp Y | \mathbb{Z}) \in I(P)\\), then
+    \\(\mathrm{d-sep}\_{G}(X;Y|\mathbb{Z})\\). Any independence
+    in \\(P\\) is reflected in the d-separation properties of
+    the graph.
+
+The notion of faithfulness is the converse of our notion of soundness.
+However, it can be shown that this desirable property of faithfulness
+is false.
+
+We can, however, adopt a weaker but useful definition of completeness:
+
+If \\((X \perp Y | \mathbb{Z})\\) in all distributions \\(P\\) that factorize
+over \\(G\\), then \\(\mathrm{d-sep}\_G(X;Y|\mathbb{Z})\\).
+
+Using this definition, we can show that If \\(X\\) and \\(Y\\) are not
+d-separated given \\(\mathbb{Z}\\) in \\(G\\), then \\(X\\) and \\(Y\\) are dependent
+given \\(Z\\) in some distribution \\(P\\) that factorizes over \\(G\\).
+
+This completeness result tells us that our definition of \\(I(G)\\) ist
+the maximal one: for any independence assertion that is not a
+consequence of d-separation in 4g$, we can always find a
+counterexample distribution \\(P\\) that factorizes over \\(G\\).
+
+In fact, for almost all distributions \\(P\\) that factorize over \\(G\\),
+that is for all distributions except for a set of measure zero in the
+space of CPD parameterizations, we have \\(I(P) = I(G)\\).
+
+
+### An algorithm for d-separation {#an-algorithm-for-d-separation}
+
+There is a linear-time (in the size of the graph) algorithm for
+determining the set of d-separations. The algorithm has 2 phases:
+
+1.  Traverse the graph bottom up, from the leaves to the roots, marking
+    all nodes that are in \\(\mathbb{Z}\\) or that have descendants in
+    \\(\mathbb{Z}\\). These nodes will serve to enable v-structures.
+2.  Traverse breadth-first from \\(X\\) to \\(Y\\), stopping the traversal
+    along a trail when we get to a blocked node.
+
+A node is blocked if:
+
+1.  it is the "middle" node in a v-structure and unmarked in phase I, or
+2.  It is not a middle node and is in $\mathbb{Z}
+
+If the BFS gets us from \\(X\\) to \\(Y\\), then there is an active trail
+between them.
+
+{{< figure src="/ox-hugo/screenshot_2019-02-14_13-27-38.png" >}}
+
+
+### I-equivalence {#i-equivalence}
+
+The notion of \\(I(G)\\) specifies a set of conditional independence
+assertions that are associated with a graph. This allows us to
+abstract away of details of the graph structure, viewing it purely as
+a specification of independence properties.
+
+One important implication of this perspective is the observation that
+very different BN structures can actually be equivalent, in that they
+encode the same set of conditional independence assumptions.
+
+This brings us to the notion of **I-equivalence**:
+
+Two graphs \\(K\_1\\) and \\(K\_2\\) over \\(X\\) are I-equivalent if \\(I(K\_1) =
+I(K\_2)\\). The set of all graphs over \\(X\\) are partitioned into mutually
+exclusive and exhaustive I-equivalence classes.
+
+This notion implies that any distribution \\(P\\) that can be factorized
+over one of these graphs can be factorized over the other.
+Furthermore, there is no intrinsic property of \\(P\\) that would allow us
+to associate it with one graph rather than an equivalent one. This
+observation has important implications with respect to our ability to
+determine the directionality of influence.
+
+
+### From Distributions to Graphs {#from-distributions-to-graphs}
+
+Given a distribution \\(P\\), to what extent can we construct a graph \\(G\\)
+whose independencies are a reasonable surrogate for the independencies
+in \\(P\\)? We will never actually take a fully-specified distribution 4p$
+and construct a graph \\(G\\) for it, as this is way too large. However,
+answering this question is an important contextual exercise, that h
+helps in understanding the process of constructing a BN that
+represents our model of the world.
+
+
+#### Minimal I-maps {#minimal-i-maps}
+
+One approach to finding a graph that represents a distribution 4p$ is
+simply to take any graph that is an I-map for \\(P\\). However, a complete
+graph is an I-map for any distribution, but it does not reveal any
+independencies in the distribution. This intuition leads us to the
+definition of a minimal I-map:
+
+A graph \\(K\\) is a minimal I-map for a set of independencies 4i$ if it
+is an I-map for \\(I\\), and if the removal of even a single edge from \\(K\\)
+renders it not an I-map.
+
+To obtain a minimal I-map we simply follow a natural algorithm that
+arises through the factorization theorem. Note that the minimal I-map
+is not necessarily unique in this construction.
+
+{{< figure src="/ox-hugo/screenshot_2019-02-14_13-43-46.png" >}}
+
+Minimal I-maps fail to capture all the independencies that hold in the
+distribution. Hence, that \\(G\\) is a minimal I-map for \\(P\\) is far from a
+guarantee that \\(G\\) captures the independence structure in \\(P\\).
+
+
+#### Perfect Maps {#perfect-maps}
+
+We say that a graph \\(K\\) is a P-map for a distribution \\(P\\), for a set
+of independencies \\(I\\) if we have that \\(I(K) = I\\). We say that \\(K\\) is a
+perfect map for \\(P\\) if \\(I(K) = I(P)\\).
+
+Unfortunately, not every distribution has a perfect map. There exists
+an algorithm for finding the DAG representing the P-map for a
+distribution of a P-map if it exists, but is quite involved. See
+<sup id="5a9029278bdd1052b087d2ffe61df3ab"><a href="#koller2009probabilistic" title="Koller, Friedman \&amp; Bach, Probabilistic graphical models: principles and techniques, MIT press (2009).">(Koller {\it et al.}, 2009)</a></sup>.
+
 # Bibliography
 <a id="ucla_causal_discus"></a>UCLSA,  (nil). *Causality - discussion*. Retrieved from [http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html). Online; accessed 11 February 2019. [↩](#151bdec7a43a27209babe151afa6228e)
+
+<a id="koller2009probabilistic"></a>Koller, D., Friedman, N., & Bach, F., *Probabilistic graphical models: principles and techniques* (2009), : MIT press. [↩](#5a9029278bdd1052b087d2ffe61df3ab)
