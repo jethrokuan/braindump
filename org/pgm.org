@@ -315,9 +315,9 @@ Using this definition, we can show that If $X$ and $Y$ are not
 d-separated given $\mathbb{Z}$ in $G$, then $X$ and $Y$ are dependent
 given $Z$ in some distribution $P$ that factorizes over $G$.
 
-This completeness result tells us that our definition of $I(G)$ ist
+This completeness result tells us that our definition of $I(G)$ is
 the maximal one: for any independence assertion that is not a
-consequence of d-separation in 4g$, we can always find a
+consequence of d-separation in $g$, we can always find a
 counterexample distribution $P$ that factorizes over $G$.
 
 In fact, for almost all distributions $P$ that factorize over $G$,
@@ -338,7 +338,7 @@ determining the set of d-separations. The algorithm has 2 phases:
 A node is blocked if:
 
 1. it is the "middle" node in a v-structure and unmarked in phase I, or
-2. It is not a middle node and is in $\mathbb{Z}
+2. It is not a middle node and is in $\mathbb{Z}$
 
 If the BFS gets us from $X$ to $Y$, then there is an active trail
 between them.
@@ -373,7 +373,7 @@ determine the directionality of influence.
 
 Given a distribution $P$, to what extent can we construct a graph $G$
 whose independencies are a reasonable surrogate for the independencies
-in $P$? We will never actually take a fully-specified distribution 4p$
+in $P$? We will never actually take a fully-specified distribution $p$
 and construct a graph $G$ for it, as this is way too large. However,
 answering this question is an important contextual exercise, that h
 helps in understanding the process of constructing a BN that
@@ -381,13 +381,13 @@ represents our model of the world.
 
 *** Minimal I-maps
 
-One approach to finding a graph that represents a distribution 4p$ is
+One approach to finding a graph that represents a distribution $p$ is
 simply to take any graph that is an I-map for $P$. However, a complete
 graph is an I-map for any distribution, but it does not reveal any
 independencies in the distribution. This intuition leads us to the
 definition of a minimal I-map:
 
-A graph $K$ is a minimal I-map for a set of independencies 4i$ if it
+A graph $K$ is a minimal I-map for a set of independencies $i$ if it
 is an I-map for $I$, and if the removal of even a single edge from $K$
 renders it not an I-map.
 
