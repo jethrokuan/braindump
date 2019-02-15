@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-15T15:18:06+08:00
+lastmod = 2019-02-15T15:23:07+08:00
 draft = false
 math = true
 +++
@@ -477,10 +477,13 @@ distribution of a P-map if it exists, but is quite involved. See
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
+(The bulk of the material is from Murphy's book
+<sup id="ad636e8b7bde174b3dcd3eb7da7aec45"><a href="#murphy2014machine" title="Murphy, Machine learning: a probabilistic perspective. 2012, {Cit{\'e} en}, v(), 117 (2014).">(Murphy, 2014)</a></sup>)
+
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
 image, we might suppose that the neighbouring pixels are correlated.
-We may from ma DAG model with a 2d lattice topology as such:
+We may form a DAG model with a 2d lattice topology as such:
 
 {{< figure src="/ox-hugo/screenshot_2019-02-15_13-15-34.png" caption="Figure 3: 2d lattice represented as a DAG." >}}
 
@@ -511,7 +514,7 @@ pairwise Markov property
 The global Markov property implies the local and pairwise Markov
 properties. If \\(p(x) > 0\\) for all \\(x\\), then the pairwise Markov
 property implies the global Markov property. This result allows us to
-use pairwise CI statements to construct a graph from which global CI
+use pairwise CI statements to construct a graph from which global
 statements can be extracted.
 
 
@@ -703,7 +706,7 @@ A CRF is a version of an MRF where all the clique potentials are
 conditioned on input features:
 
 \begin{equation}
-  p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{\x},
+  p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{x},
     \mathbf{w})} \prod\_{c} \psi\_c(\mathbf{y}\_c | \mathbf{x}, \mathbf{w})
 \end{equation}
 
@@ -726,3 +729,5 @@ However, CRF requires labeled training data, and are slower to train.
 <a id="ucla_causal_discus"></a>UCLSA,  (nil). *Causality - discussion*. Retrieved from [http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html). Online; accessed 11 February 2019. [↩](#151bdec7a43a27209babe151afa6228e)
 
 <a id="koller2009probabilistic"></a>Koller, D., Friedman, N., & Bach, F., *Probabilistic graphical models: principles and techniques* (2009), : MIT press. [↩](#5a9029278bdd1052b087d2ffe61df3ab)
+
+<a id="murphy2014machine"></a>Murphy, K. P., *Machine learning: a probabilistic perspective. 2012*, Cit{\'e} en, *()*, 117 (2014).  [↩](#ad636e8b7bde174b3dcd3eb7da7aec45)

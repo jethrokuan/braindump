@@ -424,10 +424,13 @@ cite:koller2009probabilistic.
 
 
 * Undirected Graphical Models
+(The bulk of the material is from Murphy's book
+cite:murphy2014machine)
+
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
 image, we might suppose that the neighbouring pixels are correlated.
-We may from ma DAG model with a 2d lattice topology as such:
+We may form a DAG model with a 2d lattice topology as such:
 
 #+CAPTION: 2d lattice represented as a DAG.
 [[file:images/pgm/screenshot_2019-02-15_13-15-34.png]]
@@ -454,7 +457,7 @@ UGMs define CI relationships via simple graph separation as follows:
 The global Markov property implies the local and pairwise Markov
 properties. If $p(x) > 0$ for all $x$, then the pairwise Markov
 property implies the global Markov property. This result allows us to
-use pairwise CI statements to construct a graph from which global CI
+use pairwise CI statements to construct a graph from which global
 statements can be extracted.
 
 ** Representation Power
@@ -635,7 +638,7 @@ such as *pseudo likelihood*, and *stochastic maximum likelihood*.
  conditioned on input features:
 
 \begin{equation}
-  p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{\x},
+  p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{x},
     \mathbf{w})} \prod_{c} \psi_c(\mathbf{y}_c | \mathbf{x}, \mathbf{w})
 \end{equation}
 
