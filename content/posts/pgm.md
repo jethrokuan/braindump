@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-15T08:24:17+08:00
+lastmod = 2019-02-15T14:32:42+08:00
 draft = false
 math = true
 +++
@@ -478,3 +478,134 @@ distribution of a P-map if it exists, but is quite involved. See
 <a id="ucla_causal_discus"></a>UCLSA,  (nil). *Causality - discussion*. Retrieved from [http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html). Online; accessed 11 February 2019. [↩](#151bdec7a43a27209babe151afa6228e)
 
 <a id="koller2009probabilistic"></a>Koller, D., Friedman, N., & Bach, F., *Probabilistic graphical models: principles and techniques* (2009), : MIT press. [↩](#5a9029278bdd1052b087d2ffe61df3ab)
+
+
+## Undirected Graphical Models {#undirected-graphical-models}
+
+For some domains, being forced to choose a direction for the edges, as
+required by a DGM is awkward. For example, if we're modelling an
+image, we might suppose that the neighbouring pixels are correlated.
+We may from ma DAG model with a 2d lattice topology as such:
+
+{{< figure src="/ox-hugo/screenshot_2019-02-15_13-15-34.png" caption="Figure 3: 2d lattice represented as a DAG." >}}
+
+However, representing the conditional probabilities in this way is
+rather unnatural: the Markov blanket of node \\(X\_8\\) includes its
+non-neighbours. Instead, we may want to use a UGM, or Markov Random
+Field (MRF).
+
+{{< figure src="/ox-hugo/screenshot_2019-02-15_13-16-41.png" caption="Figure 4: UGM representation of the lattice topology." >}}
+
+
+### Conditional Independence Properties of UGMs {#conditional-independence-properties-of-ugms}
+
+UGMs define CI relationships via simple graph separation as follows:
+
+global Markov property
+: \\(A \perp B | \mathbf{C}\\) if there is no
+    path between A and B in the graph upon removing all nodes in \\(\mathbf{C}\\).
+
+local Markov property
+: \\(A \perp V \setminus \\{\textrm{mb}(A),
+         A\\} | \textrm{mb}(A)\\)
+
+pairwise Markov property
+: \\(A \perp B | V \setminus \left{ A,
+         B\right}\\)
+
+The global Markov property implies the local and pairwise Markov
+properties. If \\(p(x) > 0\\) for all \\(x\\), then the pairwise Markov
+property implies the global Markov property. This result allows us to
+use pairwise CI statements to construct a graph from which global CI
+statements can be extracted.
+
+
+### Representation Power {#representation-power}
+
+DGMs and UGMs can perfectly represent different set of distributions.
+The set of distributions that are perfectly represented by both DGMs
+and UGMs are termed _chordal._
+
+{{< figure src="/ox-hugo/screenshot_2019-02-15_14-17-02.png" >}}
+
+In general, CI properties in UGMs are monotonic, in the following
+sense: if \\(A \perp B | C\\), then \\(A \perp B | C \cup D\\). In DGMs, CI
+properties can be non-monotonic, since conditioning on extra variables
+can eliminate conditional independencies due to explaining away.
+
+<div class="definition">
+  <div></div>
+
+If all the variables are collapsed in each maximal clique to make
+"mega-variables", the resulting graph will be a tree if the
+distribution is _chordal_.
+
+</div>
+
+
+### The Undirected alternative to d-separation {#the-undirected-alternative-to-d-separation}
+
+It is tempting tot simply convert the DGM to a UGM by dropping the
+orientation of the edges, but this is incorrect because a v-structure
+has different CI properties than the undirected chain. To avoid such
+incorrect CI statemnets, we can add edges between the "unmarreid"
+parents A and C, and then drop the arrows from the edges, forming in
+a connected undirected graph. This process is called **moralization**.
+
+Moralization loses some CI information, and therefore we cannot used a
+moralized UGM to determine CI properties of the DGM.
+
+
+### Parameterization of MRFs {#parameterization-of-mrfs}
+
+Since there is no topological ordering in an unordered graph, \\(p(y)\\)
+cannot be represented with the chain rule. Instead, potential
+functions or factors are associated with each maximal clique in the
+graph The join distribution is defined to be proportional to the
+product of clique potentials. The Hammersley-Clifford theorem shows
+that any positive distribution whose CI properties can be represented
+by a UGM can be represented in this way.
+
+<div class="theorem">
+  <div></div>
+
+A positive distribution \\(p(y) > 0\\) satisfies the CI properties of an
+undirected graph \\(G\\) iff p can be represented as a product of
+factors, one per maximal clique, i.e.,
+
+\begin{equation}
+  p(\mathbf{y}|\mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
+  \prod\_{c\in \mathcal{C}} \Phi\_c(\mathbf{y}\_c | \mathbf{\theta}\_c)
+\end{equation}
+
+were \\(C\\) is the set of all the (maximal) cliques of \\(G\\), and
+\\(Z(\mathbf{\theta})\\) is the partition function given by
+
+\begin{equation}
+  Z(\mathbf{\theta}) = \sum\_{x} \prod\_{c \in \mathcal{C}} \Phi\_c(\mathbf{y}\_c|\mathbf{\theta}\_c)
+\end{equation}
+
+</div>
+
+
+### Connection between statistical physics {#connection-between-statistical-physics}
+
+There is a model known as the Gibbs distribution, which can be written
+as follows:
+
+\begin{equation}
+  p(\mathbf{y} | \mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
+  \mathrm{exp} \left( - \sum\_{c} E(\mathbf{y}\_c | \mathbf{\theta}\_c) \right)
+\end{equation}
+
+where \\(E(\mathbf{y}\_c)\\) is the energy associated with the variables in
+clique \\(c\\). We can convert this to a UGM by defining:
+
+\begin{equation}
+  \Phi\_c(\mathbf{y}\_c | \mathbf{\theta}\_c) = \mathrm{exp}\left( - E(\mathbf{y}\_c | \mathbf{\theta}\_c) \right)
+\end{equation}
+
+Here we see that high probability states correspond to low energy
+configurations. We are also free to restrict the parameterization to
+the edges of the graph. A rather convenient formulation is the
+pairwise MRF.
