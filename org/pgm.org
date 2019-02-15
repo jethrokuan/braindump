@@ -423,8 +423,6 @@ distribution of a P-map if it exists, but is quite involved. See
 cite:koller2009probabilistic.
 
 
-bibliography:pgm.bib
-
 * Undirected Graphical Models
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -655,3 +653,5 @@ data-dependent. For example, we can make the latent labels in an NLP
 problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
+
+bibliography:pgm.bib

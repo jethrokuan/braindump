@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-15T15:17:23+08:00
+lastmod = 2019-02-15T15:18:06+08:00
 draft = false
 math = true
 +++
@@ -474,11 +474,6 @@ an algorithm for finding the DAG representing the P-map for a
 distribution of a P-map if it exists, but is quite involved. See
 <sup id="5a9029278bdd1052b087d2ffe61df3ab"><a href="#koller2009probabilistic" title="Koller, Friedman \&amp; Bach, Probabilistic graphical models: principles and techniques, MIT press (2009).">(Koller {\it et al.}, 2009)</a></sup>.
 
-# Bibliography
-<a id="ucla_causal_discus"></a>UCLSA,  (nil). *Causality - discussion*. Retrieved from [http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html). Online; accessed 11 February 2019. [↩](#151bdec7a43a27209babe151afa6228e)
-
-<a id="koller2009probabilistic"></a>Koller, D., Friedman, N., & Bach, F., *Probabilistic graphical models: principles and techniques* (2009), : MIT press. [↩](#5a9029278bdd1052b087d2ffe61df3ab)
-
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
@@ -726,3 +721,8 @@ data-dependent. For example, we can make the latent labels in an NLP
 problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
+
+# Bibliography
+<a id="ucla_causal_discus"></a>UCLSA,  (nil). *Causality - discussion*. Retrieved from [http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html). Online; accessed 11 February 2019. [↩](#151bdec7a43a27209babe151afa6228e)
+
+<a id="koller2009probabilistic"></a>Koller, D., Friedman, N., & Bach, F., *Probabilistic graphical models: principles and techniques* (2009), : MIT press. [↩](#5a9029278bdd1052b087d2ffe61df3ab)
