@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-14T13:53:55+08:00
+lastmod = 2019-02-15T08:24:17+08:00
 draft = false
 math = true
 +++
@@ -108,6 +108,9 @@ These two views, are in a strong sense, equivalent.
 
 We can formally define the Bayesian network structure as follows:
 
+<div class="definition">
+  <div></div>
+
 Let \\(\mathrm{Pa}\_{X\_i}^G\\) denote the parents of \\(X\_i\\) in G, and
 \\(\mathrm{NonDescendants}\_{X\_i}\\) denote the variables in the graph that
 are not descendants of \\(X\_i\\). Then \\(G\\) encodes the following set of
@@ -118,6 +121,8 @@ independence assumptions, called the local independencies, denoted by
   \text{ For each variable } X\_i: \left( X\_i \perp \mathrm{NonDescendants}\_{X\_i}
          | \mathrm{Pa}\_{X\_i}^G \right)
 \end{equation}
+
+</div>
 
 In other words, the local independencies state that each node \\(X\_i\\) is
 conditionally independent of its nondescendants given its parents.
@@ -203,12 +208,12 @@ are in the set \\(X\_1, \dots, X\_{i-1}\\). Furthermore, none of \\(X\_i\\)'s
 descendants can possibly be in the set. Hence
 
 \begin{equation}
-  \left\\{ X\_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X\_i} \in \mathbb{Z}
+  \left\\{ X\_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X\_i} \in \mathbf{Z}
 \end{equation}
 
-where \\(\mathbb{Z} \in \mathrm{ND}\_{X\_i}\\). Form the local
+where \\(\mathbf{Z} \in \mathrm{ND}\_{X\_i}\\). Form the local
 independencies for \\(X\_i\\) and from the position property it follows
-that \\(X\_i \perp \mathbb{Z} | \mathrm{Pa}\_{X\_i}\\). Hence \\(P(X\_i| X\_1,
+that \\(X\_i \perp \mathbf{Z} | \mathrm{Pa}\_{X\_i}\\). Hence \\(P(X\_i| X\_1,
 \dots X\_{i-1}) = P(X\_i | \mathrm{Pa}\_{X\_i})\\).
 
 Applying this transformation to all of the factors in the chain rule
@@ -231,13 +236,13 @@ visible both to a user and to algorithms that manipulate the BN data
 structure.
 
 The immediate question that arises is whether there exist independence
-properties that we can read off directly from \\(G\\).n
+properties that we can read off directly from \\(G\\).
 
 
 #### D-separation {#d-separation}
 
-We want to be able to guarantee that an independence \\((\mathbb{X}
-\perp \mathbb{Y} | \mathbb{Z})\\), holds in a distribution associated
+We want to be able to guarantee that an independence \\((\mathbf{X}
+\perp \mathbf{Y} | \mathbf{Z})\\), holds in a distribution associated
 with a BN structure \\(G\\). It helps to consider its converse: "Can we
 imagine a case where it does not?"
 
@@ -278,26 +283,26 @@ Common effect
     \\(Y\\)'s descendants is observed
 
 Consider the general trail \\(X\_1 \rightleftharpoons X\_2
-\rightleftharpoons \dots \rightleftharpoons X\_n\\). Let \\(\matbb{Z}\\) be a
+\rightleftharpoons \dots \rightleftharpoons X\_n\\). Let \\(\mathbf{Z}\\) be a
 subset of observed variables. Then the trail is active given
-\\(\mathbb{Z}\\) if:
+\\(\mathbf{Z}\\) if:
 
 -   Whenever we have a v-structure \\(X\_{i-1} \rightarrow X\_i \leftarrow
-      X\_{i+1}\\), then \\(X\_i\\) or one of its descendants are in \\(\mathbb{Z}\\);
--   no other node along the trail is in \\(\mathbb{Z}\\).
+      X\_{i+1}\\), then \\(X\_i\\) or one of its descendants are in \\(\mathbf{Z}\\);
+-   no other node along the trail is in \\(\mathbf{Z}\\).
 
-Let \\(\mathbb{X}, \mathbb{Y}, \mathbb{Z}\\) be three sets of nodes in
-\\(\mathcal{G}\\). We say that \\(\mathbb{X}\\) and \\(\mathbb{Y}\\) are
-d-separated given \\(\mathbb{Z}\\), denoted
-\\(\mathrm{d-sep}\_{\mathcal{G}}(\mathbb{X}; \mathbb{Y} | \mathbb{Z})\\),
-if there is no active trail between any node \\(X \in \mathbb{X}\\), and
-$Y &isin; \mathbb{Y} $ given \\(\mathbb{Z}\\). We use
+Let \\(\mathbf{X}, \mathbf{Y}, \mathbf{Z}\\) be three sets of nodes in
+\\(\mathcal{G}\\). We say that \\(\mathbf{X}\\) and \\(\mathbf{Y}\\) are
+d-separated given \\(\mathbf{Z}\\), denoted
+\\(\mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z})\\),
+if there is no active trail between any node \\(X \in \mathbf{X}\\), and
+\\(Y \in \mathbf{Y}\\) given \\(\mathbf{Z}\\). We use
 \\(\mathcal{I}(\mathcal{G})\\) to denote this set of independencies that
 correspond to d-separation:
 
 \begin{equation}
-  \mathcal{I}(\mathcal{G}) = \left\\{ (\mathbb{X} \perp \mathbb{Y} |
-    \mathbb{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbb{X}; \mathbb{Y} | \mathbb{Z}) \right\\}
+  \mathcal{I}(\mathcal{G}) = \left\\{ (\mathbf{X} \perp \mathbf{Y} |
+    \mathbf{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z}) \right\\}
 \end{equation}
 
 This set is also called the set of _global Markov independencies_. These
@@ -322,15 +327,15 @@ Soundness
 
 Completeness
 : If we have 2 variables \\(X\\) and \\(Y\\) that are
-    independent given \\(\mathbb{Z}\\), then \\(X\\) and \\(Y\\) are
+    independent given \\(\mathbf{Z}\\), then \\(X\\) and \\(Y\\) are
     d-separated. We find that this is ill-defined,
     because it does not specify the distribution in
     which \\(X\\) and \\(Y\\) are independent.
 
 Faithful
 : A distribution \\(P\\) is faithful to \\(G\\) if, whenever \\((X
-                  \perp Y | \mathbb{Z}) \in I(P)\\), then
-    \\(\mathrm{d-sep}\_{G}(X;Y|\mathbb{Z})\\). Any independence
+                  \perp Y | \mathbf{Z}) \in I(P)\\), then
+    \\(\mathrm{d-sep}\_{G}(X;Y|\mathbf{Z})\\). Any independence
     in \\(P\\) is reflected in the d-separation properties of
     the graph.
 
@@ -340,11 +345,16 @@ is false.
 
 We can, however, adopt a weaker but useful definition of completeness:
 
-If \\((X \perp Y | \mathbb{Z})\\) in all distributions \\(P\\) that factorize
-over \\(G\\), then \\(\mathrm{d-sep}\_G(X;Y|\mathbb{Z})\\).
+<div class="definition">
+  <div></div>
+
+If \\((X \perp Y | \mathbf{Z})\\) in all distributions \\(P\\) that factorize
+over \\(G\\), then \\(\mathrm{d-sep}\_G(X;Y|\mathbf{Z})\\).
+
+</div>
 
 Using this definition, we can show that If \\(X\\) and \\(Y\\) are not
-d-separated given \\(\mathbb{Z}\\) in \\(G\\), then \\(X\\) and \\(Y\\) are dependent
+d-separated given \\(\mathbf{Z}\\) in \\(G\\), then \\(X\\) and \\(Y\\) are dependent
 given \\(Z\\) in some distribution \\(P\\) that factorizes over \\(G\\).
 
 This completeness result tells us that our definition of \\(I(G)\\) is
@@ -363,15 +373,20 @@ There is a linear-time (in the size of the graph) algorithm for
 determining the set of d-separations. The algorithm has 2 phases:
 
 1.  Traverse the graph bottom up, from the leaves to the roots, marking
-    all nodes that are in \\(\mathbb{Z}\\) or that have descendants in
-    \\(\mathbb{Z}\\). These nodes will serve to enable v-structures.
+    all nodes that are in \\(\mathbf{Z}\\) or that have descendants in
+    \\(\mathbf{Z}\\). These nodes will serve to enable v-structures.
 2.  Traverse breadth-first from \\(X\\) to \\(Y\\), stopping the traversal
     along a trail when we get to a blocked node.
+
+<div class="definition">
+  <div></div>
 
 A node is blocked if:
 
 1.  it is the "middle" node in a v-structure and unmarked in phase I, or
-2.  It is not a middle node and is in \\(\mathbb{Z}\\)
+2.  It is not a middle node and is in \\(\mathbf{Z}\\)
+
+</div>
 
 If the BFS gets us from \\(X\\) to \\(Y\\), then there is an active trail
 between them.
@@ -423,9 +438,14 @@ graph is an I-map for any distribution, but it does not reveal any
 independencies in the distribution. This intuition leads us to the
 definition of a minimal I-map:
 
+<div class="definition">
+  <div></div>
+
 A graph \\(K\\) is a minimal I-map for a set of independencies \\(i\\) if it
 is an I-map for \\(I\\), and if the removal of even a single edge from \\(K\\)
 renders it not an I-map.
+
+</div>
 
 To obtain a minimal I-map we simply follow a natural algorithm that
 arises through the factorization theorem. Note that the minimal I-map
@@ -440,9 +460,14 @@ guarantee that \\(G\\) captures the independence structure in \\(P\\).
 
 #### Perfect Maps {#perfect-maps}
 
-We say that a graph \\(K\\) is a P-map for a distribution \\(P\\), for a set
-of independencies \\(I\\) if we have that \\(I(K) = I\\). We say that \\(K\\) is a
+<div class="definition">
+  <div></div>
+
+A graph \\(K\\) is a P-map for a distribution \\(P\\), for a set of
+independencies \\(I\\) if we have that \\(I(K) = I\\). We say that \\(K\\) is a
 perfect map for \\(P\\) if \\(I(K) = I(P)\\).
+
+</div>
 
 Unfortunately, not every distribution has a perfect map. There exists
 an algorithm for finding the DAG representing the P-map for a
