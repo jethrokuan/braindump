@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-15T14:32:42+08:00
+lastmod = 2019-02-15T15:17:23+08:00
 draft = false
 math = true
 +++
@@ -609,3 +609,120 @@ Here we see that high probability states correspond to low energy
 configurations. We are also free to restrict the parameterization to
 the edges of the graph. A rather convenient formulation is the
 pairwise MRF.
+
+
+### Representing Potential Functions {#representing-potential-functions}
+
+If the variables are discrete, we can represent the potential or
+energy functions as tables of (non-negative) numbers, as with CPTs.
+However, the potentials are not probabilities, but rather a
+representation of relative "compatibility" or "happiness" between the
+different assignments.
+
+A more general approach is to define the log potentials as a linear
+function of the parameters:
+
+\begin{equation}
+  \log \psi\_c (\mathbf{y}\_c) = \phi\_c (\mathbf{y}\_c)^T \mathbf{\theta}\_c
+\end{equation}
+
+where \\(\phi\_c (\mathbf{x}\_c\_)\\) a feature vector derived from the
+values of the variables \\(mathbf{y}\_c\\). The resultant log probability
+has the form:
+
+\begin{equation}
+  \log p(\mathbf{y} | \mathbf{\theta}) = \sum\_{c}
+  \phi\_c(\mathbf{y}\_c)^T \mathbf{\theta}\_c - Z(\mathbf{\theta})
+\end{equation}
+
+This is also known as the **maximum entropy** or **log linear** model.
+
+Several popular probability models, such as the Ising model, Potts model and
+Hopfield networks, can be conveniently expressed as UGMs.
+
+
+### Parameter Estimation in UGMs {#parameter-estimation-in-ugms}
+
+Consider an MRF in log-linear form:
+
+\begin{equation}
+  p(\mathbf{y} | \mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
+  \mathrm{exp} \left( \sum\_{c}\mathbf{\theta\_c}^T \phi\_c(\mathbf{y})\right)
+\end{equation}
+
+where \\(c\\) indexes the cliques. The scaled log-likelihood is given by:
+
+\begin{equation}
+  l(\mathbf{\theta}) =
+  \frac{1}{N}\sum\_{i}\log(\mathbf{y}\_i|\mathbf{\theta}) =
+  \frac{1}{N}\sum\_{i}\left[
+    \sum\_{c}\mathbf{\theta}\_c^T\phi\_c(\mathbf{y}\_i) - \log Z(\mathbf{\theta}) \right]
+\end{equation}
+
+Since MRFs are in the exponential family, we know that this function
+is convex in \\(\mathbf{\theta}\\), and has a unique global maximum which
+we can find using gradient-based optimizers.
+
+The derivative for the weights of a particular clique is given by:
+
+\begin{equation}
+  \frac{\partial l}{\partial \mathbf{\theta}\_c} =
+  \frac{1}{N}\sum\_{i}\left[ \phi\_c(\mathbf{y}\_i) -
+    \frac{\partial}{\partial \mathbf{\theta}\_c} \log Z(\mathbf{\theta}) \right]
+\end{equation}
+
+The derivative of the log partition function wrt to
+\\(\mathbf{\theta\_c}\\) is just the expectation of the cth feature under
+the model, and hence the gradient of the log-likelihood is:
+
+\begin{equation}
+  \frac{\partial l}{\partial \mathbf{\theta}\_c} =
+  \frac{1}{N}\sum\_{i}\left[ \phi\_c(\mathbf{y}\_i) -
+    \mathcal{E}[\phi\_c(\mathbf{y})]\right]
+\end{equation}
+
+In the first term, we fix \\(\mathbf{y}\\) to its observed values; this is
+sometimes called the clamped term. In the second term \\(\mathbf{y}\\) is
+free; this is sometimes called the unclamped term. Computing the
+unclamped term requires inference in the model, and must be done once
+per gradient step, making it much slower than DGM training.
+
+
+### Approximate methods for computing the MLEs of MRFs {#approximate-methods-for-computing-the-mles-of-mrfs}
+
+When fitting a UGM there is (in general) no closed form solution for
+the ML or the MAP estimate of the parameters, so we need to use
+gradient-based optimizers. This gradient requires inference. In models
+where inference is intractable, learning is also intractable. This
+motivates computationally faster alternatives to ML/MAP estimation,
+such as **pseudo likelihood**, and **stochastic maximum likelihood**.
+
+{{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-06.png" caption="Figure 5: Stochastic maximum likelihood" >}}
+
+{{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-45.png" caption="Figure 6: Iterative Proportional Fitting" >}}
+
+
+### Conditional Random Fields (CRFs) {#conditional-random-fields--crfs}
+
+A CRF is a version of an MRF where all the clique potentials are
+conditioned on input features:
+
+\begin{equation}
+  p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{\x},
+    \mathbf{w})} \prod\_{c} \psi\_c(\mathbf{y}\_c | \mathbf{x}, \mathbf{w})
+\end{equation}
+
+It can be thought of as a structured output extension of logistic
+regression. A log-linear representation of the potentials is often
+assumed.
+
+The advantage of a CRF over a MRF is analogous to the advantage of a
+discriminative classifier over a generative classifier, where we don't
+need to "waste resources" modeling things that we always observe, but
+instead model the distribution of labels given the data.
+
+In the CRF, we can also make the potentials of the model be
+data-dependent. For example, we can make the latent labels in an NLP
+problem depend on global properties of the sentence.
+
+However, CRF requires labeled training data, and are slower to train.
