@@ -1,7 +1,7 @@
 +++
 title = "Markov Chains"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-09T16:21:06+08:00
+lastmod = 2019-02-20T15:47:39+08:00
 tags = ["statistics", "machine-learning"]
 draft = false
 math = true
@@ -97,3 +97,75 @@ Two states that communicate are said to be in the same _class._ The
 concept of communication divides the state space into several separate
 classes. The Markov chain is said to be _irreducible_ if there is only 1
 class, that is all states communicate with each other.
+
+
+## Limiting Probabilities {#limiting-probabilities}
+
+Suppose we have a \\(\mathbf{P}\\) matrix such as:
+
+\begin{equation}
+  \mathbf{P}^{(4)} = \left[ \begin{matrix}
+    0.5749 & 0.5241 \\\\\\
+    0.5668 & 0.4332
+  \end{matrix} \right]
+\end{equation}
+
+We can compute \\(\mathbf{P}^{(8)}\\):
+
+\begin{equation}
+  \mathbf{P}^{(8)} = \left[ \begin{matrix}
+    0.572 & 0.428 \\\\\\
+    0.570 & 0.430
+  \end{matrix} \right]
+\end{equation}
+
+Notice that \\(\mathbf{P}^{(8)}\\) is almost identical to
+\\(\mathbf{P}^{(4)}\\), and each of the rows of \\(\mathbf{P}^{(8)}\\) has
+almost identical entries. It seems that \\(P^n\_{ij}\\) is converging to
+some value that is the same for all \\(i\\). There seems to exist a
+limiting probability that the process will be in state \\(j\\) after a
+large number of transitions, and this value is independent of the
+initial state.
+
+State \\(i\\) is said to have period \\(d\\) if \\(P^n\_{ii} = 0\\) whenever \\(n\\) is
+not divisible by \\(d\\), and \\(d\\) is the largest integer with this
+property. For instance, it may be possible for the process to enter
+state \\(i\\) only at times \\(2, 4, 6, \dots, 8\\), in which case state \\(i\\)
+has period. A state with period 1 is said to be _aperiodic_.
+
+In a finite-state Markov chain, all recurrent states are positive
+recurrent. Positive recurrent, aperiodic states are called ergodic.
+
+<div class="theorem">
+  <div></div>
+
+For an irreducible ergodic Markov chain \\(\lim\_{n \rightarrow \infty}
+P^n\_{ij}\\) exists and is independent of \\(i\\). Furthermore, letting
+
+\begin{equation}
+  \pi\_j = \lim\_{n \rightarrow \infty} P^n\_{ij}, j \ge 0
+\end{equation}
+
+then \\(\pi\_j\\) is the unique nonnegative solution of:
+
+\begin{equation}
+  \pi\_j =\sum\_{i=0}^{\infty} \pi\_i P\_{ij}, j \ge 0, \sum\_{i =
+    0}^{\infty} \pi\_{j} = = 1
+\end{equation}
+
+</div>
+
+We can obtain an expression for \\(P(X\_{n+1} = j)\\) by conditioning on
+the state at time \\(n\\):
+
+\begin{align}
+  P(X\_{n+1} = j)  &= \sum\_{i=0}^{\infty} P(X\_{n+1} = j | X\_n = i)
+                    P(X\_n = i) \\\\\\
+                  &= \sum\_{i=0}^{\infty} P\_{ij} P(X\_n = i)
+\end{align}
+
+These long run proportions \\(\pi\_j, j \ge 0\\) are often called
+stationary probabilities. The reason being that if the initial state
+is chosen according to probabilities \\(\pi\_j, j \ge 0\\), then the
+probability of being in state \\(j\\) at any time \\(n\\) is also equal to
+\\(\pi\_j\\).
