@@ -416,3 +416,226 @@ hierarchical fashion and distributed around the world.
      with a reply containing the desired mapping. 
 
 bibliography:networking.bib
+
+* Transport Layer
+
+The transport layer resides between the application and network
+layers. A transport layer protocol provides for logical communication
+between application processes running on different hosts. Although the
+communicating processes are not physically connected to each other,
+from the application's viewpoint, they are physically connected.
+Application processes use the logical communication provided by the
+transport layer to send messages to each other, free from the worries
+of the physical infrastructure used to carry these messages.
+
+Transport-layer protocols are implemented on end-systems but not in
+network routers. Network routers only act on the network-layer fields
+of the layer 3 PDUs.
+
+On the sending side, the transport layer converts the messages it
+receives from a sending application process into 4-PDUs
+(transport-layer protocol data units). This is done by (possibly)
+breaking the application messages into smaller chunks and adding a
+transport-layer header to each chunk. The transport layer then passes
+these 4-PDUs to the network layer, which are then translated into
+3-PDUs.
+
+On the receiving side, the transport layer removes the transport
+header from the 4-PDUs, reassembles the message, and passes it to the
+receiving application process.
+
+All transport-layer protocols provide an application
+multiplexing/demultiplexing service. A transport protocol can possibly
+provide other services to invoking applications, including reliable
+data transfer, bandwidth guarantees and delay guarantees.
+
+** Relationship between the transport layer and network layer
+
+The transport layer lies just above the network layer. The
+transport-layer protocol provides logical communication between
+processes running on different hosts, while the network-layer protocol
+provides logical communication between hosts.
+
+The transport-layer protocols live in the ned-systems. Within an
+end-system, a transport protocol moves messages from application
+processes to the network edge and vice versa, but it doesn't have any
+say about how the messages are moved within the network core. A
+computer network may make available multiple transport protocols, with
+each protocol offering a different service model to applications.
+
+The services that a transport protocol can provide are often
+constrained by the service model of the underlying network-layer
+protocol. For example, if the network-layer protocol cannot provide
+bandwidth or delay guarantees, then the transport-layer protocol on
+top of it cannot as well.
+
+** Overview of Transport layer in the Internet
+
+the Internet, and more generally a TCP/IP network, makes available two
+distinct transport-layer protocols to the application layer: UDP (User
+Datagram Protocol) and TCP (Transmission Control Protocol).
+
+UDP provides an unreliable, connectionless service to the invoking
+application. TCP provides a reliable, connection-oriented service to
+the invoking application.
+
+The Internet's network-layer protocol is called IP, which stands for
+Internet Protocol. The IP service model is a best-effort delivery
+service. This means that IP makes its "best effort" to deliver
+segments between communicating hosts, but makes no guarantees.
+
+The fundamental responsibility of TCP and UDP is to extend IP's
+delivery service between 2 end systems to a delivery service between
+two processes running on the end system. Extending host-to-host
+delivery to process-to-process delivery is called application
+multiplexing and demultiplexing. UDP and TCP also provide
+error-detection fields in their headers. These are the only 2 services
+UDP provides.
+
+TCP offers additional services. First, it provides reliable data
+transfer. Using flow control, sequence numbering, acknowledgments,
+and timers, TCP ensures that data is delivered correctly and in order.
+TCP also uses congestion control, which is a service provided to the
+Internet as a whole rather than a service provided to the invoking
+application. This is done by regulating the rate at which the
+sending-side TCPs can send traffic into the network.
+
+** Multiplexing and Demultiplexing Applications
+The job of delivering the data in a transport-layer segment to the
+correct application process is called /demultiplexing/. The job of
+gathering data at the source host from different application
+processes, enveloping the data with header information to create
+segments and passing to the network layer, is called /multiplexing/.
+
+This is performed by TCP and UDP by including two special fields in
+the segment headers: the *source port-number field* and the *destination
+port-number field*. 
+
+The port numbers ranging from 0 to 1023 are called *well-known port
+numbers*, and are restricted, which means that they are reserved for
+use by well-known application protocols such as HTTP and FTP: HTTP
+uses port 80, and FTP uses port 21.
+
+To identify the appropriate host, the transport segment also contains
+the source and destination IP addresses.
+
+** Connectionless Transport: UDP
+
+UDP, defined in RFC 768, does as little as a transport protocol can
+do. Aside from multiplexing/demultiplexing and some light error
+checking, it adds nothing to IP.
+
+UDP takes messages from the application processes, attaches source and
+destination port fields for the multiplexing/demultiplexing service,
+adds two other small fields, and passes the resulting segment to the
+network layer. The network layer encapsulates the segment into an IP
+datagram and then makes a best-effort attempt to deliver the segment's
+data to the correct application process.
+
+Note that with UDP there is no handshaking between sending and
+receiving transport-layer entities before sending a segment. Hence,
+UDP is said to be connectionless.
+
+DNS is an example of an application-layer protocol that uses UDP.
+
+There are many applications more suited to UDP for the following
+reasons:
+
+- No connection establishment :: TCP uses a three-way handshake before
+     it starts to transfer data. UDP does not introduce any delay to
+     establish a connection.
+- No connection state :: TCP maintains connection state in the end
+     systems. This connection state includes receive and send buffers,
+     congestion control parameters, and sequence and acknowledgment
+     number parameters. Hence, a server devoted to a particular
+     application can typically support many more active clients over UDP.
+- Small packet header overhead :: The TCP segment has 20 bytes of
+     header overhead per segment, while UDP only has 8 bytes of overhead.
+- Unregulated send rate :: TCP has a congestion control mechanism
+     that throttles the sender when one or more links between sender
+     and receiver become excessively congested. This throttling can
+     have severe impact on real-time applications. The speed at which
+     UDP sends data is only constrained by the rate at which the
+     application generates data, the capabilities of the source, and
+     the access bandwidth to the Internet.
+
+TCP cannot be employed with mulitcast, multicast applications run
+over UDP. It is possible to have reliable data transfer using UDP, by
+building this into the application itself.
+
+*** UDP Segment Structure
+
+#+CAPTION: UDP segment structure
+[[file:images/networking/screenshot_2019-02-20_16-36-34.png]]
+
+The UDP segment structure is defined in RFC 768. The UDP header has
+only four fields, each consisting of 2 bytes. The port numbers allow
+the destination host to pass the application data to the correct
+process running on the destination end system. The length field
+specifies the number of bytes in the UDP segment (header plus data).
+An explicit length value is needed since the size of the data field
+may differ between UDP segments. 
+
+The checksum provides for error detection. It determines whether bits
+within the UDP segment have been altered as it moved from source to
+destination. UDP at the sender side performs the 1s complement of the
+sum of all the 16-bit words in the segment, with any overflow
+encountered during the sum being wrapped around. This result is put
+in the checksum field of the UDP segment.
+
+For example, suppose we have 3 16-bit words:
+
+#+begin_src text
+0110011001100000
+0101010101010101
+1000111100001100
+#+end_src
+
+The sum of the first two words is:
+
+#+begin_src text
+0110011001100000
+0101010101010101
+----------------
+1011101110110101
+#+end_src
+
+Adding the third word gives:
+
+#+begin_src 
+1011101110110101
+1000111100001100
+----------------
+0100101011000010
+#+end_src
+
+Note this last addition had overflow, which is wrapped around. Thus
+the 1s complement of the sum 0100101011000010 is 1011010100111101.
+
+UDP provides a checksum because there is no guarantee that all the
+links between source and destination provide error checking. One of
+the links may use a link-layer protocol that does not provide error
+checking. Even if segments are correctly transferred across a link,
+it's possible that bit errors could be introduced when a segment is
+stored in a router's memory. Hence, UDP must provide error-detection
+at the transport layer, on an end-end basis. Because IP is supposed to
+run over just about any layer-2 protocol, it is useful for the
+transport layer to provide error checking as a safety measure. UDP
+provides nothing for error recovery. Some implementations of UDP
+simply discard the damaged segment; others pass the damaged segment to
+the application with a warning.
+
+** Principles of Reliable Data Transfer
+
+The service abstraction provided to the upper-layer entities is that
+of a reliable channel through which data can be transferred. With a
+reliable channel, no transferred data bits are corrupted or lost, and
+all are delivered in the order in which they are sent. This is the
+service model that TCP offers to the Internet applications that invoke
+it.
+
+It is the responsibility of a reliable data transfer protocol to
+implement this service abstraction. This task is made more difficult
+by the fact that the layers beneath it may be unreliable. Here, we
+develop increasingly complex models for the sender and receiver sides
+of a reliable data transfer protocol.
