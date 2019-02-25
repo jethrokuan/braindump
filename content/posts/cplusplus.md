@@ -1,7 +1,7 @@
 +++
 title = "C++"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-25T08:26:05+08:00
+lastmod = 2019-02-24T17:28:54+08:00
 tags = ["proglang", "c++"]
 draft = false
 math = true
@@ -147,13 +147,7 @@ an object. <sup id="f0a899f30af8b1c819a39ca7a6c5c42b"><a href="#cppref_raii" tit
   note =         {Online; accessed 25 January 2019},
   title =        {RAII - cppreference.com},
   year =         {nil},
-}">@misc{cppref_raii,
-  author =       {nil},
-  howpublished = {https://en.cppreference.com/w/cpp/language/raii},
-  note =         {Online; accessed 25 January 2019},
-  title =        {RAII - cppreference.com},
-  year =         {nil},
-}</a></sup>
+}">(nil, nil)</a></sup>
 
 The basic idea is that class destructors are always called when a
 particular instance of an object goes out of scope. This allows for
@@ -190,6 +184,14 @@ speed with:
 ```c++
 std::ios::sync_with_stdio(false);
 ```
+
+
+## Smart pointers {#smart-pointers}
+
+Here's a summary of smart-pointers and their semantics. [value\_ptr](https://github.com/loopperfect/valuable) is
+not in the stdlib, but is available as a C++ library.
+
+{{< figure src="/ox-hugo/screenshot_2019-02-24_17-27-51.png" caption="Figure 1: Tabular summary of smart pointers" >}}
 
 
 ## Books to read {#books-to-read}

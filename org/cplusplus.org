@@ -143,9 +143,56 @@ speed with:
 #+BEGIN_SRC c++
   std::ios::sync_with_stdio(false);
 #+END_SRC
+
+* Smart pointers
+
+Here's a summary of smart-pointers and their semantics. [[https://github.com/loopperfect/valuable][value_ptr]] is
+not in the stdlib, but is available as a C++ library.
+
+#+CAPTION: Tabular summary of smart pointers cite:buckar_c_packag_manag_missing
+[[file:images/cplusplus/screenshot_2019-02-24_17-27-51.png]]
+
+** shared_ptr
+The main advantage of shared pointers is that, we should not worry
+about calling delete or cleaning the memory in an explicit manner. The
+shared pointer will take care of it once it goes out of scope. To
+create a ~shared_ptr~, use ~make_shared~. It's fast in memory allocation
+compared to ~new~. cite:codesbay_codes_cplus_smart
+
+#+begin_src cpp
+  class Sample {
+  public:
+    Sample() { cout << "Constructor make_shared" << endl; }
+    ~Sample() { cout << "Destructor make_shared" << endl; }
+  };
+  int main() {
+    shared_ptr<Sample> sp = make_shared<Sample>();
+    return 0;
+  }
+#+end_src
+
+** unique_ptr
+Like shared_ptr<>, there is no need to call delete or clean the memory
+in an explicit manner. The unique pointer will take care of it once it
+goes out of scope. ~shared_ptr<>~ maintains reference counts where more
+than one shared_ptr<> can refer to a single object.
+
+This is prevented by ~unique_ptr<>~ and the reason behind naming it as
+unique. In ~unique_ptr<>~, one and only one ~unique_ptr<>~ has the
+ownership of the Object and manages its lifetime. cite:codesbay_codes_cplus_smart
+
+** std::move
+In unique_ptr, std::move is used to transfer the ownership from one
+unique_ptr to another, which is otherwise not possible.
+
+For shared_ptr, std::move prevents the increment and immediate
+decrement of the reference count, making it an optimization. It's not
+strictly necessary. cite:so_why_move_shared_ptr
+
 * Books to read
 http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
 * Links
 - [[https://cpppatterns.com/][C++ Patterns]]
 
 bibliography:cpp.bib
+
