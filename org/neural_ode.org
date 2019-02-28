@@ -1,0 +1,50 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Neural Ordinary Differential Equations
+#+HUGO_TAGS: machine-learning deep-learning
+
+* Introduction
+
+A traditional neural network is composed of stacked layers of simple
+computational nodes, that work together to find patterns in data.
+Every layer introduces error that compounds through the neural
+network, hindering overall performance. The only way to bypass this is
+to add more layers, and limit the complexity of each step. This means
+that the highest performing neural networks would have infinite
+layers, and infinitesimal step-changes, an infeasible task.
+
+This problem was addressed by Deep Residual Learning
+cite:he15_deep_resid_learn_image_recog. Instead of learning $h_{n+1} =
+F(h_n)$, we now learn the difference between the layers: $h_{n+1} =
+h_n + F(h_n)$.
+
+Feed-forward residual neural networks have a composition that looks like these:
+
+\begin{align*}
+  z_1 &= z_0 + f(z_0, \theta_0) \\
+  z_2 &= z_1 + f(z_1, \theta_1) \\
+  z_3 &= z_2 + f(z_2, \theta_2) \\
+  \dots \\
+  z_{t+1} &= z_t + f(z_t, \theta_t) \\
+\end{align*}
+
+In the limit of infinitesimal change, Neural ODEs can replace these
+layers entirely with ODEs.
+
+Neural ODEs scrap the need for layers entirely, by replacing them with
+equations. 
+
+Traditional deep learning methods require clear stages of observation,
+while a continuous ODE solver eliminates this problem.
+
+In the limit (of infinitesimal change), we can parameterize the
+continuous dynamics of hidden units using an ordinary differential
+equation (ODE) specified by a neural network:
+
+\begin{equation}
+  \frac{dz(t)}{dt} = f(z(t), t, \theta)
+\end{equation}
+
+That is, the equivalent of having T layers in the network, is finding
+the solution to this ODE at time T.
+
+bibliography:neural_ode.bib
