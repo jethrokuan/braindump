@@ -1,0 +1,64 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Machine Teaching
+#+HUGO_TAGS: machine-learning
+
+* Definitions cite:simard17_machin_teach
+- machine learning research :: machine learning research aims at
+     making the learner better by improving ML algorithms
+- machine teaching research :: machine teaching research aims at
+     making the teacher more productive at building machine learning
+     models
+
+* Problem Formulation
+Machine learning takes a given training dataset $D$ and learns a model
+$\hat{\theta}$. The learner can take various formrs, including version
+space learners, Bayesian learners, deep neural networks, or cognitive
+models.
+
+In contrast, in machine teaching the target model $\theta^*$ is given,
+and the teacher finds a teaching set $D$ -- not necessarily i.i.d. -
+such that a machine learner trained on $D$ will approximately learn
+$\theta^*$.
+
+In machine teaching, we wish to solve the following optimization
+problem:
+
+\begin{align}
+  \begin{matrix}
+    \textrm{min}_{D, \hat{\theta}} & \textrm{TeachingRisk}(\hat{\theta}) +
+                             \eta \textrm{TeachingCost}(D) \\
+  \textrm{s.t.} & \hat{\theta} = \textrm{MachineLearning}(D).
+  \end{matrix}
+\end{align}
+
+Where $\textrm{TeachingRisk(\hat{\theta})}$ is a generic function for
+how unsatisfied the teacher is. The target model $\theta^*$ is folded
+into the teaching risk function. The teaching cost function is also
+generalized beyond the number of teaching items. For example,
+different teaching items may have different cognitive burdens for a
+human student to absorb. cite:zhu18_overv_machin_teach
+
+There are other formulations of machine teaching that place different
+constraints on the teaching. For example, one may want to minimize the
+teaching cost, while constraining the teaching risk, or instead choose
+to optimize the teaching risk given constraints on the teaching cost.
+
+* Why bother if $\theta^*$ is known?
+
+There are applications where the teacher needs to convey the target
+model $\theta^*$ to a learner via training data. For example:
+
+- In education problems, the teacher may know $\theta^*$ but is unable
+  to telepathize the model to the students. If the teacher possesses a
+  good cognitive model on how students learn from samples, they can
+  use machine teaching to optimize the choice of learning examples.
+- In training-set poisoning, an attacker manipulates the behaviour of
+  a machine learning system by maliciously modifying the training
+  data. An attacker knowing the algorithm may send specially designed
+  training examples to manipulate the learning algorithm.
+
+
+bibliography:machine-teaching.bib
+
+
+
