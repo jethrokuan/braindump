@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-28T17:02:45+08:00
+lastmod = 2019-03-13T17:44:00+08:00
 tags = ["machine-learning", "deep-learning"]
 draft = false
 math = true
@@ -52,5 +52,14 @@ equation (ODE) specified by a neural network:
 That is, the equivalent of having T layers in the network, is finding
 the solution to this ODE at time T.
 
+
+## Adjoint Sensitivity Analysis {#adjoint-sensitivity-analysis}
+
+Sensitivity analysis defines a new ODE whose solution gives the
+gradients to the cost function w.r.t. the parameters, and solves this
+secondary ODE. <sup id="a8ae69ab153941fb09916913f187ba63"><a href="#rackauckas19_diffeq" title="Rackauckas, Innes, Ma, , Bettencourt, White, Dixit \&amp; Vaibhav, Diffeqflux.jl - a Julia Library for Neural  Differential Equations, {CoRR}, v(), (2019).">(Rackauckas {\it et al.}, 2019)</a></sup>
+
 # Bibliography
 <a id="he15_deep_resid_learn_image_recog"></a>He, K., Zhang, X., Ren, S., & Sun, J., *Deep residual learning for image recognition*, CoRR, *()*,  (2015).  [↩](#8554cd7e8a313143abfac851fd6bbfd2)
+
+<a id="rackauckas19_diffeq"></a>Rackauckas, C., Innes, M., Ma, Y., Bettencourt, J., White, L., & Dixit, V., *Diffeqflux.jl - a julia library for neural differential equations*, CoRR, *()*,  (2019).  [↩](#a8ae69ab153941fb09916913f187ba63)

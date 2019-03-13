@@ -47,6 +47,7 @@ label is received.
 
  Goal is to learn a policy (mapping from state to action) that
  minimizes the sum of expected current and future costs.
+
 *** Supervised Learning
 
 Since learning involves an interaction between the learner and the
@@ -75,9 +76,16 @@ summary, or compressed version of that data.
   or expected loss.
 **** Empirical Risk Minimisation (ERM)
   - The training set error is often called the /empirical error/ or
-    /empirical risk/.
+    /empirical risk/, andn this is the error the classifier incurs over
+    the sample:
+
+\begin{equation}
+L_S(h) = \frac{|\{i \in [m] : h(x_i) \ne y_i\}}{m}
+\end{equation}
+
   - Given a hypothesis class $H$, finding the hypothesis $h \in H$ that
     minimizes the empirical risk is a simple learning strategy.
+
 **** Assumptions Made ⚠
  1. One common assumption is that the data in the data generation
     process is independently and identically distributed (IID),
@@ -93,6 +101,7 @@ summary, or compressed version of that data.
      like a steady set distribution.
  - If dependencies are exploited, there is a possibility of attaining
    lower training and test error.
+
 ** Is Learning Feasible?
 The target function $f$ that we want to learn is unknown. The
 performance of a hypothesis on the training set $D$ tells us nothing

@@ -117,3 +117,48 @@
   eprint =       {1806.07366},
   primaryClass = {cs.LG},
 }
+
+@article{rackauckas19_diffeq,
+  author =       {Rackauckas, Chris and Innes, Mike and Ma, Yingbo and
+                  Bettencourt, Jesse and White, Lyndon and Dixit,
+                  Vaibhav},
+  title =        {Diffeqflux.jl - a Julia Library for Neural
+                  Differential Equations},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1902.02376v1},
+  abstract =     {DiffEqFlux.jl is a library for fusing neural
+                  networks and differential equations. In this work we
+                  describe differential equations from the viewpoint
+                  of data science and discuss the complementary nature
+                  between machine learning models and differential
+                  equations. We demonstrate the ability to incorporate
+                  DifferentialEquations.jl-defined differential
+                  equation problems into a Flux-defined neural
+                  network, and vice versa. The advantages of being
+                  able to use the entire DifferentialEquations.jl
+                  suite for this purpose is demonstrated by counter
+                  examples where simple integration strategies fail,
+                  but the sophisticated integration strategies
+                  provided by the DifferentialEquations.jl library
+                  succeed. This is followed by a demonstration of
+                  delay differential equations and stochastic
+                  differential equations inside of neural networks. We
+                  show high-level functionality for defining neural
+                  ordinary differential equations (neural networks
+                  embedded into the differential equation) and
+                  describe the extra models in the Flux model zoo
+                  which includes neural stochastic differential
+                  equations. We conclude by discussing the various
+                  adjoint methods used for backpropogation of the
+                  differential equation solvers. DiffEqFlux.jl is an
+                  important contribution to the area, as it allows the
+                  full weight of the differential equation solvers
+                  developed from decades of research in the scientific
+                  computing field to be readily applied to the
+                  challenges posed by machine learning and data
+                  science.},
+  archivePrefix ={arXiv},
+  eprint =       {1902.02376},
+  primaryClass = {cs.LG},
+}

@@ -47,4 +47,15 @@ equation (ODE) specified by a neural network:
 That is, the equivalent of having T layers in the network, is finding
 the solution to this ODE at time T.
 
+* Adjoint Sensitivity Analysis
+Sensitivity analysis defines a new ODE whose solution gives the
+gradients to the cost function w.r.t. the parameters, and solves this
+secondary ODE. cite:rackauckas19_diffeq
+
+
+
+
+
 bibliography:neural_ode.bib
+
+

@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-09T16:20:59+08:00
+lastmod = 2019-03-13T18:16:39+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -97,7 +97,13 @@ summary, or compressed version of that data.
 -    Empirical Risk Minimisation (ERM)
 
     -   The training set error is often called the _empirical error_ or
-        _empirical risk_.
+        _empirical risk_, andn this is the error the classifier incurs over
+        the sample:
+
+    \begin{equation}
+    L\_S(h) = \frac{|\\{i \in [m] : h(x\_i) \ne y\_i\\}}{m}
+    \end{equation}
+
     -   Given a hypothesis class \\(H\\), finding the hypothesis \\(h \in H\\) that
         minimizes the empirical risk is a simple learning strategy.
 
