@@ -1,7 +1,7 @@
 +++
 title = "PAC Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-15T17:30:25+08:00
+lastmod = 2019-03-15T18:07:00+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -87,7 +87,7 @@ Then:
 
 \begin{equation}
   D^m(\left\\{ S\_x : L\_{(D,f)}(h\_S) > \epsilon \right\\}) \le D^m(M)
-  =D^m(\cups\_{h \in \mathcal{H}\_B} {S\_x: L\_S(h) = 0})
+  =D^m(\cup\_{h \in \mathcal{H}\_B} {S\_x: L\_S(h) = 0})
 \end{equation}
 
 Because the training samples are i.i.d.:
@@ -144,7 +144,7 @@ choice of examples), \\(L\_{(D,f)}(h) \le \epsilon\\).
 
 The accuracy parameter \\(\epsilon\\) determines how far the output
 classifier can be from the optimal one, and the confidence parameter
-\\(\edelta\\) indicates how likely the classifier is to meet the accuracy
+\\(\delta\\) indicates how likely the classifier is to meet the accuracy
 requirement.
 
 Under the data access model, these approximations are inevitable: for
@@ -162,8 +162,8 @@ correct solution.
 We have shown previously that every finite hypothesis class is PAC
 learnable with sample complexity:
 
-e\begin{equation}
-  m<sub>\mathcal{H}</sub> (&epsilon;, &delta;) &le; &lceil; \frac{log(|\mathcal{H}|/&delta;)}{&epsilon;} &rceil;
+\begin{equation}
+  m\_{\mathcal{H}} (\epsilon, \delta) \le \lceil \frac{\log(|\mathcal{H}|/\delta)}{\epsilon} \rceil
 \end{equation}
 
 There are infinite hypothesis classes that are PAC learnable, and the

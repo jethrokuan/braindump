@@ -80,7 +80,7 @@ Then:
 
 \begin{equation}
   D^m(\left\{ S_x : L_{(D,f)}(h_S) > \epsilon \right\}) \le D^m(M)
-  =D^m(\cups_{h \in \mathcal{H}_B} {S_x: L_S(h) = 0})
+  =D^m(\cup_{h \in \mathcal{H}_B} {S_x: L_S(h) = 0})
 \end{equation}
 
 Because the training samples are i.i.d.:
@@ -132,7 +132,7 @@ choice of examples), $L_{(D,f)}(h) \le \epsilon$.
 
 The accuracy parameter $\epsilon$ determines how far the output
 classifier can be from the optimal one, and the confidence parameter
-$\edelta$ indicates how likely the classifier is to meet the accuracy
+$\delta$ indicates how likely the classifier is to meet the accuracy
 requirement.
 
 Under the data access model, these approximations are inevitable: for
@@ -149,7 +149,7 @@ correct solution.
 We have shown previously that every finite hypothesis class is PAC
 learnable with sample complexity:
 
-e\begin{equation}
+\begin{equation}
   m_{\mathcal{H}} (\epsilon, \delta) \le \lceil \frac{\log(|\mathcal{H}|/\delta)}{\epsilon} \rceil
 \end{equation}
 
