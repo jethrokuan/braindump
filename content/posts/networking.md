@@ -1,7 +1,7 @@
 +++
 title = "Computer Networking"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-20T16:52:08+08:00
+lastmod = 2019-03-20T10:27:20+08:00
 tags = ["networking"]
 draft = false
 math = true
@@ -680,3 +680,296 @@ implement this service abstraction. This task is made more difficult
 by the fact that the layers beneath it may be unreliable. Here, we
 develop increasingly complex models for the sender and receiver sides
 of a reliable data transfer protocol.
+
+
+## Network Layer {#network-layer}
+
+The network layer implements host-to-host communication service.
+Unlike the transport and application layer, there is a piece of the
+network layer in each and every host and router in the network.
+
+
+### Forwarding and Routing {#forwarding-and-routing}
+
+Forwarding
+: Forwarding involves the transfer of a packet from an
+    incoming link to an outgoing link within a single router.
+
+Routing
+: Routing involves all of a routers, whose collective
+    interactions via routing protocols determine the paths
+    that packets take on their trips from source to destination.
+
+Every router has a forwarding table. A router forwards a packet by
+examining the value of a field in the arriving packet's header. and
+then using this header value to index into the router's forwarding
+table.
+
+{{< figure src="/ox-hugo/screenshot_2019-03-20_09-06-04.png" caption="Figure 10: Routing algorithm determines value in forwarding table" >}}
+
+Link-layer switches base their forwarding decision on values in the
+fields of the link layer frame; switches are thus referred to as
+link-layer devices. Routers base their forwarding decision on the
+value in the network layer field, and are thus network-layer devices.
+Routers require services at both layer 2 and 3.
+
+routers along the chosen path from source to destination require
+handshaking with each other in order to set up state before
+network-layer data packets within a given source-to-destination can
+begin to flow. This process is referred to as _connection setup_.
+
+
+### Services network protocols may provide {#services-network-protocols-may-provide}
+
+There are many potential services a network protocol may provide, and
+these include:
+
+-   guaranteed delivery
+-   guaranteed delivery with bounded delay
+-   in-order packet delivery
+-   guaranteed minimal bandwidth
+-   guaranteed maximum jitter
+-   security services
+
+The Internet's network layer protocol provides a single service,
+known as the best-effort service.
+
+{{< figure src="/ox-hugo/screenshot_2019-03-20_09-12-33.png" caption="Figure 11: Internet, ATM CBR and ATM ABR Service Models" >}}
+
+It may seem like the Internet network-layer protocol provides no
+service at all. ATM networks provide service models with more services
+than the Internet IP protocol.
+
+
+### Virtual Circuit and Datagram Networks {#virtual-circuit-and-datagram-networks}
+
+Computer networks that provide only a connection service at the
+network layer are called virtual-circuit networks. Computer networks
+that provide only a connectionless service an the network layer are
+called datagram networks.
+
+The implementations of connection-oriented services in the transport
+layer and connection service in the network layer are fundamentally
+different: the network-layer connection service is implemented in the
+routers in the network core, as well as in the end systems.
+
+
+#### VC networks {#vc-networks}
+
+A VC consists of:
+
+1.  a path between the source and destination hosts
+2.  VC numbers, one number for each link along the path
+3.  entries in the forwarding table in each router along the path
+
+A packet belonging to a virtual circuit will carry a VC number in its
+header. Because a virtual circuit may have a different VC number on
+each link, each intervening router must replace the VC number of each
+traversing packet with a new VC number. This VC number is obtained
+from the forwarding table.
+
+In a VC network, the network's routers must maintain connection staet
+information for the ongoing connections. Specifically, each time a new
+connection is established across a router, a new connection entry must
+be added to the router's forwarding table, and each time a connection
+is released, an entry must be removed from the table.
+
+There are 3 phases in a virtual circuit:
+
+1.  VC Setup: The sending transport layer contacts teh network layer,
+    specifies the receiver address and waits for the network to set up
+    the VC. The network layer determines the path between sender and
+    receiver, that is, the series of links and routers through which
+    all packets of the VC will travel. The network layer also
+    determines the VC number for each link along the path. Finally, the
+    network layer adds an entry in the forwarding table in each router
+    along the path. The network layer may also reserve resources (e.g.
+    bandwidth) along the path of the VC during the setup.
+2.  Data transfer: the packet can begin to flow along the VC
+3.  VC Teardown: The sender (or receiver) informs the VC of its desire
+    to terminate the VC. The network layer typically informs the end
+    system on the other side of the network, and update the forwarding
+    tables in each of the packet routers on the path from source to
+    destination that the VC no longer exists.
+
+The messages that are passed between routers to set up the VC are
+known as signalling messages, and the protocols to exchange these
+messages are referred to as signaling protocols.
+
+
+#### Datagram Networks {#datagram-networks}
+
+In a datagram network, each time  an end system wants to send a
+packet, it stamps the packet with the address of the destination end
+system and then pops the packet into the network. There is no VC
+setup, and routers do not maintain any state information.
+
+As a packet is transmitted from source to destination, it passes
+through a series of routers. Each of these routers use the packet's
+destination address to forward the packet.
+
+Routers typically use the longest prefix matching rule, which matches
+the packet's IP address to a prefix entry in the forwarding table to
+choose the link interface to forward the packet.
+
+
+### The Internet Protocol (IP) {#the-internet-protocol--ip}
+
+{{< figure src="/ox-hugo/screenshot_2019-03-20_09-50-50.png" caption="Figure 12: Illustration of the Internet's network layer" >}}
+
+
+### Datagram {#datagram}
+
+The network-layer packet is referred to as a _datagram_. The format of a
+datagram is as follows:
+
+{{< figure src="/ox-hugo/screenshot_2019-03-20_09-51-48.png" caption="Figure 13: IPv4 datagram format" >}}
+
+The key fields include:
+
+Version number
+: the IP protocol version of the datagram
+
+Header length
+: An IPv4 datgram may have variable header length,
+    but most IP datagrams do not contain options.
+
+Type of service
+: the specific level of service to be provided is a
+    policy issue determined by the router's administrator. Services
+    include high throughput, and low delay.
+
+Datagram length
+: the total length of the IP datagram (header plus
+    data), measured in bytes
+
+Identifier flags, framentation offset
+: these concern IP
+    fragmentation. IPv6 disallows fragmentation in the routers.
+
+TTL
+: the time to live field ensure that datagrams do not circulate
+    forever in the network.
+
+Protocol
+: This fieldl is used only when an IP datagram reaches its
+    final destination. The value indicates the specific
+    transport-layer protocol (e.g. TCP) to which the data
+    portion of the IP datagram should be passed.
+
+Header checksum
+: Aids a router in detecting bit errors in a
+    received IP datagram. Routers typically discard erroneous
+    datagrams.
+
+Source and destination IP addresses
+: When a source creates a
+    datagram, it inserts its IP address into the source IP address,
+    and inserts the address of the destination into the destination
+    IP address
+
+Options
+: These allow extensions to the IP header.
+
+Data
+: The payload to transfer
+
+
+### IP Datagram Fragmentation {#ip-datagram-fragmentation}
+
+Not all link-layer protocols can carry network-layer packets of the
+same size. For example, Ethernet frames can carry up to 1500 bytes of
+data, whereas frames for some wide-area links can carry no more than
+576 bytes. The maximum amount of data that a link-layer frame can
+carry is called the maximum transmission unit (MTU). Because each IP
+datagram is encapsulated within the link-layer frame for transport
+from one router to the next, the MTU of the link-layer protocol places
+a hard limit on the length of an IP datagram.
+
+To resolve this issue, an IP datagram needs to be able to split itself
+into two or more smaller IP datagrams. These smaller datagrams are
+called fragments. Fragments need to be reassembled before reaching the
+transport layer at the destination.
+
+To perform the reassembly task, IPv4 put identification, flag and
+fragmentation offset fields in the datgram header.
+
+{{< figure src="/ox-hugo/screenshot_2019-03-20_10-04-20.png" caption="Figure 14: IP fragments" >}}
+
+
+### IPv4 addressing {#ipv4-addressing}
+
+A host typically only has 1 link into the network. A router has
+multiple interfaces, one for each of its links. IP requires each host
+and router interface to have its own IP address. Thus, an IP address
+is technically associated with an interface, rather than with the host
+or router containing that interface.
+
+Each IP address is 32 bits long, thus there are a total of \\(2^32\\)
+possible IP addresses. These addresses are typically written in
+dotted-decimal notation (e.g. 193.32.216.9).
+
+A subnet is also called an IP network, and refers to the network
+interconnecting several interfaces via one router interface. IP
+addressing assigns an address to this subnet: 223.1.1.0/24, where the
+/24 notation, sometimes known as the subnet mask, indicates that the
+leftmost 24-bits of the 32-bit quantity define the subnet address.
+
+To determine the subnets in the system:
+
+-   detach each interface from its host or router, creating islands of
+    isolated networks, with interfaces terminating the endpoints of the
+    isolated networks.
+-   each of these isolated networks is a subnet.
+
+The Internet's address alignment strategy is known as Classless
+Interdomain Routing (CIDR). An organization is typically assigned a
+block of contiguous addresses, that is, a range of addresses with a
+common prefix.
+
+
+#### Obtaining a block of addresses {#obtaining-a-block-of-addresses}
+
+The ISP itself may be allocated a block of IP addresses, for example
+200.23.16.0/20. The ISP can in turn divide its address block into
+equal-sized contiguous address blocks, and give these blocks to
+organizations. Internet Corporation for Assigned Names and Numbers
+(ICANN) is the global authority on managing IP addresses, and is also
+responsible for the DNS root servers.
+
+
+#### Obtaining a host address: The dynamic host configuration protocol {#obtaining-a-host-address-the-dynamic-host-configuration-protocol}
+
+Once an organization has obtained a block of addresses, it can assign
+individual IP addresses to the host and router interfaces in its
+organization. Host addresses can be configured via the Dynamic Host
+Configuration Protocol (DHCP). It allows a host to obtain (be
+allocated) an IP address automatically. A host may be assigned a
+temporary IP address that will be different each time the host
+connects to the network.
+
+For a newly arriving host, the DHCP protocol is a 4-step process:
+
+1.  DHCP server discovery: A DHCP discover message is sent using a UDP
+    packet to port 67. The DHCP client creates an IP datagram
+    containing its DHCP discover message along with the broadcast IP
+    address of 255.255.255.255, and a "this host" source IP address of
+    0.0.0.0. The DHCP client passes the IP datagram to the link layer,
+    which broadcasts this rame to all nodes attached to the subnet.
+2.  DHCP server offer(s): A DHCP offer message is broadcast to all
+    nodes on the subnet, using the IP broadcast address of
+    255.255.255.255. The client may be able to choose from among
+    several offers, if there are several DHCP servers present on the
+    subnet. The DHCP offer message contains the transaction ID of the
+    received discover message, the proposed IP address, and an IP
+    address lease time.
+3.  DHCP request: the client will choose among the DHCP offers, and
+    respond to the selected offer with a DHCP request message, echoing
+    back its configuration parameters
+4.  DHCP ACK: The server responds to the DHCP request message with a
+    HCP ACK message, confirming the requested parameters.
+
+{{< figure src="/ox-hugo/screenshot_2019-03-20_10-26-56.png" caption="Figure 15: DHCP client-server interaction" >}}
+
+
+#### NAT {#nat}
