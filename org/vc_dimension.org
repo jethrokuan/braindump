@@ -97,6 +97,38 @@ Then the following are equivalent:
 5. Any ERM rule is a successful PAC learner for $\mathcal{H}$.
 6. $\mathcal{H}$ has a finite VC-dimension.
 
+* Sauer's Lemma and the Growth Function 
+
+We have defined the notion of shattering, by considering the
+restriction of $\mathcal{H}$ to a finite set of instances. The growth
+function measures the maximal "effective" size of $\mathcal{H}$ on a
+set of $m$ examples. Formally:
+
+#+begin_definition
+Let $\mathcal{H}$ be a hypothesis class. Then the growth function of
+$\mathcal{H}$, denoted $\tau_{\mathcal{H}}(m) : \mathbb{N} \rightarrow
+\mathbb{N}$, is defined as:
+
+\begin{equation}
+  \tau_{\mathcal{H}}(m) = \textrm{max}_{C \subset \mathcal{X} : |C| =
+    m} |\mathcal{H}_C|
+\end{equation}
+#+end_definition
+
+$\tau_{\mathcal{H}}(m)$ is the number of different functions from a
+set $C$ of size $m$ to $\{0,1\}$ that can be obtained by restricting
+$\mathcal{H}$ to $C$. With this definition we can now state Sauer's
+lemma:
+
+#+begin_definition
+Let $\mathcal{H}$ be a hypothesis class with
+$\textrm{VCdim}(\mathcal{H}) \le d < \infty$. Then for all $m$,
+
+\begin{equation}
+\tau_{\mathcal{H}}(m) \le \sum_{i=0}^{d}{m \choose i}
+\end{equation}
+
+In particular, if $m > d + 1$, then $\tau_{\mathcal{H}}(m) \le (em/d)^d$.
+#+end_definition
+
 bibliography:ml.bib
-
-

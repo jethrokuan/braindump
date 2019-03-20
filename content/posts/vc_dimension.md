@@ -1,7 +1,7 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-20T19:30:07+08:00
+lastmod = 2019-03-20T19:37:11+08:00
 draft = false
 math = true
 +++
@@ -117,6 +117,47 @@ Then the following are equivalent:
 4.  \\(\mathcal{H}\\) is PAC learnable.
 5.  Any ERM rule is a successful PAC learner for \\(\mathcal{H}\\).
 6.  \\(\mathcal{H}\\) has a finite VC-dimension.
+
+
+## Sauer's Lemma and the Growth Function {#sauer-s-lemma-and-the-growth-function}
+
+We have defined the notion of shattering, by considering the
+restriction of \\(\mathcal{H}\\) to a finite set of instances. The growth
+function measures the maximal "effective" size of \\(\mathcal{H}\\) on a
+set of \\(m\\) examples. Formally:
+
+<div class="definition">
+  <div></div>
+
+Let \\(\mathcal{H}\\) be a hypothesis class. Then the growth function of
+\\(\mathcal{H}\\), denoted \\(\tau\_{\mathcal{H}}(m) : \mathbb{N} \rightarrow
+\mathbb{N}\\), is defined as:
+
+\begin{equation}
+  \tau\_{\mathcal{H}}(m) = \textrm{max}\_{C \subset \mathcal{X} : |C| =
+    m} |\mathcal{H}\_C|
+\end{equation}
+
+</div>
+
+\\(\tau\_{\mathcal{H}}(m)\\) is the number of different functions from a
+set \\(C\\) of size \\(m\\) to \\(\\{0,1\\}\\) that can be obtained by restricting
+\\(\mathcal{H}\\) to \\(C\\). With this definition we can now state Sauer's
+lemma:
+
+<div class="definition">
+  <div></div>
+
+Let \\(\mathcal{H}\\) be a hypothesis class with
+\\(\textrm{VCdim}(\mathcal{H}) \le d < \infty\\). Then for all \\(m\\),
+
+\begin{equation}
+\tau\_{\mathcal{H}}(m) \le \sum\_{i=0}^{d}{m \choose i}
+\end{equation}
+
+In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\).
+
+</div>
 
 # Bibliography
 <a id="shalev2014understanding"></a>Shalev-Shwartz, S., & Ben-David, S., *Understanding machine learning: from theory to algorithms* (2014), : Cambridge university press. [↩](#acdb3458f18ecb92e5037975d277d0fb)
