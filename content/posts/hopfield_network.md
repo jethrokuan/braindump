@@ -1,15 +1,15 @@
 +++
 title = "Hopfield Network"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-26T21:27:55+08:00
+lastmod = 2019-03-27T07:29:45+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
 +++
 
 A Hopfield network is a fully connected [Ising model]({{< relref "ising_models" >}}) with a symmetric
-weight matrix, \\(\mathbb{W} = \mathbb{W^T}\\). These weights plus the
-bias term \\(\mathbb{b}\\), can be learned from training data, using
+weight matrix, \\(\mathbf{W} = \mathbf{W^T}\\). These weights plus the
+bias term \\(\mathbf{b}\\), can be learned from training data, using
 (approximate) maximum likelihood.
 
 Hopfield networks can be used as an associative memory, or content
@@ -27,8 +27,8 @@ energy) state, given all its neighbours. The full conditional can be
 shown to be:
 
 \begin{equation}
-  p(y\_s = 1 | \mathbb{y\_{-s}}, \mathbb{\theta}) =
-  \textrm{sigm}(\mathbb{w\_{s,:}}^T y\_{-s} + b\_s)
+  p(y\_s = 1 | \mathbf{y\_{-s}}, \mathbf{\theta}) =
+  \textrm{sigm}(\mathbf{w\_{s,:}}^T y\_{-s} + b\_s)
 \end{equation}
 
 Picking the most probable state amounts to using the rule \\(y\_s^\* = 1\\)
@@ -79,7 +79,7 @@ activations and updates its state. The sequence of updates may be a
 fixed or random sequence.
 
 The learning rule is intended to make a set of desired memories \\(\\{
-\mathbb{x^{(n)}}\\}\\) be stabel states of the Hopfield network's
+\mathbf{x^{(n)}}\\}\\) be stabel states of the Hopfield network's
 activity rule. Each memory is a binary pattern, with \\(x\_i \in \\{ -1,
 +1\\}\\).
 

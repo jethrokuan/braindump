@@ -3,8 +3,8 @@
 #+HUGO_TAGS: machine-learning
 
 A Hopfield network is a fully connected [[file:ising_models.org][Ising model]] with a symmetric
-weight matrix, $\mathbb{W} = \mathbb{W^T}$. These weights plus the
-bias term $\mathbb{b}$, can be learned from training data, using
+weight matrix, $\mathbf{W} = \mathbf{W^T}$. These weights plus the
+bias term $\mathbf{b}$, can be learned from training data, using
 (approximate) maximum likelihood.
 
 Hopfield networks can be used as an associative memory, or content
@@ -22,8 +22,8 @@ energy) state, given all its neighbours. The full conditional can be
 shown to be:
 
 \begin{equation}
-  p(y_s = 1 | \mathbb{y_{-s}}, \mathbb{\theta}) =
-  \textrm{sigm}(\mathbb{w_{s,:}}^T y_{-s} + b_s)
+  p(y_s = 1 | \mathbf{y_{-s}}, \mathbf{\theta}) =
+  \textrm{sigm}(\mathbf{w_{s,:}}^T y_{-s} + b_s)
 \end{equation}
 
 
@@ -75,7 +75,7 @@ activations and updates its state. The sequence of updates may be a
 fixed or random sequence.
 
 The learning rule is intended to make a set of desired memories $\{
-\mathbb{x^{(n)}}\}$ be stabel states of the Hopfield network's
+\mathbf{x^{(n)}}\}$ be stabel states of the Hopfield network's
 activity rule. Each memory is a binary pattern, with $x_i \in \{ -1,
 +1\}$.
 
