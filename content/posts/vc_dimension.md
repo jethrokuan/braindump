@@ -1,7 +1,7 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-20T19:37:11+08:00
+lastmod = 2019-03-21T15:45:07+08:00
 draft = false
 math = true
 +++
@@ -152,7 +152,7 @@ Let \\(\mathcal{H}\\) be a hypothesis class with
 \\(\textrm{VCdim}(\mathcal{H}) \le d < \infty\\). Then for all \\(m\\),
 
 \begin{equation}
-\tau\_{\mathcal{H}}(m) \le \sum\_{i=0}^{d}{m \choose i}
+  \tau\_{\mathcal{H}}(m) \le \sum\_{i=0}^{d}{m \choose i}
 \end{equation}
 
 In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\).

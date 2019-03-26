@@ -125,7 +125,7 @@ Let $\mathcal{H}$ be a hypothesis class with
 $\textrm{VCdim}(\mathcal{H}) \le d < \infty$. Then for all $m$,
 
 \begin{equation}
-\tau_{\mathcal{H}}(m) \le \sum_{i=0}^{d}{m \choose i}
+  \tau_{\mathcal{H}}(m) \le \sum_{i=0}^{d}{m \choose i}
 \end{equation}
 
 In particular, if $m > d + 1$, then $\tau_{\mathcal{H}}(m) \le (em/d)^d$.
