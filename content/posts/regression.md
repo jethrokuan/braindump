@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-08T11:32:12+08:00
+lastmod = 2019-03-27T20:53:52+08:00
 tags = ["statistics"]
 draft = false
 math = true
@@ -720,12 +720,204 @@ or the sigmoidal basis function:
 \end{equation}
 
 
+## Regression Diagnostics {#regression-diagnostics}
+
+In fitting a model to a given body of data, we would like to ensure
+that the fit is not overly determined by one or a few observations.
+The distribution theory, confidence intervals, and tests of hypotheses
+are valid and have meaning only if the standard regression assumptions
+are satisfied.
+
+
+### The Standard Regression Assumptions {#the-standard-regression-assumptions}
+
+**Assumptions about the form of the model**: The model that relates the
+   response \\(Y\\) to the predictors \\(X\_1, X\_2, \dots, X\_p\\) is assumed to
+   be linear in the regression parameters \\(\beta\_0, \beta\_1, \dots,
+   \beta\_p\\) respectively:
+
+\begin{equation}
+  Y = \beta\_0 + \beta\_1X\_1 + \dots + \beta\_pX\_p + \epsilon
+\end{equation}
+
+which implies that the ith observation can be written as:
+
+\begin{equation}
+  y\_{i} = \beta\_0 + \beta\_1x\_{i1} + \dots \beta\_px\_{ip} + \epsilon\_i,
+  i = 1,2,\dots,n
+\end{equation}
+
+Checking the linearity assumption can be done by examining the scatter
+plot of \\(Y\\) versus \\(X\\), but linearity in multiple regression is more
+difficult due to the high dimensionality of the data. In some cases,
+data transformations can lead to linearity.
+
+**Assumptions about the errors**: The errors \\(\epsilon\_1, \epsilon\_2,
+  \dots, \epsilon\_n\\) are assumed to be independently and identically
+  distributed normal random variables each with mean zero and a
+  common variance \\(\sigma^2\\). Four assumptions are made here:
+
+-   The error \\(\epsilon\_i\\) has a normal distribution. This normality
+    assumption can be validated by examining appropriate graphs of
+    the residuals.
+
+-   The errors \\(\epsilon\_i\\) have mean 0.
+
+-   The errors \\(\epsilon\_i\\) have the same (but unknown) variance
+    \\(\sigma^2\\). This is the constant variance assumption, also known
+    as the homogeneity or homoscedasticity assumption. When this
+    assumption does not hold, the problem is called the heterogeneity
+    or the heteroscedasticity problem.
+
+-   The errors \\(\epsilon\_i\\) are independent of each other. When this
+    assumption doesn't hold, we have the auto-correlation problem.
+
+**Assumption about the predictors**: Three assumptions are made here:
+
+-   The predictor variables \\(X\_1, X\_2, \dots, X\_p\\) are nonrandom. This
+    assumption is satisfied only when the experimenter can set the
+    values of the predictor variables at predetermined levels. When
+    the predictor variables are random variables, all inferences are
+    conditional, conditioned on the observed data.
+
+-   The values \\(x\_{1j}, x\_{2j}, \dots, x\_{nj}\\) are measured without
+    error. This assumption is hardly ever satisfied, and errors in
+    measurement will affect the residual variance, the multiple
+    correlation coefficient, and the individual estimates of the
+    regression coefficients. Correction for measurement errors of the
+    estimated regression coefficients, even in the simplest case
+    where all measurement errors are uncorrelated, requires a
+    knowledge of the ratio between the variances and the random
+    error. These quantities are seldom known.
+
+-   The predictor variables \\(X\_1, X\_2, \dots, X\_p\\) are assumed to be
+    linearly independent of each other. This assumption is required
+    to guarantee the uniqueness of the least squares solution. If
+    this assumption is violated, the problem is referred to as the
+    collinearity problem.
+
+**Assumption about the observations**: All observations are equally
+reliable and have an approximately equal role in determining the
+regression results.
+
+A feature of the method of least squares is that minor violations of
+the underlying assumptions do not invalidate the inferences or
+conclusions drawn from the analysis in a major way. However, gross
+violations can severely distort conclusions.
+
+
+### Types of Residuals {#types-of-residuals}
+
+A simple method for detecting model deficiencies in regression
+analysis is the examination of residual plots. Residual plots will
+point to serious violations in one or more of the standard assumptions
+when they exist. The analysis of residuals may lead to suggestions of
+structure or point to information in the data that might be missed or
+overlooked if the analysis is based only on summary statistics.
+
+When fitting the linear model to a set of data by least squares, we
+obtain the fitted values:
+
+\begin{equation}
+  \hat{y}\_i = \hat{\beta}\_0 + \hat{\beta}1 x\_{i1} +\dots +
+  \hat{\beta}\_p x\_{ip}
+\end{equation}
+
+and the corresponding ordinary least squares residuals:
+
+\begin{equation}
+e\_i = y\_i - \hat{y}\_i
+\end{equation}
+
+The fitted values can also be written in an alternative form as:
+
+\begin{equation}
+\hat{y\_i} = p\_{i1}y\_1 + p\_{i2}y\_2 + \dots + p\_{in}y\_n
+\end{equation}
+
+where the \\(p\_{ij}\\) are quantities that depend only on the values of
+the predictor variables. In simple regression \\(p\_{ij}\\) is given by:
+
+\begin{equation}
+  p\_{ij} = \frac{1}{n} + \frac{\left( x\_i + \overline{x} \right)
+    \left( x\_j - \overline{x} \right)}{\sum (x\_i - \overline{x})^2}
+\end{equation}
+
+In multiple regression the \\(p\_{ij}\\) are elements of matrix known as
+the hat or projection matrix.
+
+The value \\(p\_{ii}\\) is called the leverage value for the ith
+observation, because \\(\hat{y}\_i\\) is a weighted sum of all the
+observations in \\(Y\\) and \\(p\_{ii}\\) is the weight (leverage) given to
+\\(y\_i\\) in determining the ith fitted value \\(\hat{y}\_i\\). Thus, we have
+\\(n\\) leverage values, and they are denoted by:
+
+\begin{equation}
+  p\_{11}, p\_{22}, \dots, p\_{nn}
+\end{equation}
+
+When the standard assumptions hold, the ordinary residuals, \\(e\_1, e\_2,
+\dots, e\_n\\) will sum to zero, but they will not have the same variance
+because:
+
+\begin{equation}
+  \textrm{Var}(e\_i) = \sigma^2\left( 1 - p\_{ii} \right)
+\end{equation}
+
+To over come the problem of unequal variances, we standardize the ith
+residual \\(e\_i\\) by dividing by its standard deviation:
+
+\begin{equation}
+  z\_i = \frac{e\_i}{\sigma \sqrt{1 - p\_{ii}}}
+\end{equation}
+
+This is called the ith standardized residual because it has mean zero
+and standard deviation 1. The standardized residuals depend on
+\\(\sigma\\), the unknown standard deviation of \\(\epsilon\\). An unbiased of
+\\(\sigma^2\\) is given by:
+
+\begin{equation}
+  \hat{\sigma}^2 = \frac{\sum e\_i^2}{n - p - 1} = \frac{\sum (y\_i -
+    \hat{y}\_i)^2}{n - p - 1} = \frac{\textrm{SSE}}{n -p-1}
+\end{equation}
+
+An alternative unbiased estimate of \\(\sigma^2\\) is given by:
+
+\begin{equation}
+\hat{\sigma}\_{(i)}^2 = \frac{SSE\_{(i)}}{n - p -2}
+\end{equation}
+
+where \\(SSE\_{(i)}\\) is the sum of squared residuals when we fit the
+model to the n - 1 observations by omitting the ith observation.
+
+Using \\(\hat{\sigma}\\) as an estamite of \\(\sigma\\), we obtain:
+
+\begin{equation}
+  r\_i = \frac{e\_i}{\hat{\sigma}\sqrt{1 - p\_{ii}}}
+\end{equation}
+
+which we term the internally studentized residual. Using teh other
+unbiased estimate, we get:
+
+\begin{equation}
+  r\_i^\* = \frac{e\_i}{\hat{\sigma\_{(i)}}\sqrt{1 - p\_{ii}}}
+\end{equation}
+
+which is a monotonic transformation of \\(r\_i\\). This is termed the
+externally studentized residual. The standardized residuals do not sum
+to zero, but they all have the same variance.
+
+The externally standardized residuals follow a t-distribution with n - p - 2 degrees
+of freedom, but the internally standardized residuals do not. However, with a
+moderately large sample, these residuals should approximately have a standard
+normal distribution. The residuals are not strictly independently distributed, but
+with a large number of observations, the lack of independence may be
+ignored.
+
+
 ## References {#references}
 
 <sup id="a6f25d8e3790a685481657d76f53a002"><a href="#chatterjee06_regres_analy_examp" title="Samprit Chatterjee \&amp; Ali Hadi, Regression Analysis by Example, John Wiley \&amp; Sons, Inc. (2006).">(Samprit Chatterjee \& Ali Hadi, 2006)</a></sup><sup>,</sup><sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">(James {\it et al.}, 2013)</a></sup>
-
-
-####  {#}
 
 # Bibliography
 <a id="james2013introduction"></a>James, G., Witten, D., Hastie, T., & Tibshirani, R., *An introduction to statistical learning* (2013), : Springer. [↩](#47f776a94d6687b2efebf468b22650cb)
