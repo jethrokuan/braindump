@@ -884,6 +884,87 @@ normal distribution. The residuals are not strictly independently distributed, b
 with a large number of observations, the lack of independence may be
 ignored.
 
+** Graphical methods
+
+*** Before fitting the model
+
+Graphs plotted before fitting the model serve as exploratory tools.
+There are four categories of graphs:
+
+*1. One-dimensional graphs*
+
+One-dimensional graphs give a general idea of the distribution of each
+individual variable. One of the following graphs may be used:
+
+- histogram
+- stem-and-leaf display
+- dot-plot
+- box-plot
+
+These graphs indicate whether the variable is symmetric, or skewed.
+When a variable is skewed, it should be transformed, generally
+using a logarithmic transformation. Univariate graphs also point out
+the presence of outliers in the variables. However, no observations
+should be deleted at this stage. 
+
+*2. Two-dimensional graphs*
+
+We can take the variables in pairs and look at the scatter plots of
+each variable versus each other variable in the data set. These
+explore relationships between each pair of variables and identify
+general patterns. These pairwise plots can be arranged in a matrix
+format, known as the /draftsman's plot/ or the /plot matrix/. In simple
+regression, we expect the plot of $Y$ versus $X$ to show a linear
+pattern. However, scatter plots of $Y$ versus each predictor variable
+may or may not show linear patterns.
+
+Beyond these, there are rotation plots and dynamic graphs which serve
+as powerful visualizations of the data in more than 2 dimensions.
+
+*** Graphs after fitting a model
+
+The graphs after fitting a model help check the assumptions and assess
+the adequacy of the fit of a given model.
+
+1. Graphs checking linearity and normality assumptions
+
+When the number of variables is small, the assumption of linearity can
+be checked by interactively and dynamically manipulating plots
+discussed in the previous section. However, this quickly becomes
+difficult with many predictor variables. Plotting the standardized
+residuals can help check the linearity and normality assumptions.
+
+- Normal probability plot of the standardized residuals: This is a
+  plot of the ordered standardized residuals versus the normal scores.
+  The normal scores are what we would expect to obtain if we take a
+  sample of size $n$ from a standard normal distribution. If the
+  residuals are normally distributed, the ordered residuals should be
+  approximately the same as the ordered normal scores. Under the
+  normality assumption, this plot should resemble a straight line with
+  intercept zero and slope of 1.
+
+- Scatter plots of the standardized residual against each of the
+  predictor variables: Under the standard assumptions, the
+  standardized residuals are uncorrelated with each of the predictor
+  variables. If the assumptions hold, the plot should be a random
+  scatter of points.
+
+- Scatter plot of the standardized residual versus the fitted values:
+  Under the standard assumptions, the standardized residuals are also
+  uncorrelated with the fitted values. Hence, this plot should also be
+  a random scatter of points.
+
+- Index plot of the standardized residuals: we display the
+  standardized residuals versus the observation number. If the order
+  in which the observations were taken is immaterial, this plot is not
+  needed. However, if the order is important, a plot of the residuals
+  in serial order may be used to check the assumption of the
+  independence of the errors.
+
+
+#+CAPTION: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity
+[[file:images/regression/screenshot_2019-03-27_21-15-45.png]]
+
 * References
 cite:chatterjee06_regres_analy_examp,james2013introduction
 
