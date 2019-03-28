@@ -1,7 +1,7 @@
 +++
 title = "Expectation Maximization and Mixture Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-28T15:32:52+08:00
+lastmod = 2019-03-28T16:10:08+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -42,8 +42,8 @@ fixed number of clusters \\(K\\). We formalize this by introducing
 is then to minimize the objective function:
 
 \begin{equation}
-  J = \sum\_{n=1}^{N} \sum\_{k=1}^{N} r\_{nk} \lvert \textbf{x}\_n -
-  \textbf{\mu}\_k^2 \rvert
+  J = \sum\_{n=1}^{N} \sum\_{k=1}^{N} r\_{nk} \lvert \mathbf{x}\_n -
+  \mathbf{\mu}\_k^2 \rvert
 \end{equation}
 
 The K-means algorithm works as follows:
@@ -62,8 +62,8 @@ give a closed-form solution:
 
 \begin{equation}
   r\_{nk} = \begin{cases}
-    1 & \text{if } k = \textrm{argmin}\_j \lvert \textbf{x}\_n -
-    \textbf{\mu}\_j \rvert ^2 \\\\\\
+    1 & \text{if } k = \textrm{argmin}\_j \lvert \mathbf{x}\_n -
+    \mathbf{\mu}\_j \rvert ^2 \\\\\\
     0 & \text{otherwise.}
   \end{cases}
 \end{equation}
@@ -74,11 +74,11 @@ minimized by setting the derivative wrt to \\(\mu\_k\\) to 0. We solve it
 to be:
 
 \begin{equation}
-  \textbf{\mu}\_k = \frac{\sum\_{n} r\_{nk}\textbf{x}\_n}{\sum\_{n} r\_{nk}}
+  \mathbf{\mu}\_k = \frac{\sum\_{n} r\_{nk}\mathbf{x}\_n}{\sum\_{n} r\_{nk}}
 \end{equation}
 
 This result can be interpreted as setting \\(\mu\_k\\) equal to the mean of
-all the datapoints \\(\textbf{x}\_n\\) assigned to cluster \\(k\\).
+all the datapoints \\(\mathbf{x}\_n\\) assigned to cluster \\(k\\).
 
 Because each step reduces the objective function \\(J\\), the algorithm is
 guaranteed to converge to some minimum. This minimum may be a local
@@ -94,7 +94,7 @@ using a dissimilarity measure \\(\mathcal{V}(x, x')\\) (instead of
 Euclidean distance), and minimizing the distortion measure:
 
 \begin{equation}
-  \tilde{J} = \sum\_{n=1}^{N} \sum\_{k=1}^{K} r\_{nk}\mathcal{V}(\textbf{x}\_n, \textbf{x}\_k)
+  \tilde{J} = \sum\_{n=1}^{N} \sum\_{k=1}^{K} r\_{nk}\mathcal{V}(\mathbf{x}\_n, \mathbf{x}\_k)
 \end{equation}
 
 which gives the _K-medoids algorithm_.
@@ -118,8 +118,8 @@ discrete latent variables. the Gaussian mixture distribution can be
 written as a linear superposition of Gaussians of the form:
 
 \begin{equation}
-  p(\textbf{x}) = \sum\_{k=1}^{K} \pi\_k \mathcal{N}(\textbf{x} |
-  \textbf{\mu}\_k, \textbf{\Sigma}\_k)
+  p(\mathbf{x}) = \sum\_{k=1}^{K} \pi\_k \mathcal{N}(\mathbf{x} |
+  \mathbf{\mu}\_k, \mathbf{\Sigma}\_k)
 \end{equation}
 
 We can introduce a K-dimensional binary random variable \\(\mathbf{z}\\)
@@ -145,8 +145,8 @@ we can then represent \\(p(\mathbf{z})\\) as:
 The conditional distribution can also be written as:
 
 \begin{equation}
-  p(\textbf{x} | \textbf{z}) = \prod\_{k=1}^{K} \mathcal{N}(\textbf{x}
-  | \textbf{\mu}\_k, \textbf{\Sigma}\_k)^{z\_k}
+  p(\mathbf{x} | \mathbf{z}) = \prod\_{k=1}^{K} \mathcal{N}(\mathbf{x}
+  | \mathbf{\mu}\_k, \mathbf{\Sigma}\_k)^{z\_k}
 \end{equation}
 
 Since the joint distribution is given by
@@ -155,20 +155,20 @@ Since the joint distribution is given by
 possible states of \\(\mathbf{z}\\):
 
 \begin{equation}
-p(\textbf{x}) = \sum\_{z} p(\textbf{z}) p(\textbf{x} | \textbf{z}) =
-\sum\_{k=1}^{K} pi-k \mathcal{N}(\textbf{x} | \textbf{\mu}\_k, \textbf{\Sigma}\_k)
+p(\mathbf{x}) = \sum\_{z} p(\mathbf{z}) p(\mathbf{x} | \mathbf{z}) =
+\sum\_{k=1}^{K} pi-k \mathcal{N}(\mathbf{x} | \mathbf{\mu}\_k, \mathbf{\Sigma}\_k)
 \end{equation}
 
 We define another quantity \\(\gamma(z\_k) = p(z\_k = 1 | \mathbf{x})\\), whose
 quantity can be found via Bayes theorem:
 
 \begin{equation}
-  \gamma(z\_k) = \frac{\pi\_k \mathcal{N}(\textbf{x} | \textbf{\mu}\_k,
-    \textbf{\Sigma}\_k)}{\sum\_{j=1}^{K} \pi\_j \mathcal{N}(\textbf{x} |
-    \textbf{\mu}\_j, \textbf{\Sigma}\_j)}
+  \gamma(z\_k) = \frac{\pi\_k \mathcal{N}(\mathbf{x} | \mathbf{\mu}\_k,
+    \mathbf{\Sigma}\_k)}{\sum\_{j=1}^{K} \pi\_j \mathcal{N}(\mathbf{x} |
+    \mathbf{\mu}\_j, \mathbf{\Sigma}\_j)}
 \end{equation}
 
-We shall view \\(\pi\_k\\) as the prior probability that \\(\z\_k = 1\\), and
+We shall view \\(\pi\_k\\) as the prior probability that \\(z\_k = 1\\), and
 \\(\gamma(z\_k)\\) is the _responsibility_ that component \\(k\\) takes for
 explaining the observation \\(\mathbf{x}\\).
 
@@ -196,8 +196,136 @@ First, we find the derivatives of \\(\lnp(\mathbf{X} | \mathbf{\pi},
 \mathbf{\mu}, \mathbf{\Sigma})\\) wrt to \\(\mu\_k\\) to 0:
 
 \begin{equation}
-  0 = \sum\_{n=1}^{N} \underbrace{\frac{\pi\_k \mathcal{N}(\textbf{x}\_n |
-    \textbf{\mu}\_k, \textbf{\Sigma}\_k)}{\sum\_{j} \pi\_j \mathcal{N}
-    (\textbf{x}\_n| \textbf{\mu}\_j \textbf{\Sigma}\_j)}}\_{\gamma (z\_{nk})}
-  \textbf{\Sigma}^{-1}\_k \left( \textbf{x}\_n - \textbf{\mu}\_k \right)
+  0 = \sum\_{n=1}^{N} \underbrace{\frac{\pi\_k \mathcal{N}(\mathbf{x}\_n |
+    \mathbf{\mu}\_k, \mathbf{\Sigma}\_k)}{\sum\_{j} \pi\_j \mathcal{N}
+    (\mathbf{x}\_n| \mathbf{\mu}\_j \mathbf{\Sigma}\_j)}}\_{\gamma (z\_{nk})}
+  \mathbf{\Sigma}^{-1}\_k \left( \mathbf{x}\_n - \mathbf{\mu}\_k \right)
 \end{equation}
+
+Multiplying by \\(\mathbf{\Sigma}\_k^{-1}\\) (which we assume to be
+non-singular), we get:
+
+\begin{equation}
+\mathbf{\mu}\_k = \frac{1}{N\_k} \sum\_{n=1}^{N}
+\gamma(z\_{nk})\mathbf{x}\_n, \text{ where } N\_k =\sum\_{n=1}^{N}\gamma(z\_{nk})
+\end{equation}
+
+We can interpret \\(N\_k\\) as the effective number of points assigned to
+cluster \\(k\\).
+
+If we set the derivative of \\(\lnp(\mathbf{X} | \mathbf{\pi},
+\mathbf{\mu}, \mathbf{\Sigma})\\) wrt to \\(\Sigma\_k\\) to 0, and work it
+out, we also get that:
+
+\begin{equation}
+  \pi\_k = \frac{N\_k}{N}
+\end{equation}
+
+These results are not closed form solutions of the parameters of the
+mixture model, since they depend on \\(\gamma(z\_{nk})\\). However, the
+iterative procedure in the EM algorithm, allows us to choose some
+initial values and perform E and M-steps to converge to a solution.
+
+In the expectation step (E-step), we use the current values for the
+parameters to evaluate the posterior probabilities, or
+responsibilities. We then use these probabilities in the maximization
+step (M-step), to re-estimate the means, covariances and mixing
+coefficients.
+
+
+## General EM {#general-em}
+
+The goal of the EM algorithm is to find maximum likelihood solutions
+for models having latent variables. We denote the set of all observed
+data by \\(\mathbf{X}\\), in which the nth row represents
+\\(\mathbf{x}\_n^T\\), and similarly we denote the set of all latent
+variables by \\(Z\\), with a corresponding row $\mathbf{z}\_n^T4. The set
+of all model parameters is denoted by \\(\mathbf{\theta}\\). The
+log-likelihood function is given by:
+
+\begin{equation}
+  \ln p(\mathbf{X} | \mathbf{\theta}) = \ln \left\\{ \sum\_{\mathbf{z}}
+    p(\mathbf{X}, \mathbf{Z} | \mathbf{\theta} ) \right\\}
+\end{equation}
+
+A key observation is that the summation occurs within the
+logarithm. Even if the joint distribution belongs to the exponential
+family, the marginal \\(p(\mathbf{X} | \mathbf{\theta})\\) generally does
+not because of this summation. The presence of the sum prevents the
+logarithm from acting directly on the joint distribution, resulting in
+complicated expressions for the maximum likelihood solution.
+
+Since we are in general not given the complete dataset \\(\\{\mathbf{X},
+\mathbf{Z}\\}\\), but only the incomplete data \\(\mathbf{X}\\), our state of
+knowledge of the values of the latent variables is given only by a
+posterior distribution \\(p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta})\\).
+Instead, we consider the expected value under the posterior
+distribution of the latent variable, which corresponds to the E-step
+of the EM algorithm. In the subsequent M-step, we maximize this
+expectation.
+
+In the E-step, we use the current parameters \\(\theta^{\text{old}}\\) to
+find the posterior distribution of the latent variables given by
+\\(p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta}^{\text{old}})\\). We use the
+posterior distribution to fin the expectation of the complete-data log
+likelihood evaluated for some general parameter \\(\theta\\). This
+expectation, denoted \\(Q(\mathbf{\theta}, \mathbf{\theta}^{\text{old}}
+)\\), is given by:
+
+\begin{equation}
+  Q(\mathbf{\theta}, \mathbf{\theta}^{\text{old}}) = \sum\_{\mathbf{Z}}
+  p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta}^{\text{old}})\ln
+  p(\mathbf{X} , \mathbf{Z} | \mathbf{\theta})
+\end{equation}
+
+In the M-step, we revise the parameter estimate
+\\(\mathbf{\theta}^{\text{new}}\\) by maximizing the Q function:
+
+\begin{equation}
+  \mathbf{\theta}^{\text{\new}} = \textrm{argmax}\_{\theta}
+  Q(\mathbf{\theta}, \mathbf{\theta}^{\text{old}})
+\end{equation}
+
+In the definition of \\(Q\\), the logarithm acts directly on the joint
+distribution, making the M-step tractable.
+
+In general, we suppose that the direct optimization of \\(p(\mathbf{X} |
+\mathbf{\theta})\\) is difficult, and the optimization of \\(p(\mathbf{X},
+\mathbf{Z} | \mathbf{\theta})\\) is significantly easier.
+
+We introduce a distribution \\(q(\mathbf{Z})\\) over the latent variables,
+and we observe that for any choice of \\(q(\mathbf{Z})\\), the following
+decomposition holds:
+
+\begin{equation}
+  \ln p(\mathbf{X} | \mathbf{\theta}) = \mathcal{L}(q,
+  \mathbf{\theta}) + KL(q || p)
+\end{equation}
+
+where
+
+\begin{equation}
+  \mathcal{L} (q, \mathbf{\theta}) = \sum\_{\mathbf{Z}} q(\mathbf{Z})
+  \ln \left\\{ \frac{p(\mathbf{X}, \mathbf{Z} | \mathbf{\theta})}{q(\mathbf{Z})} \right\\}
+\end{equation}
+
+and
+
+\begin{equation}
+  KL(q||p) = - \sum\_{\mathbf{Z}} q(\mathbf{Z}) \ln \left\\{
+    \frac{p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta})}{q{\mathbf{Z}}} \right\\}
+\end{equation}
+
+{{< figure src="/ox-hugo/screenshot_2018-04-03_10-56-25.png" >}}
+
+The EM algorithm involves alternatingly computing a lower bound on the
+log likelihood for the current parameter values, and then maximizing
+this bound to obtain the new parameter values.
+
+For complex models, the E-step and M-step can still be intractable.
+The Generalized EM (GEM) algorithm addresses the problem on the
+intractable M-step. Instead of maximizing \\(L(q, \mathbf{\theta})\\) wrt
+\\(\mathbf{\theta}\\), it seeks to change the parameters such that the
+value is increased. Similarly, one can address the intractable E-step
+by seeking to partially optimize \\(L(q, \mathbf{\theta})\\) wrt
+\\(q(\mathbf{Z})\\).

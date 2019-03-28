@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-13T18:16:39+08:00
+lastmod = 2019-03-28T16:07:07+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -459,43 +459,6 @@ Z^{(i)} \sim \text{multinomial}(\phi)
 \begin{equation}
 X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu\_j, \Sigma\_j)
 \end{equation}
-
-
-### Expectation Maximization {#expectation-maximization}
-
-<https://www.cs.utah.edu/~piyush/teaching/EM%5Falgorithm.pdf>
-
-The EM algorithm is an efficient iterative procedure to compute the
-Maximum Likelihood (ML) estimate in the presence of missing or hidden
-data.
-
-Each iteration of the EM algorithm consists of two processes: The
-E-step, and the M-step. In the expectation, or E-step, the missing da
-ta are estimated given the observed data and current estimate of the
-model par ameters. This is achieved using the conditional
-expectation, explaining the choice of terminology.
-
-In the M-step, the likelihood function is maximized under th e
-assumption that the missing data are known. The estimate of the
-missing data f rom the E-step are used in lieu of the actual missing
-data.
-
-Convergence is assured since the algorithm is guaranteed to
-increase the likelihood at each iteration.
-
-{{< figure src="/ox-hugo/screenshot_2018-04-03_10-56-25.png" >}}
-
-For mixture of Gaussians:
-
-Repeat until convergence:
-
-1.  E-step
-    -   guess values of \\(Z^{(i)}\\)
-    -   Let \\(w\_j^{(i)} := P(Z^{(i)=j|X^{(i), \phi, \mu, \Sigma}})\\)
-2.  M-step
-    -   \\(\phi\_j := \frac{1}{m}\sum\_{i=1}^m w\_j^{(i)}\\)
-    -   \\(\mu\_j := \frac{\sum\_{i=1}^m w\_j^{(i)}x^{(i)}}{\sum\_{i=1}^m w\_j^{(i)}}\\)
-    -   ...
 
 
 ## Refile {#refile}
