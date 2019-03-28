@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-28T11:27:38+08:00
+lastmod = 2019-03-28T12:27:45+08:00
 draft = false
 math = true
 +++
@@ -329,7 +329,7 @@ remaining variables \\(x\_{j \ne i}\\). We have:
 \begin{equation}
   p(x\_i | x\_{\\{j \ne i\\}}) = \frac{p(x\_1, \dots, x\_D)}{\int p(x\_1,
     \dots, x\_D) dx\_i} = \frac{\prod\_{k}p(x\_k | \textrm{pa}\_k)}{\prod\_k
-  p(x\_k | \textrm{pa}\_k)dx\_i}}
+  p(x\_k | \textrm{pa}\_k)dx\_i}
 \end{equation}
 
 We observe that any factor \\(p(x\_k | \textrm{pa}\_k)\\) that does not have

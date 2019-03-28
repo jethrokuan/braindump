@@ -299,7 +299,7 @@ remaining variables $x_{j \ne i}$. We have:
 \begin{equation}
   p(x_i | x_{\{j \ne i\}}) = \frac{p(x_1, \dots, x_D)}{\int p(x_1,
     \dots, x_D) dx_i} = \frac{\prod_{k}p(x_k | \textrm{pa}_k)}{\prod_k
-  p(x_k | \textrm{pa}_k)dx_i}}
+  p(x_k | \textrm{pa}_k)dx_i}
 \end{equation}
 
 We observe that any factor $p(x_k | \textrm{pa}_k)$ that does not have
