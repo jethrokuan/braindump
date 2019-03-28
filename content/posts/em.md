@@ -1,7 +1,7 @@
 +++
 title = "Expectation Maximization and Mixture Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-28T16:13:14+08:00
+lastmod = 2019-03-28T16:22:59+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -329,3 +329,13 @@ intractable M-step. Instead of maximizing \\(L(q, \mathbf{\theta})\\) wrt
 value is increased. Similarly, one can address the intractable E-step
 by seeking to partially optimize \\(L(q, \mathbf{\theta})\\) wrt
 \\(q(\mathbf{Z})\\).
+
+
+## References {#references}
+
+<sup id="13e9f4b9751b28dd85f7356d699c6650"><a href="#borman2004expectation" title="Borman, The expectation maximization algorithm-a short tutorial, {Submitted for publication}, v(), (2004).">(Borman, 2004)</a></sup><sup>,</sup><sup id="fa1cabca5f42fce421ffb108d3f60ec4"><a href="#bishop2006pattern" title="Bishop, Pattern recognition and machine learning, springer (2006).">(Bishop, 2006)</a></sup>
+
+# Bibliography
+<a id="borman2004expectation"></a>Borman, S., *The expectation maximization algorithm-a short tutorial*, Submitted for publication, *41()*,  (2004).  [↩](#13e9f4b9751b28dd85f7356d699c6650)
+
+<a id="bishop2006pattern"></a>Bishop, C. M., *Pattern recognition and machine learning* (2006), : springer. [↩](#fa1cabca5f42fce421ffb108d3f60ec4)

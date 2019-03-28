@@ -324,3 +324,9 @@ value is increased. Similarly, one can address the intractable E-step
 by seeking to partially optimize $L(q, \mathbf{\theta})$ wrt
 $q(\mathbf{Z})$.
 
+
+* References
+cite:borman2004expectation,bishop2006pattern
+
+
+bibliography:ml.bib
