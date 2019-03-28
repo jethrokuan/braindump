@@ -1,7 +1,7 @@
 +++
 title = "Expectation Maximization and Mixture Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-28T16:10:08+08:00
+lastmod = 2019-03-28T16:13:14+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -192,7 +192,7 @@ We can find maximum likelihood solutions for models with latent
 variables using the EM algorithm. We demonstrate this for the case of
 the Gaussian mixture model.
 
-First, we find the derivatives of \\(\lnp(\mathbf{X} | \mathbf{\pi},
+First, we find the derivatives of \\(\ln p(\mathbf{X} | \mathbf{\pi},
 \mathbf{\mu}, \mathbf{\Sigma})\\) wrt to \\(\mu\_k\\) to 0:
 
 \begin{equation}
@@ -213,7 +213,7 @@ non-singular), we get:
 We can interpret \\(N\_k\\) as the effective number of points assigned to
 cluster \\(k\\).
 
-If we set the derivative of \\(\lnp(\mathbf{X} | \mathbf{\pi},
+If we set the derivative of \\(\ln p(\mathbf{X} | \mathbf{\pi},
 \mathbf{\mu}, \mathbf{\Sigma})\\) wrt to \\(\Sigma\_k\\) to 0, and work it
 out, we also get that:
 
@@ -282,7 +282,7 @@ In the M-step, we revise the parameter estimate
 \\(\mathbf{\theta}^{\text{new}}\\) by maximizing the Q function:
 
 \begin{equation}
-  \mathbf{\theta}^{\text{\new}} = \textrm{argmax}\_{\theta}
+  \mathbf{\theta}^{\text{new}} = \textrm{argmax}\_{\theta}
   Q(\mathbf{\theta}, \mathbf{\theta}^{\text{old}})
 \end{equation}
 
@@ -313,7 +313,7 @@ and
 
 \begin{equation}
   KL(q||p) = - \sum\_{\mathbf{Z}} q(\mathbf{Z}) \ln \left\\{
-    \frac{p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta})}{q{\mathbf{Z}}} \right\\}
+    \frac{p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta})}{q(\mathbf{Z})} \right\\}
 \end{equation}
 
 {{< figure src="/ox-hugo/screenshot_2018-04-03_10-56-25.png" >}}
