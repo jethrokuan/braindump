@@ -289,6 +289,36 @@ every distribution over $G$.
 A nice tutorial on d-separation can be found here.
 cite:ucla_causal_discus
 
+*** Markov Blanket
+
+Consider a joint distribution $p(X_1, \dots, x_D)$ represented by a
+directed graph having $D$ nodes. Consider the conditional distribution
+of a particular node with variables $x_i$ conditioned on all the
+remaining variables $x_{j \ne i}$. We have:
+
+\begin{equation}
+  p(x_i | x_{\{j \ne i\}}) = \frac{p(x_1, \dots, x_D)}{\int p(x_1,
+    \dots, x_D) dx_i} = \frac{\prod_{k}p(x_k | \textrm{pa}_k)}{\prod_k
+  p(x_k | \textrm{pa}_k)dx_i}}
+\end{equation}
+
+We observe that any factor $p(x_k | \textrm{pa}_k)$ that does not have
+any functional dependence on $x_i$ can be taken outside the integral,
+and will therefore cancel between the numerator and the denominator.
+The only factors that will remain are the conditional distribution
+$p(x_i | \textrm{pa}_i)$ for the node $x_i$ itself, and conditional
+distributions for any nodes $x_k$ such that node $x_i$ is in teh
+conditioning set of $p(x_k | \textrm{pa}_k)$, in other words for which
+$x_i$ is a parent of $x_k$. The conditional $p(x_i | \textrm{pa}_i)$
+will depend on the parents of node $x_i$, and the conditionals
+$p(x_k | \textrm{pa}_k)$ will depend on nthe children of $x_i$, as
+well as the co-parents: variables corresponding to parents of node
+$x_k$ other than $x_i$. This set of nodes is called the /Markov Blanket/.
+
+
+#+CAPTION: An illustration of the Markov Blanket. ([[https://en.wikipedia.org/wiki/Markov_blanket][Source]])
+[[file:images/pgm/240px-Diagram_of_a_Markov_blanket.svg_2019-03-28_11-26-58.png]]
+
 ** Soundness and Completeness
 
 - Soundness :: If a distribution $P$ factorizes according to $G$, then

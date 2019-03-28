@@ -16,7 +16,7 @@ To see that this is true, we provide a counterexample.
 
 let $\mathcal{H}$ be the set of threshold functions over the real
 line, namely, $\mathcal{H} = \left\{h_a : a \in \mathbb{R}\right\}$,
-where $h_a : \mathbb{R} \rightarrow \left\{0,1\rightarrow\}$ is a
+where $h_a : \mathbb{R} \rightarrow \left\{ 0,1\rightarrow \right\}$ is a
 function such that $h_a(x) = \mathbb{I}_{[x < a]}$. Clearly $H$ is of
 infinite size. However, we can easily show that $\mathcal{H}$ is PAC
 learnable, with sample complexity:

@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-15T15:23:07+08:00
+lastmod = 2019-03-28T11:27:38+08:00
 draft = false
 math = true
 +++
@@ -319,6 +319,35 @@ A nice tutorial on d-separation can be found here.
 }">(UCLSA, nil)</a></sup>
 
 
+#### Markov Blanket {#markov-blanket}
+
+Consider a joint distribution \\(p(X\_1, \dots, x\_D)\\) represented by a
+directed graph having \\(D\\) nodes. Consider the conditional distribution
+of a particular node with variables \\(x\_i\\) conditioned on all the
+remaining variables \\(x\_{j \ne i}\\). We have:
+
+\begin{equation}
+  p(x\_i | x\_{\\{j \ne i\\}}) = \frac{p(x\_1, \dots, x\_D)}{\int p(x\_1,
+    \dots, x\_D) dx\_i} = \frac{\prod\_{k}p(x\_k | \textrm{pa}\_k)}{\prod\_k
+  p(x\_k | \textrm{pa}\_k)dx\_i}}
+\end{equation}
+
+We observe that any factor \\(p(x\_k | \textrm{pa}\_k)\\) that does not have
+any functional dependence on \\(x\_i\\) can be taken outside the integral,
+and will therefore cancel between the numerator and the denominator.
+The only factors that will remain are the conditional distribution
+\\(p(x\_i | \textrm{pa}\_i)\\) for the node \\(x\_i\\) itself, and conditional
+distributions for any nodes \\(x\_k\\) such that node \\(x\_i\\) is in teh
+conditioning set of \\(p(x\_k | \textrm{pa}\_k)\\), in other words for which
+\\(x\_i\\) is a parent of \\(x\_k\\). The conditional \\(p(x\_i | \textrm{pa}\_i)\\)
+will depend on the parents of node \\(x\_i\\), and the conditionals
+\\(p(x\_k | \textrm{pa}\_k)\\) will depend on nthe children of \\(x\_i\\), as
+well as the co-parents: variables corresponding to parents of node
+\\(x\_k\\) other than \\(x\_i\\). This set of nodes is called the _Markov Blanket_.
+
+{{< figure src="/ox-hugo/240px-Diagram_of_a_Markov_blanket.svg_2019-03-28_11-26-58.png" caption="Figure 3: An illustration of the Markov Blanket. ([Source](https://en.wikipedia.org/wiki/Markov%5Fblanket))" >}}
+
+
 ### Soundness and Completeness {#soundness-and-completeness}
 
 Soundness
@@ -485,14 +514,14 @@ required by a DGM is awkward. For example, if we're modelling an
 image, we might suppose that the neighbouring pixels are correlated.
 We may form a DAG model with a 2d lattice topology as such:
 
-{{< figure src="/ox-hugo/screenshot_2019-02-15_13-15-34.png" caption="Figure 3: 2d lattice represented as a DAG." >}}
+{{< figure src="/ox-hugo/screenshot_2019-02-15_13-15-34.png" caption="Figure 4: 2d lattice represented as a DAG." >}}
 
 However, representing the conditional probabilities in this way is
 rather unnatural: the Markov blanket of node \\(X\_8\\) includes its
 non-neighbours. Instead, we may want to use a UGM, or Markov Random
 Field (MRF).
 
-{{< figure src="/ox-hugo/screenshot_2019-02-15_13-16-41.png" caption="Figure 4: UGM representation of the lattice topology." >}}
+{{< figure src="/ox-hugo/screenshot_2019-02-15_13-16-41.png" caption="Figure 5: UGM representation of the lattice topology." >}}
 
 
 ### Conditional Independence Properties of UGMs {#conditional-independence-properties-of-ugms}
@@ -695,9 +724,9 @@ where inference is intractable, learning is also intractable. This
 motivates computationally faster alternatives to ML/MAP estimation,
 such as **pseudo likelihood**, and **stochastic maximum likelihood**.
 
-{{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-06.png" caption="Figure 5: Stochastic maximum likelihood" >}}
+{{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-06.png" caption="Figure 6: Stochastic maximum likelihood" >}}
 
-{{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-45.png" caption="Figure 6: Iterative Proportional Fitting" >}}
+{{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-45.png" caption="Figure 7: Iterative Proportional Fitting" >}}
 
 
 ### Conditional Random Fields (CRFs) {#conditional-random-fields--crfs}

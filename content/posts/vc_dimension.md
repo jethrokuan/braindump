@@ -1,7 +1,7 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-27T07:29:19+08:00
+lastmod = 2019-03-28T11:09:08+08:00
 draft = false
 math = true
 +++
@@ -22,7 +22,7 @@ To see that this is true, we provide a counterexample.
 
 let \\(\mathcal{H}\\) be the set of threshold functions over the real
 line, namely, \\(\mathcal{H} = \left\\{h\_a : a \in \mathbb{R}\right\\}\\),
-where \\(h\_a : \mathbb{R} \rightarrow \left\\{0,1\rightarrow\\}\\) is a
+where \\(h\_a : \mathbb{R} \rightarrow \left\\{ 0,1\rightarrow \right\\}\\) is a
 function such that \\(h\_a(x) = \mathbb{I}\_{[x < a]}\\). Clearly \\(H\\) is of
 infinite size. However, we can easily show that \\(\mathcal{H}\\) is PAC
 learnable, with sample complexity:
