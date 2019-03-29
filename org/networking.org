@@ -900,3 +900,91 @@ For a newly arriving host, the DHCP protocol is a 4-step process:
 [[file:images/networking/screenshot_2019-03-20_10-26-56.png]]
 
 *** NAT
+
+To address allocation of IP addresses in small networks, the network
+translation protocol (NAT) has foundn increasingly widespread use.
+There are address spaces reserved for private networks, or a realm of
+private addresses. These are:
+
+- 10.0.0.0/8
+- 172.16.0.0/12
+- 192.168.0.0/16
+
+These addresses can be used without coordination with IANA or an
+Internet registry. These IP addresses only have meaning within the
+private network.
+
+#+CAPTION: Network Address Translation
+[[file:images/networking/screenshot_2019-03-28_16-32-35.png]]
+
+*** Routing
+
+Recall that the Internet is a "network-of-networks": A hierarchy of
+Autonomous Systems (AS), e.g. ISPs each own routers and links. Due to
+the size and decentralized administration of the internet, routing on
+the Internet is done hierarchically.
+
+There are 2 forms of routing:
+
+- Intra-AS routing :: intra-as routing finds a good patht between two
+     routers within an AS. The 2 commonly used protocols are RIP and OSPF.
+- Inter-AS routing ::  inter-as routing handles the interfaces between
+     ASs. The de facto protocol for this is BGP.
+
+In intra-AS routing, there is a single administrator, so no policy
+decisions are needed. The routing policies here have a large focus on
+performance.
+
+In inter-AS routing, admins will often want control over how traffic
+is routed, or who routes through its net. In this situation, policy
+may be prioritized over performance.
+
+Routing can be viewed as a least-cost path problem between two
+vertices (routers) in a graph (network of routers).
+
+Routing algorithms are classified as follows:
+
+*Link state algorithms*. In this scenario, all routers have complete
+knowledge of the network topology, and the link costs. Routers
+periodically broadcast link costs to each other. Djikstra's algorithm
+is often used to compute the least-cost path locally.
+
+
+*Distance vector algorithms*. In this scenario, routers know
+ physically-connected neighbours, and link costs to neighbours.
+ Routers exchange "local views" and update their own "local views". An
+ iterative process of computation is taken:
+
+1. Swap local view with direct neighbours.
+2. Update own's local view.
+3. Repeat 1-2 until no more change to local view.
+
+
+The Bellman-Ford equation is used to find the least-cost path:
+
+\begin{equation}
+  d_x(y) = \textrm{min}_v(c(x,v) + d_v(y))
+\end{equation}
+
+To find the least cost path, $x$ needs to know the cost from each
+of its direct neighbour to $y$. Each neighbour $v$ sends its distance
+vector $(y, k)$ to $x$, telling $x$ that the cost from $v$ to $y$ is
+$k$.
+
+
+In the Distance Vector algorithm, every router sends its distance
+vectors to its directly connected neighbours. When router $x4 finds
+out that $y4 is advertising a path to $z$ than $x$ currently knows:
+
+- $x$ will update its distance vector to $z$ accordingly
+- $x$ will note down that all packets for $z$ should be sent to $y$.
+  This information will be used to create the forwarding table of $x$.
+
+After every router has exchanged several rounds of updates, every
+router would be aware of the least-cost paths.
+
+the Routing Information Protocol (RIP) implements the distance vector
+algorithm. It uses *hop count* as the cost metric (insensitive to
+network congestion). In RIP, entries in the routing table are
+aggregated subnet masks (routing to destination subnet). Routing
+tables are exchanged every 30 seconds over UDP port 520.

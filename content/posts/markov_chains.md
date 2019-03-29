@@ -1,7 +1,7 @@
 +++
 title = "Markov Chains"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-20T15:47:39+08:00
+lastmod = 2019-03-29T08:36:56+08:00
 tags = ["statistics", "machine-learning"]
 draft = false
 math = true
@@ -68,7 +68,7 @@ probabilities \\(P\_{ij}^n\\) then the Chapman-Kolmogorov equation asserts
 that:
 
 \begin{equation}
-  \mathbf{P}^{(n+m)} = \mathbf{P}^n \dot \mathbf{P}^m
+  \mathbf{P}^{(n+m)} = \mathbf{P}^n \cdot \mathbf{P}^m
 \end{equation}
 
 The $n$-step transition matrix can be obtained by multiplying the
