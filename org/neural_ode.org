@@ -2,59 +2,78 @@
 #+TITLE: Neural Ordinary Differential Equations
 #+HUGO_TAGS: machine-learning deep-learning
 
-* Introduction
+This is a paper review of the NIPS 2018 best paper award-winning paper
+[[https://arxiv.org/abs/1806.07366][Neural Ordinary Differential Equations]].
 
-A traditional neural network is composed of stacked layers of simple
-computational nodes, that work together to find patterns in data.
-Every layer introduces error that compounds through the neural
+* Motivation
+
+Regular neural networks states are transformed by a series of discrete
+transformations:
+
+\begin{equation}
+\mathbf{h}_{t+1} = f(\mathbf{h}_t)
+\end{equation}
+
+where $f$ could be of different kinds of layers, including convolutional
+and dense layers. $t$ can be interpreted as a time index, transforming
+some input data at $t=0$ to an output in a different space at $t=N$,
+where there are $N$ layers.
+
+Because neural networks apply discrete transformations, to learn
+dynamical systems with (recurrent) neural networks, one must
+discretize the time steps. Expressing time as a discrete variable can
+be unnatural, for example, in processes where events occur at irregular
+intervals.
+
+In addition, every layer introduces error that compounds through the neural
 network, hindering overall performance. The only way to bypass this is
 to add more layers, and limit the complexity of each step. This means
 that the highest performing neural networks would have infinite
 layers, and infinitesimal step-changes, an infeasible task.
 
-This problem was addressed by Deep Residual Learning
-cite:he15_deep_resid_learn_image_recog. Instead of learning $h_{n+1} =
-F(h_n)$, we now learn the difference between the layers: $h_{n+1} =
-h_n + F(h_n)$.
+To address this problem, deep residual neural networks were presented
+cite:he15_deep_resid_learn_image_recog. 
 
-Feed-forward residual neural networks have a composition that looks like these:
+Instead of learning $h_{t+1} = f(h_t, \theta_t)$, deep residual neural
+networks now learn the difference between the layers: $h_{t+1} = h_t +
+f(h_t, \theta_t)$. For example, feed-forward residual neural networks
+have a composition that looks like these:
 
 \begin{align*}
-  z_1 &= z_0 + f(z_0, \theta_0) \\
-  z_2 &= z_1 + f(z_1, \theta_1) \\
-  z_3 &= z_2 + f(z_2, \theta_2) \\
+  h_1 &= h_0 + f(h_0, \theta_0) \\
+  h_2 &= h_1 + f(h_1, \theta_1) \\
+  h_3 &= h_2 + f(h_2, \theta_2) \\
   \dots \\
-  z_{t+1} &= z_t + f(z_t, \theta_t) \\
+  h_{t+1} &= h_t + f(h_t, \theta_t) \\
 \end{align*}
 
-In the limit of infinitesimal change, Neural ODEs can replace these
-layers entirely with ODEs.
-
-Neural ODEs scrap the need for layers entirely, by replacing them with
-equations. 
-
-Traditional deep learning methods require clear stages of observation,
-while a continuous ODE solver eliminates this problem.
-
-In the limit (of infinitesimal change), we can parameterize the
-continuous dynamics of hidden units using an ordinary differential
-equation (ODE) specified by a neural network:
+These iterative updates correspond to the infinitesimal step-changes
+described earlier, and can be seen to be analogous to an Euler
+discretization of a continuous transformation
+cite:lu17_beyon_finit_layer_neural_networ. In the limit, one can
+instead represent the continuous dynamics between the hidden units
+using an ordinary differential equation (ODE) specified by some neural
+network:
 
 \begin{equation}
-  \frac{dz(t)}{dt} = f(z(t), t, \theta)
+  \frac{d\mathbf{h}(t)}{dt} = f(\mathbf{h}(t), t, \theta)
 \end{equation}
 
-That is, the equivalent of having T layers in the network, is finding
-the solution to this ODE at time T.
+where the neural network has parameters $\theta$. The equivalent of
+having $T$ layers in the network, is finding the solution to this ODE at
+time $T$.
+
+The analogy between ODEs and neural networks is not new, and has been
+discussed in previous papers
+cite:lu17_beyon_finit_layer_neural_networ,haber17_stabl_archit_deep_neural_networ.
+This paper popularized this idea, by proposing a new method for
+scalable backpropagation through ODE solvers, allowing end-to-end
+training within larger models.
 
 * Adjoint Sensitivity Analysis
 Sensitivity analysis defines a new ODE whose solution gives the
 gradients to the cost function w.r.t. the parameters, and solves this
 secondary ODE. cite:rackauckas19_diffeq
-
-
-
-
 
 bibliography:neural_ode.bib
 

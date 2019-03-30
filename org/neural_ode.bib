@@ -162,3 +162,93 @@
   eprint =       {1902.02376},
   primaryClass = {cs.LG},
 }
+
+@article{lu17_beyon_finit_layer_neural_networ,
+  author =       {Lu, Yiping and Zhong, Aoxiao and Li, Quanzheng and
+                  Dong, Bin},
+  title =        {Beyond Finite Layer Neural Networks: Bridging Deep
+                  Architectures and Numerical Differential Equations},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1710.10121v2},
+  abstract =     {In our work, we bridge deep neural network design
+                  with numerical differential equations. We show that
+                  many effective networks, such as ResNet, PolyNet,
+                  FractalNet and RevNet, can be interpreted as
+                  different numerical discretizations of differential
+                  equations. This finding brings us a brand new
+                  perspective on the design of effective deep
+                  architectures. We can take advantage of the rich
+                  knowledge in numerical analysis to guide us in
+                  designing new and potentially more effective deep
+                  networks. As an example, we propose a linear
+                  multi-step architecture (LM-architecture) which is
+                  inspired by the linear multi-step method solving
+                  ordinary differential equations. The LM-architecture
+                  is an effective structure that can be used on any
+                  ResNet-like networks. In particular, we demonstrate
+                  that LM-ResNet and LM-ResNeXt (i.e. the networks
+                  obtained by applying the LM-architecture on ResNet
+                  and ResNeXt respectively) can achieve noticeably
+                  higher accuracy than ResNet and ResNeXt on both
+                  CIFAR and ImageNet with comparable numbers of
+                  trainable parameters. In particular, on both CIFAR
+                  and ImageNet, LM-ResNet/LM-ResNeXt can significantly
+                  compress ($>50$\ \%) the original networks while
+                  maintaining a similar performance. This can be
+                  explained mathematically using the concept of
+                  modified equation from numerical analysis. Last but
+                  not least, we also establish a connection between
+                  stochastic control and noise injection in the
+                  training process which helps to improve
+                  generalization of the networks. Furthermore, by
+                  relating stochastic training strategy with
+                  stochastic dynamic system, we can easily apply
+                  stochastic training to the networks with the
+                  LM-architecture. As an example, we introduced
+                  stochastic depth to LM-ResNet and achieve
+                  significant improvement over the original LM-ResNet
+                  on CIFAR10.},
+  archivePrefix ={arXiv},
+  eprint =       {1710.10121},
+  primaryClass = {cs.CV},
+}
+
+@article{haber17_stabl_archit_deep_neural_networ,
+  author =       {Haber, Eldad and Ruthotto, Lars},
+  title =        {Stable Architectures for Deep Neural Networks},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1705.03341v3},
+  abstract =     {Deep neural networks have become invaluable tools
+                  for supervised machine learning, e.g.,
+                  classification of text or images. While often
+                  offering superior results over traditional
+                  techniques and successfully expressing complicated
+                  patterns in data, deep architectures are known to be
+                  challenging to design and train such that they
+                  generalize well to new data. Important issues with
+                  deep architectures are numerical instabilities in
+                  derivative-based learning algorithms commonly called
+                  exploding or vanishing gradients. In this paper we
+                  propose new forward propagation techniques inspired
+                  by systems of Ordinary Differential Equations (ODE)
+                  that overcome this challenge and lead to well-posed
+                  learning problems for arbitrarily deep networks. The
+                  backbone of our approach is our interpretation of
+                  deep learning as a parameter estimation problem of
+                  nonlinear dynamical systems. Given this formulation,
+                  we analyze stability and well-posedness of deep
+                  learning and use this new understanding to develop
+                  new network architectures. We relate the exploding
+                  and vanishing gradient phenomenon to the stability
+                  of the discrete ODE and present several strategies
+                  for stabilizing deep learning for very deep
+                  networks. While our new architectures restrict the
+                  solution space, several numerical experiments show
+                  their competitiveness with state-of-the-art
+                  networks.},
+  archivePrefix ={arXiv},
+  eprint =       {1705.03341},
+  primaryClass = {cs.LG},
+}
