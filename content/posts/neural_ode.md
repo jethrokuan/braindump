@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-29T19:49:06+08:00
+lastmod = 2019-04-01T19:45:50+08:00
 tags = ["machine-learning", "deep-learning"]
 draft = false
 math = true
@@ -12,6 +12,34 @@ This is a paper review of the NIPS 2018 best paper award-winning paper
 
 
 ## Motivation {#motivation}
+
+In this section, I motivate the benefits of Neural Ordinary
+Differential Equations (ODEs). Many physical phenomena can be modeled
+naturally with the language of differential equations. These include
+populations of predator and prey, or in physics with regards to motion
+between bodies. Differential equations shine where it is easier to
+model changes in the systems over time rather than the value
+themselves.
+
+Consider a simple pendulum, with the dampening effect of air
+resistance. One can model the dynamic system using a second-order ODE,
+as such:
+
+\begin{equation}
+  \ddot{\theta}(t) = - \mu \dot{\theta}(t) - \frac{g}{L}\sin\left( \theta(t) \right)
+\end{equation}
+
+There are infinitely many solutions to this ODE, but generally only
+one that satisfies the initial conditions at \\(t = 0\\). We'd like to
+find \\(\theta(t)\\) for some any \\(t\\). It turns out finding the solutions
+to these problems are hard, and numerical methods are required to find
+the solutions. These numerical methods range from simplest Euler's
+method, to Runge-Kutta methods.
+
+Suppose now that we have some dynamic system (for example, the
+pendulum), and we have measured some data from the system
+\\(\hat{\theta}(t)\\) (the pendulum's position, at time \\(t\\)). **Can a neural
+network learn the dynamics of the system from data?**
 
 Regular neural networks states are transformed by a series of discrete
 transformations:
@@ -27,11 +55,17 @@ where there are \\(N\\) layers.
 
 Because neural networks apply discrete transformations, to learn
 dynamical systems with (recurrent) neural networks, one must
-discretize the time steps. Expressing time as a discrete variable can
-be unnatural, for example, in processes where events occur at irregular
-intervals.
+discretize the time steps, for example through binning the
+observations into fixed time intervals. Expressing time as a discrete
+variable can be unnatural, for example, in processes where events
+occur at irregular intervals. This means that the current
+state-of-the-art neural networks are still unable to model continuous
+sequential data.
 
-In addition, every layer introduces error that compounds through the neural
+
+## The Analogy to Residual Neural Networks {#the-analogy-to-residual-neural-networks}
+
+In neural networks, every layer introduces error that compounds through the neural
 network, hindering overall performance. The only way to bypass this is
 to add more layers, and limit the complexity of each step. This means
 that the highest performing neural networks would have infinite
@@ -77,7 +111,48 @@ scalable backpropagation through ODE solvers, allowing end-to-end
 training within larger models.
 
 
-## Adjoint Sensitivity Analysis {#adjoint-sensitivity-analysis}
+## The NeuralODE Model {#the-neuralode-model}
+
+The Neural ODE model introduces a new type of block the authors term the
+ODE block. This block replaces the ResNet-like skip connections, with
+an ODE that models the neural network's dynamics:
+
+\begin{equation}
+  \frac{d\mathbf{h}(t)}{dt} = f(\mathbf{h}(t), t, \theta)
+\end{equation}
+
+This ODE can then be solved using a black box solver, with the output
+state being used to compute the loss:
+
+\begin{equation}
+  L(\mathbf{z}(t\_1)) = L\left( \mathbf{z}(t\_0) + \int\_{t\_0}^{t\_1}
+    f(\mathbf{z}(t), t, \theta)dt \right) =
+  L(\textrm{ODESolve}(\mathbf{z}(t\_0), f, t\_0, t\_1, \theta))
+\end{equation}
+
+The loss is used to compute gradients, but, as mentioned in the paper,
+performing backpropagation through the ODE solver incurs too high a
+memory cost. Here, I illustrate why, with a simple example.
+
+Suppose we use the Euler method to solve the ODE. The Euler solver update
+step is similar to a ResNet block:
+
+\begin{equation}
+  h\_{t+1} =  h\_t + NN(h\_{t})
+\end{equation}
+
+Continuous-depth networks will have large \\(t\\). Despite the ODE solvers
+being easily differentiable, backpropagating through the neural
+network in this case is equivalent to computing and storing the
+gradients in a $t$-depth ResNet. With higher-order ODE
+solvers, the memory requirements are also higher.
+
+The paper proposes a method of computing gradients by solving a
+second, augmented ODE backwards in time, that is applicable to all ODE
+solvers.
+
+
+## Gradient Computation via Adjoint Sensitivity Analysis {#gradient-computation-via-adjoint-sensitivity-analysis}
 
 Sensitivity analysis defines a new ODE whose solution gives the
 gradients to the cost function w.r.t. the parameters, and solves this
