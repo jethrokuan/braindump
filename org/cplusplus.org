@@ -189,6 +189,10 @@ For shared_ptr, std::move prevents the increment and immediate
 decrement of the reference count, making it an optimization. It's not
 strictly necessary. cite:so_why_move_shared_ptr
 
+* not_null
+not_null is available in GSL, and with compile-time guarantees that a
+pointer is not null. cite:17_bartek
+
 * Books to read
 http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
 * Links

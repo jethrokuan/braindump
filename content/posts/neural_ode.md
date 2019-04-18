@@ -1,7 +1,7 @@
 +++
-title = "Neural Ordinary Differential Equations"
+title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2019-04-01T19:45:50+08:00
+lastmod = 2019-04-18T15:51:34+08:00
 tags = ["machine-learning", "deep-learning"]
 draft = false
 math = true
@@ -56,8 +56,8 @@ where there are \\(N\\) layers.
 Because neural networks apply discrete transformations, to learn
 dynamical systems with (recurrent) neural networks, one must
 discretize the time steps, for example through binning the
-observations into fixed time intervals. Expressing time as a discrete
-variable can be unnatural, for example, in processes where events
+observations into fixed time intervals. However, expressing time as a discrete
+variable can be unnatural: this includes processes where events
 occur at irregular intervals. This means that the current
 state-of-the-art neural networks are still unable to model continuous
 sequential data.
@@ -154,9 +154,141 @@ solvers.
 
 ## Gradient Computation via Adjoint Sensitivity Analysis {#gradient-computation-via-adjoint-sensitivity-analysis}
 
+If one wishes to train a Neural ODE via gradient descent, one would
+need to compute gradients for the loss function
+\\(L(\textrm{ODESolve}(\mathbf{z}(t\_0), f, t\_0, t\_1, \theta))\\). This
+requires propagation of gradients through the ODE-solver, that is,
+gradients with respect to \\(\theta\\). The paper proposes a technique
+that scales linearly with problem size, has low memory cost, and
+explicitly controls numerical error.
+
 Sensitivity analysis defines a new ODE whose solution gives the
 gradients to the cost function w.r.t. the parameters, and solves this
-secondary ODE. <sup id="a8ae69ab153941fb09916913f187ba63"><a href="#rackauckas19_diffeq" title="Rackauckas, Innes, Ma, , Bettencourt, White, Dixit \&amp; Vaibhav, Diffeqflux.jl - a Julia Library for Neural  Differential Equations, {CoRR}, v(), (2019).">(Rackauckas {\it et al.}, 2019)</a></sup>
+secondary ODE. Because the gradients of the loss is dependent on the
+hidden state \\(z(t)\\) at each instant, the dynamics of \\(z(t)\\) can be
+represented with yet another ODE. Obtaining the gradients would
+require a single solve by recomputing \\(z(t)\\) backwards together with
+the adjoint. The derivations are provided in the appendix of the
+paper, and will not be repeated here.
+<sup id="603fb04abfb4b8763599566c9f531449"><a href="#chen18_neural_ordin_differ_equat" title="Chen, Rubanova, , Bettencourt \&amp; Duvenaud, Neural Ordinary Differential Equations, {CoRR}, v(), (2018).">(Chen {\it et al.}, 2018)</a></sup>
+
+Since a large part of the paper's contribution is the ability to
+bridge many years of mathematical advancements on solving differential
+equations, it is wise to analyse the pros and cons of other solvers in
+the context of training machine learning models.
+
+Traditional adjoint sensitivity analysis require multiple forward
+solutions of the ODE, which can become prohibitively costly in large
+models. The paper's proposal reduces the computational complexity to a
+single solve, while retaining low memory cost by solving the backwards
+solution together with the adjoint. One issue that the paper has
+failed to address is that their proposed method requires that the ODE
+integrator is time-reversible.  There are no ODE solvers for
+first-order ODEs that are time-reversible, implying that the method
+proposed will diverge on some systems. <sup id="a8ae69ab153941fb09916913f187ba63"><a href="#rackauckas19_diffeq" title="Rackauckas, Innes, Ma, , Bettencourt, White, Dixit \&amp; Vaibhav, Diffeqflux.jl - a Julia Library for Neural  Differential Equations, {CoRR}, v(), (2019).">(Rackauckas {\it et al.}, 2019)</a></sup>
+
+In general, while the model is agnostic of the choice of ODE solver,
+the ideal choice of differential equation solver depends on the
+problem to be solved. For different classes of differential equations
+(under certain assumptions), some solvers will prove to be more
+efficient or more accurate. A good rule of thumb is that forward-mode
+automatic differentiation is efficient for differential equations with
+a small number of parameters, while reverse-mode automatic
+differentiation is more efficient when the model size grows bigger.
+
+
+## Replacing ResNets {#replacing-resnets}
+
+Because an ODE block is simply the continuous version of the Residual
+block, it seems plausible to use ODE blocks as replacements for ResNet
+blocks. The authors of the paper experimented with MNIST, and found
+that using ODE blocks they were able to achieve roughly equivalent
+test-error, with a third of the parameters (0.22M compared to 0.60M)
+and constant memory cost during training.
+
+{{< figure src="/ox-hugo/screenshot_2019-04-13_22-21-54.png" >}}
+
+While this looks promising, it would be more instructive to train the
+ODEnet on different datasets.
+
+It turns out that because of the continuous limit, there is a class of
+functions that Neural ODEs. In particular, Neural ODEs can only learn
+features that are homeomorphic to the input space.
+<sup id="906e51a18dd68f58d8e649ecf013d0b8"><a href="#dupont19_augmen_neural_odes" title="Dupont, Doucet, Teh \&amp; Whye, Augmented Neural Odes, {CoRR}, v(), (2019).">(Dupont {\it et al.}, 2019)</a></sup> The errors arising from
+discretization allow ResNet trajectories to cross, allowing them to
+represent certain flows that Neural ODEs cannot.
+
+
+## Experiments {#experiments}
+
+To understand Neural ODEs, I referenced several implementations.
+First, I ran the [implementation provided with the paper](https://github.com/rtqichen/torchdiffeq). With the
+provided code, it was easy to reproduce the results of the Neural ODE
+model for MNIST.
+
+To further understand the how to write solvers for ODEs and the
+Adjoint method, I referenced the [implementations from a seminar](https://github.com/kmkolasinski/deep-learning-notes/tree/master/seminars/2019-03-Neural-Ordinary-Differential-Equations). The
+example notebooks provided were small and self-contained, I wrote the
+naive ODE solver using Euler's method, and swapped out the adjoint ODE
+solver. Even for a relatively dataset of relatively small
+dimensionality, using it to train on the MNIST dataset took an hour.
+Each epoch took slightly longer than the previous, which the authors
+attribute to the increasing number of function evaluations, as a
+result of the model adapting to increasing complexity. Perhaps one
+could place a penalty on model complexity (something like MDL), to
+prevent overfitting, and maintain interpretability of the learnt model.
+
+In general, I found that the gains from having to train a model with
+fewer parameters is offset by the difficulty in training. In my
+experiments conducted, the full data-set is passed for evaluation and
+gradient descent is used to update the parameters. The authors have
+mentioned that mini-batching, and using stochastic gradient descent is
+tricky. Doing a full gradient descent may be infeasible where the
+dataset is too large, and the sub-gradients cannot fit into memory.
+
+
+## ODE as Prior Knowledge {#ode-as-prior-knowledge}
+
+A use-case that I have not seen discussed with the introduction of
+Neural ODEs is the ability to introduce structure to the machine
+learning models.
+
+Suppose we have collected data from some known dynamic system, and
+wish to learn the system. Traditional machine learning models have no
+way of specifying the structure of the dynamic system, and the model
+would have to learn its model parameters solely from the data.
+However, supposing we know the equations governing the dynamic system:
+for example, it is a system for which the laws of physics govern the
+system (gravitational attraction between objects). We can then
+restrict the hypothesis class to the family of functions that satisfy
+the equations, while ensuring that learning is still realizable (there
+exists the correct hypothesis \\(h^\*\\) in the subclass \\(\mathcal{H'}\\)).
+Restricting the hypothesis space would lead to lower sample
+complexity.
+
+
+## Closing Thoughts {#closing-thoughts}
+
+This paper presented a new family of models called Neural ODEs. They
+naturally arise by taking the continuous limit in residual neural
+networks. The paper proposes a numerically unstable, but empirically
+working method for performing back-propagation through black-box ODE
+solvers, making training neural ODEs feasible.
+
+While not novel, this paper brought into the limelight the idea of
+marrying differential equations with machine-learning, an area that
+has seemingly a lot of potential.
+
+From experimentation, I find that Neural ODEs are still difficult to
+train beyond simple problems, and mathematical theory shows that the
+choice of the ODE solver is still important.
+
+In this review, I did not cover the applications of Neural ODEs in
+other areas. First, they have a particularly convenient formulation
+for Continuous Normalizing Flows. Normalizing flows is a technique for
+sampling from complex distributions via sampling from a simple
+distribution, and has applications in techniques like variational
+inference.
 
 # Bibliography
 <a id="he15_deep_resid_learn_image_recog"></a>He, K., Zhang, X., Ren, S., & Sun, J., *Deep residual learning for image recognition*, CoRR, *()*,  (2015).  [↩](#8554cd7e8a313143abfac851fd6bbfd2)
@@ -165,4 +297,8 @@ secondary ODE. <sup id="a8ae69ab153941fb09916913f187ba63"><a href="#rackauckas19
 
 <a id="haber17_stabl_archit_deep_neural_networ"></a>Haber, E., & Ruthotto, L., *Stable architectures for deep neural networks*, CoRR, *()*,  (2017).  [↩](#9b9433cdb51d57b66e0e48760365e5e2)
 
+<a id="chen18_neural_ordin_differ_equat"></a>Chen, R. T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D., *Neural Ordinary Differential Equations*, CoRR, *()*,  (2018).  [↩](#603fb04abfb4b8763599566c9f531449)
+
 <a id="rackauckas19_diffeq"></a>Rackauckas, C., Innes, M., Ma, Y., Bettencourt, J., White, L., & Dixit, V., *Diffeqflux.jl - a julia library for neural differential equations*, CoRR, *()*,  (2019).  [↩](#a8ae69ab153941fb09916913f187ba63)
+
+<a id="dupont19_augmen_neural_odes"></a>Dupont, E., Doucet, A., & Teh, Y. W., *Augmented Neural Odes*, CoRR, *()*,  (2019).  [↩](#906e51a18dd68f58d8e649ecf013d0b8)

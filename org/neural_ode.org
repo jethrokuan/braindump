@@ -1,6 +1,9 @@
 #+SETUPFILE: ./hugo_setup.org
-#+TITLE: Neural Ordinary Differential Equations
+#+TITLE: Neural Ordinary Differential Equations (Review)
 #+HUGO_TAGS: machine-learning deep-learning
+#+OPTIONS: toc:nil
+
+bibliographystyle:unsrt
 
 This is a paper review of the NIPS 2018 best paper award-winning paper
 [[https://arxiv.org/abs/1806.07366][Neural Ordinary Differential Equations]].
@@ -50,8 +53,8 @@ where there are $N$ layers.
 Because neural networks apply discrete transformations, to learn
 dynamical systems with (recurrent) neural networks, one must
 discretize the time steps, for example through binning the
-observations into fixed time intervals. Expressing time as a discrete
-variable can be unnatural, for example, in processes where events
+observations into fixed time intervals. However, expressing time as a discrete
+variable can be unnatural: this includes processes where events
 occur at irregular intervals. This means that the current
 state-of-the-art neural networks are still unable to model continuous
 sequential data.
@@ -144,10 +147,137 @@ second, augmented ODE backwards in time, that is applicable to all ODE
 solvers.
 
 * Gradient Computation via Adjoint Sensitivity Analysis
+
+If one wishes to train a Neural ODE via gradient descent, one would
+need to compute gradients for the loss function
+$L(\textrm{ODESolve}(\mathbf{z}(t_0), f, t_0, t_1, \theta))$. This
+requires propagation of gradients through the ODE-solver, that is,
+gradients with respect to $\theta$. The paper proposes a technique
+that scales linearly with problem size, has low memory cost, and
+explicitly controls numerical error.
+
 Sensitivity analysis defines a new ODE whose solution gives the
 gradients to the cost function w.r.t. the parameters, and solves this
-secondary ODE. cite:rackauckas19_diffeq
+secondary ODE. Because the gradients of the loss is dependent on the
+hidden state $z(t)$ at each instant, the dynamics of $z(t)$ can be
+represented with yet another ODE. Obtaining the gradients would
+require a single solve by recomputing $z(t)$ backwards together with
+the adjoint. The derivations are provided in the appendix of the
+paper, and will not be repeated here.
+cite:chen18_neural_ordin_differ_equat
+
+Since a large part of the paper's contribution is the ability to
+bridge many years of mathematical advancements on solving differential
+equations, it is wise to analyse the pros and cons of other solvers in
+the context of training machine learning models.
+
+Traditional adjoint sensitivity analysis require multiple forward
+solutions of the ODE, which can become prohibitively costly in large
+models. The paper's proposal reduces the computational complexity to a
+single solve, while retaining low memory cost by solving the backwards
+solution together with the adjoint. One issue that the paper has
+failed to address is that their proposed method requires that the ODE
+integrator is time-reversible.  There are no ODE solvers for
+first-order ODEs that are time-reversible, implying that the method
+proposed will diverge on some systems. cite:rackauckas19_diffeq 
+
+In general, while the model is agnostic of the choice of ODE solver,
+the ideal choice of differential equation solver depends on the
+problem to be solved. For different classes of differential equations
+(under certain assumptions), some solvers will prove to be more
+efficient or more accurate. A good rule of thumb is that forward-mode
+automatic differentiation is efficient for differential equations with
+a small number of parameters, while reverse-mode automatic
+differentiation is more efficient when the model size grows bigger.
+
+* Replacing ResNets
+Because an ODE block is simply the continuous version of the Residual
+block, it seems plausible to use ODE blocks as replacements for ResNet
+blocks. The authors of the paper experimented with MNIST, and found
+that using ODE blocks they were able to achieve roughly equivalent
+test-error, with a third of the parameters (0.22M compared to 0.60M)
+and constant memory cost during training.
+
+#+ATTR_LATEX: :width 8cm
+[[file:images/neural_ode/screenshot_2019-04-13_22-21-54.png]]
+
+While this looks promising, it would be more instructive to train the
+ODEnet on different datasets.
+
+It turns out that because of the continuous limit, there is a class of
+functions that Neural ODEs. In particular, Neural ODEs can only learn
+features that are homeomorphic to the input space.
+cite:dupont19_augmen_neural_odes The errors arising from
+discretization allow ResNet trajectories to cross, allowing them to
+represent certain flows that Neural ODEs cannot.
+
+* Experiments
+
+To understand Neural ODEs, I referenced several implementations.
+First, I ran the [[https://github.com/rtqichen/torchdiffeq][implementation provided with the paper]]. With the
+provided code, it was easy to reproduce the results of the Neural ODE
+model for MNIST. 
+
+To further understand the how to write solvers for ODEs and the
+Adjoint method, I referenced the [[https://github.com/kmkolasinski/deep-learning-notes/tree/master/seminars/2019-03-Neural-Ordinary-Differential-Equations][implementations from a seminar]]. The
+example notebooks provided were small and self-contained, I wrote the
+naive ODE solver using Euler's method, and swapped out the adjoint ODE
+solver. Even for a relatively dataset of relatively small
+dimensionality, using it to train on the MNIST dataset took an hour.
+Each epoch took slightly longer than the previous, which the authors
+attribute to the increasing number of function evaluations, as a
+result of the model adapting to increasing complexity. Perhaps one
+could place a penalty on model complexity (something like MDL), to
+prevent overfitting, and maintain interpretability of the learnt model.
+
+In general, I found that the gains from having to train a model with
+fewer parameters is offset by the difficulty in training. In my
+experiments conducted, the full data-set is passed for evaluation and
+gradient descent is used to update the parameters. The authors have
+mentioned that mini-batching, and using stochastic gradient descent is
+tricky. Doing a full gradient descent may be infeasible where the
+dataset is too large, and the sub-gradients cannot fit into memory.
+
+* ODE as Prior Knowledge
+
+A use-case that I have not seen discussed with the introduction of
+Neural ODEs is the ability to introduce structure to the machine
+learning models. 
+
+Suppose we have collected data from some known dynamic system, and
+wish to learn the system. Traditional machine learning models have no
+way of specifying the structure of the dynamic system, and the model
+would have to learn its model parameters solely from the data.
+However, supposing we know the equations governing the dynamic system:
+for example, it is a system for which the laws of physics govern the
+system (gravitational attraction between objects). We can then
+restrict the hypothesis class to the family of functions that satisfy
+the equations, while ensuring that learning is still realizable (there
+exists the correct hypothesis $h^*$ in the subclass $\mathcal{H'}$).
+Restricting the hypothesis space would lead to lower sample
+complexity.
+
+* Closing Thoughts
+
+This paper presented a new family of models called Neural ODEs. They
+naturally arise by taking the continuous limit in residual neural
+networks. The paper proposes a numerically unstable, but empirically
+working method for performing back-propagation through black-box ODE
+solvers, making training neural ODEs feasible. 
+
+While not novel, this paper brought into the limelight the idea of
+marrying differential equations with machine-learning, an area that
+has seemingly a lot of potential.
+
+From experimentation, I find that Neural ODEs are still difficult to
+train beyond simple problems, and mathematical theory shows that the
+choice of the ODE solver is still important. 
+
+In this review, I did not cover the applications of Neural ODEs in
+other areas. First, they have a particularly convenient formulation
+for Continuous Normalizing Flows. Normalizing flows is a technique for
+sampling from complex distributions via sampling from a simple
+distribution, and has applications in techniques like variational
+inference. 
 
 bibliography:neural_ode.bib
-
-
