@@ -58,7 +58,66 @@ model $\theta^*$ to a learner via training data. For example:
   training examples to manipulate the learning algorithm.
 
 
+
+
+* Faster Teaching Via POMDP Teaching cite:Rafferty_2015
+
+The authors formulate teaching as a POMDP, and use a
+decision-theoretic approach to planning teaching. Assuming knowledge
+about the student's learning model, the teacher is able to find
+optimal teaching actions.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-05-18 12:53:37
+[[file:images/machine_teaching/screenshot_2019-05-18_12-53-37.png]]
+
+A POMDP is specified as a tuple:
+
+\begin{equation}
+  \langle S, A, Z, p(s'|s, a), p(z|s,a), r(s,a), \gamma \rangle
+\end{equation}
+
+- S :: set of states
+- A :: set of actions
+- Z :: set of observations
+- $p(s' | s, a)$ :: transition model
+- $p(z|s, a)$ ::  Probability of observing z
+- $r(s,a)$ :: Reward/cost model
+- $\gamma$ :: Discount factor
+
+POMDP planning seeks to choose actions that minimize
+$\sum_{t=0}^\infty \gamma^t r(s_t, a_t)$.
+
+The learner model specifies the space $S$ of possible knowledge
+states, and transition model $p(s'|s ,a)$ for how knowledge changes.
+
+Simple learner models for concept learning can be specified. For
+example, in the memoryless model, if an action is consistent with the
+current concept, then the state stays the same. Else, the learner
+transitions to a state that is consistent with the action, with
+probability proportional to the prior probability of the concept:
+
+\begin{equation}
+  p(s_{t+1} = c_i | s_t = c_j , a_t) = \begin{cases}
+    p_0(c_i) & \textrm{ if $c_i$ is consistent with $a_t$} \\
+    0 & \textrm{otherwise}
+  \end{cases}
+\end{equation}
+
+Experiments showed that POMDP planning leads to faster teaching.
+
+** Limitations
+1. POMDP relies on having models of learning. The models that we
+   currently have do not fully model human learning. Human learners
+   can also learn better if they are aware they are being taught. The
+   models are not accurate enough to know when to decide to terminate
+   teaching.
+2. Beyond time to teach, it is difficult to incorporate other factors
+   such as motivation. The learners may have their own reward
+   function, and a joint optimization of the student and teacher
+   rewards is computationally more difficult.
+3. POMDP can be computationally intractable, requiring the use of
+   techniques such as MCTS and forward search, sampling only possible
+   actions taken.
+
+* 
 bibliography:machine-teaching.bib
-
-
-
