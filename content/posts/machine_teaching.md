@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-08T08:56:34+08:00
+lastmod = 2019-05-19T16:43:40+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -55,7 +55,7 @@ teaching cost, while constraining the teaching risk, or instead choose
 to optimize the teaching risk given constraints on the teaching cost.
 
 
-## Why bother if \\(\theta^\*\\) is known? {#why-bother-if--theta--is-known}
+### Why bother if \\(\theta^\*\\) is known? {#why-bother-if--theta--is-known}
 
 There are applications where the teacher needs to convey the target
 model \\(\theta^\*\\) to a learner via training data. For example:
@@ -134,14 +134,67 @@ Experiments showed that POMDP planning leads to faster teaching.
     currently have do not fully model human learning. Human learners
     can also learn better if they are aware they are being taught. The
     models are not accurate enough to know when to decide to terminate
-    teaching.
+    teaching. **Are we able to learn to teach without explicitly
+    assuming a student model?**
+
 2.  Beyond time to teach, it is difficult to incorporate other factors
     such as motivation. The learners may have their own reward
     function, and a joint optimization of the student and teacher
     rewards is computationally more difficult.
+
 3.  POMDP can be computationally intractable, requiring the use of
     techniques such as MCTS and forward search, sampling only possible
     actions taken.
+    1.  Suppose a task is modelled with a discrete state space. A task
+        with 1000 states will result in a belief state of 1000
+        dimensions. To overcome this "curse of dimensionality",
+        point-based POMDP algorithms like HSVI2 and SARSOP use
+        probabilistic sampling.
+
+    2.  One can also factor out the fully observable state components to
+        reduce the dimensionality of the belief space into \\(S = X \times
+              Y\\), where \\(X\\) is the space of all possible values fully
+        observable variables, and \\(Y\\) is the space of partially
+        observable variables.  <sup id="b4b7f43790c8103452a6d9a6561a6727"><a href="#Du2010APA" title="Yanzhu Du, David Hsu, Hanna Kurniawati, Wee Sun Lee, Sylvie Ong \&amp; Shao Wei Png, A POMDP Approach to Robot Motion Planning under Uncertainty, in edited by (2010)">(Yanzhu Du {\it et al.}, 2010)</a></sup> Since state variable \\(x\\)
+        is fully observable, we only need to maintain belief \\(b\_Y\\) for
+        the state variables in \\(Y\\).
+
+
+## Bayesian Teaching {#bayesian-teaching}
+
+Bayesian teaching aims to induce a target model in the learner by
+presenting teaching sets of data. This involves two sides of
+inference:
+
+1.  Teacher's inference: over the space of possible teaching sets
+2.  Learner's inference: over the space of possible target models
+
+
+### Bayesian Teaching as Model Explanation {#bayesian-teaching-as-model-explanation}
+
+The intuition is that subsets of training data that lead a model to
+the same (or approximately similar) inference as the model trained on
+all the data should be useful for understanding the fitted model.
+<sup id="f88402a68a48e8e87e35ad010169c296"><a href="#ravi_bayesian_teaching_mnist" title="@misc{ravi_bayesian_teaching_mnist,
+  author =       {Ravi Sojitra},
+  howpublished =
+                  {https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html},
+  note =         {Online; accessed 19 May 2019},
+  title =        {Bayesian Teaching as Model Explanation: An MNIST Example},
+  year =         {2018},
+}">(Ravi Sojitra, 2018)</a></sup>
+
+Below is an example of using Bayesian teaching, limited to a teaching
+set of dimension 2, to understand an MNIST model.
+
+{{< figure src="/ox-hugo/screenshot_2019-05-19_16-30-05.png" >}}
+
+One can inspect the best and worst teaching sets to understand what
+the model finds to be the best and worst representations for a
+particular number.
+
+Hence, Bayesian teaching is also useful in telling us which examples
+are most valuable: better suited to induce the desired target model.
 
 
 ##  {#}
@@ -152,3 +205,7 @@ Experiments showed that POMDP planning leads to faster teaching.
 <a id="zhu18_overv_machin_teach"></a>Zhu, X., Singla, A., Zilles, S., & Rafferty, A. N., *An overview of machine teaching*, CoRR, *()*,  (2018).  [↩](#caa5573af457f4ae7bf053810593bdf7)
 
 <a id="Rafferty_2015"></a>Rafferty, A. N., Brunskill, E., Griffiths, T. L., & Shafto, P., *Faster teaching via pomdp planning*, Cognitive Science, *40(6)*, 1290–1332 (2015).  http://dx.doi.org/10.1111/cogs.12290 [↩](#20d8df4efc7c1861be90e93bf2bf9231)
+
+<a id="Du2010APA"></a>Du, Y., Hsu, D., Kurniawati, H., Lee, W. S., Ong, S. C. W., & Png, S. W., *A pomdp approach to robot motion planning under uncertainty*, In ,  (pp. ) (2010). : . [↩](#b4b7f43790c8103452a6d9a6561a6727)
+
+<a id="ravi_bayesian_teaching_mnist"></a>Sojitra, R. (2018). *Bayesian teaching as model explanation: an mnist example*. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019. [↩](#f88402a68a48e8e87e35ad010169c296)

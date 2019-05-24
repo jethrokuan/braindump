@@ -43,7 +43,7 @@ constraints on the teaching. For example, one may want to minimize the
 teaching cost, while constraining the teaching risk, or instead choose
 to optimize the teaching risk given constraints on the teaching cost.
 
-* Why bother if $\theta^*$ is known?
+** Why bother if $\theta^*$ is known?
 
 There are applications where the teacher needs to convey the target
 model $\theta^*$ to a learner via training data. For example:
@@ -110,14 +110,58 @@ Experiments showed that POMDP planning leads to faster teaching.
    currently have do not fully model human learning. Human learners
    can also learn better if they are aware they are being taught. The
    models are not accurate enough to know when to decide to terminate
-   teaching.
+   teaching. *Are we able to learn to teach without explicitly
+   assuming a student model?*
+
 2. Beyond time to teach, it is difficult to incorporate other factors
    such as motivation. The learners may have their own reward
    function, and a joint optimization of the student and teacher
    rewards is computationally more difficult.
+
 3. POMDP can be computationally intractable, requiring the use of
    techniques such as MCTS and forward search, sampling only possible
    actions taken.
+
+   1. Suppose a task is modelled with a discrete state space. A task
+      with 1000 states will result in a belief state of 1000
+      dimensions. To overcome this "curse of dimensionality",
+      point-based POMDP algorithms like HSVI2 and SARSOP use
+      probabilistic sampling.
+
+   2. One can also factor out the fully observable state components to
+      reduce the dimensionality of the belief space into $S = X \times
+      Y$, where $X$ is the space of all possible values fully
+      observable variables, and $Y$ is the space of partially
+      observable variables.  cite:Du2010APA Since state variable $x$
+      is fully observable, we only need to maintain belief $b_Y$ for
+      the state variables in $Y$.
+
+* Bayesian Teaching
+Bayesian teaching aims to induce a target model in the learner by
+presenting teaching sets of data. This involves two sides of
+inference:
+
+1. Teacher's inference: over the space of possible teaching sets
+2. Learner's inference: over the space of possible target models
+
+** Bayesian Teaching as Model Explanation
+The intuition is that subsets of training data that lead a model to
+the same (or approximately similar) inference as the model trained on
+all the data should be useful for understanding the fitted model.
+cite:ravi_bayesian_teaching_mnist
+
+Below is an example of using Bayesian teaching, limited to a teaching
+set of dimension 2, to understand an MNIST model.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-05-19 16:30:05
+[[file:images/machine_teaching/screenshot_2019-05-19_16-30-05.png]]
+
+One can inspect the best and worst teaching sets to understand what
+the model finds to be the best and worst representations for a
+particular number.
+
+Hence, Bayesian teaching is also useful in telling us which examples
+are most valuable: better suited to induce the desired target model.
 
 * 
 bibliography:machine-teaching.bib

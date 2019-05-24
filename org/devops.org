@@ -73,3 +73,20 @@ http://carlosrdrz.es/kubernetes-for-small-projects/
 A response to the above article. Basically arguing that Kubernetes is
 very complex and has a lot of moving parts, which is wholly
 unnecessary for side projects.
+
+* Mesos
+
+Mesos is responsible for managing cluster resources (CPU, RAM, disk,
+etc) and the allocation of applications into those resources.
+
+[[https://people.eecs.berkeley.edu/~alig/papers/drf.pdf][Dominant Resource Fairness]]
+
+Two-level scheduler, compared to k8s one-level scheduler.
+
+Scheduler scales a lot better than k8s (earlier).
+
+
+* 
+
+bibliography:scheduling.bib
+

@@ -1,2 +1,2 @@
 (("org"
-  . ((org-mode . ((org-hugo-auto-export-on-save . t))))))
+  . ((org-mode . ((org-hugo-auto-export-mode +1))))))

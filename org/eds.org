@@ -1,0 +1,22 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Experimental Data Science
+#+HUGO_TAGS: data_science experiment
+
+* A/B Testing
+[[https://www.quora.com/When-should-A-B-testing-not-be-trusted-to-make-decisions][- When should A/B Testing not be Trusted to Make Decisions - Quora]]
+- [[https://en.wikipedia.org/wiki/Rubin_causal_model][Rubin Causal Model (Wikipedia)]]
+
+* MDE
+
+
+- generally proportional to number of users
+- Statistical power and Minimum Detectable Effect (MDE)
+  - MDE treated as smallest effect size (signals) you can find in your
+    experiment with certain probability
+
+** TODO [[https://blog.twitter.com/engineering/en_us/a/2016/power-minimal-detectable-effect-and-bucket-size-estimation-in-ab-tests.html][Power, minimal detectable effect, and bucket size estimation in A/B tests]]
+
+* 
+
+bibliography:eds.bib
+

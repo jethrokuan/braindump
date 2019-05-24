@@ -1,0 +1,14 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Variational Inference
+
+* TODO Variational Bounds of Mutual Information cite:poole19_variat_bound_mutual_infor
+
+* TODO Black Box Variational Inference cite:ranganath13_black_box_variat_infer
+
+* TODO Unbiased Implicit Variational Inference cite:titsias18_unbias_implic_variat_infer
+
+* TODO A Contrastive Divergence for Combining Variational Inference and MCMC cite:ruiz19_contr_diver_combin_variat_infer_mcmc
+
+* 
+bibliography:ml.bib
+

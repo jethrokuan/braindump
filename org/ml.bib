@@ -45,3 +45,131 @@ URL	= {https://openreview.net/pdf?id=BJij4yg0Z}
   year={2006},
   publisher={springer}
 }
+
+@article{poole19_variat_bound_mutual_infor,
+  author =       {Poole, Ben and Ozair, Sherjil and Oord, Aaron van
+                  den and Alemi, Alexander A. and Tucker, George},
+  title =        {On Variational Bounds of Mutual Information},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1905.06922v1},
+  abstract =     {Estimating and optimizing Mutual Information (MI) is
+                  core to many problems in machine learning; however,
+                  bounding MI in high dimensions is challenging. To
+                  establish tractable and scalable objectives, recent
+                  work has turned to variational bounds parameterized
+                  by neural networks, but the relationships and
+                  tradeoffs between these bounds remains unclear. In
+                  this work, we unify these recent developments in a
+                  single framework. We find that the existing
+                  variational lower bounds degrade when the MI is
+                  large, exhibiting either high bias or high variance.
+                  To address this problem, we introduce a continuum of
+                  lower bounds that encompasses previous bounds and
+                  flexibly trades off bias and variance. On
+                  high-dimensional, controlled problems, we
+                  empirically characterize the bias and variance of
+                  the bounds and their gradients and demonstrate the
+                  effectiveness of our new bounds for estimation and
+                  representation learning.},
+  archivePrefix ={arXiv},
+  eprint =       {1905.06922v1},
+  primaryClass = {cs.LG},
+}
+
+@article{ranganath13_black_box_variat_infer,
+  author =       {Ranganath, Rajesh and Gerrish, Sean and Blei, David
+                  M.},
+  title =        {Black Box Variational Inference},
+  journal =      {CoRR},
+  year =         2013,
+  url =          {http://arxiv.org/abs/1401.0118v1},
+  abstract =     {Variational inference has become a widely used
+                  method to approximate posteriors in complex latent
+                  variables models. However, deriving a variational
+                  inference algorithm generally requires significant
+                  model-specific analysis, and these efforts can
+                  hinder and deter us from quickly developing and
+                  exploring a variety of models for a problem at hand.
+                  In this paper, we present a "black box" variational
+                  inference algorithm, one that can be quickly applied
+                  to many models with little additional derivation.
+                  Our method is based on a stochastic optimization of
+                  the variational objective where the noisy gradient
+                  is computed from Monte Carlo samples from the
+                  variational distribution. We develop a number of
+                  methods to reduce the variance of the gradient,
+                  always maintaining the criterion that we want to
+                  avoid difficult model-based derivations. We evaluate
+                  our method against the corresponding black box
+                  sampling based methods. We find that our method
+                  reaches better predictive likelihoods much faster
+                  than sampling methods. Finally, we demonstrate that
+                  Black Box Variational Inference lets us easily
+                  explore a wide space of models by quickly
+                  constructing and evaluating several models of
+                  longitudinal healthcare data.},
+  archivePrefix ={arXiv},
+  eprint =       {1401.0118},
+  primaryClass = {stat.ML},
+}
+
+@article{titsias18_unbias_implic_variat_infer,
+  author =       {Titsias, Michalis K. and Ruiz, Francisco J. R.},
+  title =        {Unbiased Implicit Variational Inference},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1808.02078v3},
+  abstract =     {We develop unbiased implicit variational inference
+                  (UIVI), a method that expands the applicability of
+                  variational inference by defining an expressive
+                  variational family. UIVI considers an implicit
+                  variational distribution obtained in a hierarchical
+                  manner using a simple reparameterizable distribution
+                  whose variational parameters are defined by
+                  arbitrarily flexible deep neural networks. Unlike
+                  previous works, UIVI directly optimizes the evidence
+                  lower bound (ELBO) rather than an approximation to
+                  the ELBO. We demonstrate UIVI on several models,
+                  including Bayesian multinomial logistic regression
+                  and variational autoencoders, and show that UIVI
+                  achieves both tighter ELBO and better predictive
+                  performance than existing approaches at a similar
+                  computational cost.},
+  archivePrefix ={arXiv},
+  eprint =       {1808.02078},
+  primaryClass = {stat.ML},
+}
+
+@article{ruiz19_contr_diver_combin_variat_infer_mcmc,
+  author =       {Ruiz, Francisco J. R. and Titsias, Michalis K.},
+  title =        {A Contrastive Divergence for Combining Variational
+                  Inference and Mcmc},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1905.04062v1},
+  abstract =     {We develop a method to combine Markov chain Monte
+                  Carlo (MCMC) and variational inference (VI),
+                  leveraging the advantages of both inference
+                  approaches. Specifically, we improve the variational
+                  distribution by running a few MCMC steps. To make
+                  inference tractable, we introduce the variational
+                  contrastive divergence (VCD), a new divergence that
+                  replaces the standard Kullback-Leibler (KL)
+                  divergence used in VI. The VCD captures a notion of
+                  discrepancy between the initial variational
+                  distribution and its improved version (obtained
+                  after running the MCMC steps), and it converges
+                  asymptotically to the symmetrized KL divergence
+                  between the variational distribution and the
+                  posterior of interest. The VCD objective can be
+                  optimized efficiently with respect to the
+                  variational parameters via stochastic optimization.
+                  We show experimentally that optimizing the VCD leads
+                  to better predictive performance on two latent
+                  variable models: logistic matrix factorization and
+                  variational autoencoders (VAEs).},
+  archivePrefix ={arXiv},
+  eprint =       {1905.04062},
+  primaryClass = {stat.ML},
+}
