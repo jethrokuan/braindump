@@ -56,6 +56,17 @@ The conclusion sections elaborates on the impacts of using your
 approach. It also states limitations or disadvantages of your
 solution, and enables you to provide directions for future research in
 the field.
+
+* Writing a Technical Book
+
+[[https://www.aristeia.com/authorAdvice.html][Scott Meyers: Advice to Prospective Book Authors]]
+
+[[https://dev.to/trickvi/i-wrote-a-book-lfg][I wrote a book - DEV Community 👩‍💻👨‍💻]]
+
+[[https://zwischenzugs.com/2016/05/15/writing-a-technical-book/][Writing a Technical Book – zwischenzugs]]
+
+[[https://performancejs.com/post/31b361c/13-Tips-for-Writing-a-Technical-Book]]
+
 * Reference Books
 
 - [[https://www.amazon.com/Style-Clarity-Chicago-Writing-Publishing/dp/0226899152][Style: Toward Clarity and Grace]]

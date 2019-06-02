@@ -1,7 +1,7 @@
 +++
 title = "Writing"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-23T01:34:08+08:00
+lastmod = 2019-06-02T14:44:24+08:00
 draft = false
 math = true
 +++
@@ -80,6 +80,17 @@ The conclusion sections elaborates on the impacts of using your
 approach. It also states limitations or disadvantages of your
 solution, and enables you to provide directions for future research in
 the field.
+
+
+## Writing a Technical Book {#writing-a-technical-book}
+
+[Scott Meyers: Advice to Prospective Book Authors](https://www.aristeia.com/authorAdvice.html)
+
+[I wrote a book - DEV Community 👩‍💻👨‍💻](https://dev.to/trickvi/i-wrote-a-book-lfg)
+
+[Writing a Technical Book – zwischenzugs](https://zwischenzugs.com/2016/05/15/writing-a-technical-book/)
+
+<https://performancejs.com/post/31b361c/13-Tips-for-Writing-a-Technical-Book>
 
 
 ## Reference Books {#reference-books}
