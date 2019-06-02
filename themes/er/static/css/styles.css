@@ -266,3 +266,18 @@ h5:before {counter-increment: h5; content: counter(h2) "." counter(h3) "." count
 h6:before {counter-increment: h6; content: counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". "}
 
 h2.nocount:before, h3.nocount:before, h4.nocount:before, h5.nocount:before, h6.nocount:before { content: ""; counter-increment: none }
+
+dt {
+  font-weight: bold;
+  float: left;
+  width: 30%;
+  text-align: right;
+  padding: .25em;
+  clear: left;
+}
+dd {
+  float: left;
+  width: 60%;
+  padding: .25em 0;
+}
+dl:after {content:"";display:table;clear:both;}
