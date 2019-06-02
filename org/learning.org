@@ -1,5 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Learning
+#+TAGS: learning
+
 * Learning How to Learn
 
 ** What is learning?

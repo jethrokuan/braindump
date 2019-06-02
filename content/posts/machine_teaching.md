@@ -1,13 +1,13 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-05-19T16:43:40+08:00
+lastmod = 2019-05-25T11:39:23+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
 +++
 
-## Definitions <sup id="b5c1005733dab7e951e8ecd46dff695f"><a href="#simard17_machin_teach" title="Simard, Amershi, , Chickering, Pelton, , Ghorashi, Meek, Ramos, Gonzalo, Suh, Verwey, Wang, \&amp; Wernsing, Machine Teaching: a New Paradigm for Building  Machine Learning Systems, {CoRR}, v(), (2017).">(Simard {\it et al.}, 2017)</a></sup> {#definitions}
+## Definitions <a id="b5c1005733dab7e951e8ecd46dff695f" href="#simard17_machin_teach" title="Simard, Amershi, , Chickering, Pelton, , Ghorashi, Meek, Ramos, Gonzalo, Suh, Verwey, Wang, \&amp; Wernsing, Machine Teaching: a New Paradigm for Building  Machine Learning Systems, {CoRR}, v(), (2017).">(Simard et al., 2017)</a> {#definitions}
 
 machine learning research
 : machine learning research aims at
@@ -47,7 +47,7 @@ how unsatisfied the teacher is. The target model \\(\theta^\*\\) is folded
 into the teaching risk function. The teaching cost function is also
 generalized beyond the number of teaching items. For example,
 different teaching items may have different cognitive burdens for a
-human student to absorb. <sup id="caa5573af457f4ae7bf053810593bdf7"><a href="#zhu18_overv_machin_teach" title="Zhu, Singla, Zilles, \&amp; Rafferty, An Overview of Machine Teaching, {CoRR}, v(), (2018).">(Zhu {\it et al.}, 2018)</a></sup>
+human student to absorb. <a id="caa5573af457f4ae7bf053810593bdf7" href="#zhu18_overv_machin_teach" title="Zhu, Singla, Zilles, \&amp; Rafferty, An Overview of Machine Teaching, {CoRR}, v(), (2018).">(Zhu et al., 2018)</a>
 
 There are other formulations of machine teaching that place different
 constraints on the teaching. For example, one may want to minimize the
@@ -70,7 +70,7 @@ model \\(\theta^\*\\) to a learner via training data. For example:
     training examples to manipulate the learning algorithm.
 
 
-## Faster Teaching Via POMDP Teaching <sup id="20d8df4efc7c1861be90e93bf2bf9231"><a href="#Rafferty_2015" title="Rafferty, Brunskill, Griffiths, Thomas \&amp; Shafto, Faster Teaching via POMDP Planning, {Cognitive Science}, v(6), 1290&#8211;1332 (2015).">(Rafferty {\it et al.}, 2015)</a></sup> {#faster-teaching-via-pomdp-teaching}
+## Faster Teaching Via POMDP Teaching <a id="20d8df4efc7c1861be90e93bf2bf9231" href="#Rafferty_2015" title="Rafferty, Brunskill, Griffiths, Thomas \&amp; Shafto, Faster Teaching via POMDP Planning, {Cognitive Science}, v(6), 1290&#8211;1332 (2015).">(Rafferty et al., 2015)</a> {#faster-teaching-via-pomdp-teaching}
 
 The authors formulate teaching as a POMDP, and use a
 decision-theoretic approach to planning teaching. Assuming knowledge
@@ -155,7 +155,7 @@ Experiments showed that POMDP planning leads to faster teaching.
         reduce the dimensionality of the belief space into \\(S = X \times
               Y\\), where \\(X\\) is the space of all possible values fully
         observable variables, and \\(Y\\) is the space of partially
-        observable variables.  <sup id="b4b7f43790c8103452a6d9a6561a6727"><a href="#Du2010APA" title="Yanzhu Du, David Hsu, Hanna Kurniawati, Wee Sun Lee, Sylvie Ong \&amp; Shao Wei Png, A POMDP Approach to Robot Motion Planning under Uncertainty, in edited by (2010)">(Yanzhu Du {\it et al.}, 2010)</a></sup> Since state variable \\(x\\)
+        observable variables.  <a id="b4b7f43790c8103452a6d9a6561a6727" href="#Du2010APA" title="Yanzhu Du, David Hsu, Hanna Kurniawati, Wee Sun Lee, Sylvie Ong \&amp; Shao Wei Png, A POMDP Approach to Robot Motion Planning under Uncertainty, in edited by (2010)">(Yanzhu Du et al., 2010)</a> Since state variable \\(x\\)
         is fully observable, we only need to maintain belief \\(b\_Y\\) for
         the state variables in \\(Y\\).
 
@@ -175,14 +175,21 @@ inference:
 The intuition is that subsets of training data that lead a model to
 the same (or approximately similar) inference as the model trained on
 all the data should be useful for understanding the fitted model.
-<sup id="f88402a68a48e8e87e35ad010169c296"><a href="#ravi_bayesian_teaching_mnist" title="@misc{ravi_bayesian_teaching_mnist,
+<a id="f88402a68a48e8e87e35ad010169c296" href="#ravi_bayesian_teaching_mnist" title="@misc{ravi_bayesian_teaching_mnist,
   author =       {Ravi Sojitra},
   howpublished =
                   {https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html},
   note =         {Online; accessed 19 May 2019},
   title =        {Bayesian Teaching as Model Explanation: An MNIST Example},
   year =         {2018},
-}">(Ravi Sojitra, 2018)</a></sup>
+}">@misc{ravi_bayesian_teaching_mnist,
+  author =       {Ravi Sojitra},
+  howpublished =
+                  {https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html},
+  note =         {Online; accessed 19 May 2019},
+  title =        {Bayesian Teaching as Model Explanation: An MNIST Example},
+  year =         {2018},
+}</a>
 
 Below is an example of using Bayesian teaching, limited to a teaching
 set of dimension 2, to understand an MNIST model.

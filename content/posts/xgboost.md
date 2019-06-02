@@ -1,7 +1,8 @@
 +++
 title = "XGBoost"
 author = ["Jethro Kuan"]
-lastmod = 2019-05-25T07:08:08+08:00
+lastmod = 2019-05-25T11:41:43+08:00
+tags = ["machine-learning"]
 draft = false
 math = true
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2019-04-18T15:51:34+08:00
+lastmod = 2019-05-25T11:43:39+08:00
 tags = ["machine-learning", "deep-learning"]
 draft = false
 math = true
@@ -72,7 +72,7 @@ that the highest performing neural networks would have infinite
 layers, and infinitesimal step-changes, an infeasible task.
 
 To address this problem, deep residual neural networks were presented
-<sup id="8554cd7e8a313143abfac851fd6bbfd2"><a href="#he15_deep_resid_learn_image_recog" title="He, Zhang, Ren, \&amp; Sun, Deep Residual Learning for Image Recognition, {CoRR}, v(), (2015).">(He {\it et al.}, 2015)</a></sup>.
+<a id="8554cd7e8a313143abfac851fd6bbfd2" href="#he15_deep_resid_learn_image_recog" title="He, Zhang, Ren, \&amp; Sun, Deep Residual Learning for Image Recognition, {CoRR}, v(), (2015).">(He et al., 2015)</a>.
 
 Instead of learning \\(h\_{t+1} = f(h\_t, \theta\_t)\\), deep residual neural
 networks now learn the difference between the layers: \\(h\_{t+1} = h\_t +
@@ -90,7 +90,7 @@ have a composition that looks like these:
 These iterative updates correspond to the infinitesimal step-changes
 described earlier, and can be seen to be analogous to an Euler
 discretization of a continuous transformation
-<sup id="f767e533e2e76ca630e0e8cdac86c399"><a href="#lu17_beyon_finit_layer_neural_networ" title="Lu, Zhong, Li, \&amp; Dong, Beyond Finite Layer Neural Networks: Bridging Deep  Architectures and Numerical Differential Equations, {CoRR}, v(), (2017).">(Lu {\it et al.}, 2017)</a></sup>. In the limit, one can
+<a id="f767e533e2e76ca630e0e8cdac86c399" href="#lu17_beyon_finit_layer_neural_networ" title="Lu, Zhong, Li, \&amp; Dong, Beyond Finite Layer Neural Networks: Bridging Deep  Architectures and Numerical Differential Equations, {CoRR}, v(), (2017).">(Lu et al., 2017)</a>. In the limit, one can
 instead represent the continuous dynamics between the hidden units
 using an ordinary differential equation (ODE) specified by some neural
 network:
@@ -105,7 +105,7 @@ time \\(T\\).
 
 The analogy between ODEs and neural networks is not new, and has been
 discussed in previous papers
-<sup id="f767e533e2e76ca630e0e8cdac86c399"><a href="#lu17_beyon_finit_layer_neural_networ" title="Lu, Zhong, Li, \&amp; Dong, Beyond Finite Layer Neural Networks: Bridging Deep  Architectures and Numerical Differential Equations, {CoRR}, v(), (2017).">(Lu {\it et al.}, 2017)</a></sup><sup>,</sup><sup id="9b9433cdb51d57b66e0e48760365e5e2"><a href="#haber17_stabl_archit_deep_neural_networ" title="Haber \&amp; Ruthotto, Stable Architectures for Deep Neural Networks, {CoRR}, v(), (2017).">(Haber \& Ruthotto, 2017)</a></sup>.
+<a id="f767e533e2e76ca630e0e8cdac86c399" href="#lu17_beyon_finit_layer_neural_networ" title="Lu, Zhong, Li, \&amp; Dong, Beyond Finite Layer Neural Networks: Bridging Deep  Architectures and Numerical Differential Equations, {CoRR}, v(), (2017).">(Lu et al., 2017)</a><a>, </a><a id="9b9433cdb51d57b66e0e48760365e5e2" href="#haber17_stabl_archit_deep_neural_networ" title="Haber \&amp; Ruthotto, Stable Architectures for Deep Neural Networks, {CoRR}, v(), (2017).">(Haber \& Ruthotto, 2017)</a>.
 This paper popularized this idea, by proposing a new method for
 scalable backpropagation through ODE solvers, allowing end-to-end
 training within larger models.
@@ -170,7 +170,7 @@ represented with yet another ODE. Obtaining the gradients would
 require a single solve by recomputing \\(z(t)\\) backwards together with
 the adjoint. The derivations are provided in the appendix of the
 paper, and will not be repeated here.
-<sup id="603fb04abfb4b8763599566c9f531449"><a href="#chen18_neural_ordin_differ_equat" title="Chen, Rubanova, , Bettencourt \&amp; Duvenaud, Neural Ordinary Differential Equations, {CoRR}, v(), (2018).">(Chen {\it et al.}, 2018)</a></sup>
+<a id="603fb04abfb4b8763599566c9f531449" href="#chen18_neural_ordin_differ_equat" title="Chen, Rubanova, , Bettencourt \&amp; Duvenaud, Neural Ordinary Differential Equations, {CoRR}, v(), (2018).">(Chen et al., 2018)</a>
 
 Since a large part of the paper's contribution is the ability to
 bridge many years of mathematical advancements on solving differential
@@ -185,7 +185,7 @@ solution together with the adjoint. One issue that the paper has
 failed to address is that their proposed method requires that the ODE
 integrator is time-reversible.  There are no ODE solvers for
 first-order ODEs that are time-reversible, implying that the method
-proposed will diverge on some systems. <sup id="a8ae69ab153941fb09916913f187ba63"><a href="#rackauckas19_diffeq" title="Rackauckas, Innes, Ma, , Bettencourt, White, Dixit \&amp; Vaibhav, Diffeqflux.jl - a Julia Library for Neural  Differential Equations, {CoRR}, v(), (2019).">(Rackauckas {\it et al.}, 2019)</a></sup>
+proposed will diverge on some systems. <a id="a8ae69ab153941fb09916913f187ba63" href="#rackauckas19_diffeq" title="Rackauckas, Innes, Ma, , Bettencourt, White, Dixit \&amp; Vaibhav, Diffeqflux.jl - a Julia Library for Neural  Differential Equations, {CoRR}, v(), (2019).">(Rackauckas et al., 2019)</a>
 
 In general, while the model is agnostic of the choice of ODE solver,
 the ideal choice of differential equation solver depends on the
@@ -214,7 +214,7 @@ ODEnet on different datasets.
 It turns out that because of the continuous limit, there is a class of
 functions that Neural ODEs. In particular, Neural ODEs can only learn
 features that are homeomorphic to the input space.
-<sup id="906e51a18dd68f58d8e649ecf013d0b8"><a href="#dupont19_augmen_neural_odes" title="Dupont, Doucet, Teh \&amp; Whye, Augmented Neural Odes, {CoRR}, v(), (2019).">(Dupont {\it et al.}, 2019)</a></sup> The errors arising from
+<a id="906e51a18dd68f58d8e649ecf013d0b8" href="#dupont19_augmen_neural_odes" title="Dupont, Doucet, Teh \&amp; Whye, Augmented Neural Odes, {CoRR}, v(), (2019).">(Dupont et al., 2019)</a> The errors arising from
 discretization allow ResNet trajectories to cross, allowing them to
 represent certain flows that Neural ODEs cannot.
 

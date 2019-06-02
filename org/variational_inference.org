@@ -1,5 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Variational Inference
+#+HUGO_TAGS: machine-learning
 
 * TODO Variational Bounds of Mutual Information cite:poole19_variat_bound_mutual_infor
 
