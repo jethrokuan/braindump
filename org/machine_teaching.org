@@ -136,6 +136,106 @@ Experiments showed that POMDP planning leads to faster teaching.
       is fully observable, we only need to maintain belief $b_Y$ for
       the state variables in $Y$.
 
+* Machine Teaching For Inverse Reinforcement Learning cite:brown18_machin_teach_inver_reinf_learn
+
+Optimal Teaching for IRL gives:
+
+1. Insights into the intrinsic difficulty of teaching certain
+   sequential decision-making tasks
+2. Provides a lower bound on the number of samples needed by the
+   active IRL algorithm
+3. Optimal teaching can be used to design algorithms that better
+   leverage highly informative demonstrations which do not follow the
+   i.i.d assumptions made by many IRL applications
+
+** Machine Teaching Problem for IRL
+Given an MDP, $M$, and the teacher's reward function, $R^* =
+\mathbf{w}^{*^T} \phi (s)$, find the set of demonstrations, $D$, that
+minimizes the following optimization problem:
+
+\begin{equation}
+  \textrm{min}_{D} \textrm{TeachingCost}(D) \textrm{ s.t. } \textrm{Loss}(\mathbf{w^*}, \hat{\mathbf{w}}) \le \epsilon, \hat{\mathbf{w}} = IRL(D)
+\end{equation}
+
+Optimizing this is hard, since there are a large number of candidate
+sets of demonstrations, and the IRL problem needs to be solved for
+each candidate set. The paper proposes a greedy set-cover
+approximation algorithm that requires solving only a single
+policy-evaluation problem, using the Behavioural Equivalence Class
+(BEC) of the teacher's policy.
+
+* Teaching Inverse Reinforcement Learners via Features and Demonstrations cite:haug18_teach_inver_reinf_learn_via_featur_demon
+
+It is difficult to specify a reward function that captures all
+important aspects. In these situations, learning from demonstrations
+transforms the need of specifying this reward function to the task of
+providing examples of optimal behaviour.
+
+The paper considers the following setting:
+
+- The true reward function is a linear combination of features known
+  to the teacher
+- The learner also assumes the reward function is a linear combination
+  of features, different from the important ones (e.g. observing only
+  a subset)
+- The /teaching risk/ is proposed to bound the performance gap of the
+  teacher and learner as a function of the learner's worldview
+
+Teaching risk is defined as:
+
+\begin{equation}
+  \rho\left(A^{L} ; \mathbf{w}^{*}\right) :=\max _{v \in \operatorname{ker} A^{L},\|v\| \leq 1}\left\langle\mathbf{w}^{*}, v\right\rangle
+\end{equation}
+
+Where $A^L$ is the learner's worldview. Geometrically it is the cosine
+of the angle between ker $A^L$ and $\mathbf{w}^*$.
+
+Limiting the set of teachable features, choosing features that allow
+for minimizing teaching risk experimentally shows better performance
+than randomly choosing features.
+
+* Learner-aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints cite:tschiatschek19_learn_aware_teach
+
+This paper considers the setting where the learner has preferences.
+This captures:
+
+1. behavioural bias
+2. mismatched worldviews
+3. physical constraints
+
+Learner-aware teaching shows significant performance improvements
+
+/Math of the paper is beyond me right now./
+
+* Interactive Teaching Algorithms for Inverse Reinforcement Learning cite:kamalaruban19_inter_teach_algor_inver_reinf_learn
+
+Considers the setting where the learner is assisted by a teacher. Two
+sub-settings are considered:
+
+1. Where the teacher can fully observe the student's current policy,
+   and understands the student's dynamics (for theoretical bounds)
+2. Where the teacher only has a noisy estimate of the learner's
+   current policy, and does not understand the student's dynamics
+
+The environment is modelled as a MDP, where the learner does not have
+access to the reward furncion R. The teaching objective is to achieve
+a high-performing policy through learning from teacher demonstrations.
+
+The learner is asssumed to use the MCE-IRL algorithm. Theoretical
+analysis of the omniscient teacher shows that only $O(\log
+\frac{1}{\epsilon})$ demonstrations are required to achieve the
+teaching objective, an exponential improvement compared to selecting
+demonstrations at random.
+
+In the black box setting, the strategy considered picks the most
+informative demonstration. This is evaluated experimentally. The black
+box teacher is shown to learn faster than the agnostic teacher, in
+both the linear and non-linear reward setting. In the non-linear
+reward setting, both learners are unable to learn a good policy, but
+in the black box teaching setting progress is made much quicker.
+
+/Would be interesting to work through the proofs./
+
 * Bayesian Teaching
 Bayesian teaching aims to induce a target model in the learner by
 presenting teaching sets of data. This involves two sides of

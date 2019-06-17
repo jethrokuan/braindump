@@ -97,3 +97,131 @@
   author={Yanzhu Du and David Hsu and Hanna Kurniawati and Wee Sun Lee and Sylvie C. W. Ong and Shao Wei Png},
   year={2010}
 }
+@article{brown18_machin_teach_inver_reinf_learn,
+  author =       {Brown, Daniel S. and Niekum, Scott},
+  title =        {Machine Teaching for Inverse Reinforcement Learning:
+                  Algorithms and Applications},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1805.07687v6},
+  abstract =     {Inverse reinforcement learning (IRL) infers a reward
+                  function from demonstrations, allowing for policy
+                  improvement and generalization. However, despite
+                  much recent interest in IRL, little work has been
+                  done to understand the minimum set of demonstrations
+                  needed to teach a specific sequential
+                  decision-making task. We formalize the problem of
+                  finding maximally informative demonstrations for IRL
+                  as a machine teaching problem where the goal is to
+                  find the minimum number of demonstrations needed to
+                  specify the reward equivalence class of the
+                  demonstrator. We extend previous work on algorithmic
+                  teaching for sequential decision-making tasks by
+                  showing a reduction to the set cover problem which
+                  enables an efficient approximation algorithm for
+                  determining the set of maximally-informative
+                  demonstrations. We apply our proposed machine
+                  teaching algorithm to two novel applications:
+                  providing a lower bound on the number of queries
+                  needed to learn a policy using active IRL and
+                  developing a novel IRL algorithm that can learn more
+                  efficiently from informative demonstrations than a
+                  standard IRL approach.},
+  archivePrefix ={arXiv},
+  eprint =       {1805.07687},
+  primaryClass = {cs.LG},
+}
+@article{haug18_teach_inver_reinf_learn_via_featur_demon,
+  author =       {Haug, Luis and Tschiatschek, Sebastian and Singla,
+                  Adish},
+  title =        {Teaching Inverse Reinforcement Learners Via Features
+                  and Demonstrations},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1810.08926v4},
+  abstract =     {Learning near-optimal behaviour from an expert's
+                  demonstrations typically relies on the assumption
+                  that the learner knows the features that the true
+                  reward function depends on. In this paper, we study
+                  the problem of learning from demonstrations in the
+                  setting where this is not the case, i.e., where
+                  there is a mismatch between the worldviews of the
+                  learner and the expert. We introduce a natural
+                  quantity, the teaching risk, which measures the
+                  potential suboptimality of policies that look
+                  optimal to the learner in this setting. We show that
+                  bounds on the teaching risk guarantee that the
+                  learner is able to find a near-optimal policy using
+                  standard algorithms based on inverse reinforcement
+                  learning. Based on these findings, we suggest a
+                  teaching scheme in which the expert can decrease the
+                  teaching risk by updating the learner's worldview,
+                  and thus ultimately enable her to find a
+                  near-optimal policy.},
+  archivePrefix ={arXiv},
+  eprint =       {1810.08926},
+  primaryClass = {cs.LG},
+}
+@article{tschiatschek19_learn_aware_teach,
+  author =       {Tschiatschek, Sebastian and Ghosh, Ahana and Haug,
+                  Luis and Devidze, Rati and Singla, Adish},
+  title =        {Learner-Aware Teaching: Inverse Reinforcement
+                  Learning With Preferences and Constraints},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1906.00429v1},
+  abstract =     {Inverse reinforcement learning (IRL) enables an
+                  agent to learn complex behavior by observing
+                  demonstrations from a (near-)optimal policy. The
+                  typical assumption is that the learner's goal is to
+                  match the teacher's demonstrated behavior. In this
+                  paper, we consider the setting where the learner has
+                  her own preferences that she additionally takes into
+                  consideration. These preferences can for example
+                  capture behavioral biases, mismatched worldviews, or
+                  physical constraints. We study two teaching
+                  approaches: learner-agnostic teaching, where the
+                  teacher provides demonstrations from an optimal
+                  policy ignoring the learner's preferences, and
+                  learner-aware teaching, where the teacher accounts
+                  for the learner's preferences. We design
+                  learner-aware teaching algorithms and show that
+                  significant performance improvements can be achieved
+                  over learner-agnostic teaching.},
+  archivePrefix ={arXiv},
+  eprint =       {1906.00429},
+  primaryClass = {cs.LG},
+}
+@article{kamalaruban19_inter_teach_algor_inver_reinf_learn,
+  author =       {Kamalaruban, Parameswaran and Devidze, Rati and
+                  Cevher, Volkan and Singla, Adish},
+  title =        {Interactive Teaching Algorithms for Inverse
+                  Reinforcement Learning},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1905.11867v3},
+  abstract =     {We study the problem of inverse reinforcement
+                  learning (IRL) with the added twist that the learner
+                  is assisted by a helpful teacher. More formally, we
+                  tackle the following algorithmic question: How could
+                  a teacher provide an informative sequence of
+                  demonstrations to an IRL learner to speed up the
+                  learning process? We present an interactive teaching
+                  framework where a teacher adaptively chooses the
+                  next demonstration based on learner's current
+                  policy. In particular, we design teaching algorithms
+                  for two concrete settings: an omniscient setting
+                  where a teacher has full knowledge about the
+                  learner's dynamics and a blackbox setting where the
+                  teacher has minimal knowledge. Then, we study a
+                  sequential variant of the popular MCE-IRL learner
+                  and prove convergence guarantees of our teaching
+                  algorithm in the omniscient setting. Extensive
+                  experiments with a car driving simulator environment
+                  show that the learning progress can be speeded up
+                  drastically as compared to an uninformative
+                  teacher.},
+  archivePrefix ={arXiv},
+  eprint =       {1905.11867},
+  primaryClass = {cs.LG},
+}

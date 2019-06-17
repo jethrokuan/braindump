@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-05-25T11:39:23+08:00
+lastmod = 2019-06-17T14:28:33+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -160,6 +160,112 @@ Experiments showed that POMDP planning leads to faster teaching.
         the state variables in \\(Y\\).
 
 
+## Machine Teaching For Inverse Reinforcement Learning <a id="2729f1e86d52c599d1e5b0d6d75a3b47" href="#brown18_machin_teach_inver_reinf_learn" title="Brown \&amp; Niekum, Machine Teaching for Inverse Reinforcement Learning:  Algorithms and Applications, {CoRR}, v(), (2018).">(Brown \& Niekum, 2018)</a> {#machine-teaching-for-inverse-reinforcement-learning}
+
+Optimal Teaching for IRL gives:
+
+1.  Insights into the intrinsic difficulty of teaching certain
+    sequential decision-making tasks
+2.  Provides a lower bound on the number of samples needed by the
+    active IRL algorithm
+3.  Optimal teaching can be used to design algorithms that better
+    leverage highly informative demonstrations which do not follow the
+    i.i.d assumptions made by many IRL applications
+
+
+### Machine Teaching Problem for IRL {#machine-teaching-problem-for-irl}
+
+Given an MDP, \\(M\\), and the teacher's reward function, \\(R^\* =
+\mathbf{w}^{\*^T} \phi (s)\\), find the set of demonstrations, \\(D\\), that
+minimizes the following optimization problem:
+
+\begin{equation}
+  \textrm{min}\_{D} \textrm{TeachingCost}(D) \textrm{ s.t. } \textrm{Loss}(\mathbf{w^\*}, \hat{\mathbf{w}}) \le \epsilon, \hat{\mathbf{w}} = IRL(D)
+\end{equation}
+
+Optimizing this is hard, since there are a large number of candidate
+sets of demonstrations, and the IRL problem needs to be solved for
+each candidate set. The paper proposes a greedy set-cover
+approximation algorithm that requires solving only a single
+policy-evaluation problem, using the Behavioural Equivalence Class
+(BEC) of the teacher's policy.
+
+
+## Teaching Inverse Reinforcement Learners via Features and Demonstrations <a id="255bc1a536215d32ce8dfd159d3c4d7a" href="#haug18_teach_inver_reinf_learn_via_featur_demon" title="Haug, Tschiatschek, Singla \&amp; Adish, Teaching Inverse Reinforcement Learners Via Features  and Demonstrations, {CoRR}, v(), (2018).">(Haug et al., 2018)</a> {#teaching-inverse-reinforcement-learners-via-features-and-demonstrations}
+
+It is difficult to specify a reward function that captures all
+important aspects. In these situations, learning from demonstrations
+transforms the need of specifying this reward function to the task of
+providing examples of optimal behaviour.
+
+The paper considers the following setting:
+
+-   The true reward function is a linear combination of features known
+    to the teacher
+-   The learner also assumes the reward function is a linear combination
+    of features, different from the important ones (e.g. observing only
+    a subset)
+-   The _teaching risk_ is proposed to bound the performance gap of the
+    teacher and learner as a function of the learner's worldview
+
+Teaching risk is defined as:
+
+\begin{equation}
+  \rho\left(A^{L} ; \mathbf{w}^{\*}\right) :=\max \_{v \in \operatorname{ker} A^{L},\\|v\\| \leq 1}\left\langle\mathbf{w}^{\*}, v\right\rangle
+\end{equation}
+
+Where \\(A^L\\) is the learner's worldview. Geometrically it is the cosine
+of the angle between ker \\(A^L\\) and \\(\mathbf{w}^\*\\).
+
+Limiting the set of teachable features, choosing features that allow
+for minimizing teaching risk experimentally shows better performance
+than randomly choosing features.
+
+
+## Learner-aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints <a id="2d73f677b073c0fc37c32e652da58e0d" href="#tschiatschek19_learn_aware_teach" title="Tschiatschek, Ghosh, Haug, Luis, Devidze \&amp; Singla, Learner-Aware Teaching: Inverse Reinforcement  Learning With Preferences and Constraints, {CoRR}, v(), (2019).">(Tschiatschek et al., 2019)</a> {#learner-aware-teaching-inverse-reinforcement-learning-with-preferences-and-constraints}
+
+This paper considers the setting where the learner has preferences.
+This captures:
+
+1.  behavioural bias
+2.  mismatched worldviews
+3.  physical constraints
+
+Learner-aware teaching shows significant performance improvements
+
+_Math of the paper is beyond me right now._
+
+
+## Interactive Teaching Algorithms for Inverse Reinforcement Learning <a id="d5cdce41e67580ca88216f11069230f8" href="#kamalaruban19_inter_teach_algor_inver_reinf_learn" title="Kamalaruban, Devidze, , Cevher \&amp; Singla, Interactive Teaching Algorithms for Inverse  Reinforcement Learning, {CoRR}, v(), (2019).">(Kamalaruban et al., 2019)</a> {#interactive-teaching-algorithms-for-inverse-reinforcement-learning}
+
+Considers the setting where the learner is assisted by a teacher. Two
+sub-settings are considered:
+
+1.  Where the teacher can fully observe the student's current policy,
+    and understands the student's dynamics (for theoretical bounds)
+2.  Where the teacher only has a noisy estimate of the learner's
+    current policy, and does not understand the student's dynamics
+
+The environment is modelled as a MDP, where the learner does not have
+access to the reward furncion R. The teaching objective is to achieve
+a high-performing policy through learning from teacher demonstrations.
+
+The learner is asssumed to use the MCE-IRL algorithm. Theoretical
+analysis of the omniscient teacher shows that only \\(O(\log
+\frac{1}{\epsilon})\\) demonstrations are required to achieve the
+teaching objective, an exponential improvement compared to selecting
+demonstrations at random.
+
+In the black box setting, the strategy considered picks the most
+informative demonstration. This is evaluated experimentally. The black
+box teacher is shown to learn faster than the agnostic teacher, in
+both the linear and non-linear reward setting. In the non-linear
+reward setting, both learners are unable to learn a good policy, but
+in the black box teaching setting progress is made much quicker.
+
+_Would be interesting to work through the proofs._
+
+
 ## Bayesian Teaching {#bayesian-teaching}
 
 Bayesian teaching aims to induce a target model in the learner by
@@ -214,5 +320,13 @@ are most valuable: better suited to induce the desired target model.
 <a id="Rafferty_2015"></a>Rafferty, A. N., Brunskill, E., Griffiths, T. L., & Shafto, P., *Faster teaching via pomdp planning*, Cognitive Science, *40(6)*, 1290–1332 (2015).  http://dx.doi.org/10.1111/cogs.12290 [↩](#20d8df4efc7c1861be90e93bf2bf9231)
 
 <a id="Du2010APA"></a>Du, Y., Hsu, D., Kurniawati, H., Lee, W. S., Ong, S. C. W., & Png, S. W., *A pomdp approach to robot motion planning under uncertainty*, In ,  (pp. ) (2010). : . [↩](#b4b7f43790c8103452a6d9a6561a6727)
+
+<a id="brown18_machin_teach_inver_reinf_learn"></a>Brown, D. S., & Niekum, S., *Machine teaching for inverse reinforcement learning: algorithms and applications*, CoRR, *()*,  (2018).  [↩](#2729f1e86d52c599d1e5b0d6d75a3b47)
+
+<a id="haug18_teach_inver_reinf_learn_via_featur_demon"></a>Haug, L., Tschiatschek, S., & Singla, A., *Teaching inverse reinforcement learners via features and demonstrations*, CoRR, *()*,  (2018).  [↩](#255bc1a536215d32ce8dfd159d3c4d7a)
+
+<a id="tschiatschek19_learn_aware_teach"></a>Tschiatschek, S., Ghosh, A., Haug, L., Devidze, R., & Singla, A., *Learner-aware teaching: inverse reinforcement learning with preferences and constraints*, CoRR, *()*,  (2019).  [↩](#2d73f677b073c0fc37c32e652da58e0d)
+
+<a id="kamalaruban19_inter_teach_algor_inver_reinf_learn"></a>Kamalaruban, P., Devidze, R., Cevher, V., & Singla, A., *Interactive teaching algorithms for inverse reinforcement learning*, CoRR, *()*,  (2019).  [↩](#d5cdce41e67580ca88216f11069230f8)
 
 <a id="ravi_bayesian_teaching_mnist"></a>Sojitra, R. (2018). *Bayesian teaching as model explanation: an mnist example*. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019. [↩](#f88402a68a48e8e87e35ad010169c296)
