@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-06-17T14:28:33+08:00
+lastmod = 2019-07-01T09:24:31+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -310,7 +310,124 @@ Hence, Bayesian teaching is also useful in telling us which examples
 are most valuable: better suited to induce the desired target model.
 
 
-##  {#}
+## Robot Teaching and the Sim2Real gap {#robot-teaching-and-the-sim2real-gap}
+
+Obtaining real-world training data can be expensive, and many RL
+algorithms are sample-inefficient. Hence, many models are trained in a
+simulated environment, and the "sim2real" gap causes these models to
+perform poorly on real-world tasks.
+<a id="1f99c4b9974f48e237e3ce698feb574b" href="#lilian_domain_random_sim2r_trans" title="@misc{lilian_domain_random_sim2r_trans,
+  author =       {Lilian Weng},
+  howpublished =
+                  {https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html},
+  note =         {Online; accessed 28 June 2019},
+  title =        {Domain Randomization for Sim2Real Transfer},
+  year =         {2019},
+}">@misc{lilian_domain_random_sim2r_trans,
+  author =       {Lilian Weng},
+  howpublished =
+                  {https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html},
+  note =         {Online; accessed 28 June 2019},
+  title =        {Domain Randomization for Sim2Real Transfer},
+  year =         {2019},
+}</a>
+
+There are several approaches to closing the sim2real gap:
+
+1.  System Identification
+    -   _System identification_ involves building a mathematical model for
+        a physical system. This requires careful calibration, which can
+        be expensive.
+2.  Domain Adaptation
+    -   This refers to a set of transfer learning techniques that update
+        the data distribution in the simulated environment to match that
+        of the real world. Many of these are build on adversarial loss or GAN.
+3.  Domain Randomization
+    -   A variety of simulated environments with randomized properties
+        are created, and to allow for training a robust model that works
+        across all these environments.
+
+Both DA and DR are unsupervised. While DA requires a large amount of
+real data samples to capture the distribution, DR requires little to no
+real data.
+
+
+### Domain Randomization {#domain-randomization}
+
+
+#### Definitions {#definitions}
+
+source domain
+: The environment we have full access to (the
+    simulator). This is where training happens.
+
+target domain
+: The environment we want to transfer our model to
+    (the real world)
+
+randomization parameters
+: A set of parameters in the source
+    domain, which we can sample \\(\xi\\)
+
+
+#### Goal {#goal}
+
+During policy training, episodes are collected from the source domain
+with randomization applied. The policy learns to generalize across
+all the environments. The policy parameter \\(\theta\\) is trained to
+maximize the expected reward \\(R(\cdot)\\) average across a distribution
+of configurations:
+
+\begin{equation}
+  \theta^{\*}=\arg \max \_{\theta} \mathbb{E}\_{\xi \sim \Xi}\left[\mathbb{E}\_{\pi\_{\theta}, \tau \sim e\_{\xi}}[R(\tau)]\right]
+\end{equation}
+
+where \\(\tau\_{\xi}\\) is a trajectory collected in the source domain
+randomized with \\(\xi\\). **Discrepancies between the source and target
+domains are modelled as variability in the source domain**.
+
+In _uniform domain randomization_, each randomization parameter
+\\(\xi\_{i}\\) is bounded by an interval &xi;<sub>i</sub>
+&isin;\left[&xi;<sub>i</sub><sup>\mathrm{low}</sup>, &xi;<sub>i</sub><sup>\mathrm{high}</sup>\right], i=1,
+\ldots, N$, and each parameter is uniformly sampled within the range.
+
+-   <span class="org-todo todo TODO">TODO</span>  read <https://arxiv.org/abs/1703.06907>, <https://arxiv.org/abs/1611.04201>
+
+
+#### <span class="org-todo todo TODO">TODO</span> Domain Randomization as Optimization (read <https://arxiv.org/abs/1903.11774>) {#domain-randomization-as-optimization--read-https-arxiv-dot-org-abs-1903-dot-11774}
+
+One can view learning of randomization parameters as a bilevel
+optimization.
+
+Assume we have access to the real environment \\(e\_{\textrm{real}}\\) and
+the randomization configuration is sampled from a distribution
+parameterized by \\(\phi\\), \\(\xi \sim P\_{\phi}(\xi)\\), we would like to
+learn a distribution on which policy \\(\pi\_\theta\\) is trained on can
+achieve maximal performance in \\(e\_{\textrm{real}}\\):
+
+\begin{equation}
+  \begin{array}{c}{\phi^{\*}=\arg \min \_{\phi} \mathcal{L}\left(\pi\_{\theta^{\prime}(\phi)} ; e\_{\text { real }}\right)} \\ {\text { where } \theta^{\*}(\phi)=\arg \min \_{\theta} \mathbb{E}\_{\xi \sim P\_{\phi}(\xi)}\left[\mathcal{L}\left(\pi\_{\theta} ; e\_{\xi}\right)\right]}\end{array}
+\end{equation}
+
+where \\(\mathcal{L}(\pi ; e)\\) is the loss function of policy \\(\pi\\)
+evaluated in the environment \\(e\\).
+
+
+#### Guided Domain Randomization {#guided-domain-randomization}
+
+Vanilla Domain Randomization assumes to access to the real data, and
+randomization configuration is sampled as broadly and uniformly as
+possible in sim, hoping that the real environment is covered under
+this broad distribution.
+
+**Idea:** guide domain randomization to use configurations that are "more
+realistic". This avoids training models in unrealistic environments.
+
+
+#### <span class="org-todo todo TODO">TODO</span> read <https://arxiv.org/abs/1805.09501> {#read-https-arxiv-dot-org-abs-1805-dot-09501}
+
+
+###  {#}
 
 # Bibliography
 <a id="simard17_machin_teach"></a>Simard, P. Y., Amershi, S., Chickering, D. M., Pelton, A. E., Ghorashi, S., Meek, C., Ramos, G., …, *Machine teaching: a new paradigm for building machine learning systems*, CoRR, *()*,  (2017).  [↩](#b5c1005733dab7e951e8ecd46dff695f)
@@ -330,3 +447,5 @@ are most valuable: better suited to induce the desired target model.
 <a id="kamalaruban19_inter_teach_algor_inver_reinf_learn"></a>Kamalaruban, P., Devidze, R., Cevher, V., & Singla, A., *Interactive teaching algorithms for inverse reinforcement learning*, CoRR, *()*,  (2019).  [↩](#d5cdce41e67580ca88216f11069230f8)
 
 <a id="ravi_bayesian_teaching_mnist"></a>Sojitra, R. (2018). *Bayesian teaching as model explanation: an mnist example*. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019. [↩](#f88402a68a48e8e87e35ad010169c296)
+
+<a id="lilian_domain_random_sim2r_trans"></a>Weng, L. (2019). *Domain randomization for sim2real transfer*. Retrieved from [https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html](https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html). Online; accessed 28 June 2019. [↩](#1f99c4b9974f48e237e3ce698feb574b)

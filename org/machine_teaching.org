@@ -263,5 +263,95 @@ particular number.
 Hence, Bayesian teaching is also useful in telling us which examples
 are most valuable: better suited to induce the desired target model.
 
-* 
+* Robot Teaching and the Sim2Real gap
+
+Obtaining real-world training data can be expensive, and many RL
+algorithms are sample-inefficient. Hence, many models are trained in a
+simulated environment, and the "sim2real" gap causes these models to
+perform poorly on real-world tasks.
+cite:lilian_domain_random_sim2r_trans
+
+There are several approaches to closing the sim2real gap:
+
+1. System Identification
+   - /System identification/ involves building a mathematical model for
+     a physical system. This requires careful calibration, which can
+     be expensive.
+2. Domain Adaptation
+   - This refers to a set of transfer learning techniques that update
+     the data distribution in the simulated environment to match that
+     of the real world. Many of these are build on adversarial loss or GAN.
+3. Domain Randomization
+   - A variety of simulated environments with randomized properties
+     are created, and to allow for training a robust model that works
+     across all these environments.
+
+Both DA and DR are unsupervised. While DA requires a large amount of
+real data samples to capture the distribution, DR requires little to no
+real data.
+
+** Domain Randomization
+
+*** Definitions
+
+- source domain :: The environment we have full access to (the
+                   simulator). This is where training happens.
+- target domain :: The environment we want to transfer our model to
+                   (the real world)
+- randomization parameters :: A set of parameters in the source
+     domain, which we can sample $\xi$
+
+*** Goal
+
+During policy training, episodes are collected from the source domain
+with randomization applied. The policy learns to generalize across
+all the environments. The policy parameter $\theta$ is trained to
+maximize the expected reward $R(\cdot)$ average across a distribution
+of configurations:
+
+\begin{equation}
+  \theta^{*}=\arg \max _{\theta} \mathbb{E}_{\xi \sim \Xi}\left[\mathbb{E}_{\pi_{\theta}, \tau \sim e_{\xi}}[R(\tau)]\right]
+\end{equation}
+
+where $\tau_{\xi}$ is a trajectory collected in the source domain
+randomized with $\xi$. *Discrepancies between the source and target
+domains are modelled as variability in the source domain*.
+
+In /uniform domain randomization/, each randomization parameter
+$\xi_{i}$ is bounded by an interval \xi_{i}
+\in\left[\xi_{i}^{\mathrm{low}}, \xi_{i}^{\mathrm{high}}\right], i=1,
+\ldots, N$, and each parameter is uniformly sampled within the range.
+
+**** TODO read https://arxiv.org/abs/1703.06907, https://arxiv.org/abs/1611.04201
+
+*** TODO Domain Randomization as Optimization (read https://arxiv.org/abs/1903.11774)
+
+One can view learning of randomization parameters as a bilevel
+optimization.
+
+Assume we have access to the real environment $e_{\textrm{real}}$ and
+the randomization configuration is sampled from a distribution
+parameterized by $\phi$, $\xi \sim P_{\phi}(\xi)$, we would like to
+learn a distribution on which policy $\pi_\theta$ is trained on can
+achieve maximal performance in $e_{\textrm{real}}$:
+
+\begin{equation}
+  \begin{array}{c}{\phi^{*}=\arg \min _{\phi} \mathcal{L}\left(\pi_{\theta^{\prime}(\phi)} ; e_{\text { real }}\right)} \\ {\text { where } \theta^{*}(\phi)=\arg \min _{\theta} \mathbb{E}_{\xi \sim P_{\phi}(\xi)}\left[\mathcal{L}\left(\pi_{\theta} ; e_{\xi}\right)\right]}\end{array}
+\end{equation}
+
+where $\mathcal{L}(\pi ; e)$ is the loss function of policy $\pi$
+evaluated in the environment $e$.
+
+*** Guided Domain Randomization
+
+Vanilla Domain Randomization assumes to access to the real data, and
+randomization configuration is sampled as broadly and uniformly as
+possible in sim, hoping that the real environment is covered under
+this broad distribution.
+
+*Idea:* guide domain randomization to use configurations that are "more
+realistic". This avoids training models in unrealistic environments.
+ 
+*** TODO read https://arxiv.org/abs/1805.09501
+** 
 bibliography:machine-teaching.bib
