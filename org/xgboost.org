@@ -2,7 +2,7 @@
 #+TITLE: XGBoost
 #+HUGO_TAGS: machine-learning
 
-XGboost is an end-to-end boosting system. It is sparsity-aware.
+XGboost is an end-to-end boosting system. It is sparsity-aware. cite:chen16_xgboos
 
 * Regularized Learning Objective
 
@@ -95,3 +95,12 @@ loss reduction from splitting:
         g_i \right)^2}{\sum_{i \in I_R} h_i + \lambda} - \frac{\left( \sum_{i \in I}
         g_i \right)^2}{\sum_{i \in I} h_i + \lambda} \right]
 \end{equation}
+
+* Implementing Distributed XGBoost
+
+The implementation of distributed XGBoost uses [[https://github.com/dmlc/rabit][RABIT]], and the
+Allreduce framework. XGBoost requires gradients and hessians from each
+distributed worker. This fit the allreduce framework, which broadcasts
+each worker's reduce result across all processes. cite:chen3rabit
+
+bibliography:xgboost.bib

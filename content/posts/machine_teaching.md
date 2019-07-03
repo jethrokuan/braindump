@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-07-01T09:24:31+08:00
+lastmod = 2019-07-03T10:30:48+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -387,9 +387,9 @@ randomized with \\(\xi\\). **Discrepancies between the source and target
 domains are modelled as variability in the source domain**.
 
 In _uniform domain randomization_, each randomization parameter
-\\(\xi\_{i}\\) is bounded by an interval &xi;<sub>i</sub>
-&isin;\left[&xi;<sub>i</sub><sup>\mathrm{low}</sup>, &xi;<sub>i</sub><sup>\mathrm{high}</sup>\right], i=1,
-\ldots, N$, and each parameter is uniformly sampled within the range.
+\\(\xi\_{i}\\) is bounded by an interval \\(\xi\_{i}
+\in\left[\xi\_{i}^{\mathrm{low}}, \xi\_{i}^{\mathrm{high}}\right], i=1,
+\ldots, N\\), and each parameter is uniformly sampled within the range.
 
 -   <span class="org-todo todo TODO">TODO</span>  read <https://arxiv.org/abs/1703.06907>, <https://arxiv.org/abs/1611.04201>
 

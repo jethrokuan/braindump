@@ -318,7 +318,7 @@ randomized with $\xi$. *Discrepancies between the source and target
 domains are modelled as variability in the source domain*.
 
 In /uniform domain randomization/, each randomization parameter
-$\xi_{i}$ is bounded by an interval \xi_{i}
+$\xi_{i}$ is bounded by an interval $\xi_{i}
 \in\left[\xi_{i}^{\mathrm{low}}, \xi_{i}^{\mathrm{high}}\right], i=1,
 \ldots, N$, and each parameter is uniformly sampled within the range.
 
