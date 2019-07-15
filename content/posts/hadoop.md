@@ -1,7 +1,7 @@
 +++
 title = "Hadoop"
 author = ["Jethro Kuan"]
-lastmod = 2019-06-06T20:17:15+08:00
+lastmod = 2019-07-15T11:43:30+08:00
 draft = false
 math = true
 +++
@@ -347,7 +347,86 @@ applications use some form of remote communication to pass status
 updates and results around, but these are application specific.
 
 
+## Data Serialization {#data-serialization}
+
+Data is often represented differently in-memory, and requires
+serialization before being written to disk. For evolvability,
+serialization formats should provide forward compatibility. This
+allows schemas to change without affecting data that was written
+previously. Some serialization formats include:
+
+1.  [Thrift](https://thrift.apache.org/)
+2.  [Protocol Buffers](https://developers.google.com/protocol-buffers/)
+3.  [Avro](https://avro.apache.org/)
+
+Thrift and Protocol Buffers are highly similar projects. Thrift is
+relatively more mature, with generated serialization classes for many
+different languages, and ships with an RPC framework. Protocol Buffers
+and gRPC were developed simulataneously, but ship as separate
+projects.
+
+Avro is designed from the ground-up for the Hadoop filesystem by Doug
+Cutting, the author of Hadoop. In contrast with Thrift and Protocol
+Buffers, it provides a dynamic schema. The data format is also
+splittable by default.
+
+To allow for more efficient reads, Twitter uses [Parquet](https://parquet.apache.org/), a project
+that came out of a collaboration between Twittera and Cloudera.
+Instead of storing Thrift structures in the Thrift binary format,
+Parquet uses a data converter to convert Thrift structures into
+Parquet format, a compressed, columnar data representation.
+
+<a id="783b48bf91ec1e1990a77560e69421ea" href="#DBLP:books/oreilly/Kleppmann2014" title="Martin Kleppmann, Designing Data-Intensive Applications: The Big Ideas Behind Reliable,  Scalable, and Maintainable Systems, O'Reilly (2016).">(Martin Kleppmann, 2016)</a>
+
+
+### Parquet's Columnar Storage {#parquet-s-columnar-storage}
+
+Parquet's columnar representation is inpired by Google's Dremel.
+<a id="ed2cfb2545d07ae55a02f3661a55156d" href="#dremel" title="Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton \&amp; Theo Vassilakis, Dremel: Interactive Analysis of Web-Scale Datasets, 330-339, in in: {Proc. of the 36th Int'l Conf on Very Large Data Bases}, edited by (2010)">(Sergey Melnik et al., 2010)</a>
+
+Thrift and Protocol Buffer's binary representations are field values
+laid out sequentially. Using a columnar-striped representation enables
+queries on just a few columns to read less data from storage.
+
+A key challenge is the natural occurrence of nested records in web and
+scientific computing. Normalizing these nested records are often
+computationally too expensive. The approach Dremel takes is storing
+nested records with their values, and _repetition and definition
+levels_.
+
+Repetition levels
+: repetition levels tell us at what repeated
+    field in the field's path the value has repeated.
+
+Definition levels
+: definition levels tell us how many fields in
+    \\(p\\) could be undefined, are actually present.
+
+{{< figure src="/ox-hugo/screenshot_2019-07-15_11-39-11.png" caption="Figure 5: Two sample nested records and their schema" >}}
+
+{{< figure src="/ox-hugo/screenshot_2019-07-15_11-39-51.png" caption="Figure 6: Column-striped representation of the sample data" >}}
+
+Each column is stored as a set of blocks, each block containing the
+repetition and definition levels, and compressed field values.
+
+Record shredding is performed by creating a tree of field writers,
+whose structure matches the file hierarchy in the schema. Field
+writers update only when they have their own data, and do not try to
+propagate the parent state down the tree unless absolutely necessary.
+
+Record assembly is performed by constructing an optimal FSM that reads
+field values and levels for each field, and append the values
+sequentially to the output records.
+
+Efficient algorithms for record shredding and assembly are provided in
+Appendix A of the Dremel paper. <a id="ed2cfb2545d07ae55a02f3661a55156d" href="#dremel" title="Sergey Melnik, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton \&amp; Theo Vassilakis, Dremel: Interactive Analysis of Web-Scale Datasets, 330-339, in in: {Proc. of the 36th Int'l Conf on Very Large Data Bases}, edited by (2010)">(Sergey Melnik et al., 2010)</a>
+
+
 ##  {#}
 
 # Bibliography
 <a id="White:2009:HDG:1717298"></a>White, T., *Hadoop: the definitive guide* (2009), : O'Reilly Media, Inc. [↩](#e50b6ff0acbc468982f33753f532f6e6)
+
+<a id="DBLP:books/oreilly/Kleppmann2014"></a>Kleppmann, M., *Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems* (2016), : O'Reilly. [↩](#783b48bf91ec1e1990a77560e69421ea)
+
+<a id="dremel"></a>Melnik, S., Gubarev, A., Long, J. J., Romer, G., Shivakumar, S., Tolton, M., & Vassilakis, T., *Dremel: interactive analysis of web-scale datasets*, In , Proc. of the 36th Int'l Conf on Very Large Data Bases (pp. 330–339) (2010). : . [↩](#ed2cfb2545d07ae55a02f3661a55156d)

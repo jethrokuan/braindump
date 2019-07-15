@@ -337,6 +337,78 @@ updates and results around, but these are application specific.
 
 
 
+* Data Serialization
+
+Data is often represented differently in-memory, and requires
+serialization before being written to disk. For evolvability,
+serialization formats should provide forward compatibility. This
+allows schemas to change without affecting data that was written
+previously. Some serialization formats include:
+
+1. [[https://thrift.apache.org/][Thrift]]
+2. [[https://developers.google.com/protocol-buffers/][Protocol Buffers]]
+3. [[https://avro.apache.org/][Avro]]
+
+Thrift and Protocol Buffers are highly similar projects. Thrift is
+relatively more mature, with generated serialization classes for many
+different languages, and ships with an RPC framework. Protocol Buffers
+and gRPC were developed simulataneously, but ship as separate
+projects.
+
+Avro is designed from the ground-up for the Hadoop filesystem by Doug
+Cutting, the author of Hadoop. In contrast with Thrift and Protocol
+Buffers, it provides a dynamic schema. The data format is also
+splittable by default.
+
+To allow for more efficient reads, Twitter uses [[https://parquet.apache.org/][Parquet]], a project
+that came out of a collaboration between Twittera and Cloudera.
+Instead of storing Thrift structures in the Thrift binary format,
+Parquet uses a data converter to convert Thrift structures into
+Parquet format, a compressed, columnar data representation.
+
+cite:DBLP:books/oreilly/Kleppmann2014
+
+** Parquet's Columnar Storage
+
+Parquet's columnar representation is inpired by Google's Dremel.
+cite:dremel
+
+Thrift and Protocol Buffer's binary representations are field values
+laid out sequentially. Using a columnar-striped representation enables
+queries on just a few columns to read less data from storage. 
+
+A key challenge is the natural occurrence of nested records in web and
+scientific computing. Normalizing these nested records are often
+computationally too expensive. The approach Dremel takes is storing
+nested records with their values, and /repetition and definition
+levels/.
+
+- Repetition levels :: repetition levels tell us at what repeated
+     field in the field's path the value has repeated.
+- Definition levels :: definition levels tell us how many fields in
+     $p$ could be undefined, are actually present.
+
+
+#+CAPTION: Two sample nested records and their schema
+[[file:images/hadoop/screenshot_2019-07-15_11-39-11.png]]
+
+#+CAPTION: Column-striped representation of the sample data
+[[file:images/hadoop/screenshot_2019-07-15_11-39-51.png]]
+
+Each column is stored as a set of blocks, each block containing the
+repetition and definition levels, and compressed field values.
+
+Record shredding is performed by creating a tree of field writers,
+whose structure matches the file hierarchy in the schema. Field
+writers update only when they have their own data, and do not try to
+propagate the parent state down the tree unless absolutely necessary.
+
+Record assembly is performed by constructing an optimal FSM that reads
+field values and levels for each field, and append the values
+sequentially to the output records.
+
+Efficient algorithms for record shredding and assembly are provided in
+Appendix A of the Dremel paper. cite:dremel
 
 * 
 bibliography:hadoop.bib

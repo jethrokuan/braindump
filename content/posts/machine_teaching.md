@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-07-03T10:30:48+08:00
+lastmod = 2019-07-15T11:43:44+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -38,7 +38,7 @@ problem:
   \begin{matrix}
     \textrm{min}\_{D, \hat{\theta}} & \textrm{TeachingRisk}(\hat{\theta}) +
                              \eta \textrm{TeachingCost}(D) \\\\\\
-  \textrm{s.t.} & \hat{\theta} = \textrm{MachineLearning}(D).
+                             \textrm{s.t.} & \hat{\theta} = \textrm{MachineLearning}(D).
   \end{matrix}
 \end{align}
 
@@ -82,7 +82,7 @@ optimal teaching actions.
 A POMDP is specified as a tuple:
 
 \begin{equation}
-  \langle S, A, Z, p(s'|s, a), p(z|s,a), r(s,a), \gamma \rangle
+\langle S, A, Z, p(s'|s, a), p(z|s,a), r(s,a), \gamma \rangle
 \end{equation}
 
 S
@@ -180,7 +180,9 @@ Given an MDP, \\(M\\), and the teacher's reward function, \\(R^\* =
 minimizes the following optimization problem:
 
 \begin{equation}
-  \textrm{min}\_{D} \textrm{TeachingCost}(D) \textrm{ s.t. } \textrm{Loss}(\mathbf{w^\*}, \hat{\mathbf{w}}) \le \epsilon, \hat{\mathbf{w}} = IRL(D)
+  \textrm{min}\_{D} \textrm{TeachingCost}(D) \textrm{ s.t. }
+  \textrm{Loss}(\mathbf{w^\*}, \hat{\mathbf{w}}) \le \epsilon,
+  \hat{\mathbf{w}} = IRL(D)
 \end{equation}
 
 Optimizing this is hard, since there are a large number of candidate
@@ -211,7 +213,9 @@ The paper considers the following setting:
 Teaching risk is defined as:
 
 \begin{equation}
-  \rho\left(A^{L} ; \mathbf{w}^{\*}\right) :=\max \_{v \in \operatorname{ker} A^{L},\\|v\\| \leq 1}\left\langle\mathbf{w}^{\*}, v\right\rangle
+  \rho\left(A^{L} ; \mathbf{w}^{\*}\right) :=\max \_{v \in
+    \operatorname{ker} A^{L},\\|v\\| \leq 1}\left\langle\mathbf{w}^{\*},
+    v\right\rangle
 \end{equation}
 
 Where \\(A^L\\) is the learner's worldview. Geometrically it is the cosine
@@ -310,6 +314,19 @@ Hence, Bayesian teaching is also useful in telling us which examples
 are most valuable: better suited to induce the desired target model.
 
 
+## Learning To Interactively Learn and Assist <a id="126795725ed501c93990ffff037191f4" href="#woodward19_learn_to_inter_learn_assis" title="Woodward, Finn \&amp; Hausman, Learning To Interactively Learn and Assist, {CoRR}, v(), (2019).">(Woodward et al., 2019)</a> {#learning-to-interactively-learn-and-assist}
+
+Rewards and demonstrations are often defined and collected before
+training begins, when the human is most uncertain about what
+information would help the agent.
+
+Key idea: use _interactive learning_ in contrast to rewards or
+demonstrative learning to enable an agent to learn from another agent
+who knows the current task.
+
+Interactive learning
+
+
 ## Robot Teaching and the Sim2Real gap {#robot-teaching-and-the-sim2real-gap}
 
 Obtaining real-world training data can be expensive, and many RL
@@ -379,7 +396,7 @@ maximize the expected reward \\(R(\cdot)\\) average across a distribution
 of configurations:
 
 \begin{equation}
-  \theta^{\*}=\arg \max \_{\theta} \mathbb{E}\_{\xi \sim \Xi}\left[\mathbb{E}\_{\pi\_{\theta}, \tau \sim e\_{\xi}}[R(\tau)]\right]
+\theta^{\*}=\arg \max \_{\theta} \mathbb{E}\_{\xi \sim \Xi}\left[\mathbb{E}\_{\pi\_{\theta}, \tau \sim e\_{\xi}}[R(\tau)]\right]
 \end{equation}
 
 where \\(\tau\_{\xi}\\) is a trajectory collected in the source domain
@@ -406,7 +423,12 @@ learn a distribution on which policy \\(\pi\_\theta\\) is trained on can
 achieve maximal performance in \\(e\_{\textrm{real}}\\):
 
 \begin{equation}
-  \begin{array}{c}{\phi^{\*}=\arg \min \_{\phi} \mathcal{L}\left(\pi\_{\theta^{\prime}(\phi)} ; e\_{\text { real }}\right)} \\ {\text { where } \theta^{\*}(\phi)=\arg \min \_{\theta} \mathbb{E}\_{\xi \sim P\_{\phi}(\xi)}\left[\mathcal{L}\left(\pi\_{\theta} ; e\_{\xi}\right)\right]}\end{array}
+\begin{array}{c}{\phi^{\*}=\arg \min \_{\phi}
+  \mathcal{L}\left(\pi\_{\theta^{\prime}(\phi)} ; e\_{\text { real
+  }}\right)} \\ {\text { where } \theta^{\*}(\phi)=\arg \min
+  \_{\theta} \mathbb{E}\_{\xi \sim
+  P\_{\phi}(\xi)}\left[\mathcal{L}\left(\pi\_{\theta} ;
+  e\_{\xi}\right)\right]}\end{array}
 \end{equation}
 
 where \\(\mathcal{L}(\pi ; e)\\) is the loss function of policy \\(\pi\\)
@@ -448,4 +470,28 @@ realistic". This avoids training models in unrealistic environments.
 
 <a id="ravi_bayesian_teaching_mnist"></a>Sojitra, R. (2018). *Bayesian teaching as model explanation: an mnist example*. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019. [↩](#f88402a68a48e8e87e35ad010169c296)
 
+<a id="woodward19_learn_to_inter_learn_assis"></a>Woodward, M., Finn, C., & Hausman, K., *Learning to interactively learn and assist*, CoRR, *()*,  (2019).  [↩](#126795725ed501c93990ffff037191f4)
+
 <a id="lilian_domain_random_sim2r_trans"></a>Weng, L. (2019). *Domain randomization for sim2real transfer*. Retrieved from [https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html](https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html). Online; accessed 28 June 2019. [↩](#1f99c4b9974f48e237e3ce698feb574b)
+
+<a id="arjovsky19_invar_risk_minim"></a>Arjovsky, M., Bottou, L\'eon, Gulrajani, I., & Lopez-Paz, D., *Invariant Risk Minimization*, CoRR, *()*,  (2019).  [↩](#5feb37b967977943f69738d540e822e8)
+
+
+## Invariant Risk Minimization <a id="5feb37b967977943f69738d540e822e8" href="#arjovsky19_invar_risk_minim" title="Arjovsky, Bottou, Gulrajani, Ishaan \&amp; Lopez-Paz, Invariant Risk Minimization, {CoRR}, v(), (2019).">(Arjovsky et al., 2019)</a> {#invariant-risk-minimization}
+
+Key idea: To learn invariances across environments, find a data
+representation such that the optimal classifier on top of that
+representation matches for all environments.
+
+Consider a cow/camel classifier. If we train on labeled images where
+most pictures of cows are taken on green pastures, and pictures of
+camels in desserts, the classifier may learn to classify green
+landscapes as cows, and beige landscapes as camels.
+
+To solve this problem, we need to identify which properties of the
+training data are spurious correlations (e.g. background), and which
+are actual phenomenon of interest (animal shape). Spurious
+correlations are expected not to hold in unseen data.
+
+The goal is to learn correlations invariant across training
+environments.
