@@ -374,8 +374,7 @@ this broad distribution.
 realistic". This avoids training models in unrealistic environments.
 
 *** TODO read https://arxiv.org/abs/1805.09501
-** 
-bibliography:machine-teaching.bib
+
 * Invariant Risk Minimization cite:arjovsky19_invar_risk_minim
 
 Key idea: To learn invariances across environments, find a data
@@ -394,3 +393,6 @@ correlations are expected not to hold in unseen data.
 
 The goal is to learn correlations invariant across training
 environments. 
+
+** 
+bibliography:machine-teaching.bib

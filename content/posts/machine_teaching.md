@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-07-15T11:43:44+08:00
+lastmod = 2019-07-15T11:51:53+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -449,6 +449,26 @@ realistic". This avoids training models in unrealistic environments.
 #### <span class="org-todo todo TODO">TODO</span> read <https://arxiv.org/abs/1805.09501> {#read-https-arxiv-dot-org-abs-1805-dot-09501}
 
 
+## Invariant Risk Minimization <a id="5feb37b967977943f69738d540e822e8" href="#arjovsky19_invar_risk_minim" title="Arjovsky, Bottou, Gulrajani, Ishaan \&amp; Lopez-Paz, Invariant Risk Minimization, {CoRR}, v(), (2019).">(Arjovsky et al., 2019)</a> {#invariant-risk-minimization}
+
+Key idea: To learn invariances across environments, find a data
+representation such that the optimal classifier on top of that
+representation matches for all environments.
+
+Consider a cow/camel classifier. If we train on labeled images where
+most pictures of cows are taken on green pastures, and pictures of
+camels in desserts, the classifier may learn to classify green
+landscapes as cows, and beige landscapes as camels.
+
+To solve this problem, we need to identify which properties of the
+training data are spurious correlations (e.g. background), and which
+are actual phenomenon of interest (animal shape). Spurious
+correlations are expected not to hold in unseen data.
+
+The goal is to learn correlations invariant across training
+environments.
+
+
 ###  {#}
 
 # Bibliography
@@ -475,23 +495,3 @@ realistic". This avoids training models in unrealistic environments.
 <a id="lilian_domain_random_sim2r_trans"></a>Weng, L. (2019). *Domain randomization for sim2real transfer*. Retrieved from [https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html](https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html). Online; accessed 28 June 2019. [↩](#1f99c4b9974f48e237e3ce698feb574b)
 
 <a id="arjovsky19_invar_risk_minim"></a>Arjovsky, M., Bottou, L\'eon, Gulrajani, I., & Lopez-Paz, D., *Invariant Risk Minimization*, CoRR, *()*,  (2019).  [↩](#5feb37b967977943f69738d540e822e8)
-
-
-## Invariant Risk Minimization <a id="5feb37b967977943f69738d540e822e8" href="#arjovsky19_invar_risk_minim" title="Arjovsky, Bottou, Gulrajani, Ishaan \&amp; Lopez-Paz, Invariant Risk Minimization, {CoRR}, v(), (2019).">(Arjovsky et al., 2019)</a> {#invariant-risk-minimization}
-
-Key idea: To learn invariances across environments, find a data
-representation such that the optimal classifier on top of that
-representation matches for all environments.
-
-Consider a cow/camel classifier. If we train on labeled images where
-most pictures of cows are taken on green pastures, and pictures of
-camels in desserts, the classifier may learn to classify green
-landscapes as cows, and beige landscapes as camels.
-
-To solve this problem, we need to identify which properties of the
-training data are spurious correlations (e.g. background), and which
-are actual phenomenon of interest (animal shape). Spurious
-correlations are expected not to hold in unseen data.
-
-The goal is to learn correlations invariant across training
-environments.

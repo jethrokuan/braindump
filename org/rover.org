@@ -8,7 +8,20 @@ Landing (abbrieviated EDL). cite:lakdawalla18_curios
 
 * TODO Read cite:systemsengineering_6575245
 
-The Mars
+* How the Curiosity Rover worked
+
+- Lots of redundancy. A-side and B-side electronics.
+- The battery was a [[https://en.wikipedia.org/wiki/Multi-mission_radioisotope_thermoelectric_generator][MMRTG battery]]. Curiosity used plutonium-238 as the
+  nuclear fuel, and an array of thermocouples reliably converted the
+  released heat into electricity with no moving parts.
+
+Things to account for:
+
+- Operating temperatures of each component. Scientists maintained a
+  heating table, and also had schedules to ensure that the various
+  parts were heated to operating temperature before functioning.
+- Have a system collecting heat output from energy
+
 * 
 
 bibliography:rover.bib
