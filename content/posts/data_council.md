@@ -1,7 +1,7 @@
 +++
-title = "Data Council.ai Conference Notes"
+title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2019-07-17T11:20:40+08:00
+lastmod = 2019-07-17T13:35:45+08:00
 draft = false
 math = true
 +++
@@ -202,6 +202,70 @@ team
     engineers are taught to build data pipelines early when joining
     Twitter
 -   job of the DS manager
+
+
+## Argo: Kubernetes Native Workflows and Pipelines - Greg Roodt, Canva {#argo-kubernetes-native-workflows-and-pipelines-greg-roodt-canva}
+
+[Github project](https://github.com/argoproj/argo)
+
+-   Similar to airflow
+-   runs on top of kubernetes
+
+[Machine Learning as Code - Youtube](https://www.youtube.com/watch?v=VXrGp5er1ZE&t=0s&index=135&list=PLj6h78yzYM2PZf9eA7bhWnIh%5FmK1vyOfU) - How Kubeflow uses Argo Workflows
+as its core workflow engine and Argo CD to declaratively deploy ML
+pipelines and models.
+
+Argo's DAG UI looks nice!
+
+
+## Data Architecture 101 for Your Business - Bence Faludi, Independent Consultant {#data-architecture-101-for-your-business-bence-faludi-independent-consultant}
+
+{{< figure src="/ox-hugo/screenshot_2019-07-17_12-06-32.png" >}}
+
+-   How to handle unclean data?
+-   How quick will the transforms be?
+
+-   Transitioning into a data-driven company
+    -   Centralized existing datasets
+
+
+### Data Collection {#data-collection}
+
+-   ownership and access of data
+-   near-real time raw data : access to unfiltered data in minutes
+-   no data sampling : ensure access to full dataset
+-   ad blockers : responsible for many lost events
+-   personal identification information : turn off PII scraping
+-   data model : custom events can be sent in nested format
+-   SDKs with persistent layer: collected logs stored on the offline
+    device
+
+
+### Storage and Flow {#storage-and-flow}
+
+-   schedulable pipelines with dependencies
+    -   notifications, SLAs, extendibility
+-   Collected data transformation
+-   Raw-level data stored on the storage, accessible on query engine
+
+
+### Database Query Engine {#database-query-engine}
+
+-   read benchmarks
+-   look at distributed query engines
+-   star schema better for analytics
+-   flat truth tables
+-   store aggregations as cubes
+
+
+### Visualization {#visualization}
+
+-   self-hosted vs hosted
+-   native SQL execution
+-   interactive query builder
+
+E.g. stack Kinesis Data Firehose, S3, Airflow, EMR-Presto (Athena for
+large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 
 ##  {#}

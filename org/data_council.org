@@ -1,5 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
-#+TITLE: Data Council.ai Conference Notes
+#+TITLE: Datacouncil.ai Conference Notes
 
 * Taking recommendation technology to the masses - Le Zhang (Microsoft)
 
@@ -180,6 +180,65 @@ team
   engineers are taught to build data pipelines early when joining
   Twitter
 - job of the DS manager
+
+* Argo: Kubernetes Native Workflows and Pipelines - Greg Roodt, Canva
+
+[[https://github.com/argoproj/argo][Github project]] 
+
+- Similar to airflow
+- runs on top of kubernetes
+
+[[https://www.youtube.com/watch?v=VXrGp5er1ZE&t=0s&index=135&list=PLj6h78yzYM2PZf9eA7bhWnIh_mK1vyOfU][Machine Learning as Code - Youtube]] - How Kubeflow uses Argo Workflows
+as its core workflow engine and Argo CD to declaratively deploy ML
+pipelines and models.
+
+Argo's DAG UI looks nice!
+
+* Data Architecture 101 for Your Business - Bence Faludi, Independent Consultant
+
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-07-17 12:06:32
+[[file:images/data_council/screenshot_2019-07-17_12-06-32.png]]
+
+- How to handle unclean data?
+- How quick will the transforms be?
+
+- Transitioning into a data-driven company
+  - Centralized existing datasets
+
+** Data Collection
+- ownership and access of data
+- near-real time raw data : access to unfiltered data in minutes
+- no data sampling : ensure access to full dataset
+- ad blockers : responsible for many lost events
+- personal identification information : turn off PII scraping
+- data model : custom events can be sent in nested format
+- SDKs with persistent layer: collected logs stored on the offline
+  device
+
+** Storage and Flow
+
+- schedulable pipelines with dependencies
+  - notifications, SLAs, extendibility
+- Collected data transformation
+- Raw-level data stored on the storage, accessible on query engine
+
+** Database Query Engine
+
+- read benchmarks
+- look at distributed query engines
+- star schema better for analytics
+- flat truth tables
+- store aggregations as cubes
+
+** Visualization
+
+- self-hosted vs hosted
+- native SQL execution
+- interactive query builder
+
+E.g. stack Kinesis Data Firehose, S3, Airflow, EMR-Presto (Athena for
+large jobs), [[https://superset.incubator.apache.org/][Apache Superset]]
 
 * 
 bibliography:datacouncil.bib
