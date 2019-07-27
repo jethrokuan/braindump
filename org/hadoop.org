@@ -410,5 +410,15 @@ sequentially to the output records.
 Efficient algorithms for record shredding and assembly are provided in
 Appendix A of the Dremel paper. cite:dremel
 
+* Beyond MapReduce
+
+MapReduce - http://research.google.com/archive/mapreduce.html
+Dataflow model - http://www.vldb.org/pvldb/vol8/p1792-Akidau.pdf
+FlumeJava - http://research.google.com/pubs/pub35650.html
+MillWheel - http://research.google.com/pubs/pub41378.html
+
+Beam is an open source, unified model for defining and executing data
+processing workflows.
+
 * 
 bibliography:hadoop.bib
