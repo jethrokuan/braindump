@@ -1,2 +1,2 @@
-(("org"
-  . ((org-mode . ((org-hugo-auto-export-mode +1))))))
+(("org/"
+  . ((org-mode . ((eval . (org-hugo-auto-export-mode)))))))
