@@ -1,0 +1,54 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Statistical Methods for Finance
+
+* Returns
+
+Net Returns:
+
+\begin{equation}
+R_t = \frac{P_t}{P_{t-1}} - 1 = \frac{P_t - P_{t-1}}{P_{t-1}}
+\end{equation}
+
+$R_t \ge -1$: a 100% loss occurs if the asset becomes totally
+worthless.
+
+
+Gross Returns:
+
+\begin{equation}
+  \frac{P_t}{P_{t-1}} = 1 + R_t
+\end{equation}
+
+The gross return over the most recent $k$ periods is:
+
+\begin{equation}
+  1 + R_t(k) = \frac{P_t}{P_{t-k}} = (1 + R_t)\dots (1 + R_{t-k+1})
+\end{equation}
+
+Log Returns:
+
+\begin{equation}
+  r_t = \log (1 + R_t) = \log \frac{P_t}{P_{t-1}} = p_t - p_{t-1}
+\end{equation}
+
+\begin{equation}
+r_t(k) = r_t + r_{t-1} + \dots + r_{t-k+1}
+\end{equation}
+
+log returns are similar for daily returns, less similar for yearly
+returns, and  not necessarily similar for multi-year returns.
+
+** Random Walk Model
+
+In the random walk model, single-period log returns are assumed to be
+independent:
+
+\begin{align}
+  1 + R_t(k) &= (1 + R_t)\dots(1 + R_{t-k+1}) \\
+             &= \textrm{exp}(r_t) \dots \textrm{exp}(r_{t-k+1}) \\
+             &= \textrm{exp}(r_t + \dots + r_{t-k+1})
+\end{align}
+
+It is also sometimes assumed that log returns are $N(\mu,\sigma^2)$
+for some constant mean and variance. Then $k$ period log returns are
+$N(k\mu, k\sigma^2)$.
