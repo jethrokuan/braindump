@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-12T20:01:42+08:00
+lastmod = 2019-08-17T11:55:49+08:00
 draft = false
 math = true
 +++
@@ -93,6 +93,11 @@ performance degradation. The performance benefits come from efficient
 multiply-add operations (using XNOR, bit-counting etc.), and low
 precision computation.
 
+Non-differentiability of the output of the SNN makes it difficult to
+train SNNs with conventional backpropagation methods. Some learning
+rules approximate the derivative by smoothing out the membrane
+potential as a function of the weights.
+
 
 ### Conversion from ANNs {#conversion-from-anns}
 
@@ -136,6 +141,49 @@ connections are introduced to modulate training in these lower layers.
 Local learning rules such as Hebbian learning and
 Spike-timing-dependent-plasticity (STDP) are have been used to train
 competitive networks that are able to do clustering.
+
+
+## Probabilistic SNNs {#probabilistic-snns}
+
+A probabilistic model defines the outputs of all spiking neurons as
+jointly distributed binary random processes. The joint distribution is
+differentiable in the synaptic weights, and principled learning
+criteria from statistics and information theory such as likelihood and
+mutual information apply. The maximization of such criteria do not
+require the implementation of the backpropagation mechanism, and often
+recover as special cases known biologically plausible algorithms.
+
+
+## Converting Natural Signals {#converting-natural-signals}
+
+Natural signals can be converted into spiking signals in a few ways:
+
+rate encoding
+: amplitudes are converted into the instantaneous
+    spiking rate of a neuron
+
+time encoding
+: amplitudes are encoded into spike timings
+
+population coding
+: amplitudes are encoded into the instantaneous
+    firing rates or relative firing times of a subset of neurons
+
+
+## Graphical Representation {#graphical-representation}
+
+A SNN consists of a network of \\(N\\) spiking neurons. At any time \\(t =
+0,1,2, \dots\\) each neouron \\(i\\) outputs a binary signal \\(s\_{i,t} =
+\\{0,1\\}\\), with value \\(s\_{i,t} = 1\\) corresponding to a spike emitted at
+time \\(t\\). We collect in vector \\(s\_{t} = \left\\( s\_{i,t}: i \in V\\)\\)
+the binary signals emitted by all neurons at time \\(t\\), where \\(V\\) is
+the set of all neurons. Each neuron \\(i \in V\\) receives the signals
+emitted by a subset \\(P\_i\\) of neurons through directed links, known as
+synapses. Neurons in a set \\(P\_i\\) are referred to as _pre-synaptic_ for
+_post-synaptic_ neuron \\(i\\).
+
+The internal, analog state of each spiking neuron \\(i \in V\\) at time
+\\(t\\) is defined by its membrane potential \\(u\_{i,t}\\).
 
 
 ##  {#}

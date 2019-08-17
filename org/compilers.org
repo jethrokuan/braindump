@@ -1,0 +1,76 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Compilers
+
+* What are compilers?
+
+Compilers are programs that read in one (source) language, and translate them into another (target) language.
+
+Compilers need to perform two main tasks:
+
+1. Analysis: breaking up a source program into constituent parts, and create an intermediate representation
+2. Synthesis: Construct the desired target program from an intermediate representation
+
+A compiler is often designed in a number of phases:
+
+- lexical analyses :: reads a stream of characters, and groups them into a stream of tokens (logically cohesive character sequences). This often requires maintaining a symbol table
+- syntax analyses :: imposes a hierarchical structure on the token stream (parse tree)
+- semantic analyses :: checks parse tree for semantic errors (e.g. type errors)
+- intermediate code generation :: a program for an abstract machine
+- Code optimization :: Optimizes the intermediate code representation in terms of efficiency
+
+** Cousins of the Compiler
+
+1. Prepreprocessors
+   1. Macro Processing
+   2. File inclusion
+   3. Language Extension
+2. Assemblers
+3. Loaders and Link-editors
+
+** Textbook
+
+The Dragon book
+
+* Lexical Analyses
+
+- Read the input characters of the source program
+- Group characters into lexemes
+- Output a sequence of tokens to the parser
+- Other tasks:
+  - Filter out comments and whitespace
+  - Correlating error messages with source program
+  - Constructing symbol tables
+
+- Separation of concerns lead to simplicity of design
+- Compiler efficiency is improved, when using special techniques
+
+** Term Definitions
+- token :: <Token name, attribute value>
+- pattern :: A description of the formthat can be recognized as a token
+- lexeme :: A sequence of characters matching the pattern for a token
+
+E.g. ~printf("Total = %d", score);~
+
+| Tokens      | Lexemes |
+|-------------+---------|
+| id          |         |
+| literal     |         |
+| punctuation |         |
+
+#+begin_src text
+ID(printf)  LBRACE LITERAL("Total = %d") COMMA ID(score) RBRACE SEMI
+#+end_src
+
+Tokens have several categories:
+
+| Keywords    | if else return |
+| Operators   | > < <> != !    |
+| Identifiers | pi score temp1 |
+| Constants   | 3.14 "hello"   |
+| Punctuation | ( ) ; :        |
+
+Attributes for tokens distinguish two lexemes belonging to the same symbol table:
+
+<number, 0>, <number, 1>, <price, ptr to symbol table>
+
+
