@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-19T09:54:16+08:00
+lastmod = 2019-08-19T14:06:38+08:00
 draft = false
 math = true
 +++
@@ -49,10 +49,120 @@ relative refractory period
     period -- a period where it is difficult to excite an action
     potential
 
+We define for presynaptic neuron \\(j\\), \\(\epsilon\_{ij}(t) = u\_{i}(t) -
+u\_{rest}\\). For a few input spikes, the membrane potential responds
+roughly linearly to the input spikes:
+
+\begin{equation}
+  u\_i{t} = \sum\_{j}\sum\_{f} \epsilon\_{ij}(t - t\_j^{(f)}) + u\_{rest}
+\end{equation}
+
+If \\(u\_i(t)\\) reaches threshold \\(\vartheta\\) from below, neuron \\(i\\) fires
+a spike.
+
+From the above, we can define the Spike Response Model describing the momentary
+value of the membrane potential of neuron \\(i\\):
+
+\begin{equation}
+  u\_i{t} = \eta (t - \hat{t\_i}) + \sum\_{j}\sum\_{f} \epsilon\_{ij}(t - t\_j^{(f)}) + u\_{rest}
+\end{equation}
+
+where \\(\hat{t\_i}\\) is the last firing time of neuron \\(i\\).
+
+We refer to moment when na given neuron emits an action potential as
+the firing time of that neuron. We denote the firing times of neuron
+\\(i\\) by \\(t\_i^{(f)}\\) where \\(f = 1,2,\dots\\) is the label of the spike.
+Then we formally denote the spike train of a neuron \\(i\\) as the
+sequence of firing times:
+
+\begin{equation}
+  S\_i(t) = \sum\_{f} \delta\left( t - t\_i^{(f)} \right)
+\end{equation}
+
+where \\(\delta(x)\\) is the Dirac \\(\delta\\) function with \\(\delta(x) = 0\\)
+for \\(x \ne 0\\) and \\(\int\_{-\infty}^{\infty} \delta(x)dx = 1\\). Spikes
+are thus reduced to points in time.
+
+
+### Limitations of SRM {#limitations-of-srm}
+
+-   SRM only takes into account the most recent spike, and cannot
+    capture adaptation
+
+
+## Neuronal Coding {#neuronal-coding}
+
+How do spike trains encode information? At present, a definite answer
+to this question is not known.
+
+
+### Temporal Coding {#temporal-coding}
+
+Traditionally, it had been thought that information was contained in
+the mean firing rate of a neuron:
+
+\begin{equation}
+  v = \frac{n\_{sp}(T)}{T}
+\end{equation}
+
+measured over some time window \\(T\\), counting the number of the spikes
+\\(n\\). The primary objection to this is that if we need to compute a
+temporal average to transfer information, then our reaction times
+would be a lot slower.
+
+From the point of view of rate coding, spikes are a convenient wa of
+transmitting the analog output variable \\(v\\) over long spikes. The
+optimal scheme is to transmit the value of rate \\(v\\) by a regular spike
+train at intervals \\(\frac{1}{v}\\), allowing the rate to be reliably
+measured after 2 spikes. Therefore, irregularities in real spike
+trains must be considered as noise.
+
+
+### Rate as spike density (average over several runs) {#rate-as-spike-density--average-over-several-runs}
+
+this definition works for both stationary and time-dependent stimuli.
+The same stimulation sequence is repeated several times, and the
+neuronal response is reported in a peri-stimulus-time histogram
+(PSTH). We can obtain the spike density of the PSTH by:
+
+\begin{equation}
+  \rho(t) =  \frac{1}{\Delta t} \frac{n\_K(t; t + \Delta t)}{K}
+\end{equation}
+
+where \\(K\\) is the number of repetitions of the experiment. We can
+smooth the results to get a continuous rate.
+
+The problem with this scheme is that it cannot be the decoding scheme
+of the brain. This measure makes sense if there is always a population
+of neurons with the same stimulus. This leads to population coding.
+
+
+### Rate as population activity (average over several neurons) {#rate-as-population-activity--average-over-several-neurons}
+
+This is a simple extension of the spike density measure, but adding
+activity across a population of neurons. Population activity varies
+rapidly and can reflect changes in the stimulus nearly
+instantaneously, an advantage over temporal coding. However, it
+requires a homogeneous population of neurons, which is hardly
+realistic.
+
+
+## Spike Codes {#spike-codes}
+
+These are coding strategies based on spike timing.
+
+
+### Time-to-first-spike {#time-to-first-spike}
+
+A neuron which fires shortly after the reference signal (an abrupt
+input, for example) may signal a strong stimulation, and vice-versa.
+This estimate has been successfully used in an interpretation of
+neuronal activity in primate motor cortex.
+
 
 ## What are Spiking Neural Networks? {#what-are-spiking-neural-networks}
 
-1.  Generally natural recurrent
+1.  Generally naturally recurrent
 2.  Inspired by biological information processing: mimics how the brain
     functions
 
