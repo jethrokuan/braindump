@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-19T09:53:26+08:00
+lastmod = 2019-08-19T09:54:16+08:00
 draft = false
 math = true
 +++
@@ -219,7 +219,7 @@ population coding
 A SNN consists of a network of \\(N\\) spiking neurons. At any time \\(t =
 0,1,2, \dots\\) each neouron \\(i\\) outputs a binary signal \\(s\_{i,t} =
 \\{0,1\\}\\), with value \\(s\_{i,t} = 1\\) corresponding to a spike emitted at
-time \\(t\\). We collect in vector \\(s\_{t} = \left\\( s\_{i,t}: i \in V\\)\\)
+time \\(t\\). We collect in vector \\(s\_{t} = \left( s\_{i,t}: i \in V \right)\\)
 the binary signals emitted by all neurons at time \\(t\\), where \\(V\\) is
 the set of all neurons. Each neuron \\(i \in V\\) receives the signals
 emitted by a subset \\(P\_i\\) of neurons through directed links, known as

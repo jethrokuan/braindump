@@ -177,7 +177,7 @@ Natural signals can be converted into spiking signals in a few ways:
 A SNN consists of a network of $N$ spiking neurons. At any time $t =
 0,1,2, \dots$ each neouron $i$ outputs a binary signal $s_{i,t} =
 \{0,1\}$, with value $s_{i,t} = 1$ corresponding to a spike emitted at
-time $t$. We collect in vector $s_{t} = \left\( s_{i,t}: i \in V\)$
+time $t$. We collect in vector $s_{t} = \left( s_{i,t}: i \in V \right)$
 the binary signals emitted by all neurons at time $t$, where $V$ is
 the set of all neurons. Each neuron $i \in V$ receives the signals
 emitted by a subset $P_i$ of neurons through directed links, known as
