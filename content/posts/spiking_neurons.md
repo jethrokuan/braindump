@@ -1,10 +1,54 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-17T11:55:49+08:00
+lastmod = 2019-08-19T09:53:26+08:00
 draft = false
 math = true
 +++
+
+## The Spiking Neuron {#the-spiking-neuron}
+
+dendrites
+: input device
+
+soma
+: central processing unit (non-linear processing step). If the
+    total input exceeds a certain threshold, an output signal is generated
+
+axon
+: output device, delivering signal to other neurons
+
+synapse
+: junction between two neurons
+
+post/presynaptic cells
+: If a neuron is sending a signal across a
+    synapse, the sending neuron is the presynaptic cell, and the
+    receiving neuron is the postsynaptic cell
+
+{{< figure src="/ox-hugo/screenshot_2019-08-19_09-49-28.png" >}}
+
+action potentials/spikes
+: short electrical pulses, typically of
+    amplitude about 100mV and a duration of 1-2ms
+
+spike train
+: a chain of action potentials (sequence of stereotyped
+    events) that occur at intervals. Since all spikes of
+    a given neuron look the same, the form of the spike
+    does not matter: the number and timing of the spikes
+    encode the information.
+
+absolute refractory period
+: minimal distance between two spikes.
+    Spike are well separated, and it is impossible to excite a second
+    spike within this refractory period.
+
+relative refractory period
+: follows the absolute refractory
+    period -- a period where it is difficult to excite an action
+    potential
+
 
 ## What are Spiking Neural Networks? {#what-are-spiking-neural-networks}
 
