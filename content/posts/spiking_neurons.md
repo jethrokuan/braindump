@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-19T14:06:38+08:00
+lastmod = 2019-08-20T09:05:32+08:00
 draft = false
 math = true
 +++
@@ -83,20 +83,17 @@ where \\(\delta(x)\\) is the Dirac \\(\delta\\) function with \\(\delta(x) = 0\\
 for \\(x \ne 0\\) and \\(\int\_{-\infty}^{\infty} \delta(x)dx = 1\\). Spikes
 are thus reduced to points in time.
 
-
-### Limitations of SRM {#limitations-of-srm}
-
--   SRM only takes into account the most recent spike, and cannot
-    capture adaptation
+SRM only takes into account the most recent spike, and cannot capture
+adaptation.
 
 
-## Neuronal Coding {#neuronal-coding}
+### Neuronal Coding {#neuronal-coding}
 
 How do spike trains encode information? At present, a definite answer
 to this question is not known.
 
 
-### Temporal Coding {#temporal-coding}
+#### Temporal Coding {#temporal-coding}
 
 Traditionally, it had been thought that information was contained in
 the mean firing rate of a neuron:
@@ -118,7 +115,7 @@ measured after 2 spikes. Therefore, irregularities in real spike
 trains must be considered as noise.
 
 
-### Rate as spike density (average over several runs) {#rate-as-spike-density--average-over-several-runs}
+#### Rate as spike density (average over several runs) {#rate-as-spike-density--average-over-several-runs}
 
 this definition works for both stationary and time-dependent stimuli.
 The same stimulation sequence is repeated several times, and the
@@ -137,7 +134,7 @@ of the brain. This measure makes sense if there is always a population
 of neurons with the same stimulus. This leads to population coding.
 
 
-### Rate as population activity (average over several neurons) {#rate-as-population-activity--average-over-several-neurons}
+#### Rate as population activity (average over several neurons) {#rate-as-population-activity--average-over-several-neurons}
 
 This is a simple extension of the spike density measure, but adding
 activity across a population of neurons. Population activity varies
@@ -147,17 +144,49 @@ requires a homogeneous population of neurons, which is hardly
 realistic.
 
 
-## Spike Codes {#spike-codes}
+### Spike Codes {#spike-codes}
 
 These are coding strategies based on spike timing.
 
 
-### Time-to-first-spike {#time-to-first-spike}
+#### Time-to-first-spike {#time-to-first-spike}
 
 A neuron which fires shortly after the reference signal (an abrupt
 input, for example) may signal a strong stimulation, and vice-versa.
 This estimate has been successfully used in an interpretation of
 neuronal activity in primate motor cortex.
+
+The argument is that the brain does not have time to evaluate more
+than one spike per neuron per processing step, and hence the first
+spike should contain most of the relevant information.
+
+
+#### Phase {#phase}
+
+Oscillations are common in the olfactory system, and other areas of
+the brain. Neuronal spike trains could then encode information in the
+phase of a pulse, with respect to the background oscillation.
+
+
+#### Correlations and Synchrony {#correlations-and-synchrony}
+
+Synchrony between any pairs of neurons could signify special events
+and convey information not contained in the firing rate of the
+neurons.
+
+
+### Spikes or Rates? {#spikes-or-rates}
+
+A code based on time-to-first-spike is consistent with a rate code: if
+the mean firing rate of a neuron is high, then the time to first spike
+is expected to occur early. Stimulus reconstruction with a linear
+kernel can be seen as a special instance of a rate code. It is
+difficult to draw a clear borderline between pulse and rate codes. The
+key consideration in using any code is the ability for the system to
+react quickly to changes in the input. If pulse coding is relevant,
+information processing in the brain must be based on spiking neuron
+models. For stationary input, spiking neuron models can be reduced to
+rate models, but in other cases, this reduction is not possible.
 
 
 ## What are Spiking Neural Networks? {#what-are-spiking-neural-networks}
@@ -306,22 +335,6 @@ criteria from statistics and information theory such as likelihood and
 mutual information apply. The maximization of such criteria do not
 require the implementation of the backpropagation mechanism, and often
 recover as special cases known biologically plausible algorithms.
-
-
-## Converting Natural Signals {#converting-natural-signals}
-
-Natural signals can be converted into spiking signals in a few ways:
-
-rate encoding
-: amplitudes are converted into the instantaneous
-    spiking rate of a neuron
-
-time encoding
-: amplitudes are encoded into spike timings
-
-population coding
-: amplitudes are encoded into the instantaneous
-    firing rates or relative firing times of a subset of neurons
 
 
 ## Graphical Representation {#graphical-representation}
