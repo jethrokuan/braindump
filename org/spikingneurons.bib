@@ -49,3 +49,189 @@
   eprint =       {1812.03929v4},
   primaryClass = {eess.SP},
 }
+@article{bellec18_long_short_term_memor_learn,
+  author =       {Bellec, Guillaume and Salaj, Darjan and Subramoney,
+                  Anand and Legenstein, Robert and Maass, Wolfgang},
+  title =        {Long Short-Term Memory and Learning-To-Learn in
+                  Networks of Spiking Neurons},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1803.09574v4},
+  abstract =     {Recurrent networks of spiking neurons (RSNNs)
+                  underlie the astounding computing and learning
+                  capabilities of the brain. But computing and
+                  learning capabilities of RSNN models have remained
+                  poor, at least in comparison with artificial neural
+                  networks (ANNs). We address two possible reasons for
+                  that. One is that RSNNs in the brain are not
+                  randomly connected or designed according to simple
+                  rules, and they do not start learning as a tabula
+                  rasa network. Rather, RSNNs in the brain were
+                  optimized for their tasks through evolution,
+                  development, and prior experience. Details of these
+                  optimization processes are largely unknown. But
+                  their functional contribution can be approximated
+                  through powerful optimization methods, such as
+                  backpropagation through time (BPTT). A second major
+                  mismatch between RSNNs in the brain and models is
+                  that the latter only show a small fraction of the
+                  dynamics of neurons and synapses in the brain. We
+                  include neurons in our RSNN model that reproduce one
+                  prominent dynamical process of biological neurons
+                  that takes place at the behaviourally relevant time
+                  scale of seconds: neuronal adaptation. We denote
+                  these networks as LSNNs because of their Long
+                  short-term memory. The inclusion of adapting neurons
+                  drastically increases the computing and learning
+                  capability of RSNNs if they are trained and
+                  configured by deep learning (BPTT combined with a
+                  rewiring algorithm that optimizes the network
+                  architecture). In fact, the computational
+                  performance of these RSNNs approaches for the first
+                  time that of LSTM networks. In addition RSNNs with
+                  adapting neurons can acquire abstract knowledge from
+                  prior learning in a Learning-to-Learn (L2L) scheme,
+                  and transfer that knowledge in order to learn new
+                  but related tasks from very few examples. We
+                  demonstrate this for supervised learning and
+                  reinforcement learning.},
+  archivePrefix ={arXiv},
+  eprint =       {1803.09574},
+  primaryClass = {cs.NE},
+}
+@article{huh17_gradien_descen_spikin_neural_networ,
+  author =       {Huh, Dongsung and Sejnowski, Terrence J.},
+  title =        {Gradient Descent for Spiking Neural Networks},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1706.04698v2},
+  abstract =     {Much of studies on neural computation are based on
+                  network models of static neurons that produce analog
+                  output, despite the fact that information processing
+                  in the brain is predominantly carried out by dynamic
+                  neurons that produce discrete pulses called spikes.
+                  Research in spike-based computation has been impeded
+                  by the lack of efficient supervised learning
+                  algorithm for spiking networks. Here, we present a
+                  gradient descent method for optimizing spiking
+                  network models by introducing a differentiable
+                  formulation of spiking networks and deriving the
+                  exact gradient calculation. For demonstration, we
+                  trained recurrent spiking networks on two dynamic
+                  tasks: one that requires optimizing fast
+                  (~millisecond) spike-based interactions for
+                  efficient encoding of information, and a delayed
+                  memory XOR task over extended duration (~second).
+                  The results show that our method indeed optimizes
+                  the spiking network dynamics on the time scale of
+                  individual spikes as well as behavioral time scales.
+                  In conclusion, our result offers a general purpose
+                  supervised learning algorithm for spiking neural
+                  networks, thus advancing further investigations on
+                  spike-based computation.},
+  archivePrefix ={arXiv},
+  eprint =       {1706.04698},
+  primaryClass = {q-bio.NC},
+}
+@article{neftci19_surrog_gradien_learn_spikin_neural_networ,
+  author =       {Neftci, Emre O. and Mostafa, Hesham and Zenke,
+                  Friedemann},
+  title =        {Surrogate Gradient Learning in Spiking Neural
+                  Networks},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1901.09948v2},
+  abstract =     {Spiking neural networks are nature's versatile
+                  solution to fault-tolerant and energy efficient
+                  signal processing. To translate these benefits into
+                  hardware, a growing number of neuromorphic spiking
+                  neural network processors attempt to emulate
+                  biological neural networks. These developments have
+                  created an imminent need for methods and tools to
+                  enable such systems to solve real-world signal
+                  processing problems. Like conventional neural
+                  networks, spiking neural networks can be trained on
+                  real, domain specific data. However, their training
+                  requires overcoming a number of challenges linked to
+                  their binary and dynamical nature. This article
+                  elucidates step-by-step the problems typically
+                  encountered when training spiking neural networks,
+                  and guides the reader through the key concepts of
+                  synaptic plasticity and data-driven learning in the
+                  spiking setting. To that end, it gives an overview
+                  of existing approaches and provides an introduction
+                  to surrogate gradient methods, specifically, as a
+                  particularly flexible and efficient method to
+                  overcome the aforementioned challenges.},
+  archivePrefix ={arXiv},
+  eprint =       {1901.09948},
+  primaryClass = {cs.NE},
+}
+
+
+@article{whittington19_theor_error_back_propag_brain,
+  author =       {James C.R. Whittington and Rafal Bogacz},
+  title =        {Theories of Error Back-Propagation in the Brain},
+  journal =      {Trends in Cognitive Sciences},
+  volume =       23,
+  number =       3,
+  pages =        {235-250},
+  year =         2019,
+  doi =          {10.1016/j.tics.2018.12.005},
+  url =          {https://doi.org/10.1016/j.tics.2018.12.005},
+  DATE_ADDED =   {Tue Aug 20 10:09:27 2019},
+}
+
+@article{comsa19_tempor_codin_spikin_neural_networ,
+  author =       {Comsa, Iulia M. and Potempa, Krzysztof and Versari,
+                  Luca and Fischbacher, Thomas and Gesmundo, Andrea
+                  and Alakuijala, Jyrki},
+  title =        {Temporal Coding in Spiking Neural Networks With
+                  Alpha Synaptic Function},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1907.13223v1},
+  abstract =     {The timing of individual neuronal spikes is
+                  essential for biological brains to make fast
+                  responses to sensory stimuli. However, conventional
+                  artificial neural networks lack the intrinsic
+                  temporal coding ability present in biological
+                  networks. We propose a spiking neural network model
+                  that encodes information in the relative timing of
+                  individual neuron spikes. In classification tasks,
+                  the output of the network is indicated by the first
+                  neuron to spike in the output layer. This temporal
+                  coding scheme allows the supervised training of the
+                  network with backpropagation, using locally exact
+                  derivatives of the postsynaptic spike times with
+                  respect to presynaptic spike times. The network
+                  operates using a biologically-plausible alpha
+                  synaptic transfer function. Additionally, we use
+                  trainable synchronisation pulses that provide bias,
+                  add flexibility during training and exploit the
+                  decay part of the alpha function. We show that such
+                  networks can be trained successfully on noisy
+                  Boolean logic tasks and on the MNIST dataset encoded
+                  in time. The results show that the spiking neural
+                  network outperforms comparable spiking models on
+                  MNIST and achieves similar quality to fully
+                  connected conventional networks with the same
+                  architecture. We also find that the spiking network
+                  spontaneously discovers two operating regimes,
+                  mirroring the accuracy-speed trade-off observed in
+                  human decision-making: a slow regime, where a
+                  decision is taken after all hidden neurons have
+                  spiked and the accuracy is very high, and a fast
+                  regime, where a decision is taken very fast but the
+                  accuracy is lower. These results demonstrate the
+                  computational power of spiking networks with
+                  biological characteristics that encode information
+                  in the timing of individual neurons. By studying
+                  temporal coding in spiking networks, we aim to
+                  create building blocks towards energy-efficient and
+                  more complex biologically-inspired neural
+                  architectures.},
+  archivePrefix ={arXiv},
+  eprint =       {1907.13223},
+  primaryClass = {cs.NE},
+}

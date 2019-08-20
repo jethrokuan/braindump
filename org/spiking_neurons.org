@@ -306,6 +306,66 @@ synapses. Neurons in a set $P_i$ are referred to as /pre-synaptic/ for
 The internal, analog state of each spiking neuron $i \in V$ at time
 $t$ is defined by its membrane potential $u_{i,t}$.
 
+* Long short-term memory and learning-to-learn in networks of spiking neurons cite:bellec18_long_short_term_memor_learn
+
+*Key contribution*: Inclusion of adapting neurons into recurrent SNN
+models (RSNNs) increases computing and learning capability. By using a
+learning algorithm that combines BPTT with a rewiring algorithm that
+optimizes the network architecture, performance comes close to LSTM
+ANNs.
+
+*Model composition*: LSNNs consist of a populaction $R$ of
+integrate-and-fire (LIF) neurons (excitatory and inhibitory), and a
+second population $A$ of LIF excitatory neurons whose excitability is
+temporarily reduced through preceding firing activity. $R$ and $A$
+receive spike trains from a population $X$ of external input neurons.
+Results of computations are read out by a population $Y$ of external
+linear readout neurons.
+
+#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-20 09:44:11
+[[file:images/spiking_neurons/screenshot_2019-08-20_09-44-11.png]]
+
+BPTT is done by replacing the non-continuous membrane potential  with
+a pseudo derivative that smoothly increases from 0 to 1.
+
+** Learning to Learn LSNNs
+#+BEGIN_QUOTE
+LSTM networks are especially suited for L2L since they can
+accommodate two levelsof learning and representation of learned
+insight: Synaptic connections and weights can encode,on a higher
+level, a learning algorithm and prior knowledge on a large time-scale.
+The short-termmemory of an LSTM network can accumulate, on a lower
+level of learning, knowledge during thecurrent learning task
+#+END_QUOTE
+
+* Gradient Descent for Spiking Neural Networks cite:huh17_gradien_descen_spikin_neural_networ
+
+key idea: Replacing the non-differentiable model for membrane
+potential:
+
+\begin{equation}
+  \tau \dot{s} = -s + \sum_{k} \delta (t - t_k)
+\end{equation}
+
+with 
+
+\begin{equation}
+\tau \dot{s} = -s + g \dot{v}
+\end{equation}
+
+for some gate function $g$, and $\dot{v}$ is the time derivative of
+the pre-synaptic membrane voltage.
+
+Exact gradient calculations can be done with BPTT, or real-time
+recurrent learning. The resultant gradients are similar to
+reward-modulated spike-time dependent plasticity.
+
+* TODO Surrogate Gradient Learning in Spiking Neural Networks cite:neftci19_surrog_gradien_learn_spikin_neural_networ
+
+* TODO Theories of Error Back-Propagation in the Brain cite:whittington19_theor_error_back_propag_brain
+
+* TODO Temporal coding in spiking neural networks with alpha synaptic function cite:comsa19_tempor_codin_spikin_neural_networ
+
 * 
 bibliography:spikingneurons.bib
 

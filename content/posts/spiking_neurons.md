@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-20T09:05:32+08:00
+lastmod = 2019-08-20T10:11:06+08:00
 draft = false
 math = true
 +++
@@ -353,7 +353,81 @@ The internal, analog state of each spiking neuron \\(i \in V\\) at time
 \\(t\\) is defined by its membrane potential \\(u\_{i,t}\\).
 
 
+## Long short-term memory and learning-to-learn in networks of spiking neurons <a id="4917683f67ccf52378654f00a9c9a141" href="#bellec18_long_short_term_memor_learn" title="Bellec, Salaj, Subramoney, Anand, Legenstein \&amp; Maass, Long Short-Term Memory and Learning-To-Learn in  Networks of Spiking Neurons, {CoRR}, v(), (2018).">(Bellec et al., 2018)</a> {#long-short-term-memory-and-learning-to-learn-in-networks-of-spiking-neurons}
+
+**Key contribution**: Inclusion of adapting neurons into recurrent SNN
+models (RSNNs) increases computing and learning capability. By using a
+learning algorithm that combines BPTT with a rewiring algorithm that
+optimizes the network architecture, performance comes close to LSTM
+ANNs.
+
+**Model composition**: LSNNs consist of a populaction \\(R\\) of
+integrate-and-fire (LIF) neurons (excitatory and inhibitory), and a
+second population \\(A\\) of LIF excitatory neurons whose excitability is
+temporarily reduced through preceding firing activity. \\(R\\) and \\(A\\)
+receive spike trains from a population \\(X\\) of external input neurons.
+Results of computations are read out by a population \\(Y\\) of external
+linear readout neurons.
+
+{{< figure src="/ox-hugo/screenshot_2019-08-20_09-44-11.png" >}}
+
+BPTT is done by replacing the non-continuous membrane potential  with
+a pseudo derivative that smoothly increases from 0 to 1.
+
+
+### Learning to Learn LSNNs {#learning-to-learn-lsnns}
+
+> LSTM networks are especially suited for L2L since they can
+> accommodate two levelsof learning and representation of learned
+> insight: Synaptic connections and weights can encode,on a higher
+> level, a learning algorithm and prior knowledge on a large time-scale.
+> The short-termmemory of an LSTM network can accumulate, on a lower
+> level of learning, knowledge during thecurrent learning task
+
+
+## Gradient Descent for Spiking Neural Networks <a id="7cd889cc568ca0abd92ccb282abe3ae7" href="#huh17_gradien_descen_spikin_neural_networ" title="Huh \&amp; Sejnowski, Gradient Descent for Spiking Neural Networks, {CoRR}, v(), (2017).">(Huh \& Sejnowski, 2017)</a> {#gradient-descent-for-spiking-neural-networks}
+
+key idea: Replacing the non-differentiable model for membrane
+potential:
+
+\begin{equation}
+  \tau \dot{s} = -s + \sum\_{k} \delta (t - t\_k)
+\end{equation}
+
+with
+
+\begin{equation}
+\tau \dot{s} = -s + g \dot{v}
+\end{equation}
+
+for some gate function \\(g\\), and \\(\dot{v}\\) is the time derivative of
+the pre-synaptic membrane voltage.
+
+Exact gradient calculations can be done with BPTT, or real-time
+recurrent learning. The resultant gradients are similar to
+reward-modulated spike-time dependent plasticity.
+
+
+## <span class="org-todo todo TODO">TODO</span> Surrogate Gradient Learning in Spiking Neural Networks <a id="6c46e273de1ecbecce7f8f1ac7329a57" href="#neftci19_surrog_gradien_learn_spikin_neural_networ" title="Neftci, Mostafa, Zenke \&amp; Friedemann, Surrogate Gradient Learning in Spiking Neural  Networks, {CoRR}, v(), (2019).">(Neftci et al., 2019)</a> {#surrogate-gradient-learning-in-spiking-neural-networks}
+
+
+## <span class="org-todo todo TODO">TODO</span> Theories of Error Back-Propagation in the Brain <a id="87673c771a23a8ad0a1301cb565d0484" href="#whittington19_theor_error_back_propag_brain" title="James Whittington \&amp; Rafal Bogacz, Theories of Error Back-Propagation in the Brain, {Trends in Cognitive Sciences}, v(3), 235-250 (2019).">(James Whittington \& Rafal Bogacz, 2019)</a> {#theories-of-error-back-propagation-in-the-brain}
+
+
+## <span class="org-todo todo TODO">TODO</span> Temporal coding in spiking neural networks with alpha synaptic function <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ" title="Comsa, Potempa, Versari, Luca, Fischbacher, Gesmundo, \&amp; Alakuijala, Temporal Coding in Spiking Neural Networks With  Alpha Synaptic Function, {CoRR}, v(), (2019).">(Comsa et al., 2019)</a> {#temporal-coding-in-spiking-neural-networks-with-alpha-synaptic-function}
+
+
 ##  {#}
 
 # Bibliography
 <a id="pfeiffer18_deep_learn_with_spikin_neuron"></a>Pfeiffer, M., & Pfeil, T., *Deep learning with spiking neurons: opportunities and challenges*, Frontiers in Neuroscience, *12(nil)*,  (2018).  http://dx.doi.org/10.3389/fnins.2018.00774 [↩](#4980de9e86c6598545afbb2a4bdd8cb8)
+
+<a id="bellec18_long_short_term_memor_learn"></a>Bellec, G., Salaj, D., Subramoney, A., Legenstein, R., & Maass, W., *Long short-term memory and learning-to-learn in networks of spiking neurons*, CoRR, *()*,  (2018).  [↩](#4917683f67ccf52378654f00a9c9a141)
+
+<a id="huh17_gradien_descen_spikin_neural_networ"></a>Huh, D., & Sejnowski, T. J., *Gradient descent for spiking neural networks*, CoRR, *()*,  (2017).  [↩](#7cd889cc568ca0abd92ccb282abe3ae7)
+
+<a id="neftci19_surrog_gradien_learn_spikin_neural_networ"></a>Neftci, E. O., Mostafa, H., & Zenke, F., *Surrogate gradient learning in spiking neural networks*, CoRR, *()*,  (2019).  [↩](#6c46e273de1ecbecce7f8f1ac7329a57)
+
+<a id="whittington19_theor_error_back_propag_brain"></a>Whittington, J. C., & Bogacz, R., *Theories of error back-propagation in the brain*, Trends in Cognitive Sciences, *23(3)*, 235–250 (2019).  http://dx.doi.org/10.1016/j.tics.2018.12.005 [↩](#87673c771a23a8ad0a1301cb565d0484)
+
+<a id="comsa19_tempor_codin_spikin_neural_networ"></a>Comsa, I. M., Potempa, K., Versari, L., Fischbacher, T., Gesmundo, A., & Alakuijala, J., *Temporal coding in spiking neural networks with alpha synaptic function*, CoRR, *()*,  (2019).  [↩](#caaddec51f6948e5fea79b6d41c79676)
