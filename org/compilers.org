@@ -73,4 +73,48 @@ Attributes for tokens distinguish two lexemes belonging to the same symbol table
 
 <number, 0>, <number, 1>, <price, ptr to symbol table>
 
+* Syntax Definition
 
+We use [[file:theory_of_computation.org::*Context-free%20Grammars%20and%20Languages][context-free grammars]] to specify the syntax of a language.
+
+A grammar for arithmetic expressions can be constructed from a table
+showing the associativity and precedence of operators.
+
+#+begin_src text
+  left-associative: + -
+  left-associative: * /
+#+end_src
+
+Two different non-terminals can be constructed for the two levels of
+precedence:
+
+#+begin_src text
+  factor -> digit | (expr)
+  term -> term * factor
+    | term / factor
+    | factor
+  expr -> expr + term
+    | expr - term
+    | term
+#+end_src
+
+* Syntax Directed Translation
+
+Syntax-directed translation is done by attaching rules or program
+fragments to productions in a grammar. e.g. consider
+
+#+begin_src text
+  expr -> expr_1 + term
+#+end_src
+
+We can translate expr by:
+
+#+begin_src text
+  translate expr_1;
+  translate term;
+  handle +;
+#+end_src
+
+* Parsing
+
+Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing.
