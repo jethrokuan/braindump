@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-20T10:11:06+08:00
+lastmod = 2019-08-29T12:09:25+08:00
 draft = false
 math = true
 +++

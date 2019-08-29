@@ -368,5 +368,3 @@ reward-modulated spike-time dependent plasticity.
 
 * 
 bibliography:spikingneurons.bib
-
-
