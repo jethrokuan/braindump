@@ -1,7 +1,7 @@
 +++
 title = "Temporal Coding in Spiking Neural Networks with Alpha Synaptic Function (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-30T14:11:05+08:00
+lastmod = 2019-09-01T21:53:33+08:00
 draft = false
 +++
 
@@ -35,10 +35,13 @@ draft = false
 - <span class="section-num">3</span> [Experiments](#experiments)
     - <span class="section-num">3.1</span> [Boolean Logic Problems](#boolean-logic-problems)
     - <span class="section-num">3.2</span> [Non-convolutional MNIST](#non-convolutional-mnist)
-- <span class="section-num">4</span> [Thoughts](#thoughts)
-    - <span class="section-num">4.1</span> [My Thoughts](#my-thoughts)
-- <span class="section-num">5</span> [Bibliography](#bibliography)
-    - <span class="section-num">5.1</span> [References](#references)
+- <span class="section-num">4</span> [Running the Code](#running-the-code)
+    - <span class="section-num">4.1</span> [Training the Model](#training-the-model)
+    - <span class="section-num">4.2</span> [Testing the Models](#testing-the-models)
+- <span class="section-num">5</span> [Thoughts](#thoughts)
+    - <span class="section-num">5.1</span> [My Thoughts](#my-thoughts)
+- <span class="section-num">6</span> [Bibliography](#bibliography)
+    - <span class="section-num">6.1</span> [References](#references)
 
 </div>
 <!--endtoc-->
@@ -300,10 +303,44 @@ layer occurring before the mean spike in the hidden layer.
 {{< figure src="/ox-hugo/screenshot_2019-08-30_14-05-59.png" >}}
 
 
-## <span class="section-num">4</span> Thoughts {#thoughts}
+## <span class="section-num">4</span> Running the [Code](https://github.com/google/ihmehimmeli/) {#running-the-code}
 
 
-### <span class="section-num">4.1</span> My Thoughts {#my-thoughts}
+### <span class="section-num">4.1</span> Training the Model {#training-the-model}
+
+```text
+Ignoring n_inputs flag for MNIST problem. Using 784 inputs.
+Network architecture: [784, 340, 10]
+Sync pulses: [0.0909091, 0.181818, 0.272727, 0.363636, 0.454545, 0.545455, 0.636364, 0.727273, 0.818182, 0.909091]
+Saving the model that performs best on validation set.
+Loading MNIST data...
+Done loading MNIST data.
+Loading MNIST data...
+Done loading MNIST data.
+Using ThreadPool with 16 threads.
+
+run 0	epoch 0	train_error 0.97	train_acc.% 68.668519	valid acc.% 82.916664	elapsed 52207ms	Sync pulses: [[8.076, 8.23419, 0.189354, 0.338183, 8.56173, 1.18753, 0.407155, 9.37003, 1.0993, 9.06061], [9.09816, 2.53959, 9.10911, 9.25221, 0.243072, 9.12975, 8.56196, 4.01023, 9.1322, 5.54389], [0.0909091, 0.181818, 0.272727, 0.363636, 0.454545, 0.545455, 0.636364, 0.727273, 0.818182, 0.909091]]	LR: 0.00101864	batch sz: 32
+
+run 0	epoch 1	train_error 0.38	train_acc.% 88.842593	valid acc.% 89.650002	elapsed 52526ms	Sync pulses: [[8.92665, 9.10365, 0, 0, 9.08495, 0, 2.74874, 10.427, 6.27137, 10.0179], [9.87262, 4.53841, 9.00944, 10], [0.0909091, 0.181818, 0.272727, 0.363636, 0.454545, 0.545455, 0.636364, 0.727273, 0.818182, 0.909091]]	LR: 0.00101864	batch sz: 32
+
+run 0	epoch 2	train_error 0.29	train_acc.% 91.561111	valid acc.% 91.733330	elapsed 52074ms	Sync pulses: [[10.1715, 9.89629, 0.0372902, 0.0709029, 10.825, 0.105749, 3.72036, 11.2825, 7.87501, 11.2333], [10.3181, 5.71146, 10.3364, 11.5131, 2.54343, 11.4791, 10.4386, 3.77724, 11.4736, 8.09482], [0.0909091, 0.181818, 0.272727, 0.363636, 0.454545, 0.545455, 0.636364, 0.727273, 0.818182, 0.909091]]	LR: 0.00101864	batch sz: 32
+```
+
+
+### <span class="section-num">4.2</span> Testing the Models {#testing-the-models}
+
+```text
+[nix-shell:~/projects/ihmehimmeli/build]$ tempcoding/tempcoding_main -model_to_test=tempcoding/networks/slow_network -problem=mnist -n_test=10000 -n_train=60000 -n_validation=0 -decay_rate=0.181769 -mnist_data_path=../data/mnist
+W2019-09-01T21:48:01.040269665+08:00 /home/jethro/projects/ihmehimmeli/tempcoding/spiking_problem.cc:417] Ignoring n_inputs flag for MNIST problem. Using 784 inputs.
+                                                                                                          IHM_CHECK(file.Open(path, mode)) failed at /home/jethro/projects/ihmehimmeli/tempcoding/file_passthrough_external.cc:97
+                                                                                                          Aborted
+```
+
+
+## <span class="section-num">5</span> Thoughts {#thoughts}
+
+
+### <span class="section-num">5.1</span> My Thoughts {#my-thoughts}
 
 Little information is lost with the temporal encoding scheme, so I'd
 expect the spiking neural network to perform well. Especially so,
@@ -315,10 +352,10 @@ this scenario? Can we meta-learn for algorithms like STDP or
 equilibrium propagation instead?
 
 
-## <span class="section-num">5</span> Bibliography {#bibliography}
+## <span class="section-num">6</span> Bibliography {#bibliography}
 
 
-### <span class="section-num">5.1</span> References {#references}
+### <span class="section-num">6.1</span> References {#references}
 
 
 # Bibliography
