@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-09T15:45:14+08:00
+lastmod = 2019-09-09T15:45:23+08:00
 draft = false
 math = true
 +++
@@ -177,6 +177,3 @@ Each pattern is a regular expression, which may use the definitions of
 the declaration section. The actions are fragments of code.
 
 The auxiliary functions section contains used in these actions.
-
-
-###  {#}
