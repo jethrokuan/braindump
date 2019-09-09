@@ -119,6 +119,8 @@ We can translate expr by:
 
 Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing.
 
+
+
 * Tools
 
 ** Lex
@@ -148,5 +150,4 @@ the declaration section. The actions are fragments of code.
 
 The auxiliary functions section contains used in these actions.
 
-** 
 
