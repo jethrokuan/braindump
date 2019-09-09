@@ -118,3 +118,32 @@ We can translate expr by:
 * Parsing
 
 Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing.
+
+* Tools
+
+** Lex
+
+A Lex compiler takes a Lex source program, and outputs a program. This
+program is compiled in its source language (originally C, jFlex for
+Java). The result program takes an input stream as input, and produces
+a sequence of tokens as output.
+
+A lex program has the following form:
+
+#+begin_src text
+  declarations
+  %%
+  translation rules
+  %%
+  auxiliary functions
+#+end_src
+
+The declaration section includes declarations of variables, manifest
+constants, and regular definitions.
+
+The translation rules have form: Pattern { Action }.
+
+Each pattern is a regular expression, which may use the definitions of
+the declaration section. The actions are fragments of code. 
+
+The auxiliary functions section contains used in these actions.

@@ -1,8 +1,9 @@
 +++
 title = "Temporal Coding in Spiking Neural Networks with Alpha Synaptic Function (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-01T21:53:33+08:00
+lastmod = 2019-09-03T08:29:02+08:00
 draft = false
+math = true
 +++
 
 <style>

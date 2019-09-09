@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-27T15:51:08+08:00
+lastmod = 2019-09-09T15:43:40+08:00
 draft = false
 math = true
 +++
@@ -146,3 +146,34 @@ handle +;
 ## Parsing {#parsing}
 
 Parsers use [pushdown automata]({{< relref "theory_of_computation" >}}) to do parsing.
+
+
+## Tools {#tools}
+
+
+### Lex {#lex}
+
+A Lex compiler takes a Lex source program, and outputs a program. This
+program is compiled in its source language (originally C, jFlex for
+Java). The result program takes an input stream as input, and produces
+a sequence of tokens as output.
+
+A lex program has the following form:
+
+```text
+declarations
+%%
+translation rules
+%%
+auxiliary functions
+```
+
+The declaration section includes declarations of variables, manifest
+constants, and regular definitions.
+
+The translation rules have form: Pattern { Action }.
+
+Each pattern is a regular expression, which may use the definitions of
+the declaration section. The actions are fragments of code.
+
+The auxiliary functions section contains used in these actions.
