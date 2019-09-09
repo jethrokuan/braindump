@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-09T15:46:29+08:00
+lastmod = 2019-09-09T15:46:37+08:00
 draft = false
 math = true
 +++
@@ -149,6 +149,8 @@ Parsers use [pushdown automata]({{< relref "theory_of_computation" >}}) to do pa
 
 
 ### Recursive-Descent Parsing {#recursive-descent-parsing}
+
+Consists of a set of procedures,
 
 
 ## Tools {#tools}
