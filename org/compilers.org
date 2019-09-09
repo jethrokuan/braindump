@@ -121,7 +121,7 @@ Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown aut
 
 ** Recursive-Descent Parsing
 
-Consists of a set of procedures,
+Consists of a set of procedures, 
 
 * Tools
 
