@@ -121,7 +121,48 @@ Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown aut
 
 ** Recursive-Descent Parsing
 
-Consists of a set of procedures, one for each non-terminal.
+Consists of a set of procedures, one for each non-terminal. The
+construction of both top-down and bottom-up parsers is aided by two
+functions: ~first~ and ~follow~.
+
+#+begin_definition $First(\alpha)$
+$First(\alpha)$, where $\alpha$ is any string of grammar symbols, is
+the set of terminals that begin strings derived from $\alpha$. If
+$\alpha$ derives $\epsilon$, then $\epsilon$ is also in $First(\alpha)$.
+#+end_definition
+
+#+begin_definition $Follow(A)$
+Follow(A) for noterminal A, is the set of terminals $a$ that can
+appear immediately to the right of A in some sentential form.: the set
+of terminals $a$ such that there exists a derivation of the form $S
+\overset{**}{\Rightarrow} \alpha A a B$.
+#+end_definition
+
+*** Computing First(X)
+
+1. If X is a terminal, then $First(X) = \{ X \}$
+
+2. If X is a non-terminal and $X \rightarrow Y_1 Y_2 \dots Y_k is a
+   production for some $k \ge 1$, then place $a$ in $First(X)$ for
+   some i, a in $First(Y_i)$, and \epsilon is in all of $First(Y_1),
+   \dots, First(Y_{i-1})$. If \epsilon is in $First(Y_j)$, for all $j
+   = 1, \dots, k$ then add $\epsilon to $First(X)$.
+
+3. If $X \rightarrow \epsilon$ is a production, add $\epsilon$ to $First(X)$.
+
+*** Computing Follow(A)
+
+1. Place $ in $Follow(S)$, where $S$ is the start symbol, and $ is the
+   input right endmarker
+
+2. If there is a production $A \rightarrow \alpha B \beta$ then
+   everything in $First(\beta)$ except $\epsilon$ is in $Follow(B)$.
+
+3. IF there is a production $A \rightarrow \alpha \beta$, or a
+   production $A \rightarrow \alpha B \beta$, where $First(B)$
+   contains $\epsilon$, then everything in $Follow(A)$ is in
+   $Follow(B)$.
+
 
 * Tools
 

@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-09T15:46:49+08:00
+lastmod = 2019-09-10T09:12:22+08:00
 draft = false
 math = true
 +++
@@ -150,7 +150,55 @@ Parsers use [pushdown automata]({{< relref "theory_of_computation" >}}) to do pa
 
 ### Recursive-Descent Parsing {#recursive-descent-parsing}
 
-Consists of a set of procedures, one for each non-terminal.
+Consists of a set of procedures, one for each non-terminal. The
+construction of both top-down and bottom-up parsers is aided by two
+functions: `first` and `follow`.
+
+<div class="definition">
+  <div></div>
+
+\\(First(\alpha)\\), where \\(\alpha\\) is any string of grammar symbols, is
+the set of terminals that begin strings derived from \\(\alpha\\). If
+\\(\alpha\\) derives \\(\epsilon\\), then \\(\epsilon\\) is also in \\(First(\alpha)\\).
+
+</div>
+
+<div class="definition">
+  <div></div>
+
+Follow(A) for noterminal A, is the set of terminals \\(a\\) that can
+appear immediately to the right of A in some sentential form.: the set
+of terminals \\(a\\) such that there exists a derivation of the form \\(S
+\overset{\*\*}{\Rightarrow} \alpha A a B\\).
+
+</div>
+
+
+#### Computing First(X) {#computing-first--x}
+
+1.  If X is a terminal, then \\(First(X) = \\{ X \\}\\)
+
+2.  If X is a non-terminal and $X &rarr; Y\_1 Y\_2 &hellip; Y\_k is a
+    production for some \\(k \ge 1\\), then place \\(a\\) in \\(First(X)\\) for
+    some i, a in \\(First(Y\_i)\\), and &epsilon; is in all of \\(First(Y\_1),
+       \dots, First(Y\_{i-1})\\). If &epsilon; is in \\(First(Y\_j)\\), for all \\(j
+       = 1, \dots, k\\) then add $&epsilon; to \\(First(X)\\).
+
+3.  If \\(X \rightarrow \epsilon\\) is a production, add \\(\epsilon\\) to \\(First(X)\\).
+
+
+#### Computing Follow(A) {#computing-follow--a}
+
+1.  Place $ in \\(Follow(S)\\), where \\(S\\) is the start symbol, and $ is the
+    input right endmarker
+
+2.  If there is a production \\(A \rightarrow \alpha B \beta\\) then
+    everything in \\(First(\beta)\\) except \\(\epsilon\\) is in \\(Follow(B)\\).
+
+3.  IF there is a production \\(A \rightarrow \alpha \beta\\), or a
+    production \\(A \rightarrow \alpha B \beta\\), where \\(First(B)\\)
+    contains \\(\epsilon\\), then everything in \\(Follow(A)\\) is in
+    \\(Follow(B)\\).
 
 
 ## Tools {#tools}
