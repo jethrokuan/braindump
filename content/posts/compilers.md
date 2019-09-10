@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-10T09:12:22+08:00
+lastmod = 2019-09-10T10:37:21+08:00
 draft = false
 math = true
 +++
@@ -199,6 +199,79 @@ of terminals \\(a\\) such that there exists a derivation of the form \\(S
     production \\(A \rightarrow \alpha B \beta\\), where \\(First(B)\\)
     contains \\(\epsilon\\), then everything in \\(Follow(A)\\) is in
     \\(Follow(B)\\).
+
+[A good video showcasing the computations](https://www.youtube.com/watch?v=%5FuSlP91jmTM)
+
+
+#### LL(1) {#ll--1}
+
+A grammar \\(G\\) is LL(1) if and only if whenever \\(A \rightarrow \alpha |
+\beta\\) are two distinct productions of \\(G\\), the following conditions
+hold:
+
+1.  For no terminal $a4 do both \\(\alpha\\) and \\(\beta\\) derive strings
+    beginning with \\(a\\).
+2.  At most one of \\(\alpha\\) and \\(\beta\\) can derive the empty string.
+3.  If \\(\beta \overset{\*}{\Rightarrow} \epsilon\\) then $&alpha; does n ot
+    derive any string beginning with a terminal in \\(Follow(A)\\), and
+    vice versa.
+
+Conditions 1 and 2 are equivalent to \\(First(\alpha)\\) and
+\\(First(\beta)\\) being disjoint sets. The third condition is equivalent
+to stating that if \\(\epsilon\\) is in \\(First(B)\\), then \\(First(\alpha)\\)
+and \\(First(A)\\) are disjoint sets, and likewise interchanging \\(\alpha\\)
+and \\(\beta\\).
+
+
+### Bottom-up Parsing {#bottom-up-parsing}
+
+The parse tree for an input string is constructed beginning from the
+leaves (bottom) and working up towards the root (the top).
+
+{{< figure src="/ox-hugo/screenshot_2019-09-10_10-25-22.png" caption="Figure 1: Bottom up parsing" >}}
+
+LR grammars can be parsed with shift-reduce parsers.
+
+One can think of bottom-up parsing as the process of "reducing" a
+string \\(w\\) to the start symbol of the grammar. At each reduction, a
+specific substring matching the body of a production is replaced by
+the nonterminal at the head of the production.
+
+Bottom-up parsing during a left-to-right scan of the input constructs
+a right-most derivation in reverse.
+
+A stack holds grammar symbols and an inptu buffer holds the rest of
+the string to be parsed. During a left-to-right scan of the input
+string, the parser shifts zero or more input symbols onto the stack,
+until it is ready to reduce a string \\(\beta\\) of grammar symbols onto
+the stack. It then reduces \\(\beta\\) to the head of the appropriate
+production. The parser repeats this cycle until it has detected an
+error, or until the stack contains the start symbol and the input is
+empty.
+
+{{< figure src="/ox-hugo/screenshot_2019-09-10_10-29-51.png" >}}
+
+The use of a stack in shift-reduce parsing is because the handle will
+always eventually appear on top of the stack, and never inside.
+
+
+### Shift-reduce conflicts {#shift-reduce-conflicts}
+
+1.  Cannot decide whether to shift or reduce (shift/reduce conflict)
+2.  Cannot decide which of several reductions (reduce/reduce conflict)
+
+These grammars are not in the \\(LR(k)\\) class of grammars.
+
+In \\(LR(k)\\), L stands for-to-right scanning, R stands for rightmost
+derivation. LR parsers are table-driven. The LR-parsing method is the
+most general nonbacktracking shit-reduce parsing method known. An LR
+parser can detect a syntactic error as soon as it is possible to do on
+a left-to-right scan on the input. The class of grammars that can be
+parsed using LR methods is a proper subset of the class of grammars
+that can be parsed with predictive or LL methods.
+
+The main downside to this is that construction of a LR parser is
+tedious by hand.
 
 
 ## Tools {#tools}
