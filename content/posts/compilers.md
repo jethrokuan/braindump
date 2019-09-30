@@ -1,7 +1,8 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-10T10:37:21+08:00
+lastmod = 2019-09-26T14:30:25+08:00
+tags = ["proglang", "compilers"]
 draft = false
 math = true
 +++
@@ -12,25 +13,35 @@ Compilers are programs that read in one (source) language, and translate them in
 
 Compilers need to perform two main tasks:
 
-1.  Analysis: breaking up a source program into constituent parts, and create an intermediate representation
-2.  Synthesis: Construct the desired target program from an intermediate representation
+1.  **Analysis**: breaking up a source program into constituent parts, and
+    create an intermediate representation
+2.  **Synthesis**: Construct the desired target program from an intermediate representation
 
 A compiler is often designed in a number of phases:
 
 lexical analyses
-: reads a stream of characters, and groups them into a stream of tokens (logically cohesive character sequences). This often requires maintaining a symbol table
+: reads a stream of characters, and groups them
+    into a stream of tokens (logically cohesive character sequences).
+    This often requires maintaining a symbol table
 
 syntax analyses
-: imposes a hierarchical structure on the token stream (parse tree)
+: imposes a hierarchical structure on the token
+    stream (parse tree)
 
 semantic analyses
-: checks parse tree for semantic errors (e.g. type errors)
+: checks parse tree for semantic errors (e.g.
+    type errors)
+
+Code optimization
+: Optimizes the intermediate code representation
+    in terms of efficiency
 
 intermediate code generation
 : a program for an abstract machine
 
-Code optimization
-: Optimizes the intermediate code representation in terms of efficiency
+To contrast this with interpreters, interpreters take as input the
+program and the data, and produce an output. The interpreters do their
+computation "online".
 
 
 ### Cousins of the Compiler {#cousins-of-the-compiler}
@@ -43,20 +54,33 @@ Code optimization
 3.  Loaders and Link-editors
 
 
-### Textbook {#textbook}
+### The Economy of Programming Languages {#the-economy-of-programming-languages}
 
-The Dragon book
+Why are there so many programming languages? Application domains have
+distinctive/conflicting needs. For example, in scientific computing,
+there needs to be good support for FP, arrays and parallelism. Julia
+is a good example of a language designed for scientific computing. In
+systems programming, we require fine control over resources, and
+satisfy certain real-time constraints. Languages like C are suited for
+these applications.
+
+Programmer training is the dominant cost for a programming language.
+It is difficult to modify a language, but easy to start a new one.
 
 
 ## Lexical Analyses {#lexical-analyses}
 
--   Read the input characters of the source program
--   Group characters into lexemes
--   Output a sequence of tokens to the parser
--   Other tasks:
-    -   Filter out comments and whitespace
-    -   Correlating error messages with source program
-    -   Constructing symbol tables
+The lexical analyzer reads input characters of the source program,
+group characters into lexemes, and outputs a sequence of tokens to the
+parser.
+
+It may also:
+
+-   Filter out comments and whitespace
+-   Correlating error messages with source program
+-   Constructing symbol tables
+
+<!--listend-->
 
 -   Separation of concerns lead to simplicity of design
 -   Compiler efficiency is improved, when using special techniques
@@ -97,6 +121,32 @@ Tokens have several categories:
 Attributes for tokens distinguish two lexemes belonging to the same symbol table:
 
 <number, 0>, <number, 1>, <price, ptr to symbol table>
+
+
+### Regular Languages {#regular-languages}
+
+Since the lexical analyzer needs to split splits into token
+classes, it must be specify the set of strings that belongs into a
+token class. To do so, we use [regular languages]({{< relref "theory_of_computation" >}}).
+
+{{< figure src="/ox-hugo/screenshot_2019-09-25_16-21-45.png" caption="Figure 1: Cycle of constructions" >}}
+
+
+#### Thompson's construction {#thompson-s-construction}
+
+Thompson's construction converts a regular expression into a NFA. The
+NFAs derived have several specific properties that simplify an
+implementation:
+
+1.  Each NFA has one start state and one end state
+2.  No transition other than the initial transition, enters the start state
+3.  An \\(\epsilon\\)-transtition always connects two states that were,
+    earlier in the process, the start state and accepting state of NFAs
+    for some component REs
+4.  Each state has at most 2 entering and 2 exiting \\(\epsilon\\)-moves,
+    and at most one exiting move on a symbol in the alphabet.
+
+{{< figure src="/ox-hugo/screenshot_2019-09-25_16-24-48.png" >}}
 
 
 ## Syntax Definition {#syntax-definition}
@@ -200,7 +250,7 @@ of terminals \\(a\\) such that there exists a derivation of the form \\(S
     contains \\(\epsilon\\), then everything in \\(Follow(A)\\) is in
     \\(Follow(B)\\).
 
-[A good video showcasing the computations](https://www.youtube.com/watch?v=%5FuSlP91jmTM)
+[A good video showcasing the computations](https://www.youtube.com/watch?v=dDoo5BF9T4E)
 
 
 #### LL(1) {#ll--1}
@@ -228,7 +278,7 @@ and \\(\beta\\).
 The parse tree for an input string is constructed beginning from the
 leaves (bottom) and working up towards the root (the top).
 
-{{< figure src="/ox-hugo/screenshot_2019-09-10_10-25-22.png" caption="Figure 1: Bottom up parsing" >}}
+{{< figure src="/ox-hugo/screenshot_2019-09-10_10-25-22.png" caption="Figure 2: Bottom up parsing" >}}
 
 LR grammars can be parsed with shift-reduce parsers.
 
