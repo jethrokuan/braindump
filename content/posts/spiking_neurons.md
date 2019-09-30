@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-08-29T12:09:25+08:00
+lastmod = 2019-09-30T11:10:41+08:00
 draft = false
 math = true
 +++
@@ -414,7 +414,31 @@ reward-modulated spike-time dependent plasticity.
 ## <span class="org-todo todo TODO">TODO</span> Theories of Error Back-Propagation in the Brain <a id="87673c771a23a8ad0a1301cb565d0484" href="#whittington19_theor_error_back_propag_brain" title="James Whittington \&amp; Rafal Bogacz, Theories of Error Back-Propagation in the Brain, {Trends in Cognitive Sciences}, v(3), 235-250 (2019).">(James Whittington \& Rafal Bogacz, 2019)</a> {#theories-of-error-back-propagation-in-the-brain}
 
 
-## <span class="org-todo todo TODO">TODO</span> Temporal coding in spiking neural networks with alpha synaptic function <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ" title="Comsa, Potempa, Versari, Luca, Fischbacher, Gesmundo, \&amp; Alakuijala, Temporal Coding in Spiking Neural Networks With  Alpha Synaptic Function, {CoRR}, v(), (2019).">(Comsa et al., 2019)</a> {#temporal-coding-in-spiking-neural-networks-with-alpha-synaptic-function}
+## [Temporal coding in spiking neural networks with alpha synaptic function]({{< relref "temporal-coding-comsa" >}}) {#temporal-coding-in-spiking-neural-networks-with-alpha-synaptic-function--presentations-temporal-coding-comsa-dot-md}
+
+
+## STDP {#stdp}
+
+STDP is a biologically inspired long-term plasticity model, in which
+each synapse is given a weight \\(0 \le w \le w\_{maxx}\\) , characterizing its
+strength, and its change depends on the exact moments \\(t\_{pre}\\) of
+presynaptic spikes and \\(t\_{post}\\) of postsynaptic spikes:
+
+\begin{equation}
+  \Delta w=\left\\{\begin{array}{l}{-\alpha \lambda \cdot \exp
+                    \left(-\frac{t\_{\mathrm{pre}}-t\_{\mathrm{post}}}{\tau\_{-}}\right),
+                    \text {if } t\_{\mathrm{pre}}-t\_{\mathrm{post}}>0}
+                    \\ {\lambda \cdot \exp
+                    \left(-\frac{t\_{\mathrm{post}}-t\_{\mathrm{pre}}}{\tau\_{+}}\right),
+                    \text {if }
+                    t\_{\mathrm{pre}}-t\_{\mathrm{post}}<0}\end{array}\right.
+\end{equation}
+
+This additive STDP rule requires also an additional constraint that
+explicitly prevents the weight from falling below 0 or exceeding the
+maximum value of 1.
+
+<a id="5c8bcfe50f375b189e564db4d78fe1a3" href="#sboev18_spikin_neural_networ_reinf_learn" title="Alexander Sboev, Danila Vlasov, Roman Rybka, \&amp; Alexey Serenko, Spiking Neural Network Reinforcement Learning Method  Based on Temporal Coding and Stdp, {Procedia Computer Science}, v(nil), 458-463 (2018).">(Alexander Sboev et al., 2018)</a>
 
 
 ##  {#}
@@ -430,4 +454,4 @@ reward-modulated spike-time dependent plasticity.
 
 <a id="whittington19_theor_error_back_propag_brain"></a>Whittington, J. C., & Bogacz, R., *Theories of error back-propagation in the brain*, Trends in Cognitive Sciences, *23(3)*, 235–250 (2019).  http://dx.doi.org/10.1016/j.tics.2018.12.005 [↩](#87673c771a23a8ad0a1301cb565d0484)
 
-<a id="comsa19_tempor_codin_spikin_neural_networ"></a>Comsa, I. M., Potempa, K., Versari, L., Fischbacher, T., Gesmundo, A., & Alakuijala, J., *Temporal coding in spiking neural networks with alpha synaptic function*, CoRR, *()*,  (2019).  [↩](#caaddec51f6948e5fea79b6d41c79676)
+<a id="sboev18_spikin_neural_networ_reinf_learn"></a>Sboev, A., Vlasov, D., Rybka, R., & Serenko, A., *Spiking neural network reinforcement learning method based on temporal coding and stdp*, Procedia Computer Science, *145(nil)*, 458–463 (2018).  http://dx.doi.org/10.1016/j.procs.2018.11.107 [↩](#5c8bcfe50f375b189e564db4d78fe1a3)

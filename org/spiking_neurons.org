@@ -364,7 +364,29 @@ reward-modulated spike-time dependent plasticity.
 
 * TODO Theories of Error Back-Propagation in the Brain cite:whittington19_theor_error_back_propag_brain
 
-* TODO Temporal coding in spiking neural networks with alpha synaptic function cite:comsa19_tempor_codin_spikin_neural_networ
+* [[file:presentations/temporal-coding-comsa.org][Temporal coding in spiking neural networks with alpha synaptic function]]
+* STDP
+
+STDP is a biologically inspired long-term plasticity model, in which
+each synapse is given a weight $0 \le w \le w_{maxx}$ , characterizing its
+strength, and its change depends on the exact moments $t_{pre}$ of
+presynaptic spikes and $t_{post}$ of postsynaptic spikes:
+
+\begin{equation}
+  \Delta w=\left\{\begin{array}{l}{-\alpha \lambda \cdot \exp
+                    \left(-\frac{t_{\mathrm{pre}}-t_{\mathrm{post}}}{\tau_{-}}\right),
+                    \text {if } t_{\mathrm{pre}}-t_{\mathrm{post}}>0}
+                    \\ {\lambda \cdot \exp
+                    \left(-\frac{t_{\mathrm{post}}-t_{\mathrm{pre}}}{\tau_{+}}\right),
+                    \text {if }
+                    t_{\mathrm{pre}}-t_{\mathrm{post}}<0}\end{array}\right.              
+\end{equation}
+
+This additive STDP rule requires also an additional constraint that
+explicitly prevents the weight from falling below 0 or exceeding the
+maximum value of 1.
+
+cite:sboev18_spikin_neural_networ_reinf_learn
 
 * 
 bibliography:spikingneurons.bib
