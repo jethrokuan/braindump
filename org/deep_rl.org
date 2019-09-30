@@ -18,6 +18,66 @@ bibliographystyle:unsrt
    ([[https://github.com/openai/spinningup][Tensorflow]], [[https://github.com/kashif/firedup/][Pytorch]])
 
 * Algorithms
+
+** The Simplest Policy Gradient ([[https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html#deriving-the-simplest-policy-gradient][Spinning Up]])
+
+We can derive a simple policy gradient algorithm by using the
+   likelihood ratio trick:
+
+\begin{equation}
+  \nabla_{\theta} P(\tau |
+ \theta)=P(\tau | \theta) \nabla_{\theta} \log P(\tau | \theta) 
+\end{equation}
+
+The link provides a succinct derivation of the PG algorithm.
+
+** Vanilla Policy Gradient ([[https://spinningup.openai.com/en/latest/algorithms/vpg.html][Spinning Up]])
+
+Spinning Up's implementation of VPG uses several tricks:
+
+1. [[Generalized Advantage Estimator (GAE) cite:schulman15_high_dimen_contin_contr_using][Generalized Advantage Estimation (GAE)]]
+2. [[*Actor Critic][Actor-critic]]
+
+** Generalized Advantage Estimator (GAE) cite:schulman15_high_dimen_contin_contr_using
+
+The variance of a gradient estimator scales unfavourably with the time
+horizon, since the effect of an action is confounded with the effects
+of past and future actions.
+
+The generalized advantage estimator (GAE) is a family of policy
+gradient estimators that *reduce variance of the policy gradient
+estimators while maintaining a tolerable level of bias*. 
+
+Policy gradient methods maximize the expected total reward by
+repeatedly estimating the gradient $g$:
+
+\begin{equation}
+  g=\mathbb{E}\left[\sum_{t=0}^{\infty} \Psi_{t} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | s_{t}\right)\right]
+\end{equation}
+
+Where \( \Psi_{t} \) may be one of the following:
+
+\begin{equation}
+  \begin{array}{ll}{\text { 1. } \sum_{t=0}^{\infty} r_{t} : \text { total reward of the trajectory. }} & {\text { 4. } Q^{\pi}\left(s_{t}, a_{t}\right) : \text { state-action value function. }} \\ {\text { 2. } \sum_{t^{\prime}=t}^{\infty} r_{t} : \text { reward following action } a_{t} .} & {\text { 5. } A^{\pi}\left(s_{t}, a_{t}\right) : \text { advantage function. }} \\ {\text { 3. } \sum_{t^{\prime}=t}^{\infty} r_{t^{\prime}}-b\left(s_{t}\right) : \text { baselined version of }} & {} \\ {\text { previous formula. }} & {\text { 6. } r_{t}+V^{\pi}\left(s_{t+1}\right)-V^{\pi}\left(s_{t}\right) : \text { TD residual. }}\end{array}
+\end{equation}
+
+The choice of \( \Psi_{t} = A^{\pi}(s_t, a_t)\) yields almost the
+lowest variance, but in practice, the advantage function is not known
+and must be approximated.
+
+The parameter \(\gamma\) allows us to reduce variance by downweighting
+rewards corresponding to delayed effects, at the cost of introducing
+bias. This parameter corresponds to the discount factor used in
+discounted formulations of MDPs, but is used as variance reduction in
+an undiscounted problem. 
+
+\begin{equation}
+  V^{\pi, \gamma}\left(s_{t}\right) :=\underset{a_{s_{t+1} : \infty}}{\mathbb{E}_{s_{t+1 ; \infty}},}\left[\sum_{l=0}^{\infty} \gamma^{l} r_{t+l}\right] \quad Q^{\pi, \gamma}\left(s_{t}, a_{t}\right) :=\underset{a_{s_{t+1} : \infty}}{\mathbb{E}_{s_{t+1 ; \infty}},}\left[\sum_{l=0}^{\infty} \gamma^{l} r_{t+l}\right]
+\end{equation}
+
+\begin{equation}
+  A^{\pi, \gamma}\left(s_{t}, a_{t}\right) :=Q^{\pi, \gamma}\left(s_{t}, a_{t}\right)-V^{\pi, \gamma}\left(s_{t}\right)
+\end{equation}
 ** Actor Critic
 
 Batch actor-critic algorithm:
@@ -121,3 +181,4 @@ $\theta^-$ is the parameters of the frozen target Q-network.
 
 
 bibliography:rl.bib
+

@@ -160,3 +160,43 @@
   eprint =       {1511.05952},
   primaryClass = {cs.LG},
 }
+@article{schulman15_high_dimen_contin_contr_using,
+  author =       {Schulman, John and Moritz, Philipp and Levine,
+                  Sergey and Jordan, Michael and Abbeel, Pieter},
+  title =        {High-Dimensional Continuous Control Using
+                  Generalized Advantage Estimation},
+  journal =      {CoRR},
+  year =         2015,
+  url =          {http://arxiv.org/abs/1506.02438v6},
+  abstract =     {Policy gradient methods are an appealing approach in
+                  reinforcement learning because they directly
+                  optimize the cumulative reward and can
+                  straightforwardly be used with nonlinear function
+                  approximators such as neural networks. The two main
+                  challenges are the large number of samples typically
+                  required, and the difficulty of obtaining stable and
+                  steady improvement despite the nonstationarity of
+                  the incoming data. We address the first challenge by
+                  using value functions to substantially reduce the
+                  variance of policy gradient estimates at the cost of
+                  some bias, with an exponentially-weighted estimator
+                  of the advantage function that is analogous to
+                  TD(lambda). We address the second challenge by using
+                  trust region optimization procedure for both the
+                  policy and the value function, which are represented
+                  by neural networks. Our approach yields strong
+                  empirical results on highly challenging 3D
+                  locomotion tasks, learning running gaits for bipedal
+                  and quadrupedal simulated robots, and learning a
+                  policy for getting the biped to stand up from
+                  starting out lying on the ground. In contrast to a
+                  body of prior work that uses hand-crafted policy
+                  representations, our neural network policies map
+                  directly from raw kinematics to joint torques. Our
+                  algorithm is fully model-free, and the amount of
+                  simulated experience required for the learning tasks
+                  on 3D bipeds corresponds to 1-2 weeks of real time.},
+  archivePrefix ={arXiv},
+  eprint =       {1506.02438},
+  primaryClass = {cs.LG},
+}

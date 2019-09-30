@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-30T09:11:03+08:00
+lastmod = 2019-09-30T11:49:25+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -25,6 +25,69 @@ math = true
 
 
 ## Algorithms {#algorithms}
+
+
+### The Simplest Policy Gradient ([Spinning Up](https://spinningup.openai.com/en/latest/spinningup/rl%5Fintro3.html#deriving-the-simplest-policy-gradient)) {#the-simplest-policy-gradient--spinning-up}
+
+We can derive a simple policy gradient algorithm by using the
+   likelihood ratio trick:
+
+\begin{equation}
+  \nabla\_{\theta} P(\tau |
+ \theta)=P(\tau | \theta) \nabla\_{\theta} \log P(\tau | \theta)
+\end{equation}
+
+The link provides a succinct derivation of the PG algorithm.
+
+
+### Vanilla Policy Gradient ([Spinning Up](https://spinningup.openai.com/en/latest/algorithms/vpg.html)) {#vanilla-policy-gradient--spinning-up}
+
+Spinning Up's implementation of VPG uses several tricks:
+
+1.  [Generalized Advantage Estimation (GAE)](#generalized-advantage-estimator--gae)
+2.  [Actor-critic](#actor-critic)
+
+
+### Generalized Advantage Estimator (GAE) <a id="57393aa8ebb8846c7181c31bfd5fbe89" href="#schulman15_high_dimen_contin_contr_using" title="Schulman, Moritz, Levine, Sergey, Jordan \&amp; Abbeel, High-Dimensional Continuous Control Using  Generalized Advantage Estimation, {CoRR}, v(), (2015).">(Schulman et al., 2015)</a> {#generalized-advantage-estimator--gae}
+
+The variance of a gradient estimator scales unfavourably with the time
+horizon, since the effect of an action is confounded with the effects
+of past and future actions.
+
+The generalized advantage estimator (GAE) is a family of policy
+gradient estimators that **reduce variance of the policy gradient
+estimators while maintaining a tolerable level of bias**.
+
+Policy gradient methods maximize the expected total reward by
+repeatedly estimating the gradient \\(g\\):
+
+\begin{equation}
+  g=\mathbb{E}\left[\sum\_{t=0}^{\infty} \Psi\_{t} \nabla\_{\theta} \log \pi\_{\theta}\left(a\_{t} | s\_{t}\right)\right]
+\end{equation}
+
+Where \\( \Psi\_{t} \\) may be one of the following:
+
+\begin{equation}
+  \begin{array}{ll}{\text { 1. } \sum\_{t=0}^{\infty} r\_{t} : \text { total reward of the trajectory. }} & {\text { 4. } Q^{\pi}\left(s\_{t}, a\_{t}\right) : \text { state-action value function. }} \\ {\text { 2. } \sum\_{t^{\prime}=t}^{\infty} r\_{t} : \text { reward following action } a\_{t} .} & {\text { 5. } A^{\pi}\left(s\_{t}, a\_{t}\right) : \text { advantage function. }} \\ {\text { 3. } \sum\_{t^{\prime}=t}^{\infty} r\_{t^{\prime}}-b\left(s\_{t}\right) : \text { baselined version of }} & {} \\ {\text { previous formula. }} & {\text { 6. } r\_{t}+V^{\pi}\left(s\_{t+1}\right)-V^{\pi}\left(s\_{t}\right) : \text { TD residual. }}\end{array}
+\end{equation}
+
+The choice of \\( \Psi\_{t} = A^{\pi}(s\_t, a\_t)\\) yields almost the
+lowest variance, but in practice, the advantage function is not known
+and must be approximated.
+
+The parameter \\(\gamma\\) allows us to reduce variance by downweighting
+rewards corresponding to delayed effects, at the cost of introducing
+bias. This parameter corresponds to the discount factor used in
+discounted formulations of MDPs, but is used as variance reduction in
+an undiscounted problem.
+
+\begin{equation}
+  V^{\pi, \gamma}\left(s\_{t}\right) :=\underset{a\_{s\_{t+1} : \infty}}{\mathbb{E}\_{s\_{t+1 ; \infty}},}\left[\sum\_{l=0}^{\infty} \gamma^{l} r\_{t+l}\right] \quad Q^{\pi, \gamma}\left(s\_{t}, a\_{t}\right) :=\underset{a\_{s\_{t+1} : \infty}}{\mathbb{E}\_{s\_{t+1 ; \infty}},}\left[\sum\_{l=0}^{\infty} \gamma^{l} r\_{t+l}\right]
+\end{equation}
+
+\begin{equation}
+  A^{\pi, \gamma}\left(s\_{t}, a\_{t}\right) :=Q^{\pi, \gamma}\left(s\_{t}, a\_{t}\right)-V^{\pi, \gamma}\left(s\_{t}\right)
+\end{equation}
 
 
 ### Actor Critic {#actor-critic}
@@ -133,6 +196,8 @@ where \\(U(D)\\) is a uniform distribution over the replay buffer, and
 \\(\theta^-\\) is the parameters of the frozen target Q-network.
 
 # Bibliography
+<a id="schulman15_high_dimen_contin_contr_using"></a>Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., *High-Dimensional Continuous Control Using Generalized Advantage Estimation*, CoRR, *()*,  (2015).  [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
+
 <a id="sutton2000policy"></a>Sutton, R. S., McAllester, D. A., Singh, S. P., & Mansour, Y., *Policy gradient methods for reinforcement learning with function approximation*, In , Advances in neural information processing systems (pp. 1057–1063) (2000). : . [↩](#38c18a560d20d4d8d46b43c7dc375d47)
 
 <a id="mnih16_async_method_deep_reinf_learn"></a>Mnih, V., Badia, Adri\`a Puigdom\`enech, Mirza, M., Graves, A., Lillicrap, T. P., Harley, T., Silver, D., …, *Asynchronous methods for deep reinforcement learning*, CoRR, *()*,  (2016).  [↩](#5ee60195703614202558f73eaeb64891)
