@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-30T11:10:41+08:00
+lastmod = 2019-10-13T20:22:08+08:00
 draft = false
 math = true
 +++
@@ -441,6 +441,50 @@ maximum value of 1.
 <a id="5c8bcfe50f375b189e564db4d78fe1a3" href="#sboev18_spikin_neural_networ_reinf_learn" title="Alexander Sboev, Danila Vlasov, Roman Rybka, \&amp; Alexey Serenko, Spiking Neural Network Reinforcement Learning Method  Based on Temporal Coding and Stdp, {Procedia Computer Science}, v(nil), 458-463 (2018).">(Alexander Sboev et al., 2018)</a>
 
 
+## Loihi {#loihi}
+
+-   Describes SNNs as a weighted, directed graph \\( G(V, E)\\) where the
+    vertices \\(V\\) represent compartments, and the weighted edges \\(E\\)
+    represent synapses.
+-   Both compartments and synapses maintain internal state and
+    communicate only via discrete spike impulses.
+-   Uses a variant of the CUBA model for the neuron model, which is
+    defined as a set of first-order differential equation using traces,
+    evaluated at discrete algorithmic time steps.
+
+Learning must follow the sum-of-products form:
+
+\begin{equation}
+  Z(t) = Z(t-1) + \sum\_m S\_m \prod\_n F\_n
+\end{equation}
+
+where \\(Z\\) is the synaptic state variable defined for the source
+destination neuron pair being updated, and \\(F-N\\) may be a synaptic
+state variable, a pre-synaptic trace or a post-synaptic trace defined
+for the neuron pair.
+
+
+## Generating Spike Trains {#generating-spike-trains}
+
+
+### Poisson Model <a id="15fef7332c23705120f84cb94df313f0" href="#heeger2000poisson" title="Heeger, Poisson model of spike generation, {Handout, University of Standford}, v(), 1--13 (2000).">(Heeger, 2000)</a> {#poisson-model}
+
+Independent spike hypothesis: the generation of each spike is
+independent of all other spikes. If the underlying instantaneous
+firing rate \\(r\\) is constant over time, it is a homogeneous Poisson
+process.
+
+We can write:
+
+\begin{equation}
+  P(\textrm{1 spike during } \delta t) \approx r \delta t
+\end{equation}
+
+We divide time into short, discrete intervals \\(\delta t\\). Then, we
+generate a sequence of random numbers \\(x[i]\\) uniformly between 0
+and 1. For each interval, if \\(x[i] \le r \delta t\\), generate a spike.
+
+
 ##  {#}
 
 # Bibliography
@@ -455,3 +499,5 @@ maximum value of 1.
 <a id="whittington19_theor_error_back_propag_brain"></a>Whittington, J. C., & Bogacz, R., *Theories of error back-propagation in the brain*, Trends in Cognitive Sciences, *23(3)*, 235–250 (2019).  http://dx.doi.org/10.1016/j.tics.2018.12.005 [↩](#87673c771a23a8ad0a1301cb565d0484)
 
 <a id="sboev18_spikin_neural_networ_reinf_learn"></a>Sboev, A., Vlasov, D., Rybka, R., & Serenko, A., *Spiking neural network reinforcement learning method based on temporal coding and stdp*, Procedia Computer Science, *145(nil)*, 458–463 (2018).  http://dx.doi.org/10.1016/j.procs.2018.11.107 [↩](#5c8bcfe50f375b189e564db4d78fe1a3)
+
+<a id="heeger2000poisson"></a>Heeger, D., *Poisson model of spike generation*, Handout, University of Standford, *5()*, 1–13 (2000).  [↩](#15fef7332c23705120f84cb94df313f0)

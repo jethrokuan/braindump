@@ -388,5 +388,46 @@ maximum value of 1.
 
 cite:sboev18_spikin_neural_networ_reinf_learn
 
+* Loihi
+
+- Describes SNNs as a weighted, directed graph \( G(V, E)\) where the
+  vertices $V$ represent compartments, and the weighted edges $E$
+  represent synapses.
+- Both compartments and synapses maintain internal state and
+  communicate only via discrete spike impulses.
+- Uses a variant of the CUBA model for the neuron model, which is
+  defined as a set of first-order differential equation using traces,
+  evaluated at discrete algorithmic time steps.
+
+Learning must follow the sum-of-products form:
+
+\begin{equation}
+  Z(t) = Z(t-1) + \sum_m S_m \prod_n F_n
+\end{equation}
+
+where $Z$ is the synaptic state variable defined for the source
+destination neuron pair being updated, and $F-N$ may be a synaptic
+state variable, a pre-synaptic trace or a post-synaptic trace defined
+for the neuron pair.
+
+* Generating Spike Trains
+
+** Poisson Model cite:heeger2000poisson
+
+Independent spike hypothesis: the generation of each spike is
+independent of all other spikes. If the underlying instantaneous
+firing rate $r$ is constant over time, it is a homogeneous Poisson
+process.
+
+We can write:
+
+\begin{equation}
+  P(\textrm{1 spike during } \delta t) \approx r \delta t
+\end{equation}
+
+We divide time into short, discrete intervals $\delta t$. Then, we
+generate a sequence of random numbers $x[i]$ uniformly between 0
+and 1. For each interval, if $x[i] \le r \delta t$, generate a spike.
+
 * 
 bibliography:spikingneurons.bib

@@ -1,7 +1,7 @@
 +++
 title = "Sleep"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:36+08:00
+lastmod = 2019-10-11T15:43:54+08:00
 draft = false
 math = true
 +++
@@ -23,3 +23,5 @@ If you use an alarm clock, either:
 -   you will feel more miserable.
 
 Artificial sleep schedules will dramatically reduce your mental capacity. A healthy individual in normal conditions will find it difficult to fall asleep 4 hours after the main sleep episode unless that episode was unnaturally cut with an alarm clock resulting in sleep deprivation.
+
+[What Happens to Your Body on No Sleep | Outside Online](https://www.outsideonline.com/2292806/your-body-no-sleep)

@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-09-26T14:30:25+08:00
+lastmod = 2019-10-07T14:40:24+08:00
 tags = ["proglang", "compilers"]
 draft = false
 math = true
@@ -175,24 +175,6 @@ expr -> expr + term
 ```
 
 
-## Syntax Directed Translation {#syntax-directed-translation}
-
-Syntax-directed translation is done by attaching rules or program
-fragments to productions in a grammar. e.g. consider
-
-```text
-expr -> expr_1 + term
-```
-
-We can translate expr by:
-
-```text
-translate expr_1;
-translate term;
-handle +;
-```
-
-
 ## Parsing {#parsing}
 
 Parsers use [pushdown automata]({{< relref "theory_of_computation" >}}) to do parsing.
@@ -322,6 +304,111 @@ that can be parsed with predictive or LL methods.
 
 The main downside to this is that construction of a LR parser is
 tedious by hand.
+
+
+## Syntax Directed Translation {#syntax-directed-translation}
+
+Syntax-directed translation is done by attaching rules or program
+fragments to productions in a grammar. e.g. consider
+
+```text
+expr -> expr_1 + term
+```
+
+We can translate expr by attaching a semantic action within the
+production body:
+
+```text
+expr -> expr_1 + term { print "+" }
+```
+
+The position of the semantic action determines the order in which the
+action is executed.
+
+The most general approach to SDT is to construct a parse tree or
+syntax tree, and compute the values of attributes by visiting the
+nodes of the tree. In most cases, SDT can be performed without
+explicit construction of the tree.
+
+L-attributed translations (Left to right) encompass all translations
+that can be performed during parsing.
+
+S-attributed translations (synthesized) is a smaller class that can be
+performed easily in connection with a bottom-up parse.
+
+
+### Syntax-Directed Definitions {#syntax-directed-definitions}
+
+A SDD is a CFG together with attributes and rules. Attributes are
+associated with grammar symbols, and rules are associated with
+productions. We write \\(X.a\\) where \\(X\\) is a symbol and \\(a\\) is an
+attribute.
+
+There are 2 kinds of attributes for non-terminals:
+
+synthesized attribute
+: defined by semantic rule associated with
+    the production at parse tree.
+
+inherited attribute
+: defined by semantic rule associated with the
+    production of parent at parse-tree.
+
+
+### Evaluating an SDD at the nodes of a parse tree {#evaluating-an-sdd-at-the-nodes-of-a-parse-tree}
+
+We can construct an annotated parse tree. With synthesized attributes,
+ An SDD with both inherited and
+synthesized attributes has no guarantee that there is one order in
+which to evaluate the attributes at nodes. There are useful subclasses
+of SDDs that are sufficient to guarantee an order of evaluation
+exists.
+
+The dependency graph characterizes the possible orders in which we can
+evaluate the attributes at various nodes in the parse tree.
+
+An SDD is _S-attributed_ if every attribute is synthesized. In this
+scenario, we can evaluate attributes in any bottom-up order, for
+example using post-order traversal of the parse tree.
+
+In L-attributed SDDs, dependency-graph edges can only go from
+left-to-right, and not right-to-left. This means that each attribute
+must be either:
+
+1.  Synthesized, or
+2.  Inherited, but with rules limited as follows: If there is a
+    production \\( A \rightarrow X\_1 X\_2 \dots X\_n \\) and there is an
+    inherited attribute \\(X\_i.a\\) computed by a rule associated with this
+    production, then the rule may use only:
+    1.  Inherited attributes associated with the head \\(A\\)
+    2.  Either inherited or synthesized attributes associated with the
+        occurrences of symbols \\(X\_1, X\_2 \dots X\_{i-1}\\) located to the
+        left of \\(X\_i\\).
+    3.  Inherited or synthesized attributes associated with \\(X\_i\\)
+        itself, in a way that no cycles are formed in the dependency
+        graph by attributes of this \\(X\_i\\).
+
+
+### Side effecting {#side-effecting}
+
+We can control side effects in SDDs by:
+
+1.  Permitting incidental side effects that do not constrain attribute evaluation
+2.  Constrain allowable evaluation orders, so that the translation is
+    produced for any allowable order
+
+Semantic rules executed for their side effects, such as printing, are
+treade as the definitions of dummy synthesized attributes associated
+with the head of the production. The modified SDD produces the same
+translation under any topological sort, since the statement is
+executed at the end.
+
+
+### Syntax-Directed Translation Schemes {#syntax-directed-translation-schemes}
+
+A SDT is a CFG with program fragments embedded within production
+bodies. The program fragments are called semantic actions, and can
+appear at any position within the production body.
 
 
 ## Tools {#tools}
