@@ -1,0 +1,217 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Robot Operating System (ROS)
+
+#+begin_export latex
+\bibliographystyle{unsrt}
+#+end_export
+
+* Introduction to ROS
+
+** What is ROS? cite:nilil_ros_introd_ros_wiki
+
+*** Left                                                         :B_column:
+:PROPERTIES:
+:BEAMER_col: 0.63
+:BEAMER_env: column
+:END:
+
+- Meta-operating system, providing low level services:
+  - process communication over a network
+  - device control
+  - hardware abstraction
+- Distributed framework of processes
+
+*** Right                                                        :B_column:
+:PROPERTIES:
+:BEAMER_col: 0.43
+:BEAMER_env: column
+:END:
+
+#+ATTR_LATEX: :width 0.4\textwidth
+[[file:images/ros/ros-logo_2019-10-15_16-56-35.jpg]]
+
+** Why use ROS?
+
+- "Lightweight" framework that speeds up large-scale robotic
+  development
+- Many libraries developed on top of this framework that can be
+  reused:
+  - Physics simulation ([[http://gazebosim.org/][Gazebo]])
+  - Movement + Navigation ([[http://wiki.ros.org/navigation][ROS navigation]])
+
+** ROS Concepts
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+*** Computational Graph
+
+- All computation is organized as a peer-to-peer network of communicating
+  processes.
+
+*** Nodes
+
+- Processes that perform any form of computation.
+- Nodes can communicate with one another.
+- Example of nodes:
+  - Publish sensor readings
+  - Receiving teleop commands and running them
+- Written with ROS client libraries ([[http://wiki.ros.org/rospy][rospy]], [[http://wiki.ros.org/roscpp][roscpp]])
+
+*** Master (Primary) Node
+
+- Provides name registration, node lookup to all nodes in the
+  computational graph.
+- Enables communication between nodes.
+
+*** Parameter Server
+
+- "Distributed" key-value store: all nodes can access data stored in
+  these keys.
+
+*** Topics
+
+- Nodes communicating via the publish-subscribe semantics do so by
+  publishing and subscribing to topics.
+- Every topic has a name, e.g. ~/sensors/temp1~
+- No access permissions
+
+*** Services
+
+- Request-response semantics (think Web servers)
+- Requests are blocking
+
+** Example Computational Graph
+
+#+begin_src dot :file images/ros/newspirit.png :cmdline -Kdot -Tpng
+  graph G {
+        master[label="Master Node (RPI)", style=filled, fillcolor=yellow]
+        mega[label="Servo Microcontroller (Arduino Mega)", style=filled, fillcolor=yellow]
+        lws[label="Lewansoul MC"]
+        ws[label="ROS Websocket Server (RPI)", style=filled, fillcolor=yellow]
+        phone[label="Phone Joystick"]
+        master -- mega
+        master -- ws
+        ws -- mega
+        mega -- lws
+        phone -- ws[style=dotted];
+  }
+#+end_src
+
+* Getting Started With ROS
+** ROS Environment Setup
+
+Here I assume you have the ROS environment set up. If not, see [[*ROS Installation][the
+appendix]].
+
+** Creating a ROS Workspace
+
+Catkin is ROS' package manager, built on top of CMake. 
+
+#+begin_src bash
+  mkdir -p ~/catkin_ws/src        # Create the directories
+  cd ~/catkin_ws/                 # Change to the directory
+  catkin_make                     # Initial setup
+#+end_src
+
+** Exploring ROS bash commands [fn::Almost all bash commands have tab completion!]
+*** rospack
+~rospack find~ locates ROS packages.
+
+#+begin_src bash
+  rospack find roscpp # /opt/ros/melodic/share/roscpp
+#+end_src
+*** roscd
+roscd changes you to the directory of the ros package.
+
+#+begin_src bash
+  roscd roscpp
+  pwd # /opt/ros/melodic/share/roscpp
+#+end_src
+** Creating a ROS package
+
+We use the convenience script ~catkin_create_pkg~ to instantiate our package.
+
+#+begin_src bash
+  cd ~/catkin_ws/src
+  catkin_create_pkg workshop std_msgs rospy roscpp
+  # Created file workshop/CMakeLists.txt
+  # Created file workshop/package.xml
+  # Created folder workshop/include/workshop
+  # Created folder workshop/src
+  # Successfully created files in /home/jethro/catkin_ws/src/workshop. Please adjust the values in package.xml.
+#+end_src
+
+** What's in a ROS package?
+
+#+BEGIN_src text
+  workshop
+      CMakeLists.txt          # Build instructions
+      include                 # For cpp deps, if any
+         workshop
+      package.xml             # Details about the package
+      src                     # Contains source code
+#+END_src
+
+** Starting ROS
+
+We initialize the ROS master node with ~roscore~.
+
+#+begin_src bash
+  roscore
+  
+  # ...
+  # process[master]: started with pid [16206]
+  # ROS_MASTER_URI=http://jethro:11311/
+
+  # setting /run_id to 05bf8c5e-efed-11e9-957b-382c4a4f3d31
+  # process[rosout-1]: started with pid [16217]
+
+#+end_src
+
+To kill it, press ~Ctrl-C~ in the same terminal.
+
+** ROS Nodes
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+*** rosnode
+
+rosnode let's us inspect available nodes:
+
+#+begin_src bash
+  rosnode list                    # /rosout
+  rosnode info /rosout
+#+end_src
+
+What happens if master is not running?
+
+#+begin_src bash
+  rosnode list               # ERROR: Unable to communicate with master!
+#+end_src
+
+*** Running a ROS node
+
+A ROS package may contain many ROS nodes.
+
+#+begin_src bash
+  rosrun turtlesim <TAB>
+  # draw_square        mimic              turtlesim_node     turtle_teleop_key  
+#+end_src
+
+#+begin_src bash
+  rosrun turtlesim turtlesim_node 
+  # [ INFO] [1571214245.786246078]: Starting turtlesim with node name /turtlesim
+  # [ INFO] [1571214245.790986159]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+#+end_src
+
+Exercise: reinspect the node list.
+
+* Appendix
+
+** ROS Installation
+*** Ubuntu
+Follow the instructions on ROS Wiki. cite:nilil_instal_ubunt_ros_wiki
+
+* References
+
+bibliography:ros.bib
