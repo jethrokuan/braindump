@@ -1,0 +1,218 @@
+#+SETUPFILE: ../hugo_setup.org
+#+TITLE: Introduction to Emacs
+#+begin_export latex
+\bibliographystyle{unsrt}
+#+end_export
+
+* The Church of Emacs
+
+** What is Emacs?
+- the extensible, customizable, self-documenting, real-time display
+  editor
+- An environment with a Turing-complete programming language (Emacs
+  Lisp) *designed around the manipulation of text*
+- Goes against the unix philosophy: one tool for everything
+- The true hacker's editor
+
+** Emacs Highlights
+- Edit files over many remote protocols (ssh, ftp etc.) as if local
+- Extremely powerful text-based clients
+  - Mail ([[https://www.djcbsoftware.nl/code/mu/mu4e.html][mu4e]], [[https://notmuchmail.org/notmuch-emacs/][notmuch]])
+  - RSS ([[https://github.com/skeeto/elfeed][elfeed]])
+  - File Management ([[https://www.gnu.org/software/emacs/manual/html_node/emacs/Dired.html][dired]])
+  - Git ([[https://magit.vc/][Magit]])
+  - Kubernetes ([[https://github.com/chrisbarrett/kubernetes-el][kubernetes-el]])
+- Org-mode (Thesis writing, planning, cheatsheet)
+
+** Who Uses Emacs? cite:famous_emacs_users
+- Julian Assange (Wikileaks)
+- Yukihiro Matsumoto (Ruby)
+- Guido van Rossum (Python)
+- Rich Hickey (Clojure)
+- Joe Armstrong (Erlang)
+- Neal Stephenson (Writer)
+** 
+#+BEGIN_QUOTE
+In the GNU/Linux world there are two major text editing programs: the
+minimalist vi (known in some implementations as elvis) and the
+maximalist emacs. I use emacs, which might be thought of as a
+thermonuclear word processor... emacs outshines all other editing
+software in approximately the same way that the noonday sun does the
+stars. It is not just bigger and brighter; it simply makes everything
+else vanish. --- Neal Stephenson, In the Beginning was the Command Line (1981)
+#+END_QUOTE
+** Emacs at Amazon cite:yegge_tour_de_babel
+
+#+BEGIN_QUOTE
+Mailman was the Customer Service customer-email processing application
+for ... four, five years? A long time, anyway. It was written in
+Emacs. Everyone loved it.
+#+END_QUOTE
+
+* Basic Emacs
+** Keyboard Notations
+- ~C-x~ :: Ctrl-x
+- ~M-x~ :: Alt-x
+** Basic Commands
+- ~C-x C-c~ :: Quit Emacs
+- ~C-g~ :: Cancel current command (spammable)
+- ~C-h t~ :: Emacs tutorial
+- C-h f, C-h v, C-h k :: Describe function, variable, keybinding
+** Emacs Terminology
+
+#+DOWNLOADED: https://practicalli.github.io/spacemacs/images/emacs-terminology-structure.png @ 2019-10-20 17:24:09
+#+CAPTION: Source: https://practicalli.github.io/spacemacs/images/emacs-terminology-structure.png
+[[file:images/emacs/emacs-terminology-structure_2019-10-20_17-24-09.png]]
+
+** Emacs Tutorial
+- ~M-x~ brings up the interactive command launch environment
+- We want to launch ~M-x help-with-tutorial~
+- We can tab-complete here ~M-x help-<TAB>~
+
+* Configuring Emacs
+** Configuring Emacs
+Configuring Emacs is the same as writing Emacs Lisp code to be
+evaluated during program launch time. Emacs looks for your init file
+in the following locations (in order):
+  - =~/.emacs=
+  - =~/.emacs.el=
+  - =~/.emacs.d/init.el= (preferred)
+
+** Installing packages
+:PROPERTIES:
+:BEAMER_opt: allowframebreaks
+:END:
+*** Adding package mirrors
+
+Emacs needs to know where to fetch packages from. Here we add 2
+mirrors, the Org mirror and the [[https://melpa.org/#/][MELPA mirror]], where most community
+packages are hosted.
+
+#+begin_src emacs-lisp
+  (require 'package)
+  (add-to-list 'package-archives '("melpa" . "https://melpa.org/packages/") t)
+  (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
+  (package-initialize)
+#+end_src
+
+*** Listing Installable Packages                                :B_columns:
+:PROPERTIES:
+:BEAMER_env: columns
+:END:
+
+**** Left                                                          :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+We run ~M-x package-refresh-contents~ to pull new content from the
+mirrors. 
+
+We can see a list of packages to install by running ~M-x
+list-packages~:
+
+**** Right 
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:images/emacs/screenshot_2019-10-19_21-04-46.png]]
+
+*** Exercise: Installing Counsel/Ivy
+
+[[https://github.com/abo-abo/swiper][Ivy]] is a better interface for basic Emacs tasks.
+
+* Emacs Packages
+** Dired
+- basic file management:
+  - deleting, renaming, movement
+- [[https://www.gnu.org/software/emacs/manual/html_node/emacs/Wdired.html][wdired]]
+
+** Org-mode
+- Basic org syntax
+- org-agenda
+- org-babel
+- org export
+- deft
+** Magit
+- commit
+- log
+- rebase
+- spinoff
+- stash
+** Common Plugins
+- project management :: [[https://github.com/bbatsov/projectile][projectile]]
+- directory view :: [[https://github.com/Alexander-Miller/treemacs][treemacs]]
+- code completion :: [[https://company-mode.github.io/][company-mode]] + [[https://github.com/emacs-lsp/lsp-mode][lsp-mode]]
+- code editing :: [[https://github.com/Malabarba/aggressive-indent-mode][aggressive-indent]], [[https://github.com/Fuco1/smartparens][smartparens]], [[https://github.com/magnars/multiple-cursors.el][multiple-cursors]]
+- code navigation :: [[https://github.com/abo-abo/avy][avy]]
+* Tips
+** Getting Productive Quickly
+
+Vanilla Emacs is powerful, but often not powerful enough for
+day-to-day work. An easy way to get started is to use a starter kit:
+
+- [[https://github.com/bbatsov/prelude][prelude]]
+- [[https://github.com/syl20bnr/spacemacs][spacemacs]]
+- [[https://github.com/hlissner/doom-emacs][doom-emacs]]
+- [[https://github.com/seagle0128/.emacs.d][Centaur Emacs]]
+
+** Evil-mode
+
+If you like Vim's modal editing, consider [[https://github.com/emacs-evil/evil][evil-mode]]. Evil + Emacs
+allows you to fully emulate Vim's modal editing capabilities,
+alongside the power of scripting in Emacs Lisp.
+
+** Remap Capslock to Ctrl                                         :B_column:
+:PROPERTIES:
+:BEAMER_env: column
+:END:
+
+*** Left                                                            :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.6
+:END:
+This will save you from Emacs pinky. Treat yourself to a good
+keyboard, you're going to be using one heavily in the foreseeable
+future.
+
+*** Right                                                           :BMCOL:
+:PROPERTIES:
+:BEAMER_col: 0.4
+:END:
+
+#+CAPTION: Source cite:jethros_left_hand
+#+ATTR_LATEX: :height 0.6\textheight
+[[file:images/emacs/screenshot_2019-10-20_17-54-25.png]]
+
+
+** Study Emacs Configurations
+Emacs is a tinkerer's editor: make it your own. Scratch your itch,
+experiment with packages. [[*Config Files][Look at what other people use]] and see if you
+like them.
+
+** Emacsclient
+
+Emacs start-up time is non-negligible (mine is around 3s), especially
+when you have a lot of packages and Elisp to evaluate. Solution: [[https://www.emacswiki.org/emacs/EmacsAsDaemon][run
+emacs as a daemon]], and launch clients that connect to it.
+
+** Join Communities
+- [[https://www.reddit.com/r/emacs/][r/emacs]]
+- #emacs on IRC
+* Appendix
+** Config Files
+- [[https://github.com/jethrokuan/.emacs.d/blob/master/config.org][jethrokuan/.emacs.d]]
+- [[https://github.com/caisah/emacs.dz][caisah/emacs.dz]]
+- [[https://github.com/syl20bnr/spacemacs][spacemacs]]
+- [[https://github.com/hlissner/doom-emacs][doom-emacs]]
+- [[https://github.com/seagle0128/.emacs.d][Centaur Emacs]]
+
+** Books/Blogs
+- [[https://planet.emacslife.com/][Planet Emacslife]]
+- [[https://sachachua.com/blog/category/geek/emacs/emacs-news/][Sacha Chua's Emacs News]]
+- [[https://www.masteringemacs.org/][Mickey Petersen's Mastering Emacs]]
+
+* References
+
+bibliography:emacs.bib
+
