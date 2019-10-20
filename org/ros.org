@@ -585,7 +585,7 @@ Write a client that sends the request and prints this response.
 Follow the instructions on ROS Wiki. cite:nilil_instal_ubunt_ros_wiki
 *** VM
 
-Download the VM image and load it.
+[[https://drive.google.com/file/d/1SFU4rhWyAd2mlmDAIh0pvXkOvpxO5QuT/view][Download the VM image]] and load it.
 
 * References
 :PROPERTIES:

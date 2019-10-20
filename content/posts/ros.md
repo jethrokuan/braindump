@@ -1,7 +1,7 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2019-10-17T16:13:24+08:00
+lastmod = 2019-10-17T16:18:53+08:00
 draft = false
 math = true
 +++
@@ -671,7 +671,7 @@ source devel/setup.bash
 
 -    VM
 
-    Download the VM image and load it.
+    [Download the VM image](https://drive.google.com/file/d/1SFU4rhWyAd2mlmDAIh0pvXkOvpxO5QuT/view) and load it.
 
 
 ## References {#references}
