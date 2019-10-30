@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons"
 author = ["Jethro Kuan"]
-lastmod = 2019-10-13T20:22:08+08:00
+lastmod = 2019-10-30T13:03:38+08:00
 draft = false
 math = true
 +++
@@ -69,7 +69,7 @@ value of the membrane potential of neuron \\(i\\):
 
 where \\(\hat{t\_i}\\) is the last firing time of neuron \\(i\\).
 
-We refer to moment when na given neuron emits an action potential as
+We refer to moment when a given neuron emits an action potential as
 the firing time of that neuron. We denote the firing times of neuron
 \\(i\\) by \\(t\_i^{(f)}\\) where \\(f = 1,2,\dots\\) is the label of the spike.
 Then we formally denote the spike train of a neuron \\(i\\) as the
@@ -92,87 +92,81 @@ adaptation.
 How do spike trains encode information? At present, a definite answer
 to this question is not known.
 
+-    Temporal Coding
 
-#### Temporal Coding {#temporal-coding}
+    Traditionally, it had been thought that information was contained in
+    the mean firing rate of a neuron:
 
-Traditionally, it had been thought that information was contained in
-the mean firing rate of a neuron:
+    \begin{equation}
+      v = \frac{n\_{sp}(T)}{T}
+    \end{equation}
 
-\begin{equation}
-  v = \frac{n\_{sp}(T)}{T}
-\end{equation}
+    measured over some time window \\(T\\), counting the number of the spikes
+    \\(n\\). The primary objection to this is that if we need to compute a
+    temporal average to transfer information, then our reaction times
+    would be a lot slower.
 
-measured over some time window \\(T\\), counting the number of the spikes
-\\(n\\). The primary objection to this is that if we need to compute a
-temporal average to transfer information, then our reaction times
-would be a lot slower.
+    From the point of view of rate coding, spikes are a convenient wa of
+    transmitting the analog output variable \\(v\\) over long spikes. The
+    optimal scheme is to transmit the value of rate \\(v\\) by a regular spike
+    train at intervals \\(\frac{1}{v}\\), allowing the rate to be reliably
+    measured after 2 spikes. Therefore, irregularities in real spike
+    trains must be considered as noise.
 
-From the point of view of rate coding, spikes are a convenient wa of
-transmitting the analog output variable \\(v\\) over long spikes. The
-optimal scheme is to transmit the value of rate \\(v\\) by a regular spike
-train at intervals \\(\frac{1}{v}\\), allowing the rate to be reliably
-measured after 2 spikes. Therefore, irregularities in real spike
-trains must be considered as noise.
+-    Rate as spike density (average over several runs)
 
+    this definition works for both stationary and time-dependent stimuli.
+    The same stimulation sequence is repeated several times, and the
+    neuronal response is reported in a peri-stimulus-time histogram
+    (PSTH). We can obtain the spike density of the PSTH by:
 
-#### Rate as spike density (average over several runs) {#rate-as-spike-density--average-over-several-runs}
+    \begin{equation}
+      \rho(t) =  \frac{1}{\Delta t} \frac{n\_K(t; t + \Delta t)}{K}
+    \end{equation}
 
-this definition works for both stationary and time-dependent stimuli.
-The same stimulation sequence is repeated several times, and the
-neuronal response is reported in a peri-stimulus-time histogram
-(PSTH). We can obtain the spike density of the PSTH by:
+    where \\(K\\) is the number of repetitions of the experiment. We can
+    smooth the results to get a continuous rate.
 
-\begin{equation}
-  \rho(t) =  \frac{1}{\Delta t} \frac{n\_K(t; t + \Delta t)}{K}
-\end{equation}
+    The problem with this scheme is that it cannot be the decoding scheme
+    of the brain. This measure makes sense if there is always a population
+    of neurons with the same stimulus. This leads to population coding.
 
-where \\(K\\) is the number of repetitions of the experiment. We can
-smooth the results to get a continuous rate.
+-    Rate as population activity (average over several neurons)
 
-The problem with this scheme is that it cannot be the decoding scheme
-of the brain. This measure makes sense if there is always a population
-of neurons with the same stimulus. This leads to population coding.
-
-
-#### Rate as population activity (average over several neurons) {#rate-as-population-activity--average-over-several-neurons}
-
-This is a simple extension of the spike density measure, but adding
-activity across a population of neurons. Population activity varies
-rapidly and can reflect changes in the stimulus nearly
-instantaneously, an advantage over temporal coding. However, it
-requires a homogeneous population of neurons, which is hardly
-realistic.
+    This is a simple extension of the spike density measure, but adding
+    activity across a population of neurons. Population activity varies
+    rapidly and can reflect changes in the stimulus nearly
+    instantaneously, an advantage over temporal coding. However, it
+    requires a homogeneous population of neurons, which is hardly
+    realistic.
 
 
 ### Spike Codes {#spike-codes}
 
 These are coding strategies based on spike timing.
 
+-    Time-to-first-spike
 
-#### Time-to-first-spike {#time-to-first-spike}
+    A neuron which fires shortly after the reference signal (an abrupt
+    input, for example) may signal a strong stimulation, and vice-versa.
+    This estimate has been successfully used in an interpretation of
+    neuronal activity in primate motor cortex.
 
-A neuron which fires shortly after the reference signal (an abrupt
-input, for example) may signal a strong stimulation, and vice-versa.
-This estimate has been successfully used in an interpretation of
-neuronal activity in primate motor cortex.
+    The argument is that the brain does not have time to evaluate more
+    than one spike per neuron per processing step, and hence the first
+    spike should contain most of the relevant information.
 
-The argument is that the brain does not have time to evaluate more
-than one spike per neuron per processing step, and hence the first
-spike should contain most of the relevant information.
+-    Phase
 
+    Oscillations are common in the olfactory system, and other areas of
+    the brain. Neuronal spike trains could then encode information in the
+    phase of a pulse, with respect to the background oscillation.
 
-#### Phase {#phase}
+-    Correlations and Synchrony
 
-Oscillations are common in the olfactory system, and other areas of
-the brain. Neuronal spike trains could then encode information in the
-phase of a pulse, with respect to the background oscillation.
-
-
-#### Correlations and Synchrony {#correlations-and-synchrony}
-
-Synchrony between any pairs of neurons could signify special events
-and convey information not contained in the firing rate of the
-neurons.
+    Synchrony between any pairs of neurons could signify special events
+    and convey information not contained in the firing rate of the
+    neurons.
 
 
 ### Spikes or Rates? {#spikes-or-rates}
@@ -241,11 +235,11 @@ depends on:
 
 Firing frequencies
 : relative timing of pre and post-synaptic
-    spikes, firing patterns
+    spikes, and the neuronal firing patterns
 
 Identity of synapses used
 : which neurons are connected, whether
-    synapse is inhibitory or excitatory, synaptic strength etc.
+    the synapse is inhibitory or excitatory, synaptic strength etc.
 
 
 ## Difficulties on training SNNs {#difficulties-on-training-snns}

@@ -49,7 +49,7 @@ value of the membrane potential of neuron $i$:
 
 where $\hat{t_i}$ is the last firing time of neuron $i$.
 
-We refer to moment when na given neuron emits an action potential as
+We refer to moment when a given neuron emits an action potential as
 the firing time of that neuron. We denote the firing times of neuron
 $i$ by $t_i^{(f)}$ where $f = 1,2,\dots$ is the label of the spike.
 Then we formally denote the spike train of a neuron $i$ as the
@@ -204,9 +204,9 @@ Neurons exchange information via spikes, and the information received
 depends on:
 
 - Firing frequencies :: relative timing of pre and post-synaptic
-     spikes, firing patterns
+     spikes, and the neuronal firing patterns
 - Identity of synapses used :: which neurons are connected, whether
-     synapse is inhibitory or excitatory, synaptic strength etc.
+     the synapse is inhibitory or excitatory, synaptic strength etc.
 
 * Difficulties on training SNNs
 
