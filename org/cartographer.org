@@ -1,0 +1,9 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Google Cartographer
+* Cartographer
+
+
+#+DOWNLOADED: https://google-cartographer.readthedocs.io/en/latest/_images/high_level_system_overview.png @ 2019-11-05 14:15:55
+[[file:images/cartographer/high_level_system_overview2019-11-05_14-15-55_.png]]
+
+- odometry pose :: how far we've moved, relative to where we started
