@@ -1,0 +1,6 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Robotics
+
+* Related
+- [[file:uncertainty_in_robotics.org][§uncertainty_in_robotics]]
+- [[file:global_localization.org][§global_localization]]
