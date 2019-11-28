@@ -147,9 +147,8 @@ precedence:
 
 * Parsing
 
-Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing.
-
-See §2019-11-27-1534 for an online parsing tool.
+Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing. See [[http://jsmachines.sourceforge.net/machines/][LR online parsing
+machines]] for an online parsing tool.
 
 ** Recursive-Descent Parsing
 
