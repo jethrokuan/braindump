@@ -149,6 +149,8 @@ precedence:
 
 Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing.
 
+See §2019-11-27-1534 for an online parsing tool.
+
 ** Recursive-Descent Parsing
 
 Consists of a set of procedures, one for each non-terminal. The

@@ -1,0 +1,6 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Arguments Against Zettelkasten
+
+1. Densely interconnecting ideas across domains results in complex
+   mental models, may obscure reality (Source: [[https://fs.blog/venkatesh-rao/][Venkatesh Rao, 2016
+   podcast with Farnam Street]])

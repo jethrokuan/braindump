@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-10-18T16:32:57+08:00
+lastmod = 2019-11-27T15:37:18+08:00
 tags = ["proglang", "compilers"]
 draft = false
 math = true
@@ -177,6 +177,8 @@ expr -> expr + term
 ## Parsing {#parsing}
 
 Parsers use [pushdown automata]({{< relref "theory_of_computation" >}}) to do parsing.
+
+See §2019-11-27-1534 for an online parsing tool.
 
 
 ### Recursive-Descent Parsing {#recursive-descent-parsing}
