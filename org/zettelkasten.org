@@ -8,4 +8,4 @@
 [[https://www.lesswrong.com/posts/NfdHG6oHBJ8Qxc26s/the-zettelkasten-method-1][The Zettelkasten Method - LessWrong 2.0]]
 
 * Related
-§2019-11-28-1739 Arguments Against Zettelkasten
+[[file:arguments_against_zettelkasten.org][§arguments_against_zettelkasten]]

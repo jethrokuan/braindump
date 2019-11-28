@@ -1,7 +1,7 @@
 +++
 title = "Zettelkasten"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-28T17:40:20+08:00
+lastmod = 2019-11-28T18:51:14+08:00
 draft = false
 math = true
 +++
@@ -16,4 +16,4 @@ math = true
 
 ## Related {#related}
 
-§2019-11-28-1739 Arguments Against Zettelkasten
+[§arguments\_against\_zettelkasten]({{< relref "arguments_against_zettelkasten" >}})
