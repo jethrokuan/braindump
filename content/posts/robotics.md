@@ -1,7 +1,7 @@
 +++
 title = "Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-29T00:19:49+08:00
+lastmod = 2019-11-29T00:41:54+08:00
 draft = false
 math = true
 +++

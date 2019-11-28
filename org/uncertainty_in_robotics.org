@@ -18,6 +18,8 @@ A robot that carries a notion of its own uncertainty that acts
 accordingly is superior to one that does not.
 #+END_QUOTE
 
+cite:thrun2005probabilistic
+
 * Pros
 1. Robust, and scale better to complex, unstructured environments
 2. Weaker requirements on the accuracy of the models compared to
@@ -29,3 +31,5 @@ accordingly is superior to one that does not.
 * Cons
 - Relatively computationally inefficient
 - Requires approximation (exact posteriors are computationally intractable)
+
+bibliography:robotics.bib
