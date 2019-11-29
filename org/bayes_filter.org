@@ -54,3 +54,6 @@ Approximations requires trading off:
   representations lend themselves to simple implementations for
   complex non-linear systems.
 
+* Related
+- [[file:gaussian_filter.org][§gaussian_filter]]
+

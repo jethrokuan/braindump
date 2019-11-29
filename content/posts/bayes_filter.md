@@ -1,7 +1,7 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-29T15:45:58+08:00
+lastmod = 2019-11-29T17:35:50+08:00
 draft = false
 math = true
 +++
@@ -69,3 +69,8 @@ Ease of implementation
     (see [§robotics\_probabilistic\_generative\_laws]({{< relref "robotics_probabilistic_generative_laws" >}})). Particle
     representations lend themselves to simple implementations for
     complex non-linear systems.
+
+
+## Related {#related}
+
+-   [§gaussian\_filter]({{< relref "gaussian_filter" >}})

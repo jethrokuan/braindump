@@ -1,0 +1,12 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Extended Kalman Filter
+
+* TODO Key Idea
+
+- Remove linearity assumption from kalman filter
+- Use taylor approximation for linearity
+
+* Related
+- [[file:bayes_filter.org][§bayes_filter]]
+- [[file:kalman_filter.org][§kalman_filter]]
+
