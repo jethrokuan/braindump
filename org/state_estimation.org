@@ -1,0 +1,10 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: State Estimation
+
+State estimation seeks to recover state variables from the data.
+Probabilistic state estimation computes belief distributions over
+possible world states.
+
+Examples of state estimation include [[file:global_localization.org][§global_localization]].
+
+[[file:bayes_filter.org][§bayes_filter]]
