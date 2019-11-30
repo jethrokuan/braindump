@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Extended Kalman Filter
 
-* TODO Key Idea
+* Key Idea
 
 Remove linearity assumption from the [[file:kalman_filter.org][§kalman_filter]]:
 

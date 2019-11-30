@@ -1,12 +1,12 @@
 +++
 title = "Extended Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-30T13:02:18+08:00
+lastmod = 2019-12-01T01:45:59+08:00
 draft = false
 math = true
 +++
 
-## <span class="org-todo todo TODO">TODO</span> Key Idea {#key-idea}
+## Key Idea {#key-idea}
 
 Remove linearity assumption from the [§kalman\_filter]({{< relref "kalman_filter" >}}):
 
