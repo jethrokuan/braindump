@@ -1,0 +1,13 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Non-parametric Filters
+
+Non-parametric filters do not make strong assumptions on the posterior
+density, making them well suited for complex, multi-modal beliefs. The
+representational power comes at the cost of computational complexity.
+
+Some non-parametric techniques allow adaptivity. For example, particle
+filters can adapt the number of particles based on the available
+compute resources.
+
+* Related
+- [[file:bayes_filter.org][§bayes_filter]]
