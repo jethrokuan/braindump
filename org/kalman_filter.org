@@ -39,12 +39,12 @@ These 4 assumptions give rise to the Kalman Filter algorithm.
 
 \begin{algorithm}
   \caption{Kalman Filter}
-  \label{bayes_filter}
+  \label{kalman_filter}
   \begin{algorithmic}[1]
     \Procedure{KalmanFilter}{$\mu_{t-1}, \Sigma_{t-1}, \mu_t, \z_t$}
     \State $\overline{\mu}_t = A_t \mu_{t-1} + B_t \mu_t$
     \State $\overline{\Sigma}_t = A_t \Sigma_{t-1} A_t^T + R_t$
-    \State ${K}_t = \hat{\Sigma}_t C_t^T (C_t \hat{\Sigma}_t C_t^T + Q_t)^{-1}$
+    \State ${K}_t = \overline{\Sigma}_t C_t^T (C_t \overline{\Sigma}_t C_t^T + Q_t)^{-1}$
     \State $\mu_t = \overline{\mu}_t + K_t(z_t - C_t\overline{\mu}_t)$
     \State $\Sigma_t = (I - K_t C_t) \overline{\Sigma}_t$
     \State \Return $\mu_t, \Sigma_t$
@@ -61,3 +61,4 @@ Kalman Filter ([[file:extended_kalman_filter.org][§extended_kalman_filter]]).
 
 * Related
 [[file:gaussian_filter.org][- §gaussian_filter]]
+[[file:extended_kalman_filter.org][- §extended_kalman_filter]]

@@ -1,7 +1,7 @@
 +++
 title = "Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-29T18:14:41+08:00
+lastmod = 2019-11-30T12:41:54+08:00
 draft = false
 math = true
 +++
@@ -44,12 +44,12 @@ These 4 assumptions give rise to the Kalman Filter algorithm.
 
 \begin{algorithm}
   \caption{Kalman Filter}
-  \label{bayes\_filter}
+  \label{kalman\_filter}
   \begin{algorithmic}[1]
     \Procedure{KalmanFilter}{$\mu\_{t-1}, \Sigma\_{t-1}, \mu\_t, \z\_t$}
     \State $\overline{\mu}\_t = A\_t \mu\_{t-1} + B\_t \mu\_t$
     \State $\overline{\Sigma}\_t = A\_t \Sigma\_{t-1} A\_t^T + R\_t$
-    \State ${K}\_t = \hat{\Sigma}\_t C\_t^T (C\_t \hat{\Sigma}\_t C\_t^T + Q\_t)^{-1}$
+    \State ${K}\_t = \overline{\Sigma}\_t C\_t^T (C\_t \overline{\Sigma}\_t C\_t^T + Q\_t)^{-1}$
     \State $\mu\_t = \overline{\mu}\_t + K\_t(z\_t - C\_t\overline{\mu}\_t)$
     \State $\Sigma\_t = (I - K\_t C\_t) \overline{\Sigma}\_t$
     \State \Return $\mu\_t, \Sigma\_t$
@@ -69,3 +69,4 @@ Kalman Filter ([§extended\_kalman\_filter]({{< relref "extended_kalman_filter" 
 ## Related {#related}
 
 [- §gaussian\_filter]({{< relref "gaussian_filter" >}})
+[- §extended\_kalman\_filter]({{< relref "extended_kalman_filter" >}})
