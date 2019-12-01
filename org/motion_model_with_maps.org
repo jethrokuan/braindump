@@ -1,0 +1,22 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Motion Model With Maps
+
+Often, we are given map $m$ of the environment, giving us further
+information about the robot pose $x_t$. In general,
+
+\begin{equation}
+  p\left(x_{t} | u_{t}, x_{t-1}\right) \neq p\left(x_{t} | u_{t}, x_{t-1}, m\right)
+\end{equation}
+
+And the map-based motion model should give better results. Computing
+this motion model in closed form is difficult. An approximation via
+factorization works well where the distance $x_{t-1}$ and $x_t$ is
+small.
+
+\begin{equation}
+  p\left(x_{t} | u_{t}, x_{t-1}, m\right)=\eta p\left(x_{t} | u_{t}, x_{t-1}\right) p\left(x_{t} | m\right)
+\end{equation}
+
+* Related
+- [[file:velocity_motion_model.org][§velocity_motion_model]]
+- [[file:odometry_motion_model.org][§odometry_motion_model]]

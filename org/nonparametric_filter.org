@@ -11,3 +11,6 @@ compute resources.
 
 * Related
 - [[file:bayes_filter.org][§bayes_filter]]
+- [[file:particle_filter.org][§particle_filter]]
+- [[file:histogram_filter.org][§histogram_filter]]
+ 

@@ -1,7 +1,7 @@
 +++
 title = "Non-parametric Filters"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T04:45:41+08:00
+lastmod = 2019-12-01T20:56:55+08:00
 draft = false
 math = true
 +++
@@ -18,3 +18,5 @@ compute resources.
 ## Related {#related}
 
 -   [§bayes\_filter]({{< relref "bayes_filter" >}})
+-   [§particle\_filter]({{< relref "particle_filter" >}})
+-   [§histogram\_filter]({{< relref "histogram_filter" >}})
