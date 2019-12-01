@@ -1,7 +1,7 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-29T17:35:50+08:00
+lastmod = 2019-12-01T19:22:13+08:00
 draft = false
 math = true
 +++
@@ -25,6 +25,9 @@ filtering. Computing \\(\text{bel}(t)\\) from
 \\(\overline{\text{bel}}(t)\\) is called _correction_ or the _measurement
 update_.
 
+
+## Algorithm {#algorithm}
+
 \begin{algorithm}
   \caption{Bayes Filtering}
   \label{bayes\_filter}
@@ -40,7 +43,10 @@ update_.
   \end{algorithmic}
 \end{algorithm}
 
-Mathematical Derivation makes the [§markovian\_assumption]({{< relref "markovian_assumption" >}}).
+
+## Details {#details}
+
+Mathematical derivation makes the [§markovian\_assumption]({{< relref "markovian_assumption" >}}).
 
 Exact techniques for belief calculation are reserved for specialized
 cases. In most scenarios, these beliefs have to be approximated, and

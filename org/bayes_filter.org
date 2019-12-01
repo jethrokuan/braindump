@@ -14,6 +14,7 @@ filtering. Computing $\text{bel}(t)$ from
 $\overline{\text{bel}}(t)$ is called /correction/ or the /measurement
 update/.
 
+* Algorithm
 \begin{algorithm}
   \caption{Bayes Filtering}
   \label{bayes_filter}
@@ -29,7 +30,8 @@ update/.
   \end{algorithmic}
 \end{algorithm}
 
-Mathematical Derivation makes the [[file:markovian_assumption.org][§markovian_assumption]].
+* Details
+Mathematical derivation makes the [[file:markovian_assumption.org][§markovian_assumption]].
 
 Exact techniques for belief calculation are reserved for specialized
 cases. In most scenarios, these beliefs have to be approximated, and
