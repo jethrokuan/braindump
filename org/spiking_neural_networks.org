@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Spiking Neural Networks
 
-- [[file:spiking_neurons_lit_review.org][§spiking_neurons_lit_review]] 
+- [[file:spiking_neurons_lit_review.org][§spiking_neurons_lit_review]]
+- [[file:temp_coding_comsa2019.org][§temp_coding_comsa2019]]
