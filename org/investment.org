@@ -1,0 +1,4 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Investment
+
+- [[file:investing_in_etfs.org][§investing_in_etfs]]

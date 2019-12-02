@@ -2,7 +2,6 @@
 #+TITLE: Robotics
 #+HUGO_TAGS: robotics
 
-* Related
 - [[file:uncertainty_in_robotics.org][§uncertainty_in_robotics]]
 - [[file:robotics_probabilistic_generative_laws.org][§robotics_probabilistic_generative_laws]]
 - [[file:global_localization.org][§global_localization]]
