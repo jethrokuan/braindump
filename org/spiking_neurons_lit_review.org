@@ -1,5 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
-#+TITLE: Spiking Neurons
+#+TITLE: Spiking Neurons (Literature Review)
 * Introduction to Spiking Neural Networks label:sec:snn
 
 While the project is equal part reinforcement learning and spiking
@@ -756,7 +756,7 @@ synapses. Neurons in a set $P_i$ are referred to as /pre-synaptic/ for
 The internal, analog state of each spiking neuron $i \in V$ at time
 $t$ is defined by its membrane potential $u_{i,t}$.
 
-* Long short-term memory and learning-to-learn in networks of spiking neurons cite:bellec18_long_short_term_memor_lear
+* Long short-term memory and learning-to-learn in networks of spiking neurons cite:bellec18_long_short_term_memor_learn
 
 *Key contribution*: Inclusion of adapting neurons into recurrent SNN
 models (RSNNs) increases computing and learning capability. By using a
