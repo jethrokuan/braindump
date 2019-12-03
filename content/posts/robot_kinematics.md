@@ -1,7 +1,7 @@
 +++
 title = "Robot Kinematics"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T21:49:31+08:00
+lastmod = 2019-12-03T22:41:00+08:00
 draft = false
 math = true
 +++
@@ -47,3 +47,4 @@ for motion planning.
 ## Related {#related}
 
 -   [§velocity\_motion\_model]({{< relref "velocity_motion_model" >}})
+-   [§odometry\_motion\_model]({{< relref "odometry_motion_model" >}})

@@ -6,3 +6,5 @@
 - [[file:robotics_probabilistic_generative_laws.org][§robotics_probabilistic_generative_laws]]
 - [[file:global_localization.org][§global_localization]]
 - [[file:state_estimation.org][§state_estimation]]
+- [[file:robot_motion.org][§robot_motion]]
+- [[file:range_finder_model.org][§range_finder_model]]

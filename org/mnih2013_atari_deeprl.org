@@ -1,0 +1,13 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Playing Atari with Deep RL
+* Preprocessing Steps
+
+1. Obtain raw pixels of size $210 \times 160$
+2. Grayscale and downsample to $110 \times 84$
+3. Crop representative $84 \times 84$ region
+4. Stack the last 4 frames in history to form the $84 \times 84 \times
+   4$ input
+
+* Training Method
+
+DQN with Experience Replay

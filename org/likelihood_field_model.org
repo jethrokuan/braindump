@@ -1,0 +1,32 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Likelihood Field Model
+
+* Key Idea
+Project an individual sensor measurement $z_t^k$ into the global
+coordinate frame of map $m$. Discards max-range readings.
+
+Assumes three types of noise, similar to [[file:range_finder_model.org][§range_finder_model]]:
+
+1. Measurement noise: Gaussian
+2. Failures: point-mass distribution at $z_{\text{max}}$
+3. Random measurements: Uniform distribution $p_{\text{rand}}$
+
+The model is a mixture of these 3 densities:
+
+\begin{equation}
+  z_{\mathrm{hit}} \cdot p_{\mathrm{hit}}+z_{\mathrm{rand}} \cdot p_{\mathrm{rand}}+z_{\mathrm{max}} \cdot p_{\mathrm{max}}
+\end{equation}
+
+* Issues
+
+1. Does not explicitly model dynamic objects that cause short readings
+2. Treats sensors as being able to see through walls: ray casting
+   replaced by nearest neighbour function: incapable of determining
+   whether a path to a point is intercepted by an obstacle in the map
+3. Does not account for map uncertainty
+
+These issues can be addressed via extensions to the algorithm.
+
+* Related
+- [[file:range_finder_model.org][§range_finder_model]]
+- [[file:map_matching.org][§map_matching]]

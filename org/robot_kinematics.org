@@ -41,3 +41,4 @@ for motion planning.
 
 * Related
 - [[file:velocity_motion_model.org][§velocity_motion_model]]
+- [[file:odometry_motion_model.org][§odometry_motion_model]]
