@@ -1,7 +1,7 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T14:19:18+08:00
+lastmod = 2019-12-05T18:15:55+08:00
 draft = false
 math = true
 +++
@@ -68,6 +68,11 @@ active localization
 : control the robot as to minimize the
     localization error or costs arising from moving a poorly localized
     robot into a hazardous place.
+
+
+## Summary {#summary}
+
+{{< figure src="/ox-hugo/screenshot2019-12-05_18-15-41_.png" caption="Figure 1: Comparisons between different Markov localization techniques" >}}
 
 
 ## Related {#related}

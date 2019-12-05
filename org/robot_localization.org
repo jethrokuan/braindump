@@ -49,8 +49,14 @@ integrating data over time is required to determine the pose.
   robot into a hazardous place.
 
 
+* Summary
+
+#+CAPTION: Comparisons between different Markov localization techniques
+[[file:images/robot_localization/screenshot2019-12-05_18-15-41_.png]]
+
 * Related
 - [[file:markov_localization.org][§markov_localization]]
 - [[file:ekf_localization.org][§ekf_localization]]
 - [[file:grid_mc_localization.org][§grid_mc_localization]]
+
 
