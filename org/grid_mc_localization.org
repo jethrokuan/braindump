@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Grid & Monte Carlo Localization
+
+Grid & Monte Carlo Localization methods are able to solve global
+localization problems (in comparison to EKF and Markov Localization [[file:robot_localization.org][§robot_localization]])
