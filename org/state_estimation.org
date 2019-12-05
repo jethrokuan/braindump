@@ -5,6 +5,6 @@ State estimation seeks to recover state variables from the data.
 Probabilistic state estimation computes belief distributions over
 possible world states.
 
-Examples of state estimation include [[file:global_localization.org][§global_localization]].
+Examples of state estimation include [[file:robot_localization.org][§robot_localization]].
 
 [[file:bayes_filter.org][§bayes_filter]]
