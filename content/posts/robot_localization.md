@@ -1,7 +1,7 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T13:55:56+08:00
+lastmod = 2019-12-05T14:08:12+08:00
 draft = false
 math = true
 +++
@@ -147,5 +147,5 @@ outliers
 
 information
 : EKF localization uses a subset of all available
-    information (processed features) to localize. IN addition EKF is
+    information (processed features) to localize. In addition EKF is
     unable to process negative information (lack of a feature).

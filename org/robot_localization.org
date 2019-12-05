@@ -116,5 +116,5 @@ far apart, and making sure that the robot's uncertainty is small.
   this mutual exclusion can significantly reduce the search space.
 - outliers :: Outliers are not addressed in the algorithm.
 - information :: EKF localization uses a subset of all available
-  information (processed features) to localize. IN addition EKF is
+  information (processed features) to localize. In addition EKF is
   unable to process negative information (lack of a feature).
