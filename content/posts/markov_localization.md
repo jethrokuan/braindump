@@ -1,7 +1,7 @@
 +++
 title = "Markov Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T14:18:56+08:00
+lastmod = 2019-12-05T21:00:29+08:00
 draft = false
 math = true
 +++
@@ -9,7 +9,7 @@ math = true
 ## Markov Localization {#markov-localization}
 
 A direct extension of the [§bayes\_filter]({{< relref "bayes_filter" >}}), but using the map \\(m\\) of the
-environment.
+environment:
 
 \begin{algorithm}
   \caption{Markov Localization}

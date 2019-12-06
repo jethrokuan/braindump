@@ -2,9 +2,8 @@
 #+TITLE: Markov Localization
 
 * Markov Localization
-
 A direct extension of the [[file:bayes_filter.org][§bayes_filter]], but using the map $m$ of the
-environment.
+environment:
 
 \begin{algorithm}
   \caption{Markov Localization}
