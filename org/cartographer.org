@@ -7,7 +7,7 @@ Google Cartographer provides a real-time solution for indoor mapping
 in the form of a sensor-equipped backpack that generates 2D grid maps
 with a $r = 5cm$ resolution cite:googlecartographer. It is built to
 scale to large maps, where previous approaches face issues. For
-example, particle filter SLAM approaches become resource intensive as
+example, particle filter SLAM ([[file:slam.org][§slam]]) approaches become resource intensive as
 maps become large, since each particle filter must maintain a
 representation of the full system state in each particle.
 

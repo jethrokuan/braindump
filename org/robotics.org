@@ -2,9 +2,16 @@
 #+TITLE: Robotics
 #+HUGO_TAGS: robotics
 
+* Theory
 - [[file:uncertainty_in_robotics.org][§uncertainty_in_robotics]]
 - [[file:robotics_probabilistic_generative_laws.org][§robotics_probabilistic_generative_laws]]
 - [[file:robot_localization.org][§robot_localization]]
 - [[file:state_estimation.org][§state_estimation]]
 - [[file:robot_motion.org][§robot_motion]]
 - [[file:range_finder_model.org][§range_finder_model]]
+- [[file:occupancy_grid_mapping.org][§occupancy_grid_mapping]]
+- [[file:slam.org][§slam]]
+
+* Tools
+- [[file:ros.org][§ros]]
+- [[file:cartographer.org][§cartographer]]
