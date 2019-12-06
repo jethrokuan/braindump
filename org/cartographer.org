@@ -1,9 +1,32 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Google Cartographer
-* Cartographer
 
+* System Overview
+
+Google Cartographer provides a real-time solution for indoor mapping
+in the form of a sensor-equipped backpack that generates 2D grid maps
+with a $r = 5cm$ resolution cite:googlecartographer. It is built to
+scale to large maps, where previous approaches face issues. For
+example, particle filter SLAM approaches become resource intensive as
+maps become large, since each particle filter must maintain a
+representation of the full system state in each particle.
+
+Laser scans are inserted into a submap at the best estimated position,
+which is assumed to be sufficiently accurate for short periods of
+time. Scan matching happens against a recent submap, so it only
+depends on recent scans, and the error of pose estimates in the world
+accumulates.
+
+To cope with this accumulation of error, /pose optimization/ is run
+regularly. When a submap is finished (i.e. no new scans are added in),
+it takes part in scan matching for loop closure. All finish submaps
+and scans are automatically considered for loop closure. If they are
+close enough based on current pose estimates, a scan matcher tries to
+find the scan in the submap, and if a good match is found within the
+currently estimated pose, it is added as a loop closing constraint to
+the optimization problem.
 
 #+DOWNLOADED: https://google-cartographer.readthedocs.io/en/latest/_images/high_level_system_overview.png @ 2019-11-05 14:15:55
 [[file:images/cartographer/high_level_system_overview2019-11-05_14-15-55_.png]]
 
-- odometry pose :: how far we've moved, relative to where we started
+bibliography:robotics.bib
