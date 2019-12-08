@@ -1,12 +1,12 @@
 +++
-title = "Temp Coding Comsa2019"
+title = "Temp Coding with Alpha Synaptic Function"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-02T13:27:35+08:00
+lastmod = 2019-12-08T21:45:24+08:00
 draft = false
 math = true
 +++
 
-## Temporal Coding using with Alpha Synaptic Function <sup id="caaddec51f6948e5fea79b6d41c79676"><a href="#comsa19_tempor_codin_spikin_neural_networ" title="Comsa, Potempa, Versari, Luca, Fischbacher, Gesmundo, \&amp; Alakuijala, Temporal Coding in Spiking Neural Networks With  Alpha Synaptic Function, {CoRR}, v(), (2019).">(Comsa {\it et al.}, 2019)</a></sup> {#temporal-coding-using-with-alpha-synaptic-function}
+## Temporal Coding with Alpha Synaptic Function <sup id="caaddec51f6948e5fea79b6d41c79676"><a href="#comsa19_tempor_codin_spikin_neural_networ" title="Comsa, Potempa, Versari, Luca, Fischbacher, Gesmundo, \&amp; Alakuijala, Temporal Coding in Spiking Neural Networks With  Alpha Synaptic Function, {CoRR}, v(), (2019).">(Comsa {\it et al.}, 2019)</a></sup> {#temporal-coding-with-alpha-synaptic-function}
 
 
 ### Motivation {#motivation}

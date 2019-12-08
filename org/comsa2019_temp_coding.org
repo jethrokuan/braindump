@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
-#+TITLE: Temp Coding Comsa2019
+#+TITLE: Temp Coding with Alpha Synaptic Function
 
-* Temporal Coding using with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ
+* Temporal Coding with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ
 
 ** Motivation
 

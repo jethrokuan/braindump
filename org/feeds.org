@@ -12,8 +12,6 @@
 *** https://reddit.com/r/MachineLearning/.rss
 *** https://medium.com/feed/mlreview/
 *** https://distill.pub/rss.xml
-*** http://www.datatau.com/rss
-*** https://towardsdatascience.com/feed
 *** http://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss
 *** https://thegradient.pub/rss/
 *** https://lilianweng.github.io/lil-log/feed.xml
