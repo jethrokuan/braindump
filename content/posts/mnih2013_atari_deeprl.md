@@ -1,12 +1,12 @@
 +++
 title = "Playing Atari with Deep RL"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T16:19:05+08:00
+lastmod = 2019-12-11T17:17:28+08:00
 draft = false
 math = true
 +++
 
-## Playing Atari With Deep RL <sup id="e3433750724eb4eebeebd0d71a7608d6"><a href="#mnih2013playing" title="Mnih, Kavukcuoglu, Silver, Graves, Antonoglou, Wierstra \&amp; Riedmiller, Playing atari with deep reinforcement learning, {arXiv preprint arXiv:1312.5602}, v(), (2013).">(Mnih {\it et al.}, 2013)</a></sup> {#playing-atari-with-deep-rl}
+## Playing Atari With Deep RL <a id="e3433750724eb4eebeebd0d71a7608d6" href="#mnih2013playing" title="Mnih, Kavukcuoglu, Silver, Graves, Antonoglou, Wierstra \&amp; Riedmiller, Playing atari with deep reinforcement learning, {arXiv preprint arXiv:1312.5602}, v(), (2013).">(Mnih et al., 2013)</a> {#playing-atari-with-deep-rl}
 
 
 ### Preprocessing Steps {#preprocessing-steps}
@@ -37,10 +37,10 @@ rapidly.
 
 ## Improving DQN {#improving-dqn}
 
--   Double Q-learning reduces bias <sup id="12d44fc18d38fd615bdd468a7a3a1f21"><a href="#van2016deep" title="Van Hasselt, Guez \&amp; Silver, Deep reinforcement learning with double q-learning, in in: {Thirtieth AAAI conference on artificial intelligence}, edited by (2016)">(Van Hasselt {\it et al.}, 2016)</a></sup>
--   Average Q-learning reduces variance <sup id="ff6280fa6d28cb1f79170f6a8c88ad92"><a href="#anschel2017averaged" title="Anschel, Baram \&amp; Shimkin, Averaged-dqn: Variance reduction and stabilization for deep reinforcement learning, 176--185, in in: {Proceedings of the 34th International Conference on Machine Learning-Volume 70}, edited by (2017)">(Anschel {\it et al.}, 2017)</a></sup>
--   Hindsight Experience Replay <sup id="ffaf2d08e446da500e82a251db070767"><a href="#andrychowicz2017hindsight" title="Andrychowicz, Wolski, Ray, Schneider, Fong, Welinder, McGrew, Tobin, Abbeel \&amp; Zaremba, Hindsight experience replay, 5048--5058, in in: {Advances in Neural Information Processing Systems}, edited by (2017)">(Andrychowicz {\it et al.}, 2017)</a></sup>
--   Distributional RL <sup id="df0211097f3af68bb797b195f1e9d661"><a href="#dabney2018distributional" title="Dabney, Rowland, Bellemare \&amp; Munos, Distributional reinforcement learning with quantile regression, in in: {Thirty-Second AAAI Conference on Artificial Intelligence}, edited by (2018)">(Dabney {\it et al.}, 2018)</a></sup>
+-   Double Q-learning reduces bias <a id="12d44fc18d38fd615bdd468a7a3a1f21" href="#van2016deep" title="Van Hasselt, Guez \&amp; Silver, Deep reinforcement learning with double q-learning, in in: {Thirtieth AAAI conference on artificial intelligence}, edited by (2016)">(Van Hasselt et al., 2016)</a>
+-   Average Q-learning reduces variance <a id="ff6280fa6d28cb1f79170f6a8c88ad92" href="#anschel2017averaged" title="Anschel, Baram \&amp; Shimkin, Averaged-dqn: Variance reduction and stabilization for deep reinforcement learning, 176--185, in in: {Proceedings of the 34th International Conference on Machine Learning-Volume 70}, edited by (2017)">(Anschel et al., 2017)</a>
+-   Hindsight Experience Replay <a id="ffaf2d08e446da500e82a251db070767" href="#andrychowicz2017hindsight" title="Andrychowicz, Wolski, Ray, Schneider, Fong, Welinder, McGrew, Tobin, Abbeel \&amp; Zaremba, Hindsight experience replay, 5048--5058, in in: {Advances in Neural Information Processing Systems}, edited by (2017)">(Andrychowicz et al., 2017)</a>
+-   Distributional RL <a id="df0211097f3af68bb797b195f1e9d661" href="#dabney2018distributional" title="Dabney, Rowland, Bellemare \&amp; Munos, Distributional reinforcement learning with quantile regression, in in: {Thirty-Second AAAI Conference on Artificial Intelligence}, edited by (2018)">(Dabney et al., 2018)</a>
 
 
 ## References {#references}
