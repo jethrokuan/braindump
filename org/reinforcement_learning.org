@@ -3,25 +3,33 @@
 #+HUGO_TAGS: machine-learning
 bibliographystyle:unsrt
 
+Reinforcement Learning is the field of learning and decision-making
+under uncertainty. An agent acts with a learnable behaviour policy in
+an environment with initially unknown dynamics and reward. The agent
+observes the environment's state (sometimes partially: [[file:pomdp.org][§pomdp]]) and
+chooses an action.
+
+- behaviour :: $\Pi(a | s)$
+- action :: $a_t \in A$
+- reward :: $r_{t+1} \in R$
+- state :: $s_{t+1} \in S$
+- dynamics :: $T(s_{t+1} | s_t, a_t)$
+- reward :: $R(r_{t+1} | s_t, a_t)$
+
+The dynamics and rewards here reflect the [[file:markovian_assumption.org][§markovian_assumption]].
+States can be represented in many ways: in a tabular fashion (state 1
+$\rightarrow$ state 2) or as features.
+
+* Key Challenges
+1. Exploration vs Exploitation
+2. Function approximation
+3. Credit Assignment
+
 * Making Complex Decisions
 Earlier, we were concerned with environments with one-shot, episodic
 decision problems. Sequential decision problems incorporate utilities,
 uncertainty and sensing. These include searching and planning problems
 as special cases.
-
-** Markov Decision Process (MDP)
-A sequential decision problem for a fully observable, stochastic
-environment with a Markovian transition model and additive rewards is
-called a Markov decision process. It consists of a set of states, with
-initial state $s_0$, a set $ACTIONS(s)$ of actions in each state, a
-transition model $P(s'|s, a)$, and a reward function $R(s)$.
-
-A policy, denoted $\pi$, specifies what the agent should do in any state
-$s$. This action is denoted by $\pi(s)$. The optimal policy $\pi^*$ yields the
-highest expected utility.
-
-The careful balancing of risk and reward is a characteristic of MDPs
-that does not arise in deterministic search problems.
 
 ** Utilities over time
 A finite horizon for decision making means that there is a fixed time
@@ -169,206 +177,6 @@ gives us a means to design efficient heuristic algorithms.
 | Prediction | Bellman Expectation Equation                             | Iterative Policy Evaluation |
 | Control    | Bellman Expectation Equation + Greedy Policy Improvement | Policy Iteration            |
 | Control    | Bellman Optimality Equation                              | Value Iteration             |
-** Partially Observable MDPs (POMDPs)
-The assumption of full observability, accompanied with the Markov
-assumption for the transition model means that the optimal policy
-depends only on the current state. When the environment is partially
-observable, the agent does not know which state it is in. The agent
-then cannot execute $\pi(s)$. The utility of a state $s$ and the optimal
-action in $s$ does not only depend on $s$, but also how much the agent
-knows when it is in $s$.
-
-In addition to the elements of the MDP -- the transition model
-$P(s'|s, a)$, actions $A(s)$, and reward function $R(s)$, it also has
-a sensor model $P(e|s)$. The sensor model specifies the probability of
-perceiving evidence $e$ in state $s$. For example, a sensor might
-measure the number of adjacent walls. A noisy sensor might return the
-wrong value with some probability.
-
-Belief states are the set of actual states the agent might be in. In
-POMDPs, these belief states are probability distributions over all
-possible states. The agent can calculate its current belief state as
-the conditional probability distribution over the actual states given
-the sequences of percepts and actions so far.
-
-If the previous belief state is $b(s)$, and the agent performs some
-action $a$ and perceives evidence $e$, then the new belief state is
-given by:
-
-\begin{equation}
-b'(s') = \alpha P(e | s') \sum_s P(s' | s, a) b(s)
-\end{equation}
-
-where $\alpha$ is a normalizing constant that makes the belief state sum
-to 1.
-
-*The optimal action in a POMDP depends only on the agent's belief
-state*. The optimal policy can be described by a mapping $\pi^* (b)$ from
-belief states to actions. 
-
-The decision cycle of a POMDP can be broken down into 3 steps:
-
-1. Given the current belief state $b$, execute the action $a = \pi^* (b)$.
-2. Receive percept $e$.
-3. Update the belief state to $b'$ and repeat.
-
-If we knew the action and the subsequent percept, then the update to
-the belief state would be a deterministic one, following the update
-equation. The subsequent percept is not yet known, so the agent will
-arrive in one of several possible belief states. The probability of
-perceiving $e$, given that $a$ is was the action taken from belief
-state $b$, is given by:
-
-\begin{align}
-  P(e | a,b) &= \sum_{s'} P(e | a, s', b) P(s' | a, b) \\
-             &= \sum_{s'} P(e|s')P(s'|a, b) \\
-             &= \sum_{s'} P(e | s')\sum_{s'}P(s'|s, a)b(s)
-\end{align}
-
-\begin{align}
-  P(b' | a, b) &= \sum_eP(b' | e, a, b) P(e | a, b) \\
-               &= \sum_eP(b' | e, a, b)\sum_{s'} P(e|s')\sum_{s'} P(s'
-                 | s, a)b(s)
-\end{align}
-
-Where $P(b' | e, a, b) = 1$ if $b' = FORWARD(b,a,e)$ and $0$
-otherwise.
-
-Because POMDPs have continuous state space, new algorithms for
-computing or approximating the optimal policies for MDPs do not apply here.
-
-** Value iteration for POMDPs
-The value iteration algorithm for the MDP computed one utility value
-for each state. With infinitely many belief states, we need to be more
-creative.
-
-Consider conditional plans, and how the expected utility of executing
-a fixed conditional plan varies with the initial belief state.
-
-1. Let the utility of executing a fixed conditional plan $p$ starting
-   in physical state $s$ be $\alpha_p(s)$. Then the expected utility of
-   executing $p$ in belief state $b$ is $\sum_s b(s) \alpha_p (s)$ Hence the
-   expected utility of a fixed conditional plan varies linearly with
-   $b$.
-2. At any given belief state $b$, the optimal policy will choose to
-   execute the conditional plan with the highest expected utility, and
-   the expected utility is just the utility of that conditional plan:
-
-\begin{equation}
-  U(b) = U^{\pi^*}(b) = max_{p} b \cdot \alpha_p
-\end{equation}
-
-If the optimal policy $\pi^*$ chooses to execute $p$ starting at $b$,
-then it is reasonable to expect that it might choose to execute $p$ in
-belief states that are close to $b$.
-
-From these 2 observations, we see that the utility function $U(b)$ on
-belief states, being the maximum of a collection of hyperplanes, will
-be piecewise linear and convex.
-
-Let $p$ be a depth-d conditional plan whose initial action is $a$ and
-whose depth-d-1 subplan for percept $e$ is $p.e$, then
-
-\begin{equation}
-  \alpha_p{s} = R(s) + \gamma \left( \sum_{s'} P(s' | s,a)\sum_e P(e|s')\alpha_{p.e}(s') \right)
-\end{equation}
-
-This recursion gives rise to a value iteration algorithm:
-
-#+BEGIN_SRC text
-  function POMDP-VALUE-ITERATION returns a utility function
-    inputs: pomdp
-            e, the maximum error allowed for utility
-    locals: U, U' sets of plans p
-
-    U' <- set containing the empty plan [], with \alpha_[](s) = R(s)
-    repeat
-      U <- U'
-      U' <- set of all plans computed with above equation
-      U' <- REMOVE-DOMINATED-PLANS(U')
-    until MAX-DIFFERENCE(U, U') < e(1-\gamma) / \gamma
-    return U
-#+END_SRC
-
-The algorithm's complexity is dominated by the number of plans
-generated: given $|A|$ possible actions and $|E|$ possible
-observations, there are $|A|^{O(|E|^{d-1})}$ distinct depth-d plans,
-making the algorithm hopelessly inefficient for larger problems.
-
-** TODO Online agents for POMDPs
-
-** Monte Carlo Tree Search
-:PROPERTIES:
-:REFERENCE_ALL: https://jeffbradberry.com/posts/2015/09/intro-to-monte-carlo-tree-search/ https://www.youtube.com/watch?v=Fbs4lnGLS28M http://www.moderndescartes.com/essays/deep_dive_mcts/
-:END:
-We are still far from making anything that even resembles a strong AI.
-What makes MCTS different from [[https://en.wikipedia.org/wiki/Minimax][Minimax]]?
-
-Minimax can take an impractical amount of time to do a full search of
-the game tree, especially games with high branching factor. Some games
-are highly open-ended, with game trees that are highly complex. This
-makes it difficult to write an evaluation function for each state.
-MCTS is a technique that will give good results for games, and is
-domain-independent.
-
-UCB1 constructs statistical confidence intervals:
-
-\begin{equation}
-  \bar{x_i} \pm \sqrt{\frac{2 \ln n}{n_i}}
-\end{equation}
-
-where:
-
-- $\bar{x_i}$ is the mean payout for action $i$
-- $n_i$ is the number of simulations of action $i$
-- $n$ is the total number of plays
-
-The strategy is to pick the action with the highest upper bound each time.
-
-How could an AI possibly "plan" ahead when there are so many potential
-moves and counter moves in Go?
-
-MCTS builds a /statistics tree/ (detailing value of nodes) that
-partially maps onto the entire tree. Statistics tree guides the AI.
-
-MCTS constructs the statistics tree at the starting point.
-
-- Selection :: All child nodes have now been visited at least once.
-               Now AI can select the best child node.
-  - based on how good the statistics are
-  - how much the child node has been "ignored"
-- Expansion :: Add a new node that the AI will investigate
-- Simulation :: starting from position represented by left child node,
-                make random moves repeatedly until the game is won or lost
-- Update :: Depending on win or loss, update left child node in stats
-            tree with relevant stats
-
-The parent nodes inherit statistics from child nodes.
-
-The node with the highest number of simulations will be chosen as the
-next move.
-
-The first phase, selection, lasts until the statistics necessary to
-treat each position reached as a multi-armed bandit problem is
-collected. 
-
-The second phase, expansion, occurs when the algorithm can longer be
-applied. An unvisited child is randomly chosen, and a new record node
-is added to the tree of statistics.
-
-After expansion, the remainder of the playout is in phase 3,
-simulation. This is done as a typical monte carlo simulation.
-
-When the playout reaches the end, the update phase takes place. All of
-the positions visited during this playout have their play count and
-their win count incremented.
-
-Some great references for productionized implementations of MCTS
-include:
-
-- [[https://github.com/tensorflow/minigo/blob/master/strategies.py][minigo/strategies.py]]
-- [[https://github.com/tensorflow/minigo/blob/master/mcts.py][minigo/mcts.py]]
-
 
 * Passive Reinforcement Learning
 We start with a passive learning agent using a state-based
@@ -580,67 +388,21 @@ to be able choose an action based on $U$ via one-step look-ahead. The
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
-** Q-learning
-Q-learning learns an action-utility representation instead of learning
-utilities. We will use the notation $Q(s,a)$ to denote the value of
-doing action $a$ in state $s$.
+* RL Applications
 
-\begin{equation}
-  U = max_a Q(s, a)
-\end{equation}
+- Personalizer :: [[http://hunch.net/~rwil][ICML 2017 Tutorial on Real World Interactive Learning]]
+- Robotics :: [[https://sites.google.com/view/icml17deeprl][Deep Reinforcement Learning, Decision Making, and Control]]
+- Tutoring Systems :: [[https://www.youtube.com/watch?v=TqT9nIx27Eg][Reinforcement Learning with People - NIPS 2017 - YouTube]]
 
-*A TD agent that learns a Q-function does not need a model of the form
-$P(s' | s, a)$, either for learning or for action selection.*
-Q-learning is hence called a model-free method. We can write a
-constraint equation as follows:
+* Resources
+- [[https://slideslive.com/38921493/reinforcement-learning-past-present-and-future-perspectives][Katja Hofmann | Reinforcement Learning: Past, Present, and Future Perspective...]]
 
-\begin{equation}
-  Q(s,a) = R(s) + \gamma \sum_{s'} P(s' | s, a) max_{a'} Q(s', a')
-\end{equation}
+* Related
+- [[file:markov_decision_process.org][§markov_decision_process]]
+- [[file:mcts.org][§mcts]]
+- [[file:deep_rl.org][§deep_rl]]
+- [[file:td_learning.org][§td_learning]]
+- [[file:q_learning.org][§q_learning]]
 
-However, this equation requires a model to be learnt, since it depends
-on $P(s' | s, a)$. The TD approach requires no model of state
-transitions.
-
-The updated equation for TD Q-learning is:
-
-\begin{equation}
-  Q(s, a) \leftarrow Q(s, a) + \alpha (R(s) + \gamma max_{a'} Q(s',
-  a') - Q(s,a))
-\end{equation}
-
-which is calculated whenever action $a$ is executed in state $s$
-leading to state $s'$.
-
-Q-learning has a close relative called SARSA
-(State-Action-Reward-State-Action). The update rule for SARSA is as
-follows:
-
-\begin{equation}
-  Q(s, a) \leftarrow Q(s, a) + \alpha (R(s) + \gamma Q(s', a') - Q(s, a))
-\end{equation}
-
-where $a'$ is the action actually taken in state $s'$. The rule is
-applied at the end of each $s, a, r, s', a'$ quintuplet, hence the
-name.
-
-Whereas Q-learning backs up the best Q-value from the state reached in
-the observed transition, SARSA waits until an action is actually taken
-and backs up the Q-value for that action. For a greedy agent that
-always takes the action with best Q-value, the two algorithms are
-identical. When exploration is happening, they differ significanty.
-
-Because Q-learning uses the best Q-value, it pays no attention to the
-actual policy being followed - it is an off-policy learning algorithm.
-However, SARSA is an on-policy algorithm.
-
-Q-learning is more flexible in the sense that a Q-learning agent can
-learn how to behave well even when guided by a random or adversarial
-exploration policy. On the other hand, SARSA is more realistic: for
-example if the overall policy is even partly controlled by other
-agents, it is better to learn a Q-function for what will actually
-happen rather than what the agent would like to happen.
-
-* 
 bibliography:rl.bib
 

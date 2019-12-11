@@ -1,0 +1,25 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Generalization In RL
+
+- Generalization using successor features (Dayan 1993).
+- Adapt to new reward structure (Barreto 2018)
+- How many tasks are needed before modern approaches generalize?
+  (Cobbe 2019)
+
+Generalization with selective noise injection and information
+bottleneck
+
+- Insight 1: Selective noise injection for gradient update but not
+  behaviour (rollout) policy speeds learning
+- Insight 2: Regularization with Information bottleneck is
+  particularly effective
+
+\begin{equation}
+  \nabla_{\theta} J\left(\pi_{\theta}\right)=\widehat{\mathbb{E}}_{\pi_{\theta}^{r}\left(a_{t} | x_{t}\right)}\left[\sum_{t}^{T} \frac{\pi_{\theta}\left(a_{t} | x_{t}\right)}{\pi_{\theta}^{r}\left(a_{t} | x_{t}\right)} \nabla_{\theta} \log \pi_{\theta}\left(a_{t} | x_{t}\right) \hat{A}_{t}\right]
+\end{equation}
+
+* Benchmarks
+- Multi-Room (Chevalier 2018)
+  - No room is seen twice
+- CoinRun (Cobbe 2019)
+- [[https://github.com/openai/procgen][openai/procgen]]

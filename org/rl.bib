@@ -100,39 +100,6 @@
   publisher    = {Springer Nature}
 }
 
-@article{andrychowicz17_hinds_exper_replay,
-  author =       {Andrychowicz, Marcin and Wolski, Filip and Ray, Alex
-                  and Schneider, Jonas and Fong, Rachel and Welinder,
-                  Peter and McGrew, Bob and Tobin, Josh and Abbeel,
-                  Pieter and Zaremba, Wojciech},
-  title =        {Hindsight Experience Replay},
-  journal =      {CoRR},
-  year =         2017,
-  url =          {http://arxiv.org/abs/1707.01495v3},
-  abstract =     {Dealing with sparse rewards is one of the biggest
-                  challenges in Reinforcement Learning (RL). We
-                  present a novel technique called Hindsight
-                  Experience Replay which allows sample-efficient
-                  learning from rewards which are sparse and binary
-                  and therefore avoid the need for complicated reward
-                  engineering. It can be combined with an arbitrary
-                  off-policy RL algorithm and may be seen as a form of
-                  implicit curriculum. We demonstrate our approach on
-                  the task of manipulating objects with a robotic arm.
-                  In particular, we run experiments on three different
-                  tasks: pushing, sliding, and pick-and-place, in each
-                  case using only binary rewards indicating whether or
-                  not the task is completed. Our ablation studies show
-                  that Hindsight Experience Replay is a crucial
-                  ingredient which makes training possible in these
-                  challenging environments. We show that our policies
-                  trained on a physics simulation can be deployed on a
-                  physical robot and successfully complete the task.},
-  archivePrefix ={arXiv},
-  eprint =       {1707.01495},
-  primaryClass = {cs.LG},
-}
-
 @article{schaul15_prior_exper_replay,
   author =       {Schaul, Tom and Quan, John and Antonoglou, Ioannis
                   and Silver, David},
@@ -199,4 +166,70 @@
   archivePrefix ={arXiv},
   eprint =       {1506.02438},
   primaryClass = {cs.LG},
+}
+
+@inproceedings{dann2017unifying,
+  title={Unifying PAC and regret: Uniform PAC bounds for episodic reinforcement learning},
+  author={Dann, Christoph and Lattimore, Tor and Brunskill, Emma},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={5713--5723},
+  year={2017}
+}
+
+@article{kaelbling1996reinforcement,
+  title={Reinforcement learning: A survey},
+  author={Kaelbling, Leslie Pack and Littman, Michael L and Moore, Andrew W},
+  journal={Journal of artificial intelligence research},
+  volume={4},
+  pages={237--285},
+  year={1996}
+}
+
+@incollection{jin_q_learning_provably_efficient,
+title = {Is Q-Learning Provably Efficient?},
+author = {Jin, Chi and Allen-Zhu, Zeyuan and Bubeck, Sebastien and Jordan, Michael I},
+booktitle = {Advances in Neural Information Processing Systems 31},
+editor = {S. Bengio and H. Wallach and H. Larochelle and K. Grauman and N. Cesa-Bianchi and R. Garnett},
+pages = {4863--4873},
+year = {2018},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf}
+}
+
+@article{mnih2013playing,
+  title={Playing atari with deep reinforcement learning},
+  author={Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Graves, Alex and Antonoglou, Ioannis and Wierstra, Daan and Riedmiller, Martin},
+  journal={arXiv preprint arXiv:1312.5602},
+  year={2013}
+}
+
+@inproceedings{van2016deep,
+  title={Deep reinforcement learning with double q-learning},
+  author={Van Hasselt, Hado and Guez, Arthur and Silver, David},
+  booktitle={Thirtieth AAAI conference on artificial intelligence},
+  year={2016}
+}
+
+@inproceedings{anschel2017averaged,
+  title={Averaged-dqn: Variance reduction and stabilization for deep reinforcement learning},
+  author={Anschel, Oron and Baram, Nir and Shimkin, Nahum},
+  booktitle={Proceedings of the 34th International Conference on Machine Learning-Volume 70},
+  pages={176--185},
+  year={2017},
+  organization={JMLR. org}
+}
+
+@inproceedings{andrychowicz2017hindsight,
+  title={Hindsight experience replay},
+  author={Andrychowicz, Marcin and Wolski, Filip and Ray, Alex and Schneider, Jonas and Fong, Rachel and Welinder, Peter and McGrew, Bob and Tobin, Josh and Abbeel, OpenAI Pieter and Zaremba, Wojciech},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={5048--5058},
+  year={2017}
+}
+
+@inproceedings{dabney2018distributional,
+  title={Distributional reinforcement learning with quantile regression},
+  author={Dabney, Will and Rowland, Mark and Bellemare, Marc G and Munos, R{\'e}mi},
+  booktitle={Thirty-Second AAAI Conference on Artificial Intelligence},
+  year={2018}
 }

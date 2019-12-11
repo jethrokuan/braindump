@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T12:54:47+08:00
+lastmod = 2019-12-11T16:22:15+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -23,6 +23,7 @@ math = true
 1.  [CS285 Fall 2019 - YouTube](https://www.youtube.com/playlist?list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A)
 2.  [Welcome to Spinning Up in Deep RL! — Spinning Up documentation](https://spinningup.openai.com/en/latest/)
     ([Tensorflow](https://github.com/openai/spinningup), [Pytorch](https://github.com/kashif/firedup/))
+3.  [David Silver's Deep RL ICML Tutorial](https://www.icml.cc/2016/tutorials/deep%5Frl%5Ftutorial.pdf)
 
 
 ## Algorithms {#algorithms}
@@ -150,8 +151,6 @@ updated target**.
 
 -    Experience Replay
 
-    This idea is first proposed in <sup id="2be9d1740dee0aea772ef29e59e5766a"><a href="#Mnih_2015" title="Mnih, Kavukcuoglu, Silver, David, Rusu, Veness, , Bellemare, Graves, Riedmiller, Martin, Fidjeland, Ostrovski, Georg \&amp; et, Human-level control through deep reinforcement  learning, {Nature}, v(7540), 529&#8211;533 (2015).">(Mnih {\it et al.}, 2015)</a></sup>.
-
     All episodic steps \\(e\_t = (S\_t, A\_t, R\_t, S\_{t+1})\\) are stored in a
     replay buffer \\(D\_t = \left\\{e\_1, \dots, e\_t\right\\}\\). \\(D\_t\\) has
     experience tuples over many episodes. During Q-learning updates,
@@ -170,7 +169,7 @@ updated target**.
     One ability humans have is to learn almost as much from achieving an
     undesirable outcome as from the desired one. This property is missing
     from many model-free RL algorithms. _Hindsight Experience Replay (HER)_
-    <sup id="338b9415f1be2c4aa207d23394706bb6"><a href="#andrychowicz17_hinds_exper_replay" title="Andrychowicz, Wolski, Ray, , Schneider, Fong, Welinder, Peter, McGrew, Tobin, Abbeel, Pieter \&amp; Zaremba, Hindsight Experience Replay, {CoRR}, v(), (2017).">(Andrychowicz {\it et al.}, 2017)</a></sup> allows the algorithm to perform
+    <sup id="ffaf2d08e446da500e82a251db070767"><a href="#andrychowicz2017hindsight" title="Andrychowicz, Wolski, Ray, Schneider, Fong, Welinder, McGrew, Tobin, Abbeel \&amp; Zaremba, Hindsight experience replay, 5048--5058, in in: {Advances in Neural Information Processing Systems}, edited by (2017)">(Andrychowicz {\it et al.}, 2017)</a></sup> allows the algorithm to perform
     this kind of reasoning, and can be combined with any off-policy RL
     algorithm. This is applicable whenever multiple goals may be achieved.
     This makes learning more sample efficient, and possible when rewards
@@ -206,4 +205,4 @@ updated target**.
 
     <a id="schaul15_prior_exper_replay"></a>Schaul, T., Quan, J., Antonoglou, I., & Silver, D., *Prioritized Experience Replay*, CoRR, *()*,  (2015).  [↩](#63b3f3d1a1abcd81f6cfc4a0b95212d0)
 
-    <a id="andrychowicz17_hinds_exper_replay"></a>Andrychowicz, M., Wolski, F., Ray, A., Schneider, J., Fong, R., Welinder, P., McGrew, B., …, *Hindsight Experience Replay*, CoRR, *()*,  (2017).  [↩](#338b9415f1be2c4aa207d23394706bb6)
+    <a id="andrychowicz2017hindsight"></a>Andrychowicz, M., Wolski, F., Ray, A., Schneider, J., Fong, R., Welinder, P., McGrew, B., …, *Hindsight experience replay*, In , Advances in Neural Information Processing Systems (pp. 5048–5058) (2017). : . [↩](#ffaf2d08e446da500e82a251db070767)

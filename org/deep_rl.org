@@ -17,6 +17,7 @@ bibliographystyle:unsrt
 1. [[https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A][CS285 Fall 2019 - YouTube]]
 2. [[https://spinningup.openai.com/en/latest/][Welcome to Spinning Up in Deep RL! — Spinning Up documentation]]
    ([[https://github.com/openai/spinningup][Tensorflow]], [[https://github.com/kashif/firedup/][Pytorch]])
+3. [[https://www.icml.cc/2016/tutorials/deep_rl_tutorial.pdf][David Silver's Deep RL ICML Tutorial]]
 
 * Algorithms
 
@@ -136,8 +137,6 @@ updated target*.
 
 *** Experience Replay
 
-This idea is first proposed in cite:Mnih_2015.
-
 All episodic steps $e_t = (S_t, A_t, R_t, S_{t+1})$ are stored in a
 replay buffer $D_t = \left\{e_1, \dots, e_t\right\}$. $D_t$ has
 experience tuples over many episodes. During Q-learning updates,
@@ -156,7 +155,7 @@ using importance-sampling weights.
 One ability humans have is to learn almost as much from achieving an
 undesirable outcome as from the desired one. This property is missing
 from many model-free RL algorithms. /Hindsight Experience Replay (HER)/
-cite:andrychowicz17_hinds_exper_replay allows the algorithm to perform
+cite:andrychowicz2017hindsight allows the algorithm to perform
 this kind of reasoning, and can be combined with any off-policy RL
 algorithm. This is applicable whenever multiple goals may be achieved.
 This makes learning more sample efficient, and possible when rewards
