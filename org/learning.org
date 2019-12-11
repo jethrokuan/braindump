@@ -91,4 +91,4 @@ work on it. This provides a direct feedback loop cite:maciver_hard_things.
 #+END_QUOTE
 
 
-bibliography:learning.bib
+bibliography:biblio/learning.bib

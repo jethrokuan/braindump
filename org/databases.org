@@ -22,4 +22,4 @@ Understanding the three classical ~JOIN~ algorithms – ~NestedLoop~,
 how they behave when there is no index can give you a lot of insight
 on how databases run queries. cite:felipe_demys_join_algor
 
-bibliography:db.bib
+bibliography:biblio/db.bib

@@ -139,4 +139,4 @@ Gaussians. cite:johndrow17_bayes_shrin_at_gwas_scale
 
 
 ** 
-bibliography:bayesian_inference.bib
+bibliography:biblio/bayesian_inference.bib

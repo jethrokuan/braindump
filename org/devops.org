@@ -88,5 +88,5 @@ Scheduler scales a lot better than k8s (earlier).
 
 * 
 
-bibliography:scheduling.bib
+bibliography:biblio/scheduling.bib
 

@@ -29,4 +29,4 @@ the optimization problem.
 #+DOWNLOADED: https://google-cartographer.readthedocs.io/en/latest/_images/high_level_system_overview.png @ 2019-11-05 14:15:55
 [[file:images/cartographer/high_level_system_overview2019-11-05_14-15-55_.png]]
 
-bibliography:robotics.bib
+bibliography:biblio/robotics.bib

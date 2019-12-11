@@ -280,4 +280,4 @@ sampling from complex distributions via sampling from a simple
 distribution, and has applications in techniques like variational
 inference. 
 
-bibliography:neural_ode.bib
+bibliography:biblio/neural_ode.bib

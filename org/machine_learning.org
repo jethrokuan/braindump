@@ -687,7 +687,7 @@ has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
-bibliography:ml.bib
+bibliography:biblio/ml.bib
 
 * Footnotes
 [fn:1] See [[https://drivendata.github.io/cookiecutter-data-science/][Home - Cookiecutter Data Science]].

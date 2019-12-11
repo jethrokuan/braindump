@@ -24,4 +24,4 @@ To alleviate these issues:
 2. Evaluate on appropriate datasets (size is important)
 3. Release reproducible code
 
-bibliography:recsys.bib
+bibliography:biblio/recsys.bib

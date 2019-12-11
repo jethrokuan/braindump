@@ -415,7 +415,7 @@ hierarchical fashion and distributed around the world.
      queried by a root server, the authoritative name server responds
      with a reply containing the desired mapping. 
 
-bibliography:networking.bib
+bibliography:biblio/networking.bib
 
 * Transport Layer
 

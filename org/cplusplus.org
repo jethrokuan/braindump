@@ -198,5 +198,5 @@ http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
 * Links
 - [[https://cpppatterns.com/][C++ Patterns]]
 
-bibliography:cpp.bib
+bibliography:biblio/cpp.bib
 

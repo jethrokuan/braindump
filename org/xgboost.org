@@ -103,4 +103,4 @@ Allreduce framework. XGBoost requires gradients and hessians from each
 distributed worker. This fit the allreduce framework, which broadcasts
 each worker's reduce result across all processes. cite:chen3rabit
 
-bibliography:xgboost.bib
+bibliography:biblio/xgboost.bib

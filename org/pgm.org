@@ -687,4 +687,4 @@ problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
 
-bibliography:pgm.bib
+bibliography:biblio/pgm.bib

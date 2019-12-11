@@ -11,5 +11,5 @@
 * TODO A Contrastive Divergence for Combining Variational Inference and MCMC cite:ruiz19_contr_diver_combin_variat_infer_mcmc
 
 * 
-bibliography:ml.bib
+bibliography:biblio/ml.bib
 

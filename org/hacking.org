@@ -15,4 +15,4 @@ cite:trimstray_se_hackers
 - https://wigle.net/
 
 
-bibliography:hacking.bib
+bibliography:biblio/hacking.bib

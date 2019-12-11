@@ -395,4 +395,4 @@ The goal is to learn correlations invariant across training
 environments. 
 
 ** 
-bibliography:machine-teaching.bib
+bibliography:biblio/machine-teaching.bib

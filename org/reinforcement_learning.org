@@ -404,5 +404,5 @@ training sequences tends to infinity.
 - [[file:td_learning.org][§td_learning]]
 - [[file:q_learning.org][§q_learning]]
 
-bibliography:rl.bib
+bibliography:biblio/rl.bib
 

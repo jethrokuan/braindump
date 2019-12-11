@@ -18,5 +18,5 @@
 
 * 
 
-bibliography:eds.bib
+bibliography:biblio/eds.bib
 

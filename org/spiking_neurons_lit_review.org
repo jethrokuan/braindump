@@ -880,4 +880,4 @@ generate a sequence of random numbers $x[i]$ uniformly between 0
 and 1. For each interval, if $x[i] \le r \delta t$, generate a spike.
 
 * 
-bibliography:spikingneurons.bib
+bibliography:biblio/spikingneurons.bib

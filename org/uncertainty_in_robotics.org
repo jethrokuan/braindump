@@ -32,4 +32,4 @@ cite:thrun2005probabilistic
 - Relatively computationally inefficient
 - Requires approximation (exact posteriors are computationally intractable)
 
-bibliography:robotics.bib
+bibliography:biblio/robotics.bib

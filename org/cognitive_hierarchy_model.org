@@ -22,6 +22,6 @@ that some players may be doing as much or more.
  
 * 
 
-bibliography:cgm.bib
+bibliography:biblio/cgm.bib
 
 

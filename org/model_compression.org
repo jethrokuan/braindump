@@ -21,4 +21,4 @@ quantized separately. These are typically studied under the context of
 nearest neighbour search.
 
 * 
-bibliography:model_compression.bib
+bibliography:biblio/model_compression.bib

@@ -38,4 +38,4 @@ c_{|C|} \right\}$, it defines a Markov Logic Network as follows:
    is the $w_i$ associated with $F_i$ in $L$.
 
 * 
-bibliography:mln.bib
+bibliography:biblio/mln.bib

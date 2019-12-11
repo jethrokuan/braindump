@@ -37,5 +37,5 @@ where the denominator can be thought of as an "Occam factor", causing
 the network to prefer broad minima.
 
 
-bibliography:ml.bib
+bibliography:biblio/ml.bib
 

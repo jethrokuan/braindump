@@ -96,4 +96,4 @@ algorithm that stabilized deep Q-learning ([[file:mnih2013_atari_deeprl.org][§m
 
 - [[file:td_learning.org][§td_learning]]
   
-bibliography:rl.bib
+bibliography:biblio/rl.bib

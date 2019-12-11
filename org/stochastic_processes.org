@@ -57,7 +57,7 @@ Example of stochastic process: Gambler's ruin
 * Reference Textbooks
 cite:ross2014introduction,pinsky2010introduction
 
-bibliography:slt.bib
+bibliography:biblio/slt.bib
 
 # Local Variables:
 # nix-buffer-root-file: "statistics.nix"

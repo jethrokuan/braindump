@@ -329,4 +329,4 @@ $q(\mathbf{Z})$.
 cite:borman2004expectation,bishop2006pattern
 
 
-bibliography:ml.bib
+bibliography:biblio/ml.bib
