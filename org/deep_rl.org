@@ -3,7 +3,7 @@
 #+HUGO_TAGS: machine-learning
 bibliographystyle:unsrt
 
-* Why Deep RL?
+* Why Deep Reinforcement Learning?
 
 1. Reinforcement learning provides a mathematical framework for decision-making
 2. Deep learning has shown to be extremely successful in unstructured
@@ -11,6 +11,7 @@ bibliographystyle:unsrt
 3. Deep RL allows for end-to-end training of policies
    1. Features are tedious and difficult to hand-design, and are not
       so transferable across tasks
+   2. Features are informed by the task
 
 * Good Resources
 1. [[https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A][CS285 Fall 2019 - YouTube]]
