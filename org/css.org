@@ -7,3 +7,4 @@
 * CSS Frameworks
 - [[http://tachyons.io/][TACHYONS - Css Toolkit]]
 - [[https://tailwindcss.com/][Tailwind CSS - A Utility-First CSS Framework for Rapid UI Development]]
+  - [[https://www.youtube.com/watch?v=6xgMkGMIudE][Tailwind.css Inbox UI Demo]]

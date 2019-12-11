@@ -1,10 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Markov Logic Networks
 
-Main references are from the original paper
-cite:richardson06_markov_logic_networ.
-
-* Problem
+* Markov Logic Networks cite:richardson06_markov_logic_networ.
+** Problem
 
 Traditionally, first-order logic imposes hard constraints on the
 world. This poses problems in the real world: formulae that may be
@@ -12,7 +10,7 @@ typically true in the real world are not always true. In most domains,
 it is difficult to devise non-trivial formulae that are always true.
 Probabilistic graphical models is a decent solution.
 
-* Markov Logic Networks 
+** What are Markov Logic Networks ?
 
 Markov logic networks relax the hard constraints that first-order
 logic enforces. When a world violates one formula in a KB, it is less
@@ -37,5 +35,4 @@ c_{|C|} \right\}$, it defines a Markov Logic Network as follows:
    ground formula is true, and 0 otherwise. The weight of the feature
    is the $w_i$ associated with $F_i$ in $L$.
 
-* 
-bibliography:biblio/mln.bib
+bibliography:../biblio/mln.bib
