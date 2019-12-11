@@ -1,7 +1,7 @@
 +++
 title = "Book: The Art Of Unix Programming"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T19:51:32+08:00
+lastmod = 2019-12-11T23:10:30+08:00
 draft = false
 math = true
 +++

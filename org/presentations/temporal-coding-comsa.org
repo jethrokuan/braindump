@@ -1,6 +1,4 @@
-#+HUGO_BASE_DIR: ../..
-#+HUGO_SECTION: presentations
-#+hugo_custom_front_matter: :math true
+#+SETUPFILE: ./hugo_setup.org
 
 #+TITLE: Temporal Coding in Spiking Neural Networks with Alpha Synaptic Function (Review)
 #+AUTHOR: Jethro Kuan

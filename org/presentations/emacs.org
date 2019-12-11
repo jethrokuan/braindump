@@ -1,4 +1,4 @@
-#+SETUPFILE: ../hugo_setup.org
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: Introduction to Emacs
 #+begin_export latex
 \bibliographystyle{unsrt}

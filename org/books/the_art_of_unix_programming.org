@@ -29,4 +29,3 @@ upon the software without breaking the mechanism. Eric gave the
 example of X, and the survival of X was attributed to its mechanisms
 (the raster operations) being separated from the GUI implementations,
 which had been phased out multiple times.
-

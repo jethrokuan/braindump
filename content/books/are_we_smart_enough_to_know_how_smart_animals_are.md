@@ -1,5 +1,15 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Language As Root Of Thought
++++
+title = "Are We Smart Enough to Know How Smart Animals Are?"
+author = ["Jethro Kuan"]
+lastmod = 2019-12-11T23:12:57+08:00
+draft = false
+math = true
++++
+
+Why is it that facial expression is universally consistent?
+
+
+## Language As Root Of Thought {#language-as-root-of-thought}
 
 If language were at the root of thought, why is it that we sometimes
 find ourselves at a loss for words?
