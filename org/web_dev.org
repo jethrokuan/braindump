@@ -1,0 +1,8 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Web Development
+
+* CSS
+- [[https://www.youtube.com/watch?v=6xgMkGMIudE][Tailwind.css Inbox UI Demo]]
+
+* Tools
+- [[https://jakearchibald.github.io/svgomg/][SVGOMG - SVGO's Missing GUI]]
