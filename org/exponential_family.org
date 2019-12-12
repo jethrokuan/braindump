@@ -1,0 +1,16 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Exponential Family
+
+\begin{equation}
+q(\theta) \propto \mathrm{exp}\left[ \lambda^T T(\theta) \right]
+\end{equation}
+
+where $\lambda$ is the natural parameters, and $\theta$ is the
+sufficient statistics.
+
+Expectation parameters:
+
+\begin{equation}
+  \mu := E_q\left[T(\theta)\right]
+\end{equation}
+
