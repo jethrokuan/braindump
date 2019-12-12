@@ -1,0 +1,7 @@
+#+HUGO_BASE_DIR: ../..
+#+HUGO_SECTION: books
+#+hugo_custom_front_matter: :math true
+#+hugo_auto_set_lastmod: t
+#+startup: beamer
+#+LaTeX_CLASS: beamer
+#+OPTIONS: H:2

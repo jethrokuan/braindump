@@ -58,7 +58,7 @@ Instead of adding the landmark immediately, it is added to this list,
 and when the uncertainty has shrunk after repeated observations of the
 landmark, it is added in.
 
-** EIF SLAM
+* EIF SLAM
 
 Unlike EKF SLAM, the extended information form SLAM algorithm (EIF
 SLAM) solves the full SLAM problem. EIF represents the posterior

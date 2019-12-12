@@ -1,7 +1,7 @@
 +++
 title = "Simultaneous Localization and Mapping (SLAM)"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-06T16:36:32+08:00
+lastmod = 2019-12-12T13:02:58+08:00
 draft = false
 math = true
 +++
@@ -75,7 +75,7 @@ and when the uncertainty has shrunk after repeated observations of the
 landmark, it is added in.
 
 
-### EIF SLAM {#eif-slam}
+## EIF SLAM {#eif-slam}
 
 Unlike EKF SLAM, the extended information form SLAM algorithm (EIF
 SLAM) solves the full SLAM problem. EIF represents the posterior
