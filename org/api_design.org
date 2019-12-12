@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: API Design
+
+- [[file:code_litmus_tests.org][§code_litmus_tests]]
+- [[file:game_api_design.org][§game_api_design]]
+

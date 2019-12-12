@@ -1,0 +1,34 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Game API Design
+
+* Core Tenets from Handmade cite:handmade_how_to_write_better
+** Maximize portability
+- Write in C99 if possible
+- Try to avoid:
+  - compiler extensions
+- Do:
+  - Use the C standard library
+  - Undef macros that should not be exposed to the end user
+  - Prefix names to avoid collisions
+  - Write the interface in C
+
+** Be easy to build
+- Don't use a custom build system
+- Make build system optional
+- Allow people to compile from source
+- Minimize dependencies
+- don't allocate memory or handle resources for the user
+- be const correct
+- always ask for the size of buffers
+
+** Be easy to integrate
+- Consider error codes or result structs that must be handled at
+  runtime
+- Keep error code/reason in struct
+
+#+begin_src C
+  ParsePNGFileResult result = ParsePNGFile(png_file_data);
+  if (result.error) { /* handle error */ }
+#+end_src
+
+bibliography:./biblio/api.bib
