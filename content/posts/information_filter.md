@@ -1,7 +1,7 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-30T13:02:16+08:00
+lastmod = 2019-12-12T17:24:04+08:00
 draft = false
 math = true
 +++
@@ -56,7 +56,7 @@ distance.
 2.  More numerically stable for many applications.
 3.  Natural fit for multi-robot problems, where sensor data is
     collected decentrally. Information integration is additive and
-    achieved by summing information from multiple robots. Thisi is
+    achieved by summing information from multiple robots. This is
     because the canonical parameters represent a probability in log
     form.
 4.  Information matrix may be sparse, lending itself to algorithms that
