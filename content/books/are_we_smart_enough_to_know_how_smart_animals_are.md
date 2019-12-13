@@ -1,7 +1,7 @@
 +++
 title = "Are We Smart Enough to Know How Smart Animals Are?"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T23:12:57+08:00
+lastmod = 2019-12-13T14:45:50+08:00
 draft = false
 math = true
 +++
@@ -20,3 +20,34 @@ cognitive function without an equally powerful language.
 
 As humans, we are able to use language to communicate ideas that
 transcend time, and this has been essential for our survival.
+
+
+## The Social Brain Hypothesis {#the-social-brain-hypothesis}
+
+The intelligence required to effectively deal with social networks may
+explain why the primate order underwent its remarkable brain
+expansion.
+
+
+## Consciousness {#consciousness}
+
+There is claim that humans are the only species that consciously
+access the past and the future, but recent evidence shows otherwise.
+Either animals also posses consciousness, or consciousness is not a
+necessary ingredient for such introspection.
+
+
+## Names {#names}
+
+Some species like dolphins use _signature whistles_, which is
+analogous to human names.
+
+
+## Studying cognition {#studying-cognition}
+
+Neuroscience may tell us where things happen in the brain, but does
+not help us formulate new theories or design insightful tests of
+cognition.
+
+Instead of making humanity the measure of most things, we need to
+evaluate other species for what they are.
