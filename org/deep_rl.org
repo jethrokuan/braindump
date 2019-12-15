@@ -19,6 +19,52 @@ bibliographystyle:unsrt
    ([[https://github.com/openai/spinningup][Tensorflow]], [[https://github.com/kashif/firedup/][Pytorch]])
 3. [[https://www.icml.cc/2016/tutorials/deep_rl_tutorial.pdf][David Silver's Deep RL ICML Tutorial]]
 
+* Anatomy of Deep RL algorithms
+
+\begin{equation}
+  \theta^{\star}=\arg \max _{\theta} E_{\tau \sim p_{\theta}(\tau)}\left[\sum_{t} r\left(\mathbf{s}_{t}, \mathbf{a}_{t}\right)\right]
+\end{equation}
+
+- policy gradients :: directly differentiate above objective
+- value-based :: estimate value/q-function of the optimal policy (no
+  explicit policy)
+- actor-critic :: estimate value/q-function of the current policy, use
+  it to improve policy
+- model-based RL :: estimate the transition model, and then...
+  - use it for planning (no explicit policy)
+    - Trajectory optimization/optimal control (continuous spaces)
+    - Discrete planning in discrete action spaces ([[file:mcts.org][§mcts]])
+  - use it to improve a policy (e.g. via backpropagation, with some tricks)
+  - use the model to learn a value function (e.g. through dynamic programming)
+
+* Why so many RL algorithms?
+- Different tradeoffs
+  - sample efficiency
+    - is it off policy: can improve policy without generating new
+      samples from that policy?
+    - however, are samples cheap to obtain?
+
+#+CAPTION: Sample efficiency comparison
+[[file:images/deep_rl/screenshot2019-12-16_01-35-50_.png]]
+
+- stability and ease of use (does it converge, and if so to what?)
+  - Q-learning: fixed point iteration
+  - Model-based RL: model is not optimized for expected reward
+- Different assumptions
+  - fully observable?
+    - generally assumed by value function fitting methods (mitigated
+      by adding recurrence)
+    - episodic learning
+      - generally assumed by pure policy gradient methods
+      - assumed by some model-based RL methods
+    - continuity or smoothness?
+      - assumed by some continuous value function learning methods
+      - often assumed by some model-based RL methods
+  - stochastic or deterministic?
+- Different things are easy or hard in different settings
+  - easier to represent the policy?
+  - easier to represent the model?
+
 * Algorithms
 
 ** The Simplest Policy Gradient ([[https://spinningup.openai.com/en/latest/spinningup/rl_intro3.html#deriving-the-simplest-policy-gradient][Spinning Up]])
@@ -46,7 +92,7 @@ The variance of a gradient estimator scales unfavourably with the time
 horizon, since the effect of an action is confounded with the effects
 of past and future actions.
 
-The generalized advantage estimator (GAE) is a family of policy
+The generalized advantage estimator (GAE) is a fapmily of policy
 gradient estimators that *reduce variance of the policy gradient
 estimators while maintaining a tolerable level of bias*. 
 

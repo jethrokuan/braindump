@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T16:07:39+08:00
+lastmod = 2019-12-16T01:23:03+08:00
 draft = false
 math = true
 +++
@@ -69,7 +69,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting <sup id="01672110f741e437a834e37dc0d172c4"><a href="#jin_q_learning_provably_efficient" title="@incollection{jin_q_learning_provably_efficient,
+setting <a id="01672110f741e437a834e37dc0d172c4" href="#jin_q_learning_provably_efficient" title="@incollection{jin_q_learning_provably_efficient,
 title = {Is Q-Learning Provably Efficient?},
 author = {Jin, Chi and Allen-Zhu, Zeyuan and Bubeck, Sebastien and Jordan, Michael I},
 booktitle = {Advances in Neural Information Processing Systems 31},
@@ -87,7 +87,17 @@ pages = {4863--4873},
 year = {2018},
 publisher = {Curran Associates, Inc.},
 url = {http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf}
-}</a></sup>.
+}</a>.
+
+
+## Key Ideas {#key-ideas}
+
+1.  If we have a policy \\(\pi\\), and we know \\(Q^{\pi}(s\_t, a\_t)\\), then we
+    can improve \\(\pi\\) by setting \\(\pi'(a|s) = 1\\) where \\(a =
+       \mathrm{argmax}\_aQ^{\pi}(s , a)\\).
+2.  We can compute the gradient to increase the probability of good
+    actions \\(a\\): if \\(Q^{\pi}(s, a) > V^{\pi}(s)\\), then a is better than
+    average (\\(V\\) is expectation of \\(Q\\) over \\(\pi(a|s)\\)).
 
 
 ## Q-learning with function approximation {#q-learning-with-function-approximation}

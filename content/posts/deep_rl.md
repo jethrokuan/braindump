@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T16:22:15+08:00
+lastmod = 2019-12-16T01:43:58+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -24,6 +24,61 @@ math = true
 2.  [Welcome to Spinning Up in Deep RL! — Spinning Up documentation](https://spinningup.openai.com/en/latest/)
     ([Tensorflow](https://github.com/openai/spinningup), [Pytorch](https://github.com/kashif/firedup/))
 3.  [David Silver's Deep RL ICML Tutorial](https://www.icml.cc/2016/tutorials/deep%5Frl%5Ftutorial.pdf)
+
+
+## Anatomy of Deep RL algorithms {#anatomy-of-deep-rl-algorithms}
+
+\begin{equation}
+  \theta^{\star}=\arg \max \_{\theta} E\_{\tau \sim p\_{\theta}(\tau)}\left[\sum\_{t} r\left(\mathbf{s}\_{t}, \mathbf{a}\_{t}\right)\right]
+\end{equation}
+
+policy gradients
+: directly differentiate above objective
+
+value-based
+: estimate value/q-function of the optimal policy (no
+    explicit policy)
+
+actor-critic
+: estimate value/q-function of the current policy, use
+    it to improve policy
+
+model-based RL
+: estimate the transition model, and then...
+    -   use it for planning (no explicit policy)
+        -   Trajectory optimization/optimal control (continuous spaces)
+        -   Discrete planning in discrete action spaces ([§mcts]({{< relref "mcts" >}}))
+    -   use it to improve a policy (e.g. via backpropagation, with some tricks)
+    -   use the model to learn a value function (e.g. through dynamic programming)
+
+
+## Why so many RL algorithms? {#why-so-many-rl-algorithms}
+
+-   Different tradeoffs
+    -   sample efficiency
+        -   is it off policy: can improve policy without generating new
+            samples from that policy?
+        -   however, are samples cheap to obtain?
+
+{{< figure src="/ox-hugo/screenshot2019-12-16_01-35-50_.png" caption="Figure 1: Sample efficiency comparison" >}}
+
+-   stability and ease of use (does it converge, and if so to what?)
+    -   Q-learning: fixed point iteration
+    -   Model-based RL: model is not optimized for expected reward
+-   Different assumptions
+    -   fully observable?
+        -   generally assumed by value function fitting methods (mitigated
+            by adding recurrence)
+        -   episodic learning
+            -   generally assumed by pure policy gradient methods
+            -   assumed by some model-based RL methods
+        -   continuity or smoothness?
+            -   assumed by some continuous value function learning methods
+            -   often assumed by some model-based RL methods
+    -   stochastic or deterministic?
+-   Different things are easy or hard in different settings
+    -   easier to represent the policy?
+    -   easier to represent the model?
 
 
 ## Algorithms {#algorithms}
@@ -50,13 +105,13 @@ Spinning Up's implementation of VPG uses several tricks:
 2.  [Actor-critic](#actor-critic)
 
 
-### Generalized Advantage Estimator (GAE) <sup id="57393aa8ebb8846c7181c31bfd5fbe89"><a href="#schulman15_high_dimen_contin_contr_using" title="Schulman, Moritz, Levine, Sergey, Jordan \&amp; Abbeel, High-Dimensional Continuous Control Using  Generalized Advantage Estimation, {CoRR}, v(), (2015).">(Schulman {\it et al.}, 2015)</a></sup> {#generalized-advantage-estimator--gae}
+### Generalized Advantage Estimator (GAE) <a id="57393aa8ebb8846c7181c31bfd5fbe89" href="#schulman15_high_dimen_contin_contr_using" title="Schulman, Moritz, Levine, Sergey, Jordan \&amp; Abbeel, High-Dimensional Continuous Control Using  Generalized Advantage Estimation, {CoRR}, v(), (2015).">(Schulman et al., 2015)</a> {#generalized-advantage-estimator--gae}
 
 The variance of a gradient estimator scales unfavourably with the time
 horizon, since the effect of an action is confounded with the effects
 of past and future actions.
 
-The generalized advantage estimator (GAE) is a family of policy
+The generalized advantage estimator (GAE) is a fapmily of policy
 gradient estimators that **reduce variance of the policy gradient
 estimators while maintaining a tolerable level of bias**.
 
@@ -105,7 +160,7 @@ Batch actor-critic algorithm:
        \pi\_\theta(a\_i|s\_i) \hat{A}^\pi (s\_i|a\_i)\\)
 5.  \\(\theta \leftarrow \theta + \alpha \nabla\_\theta J(\theta)\\)
 
-<sup id="38c18a560d20d4d8d46b43c7dc375d47"><a href="#sutton2000policy" title="Sutton, McAllester, Singh \&amp; Mansour, Policy gradient methods for reinforcement learning with function approximation, 1057--1063, in in: {Advances in neural information processing systems}, edited by (2000)">(Sutton {\it et al.}, 2000)</a></sup><sup>,</sup><sup id="5ee60195703614202558f73eaeb64891"><a href="#mnih16_async_method_deep_reinf_learn" title="Mnih, Badia, Puigdom\`enech, Mirza, Graves, , Lillicrap, Harley, , Silver \&amp; Kavukcuoglu, Asynchronous Methods for Deep Reinforcement  Learning, {CoRR}, v(), (2016).">(Mnih {\it et al.}, 2016)</a></sup><sup>,</sup><sup id="23ad5881923885616b0afd34dad9df52"><a href="#gu16_q_prop" title="Gu, Lillicrap, Ghahramani, Zoubin, Turner \&amp; Levine, Q-Prop: Sample-Efficient Policy Gradient With an  Off-Policy Critic, {CoRR}, v(), (2016).">(Gu {\it et al.}, 2016)</a></sup>
+<a id="38c18a560d20d4d8d46b43c7dc375d47" href="#sutton2000policy" title="Sutton, McAllester, Singh \&amp; Mansour, Policy gradient methods for reinforcement learning with function approximation, 1057--1063, in in: {Advances in neural information processing systems}, edited by (2000)">(Sutton et al., 2000)</a><a>, </a><a id="5ee60195703614202558f73eaeb64891" href="#mnih16_async_method_deep_reinf_learn" title="Mnih, Badia, Puigdom\`enech, Mirza, Graves, , Lillicrap, Harley, , Silver \&amp; Kavukcuoglu, Asynchronous Methods for Deep Reinforcement  Learning, {CoRR}, v(), (2016).">(Mnih et al., 2016)</a><a>, </a><a id="23ad5881923885616b0afd34dad9df52" href="#gu16_q_prop" title="Gu, Lillicrap, Ghahramani, Zoubin, Turner \&amp; Levine, Q-Prop: Sample-Efficient Policy Gradient With an  Off-Policy Critic, {CoRR}, v(), (2016).">(Gu et al., 2016)</a>
 
 
 ### Deep RL with Q-functions {#deep-rl-with-q-functions}
@@ -145,7 +200,7 @@ Batch actor-critic algorithm:
 
 ### Deep Q-network (DQN) {#deep-q-network--dqn}
 
-DQN <sup id="2be9d1740dee0aea772ef29e59e5766a"><a href="#Mnih_2015" title="Mnih, Kavukcuoglu, Silver, David, Rusu, Veness, , Bellemare, Graves, Riedmiller, Martin, Fidjeland, Ostrovski, Georg \&amp; et, Human-level control through deep reinforcement  learning, {Nature}, v(7540), 529&#8211;533 (2015).">(Mnih {\it et al.}, 2015)</a></sup> aims to improve the stability of Q-learning by
+DQN <a id="2be9d1740dee0aea772ef29e59e5766a" href="#Mnih_2015" title="Mnih, Kavukcuoglu, Silver, David, Rusu, Veness, , Bellemare, Graves, Riedmiller, Martin, Fidjeland, Ostrovski, Georg \&amp; et, Human-level control through deep reinforcement  learning, {Nature}, v(7540), 529&#8211;533 (2015).">(Mnih et al., 2015)</a> aims to improve the stability of Q-learning by
 introducing 2 mechanisms: **experience replay**, and a **periodically
 updated target**.
 
@@ -162,14 +217,14 @@ updated target**.
     expected that some episodes may provide higher expected learning
     progress, and prioritizing these episodes should lead to faster
     learning. Prioritized experience replay
-    <sup id="63b3f3d1a1abcd81f6cfc4a0b95212d0"><a href="#schaul15_prior_exper_replay" title="Schaul, Quan, Antonoglou, \&amp; Silver, Prioritized Experience Replay, {CoRR}, v(), (2015).">(Schaul {\it et al.}, 2015)</a></sup> uses TD-error as a measure of
+    <a id="63b3f3d1a1abcd81f6cfc4a0b95212d0" href="#schaul15_prior_exper_replay" title="Schaul, Quan, Antonoglou, \&amp; Silver, Prioritized Experience Replay, {CoRR}, v(), (2015).">(Schaul et al., 2015)</a> uses TD-error as a measure of
     expected learning progress, correcting for the introduced bias by
     using importance-sampling weights.
 
     One ability humans have is to learn almost as much from achieving an
     undesirable outcome as from the desired one. This property is missing
     from many model-free RL algorithms. _Hindsight Experience Replay (HER)_
-    <sup id="ffaf2d08e446da500e82a251db070767"><a href="#andrychowicz2017hindsight" title="Andrychowicz, Wolski, Ray, Schneider, Fong, Welinder, McGrew, Tobin, Abbeel \&amp; Zaremba, Hindsight experience replay, 5048--5058, in in: {Advances in Neural Information Processing Systems}, edited by (2017)">(Andrychowicz {\it et al.}, 2017)</a></sup> allows the algorithm to perform
+    <a id="ffaf2d08e446da500e82a251db070767" href="#andrychowicz2017hindsight" title="Andrychowicz, Wolski, Ray, Schneider, Fong, Welinder, McGrew, Tobin, Abbeel \&amp; Zaremba, Hindsight experience replay, 5048--5058, in in: {Advances in Neural Information Processing Systems}, edited by (2017)">(Andrychowicz et al., 2017)</a> allows the algorithm to perform
     this kind of reasoning, and can be combined with any off-policy RL
     algorithm. This is applicable whenever multiple goals may be achieved.
     This makes learning more sample efficient, and possible when rewards
