@@ -1,0 +1,26 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Options Framework
+
+An option is defined as a tuple containing:
+
+1. An initiation function (precondition)
+2. An internal policy (behaviour)
+3. A termination function (post-condition)
+
+This helps put learning and planning algorithms at the same level of
+abstraction. cite:stolle2002learning
+
+* Models vs Actions
+
+- models of actions consist of immediate reward and transition
+  probability to next state
+- models of options consist of reward until termination, and
+  (discounted) transition to termination state
+
+They look a lot like value functions, and can use the TD error to
+train the model [[file:td_learning.org][§td_learning]].
+
+* Related
+- [[file:generalized_value_functions.org][§generalized_value_functions]]
+
+bibliography:./biblio/rl.bib

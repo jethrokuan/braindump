@@ -1,0 +1,11 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Neuroscience and Reinforcement Learning
+
+Reinforcement learning is similar to how humans learn:
+
+- Learning by trail-and-error
+- Reward is often delayed
+
+TD errors model the activity of dopamine neurons cite:schultz97_neural_subst_predic_rewar
+
+bibliography:./biblio/rl.bib
