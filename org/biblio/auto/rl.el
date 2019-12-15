@@ -17,6 +17,7 @@
     "andrychowicz2017hindsight"
     "dabney2018distributional"
     "schultz97_neural_subst_predic_rewar"
-    "stolle2002learning"))
+    "stolle2002learning"
+    "haan19_causal_confus_imitat_learn"))
  :bibtex)
 

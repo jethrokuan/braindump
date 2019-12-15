@@ -255,3 +255,36 @@ url = {http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf}
   year={2002},
   organization={Springer}
 }
+
+@article{haan19_causal_confus_imitat_learn,
+  author =       {Haan, Pim de and Jayaraman, Dinesh and Levine,
+                  Sergey},
+  title =        {Causal Confusion in Imitation Learning},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1905.11979v2},
+  abstract =     {Behavioral cloning reduces policy learning to
+                  supervised learning by training a discriminative
+                  model to predict expert actions given observations.
+                  Such discriminative models are non-causal: the
+                  training procedure is unaware of the causal
+                  structure of the interaction between the expert and
+                  the environment. We point out that ignoring
+                  causality is particularly damaging because of the
+                  distributional shift in imitation learning. In
+                  particular, it leads to a counter-intuitive "causal
+                  misidentification" phenomenon: access to more
+                  information can yield worse performance. We
+                  investigate how this problem arises, and propose a
+                  solution to combat it through targeted
+                  interventions---either environment interaction or
+                  expert queries---to determine the correct causal
+                  model. We show that causal misidentification occurs
+                  in several benchmark control domains as well as
+                  realistic driving settings, and validate our
+                  solution against DAgger and other baselines and
+                  ablations.},
+  archivePrefix ={arXiv},
+  eprint =       {1905.11979},
+  primaryClass = {cs.LG},
+}
