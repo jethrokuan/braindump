@@ -128,27 +128,6 @@ Objective: $J(\theta) = \sum_{\tau} P_{\theta}(\tau)R(\tau)$
 Actor critics use learned estimate (e.g. $\hat{A}(s, a) = \hat{Q}(s,
 a) - \hat{V}(s).)
 
-* Actor-Critic
-
-Need to balance between learning speed, stability.
-
-- Conservative Policy Iteration (CPI)
-  - propose surrogate objective, guarantee monotonic improvement under
-    specific state distribution
-- Trust Region Policy Optimization (TRPO)
-  - approximates CPI with trust region constraint
-- Proximal Policy Optimization (PPO)
-  - replaces TRPO constraint with RL penalty + clipping
-    (computationally efficient)
-- Soft Actor-Critic (SAC)
-  - stabilize learning by jointly maximizing expected reward and
-    policy entropy (based on maximum entropy RL)
-- Optimistic Actor Critic (OAC)
-  - Focus on exploration in deep Actor critic approaches.
-  - *Key insight*: existing approaches tend to explore conservatively
-  - *Key result*: Optimistic exploration leads to efficient, stable
-    learning in modern Actor Critic methods
-
 * Resources
 - [[https://nips.cc/Conferences/2016/Schedule?showEvent=6198][Deep Reinforcement Learning Through Policy Optimization - NIPS 2016 Tutorial]]
 - [[https://www.youtube.com/watch?v=Ds1trXd6pos&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=6&t=0s][CS285 Fa19 9/16/19 - YouTube]]
