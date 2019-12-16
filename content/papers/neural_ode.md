@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2019-05-25T11:43:39+08:00
+lastmod = 2019-12-16T19:42:50+08:00
 tags = ["machine-learning", "deep-learning"]
 draft = false
 math = true
@@ -206,7 +206,7 @@ that using ODE blocks they were able to achieve roughly equivalent
 test-error, with a third of the parameters (0.22M compared to 0.60M)
 and constant memory cost during training.
 
-{{< figure src="/ox-hugo/screenshot_2019-04-13_22-21-54.png" >}}
+{{< figure src="images/neural_ode/screenshot_2019-04-13_22-21-54.png" >}}
 
 While this looks promising, it would be more instructive to train the
 ODEnet on different datasets.
@@ -289,6 +289,9 @@ for Continuous Normalizing Flows. Normalizing flows is a technique for
 sampling from complex distributions via sampling from a simple
 distribution, and has applications in techniques like variational
 inference.
+
+EDIT: During NeurIPS 2019, [David Duvenaud reflects on the claims and
+the hype of the Neural ODE paper](https://slideslive.com/38921897/retrospectives-a-venue-for-selfreflection-in-ml-research-4).
 
 # Bibliography
 <a id="he15_deep_resid_learn_image_recog"></a>He, K., Zhang, X., Ren, S., & Sun, J., *Deep residual learning for image recognition*, CoRR, *()*,  (2015).  [↩](#8554cd7e8a313143abfac851fd6bbfd2)

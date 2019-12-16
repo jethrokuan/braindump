@@ -280,4 +280,7 @@ sampling from complex distributions via sampling from a simple
 distribution, and has applications in techniques like variational
 inference. 
 
-bibliography:biblio/neural_ode.bib
+EDIT: During NeurIPS 2019, [[https://slideslive.com/38921897/retrospectives-a-venue-for-selfreflection-in-ml-research-4][David Duvenaud reflects on the claims and
+the hype of the Neural ODE paper]].
+
+bibliography:../biblio/neural_ode.bib
