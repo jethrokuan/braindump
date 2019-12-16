@@ -2,9 +2,16 @@
 #+HUGO_TAGS: web
 #+TITLE: CSS
 
-* TODO [[https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/][An introduction to CSS Containment - Rego's Everyday Life]]
+* Flexbox
+- [[https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/][An introduction to CSS Containment - Rego's Everyday Life]]
 
 * CSS Frameworks
 - [[http://tachyons.io/][TACHYONS - Css Toolkit]]
 - [[https://tailwindcss.com/][Tailwind CSS - A Utility-First CSS Framework for Rapid UI Development]]
   - [[https://www.youtube.com/watch?v=6xgMkGMIudE][Tailwind.css Inbox UI Demo]]
+
+* Advanced
+ - [[https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/][An introduction to CSS Containment - Rego's Everyday Life]]
+
+* Related
+- Root: [[file:web_dev.org][§web_dev]]
