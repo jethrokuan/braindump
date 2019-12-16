@@ -1,10 +1,56 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T16:54:49+08:00
+lastmod = 2019-12-16T13:00:46+08:00
 draft = false
 math = true
 +++
+
+## Key Idea {#key-idea}
+
+The objective is:
+
+\begin{equation}
+  \theta^{\star}=\arg \max \_{\theta} E\_{\tau \sim p\_{\theta}(\tau)}\left[\sum\_{t} r\left(\mathbf{s}\_{t}, \mathbf{a}\_{t}\right)\right]
+\end{equation}
+
+To evaluate the objective, we need to estimate this expectation, often
+through sampling by generating multiple samples from the distribution:
+
+\begin{equation}
+  J(\theta)=E\_{\tau \sim p\_{\theta}(\tau)}\left[\sum\_{t} r\left(\mathbf{s}\_{t}, \mathbf{a}\_{t}\right)\right] \approx \frac{1}{N} \sum\_{i} \sum\_{t} r\left(\mathbf{s}\_{i, t}, \mathbf{a}\_{i, t}\right)
+\end{equation}
+
+Recall that:
+
+\begin{equation}
+  \nabla\_{\theta} J(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N} \underbrace{\nabla\_{\theta} \log \pi\_{\theta}\left(\tau\_{i}\right)}\_{\sum\_{t=1}^{T} \nabla\_{\theta} \log \_{\theta} \pi\_{\theta}\left(\mathbf{a}\_{i, t} | \mathbf{s}\_{i, t}\right)}r\left(\tau\_{i}\right)
+\end{equation}
+
+This makes the good stuff more likely, and bad stuff less likely, but
+scaled by the rewards.
+
+
+### Comparison to Maximum Likelihood {#comparison-to-maximum-likelihood}
+
+policy gradient
+: \\(\nabla\_{\theta} J(\theta) \approx \frac{1}{N}
+      \sum\_{i=1}^{N}\left(\sum\_{t=1}^{T} \nabla\_{\theta} \log
+      \pi\_{\theta}\left(\mathbf{a}\_{i, t} | \mathbf{s}\_{i,
+      t}\right)\right)\left(\sum\_{t=1}^{T} r\left(\mathbf{s}\_{i, t},
+      \mathbf{a}\_{i, t}\right)\right)\\)
+
+maximum likelihood
+: \\(\nabla\_{\theta} J\_{\mathrm{ML}}(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N}\left(\sum\_{t=1}^{T} \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i, t} | \mathbf{s}\_{i, t}\right)\right)\\)
+
+
+### Partial Observability {#partial-observability}
+
+The policy gradient method does not assume that the system follows the
+[§markovian\_assumption]({{< relref "markovian_assumption" >}})! The algorithm only requires the ability to
+generate samples, and a function approximator for
+\\(\pi\_{\theta}(a\_t |o\_t)\\).
+
 
 ## REINFORCE {#reinforce}
 

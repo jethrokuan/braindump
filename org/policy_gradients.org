@@ -1,6 +1,46 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Policy Gradients
 
+* Key Idea
+
+The objective is:
+
+\begin{equation}
+  \theta^{\star}=\arg \max _{\theta} E_{\tau \sim p_{\theta}(\tau)}\left[\sum_{t} r\left(\mathbf{s}_{t}, \mathbf{a}_{t}\right)\right]
+\end{equation}
+
+To evaluate the objective, we need to estimate this expectation, often
+through sampling by generating multiple samples from the distribution:
+
+\begin{equation}
+  J(\theta)=E_{\tau \sim p_{\theta}(\tau)}\left[\sum_{t} r\left(\mathbf{s}_{t}, \mathbf{a}_{t}\right)\right] \approx \frac{1}{N} \sum_{i} \sum_{t} r\left(\mathbf{s}_{i, t}, \mathbf{a}_{i, t}\right)
+\end{equation}
+
+Recall that:
+
+\begin{equation}
+  \nabla_{\theta} J(\theta) \approx \frac{1}{N} \sum_{i=1}^{N} \underbrace{\nabla_{\theta} \log \pi_{\theta}\left(\tau_{i}\right)}_{\sum_{t=1}^{T} \nabla_{\theta} \log _{\theta} \pi_{\theta}\left(\mathbf{a}_{i, t} | \mathbf{s}_{i, t}\right)}r\left(\tau_{i}\right)
+\end{equation}
+
+This makes the good stuff more likely, and bad stuff less likely, but
+scaled by the rewards.
+
+** Comparison to Maximum Likelihood
+
+- policy gradient :: $\nabla_{\theta} J(\theta) \approx \frac{1}{N}
+  \sum_{i=1}^{N}\left(\sum_{t=1}^{T} \nabla_{\theta} \log
+  \pi_{\theta}\left(\mathbf{a}_{i, t} | \mathbf{s}_{i,
+  t}\right)\right)\left(\sum_{t=1}^{T} r\left(\mathbf{s}_{i, t},
+  \mathbf{a}_{i, t}\right)\right)$
+- maximum likelihood :: $\nabla_{\theta} J_{\mathrm{ML}}(\theta) \approx \frac{1}{N} \sum_{i=1}^{N}\left(\sum_{t=1}^{T} \nabla_{\theta} \log \pi_{\theta}\left(\mathbf{a}_{i, t} | \mathbf{s}_{i, t}\right)\right)$
+
+** Partial Observability
+
+The policy gradient method does not assume that the system follows the
+[[file:markovian_assumption.org][§markovian_assumption]]! The algorithm only requires the ability to
+generate samples, and a function approximator for
+$\pi_{\theta}(a_t |o_t)$.
+
 * REINFORCE
 
 1. For each episode,
