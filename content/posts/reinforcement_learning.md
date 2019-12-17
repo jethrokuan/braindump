@@ -1,7 +1,7 @@
 +++
 title = "Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T01:31:42+08:00
+lastmod = 2019-12-17T14:38:04+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -103,104 +103,6 @@ principle of maximum expected utility from the earlier chapter: \\(\pi^\*(s)
 = argmax\_{a \in A(s) } \sum\_{s^{i}} P(s' |s, a)U(s')\\).
 
 
-### Value Iteration {#value-iteration}
-
-The bellman equation illustrates that the utility of a state is the
-immediate reward for that state plus the expected discounted utility
-of the next state:
-
-\begin{equation}
-U(s) = R(s) + \gamma max\_{a \in A(s)} \sum\_{s'} P(s' | s, a)U(s')
-\end{equation}
-
-If there are \\(n\\) possible states, there are \\(n\\) Bellman equations to
-solve. However, these equations are non-linear, and cannot be solved
-using linear algebra techniques.
-
-Value iteration is an algorithm that is guaranteed to converge to an
-equilibrium. The basic idea is to start with arbitrary initial values
-for the utilities. We compute the right hand side of the equation, and
-update the utility on the left hand side of the equation.
-
-```text
-function VALUE-ITERATION(mdp, e) returns a utility function
-  inputs: mdp, an MDP with states S, actions A(s), transition model P(s' | s, a), discount \gamma
-          e, the maximium error allowed in the utility of any state
-  locals: U, U', vectors of utilities for states in S, initially zero
-          \delta, the maximum change in utility for any state
-  repeat
-    U <- U'; \delta <- 0
-    for each state s in S do
-      U'[s] <- R(s) + \gamma max_{a \in A(s)} \sum_{s'} P(s' | s, a) U[s']
-      if |U'[s] - U[s] | > \delta then \delta <- |U'[s] - U[s]|
-    until \delta < e(1-\gamma) / \gamma
-  return U
-```
-
-
-### Policy Iteration {#policy-iteration}
-
-We have already observed that it is possible to get an optimal policy,
-without having accurate utility function estimates.
-
-The policy iteration algorithm exploits this. The algorithm alternates
-between 2 steps, beginning at some policy \\(\pi\_0\\):
-
-1.  **Policy evaluation**: given a policy \\(\pi\_i\\), calculate \\(U\_i = U^{\pi\_i}\\),
-    the utility of each state if \\(\pi\_i\\) were to be executed
-2.  **Policy improvement**: calculate a new MEU policy \\(\pi\_{i+1}\\), using
-    one-step look ahead based on \\(U\_i\\):
-
-\begin{equation}
-\pi^\* (s) = argmax\_{a \in A(s)} P(s' | s, a) U(s')
-\end{equation}
-
-Policy evaluation is simple, because the policy \\(\pi\_i\\) specifies the
-action \\(\pi\_i(s)\\) in state \\(s\\). This means we have a simplified version
-of the Bellman equation relating the utility of \\(s\\) to the utility of
-its neighbours:
-
-\begin{equation}
-  U(s) = R(s) + \gamma  \sum\_{s'} P(s' | s, a)U(s')
-\end{equation}
-
-These equations are linear and can be quickly solved (in \\(O(n^3)\\) time)
-with linear algebra techniques. We can further speed up this process
-by performing an approximate policy evaluation. We do this by
-performing some number of value iteration steps to update the
-utilities:
-
-\begin{equation}
-U\_{i+1}(s) \leftarrow R(s) + \gamma \sum\_{s'}P(s'|s, \pi\_i(s))U\_i(s')
-\end{equation}
-
-The resulting algorithm is called modified policy iteration, and is
-often much more efficient.
-
-```text
-function POLICY-ITERATION(mdp) returns a policy
-  inputs: mdp, an MDP
-  locals: U, vector of utilities for states in S
-          \pi, a policy vector indexed by state, initially random
-  repeat
-    U <- POLICY-EVALUATION(\pi, U, mdp)
-    unchanged? <- true
-    for each state s in S do
-      if max_{a \in A(s)} \sum_{s'} P(s'|s, a) U[s'] > \sum_{s'} P(s'|s, \pi[s])U[s'] then do
-        \pi[s] \leftarrow argmax_{a \in A(s)} P(s'|s, a) U[s']
-        unchanged <- false
-  until
-    unchanged?
-  return \pi
-```
-
-**Asynchronous policy iteration** involves picking a subset of states and
-applying either kind of updating (policy improvement or simplified
-value iteration) on that subset. Given certain conditions, this is
-guaranteed to converge, and the freedom to choose any subset of states
-gives us a means to design efficient heuristic algorithms.
-
-
 ### Summary {#summary}
 
 | Problem    | Bellman Equation                                         | Algorithm                   |
@@ -251,7 +153,7 @@ utility, then neighbouring states should also have high expected
 utility.
 
 The utility of each state equals its own reward plus the expected
-utility of its successor states: i.e. it obeys the [Bellman Equation](#org5ffca78)
+utility of its successor states: i.e. it obeys the Bellman Equation
 for a fixed policy.
 
 We can view directed utility estimation as searching for \\(U\\) in a
@@ -378,7 +280,7 @@ policy. The learning mechanism for the passive ADP agent will work for
 this
 
 Next, the agent has a choice of actions. The utilities it learns are
-defined by the optimal policy, governed by the [Bellman equations](#org5ffca78).
+defined by the optimal policy, governed by the Bellman Equations.
 Having obtained a utility function for the given  model, the agent can
 extract an optimal action by one-step look-ahead to maximise the
 expected utility.
@@ -428,7 +330,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orgc999396) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org901a29d) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
@@ -456,6 +358,8 @@ Tutoring Systems
 -   [§mcts]({{< relref "mcts" >}})
 -   [§deep\_rl]({{< relref "deep_rl" >}})
 -   [§td\_learning]({{< relref "td_learning" >}})
+-   [§policy\_gradients]({{< relref "policy_gradients" >}})
+-   [§actor\_critic]({{< relref "actor_critic" >}})
 -   [§q\_learning]({{< relref "q_learning" >}})
 
 <biblio/rl.bib>

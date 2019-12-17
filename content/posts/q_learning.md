@@ -1,10 +1,47 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T01:23:03+08:00
+lastmod = 2019-12-17T14:35:50+08:00
 draft = false
 math = true
 +++
+
+The actor-critic algorithm ([§actor\_critic]({{< relref "actor_critic" >}})) fits 2 function
+approximators: one for the policy, and one for the value function. A
+key problem with the policy gradient method is the high variance in
+the gradient update. _Can we omit policy gradients completely
+([§policy\_gradients]({{< relref "policy_gradients" >}}))?_
+
+
+## Key Ideas {#key-ideas}
+
+1.  If we have a policy \\(\pi\\), and we know \\(Q^{\pi}(s\_t, a\_t)\\), then we
+    can improve \\(\pi\\) by setting \\(\pi'(a|s) = 1\\) where \\(a =
+       \mathrm{argmax}\_aQ^{\pi}(s , a)\\).
+2.  We can compute the gradient to increase the probability of good
+    actions \\(a\\): if \\(Q^{\pi}(s, a) > V^{\pi}(s)\\), then a is better than
+    average (\\(V\\) is expectation of \\(Q\\) over \\(\pi(a|s)\\)).
+3.  It can be shown that in a fully-observed MDP, there is a policy
+    that is both deterministic and optimal
+
+
+## Policy Iteration {#policy-iteration}
+
+1.  evaluate \\(A^\pi (s, a)\\)
+2.  set \\(\pi \leftarrow \pi'\\) where \\(\pi' = 1\\) if \\(a\_t =
+       \mathrm{argmax}\_{a\_t}A^\pi(s\_t, a\_t)\\) and \\(0\\) otherwise
+
+
+## Value Iteration {#value-iteration}
+
+Skips the explicit policy representation altogether. _Key idea_:
+argmax of advantage function is the same as argmax of Q-function.
+
+1.  set \\(Q(s,a) \leftarrow r(s,a) + \gamma E\left[V(s')\right]\\)
+2.  set \\(V(s) \leftarrow \mathrm{argmax}\_a Q(s,a)\\)
+
+This simplifies the dynamic programming problem in policy iteration.
+
 
 ## Q-learning {#q-learning}
 
@@ -90,16 +127,6 @@ url = {http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf}
 }</a>.
 
 
-## Key Ideas {#key-ideas}
-
-1.  If we have a policy \\(\pi\\), and we know \\(Q^{\pi}(s\_t, a\_t)\\), then we
-    can improve \\(\pi\\) by setting \\(\pi'(a|s) = 1\\) where \\(a =
-       \mathrm{argmax}\_aQ^{\pi}(s , a)\\).
-2.  We can compute the gradient to increase the probability of good
-    actions \\(a\\): if \\(Q^{\pi}(s, a) > V^{\pi}(s)\\), then a is better than
-    average (\\(V\\) is expectation of \\(Q\\) over \\(\pi(a|s)\\)).
-
-
 ## Q-learning with function approximation {#q-learning-with-function-approximation}
 
 To generalize over states and actions, parameterize Q with a function
@@ -131,6 +158,7 @@ algorithm that stabilized deep Q-learning ([§mnih2013\_atari\_deeprl]({{< relre
 ## Related {#related}
 
 -   [§td\_learning]({{< relref "td_learning" >}})
+-   [§policy\_gradients]({{< relref "policy_gradients" >}})
 
 # Bibliography
 <a id="jin_q_learning_provably_efficient"></a>Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., *Is Q-Learning Provably Efficient?*, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc. [↩](#01672110f741e437a834e37dc0d172c4)
