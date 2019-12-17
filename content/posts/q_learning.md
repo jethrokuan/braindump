@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-17T14:35:50+08:00
+lastmod = 2019-12-17T16:09:26+08:00
 draft = false
 math = true
 +++
@@ -41,6 +41,204 @@ argmax of advantage function is the same as argmax of Q-function.
 2.  set \\(V(s) \leftarrow \mathrm{argmax}\_a Q(s,a)\\)
 
 This simplifies the dynamic programming problem in policy iteration.
+
+
+### Fitted Value Iteration {#fitted-value-iteration}
+
+We can use any most function approximators to represent \\(V(s)\\).
+
+1.  set \\(y\_i \leftarrow \mathrm{max}\_{a\_i} (r(s\_i, a\_i) + \gamma E\left[V\_{\phi}(s\_i')\right])\\)
+2.  set \\(\phi \leftarrow \mathrm{argmin}\_{\phi} \frac{1}{2}
+       \sum\_i |V\_{\phi}(s\_i) - y\_i |^2\\)
+
+This algorithm suffers from the curse of dimensionality. When the
+state space is large, the algorithm is computationally expensive. To
+get around this, we may sample states instead, with little change to
+the algorithm.
+
+
+### Fitted Q Iteration {#fitted-q-iteration}
+
+Notice the \\(\mathrm{max}\\) over \\(a\_i\\). This means that we need to know
+the outcomes for different actions! But what if we don't know the
+transition dynamics? If we use a Q-table, then we arrive at an
+algorithm without needing to know the transition dynamics!
+
+1.  set \\(y\_i \leftarrow r(s\_i, a\_i) + \gamma E\left[V\_{\phi}(s\_i')\right]\\)
+2.  set \\(\phi \leftarrow \mathrm{argmin}\_{\phi} \frac{1}{2}
+       \sum\_i |Q\_{\phi}(s\_i, a\_i) - y\_i |^2\\)
+
+There is still a "max" hiding in \\(V\_\phi(s\_i')\\). To get around this,
+we approximate \\(E\left[V(s\_i')\right] \approx \mathrm{max}\_{a'}
+Q(s\_i', a\_i')\\):
+
+1.  Collect dataset \\(\left\\{(s\_i, a\_i, s\_i', r\_i)\right\\}\\) using some policy
+    1.1. set \\(y\_i \leftarrow r(s\_i, a\_i) + \gamma \mathrm{max}\_{a'} Q(s\_i', a\_i')\\)
+    1.2. set \\(\phi \leftarrow \mathrm{argmin}\_{\phi} \frac{1}{2}
+          \sum\_i |Q\_{\phi}(s\_i, a\_i) - y\_i |^2\\)
+    1.3. goto 1.1 or 1
+
+This works, even for off-policy samples (unlike [§actor\_critic]({{< relref "actor_critic" >}})). In
+addition, there is only one network, hence no high-variance policy
+gradient methods. However, _there are no convergence guarantees with
+non-linear function approximators_!
+
+Why is it off-policy? The algorithm doesn't assume anything about the
+policy: given \\(s\\) and \\(a\\), the transition is independent of \\(\pi\\).
+
+In step 1.3, if the algorithm is off-policy, why would we ever need to
+go back to collect more samples in step 1? This is because on a
+random, poorly performing policy, we might not access some interesting
+states, that we would get after learning a better policy through
+Q-iteration.
+
+
+### Exploration in Q-learning {#exploration-in-q-learning}
+
+The policy used in Q-learning is deterministic. To get around this, we
+use a different, stochastic policy in step 1, when sampling actions to
+take. An example of such a policy is the epsilon-greedy, or Boltzmann
+exploration policy.
+
+
+### Non-Tabular Value Function Learning {#non-tabular-value-function-learning}
+
+In the tabular case, we have a Bellman contraction \\(BV\\) such that \\(B\\)
+is a contraction w.r.t. tho infinity-norm:
+
+\begin{equation}
+ |BV - B\overline{V}| \le \gamma |V - \overline{V}| \_{\infty}
+\end{equation}
+
+ When we do fitted value iteration, we have another contraction \\(\Pi\\)
+that is a contraction wr.t. the \\(l\_2\\) norm (if we do the l2 norm
+regression):
+
+\begin{equation}
+ |\Pi V - \Pi\overline{V}| \le |V - \overline{V}| \_{\infty}
+\end{equation}
+
+However, \\(\Pi B\\) is not a contraction of any kind! _All convergence
+guarantees is lost!_
+
+
+### Q-learning is not gradient descent! {#q-learning-is-not-gradient-descent}
+
+There are several problems with the regular Q-iteration algorithm:
+
+1.  Samples are temporally correlated
+2.  Target values are always changing
+3.  There is a no gradient through the target value, even though it
+    seems we are doing a single gradient update step.
+4.  Single-sample updates
+
+With 1 and 2, it's possible to repeatedly overfit to the current sample.
+
+
+### Dealing with correlated samples {#dealing-with-correlated-samples}
+
+We can follow the same technique from actor-critic
+(synchronous/asynchronous parallel Q-learning) to alleviate correlated
+samples. The samples are however still temporally correlated. A better
+solution is to use a replay buffer.
+
+
+### Replay buffer {#replay-buffer}
+
+We have a buffer \\(B\\) that stores samples of \\((s\_i, a\_i, s\_i', r\_i)\\)
+Each time we do an update, we sample a batch i.i.d from \\(B\\), resulting in a
+lower-variance gradient. The i.i.d results in decorrelated samples. In
+practice, we periodically update the replay buffer.
+
+
+### Dealing with the moving target {#dealing-with-the-moving-target}
+
+In the online Q-learning algorithm, the target Q moves. To resolve
+this we can use a _target network_:
+
+\begin{equation}
+  \phi \leftarrow \phi - \alpha \sum\_i
+  \frac{dQ\_\phi}{d\phi}(s\_i,a\_i)(Q\_\phi(s\_i,a\_i) - [r(s\_i,a\_i) +
+  \gamma Q\_{\phi '}(s\_i', a\_i')])
+\end{equation}
+
+The use of the target network \\(Q\_{\phi '}\\) results in targets not
+changing in the inner loop.
+
+
+### DQN {#dqn}
+
+DQN is the result of using a replay buffer, target network and some
+gradient clipping. See [§mnih2013\_atari\_deeprl]({{< relref "mnih2013_atari_deeprl" >}}).
+
+
+## Double DQN {#double-dqn}
+
+{{< figure src="/ox-hugo/screenshot2019-12-17_15-54-23_.png" caption="Figure 1: The predicted Q-values are much higher than the true Q-values" >}}
+
+It has been shown imperatively that the learnt Q-values are
+numerically much higher than the true Q-values. Practically, this
+isn't much of an issue: as the predicted Q-value increases,
+performance also increases.
+
+The intuition behind why this happens, is that our target value \\(y\_j\\)
+is given by:
+
+\begin{equation}
+  y\_j = r\_j + \gamma \mathrm{max}\_{a\_j'}Q\_{\phi '}(s\_j', a\_j')
+\end{equation}
+
+It is easy to show that:
+
+\begin{equation}
+  E\left[ \mathrm{max}(X\_1, X\_2) \right] \ge \mathrm{max}(E[X\_1], E[X\_2])
+\end{equation}
+
+\\(Q\_{\phi '}(s', a')\\) overestimates the next value, because it is
+noisy! The solution is to use 2 Q-functions, decorrelating the errors:
+
+\begin{equation}
+  \mathrm{max}\_{a'}Q\_{\phi '}(s', a') = Q\_{\phi '}(s', \mathrm{argmax}\_{a'}(s',a'))
+\end{equation}
+
+becomes:
+
+\begin{equation}
+  Q\_{\phi\_A} (s,a) \leftarrow r + \gamma Q\_{\phi\_B}(s', \mathrm{argmax}\_{a'}Q\_{\phi\_A}(s',a'))
+\end{equation}
+
+\begin{equation}
+  Q\_{\phi\_B} (s,a) \leftarrow r + \gamma Q\_{\phi\_A}(s', \mathrm{argmax}\_{a'}Q\_{\phi\_B}(s',a'))
+\end{equation}
+
+To get 2 Q-functions, we use the current and target networks:
+
+\begin{equation}
+  y = r + \gamma Q\_{\phi '}(s', \mathrm{argmax}\_{a'} Q\_\phi(s',a'))
+\end{equation}
+
+
+## Q-learning with stochastic optimization {#q-learning-with-stochastic-optimization}
+
+Taking max over a continuous action space can be expensive. A simple
+approximation is:
+
+\begin{equation}
+  \mathrm{max}\_{a} Q(s,a) \approx \mathrm{max}\left\\{ Q(s,a\_1), \dots,
+  Q(s,a\_N)\right\\}
+\end{equation}
+
+where \\((a\_1, \dots, a\_N)\\) is sampled from some distribution. A more
+accurate solution is to use the cross-entropy method.
+
+Another option is to use a function class that is easy to maximize
+(e.g. using a quadratic function). This option is simple, but loses
+representational power.
+
+The final option is to learn an approximate maximizer (e.g. DDPG). The
+idea is to train another network \\(\mu\_{\phi}(s) \approx
+\mathrm{argmax}\_{a}Q\_{\phi}(s,a)\\), by solving \\(\theta \leftarrow
+\argmax Q\_\phi(s, \mu\_\theta(s))\\)
 
 
 ## Q-learning {#q-learning}
