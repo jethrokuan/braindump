@@ -178,7 +178,7 @@ because there are no gradients through target value.
 ** Deep Q-network (DQN)
 
 DQN cite:Mnih_2015 aims to improve the stability of Q-learning by
-introducing 2 mechanisms: *experience replay*, and a *periodically
+introducing 2 mechanisms: [[file:experience_replay.org][§experience_replay]], and a *periodically
 updated target*.
 
 *** Experience Replay

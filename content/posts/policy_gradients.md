@@ -1,7 +1,7 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T17:09:12+08:00
+lastmod = 2019-12-19T14:58:16+08:00
 draft = false
 math = true
 +++
@@ -147,7 +147,76 @@ Actor critics use learned estimate (e.g. $\hat{A}(s, a) = \hat{Q}(s,
 a) - \hat{V}(s).)
 
 
+## Policy Gradients an Policy Iteration {#policy-gradients-an-policy-iteration}
+
+Policy gradients involves estimating \\(\hat{A}{s,a}\\), and using it to
+improve the policy, much like policy iteration which evaluates
+\\(A(s,a)\\) and use it to create a better, deterministic policy.
+
+\begin{align}
+  J(\theta') - J(\theta)  &= J(\theta') - E\_{s\_0 \sim p(s\_1)}\left[
+                            V^{\pi\_\theta}(s\_0) \right] \\\\\\
+                          &=J(\theta') - E\_{\tau \sim p\_{\theta'}(\tau)}\left[
+                            V^{\pi\_\theta}(s\_0) \right] \\\\\\
+                          &= J(\theta') - E\_{\tau \sim
+                            p\_{\theta'}(\tau)} \left[
+                            \sum\_{t=0}^{\infty} \gamma^t
+                            V^{\pi\_\theta} (s\_t) - \sum\_{t=1}^{\infty} \gamma^t
+                            V^{\pi\_\theta} (s\_t)\right] \\\\\\
+                          &= J(\theta') + E\_{\tau \sim
+                            p\_{\theta'}(\tau)} \left[
+                            \sum\_{t=0}^{\infty} \gamma^t (\gamma
+                            V^{\pi\_\theta}(s\_{t+1}) -
+                            V^{\pi\_\theta})(s\_t) \right] \\\\\\
+                          &= E\_{\tau \sim \p\_{\theta'}(\tau)} \left[
+                            \sum\_{t=0}^{\infty} \gamma^t r(s\_t, a\_t)
+                            \right] + E\_{\tau \sim
+                            p\_{\theta'}(\tau)} \left[
+                            \sum\_{t=0}^{\infty} \gamma^t (\gamma
+                            V^{\pi\_\theta}(s\_{t+1}) -
+                            V^{\pi\_\theta})(s\_t) \right] \\\\\\
+                          &= E\_{\tau \sim p\_{\theta'}(\tau)} \left[
+    \sum\_t \gamma^t A^{\pi\_\theta} (s\_t, a,\_t) \right]
+\end{align}
+
+We have an expectation under \\(\theta'\\), but samples under \\(\theta\\). We
+use marginals representation, and importance sampling to remove the
+expectation under \\(\pi\_\theta'\\), but can we ignore the other
+distribution mismatch?
+
+{{< figure src="/ox-hugo/screenshot2019-12-19_14-47-34_.png" >}}
+
+We can bound the distribution change from \\(p\_{\theta}(s\_t)\\) to
+\\(p\_{\theta'}(s\_t)\\). (See Trust Region Policy Optimization paper)
+
+We can measure the distribution mismatch with KL divergence.
+
+Then, we can enforce the constraint of a small KL divergence by using
+a loss function with  the Lagrange Multiplier:
+
+\begin{equation}
+  L(\theta', \lambda) = \sum\_{t} E\_{s\_t \sim p\_\theta(s\_t)} \left[
+    E\_{a\_t \sim \pi\_{theta}(a\_t|s\_t)} \left[
+      \frac{p\_{theta'}(a\_t|s\_t)}{p\_\theta(a\_t|s\_t)} \gamma^t
+      A^{\pi\_\theta} (s\_t, a\_t) \right] \right] - \lambda \left(
+    D\_{KL}(\pi\_{\theta'}(a\_t|s\_t) || \pi\_\theta (a\_t|s\_t)) - \epsilon \right)
+\end{equation}
+
+1.  Maximize \\(L'\\) wrt to \\(\theta'\\)
+2.  \\(\lambda  \leftarrow \lambda + \alpha (D\_{KL} - \epsilon)\\)
+
+Intuition: raise \\(\lambda\\) if constraint violated too much, else lower
+it.
+
+Alternatively, optimize within some region, and use a Taylor expansion
+to approximate the function within that region.
+
+
+## Natural Gradients {#natural-gradients}
+
+
 ## Resources {#resources}
 
 -   [Deep Reinforcement Learning Through Policy Optimization - NIPS 2016 Tutorial](https://nips.cc/Conferences/2016/Schedule?showEvent=6198)
 -   [CS285 Fa19 9/16/19 - YouTube](https://www.youtube.com/watch?v=Ds1trXd6pos&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=6&t=0s)
+-   [CS285 Fa19 9/30/19 - YouTube](https://www.youtube.com/watch?v=uR1Ubd2hAlE&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=10&t=0s)

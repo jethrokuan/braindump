@@ -1,7 +1,7 @@
 +++
 title = "Playing Atari with Deep RL"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T23:22:49+08:00
+lastmod = 2019-12-19T18:18:22+08:00
 draft = false
 math = true
 +++
@@ -20,7 +20,7 @@ math = true
 
 ### DQN {#dqn}
 
-1.  Use of experience replay buffer
+1.  Use of [§experience\_replay]({{< relref "experience_replay" >}}) buffer
 2.  Separate target network stabilizes optimization targets:
 
 \begin{equation}

@@ -60,6 +60,7 @@ policy. This can be tweaked into an off-policy method using
 \begin{aligned} \nabla_{\theta^{\prime}} J\left(\theta^{\prime}\right) &=E_{\tau \sim \pi_{\theta}(\tau)}\left[\frac{\pi_{\theta^{\prime}}(\tau)}{\pi_{\theta}(\tau)} \nabla_{\theta^{\prime}} \log \pi_{\theta^{\prime}}(\tau) r(\tau)\right] \quad \text { when } \theta \neq \theta^{\prime} \\ &=E_{\tau \sim \pi_{\theta}(\tau)}\left[\left(\prod_{t=1}^{T} \frac{\pi_{\theta^{\prime}}\left(\mathbf{a}_{t} | \mathbf{s}_{t}\right)}{\pi_{\theta}\left(\mathbf{a}_{t} | \mathbf{s}_{t}\right)}\right)\left(\sum_{t=1}^{T} \nabla_{\theta^{\prime}} \log \pi_{\theta^{\prime}}\left(\mathbf{a}_{t} | \mathbf{s}_{t}\right)\right)\left(\sum_{t=1}^{T} r\left(\mathbf{s}_{t}, \mathbf{a}_{t}\right)\right)\right] \end{aligned}
 
 Problem: with large T the first term becomes extremely big or small.
+
 * Variance Reduction
 
 ** Causality
@@ -95,6 +96,7 @@ with respect to $b$ to 0:
 [[file:images/policy_gradients/screenshot2019-12-16_13-17-00_.png]]
 
 This is just expected reward, but weighted by gradient magnitudes.
+
 * Policy Gradient in practice
 
 - Gradients have high variance
@@ -128,6 +130,74 @@ Objective: $J(\theta) = \sum_{\tau} P_{\theta}(\tau)R(\tau)$
 Actor critics use learned estimate (e.g. $\hat{A}(s, a) = \hat{Q}(s,
 a) - \hat{V}(s).)
 
+* Policy Gradients an Policy Iteration
+
+Policy gradients involves estimating $\hat{A}{s,a}$, and using it to
+improve the policy, much like policy iteration which evaluates
+$A(s,a)$ and use it to create a better, deterministic policy.
+
+\begin{align}
+  J(\theta') - J(\theta)  &= J(\theta') - E_{s_0 \sim p(s_1)}\left[
+                            V^{\pi_\theta}(s_0) \right] \\
+                          &=J(\theta') - E_{\tau \sim p_{\theta'}(\tau)}\left[
+                            V^{\pi_\theta}(s_0) \right] \\
+                          &= J(\theta') - E_{\tau \sim
+                            p_{\theta'}(\tau)} \left[
+                            \sum_{t=0}^{\infty} \gamma^t
+                            V^{\pi_\theta} (s_t) - \sum_{t=1}^{\infty} \gamma^t
+                            V^{\pi_\theta} (s_t)\right] \\
+                          &= J(\theta') + E_{\tau \sim
+                            p_{\theta'}(\tau)} \left[
+                            \sum_{t=0}^{\infty} \gamma^t (\gamma
+                            V^{\pi_\theta}(s_{t+1}) -
+                            V^{\pi_\theta})(s_t) \right] \\
+                          &= E_{\tau \sim \p_{\theta'}(\tau)} \left[
+                            \sum_{t=0}^{\infty} \gamma^t r(s_t, a_t)
+                            \right] + E_{\tau \sim
+                            p_{\theta'}(\tau)} \left[
+                            \sum_{t=0}^{\infty} \gamma^t (\gamma
+                            V^{\pi_\theta}(s_{t+1}) -
+                            V^{\pi_\theta})(s_t) \right] \\
+                          &= E_{\tau \sim p_{\theta'}(\tau)} \left[
+    \sum_t \gamma^t A^{\pi_\theta} (s_t, a,_t) \right]
+\end{align}
+
+We have an expectation under $\theta'$, but samples under $\theta$. We
+use marginals representation, and importance sampling to remove the
+expectation under $\pi_\theta'$, but can we ignore the other
+distribution mismatch?
+
+#+DOWNLOADED: screenshot @ 2019-12-19 14:47:34
+[[file:images/policy_gradients/screenshot2019-12-19_14-47-34_.png]]
+
+We can bound the distribution change from $p_{\theta}(s_t)$ to
+$p_{\theta'}(s_t)$. (See Trust Region Policy Optimization paper)
+
+We can measure the distribution mismatch with KL divergence.
+
+Then, we can enforce the constraint of a small KL divergence by using
+a loss function with  the Lagrange Multiplier:
+
+\begin{equation}
+  L(\theta', \lambda) = \sum_{t} E_{s_t \sim p_\theta(s_t)} \left[
+    E_{a_t \sim \pi_{theta}(a_t|s_t)} \left[
+      \frac{p_{theta'}(a_t|s_t)}{p_\theta(a_t|s_t)} \gamma^t
+      A^{\pi_\theta} (s_t, a_t) \right] \right] - \lambda \left(
+    D_{KL}(\pi_{\theta'}(a_t|s_t) || \pi_\theta (a_t|s_t)) - \epsilon \right)
+\end{equation}
+
+1. Maximize $L'$ wrt to $\theta'$
+2. $\lambda  \leftarrow \lambda + \alpha (D_{KL} - \epsilon)$
+
+Intuition: raise $\lambda$ if constraint violated too much, else lower
+it.
+
+Alternatively, optimize within some region, and use a Taylor expansion
+to approximate the function within that region.
+
+* Natural Gradients
+
 * Resources
 - [[https://nips.cc/Conferences/2016/Schedule?showEvent=6198][Deep Reinforcement Learning Through Policy Optimization - NIPS 2016 Tutorial]]
 - [[https://www.youtube.com/watch?v=Ds1trXd6pos&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=6&t=0s][CS285 Fa19 9/16/19 - YouTube]]
+- [[https://www.youtube.com/watch?v=uR1Ubd2hAlE&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=10&t=0s][CS285 Fa19 9/30/19 - YouTube]]

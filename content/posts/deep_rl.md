@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T01:43:58+08:00
+lastmod = 2019-12-19T18:04:17+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -201,7 +201,7 @@ Batch actor-critic algorithm:
 ### Deep Q-network (DQN) {#deep-q-network--dqn}
 
 DQN <a id="2be9d1740dee0aea772ef29e59e5766a" href="#Mnih_2015" title="Mnih, Kavukcuoglu, Silver, David, Rusu, Veness, , Bellemare, Graves, Riedmiller, Martin, Fidjeland, Ostrovski, Georg \&amp; et, Human-level control through deep reinforcement  learning, {Nature}, v(7540), 529&#8211;533 (2015).">(Mnih et al., 2015)</a> aims to improve the stability of Q-learning by
-introducing 2 mechanisms: **experience replay**, and a **periodically
+introducing 2 mechanisms: [§experience\_replay]({{< relref "experience_replay" >}}), and a **periodically
 updated target**.
 
 -    Experience Replay
