@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T19:42:50+08:00
+lastmod = 2019-12-19T21:33:15+08:00
 tags = ["machine-learning", "deep-learning"]
 draft = false
 math = true
@@ -206,7 +206,7 @@ that using ODE blocks they were able to achieve roughly equivalent
 test-error, with a third of the parameters (0.22M compared to 0.60M)
 and constant memory cost during training.
 
-{{< figure src="images/neural_ode/screenshot_2019-04-13_22-21-54.png" >}}
+{{< figure src="/ox-hugo/screenshot_2019-04-13_22-21-54.png" >}}
 
 While this looks promising, it would be more instructive to train the
 ODEnet on different datasets.
