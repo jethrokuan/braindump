@@ -43,7 +43,7 @@ MCTS constructs the statistics tree at the starting point.
 - Simulation :: starting from position represented by left child node,
                 make random moves repeatedly until the game is won or lost
 - Update :: Depending on win or loss, update left child node in stats
-            tree with relevant stats
+            
 
 The parent nodes inherit statistics from child nodes.
 

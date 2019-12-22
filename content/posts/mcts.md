@@ -1,7 +1,7 @@
 +++
 title = "Monte Carlo Tree Search"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T15:29:01+08:00
+lastmod = 2019-12-22T18:12:28+08:00
 draft = false
 math = true
 +++
@@ -55,7 +55,6 @@ Simulation
 
 Update
 : Depending on win or loss, update left child node in stats
-    tree with relevant stats
 
 The parent nodes inherit statistics from child nodes.
 
