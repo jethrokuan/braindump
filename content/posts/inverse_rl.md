@@ -1,7 +1,7 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-25T17:15:04+08:00
+lastmod = 2019-12-25T17:33:32+08:00
 draft = false
 math = true
 +++
@@ -86,8 +86,8 @@ soft optimal policy under current reward.
 
 ## MaxEntropy Inverse RL <a id="78d223b81b3f438213caf1f4b12184f1" href="#ziebart2008_maxentrl" title="Ziebart, Maas, Bagnell \&amp; Dey, Maximum Entropy Inverse Reinforcement Learning., 1433-1438, in edited by (2008)">(Ziebart et al., 2008)</a> {#maxentropy-inverse-rl}
 
-1.  Given \\(\psi\\), compute backward message \\(\beta(s\_t, a\_t)\\)
-2.  Given \\(\psi\\), compute forward message \\(\alpha(s\_t)\\)
+1.  Given \\(\psi\\), compute [backward message]({{< relref "control_as_inference" >}}) \\(\beta(s\_t, a\_t)\\)
+2.  Given \\(\psi\\), compute [forward message]({{< relref "control_as_inference" >}}) \\(\alpha(s\_t)\\)
 3.  Compute \\(\mu\_t(s\_t, a\_t) \propto \beta(s\_t, a\_t) \alpha(s\_t)\\)
 4.  Evaluate:
 
@@ -99,9 +99,34 @@ soft optimal policy under current reward.
 
 1.  \\(\psi \leftarrow \psi + \eta \nabla\_\psi L\\)
 
-Int he case where the reward function is linear, we can show that it optimizes
+In the case where the reward function is linear, we can show that it optimizes
 to maximize entropy in the policy under the constraint that the
 expectations of the rewards for the policy and the expert are equal.
+
+MaxEnt IRL requires:
+
+1.  Solving for soft optimal policy in the inner loop
+2.  Enumerating all state-action tuples for visitation frequency and
+    gradient
+
+
+### Sample-based Updates {#sample-based-updates}
+
+This handles unknown dynamics, or large/continuous state-action
+spaces. This works under the assumption that we can sample from the
+environment.
+
+\begin{equation}
+  \nabla\_\psi L \approx \frac{1}{N} \sum\_{i=1}^{N} \nabla\_\psi r\_\psi
+  (\tau\_i) - \frac{1}{M} \sum\_{j=1}^{M} \nabla\_\psi r\_\psi(\tau\_j)
+\end{equation}
+
+We learn \\(p(a\_t | s\_t, \mathcal{O}\_{1:T}, \psi)\\) using any max-ent RL
+algorithm like soft Q-learning, then run this policy to sample
+\\(\tau\_j\\). But this is expensive, so make a small improvement to
+\\(p(a\_t | s\_t, \mathcal{O}\_{1:T}, \psi)\\) instead, and use importance
+sampling to account for the distribution mismatch. Each policy update
+w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 
 
 ## Resources {#resources}

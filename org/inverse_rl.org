@@ -78,8 +78,8 @@ soft optimal policy under current reward.
 
 * MaxEntropy Inverse RL cite:ziebart2008_maxentrl
 
-1. Given $\psi$, compute backward message $\beta(s_t, a_t)$
-2. Given $\psi$, compute forward message $\alpha(s_t)$
+1. Given $\psi$, compute [[file:control_as_inference.org::*Backward Messages][backward message]] $\beta(s_t, a_t)$
+2. Given $\psi$, compute [[file:control_as_inference.org::*Forward Messages][forward message]] $\alpha(s_t)$
 3. Compute $\mu_t(s_t, a_t) \propto \beta(s_t, a_t) \alpha(s_t)$
 4. Evaluate:
 
@@ -91,9 +91,33 @@ soft optimal policy under current reward.
 
 5. $\psi \leftarrow \psi + \eta \nabla_\psi L$
 
-Int he case where the reward function is linear, we can show that it optimizes
+In the case where the reward function is linear, we can show that it optimizes
 to maximize entropy in the policy under the constraint that the
 expectations of the rewards for the policy and the expert are equal.
+
+MaxEnt IRL requires:
+
+1. Solving for soft optimal policy in the inner loop
+2. Enumerating all state-action tuples for visitation frequency and
+   gradient
+
+** Sample-based Updates
+
+This handles unknown dynamics, or large/continuous state-action
+spaces. This works under the assumption that we can sample from the
+environment.
+
+\begin{equation}
+  \nabla_\psi L \approx \frac{1}{N} \sum_{i=1}^{N} \nabla_\psi r_\psi
+  (\tau_i) - \frac{1}{M} \sum_{j=1}^{M} \nabla_\psi r_\psi(\tau_j)
+\end{equation}
+
+We learn $p(a_t | s_t, \mathcal{O}_{1:T}, \psi)$ using any max-ent RL
+algorithm like soft Q-learning, then run this policy to sample
+$\tau_j$. But this is expensive, so make a small improvement to
+$p(a_t | s_t, \mathcal{O}_{1:T}, \psi)$ instead, and use importance
+sampling to account for the distribution mismatch. Each policy update
+w.r.t $r_\psi$ brings us closer to the target distribution.
 
 * Resources
 - [[https://www.youtube.com/watch?v=DP0SJrNgV60&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=15&t=0s][CS285 Fa19 10/21/19 - YouTube]]
