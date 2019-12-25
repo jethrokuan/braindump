@@ -1,7 +1,7 @@
 +++
 title = "Model-Based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-22T17:59:28+08:00
+lastmod = 2019-12-23T18:06:54+08:00
 draft = false
 math = true
 +++
@@ -41,3 +41,62 @@ In the stochastic _closed-loop_ case,
 
 where \\(\pi = \mathrm{argmax}\_{\pi}E\_{\tau \sim p(\tau)} \left[ \sum\_t
 r(s\_t, a\_t)\right]\\)
+
+
+## Simple Model-based RL {#simple-model-based-rl}
+
+The most basic algorithm does this:
+
+1.  Run base policy to obtain tuples \\((s\_{t+1}, s\_t, a\_t)\\)
+2.  Use supervised learning on the tuples to learn the dynamics \\(f(s\_t,
+       a\_t)\\), minimizing loss \\(\sum\_i |f(s\_t, a\_t) - s\_{t+1}|^2\\)
+3.  Use the learnt model for control
+
+Problem: _distributional shift_. We learn from some base distribution
+\\(\pi\_{0}\\), but control via \\(\pi\_{f}\\). This can be addressed by
+re-sampling \\((s, a, s')\\) to \\(D\\) after step 3.
+
+
+## Performance gap in model-based RL {#performance-gap-in-model-based-rl}
+
+Model-based RL tends to plateau in performance much earlier than
+model-free RL. This is because it needs to use a function approximator
+that:
+
+1.  Does not overfit a low amount of samples
+2.  But also is expressive enough
+
+And this turns out to be hard. Below, the model is overfitted, and the
+planner might want to exploit going to this non-existent peak, and
+result in nonsensical behaviour.
+
+![](/ox-hugo/screenshot2019-12-23_14-31-15_.png)
+We can use _uncertainty estimation_ to detect where the models may be
+wrong, for example by using [§gaussian\_processes]({{< relref "gaussian_processes" >}}).
+
+For planning under uncertainty, one can use the expected value,
+optimistic value, or pessimistic value, depending on application.
+
+
+## How can we have uncertainty-aware models? {#how-can-we-have-uncertainty-aware-models}
+
+1.  ~~Use output entropy: high entropy means model is uncertain.~~
+    1.  But model might overfit and be confident, but wrong!
+2.  Estimate model uncertainty: the model is certain about the data,
+    but we are not certain about the model.
+    1.  estimate \\(\mathrm{argmax}\_\theta \log p(\theta | D)\\)
+3.  Or use Bayesian NN, Bootstrap ensembles
+
+
+## Problems with model-based RL {#problems-with-model-based-rl}
+
+1.  High dimensionality
+2.  Redundancy
+
+
+### Partial observability {#partial-observability}
+
+Latent space models: separately learn \\(p(o\_t | s\_t)\\) (observation
+model; high dimensional, but not dynamic) and \\(p(s\_{t+1} | s\_t,
+a\_t)\\) (dynamics model; low dimensional, but dynamic), and \\(p(r\_t |
+s\_t, a\_t)\\) (reward model).

@@ -1,0 +1,4 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Gaussian Processes
+
+* TODO [[https://yugeten.github.io/posts/2019/09/GP/][Gaussian Process, not quite for dummies - Yuge Shi]]

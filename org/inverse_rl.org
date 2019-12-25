@@ -1,0 +1,106 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Inverse Reinforcement Learning
+
+Standard [[file:imitation_learning.org][§imitation_learning]] copies actions performed by the expert,
+and do not reason about the outcomes of the actions. However, humans
+copy the /intent/ of the actions, which result in vastly different
+actions.
+
+We want to learn the reward function because the reward function is
+often hard to specify.
+
+Inverse Reinforcement Learning is about learning reward functions.
+This problem is, however, ill-specified: *there are infinitely many
+reward functions that can explain the same behaviour*. Formally:
+
+Inverse RL is the setting where we are given:
+
+1. states $s \in S$, actions $a \in A$
+2. (sometimes) transitions $p(s' | s, a)$
+3. samples $\{\tau_i\}$ sampled from $\pi^\star (\tau)$
+
+and we would like to learn $r_{\psi}(s,a)$, where $\psi$ are the
+parameters of the reward functions. A common choice is a linear reward
+function:
+
+\begin{equation}
+  r_\psi (s,a) = \sum_{i} \psi_i f_i(s,a) = \psi^T f(s,a)
+\end{equation}
+
+* Feature Matching IRL
+
+/Idea:/ if features $f$ are important, what if we match their
+expectations? Let $\pi^{r_\psi}$ be the optimal policy for $r_\psi$,
+then we pick $\psi$ such that $E_\pi r_\psi [f(s,a)]= E_{\pi^\star}[f(s,a)]$
+
+We can approximate the RHS using expert samples, and the LHS is the
+state-action marginal under $\pi^{r_\psi}$. This is still ambiguous,
+and a solution inspired from SVMs is to use the /maximum margin
+principle/:
+
+\begin{equation}
+  \mathrm{min}_\psi \frac{1}{2} |\psi|^2 \text{ such that } \psi^T
+  E_{\pi^\star}[f(s,a)] \ge \mathrm{max}_{\psi \in \Pi} \psi^T
+  E_{\pi}[f(s,a)] + D(\pi, \pi^\star)
+\end{equation}
+
+where $D$ could be the difference in expectations.
+
+Issues with the maximum margin principle:
+
+1. Maximizing margin is an arbitrary choice
+2. No clear model of sub-optimality
+
+* Maximum likelihood learning
+
+The IRL partition function is:
+
+\begin{equation}
+  \mathrm{max}_{\psi}\frac{1}{N} \sum_{i=1}^{N} r_\psi (\tau_i) - \log Z
+\end{equation}
+
+where $Z$ is the integral over all trajectories: $Z = \int p(\tau) \mathrm{exp}(r_\psi(\tau))d\tau$
+
+\begin{equation}
+  \nabla_\psi L = \frac{1}{N}\sum_{i=1}^{N}\nabla_\psi r_\psi(\tau_i)
+  - \frac{1}{Z} \int p(\tau) \mathrm{exp}(r_\psi(\tau))\nabla_\psi
+  r_\psi(\tau) d\tau
+\end{equation}
+
+\begin{equation}
+  \nabla_\psi L = E_{\tau \sim \pi^\star (\tau)} [\nabla_\psi
+  r_\psi(\tau_i)] - E_{\tau \sim p(\tau | \mathcal{O}_{1:T},
+    \psi)}[\nabla_\psi r_\psi (\tau)]
+\end{equation}
+
+first term is estimated with expert samples, and the second with the
+soft optimal policy under current reward.
+
+* MaxEntropy Inverse RL cite:ziebart2008_maxentrl
+
+1. Given $\psi$, compute backward message $\beta(s_t, a_t)$
+2. Given $\psi$, compute forward message $\alpha(s_t)$
+3. Compute $\mu_t(s_t, a_t) \propto \beta(s_t, a_t) \alpha(s_t)$
+4. Evaluate:
+
+\begin{equation}
+  \nabla_\psi L = \frac{1}{N}\sum_{i=1}^{N}\sum_{t=1}^{T} \nabla_\psi
+  r_\psi (s_{i,t},a_{i,t}) - \sum_{t=1}^{T} \int \int
+  \mu_t(s_t,a_t)\nabla_\psi r_\psi(s_t, a_t)ds_t da_t
+\end{equation}
+
+5. $\psi \leftarrow \psi + \eta \nabla_\psi L$
+
+Int he case where the reward function is linear, we can show that it optimizes
+to maximize entropy in the policy under the constraint that the
+expectations of the rewards for the policy and the expert are equal.
+
+* Resources
+- [[https://www.youtube.com/watch?v=DP0SJrNgV60&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=15&t=0s][CS285 Fa19 10/21/19 - YouTube]]
+
+* Papers
+- cite:abbeel2004apprenticeship
+- cite:ratliff2006maximum
+
+bibliography:./biblio/rl.bib
+

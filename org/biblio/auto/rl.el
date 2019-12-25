@@ -18,6 +18,10 @@
     "dabney2018distributional"
     "schultz97_neural_subst_predic_rewar"
     "stolle2002learning"
-    "haan19_causal_confus_imitat_learn"))
+    "haan19_causal_confus_imitat_learn"
+    "levine18_reinf_learn_contr_as_probab_infer"
+    "abbeel2004apprenticeship"
+    "ratliff2006maximum"
+    "ziebart2008_maxentrl"))
  :bibtex)
 
