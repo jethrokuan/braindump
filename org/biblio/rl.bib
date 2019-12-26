@@ -352,3 +352,53 @@ month = {01},
 pages = {1433-1438},
 title = {Maximum Entropy Inverse Reinforcement Learning.}
 }
+
+
+
+
+@InProceedings{pmlr-v70-haarnoja17a,
+  title = 	 {Reinforcement Learning with Deep Energy-Based Policies},
+  author = 	 {Tuomas Haarnoja and Haoran Tang and Pieter Abbeel and Sergey Levine},
+  booktitle = 	 {Proceedings of the 34th International Conference on Machine Learning},
+  pages = 	 {1352--1361},
+  year = 	 {2017},
+  editor = 	 {Doina Precup and Yee Whye Teh},
+  volume = 	 {70},
+  series = 	 {Proceedings of Machine Learning Research},
+  address = 	 {International Convention Centre, Sydney, Australia},
+  month = 	 {06--11 Aug},
+  publisher = 	 {PMLR},
+  pdf = 	 {http://proceedings.mlr.press/v70/haarnoja17a/haarnoja17a.pdf},
+  url = 	 {http://proceedings.mlr.press/v70/haarnoja17a.html},
+  abstract = 	 {We propose a method for learning expressive energy-based policies for continuous states and actions, which has been feasible only in tabular domains before. We apply our method to learning maximum entropy policies, resulting into a new algorithm, called soft Q-learning, that expresses the optimal policy via a Boltzmann distribution. We use the recently proposed amortized Stein variational gradient descent to learn a stochastic sampling network that approximates samples from this distribution. The benefits of the proposed algorithm include improved exploration and compositionality that allows transferring skills between tasks, which we confirm in simulated experiments with swimming and walking robots. We also draw a connection to actor-critic methods, which can be viewed performing approximate inference on the corresponding energy-based model.}
+}
+
+@article{rusu15_polic_distil,
+  author =       {Rusu, Andrei A. and Colmenarejo, Sergio Gomez and
+                  Gulcehre, Caglar and Desjardins, Guillaume and
+                  Kirkpatrick, James and Pascanu, Razvan and Mnih,
+                  Volodymyr and Kavukcuoglu, Koray and Hadsell, Raia},
+  title =        {Policy Distillation},
+  journal =      {CoRR},
+  year =         2015,
+  url =          {http://arxiv.org/abs/1511.06295v2},
+  abstract =     {Policies for complex visual tasks have been
+                  successfully learned with deep reinforcement
+                  learning, using an approach called deep Q-networks
+                  (DQN), but relatively large (task-specific) networks
+                  and extensive training are needed to achieve good
+                  performance. In this work, we present a novel method
+                  called policy distillation that can be used to
+                  extract the policy of a reinforcement learning agent
+                  and train a new network that performs at the expert
+                  level while being dramatically smaller and more
+                  efficient. Furthermore, the same method can be used
+                  to consolidate multiple task-specific policies into
+                  a single policy. We demonstrate these claims using
+                  the Atari domain and show that the multi-task
+                  distilled agent outperforms the single-task teachers
+                  as well as a jointly-trained DQN agent.},
+  archivePrefix ={arXiv},
+  eprint =       {1511.06295},
+  primaryClass = {cs.LG},
+}

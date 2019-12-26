@@ -22,6 +22,8 @@
     "levine18_reinf_learn_contr_as_probab_infer"
     "abbeel2004apprenticeship"
     "ratliff2006maximum"
-    "ziebart2008_maxentrl"))
+    "ziebart2008_maxentrl"
+    "pmlr-v70-haarnoja17a"
+    "rusu15_polic_distil"))
  :bibtex)
 

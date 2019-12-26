@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-17T16:09:26+08:00
+lastmod = 2019-12-26T21:35:23+08:00
 draft = false
 math = true
 +++
@@ -166,7 +166,7 @@ The use of the target network \\(Q\_{\phi '}\\) results in targets not
 changing in the inner loop.
 
 
-### DQN {#dqn}
+## DQN {#dqn}
 
 DQN is the result of using a replay buffer, target network and some
 gradient clipping. See [§mnih2013\_atari\_deeprl]({{< relref "mnih2013_atari_deeprl" >}}).

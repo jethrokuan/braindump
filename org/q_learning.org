@@ -149,7 +149,7 @@ this we can use a /target network/:
 The use of the target network $Q_{\phi '}$ results in targets not
 changing in the inner loop.
 
-** DQN
+* DQN
 
 DQN is the result of using a replay buffer, target network and some
 gradient clipping. See [[file:mnih2013_atari_deeprl.org][§mnih2013_atari_deeprl]].
