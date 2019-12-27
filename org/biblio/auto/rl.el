@@ -24,6 +24,11 @@
     "ratliff2006maximum"
     "ziebart2008_maxentrl"
     "pmlr-v70-haarnoja17a"
-    "rusu15_polic_distil"))
+    "rusu15_polic_distil"
+    "nair15_massiv_paral_method_deep_reinf_learn"
+    "espeholt18_impal"
+    "horgan18_distr_prior_exper_replay"
+    "paine19_makin_effic_use_demon_to"
+    "NIPS2016_6383"))
  :bibtex)
 

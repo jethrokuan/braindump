@@ -402,3 +402,144 @@ title = {Maximum Entropy Inverse Reinforcement Learning.}
   eprint =       {1511.06295},
   primaryClass = {cs.LG},
 }
+
+@article{nair15_massiv_paral_method_deep_reinf_learn,
+  author =       {Nair, Arun and Srinivasan, Praveen and Blackwell,
+                  Sam and Alcicek, Cagdas and Fearon, Rory and Maria,
+                  Alessandro De and Panneershelvam, Vedavyas and
+                  Suleyman, Mustafa and Beattie, Charles and Petersen,
+                  Stig and Legg, Shane and Mnih, Volodymyr and
+                  Kavukcuoglu, Koray and Silver, David},
+  title =        {Massively Parallel Methods for Deep Reinforcement
+                  Learning},
+  journal =      {CoRR},
+  year =         2015,
+  url =          {http://arxiv.org/abs/1507.04296v2},
+  abstract =     {We present the first massively distributed
+                  architecture for deep reinforcement learning. This
+                  architecture uses four main components: parallel
+                  actors that generate new behaviour; parallel
+                  learners that are trained from stored experience; a
+                  distributed neural network to represent the value
+                  function or behaviour policy; and a distributed
+                  store of experience. We used our architecture to
+                  implement the Deep Q-Network algorithm (DQN). Our
+                  distributed algorithm was applied to 49 games from
+                  Atari 2600 games from the Arcade Learning
+                  Environment, using identical hyperparameters. Our
+                  performance surpassed non-distributed DQN in 41 of
+                  the 49 games and also reduced the wall-time required
+                  to achieve these results by an order of magnitude on
+                  most games.},
+  archivePrefix ={arXiv},
+  eprint =       {1507.04296},
+  primaryClass = {cs.LG},
+}
+
+@article{espeholt18_impal,
+  author =       {Espeholt, Lasse and Soyer, Hubert and Munos, Remi
+                  and Simonyan, Karen and Mnih, Volodymir and Ward,
+                  Tom and Doron, Yotam and Firoiu, Vlad and Harley,
+                  Tim and Dunning, Iain and Legg, Shane and
+                  Kavukcuoglu, Koray},
+  title =        {Impala: Scalable Distributed Deep-Rl With Importance
+                  Weighted Actor-Learner Architectures},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1802.01561v3},
+  abstract =     {In this work we aim to solve a large collection of
+                  tasks using a single reinforcement learning agent
+                  with a single set of parameters. A key challenge is
+                  to handle the increased amount of data and extended
+                  training time. We have developed a new distributed
+                  agent IMPALA (Importance Weighted Actor-Learner
+                  Architecture) that not only uses resources more
+                  efficiently in single-machine training but also
+                  scales to thousands of machines without sacrificing
+                  data efficiency or resource utilisation. We achieve
+                  stable learning at high throughput by combining
+                  decoupled acting and learning with a novel
+                  off-policy correction method called V-trace. We
+                  demonstrate the effectiveness of IMPALA for
+                  multi-task reinforcement learning on DMLab-30 (a set
+                  of 30 tasks from the DeepMind Lab environment
+                  (Beattie et al., 2016)) and Atari-57 (all available
+                  Atari games in Arcade Learning Environment
+                  (Bellemare et al., 2013a)). Our results show that
+                  IMPALA is able to achieve better performance than
+                  previous agents with less data, and crucially
+                  exhibits positive transfer between tasks as a result
+                  of its multi-task approach.},
+  archivePrefix ={arXiv},
+  eprint =       {1802.01561},
+  primaryClass = {cs.LG},
+}
+
+@article{horgan18_distr_prior_exper_replay,
+  author =       {Horgan, Dan and Quan, John and Budden, David and
+                  Barth-Maron, Gabriel and Hessel, Matteo and Hasselt,
+                  Hado van and Silver, David},
+  title =        {Distributed Prioritized Experience Replay},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1803.00933v1},
+  abstract =     {We propose a distributed architecture for deep
+                  reinforcement learning at scale, that enables agents
+                  to learn effectively from orders of magnitude more
+                  data than previously possible. The algorithm
+                  decouples acting from learning: the actors interact
+                  with their own instances of the environment by
+                  selecting actions according to a shared neural
+                  network, and accumulate the resulting experience in
+                  a shared experience replay memory; the learner
+                  replays samples of experience and updates the neural
+                  network. The architecture relies on prioritized
+                  experience replay to focus only on the most
+                  significant data generated by the actors. Our
+                  architecture substantially improves the state of the
+                  art on the Arcade Learning Environment, achieving
+                  better final performance in a fraction of the
+                  wall-clock training time.},
+  archivePrefix ={arXiv},
+  eprint =       {1803.00933},
+  primaryClass = {cs.LG},
+}
+
+@article{paine19_makin_effic_use_demon_to,
+  author =       {Paine, Tom Le and Gulcehre, Caglar and Shahriari,
+                  Bobak and Denil, Misha and Hoffman, Matt and Soyer,
+                  Hubert and Tanburn, Richard and Kapturowski, Steven
+                  and Rabinowitz, Neil and Williams, Duncan and
+                  Barth-Maron, Gabriel and Wang, Ziyu and Freitas,
+                  Nando de and Team, Worlds},
+  title =        {Making Efficient Use of Demonstrations To Solve Hard
+                  Exploration Problems},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1909.01387v1},
+  abstract =     {This paper introduces R2D3, an agent that makes
+                  efficient use of demonstrations to solve hard
+                  exploration problems in partially observable
+                  environments with highly variable initial
+                  conditions. We also introduce a suite of eight tasks
+                  that combine these three properties, and show that
+                  R2D3 can solve several of the tasks where other
+                  state of the art methods (both with and without
+                  demonstrations) fail to see even a single successful
+                  trajectory after tens of billions of steps of
+                  exploration.},
+  archivePrefix ={arXiv},
+  eprint =       {1909.01387},
+  primaryClass = {cs.LG},
+}
+
+@incollection{NIPS2016_6383,
+title = {Unifying Count-Based Exploration and Intrinsic Motivation},
+author = {Bellemare, Marc and Srinivasan, Sriram and Ostrovski, Georg and Schaul, Tom and Saxton, David and Munos, Remi},
+booktitle = {Advances in Neural Information Processing Systems 29},
+editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
+pages = {1471--1479},
+year = {2016},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf}
+}

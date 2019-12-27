@@ -1,0 +1,15 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Distributed Reinforcement Learning
+
+* History of Distributed RL
+1. DQN cite:mnih2013playing: [[file:mnih2013_atari_deeprl.org][§mnih2013_atari_deeprl]]
+2. GORILA cite:nair15_massiv_paral_method_deep_reinf_learn
+3. A3C cite:mnih16_async_method_deep_reinf_learn
+4. IMPALA cite:espeholt18_impal
+5. Ape-X cite:horgan18_distr_prior_exper_replay
+6. R2D3 cite:paine19_makin_effic_use_demon_to
+
+* Resources
+- [[https://www.youtube.com/watch?v=oUnsDUtNsOQ&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=17&t=0s][CS285 Fa19 10/30/19 - YouTube]]
+
+bibliography:./biblio/rl.bib
