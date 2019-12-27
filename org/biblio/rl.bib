@@ -543,3 +543,78 @@ year = {2016},
 publisher = {Curran Associates, Inc.},
 url = {http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf}
 }
+
+@article{pong19_skew_fit,
+  author =       {Pong, Vitchyr H. and Dalal, Murtaza and Lin, Steven
+                  and Nair, Ashvin and Bahl, Shikhar and Levine,
+                  Sergey},
+  title =        {Skew-Fit: State-Covering Self-Supervised
+                  Reinforcement Learning},
+  journal =      {CoRR},
+  year =         2019,
+  url =          {http://arxiv.org/abs/1903.03698v2},
+  abstract =     {In standard reinforcement learning, each new skill
+                  requires a manually-designed reward function, which
+                  takes considerable manual effort and engineering.
+                  Self-supervised goal setting has the potential to
+                  automate this process, enabling an agent to propose
+                  its own goals and acquire skills that achieve these
+                  goals. However, such methods typically rely on
+                  manually-designed goal distributions, or heuristics
+                  to force the agent to explore a wide range of
+                  states. We propose a formal exploration objective
+                  for goal-reaching policies that maximizes state
+                  coverage. We show that this objective is equivalent
+                  to maximizing the entropy of the goal distribution
+                  together with goal reaching performance, where goals
+                  correspond to entire states. We present an algorithm
+                  called Skew-Fit for learning such a maximum-entropy
+                  goal distribution, and show that under certain
+                  regularity conditions, our method converges to a
+                  uniform distribution over the set of possible
+                  states, even when we do not know this set
+                  beforehand. Skew-Fit enables self-supervised agents
+                  to autonomously choose and practice diverse goals.
+                  Our experiments show that it can learn a variety of
+                  manipulation tasks from images, including opening a
+                  door with a real robot, entirely from scratch and
+                  without any manually-designed reward function.},
+  archivePrefix ={arXiv},
+  eprint =       {1903.03698},
+  primaryClass = {cs.LG},
+}
+
+@article{eysenbach18_diver_is_all_you_need,
+  author =       {Eysenbach, Benjamin and Gupta, Abhishek and Ibarz,
+                  Julian and Levine, Sergey},
+  title =        {Diversity Is All You Need: Learning Skills Without a
+                  Reward Function},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1802.06070v6},
+  abstract =     {Intelligent creatures can explore their environments
+                  and learn useful skills without supervision. In this
+                  paper, we propose DIAYN ('Diversity is All You
+                  Need'), a method for learning useful skills without
+                  a reward function. Our proposed method learns skills
+                  by maximizing an information theoretic objective
+                  using a maximum entropy policy. On a variety of
+                  simulated robotic tasks, we show that this simple
+                  objective results in the unsupervised emergence of
+                  diverse skills, such as walking and jumping. In a
+                  number of reinforcement learning benchmark
+                  environments, our method is able to learn a skill
+                  that solves the benchmark task despite never
+                  receiving the true task reward. We show how
+                  pretrained skills can provide a good parameter
+                  initialization for downstream tasks, and can be
+                  composed hierarchically to solve complex, sparse
+                  reward tasks. Our results suggest that unsupervised
+                  discovery of skills can serve as an effective
+                  pretraining mechanism for overcoming challenges of
+                  exploration and data efficiency in reinforcement
+                  learning.},
+  archivePrefix ={arXiv},
+  eprint =       {1802.06070},
+  primaryClass = {cs.AI},
+}

@@ -59,6 +59,26 @@ bibliographystyle:unsrt
   - easier to represent the policy?
   - easier to represent the model?
 
+* Challenges in Deep RL
+** Stability and Hyperparameter Tuning
+- Devising stable RL algorithms is hard
+- Can't run hyperparameter sweeps in the real world
+
+Would like algorithms with favourable improvement and convergence
+properties:
+
+- Trust region policy optimization
+  cite:schulman15_high_dimen_contin_contr_using
+
+or algorithms that adaptively adjust parameters:
+
+- Q-Prop cite:gu16_q_prop
+
+** Problem Formulation
+
+- Multi-task reinforcement learning and generalization
+- Unsupervised or self-supervised learning
+
 * Resources
 1. [[https://www.youtube.com/playlist?list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A][CS285 Fall 2019 - YouTube]]
 2. [[https://spinningup.openai.com/en/latest/][Welcome to Spinning Up in Deep RL! — Spinning Up documentation]]
@@ -72,3 +92,9 @@ bibliographystyle:unsrt
 - [[file:inverse_rl.org][§inverse_rl]]
 - [[file:control_as_inference.org][§control_as_inference]]
 - [[file:transfer_learning.org][§transfer_learning]]
+- [[file:distributed_rl.org][§distributed_rl]]
+- [[file:exploration_in_rl.org][§exploration_in_rl]]
+- [[file:information_theoretic_rl.org][§information_theoretic_rl]]
+
+
+bibliography:./biblio/rl.bib

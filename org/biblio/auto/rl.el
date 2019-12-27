@@ -29,6 +29,8 @@
     "espeholt18_impal"
     "horgan18_distr_prior_exper_replay"
     "paine19_makin_effic_use_demon_to"
-    "NIPS2016_6383"))
+    "NIPS2016_6383"
+    "pong19_skew_fit"
+    "eysenbach18_diver_is_all_you_need"))
  :bibtex)
 

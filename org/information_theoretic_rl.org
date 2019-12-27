@@ -1,0 +1,20 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Information Theoretic Reinforcement Learning
+
+Can we learn /without/ any reward function at all?
+
+* Identities
+
+- entropy :: $\mathcal{H}(p(x)) = - E_{x \sim p(x)}[\log p(x)]$
+- mutual information ::  $\mathcal{I}(x;y) = D_{KL}(p(x,y) || p(x)p(y))$
+
+* Information theoretic quantities in RL
+- $\pi(s)$ :: state marginal distribution of policy $\pi$
+- $\mathcal{H}(\pi(s))$ :: state marginal entropy of policy $\pi$
+- empowerment :: $\mathcal{I}(s_{t+1};a_t) = \mathcal{H}(s_{t+1}) - \mathcal{H}(s_{t+1}|a_t)$
+
+* Papers
+- Skew-Fit cite:pong19_skew_fit
+- Diversity is All your Need cite:eysenbach18_diver_is_all_you_need
+
+bibliography:./biblio/rl.bib

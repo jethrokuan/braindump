@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-26T21:50:04+08:00
+lastmod = 2019-12-27T12:52:06+08:00
 tags = ["machine-learning"]
 draft = false
 math = true
@@ -73,6 +73,31 @@ model-based RL
     -   easier to represent the model?
 
 
+## Challenges in Deep RL {#challenges-in-deep-rl}
+
+
+### Stability and Hyperparameter Tuning {#stability-and-hyperparameter-tuning}
+
+-   Devising stable RL algorithms is hard
+-   Can't run hyperparameter sweeps in the real world
+
+Would like algorithms with favourable improvement and convergence
+properties:
+
+-   Trust region policy optimization
+    <a id="57393aa8ebb8846c7181c31bfd5fbe89" href="#schulman15_high_dimen_contin_contr_using" title="Schulman, Moritz, Levine, Sergey, Jordan \&amp; Abbeel, High-Dimensional Continuous Control Using  Generalized Advantage Estimation, {CoRR}, v(), (2015).">(Schulman et al., 2015)</a>
+
+or algorithms that adaptively adjust parameters:
+
+-   Q-Prop <a id="23ad5881923885616b0afd34dad9df52" href="#gu16_q_prop" title="Gu, Lillicrap, Ghahramani, Zoubin, Turner \&amp; Levine, Q-Prop: Sample-Efficient Policy Gradient With an  Off-Policy Critic, {CoRR}, v(), (2016).">(Gu et al., 2016)</a>
+
+
+### Problem Formulation {#problem-formulation}
+
+-   Multi-task reinforcement learning and generalization
+-   Unsupervised or self-supervised learning
+
+
 ## Resources {#resources}
 
 1.  [CS285 Fall 2019 - YouTube](https://www.youtube.com/playlist?list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A)
@@ -89,3 +114,11 @@ model-based RL
 -   [§inverse\_rl]({{< relref "inverse_rl" >}})
 -   [§control\_as\_inference]({{< relref "control_as_inference" >}})
 -   [§transfer\_learning]({{< relref "transfer_learning" >}})
+-   [§distributed\_rl]({{< relref "distributed_rl" >}})
+-   [§exploration\_in\_rl]({{< relref "exploration_in_rl" >}})
+-   [§information\_theoretic\_rl]({{< relref "information_theoretic_rl" >}})
+
+# Bibliography
+<a id="schulman15_high_dimen_contin_contr_using"></a>Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., *High-Dimensional Continuous Control Using Generalized Advantage Estimation*, CoRR, *()*,  (2015).  [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
+
+<a id="gu16_q_prop"></a>Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., *Q-prop: sample-efficient policy gradient with an off-policy critic*, CoRR, *()*,  (2016).  [↩](#23ad5881923885616b0afd34dad9df52)
