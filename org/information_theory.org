@@ -128,3 +128,10 @@ We can compress N outcomes from a source $X$ into roughly $NH(X)$
 bits.
 
 This is provable by counting the typical set.
+
+* Shannon's Noisy-Channel Coding Theorem
+
+#+BEGIN_QUOTE
+Information can be communicated over a noisy channel at a non-zero
+rate with arbitrarily small error probability
+#+END_QUOTE

@@ -1,0 +1,4 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Numpy
+* Resources
+- [[https://www.labri.fr/perso/nrougier/from-python-to-numpy/][From Python to Numpy]]

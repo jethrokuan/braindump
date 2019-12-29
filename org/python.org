@@ -2,6 +2,15 @@
 #+HUGO_TAGS: python proglang
 #+TITLE: Python
 
+* Setting up Python Environment
+
+Python version management is handled with [[https://github.com/pyenv/pyenv][pyenv]]. Some further packages
+may need to be installed to build a full Python distribution:
+
+#+begin_src bash
+  sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
+#+end_src
+
 * Python Default Values
 http://effbot.org/zone/default-values.htm
 
@@ -32,7 +41,7 @@ default arguments are evaluated in the “def” statement’s environment.
 If you execute “def” multiple times, it’ll create a new function
 object (with freshly calculated default values) each time.
 
-* Python  Data Structure Libraries
+* Python Data Structures
 ** Heap
 Heaps are provided by the =heapq= library in python.
 
@@ -76,12 +85,7 @@ questions.
 : (5, 'five')
 : (10, 'ten')
 
-* Python Libraries
-** Bisect
-https://docs.python.org/2/library/bisect.html
-
-
-* Strings
+** Strings
 
 Some important string operators and functions are:
 
@@ -101,7 +105,7 @@ Some important string operators and functions are:
 Strings are immutable, so operations create new array of characters
 that are then assigned back to s.
 
-* Python Nifty Tricks
+* Tricks
 ** Tilde Operator
 The tilde operator =~= is the bit-wise complement operator, and it
 essentially calculates the ~-x-1.~ This comes in useful in arrays, where
@@ -124,19 +128,15 @@ substitution quick.
 ** Checking if character unique in string
  ~s.index(x) == s.rindex(x)~ to check if character is only one in the string
 
-* Numpy
-[[https://github.com/rougier/from-python-to-numpy/][rougier/from-python-to-numpy]] is a great reference to see how to speed
-up programs through vectorization.
-
 * Reference Python Applications
-[[https://github.com/mahmoud/awesome-python-applications][mahmoud/awesome-python-applications]]
+- [[https://github.com/mahmoud/awesome-python-applications][mahmoud/awesome-python-applications]]
 
-* Google Python Style Guide
-https://google.github.io/styleguide/pyguide.html
+* Style Guides
+- [[https://google.github.io/styleguide/pyguide.html][styleguide | Style guides for Google-originated open-source projects]]
+- [[https://github.com/psf/black][psf/black]]
 
 * Optimizing Python
-[[https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/][Gregory Szorc's Digital Home | What I've Learned About Optimizing
-Python]]
+- [[https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/][Gregory Szorc's Digital Home | What I've Learned About Optimizing Python]]
 
 * Profiling Python
-[[https://github.com/benfred/py-spy][benfred/py-spy: Sampling profiler for Python programs]]
+- [[https://github.com/benfred/py-spy][benfred/py-spy: Sampling profiler for Python programs]]

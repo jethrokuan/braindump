@@ -1,11 +1,21 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:40:58+08:00
+lastmod = 2019-12-29T20:07:42+08:00
 tags = ["python", "proglang"]
 draft = false
 math = true
 +++
+
+## Setting up Python Environment {#setting-up-python-environment}
+
+Python version management is handled with [pyenv](https://github.com/pyenv/pyenv). Some further packages
+may need to be installed to build a full Python distribution:
+
+```bash
+sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
+```
+
 
 ## Python Default Values {#python-default-values}
 
@@ -33,7 +43,7 @@ If you execute “def” multiple times, it’ll create a new function
 object (with freshly calculated default values) each time.
 
 
-## Python  Data Structure Libraries {#python-data-structure-libraries}
+## Python Data Structures {#python-data-structures}
 
 
 ### Heap {#heap}
@@ -78,15 +88,7 @@ while not pq.empty():
 ```
 
 
-## Python Libraries {#python-libraries}
-
-
-### Bisect {#bisect}
-
-<https://docs.python.org/2/library/bisect.html>
-
-
-## Strings {#strings}
+### Strings {#strings}
 
 Some important string operators and functions are:
 
@@ -107,7 +109,7 @@ Strings are immutable, so operations create new array of characters
 that are then assigned back to s.
 
 
-## Python Nifty Tricks {#python-nifty-tricks}
+## Tricks {#tricks}
 
 
 ### Tilde Operator {#tilde-operator}
@@ -140,28 +142,22 @@ substitution quick.
 `s.index(x) == s.rindex(x)` to check if character is only one in the string
 
 
-## Numpy {#numpy}
-
-[rougier/from-python-to-numpy](https://github.com/rougier/from-python-to-numpy/) is a great reference to see how to speed
-up programs through vectorization.
-
-
 ## Reference Python Applications {#reference-python-applications}
 
-[mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications)
+-   [mahmoud/awesome-python-applications](https://github.com/mahmoud/awesome-python-applications)
 
 
-## Google Python Style Guide {#google-python-style-guide}
+## Style Guides {#style-guides}
 
-<https://google.github.io/styleguide/pyguide.html>
+-   [styleguide | Style guides for Google-originated open-source projects](https://google.github.io/styleguide/pyguide.html)
+-   [psf/black](https://github.com/psf/black)
 
 
 ## Optimizing Python {#optimizing-python}
 
-[Gregory Szorc's Digital Home | What I've Learned About Optimizing
-Python](https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/)
+-   [Gregory Szorc's Digital Home | What I've Learned About Optimizing Python](https://gregoryszorc.com/blog/2019/01/10/what-i've-learned-about-optimizing-python/)
 
 
 ## Profiling Python {#profiling-python}
 
-[benfred/py-spy: Sampling profiler for Python programs](https://github.com/benfred/py-spy)
+-   [benfred/py-spy: Sampling profiler for Python programs](https://github.com/benfred/py-spy)

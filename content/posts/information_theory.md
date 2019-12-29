@@ -1,7 +1,7 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-07T14:36:59+08:00
+lastmod = 2019-12-28T21:25:27+08:00
 draft = false
 math = true
 +++
@@ -34,90 +34,87 @@ creation of practical encoding and decoding systems.
 
 ### Error-correcting codes for binary symmetric channels {#error-correcting-codes-for-binary-symmetric-channels}
 
+-    Repetition codes
 
-#### Repetition codes {#repetition-codes}
+    Key idea: repeat every bit of the message a prearranged number of
+    times, and pick the bit with the majority vote.
 
-Key idea: repeat every bit of the message a prearranged number of
-times, and pick the bit with the majority vote.
+    We can describe the channel as adding a sparse noise vector n to the
+    transmitted vector, adding in a modulo 2 arithmetic.
 
-We can describe the channel as adding a sparse noise vector n to the
-transmitted vector, adding in a modulo 2 arithmetic.
+    One can show that this algorithm is optimal by considering the maximum
+    likelihood function of `s`.
 
-One can show that this algorithm is optimal by considering the maximum
-likelihood function of `s`.
+    The repetition code \\(R\_3\\) (repeat 3 times) has reduced the probability
+    of error, but has also reduced the _rate_ of information by a factor
+    of 3.
 
-The repetition code \\(R\_3\\) (repeat 3 times) has reduced the probability
-of error, but has also reduced the _rate_ of information by a factor
-of 3.
+-    Block codes - the (7,4) Hamming Code
 
+    Key idea: add redundancy to blocks of data instead of encoding one bit
+    at a time.
 
-#### Block codes - the (7,4) Hamming Code {#block-codes-the--7-4--hamming-code}
+    A block code is a rule for converting a sequence of source bits `s`,
+    of length `K`, into  transmitted sequence `t` of length `N > K` bits.
+    The Hamming code transmits `N=7` bits for every `K=4` bits.
 
-Key idea: add redundancy to blocks of data instead of encoding one bit
-at a time.
+    Because the Hamming code is a linear code, it can be written compactly
+    as a matrix:
 
-A block code is a rule for converting a sequence of source bits `s`,
-of length `K`, into  transmitted sequence `t` of length `N > K` bits.
-The Hamming code transmits `N=7` bits for every `K=4` bits.
+    \begin{equation\*}
+      \text{transmitted} = G^T \text{source}
+    \end{equation\*}
 
-Because the Hamming code is a linear code, it can be written compactly
-as a matrix:
+    where \\(G\\) is the generator matrix of the code.
 
-\begin{equation\*}
-  \text{transmitted} = G^T \text{source}
-\end{equation\*}
+    -    Decoding for linear codes: syndrome decoding
 
-where \\(G\\) is the generator matrix of the code.
+        The decoding problem for linear codes can also be described in terms
+        of matrices. We evaluate 3 parity-check bits for the received bits
+        \\(r\_1r\_2r\_3r\_4\\), and see whether they match the three received bits
+        \\(r\_5r\_6r\_7\\). The differences (mod 2) between these 2 triplets are
+        called the _syndrome_ of the received vector. If the syndrome is 0,
+        then the received vector is a code word, and the most probable
+        decoding is given by reading its first four bits.
 
--    Decoding for linear codes: syndrome decoding
-
-    The decoding problem for linear codes can also be described in terms
-    of matrices. We evaluate 3 parity-check bits for the received bits
-    \\(r\_1r\_2r\_3r\_4\\), and see whether they match the three received bits
-    \\(r\_5r\_6r\_7\\). The differences (mod 2) between these 2 triplets are
-    called the _syndrome_ of the received vector. If the syndrome is 0,
-    then the received vector is a code word, and the most probable
-    decoding is given by reading its first four bits.
-
-    \begin{align\*}
-      G^T &=
-      \begin{bmatrix}
-        I\_4 \\\\\\
-        P
-      \end{bmatrix}, \\\\\\
-      H &=
+        \begin{align\*}
+          G^T &=
           \begin{bmatrix}
-            -P & I\_3
-          \end{bmatrix}
-                 =
-          \begin{bmatrix}
-            P & I\_3
-          \end{bmatrix}
-                =
-          \begin{bmatrix}
-        1 & 1 & 1 & 0 & 1 & 0 & 0 \\\\\\
-        0 & 1 & 1 & 1 & 0 & 1 & 0 \\\\\\
-        1 & 0 & 1 & 1 & 0 & 0 & 1
-        \end{bmatrix}
-    \end{align\*}
+            I\_4 \\\\\\
+            P
+          \end{bmatrix}, \\\\\\
+          H &=
+              \begin{bmatrix}
+                -P & I\_3
+              \end{bmatrix}
+                     =
+              \begin{bmatrix}
+                P & I\_3
+              \end{bmatrix}
+                    =
+              \begin{bmatrix}
+            1 & 1 & 1 & 0 & 1 & 0 & 0 \\\\\\
+            0 & 1 & 1 & 1 & 0 & 1 & 0 \\\\\\
+            1 & 0 & 1 & 1 & 0 & 0 & 1
+            \end{bmatrix}
+        \end{align\*}
 
+-    What performance can the best codes achieve?
 
-#### What performance can the best codes achieve? {#what-performance-can-the-best-codes-achieve}
+    We consider the `(R, p_b)` plane, where \\(R\\) is the rate,
+    and \\(p\_b\\) is the decoded bit-error probability, Claude Shannon proved that the boundary between achievable and
+    non-achievable points meets the \\(R\\) axis at a non-zero value \\(R = C\\).
+    For any channel, there exist codes that make it possible to
+    communicate with arbitrarily small probability of error $p\_b= at
+    non-zero rates. This theorem is called the _noisy-channel coding
+    theorem_.
 
-We consider the `(R, p_b)` plane, where \\(R\\) is the rate,
-and \\(p\_b\\) is the decoded bit-error probability, Claude Shannon proved that the boundary between achievable and
-non-achievable points meets the \\(R\\) axis at a non-zero value \\(R = C\\).
-For any channel, there exist codes that make it possible to
-communicate with arbitrarily small probability of error $p\_b= at
-non-zero rates. This theorem is called the _noisy-channel coding
-theorem_.
+    The maximum rate at which communication is possible with arbitrarily
+    small \\(p\_b\\) is called the capacity of the channel.
 
-The maximum rate at which communication is possible with arbitrarily
-small \\(p\_b\\) is called the capacity of the channel.
-
-\begin{equation\*}
-  C(f) = 1 - H\_2(f) = 1 - \left[f\log\_2\frac{1}{f} + (1-f)\log\_2\frac{1}{1-f}\right]
-\end{equation\*}
+    \begin{equation\*}
+      C(f) = 1 - H\_2(f) = 1 - \left[f\log\_2\frac{1}{f} + (1-f)\log\_2\frac{1}{1-f}\right]
+    \end{equation\*}
 
 
 ## Measuring Information Content {#measuring-information-content}
@@ -153,3 +150,9 @@ We can compress N outcomes from a source \\(X\\) into roughly \\(NH(X)\\)
 bits.
 
 This is provable by counting the typical set.
+
+
+## Shannon's Noisy-Channel Coding Theorem {#shannon-s-noisy-channel-coding-theorem}
+
+> Information can be communicated over a noisy channel at a non-zero
+> rate with arbitrarily small error probability
