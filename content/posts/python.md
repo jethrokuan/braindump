@@ -1,7 +1,7 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-29T20:07:42+08:00
+lastmod = 2019-12-29T20:10:07+08:00
 tags = ["python", "proglang"]
 draft = false
 math = true
@@ -15,6 +15,9 @@ may need to be installed to build a full Python distribution:
 ```bash
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
 ```
+
+Package management is traditionally accomplished via pip, but [poetry](https://github.com/python-poetry/poetry)
+is getting more popular.
 
 
 ## Python Default Values {#python-default-values}

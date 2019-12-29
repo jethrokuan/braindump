@@ -11,6 +11,9 @@ may need to be installed to build a full Python distribution:
   sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev
 #+end_src
 
+Package management is traditionally accomplished via pip, but [[https://github.com/python-poetry/poetry][poetry]]
+is getting more popular.
+
 * Python Default Values
 http://effbot.org/zone/default-values.htm
 
