@@ -77,7 +77,7 @@ optimistic value, or pessimistic value, depending on application.
    1. But model might overfit and be confident, but wrong!
 2. Estimate model uncertainty: the model is certain about the data,
    but we are not certain about the model.
-   1. estimate $\mathrm{argmax}_\theta \log p(\theta | D)$
+   1. estimate $\log p(\theta | D)$
 3. Or use Bayesian NN, Bootstrap ensembles
 
 * Problems with model-based RL

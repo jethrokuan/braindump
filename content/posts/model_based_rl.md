@@ -1,7 +1,7 @@
 +++
 title = "Model-Based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-23T18:06:54+08:00
+lastmod = 2019-12-30T12:44:43+08:00
 draft = false
 math = true
 +++
@@ -84,7 +84,7 @@ optimistic value, or pessimistic value, depending on application.
     1.  But model might overfit and be confident, but wrong!
 2.  Estimate model uncertainty: the model is certain about the data,
     but we are not certain about the model.
-    1.  estimate \\(\mathrm{argmax}\_\theta \log p(\theta | D)\\)
+    1.  estimate \\(\log p(\theta | D)\\)
 3.  Or use Bayesian NN, Bootstrap ensembles
 
 
