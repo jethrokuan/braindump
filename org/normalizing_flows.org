@@ -91,9 +91,8 @@ $p_{u^\star}(\mathbf{u}; \phi)$ to the base via forward KL-divergence.
 Alternative divergences include f-divergences, which use density
 ratios, or integral probability metrics (IPM) that uses differences.
 
-* Implementing Flow-based Models
 
-** Computational Complexities
+* Computational Complexities
 
 Increasing the "depth" (number of composed sub-flows) of the
 transformation results in only $O(K)$ growth in computation
@@ -111,11 +110,11 @@ Examples of such efficient sub-flow transformations include:
 - linear flows
 - residual flows
 
-** Practical Considerations
+* Practical Considerations
 
 Composing a large number of flows bring their own challenges.
 
-*** Normalization
+** Normalization
 
 As with deep neural networks, normalizing the intermediate
 representation is crucial for stable gradients throughout the flow.
@@ -133,7 +132,7 @@ Glow uses a variant called activation normalization, which is
 preferable when training with small mini-batches since batch norm's
 statistics become noisy and can destabilize training.
 
-*** Multi-scale architectures
+** Multi-scale architectures
 
 Because $\mathbf{x}$ and $\mathbf{u}$ must have the same
 dimensionality, and $T_k$ must preserve this dimensionality, the

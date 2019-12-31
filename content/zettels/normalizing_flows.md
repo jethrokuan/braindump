@@ -1,7 +1,7 @@
 +++
 title = "Normalizing Flows"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-31T13:48:54+08:00
+lastmod = 2020-01-01T04:14:31+08:00
 draft = false
 math = true
 +++
@@ -98,10 +98,7 @@ Alternative divergences include f-divergences, which use density
 ratios, or integral probability metrics (IPM) that uses differences.
 
 
-## Implementing Flow-based Models {#implementing-flow-based-models}
-
-
-### Computational Complexities {#computational-complexities}
+## Computational Complexities {#computational-complexities}
 
 Increasing the "depth" (number of composed sub-flows) of the
 transformation results in only \\(O(K)\\) growth in computation
@@ -120,39 +117,41 @@ Examples of such efficient sub-flow transformations include:
 -   residual flows
 
 
-### Practical Considerations {#practical-considerations}
+## Practical Considerations {#practical-considerations}
 
 Composing a large number of flows bring their own challenges.
 
--    Normalization
 
-    As with deep neural networks, normalizing the intermediate
-    representation is crucial for stable gradients throughout the flow.
-    Models such as Glow employ variants of batch normalization. Batch
-    normalization can be implemented as a composition of 2 affine
-    transformations. The first has scale and translation parameters set
-    by the batch statistics, and the second has free parameters \\(\alpha\\)
-    (scale) and \\(\beta\\) (translation):
+### Normalization {#normalization}
 
-    \begin{equation}
-      \mathrm{BN}(\mathrm{z})=\alpha \odot \frac{\mathrm{z}-\hat{\mu}}{\sqrt{\hat{\sigma}^{2}+\epsilon}}+\beta, \quad \mathrm{BN}^{-1}\left(\mathrm{z}^{\prime}\right)=\hat{\mu}+\frac{\mathrm{z}^{\prime}-\beta}{\alpha} \odot \sqrt{\hat{\sigma}^{2}+\epsilon}
-    \end{equation}
+As with deep neural networks, normalizing the intermediate
+representation is crucial for stable gradients throughout the flow.
+Models such as Glow employ variants of batch normalization. Batch
+normalization can be implemented as a composition of 2 affine
+transformations. The first has scale and translation parameters set
+by the batch statistics, and the second has free parameters \\(\alpha\\)
+(scale) and \\(\beta\\) (translation):
 
-    Glow uses a variant called activation normalization, which is
-    preferable when training with small mini-batches since batch norm's
-    statistics become noisy and can destabilize training.
+\begin{equation}
+  \mathrm{BN}(\mathrm{z})=\alpha \odot \frac{\mathrm{z}-\hat{\mu}}{\sqrt{\hat{\sigma}^{2}+\epsilon}}+\beta, \quad \mathrm{BN}^{-1}\left(\mathrm{z}^{\prime}\right)=\hat{\mu}+\frac{\mathrm{z}^{\prime}-\beta}{\alpha} \odot \sqrt{\hat{\sigma}^{2}+\epsilon}
+\end{equation}
 
--    Multi-scale architectures
+Glow uses a variant called activation normalization, which is
+preferable when training with small mini-batches since batch norm's
+statistics become noisy and can destabilize training.
 
-    Because \\(\mathbf{x}\\) and \\(\mathbf{u}\\) must have the same
-    dimensionality, and \\(T\_k\\) must preserve this dimensionality, the
-    transformations can be extremely expensive. To combat this issue, one
-    can clamp sub-dimensions of the intermediate flow \\(z\_k\\) such that no
-    additional transformation is applied. Doing so allows us to apply
-    steps to a subset of dimensions, which is less costly.
 
-    This kind of optimization is natural when dealing with granular data
-    types such as pixels.
+### Multi-scale architectures {#multi-scale-architectures}
+
+Because \\(\mathbf{x}\\) and \\(\mathbf{u}\\) must have the same
+dimensionality, and \\(T\_k\\) must preserve this dimensionality, the
+transformations can be extremely expensive. To combat this issue, one
+can clamp sub-dimensions of the intermediate flow \\(z\_k\\) such that no
+additional transformation is applied. Doing so allows us to apply
+steps to a subset of dimensions, which is less costly.
+
+This kind of optimization is natural when dealing with granular data
+types such as pixels.
 
 
 ## Continuous Flows {#continuous-flows}
