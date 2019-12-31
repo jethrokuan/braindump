@@ -1,4 +1,5 @@
 #+HUGO_BASE_DIR: ..
+#+HUGO_SECTION: zettels
 #+hugo_custom_front_matter: :math true
 #+hugo_auto_set_lastmod: t
 #+startup: beamer
