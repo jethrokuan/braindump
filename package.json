@@ -1,0 +1,23 @@
+{
+  "name": "braindump",
+  "version": "1.0.0",
+  "description": "This braindump is generated via [ox-hugo](https://github.com/kaushalmodi/ox-hugo) and uses an adapted version of the [er](https://github.com/lingxz/er) theme.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run lunr:index && hugo",
+    "lunr:index": "hli -i 'content/**' -o '/static/lunr.json' -l 'toml' -d '+++'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jethrokuan/braindump.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jethrokuan/braindump/issues"
+  },
+  "homepage": "https://github.com/jethrokuan/braindump#readme",
+  "dependencies": {
+    "hugo-lunr-indexer": "^1.1.3"
+  }
+}

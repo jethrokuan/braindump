@@ -1,9 +1,21 @@
 baseURL = "https://braindump.jethro.dev/"
 languageCode = "en-us"
 title = "Jethro's Braindump"
-theme = "er"
+theme = "cortex"
 
 [params]
 showTagCloud = false
 description = "Here lies my exobrain, which started circa 2017. I study about Computer Science, but anything I find noteworthy goes in here. I try to cite as often as I can, but that practice only started recently."
 email = "jethrokuan95@gmail.com"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "github"
+    tabWidth = 4

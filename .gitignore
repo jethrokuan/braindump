@@ -1,3 +1,6 @@
 /public/
 /org/talks/ltximg/
 org/papers/ltximg/
+/node_modules/
+/resources/
+/static/lunr.json
