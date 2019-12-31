@@ -1,7 +1,7 @@
 +++
 title = "Model-Based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-30T12:44:43+08:00
+lastmod = 2019-12-30T12:47:05+08:00
 draft = false
 math = true
 +++

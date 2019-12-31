@@ -91,5 +91,3 @@ Latent space models: separately learn $p(o_t | s_t)$ (observation
 model; high dimensional, but not dynamic) and $p(s_{t+1} | s_t,
 a_t)$ (dynamics model; low dimensional, but dynamic), and $p(r_t |
 s_t, a_t)$ (reward model).
-
-
