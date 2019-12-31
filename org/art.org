@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Art
+
+* Resources
+- [[https://artres.xyz/][Art Resources and Tutorials]]
