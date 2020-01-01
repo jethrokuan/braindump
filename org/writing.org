@@ -2,6 +2,7 @@
 #+TITLE: Writing
 
 * Related
+- [[file:copy_editing.org][§copy_editing]]
 - [[file:writing_articles.org][§writing_articles]]
 - [[file:writing_papers.org][§writing_papers]]
 - [[file:writing_books.org][§writing_books]]
