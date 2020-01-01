@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T12:32:56+08:00
+lastmod = 2020-01-01T13:12:38+08:00
 draft = false
 math = true
 +++
@@ -304,25 +304,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting <a id="01672110f741e437a834e37dc0d172c4" href="#jin_q_learning_provably_efficient" title="@incollection{jin_q_learning_provably_efficient,
-title = {Is Q-Learning Provably Efficient?},
-author = {Jin, Chi and Allen-Zhu, Zeyuan and Bubeck, Sebastien and Jordan, Michael I},
-booktitle = {Advances in Neural Information Processing Systems 31},
-editor = {S. Bengio and H. Wallach and H. Larochelle and K. Grauman and N. Cesa-Bianchi and R. Garnett},
-pages = {4863--4873},
-year = {2018},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf}
-}">@incollection{jin_q_learning_provably_efficient,
-title = {Is Q-Learning Provably Efficient?},
-author = {Jin, Chi and Allen-Zhu, Zeyuan and Bubeck, Sebastien and Jordan, Michael I},
-booktitle = {Advances in Neural Information Processing Systems 31},
-editor = {S. Bengio and H. Wallach and H. Larochelle and K. Grauman and N. Cesa-Bianchi and R. Garnett},
-pages = {4863--4873},
-year = {2018},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf}
-}</a>.
+setting <a id="01672110f741e437a834e37dc0d172c4" href="#jin_q_learning_provably_efficient">(Jin et al., 2018)</a>.
 
 
 ## Q-learning with function approximation {#q-learning-with-function-approximation}
@@ -359,4 +341,4 @@ algorithm that stabilized deep Q-learning ([§mnih2013\_atari\_deeprl]({{< relre
 -   [§policy\_gradients]({{< relref "policy_gradients" >}})
 
 # Bibliography
-<a class="cite-link" id="jin_q_learning_provably_efficient"></a>Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., *Is Q-Learning Provably Efficient?*, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc. [↩](#01672110f741e437a834e37dc0d172c4)
+<a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., *Is Q-Learning Provably Efficient?*, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc.</a> [↩](#01672110f741e437a834e37dc0d172c4)

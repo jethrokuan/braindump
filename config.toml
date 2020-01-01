@@ -8,6 +8,23 @@ attributions = "Icon by Laymik from The Noun Project. Website Built with ♥ wit
 email = "jethrokuan95@gmail.com"
 
 [markup]
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xHTML = false
+
   [markup.highlight]
     codeFences = true
     guessSyntax = false
