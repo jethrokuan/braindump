@@ -4,7 +4,7 @@ title = "Jethro's Braindump"
 theme = "cortex"
 
 [params]
-attributions = "Icon by Laymik from The Noun Project. Website Built with ♥ with Org-mode, Hugo, and Netlify."
+attributions = "Website built with ♥ with Org-mode, Hugo, and Netlify."
 email = "jethrokuan95@gmail.com"
 
 [markup]
