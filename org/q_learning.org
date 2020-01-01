@@ -220,7 +220,7 @@ representational power.
 The final option is to learn an approximate maximizer (e.g. DDPG). The
 idea is to train another network $\mu_{\phi}(s) \approx
 \mathrm{argmax}_{a}Q_{\phi}(s,a)$, by solving $\theta \leftarrow
-\argmax Q_\phi(s, \mu_\theta(s))$
+\mathrm{argmax} Q_\phi(s, \mu_\theta(s))$
 
 * Q-learning
 Q-learning learns an action-utility representation instead of learning

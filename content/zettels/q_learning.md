@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-26T21:35:23+08:00
+lastmod = 2020-01-01T12:32:56+08:00
 draft = false
 math = true
 +++
@@ -238,7 +238,7 @@ representational power.
 The final option is to learn an approximate maximizer (e.g. DDPG). The
 idea is to train another network \\(\mu\_{\phi}(s) \approx
 \mathrm{argmax}\_{a}Q\_{\phi}(s,a)\\), by solving \\(\theta \leftarrow
-\argmax Q\_\phi(s, \mu\_\theta(s))\\)
+\mathrm{argmax} Q\_\phi(s, \mu\_\theta(s))\\)
 
 
 ## Q-learning {#q-learning}
@@ -359,4 +359,4 @@ algorithm that stabilized deep Q-learning ([§mnih2013\_atari\_deeprl]({{< relre
 -   [§policy\_gradients]({{< relref "policy_gradients" >}})
 
 # Bibliography
-<a id="jin_q_learning_provably_efficient"></a>Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., *Is Q-Learning Provably Efficient?*, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc. [↩](#01672110f741e437a834e37dc0d172c4)
+<a class="cite-link" id="jin_q_learning_provably_efficient"></a>Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., *Is Q-Learning Provably Efficient?*, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc. [↩](#01672110f741e437a834e37dc0d172c4)
