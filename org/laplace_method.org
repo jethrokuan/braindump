@@ -1,4 +1,4 @@
-''#+SETUPFILE:./hugo_setup.org
+#+SETUPFILE:./hugo_setup.org
 #+TITLE: Laplace's Method
 
 Suppose we have an unnormalized probability density $P^\star(x)$,
@@ -10,7 +10,7 @@ whose normalizing constant:
 
 is of interest, and has a peak at point $x_0$.
 
-We perform a Taylor expansion of $\l P^\star(x)$ at this peak:
+We perform a Taylor expansion of $\ln P^\star(x)$ at this peak:
 
 \begin{equation}
   \ln P^\star(x) \approxeq \ln P^\star(x_0) - \frac{c}{2}(x - x_0)^2 + \dots
