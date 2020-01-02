@@ -30,7 +30,7 @@ rapidly.
 * Improving DQN
 - Double Q-learning reduces bias cite:van2016deep
 - Average Q-learning reduces variance cite:anschel2017averaged
-- Hindsight Experience Replay cite:andrychowicz2017hindsight
+- [[file:andrychowicz2017_hindsight_experience_replay.org][§andrychowicz2017_hindsight_experience_replay]] cite:andrychowicz2017hindsight
 - Distributional RL cite:dabney2018distributional
 
 * References
