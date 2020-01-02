@@ -1,7 +1,7 @@
 +++
 title = "Arguments Against Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-02T13:07:03+08:00
+lastmod = 2020-01-02T14:45:51+08:00
 draft = false
 math = true
 +++
@@ -19,3 +19,10 @@ Once the assumptions are made, the inferences are objective, unique,
 and can be agreed upon by everyone. These assumptions are easy to
 modify, and we can quantify the sensitivity of our inferences to our
 assumptions. It also quantifies the uncertainty in our inferences.
+
+There is a common misconception that the aim of inference is to find
+the most probable explanation for some data. While the most probable
+explanation may be of some interest, this is only the peak of a
+probability distribution, and it is the whole distribution of
+explanations itself that is of interest. _The most probable outcome
+from a source is often not a typical outcome from that source._
