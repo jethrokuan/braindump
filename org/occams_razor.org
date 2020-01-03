@@ -25,3 +25,5 @@ theories, the simpler $\mathcal{H}_1$ would turn out to be more
 probable than the more complex $\mathcal{H}_2$. Hence the second term
 automatically embodies the Occam's razor.
 
+* Related
+- [[file:two_levels_of_inference.org][§two_levels_of_inference]]

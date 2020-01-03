@@ -1,7 +1,7 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-03T02:53:24+08:00
+lastmod = 2020-01-03T09:43:17+08:00
 draft = false
 math = true
 +++
@@ -29,3 +29,8 @@ hypothesis space. In the case where the data are compatible with both
 theories, the simpler \\(\mathcal{H}\_1\\) would turn out to be more
 probable than the more complex \\(\mathcal{H}\_2\\). Hence the second term
 automatically embodies the Occam's razor.
+
+
+## Related {#related}
+
+-   [§two\_levels\_of\_inference]({{< relref "two_levels_of_inference" >}})
