@@ -20,3 +20,9 @@ as a Gaussian centered on $x^(t)$ can be used.
 2. Lengthy simulations may be needed for convergence, because of the
    quadratic dependence on the lengthscale-ratio. A random walk is
    extremely slow, and should try to be suppressed.
+
+* Suppressing Random Walks
+
+Hamiltonian Monte-Carlo methods make use of gradient information to
+reduce random-walk behaviour.
+

@@ -1,7 +1,7 @@
 +++
 title = "Metropolis-Hastings Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T22:54:19+08:00
+lastmod = 2020-01-05T23:13:40+08:00
 draft = false
 math = true
 +++
@@ -28,3 +28,9 @@ as a Gaussian centered on \\(x^(t)\\) can be used.
 2.  Lengthy simulations may be needed for convergence, because of the
     quadratic dependence on the lengthscale-ratio. A random walk is
     extremely slow, and should try to be suppressed.
+
+
+## Suppressing Random Walks {#suppressing-random-walks}
+
+Hamiltonian Monte-Carlo methods make use of gradient information to
+reduce random-walk behaviour.
