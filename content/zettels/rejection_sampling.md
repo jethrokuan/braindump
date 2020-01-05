@@ -1,7 +1,7 @@
 +++
 title = "Rejection Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T21:44:49+08:00
+lastmod = 2020-01-05T21:56:27+08:00
 draft = false
 math = true
 +++

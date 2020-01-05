@@ -26,4 +26,3 @@
    keeping $c$ small
 2. In high-dimensional settings, $c$ will generally be so large that
    acceptances will be rare
-

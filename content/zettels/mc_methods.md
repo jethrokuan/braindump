@@ -1,7 +1,7 @@
 +++
 title = "Monte Carlo Methods"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T21:29:04+08:00
+lastmod = 2020-01-05T23:07:01+08:00
 draft = false
 math = true
 +++
@@ -50,3 +50,6 @@ states.
 
 -   [§importance\_sampling]({{< relref "importance_sampling" >}})
 -   [§rejection\_sampling]({{< relref "rejection_sampling" >}})
+-   [§metropolis\_hastings]({{< relref "metropolis_hastings" >}})
+-   [§gibbs\_sampling]({{< relref "gibbs_sampling" >}})
+-   [§slice\_sampling]({{< relref "slice_sampling" >}})
