@@ -163,7 +163,7 @@ $A(s,a)$ and use it to create a better, deterministic policy.
 \end{align}
 
 We have an expectation under $\theta'$, but samples under $\theta$. We
-use marginals representation, and importance sampling to remove the
+use marginals representation, and [[file:importance_sampling.org][§importance_sampling]] to remove the
 expectation under $\pi_\theta'$, but can we ignore the other
 distribution mismatch?
 

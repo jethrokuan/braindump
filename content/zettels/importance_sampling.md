@@ -1,7 +1,7 @@
 +++
 title = "Importance Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-04T18:08:45+08:00
+lastmod = 2020-01-05T21:39:14+08:00
 draft = false
 math = true
 +++
@@ -9,9 +9,7 @@ math = true
 Importance sampling does not allow us to generate samples from \\(p(x)\\),
 but allows us to estimate the expectation of a function \\(f(x)\\).
 
-Suppose we cannot sample from \\(p(x)\\), but we have a simpler density
-\\(q(x)\\) that we can sample from and evaluate to within a multiplicative
-constant \\(q^\star(x) = q(x) Z\_q\\).
+Suppose we cannot sample from \\(p(x)\\)
 
 \begin{aligned}
   E\_{x \sim p(x)}[f(x)] &=\int p(x) f(x) d x \\ &=\int
@@ -41,3 +39,11 @@ which adjust the importance of each point in the estimator:
     where \\(|f(x)p^\star(x)|\\) is large, the estimate would be greatly
     wrong, and it is possible that even after many samples are
     generated, none fall into this region.
+3.  In high-dimensional problems:
+    1.  It will take a long time to acquire samples that lie in the
+        typical set of \\(p\\), unless \\(q\\) is a good approximation of \\(p\\).
+    2.  Even if able to obtain samples in the typical set, the weights
+        associated with these samples are likely to vary by large
+        factors because probabilities of points, despite being in the
+        typical set, still differ by factors of order
+        \\(\mathrm{exp}(\sqrt{N})\\), where \\(N\\) is the number of dimensions.

@@ -43,3 +43,4 @@ states.
 
 * Methods
 - [[file:importance_sampling.org][§importance_sampling]]
+- [[file:rejection_sampling.org][§rejection_sampling]]
