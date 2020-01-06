@@ -1,7 +1,7 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-28T21:25:27+08:00
+lastmod = 2020-01-05T23:29:30+08:00
 draft = false
 math = true
 +++
@@ -156,3 +156,9 @@ This is provable by counting the typical set.
 
 > Information can be communicated over a noisy channel at a non-zero
 > rate with arbitrarily small error probability
+
+
+## Articles {#articles}
+
+-   [Andreas Kirsch | Better intuition for information theory](https://www.blackhc.net/blog/2019/better-intuition-for-information-theory/)
+-   [Visual Information Theory -- colah's blog](http://colah.github.io/posts/2015-09-Visual-Information/)

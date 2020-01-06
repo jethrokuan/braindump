@@ -1,0 +1,16 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Evolving Connectionist Systems
+
+Evolving Connectionist Systems (ECoS) learn local models from data
+through clustering the data and associating a local output function
+for each cluster represented in a connectionist structure
+cite:schliebs13_evolv_spikin_neural_networ_survey. These clusters are
+created based on similarity between data samples either in the input
+space, or both in the input space and output space. These functions
+are represented in their connection weights.
+
+ECoS traditionally uses the simple sigmoid model of a neuron. Evolving
+Spiking Neural Networks ([[file:evolving_snn.org][§evolving_snn]]) architectures use a spiking neuron
+model. 
+
+bibliography:./biblio/ml.bib

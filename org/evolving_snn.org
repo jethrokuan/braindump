@@ -1,0 +1,25 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Evolving Spiking Neural Networks
+
+Early eSNN architectures use the Leaky Integrate-and-Fire (LIF) model,
+and rank-order encoding. eSNNs can be used for classification. Given
+an input sample, the spike train is propagated through the SNN,
+resulting in the firing of output neurons. If no output neuron is
+activated, the classification result is undetermined. If one or more
+output neurons emit a spike, the label of the neuron with the shortest
+response time represents the classification result.
+
+* Training an eSNN
+
+For each class label an individual repository is evolved. A new output
+neuron is created and fully connected to the previous layer of
+neurons. Input spikes are propagated through the network, and the
+weight vector for the neuron is computed, along with its firing
+threshold. This weight vector is compared to existing neurons in the
+repository. If neurons are too similar (e.g. small Euclidean distance
+between weight vectors), they are merged.
+
+See cite:schliebs13_evolv_spikin_neural_networ_survey for a
+comprehensive review.
+
+bibliography:./biblio/ml.bib
