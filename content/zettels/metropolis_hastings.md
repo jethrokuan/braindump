@@ -1,7 +1,7 @@
 +++
 title = "Metropolis-Hastings Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T23:13:40+08:00
+lastmod = 2020-01-08T12:30:17+08:00
 draft = false
 math = true
 +++
@@ -18,7 +18,7 @@ as a Gaussian centered on \\(x^(t)\\) can be used.
 1.  Evaluate \\(p^\star(x)\\) for any \\(x\\).
 2.  A tentative new state \\(x'\\) is generated from the proposal density \\(q(x';x^{(t)})\\).
 3.  Compute \\(a = \frac{p^\star(x')}{p^\star(x^{(t)})} \frac{q(x^{(t)};x')}{q(x';x^{(t)})}\\)
-4.  If \\(a \ge 1\\), accept new state and set \\(x^{(t+1) = x'}\\), else set
+4.  If \\(a \ge 1\\), accept new state and set \\(x^{(t+1)}= x'\\), else set
     \\(x^{(t+1)} = x^{(t)}\\)
 
 

@@ -1,7 +1,7 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-06T19:10:11+08:00
+lastmod = 2020-01-07T13:34:07+08:00
 draft = false
 math = true
 +++
