@@ -1,6 +1,16 @@
+/org/*
+!/org/*.org
+!/org/*.pdf
+!/org/*.html
+!/org/biblio/*
+!/org/papers/
+!/org/books/
+!/org/images/
+!/talks/
+!README.md
 /public/
 /org/talks/ltximg/
-org/papers/ltximg/
+/org/papers/ltximg/
 /node_modules/
 /resources/
 /static/lunr.json
