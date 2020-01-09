@@ -4,7 +4,7 @@
 - title :: The Art Of Doing Science And Engineering
 - author :: Richard Hamming
 - links :: [[https://www.goodreads.com/book/show/530415.The_Art_of_Doing_Science_and_Engineering?ac=1&from_search=true&qid=JiicJZOxxt&rank=1][Goodreads]]
-- personal rating :: 
+- personal rating :: 4/5
 
 * Synopsis
 

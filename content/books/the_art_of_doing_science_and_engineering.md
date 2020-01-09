@@ -1,7 +1,7 @@
 +++
 title = "The Art Of Doing Science And Engineering"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-09T15:16:54+08:00
+lastmod = 2020-01-09T15:17:50+08:00
 draft = false
 math = true
 +++
@@ -16,7 +16,7 @@ links
 : [Goodreads](https://www.goodreads.com/book/show/530415.The%5FArt%5Fof%5FDoing%5FScience%5Fand%5FEngineering?ac=1&from%5Fsearch=true&qid=JiicJZOxxt&rank=1)
 
 personal rating
-:
+: 4/5
 
 
 ## Synopsis {#synopsis}
