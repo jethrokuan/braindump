@@ -1,7 +1,7 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-03T09:43:17+08:00
+lastmod = 2020-01-11T16:46:23+08:00
 draft = false
 math = true
 +++
@@ -29,6 +29,22 @@ hypothesis space. In the case where the data are compatible with both
 theories, the simpler \\(\mathcal{H}\_1\\) would turn out to be more
 probable than the more complex \\(\mathcal{H}\_2\\). Hence the second term
 automatically embodies the Occam's razor.
+
+
+## Gelman on the Occam Factor {#gelman-on-the-occam-factor}
+
+Source: [David MacKay and Occam’s Razor « Statistical Modeling, Causal Inference, and ...](https://statmodeling.stat.columbia.edu/2011/12/04/david-mackay-and-occams-razor/)
+
+Gelman is not fond of Mackay's above argument about Bayesian inference
+embodying Occam razor. His argument seems to be about wanting to keep
+more complex models:
+
+> once I’ve set up a model I’d like to keep all of
+> it, maybe shrinking some parts toward zero but not getting rid of
+> coefficients entirely.
+
+I still don't see a contradiction with Mackay's proposed argument.
+Maybe I'm missing something...
 
 
 ## Related {#related}
