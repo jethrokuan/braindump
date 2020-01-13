@@ -3,6 +3,13 @@
 #+HUGO_TAGS: bayes deep-learning
 bibliographystyle:unsrt
 
+* The Case For Bayesian Learning cite:wilson2019bayesian
+- Vague parameter prior + structured model (e.g. CNN) = structured
+  function prior!
+- The success of ensembles encourages Bayesians, since ensembles
+  approximate the Bayesian Model Average
+
+
 * Bayesian Perspective on Generalization cite:smith_quoc_bayes_generalization_sgd
 
 Bayesian model comparisons were first made on Neural Networks by
@@ -38,4 +45,3 @@ the network to prefer broad minima.
 
 
 bibliography:biblio/ml.bib
-

@@ -12,6 +12,7 @@
     "ranganath13_black_box_variat_infer"
     "titsias18_unbias_implic_variat_infer"
     "ruiz19_contr_diver_combin_variat_infer_mcmc"
-    "schliebs13_evolv_spikin_neural_networ_survey"))
+    "schliebs13_evolv_spikin_neural_networ_survey"
+    "wilson2019bayesian"))
  :bibtex)
 
