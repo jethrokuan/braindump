@@ -47,7 +47,7 @@ ref:eq:lif_with_reset can then be expressed as:
 
 with $\beta \equiv \exp
 \left(-\frac{\Delta_{t}}{\tau_{\operatorname{mem}}}\right)$. These two
-equations characterize the dynamics of a RNN. Specifcially, the state
+equations characterise the dynamics of a RNN. Specifically, the state
 of neuron $i$ is given by the instantaneous synaptic currents $I_i$
 and the membrane voltage $U_i$.
 

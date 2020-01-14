@@ -1,7 +1,7 @@
 +++
 title = "Synaptic Current Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T13:39:07+08:00
+lastmod = 2020-01-14T13:48:14+08:00
 draft = false
 math = true
 +++
@@ -52,7 +52,7 @@ with decay strength \\(\alpha \equiv \exp
 
 with \\(\beta \equiv \exp
 \left(-\frac{\Delta\_{t}}{\tau\_{\operatorname{mem}}}\right)\\). These two
-equations characterize the dynamics of a RNN. Specifcially, the state
+equations characterise the dynamics of a RNN. Specifically, the state
 of neuron \\(i\\) is given by the instantaneous synaptic currents \\(I\_i\\)
 and the membrane voltage \\(U\_i\\).
 

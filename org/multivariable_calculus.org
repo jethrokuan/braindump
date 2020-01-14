@@ -1,0 +1,9 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Multi-variable Calculus
+
+Study of generalizations of the fundamental theorem of calculus to
+higher dimensions:
+
+- Fundamental theorem of calculus for line integrals
+- Green's theorem
+- Stoke's theorem

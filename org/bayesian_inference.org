@@ -2,6 +2,18 @@
 #+TITLE: Bayesian Inference
 #+HUGO_TAGS: machine-learning
 
+* Setup
+
+We have some unknown quantity $\theta$ (possibly a vector) that we
+wish to learn about, and we observe some data $y$. In Bayesian
+statistics, we specify:
+
+1. A /sampling model/, often expressed as a probability density
+   function $p(y|\theta)$, which we call the *likelihood function*
+2. A /prior distribution/ $p(\theta)$, which expresses any prior
+   knowledge or beliefs that we have about their values before
+   observing the data
+
 * [[https://videoken.com/embed/0HXpnG_WnlI][Scalable Bayesian Inference]]
 
 There is an increasingly immense literature focused on big data. Most
@@ -13,7 +25,7 @@ working on similar problems, while critical open problems remain
 untouched.
 
 The end goal is having general probabilistic inference algorithms for
-complex data, and being able to handle arbitrarily probability models.
+complex data, and being able to handle arbitrarily complex probability models.
 We want algorithms to be scalable to huge data, and also be able to
 accurately quantify uncertainty.
 
