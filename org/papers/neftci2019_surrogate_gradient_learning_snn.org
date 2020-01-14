@@ -1,0 +1,12 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Surrogate Gradient Learning In Spiking Neural Networks
+
+- paper :: https://arxiv.org/pdf/1901.09948v2.pdf
+
+Spiking Neural Networks enable power-efficient network models, which
+have become of increasing importance in embedded and auto-motive
+applications. The power efficiency stems from dispensing of expensive
+floating-point computations.
+
+* Related
+- [[file:~/.org/braindump/org/spiking_neural_networks.org][§spiking_neural_networks]]

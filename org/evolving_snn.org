@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Evolving Spiking Neural Networks
 
-Early eSNN architectures use the Leaky Integrate-and-Fire (LIF) model,
+Early eSNN architectures use the [[file:leaky_integrate_and_fire.org][§leaky_integrate_and_fire]] model,
 and rank-order encoding. eSNNs can be used for classification. Given
 an input sample, the spike train is propagated through the SNN,
 resulting in the firing of output neurons. If no output neuron is
