@@ -1,0 +1,19 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: A Distributional Code for Value in Dopamine-based Reinforcement Learning
+
+- paper :: [[https://www.nature.com/articles/s41586-019-1924-6][https://www.nature.com/articles/s41586-019-1924-6]]
+- related :: [[file:~/.org/braindump/org/reinforcement_learning.org][§reinforcement_learning]]
+
+* Abstract
+Reward prediction errors are typically represented by a single scalar
+quantity, as in temporal-difference learning. In distributional RL,
+the reward prediction error consists of a diverse set of channels,
+predicting multiple future outcomes. Different channels have different
+relative scalings for positive and negative reward prediction errors.
+Imbalances between these scalings cause each channel to learn a
+different value prediction, and collectively represent a distribution
+over possible rewards.
+
+* Resources
+- [[https://mtomassoli.github.io/2017/12/08/distributional_rl/][Distributional RL – Simple Machine Learning]]
+
