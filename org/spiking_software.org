@@ -11,3 +11,4 @@
 - [[https://github.com/bamsumit/slayerPytorch][GitHub - bamsumit/slayerPytorch: PyTorch implementation of SLAYER for trainin...]]
 - [[https://github.com/uber-research/backpropamine][GitHub - uber-research/backpropamine: Train self-modifying neural networks wi...]]
 - [[https://github.com/fzenke/pub2018superspike][GitHub - fzenke/pub2018superspike: Code from our paper: SuperSpike: Supervise...]]
+- [[https://github.com/nmi-lab/dcll][GitHub - nmi-lab/dcll]]

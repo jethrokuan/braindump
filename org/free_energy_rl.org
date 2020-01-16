@@ -1,0 +1,23 @@
+#+SETUPFILE:./hugo_setup.org
+#+TITLE: Free-Energy Reinforcement Learning
+
+This is a framework proposed by Sallans and Hinton in 2004
+cite:sallans04a_ferl. The key insight is that a product of experts
+allows for model parameters to be learnt efficiently, because values
+and derivatives for the product of experts can be efficiently computed.
+
+#+CAPTION: Free-energy RL
+[[file:images/free_energy_rl/screenshot2020-01-16_23-15-12_.png]]
+
+The weights of the RBM are tweaked such that the free energy of a
+network configuration equals to the reward signal for the given
+state-action pair.
+
+An action is selected by performing Gibbs sampling, holding the state
+variables fixed. The action with the lowest free energy is produced,
+corresponding to the highest expected reward for the given state.
+
+Spiking neural networks can be used to implement RBMs, hence used for
+FERL cite:nakano11_spikin_neural_networ_model_free.
+
+bibliography:./biblio/biblio.bib
