@@ -1,12 +1,12 @@
 +++
 title = "Markov Logic Networks"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T23:46:56+08:00
+lastmod = 2020-01-21T18:38:14+08:00
 draft = false
 math = true
 +++
 
-## Markov Logic Networks <a id="ffcf484ffbed70c6ebcf595884716056" href="#richardson06_markov_logic_networ" title="Matthew Richardson \&amp; Pedro Domingos, Markov Logic Networks, {Machine Learning}, v(1-2), 107-136 (2006).">(Matthew Richardson \& Pedro Domingos, 2006)</a>. {#markov-logic-networks-dot}
+## Markov Logic Networks <a id="ffcf484ffbed70c6ebcf595884716056" href="#richardson06_markov_logic_networ">(Matthew Richardson \& Pedro Domingos, 2006)</a>. {#markov-logic-networks-dot}
 
 
 ### Problem {#problem}
@@ -44,4 +44,4 @@ c\_{|C|} \right\\}\\), it defines a Markov Logic Network as follows:
     is the \\(w\_i\\) associated with \\(F\_i\\) in \\(L\\).
 
 # Bibliography
-<a id="richardson06_markov_logic_networ"></a>Richardson, M., & Domingos, P., *Markov Logic Networks*, Machine Learning, *62(1-2)*, 107–136 (2006).  http://dx.doi.org/10.1007/s10994-006-5833-1 [↩](#ffcf484ffbed70c6ebcf595884716056)
+<a id="richardson06_markov_logic_networ" target="_blank">Richardson, M., & Domingos, P., *Markov Logic Networks*, Machine Learning, *62(1-2)*, 107–136 (2006).  http://dx.doi.org/10.1007/s10994-006-5833-1</a> [↩](#ffcf484ffbed70c6ebcf595884716056)

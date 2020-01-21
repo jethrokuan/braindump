@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Markov Logic Networks
 
 * Markov Logic Networks cite:richardson06_markov_logic_networ.

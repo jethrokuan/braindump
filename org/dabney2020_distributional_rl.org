@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: A Distributional Code for Value in Dopamine-based Reinforcement Learning
 
 - paper :: [[https://www.nature.com/articles/s41586-019-1924-6][https://www.nature.com/articles/s41586-019-1924-6]]

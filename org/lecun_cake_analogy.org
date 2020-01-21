@@ -10,5 +10,5 @@ data. Supervised learning forms the icing on the cake, and
 reinforcement learning is the cherry on top.
 
 In NIPS 2017, Pieter Abbeel reused this cake analogy to describe his
-paper [[file:/papers/andrychowicz2017_hindsight_experience_replay.org][§andrychowicz2017_hindsight_experience_replay]]: "Intelligence is
+paper [[file:andrychowicz2017_hindsight_experience_replay.org][§andrychowicz2017_hindsight_experience_replay]]: "Intelligence is
 a cake with many cherries"

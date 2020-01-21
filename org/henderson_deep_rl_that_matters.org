@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Deep Reinforcement Learning That Matters
 
 This paper is a comprehensive study of several model-free policy

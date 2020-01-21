@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Hindsight Experience Replay
 
 - paper ::

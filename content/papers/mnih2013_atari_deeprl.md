@@ -1,7 +1,7 @@
 +++
 title = "Playing Atari with Deep RL"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-03T00:33:34+08:00
+lastmod = 2020-01-21T18:38:19+08:00
 draft = false
 math = true
 +++

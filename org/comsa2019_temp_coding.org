@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Temp Coding with Alpha Synaptic Function
 
 * Temporal Coding with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ

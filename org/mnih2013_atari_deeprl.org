@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Playing Atari with Deep RL 
 
 * Playing Atari With Deep RL cite:mnih2013playing

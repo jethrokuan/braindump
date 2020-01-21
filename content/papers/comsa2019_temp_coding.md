@@ -1,12 +1,12 @@
 +++
 title = "Temp Coding with Alpha Synaptic Function"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T23:22:35+08:00
+lastmod = 2020-01-21T18:38:05+08:00
 draft = false
 math = true
 +++
 
-## Temporal Coding with Alpha Synaptic Function <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ" title="Comsa, Potempa, Versari, Luca, Fischbacher, Gesmundo, \&amp; Alakuijala, Temporal Coding in Spiking Neural Networks With  Alpha Synaptic Function, {CoRR}, v(), (2019).">(Comsa et al., 2019)</a> {#temporal-coding-with-alpha-synaptic-function}
+## Temporal Coding with Alpha Synaptic Function <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ">(Comsa et al., 2019)</a> {#temporal-coding-with-alpha-synaptic-function}
 
 
 ### Motivation {#motivation}
@@ -56,7 +56,7 @@ Incoming exponential synaptic kernels are of the form \\(\epsilon(t) =
 membrane in response to the spike is then \\(u(t) = t e^{-\tau t}\\). It
 has a gradual rise, and slow decay.
 
-{{< figure src="images/temporal-coding-comsa/screenshot_2019-08-30_13-21-44.png" caption="Figure 1: Plot of \\(y = x e^{-10x}, x \in [0, 1]\\)" >}}
+{{< figure src="/ox-hugo/screenshot_2019-08-30_13-21-44.png" caption="Figure 1: Plot of \\(y = x e^{-10x}, x \in [0, 1]\\)" >}}
 
 
 ### Modelling Membrane Potential {#modelling-membrane-potential}
@@ -139,7 +139,7 @@ the network.
 
 ### Hyperparameters {#hyperparameters}
 
-{{< figure src="images/temporal-coding-comsa/screenshot_2019-08-30_13-52-12.png" >}}
+{{< figure src="/ox-hugo/screenshot_2019-08-30_13-52-12.png" >}}
 
 
 ## Experiments {#experiments}
@@ -169,7 +169,7 @@ Operating in the slow regime has higher accuracy, but takes more time.
 Fast regime makes quick decisions, with the first spike in the output
 layer occurring before the mean spike in the hidden layer.
 
-{{< figure src="images/temporal-coding-comsa/screenshot_2019-08-30_14-05-59.png" >}}
+{{< figure src="/ox-hugo/screenshot_2019-08-30_14-05-59.png" >}}
 
 # Bibliography
-<a id="comsa19_tempor_codin_spikin_neural_networ"></a>Comsa, I. M., Potempa, K., Versari, L., Fischbacher, T., Gesmundo, A., & Alakuijala, J., *Temporal coding in spiking neural networks with alpha synaptic function*, CoRR, *()*,  (2019).  [↩](#caaddec51f6948e5fea79b6d41c79676)
+<a id="comsa19_tempor_codin_spikin_neural_networ" target="_blank">Comsa, I. M., Potempa, K., Versari, L., Fischbacher, T., Gesmundo, A., & Alakuijala, J., *Temporal coding in spiking neural networks with alpha synaptic function*, CoRR, *()*,  (2019). </a> [↩](#caaddec51f6948e5fea79b6d41c79676)

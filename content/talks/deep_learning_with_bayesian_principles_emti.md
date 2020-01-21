@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning With Bayesian Principles"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-12T16:33:22+08:00
+lastmod = 2020-01-21T18:36:17+08:00
 draft = false
 math = true
 +++

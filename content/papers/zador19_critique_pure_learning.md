@@ -1,7 +1,7 @@
 +++
 title = "A critique of pure learning and what artificial neural networks can learn from animal brains"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-12T12:46:56+08:00
+lastmod = 2020-01-21T18:38:29+08:00
 draft = false
 math = true
 +++

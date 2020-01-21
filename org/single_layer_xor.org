@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Single Layer XOR
 
 - paper :: https://science.sciencemag.org/content/367/6473/83

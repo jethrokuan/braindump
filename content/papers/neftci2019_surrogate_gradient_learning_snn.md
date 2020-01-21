@@ -1,7 +1,7 @@
 +++
 title = "Surrogate Gradient Learning In Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T13:18:53+08:00
+lastmod = 2020-01-21T18:38:21+08:00
 draft = false
 math = true
 +++

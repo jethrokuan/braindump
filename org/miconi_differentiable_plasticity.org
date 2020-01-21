@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Differentiable plasticity: training plastic neural networks with backpropagation
 
 Paper: https://arxiv.org/abs/1804.02464

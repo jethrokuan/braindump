@@ -1,4 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: papers
 #+TITLE: Surrogate Gradient Learning In Spiking Neural Networks
 
 - paper :: https://arxiv.org/pdf/1901.09948v2.pdf
