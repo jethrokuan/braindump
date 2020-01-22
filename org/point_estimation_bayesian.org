@@ -9,5 +9,9 @@ $\theta$.
 To do so, we may select a summary feature of $p(\theta | y)$ such as
 its mean, median or mode.
 
-* Related 
-- [[file:bayesian_inference.org][§bayesian_inference]]
+For symmetric posterior densities, the mean and median are equal. If
+the posterior is also unimodal, then all 3 coincide.
+
+For asymmetric posteriors, the median is often preferred. The mode
+only considers the value corresponding to the maximum value of the
+density, while the mean may give too much weight to extreme outliers.
