@@ -1,5 +1,4 @@
 #+HUGO_BASE_DIR: ..
-#+HUGO_SECTION: zettels
 #+hugo_auto_set_lastmod: t
 #+startup: beamer
 #+LaTeX_CLASS: beamer

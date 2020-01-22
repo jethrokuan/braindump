@@ -1,9 +1,8 @@
 +++
 title = "Hindsight Experience Replay"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:38:03+08:00
+lastmod = 2020-01-22T16:56:58+08:00
 draft = false
-math = true
 +++
 
 paper
