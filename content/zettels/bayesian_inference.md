@@ -1,10 +1,9 @@
 +++
 title = "Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T18:53:43+08:00
+lastmod = 2020-01-22T21:20:02+08:00
 tags = ["machine-learning"]
 draft = false
-math = true
 +++
 
 ## Setup {#setup}
@@ -39,7 +38,7 @@ accurately quantify uncertainty.
 ### Classical Posterior Approximations {#classical-posterior-approximations}
 
 -   In conjugate models, one can express the posterior in simple form -
-    e.g. as a multivariate Gaussian
+    e.g. as a multivariate Gaussian (see [§exponential\_family]({{< relref "exponential_family" >}}))
 -   In more complex settings, one can approximate the posterior using
     some tractable class of distributions
 -   Large sample Gaussian approximations:

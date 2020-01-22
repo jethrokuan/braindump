@@ -32,7 +32,7 @@ accurately quantify uncertainty.
 ** Classical Posterior Approximations
 
 - In conjugate models, one can express the posterior in simple form -
-  e.g. as a multivariate Gaussian
+  e.g. as a multivariate Gaussian (see [[file:exponential_family.org][§exponential_family]])
 - In more complex settings, one can approximate the posterior using
   some tractable class of distributions
 - Large sample Gaussian approximations:
