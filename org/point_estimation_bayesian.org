@@ -1,0 +1,13 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Point Estimation in Bayesian Statistics
+
+Suppose we have a posterior distribution over parameters $\theta$.
+Sometimes, we would like to obtain a point estimate $\hat{\theta}$ of
+$\theta$.
+
+To do so, we may select a summary feature of $p(\theta | y)$ such as
+its mean, median or mode.
+
+* Related 
+- [[file:bayesian_inference.org][§bayesian_inference]]
