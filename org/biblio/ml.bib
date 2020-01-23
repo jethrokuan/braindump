@@ -193,4 +193,54 @@ author={Wilson, Andrew Gordon},
 note={Accessible at \url{https://cims.nyu.edu/~andrewgw/caseforbdl.pdf}},
 journal={NYU Courant Technical Report},
 year={2019}
-} 
+}
+
+
+@article{shwartz-ziv17_openin_black_box_deep_neural,
+  author =       {Shwartz-Ziv, Ravid and Tishby, Naftali},
+  title =        {Opening the Black Box of Deep Neural Networks Via
+                  Information},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1703.00810v3},
+  abstract =     {Despite their great success, there is still no
+                  comprehensive theoretical understanding of learning
+                  with Deep Neural Networks (DNNs) or their inner
+                  organization. Previous work proposed to analyze DNNs
+                  in the \textit{Information Plane}; i.e., the plane
+                  of the Mutual Information values that each layer
+                  preserves on the input and output variables. They
+                  suggested that the goal of the network is to
+                  optimize the Information Bottleneck (IB) tradeoff
+                  between compression and prediction, successively,
+                  for each layer. In this work we follow up on this
+                  idea and demonstrate the effectiveness of the
+                  Information-Plane visualization of DNNs. Our main
+                  results are: (i) most of the training epochs in
+                  standard DL are spent on {\emph compression} of the
+                  input to efficient representation and not on fitting
+                  the training labels. (ii) The representation
+                  compression phase begins when the training errors
+                  becomes small and the Stochastic Gradient Decent
+                  (SGD) epochs change from a fast drift to smaller
+                  training error into a stochastic relaxation, or
+                  random diffusion, constrained by the training error
+                  value. (iii) The converged layers lie on or very
+                  close to the Information Bottleneck (IB) theoretical
+                  bound, and the maps from the input to any hidden
+                  layer and from this hidden layer to the output
+                  satisfy the IB self-consistent equations. This
+                  generalization through noise mechanism is unique to
+                  Deep Neural Networks and absent in one layer
+                  networks. (iv) The training time is dramatically
+                  reduced when adding more hidden layers. Thus the
+                  main advantage of the hidden layers is
+                  computational. This can be explained by the reduced
+                  relaxation time, as this it scales super-linearly
+                  (exponentially for simple diffusion) with the
+                  information compression from the previous layer.},
+  archivePrefix ={arXiv},
+  eprint =       {1703.00810},
+  primaryClass = {cs.LG},
+}
+
