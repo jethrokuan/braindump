@@ -6,3 +6,5 @@
 - [[file:spiking_datasets.org][§spiking_datasets]]
 - [[file:spiking_software.org][§spiking_software]]
 - [[file:neuroscience_experimental_evidence.org][§neuroscience_experimental_evidence]]
+- [[file:spike_train_metrics.org][§spike_train_metrics]]
+- [[file:spike_train_mutual_information.org][§spike_train_mutual_information]]

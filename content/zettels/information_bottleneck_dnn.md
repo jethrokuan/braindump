@@ -1,7 +1,7 @@
 +++
 title = "Information Bottleneck in Deep Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-23T15:29:20+08:00
+lastmod = 2020-01-23T21:26:00+08:00
 draft = false
 +++
 
