@@ -14,7 +14,7 @@
 
 ** DQN
 
-1. Use of [[file:~/.org/braindump/org/experience_replay.org][§experience_replay]] buffer
+1. Use of [[file:experience_replay.org][§experience_replay]] buffer
 2. Separate target network stabilizes optimization targets:
 
 \begin{equation}

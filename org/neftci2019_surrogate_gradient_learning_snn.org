@@ -10,4 +10,4 @@ applications. The power efficiency stems from dispensing of expensive
 floating-point computations.
 
 * Related
-- [[file:~/.org/braindump/org/spiking_neural_networks.org][§spiking_neural_networks]]
+- [[file:spiking_neural_networks.org][§spiking_neural_networks]]

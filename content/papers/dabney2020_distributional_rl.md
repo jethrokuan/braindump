@@ -1,9 +1,8 @@
 +++
 title = "A Distributional Code for Value in Dopamine-based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:38:07+08:00
+lastmod = 2020-02-03T21:20:26+08:00
 draft = false
-math = true
 +++
 
 paper

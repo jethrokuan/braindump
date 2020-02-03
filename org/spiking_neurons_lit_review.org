@@ -814,7 +814,7 @@ reward-modulated spike-time dependent plasticity.
 
 * TODO Theories of Error Back-Propagation in the Brain cite:whittington19_theor_error_back_propag_brain
 
-* [[file:~/.org/braindump/org/comsa2019_temp_coding.org][§comsa2019_temp_coding]]
+* [[file:comsa2019_temp_coding.org][§comsa2019_temp_coding]]
 * STDP
 
 STDP is a biologically inspired long-term plasticity model, in which

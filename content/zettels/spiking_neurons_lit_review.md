@@ -1,9 +1,8 @@
 +++
 title = "Spiking Neurons (Literature Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:43:05+08:00
+lastmod = 2020-02-03T21:20:32+08:00
 draft = false
-math = true
 +++
 
 ## Introduction to Spiking Neural Networks <a name="sec:snn"></a> {#introduction-to-spiking-neural-networks}
@@ -853,7 +852,7 @@ reward-modulated spike-time dependent plasticity.
 ## <span class="org-todo todo TODO">TODO</span> Theories of Error Back-Propagation in the Brain <a id="87673c771a23a8ad0a1301cb565d0484" href="#whittington19_theor_error_back_propag_brain">(James Whittington \& Rafal Bogacz, 2019)</a> {#theories-of-error-back-propagation-in-the-brain}
 
 
-## [§comsa2019\_temp\_coding]({{< relref "comsa2019_temp_coding" >}}) {#comsa2019-temp-coding}
+## [§comsa2019\_temp\_coding]({{< relref "comsa2019_temp_coding" >}}) {#comsa2019-temp-coding--comsa2019-temp-coding-dot-md}
 
 
 ## STDP {#stdp}
