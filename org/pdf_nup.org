@@ -1,0 +1,10 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: PDF Nup
+
+This puts several pages of a PDF together. ~2x1~ is a particularly
+common combination.
+
+#+begin_src bash
+alias p2x1="pdfnup --nup 2x1 --landscape --suffix '2x1' --batch "
+#+end_src
