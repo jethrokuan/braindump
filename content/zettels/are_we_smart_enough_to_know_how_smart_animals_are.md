@@ -1,18 +1,9 @@
 +++
 title = "Are We Smart Enough to Know How Smart Animals Are?"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:14:47+08:00
+lastmod = 2020-02-06T00:13:24+08:00
 draft = false
 +++
-
-title
-: Are We Smart Enough to Know How Smart Animals Are?
-
-author
-: Frans de Waal
-
-personal rating
-: 4/5
 
 tags
 : [§books]({{< relref "books" >}})

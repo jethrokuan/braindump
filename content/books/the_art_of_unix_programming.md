@@ -1,10 +1,21 @@
 +++
-title = "Book: The Art Of Unix Programming"
+title = "The Art Of Unix Programming"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:39:12+08:00
+lastmod = 2020-02-06T00:15:40+08:00
 draft = false
-math = true
 +++
+
+title
+: The Art Of Unix Programming
+
+author
+: Ken Thompson
+
+personal rating
+: 5/5
+
+tags
+: [§books]({{< relref "books" >}})
 
 In The Art of Unix Programming, Ken Thompson was quoted to have
 provided the following design rules:
