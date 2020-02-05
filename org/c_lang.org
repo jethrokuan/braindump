@@ -1,4 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
+#+HUGO_SECTION: zettels
 #+TITLE: The C Language
 #+HUGO_TAGS: proglang c
 
