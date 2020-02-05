@@ -1,9 +1,8 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-13T02:00:25+08:00
+lastmod = 2020-02-06T00:17:52+08:00
 draft = false
-math = true
 +++
 
 ## How to Represent Words {#how-to-represent-words}
@@ -53,92 +52,90 @@ learnt.
 
 Efficient tree structure to compute probabiltiies for all the vocabulary
 
+-    Language Models
 
-#### Language Models {#language-models}
+    The model will need to assign a probability to a sequence of tokens.
+    We want a high probability for a sentence that makes sense, and a low
+    probability for a sentence that doesn't.
 
-The model will need to assign a probability to a sequence of tokens.
-We want a high probability for a sentence that makes sense, and a low
-probability for a sentence that doesn't.
+    Unigrams completely ignore this, and a nonsensical sentence might
+    actually be assigned a high probability. Bigrams are a naive way of
+    evaluating a whole sentence.
 
-Unigrams completely ignore this, and a nonsensical sentence might
-actually be assigned a high probability. Bigrams are a naive way of
-evaluating a whole sentence.
+    -    Continuous bag-of-words (CBOW)
 
--    Continuous bag-of-words (CBOW)
+        Predicts a center word from the surrounding context in terms of word
+        vectors.
 
-    Predicts a center word from the surrounding context in terms of word
-    vectors.
+        For each word, we want to learn 2 vectors:
 
-    For each word, we want to learn 2 vectors:
+        1.  v: (input vector) when the word is in the context
+        2.  u: (output vector) when the word is in the center
 
-    1.  v: (input vector) when the word is in the context
-    2.  u: (output vector) when the word is in the center
+        3.  known parameters
+            -   **input:** sentence represented by one-hot vectors
+            -   **output:** one hot vector of the known center word
 
-    3.  known parameters
-        -   **input:** sentence represented by one-hot vectors
-        -   **output:** one hot vector of the known center word
+        Create 2 matrices \\(\mathbb{V} \in \mathbb{R}^{n \times |V|}\\) and
+        \\(\mathbb{U} \in \mathbb{R}^{|V| \times n}\\), where n is the arbitrary
+        size which defines the size of the embedding space.
 
-    Create 2 matrices \\(\mathbb{V} \in \mathbb{R}^{n \times |V|}\\) and
-    \\(\mathbb{U} \in \mathbb{R}^{|V| \times n}\\), where n is the arbitrary
-    size which defines the size of the embedding space.
+        \\(V\\) is the input word matrix such that the _i_-th column of \\(V\\) is the
+        $n$-dimensional embedded vector for word \\(w\_i\\) when it is an input to
+        this model. \\(U\\) is the output word matrix.
 
-    \\(V\\) is the input word matrix such that the _i_-th column of \\(V\\) is the
-    $n$-dimensional embedded vector for word \\(w\_i\\) when it is an input to
-    this model. \\(U\\) is the output word matrix.
+        1.  Generate one-hot word vectors for the input context of size m.
+        2.  Get our embedded word vectors for the context: (\\(v\_{c-m} =
+                 Vx^{c-m}\\), ...)
+        3.  Average these vectors to get \\(\hat{v} = \frac{\sum v}{2m} \in \mathbb{R^n}\\)
+        4.  Generate a score vector \\(z = U\hat{v} \in \mathbb{R}^{|V|}\\) As the
+            dot product of similar vectors is higher, it will push simila words
+            close to each other in order to achieve a high score.
+        5.  Turn the scores into probabilities \\(\hat{y} = softmax(z) \in \mathbb{R}^{|V|}\\)
 
-    1.  Generate one-hot word vectors for the input context of size m.
-    2.  Get our embedded word vectors for the context: (\\(v\_{c-m} =
-             Vx^{c-m}\\), ...)
-    3.  Average these vectors to get \\(\hat{v} = \frac{\sum v}{2m} \in \mathbb{R^n}\\)
-    4.  Generate a score vector \\(z = U\hat{v} \in \mathbb{R}^{|V|}\\) As the
-        dot product of similar vectors is higher, it will push simila words
-        close to each other in order to achieve a high score.
-    5.  Turn the scores into probabilities \\(\hat{y} = softmax(z) \in \mathbb{R}^{|V|}\\)
+        Minimise loss function (cross entropy), and use stochastic gradient
+        descent to update all relevant word vectors.
 
-    Minimise loss function (cross entropy), and use stochastic gradient
-    descent to update all relevant word vectors.
+    -    Skipgram
 
--    Skipgram
+        <http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/>
 
-    <http://mccormickml.com/2016/04/19/word2vec-tutorial-the-skip-gram-model/>
+        Predicts the distribution of context words from a center word. This is
+        very similar to the CBOW approach, wind the input and output vectors
+        reversed. Here, a naive Bayes assumption is invoked: that given the
+        center word, all output words are completely independent.
 
-    Predicts the distribution of context words from a center word. This is
-    very similar to the CBOW approach, wind the input and output vectors
-    reversed. Here, a naive Bayes assumption is invoked: that given the
-    center word, all output words are completely independent.
+        Input vector: one-hot vectors corresponding to the vocabulary
 
-    Input vector: one-hot vectors corresponding to the vocabulary
+        The neural network is consists of one hidden layer of \\(n\\) units, where
+        \\(n\\) is the desired dimension of the word vector. The output layer is a
+        softmax regression layer, outputting a value between 0 and 1. We want
+        the value for the context words to be high, and the non-context words
+        to be low.
 
-    The neural network is consists of one hidden layer of \\(n\\) units, where
-    \\(n\\) is the desired dimension of the word vector. The output layer is a
-    softmax regression layer, outputting a value between 0 and 1. We want
-    the value for the context words to be high, and the non-context words
-    to be low.
+        After training, the output layer is discarded, and the weights at the
+        hidden layer are the word vectors we want.
 
-    After training, the output layer is discarded, and the weights at the
-    hidden layer are the word vectors we want.
+-    Training Methods
 
+    In practice, negative sampling works better for frequently occurring
+    words and lower-dimensional vectors, and hierachical softmax works
+    better for infrequent words.
 
-#### Training Methods {#training-methods}
+    -    Negative Sampling
 
-In practice, negative sampling works better for frequently occurring
-words and lower-dimensional vectors, and hierachical softmax works
-better for infrequent words.
+        Take \\(k\\) negative samples, and minimise the probability of the two
+        words co-occurring while also maximising the probability of the two
+        words in the same window co-occur.
 
--    Negative Sampling
+    -    Hierarchical Softmax
 
-    Take \\(k\\) negative samples, and minimise the probability of the two
-    words co-occurring while also maximising the probability of the two
-    words in the same window co-occur.
-
--    Hierarchical Softmax
-
-    Hierarchical Softmax uses a binary tree to represent all words in the
-    vocabulary. Each leaf of the tree is a word, and there is a unique
-    path from root to leaf. The probability of a word \\(w\\) given a vector
-    \\(w\_i\\), \\(P(w|w\_i)\\), is equal to the probability of a random walk
-    starting from the root and ending in the leaf node corresponding to
-    \\(w\\).
+        Hierarchical Softmax uses a binary tree to represent all words in the
+        vocabulary. Each leaf of the tree is a word, and there is a unique
+        path from root to leaf. The probability of a word \\(w\\) given a vector
+        \\(w\_i\\), \\(P(w|w\_i)\\), is equal to the probability of a random walk
+        starting from the root and ending in the leaf node corresponding to
+        \\(w\\).
 
 
 ### Global Vectors for Word Representation (GloVe) {#global-vectors-for-word-representation--glove}
@@ -170,15 +167,14 @@ the difference of logarithms, this objective associates (the logarithm
 of) ratios of co-occurrence probabilities with vector differences in
 the word vector space.
 
+-    Co-occurrence Matrix
 
-#### Co-occurrence Matrix {#co-occurrence-matrix}
-
-Let \\(X\\) denote the word-word co-occurrence matrix, where \\(X\_{ij}\\)
-indicate the number of times word \\(j\\) occur in the context of word
-\\(i\\). Let \\(X\_i = \sum\_k X\_{ik}\\) be the number of times any word \\(k\\)
-appears in the context of word \\(i\\). Let \\(P\_{ij} = P(w\_j|w\_i) =
-\frac{X\_{ij}}{X\_i}\\) be the probability of j appearing in the context
-of word \\(i\\).
+    Let \\(X\\) denote the word-word co-occurrence matrix, where \\(X\_{ij}\\)
+    indicate the number of times word \\(j\\) occur in the context of word
+    \\(i\\). Let \\(X\_i = \sum\_k X\_{ik}\\) be the number of times any word \\(k\\)
+    appears in the context of word \\(i\\). Let \\(P\_{ij} = P(w\_j|w\_i) =
+    \frac{X\_{ij}}{X\_i}\\) be the probability of j appearing in the context
+    of word \\(i\\).
 
 
 ## Topic Modeling {#topic-modeling}
@@ -391,79 +387,77 @@ The learning problem involves predicting the next transition in the
 state machine. The parsing problem constructs the optimal sequence of
 transitions for the input sentence, given the previously induced model.
 
+-    Greedy Deterministic Transition-based Parsing
 
-#### Greedy Deterministic Transition-based Parsing {#greedy-deterministic-transition-based-parsing}
+    The transition system is a state machine, which consists of _states_
+    and _transitions_ between those states. The model induces a sequence
+    of transitions from some initial state to one of several terminal
+    states. For any sentence \\(S = w\_0w\_1\dots w\_n\\) a state can be
+    described with a triple \\(c = \left(\sigma, \beta, A)\\):
 
-The transition system is a state machine, which consists of _states_
-and _transitions_ between those states. The model induces a sequence
-of transitions from some initial state to one of several terminal
-states. For any sentence \\(S = w\_0w\_1\dots w\_n\\) a state can be
-described with a triple \\(c = \left(\sigma, \beta, A)\\):
+    1.  a stack \\(\sigma\\) of words \\(w\_i\\) from S,
+    2.  a buffer \\(\beta\\) of words \\(w\_i\\) from S,
+    3.  a set of dependency arcs \\(A\\) of the form \\(\left(w\_i, r, w\_j\right)\\)
 
-1.  a stack \\(\sigma\\) of words \\(w\_i\\) from S,
-2.  a buffer \\(\beta\\) of words \\(w\_i\\) from S,
-3.  a set of dependency arcs \\(A\\) of the form \\(\left(w\_i, r, w\_j\right)\\)
+    For each sentence, there is an initial state, and a terminal state.
 
-For each sentence, there is an initial state, and a terminal state.
+    There are three types of transitions:
 
-There are three types of transitions:
+    shift
+    : Remove the first word in the buffer, and push it on top of
+        the stack
 
-shift
-: Remove the first word in the buffer, and push it on top of
-    the stack
+    left-arc
+    : add a dependency arc \\((w\_j, r, w\_i)\\) to the arc set A,
+        where \\(w\_i\\) is the word second to the top of the stack,
+        and \\(w\_j\\) is the word at the top of the stack. Remove
+        \\(w\_i\\) from the stack.
 
-left-arc
-: add a dependency arc \\((w\_j, r, w\_i)\\) to the arc set A,
-    where \\(w\_i\\) is the word second to the top of the stack,
-    and \\(w\_j\\) is the word at the top of the stack. Remove
-    \\(w\_i\\) from the stack.
+    right-arc
+    : add a dependency arc \\((w\_i, r, w\_j)\\) to the arc set A,
+        where \\(w\_i\\) is the word second to the top of the stack,
+        and \\(w\_j\\) is the word at the top of the stack. Remove
+        \\(w\_i\\) from the stack.
 
-right-arc
-: add a dependency arc \\((w\_i, r, w\_j)\\) to the arc set A,
-    where \\(w\_i\\) is the word second to the top of the stack,
-    and \\(w\_j\\) is the word at the top of the stack. Remove
-    \\(w\_i\\) from the stack.
+-    Neural Dependency Parsing
 
+    -    Feature Selection
 
-#### Neural Dependency Parsing {#neural-dependency-parsing}
+        \\(S\_{word}\\)
+        : vector representation of the words in 4s$
 
--    Feature Selection
+        \\(S\_{tag}\\)
+        : Part-of-Speech (POS) tags, comprising of a small
+            discrete set \\(P = {NN, NP, \dots}\\)
 
-    \\(S\_{word}\\)
-    : vector representation of the words in 4s$
+        \\(S\_{label}\\)
+        : Arc-labels, comprising of a small discrete set,
+            describing the dependency relation.
 
-    \\(S\_{tag}\\)
-    : Part-of-Speech (POS) tags, comprising of a small
-        discrete set \\(P = {NN, NP, \dots}\\)
+        For each feature type, we will have a corresponding embedding matrix,
+        mapping from the feature's one-hot encoding, to a d-dimensional dense
+        vector representation.
 
-    \\(S\_{label}\\)
-    : Arc-labels, comprising of a small discrete set,
-        describing the dependency relation.
+        The full embedding for \\(S\_{word}\\) is \\(E^w \in \mathbb{R}^{d\times
+        N\_w}\\) where \\(N\_w\\) is the vocabulary size. The POS and label embedding
+        matrices are \\(E^t \in \mathbb{R}^{d\times N\_t}\\) and \\(E^l \in
+        \mathbb{R}^{d\times N\_l}\\) where \\(N\_t\\) and \\(N\_l\\) are the number of
+        distinct POS tags and arc labels respectively.
 
-    For each feature type, we will have a corresponding embedding matrix,
-    mapping from the feature's one-hot encoding, to a d-dimensional dense
-    vector representation.
+    -    The network
 
-    The full embedding for \\(S\_{word}\\) is \\(E^w \in \mathbb{R}^{d\times
-    N\_w}\\) where \\(N\_w\\) is the vocabulary size. The POS and label embedding
-    matrices are \\(E^t \in \mathbb{R}^{d\times N\_t}\\) and \\(E^l \in
-    \mathbb{R}^{d\times N\_l}\\) where \\(N\_t\\) and \\(N\_l\\) are the number of
-    distinct POS tags and arc labels respectively.
+        The network contains an input layer \\([x^w, x^t, x\_l]\\), a hidden layer,
+        and a final softmax layer with a cross-entropy loss function.
 
--    The network
+        We can define a single weight matrix in the hidden layer, to operate
+        on a concatenation of \\([x^w, x^t, x^l]\\), or we can use three weight
+        matrices \\([W^w\_1, W^t\_1, W^l\_1]\\), one for each input type. We then
+        apply a non-linear function and use one more affine (fully-connected)
+        layer \\([W\_2]\\) so that there are an equivalent number of softmax
+        probabilities to the number of possible transitions (the output
+        dimension).
 
-    The network contains an input layer \\([x^w, x^t, x\_l]\\), a hidden layer,
-    and a final softmax layer with a cross-entropy loss function.
-
-    We can define a single weight matrix in the hidden layer, to operate
-    on a concatenation of \\([x^w, x^t, x^l]\\), or we can use three weight
-    matrices \\([W^w\_1, W^t\_1, W^l\_1]\\), one for each input type. We then
-    apply a non-linear function and use one more affine (fully-connected)
-    layer \\([W\_2]\\) so that there are an equivalent number of softmax
-    probabilities to the number of possible transitions (the output
-    dimension).
-
-    {{< figure src="/ox-hugo/screenshot_2018-01-20_15-36-45.png" >}}
+        {{< figure src="/ox-hugo/screenshot_2018-01-20_15-36-45.png" >}}
 
 
 ## Basic Visualization Techniques of Text Data {#basic-visualization-techniques-of-text-data}
@@ -510,11 +504,9 @@ analysis.
 
 ## Deep Visualization Techniques {#deep-visualization-techniques}
 
-
-#### [ DeepEyes](https://ieeexplore.ieee.org/document/8019872/) {#deepeyes}
+-    [ DeepEyes](https://ieeexplore.ieee.org/document/8019872/)
 
 
 ### Dimensionality Reduction (aka [Manifold Learning](https://link.springer.com/chapter/10.1007/978-1-84882-312-9%5F4)) {#dimensionality-reduction--aka-manifold-learning}
 
-
-#### [Linear tSNE optimization for the Web](https://arxiv.org/abs/1805.10817) {#linear-tsne-optimization-for-the-web}
+-    [Linear tSNE optimization for the Web](https://arxiv.org/abs/1805.10817)

@@ -1,10 +1,9 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-28T16:07:07+08:00
+lastmod = 2020-02-06T00:17:43+08:00
 tags = ["machine-learning"]
 draft = false
-math = true
 +++
 
 ## When do we need machine learning? {#when-do-we-need-machine-learning}
@@ -30,99 +29,94 @@ An agent is said to be _learning_ if it improves its performance P on
 task T based on experience/observations/data E. T must be fixed, P
 must be measurable, E must exist. See [Learning Agents]({{< relref "artificial_intelligence" >}}).
 
+-    Inductive Bias
 
-#### Inductive Bias {#inductive-bias}
-
-The incorporation of prior knowledge biases the learning mechanism.
-This is also called _inductive bias_. The incorporation of prior
-knowledge is inevitable for the success of learning algorithms (the
-no-free-lunch theorem). The stronger the prior knowledge that one
-starts the learning process with, the easier it is to learn from
-further examples.
+    The incorporation of prior knowledge biases the learning mechanism.
+    This is also called _inductive bias_. The incorporation of prior
+    knowledge is inevitable for the success of learning algorithms (the
+    no-free-lunch theorem). The stronger the prior knowledge that one
+    starts the learning process with, the easier it is to learn from
+    further examples.
 
 
 ### Types of Learning {#types-of-learning}
 
+-    Active vs Passive Learning
 
-#### Active vs Passive Learning {#active-vs-passive-learning}
+    An active learner interacts with the environment at training time,
+    (e.g. by posing queries or performing experiments), while a passive
+    learner only observes the information provided by the environment.
 
-An active learner interacts with the environment at training time,
-(e.g. by posing queries or performing experiments), while a passive
-learner only observes the information provided by the environment.
+-    Online vs Batch Learning
 
+    In online learning, the hypothesis has to be updated each time a new
+    label is received.
 
-#### Online vs Batch Learning {#online-vs-batch-learning}
+-    Reinforcement Learning
 
-In online learning, the hypothesis has to be updated each time a new
-label is received.
+    Each action in a state has an associated cost and a probability
+    distribution of the next state.
 
+    Goal is to learn a policy (mapping from state to action) that
+    minimizes the sum of expected current and future costs.
 
-#### Reinforcement Learning {#reinforcement-learning}
+-    Supervised Learning
 
-Each action in a state has an associated cost and a probability
-distribution of the next state.
+    Since learning involves an interaction between the learner and the
+    environment, one can divide tasks according to the nature of that
+    interaction.
 
-Goal is to learn a policy (mapping from state to action) that
-minimizes the sum of expected current and future costs.
+    Supervised learning describes a scenario in which the training
+    examples contain significant information that is missing in the unseen
+    "test examples". In unsupervised learning, there is no distinction
+    between the training and test data. The goal is to come up with some
+    summary, or compressed version of that data.
 
+    -    Measure of success
 
-#### Supervised Learning {#supervised-learning}
+        A loss function helps measure our success. Given a set \\(H\\) of
+        hypothesis of models, and a domain \\(Z\\), let \\(l\\) be a function from \\(H
+          \times Z\\) to non-negative real numbers $l: \\(H \times Z \rightarrow
+          \mathbb{R}\_{+}\\).
 
-Since learning involves an interaction between the learner and the
-environment, one can divide tasks according to the nature of that
-interaction.
+        The _risk function_ is the expected loss of the hypothesis,
 
-Supervised learning describes a scenario in which the training
-examples contain significant information that is missing in the unseen
-"test examples". In unsupervised learning, there is no distinction
-between the training and test data. The goal is to come up with some
-summary, or compressed version of that data.
+        \begin{equation\*}
+          L\_D(h) = E\_{z \sim D}[l(h,z)]
+        \end{equation\*}
 
--    Measure of success
+        We are interested in finding a hypothesis \\(h\\) that has a small risk,
+        or expected loss.
 
-    A loss function helps measure our success. Given a set \\(H\\) of
-    hypothesis of models, and a domain \\(Z\\), let \\(l\\) be a function from \\(H
-      \times Z\\) to non-negative real numbers $l: \\(H \times Z \rightarrow
-      \mathbb{R}\_{+}\\).
+    -    Empirical Risk Minimisation (ERM)
 
-    The _risk function_ is the expected loss of the hypothesis,
+        -   The training set error is often called the _empirical error_ or
+            _empirical risk_, andn this is the error the classifier incurs over
+            the sample:
 
-    \begin{equation\*}
-      L\_D(h) = E\_{z \sim D}[l(h,z)]
-    \end{equation\*}
+        \begin{equation}
+        L\_S(h) = \frac{|\\{i \in [m] : h(x\_i) \ne y\_i\\}}{m}
+        \end{equation}
 
-    We are interested in finding a hypothesis \\(h\\) that has a small risk,
-    or expected loss.
+        -   Given a hypothesis class \\(H\\), finding the hypothesis \\(h \in H\\) that
+            minimizes the empirical risk is a simple learning strategy.
 
--    Empirical Risk Minimisation (ERM)
+    -    Assumptions Made ⚠
 
-    -   The training set error is often called the _empirical error_ or
-        _empirical risk_, andn this is the error the classifier incurs over
-        the sample:
+        1.  One common assumption is that the data in the data generation
+            process is independently and identically distributed (IID),
+            according to the distribution \\(D\\).
 
-    \begin{equation}
-    L\_S(h) = \frac{|\\{i \in [m] : h(x\_i) \ne y\_i\\}}{m}
-    \end{equation}
+        Q: Given a large enough training set, do you expect the long term test
+        error to be similar to the training error?
 
-    -   Given a hypothesis class \\(H\\), finding the hypothesis \\(h \in H\\) that
-        minimizes the empirical risk is a simple learning strategy.
-
--    Assumptions Made ⚠
-
-    1.  One common assumption is that the data in the data generation
-        process is independently and identically distributed (IID),
-        according to the distribution \\(D\\).
-
-    Q: Given a large enough training set, do you expect the long term test
-    error to be similar to the training error?
-
-    -   If IID, then yes
-    -   If not, there is likely dependencies, but under certain conditions,
-        yes.
-        -   If sampling mixes well, it will not take long for D' to look
-            like a steady set distribution.
-    -   If dependencies are exploited, there is a possibility of attaining
-        lower training and test error.
+        -   If IID, then yes
+        -   If not, there is likely dependencies, but under certain conditions,
+            yes.
+            -   If sampling mixes well, it will not take long for D' to look
+                like a steady set distribution.
+        -   If dependencies are exploited, there is a possibility of attaining
+            lower training and test error.
 
 
 ### Is Learning Feasible? {#is-learning-feasible}
@@ -134,17 +128,16 @@ about the performance on the data outside of \\(D\\).
 As long as \\(f\\) is unknown, knowing \\(D\\) cannot exclude any patterns of
 \\(f\\) outside of \\(D\\), and the predictions of \\(g\\) would be meaningless.
 
+-    Probabilistic View
 
-#### Probabilistic View {#probabilistic-view}
+    If we accept a probabilistic answer, that is \\(D\\) tells us something
+    likely about \\(f\\) outside of \\(D\\), then learning is feasible, only with
+    a small price.
 
-If we accept a probabilistic answer, that is \\(D\\) tells us something
-likely about \\(f\\) outside of \\(D\\), then learning is feasible, only with
-a small price.
-
-Learning a hypothesis \\(g\\) approximates the target function \\(f\\) well,
-i.e. \\(E\_{out}(g) \approx 0\\). However, probabilistic analysis via
-Hoeffding's Inequality gives \\(E\_{out}(g) \approx E\_{in}(g)\\).
-Therefore, we still need to ensure \\(E\_{in}(g) \approx 0\\).
+    Learning a hypothesis \\(g\\) approximates the target function \\(f\\) well,
+    i.e. \\(E\_{out}(g) \approx 0\\). However, probabilistic analysis via
+    Hoeffding's Inequality gives \\(E\_{out}(g) \approx E\_{in}(g)\\).
+    Therefore, we still need to ensure \\(E\_{in}(g) \approx 0\\).
 
 
 ## Training vs Testing {#training-vs-testing}
@@ -244,13 +237,12 @@ Intuition: Start with the most specific hypothesis \\(h\\). Whenever it
 wrongly classifies a positive training example, we "minimally"
 generalize it to satisfy its input instance.
 
+-    Limitations
 
-#### Limitations {#limitations}
-
-1.  Can't tell whether Find-S has learnt the target concept
-2.  Can't tell when training examples are _inconsistent_
-3.  Picks a maximally specific \\(h\\)
-4.  Depending on \\(H\\), there may be several solutions
+    1.  Can't tell whether Find-S has learnt the target concept
+    2.  Can't tell when training examples are _inconsistent_
+    3.  Picks a maximally specific \\(h\\)
+    4.  Depending on \\(H\\), there may be several solutions
 
 
 ### Version Space {#version-space}
@@ -313,76 +305,72 @@ attribute is evaluated using a statistical test to determine how well
 it alone classifies the examples. The best attribute is selected and
 used as the test at the root node of the tree.
 
+-    Which is the best attribute?
 
-#### Which is the best attribute? {#which-is-the-best-attribute}
+    A statistical property called _information gain_ measures how well a
+    given attribute separates the training examples according to their
+    target classification.
 
-A statistical property called _information gain_ measures how well a
-given attribute separates the training examples according to their
-target classification.
+    Information gain is the expected reduction in entropy caused by
+    partitioning the examples according to this attribute:
 
-Information gain is the expected reduction in entropy caused by
-partitioning the examples according to this attribute:
+    \begin{align}
+      Gain(S,A) = Entropy(S) - \sum\_{v\in Values(A)}\frac{|S\_v|}{|S|}Entropy(S\_v)
+    \end{align}
 
-\begin{align}
-  Gain(S,A) = Entropy(S) - \sum\_{v\in Values(A)}\frac{|S\_v|}{|S|}Entropy(S\_v)
-\end{align}
+    For example:
 
-For example:
+    \begin{align}
+      Values(Wind) &= Weak, Strong \\\\\\
+      S &= [9+, 5-] \\\\\\
+      S\_{Weak} &\leftarrow [6+, 2-] \\\\\\
+      S\_{Strong} &\leftarrow [3+, 3-] \\\\\\
+      Gain(S, Wind) &= Entropy(S) - \frac{8}{14}Entropy(S\_{Weak}) -
+                      \frac{6}{14}Entropy(S\_{Strong}) \\\\\\
+                   &=0.048
+    \end{align}
 
-\begin{align}
-  Values(Wind) &= Weak, Strong \\\\\\
-  S &= [9+, 5-] \\\\\\
-  S\_{Weak} &\leftarrow [6+, 2-] \\\\\\
-  S\_{Strong} &\leftarrow [3+, 3-] \\\\\\
-  Gain(S, Wind) &= Entropy(S) - \frac{8}{14}Entropy(S\_{Weak}) -
-                  \frac{6}{14}Entropy(S\_{Strong}) \\\\\\
-               &=0.048
-\end{align}
+-    Hypothesis Space Search
 
+    ID3 can be characterised as searching a space of hypotheses for one
+    that fits the training examples. The hypothesis space searched is the
+    set of possible decision trees. ID3 performs a simple-to-complex,
+    hill-climbing search. The evaluation measure that guides the search is
+    the information gain measure.
 
-#### Hypothesis Space Search {#hypothesis-space-search}
+    Because ID3's hypothesis space of all decision trees is a complete
+    space of finite discrete-valued functions, it avoids the risk that the
+    hypothesis space might not contain the target function.
 
-ID3 can be characterised as searching a space of hypotheses for one
-that fits the training examples. The hypothesis space searched is the
-set of possible decision trees. ID3 performs a simple-to-complex,
-hill-climbing search. The evaluation measure that guides the search is
-the information gain measure.
+    ID3 maintains only a single hypothesis as it searches through the
+    space of decision trees. ID3 loses the capabilities that follow from
+    explicitly representing all consistent hypothesis.
 
-Because ID3's hypothesis space of all decision trees is a complete
-space of finite discrete-valued functions, it avoids the risk that the
-hypothesis space might not contain the target function.
+    ID3 in its pure form performs no backtracking in its search, and can
+    result in locally but not globally optimal target functions.
 
-ID3 maintains only a single hypothesis as it searches through the
-space of decision trees. ID3 loses the capabilities that follow from
-explicitly representing all consistent hypothesis.
+    ID3 uses all training examples at each step to make statistically
+    based decisions, unlike other algorithms that make decisions incrementally.
 
-ID3 in its pure form performs no backtracking in its search, and can
-result in locally but not globally optimal target functions.
+-    Inductive bias
 
-ID3 uses all training examples at each step to make statistically
-based decisions, unlike other algorithms that make decisions incrementally.
+    The inductive bias of decision tree learning is that shorter trees are
+    preferred over larger trees (Occam's razor). Trees that place high
+    information gain attributes close to the root are preferred over those
+    that do not. ID3 can be viewed as a greedy heuristic search for the
+    shortest tree without conducting the entire breadth-first search
+    through the hypothesis space.
 
+    Notice that ID3 searches a complete hypothesis space incompletely, and
+    candidate-elimination searches an incomplete hypothesis space
+    completely. The inductive bias of ID3 follows from its search strategy
+    (_preference bias_), while that of candidate elimination follows from
+    the definition of its search space. (_restriction bias_).
 
-#### Inductive bias {#inductive-bias}
+-    Why Prefer Shorter Hypotheses?
 
-The inductive bias of decision tree learning is that shorter trees are
-preferred over larger trees (Occam's razor). Trees that place high
-information gain attributes close to the root are preferred over those
-that do not. ID3 can be viewed as a greedy heuristic search for the
-shortest tree without conducting the entire breadth-first search
-through the hypothesis space.
-
-Notice that ID3 searches a complete hypothesis space incompletely, and
-candidate-elimination searches an incomplete hypothesis space
-completely. The inductive bias of ID3 follows from its search strategy
-(_preference bias_), while that of candidate elimination follows from
-the definition of its search space. (_restriction bias_).
-
-
-#### Why Prefer Shorter Hypotheses? {#why-prefer-shorter-hypotheses}
-
-1.  fewer shorter hypothesis than larger ones, means it's less likely
-    to over-generalise
+    1.  fewer shorter hypothesis than larger ones, means it's less likely
+        to over-generalise
 
 
 ## Density Estimation {#density-estimation}
@@ -488,41 +476,39 @@ set.
 Generative algorithms model \\(p(y | x)\\) and \\(p(y)\\). Then \\(argmax\_y
 p(y|x) = argmax\_y \frac{p(x|y)p(y)}{p(x)} = argmax\_y p(x|y)p(y)\\).
 
+-    Multivariate Normal Distribution
 
-#### Multivariate Normal Distribution {#multivariate-normal-distribution}
+    A multivariate normal distribution is parameterized by a mean vector
+    \\(\mu \in R^n\\) and a covariance matrix \\(\Sigma \in R^{n \times n}\\), where \\(\Sigma \ge
+    0\\) is symmetric and positive semi-definite.
 
-A multivariate normal distribution is parameterized by a mean vector
-\\(\mu \in R^n\\) and a covariance matrix \\(\Sigma \in R^{n \times n}\\), where \\(\Sigma \ge
-0\\) is symmetric and positive semi-definite.
+-   <span class="org-todo todo TODO">TODO</span>  Gaussian Discriminant Analysis
 
+    In Gaussian Discriminant Analysis, p(x | y) is distributed to a
+    [multivariate normal distribution](#multivariate-normal-distribution).
 
-#### <span class="org-todo todo TODO">TODO</span> Gaussian Discriminant Analysis {#gaussian-discriminant-analysis}
+    \begin{align}
+      y &\sim Bernoulli(\phi) \\\\\\
+      x|y = 0 &\sim N(\mu\_0, \Sigma) \\\\\\
+      x|y = 1 &\sim N(\mu\_1, \Sigma)
+    \end{align}
 
-In Gaussian Discriminant Analysis, p(x | y) is distributed to a
-[multivariate normal distribution](#multivariate-normal-distribution).
+    We can write out the distributions:
 
-\begin{align}
-  y &\sim Bernoulli(\phi) \\\\\\
-  x|y = 0 &\sim N(\mu\_0, \Sigma) \\\\\\
-  x|y = 1 &\sim N(\mu\_1, \Sigma)
-\end{align}
+    \begin{align}
+      p(y) &= \phi^y (1 - \phi)^{1-y} \\\\\\
+      p(x | y = 0) &= \frac{1}{(2\pi)^{n/2}|\Sigma|^{n/2}} exp \left( - \frac{1}{2} (x - \mu\_0)^T \Sigma^{-1}(x - \mu\_0) \right) \\\\\\
+      p(x | y = 1) &= \frac{1}{(2\pi)^{n/2}|\Sigma|^{n/2}} exp \left( - \frac{1}{2} (x - \mu\_1)^T \Sigma^{-1}(x - \mu\_1) \right)
+    \end{align}
 
-We can write out the distributions:
+    Then, the log-likelihood of the data is:
 
-\begin{align}
-  p(y) &= \phi^y (1 - \phi)^{1-y} \\\\\\
-  p(x | y = 0) &= \frac{1}{(2\pi)^{n/2}|\Sigma|^{n/2}} exp \left( - \frac{1}{2} (x - \mu\_0)^T \Sigma^{-1}(x - \mu\_0) \right) \\\\\\
-  p(x | y = 1) &= \frac{1}{(2\pi)^{n/2}|\Sigma|^{n/2}} exp \left( - \frac{1}{2} (x - \mu\_1)^T \Sigma^{-1}(x - \mu\_1) \right)
-\end{align}
+    \begin{align}
+      l(\phi, \mu\_0, \mu\_1, \Sigma) &= \log \prod\_{i=1}^m p(x^{(i)}, y^{(i)}; \mu\_0, \mu\_1, \Sigma) \\\\\\
+      &= \log \prod\_{i=1}^m p(x^{(i) }| y^{(i)}; \mu\_0, \mu\_1, \Sigma)p(y^{(i)}; \phi)
+    \end{align}
 
-Then, the log-likelihood of the data is:
-
-\begin{align}
-  l(\phi, \mu\_0, \mu\_1, \Sigma) &= \log \prod\_{i=1}^m p(x^{(i)}, y^{(i)}; \mu\_0, \mu\_1, \Sigma) \\\\\\
-  &= \log \prod\_{i=1}^m p(x^{(i) }| y^{(i)}; \mu\_0, \mu\_1, \Sigma)p(y^{(i)}; \phi)
-\end{align}
-
-We maximize \\(l\\) with respect to the parameters.
+    We maximize \\(l\\) with respect to the parameters.
 
 
 ## Riken AIP Workshop {#riken-aip-workshop}
@@ -530,85 +516,78 @@ We maximize \\(l\\) with respect to the parameters.
 
 ### Weakly Supervised Classification {#weakly-supervised-classification}
 
+-    Motivation
 
-#### Motivation {#motivation}
+    -   Machine learning from big data is already successful
+    -   In some cases, massive labelled data is not available
+    -   Classification from limited information
 
--   Machine learning from big data is already successful
--   In some cases, massive labelled data is not available
--   Classification from limited information
+-    Supervised Classification
 
+    A large number of labeled samples yield better classification
+    performance.
+    Optimal convergence rate is \\(O(n^{-\frac{1}{2}})\\).
 
-#### Supervised Classification {#supervised-classification}
+-    Unsupervised Classification
 
-A large number of labeled samples yield better classification
-performance.
-Optimal convergence rate is \\(O(n^{-\frac{1}{2}})\\).
+    Since collecting labelled samples is costly, we can learn a classifier
+    from unlabelled data. This is equivalent to clustering
 
+-    Semi-supervised Classification
 
-#### Unsupervised Classification {#unsupervised-classification}
+    -   Use a large number of unlabelled samples and a small number of
+        labelled samples.
+    -   Find a decision boundary along cluster structure induced by
+        unlabelled samples.
 
-Since collecting labelled samples is costly, we can learn a classifier
-from unlabelled data. This is equivalent to clustering
+-    Positive Unlabelled Classification
 
+    Given positive and unlabelled samples:
 
-#### Semi-supervised Classification {#semi-supervised-classification}
+    \begin{equation}
+    {x\_i^P}\_{i=1}^{n\_P} \sim P(x | y = + 1)
+    \end{equation}
 
--   Use a large number of unlabelled samples and a small number of
-    labelled samples.
--   Find a decision boundary along cluster structure induced by
-    unlabelled samples.
+    \begin{equation}
+      {x\_i^U}\_{i=1}^{n\_U} \sim P(x)
+    \end{equation}
 
+    Risk of classifier can be decomposed into two terms:
 
-#### Positive Unlabelled Classification {#positive-unlabelled-classification}
+    1.  Risk for positive data
+    2.  Risk for negative data
 
-Given positive and unlabelled samples:
+    Since we do not have negative data in the positive unlabelled data in
+    the PU setting, the risk cannot be directly estimated.
 
-\begin{equation}
-{x\_i^P}\_{i=1}^{n\_P} \sim P(x | y = + 1)
-\end{equation}
+    U-density is a mixture of positive and negative densities:
 
-\begin{equation}
-  {x\_i^U}\_{i=1}^{n\_U} \sim P(x)
-\end{equation}
+    \begin{equation}
+      R(f) = \pi E\_{p(x|y=+1)} \left[ l(f(x)) \right] + (1-\pi) E\_{p(x|y=-1)}\left[ l(-f(x)) \right]
+    \end{equation}
 
-Risk of classifier can be decomposed into two terms:
+    Through this we can find an unbiased risk estimator.
 
-1.  Risk for positive data
-2.  Risk for negative data
+    Estimating error bounds, we can show that PU learning can be better
+    than PN provided a large number of PU data.
 
-Since we do not have negative data in the positive unlabelled data in
-the PU setting, the risk cannot be directly estimated.
+-    PNU Classification
 
-U-density is a mixture of positive and negative densities:
+    -   Train PU, PN, and NU classification, and combine them.
+    -   Unlabelled data always helps without cluster assumptions
+    -   Use unlabelled data for loss evaluation (reducing the bias), not for
+        regularisation.
 
-\begin{equation}
-  R(f) = \pi E\_{p(x|y=+1)} \left[ l(f(x)) \right] + (1-\pi) E\_{p(x|y=-1)}\left[ l(-f(x)) \right]
-\end{equation}
+-    Pconf Classification
 
-Through this we can find an unbiased risk estimator.
+    Only positive data is available:
 
-Estimating error bounds, we can show that PU learning can be better
-than PN provided a large number of PU data.
+    1.  data from rival companies cannot be obtained
+    2.  Only successful examples are available
 
+    If we have positive data with confidence, we can train a classifier.
 
-#### PNU Classification {#pnu-classification}
-
--   Train PU, PN, and NU classification, and combine them.
--   Unlabelled data always helps without cluster assumptions
--   Use unlabelled data for loss evaluation (reducing the bias), not for
-    regularisation.
-
-
-#### Pconf Classification {#pconf-classification}
-
-Only positive data is available:
-
-1.  data from rival companies cannot be obtained
-2.  Only successful examples are available
-
-If we have positive data with confidence, we can train a classifier.
-
-Others: Similar-unlabelled etc.
+    Others: Similar-unlabelled etc.
 
 
 ### Fast Computation of Uncertainty in Deep Learning {#fast-computation-of-uncertainty-in-deep-learning}
@@ -618,35 +597,33 @@ Emtiyaz Khan
 Uncertainty quantifies the confidence in the prediction of a model,
 i.e., how much it does not know.
 
+-    Uncertainty in Deep Learning
 
-#### Uncertainty in Deep Learning {#uncertainty-in-deep-learning}
+    <https://emtiyaz.github.io/>
 
-<https://emtiyaz.github.io/>
+    \begin{equation}
+      p(D|\theta) = \prod\_{i=1}^{N} p(y\_i | f\_\theta (x\_i))
+    \end{equation}
 
-\begin{equation}
-  p(D|\theta) = \prod\_{i=1}^{N} p(y\_i | f\_\theta (x\_i))
-\end{equation}
+    Data given parameters,  output given NN(input)
 
-Data given parameters,  output given NN(input)
+    1.  Generate a prior distribution \\(\theta \sim p(\theta)\\)
 
-1.  Generate a prior distribution \\(\theta \sim p(\theta)\\)
+-    Approximating Inference with Gradients
 
+    \begin{equation}
+      p(\theta | D) \approx q(\theta) = N(\theta | \mu, \sigma^2)
+    \end{equation}
 
-#### Approximating Inference with Gradients {#approximating-inference-with-gradients}
+    Find the \\(\mu\\) and \\(\sigma^2\\) such that \\(q\\) is close to the posterior distribution.
 
-\begin{equation}
-  p(\theta | D) \approx q(\theta) = N(\theta | \mu, \sigma^2)
-\end{equation}
+    \begin{equation}
+      max L(\mu, \sigma^2) = E\_q\left[ \log \frac{p(\theta)}{q(\theta)} \right] +
+      \sum\_{i=1}^N E\_q \left[ \log p(D\_i|\theta) \right]
+    \end{equation}
 
-Find the \\(\mu\\) and \\(\sigma^2\\) such that \\(q\\) is close to the posterior distribution.
-
-\begin{equation}
-  max L(\mu, \sigma^2) = E\_q\left[ \log \frac{p(\theta)}{q(\theta)} \right] +
-  \sum\_{i=1}^N E\_q \left[ \log p(D\_i|\theta) \right]
-\end{equation}
-
-Using natural-gradients leads to faster and simpler algorithm than
-gradients methods.
+    Using natural-gradients leads to faster and simpler algorithm than
+    gradients methods.
 
 
 ### Data-efficient Probabilistic Machine Learning {#data-efficient-probabilistic-machine-learning}
@@ -655,29 +632,26 @@ Bryan Low
 
 Gaussian Process (GP) Models for Big Data.
 
+-    Gaussian Process
 
-#### Gaussian Process {#gaussian-process}
+    -   Is a rich class of Bayesian, non-parametric models
+    -   A GP is a collection of rvs any finite subset of which belongs to a
+        univariate
 
--   Is a rich class of Bayesian, non-parametric models
--   A GP is a collection of rvs any finite subset of which belongs to a
-    univariate
+-    Task Setting
 
+    -   Agent explores unknown environment modelled by GP
+    -   Every location has a reward
 
-#### Task Setting {#task-setting}
+-    Lipschitz Continuous Reward Functions
 
--   Agent explores unknown environment modelled by GP
--   Every location has a reward
+    \begin{equation}
+      R(z\_t, s\_t) \overset{\Delta}{=}  R\_1(z\_t) + R\_2(z\_t) + R\_3(s\_t)
+    \end{equation}
 
-
-#### Lipschitz Continuous Reward Functions {#lipschitz-continuous-reward-functions}
-
-\begin{equation}
-  R(z\_t, s\_t) \overset{\Delta}{=}  R\_1(z\_t) + R\_2(z\_t) + R\_3(s\_t)
-\end{equation}
-
--   R\_1 Lipschitz continuous (current measurement)
--   R\_2 Lipschitz continuous after convolution with Gaussian kernel (current measurement)
--   R\_3 Location History, independent of current measurement
+    -   R\_1 Lipschitz continuous (current measurement)
+    -   R\_2 Lipschitz continuous after convolution with Gaussian kernel (current measurement)
+    -   R\_3 Location History, independent of current measurement
 
 
 ## The Natural Language Decathlon: Multitask Learning as Question Answering: Richard Socher {#the-natural-language-decathlon-multitask-learning-as-question-answering-richard-socher}
@@ -781,14 +755,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 ## Structuring Data Science Projects {#structuring-data-science-projects}
 
 Cookiecutter Data Science provides a decent project structure, and
-uses the ubiquitous build tool `Make` to build data projects. <sup id="e0ca383893600291ac5eca0f379984fb"><a href="#home_cookiec_data_scien" title="@misc{home_cookiec_data_scien,
-  author =       {DrivenData},
-  howpublished =
-                  {https://drivendata.github.io/cookiecutter-data-science/},
-  note =         {Online; accessed 06 January 2019},
-  title =        {Home - Cookiecutter Data Science},
-  year =         {2019},
-}">(DrivenData, 2019)</a></sup>
+uses the ubiquitous build tool `Make` to build data projects. <a id="e0ca383893600291ac5eca0f379984fb" href="#home_cookiec_data_scien">(DrivenData, 2019)</a>
 
 ```text
 ├── LICENSE
@@ -837,19 +804,12 @@ uses the ubiquitous build tool `Make` to build data projects. <sup id="e0ca38389
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-Stripe's approach <sup id="77ac83a13ddf56f053f1ba225873677d"><a href="#dan_reprod" title="@misc{dan_reprod,
-  author =       {Dan Frank},
-  howpublished = {https://stripe.com/blog/reproducible-research},
-  note =         {Online; accessed 06 January 2019},
-  title =        {Reproducible research: Stripe's approach to data
-                  science},
-  year =         {2016},
-}">(Dan Frank, 2016)</a></sup> still primarily uses Jupyter notebooks, but
+Stripe's approach <a id="77ac83a13ddf56f053f1ba225873677d" href="#dan_reprod">(Dan Frank, 2016)</a> still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
 # Bibliography
-<a id="home_cookiec_data_scien"></a>DrivenData,  (2019). *Home - cookiecutter data science*. Retrieved from [https://drivendata.github.io/cookiecutter-data-science/](https://drivendata.github.io/cookiecutter-data-science/). Online; accessed 06 January 2019. [↩](#e0ca383893600291ac5eca0f379984fb)
+<a id="home_cookiec_data_scien" target="_blank">DrivenData,  (2019). *Home - cookiecutter data science*. Retrieved from [https://drivendata.github.io/cookiecutter-data-science/](https://drivendata.github.io/cookiecutter-data-science/). Online; accessed 06 January 2019.</a> [↩](#e0ca383893600291ac5eca0f379984fb)
 
-<a id="dan_reprod"></a>Frank, D. (2016). *Reproducible research: stripe's approach to data science*. Retrieved from [https://stripe.com/blog/reproducible-research](https://stripe.com/blog/reproducible-research). Online; accessed 06 January 2019. [↩](#77ac83a13ddf56f053f1ba225873677d)
+<a id="dan_reprod" target="_blank">Frank, D. (2016). *Reproducible research: stripe's approach to data science*. Retrieved from [https://stripe.com/blog/reproducible-research](https://stripe.com/blog/reproducible-research). Online; accessed 06 January 2019.</a> [↩](#77ac83a13ddf56f053f1ba225873677d)

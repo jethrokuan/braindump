@@ -2,11 +2,6 @@
 #+TITLE: Machine Learning
 #+HUGO_TAGS: machine-learning
 
-* Reference Book                                                   :noexport:
-Learning From Data
-[[file:~/Dropbox/Books/Programming/Machine%20Learning/Bishop%20-%20Pattern%20Recognition%20And%20Machine%20Learning%20-%20Springer%20%202006.pdf][Pattern Recognition and Machine Learning]]
-[[file:~/Dropbox/Books/Programming/Machine%20Learning/understanding-machine-learning-theory-algorithms.pdf][Understanding Machine Learning]]
-
 * When do we need machine learning?
 Two aspects of a given problem may call for the use of programs that
 learn and improve on the basis of their "experience":

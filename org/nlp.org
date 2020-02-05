@@ -1,9 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Natural Language Processing
 
-* Reference Material                                               :noexport:
-[[file:~/Dropbox/Books/Programming/Deep%20Learning/CS224n%20Lecture%20Notes/][CS224n]]
-
 * How to Represent Words
 http://ruder.io/word-embeddings-2017/index.html
 

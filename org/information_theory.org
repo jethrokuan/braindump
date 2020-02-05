@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Information Theory
 * Reference Book                                                   :noexport:
-[[file:~/Dropbox/Books/Programming/Information%20Theory/Mackay%20Information%20Theory.pdf][Information Theory, Inference, and Learning Algorithms]]
+
 * Introduction
 ** How can we achieve perfect communication over an imperfect noisy communication channel?
 The physical solution is to improve the characteristics of the

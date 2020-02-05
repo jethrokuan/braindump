@@ -1,10 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Artificial Intelligence
 
-* Reference Books                                                  :noexport:
-[[file:~/Dropbox/Books/Programming/Artificial%20Intelligence/Artificial%20Intelligence%20A%20Modern%20Approach%20(3rd%20Edition).pdf][AIMA]]
-[[file:~/Dropbox/NUS/CS4246/Reinforcement%20Learning%20_%20Sutton.pdf][Reinforcement Learning - Sutton]]
-
 * What is Artificial Intelligence?
 Designing agents that act rationally (e.g. through maximising a reward
 function).

@@ -1,9 +1,8 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T23:29:30+08:00
+lastmod = 2020-02-06T00:17:24+08:00
 draft = false
-math = true
 +++
 
 ## Introduction {#introduction}
