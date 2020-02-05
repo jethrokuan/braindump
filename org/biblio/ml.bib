@@ -244,3 +244,74 @@ year={2019}
   primaryClass = {cs.LG},
 }
 
+@article{you17_large_batch_train_convol_networ,
+  author =       {You, Yang and Gitman, Igor and Ginsburg, Boris},
+  title =        {Large Batch Training of Convolutional Networks},
+  journal =      {CoRR},
+  year =         2017,
+  url =          {http://arxiv.org/abs/1708.03888v3},
+  abstract =     {A common way to speed up training of large
+                  convolutional networks is to add computational
+                  units. Training is then performed using
+                  data-parallel synchronous Stochastic Gradient
+                  Descent (SGD) with mini-batch divided between
+                  computational units. With an increase in the number
+                  of nodes, the batch size grows. But training with
+                  large batch size often results in the lower model
+                  accuracy. We argue that the current recipe for large
+                  batch training (linear learning rate scaling with
+                  warm-up) is not general enough and training may
+                  diverge. To overcome this optimization difficulties
+                  we propose a new training algorithm based on
+                  Layer-wise Adaptive Rate Scaling (LARS). Using LARS,
+                  we scaled Alexnet up to a batch size of 8K, and
+                  Resnet-50 to a batch size of 32K without loss in
+                  accuracy.},
+  archivePrefix ={arXiv},
+  eprint =       {1708.03888},
+  primaryClass = {cs.CV},
+}
+
+@article{huang18_gpipe,
+  author =       {Huang, Yanping and Cheng, Youlong and Bapna, Ankur
+                  and Firat, Orhan and Chen, Mia Xu and Chen, Dehao
+                  and Lee, HyoukJoong and Ngiam, Jiquan and Le, Quoc
+                  V. and Wu, Yonghui and Chen, Zhifeng},
+  title =        {Gpipe: Efficient Training of Giant Neural Networks
+                  Using Pipeline Parallelism},
+  journal =      {CoRR},
+  year =         2018,
+  url =          {http://arxiv.org/abs/1811.06965v5},
+  abstract =     {Scaling up deep neural network capacity has been
+                  known as an effective approach to improving model
+                  quality for several different machine learning
+                  tasks. In many cases, increasing model capacity
+                  beyond the memory limit of a single accelerator has
+                  required developing special algorithms or
+                  infrastructure. These solutions are often
+                  architecture-specific and do not transfer to other
+                  tasks. To address the need for efficient and
+                  task-independent model parallelism, we introduce
+                  GPipe, a pipeline parallelism library that allows
+                  scaling any network that can be expressed as a
+                  sequence of layers. By pipelining different
+                  sub-sequences of layers on separate accelerators,
+                  GPipe provides the flexibility of scaling a variety
+                  of different networks to gigantic sizes efficiently.
+                  Moreover, GPipe utilizes a novel batch-splitting
+                  pipelining algorithm, resulting in almost linear
+                  speedup when a model is partitioned across multiple
+                  accelerators. We demonstrate the advantages of GPipe
+                  by training large-scale neural networks on two
+                  different tasks with distinct network architectures:
+                  (i) Image Classification: We train a
+                  557-million-parameter AmoebaNet model and attain a
+                  top-1 accuracy of 84.4 \% on ImageNet-2012, (ii)
+                  Multilingual Neural Machine Translation: We train a
+                  single 6-billion-parameter, 128-layer Transformer
+                  model on a corpus spanning over 100 languages and
+                  achieve better quality than all bilingual models.},
+  archivePrefix ={arXiv},
+  eprint =       {1811.06965},
+  primaryClass = {cs.CV},
+}

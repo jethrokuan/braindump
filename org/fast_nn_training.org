@@ -1,0 +1,3 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Fast Neural Network Training

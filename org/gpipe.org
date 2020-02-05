@@ -1,0 +1,20 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Gpipe
+
+Gpipe is a scalable pipeline parallelism library published by Google
+Brain, which allows for efficient training of large, memory-consuming
+models cite:huang18_gpipe. Pipeline parallelism allows for
+[[file:fast_nn_training.org][§fast_nn_training]]. 
+
+In Gpipe, neural networks with sequential layers are partitioned
+across accelerators. The pipeline parallelism divides each input
+mini-batch into smaller micro-batches, enabling different accelerators
+to work on different micro-batches simultaneously. This is especially
+useful in [[file:large_batch_training.org][§large_batch_training]].
+
+#+DOWNLOADED: screenshot @ 2020-02-05 23:05:00
+[[file:images/gpipe/screenshot2020-02-05_23-05-00_.png]]
+
+
+bibliography:./biblio/ml.bib

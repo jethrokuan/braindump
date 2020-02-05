@@ -14,6 +14,8 @@
     "ruiz19_contr_diver_combin_variat_infer_mcmc"
     "schliebs13_evolv_spikin_neural_networ_survey"
     "wilson2019bayesian"
-    "shwartz-ziv17_openin_black_box_deep_neural"))
+    "shwartz-ziv17_openin_black_box_deep_neural"
+    "you17_large_batch_train_convol_networ"
+    "huang18_gpipe"))
  :bibtex)
 
