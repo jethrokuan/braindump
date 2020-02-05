@@ -1,5 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Spiking Datasets
 
+Datasets for evaluating [[file:spiking_neural_networks.org][§spiking_neural_networks]].
+
 - [[https://compneuro.net/][Spiking Heidelberg Digits (SHD) dataset and the Spiking Speech Command (SSC) dataset]]
 - [[https://www.garrickorchard.com/datasets][N-Caltech101, N-MNIST and Characters]]

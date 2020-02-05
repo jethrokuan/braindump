@@ -1,5 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Spiking Neurons (Literature Review)
+- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+
 * Introduction to Spiking Neural Networks label:sec:snn
 
 While the project is equal part reinforcement learning and spiking

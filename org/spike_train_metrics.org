@@ -2,6 +2,8 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Spike Train Metrics
 
+- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+
 We study spike train metrics to quantify differences between event
 sequences. These metrics apply at both the single-neuron level and the
 multi-neuronal level. Studying these metrics helps us identify

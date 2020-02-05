@@ -2,6 +2,8 @@
 #+HUGO_SECTION: papers
 #+TITLE: Temp Coding with Alpha Synaptic Function
 
+- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+
 * Temporal Coding with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ
 
 ** Motivation

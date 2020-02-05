@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Neuroscience Experimental Evidence
 
+- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+
 * Eligibility Traces
 
 Neurons in the brain maintain traces of preceding activity on the

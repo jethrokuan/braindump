@@ -1,9 +1,13 @@
 +++
 title = "Spiking Neurons (Literature Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-03T21:20:32+08:00
+lastmod = 2020-02-06T00:10:15+08:00
 draft = false
 +++
+
+tags
+: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})
+
 
 ## Introduction to Spiking Neural Networks <a name="sec:snn"></a> {#introduction-to-spiking-neural-networks}
 

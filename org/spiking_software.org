@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: SNN Software
 
+Software for [[file:spiking_neural_networks.org][§spiking_neural_networks]].
+
 * Python
 - [[https://github.com/BindsNET/bindsnet][GitHub - BindsNET/bindsnet: Simulation of spiking neural networks (SNNs) usin...]]
 - [[https://github.com/norse/norse/][GitHub - norse/norse: A library to do deep learning with spiking neural netwo...]]
