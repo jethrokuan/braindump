@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Progressive Summarization
 
+- tags :: [[file:productivity.org][§productivity]]
+
 The idea of progressive summarization is to create notes such that
 their purpose is comprehensible in the future.
 

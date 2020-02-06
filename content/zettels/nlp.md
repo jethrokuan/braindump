@@ -1,9 +1,13 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:17:52+08:00
+lastmod = 2020-02-06T12:13:26+08:00
 draft = false
 +++
+
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}}), [§deep\_learning]({{< relref "deep_learning" >}})
+
 
 ## How to Represent Words {#how-to-represent-words}
 

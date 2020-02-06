@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Presentations
 
+- tags :: [[file:writing.org][§writing]]
+
 * Creating Good Presentations
 
 1. Adjust to the frequency of your audience so that the message

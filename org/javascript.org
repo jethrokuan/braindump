@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Javascript
+
+- tags :: [[file:prog_lang.org][§prog_lang]], [[file:web_dev.org][§web_dev]]

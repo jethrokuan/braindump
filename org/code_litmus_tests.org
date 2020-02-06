@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Code Litmus Tests
 
+- tags :: [[file:software_engineering.org][§software_engineering]]
+
 Here are some questions you can ask yourself when evaluating the code
 you write:
 

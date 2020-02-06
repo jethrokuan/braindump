@@ -1,11 +1,11 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Zettelkasten
+
+- tags :: [[file:productivity.org][§productivity]]
+
 * Why Zettelkasten
 
 1. Forces you to adopt a linking system: connect ideas, tangents
 2. Break ideas up into smaller pieces, increase surface area for expansion
 
 [[https://www.lesswrong.com/posts/NfdHG6oHBJ8Qxc26s/the-zettelkasten-method-1][The Zettelkasten Method - LessWrong 2.0]]
-
-* Related
-[[file:arguments_against_zettelkasten.org][§arguments_against_zettelkasten]]

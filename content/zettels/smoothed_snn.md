@@ -1,10 +1,12 @@
 +++
 title = "Smoothed Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-15T15:27:19+08:00
+lastmod = 2020-02-06T12:10:32+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})
 
 Smoothed SNNs ensure well-behaved gradients which are directly
 suitable for optimization. They come in 4 categories:

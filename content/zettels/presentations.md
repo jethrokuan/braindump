@@ -1,10 +1,13 @@
 +++
 title = "Presentations"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T13:53:28+08:00
+lastmod = 2020-02-06T12:16:14+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§writing]({{< relref "writing" >}})
+
 
 ## Creating Good Presentations {#creating-good-presentations}
 

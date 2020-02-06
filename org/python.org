@@ -2,6 +2,8 @@
 #+HUGO_TAGS: python proglang
 #+TITLE: Python
 
+- tags :: [[file:prog_lang.org][§prog_lang]]
+
 * Setting up Python Environment
 
 Python version management is handled with [[https://github.com/pyenv/pyenv][pyenv]]. Some further packages

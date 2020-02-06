@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Studying
-#+HUGO_TAGS: meta learning
+
+- tags :: [[file:soft_skills.org][§soft_skills]]
 
 * The optimal studying strategy
 1. Glance at past year paper questions

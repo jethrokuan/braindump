@@ -1,11 +1,13 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-27T12:52:06+08:00
-tags = ["machine-learning"]
+lastmod = 2020-02-06T12:00:48+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}}), [§machine\_learning]({{< relref "machine_learning" >}})
+
 
 ## Why Deep Reinforcement Learning? {#why-deep-reinforcement-learning}
 
@@ -85,11 +87,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 -   Trust region policy optimization
-    <a id="57393aa8ebb8846c7181c31bfd5fbe89" href="#schulman15_high_dimen_contin_contr_using" title="Schulman, Moritz, Levine, Sergey, Jordan \&amp; Abbeel, High-Dimensional Continuous Control Using  Generalized Advantage Estimation, {CoRR}, v(), (2015).">(Schulman et al., 2015)</a>
+    <a id="57393aa8ebb8846c7181c31bfd5fbe89" href="#schulman15_high_dimen_contin_contr_using">(Schulman et al., 2015)</a>
 
 or algorithms that adaptively adjust parameters:
 
--   Q-Prop <a id="23ad5881923885616b0afd34dad9df52" href="#gu16_q_prop" title="Gu, Lillicrap, Ghahramani, Zoubin, Turner \&amp; Levine, Q-Prop: Sample-Efficient Policy Gradient With an  Off-Policy Critic, {CoRR}, v(), (2016).">(Gu et al., 2016)</a>
+-   Q-Prop <a id="23ad5881923885616b0afd34dad9df52" href="#gu16_q_prop">(Gu et al., 2016)</a>
 
 
 ### Problem Formulation {#problem-formulation}
@@ -119,6 +121,6 @@ or algorithms that adaptively adjust parameters:
 -   [§information\_theoretic\_rl]({{< relref "information_theoretic_rl" >}})
 
 # Bibliography
-<a id="schulman15_high_dimen_contin_contr_using"></a>Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., *High-Dimensional Continuous Control Using Generalized Advantage Estimation*, CoRR, *()*,  (2015).  [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
+<a id="schulman15_high_dimen_contin_contr_using" target="_blank">Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., *High-Dimensional Continuous Control Using Generalized Advantage Estimation*, CoRR, *()*,  (2015). </a> [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
 
-<a id="gu16_q_prop"></a>Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., *Q-prop: sample-efficient policy gradient with an off-policy critic*, CoRR, *()*,  (2016).  [↩](#23ad5881923885616b0afd34dad9df52)
+<a id="gu16_q_prop" target="_blank">Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., *Q-prop: sample-efficient policy gradient with an off-policy critic*, CoRR, *()*,  (2016). </a> [↩](#23ad5881923885616b0afd34dad9df52)

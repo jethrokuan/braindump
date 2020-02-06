@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Cognitive Hierarchy Model
 
+- tags :: [[file:artificial_intelligence.org][§artificial_intelligence]]
+
 * Cognitive Hierarchy Model
 
 See cite:camerer2004cognitive for a nice introduction using Keynes'

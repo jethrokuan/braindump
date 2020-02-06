@@ -1,10 +1,12 @@
 +++
 title = "Config Management"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-02T14:57:20+08:00
+lastmod = 2020-02-06T12:11:28+08:00
 draft = false
-math = true
 +++
+
+-   [§operating\_systems]({{< relref "operating_systems" >}})
+
 
 ## Dotfiles {#dotfiles}
 

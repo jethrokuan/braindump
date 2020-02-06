@@ -1,11 +1,13 @@
 +++
 title = "OCaml"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:40:48+08:00
-tags = ["proglang"]
+lastmod = 2020-02-06T11:56:13+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§prog\_lang]({{< relref "prog_lang" >}})
+
 
 ## Pattern Matching {#pattern-matching}
 

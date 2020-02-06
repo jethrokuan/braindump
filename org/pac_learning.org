@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: PAC Learning
-#+HUGO_TAGS: machine-learning
 
+- tags :: [[file:machine_learning.org][§machine_learning]]
 
 * ERM for finite hypothesis classes
 

@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Smoothed Spiking Neural Networks
 
+- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+
 Smoothed SNNs ensure well-behaved gradients which are directly
 suitable for optimization. They come in 4 categories:
 

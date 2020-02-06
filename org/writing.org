@@ -1,17 +1,9 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Writing
 
-* Related
-- [[file:copy_editing.org][§copy_editing]]
-- [[file:writing_articles.org][§writing_articles]]
-- [[file:writing_papers.org][§writing_papers]]
-- [[file:writing_books.org][§writing_books]]
-- [[file:presentations.org][§presentations]]
-
-* Reference Books
+* Books
 
 - [[https://www.amazon.com/Style-Clarity-Chicago-Writing-Publishing/dp/0226899152][Style: Toward Clarity and Grace]]
 - [[https://www.goodreads.com/book/show/53343.On_Writing_Well][On Writing Well: The Classic Guide to Writing Nonfiction]]
-- [[https://www.goodreads.com/book/show/40063024-dreyer-s-english][Dreyer’s English: An Utterly Correct Guide to Clarity and Style]] ::
-  Fun read, covers basic copy-editing, things to look out for
+
 

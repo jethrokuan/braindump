@@ -1,9 +1,13 @@
 +++
 title = "Artificial Intelligence"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:17:32+08:00
+lastmod = 2020-02-06T12:14:57+08:00
 draft = false
 +++
+
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}})
+
 
 ## What is Artificial Intelligence? {#what-is-artificial-intelligence}
 

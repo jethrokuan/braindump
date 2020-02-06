@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Generalization In RL
 
+- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]]
+
 - Generalization using successor features (Dayan 1993).
 - Adapt to new reward structure (Barreto 2018)
 - How many tasks are needed before modern approaches generalize?

@@ -1,28 +1,15 @@
 +++
 title = "Game API Design"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-12T19:45:28+08:00
+lastmod = 2020-02-06T12:12:02+08:00
 draft = false
-math = true
 +++
 
-## Core Tenets from Handmade <a id="9eba6e4f7d26bb0e67deeb10da2c68db" href="#handmade_how_to_write_better" title="@misc{handmade_how_to_write_better,
-  author =       {Handmade},
-  howpublished =
-                  {https://handmade.network/wiki/7138-how_to_write_better_game_libraries},
-  note =         {Online; accessed 12 December 2019},
-  title =        {How to write better (game) libraries |
-                  handmade.network Wiki},
-  year =         {2019},
-}">@misc{handmade_how_to_write_better,
-  author =       {Handmade},
-  howpublished =
-                  {https://handmade.network/wiki/7138-how_to_write_better_game_libraries},
-  note =         {Online; accessed 12 December 2019},
-  title =        {How to write better (game) libraries |
-                  handmade.network Wiki},
-  year =         {2019},
-}</a> {#core-tenets-from-handmade-a-id-9eba6e4f7d26bb0e67deeb10da2c68db-href-handmade-how-to-write-better-title-misc-handmade-how-to-write-better-author-handmade-howpublished-https-handmade-dot-network-wiki-7138-how-to-write-better-game-libraries-note-online-accessed-12-december-2019-title-how-to-write-better--game--libraries-handmade-dot-network-wiki-year-2019-misc-handmade-how-to-write-better-author-handmade-howpublished-https-handmade-dot-network-wiki-7138-how-to-write-better-game-libraries-note-online-accessed-12-december-2019-title-how-to-write-better--game--libraries-handmade-dot-network-wiki-year-2019-a}
+tags
+: [§software\_engineering]({{< relref "software_engineering" >}})
+
+
+## Core Tenets from Handmade <a id="9eba6e4f7d26bb0e67deeb10da2c68db" href="#handmade_how_to_write_better">(Handmade, 2019)</a> {#core-tenets-from-handmade}
 
 
 ### Maximize portability {#maximize-portability}
@@ -62,4 +49,4 @@ if (result.error) { /* handle error */ }
 ```
 
 # Bibliography
-<a id="handmade_how_to_write_better"></a>Handmade,  (2019). *How to write better (game) libraries | handmade.network wiki*. Retrieved from [https://handmade.network/wiki/7138-how_to_write_better_game_libraries](https://handmade.network/wiki/7138-how_to_write_better_game_libraries). Online; accessed 12 December 2019. [↩](#9eba6e4f7d26bb0e67deeb10da2c68db)
+<a id="handmade_how_to_write_better" target="_blank">Handmade,  (2019). *How to write better (game) libraries | handmade.network wiki*. Retrieved from [https://handmade.network/wiki/7138-how_to_write_better_game_libraries](https://handmade.network/wiki/7138-how_to_write_better_game_libraries). Online; accessed 12 December 2019.</a> [↩](#9eba6e4f7d26bb0e67deeb10da2c68db)

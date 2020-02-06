@@ -1,0 +1,6 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: Swift
+
+- tags :: [[file:prog_lang.org][§prog_lang]]
+
+The Swift Programming Language book

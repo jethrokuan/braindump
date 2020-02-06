@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Game API Design
 
+- tags :: [[file:software_engineering.org][§software_engineering]]
+
 * Core Tenets from Handmade cite:handmade_how_to_write_better
 ** Maximize portability
 - Write in C99 if possible

@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Machine Teaching
-#+HUGO_TAGS: machine-learning
+
+- tags :: [[file:machine_learning.org][§machine_learning]]
 
 * Definitions cite:simard17_machin_teach
 - machine learning research :: machine learning research aims at

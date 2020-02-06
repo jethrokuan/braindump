@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Normalizing Flows
 
+- tags :: [[file:machine_learning.org][§machine_learning]]
+
 Normalizing flows provide a way of constructing probability
 distributions over continuous random variables. In flow-based
 modelling, we would like to express a D-dimensional vector

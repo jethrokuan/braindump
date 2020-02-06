@@ -3,6 +3,8 @@
 #+HUGO_TAGS: machine-learning
 bibliographystyle:unsrt
 
+- tags :: [[file:machine_learning.org][§machine_learning]]
+
 Reinforcement Learning is the field of learning and decision-making
 under uncertainty. An agent acts with a learnable behaviour policy in
 an environment with initially unknown dynamics and reward. The agent

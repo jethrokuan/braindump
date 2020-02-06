@@ -1,0 +1,8 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Find
+
+- tags :: [[file:unix.org][§unix]]
+
+* Links
+- [[http://www.grymoire.com/Unix/Find.html][Find]]

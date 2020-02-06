@@ -1,7 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Haskell
-#+HUGO_TAGS: haskell proglang
 #+OPTIONS: toc:nil
+
+- tags :: [[file:prog_lang.org][§prog_lang]]
 
 * Introduction
 ** Expressions

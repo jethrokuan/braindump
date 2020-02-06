@@ -1,0 +1,40 @@
++++
+title = "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches"
+author = ["Jethro Kuan"]
+lastmod = 2020-02-06T12:03:56+08:00
+draft = false
++++
+
+title
+: Are We Really Making Much Progress? A Worrying Analysis of
+    Recent Neural Recommendation Approaches
+
+paper
+: <a id="d3cb4e95df75aa1a78534232726eadd6" href="#dacrema19_are_we_reall_makin_much_progr">(Dacrema et al., 2019)</a>
+
+tags
+: [§recommender\_systems]({{< relref "recommender_systems" >}})
+
+The authors analyzed various recent publications on recommendation
+systems techniques, and found that these have:
+
+1.  Weak baselines
+2.  Establish weak methods as baselines
+3.  Are outperformed by simple, sometimes non-neural approaches
+
+The simple approaches that work well include ItemKNN, a
+collaborative-filtering approach that uses k-nearest neighbours and
+item-item similarities:
+
+\begin{equation}
+  s\_{ij} = \frac{r\_i \dot r\_j}{\lvert r\_i \rvert \lvert r\_j \rvert + h}
+\end{equation}
+
+To alleviate these issues:
+
+1.  Use appropriate evaluation methods
+2.  Evaluate on appropriate datasets (size is important)
+3.  Release reproducible code
+
+# Bibliography
+<a id="dacrema19_are_we_reall_makin_much_progr" target="_blank">Dacrema, M. F., Cremonesi, P., & Jannach, D., *Are we really making much progress? a worrying analysis of recent neural recommendation approaches*, CoRR, *()*,  (2019). </a> [↩](#d3cb4e95df75aa1a78534232726eadd6)

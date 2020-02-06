@@ -1,11 +1,14 @@
 +++
 title = "CSS"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T19:06:02+08:00
+lastmod = 2020-02-06T11:57:40+08:00
 tags = ["web"]
 draft = false
-math = true
 +++
+
+tags
+: [§web\_dev]({{< relref "web_dev" >}}), [§prog\_lang]({{< relref "prog_lang" >}})
+
 
 ## Flexbox {#flexbox}
 

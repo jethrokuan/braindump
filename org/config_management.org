@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Config Management
 
+- [[file:operating_systems.org][§operating_systems]]
+
 * Dotfiles
 
 - For Nix, there's [[https://github.com/rycee/home-manager][home-manager]]

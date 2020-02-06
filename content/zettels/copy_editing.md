@@ -1,10 +1,13 @@
 +++
 title = "Copy Editing"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T13:59:56+08:00
+lastmod = 2020-02-06T12:15:36+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§writing]({{< relref "writing" >}})
+
 
 series comma
 : always use the Oxford comma (or series comma)

@@ -1,11 +1,14 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-29T20:10:07+08:00
+lastmod = 2020-02-06T11:55:31+08:00
 tags = ["python", "proglang"]
 draft = false
-math = true
 +++
+
+tags
+: [§prog\_lang]({{< relref "prog_lang" >}})
+
 
 ## Setting up Python Environment {#setting-up-python-environment}
 

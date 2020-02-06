@@ -1,8 +1,2 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Unix
-* find
-http://www.grymoire.com/Unix/Find.html
-* awk
-[[http://sparky.rice.edu/~hartigan/awk.html]]
-* lsof
-https://medium.com/@copyconstruct/lsof-f2b224eee7b5

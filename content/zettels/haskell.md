@@ -1,11 +1,13 @@
 +++
 title = "Haskell"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:41:12+08:00
-tags = ["haskell", "proglang"]
+lastmod = 2020-02-06T11:56:24+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§prog\_lang]({{< relref "prog_lang" >}})
+
 
 ## Introduction {#introduction}
 
@@ -68,39 +70,36 @@ celebrate "dogs" -- "dogs woot!"
 
 ### Types {#types}
 
+-    Polymorphism
 
-#### Polymorphism {#polymorphism}
+    1.  Parametric polymorphism
+        -   Refers to type variables, or parameters, that are fully
+            polymorphic
+        -   When unconstrained by a typeclass, the final concrete type could
+            be anything
+    2.  Constrained polymorphism
+        -   Puts typeclass constraints on the variable, decreasing the number
+            of concrete types it could be, but increasing what you can
+            actually do with it by defining and bringing into scope a set of
+            operations
 
-1.  Parametric polymorphism
-    -   Refers to type variables, or parameters, that are fully
-        polymorphic
-    -   When unconstrained by a typeclass, the final concrete type could
-        be anything
-2.  Constrained polymorphism
-    -   Puts typeclass constraints on the variable, decreasing the number
-        of concrete types it could be, but increasing what you can
-        actually do with it by defining and bringing into scope a set of
-        operations
+    Numeric literals are polymorphic and stay so until given a more
+    specific type.
 
-Numeric literals are polymorphic and stay so until given a more
-specific type.
+-    Parametricity
 
+    _parametricity_ means that the behaviour of a function with respect to
+    the types its (parametric polymorphic) arguments is uniform. The
+    behaviour cannot change just because it was applied to an argument of
+    a different type.
 
-#### Parametricity {#parametricity}
+-    Making things more polymorphic
 
-_parametricity_ means that the behaviour of a function with respect to
-the types its (parametric polymorphic) arguments is uniform. The
-behaviour cannot change just because it was applied to an argument of
-a different type.
-
-
-#### Making things more polymorphic {#making-things-more-polymorphic}
-
-```haskell
--- fromIntegral :: (Num b, Integral a) => a -> b
--- e.g.
-6 / fromIntegral (length [1,2,3])
-```
+    ```haskell
+    -- fromIntegral :: (Num b, Integral a) => a -> b
+    -- e.g.
+    6 / fromIntegral (length [1,2,3])
+    ```
 
 
 ## Laziness and Performance {#laziness-and-performance}
@@ -414,41 +413,40 @@ mkPerson name age
 `Left` is used as the invalid or error constructor. `Functor` will not
 map over the left type argument because it has been applied away.
 
+-    Signalling Multiple errors
 
-#### Signalling Multiple errors {#signalling-multiple-errors}
+    ```haskell
+    type Name = String
+    type Age = Integer
+    type ValidatePerson a = Either [PersonInvalid] a
 
-```haskell
-type Name = String
-type Age = Integer
-type ValidatePerson a = Either [PersonInvalid] a
+    data Person = Person Name Age deriving Show
 
-data Person = Person Name Age deriving Show
+    data PersonInvalid = NameEmpty | AgeTooLow deriving (Eq, Show)
 
-data PersonInvalid = NameEmpty | AgeTooLow deriving (Eq, Show)
+    ageOkay :: Age -> Either [PersonInvalid] Age
+    ageOkay age = case age >= 0 of
+      True -> Right age
+      False -> Left [AgeTooLow]
 
-ageOkay :: Age -> Either [PersonInvalid] Age
-ageOkay age = case age >= 0 of
-  True -> Right age
-  False -> Left [AgeTooLow]
+    nameOkay :: Name -> Either [PersonInvalid] Name
+    nameOkay name = case name == "" of
+      True -> Left [NameEmpty]
+      False -> Right name
 
-nameOkay :: Name -> Either [PersonInvalid] Name
-nameOkay name = case name == "" of
-  True -> Left [NameEmpty]
-  False -> Right name
+    mkPerson :: Name -> Age -> ValidatePerson Person
+    mkPerson name age =
+      mkPerson' (nameOkay name) (ageOkay age)
 
-mkPerson :: Name -> Age -> ValidatePerson Person
-mkPerson name age =
-  mkPerson' (nameOkay name) (ageOkay age)
+    mkPerson' :: ValidatePerson Name
+              -> ValidatePerson Age
+              -> ValidatePerson Person
 
-mkPerson' :: ValidatePerson Name
-          -> ValidatePerson Age
-          -> ValidatePerson Person
-
-mkPerson' (Right nameOk) (Right ageOk) = Right (Person nameOk ageOk)
-mkPerson' (Left badName) (Left badAge) = Left (badName ++ badAge)
-mkPerson' (Left badName) _ = Left badName
-mkPerson' _ (Left badAge) = Left badAge
-```
+    mkPerson' (Right nameOk) (Right ageOk) = Right (Person nameOk ageOk)
+    mkPerson' (Left badName) (Left badAge) = Left (badName ++ badAge)
+    mkPerson' (Left badName) _ = Left badName
+    mkPerson' _ (Left badAge) = Left badAge
+    ```
 
 
 ### Anamorphisms {#anamorphisms}
@@ -508,29 +506,27 @@ together. `mempty` is the identity value for that mappend operation.
 
 ### Examples of Monoids {#examples-of-monoids}
 
+-    List
 
-#### List {#list}
+    ```haskell
+    mappend [1,2,3] [4,5,6]
+    -- [1,2,3,4,5,6]
+    mconcat [[1..3], [4..6]]
+    -- [1,2,3,4,5,6]
+    mappend "Trout" " goes well with garlic"
+    -- "Trout goes well with garlic"
 
-```haskell
-mappend [1,2,3] [4,5,6]
--- [1,2,3,4,5,6]
-mconcat [[1..3], [4..6]]
--- [1,2,3,4,5,6]
-mappend "Trout" " goes well with garlic"
--- "Trout goes well with garlic"
+    instance Monoid [a] where
+      mempty = []
+      mappend = (++)
+    ```
 
-instance Monoid [a] where
-  mempty = []
-  mappend = (++)
-```
+-    Integers
 
-
-#### Integers {#integers}
-
-Integers form a monoid under summation and multiplication. Because it
-is unclear which rule is to be followed, there is no Monoid class
-under Integer, but there is the `Sum` and `Product` types that signal
-which Monoid instance is wanted.
+    Integers form a monoid under summation and multiplication. Because it
+    is unclear which rule is to be followed, there is no Monoid class
+    under Integer, but there is the `Sum` and `Product` types that signal
+    which Monoid instance is wanted.
 
 
 ### Newtype {#newtype}
@@ -657,36 +653,33 @@ fmap :: (a -> b) -> Identity a -> Identity b
 
 ### Functor Laws {#functor-laws}
 
+-    Identity
 
-#### Identity {#identity}
+    ```haskell
+    fmap id == id
+    ```
 
-```haskell
-fmap id == id
-```
+    If we fmap the identity function, it should have the same result as
+    passing our value to identity.
 
-If we fmap the identity function, it should have the same result as
-passing our value to identity.
+-    Composition
 
+    ```haskell
+    fmap (f . g) == fmap f . fmap g
+    ```
 
-#### Composition {#composition}
+-    Structure Preservation
 
-```haskell
-fmap (f . g) == fmap f . fmap g
-```
+    ```haskell
+    fmap :: Functor f => (a -> b) -> f a -> f b
+    ```
 
-
-#### Structure Preservation {#structure-preservation}
-
-```haskell
-fmap :: Functor f => (a -> b) -> f a -> f b
-```
-
-The _f_ is constrained by the typeclass Functor, but that is all we
-know about its type from this definition. Because the _f_ persists
-through the type of `fmap`, whatever the type is, we know it must be a
-type that can take an argument, as in `f a` and `f b` and that it will
-be the "structure" we're lifting the function over when we apply it to
-the value inside.
+    The _f_ is constrained by the typeclass Functor, but that is all we
+    know about its type from this definition. Because the _f_ persists
+    through the type of `fmap`, whatever the type is, we know it must be a
+    type that can take an argument, as in `f a` and `f b` and that it will
+    be the "structure" we're lifting the function over when we apply it to
+    the value inside.
 
 
 ### Examples {#examples}
@@ -752,30 +745,28 @@ failure cases. Because fmap doesn't touch those cases, you can map
 your function right to the values that you intend to work with and
 ignore failure cases.
 
+-    Maybe
 
-#### Maybe {#maybe}
+    ```haskell
+    incIfJust :: Num a => Maybe a -> Maybe a
+    incIfJust (Just n) = Just $ n + 1
+    incIfJust Nothing = Nothing
 
-```haskell
-incIfJust :: Num a => Maybe a -> Maybe a
-incIfJust (Just n) = Just $ n + 1
-incIfJust Nothing = Nothing
+    incMaybe :: Num a => Maybe a -> Maybe a
+    incMaybe = fmap (+1)
+    ```
 
-incMaybe :: Num a => Maybe a -> Maybe a
-incMaybe = fmap (+1)
-```
+-    Either
 
+    ```haskell
+    incIfRight :: Num a => Either e a => Either e a
+    incIfRight (Right n) = Right $ n + 1
+    incIfRight (Left e) = Left e
 
-#### Either {#either}
-
-```haskell
-incIfRight :: Num a => Either e a => Either e a
-incIfRight (Right n) = Right $ n + 1
-incIfRight (Left e) = Left e
-
--- can be simplified to
-incEither :: Num a => Either e a => Either e a
-incEither = fmap (+1)
-```
+    -- can be simplified to
+    incEither :: Num a => Either e a => Either e a
+    incEither = fmap (+1)
+    ```
 
 
 ### Summary {#summary}
@@ -944,93 +935,91 @@ m >>= (\x -> k x >>= h) = (m >>= k) >>= h
 
 ### Built in Monads {#built-in-monads}
 
+-    Maybe
 
-#### Maybe {#maybe}
+    ```haskell
+    -- treating Maybe as unctors
+    fmap (++"!") (Just "wisdom") -- Just "wisdom!"
+    fmap (++"!") Nothing -- Nothing
 
-```haskell
--- treating Maybe as unctors
-fmap (++"!") (Just "wisdom") -- Just "wisdom!"
-fmap (++"!") Nothing -- Nothing
+    -- treating Maybe as Applicatives
+    Just (+3) <*> Just 3 -- Just 6
+    Nothing <*> Just "greed" -- Nothing
+    max <$> Just 3 <*> Just 6 -- Just 6
+    max <$> Just 3 <*> Nothing -- Nothing
 
--- treating Maybe as Applicatives
-Just (+3) <*> Just 3 -- Just 6
-Nothing <*> Just "greed" -- Nothing
-max <$> Just 3 <*> Just 6 -- Just 6
-max <$> Just 3 <*> Nothing -- Nothing
+    -- Upgrading to Monads
+    (\x -> Just (x + 1)) 1 -- Just 2
+    applyMaybe :: Maybe a -> (a -> Maybe b) -> Maybe b
+    applyMaybe Nothing f = Nothing
+    applyMaybe (Just x) f = f x
 
--- Upgrading to Monads
-(\x -> Just (x + 1)) 1 -- Just 2
-applyMaybe :: Maybe a -> (a -> Maybe b) -> Maybe b
-applyMaybe Nothing f = Nothing
-applyMaybe (Just x) f = f x
+    Just 3 `applyMaybe` \x -> Just (x + 1) -- Just 4
+    Nothing `applyMaybe` \x -> Just (x + 1) -- Nothing
 
-Just 3 `applyMaybe` \x -> Just (x + 1) -- Just 4
-Nothing `applyMaybe` \x -> Just (x + 1) -- Nothing
+    -- applyMaybe is >>= for the Maybe monad
+    ```
 
--- applyMaybe is >>= for the Maybe monad
-```
+-    Lists
 
+    The monadic aspects of lists bring non-determinism into code in a
+    clear and readable manner.
 
-#### Lists {#lists}
+    ```haskell
+    instance Monad [] where
+      return x = [x]
+      xs >>= f = concat (map f xs)
+      fail _ = []
+    ```
 
-The monadic aspects of lists bring non-determinism into code in a
-clear and readable manner.
+    ```haskell
+    [3,4,5] >> = \x -> [x, -x]
+    -- [3, -3, 4, -4, 5, -5]
+    ```
 
-```haskell
-instance Monad [] where
-  return x = [x]
-  xs >>= f = concat (map f xs)
-  fail _ = []
-```
+    Non-determinism also includes support for failure. Here, the empty
+    list `[]` is the equivalent of `Nothing`, because it signifies the
+    absence of a result.
 
-```haskell
-[3,4,5] >> = \x -> [x, -x]
--- [3, -3, 4, -4, 5, -5]
-```
+    Just like with `Maybe` values, we can chain several lists with `>>=`:
 
-Non-determinism also includes support for failure. Here, the empty
-list `[]` is the equivalent of `Nothing`, because it signifies the
-absence of a result.
+    ```haskell
+    [1,2] >>= \n -> ['a', 'b'] >>= \ch -> return (n,ch)
+    -- [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]
 
-Just like with `Maybe` values, we can chain several lists with `>>=`:
+    do
+      n <- [1,2]
+      ch <- ['a', 'b']
+      return (n,ch)
+    ```
 
-```haskell
-[1,2] >>= \n -> ['a', 'b'] >>= \ch -> return (n,ch)
--- [(1, 'a'), (1, 'b'), (2, 'a'), (2, 'b')]
+    The list `[1,2]` gets bound to n, and `["a", "b"]` gets bound to ch.
+    `return (n,ch)`, takes the tuple, and makes the smallest possible list
+    that still presents (n,ch) as the result.
 
-do
-  n <- [1,2]
-  ch <- ['a', 'b']
-  return (n,ch)
-```
+    For lists, monadic binding involves joining together a set of
+    calculations for each value in the list. When used with lists, the
+    signature of `>>=` becomes:
 
-The list `[1,2]` gets bound to n, and `["a", "b"]` gets bound to ch.
-`return (n,ch)`, takes the tuple, and makes the smallest possible list
-that still presents (n,ch) as the result.
+    ```haskell
+    (>>=) :: [a] -> (a -> [b]) -> [b]
+    ```
 
-For lists, monadic binding involves joining together a set of
-calculations for each value in the list. When used with lists, the
-signature of `>>=` becomes:
+    Given a list of `a`'s and a function that maps an a onto a list of
+    `b`'s, `>>=` applies this function to each of the `a`'s in the input
+    and returns the generated `b`'s concatenated into a list. The return
+    function creates a singleton list.
 
-```haskell
-(>>=) :: [a] -> (a -> [b]) -> [b]
-```
+    The following two expressions are equivalent:
 
-Given a list of `a`'s and a function that maps an a onto a list of
-`b`'s, `>>=` applies this function to each of the `a`'s in the input
-and returns the generated `b`'s concatenated into a list. The return
-function creates a singleton list.
+    ```haskell
+    [(x,y) | x <- [1,2,3] , y <- [1,2,3], x /= y]
 
-The following two expressions are equivalent:
-
-```haskell
-[(x,y) | x <- [1,2,3] , y <- [1,2,3], x /= y]
-
-do x <- [1,2,3]
-   y <- [1,2,3]
-   True <- return (x /= y)
-   return (x,y)
-```
+    do x <- [1,2,3]
+       y <- [1,2,3]
+       True <- return (x /= y)
+       return (x,y)
+    ```
 
 
 ### Using Monads {#using-monads}

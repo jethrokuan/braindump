@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Information Theory
-* Reference Book                                                   :noexport:
+
+- tags :: [[file:machine_learning.org][§machine_learning]]
 
 * Introduction
 ** How can we achieve perfect communication over an imperfect noisy communication channel?

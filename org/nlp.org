@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Natural Language Processing
 
+- tags :: [[file:machine_learning.org][§machine_learning]], [[file:deep_learning.org][§deep_learning]]
+
 * How to Represent Words
 http://ruder.io/word-embeddings-2017/index.html
 
@@ -165,7 +167,6 @@ improving them.
 Topic Lens https://ieeexplore.ieee.org/document/7539597/
 UTOPIAN
 http://xueshu.baidu.com/s?wd=paperuri%3A%2809451ca1aa2a439f5b6e0c6c768fcd9a%29&filter=sc_long_sign&tn=SE_xueshusource_2kduw22v&sc_vurl=http%3A%2F%2Fieeexplore.ieee.org%2Fdocument%2F6634167%2F&ie=utf-8&sc_us=618112135367870968
-
 
 * Dimension Reduction
 

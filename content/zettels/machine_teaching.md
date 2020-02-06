@@ -1,13 +1,15 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2019-07-15T11:51:53+08:00
-tags = ["machine-learning"]
+lastmod = 2020-02-06T12:01:58+08:00
 draft = false
-math = true
 +++
 
-## Definitions <a id="b5c1005733dab7e951e8ecd46dff695f" href="#simard17_machin_teach" title="Simard, Amershi, , Chickering, Pelton, , Ghorashi, Meek, Ramos, Gonzalo, Suh, Verwey, Wang, \&amp; Wernsing, Machine Teaching: a New Paradigm for Building  Machine Learning Systems, {CoRR}, v(), (2017).">(Simard et al., 2017)</a> {#definitions}
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}})
+
+
+## Definitions <a id="b5c1005733dab7e951e8ecd46dff695f" href="#simard17_machin_teach">(Simard et al., 2017)</a> {#definitions}
 
 machine learning research
 : machine learning research aims at
@@ -47,7 +49,7 @@ how unsatisfied the teacher is. The target model \\(\theta^\*\\) is folded
 into the teaching risk function. The teaching cost function is also
 generalized beyond the number of teaching items. For example,
 different teaching items may have different cognitive burdens for a
-human student to absorb. <a id="caa5573af457f4ae7bf053810593bdf7" href="#zhu18_overv_machin_teach" title="Zhu, Singla, Zilles, \&amp; Rafferty, An Overview of Machine Teaching, {CoRR}, v(), (2018).">(Zhu et al., 2018)</a>
+human student to absorb. <a id="caa5573af457f4ae7bf053810593bdf7" href="#zhu18_overv_machin_teach">(Zhu et al., 2018)</a>
 
 There are other formulations of machine teaching that place different
 constraints on the teaching. For example, one may want to minimize the
@@ -70,7 +72,7 @@ model \\(\theta^\*\\) to a learner via training data. For example:
     training examples to manipulate the learning algorithm.
 
 
-## Faster Teaching Via POMDP Teaching <a id="20d8df4efc7c1861be90e93bf2bf9231" href="#Rafferty_2015" title="Rafferty, Brunskill, Griffiths, Thomas \&amp; Shafto, Faster Teaching via POMDP Planning, {Cognitive Science}, v(6), 1290&#8211;1332 (2015).">(Rafferty et al., 2015)</a> {#faster-teaching-via-pomdp-teaching}
+## Faster Teaching Via POMDP Teaching <a id="20d8df4efc7c1861be90e93bf2bf9231" href="#Rafferty_2015">(Rafferty et al., 2015)</a> {#faster-teaching-via-pomdp-teaching}
 
 The authors formulate teaching as a POMDP, and use a
 decision-theoretic approach to planning teaching. Assuming knowledge
@@ -155,12 +157,12 @@ Experiments showed that POMDP planning leads to faster teaching.
         reduce the dimensionality of the belief space into \\(S = X \times
               Y\\), where \\(X\\) is the space of all possible values fully
         observable variables, and \\(Y\\) is the space of partially
-        observable variables.  <a id="b4b7f43790c8103452a6d9a6561a6727" href="#Du2010APA" title="Yanzhu Du, David Hsu, Hanna Kurniawati, Wee Sun Lee, Sylvie Ong \&amp; Shao Wei Png, A POMDP Approach to Robot Motion Planning under Uncertainty, in edited by (2010)">(Yanzhu Du et al., 2010)</a> Since state variable \\(x\\)
+        observable variables.  <a id="b4b7f43790c8103452a6d9a6561a6727" href="#Du2010APA">(Yanzhu Du et al., 2010)</a> Since state variable \\(x\\)
         is fully observable, we only need to maintain belief \\(b\_Y\\) for
         the state variables in \\(Y\\).
 
 
-## Machine Teaching For Inverse Reinforcement Learning <a id="2729f1e86d52c599d1e5b0d6d75a3b47" href="#brown18_machin_teach_inver_reinf_learn" title="Brown \&amp; Niekum, Machine Teaching for Inverse Reinforcement Learning:  Algorithms and Applications, {CoRR}, v(), (2018).">(Brown \& Niekum, 2018)</a> {#machine-teaching-for-inverse-reinforcement-learning}
+## Machine Teaching For Inverse Reinforcement Learning <a id="2729f1e86d52c599d1e5b0d6d75a3b47" href="#brown18_machin_teach_inver_reinf_learn">(Brown \& Niekum, 2018)</a> {#machine-teaching-for-inverse-reinforcement-learning}
 
 Optimal Teaching for IRL gives:
 
@@ -193,7 +195,7 @@ policy-evaluation problem, using the Behavioural Equivalence Class
 (BEC) of the teacher's policy.
 
 
-## Teaching Inverse Reinforcement Learners via Features and Demonstrations <a id="255bc1a536215d32ce8dfd159d3c4d7a" href="#haug18_teach_inver_reinf_learn_via_featur_demon" title="Haug, Tschiatschek, Singla \&amp; Adish, Teaching Inverse Reinforcement Learners Via Features  and Demonstrations, {CoRR}, v(), (2018).">(Haug et al., 2018)</a> {#teaching-inverse-reinforcement-learners-via-features-and-demonstrations}
+## Teaching Inverse Reinforcement Learners via Features and Demonstrations <a id="255bc1a536215d32ce8dfd159d3c4d7a" href="#haug18_teach_inver_reinf_learn_via_featur_demon">(Haug et al., 2018)</a> {#teaching-inverse-reinforcement-learners-via-features-and-demonstrations}
 
 It is difficult to specify a reward function that captures all
 important aspects. In these situations, learning from demonstrations
@@ -226,7 +228,7 @@ for minimizing teaching risk experimentally shows better performance
 than randomly choosing features.
 
 
-## Learner-aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints <a id="2d73f677b073c0fc37c32e652da58e0d" href="#tschiatschek19_learn_aware_teach" title="Tschiatschek, Ghosh, Haug, Luis, Devidze \&amp; Singla, Learner-Aware Teaching: Inverse Reinforcement  Learning With Preferences and Constraints, {CoRR}, v(), (2019).">(Tschiatschek et al., 2019)</a> {#learner-aware-teaching-inverse-reinforcement-learning-with-preferences-and-constraints}
+## Learner-aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints <a id="2d73f677b073c0fc37c32e652da58e0d" href="#tschiatschek19_learn_aware_teach">(Tschiatschek et al., 2019)</a> {#learner-aware-teaching-inverse-reinforcement-learning-with-preferences-and-constraints}
 
 This paper considers the setting where the learner has preferences.
 This captures:
@@ -240,7 +242,7 @@ Learner-aware teaching shows significant performance improvements
 _Math of the paper is beyond me right now._
 
 
-## Interactive Teaching Algorithms for Inverse Reinforcement Learning <a id="d5cdce41e67580ca88216f11069230f8" href="#kamalaruban19_inter_teach_algor_inver_reinf_learn" title="Kamalaruban, Devidze, , Cevher \&amp; Singla, Interactive Teaching Algorithms for Inverse  Reinforcement Learning, {CoRR}, v(), (2019).">(Kamalaruban et al., 2019)</a> {#interactive-teaching-algorithms-for-inverse-reinforcement-learning}
+## Interactive Teaching Algorithms for Inverse Reinforcement Learning <a id="d5cdce41e67580ca88216f11069230f8" href="#kamalaruban19_inter_teach_algor_inver_reinf_learn">(Kamalaruban et al., 2019)</a> {#interactive-teaching-algorithms-for-inverse-reinforcement-learning}
 
 Considers the setting where the learner is assisted by a teacher. Two
 sub-settings are considered:
@@ -285,21 +287,7 @@ inference:
 The intuition is that subsets of training data that lead a model to
 the same (or approximately similar) inference as the model trained on
 all the data should be useful for understanding the fitted model.
-<a id="f88402a68a48e8e87e35ad010169c296" href="#ravi_bayesian_teaching_mnist" title="@misc{ravi_bayesian_teaching_mnist,
-  author =       {Ravi Sojitra},
-  howpublished =
-                  {https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html},
-  note =         {Online; accessed 19 May 2019},
-  title =        {Bayesian Teaching as Model Explanation: An MNIST Example},
-  year =         {2018},
-}">@misc{ravi_bayesian_teaching_mnist,
-  author =       {Ravi Sojitra},
-  howpublished =
-                  {https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html},
-  note =         {Online; accessed 19 May 2019},
-  title =        {Bayesian Teaching as Model Explanation: An MNIST Example},
-  year =         {2018},
-}</a>
+<a id="f88402a68a48e8e87e35ad010169c296" href="#ravi_bayesian_teaching_mnist">(Ravi Sojitra, 2018)</a>
 
 Below is an example of using Bayesian teaching, limited to a teaching
 set of dimension 2, to understand an MNIST model.
@@ -314,7 +302,7 @@ Hence, Bayesian teaching is also useful in telling us which examples
 are most valuable: better suited to induce the desired target model.
 
 
-## Learning To Interactively Learn and Assist <a id="126795725ed501c93990ffff037191f4" href="#woodward19_learn_to_inter_learn_assis" title="Woodward, Finn \&amp; Hausman, Learning To Interactively Learn and Assist, {CoRR}, v(), (2019).">(Woodward et al., 2019)</a> {#learning-to-interactively-learn-and-assist}
+## Learning To Interactively Learn and Assist <a id="126795725ed501c93990ffff037191f4" href="#woodward19_learn_to_inter_learn_assis">(Woodward et al., 2019)</a> {#learning-to-interactively-learn-and-assist}
 
 Rewards and demonstrations are often defined and collected before
 training begins, when the human is most uncertain about what
@@ -333,21 +321,7 @@ Obtaining real-world training data can be expensive, and many RL
 algorithms are sample-inefficient. Hence, many models are trained in a
 simulated environment, and the "sim2real" gap causes these models to
 perform poorly on real-world tasks.
-<a id="1f99c4b9974f48e237e3ce698feb574b" href="#lilian_domain_random_sim2r_trans" title="@misc{lilian_domain_random_sim2r_trans,
-  author =       {Lilian Weng},
-  howpublished =
-                  {https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html},
-  note =         {Online; accessed 28 June 2019},
-  title =        {Domain Randomization for Sim2Real Transfer},
-  year =         {2019},
-}">@misc{lilian_domain_random_sim2r_trans,
-  author =       {Lilian Weng},
-  howpublished =
-                  {https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html},
-  note =         {Online; accessed 28 June 2019},
-  title =        {Domain Randomization for Sim2Real Transfer},
-  year =         {2019},
-}</a>
+<a id="1f99c4b9974f48e237e3ce698feb574b" href="#lilian_domain_random_sim2r_trans">(Lilian Weng, 2019)</a>
 
 There are several approaches to closing the sim2real gap:
 
@@ -371,85 +345,80 @@ real data.
 
 ### Domain Randomization {#domain-randomization}
 
+-    Definitions
 
-#### Definitions {#definitions}
+    source domain
+    : The environment we have full access to (the
+        simulator). This is where training happens.
 
-source domain
-: The environment we have full access to (the
-    simulator). This is where training happens.
+    target domain
+    : The environment we want to transfer our model to
+        (the real world)
 
-target domain
-: The environment we want to transfer our model to
-    (the real world)
+    randomization parameters
+    : A set of parameters in the source
+        domain, which we can sample \\(\xi\\)
 
-randomization parameters
-: A set of parameters in the source
-    domain, which we can sample \\(\xi\\)
+-    Goal
 
+    During policy training, episodes are collected from the source domain
+    with randomization applied. The policy learns to generalize across
+    all the environments. The policy parameter \\(\theta\\) is trained to
+    maximize the expected reward \\(R(\cdot)\\) average across a distribution
+    of configurations:
 
-#### Goal {#goal}
+    \begin{equation}
+    \theta^{\*}=\arg \max \_{\theta} \mathbb{E}\_{\xi \sim \Xi}\left[\mathbb{E}\_{\pi\_{\theta}, \tau \sim e\_{\xi}}[R(\tau)]\right]
+    \end{equation}
 
-During policy training, episodes are collected from the source domain
-with randomization applied. The policy learns to generalize across
-all the environments. The policy parameter \\(\theta\\) is trained to
-maximize the expected reward \\(R(\cdot)\\) average across a distribution
-of configurations:
+    where \\(\tau\_{\xi}\\) is a trajectory collected in the source domain
+    randomized with \\(\xi\\). **Discrepancies between the source and target
+    domains are modelled as variability in the source domain**.
 
-\begin{equation}
-\theta^{\*}=\arg \max \_{\theta} \mathbb{E}\_{\xi \sim \Xi}\left[\mathbb{E}\_{\pi\_{\theta}, \tau \sim e\_{\xi}}[R(\tau)]\right]
-\end{equation}
+    In _uniform domain randomization_, each randomization parameter
+    \\(\xi\_{i}\\) is bounded by an interval \\(\xi\_{i}
+    \in\left[\xi\_{i}^{\mathrm{low}}, \xi\_{i}^{\mathrm{high}}\right], i=1,
+    \ldots, N\\), and each parameter is uniformly sampled within the range.
 
-where \\(\tau\_{\xi}\\) is a trajectory collected in the source domain
-randomized with \\(\xi\\). **Discrepancies between the source and target
-domains are modelled as variability in the source domain**.
+    -   <span class="org-todo todo TODO">TODO</span>  read <https://arxiv.org/abs/1703.06907>, <https://arxiv.org/abs/1611.04201>
 
-In _uniform domain randomization_, each randomization parameter
-\\(\xi\_{i}\\) is bounded by an interval \\(\xi\_{i}
-\in\left[\xi\_{i}^{\mathrm{low}}, \xi\_{i}^{\mathrm{high}}\right], i=1,
-\ldots, N\\), and each parameter is uniformly sampled within the range.
+-   <span class="org-todo todo TODO">TODO</span>  Domain Randomization as Optimization (read <https://arxiv.org/abs/1903.11774>)
 
--   <span class="org-todo todo TODO">TODO</span>  read <https://arxiv.org/abs/1703.06907>, <https://arxiv.org/abs/1611.04201>
+    One can view learning of randomization parameters as a bilevel
+    optimization.
 
+    Assume we have access to the real environment \\(e\_{\textrm{real}}\\) and
+    the randomization configuration is sampled from a distribution
+    parameterized by \\(\phi\\), \\(\xi \sim P\_{\phi}(\xi)\\), we would like to
+    learn a distribution on which policy \\(\pi\_\theta\\) is trained on can
+    achieve maximal performance in \\(e\_{\textrm{real}}\\):
 
-#### <span class="org-todo todo TODO">TODO</span> Domain Randomization as Optimization (read <https://arxiv.org/abs/1903.11774>) {#domain-randomization-as-optimization--read-https-arxiv-dot-org-abs-1903-dot-11774}
+    \begin{equation}
+    \begin{array}{c}{\phi^{\*}=\arg \min \_{\phi}
+      \mathcal{L}\left(\pi\_{\theta^{\prime}(\phi)} ; e\_{\text { real
+      }}\right)} \\ {\text { where } \theta^{\*}(\phi)=\arg \min
+      \_{\theta} \mathbb{E}\_{\xi \sim
+      P\_{\phi}(\xi)}\left[\mathcal{L}\left(\pi\_{\theta} ;
+      e\_{\xi}\right)\right]}\end{array}
+    \end{equation}
 
-One can view learning of randomization parameters as a bilevel
-optimization.
+    where \\(\mathcal{L}(\pi ; e)\\) is the loss function of policy \\(\pi\\)
+    evaluated in the environment \\(e\\).
 
-Assume we have access to the real environment \\(e\_{\textrm{real}}\\) and
-the randomization configuration is sampled from a distribution
-parameterized by \\(\phi\\), \\(\xi \sim P\_{\phi}(\xi)\\), we would like to
-learn a distribution on which policy \\(\pi\_\theta\\) is trained on can
-achieve maximal performance in \\(e\_{\textrm{real}}\\):
+-    Guided Domain Randomization
 
-\begin{equation}
-\begin{array}{c}{\phi^{\*}=\arg \min \_{\phi}
-  \mathcal{L}\left(\pi\_{\theta^{\prime}(\phi)} ; e\_{\text { real
-  }}\right)} \\ {\text { where } \theta^{\*}(\phi)=\arg \min
-  \_{\theta} \mathbb{E}\_{\xi \sim
-  P\_{\phi}(\xi)}\left[\mathcal{L}\left(\pi\_{\theta} ;
-  e\_{\xi}\right)\right]}\end{array}
-\end{equation}
+    Vanilla Domain Randomization assumes to access to the real data, and
+    randomization configuration is sampled as broadly and uniformly as
+    possible in sim, hoping that the real environment is covered under
+    this broad distribution.
 
-where \\(\mathcal{L}(\pi ; e)\\) is the loss function of policy \\(\pi\\)
-evaluated in the environment \\(e\\).
+    **Idea:** guide domain randomization to use configurations that are "more
+    realistic". This avoids training models in unrealistic environments.
 
-
-#### Guided Domain Randomization {#guided-domain-randomization}
-
-Vanilla Domain Randomization assumes to access to the real data, and
-randomization configuration is sampled as broadly and uniformly as
-possible in sim, hoping that the real environment is covered under
-this broad distribution.
-
-**Idea:** guide domain randomization to use configurations that are "more
-realistic". This avoids training models in unrealistic environments.
+-   <span class="org-todo todo TODO">TODO</span>  read <https://arxiv.org/abs/1805.09501>
 
 
-#### <span class="org-todo todo TODO">TODO</span> read <https://arxiv.org/abs/1805.09501> {#read-https-arxiv-dot-org-abs-1805-dot-09501}
-
-
-## Invariant Risk Minimization <a id="5feb37b967977943f69738d540e822e8" href="#arjovsky19_invar_risk_minim" title="Arjovsky, Bottou, Gulrajani, Ishaan \&amp; Lopez-Paz, Invariant Risk Minimization, {CoRR}, v(), (2019).">(Arjovsky et al., 2019)</a> {#invariant-risk-minimization}
+## Invariant Risk Minimization <a id="5feb37b967977943f69738d540e822e8" href="#arjovsky19_invar_risk_minim">(Arjovsky et al., 2019)</a> {#invariant-risk-minimization}
 
 Key idea: To learn invariances across environments, find a data
 representation such that the optimal classifier on top of that
@@ -472,26 +441,26 @@ environments.
 ###  {#}
 
 # Bibliography
-<a id="simard17_machin_teach"></a>Simard, P. Y., Amershi, S., Chickering, D. M., Pelton, A. E., Ghorashi, S., Meek, C., Ramos, G., …, *Machine teaching: a new paradigm for building machine learning systems*, CoRR, *()*,  (2017).  [↩](#b5c1005733dab7e951e8ecd46dff695f)
+<a id="simard17_machin_teach" target="_blank">Simard, P. Y., Amershi, S., Chickering, D. M., Pelton, A. E., Ghorashi, S., Meek, C., Ramos, G., …, *Machine teaching: a new paradigm for building machine learning systems*, CoRR, *()*,  (2017). </a> [↩](#b5c1005733dab7e951e8ecd46dff695f)
 
-<a id="zhu18_overv_machin_teach"></a>Zhu, X., Singla, A., Zilles, S., & Rafferty, A. N., *An overview of machine teaching*, CoRR, *()*,  (2018).  [↩](#caa5573af457f4ae7bf053810593bdf7)
+<a id="zhu18_overv_machin_teach" target="_blank">Zhu, X., Singla, A., Zilles, S., & Rafferty, A. N., *An overview of machine teaching*, CoRR, *()*,  (2018). </a> [↩](#caa5573af457f4ae7bf053810593bdf7)
 
-<a id="Rafferty_2015"></a>Rafferty, A. N., Brunskill, E., Griffiths, T. L., & Shafto, P., *Faster teaching via pomdp planning*, Cognitive Science, *40(6)*, 1290–1332 (2015).  http://dx.doi.org/10.1111/cogs.12290 [↩](#20d8df4efc7c1861be90e93bf2bf9231)
+<a id="Rafferty_2015" target="_blank">Rafferty, A. N., Brunskill, E., Griffiths, T. L., & Shafto, P., *Faster teaching via pomdp planning*, Cognitive Science, *40(6)*, 1290–1332 (2015).  http://dx.doi.org/10.1111/cogs.12290</a> [↩](#20d8df4efc7c1861be90e93bf2bf9231)
 
-<a id="Du2010APA"></a>Du, Y., Hsu, D., Kurniawati, H., Lee, W. S., Ong, S. C. W., & Png, S. W., *A pomdp approach to robot motion planning under uncertainty*, In ,  (pp. ) (2010). : . [↩](#b4b7f43790c8103452a6d9a6561a6727)
+<a id="Du2010APA" target="_blank">Du, Y., Hsu, D., Kurniawati, H., Lee, W. S., Ong, S. C. W., & Png, S. W., *A pomdp approach to robot motion planning under uncertainty*, In ,  (pp. ) (2010). : .</a> [↩](#b4b7f43790c8103452a6d9a6561a6727)
 
-<a id="brown18_machin_teach_inver_reinf_learn"></a>Brown, D. S., & Niekum, S., *Machine teaching for inverse reinforcement learning: algorithms and applications*, CoRR, *()*,  (2018).  [↩](#2729f1e86d52c599d1e5b0d6d75a3b47)
+<a id="brown18_machin_teach_inver_reinf_learn" target="_blank">Brown, D. S., & Niekum, S., *Machine teaching for inverse reinforcement learning: algorithms and applications*, CoRR, *()*,  (2018). </a> [↩](#2729f1e86d52c599d1e5b0d6d75a3b47)
 
-<a id="haug18_teach_inver_reinf_learn_via_featur_demon"></a>Haug, L., Tschiatschek, S., & Singla, A., *Teaching inverse reinforcement learners via features and demonstrations*, CoRR, *()*,  (2018).  [↩](#255bc1a536215d32ce8dfd159d3c4d7a)
+<a id="haug18_teach_inver_reinf_learn_via_featur_demon" target="_blank">Haug, L., Tschiatschek, S., & Singla, A., *Teaching inverse reinforcement learners via features and demonstrations*, CoRR, *()*,  (2018). </a> [↩](#255bc1a536215d32ce8dfd159d3c4d7a)
 
-<a id="tschiatschek19_learn_aware_teach"></a>Tschiatschek, S., Ghosh, A., Haug, L., Devidze, R., & Singla, A., *Learner-aware teaching: inverse reinforcement learning with preferences and constraints*, CoRR, *()*,  (2019).  [↩](#2d73f677b073c0fc37c32e652da58e0d)
+<a id="tschiatschek19_learn_aware_teach" target="_blank">Tschiatschek, S., Ghosh, A., Haug, L., Devidze, R., & Singla, A., *Learner-aware teaching: inverse reinforcement learning with preferences and constraints*, CoRR, *()*,  (2019). </a> [↩](#2d73f677b073c0fc37c32e652da58e0d)
 
-<a id="kamalaruban19_inter_teach_algor_inver_reinf_learn"></a>Kamalaruban, P., Devidze, R., Cevher, V., & Singla, A., *Interactive teaching algorithms for inverse reinforcement learning*, CoRR, *()*,  (2019).  [↩](#d5cdce41e67580ca88216f11069230f8)
+<a id="kamalaruban19_inter_teach_algor_inver_reinf_learn" target="_blank">Kamalaruban, P., Devidze, R., Cevher, V., & Singla, A., *Interactive teaching algorithms for inverse reinforcement learning*, CoRR, *()*,  (2019). </a> [↩](#d5cdce41e67580ca88216f11069230f8)
 
-<a id="ravi_bayesian_teaching_mnist"></a>Sojitra, R. (2018). *Bayesian teaching as model explanation: an mnist example*. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019. [↩](#f88402a68a48e8e87e35ad010169c296)
+<a id="ravi_bayesian_teaching_mnist" target="_blank">Sojitra, R. (2018). *Bayesian teaching as model explanation: an mnist example*. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019.</a> [↩](#f88402a68a48e8e87e35ad010169c296)
 
-<a id="woodward19_learn_to_inter_learn_assis"></a>Woodward, M., Finn, C., & Hausman, K., *Learning to interactively learn and assist*, CoRR, *()*,  (2019).  [↩](#126795725ed501c93990ffff037191f4)
+<a id="woodward19_learn_to_inter_learn_assis" target="_blank">Woodward, M., Finn, C., & Hausman, K., *Learning to interactively learn and assist*, CoRR, *()*,  (2019). </a> [↩](#126795725ed501c93990ffff037191f4)
 
-<a id="lilian_domain_random_sim2r_trans"></a>Weng, L. (2019). *Domain randomization for sim2real transfer*. Retrieved from [https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html](https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html). Online; accessed 28 June 2019. [↩](#1f99c4b9974f48e237e3ce698feb574b)
+<a id="lilian_domain_random_sim2r_trans" target="_blank">Weng, L. (2019). *Domain randomization for sim2real transfer*. Retrieved from [https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html](https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html). Online; accessed 28 June 2019.</a> [↩](#1f99c4b9974f48e237e3ce698feb574b)
 
-<a id="arjovsky19_invar_risk_minim"></a>Arjovsky, M., Bottou, L\'eon, Gulrajani, I., & Lopez-Paz, D., *Invariant Risk Minimization*, CoRR, *()*,  (2019).  [↩](#5feb37b967977943f69738d540e822e8)
+<a id="arjovsky19_invar_risk_minim" target="_blank">Arjovsky, M., Bottou, L\'eon, Gulrajani, I., & Lopez-Paz, D., *Invariant Risk Minimization*, CoRR, *()*,  (2019). </a> [↩](#5feb37b967977943f69738d540e822e8)

@@ -1,10 +1,13 @@
 +++
 title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2019-07-17T13:35:45+08:00
+lastmod = 2020-02-06T12:06:49+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§conferences]({{< relref "conferences" >}}), [§data\_science]({{< relref "data_science" >}})
+
 
 ## Taking recommendation technology to the masses - Le Zhang (Microsoft) {#taking-recommendation-technology-to-the-masses-le-zhang--microsoft}
 
@@ -70,13 +73,12 @@ e.g. Factorization machines
   \sum\_{i=1}^{n}\sum\_{j=i+1}^n \langle v\_i, v\_j \rangle x\_i x\_j
 \end{equation}
 
+-   <span class="org-todo todo TODO">TODO</span>  xDeepFM
 
-#### <span class="org-todo todo TODO">TODO</span> xDeepFM {#xdeepfm}
-
-<a id="892cd5bf0eb9a5acd1874032ba4ca28c" href="#guo17_deepf" title="Guo, Tang, Ye, , Li \&amp; He, Deepfm: a Factorization-Machine Based Neural Network  for Ctr Prediction, {CoRR}, v(), (2017).">(Guo et al., 2017)</a><a>, </a><a id="e4d627ce64d7fbf933655db85b3057e0" href="#lian18_xdeep" title="Lian, Zhou, Zhang, , Chen, Xie, Sun \&amp; Guangzhong, Xdeepfm: Combining Explicit and Implicit Feature  Interactions for Recommender Systems, {CoRR}, v(), (2018).">(Lian et al., 2018)</a>
+    <a id="892cd5bf0eb9a5acd1874032ba4ca28c" href="#guo17_deepf">(Guo et al., 2017)</a><a>, </a><a id="e4d627ce64d7fbf933655db85b3057e0" href="#lian18_xdeep">(Lian et al., 2018)</a>
 
 
-### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network <a id="fef749252ffc4be87873f182cdba0fad" href="#wang18_dkn" title="Wang, Zhang, Xie, \&amp; Guo, Dkn: Deep Knowledge-Aware Network for News  Recommendation, {CoRR}, v(), (2018).">(Wang et al., 2018)</a> {#deep-knowledge-aware-network}
+### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network <a id="fef749252ffc4be87873f182cdba0fad" href="#wang18_dkn">(Wang et al., 2018)</a> {#deep-knowledge-aware-network}
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -271,8 +273,8 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 ##  {#}
 
 # Bibliography
-<a id="guo17_deepf"></a>Guo, H., Tang, R., Ye, Y., Li, Z., & He, X., *Deepfm: a factorization-machine based neural network for ctr prediction*, CoRR, *()*,  (2017).  [↩](#892cd5bf0eb9a5acd1874032ba4ca28c)
+<a id="guo17_deepf" target="_blank">Guo, H., Tang, R., Ye, Y., Li, Z., & He, X., *Deepfm: a factorization-machine based neural network for ctr prediction*, CoRR, *()*,  (2017). </a> [↩](#892cd5bf0eb9a5acd1874032ba4ca28c)
 
-<a id="lian18_xdeep"></a>Lian, J., Zhou, X., Zhang, F., Chen, Z., Xie, X., & Sun, G., *Xdeepfm: combining explicit and implicit feature interactions for recommender systems*, CoRR, *()*,  (2018).  [↩](#e4d627ce64d7fbf933655db85b3057e0)
+<a id="lian18_xdeep" target="_blank">Lian, J., Zhou, X., Zhang, F., Chen, Z., Xie, X., & Sun, G., *Xdeepfm: combining explicit and implicit feature interactions for recommender systems*, CoRR, *()*,  (2018). </a> [↩](#e4d627ce64d7fbf933655db85b3057e0)
 
-<a id="wang18_dkn"></a>Wang, H., Zhang, F., Xie, X., & Guo, M., *Dkn: deep knowledge-aware network for news recommendation*, CoRR, *()*,  (2018).  [↩](#fef749252ffc4be87873f182cdba0fad)
+<a id="wang18_dkn" target="_blank">Wang, H., Zhang, F., Xie, X., & Guo, M., *Dkn: deep knowledge-aware network for news recommendation*, CoRR, *()*,  (2018). </a> [↩](#fef749252ffc4be87873f182cdba0fad)

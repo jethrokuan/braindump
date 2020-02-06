@@ -1,10 +1,13 @@
 +++
 title = "React"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:27+08:00
+lastmod = 2020-02-06T11:57:15+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§javascript]({{< relref "javascript" >}})
+
 
 ## React Frameworks {#react-frameworks}
 

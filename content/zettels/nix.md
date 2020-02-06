@@ -1,10 +1,13 @@
 +++
 title = "Nix/NixOS"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:28+08:00
+lastmod = 2020-02-06T11:58:23+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§prog\_lang]({{< relref "prog_lang" >}}), [§operating\_systems]({{< relref "operating_systems" >}})
+
 
 ## Links {#links}
 

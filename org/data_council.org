@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Datacouncil.ai Conference Notes
 
+- tags :: [[file:conferences.org][§conferences]], [[file:data_science.org][§data_science]]
+
 * Taking recommendation technology to the masses - Le Zhang (Microsoft)
 
 Challenges:

@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Web Dev Tools
 
+- tags :: [[file:web_dev.org][§web_dev]]
+
 * SVG
 - [[https://jakearchibald.github.io/svgomg/][SVGOMG - SVGO's Missing GUI]]
 

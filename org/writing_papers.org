@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Writing Papers
 
+- tags :: [[file:writing.org][§writing]]
+
 The following content is summarized from "How To Write a Technical
 Paper" cite:Whiteside2017HowTW.
 

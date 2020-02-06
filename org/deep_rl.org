@@ -1,7 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Deep Reinforcement Learning
-#+HUGO_TAGS: machine-learning
 bibliographystyle:unsrt
+
+- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]]
 
 * Why Deep Reinforcement Learning?
 

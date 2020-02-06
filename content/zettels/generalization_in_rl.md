@@ -1,14 +1,19 @@
 +++
 title = "Generalization In RL"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T17:02:01+08:00
+lastmod = 2020-02-06T12:13:58+08:00
 draft = false
-math = true
 +++
 
--   Generalization using successor features (Dayan 1993).
--   Adapt to new reward structure (Barreto 2018)
--   How many tasks are needed before modern approaches generalize?
+tags
+: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
+
+
+Generalization using successor features (Dayan 1993).
+
+Adapt to new reward structure (Barreto 2018)
+
+How many tasks are needed before modern approaches generalize?
     (Cobbe 2019)
 
 Generalization with selective noise injection and information

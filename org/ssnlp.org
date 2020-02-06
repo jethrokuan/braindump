@@ -1,3 +1,8 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: SSNLP Conference Notes
+
+- tags :: [[file:conferences.org][§conferences]], [[file:nlp.org][§nlp]]
+
 * AliNLP: the Text Processing Engine that Powers Alibaba's Business Applications
 
 - Linlin Li

@@ -1,11 +1,14 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T01:53:23+08:00
+lastmod = 2020-02-06T12:10:54+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
-math = true
 +++
+
+tags
+: [§deep\_learning]({{< relref "deep_learning" >}})
+
 
 ## The Case For Bayesian Learning <a id="179a446e344f34ef9150164c2bd666ae" href="#wilson2019bayesian">(Wilson, 2019)</a> {#the-case-for-bayesian-learning}
 

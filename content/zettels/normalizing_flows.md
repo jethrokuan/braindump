@@ -1,10 +1,12 @@
 +++
 title = "Normalizing Flows"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T04:14:31+08:00
+lastmod = 2020-02-06T12:01:47+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}})
 
 Normalizing flows provide a way of constructing probability
 distributions over continuous random variables. In flow-based
@@ -164,7 +166,7 @@ equation (ODE) that describes the flow's evolution in time.
 
 ## Resources {#resources}
 
--   Normalizing Flows for Probabilistic Modeling and Inference <a id="a4fefb8e3be96de786eb8c74324ec9e5" href="#papamakarios19_normal_flows_probab_model_infer" title="Papamakarios, Nalisnick, , Rezende, Mohamed, \&amp; Lakshminarayanan, Normalizing Flows for Probabilistic Modeling and  Inference, {CoRR}, v(), (2019).">(Papamakarios et al., 2019)</a>
+-   Normalizing Flows for Probabilistic Modeling and Inference <a id="a4fefb8e3be96de786eb8c74324ec9e5" href="#papamakarios19_normal_flows_probab_model_infer">(Papamakarios et al., 2019)</a>
 
 # Bibliography
-<a id="papamakarios19_normal_flows_probab_model_infer"></a>Papamakarios, G., Nalisnick, E., Rezende, D. J., Mohamed, S., & Lakshminarayanan, B., *Normalizing flows for probabilistic modeling and inference*, CoRR, *()*,  (2019).  [↩](#a4fefb8e3be96de786eb8c74324ec9e5)
+<a id="papamakarios19_normal_flows_probab_model_infer" target="_blank">Papamakarios, G., Nalisnick, E., Rezende, D. J., Mohamed, S., & Lakshminarayanan, B., *Normalizing flows for probabilistic modeling and inference*, CoRR, *()*,  (2019). </a> [↩](#a4fefb8e3be96de786eb8c74324ec9e5)

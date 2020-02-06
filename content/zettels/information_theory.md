@@ -1,9 +1,13 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:17:24+08:00
+lastmod = 2020-02-06T12:01:20+08:00
 draft = false
 +++
+
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}})
+
 
 ## Introduction {#introduction}
 

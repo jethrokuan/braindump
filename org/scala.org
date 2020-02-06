@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Scala
-#+HUGO_TAGS: proglang scala
+
+- tags :: [[file:prog_lang.org][§prog_lang]]
 
 * Introduction to Scala
 

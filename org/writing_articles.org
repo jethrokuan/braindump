@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Writing Articles
 
+- tags :: [[file:writing.org][§writing]]
+
 - [[https://chrisshort.net/writing-technical-articles/][Rule of Three]]: have 3 main topic points with no more than 3 subtopic
   points under them.
 

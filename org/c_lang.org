@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+HUGO_SECTION: zettels
 #+TITLE: The C Language
-#+HUGO_TAGS: proglang c
+
+- tags :: [[file:prog_lang.org][§prog_lang]]
 
 * TODO  Read [[http://icube-icps.unistra.fr/img_auth.php/d/db/ModernC.pdf][Modern C]]

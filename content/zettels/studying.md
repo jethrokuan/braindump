@@ -1,11 +1,13 @@
 +++
 title = "Studying"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:39:31+08:00
-tags = ["meta", "learning"]
+lastmod = 2020-02-06T12:05:52+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§soft\_skills]({{< relref "soft_skills" >}})
+
 
 ## The optimal studying strategy {#the-optimal-studying-strategy}
 

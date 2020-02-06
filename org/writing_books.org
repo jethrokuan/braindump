@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Writing Books
 
+- tags :: [[file:writing.org][§writing]]
+
 - [[https://www.aristeia.com/authorAdvice.html][Scott Meyers: Advice to Prospective Book Authors]]
 - [[https://dev.to/trickvi/i-wrote-a-book-lfg][I wrote a book - DEV Community 👩‍💻👨‍💻]]
 - [[https://zwischenzugs.com/2016/05/15/writing-a-technical-book/][Writing a Technical Book – zwischenzugs]]

@@ -1,9 +1,8 @@
 +++
 title = "Surrogate Gradients in Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-15T15:41:45+08:00
+lastmod = 2020-02-06T12:10:39+08:00
 draft = false
-math = true
 +++
 
 Surrogate gradient methods overcome the difficulties associated with

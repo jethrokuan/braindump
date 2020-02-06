@@ -1,10 +1,12 @@
 +++
 title = "Writing Papers"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T13:52:57+08:00
+lastmod = 2020-02-06T12:15:55+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§writing]({{< relref "writing" >}})
 
 The following content is summarized from "How To Write a Technical
 Paper" <a id="7a6b903918cb910a3f8207e8473a9ee3" href="#Whiteside2017HowTW">(James Whiteside, 2017)</a>.

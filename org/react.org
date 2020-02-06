@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: React
 
+- tags :: [[file:javascript.org][§javascript]]
+
 * React Frameworks
 - https://evergreen.segment.com/
 - https://element.eleme.io/

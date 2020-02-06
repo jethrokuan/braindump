@@ -1,6 +1,9 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Nix/NixOS
 #+AUTHOR: Jethro Kuan
+
+- tags :: [[file:prog_lang.org][§prog_lang]], [[file:operating_systems.org][§operating_systems]]
+
 * Links
 - [[https://weekly.nixos.org/][NixOS Weekly Newsletter]]
 - [[https://nixos.org/nixos/nix-pills/][Nix Pills]]

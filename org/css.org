@@ -2,6 +2,8 @@
 #+HUGO_TAGS: web
 #+TITLE: CSS
 
+- tags :: [[file:web_dev.org][§web_dev]], [[file:prog_lang.org][§prog_lang]]
+
 * Flexbox
 - [[https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/][An introduction to CSS Containment - Rego's Everyday Life]]
 
