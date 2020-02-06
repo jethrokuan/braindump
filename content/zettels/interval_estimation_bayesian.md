@@ -1,9 +1,12 @@
 +++
 title = "Interval Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-22T20:52:44+08:00
+lastmod = 2020-02-06T12:35:11+08:00
 draft = false
 +++
+
+tags
+: [§bayesian\_statistics]({{< relref "bayesian_statistics" >}})
 
 Suppose instead of [§point\_estimation\_bayesian]({{< relref "point_estimation_bayesian" >}}), we'd like to identify a
 region that is likely to contain the true value of parameter \\(\theta\\).

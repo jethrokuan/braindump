@@ -1,11 +1,13 @@
 +++
 title = "Markov Chains"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-29T08:36:56+08:00
-tags = ["statistics", "machine-learning"]
+lastmod = 2020-02-06T12:39:10+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§statistics]({{< relref "statistics" >}}), [§stochastic\_processes]({{< relref "stochastic_processes" >}})
+
 
 ## Introduction {#introduction}
 

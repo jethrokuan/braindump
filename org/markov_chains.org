@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Markov Chains
-#+HUGO_TAGS: statistics machine-learning
+
+- tags :: [[file:statistics.org][§statistics]], [[file:stochastic_processes.org][§stochastic_processes]]
 
 * Introduction
 

@@ -1,9 +1,8 @@
 +++
 title = "Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-08T12:09:44+08:00
+lastmod = 2020-02-06T12:23:04+08:00
 draft = false
-math = true
 +++
 
 ## Basic Properties {#basic-properties}
@@ -132,41 +131,36 @@ Let \\(X\_1, X\_2, ..., X\_n\\) be IID \\(\mathcal{N}(\mu, \sigma^2)\\).
 Assume \\(n\\) random draws are made without replacement. (Not SRS, will
 be corrected for later).
 
+-    Summary of Lemmas
 
-#### Summary of Lemmas {#summary-of-lemmas}
+    -   \\(P(X\_i =\xi\_j) = \frac{n\_j}{N}\\): Lemma A
+    -   For \\(i \ne j\\), \\(Cov(X\_i, X\_j) = - \frac{\sigma^2}{N-1}\\): Lemma B
 
--   \\(P(X\_i =\xi\_j) = \frac{n\_j}{N}\\): Lemma A
--   For \\(i \ne j\\), \\(Cov(X\_i, X\_j) = - \frac{\sigma^2}{N-1}\\): Lemma B
+-    Estimation Problem
 
+    Let \\(X\_1, X\_2, ..., X\_n\\) be random draws with replacement. Then
+    \\(\overline{X}\\) is an estimator of \\(\mu\\). and the observed value of
+    \\(\overline{X}\\), \\(\overline{x}\\) is an estimate of \\(\mu\\).
 
-#### Estimation Problem {#estimation-problem}
+-    Standard Error (SE)
 
-Let \\(X\_1, X\_2, ..., X\_n\\) be random draws with replacement. Then
-\\(\overline{X}\\) is an estimator of \\(\mu\\). and the observed value of
-\\(\overline{X}\\), \\(\overline{x}\\) is an estimate of \\(\mu\\).
+    SE of an \\(\overline{X}\\) is defined to be \\(SD(\overline{X})\\).
 
+    | param     | est                | SE                            | Est. SE                                     |
+    |-----------|--------------------|-------------------------------|---------------------------------------------|
+    | \\(\mu\\) | \\(\overline{X}\\) | \\(\frac{\sigma}{\sqrt{n}}\\) | \\(\frac{s}{\sqrt{n}}\\)                    |
+    | \\(p\\)   | \\(\hat{p}\\)      | \\(\sqrt{\frac{p(1-p)}{n}}\\) | \\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n-1}}\\) |
 
-#### Standard Error (SE) {#standard-error--se}
+-    Without Replacement
 
-SE of an \\(\overline{X}\\) is defined to be \\(SD(\overline{X})\\).
+    SE is multiplied by \\(\frac{N-n}{N-1}\\), because \\(s^2\\) is biased for
+    \\(\sigma^2\\): \\(E(\frac{N-1}{N}s^2) = \sigma^2\\), but N is normally large.
 
-| param     | est                | SE                            | Est. SE                                     |
-|-----------|--------------------|-------------------------------|---------------------------------------------|
-| \\(\mu\\) | \\(\overline{X}\\) | \\(\frac{\sigma}{\sqrt{n}}\\) | \\(\frac{s}{\sqrt{n}}\\)                    |
-| \\(p\\)   | \\(\hat{p}\\)      | \\(\sqrt{\frac{p(1-p)}{n}}\\) | \\(\sqrt{\frac{\hat{p}(1-\hat{p})}{n-1}}\\) |
+-    Confidence Interval
 
+    An approximate \\(1-\alpha\\) CI for \\(\mu\\) is
 
-#### Without Replacement {#without-replacement}
-
-SE is multiplied by \\(\frac{N-n}{N-1}\\), because \\(s^2\\) is biased for
-\\(\sigma^2\\): \\(E(\frac{N-1}{N}s^2) = \sigma^2\\), but N is normally large.
-
-
-#### Confidence Interval {#confidence-interval}
-
-An approximate \\(1-\alpha\\) CI for \\(\mu\\) is
-
-\\((\overline{x} - z\_{\alpha/2}\frac{s}{\sqrt{n}}, \overline{x} + z\_{\alpha/2}\frac{s}{\sqrt{n}})\\)
+    \\((\overline{x} - z\_{\alpha/2}\frac{s}{\sqrt{n}}, \overline{x} + z\_{\alpha/2}\frac{s}{\sqrt{n}})\\)
 
 
 ### Biased Measurements {#biased-measurements}
@@ -201,44 +195,42 @@ An obvious estimator of r is \\(R = \frac{\overline{Y}}{\overline{X}}\\)
 \\(\sigma\_{xy} := \frac{1}{N}\sum^{N}\_{i=1}(x\_i-\mu\_x)(x\_i-\mu\_y)\\) is
 the population covariance.
 
+-    Properties
 
-#### Properties {#properties}
+    \\(Var( R) \approx \frac{1}{\mu\_x^2}\left(r^2\sigma\_{\overline{X}}^2 + \sigma\_{\overline{Y}}^2 - 2r\sigma\_{\overline{X}\overline{Y}}\right)\\)
 
-\\(Var( R) \approx \frac{1}{\mu\_x^2}\left(r^2\sigma\_{\overline{X}}^2 + \sigma\_{\overline{Y}}^2 - 2r\sigma\_{\overline{X}\overline{Y}}\right)\\)
+    Population coefficient \\(\rho =
+    \frac{\sigma\_{xy}}{\sigma\_{x}\sigma\_{y}}\\)
 
-Population coefficient \\(\rho =
-\frac{\sigma\_{xy}}{\sigma\_{x}\sigma\_{y}}\\)
+    \\(E( R) \approx r + \frac{1}{n}\left(\frac{N-n}{N-1}\right)\frac{1}{\mu\_x^2}\left(r\sigma\_x^2-\rho\sigma\_x\sigma\_y\right)\\)
 
-\\(E( R) \approx r + \frac{1}{n}\left(\frac{N-n}{N-1}\right)\frac{1}{\mu\_x^2}\left(r\sigma\_x^2-\rho\sigma\_x\sigma\_y\right)\\)
+    \\(s\_{xy} = \frac{1}{n-1}\sum^{n}\_{i=1}\left(X\_i -
+    \overline{X}\right)\left(Y\_i - \overline{Y}\right)\\)
 
-\\(s\_{xy} = \frac{1}{n-1}\sum^{n}\_{i=1}\left(X\_i -
-\overline{X}\right)\left(Y\_i - \overline{Y}\right)\\)
+-    Ratio Estimates
 
+    \\(\overline{Y}\_R = \frac{\mu\_x}{\overline{X}}\overline{Y} = \mu\_xR\\)
 
-#### Ratio Estimates {#ratio-estimates}
+    \\(Var(\overline{Y}\_R) \approx
+    \frac{1}{n}\frac{N-n}{N-1}(r^2\sigma\_x^2 + \sigma\_y^2
+    -2r\rho\sigma\_x\sigma\_y)\\)
 
-\\(\overline{Y}\_R = \frac{\mu\_x}{\overline{X}}\overline{Y} = \mu\_xR\\)
+    \\(E(\overline{Y}\_R) - \mu\_y \approx
+    \frac{1}{n}\frac{N-n}{N-1}\frac{1}{\mu\_x}\left(r\sigma\_x^2 -\rho\sigma\_x\sigma\_y\right)\\)
 
-\\(Var(\overline{Y}\_R) \approx
-\frac{1}{n}\frac{N-n}{N-1}(r^2\sigma\_x^2 + \sigma\_y^2
--2r\rho\sigma\_x\sigma\_y)\\)
+    The bias is of order \\(\frac{1}{n}\\), small compared to its standard error.
 
-\\(E(\overline{Y}\_R) - \mu\_y \approx
-\frac{1}{n}\frac{N-n}{N-1}\frac{1}{\mu\_x}\left(r\sigma\_x^2 -\rho\sigma\_x\sigma\_y\right)\\)
+    \\(\overline{Y}\_R\\) is better than \\(\overline{Y}\\), having smaller
+    variance, when \\(\rho > \frac{1}{2}\left(\frac{C\_x}{C\_y}\right)\\), where
+    \\(C\_i = \sigma\_i/\mu\_i\\)
 
-The bias is of order \\(\frac{1}{n}\\), small compared to its standard error.
+    Variance of \\(\overline{Y}\_R\\) can be estimated by
 
-\\(\overline{Y}\_R\\) is better than \\(\overline{Y}\\), having smaller
-variance, when \\(\rho > \frac{1}{2}\left(\frac{C\_x}{C\_y}\right)\\), where
-\\(C\_i = \sigma\_i/\mu\_i\\)
+    \\(s\_{\overline{Y}\_R}^2 =
+    \frac{1}{n}\frac{N-n}{N-1}\left(R^2s\_x^2+s\_y^2-2Rs\_{xy}\right)\\)
 
-Variance of \\(\overline{Y}\_R\\) can be estimated by
-
-\\(s\_{\overline{Y}\_R}^2 =
-\frac{1}{n}\frac{N-n}{N-1}\left(R^2s\_x^2+s\_y^2-2Rs\_{xy}\right)\\)
-
-An approximate \\(1-\alpha\\) C.I. for \\(\mu\_y\\) is \\(\overline{Y}\_R \pm
-z\_{\alpha/2}s\_{\overline{Y}\_R}\\)
+    An approximate \\(1-\alpha\\) C.I. for \\(\mu\_y\\) is \\(\overline{Y}\_R \pm
+    z\_{\alpha/2}s\_{\overline{Y}\_R}\\)
 
 
 ## Method of Moments {#method-of-moments}
@@ -512,46 +504,42 @@ For large n, the null distribution of \\(-2\log\Lambda\\) is approximately
 \\(X\_1, ..., X\_n\\) be i.i.d \\(N(\mu\_X,\sigma^2)\\) and \\(Y\_1,...,Y\_m\\) be
 i.i.d \\(N(\mu\_Y, \sigma^2)\\), independent. \\(H\_0: \mu\_X - \mu\_Y = d\\)
 
+-    Known Variance
 
-#### Known Variance {#known-variance}
+    \\(Z := \frac{\bar{X} - \bar{Y} - (\mu\_X -
+    \mu\_Y)}{\sigma{\sqrt{\frac{1}{n} + \frac{1}{m}}}}\\) and reject \\(H\_0\\)
+    when \\(|Z| > z\_{\alpha/2}\\)
 
-\\(Z := \frac{\bar{X} - \bar{Y} - (\mu\_X -
-\mu\_Y)}{\sigma{\sqrt{\frac{1}{n} + \frac{1}{m}}}}\\) and reject \\(H\_0\\)
-when \\(|Z| > z\_{\alpha/2}\\)
+-    Unknown Variance
 
+    \\(s\_p^2 = \frac{(n-1)s\_X^2 + (m-1)s\_Y^2}{m+n-2}\\) where \\(s\_X^2 =
+    \frac{1}{n-1}\sum\_{i=1}^{n}(X\_i-\bar{X})^2\\). \\(s\_p^2\\) is an unbiased
+    estimator of \\(\sigma^2\\). \\(s\_X\\) within factor of 2 from \\(s\_Y\\).
 
-#### Unknown Variance {#unknown-variance}
+    \\(t := \frac{\bar{X} - \bar{Y} - (\mu\_X -
+    \mu\_Y)}{s\_p{\sqrt{\frac{1}{n} + \frac{1}{m}}}}\\) follows a t
+    distribution with \\(m+n-2\\) d.f.
 
-\\(s\_p^2 = \frac{(n-1)s\_X^2 + (m-1)s\_Y^2}{m+n-2}\\) where \\(s\_X^2 =
-\frac{1}{n-1}\sum\_{i=1}^{n}(X\_i-\bar{X})^2\\). \\(s\_p^2\\) is an unbiased
-estimator of \\(\sigma^2\\). \\(s\_X\\) within factor of 2 from \\(s\_Y\\).
+    If two-sided: reject \\(H\_0\\) when \\(|t| > t\_{n+m-2,\alpha/2}\\). If
+    one-sided, e.g \\(H\_1: \mu\_X > \mu\_Y\\), reject \\(H\_0\\) when \\(t >
+    t\_{n+m-2,\alpha}\\).
 
-\\(t := \frac{\bar{X} - \bar{Y} - (\mu\_X -
-\mu\_Y)}{s\_p{\sqrt{\frac{1}{n} + \frac{1}{m}}}}\\) follows a t
-distribution with \\(m+n-2\\) d.f.
+-    CI
 
-If two-sided: reject \\(H\_0\\) when \\(|t| > t\_{n+m-2,\alpha/2}\\). If
-one-sided, e.g \\(H\_1: \mu\_X > \mu\_Y\\), reject \\(H\_0\\) when \\(t >
-t\_{n+m-2,\alpha}\\).
+    \\(\frac{\bar{X}-\bar{Y}}\pm z\_{\alpha/2} \cdot \sigma
+    \sqrt{\frac{1}{n} + \frac{1}{m}}\\) if \\(\sigma\\) is known, or
+    \\(\frac{\bar{X}-\bar{Y}}\pm t\_{m+n-2, \alpha/2} \cdot s\_p
+    \sqrt{\frac{1}{n} + \frac{1}{m}}\\) if \\(\sigma\\) is unknown.
 
+-    Unequal Variance
 
-#### CI {#ci}
+    \\(Z := \frac{\bar{X} - \bar{Y} - (\mu\_X -
+    \mu\_Y)}{{\sqrt{\frac{\sigma\_X^2}{n} + \frac{\sigma\_Y^2}{m}}}}\\)
 
-\\(\frac{\bar{X}-\bar{Y}}\pm z\_{\alpha/2} \cdot \sigma
-\sqrt{\frac{1}{n} + \frac{1}{m}}\\) if \\(\sigma\\) is known, or
-\\(\frac{\bar{X}-\bar{Y}}\pm t\_{m+n-2, \alpha/2} \cdot s\_p
-\sqrt{\frac{1}{n} + \frac{1}{m}}\\) if \\(\sigma\\) is unknown.
-
-
-#### Unequal Variance {#unequal-variance}
-
-\\(Z := \frac{\bar{X} - \bar{Y} - (\mu\_X -
-\mu\_Y)}{{\sqrt{\frac{\sigma\_X^2}{n} + \frac{\sigma\_Y^2}{m}}}}\\)
-
-\\(t := \frac{\bar{X} - \bar{Y} - (\mu\_X -
-\mu\_Y)}{{\sqrt{\frac{s\_X^2}{n} + \frac{s\_Y^2}{m}}}}\\), with \\(df =
-\frac{(a+b)^2}{\frac{a^2}{n-1} + \frac{b^2}{m-1}}\\) where \\(a =
-\frac{s\_X^2}{n}\\) and \\(b = \frac{s\_Y^2}{m}\\)
+    \\(t := \frac{\bar{X} - \bar{Y} - (\mu\_X -
+    \mu\_Y)}{{\sqrt{\frac{s\_X^2}{n} + \frac{s\_Y^2}{m}}}}\\), with \\(df =
+    \frac{(a+b)^2}{\frac{a^2}{n-1} + \frac{b^2}{m-1}}\\) where \\(a =
+    \frac{s\_X^2}{n}\\) and \\(b = \frac{s\_Y^2}{m}\\)
 
 
 ### Mann-Whitney Test {#mann-whitney-test}

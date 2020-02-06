@@ -1,13 +1,15 @@
 +++
 title = "Single Layer XOR"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:38:26+08:00
+lastmod = 2020-02-06T12:38:38+08:00
 draft = false
-math = true
 +++
 
 paper
 : <https://science.sciencemag.org/content/367/6473/83>
+
+tags
+: [§neuroscience]({{< relref "neuroscience" >}}), [§machine\_learning]({{< relref "machine_learning" >}})
 
 
 ## Finding {#finding}

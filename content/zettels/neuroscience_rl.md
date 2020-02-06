@@ -1,10 +1,12 @@
 +++
 title = "Neuroscience and Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-04T10:57:47+08:00
+lastmod = 2020-02-06T12:18:34+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}}), [§neuroscience]({{< relref "neuroscience" >}})
 
 Reinforcement learning is similar to how humans learn:
 

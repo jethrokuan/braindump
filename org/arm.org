@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: ARM Assembly Programming
 
+- tags :: [[file:operating_systems.org][§operating_systems]], [[file:prog_lang.org][§prog_lang]]
+
 * Background
 
 In a /machine language/, instructions are encoded as 0's and 1's. This

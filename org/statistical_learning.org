@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Statistical Learning
 
+- tags :: [[file:machine_learning.org][§machine_learning]], [[file:statistics.org][§statistics]]
+
 * Introduction
 Statistical learning refers to a vast set of tools for /understanding
 data/. It involves building a statistical model for predicting, or

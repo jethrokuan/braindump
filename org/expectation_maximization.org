@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Expectation Maximization and Mixture Models
-#+HUGO_TAGS: machine-learning
+
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
 
 * Introduction
 

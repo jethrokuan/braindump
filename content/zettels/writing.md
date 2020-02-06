@@ -1,7 +1,7 @@
 +++
 title = "Writing"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:16:39+08:00
+lastmod = 2020-02-06T12:17:24+08:00
 draft = false
 +++
 

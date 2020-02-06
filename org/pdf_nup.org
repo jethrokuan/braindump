@@ -2,6 +2,8 @@
 #+HUGO_SECTION: zettels
 #+TITLE: PDF Nup
 
+- tags :: [[file:pdf_tools.org][§pdf_tools]]
+
 This puts several pages of a PDF together. ~2x1~ is a particularly
 common combination.
 

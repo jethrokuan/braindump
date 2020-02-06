@@ -1,12 +1,15 @@
 +++
 title = "Meta Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T17:06:49+08:00
+lastmod = 2020-02-06T12:26:05+08:00
 draft = false
-math = true
 +++
 
--   Learning to learn: learn an update rule from related tasks
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}}), [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
+
+
+Learning to learn: learn an update rule from related tasks
 
 For example, tasks are related through a low-dimensional embedding.
 

@@ -1,5 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Deep Learning Tools
+
+- tags :: [[file:deep_learning.org][§deep_learning]]
+
 * Tensorflow
 ** What is Tensorflow
 TensorFlow is open-source software library for numerical computation.

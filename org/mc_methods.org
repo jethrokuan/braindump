@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Monte Carlo Methods
 
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]], [[file:pgm.org][§pgm]]
+
 Monte Carlo methods make use of random numbers to solve the following
 problems:
 

@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Jensen's Inequality
 
+- tags :: [[file:information_theory.org][§information_theory]]
+
 If $f$ is a convex function, and $x$ is a random variable then:
 
 \begin{equation}

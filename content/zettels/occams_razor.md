@@ -1,10 +1,12 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-11T16:46:23+08:00
+lastmod = 2020-02-06T12:28:53+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}}), [§information\_theory]({{< relref "information_theory" >}})
 
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian

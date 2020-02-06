@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: I-Diagrams
 
+- tags :: [[file:information_theory.org][§information_theory]]
+
 If we view random variables as sets, different information theory
 concepts can be represented using an information diagram.
 

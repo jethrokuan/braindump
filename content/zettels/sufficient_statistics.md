@@ -1,9 +1,12 @@
 +++
 title = "Sufficient Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-22T19:06:14+08:00
+lastmod = 2020-02-06T12:31:59+08:00
 draft = false
 +++
+
+tags
+: [§exponential\_family]({{< relref "exponential_family" >}}), [§statistics]({{< relref "statistics" >}})
 
 A statistic \\(t\\) is called a sufficient statistic for \\(\theta\\) for a
 given \\(\boldsymbol{y}\\) if:

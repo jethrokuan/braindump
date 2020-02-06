@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Policy Gradients
 
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
+
 * Key Idea
 
 The objective is:

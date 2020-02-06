@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Normalizing Flows
 
-- tags :: [[file:machine_learning.org][§machine_learning]]
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
 
 Normalizing flows provide a way of constructing probability
 distributions over continuous random variables. In flow-based

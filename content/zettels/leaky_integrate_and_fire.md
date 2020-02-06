@@ -1,10 +1,12 @@
 +++
 title = "Leaky Integrate-And-Fire"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T13:27:12+08:00
+lastmod = 2020-02-06T12:17:45+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})
 
 A Leaky Integrate-and-Fire neuron at layer \\(l\\) and index \\(i\\) can be
 described in differential form as:

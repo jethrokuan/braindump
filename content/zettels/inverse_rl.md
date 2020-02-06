@@ -1,10 +1,12 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-25T17:33:32+08:00
+lastmod = 2020-02-06T12:22:52+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
 
 Standard [§imitation\_learning]({{< relref "imitation_learning" >}}) copies actions performed by the expert,
 and do not reason about the outcomes of the actions. However, humans
@@ -84,7 +86,7 @@ first term is estimated with expert samples, and the second with the
 soft optimal policy under current reward.
 
 
-## MaxEntropy Inverse RL <a id="78d223b81b3f438213caf1f4b12184f1" href="#ziebart2008_maxentrl" title="Ziebart, Maas, Bagnell \&amp; Dey, Maximum Entropy Inverse Reinforcement Learning., 1433-1438, in edited by (2008)">(Ziebart et al., 2008)</a> {#maxentropy-inverse-rl}
+## MaxEntropy Inverse RL <a id="78d223b81b3f438213caf1f4b12184f1" href="#ziebart2008_maxentrl">(Ziebart et al., 2008)</a> {#maxentropy-inverse-rl}
 
 1.  Given \\(\psi\\), compute [backward message]({{< relref "control_as_inference" >}}) \\(\beta(s\_t, a\_t)\\)
 2.  Given \\(\psi\\), compute [forward message]({{< relref "control_as_inference" >}}) \\(\alpha(s\_t)\\)
@@ -136,12 +138,12 @@ w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 
 ## Papers {#papers}
 
--   <a id="8b56bcc6746b685f5684ccf1402753fc" href="#abbeel2004apprenticeship" title="Abbeel \&amp; Ng, Apprenticeship learning via inverse reinforcement learning, 1, in in: {Proceedings of the twenty-first international conference on Machine learning}, edited by (2004)">(Abbeel \& Ng, 2004)</a>
--   <a id="d878ab6d38d5e3ab2f9ab484b7c27875" href="#ratliff2006maximum" title="Ratliff, Bagnell \&amp; Zinkevich, Maximum margin planning, 729--736, in in: {Proceedings of the 23rd international conference on Machine learning}, edited by (2006)">(Ratliff et al., 2006)</a>
+-   <a id="8b56bcc6746b685f5684ccf1402753fc" href="#abbeel2004apprenticeship">(Abbeel \& Ng, 2004)</a>
+-   <a id="d878ab6d38d5e3ab2f9ab484b7c27875" href="#ratliff2006maximum">(Ratliff et al., 2006)</a>
 
 # Bibliography
-<a id="ziebart2008_maxentrl"></a>Ziebart, B., Maas, A., Bagnell, J., & Dey, A., *Maximum Entropy Inverse Reinforcement Learning.*, In ,  (pp. 1433–1438) (2008). : . [↩](#78d223b81b3f438213caf1f4b12184f1)
+<a id="ziebart2008_maxentrl" target="_blank">Ziebart, B., Maas, A., Bagnell, J., & Dey, A., *Maximum Entropy Inverse Reinforcement Learning.*, In ,  (pp. 1433–1438) (2008). : .</a> [↩](#78d223b81b3f438213caf1f4b12184f1)
 
-<a id="abbeel2004apprenticeship"></a>Abbeel, P., & Ng, A. Y., *Apprenticeship learning via inverse reinforcement learning*, In , Proceedings of the twenty-first international conference on Machine learning (pp. 1) (2004). : . [↩](#8b56bcc6746b685f5684ccf1402753fc)
+<a id="abbeel2004apprenticeship" target="_blank">Abbeel, P., & Ng, A. Y., *Apprenticeship learning via inverse reinforcement learning*, In , Proceedings of the twenty-first international conference on Machine learning (pp. 1) (2004). : .</a> [↩](#8b56bcc6746b685f5684ccf1402753fc)
 
-<a id="ratliff2006maximum"></a>Ratliff, N. D., Bagnell, J. A., & Zinkevich, M. A., *Maximum margin planning*, In , Proceedings of the 23rd international conference on Machine learning (pp. 729–736) (2006). : . [↩](#d878ab6d38d5e3ab2f9ab484b7c27875)
+<a id="ratliff2006maximum" target="_blank">Ratliff, N. D., Bagnell, J. A., & Zinkevich, M. A., *Maximum margin planning*, In , Proceedings of the 23rd international conference on Machine learning (pp. 729–736) (2006). : .</a> [↩](#d878ab6d38d5e3ab2f9ab484b7c27875)

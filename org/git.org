@@ -1,4 +1,7 @@
 #+TITLE: Git
+
+- tags :: [[file:unix.org][§unix]]
+
 * Git Internals
 ** Content of .git folder
 Git stores snapshots (exact content of the files) at the point of a commit.

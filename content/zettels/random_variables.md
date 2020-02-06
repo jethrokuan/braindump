@@ -1,11 +1,14 @@
 +++
 title = "Random Variables"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-17T14:20:12+08:00
+lastmod = 2020-02-06T12:27:00+08:00
 tags = ["statistics"]
 draft = false
-math = true
 +++
+
+tags
+: [§statistics]({{< relref "statistics" >}})
+
 
 ## Introduction {#introduction}
 

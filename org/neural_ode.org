@@ -1,8 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+HUGO_SECTION: papers
 #+TITLE: Neural Ordinary Differential Equations (Review)
-#+HUGO_TAGS: machine-learning deep-learning
 #+OPTIONS: toc:nil
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]], [[file:stochastic_processes.org][§stochastic_processes]]
 
 bibliographystyle:unsrt
 

@@ -1,10 +1,12 @@
 +++
 title = "Jensen's Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T15:16:16+08:00
+lastmod = 2020-02-06T12:28:00+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§information\_theory]({{< relref "information_theory" >}})
 
 If \\(f\\) is a convex function, and \\(x\\) is a random variable then:
 

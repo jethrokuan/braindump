@@ -1,10 +1,13 @@
 +++
 title = "ARM Assembly Programming"
 author = ["Jethro Kuan"]
-lastmod = 2019-10-08T15:21:14+08:00
+lastmod = 2020-02-06T12:31:35+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§operating\_systems]({{< relref "operating_systems" >}}), [§prog\_lang]({{< relref "prog_lang" >}})
+
 
 ## Background {#background}
 

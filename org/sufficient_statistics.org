@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Sufficient Statistics
 
+- tags :: [[file:exponential_family.org][§exponential_family]], [[file:statistics.org][§statistics]]
+
 A statistic $t$ is called a sufficient statistic for $\theta$ for a
 given $\boldsymbol{y}$ if:
 

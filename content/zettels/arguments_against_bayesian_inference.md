@@ -1,10 +1,12 @@
 +++
 title = "Arguments Against Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-02T14:45:51+08:00
+lastmod = 2020-02-06T12:33:47+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§bayesian\_inference]({{< relref "bayesian_inference" >}})
 
 Whereas frequentist methods derive solutions via inventing estimators
 (a multitude of them may exist) and computing a likelihood function,

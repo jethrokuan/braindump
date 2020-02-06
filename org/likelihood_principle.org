@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Likelihood Principle
 
+- tags :: [[file:machine_learning.org][§machine_learning]]
+
 Given a generative model for data $d$ given parameters
 $\mathrm{\theta}$, $P(d|\mathrm{\theta})$, and having observed a
 particular outcome $d_1$, all inferences and predictions should depend

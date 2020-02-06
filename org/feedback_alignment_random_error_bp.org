@@ -1,6 +1,9 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Feedback Alignment and Random Error Backpropagation
 
+- tag :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]], [[file:spiking_neural_networks.org][§spiking_neural_networks]],
+  [[file:neuroscience.org][§neuroscience]]
+
 Backpropagation is not biologically plausible because it the error
 signals to update the weights of the hidden layers need to be
 propagated back from the top layer.

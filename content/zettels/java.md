@@ -1,10 +1,13 @@
 +++
 title = "Java"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:49+08:00
+lastmod = 2020-02-06T12:31:04+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§prog\_lang]({{< relref "prog_lang" >}})
+
 
 ## Hash Table {#hash-table}
 

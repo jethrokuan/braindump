@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Regression
-#+HUGO_TAGS: statistics
+
+- tags :: [[file:statistics.org][§statistics]], [[file:bayesian_statistics.org][§bayesian_statistics]]
 
 * Introduction
 

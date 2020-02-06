@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Occam's Razor
 
+- tags :: [[file:machine_learning.org][§machine_learning]], [[file:information_theory.org][§information_theory]]
+
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian
 probabilistic inference automatically embodies this principle,

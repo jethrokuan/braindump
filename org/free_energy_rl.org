@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Free-Energy Reinforcement Learning
 
+- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]]
+
 This is a framework proposed by Sallans and Hinton in 2004
 cite:sallans04a_ferl. The key insight is that a product of experts
 allows for model parameters to be learnt efficiently, because values

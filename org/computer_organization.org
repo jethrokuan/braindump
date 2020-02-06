@@ -1,5 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Computer Organization
+
+- tags :: [[file:operating_systems.org][§operating_systems]]
+
 * Pipelining
 - Increases throughput, but not latency
 ** Structural Hazard

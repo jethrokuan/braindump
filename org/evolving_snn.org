@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Evolving Spiking Neural Networks
 
+- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+
 Early eSNN architectures use the [[file:leaky_integrate_and_fire.org][§leaky_integrate_and_fire]] model,
 and rank-order encoding. eSNNs can be used for classification. Given
 an input sample, the spike train is propagated through the SNN,

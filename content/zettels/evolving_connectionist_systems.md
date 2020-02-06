@@ -1,9 +1,8 @@
 +++
 title = "Evolving Connectionist Systems"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-06T18:19:27+08:00
+lastmod = 2020-02-06T12:17:57+08:00
 draft = false
-math = true
 +++
 
 Evolving Connectionist Systems (ECoS) learn local models from data

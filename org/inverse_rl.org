@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Inverse Reinforcement Learning
 
+- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]]
+
 Standard [[file:imitation_learning.org][§imitation_learning]] copies actions performed by the expert,
 and do not reason about the outcomes of the actions. However, humans
 copy the /intent/ of the actions, which result in vastly different

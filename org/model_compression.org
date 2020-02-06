@@ -1,24 +1,4 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Model Compression
 
-
-*  And the Bit Goes Down: Revisiting the Quantization of Neural Networks cite:stock19_and_bit_goes_down
-
-This method minimizes the loss reconstruction error for in-domain
-inputs, and does not require any labelled data.
-
-[[file:images/model_compression/screenshot_2019-08-02_13-07-02.png]]
-
-This method exploits the high correlation in the convolutions in
-ResNet-like architectures by the use of product quantization (PQ). The
-approach here focuses on reconstructing the activations, and not the
-weights. This results in better in-domain reconstruction, and does not
-require any supervision.
-
-Vector Quantization (VQ) and Product Quantization (PQ) decompose the
-high-dimensional space into a cartesian product of subspaces that are
-quantized separately. These are typically studied under the context of
-nearest neighbour search.
-
-* 
-bibliography:biblio/model_compression.bib
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]

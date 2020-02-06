@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Probability Theory
-#+HUGO_TAGS: statistics
+
+- tags :: [[file:statistics.org][§statistics]]
 
 * Setup
 

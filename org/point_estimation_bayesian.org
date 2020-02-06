@@ -2,6 +2,8 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Point Estimation in Bayesian Statistics
 
+- tags :: [[file:bayesian_statistics.org][§bayesian_statistics]]
+
 Suppose we have a posterior distribution over parameters $\theta$.
 Sometimes, we would like to obtain a point estimate $\hat{\theta}$ of
 $\theta$.

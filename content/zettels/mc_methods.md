@@ -1,10 +1,12 @@
 +++
 title = "Monte Carlo Methods"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T23:07:01+08:00
+lastmod = 2020-02-06T12:24:57+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}}), [§pgm]({{< relref "pgm" >}})
 
 Monte Carlo methods make use of random numbers to solve the following
 problems:

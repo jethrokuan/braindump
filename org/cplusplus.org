@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: C++
-#+HUGO_TAGS: proglang c++
+
+- tags :: [[file:prog_lang.org][§prog_lang]]
 
 * What is C++
 C++ is a compiled language. For a program to run, its source text has

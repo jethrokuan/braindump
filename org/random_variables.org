@@ -2,6 +2,8 @@
 #+TITLE: Random Variables
 #+HUGO_TAGS: statistics
 
+- tags :: [[file:statistics.org][§statistics]]
+
 * Introduction
 It frequently occurs that in performing an experiment, we are mainly
 interested in some function of the outcome rather than the outcome

@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Neuroscience and Reinforcement Learning
 
+- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]], [[file:neuroscience.org][§neuroscience]]
+
 Reinforcement learning is similar to how humans learn:
 
 - Learning by trial-and-error

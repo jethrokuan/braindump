@@ -1,10 +1,13 @@
 +++
 title = "Feedback Alignment and Random Error Backpropagation"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-15T15:51:03+08:00
+lastmod = 2020-02-06T12:27:38+08:00
 draft = false
-math = true
 +++
+
+tag
+: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}}), [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}}),
+    [§neuroscience]({{< relref "neuroscience" >}})
 
 Backpropagation is not biologically plausible because it the error
 signals to update the weights of the hidden layers need to be

@@ -1,10 +1,13 @@
 +++
 title = "System Design"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:28+08:00
+lastmod = 2020-02-06T12:20:05+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§coding\_interview]({{< relref "coding_interview" >}}), [§software\_engineering]({{< relref "software_engineering" >}})
+
 
 ## Basics {#basics}
 
@@ -167,19 +170,16 @@ If adding new item, and it is full, remove tail of list,
 -   shortenURL(url)
 -   expandURL(hash)
 
+-    Computing the Hash
 
-#### Computing the Hash {#computing-the-hash}
+    convert\_to\_base\_62(md5(url + salt))[:6]
 
-convert\_to\_base\_62(md5(url + salt))[:6]
+-    Stateless application servers
 
+    load balancers ensure application is available when a server dies, and
+    client knows which server to talk to
 
-#### Stateless application servers {#stateless-application-servers}
-
-load balancers ensure application is available when a server dies, and
-client knows which server to talk to
-
-
-####  {#}
+-
 
 
 ## Implementing Search {#implementing-search}

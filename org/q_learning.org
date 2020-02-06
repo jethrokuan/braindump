@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Q-Learning 
 
+- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
+
 The actor-critic algorithm ([[file:actor_critic.org][§actor_critic]]) fits 2 function
 approximators: one for the policy, and one for the value function. A
 key problem with the policy gradient method is the high variance in

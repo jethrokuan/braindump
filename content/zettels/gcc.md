@@ -1,11 +1,13 @@
 +++
 title = "GCC"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-09T22:40:12+08:00
-tags = ["compilers"]
+lastmod = 2020-02-06T12:40:13+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§compilers]({{< relref "compilers" >}}), [§cplusplus]({{< relref "cplusplus" >}}), [§c\_lang]({{< relref "c_lang" >}})
+
 
 ## Building GCC {#building-gcc}
 

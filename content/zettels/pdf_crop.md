@@ -1,9 +1,12 @@
 +++
 title = "PDF Cropping"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-04T22:53:05+08:00
+lastmod = 2020-02-06T12:29:32+08:00
 draft = false
 +++
+
+tags
+: [§pdf\_tools]({{< relref "pdf_tools" >}})
 
 Cropping PDFs can be done through `pdfcrop`. `pdfcrop` only takes a
 single argument, use a bash function to batch crop:

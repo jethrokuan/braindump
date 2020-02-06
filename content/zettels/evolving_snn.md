@@ -1,10 +1,12 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T13:20:40+08:00
+lastmod = 2020-02-06T12:17:53+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})
 
 Early eSNN architectures use the [§leaky\_integrate\_and\_fire]({{< relref "leaky_integrate_and_fire" >}}) model,
 and rank-order encoding. eSNNs can be used for classification. Given

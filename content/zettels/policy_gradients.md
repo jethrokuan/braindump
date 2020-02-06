@@ -1,10 +1,13 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-19T14:58:16+08:00
+lastmod = 2020-02-06T12:21:55+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}})
+
 
 ## Key Idea {#key-idea}
 
@@ -180,7 +183,7 @@ improve the policy, much like policy iteration which evaluates
 \end{align}
 
 We have an expectation under \\(\theta'\\), but samples under \\(\theta\\). We
-use marginals representation, and importance sampling to remove the
+use marginals representation, and [§importance\_sampling]({{< relref "importance_sampling" >}}) to remove the
 expectation under \\(\pi\_\theta'\\), but can we ignore the other
 distribution mismatch?
 

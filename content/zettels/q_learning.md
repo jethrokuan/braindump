@@ -1,10 +1,12 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T13:12:38+08:00
+lastmod = 2020-02-06T12:21:44+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}})
 
 The actor-critic algorithm ([§actor\_critic]({{< relref "actor_critic" >}})) fits 2 function
 approximators: one for the policy, and one for the value function. A

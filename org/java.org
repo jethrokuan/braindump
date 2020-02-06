@@ -1,5 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Java
+
+- tags :: [[file:prog_lang.org][§prog_lang]]
+
 * Hash Table
 Default java implementation:
 1. =hashCode= returns memory location of the object

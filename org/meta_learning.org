@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Meta Learning
 
+- tags :: [[file:machine_learning.org][§machine_learning]], [[file:reinforcement_learning.org][§reinforcement_learning]]
+
 - Learning to learn: learn an update rule from related tasks
 
 For example, tasks are related through a low-dimensional embedding.

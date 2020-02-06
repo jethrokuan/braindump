@@ -1,10 +1,13 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-18T15:23:52+08:00
+lastmod = 2020-02-06T12:34:15+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning]({{< relref "machine_learning" >}}), [§statistics]({{< relref "statistics" >}})
+
 
 ## Introduction {#introduction}
 
@@ -65,7 +68,7 @@ example of a non-parametric model is the [thin-plate spline](https://en.wikipedi
 
 ### The Trade-Off Between Prediction Accuracy and Model Interpretability {#the-trade-off-between-prediction-accuracy-and-model-interpretability}
 
-{{< figure src="/ox-hugo/screenshot_2019-01-07_16-19-48.png" caption="Figure 1: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. <sup id=\"47f776a94d6687b2efebf468b22650cb\"><a href=\"#james2013introduction\" title=\"James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).\">(James, 2013)</a></sup>" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-07_16-19-48.png" caption="Figure 1: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. <a id=\"47f776a94d6687b2efebf468b22650cb\" href=\"#james2013introduction\">(James et al., 2013)</a>" >}}
 
 There are several reasons to choose a restrictive model over a
 flexible approach. First, if the interest is mainly in inference,
@@ -203,7 +206,7 @@ The learner's input consists of:
 
     \begin{equation} \label{eqn:dfn:error}
       L\_{\mathcal{D}, f} (h) \overset{\mathrm{def}}{=} \mathop{P}\_{x \sim \mathcal{D}} \left[ h(x) \ne f(x) \right] \overset{\mathrm{def}}{=}
-    \mathcal{D} (\{ x: h(x) \ne f(x) \} )
+    \mathcal{D} (\\{ x: h(x) \ne f(x) \\} )
     \end{equation}
 
 The learner is blind to the underlying probability distribution
@@ -489,10 +492,10 @@ make some assumptions about the form of the decision boundary.
 
 ## Reference Textbooks {#reference-textbooks}
 
-1.  An introduction to statistical learning <sup id="47f776a94d6687b2efebf468b22650cb"><a href="#james2013introduction" title="James, Witten, Hastie \&amp; Tibshirani, An introduction to statistical learning, Springer (2013).">(James, 2013)</a></sup>
-2.  Understanding Machine Learning <sup id="63e0a08c15f1a264659ec7862354748b"><a href="#Shalev-Shwartz:2014:UML:2621980" title="Shalev-Shwartz \&amp; Ben-David, Understanding Machine Learning: From Theory to Algorithms, Cambridge University Press (2014).">(Shalev-Shwartz, 2014)</a></sup>
+1.  An introduction to statistical learning <a id="47f776a94d6687b2efebf468b22650cb" href="#james2013introduction">(James et al., 2013)</a>
+2.  Understanding Machine Learning <a id="63e0a08c15f1a264659ec7862354748b" href="#Shalev-Shwartz:2014:UML:2621980">(Shalev-Shwartz \& Ben-David, 2014)</a>
 
 # Bibliography
-<a id="james2013introduction"></a>James, G., Witten, D., Hastie, T., & Tibshirani, R., *An introduction to statistical learning* (2013), : Springer. [↩](#47f776a94d6687b2efebf468b22650cb)
+<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., *An introduction to statistical learning* (2013), : Springer.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
 
-<a id="Shalev-Shwartz:2014:UML:2621980"></a>Shalev-Shwartz, S., & Ben-David, S., *Understanding machine learning: from theory to algorithms* (2014), New York, NY, USA: Cambridge University Press. [↩](#63e0a08c15f1a264659ec7862354748b)
+<a id="Shalev-Shwartz:2014:UML:2621980" target="_blank">Shalev-Shwartz, S., & Ben-David, S., *Understanding machine learning: from theory to algorithms* (2014), New York, NY, USA: Cambridge University Press.</a> [↩](#63e0a08c15f1a264659ec7862354748b)

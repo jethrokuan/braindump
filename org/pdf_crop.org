@@ -2,6 +2,8 @@
 #+HUGO_SECTION: zettels
 #+TITLE: PDF Cropping
 
+- tags :: [[file:pdf_tools.org][§pdf_tools]]
+
 Cropping PDFs can be done through ~pdfcrop~. ~pdfcrop~ only takes a
 single argument, use a bash function to batch crop:
 

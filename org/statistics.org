@@ -1,6 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Statistics
 #+AUTHOR: Jethro Kuan
+
 * Basic Properties
 1. $E(X) = \sum x p(x)$
 2. $Var(X) = \sum (x-\mu)^2f(x)$

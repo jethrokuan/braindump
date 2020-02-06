@@ -5,6 +5,8 @@
 #+AUTHOR: Jethro Kuan
 #+EMAIL: jethrokuan95@gmail.com
 
+- tags :: [[file:linux.org][§linux]], [[file:operating_systems.org][§operating_systems]]
+
 * Why Containers
   :PROPERTIES:
   :FILL:     images/docker/cargo.jpg
