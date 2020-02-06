@@ -1,7 +1,7 @@
 +++
 title = "ARM Assembly Programming"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:31:35+08:00
+lastmod = 2020-02-06T16:14:04+08:00
 draft = false
 +++
 
@@ -40,6 +40,3 @@ called the _instruction set architecture (ISA)_.
 
 
 ## Arm {#arm}
-
-
-##  {#}
