@@ -1,0 +1,13 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Spaced Repetition
+
+- tags :: [[file:productivity.org][§productivity]]
+
+#+begin_quote
+what srs does is makes it easier to reconstruct a graph on the fly, by
+memorizing certain nodes once you have certain node density, you can
+do a lossless reconstruction
+
+- Siaw Young Lau (02/08/2020)
+#+end_quote

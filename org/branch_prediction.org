@@ -1,0 +1,8 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Branch Prediction
+
+- tags :: [[file:operating_systems.org][§operating_systems]], [[file:computer_organization.org][§computer_organization]]
+
+* TODO https://comparch.net/2013/06/30/why-tage-is-the-best/
+- https://github.com/sjdesai16/tage
