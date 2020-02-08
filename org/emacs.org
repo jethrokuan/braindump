@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Emacs
+
+- tags :: [[file:emacs_lisp.org][§emacs_lisp]]

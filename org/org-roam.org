@@ -1,0 +1,9 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Org-Roam
+- tags :: [[file:emacs.org][§emacs]], [[file:org_mode.org][§org_mode]]
+* Media
+
+- [[https://blog.jethro.dev/posts/introducing_org_roam/][Introducing Org Roam - Jethro Kuan]]
+- [[https://www.baty.net/2020/org-roam/][Org-roam - Jack Baty's weblog]]
+- [[https://www.rousette.org.uk/archives/further-adventures-in-org-mode/][BSAG » Further adventures in org-mode]] 

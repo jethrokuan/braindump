@@ -8,3 +8,4 @@
 - ~sudo~ needs to resolve hostnames because the sudoers file specifies
   hostnames in the rules. Hence sudo requires both loopback and
   "real". ([[https://unix.stackexchange.com/questions/218145/why-does-sudo-need-the-loopback-interface][Source]])
+- ~pkexec~ lets authorized users execute programs as another user.

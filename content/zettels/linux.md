@@ -1,7 +1,7 @@
 +++
 title = "Linux"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-08T01:55:17+08:00
+lastmod = 2020-02-09T02:06:39+08:00
 draft = false
 +++
 
@@ -11,3 +11,4 @@ draft = false
 -   `sudo` needs to resolve hostnames because the sudoers file specifies
     hostnames in the rules. Hence sudo requires both loopback and
     "real". ([Source](https://unix.stackexchange.com/questions/218145/why-does-sudo-need-the-loopback-interface))
+-   `pkexec` lets authorized users execute programs as another user.
