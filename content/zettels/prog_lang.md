@@ -1,6 +1,6 @@
 +++
-title = "Prog Lang"
+title = "Progamming Languages"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-07T13:39:12+08:00
+lastmod = 2020-02-09T03:20:18+08:00
 draft = false
 +++

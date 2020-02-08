@@ -4,4 +4,4 @@
 
 - tags :: [[file:prog_lang.org][§prog_lang]]
 
-* 
+- [[https://github.com/chrisdone/elisp-guide][GitHub - chrisdone/elisp-guide]]
