@@ -1,7 +1,10 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
 #+TITLE: Org-Roam
-- tags :: [[file:emacs.org][§emacs]], [[file:org_mode.org][§org_mode]]
+
+Org-roam is a package I built trying to emulate [[https://roamresearch.org/][Roam Research]] in
+[[file:emacs.org][§emacs]] and [[file:org_mode.org][§org_mode]].
+
 * Media
 
 - [[https://blog.jethro.dev/posts/introducing_org_roam/][Introducing Org Roam - Jethro Kuan]]

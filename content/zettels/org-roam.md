@@ -1,12 +1,12 @@
 +++
 title = "Org-Roam"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-09T03:10:32+08:00
+lastmod = 2020-02-09T15:37:14+08:00
 draft = false
 +++
 
-tags
-: [§emacs]({{< relref "emacs" >}}), [§org\_mode]({{< relref "org_mode" >}})
+Org-roam is a package I built trying to emulate [Roam Research](https://roamresearch.org/) in
+[§emacs]({{< relref "emacs" >}}) and [§org\_mode]({{< relref "org_mode" >}}).
 
 
 ## Media {#media}
