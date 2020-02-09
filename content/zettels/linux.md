@@ -1,7 +1,7 @@
 +++
 title = "Linux"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-09T03:25:57+08:00
+lastmod = 2020-02-09T20:09:31+08:00
 draft = false
 +++
 
