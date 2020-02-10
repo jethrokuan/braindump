@@ -1,14 +1,17 @@
 +++
 title = "Extended Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T01:45:59+08:00
+lastmod = 2020-02-10T14:31:28+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Bayes Filter]({{< relref "bayes_filter" >}}), [Kalman Filter]({{< relref "kalman_filter" >}}), [Information Filter]({{< relref "information_filter" >}})
+
 
 ## Key Idea {#key-idea}
 
-Remove linearity assumption from the [§kalman\_filter]({{< relref "kalman_filter" >}}):
+Remove linearity assumption from the [Kalman Filter]({{< relref "kalman_filter" >}}):
 
 \begin{align}
   x\_t &= g(u\_t, x\_{t-1}) + \epsilon\_t \\\\\\
@@ -82,10 +85,3 @@ probes the function to be linearized at selected points, and
 calculates a linearized approximation based on the outcomes of the
 probes. Moments matching linearizes while preserving the true mean and
 true covariance of the posterior distribution.
-
-
-## Related {#related}
-
--   [§bayes\_filter]({{< relref "bayes_filter" >}})
--   [§kalman\_filter]({{< relref "kalman_filter" >}})
--   [§information\_filter]({{< relref "information_filter" >}})

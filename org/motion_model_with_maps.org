@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Motion Model With Maps
 
+- tags :: [[file:velocity_motion_model.org][Velocity Motion Model]], [[file:odometry_motion_model.org][Odometry Motion Model]]
+
 Often, we are given map $m$ of the environment, giving us further
 information about the robot pose $x_t$. In general,
 
@@ -16,7 +18,3 @@ small.
 \begin{equation}
   p\left(x_{t} | u_{t}, x_{t-1}, m\right)=\eta p\left(x_{t} | u_{t}, x_{t-1}\right) p\left(x_{t} | m\right)
 \end{equation}
-
-* Related
-- [[file:velocity_motion_model.org][§velocity_motion_model]]
-- [[file:odometry_motion_model.org][§odometry_motion_model]]

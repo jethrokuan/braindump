@@ -1,10 +1,13 @@
 +++
 title = "Entropy"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T15:16:38+08:00
+lastmod = 2020-02-10T14:33:36+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Information Theory]({{< relref "information_theory" >}}), [Gibbs' Inequality]({{< relref "gibbs_inequality" >}})
+
 
 ## Definitions {#definitions}
 
@@ -39,9 +42,3 @@ Entropy is additive if the ensembles are independent:
 \end{equation}
 
 Entropy is _decomposable_.
-
-
-## Related {#related}
-
--   [§gibbs\_inequality]({{< relref "gibbs_inequality" >}})
--   [§information\_theory]({{< relref "information_theory" >}})

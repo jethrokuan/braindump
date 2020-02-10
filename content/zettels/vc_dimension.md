@@ -1,14 +1,14 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-28T11:09:08+08:00
+lastmod = 2020-02-10T14:31:00+08:00
 draft = false
-math = true
 +++
 
-Related posts: [Bias-Complexity Tradeoff]({{< relref "bias_complexity_tradeoff" >}}), [PAC Learning]({{< relref "pac_learning" >}})
+tags
+: [Bias-Complexity Tradeoff]({{< relref "bias_complexity_tradeoff" >}}), [PAC Learning]({{< relref "pac_learning" >}})
 
-<sup id="acdb3458f18ecb92e5037975d277d0fb"><a href="#shalev2014understanding" title="Shalev-Shwartz \&amp; Ben-David, Understanding machine learning: From theory to algorithms, Cambridge university press (2014).">(Shalev-Shwartz \& Ben-David, 2014)</a></sup>
+<a id="acdb3458f18ecb92e5037975d277d0fb" href="#shalev2014understanding">(Shalev-Shwartz \& Ben-David, 2014)</a>
 
 What makes one class learnable and another unlearnable? The family of
 learnable classes in the setup of binary valued classification with
@@ -160,4 +160,4 @@ In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\
 </div>
 
 # Bibliography
-<a id="shalev2014understanding"></a>Shalev-Shwartz, S., & Ben-David, S., *Understanding machine learning: from theory to algorithms* (2014), : Cambridge university press. [↩](#acdb3458f18ecb92e5037975d277d0fb)
+<a id="shalev2014understanding" target="_blank">Shalev-Shwartz, S., & Ben-David, S., *Understanding machine learning: from theory to algorithms* (2014), : Cambridge university press.</a> [↩](#acdb3458f18ecb92e5037975d277d0fb)

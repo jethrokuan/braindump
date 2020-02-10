@@ -1,9 +1,8 @@
 +++
-title = "Gibb's Inequality"
+title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-01T15:15:17+08:00
+lastmod = 2020-02-10T14:33:22+08:00
 draft = false
-math = true
 +++
 
 The relative entropy or [§kl\_divergence]({{< relref "kl_divergence" >}}) between two probability

@@ -1,10 +1,12 @@
 +++
 title = "Velocity Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T21:49:28+08:00
+lastmod = 2020-02-10T14:29:30+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Odometry Motion Model]({{< relref "odometry_motion_model" >}}), [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})
 
 The velocity motion model assumes that the robot is controlled through
 2 velocities: rotational and translational velocity:
@@ -20,9 +22,3 @@ drawn from the error parameters of the kinematic motion model.
 \begin{equation}
   \left(\begin{array}{c}{\hat{v}} \\ {\hat{\omega}}\end{array}\right)=\left(\begin{array}{c}{v} \\ {\omega}\end{array}\right)+\left(\begin{array}{c}{\varepsilon\_{\alpha\_{1}|v|+\alpha\_{2}|\omega|}} \\ {\varepsilon\_{\alpha\_{3}|v|+\alpha\_{4}|\omega|}}\end{array}\right)
 \end{equation}
-
-
-## Related {#related}
-
--   [§odometry\_motion\_model]({{< relref "odometry_motion_model" >}})
--   [§motion\_model\_with\_maps]({{< relref "motion_model_with_maps" >}})

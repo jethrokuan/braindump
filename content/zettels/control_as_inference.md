@@ -1,10 +1,12 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-24T20:20:05+08:00
+lastmod = 2020-02-10T14:30:40+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Optimal Control and Planning]({{< relref "optimal_control" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_19-20-19_.png" caption="Figure 1: PGM for decision making for the first 3 time-steps" >}}
 
@@ -135,18 +137,12 @@ same derivations as [§hidden\_markov\_model]({{< relref "hidden_markov_model" >
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-18-55_.png" >}}
 
-For more, see <a id="bf624e2cac020327e631eac77ec9f4e9" href="#levine18_reinf_learn_contr_as_probab_infer" title="Levine, Reinforcement Learning and Control As Probabilistic  Inference: Tutorial and Review, {CoRR}, v(), (2018).">(Levine, 2018)</a>.
+For more, see <a id="bf624e2cac020327e631eac77ec9f4e9" href="#levine18_reinf_learn_contr_as_probab_infer">(Levine, 2018)</a>.
 
 
 ## Resources {#resources}
 
 -   [CS285 Fa19 10/16/19 - YouTube](https://www.youtube.com/watch?v=Pei6G8%5F3r8I&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=13)
 
-
-## Related {#related}
-
--   [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
--   [§optimal\_control]({{< relref "optimal_control" >}})
-
 # Bibliography
-<a id="levine18_reinf_learn_contr_as_probab_infer"></a>Levine, S., *Reinforcement learning and control as probabilistic inference: tutorial and review*, CoRR, *()*,  (2018).  [↩](#bf624e2cac020327e631eac77ec9f4e9)
+<a id="levine18_reinf_learn_contr_as_probab_infer" target="_blank">Levine, S., *Reinforcement learning and control as probabilistic inference: tutorial and review*, CoRR, *()*,  (2018). </a> [↩](#bf624e2cac020327e631eac77ec9f4e9)

@@ -1,5 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
-#+TITLE: Reinforcement Learning
+#+TITLE: Reinforcement Learning ⭐
 #+HUGO_TAGS: machine-learning
 bibliographystyle:unsrt
 

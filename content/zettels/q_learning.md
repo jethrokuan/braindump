@@ -1,12 +1,12 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:14:45+08:00
+lastmod = 2020-02-10T14:32:40+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}})
+: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Temporal Difference Learning]({{< relref "td_learning" >}})
 
 The [Actor-Critic]({{< relref "actor_critic" >}}) algorithm fits 2 function approximators: one for the
 policy, and one for the value function. A key problem with the policy
@@ -335,11 +335,6 @@ triad".
 In the presence of all three, learning is unstable. DQN is the first
 algorithm that stabilized deep Q-learning ([Playing Atari with Deep
 RL]({{< relref "mnih2013_atari_deeprl" >}})).
-
-
-## Related {#related}
-
--   [§td\_learning]({{< relref "td_learning" >}})
 
 # Bibliography
 <a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., *Is Q-Learning Provably Efficient?*, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc.</a> [↩](#01672110f741e437a834e37dc0d172c4)

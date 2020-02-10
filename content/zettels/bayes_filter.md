@@ -1,10 +1,13 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T19:22:13+08:00
+lastmod = 2020-02-10T14:32:17+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Gaussian Filter]({{< relref "gaussian_filter" >}})
+
 
 ## Notation {#notation}
 
@@ -46,7 +49,7 @@ update_.
 
 ## Details {#details}
 
-Mathematical derivation makes the [§markovian\_assumption]({{< relref "markovian_assumption" >}}).
+Mathematical derivation makes the [Markovian Assumption]({{< relref "markovian_assumption" >}}).
 
 Exact techniques for belief calculation are reserved for specialized
 cases. In most scenarios, these beliefs have to be approximated, and
@@ -72,11 +75,6 @@ Accuracy
 Ease of implementation
 : Difficulty in implementation typically
     arises from the form of the transition and measurement probabilities
-    (see [§robotics\_probabilistic\_generative\_laws]({{< relref "robotics_probabilistic_generative_laws" >}})). Particle
+    (see [Robotics Probabilistic Generative Laws]({{< relref "robotics_probabilistic_generative_laws" >}})). Particle
     representations lend themselves to simple implementations for
     complex non-linear systems.
-
-
-## Related {#related}
-
--   [§gaussian\_filter]({{< relref "gaussian_filter" >}})

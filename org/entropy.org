@@ -1,5 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Entropy
+- tags :: [[file:information_theory.org][Information Theory]], [[file:gibbs_inequality.org][Gibbs' Inequality]]
 
 * Definitions
 
@@ -9,7 +10,6 @@ is defined to be:
 \begin{equation}
   h(x) = \log_2 \frac{1}{P(x)}
 \end{equation}
-
 
 The entropy of an ensemble $X$ is defined to be the average Shannon
 information content of an outcome:
@@ -36,7 +36,5 @@ Entropy is additive if the ensembles are independent:
 
 Entropy is /decomposable/.
 
-* Related
-- [[file:gibbs_inequality.org][§gibbs_inequality]]
-- [[file:information_theory.org][§information_theory]]
+
 

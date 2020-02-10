@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Control As Inference
 
+- tags :: [[file:optimal_control.org][Optimal Control and Planning]], [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+
 #+CAPTION: PGM for decision making for the first 3 time-steps
 [[file:images/human_behaviour_as_optimal_control/screenshot2019-12-24_19-20-19_.png]]
 
@@ -134,8 +136,5 @@ For more, see cite:levine18_reinf_learn_contr_as_probab_infer.
 * Resources
 - [[https://www.youtube.com/watch?v=Pei6G8_3r8I&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=13][CS285 Fa19 10/16/19 - YouTube]] 
 
-* Related
-- [[file:reinforcement_learning.org][§reinforcement_learning]]
-- [[file:optimal_control.org][§optimal_control]]
 
 bibliography:./biblio/rl.bib

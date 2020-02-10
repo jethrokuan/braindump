@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Velocity Motion Model
 
+- tags :: [[file:odometry_motion_model.org][Odometry Motion Model]], [[file:motion_model_with_maps.org][Motion Model With Maps]]
+
 The velocity motion model assumes that the robot is controlled through
 2 velocities: rotational and translational velocity:
 
@@ -15,7 +17,3 @@ drawn from the error parameters of the kinematic motion model.
 \begin{equation}
   \left(\begin{array}{c}{\hat{v}} \\ {\hat{\omega}}\end{array}\right)=\left(\begin{array}{c}{v} \\ {\omega}\end{array}\right)+\left(\begin{array}{c}{\varepsilon_{\alpha_{1}|v|+\alpha_{2}|\omega|}} \\ {\varepsilon_{\alpha_{3}|v|+\alpha_{4}|\omega|}}\end{array}\right)
 \end{equation}
-
-* Related
-- [[file:odometry_motion_model.org][§odometry_motion_model]]
-- [[file:motion_model_with_maps.org][§motion_model_with_maps]]

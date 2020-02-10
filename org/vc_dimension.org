@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: VC-Dimension
 
-Related posts: [[file:bias_complexity_tradeoff.org][Bias-Complexity Tradeoff]], [[file:pac_learning.org][PAC Learning]]
+- tags :: [[file:bias_complexity_tradeoff.org][Bias-Complexity Tradeoff]], [[file:pac_learning.org][PAC Learning]]
 
 cite:shalev2014understanding
 
