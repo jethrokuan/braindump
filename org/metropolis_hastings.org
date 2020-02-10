@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Metropolis-Hastings Method
 
-In [[file:importance_sampling.org][§importance_sampling]] and [[file:rejection_sampling.org][§rejection_sampling]], the proposal
+In [[file:importance_sampling.org][Importance Sampling]] and [[file:rejection_sampling.org][Rejection Sampling]], the proposal
 distribution $q(x)$ needs to be similar to $p(x)$. The
 Metropolis-Hastings method uses a proposal density $q(x;x^(t))$ that
 is dependent on the current state $x^(t)$. A simple distribution such

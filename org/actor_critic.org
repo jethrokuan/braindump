@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Actor-Critic
 
-Actor-Critic improves on [[file:policy_gradients.org][§policy_gradients]] methods by introducing a
+Actor-Critic improves on [[file:policy_gradients.org][Policy Gradients]] methods by introducing a
 critic.
 
 Recall the objective:

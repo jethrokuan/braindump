@@ -3,11 +3,10 @@
 
 - tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
 
-The actor-critic algorithm ([[file:actor_critic.org][§actor_critic]]) fits 2 function
-approximators: one for the policy, and one for the value function. A
-key problem with the policy gradient method is the high variance in
-the gradient update. /Can we omit policy gradients completely
-([[file:policy_gradients.org][§policy_gradients]])?/
+The [[file:actor_critic.org][Actor-Critic]] algorithm fits 2 function approximators: one for the
+policy, and one for the value function. A key problem with the policy
+gradient method is the high variance in the gradient update. /Can we
+omit [[file:policy_gradients.org][Policy Gradients]] completely?/
 
 * Key Ideas
 
@@ -154,7 +153,7 @@ changing in the inner loop.
 * DQN
 
 DQN is the result of using a replay buffer, target network and some
-gradient clipping. See [[file:mnih2013_atari_deeprl.org][§mnih2013_atari_deeprl]].
+gradient clipping. See [[file:mnih2013_atari_deeprl.org][Playing Atari with Deep RL]].
 
 * Double DQN
 
@@ -313,11 +312,12 @@ triad".
 3. Bootstrapping
 
 In the presence of all three, learning is unstable. DQN is the first
-algorithm that stabilized deep Q-learning ([[file:mnih2013_atari_deeprl.org][§mnih2013_atari_deeprl]]). 
+algorithm that stabilized deep Q-learning ([[file:mnih2013_atari_deeprl.org][Playing Atari with Deep
+RL]]).
+
 
 * Related
 
 - [[file:td_learning.org][§td_learning]]
-- [[file:policy_gradients.org][§policy_gradients]]
   
 bibliography:biblio/rl.bib

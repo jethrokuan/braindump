@@ -1,7 +1,7 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:21:55+08:00
+lastmod = 2020-02-10T14:13:01+08:00
 draft = false
 +++
 
@@ -50,7 +50,7 @@ maximum likelihood
 ### Partial Observability {#partial-observability}
 
 The policy gradient method does not assume that the system follows the
-[§markovian\_assumption]({{< relref "markovian_assumption" >}})! The algorithm only requires the ability to
+[Markovian Assumption]({{< relref "markovian_assumption" >}})! The algorithm only requires the ability to
 generate samples, and a function approximator for
 \\(\pi\_{\theta}(a\_t |o\_t)\\).
 
@@ -67,7 +67,7 @@ generate samples, and a function approximator for
 
 The objective is an expectation under trajectories sampled under that
 policy. This can be tweaked into an off-policy method using
-[§importance\_sampling]({{< relref "importance_sampling" >}}).
+[Importance Sampling]({{< relref "importance_sampling" >}}).
 
 {{< figure src="/ox-hugo/screenshot2019-12-16_13-24-18_.png" caption="Figure 1: Off-policy policy gradients" >}}
 
@@ -183,7 +183,7 @@ improve the policy, much like policy iteration which evaluates
 \end{align}
 
 We have an expectation under \\(\theta'\\), but samples under \\(\theta\\). We
-use marginals representation, and [§importance\_sampling]({{< relref "importance_sampling" >}}) to remove the
+use marginals representation, and [Importance Sampling]({{< relref "importance_sampling" >}}) to remove the
 expectation under \\(\pi\_\theta'\\), but can we ignore the other
 distribution mismatch?
 

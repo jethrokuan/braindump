@@ -1,12 +1,11 @@
 +++
 title = "Actor-Critic"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-16T18:19:19+08:00
+lastmod = 2020-02-10T14:13:13+08:00
 draft = false
-math = true
 +++
 
-Actor-Critic improves on [§policy\_gradients]({{< relref "policy_gradients" >}}) methods by introducing a
+Actor-Critic improves on [Policy Gradients]({{< relref "policy_gradients" >}}) methods by introducing a
 critic.
 
 Recall the objective:

@@ -1,9 +1,8 @@
 +++
 title = "Rejection Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T21:56:27+08:00
+lastmod = 2020-02-10T14:11:20+08:00
 draft = false
-math = true
 +++
 
 **Goal**: To sample from unknown distribution \\(p(x)\\).
