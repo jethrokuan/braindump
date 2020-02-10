@@ -1,7 +1,7 @@
 +++
 title = "A Distributional Code for Value in Dopamine-based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-03T21:20:26+08:00
+lastmod = 2020-02-10T15:04:56+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ paper
 : [https://www.nature.com/articles/s41586-019-1924-6](https://www.nature.com/articles/s41586-019-1924-6)
 
 related
-: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 
 ## Abstract {#abstract}

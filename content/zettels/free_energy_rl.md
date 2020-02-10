@@ -1,12 +1,12 @@
 +++
 title = "Free-Energy Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:26:51+08:00
+lastmod = 2020-02-10T15:02:49+08:00
 draft = false
 +++
 
 tags
-: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 This is a framework proposed by Sallans and Hinton in 2004
 <a id="bcefc9142eabe05927aeae8f8d450cbe" href="#sallans04a_ferl">(Sallans \& Hinton, 2004)</a>. The key insight is that a product of experts

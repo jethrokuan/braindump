@@ -1,12 +1,12 @@
 +++
-title = "Generalization In RL"
+title = "Generalization In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:13:58+08:00
+lastmod = 2020-02-10T15:04:40+08:00
 draft = false
 +++
 
 tags
-: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 
 Generalization using successor features (Dayan 1993).
@@ -19,10 +19,12 @@ How many tasks are needed before modern approaches generalize?
 Generalization with selective noise injection and information
 bottleneck
 
--   Insight 1: Selective noise injection for gradient update but not
-    behaviour (rollout) policy speeds learning
--   Insight 2: Regularization with Information bottleneck is
-    particularly effective
+Insights:
+
+1.  Selective noise injection for gradient update but not behaviour
+    (rollout) policy speeds learning
+2.  Regularization with Information bottleneck is particularly
+    effective
 
 \begin{equation}
   \nabla\_{\theta} J\left(\pi\_{\theta}\right)=\widehat{\mathbb{E}}\_{\pi\_{\theta}^{r}\left(a\_{t} | x\_{t}\right)}\left[\sum\_{t}^{T} \frac{\pi\_{\theta}\left(a\_{t} | x\_{t}\right)}{\pi\_{\theta}^{r}\left(a\_{t} | x\_{t}\right)} \nabla\_{\theta} \log \pi\_{\theta}\left(a\_{t} | x\_{t}\right) \hat{A}\_{t}\right]

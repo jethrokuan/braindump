@@ -1,14 +1,14 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:22:52+08:00
+lastmod = 2020-02-10T15:03:15+08:00
 draft = false
 +++
 
 tags
-: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
-Standard [§imitation\_learning]({{< relref "imitation_learning" >}}) copies actions performed by the expert,
+Standard [Imitation Learning]({{< relref "imitation_learning" >}}) copies actions performed by the expert,
 and do not reason about the outcomes of the actions. However, humans
 copy the _intent_ of the actions, which result in vastly different
 actions.

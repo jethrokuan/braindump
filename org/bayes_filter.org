@@ -58,4 +58,3 @@ Approximations requires trading off:
   representations lend themselves to simple implementations for
   complex non-linear systems.
 
-

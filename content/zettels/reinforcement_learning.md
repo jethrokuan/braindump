@@ -1,7 +1,7 @@
 +++
 title = "Reinforcement Learning ⭐"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:30:27+08:00
+lastmod = 2020-02-10T15:01:03+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -332,7 +332,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orgf221fd7) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org0bcb6c6) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 

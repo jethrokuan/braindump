@@ -1,12 +1,12 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:00:48+08:00
+lastmod = 2020-02-10T15:00:54+08:00
 draft = false
 +++
 
 tags
-: [§reinforcement\_learning]({{< relref "reinforcement_learning" >}}), [§machine\_learning]({{< relref "machine_learning" >}})
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 
 ## Why Deep Reinforcement Learning? {#why-deep-reinforcement-learning}

@@ -2,7 +2,7 @@
 #+HUGO_SECTION: papers
 #+TITLE: Deep Reinforcement Learning That Matters
 
-- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]]
+- tags :: [[file:deep_rl.org][Deep Reinforcement Learning]], [[file:ml_papers.org][Machine Learning Papers]]
 
 This paper is a comprehensive study of several model-free policy
 gradient methods:

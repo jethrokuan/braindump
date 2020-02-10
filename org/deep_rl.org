@@ -2,7 +2,7 @@
 #+TITLE: Deep Reinforcement Learning
 bibliographystyle:unsrt
 
-- tags :: [[file:reinforcement_learning.org][§reinforcement_learning]]
+- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
 * Why Deep Reinforcement Learning?
 

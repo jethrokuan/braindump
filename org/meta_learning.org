@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Meta Learning
 
-- tags :: [[file:machine_learning.org][§machine_learning]], [[file:reinforcement_learning.org][§reinforcement_learning]]
+- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
 - Learning to learn: learn an update rule from related tasks
 
