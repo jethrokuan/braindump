@@ -1,12 +1,12 @@
 +++
 title = "Quantization"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-08T00:15:37+08:00
+lastmod = 2020-02-10T14:21:35+08:00
 draft = false
 +++
 
 tags
-: [§model\_compression]({{< relref "model_compression" >}}), [§machine\_learning]({{< relref "machine_learning" >}})
+: [Model Compression]({{< relref "model_compression" >}}), [Machine Learning]({{< relref "machine_learning" >}})
 
 Quantization refers to techniques for performing computations and
 storing tensors at lower bitwidths than floating point precision.

@@ -2,7 +2,7 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Quantization
 
-- tags :: [[file:model_compression.org][§model_compression]], [[file:machine_learning.org][§machine_learning]]
+- tags :: [[file:model_compression.org][Model Compression]], [[file:machine_learning.org][Machine Learning]]
 
 Quantization refers to techniques for performing computations and
 storing tensors at lower bitwidths than floating point precision.

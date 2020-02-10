@@ -1,12 +1,12 @@
 +++
 title = "And the Bit Goes Down: Revisiting the Quantization of Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:42:41+08:00
+lastmod = 2020-02-10T14:21:09+08:00
 draft = false
 +++
 
 tags
-: [§model\_compression]({{< relref "model_compression" >}})
+: [Model Compression]({{< relref "model_compression" >}})
 
 paper
 : <a id="56497b51cc79dfdb43c364d93a9978c3" href="#stock19_and_bit_goes_down">(Stock et al., 2019)</a>
