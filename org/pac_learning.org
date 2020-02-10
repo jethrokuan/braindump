@@ -5,7 +5,7 @@
 
 * ERM for finite hypothesis classes
 
-We note that [[file:machine_learning.org::*Empirical%20Risk%20Minimisation%20(ERM)][empirical risk minimization]] can easily overfit
+We note that [[file:erm.org][Empirical Risk Minimization]] can easily overfit
 to the training data. To correct for this, we introduce inductive
 bias, restricting the hypothesis space $\mathcal{H}$.
 

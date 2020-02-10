@@ -1,0 +1,37 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: How To Know - Chelsea Kidd
+
+Link: [[https://slideslive.com/38921495/how-to-know][Celeste Kidd | How to Know · SlidesLive]]
+
+Why are we curious about some things but not others? What are the core
+cognitive systems that people use to guide their learning about the
+world?
+
+* 5 Key things in ML that we should know about humans
+** Humans continuously form beliefs
+  Upon seeing a bowl, we update our belief about what a bowl is. This
+  also influences what we wish to sample next. Infants look away when
+  events are predictable, but also when they are surprising!
+
+#+DOWNLOADED: screenshot @ 2019-12-12 13:22:09
+[[file:images/how_to_know_kidd/screenshot2019-12-12_13-22-09_.png]]
+
+*When present data to learning algorithms, we should show data that is
+at ideal region on the "surprising" spectrum.*
+
+** Certainty diminishes interest
+
+We are not curious about things that we already know. If we think we
+know an answer, when presented with the objective truth, we are still
+unlikely to change our beliefs.
+
+** Certainty is driven by feedback
+
+When feedback isn't available, our estimates about our certainty may
+not be accurate. When feedback is readily available, we can sometimes
+be certain, when we should not be.
+
+** Less feedback may encourage overconfidence
+
+** Humans form beliefs quickly

@@ -1,7 +1,7 @@
 +++
 title = "PAC Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:14:45+08:00
+lastmod = 2020-02-10T16:49:13+08:00
 draft = false
 +++
 
@@ -11,7 +11,7 @@ tags
 
 ## ERM for finite hypothesis classes {#erm-for-finite-hypothesis-classes}
 
-We note that [empirical risk minimization]({{< relref "machine_learning" >}}) can easily overfit
+We note that [Empirical Risk Minimization]({{< relref "erm" >}}) can easily overfit
 to the training data. To correct for this, we introduce inductive
 bias, restricting the hypothesis space \\(\mathcal{H}\\).
 
