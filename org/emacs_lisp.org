@@ -2,6 +2,6 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Emacs Lisp
 
-- tags :: [[file:prog_lang.org][§prog_lang]]
+- tags :: [[file:prog_lang.org][Programming Languages]]
 
 - [[https://github.com/chrisdone/elisp-guide][GitHub - chrisdone/elisp-guide]]

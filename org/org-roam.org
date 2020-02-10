@@ -3,7 +3,7 @@
 #+TITLE: Org-Roam
 
 Org-roam is a package I built trying to emulate [[https://roamresearch.org/][Roam Research]] in
-[[file:emacs.org][§emacs]] and [[file:org-mode.org][§org-mode]].
+[[file:emacs.org][Emacs]] and [[file:org-mode.org][Org-Mode]].
 
 * Media
 

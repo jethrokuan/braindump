@@ -1,12 +1,12 @@
 +++
 title = "Emacs Lisp"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-09T02:49:04+08:00
+lastmod = 2020-02-10T16:38:08+08:00
 draft = false
 +++
 
 tags
-: [§prog\_lang]({{< relref "prog_lang" >}})
+: [Programming Languages]({{< relref "prog_lang" >}})
 
 
 [GitHub - chrisdone/elisp-guide](https://github.com/chrisdone/elisp-guide)

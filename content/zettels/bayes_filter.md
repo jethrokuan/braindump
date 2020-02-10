@@ -1,12 +1,12 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T15:29:39+08:00
+lastmod = 2020-02-10T16:38:23+08:00
 draft = false
 +++
 
 tags
-: [<Gaussian Filter>]({{< relref "gaussian_filter" >}})
+: [Gaussian Filter]({{< relref "gaussian_filter" >}})
 
 
 ## Notation {#notation}

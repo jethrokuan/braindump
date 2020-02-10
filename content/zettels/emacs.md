@@ -1,9 +1,13 @@
 +++
 title = "Emacs"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-09T02:24:19+08:00
+lastmod = 2020-02-10T16:37:18+08:00
 draft = false
 +++
 
-tags
-: [§emacs\_lisp]({{< relref "emacs_lisp" >}})
+Much of Emacs is written in [Emacs Lisp]({{< relref "emacs_lisp" >}}).
+
+
+## Iconic Blog Posts {#iconic-blog-posts}
+
+-   [tour-de-babel - steveyegge2](https://sites.google.com/site/steveyegge2/tour-de-babel)
