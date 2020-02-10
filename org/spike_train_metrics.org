@@ -2,7 +2,7 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Spike Train Metrics
 
-- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+- tags ::  [[file:spiking_neural_networks.org][Spiking Neural Networks]]
 
 We study spike train metrics to quantify differences between event
 sequences. These metrics apply at both the single-neuron level and the
@@ -156,7 +156,6 @@ delta-function corresponding to each spike by a unit vector
 $\vec{c_l}$, where the direction vector represents the label $l$ of
 that spike. These directions are allowed to be non-orthogonal.
 Collinear labels correspond to a summed population code.
-
 
 Therefore, a multi-neuronal spike train ($L$ neurons), with events at
 times $t_j$ and associated with labels $l_j$ is represented by an

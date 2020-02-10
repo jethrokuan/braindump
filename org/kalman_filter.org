@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Kalman Filter
 
+- tags :: [[file:extended_kalman_filter.org][Extended Kalman Filter]], [[file:gaussian_filter.org][Gaussian Filter]]
+
 The Kalman filter is a technique for belief computation in linear
 systems. It implements belief computation over continuous states, and
 is not suitable for discrete or hybrid state spaces.
@@ -9,7 +11,7 @@ It uses the moments representation. At time $t$, the belief is
 represented by mean $\mu_t$ and covariance $\Sigma_t$. It makes the
 following assumptions:
 
-1. The Markovian Assumption ([[file:markovian_assumption.org][§markovian_assumption]])
+1. The Markovian Assumption ([[file:markovian_assumption.org][Markovian Assumption]])
 2. The next state probability $p(x_t | u_t, x_{t-1})$ is a linear
    function in its arguments with added Gaussian noise:
 
@@ -56,9 +58,6 @@ These 4 assumptions give rise to the Kalman Filter algorithm.
 
 The linearity assumptions are often unfulfilled in practice. For
 example, circular trajectories cannot be described with linear state
-transitions. To overcome this difficulty, people use the extended
-Kalman Filter ([[file:extended_kalman_filter.org][§extended_kalman_filter]]).
+transitions. To overcome this difficulty, people use the [[file:extended_kalman_filter.org][Extended
+Kalman Filter]].
 
-* Related
-[[file:gaussian_filter.org][- §gaussian_filter]]
-[[file:extended_kalman_filter.org][- §extended_kalman_filter]]

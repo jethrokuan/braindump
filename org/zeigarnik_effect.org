@@ -1,0 +1,10 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Zeigarnik Effect
+
+Simply put, the Zeigarnik effect is the observation that /interrupted
+tasks are better remembered than completed ones/. This has
+ramifications for [[file:productivity.org][productivity]].
+
+An example of applying the Zeigarnik Effect would be to stop coding
+halfway while having a good streak, and come back another day.

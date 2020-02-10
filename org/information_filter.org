@@ -1,6 +1,8 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Information Filter
 
+- tags :: [[file:gaussian_filter.org][Gaussian Filter]], [[file:bayes_filter.org][Bayes Filter]]
+
 * Key Idea
 
 The multi-variate Gaussians are represented in their canonical
@@ -59,10 +61,3 @@ distance.
 1. The update step requires the recovery of a state estimate,
    inverting the information matrix. Matrix inversion is
    computationally expensive.
-
-* Related
-- [[file:bayes_filter.org][§bayes_filter]]
-- [[file:gaussian_filter.org][§gaussian_filter]]
-- [[file:kalman_filter.org][§kalman_filter]]
-- [[file:extended_kalman_filter.org][§extended_kalman_filter]]
-

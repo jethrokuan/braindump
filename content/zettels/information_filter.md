@@ -1,10 +1,13 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-12T17:24:04+08:00
+lastmod = 2020-02-10T20:25:07+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Gaussian Filter]({{< relref "gaussian_filter" >}}), [Bayes Filter]({{< relref "bayes_filter" >}})
+
 
 ## Key Idea {#key-idea}
 
@@ -68,11 +71,3 @@ distance.
 1.  The update step requires the recovery of a state estimate,
     inverting the information matrix. Matrix inversion is
     computationally expensive.
-
-
-## Related {#related}
-
--   [§bayes\_filter]({{< relref "bayes_filter" >}})
--   [§gaussian\_filter]({{< relref "gaussian_filter" >}})
--   [§kalman\_filter]({{< relref "kalman_filter" >}})
--   [§extended\_kalman\_filter]({{< relref "extended_kalman_filter" >}})

@@ -2,7 +2,7 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Spaced Repetition
 
-- tags :: [[file:productivity.org][§productivity]]
+- tags :: [[file:productivity.org][Productivity]]
 
 #+begin_quote
 what srs does is makes it easier to reconstruct a graph on the fly, by
@@ -11,3 +11,8 @@ do a lossless reconstruction
 
 - Siaw Young Lau (02/08/2020)
 #+end_quote
+
+* SRS Software
+
+- [[https://apps.ankiweb.net/][Anki]]
+- [[https://github.com/l3kn/org-fc/][l3kn/org-fc]]

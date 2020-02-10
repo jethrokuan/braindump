@@ -1,10 +1,12 @@
 +++
 title = "Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-30T12:41:54+08:00
+lastmod = 2020-02-10T20:26:06+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}}), [Gaussian Filter]({{< relref "gaussian_filter" >}})
 
 The Kalman filter is a technique for belief computation in linear
 systems. It implements belief computation over continuous states, and
@@ -14,7 +16,7 @@ It uses the moments representation. At time \\(t\\), the belief is
 represented by mean \\(\mu\_t\\) and covariance \\(\Sigma\_t\\). It makes the
 following assumptions:
 
-1.  The Markovian Assumption ([§markovian\_assumption]({{< relref "markovian_assumption" >}}))
+1.  The Markovian Assumption ([Markovian Assumption]({{< relref "markovian_assumption" >}}))
 2.  The next state probability \\(p(x\_t | u\_t, x\_{t-1})\\) is a linear
     function in its arguments with added Gaussian noise:
 
@@ -62,11 +64,5 @@ These 4 assumptions give rise to the Kalman Filter algorithm.
 
 The linearity assumptions are often unfulfilled in practice. For
 example, circular trajectories cannot be described with linear state
-transitions. To overcome this difficulty, people use the extended
-Kalman Filter ([§extended\_kalman\_filter]({{< relref "extended_kalman_filter" >}})).
-
-
-## Related {#related}
-
-[- §gaussian\_filter]({{< relref "gaussian_filter" >}})
-[- §extended\_kalman\_filter]({{< relref "extended_kalman_filter" >}})
+transitions. To overcome this difficulty, people use the [Extended
+Kalman Filter]({{< relref "extended_kalman_filter" >}}).

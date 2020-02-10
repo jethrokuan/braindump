@@ -1,0 +1,13 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Getting Things Done (GTD)
+
+[[https://gettingthingsdone.com/][GTD]] is a work-life management system created by David Allen. This
+[[file:productivity.org][productivity]] is summarized nicely in [[https://hamberg.no/gtd/][this article]].
+
+[[file:org-mode.org][Org-Mode]] has first-class support for this technique. There are several
+people who have documented their GTD workflow using [[file:org-mode.org][Org-Mode]]. Here is
+a list:
+
+- [[http://doc.norang.ca/org-mode.html][Org Mode - Organize Your Life In Plain Text!]] ⭐
+- [[https://blog.jethro.dev/posts/org_mode_workflow_preview/][Org-mode Workflow: A Preview - Jethro Kuan]] ⭐

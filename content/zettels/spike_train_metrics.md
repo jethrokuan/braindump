@@ -1,12 +1,12 @@
 +++
 title = "Spike Train Metrics"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:09:04+08:00
+lastmod = 2020-02-10T20:27:19+08:00
 draft = false
 +++
 
 tags
-: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})
+: [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
 
 We study spike train metrics to quantify differences between event
 sequences. These metrics apply at both the single-neuron level and the

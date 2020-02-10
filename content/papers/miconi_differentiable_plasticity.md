@@ -1,12 +1,15 @@
 +++
 title = "Differentiable plasticity: training plastic neural networks with backpropagation"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:38:17+08:00
+lastmod = 2020-02-10T20:43:44+08:00
 draft = false
-math = true
 +++
 
-Paper: <https://arxiv.org/abs/1804.02464>
+tags
+: [Machine Learning Papers]({{< relref "ml_papers" >}})
+
+paper
+: <https://arxiv.org/abs/1804.02464>
 
 
 ## Goal {#goal}
@@ -16,7 +19,7 @@ experience, inspired by synaptic plasticity. This is to bridge the gap
 with biological agents, which are able to learn quickly from prior
 experience, mastering environments with changing features.
 
-An alternative to [§meta\_learning]({{< relref "meta_learning" >}}), synaptic plasticity strengthens and
+An alternative to [Meta Learning]({{< relref "meta_learning" >}}), synaptic plasticity strengthens and
 weakens connections between neurons based on neural activity: whether
 they fire together.
 

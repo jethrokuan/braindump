@@ -1,12 +1,12 @@
 +++
 title = "Extended Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:36:30+08:00
+lastmod = 2020-02-10T20:24:25+08:00
 draft = false
 +++
 
 tags
-: [[[Bayes Filter]​]​]({{< relref "bayes_filter" >}}), [Kalman Filter]({{< relref "kalman_filter" >}}), [Information Filter]({{< relref "information_filter" >}})
+: [Bayes Filter]({{< relref "bayes_filter" >}}), [Kalman Filter]({{< relref "kalman_filter" >}}), [Information Filter]({{< relref "information_filter" >}})
 
 
 ## Key Idea {#key-idea}

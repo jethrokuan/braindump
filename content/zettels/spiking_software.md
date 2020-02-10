@@ -1,11 +1,11 @@
 +++
 title = "SNN Software"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:09:27+08:00
+lastmod = 2020-02-10T20:26:52+08:00
 draft = false
 +++
 
-Software for [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}}).
+Software for [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}).
 
 
 ## Python {#python}
