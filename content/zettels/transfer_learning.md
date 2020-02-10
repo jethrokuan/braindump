@@ -1,10 +1,12 @@
 +++
 title = "Transfer Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-26T21:37:28+08:00
+lastmod = 2020-02-10T20:17:09+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 Prior understanding of problem structure can help us solve complex
 tasks quickly. Perhaps solving prior tasks would help acquire useful
@@ -67,7 +69,7 @@ Fine tuning is popular in the supervised learning setting.
         2.  Little exploration at convergence
 
     To increase diversity and entropy, we can do maximum-entropy learning
-    which acts as randomly as possible while collecting high rewards <a id="1b37e467d7dc76e365875dfb5c03fa1e" href="#pmlr-v70-haarnoja17a" title="Tuomas Haarnoja, Haoran Tang, Pieter Abbeel \&amp; Sergey Levine, Reinforcement Learning with Deep Energy-Based Policies, 1352--1361, in in: {Proceedings of the 34th International Conference on Machine Learning}, edited by Doina Precup \&amp; Yee Whye Teh, PMLR (2017)">(Tuomas Haarnoja et al., 2017)</a>:
+    which acts as randomly as possible while collecting high rewards <a id="1b37e467d7dc76e365875dfb5c03fa1e" href="#pmlr-v70-haarnoja17a">(Tuomas Haarnoja et al., 2017)</a>:
 
     \begin{equation}
       \pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
@@ -99,7 +101,7 @@ across multiple tasks.
 
 In model distillation, multiple policies are combined into one, for
 concurrent multi-task learning. Policy distillation
-<a id="6c0f3e1b8610e021d4a59b9c6b7598dd" href="#rusu15_polic_distil" title="Rusu, Colmenarejo, , Gulcehre, Desjardins, , Kirkpatrick, Pascanu, Mnih, Volodymyr, Kavukcuoglu \&amp; Hadsell, Policy Distillation, {CoRR}, v(), (2015).">(Rusu et al., 2015)</a> is able to:
+<a id="6c0f3e1b8610e021d4a59b9c6b7598dd" href="#rusu15_polic_distil">(Rusu et al., 2015)</a> is able to:
 
 1.  Compress policies learnt on single games into smaller models
 2.  Build agents capable of playing multiple games
@@ -107,6 +109,6 @@ concurrent multi-task learning. Policy distillation
     online the policy of the best performing agent
 
 # Bibliography
-<a id="pmlr-v70-haarnoja17a"></a>Haarnoja, T., Tang, H., Abbeel, P., & Levine, S., *Reinforcement learning with deep energy-based policies*, In D. Precup, & Y. W. Teh, Proceedings of the 34th International Conference on Machine Learning (pp. 1352–1361) (2017). International Convention Centre, Sydney, Australia: PMLR. [↩](#1b37e467d7dc76e365875dfb5c03fa1e)
+<a id="pmlr-v70-haarnoja17a" target="_blank">Haarnoja, T., Tang, H., Abbeel, P., & Levine, S., *Reinforcement learning with deep energy-based policies*, In D. Precup, & Y. W. Teh, Proceedings of the 34th International Conference on Machine Learning (pp. 1352–1361) (2017). International Convention Centre, Sydney, Australia: PMLR.</a> [↩](#1b37e467d7dc76e365875dfb5c03fa1e)
 
-<a id="rusu15_polic_distil"></a>Rusu, A. A., Colmenarejo, S. G., Gulcehre, C., Desjardins, G., Kirkpatrick, J., Pascanu, R., Mnih, V., …, *Policy Distillation*, CoRR, *()*,  (2015).  [↩](#6c0f3e1b8610e021d4a59b9c6b7598dd)
+<a id="rusu15_polic_distil" target="_blank">Rusu, A. A., Colmenarejo, S. G., Gulcehre, C., Desjardins, G., Kirkpatrick, J., Pascanu, R., Mnih, V., …, *Policy Distillation*, CoRR, *()*,  (2015). </a> [↩](#6c0f3e1b8610e021d4a59b9c6b7598dd)

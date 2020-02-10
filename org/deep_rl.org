@@ -86,16 +86,4 @@ or algorithms that adaptively adjust parameters:
    ([[https://github.com/openai/spinningup][Tensorflow]], [[https://github.com/kashif/firedup/][Pytorch]])
 3. [[https://www.icml.cc/2016/tutorials/deep_rl_tutorial.pdf][David Silver's Deep RL ICML Tutorial]]
 
-* Subtopics
-- [[file:policy_gradients.org][§policy_gradients]]
-- [[file:q_learning.org][§q_learning]]
-- [[file:model_based_rl.org][§model_based_rl]]
-- [[file:inverse_rl.org][§inverse_rl]]
-- [[file:control_as_inference.org][§control_as_inference]]
-- [[file:transfer_learning.org][§transfer_learning]]
-- [[file:distributed_rl.org][§distributed_rl]]
-- [[file:exploration_in_rl.org][§exploration_in_rl]]
-- [[file:information_theoretic_rl.org][§information_theoretic_rl]]
-
-
 bibliography:./biblio/rl.bib

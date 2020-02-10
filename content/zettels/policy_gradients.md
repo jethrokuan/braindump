@@ -1,12 +1,12 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:13:01+08:00
+lastmod = 2020-02-10T20:18:20+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}})
+: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 
 ## Key Idea {#key-idea}

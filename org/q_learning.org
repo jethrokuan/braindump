@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Q-Learning 
 
-- tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:td_learning.org][Temporal Difference Learning]]
+- tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:td_learning.org][Temporal Difference Learning]], [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
 The [[file:actor_critic.org][Actor-Critic]] algorithm fits 2 function approximators: one for the
 policy, and one for the value function. A key problem with the policy

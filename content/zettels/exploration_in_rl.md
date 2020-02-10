@@ -1,15 +1,15 @@
 +++
 title = "Exploration In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-27T12:32:06+08:00
+lastmod = 2020-02-10T20:16:27+08:00
 draft = false
-math = true
 +++
 
-Exploration is important where rewards are sparse, and not a direct
-indication of how good an action is. Some environments where good
-exploration is necessary is Montezuma's revenge, where finishing a
-game only weakly correlates with rewarding events.
+In [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}), exploration is important where rewards
+are sparse, and not a direct indication of how good an action is. Some
+environments where good exploration is necessary is Montezuma's
+revenge, where finishing a game only weakly correlates with rewarding
+events.
 
 Key Questions:
 
@@ -32,7 +32,7 @@ In order of theoretical tractability (tractable to intractable):
 4.  large, infinite MDPs, continuous spaces : optimal methods don't work
 
 
-## General Themes in exploration {#general-themes-in-exploration}
+## General Themes in Exploration {#general-themes-in-exploration}
 
 -   Requires some form of uncertainty
 -   Assumes:
@@ -88,28 +88,10 @@ choose \\(a\\) according to \\(\mathrm{argmin}\_a \frac{\Delta(a)^2}{g(a)}\\).
 \end{equation}
 
 
-## Extending exploration to RL {#extending-exploration-to-rl}
+## Extending Exploration to RL {#extending-exploration-to-rl}
 
 
-### Count-based exploration <a id="e8434a667b6a92e6ed91dbeac3bc0890" href="#NIPS2016_6383" title="@incollection{NIPS2016_6383,
-title = {Unifying Count-Based Exploration and Intrinsic Motivation},
-author = {Bellemare, Marc and Srinivasan, Sriram and Ostrovski, Georg and Schaul, Tom and Saxton, David and Munos, Remi},
-booktitle = {Advances in Neural Information Processing Systems 29},
-editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
-pages = {1471--1479},
-year = {2016},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf}
-}">@incollection{NIPS2016_6383,
-title = {Unifying Count-Based Exploration and Intrinsic Motivation},
-author = {Bellemare, Marc and Srinivasan, Sriram and Ostrovski, Georg and Schaul, Tom and Saxton, David and Munos, Remi},
-booktitle = {Advances in Neural Information Processing Systems 29},
-editor = {D. D. Lee and M. Sugiyama and U. V. Luxburg and I. Guyon and R. Garnett},
-pages = {1471--1479},
-year = {2016},
-publisher = {Curran Associates, Inc.},
-url = {http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf}
-}</a> {#count-based-exploration-a-id-e8434a667b6a92e6ed91dbeac3bc0890-href-nips2016-6383-title-incollection-nips2016-6383-title-unifying-count-based-exploration-and-intrinsic-motivation-author-bellemare-marc-and-srinivasan-sriram-and-ostrovski-georg-and-schaul-tom-and-saxton-david-and-munos-remi-booktitle-advances-in-neural-information-processing-systems-29-editor-d-dot-d-dot-lee-and-m-dot-sugiyama-and-u-dot-v-dot-luxburg-and-i-dot-guyon-and-r-dot-garnett-pages-1471-1479-year-2016-publisher-curran-associates-inc-dot-url-http-papers-dot-nips-dot-cc-paper-6383-unifying-count-based-exploration-and-intrinsic-motivation-dot-pdf-incollection-nips2016-6383-title-unifying-count-based-exploration-and-intrinsic-motivation-author-bellemare-marc-and-srinivasan-sriram-and-ostrovski-georg-and-schaul-tom-and-saxton-david-and-munos-remi-booktitle-advances-in-neural-information-processing-systems-29-editor-d-dot-d-dot-lee-and-m-dot-sugiyama-and-u-dot-v-dot-luxburg-and-i-dot-guyon-and-r-dot-garnett-pages-1471-1479-year-2016-publisher-curran-associates-inc-dot-url-http-papers-dot-nips-dot-cc-paper-6383-unifying-count-based-exploration-and-intrinsic-motivation-dot-pdf-a}
+### Count-based exploration <a id="e8434a667b6a92e6ed91dbeac3bc0890" href="#NIPS2016_6383">(Bellemare et al., 2016)</a> {#count-based-exploration}
 
 Use pseudo-counts:
 
@@ -120,4 +102,4 @@ r\_i^+ = r\_i + \mathcal{B}(\hat{N}(s))
 There are many choices for the bonus.
 
 # Bibliography
-<a id="NIPS2016_6383"></a>Bellemare, M., Srinivasan, S., Ostrovski, G., Schaul, T., Saxton, D., & Munos, R., *Unifying count-based exploration and intrinsic motivation*, In D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 29 (pp. 1471–1479) (2016). : Curran Associates, Inc. [↩](#e8434a667b6a92e6ed91dbeac3bc0890)
+<a id="NIPS2016_6383" target="_blank">Bellemare, M., Srinivasan, S., Ostrovski, G., Schaul, T., Saxton, D., & Munos, R., *Unifying count-based exploration and intrinsic motivation*, In D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 29 (pp. 1471–1479) (2016). : Curran Associates, Inc.</a> [↩](#e8434a667b6a92e6ed91dbeac3bc0890)

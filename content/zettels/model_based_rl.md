@@ -1,15 +1,14 @@
 +++
 title = "Model-Based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-30T12:47:05+08:00
+lastmod = 2020-02-10T20:17:29+08:00
 draft = false
-math = true
 +++
 
-In model-free RL, we assumed that \\(p(s\_{t+1} | s\_t, a\_t)\\) is unknown,
-and no attempt is made to learn it. However, we often know the
-dynamics. For example, in games such as chess, and easily modeled
-systems, like car navigation.
+In model-free [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}), we assumed that \\(p(s\_{t+1} |
+s\_t, a\_t)\\) is unknown, and no attempt is made to learn it. However, we
+often know the dynamics. For example, in games such as chess, and
+easily modeled systems, like car navigation.
 
 Model-based Reinforcement learning is about learning system dynamics,
 and using the learnt system to make decisions.

@@ -1,10 +1,11 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Exploration In Reinforcement Learning
 
-Exploration is important where rewards are sparse, and not a direct
-indication of how good an action is. Some environments where good
-exploration is necessary is Montezuma's revenge, where finishing a
-game only weakly correlates with rewarding events.
+In [[file:reinforcement_learning.org][Reinforcement Learning ⭐]], exploration is important where rewards
+are sparse, and not a direct indication of how good an action is. Some
+environments where good exploration is necessary is Montezuma's
+revenge, where finishing a game only weakly correlates with rewarding
+events.
 
 Key Questions:
 
@@ -26,7 +27,7 @@ In order of theoretical tractability (tractable to intractable):
    value of information
 4. large, infinite MDPs, continuous spaces : optimal methods don't work
 
-* General Themes in exploration
+* General Themes in Exploration
 
 - Requires some form of uncertainty
 - Assumes:
@@ -76,7 +77,7 @@ choose $a$ according to $\mathrm{argmin}_a \frac{\Delta(a)^2}{g(a)}$.
   a = \mathrm{argmax} \hat{\mu}_a + \sqrt{\frac{2 \ln T}{N(a)}}
 \end{equation}
 
-* Extending exploration to RL
+* Extending Exploration to RL
 
 ** Count-based exploration cite:NIPS2016_6383
 Use pseudo-counts:

@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T15:00:54+08:00
+lastmod = 2020-02-10T20:18:11+08:00
 draft = false
 +++
 
@@ -106,19 +106,6 @@ or algorithms that adaptively adjust parameters:
 2.  [Welcome to Spinning Up in Deep RL! — Spinning Up documentation](https://spinningup.openai.com/en/latest/)
     ([Tensorflow](https://github.com/openai/spinningup), [Pytorch](https://github.com/kashif/firedup/))
 3.  [David Silver's Deep RL ICML Tutorial](https://www.icml.cc/2016/tutorials/deep%5Frl%5Ftutorial.pdf)
-
-
-## Subtopics {#subtopics}
-
--   [§policy\_gradients]({{< relref "policy_gradients" >}})
--   [§q\_learning]({{< relref "q_learning" >}})
--   [§model\_based\_rl]({{< relref "model_based_rl" >}})
--   [§inverse\_rl]({{< relref "inverse_rl" >}})
--   [§control\_as\_inference]({{< relref "control_as_inference" >}})
--   [§transfer\_learning]({{< relref "transfer_learning" >}})
--   [§distributed\_rl]({{< relref "distributed_rl" >}})
--   [§exploration\_in\_rl]({{< relref "exploration_in_rl" >}})
--   [§information\_theoretic\_rl]({{< relref "information_theoretic_rl" >}})
 
 # Bibliography
 <a id="schulman15_high_dimen_contin_contr_using" target="_blank">Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., *High-Dimensional Continuous Control Using Generalized Advantage Estimation*, CoRR, *()*,  (2015). </a> [↩](#57393aa8ebb8846c7181c31bfd5fbe89)

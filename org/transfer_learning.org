@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Transfer Learning
 
+- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+
 Prior understanding of problem structure can help us solve complex
 tasks quickly. Perhaps solving prior tasks would help acquire useful
 knowledge for solving a new task.

@@ -1,12 +1,12 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:32:40+08:00
+lastmod = 2020-02-10T20:17:53+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Temporal Difference Learning]({{< relref "td_learning" >}})
+: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Temporal Difference Learning]({{< relref "td_learning" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 The [Actor-Critic]({{< relref "actor_critic" >}}) algorithm fits 2 function approximators: one for the
 policy, and one for the value function. A key problem with the policy

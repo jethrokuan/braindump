@@ -1,5 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
-#+TITLE: Information Theoretic Reinforcement Learning
+#+TITLE: Information-Theoretic Reinforcement Learning
 
 Can we learn /without/ any reward function at all?
 

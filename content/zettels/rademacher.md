@@ -1,14 +1,14 @@
 +++
 title = "Rademacher Complexity"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:14:37+08:00
+lastmod = 2020-02-10T20:15:15+08:00
 draft = false
 +++
 
 tags
 : [§machine\_learning]({{< relref "machine_learning" >}})
 
-In [§pac\_learning]({{< relref "pac_learning" >}}), We have shown that [uniform convergence is a
+In [PAC Learning]({{< relref "pac_learning" >}}), We have shown that [uniform convergence is a
 sufficient condition for learnability]({{< relref "pac_learning" >}}). Rademacher complexity measures
 the rate of uniform convergence. Rademacher complexity can also be
 used to provide generalization bounds.
