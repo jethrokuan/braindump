@@ -1,7 +1,7 @@
 +++
 title = "Spaced Repetition"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T20:31:37+08:00
+lastmod = 2020-02-10T22:38:40+08:00
 draft = false
 +++
 
@@ -12,7 +12,7 @@ tags
 > memorizing certain nodes once you have certain node density, you can
 > do a lossless reconstruction
 >
-> -   Siaw Young Lau (02/08/2020)
+> -- Siaw Young Lau (02/08/2020)
 
 
 ## SRS Software {#srs-software}
