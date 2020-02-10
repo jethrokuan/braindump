@@ -1,7 +1,7 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:30:40+08:00
+lastmod = 2020-02-10T15:33:09+08:00
 draft = false
 +++
 
@@ -25,7 +25,7 @@ If we choose \\(p(O\_t | s\_t, a\_t) = \mathrm{exp}(r(s\_t, a\_t))\\), then:
                                 r(s\_t, a\_t) \right)
 \end{align}
 
-With this [§pgm]({{< relref "pgm" >}}), we can:
+With this [Probabilistic Graph Model]({{< relref "pgm" >}}), we can:
 
 1.  model sub-optimal behaviour (important for inverse RL)
 2.  can apply inference algorithms to solve control and planning problems

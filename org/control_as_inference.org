@@ -21,7 +21,7 @@ If we choose $p(O_t | s_t, a_t) = \mathrm{exp}(r(s_t, a_t))$, then:
                                 r(s_t, a_t) \right)
 \end{align}
 
-With this [[file:pgm.org][§pgm]], we can:
+With this [[file:pgm.org][Probabilistic Graph Model]], we can:
 
 1. model sub-optimal behaviour (important for inverse RL)
 2. can apply inference algorithms to solve control and planning problems

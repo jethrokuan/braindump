@@ -1,19 +1,19 @@
 +++
 title = "Neuroscience and Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T15:30:40+08:00
+lastmod = 2020-02-10T15:33:49+08:00
 draft = false
 +++
 
 tags
-: [<Reinforcement Learning ⭐>]({{< relref "reinforcement_learning" >}}), [<Neuroscience ⭐>]({{< relref "neuroscience" >}})
+: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}), [Neuroscience ⭐]({{< relref "neuroscience" >}})
 
-[<Reinforcement Learning ⭐>]({{< relref "reinforcement_learning" >}}) is similar to how humans learn:
+[Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}) is similar to how humans learn:
 
 -   Learning by trial-and-error
 -   Reward is often delayed
 
-TD errors ([<Temporal Difference Learning>]({{< relref "td_learning" >}})) model the activity of
+TD errors ([Temporal Difference Learning]({{< relref "td_learning" >}})) model the activity of
 dopamine neurons <a id="1df216ba2adc9f4271136342d9e684a9" href="#schultz97_neural_subst_predic_rewar">(Schultz et al., 1997)</a>
 
 # Bibliography
