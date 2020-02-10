@@ -79,7 +79,7 @@ approximation $q$, and giving away the global property of the rule.
 
 ** Deriving Gradient Descent
 Gradient descent is derived from using a Gaussian with fixed
-covariance, and approximating $E_q[l(\theta)] \approx l(m).$
+covariance, and approximating $E_q[l(\theta)] \approx l(m)$.
 
 * Resources
 - [[https://emtiyaz.github.io/papers/learning_from_bayes.pdf]]

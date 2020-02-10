@@ -1,12 +1,12 @@
 +++
 title = "Docker 101"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:25:22+08:00
+lastmod = 2020-02-10T21:15:10+08:00
 draft = false
 +++
 
 tags
-: [§linux]({{< relref "linux" >}}), [§operating\_systems]({{< relref "operating_systems" >}})
+: [Linux]({{< relref "linux" >}}), [Operating Systems]({{< relref "operating_systems" >}})
 
 
 ## Why Containers {#why-containers}

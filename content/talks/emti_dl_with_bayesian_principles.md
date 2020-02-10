@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning With Bayesian Principles - Emtiyaz Khan"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T17:00:12+08:00
+lastmod = 2020-02-10T22:07:04+08:00
 draft = false
 +++
 
@@ -90,7 +90,7 @@ approximation \\(q\\), and giving away the global property of the rule.
 ### Deriving Gradient Descent {#deriving-gradient-descent}
 
 Gradient descent is derived from using a Gaussian with fixed
-covariance, and approximating $E\_q[l(&theta;)] &asymp; l(m).$
+covariance, and approximating \\(E\_q[l(\theta)] \approx l(m)\\).
 
 
 ## Resources {#resources}

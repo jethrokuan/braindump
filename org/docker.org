@@ -5,7 +5,7 @@
 #+AUTHOR: Jethro Kuan
 #+EMAIL: jethrokuan95@gmail.com
 
-- tags :: [[file:linux.org][§linux]], [[file:operating_systems.org][§operating_systems]]
+- tags :: [[file:linux.org][Linux]], [[file:operating_systems.org][Operating Systems]]
 
 * Why Containers
   :PROPERTIES:

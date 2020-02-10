@@ -1,7 +1,7 @@
 #+TITLE: GCC
 #+SETUPFILE: ./hugo_setup.org
 
-- tags :: [[file:compilers.org][§compilers]], [[file:cplusplus.org][§cplusplus]], [[file:c_lang.org][§c_lang]]
+- tags :: [[file:compilers.org][Compilers]], [[file:c_lang.org][The C Language]]
 
 * Building GCC
 Instead of downloading the tarball, we clone from the Git mirror,
