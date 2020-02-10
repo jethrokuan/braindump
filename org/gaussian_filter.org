@@ -2,7 +2,7 @@
 #+TITLE: Gaussian Filter
 
 Gaussian Filters is a tractable implementation of the Bayes filter
-([[file:bayes_filter.org][§bayes_filter]]) for continuous spaces.
+([[file:bayes_filter.org][<Bayes Filter>]]) for continuous spaces.
 
 * Key Idea
 

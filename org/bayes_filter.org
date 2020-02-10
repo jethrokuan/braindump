@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Bayes Filter
 
-- tags :: [[file:gaussian_filter.org][Gaussian Filter]]
+- tags :: [[file:gaussian_filter.org][<Gaussian Filter>]]
 
 * Notation
 - $\eta$ :: normalizing constant, to make probability distribution sum
