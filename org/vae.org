@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Variational Autoencoders
+
+* Links
+- [[https://github.com/matthewvowels1/Awesome-VAEs][matthewvowels1/Awesome-VAEs]]

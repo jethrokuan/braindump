@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Travel
+
+* Useful Links
+- [[https://www.seat61.com/][The Man in Seat Sixty-One - the train travel guide...]]
