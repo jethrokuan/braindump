@@ -1,5 +1,3 @@
 #+HUGO_BASE_DIR: ..
 #+hugo_auto_set_lastmod: t
-#+startup: beamer
-#+LaTeX_CLASS: beamer
 #+OPTIONS: H:2
