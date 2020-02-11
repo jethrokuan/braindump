@@ -1,12 +1,12 @@
 +++
-title = "Find"
+title = "Find (CLI Tool)"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:08:30+08:00
+lastmod = 2020-02-11T18:56:04+08:00
 draft = false
 +++
 
 tags
-: [§unix]({{< relref "unix" >}})
+: [Unix]({{< relref "unix" >}})
 
 
 ## Links {#links}

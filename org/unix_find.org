@@ -1,8 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
-#+TITLE: Find
+#+TITLE: Find (CLI Tool)
 
-- tags :: [[file:unix.org][§unix]]
+- tags :: [[file:unix.org][Unix]]
 
 * Links
 - [[http://www.grymoire.com/Unix/Find.html][Find]]

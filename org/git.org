@@ -1,6 +1,6 @@
 #+TITLE: Git
 
-- tags :: [[file:unix.org][§unix]]
+- tags :: [[file:unix.org][Unix]]
 
 * Git Internals
 ** Content of .git folder
@@ -32,5 +32,6 @@ of objects:
 - commit :: contains reference to another tree object and some other
             information (author, committer etc.)
 - tag :: Another reference to a commit object
+
 * Git Branching Models
 [[https://nvie.com/posts/a-successful-git-branching-model/][A successful Git branching model » nvie.com]]

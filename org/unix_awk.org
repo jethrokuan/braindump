@@ -2,7 +2,7 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Awk
 
-- tags :: [[file:unix.org][§unix]]
+- tags :: [[file:unix.org][Unix]]
 
 * Links
 [[http://sparky.rice.edu/~hartigan/awk.html]]

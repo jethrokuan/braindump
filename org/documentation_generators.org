@@ -1,0 +1,11 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Documentation Generators
+
+We use these to generate [[file:documentation.org][documentation]] for projects.
+
+* Software
+
+- [[https://v2.docusaurus.io/][Docusaurus]]
+- [[https://www.gatsbyjs.org/starters/hasura/gatsby-gitbook-starter/][Gatsby.js]]
+- [[https://www.gitbook.com/][Gitbook]] - Only has a limited number of free spaces

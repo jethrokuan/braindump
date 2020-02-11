@@ -1,12 +1,12 @@
 +++
 title = "Lsof"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:09:38+08:00
+lastmod = 2020-02-11T18:55:33+08:00
 draft = false
 +++
 
 tags
-: [§unix]({{< relref "unix" >}})
+: [Unix]({{< relref "unix" >}})
 
 
 ## Links {#links}

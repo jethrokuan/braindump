@@ -2,8 +2,20 @@
 #+TITLE: Nix/NixOS
 #+AUTHOR: Jethro Kuan
 
-- tags :: [[file:prog_lang.org][§prog_lang]], [[file:operating_systems.org][§operating_systems]]
+NixOS is a [[file:linux.org][Linux]] [[file:operating_systems.org][operating System]] built upon the Nix package manager. Nix
+refers to both the package manager, and the name of the [[file:prog_lang.org][programming
+language]] it is written in.
+
+* Nix Software
+- [[https://github.com/target/lorri][target/lorri]] provides great [[https://direnv.net/][direnv]] ([[file:unix.org][Unix]]) /nix-shell integration
+- [[https://github.com/nmattia/niv][nmattia/niv]] provides dependency management for Nix projects
 
 * Links
+- [[https://github.com/nix-community/awesome-nix][nix-community/awesome-nix]]
 - [[https://weekly.nixos.org/][NixOS Weekly Newsletter]]
 - [[https://nixos.org/nixos/nix-pills/][Nix Pills]]
+- [[https://github.com/justinwoo/nix-shorts][Nix Shorts]]
+
+* Articles
+
+- [[https://christine.website/blog/i-was-wrong-about-nix-2020-02-10][I was Wrong about Nix - Christine Dodrill]]
