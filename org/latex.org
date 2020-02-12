@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: LaTeX
+
+* Useful Tools
+- [[https://mathpix.com/][Mathpix]] :: extracts LaTeX from PDFs
