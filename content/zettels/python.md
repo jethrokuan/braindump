@@ -1,19 +1,36 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T11:55:31+08:00
+lastmod = 2020-02-12T14:41:30+08:00
 tags = ["python", "proglang"]
 draft = false
 +++
 
-tags
-: [§prog\_lang]({{< relref "prog_lang" >}})
+Python is an interpreted, general-purpose, high-level [programming
+language]({{< relref "prog_lang" >}}). Some properties of Python include:
+
+-   whitespaces being significant
+-   dynamically-typed
+-   garbage-collected
+
+
+## Python Books {#python-books}
+
+
+### <span class="org-todo todo TODO">TODO</span> [Fluent Python](https://www.goodreads.com/book/show/22800567-fluent-python?ac=1&from%5Fsearch=true&qid=Fo3rzgCJBZ&rank=1) {#fluent-python}
+
+
+### <span class="org-todo todo TODO">TODO</span> [Effective Python](https://www.goodreads.com/book/show/23020812-effective-python) {#effective-python}
+
+
+### <span class="org-todo todo TODO">TODO</span> [High Performance Python](https://www.goodreads.com/book/show/17802644-high-performance-python?ac=1&from%5Fsearch=true&qid=IniMBn35h2&rank=1) {#high-performance-python}
 
 
 ## Setting up Python Environment {#setting-up-python-environment}
 
-Python version management is handled with [pyenv](https://github.com/pyenv/pyenv). Some further packages
-may need to be installed to build a full Python distribution:
+If not using [Nix/NixOS]({{< relref "nix" >}}), versioning Python is (in my opinion best)
+handled with [pyenv](https://github.com/pyenv/pyenv). Some further packages may need to be installed to
+build a full Python distribution:
 
 ```bash
 sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev

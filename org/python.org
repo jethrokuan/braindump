@@ -2,12 +2,23 @@
 #+HUGO_TAGS: python proglang
 #+TITLE: Python
 
-- tags :: [[file:prog_lang.org][§prog_lang]]
+Python is an interpreted, general-purpose, high-level [[file:prog_lang.org][programming
+language]]. Some properties of Python include:
+
+- whitespaces being significant
+- dynamically-typed
+- garbage-collected
+
+* Python Books
+** TODO [[https://www.goodreads.com/book/show/22800567-fluent-python?ac=1&from_search=true&qid=Fo3rzgCJBZ&rank=1][Fluent Python]]
+** TODO  [[https://www.goodreads.com/book/show/23020812-effective-python][Effective Python]]
+** TODO [[https://www.goodreads.com/book/show/17802644-high-performance-python?ac=1&from_search=true&qid=IniMBn35h2&rank=1][High Performance Python]]
 
 * Setting up Python Environment
 
-Python version management is handled with [[https://github.com/pyenv/pyenv][pyenv]]. Some further packages
-may need to be installed to build a full Python distribution:
+If not using [[file:nix.org][Nix/NixOS]], versioning Python is (in my opinion best)
+handled with [[https://github.com/pyenv/pyenv][pyenv]]. Some further packages may need to be installed to
+build a full Python distribution:
 
 #+begin_src bash
   sudo apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libreadline-dev libffi-dev libsqlite3-dev libbz2-dev

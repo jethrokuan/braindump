@@ -1,5 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
-#+TITLE: Javascript
+#+TITLE: JavaScript
 
-- tags :: [[file:prog_lang.org][§prog_lang]], [[file:web_dev.org][§web_dev]]
+JavaScript is an interpreted [[file:prog_lang.org][programming language]], originally designed
+for the [[file:web_dev.org][web]].

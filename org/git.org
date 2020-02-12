@@ -1,6 +1,12 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
 #+TITLE: Git
 
 - tags :: [[file:unix.org][Unix]]
+
+* Links
+** TODO [[https://www.sbf5.com/~cduan/technical/git/][Understanding Git Conceptually]]
+** TODO [[https://github.com/pluralsight/git-internals-pdf][GitHub - pluralsight/git-internals-pdf: PDF on Git Internals]]
 
 * Git Internals
 ** Content of .git folder
