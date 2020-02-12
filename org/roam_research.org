@@ -5,10 +5,13 @@
 - webpage :: [[https://roamresearch.com][Roam Research]]
 - tags :: [[file:productivity.org][Productivity]], [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]]
 
+Roam research is a tool for networked-thought, created by [[file:conor_white_sullivan.org][Conor
+White-Sullivan]]. 
+
 * Roam Tutorials
 
 - [[https://www.youtube.com/watch?v=RvWic15iXjk][How to Use Roam to Outline a New Article in Under 20 Minutes -
-  YouTube]]
+  YouTube]] by [[file:nat_eliason.org][Nat Eliason]]
   - Basic Idea is to pull out related notes from other sources (books,
     articles etc.)
   - Group them up into common themes (e.g. "Ease is not the Goal")

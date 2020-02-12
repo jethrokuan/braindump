@@ -1,0 +1,7 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Conor White-Sullivan
+
+Creator of [[file:roam_research.org][Roam Research]].
+
+- socials :: [[https://twitter.com/Conaw][Twitter]]
