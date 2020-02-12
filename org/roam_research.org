@@ -1,0 +1,15 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+TITLE: Roam Research
+
+- webpage :: [[https://roamresearch.com][Roam Research]]
+- tags :: [[file:productivity.org][Productivity]], [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]]
+
+* Roam Tutorials
+
+- [[https://www.youtube.com/watch?v=RvWic15iXjk][How to Use Roam to Outline a New Article in Under 20 Minutes -
+  YouTube]]
+  - Basic Idea is to pull out related notes from other sources (books,
+    articles etc.)
+  - Group them up into common themes (e.g. "Ease is not the Goal")
+  - Polish after pulling out relevant notes

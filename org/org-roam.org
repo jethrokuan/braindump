@@ -2,7 +2,7 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Org-Roam
 
-Org-roam is a package I built trying to emulate [[https://roamresearch.org/][Roam Research]] in
+Org-roam is a package I built trying to emulate [[file:roam_research.org][Roam Research]] in
 [[file:emacs.org][Emacs]] and [[file:org-mode.org][Org-Mode]].
 
 * Media

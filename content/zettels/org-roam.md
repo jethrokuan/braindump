@@ -1,11 +1,11 @@
 +++
 title = "Org-Roam"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T16:36:29+08:00
+lastmod = 2020-02-12T20:34:36+08:00
 draft = false
 +++
 
-Org-roam is a package I built trying to emulate [Roam Research](https://roamresearch.org/) in
+Org-roam is a package I built trying to emulate [Roam Research]({{< relref "roam_research" >}}) in
 [Emacs]({{< relref "emacs" >}}) and [Org-Mode]({{< relref "org-mode" >}}).
 
 
