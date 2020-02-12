@@ -1,11 +1,11 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Slice Sampling
 
-Slice sampling has similarities to [[file:gibbs_sampling.org][§gibbs_sampling]],
-[[file:rejection_sampling.org][§rejection_sampling]] and the [[file:metropolis_hastings.org][§metropolis_hastings]] method. The advantage
-over simple [[file:metropolis_hastings.org][§metropolis_hastings]] methods is that  it is robust to the
-choice of parameters. Like rejection sampling, it asymptotically draws
-samples from volume under the curve $p^\star(x)$.
+Slice sampling has similarities to [[file:gibbs_sampling.org][gibbs sampling]], [[file:rejection_sampling.org][rejection sampling]]
+and the [[file:metropolis_hastings.org][Metropolis-Hastings method]]. The advantage over simple
+[[file:metropolis_hastings.org][Metropolis-Hastings]] methods is that it is robust to the choice of
+parameters. Like rejection sampling, it asymptotically draws samples
+from volume under the curve $p^\star(x)$.
 
 A good treatment of slice sampling can be found in Mackay's Book
 [[http://www.inference.org.uk/itprnn/book.pdf][Information Theory, Inference and Learning Algorithms]]. 

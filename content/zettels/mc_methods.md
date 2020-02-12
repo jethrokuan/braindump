@@ -1,12 +1,12 @@
 +++
 title = "Monte Carlo Methods"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:24:57+08:00
+lastmod = 2020-02-12T23:36:18+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}}), [§pgm]({{< relref "pgm" >}})
+: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Probabilistic Graph Models]({{< relref "pgm" >}})
 
 Monte Carlo methods make use of random numbers to solve the following
 problems:
@@ -46,12 +46,3 @@ $P^*(x) = \\(P(x) Z\\). To generate samples from \\(P(x)\\), we need to
 know the normalizing constant \\(Z\\). Even if we knew \\(Z\\), there is no
 obvious way to sample without enumerating most or all of the possible
 states.
-
-
-## Methods {#methods}
-
--   [§importance\_sampling]({{< relref "importance_sampling" >}})
--   [§rejection\_sampling]({{< relref "rejection_sampling" >}})
--   [§metropolis\_hastings]({{< relref "metropolis_hastings" >}})
--   [§gibbs\_sampling]({{< relref "gibbs_sampling" >}})
--   [§slice\_sampling]({{< relref "slice_sampling" >}})

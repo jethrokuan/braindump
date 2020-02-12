@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Gibbs Sampling
 
-Gibbs sampling is a special case of the [[file:metropolis_hastings.org][§metropolis_hastings]] method,
+Gibbs sampling is a special case of the [[file:metropolis_hastings.org][Metropolis-Hastings method]],
 where a sequence of proposal distributions $q$ is defined in terms of
 the conditional distributions of the joint distribution
 $p(\mathbf{x})$, and proposals are always accepted.
@@ -14,5 +14,5 @@ involves sampling one parameter at a time:
 \end{equation}
 
 * Pros and Cons
-1. Suffers the same defects as [[file:metropolis_hastings.org][§metropolis_hastings]] methods
+1. Suffers the same defects as [[file:metropolis_hastings.org][Metropolis-Hastings methods]]
 2. No adjustable parameters, so it's easy to start with

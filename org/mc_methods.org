@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Monte Carlo Methods
 
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]], [[file:pgm.org][§pgm]]
+- tags :: [[file:/home/jethro/Dropbox/org/braindump/org/machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:/home/jethro/Dropbox/org/braindump/org/pgm.org][Probabilistic Graph Models]]
 
 Monte Carlo methods make use of random numbers to solve the following
 problems:
@@ -42,10 +42,3 @@ $P^\star(x) = $P(x) Z$. To generate samples from $P(x)$, we need to
 know the normalizing constant $Z$. Even if we knew $Z$, there is no
 obvious way to sample without enumerating most or all of the possible
 states.
-
-* Methods
-- [[file:importance_sampling.org][§importance_sampling]]
-- [[file:rejection_sampling.org][§rejection_sampling]]
-- [[file:metropolis_hastings.org][§metropolis_hastings]]
-- [[file:gibbs_sampling.org][§gibbs_sampling]]
-- [[file:slice_sampling.org][§slice_sampling]]
