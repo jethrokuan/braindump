@@ -3,5 +3,5 @@
 /node_modules/
 /resources/
 /org/biblio/auto/
-**/*/dailies-*.md
-**/*/dailies-*.org
+**/*/private-*.md
+**/*/private-*.org

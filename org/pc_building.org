@@ -1,3 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: building_a_pc
 #+HUGO_SETUP: ./hugo_setup.org
 #+TITLE: Building a PC
 

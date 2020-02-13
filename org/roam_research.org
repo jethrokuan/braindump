@@ -8,6 +8,9 @@
 Roam research is a tool for networked-thought, created by [[file:conor_white_sullivan.org][Conor
 White-Sullivan]]. 
 
+* Roam Media
+- [[https://twitter.com/adam_keesling/status/1196864424725774336][Adam Keesling's Roam Thread]]
+
 * Roam Tutorials
 
 - [[https://www.youtube.com/watch?v=RvWic15iXjk][How to Use Roam to Outline a New Article in Under 20 Minutes -

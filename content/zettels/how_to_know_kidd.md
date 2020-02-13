@@ -1,7 +1,7 @@
 +++
 title = "How To Know - Chelsea Kidd"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T17:00:05+08:00
+lastmod = 2020-02-13T15:51:57+08:00
 draft = false
 +++
 

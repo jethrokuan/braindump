@@ -1,0 +1,12 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: elisp_bufferpassing_style
+#+TITLE: Elisp: Buffer-passing Style
+
+- tags :: [[file:/home/jethro/Dropbox/org/braindump/org/emacs_lisp.org][Emacs Lisp]]
+
+Rather than have the callee instantiate the buffer, the caller
+instantiates the buffer, and passes it implicitly as the current
+buffer. The callee fills it with something. The caller should use
+something like with-temp-buffer so that the buffer has a clean
+life-cycle, fully managed by the caller ([[https://nullprogram.com/blog/2014/05/27/][Source]]).

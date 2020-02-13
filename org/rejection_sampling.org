@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Rejection Sampling
 
-*Goal*: To sample from unknown distribution $p(x)$.
+ *Goal*: To sample from unknown distribution $p(x)$.
 
 * Assumptions
 - we cannot sample from $p(x)$
