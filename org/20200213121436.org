@@ -1,4 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
-#+HUGO_SLUG: editme
+#+HUGO_SLUG: sonke_ahrens
 #+TITLE: Sonke Ahrens
