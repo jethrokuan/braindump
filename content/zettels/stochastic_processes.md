@@ -1,12 +1,9 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:36:40+08:00
+lastmod = 2020-02-13T19:53:29+08:00
 draft = false
 +++
-
-tags
-: [§stochastic\_processes]({{< relref "stochastic_processes" >}})
 
 A stochastic process \\(X(t), t \in T\\) is a collection of random
 variables. For each \\(t \in T\\), \\(X(t)\\) is a random variable. The index

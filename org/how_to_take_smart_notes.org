@@ -5,3 +5,35 @@
 - author :: [[file:20200213121436.org][Sonke Ahrens]]
 - tags :: [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]], [[file:books.org][Books]], [[file:productivity.org][Productivity]]
 - recommended by :: [[file:/home/jethro/Dropbox/org/braindump/org/conor_white_sullivan.org][Conor White-Sullivan]]
+
+* Motivations
+- There's a ton of books covering the art of writing, and very little
+  on note-taking.
+- These books don't cover the connections between note-taking and
+  writing well.
+
+#+begin_quote
+Notes aren't a record of my thinking process. They are my thinking
+process. -- [[file:20200213173516.org][Richard Feynman]]
+#+end_quote
+
+The mind is extremely reliant of external scaffolding:
+
+#+begin_quote
+Notes on paper, or on a computer screen ... do not make contemporary
+physics or other kinds of intellectual endeavour easier, they make it
+possible -- Neil Levy (Neuroethics and the Extended Mind)
+#+end_quote
+
+Hence, use the [[file:zettelkasten.org][Zettelkasten]] method. To get around this idea of
+note-taking, it is important to understand that:
+
+1. Note sequences are meant for developing ideas, not storing them
+2. Links and indices  are helpful, but not central features
+3. The workflow is streamlined to writing
+
+In [[file:zettelkasten.org][Zettelkasten]], the most time-consuming portion is determining /the
+order/ for the notes in which to write about.
+
+* Resources
+- [[https://vimeo.com/275530205][Sönke Ahrens - How to take smart notes on Vimeo]]

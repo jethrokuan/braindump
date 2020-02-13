@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Stochastic Processes
 
-- tags :: [[file:stochastic_processes.org][§stochastic_processes]]
-
 A stochastic process $X(t), t \in T$ is a collection of random
 variables. For each $t \in T$, $X(t)$ is a random variable. The index
 $t$ is often interpreted as time, and as a result, we refer to $X(t)$
@@ -59,7 +57,3 @@ Example of stochastic process: Gambler's ruin
 cite:ross2014introduction,pinsky2010introduction
 
 bibliography:biblio/slt.bib
-
-# Local Variables:
-# nix-buffer-root-file: "statistics.nix"
-# End:
