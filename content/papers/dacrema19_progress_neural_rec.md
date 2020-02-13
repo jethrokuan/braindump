@@ -1,7 +1,7 @@
 +++
 title = "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:03:56+08:00
+lastmod = 2020-02-13T21:26:18+08:00
 draft = false
 +++
 
@@ -13,7 +13,7 @@ paper
 : <a id="d3cb4e95df75aa1a78534232726eadd6" href="#dacrema19_are_we_reall_makin_much_progr">(Dacrema et al., 2019)</a>
 
 tags
-: [§recommender\_systems]({{< relref "recommender_systems" >}})
+: [Recommender Systems]({{< relref "recommender_systems" >}}), [Machine Learning Papers]({{< relref "ml_papers" >}})
 
 The authors analyzed various recent publications on recommendation
 systems techniques, and found that these have:

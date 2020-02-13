@@ -1,2 +1,4 @@
 #+SETUPFILE: ./hugo_setup.org
+#+HUGO_SECTION: zettels
 #+TITLE: Recommender Systems
+ - tags :: [[file:machine_learning.org][Machine Learning]]
