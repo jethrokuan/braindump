@@ -1,0 +1,25 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: talks
+#+HUGO_SLUG: emacs_should_be_emacs_lisp
+#+TITLE: Emacs Should Be Emacs Lisp - Tom Tromey
+
+- talk :: https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm
+- speaker :: [[file:20200213215019.org][Tom Tromey]]
+- tags :: [[file:emacs.org][Emacs]], [[file:emacs_lisp.org][Emacs Lisp]]
+
+* Several competing ideas and their problems
+- Guile Emacs
+  - Scheme is not Emacs Lisp! Impedance mismatch -- largely solved by
+    Guile Scheme, at the expense of Guile not being a proper Scheme
+  - Scripting fragmentation (rather than have)
+- Rebase on Common Lisp
+  - Experiment in 2012, an attempt to unify the type systems
+  - Impedance mismatch, hard to maintain
+
+* Emacs Should Be Emacs Lisp!
+- Easier to hack
+- Threads
+- GC
+- Library-only
+- FFI - [[http://github.com/tromey/emacs-ffi][tromey/emacs-ffi]]
+
