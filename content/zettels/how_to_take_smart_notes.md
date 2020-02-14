@@ -1,7 +1,7 @@
 +++
 title = "How To Take Smart Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-13T18:56:43+08:00
+lastmod = 2020-02-14T13:28:42+08:00
 draft = false
 +++
 
@@ -42,6 +42,22 @@ In [Zettelkasten]({{< relref "zettelkasten" >}}), the most time-consuming portio
 order_ for the notes in which to write about.
 
 
+## Concrete Changes {#concrete-changes}
+
+1.  Instead of highlighting passages, manually create notes of the
+    ideas you get as you read. These notes should be relevant to the
+    contexts important to you, not just related to the book you read.
+    <a id="bc302d5dd07e04119ae17c22121835a9" href="#nateliason_how_take_smart_notes">(Nat Eliason, 2020)</a>
+2.  Always reference the source. Cite, or indicate the page number.
+3.  When copying notes over, try to make the ideas standalone.
+4.  When filing notes, think instead about: _in which context will I
+    want to stumble on it again?_ Use tags for this.
+
+
 ## Resources {#resources}
 
 -   [Sönke Ahrens - How to take smart notes on Vimeo](https://vimeo.com/275530205)
+-   [How to Take Smart Notes: A Step-by-Step Guide - Nat Eliason](https://www.nateliason.com/blog/smart-notes)
+
+# Bibliography
+<a id="nateliason_how_take_smart_notes" target="_blank">Eliason, N. (2020). *How to take smart notes: a step-by-step guide - nat eliason*. Retrieved from [https://www.nateliason.com/blog/smart-notes](https://www.nateliason.com/blog/smart-notes). Online; accessed 14 February 2020.</a> [↩](#bc302d5dd07e04119ae17c22121835a9)

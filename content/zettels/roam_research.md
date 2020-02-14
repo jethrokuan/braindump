@@ -1,7 +1,7 @@
 +++
 title = "Roam Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-13T12:21:19+08:00
+lastmod = 2020-02-14T13:29:44+08:00
 draft = false
 +++
 
@@ -12,12 +12,15 @@ tags
 : [Productivity]({{< relref "productivity" >}}), [Writing]({{< relref "writing" >}}), [Note-taking]({{< relref "note_taking" >}})
 
 Roam research is a tool for networked-thought, created by [Conor
-White-Sullivan]({{< relref "conor_white_sullivan" >}}).
+White-Sullivan]({{< relref "conor_white_sullivan" >}}). Roam adopts methods from [Zettelkasten]({{< relref "zettelkasten" >}}).
 
 
 ## Roam Media {#roam-media}
 
 -   [Adam Keesling's Roam Thread](https://twitter.com/adam%5Fkeesling/status/1196864424725774336)
+-   [Building a Second Brain in Roam...And Why You Might Want To :
+    RoamResearch](https://reddit.com/r/RoamResearch/comments/eho7de/building%5Fa%5Fsecond%5Fbrain%5Fin%5Froamand%5Fwhy%5Fyou%5Fmight)
+-   [Roam: Why I Love It and How I Use It - Nat Eliason](https://www.nateliason.com/blog/roam)
 
 
 ## Roam Tutorials {#roam-tutorials}

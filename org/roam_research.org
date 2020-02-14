@@ -6,10 +6,13 @@
 - tags :: [[file:productivity.org][Productivity]], [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]]
 
 Roam research is a tool for networked-thought, created by [[file:conor_white_sullivan.org][Conor
-White-Sullivan]]. 
+White-Sullivan]]. Roam adopts methods from [[file:zettelkasten.org][Zettelkasten]].
 
 * Roam Media
 - [[https://twitter.com/adam_keesling/status/1196864424725774336][Adam Keesling's Roam Thread]]
+- [[https://reddit.com/r/RoamResearch/comments/eho7de/building_a_second_brain_in_roamand_why_you_might][Building a Second Brain in Roam...And Why You Might Want To :
+  RoamResearch]]
+- [[https://www.nateliason.com/blog/roam][Roam: Why I Love It and How I Use It - Nat Eliason]]
 
 * Roam Tutorials
 

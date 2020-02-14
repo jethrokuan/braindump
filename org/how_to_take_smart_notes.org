@@ -35,5 +35,20 @@ note-taking, it is important to understand that:
 In [[file:zettelkasten.org][Zettelkasten]], the most time-consuming portion is determining /the
 order/ for the notes in which to write about.
 
+* Concrete Changes
+
+1. Instead of highlighting passages, manually create notes of the
+   ideas you get as you read. These notes should be relevant to the
+   contexts important to you, not just related to the book you read.
+   cite:nateliason_how_take_smart_notes
+2. Always reference the source. Cite, or indicate the page number.
+3. When copying notes over, try to make the ideas standalone.
+4. When filing notes, think instead about: /in which context will I
+   want to stumble on it again?/ Use tags for this.
+
+
 * Resources
 - [[https://vimeo.com/275530205][Sönke Ahrens - How to take smart notes on Vimeo]]
+- [[https://www.nateliason.com/blog/smart-notes][How to Take Smart Notes: A Step-by-Step Guide - Nat Eliason]]
+
+bibliography:./biblio/biblio.bib
