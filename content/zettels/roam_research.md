@@ -1,7 +1,7 @@
 +++
 title = "Roam Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-14T13:29:44+08:00
+lastmod = 2020-02-15T15:42:56+08:00
 draft = false
 +++
 
@@ -31,3 +31,8 @@ White-Sullivan]({{< relref "conor_white_sullivan" >}}). Roam adopts methods from
         articles etc.)
     -   Group them up into common themes (e.g. "Ease is not the Goal")
     -   Polish after pulling out relevant notes
+-   [Roam for Personal Knowledge Management: Zettelkasten Method in Roam
+    Research ...](https://www.youtube.com/watch?v=ljyo%5FWAJevQ)
+    -   Highly similar to the above Nat Eliason video.
+    -   He uses file-tag metadata as well, "in what context do I want to
+        see this idea?"

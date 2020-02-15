@@ -22,3 +22,8 @@ White-Sullivan]]. Roam adopts methods from [[file:zettelkasten.org][Zettelkasten
     articles etc.)
   - Group them up into common themes (e.g. "Ease is not the Goal")
   - Polish after pulling out relevant notes
+- [[https://www.youtube.com/watch?v=ljyo_WAJevQ][Roam for Personal Knowledge Management: Zettelkasten Method in Roam
+  Research ...]]
+  - Highly similar to the above Nat Eliason video.
+  - He uses file-tag metadata as well, "in what context do I want to
+    see this idea?"
