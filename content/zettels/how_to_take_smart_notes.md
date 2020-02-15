@@ -1,7 +1,7 @@
 +++
 title = "How To Take Smart Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-14T13:28:42+08:00
+lastmod = 2020-02-14T23:58:29+08:00
 draft = false
 +++
 
@@ -35,7 +35,7 @@ Hence, use the [Zettelkasten]({{< relref "zettelkasten" >}}) method. To get arou
 note-taking, it is important to understand that:
 
 1.  Note sequences are meant for developing ideas, not storing them
-2.  Links and indices  are helpful, but not central features
+2.  Links and indices are helpful, but not central features
 3.  The workflow is streamlined to writing
 
 In [Zettelkasten]({{< relref "zettelkasten" >}}), the most time-consuming portion is determining _the

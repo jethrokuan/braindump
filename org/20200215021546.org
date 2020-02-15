@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: feynman_technique
+#+TITLE: Feynman Technique
+
+- tags :: [[file:20200213173516.org][Richard Feynman]]

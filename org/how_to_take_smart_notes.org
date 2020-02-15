@@ -29,7 +29,7 @@ Hence, use the [[file:zettelkasten.org][Zettelkasten]] method. To get around thi
 note-taking, it is important to understand that:
 
 1. Note sequences are meant for developing ideas, not storing them
-2. Links and indices  are helpful, but not central features
+2. Links and indices are helpful, but not central features
 3. The workflow is streamlined to writing
 
 In [[file:zettelkasten.org][Zettelkasten]], the most time-consuming portion is determining /the
