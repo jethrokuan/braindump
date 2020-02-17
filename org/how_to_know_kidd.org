@@ -1,8 +1,10 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
-#+TITLE: How To Know - Chelsea Kidd
+#+TITLE: How To Know - Celeste Kidd
 
-Link: [[https://slideslive.com/38921495/how-to-know][Celeste Kidd | How to Know · SlidesLive]]
+- tags :: [[file:machine_learning.org][Machine Learning]], [[file:20200217215815_neurips.org][NeurIPS]]
+- link :: [[https://slideslive.com/38921495/how-to-know][Celeste Kidd | How to Know · SlidesLive]]
+- speaker :: [[file:20200217215856_celeste_kidd.org][Celeste Kidd]]
 
 Why are we curious about some things but not others? What are the core
 cognitive systems that people use to guide their learning about the
