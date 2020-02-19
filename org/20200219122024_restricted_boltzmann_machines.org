@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: restricted_boltzmann_machines
+#+TITLE: Restricted Boltzmann machines
+

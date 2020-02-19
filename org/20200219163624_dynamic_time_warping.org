@@ -1,0 +1,17 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: dynamic_time_warping
+#+TITLE: Dynamic Time Warping
+
+Dynamic time warping (DTW) is a dynamic programming approach used to
+align multi-view time series. The similarity between two sequences are
+measured, and used to find an optimal match between them via
+time-warping (inserting frames).
+
+This approach requires timesteps in the two sequences to be
+comparable, and requires a similarity measure between sequences.
+Because DTW requires a pre-defined similarity measure, it has been
+extended to [[file:20200219160013_canonical_correlation_analysis.org][canonical correlation analysis]] which does this computation
+in a coordinated space for [[file:20200219115844_multimodal_machine_learning.org][multi-modal machine learning]]. This allows
+for both aligning and mapping between different modalities jointly in
+ean unsupervised manner.

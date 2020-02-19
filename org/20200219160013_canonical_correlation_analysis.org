@@ -1,0 +1,12 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: canonical_correlation_analysis
+#+TITLE: Canonical Correlation Analysis
+
+Canonical Correlation Analysis computes a linear projection which
+maximizes the correlation between two random variables andn enforces
+orthogonality in the new space. This is commonly used in [[file:20200219120814_multimodal_representation.org][multi-modal
+representation]] learning, where the random variables are modalities.
+
+Extensions of CCA include Kernel CCA, which uses a non-linear
+projection, and Deep CCA, which addresses the scalability issues of KCCA.
