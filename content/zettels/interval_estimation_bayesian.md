@@ -1,16 +1,13 @@
 +++
 title = "Interval Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:35:11+08:00
+lastmod = 2020-02-18T23:26:36+08:00
 draft = false
 +++
 
-tags
-: [§bayesian\_statistics]({{< relref "bayesian_statistics" >}})
-
-Suppose instead of [§point\_estimation\_bayesian]({{< relref "point_estimation_bayesian" >}}), we'd like to identify a
+Suppose instead of [point estimation]({{< relref "point_estimation_bayesian" >}}), we'd like to identify a
 region that is likely to contain the true value of parameter \\(\theta\\).
-In Bayesian inference, this region is called the _credible set_, or
+In [Bayesian Inference]({{< relref "bayesian_inference" >}}), this region is called the _credible set_, or
 the _Bayesian confidence interval_.
 
 A \\(100(1-\alpha)%\\) credible set for \\(\theta\\) is subset \\(\mathcal{C}\\)
@@ -23,7 +20,7 @@ of \\(\Theta\\) such that:
 Interpreting credible sets is different in Bayesian statistics,
 compared to frequentist confidence intervals.
 
-In Bayesian statistics, the unknown parameters \\(\theta\\) is regarded as
+In [Bayesian statistics]({{< relref "bayesian_statistics" >}}), the unknown parameters \\(\theta\\) is regarded as
 a random variable, and the interval is fixed once data is observed.
 That is, we can make direct probabilistic statements like:
 
