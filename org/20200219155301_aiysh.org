@@ -1,5 +1,0 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
-#+HUGO_SLUG: aiysh
-#+TITLE: Aiysh
-
