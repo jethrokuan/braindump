@@ -21,9 +21,10 @@
 - fusion :: Join information from two ore more modalities to perform a
   prediction (with possibly missing data from modalities). Different
   modalities may have varying predictive power and noise topology.
+  (see [[file:20200219121628_multimodal_fusion.org][Multi-modal Fusion]])
 - co-learning :: Transferring knowledge between modalities, their
-  representation, and predictive models.
+  representation, and predictive models. (see [[file:20200221152911_colearning.org][Co-learning]])
 
-bibliography:./biblio/multimodal.bib
+bibliography:./biblio/biblio.bib
 
 

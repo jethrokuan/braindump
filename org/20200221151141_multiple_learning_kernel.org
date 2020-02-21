@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: multiple_learning_kernel
+#+TITLE: Multiple Learning Kernel
+

@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Representation"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-19T16:03:50+08:00
+lastmod = 2020-02-21T15:10:23+08:00
 slug = "multimodal_representation"
 draft = false
 +++

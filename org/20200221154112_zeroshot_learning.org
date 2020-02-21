@@ -1,0 +1,7 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: zeroshot_learning
+#+TITLE: Zero shot Learning
+
+Zero shot learning refers to recognizing a concept without having explicitly
+seen any examples of it. 

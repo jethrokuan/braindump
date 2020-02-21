@@ -1,7 +1,7 @@
 +++
 title = "Cross-modal Hashing"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-19T15:58:06+08:00
+lastmod = 2020-02-21T15:10:21+08:00
 slug = "crossmodal_hashing"
 draft = false
 +++

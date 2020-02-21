@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Translation"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-19T16:30:06+08:00
+lastmod = 2020-02-21T15:10:20+08:00
 slug = "multimodal_translation"
 draft = false
 +++

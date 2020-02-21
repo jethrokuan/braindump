@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-19T16:31:07+08:00
+lastmod = 2020-02-21T15:59:20+08:00
 slug = "multimodal_machine_learning"
 draft = false
 +++
@@ -37,9 +37,10 @@ fusion
 : Join information from two ore more modalities to perform a
     prediction (with possibly missing data from modalities). Different
     modalities may have varying predictive power and noise topology.
+    (see [Multi-modal Fusion]({{< relref "20200219121628_multimodal_fusion" >}}))
 
 co-learning
 : Transferring knowledge between modalities, their
-    representation, and predictive models.
+    representation, and predictive models. (see [Co-learning]({{< relref "20200221152911_colearning" >}}))
 
-<./biblio/multimodal.bib>
+<./biblio/biblio.bib>

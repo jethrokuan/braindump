@@ -67,6 +67,6 @@ later decoding it to generate the target modality.
  generation models have to tackle the additional difficulty of
  temporal consistency between modalities.
 
-bibliography:./biblio/multimodal.bib
+bibliography:./biblio/biblio.bib
 
 

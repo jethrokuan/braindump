@@ -1,0 +1,5 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: support_vector_machines
+#+TITLE: Support Vector Machines
+
