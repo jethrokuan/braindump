@@ -3,45 +3,52 @@
 * Vectors, Lines & Planes
 ** Important Properties                                                  :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T09:33:56Z
-:FC_TYPE:  normal
-:ID:       2e133396-c7ec-4097-b6b2-15b1b3c539a5
+:FC_CREATED: 2020-02-25T10:51:59Z
+:FC_TYPE:  cloze
+:ID:       c8b92411-bd57-4f87-aa7f-bbac54afa82e
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:35:53Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T10:52:43Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T10:52:43Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T10:52:41Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T10:52:45Z |
+|        4 | 2.50 |   2 |     1.00 | 2020-02-26T10:52:46Z |
 :END:
-
-- $||c\boldsymbol{u}|| = |c| \, ||\boldsymbol{u}||$
-- $\boldsymbol{u} = \boldsymbol{a}/||\boldsymbol{a}||$
-- $\boldsymbol{a} \cdot \boldsymbol{b} = ||\boldsymbol{a}|| \, ||\boldsymbol{b}|| \cos \theta$
-- $\boldsymbol{a}$ and $\boldsymbol{b}$ are orthogonal iff $\boldsymbol{a} \cdot \boldsymbol{b} = 0$
-- $\boldsymbol{a} \times \boldsymbol{b}$ is orthogonal to $\boldsymbol{a}$ and $\boldsymbol{b}$
+- $||c\boldsymbol{u}|| =$ {{$|c| \, ||\boldsymbol{u}||$}@0}
+- $\boldsymbol{u} =$ {{$\boldsymbol{a}/||\boldsymbol{a}||$}@1}
+- $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{$||\boldsymbol{a}|| \, ||\boldsymbol{b}|| \cos \theta$}@2}
+- $\boldsymbol{a}$ and $\boldsymbol{b}$ are orthogonal iff {{$\boldsymbol{a} \cdot \boldsymbol{b} = 0$}@3}
+- $\boldsymbol{a} \times \boldsymbol{b}$ is {{orthogonal}@4} to $\boldsymbol{a}$ and $\boldsymbol{b}$
 
 ** Dot Product Properties                                                :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T09:34:03Z
-:FC_TYPE:  normal
-:ID:       6e4685be-b2d7-4fc2-893e-8e7658c102e1
+:FC_CREATED: 2020-02-25T10:50:41Z
+:FC_TYPE:  cloze
+:ID:       bfc492cf-fef4-4ee8-ad21-f12493202bc7
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:36:14Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T10:55:43Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T10:55:44Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T10:55:45Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T10:55:48Z |
+|        4 | 2.50 |   2 |     1.00 | 2020-02-26T10:55:49Z |
 :END:
 
-- Commutativity: $\boldsymbol{a} \cdot \boldsymbol{b} = \boldsymbol{b} \cdot \boldsymbol{a}$
-- Distributive: $\boldsymbol{a} \cdot (\boldsymbol{b} + \boldsymbol{c}) = 
-	\boldsymbol{a} \cdot \boldsymbol{b} + \boldsymbol{a} \cdot
-  \boldsymbol{c}$
-- $\boldsymbol{0} \cdot \boldsymbol{a} = 0$
-- $\boldsymbol{a} \cdot \boldsymbol{a} = ||\boldsymbol{a}||^2$
-- $\boldsymbol{a} \cdot \boldsymbol{b} = 0 \nRightarrow \boldsymbol{a} = \boldsymbol{0}$ or $\boldsymbol{b} = \boldsymbol{0}$
+- Commutativity: $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{$\boldsymbol{b} \cdot \boldsymbol{a}$}@0}
+- Distributive: $\boldsymbol{a} \cdot (\boldsymbol{b} +
+  \boldsymbol{c})=$ {{$\boldsymbol{a} \cdot \boldsymbol{b} +
+  \boldsymbol{a} \cdot \boldsymbol{c}$}@1}
+- $\boldsymbol{0} \cdot \boldsymbol{a} =$  {{$0$}@2}
+- $\boldsymbol{a} \cdot \boldsymbol{a} =$ {{$||\boldsymbol{a}||^2$}@3}
+- $\boldsymbol{a} \cdot \boldsymbol{b} = 0 \nRightarrow$ {{$\boldsymbol{a} = \boldsymbol{0}$ or $\boldsymbol{b} = \boldsymbol{0}$}@4}
 
 ** Projections                                                           :fc:
 :PROPERTIES:
@@ -87,10 +94,10 @@ component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:21Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:23Z |
-|        2 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:22Z |
-|        3 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:20Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T10:57:32Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T10:57:35Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T10:57:38Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T10:57:39Z |
 :END:
 
 - $\boldsymbol{a} \times \boldsymbol{b} =$ {{$-\boldsymbol{b} \times \boldsymbol{a}$}@0}
@@ -149,6 +156,318 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
   d = \frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}
 \end{equation}
 
+** Vector Equation of Plane                                              :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T10:58:16Z
+:FC_TYPE:  normal
+:ID:       2082ef86-db79-4ebe-98ce-8a3fd534ef5d
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T11:02:01Z |
+:END:
+
+\begin{equation}
+  \boldsymbol{n} \cdot (\boldsymbol{r} - \boldsymbol{r}_0) = 0
+\end{equation}
+
+** Useful Techniques
+
+*** Finding Angle Between Planes                                         :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T10:59:05Z
+:FC_TYPE:  cloze
+:ID:       491d49ed-a887-4e7b-be98-a89f1517bfd6
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: deletion
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:01:36Z |
+:END:
+
+Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ {{$\theta = \cos^{-1} \left( \frac{\boldsymbol{u} \cdot \boldsymbol{v}}{||\boldsymbol{u}|| \, ||\boldsymbol{v}||} \right)$}@0}
+
+*** Finding line of intesection between planes                           :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T11:00:51Z
+:FC_TYPE:  normal
+:ID:       f3577bb5-7471-4621-9a33-bd72f9381146
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T11:01:40Z |
+:END:
+1. Solve for $x$
+2. Set both $x$ equal then let $y=t$ to obtain parametric equations
+   for line
+
+*** Distance between 2 Planes                                            :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T11:00:47Z
+:FC_TYPE:  cloze
+:ID:       0e2e3c81-6483-42eb-b9af-490ca130dd4f
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:01:50Z |
+:END:
+
+1. Find $\boldsymbol{u}$ vector that connects both planes
+2. distance $= ||\boldsymbol{u}|| \, |\cos \theta| =$ {{$\left| \frac{\boldsymbol{u} \cdot \boldsymbol{n}}{||\boldsymbol{n}||} \right|$}@0} 
+
+* Function of 2 Variables, Surface, Limits and Continuity
+** Quadric Surfaces
+*** Elliptic Paraboloid                                                  :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T11:06:04Z
+:FC_TYPE:  cloze
+:ID:       e9c07516-edb6-4205-8f08-0bc3925463db
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:15Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:16Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:18Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:20Z |
+|        4 | 2.50 |   2 |     1.00 | 2020-02-26T11:08:07Z |
+:END:
+
+- Horizontal trace :: {{ellipses}@0}
+- Vertical trace :: {{parabolas}@1}
+
+Equation: 
+
+{{$\frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{z}{c}$}@2}
+
+Image:
+
+#+DOWNLOADED: screenshot @ 2020-02-25 19:05:11
+{{[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-05-11_.png]]}@3}
+
+The vertix will be shifted to $(x_0, y_0, z_0)$ if the elliptic
+paraboloid is given by
+{{$\frac{\left(x-x_{0}\right)^{2}}{a^{2}}+\frac{\left(y-y_{0}\right)^{2}}{b^{2}}=\frac{\left(z-z_{0}\right)}{c}$}@4}
+
+*** Hyperbolic Paraboloid                                                :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T11:14:26Z
+:FC_TYPE:  cloze
+:ID:       407556ce-e833-4016-b461-4ac0c3f537e6
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:15:50Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T11:49:42Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T11:49:55Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T11:51:54Z |
+:END:
+
+- Horizontal traces :: {{hyperbolas}@0}
+- Vertical traces :: {{parabolas}@1}
+
+Equation:
+
+{{$$\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=\frac{z}{c}$$}@2}
+
+{{[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-13-32_.png]]}@3}
+
+*** Ellipsoid                                                            :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T11:15:35Z
+:FC_TYPE:  cloze
+:ID:       1b32c55c-fe3f-417c-bb90-5b25d349acce
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:49:44Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T11:16:10Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T11:50:43Z |
+|        3 | 2.50 |   3 |     6.00 | 2020-03-02T12:35:55Z |
+:END:
+
+- Horizontal traces :: {{ellipses}@0}
+- Vertical traces :: {{ellipses}@1}
+
+Equation:
+
+{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$$}@2}
+
+Image:
+
+{{[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-15-07_.png]]}@3} 
+
+*** Elliptic Cone                                                        :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T12:20:51Z
+:FC_TYPE:  cloze
+:ID:       ece7a5f5-a892-4531-b97b-7d31791cd8f3
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:28Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:49:48Z |
+|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:31Z |
+|        3 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:32Z |
+|        4 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:31Z |
+:END:
+
+- Horizontal traces :: {{ellipses}@0}
+- Vertical traces :: {{hyperbolas}@1} in the planes {{$x = k$ and $y =
+  k$}@2}, where {{$k \ne 0$}@3}
+
+Equation:
+
+{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=0$$}@4}
+
+Image:
+
+#+DOWNLOADED: screenshot @ 2020-02-25 20:20:27
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-20-27_.png]]
+
+*** Hyperboloid of 1 Sheet
+
+- Horizontal traces :: {{ellipses}@0}
+- Vertical traces :: {{hyperbolas}@1}
+
+Equation:
+
+{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$$}@2}
+
+Image:
+
+
+#+DOWNLOADED: screenshot @ 2020-02-25 20:21:32
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-21-32_.png]]
+
+*** Hyperboloid of 2 sheets                                              :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T12:23:00Z
+:FC_TYPE:  cloze
+:ID:       64c84cc9-cb52-43e6-adc8-af30fb0d322b
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:28Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:01Z |
+|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:33Z |
+|        3 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:26Z |
+:END:
+
+- Horizontal traces :: in {{$z=k$}@0} are {{ellipses}@1}, if $k > c$
+  or $k < -c$
+- Vertical traces :: {{hyperbolas}@2}
+
+Equation:
+
+{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=-1$$}@3}
+
+Image:
+
+#+DOWNLOADED: screenshot @ 2020-02-25 20:22:49
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-22-49_.png]]
+
+** Definition of Limits                                                  :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T12:25:26Z
+:FC_TYPE:  cloze
+:ID:       961cbe42-1f82-4a3c-a667-c80c1dda0bd6
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:17Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:21Z |
+|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:25Z |
+|        3 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:11Z |
+:END:
+Let $f$ be a function of two variables whose domain $D$ contains
+points arbitrarily close to $(a,b)$. We say that the limit of $f(x,y)$
+as $(x,y)$ approaches (a,b) is $L \in \mathcal{R}$, denoted by:
+
+\begin{equation}
+  \lim _{(x, y) \rightarrow(a, b)} f(x, y)=L
+\end{equation}
+
+if for any number {{$\epsilon > 0$}@0} there exists a number {{$\delta
+> 0$}@1} such that {{$|f(x, y)-L|<\epsilon$}@2} whenever
+{{$0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta$}@3}.
+
+** Showing a limit does not exist
+
+If the limit along SOME paths at $(a,b)$ are different, then the limit
+does not exist at $(a,b)$
+
+** Showing limits exist
+
+*** Properties of limits or continuity                                   :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T12:28:05Z
+:FC_TYPE:  cloze
+:ID:       5dcf9b26-3272-4b67-809b-2183fd8b812b
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:30Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:49:56Z |
+|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:29Z |
+:END:
+
+1. $\lim _{(x, y) \rightarrow(a, b)}(f(x, y) \pm g(x, y))=$ {{$\lim
+   _{(x, y) \rightarrow(a, b)} f(x, y) \pm \lim _{(x, y)
+   \rightarrow(a, b)} g(x, y)$}@0}
+2. $\lim _{(x, y) \rightarrow(a, b)} f(x, y) g(x, y)=$ {{$\left(\lim _{(x, y) \rightarrow(a, b)} f(x, y)\right)\left(\lim _{(x, y) \rightarrow(a, b)} g(x, y)\right)$}@1}
+3. $\lim _{(x, y) \rightarrow(a, b) \rightarrow(a, b)} \frac{f(x,
+   y)}{g(x, y)}=\frac{\lim _{(x, y) \rightarrow(a, b)} f(x, y)}{\lim
+   _{(x, y) \rightarrow(a, b)} g(x, y)}$ if {{$\lim _{(x, y) \rightarrow(a, b)} g(x, y) \neq 0$}@2}
+
+*** Squeeze Theorem                                                      :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T12:35:15Z
+:FC_TYPE:  cloze
+:ID:       0189e2d0-cff1-4d99-967c-7af5868e18f7
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:37Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:36Z |
+:END:
+
+1. {{$|f(x, y)-L|$}@0} $\leq g(x, y) \forall(x, y) \text { close to }(a, b)$
+2. $\lim _{(x, y) \rightarrow(a, b)} g(x, y)=$ {{$0$}@1}
+
+Then $$\lim _{(x, y) \rightarrow(a, b)} f(x, y)=L$$.
+
+* Setup
 
 # Local Variables:
 # eval: (org-hugo-auto-export-mode -1)
