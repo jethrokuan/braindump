@@ -1,0 +1,155 @@
+#+TITLE: Flashcards: Multivariable Calculus
+
+* Vectors, Lines & Planes
+** Important Properties                                                  :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T09:33:56Z
+:FC_TYPE:  normal
+:ID:       2e133396-c7ec-4097-b6b2-15b1b3c539a5
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:35:53Z |
+:END:
+
+- $||c\boldsymbol{u}|| = |c| \, ||\boldsymbol{u}||$
+- $\boldsymbol{u} = \boldsymbol{a}/||\boldsymbol{a}||$
+- $\boldsymbol{a} \cdot \boldsymbol{b} = ||\boldsymbol{a}|| \, ||\boldsymbol{b}|| \cos \theta$
+- $\boldsymbol{a}$ and $\boldsymbol{b}$ are orthogonal iff $\boldsymbol{a} \cdot \boldsymbol{b} = 0$
+- $\boldsymbol{a} \times \boldsymbol{b}$ is orthogonal to $\boldsymbol{a}$ and $\boldsymbol{b}$
+
+** Dot Product Properties                                                :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T09:34:03Z
+:FC_TYPE:  normal
+:ID:       6e4685be-b2d7-4fc2-893e-8e7658c102e1
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:36:14Z |
+:END:
+
+- Commutativity: $\boldsymbol{a} \cdot \boldsymbol{b} = \boldsymbol{b} \cdot \boldsymbol{a}$
+- Distributive: $\boldsymbol{a} \cdot (\boldsymbol{b} + \boldsymbol{c}) = 
+	\boldsymbol{a} \cdot \boldsymbol{b} + \boldsymbol{a} \cdot
+  \boldsymbol{c}$
+- $\boldsymbol{0} \cdot \boldsymbol{a} = 0$
+- $\boldsymbol{a} \cdot \boldsymbol{a} = ||\boldsymbol{a}||^2$
+- $\boldsymbol{a} \cdot \boldsymbol{b} = 0 \nRightarrow \boldsymbol{a} = \boldsymbol{0}$ or $\boldsymbol{b} = \boldsymbol{0}$
+
+** Projections                                                           :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T09:34:43Z
+:FC_TYPE:  cloze
+:ID:       eeef3d55-8040-4ec2-a964-685a8784f7f1
+:FC_CLOZE_MAX: 1
+:FC_CLOZE_TYPE: deletion
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T09:54:31Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T09:54:34Z |
+:END:
+
+$\vv{PS}$ is the vector projection of {{$\boldsymbol{b}$ onto $\boldsymbol{a}$}@0}, denoted by {{$\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$}@1}
+
+Scalar projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$ (called
+component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
+
+\begin{equation}
+  \text{comp}_{\boldsymbol{a}} \boldsymbol{b}=||\boldsymbol{b}||\cos
+  \theta = \frac{\boldsymbol{a} \cdot
+  \boldsymbol{b}}{||\boldsymbol{a}||}
+\end{equation}
+ 
+\begin{equation}
+\text{proj}_{\boldsymbol{a}}
+\boldsymbol{b} = \text{comp}_{\boldsymbol{a}} \boldsymbol{b} \times
+\frac{a}{||\boldsymbol{a}||}= \frac{\boldsymbol{a} \cdot
+\boldsymbol{b}}{\boldsymbol{a} \cdot \boldsymbol{a}} \boldsymbol{a}
+\end{equation}
+
+** Cross Product                                                         :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T10:13:36Z
+:FC_TYPE:  cloze
+:ID:       aeaeafb8-cb1a-4136-a194-77d147b4c596
+:FC_CLOZE_MAX: -5
+:FC_CLOZE_TYPE: deletion
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:21Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:23Z |
+|        2 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:22Z |
+|        3 | 2.50 |   1 |     0.01 | 2020-02-25T10:29:20Z |
+:END:
+
+- $\boldsymbol{a} \times \boldsymbol{b} =$ {{$-\boldsymbol{b} \times \boldsymbol{a}$}@0}
+- $(d \boldsymbol{a}) \times \boldsymbol{b} =$ {{$d(\boldsymbol{a} \times
+  \boldsymbol{b}) = \boldsymbol{a} \times (d\boldsymbol{b})$}@1}
+- $\boldsymbol{a} \times (\boldsymbol{b} + \boldsymbol{c}) =$
+  {{$\boldsymbol{a} \times \boldsymbol{b} + \boldsymbol{a} \times \boldsymbol{c}$}@2}
+- $(\boldsymbol{a}+\boldsymbol{b})\times \boldsymbol{c}=$ {{$\boldsymbol{a}
+  \times \boldsymbol{c} + \boldsymbol{b} \times \boldsymbol{c}$}@3}
+
+** Area of Parallelogram                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T09:26:16Z
+:FC_TYPE:  normal
+:ID:       a65f2c62-91c2-4b31-b0b3-00355fa6865c
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:54:33Z |
+:END:
+
+\begin{equation}
+A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
+\end{equation}
+
+** Distance of point (Q) to line ($\vv{PR}$)                                        :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T09:26:31Z
+:FC_TYPE:  normal
+:ID:       801b1e54-63e5-47fd-9cf5-c941f0199c0f
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:54:22Z |
+:END:
+
+\begin{equation}
+  ||\vv{PQ}|| \sin \theta = \frac{||\vv{PQ} \times
+    \vv{PR}||}{||\vv{PR}||}
+\end{equation}
+
+** Distance of point $P(x_1,y_1,z_1)$ from plane $Ax+By+Cz+D=0$          :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T09:26:42Z
+:FC_TYPE:  normal
+:ID:       74266d9f-c0db-4503-a154-44cb8e2c54d6
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:54:17Z |
+:END:
+\begin{equation}
+  d = \frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}
+\end{equation}
+
+
+# Local Variables:
+# eval: (org-hugo-auto-export-mode -1)
+# End:

@@ -1,7 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
 #+HUGO_SLUG: multimodal_fusion
-#+ROAM_ALIAS: "MM Fusion"
 #+TITLE: Multi-modal Fusion
 
 Multi-modal fusion is the integration of information from multiple
