@@ -1,8 +1,8 @@
 +++
 title = "Coding Interview Preparation"
 author = ["Jethro Kuan"]
+lastmod = 2020-02-24T19:41:18+08:00
 draft = false
-math = true
 +++
 
 ## Data Structures Review {#data-structures-review}
@@ -114,48 +114,50 @@ def delete_after(node):
 
 ### Queues {#queues}
 
+-    Queues with Circular Buffer
 
-#### Queues with Circular Buffer {#queues-with-circular-buffer}
+    ```python
+    class Queue:
+        SCALING_FACTOR = 2
 
-```python
-class Queue:
-    SCALING_FACTOR = 2
+        def __init__(self, capacity):
+            self._entries = [None] * capacity
+            self._head = self._tail = self._num_queue_elements = 0
 
-    def __init__(self, capacity):
-        self._entries = [None] * capacity
-        self._head = self._tail = self._num_queue_elements = 0
+        def enqueue(self, x):
+            if self._num_queue_elements == len(self._entries):
+                # Need to resize
+                self._entries = (
+                    self._entries[self._head:] + self._entries[:self._head])
+                self._head, self._tail = 0, self._num_queue_elements
+                self._entries += [None] * (len(self._entries) * Queue.SCALING_FACTOR)
 
-    def enqueue(self, x):
-        if self._num_queue_elements == len(self._entries):
-            # Need to resize
-            self._entries = (
-                self._entries[self._head:] + self._entries[:self._head])
-            self._head, self._tail = 0, self._num_queue_elements
-            self._entries += [None] * (len(self._entries) * Queue.SCALING_FACTOR)
+            self._entries[self._tail] = x
+            self._tail = (self._tail + 1) % self._num_queue_elements
+            self._num_queue_elements += 1
 
-        self._entries[self._tail] = x
-        self._tail = (self._tail + 1) % self._num_queue_elements
-        self._num_queue_elements += 1
+        def dequeue(self, x):
+            if not self._num_queue_elements:
+                raise IndexError("Empty queue")
 
-    def dequeue(self, x):
-        if not self._num_queue_elements:
-            raise IndexError("Empty queue")
+            self._num_queue_elements -= 1
+            ret = self._entries[self._head]
+            self._head = (self._head + 1) % len(self._entries)
+            return ert
 
-        self._num_queue_elements -= 1
-        ret = self._entries[self._head]
-        self._head = (self._head + 1) % len(self._entries)
-        return ert
-
-    @property
-    def size(self):
-        return self._num_queue_elements
-```
+        @property
+        def size(self):
+            return self._num_queue_elements
+    ```
 
 
 ## Common Questions {#common-questions}
 
 
 ### Find kth largest in array {#find-kth-largest-in-array}
+
+| position | ease | box | interval | due |
+|----------|------|-----|----------|-----|
 
 ```python
 import operator
@@ -367,6 +369,9 @@ def multiply(num1, num2):
 
 
 ### Next Permutation {#next-permutation}
+
+| position | ease | box | interval | due |
+|----------|------|-----|----------|-----|
 
 ```python
 def next_permutation(perm):

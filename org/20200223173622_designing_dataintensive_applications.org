@@ -1,0 +1,24 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: designing_dataintensive_applications
+#+TITLE: Designing Data-Intensive Applications
+
+- tags :: [[file:system_design.org][System Design]], [[file:databases.org][Databases]], [[file:hadoop.org][Hadoop]]
+- author :: [[file:20200223173656_martin_kleppmann.org][Martin Kleppmann]]
+
+* Preface
+
+- Data abstractions are well-built (databases, etc.) but the
+  boundaries are blurring
+- Design decisions are highly centered around data requirements (both
+  functional and non-functional requirements)
+- How to build reliable, scalable, and maintainable applications
+
+* Data Models
+
+- Prevalence of SQL
+- NoSQL has benefits of being schemaless (lower impedence mismatch)
+  and storage locality, when fetching whole documents
+  - joins are poorly implemented, can't access nested item in document efficiently
+- Graph DBs implement many-to-many relationships well, also somewhat schemaless
+
