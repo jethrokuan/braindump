@@ -238,8 +238,8 @@ Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ {{$\theta = \cos^{-1} \l
 |        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:15Z |
 |        1 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:16Z |
 |        2 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:18Z |
-|        3 | 2.50 |   2 |     1.00 | 2020-02-26T11:07:20Z |
-|        4 | 2.50 |   2 |     1.00 | 2020-02-26T11:08:07Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T16:24:07Z |
+|        4 | 2.50 |   3 |     6.00 | 2020-03-02T14:06:53Z |
 :END:
 
 - Horizontal trace :: {{ellipses}@0}
@@ -272,7 +272,7 @@ paraboloid is given by
 |        0 | 2.50 |   2 |     1.00 | 2020-02-26T11:15:50Z |
 |        1 | 2.50 |   2 |     1.00 | 2020-02-26T11:49:42Z |
 |        2 | 2.50 |   2 |     1.00 | 2020-02-26T11:49:55Z |
-|        3 | 2.50 |   2 |     1.00 | 2020-02-26T11:51:54Z |
+|        3 | 2.35 |   3 |     6.00 | 2020-03-02T14:04:00Z |
 :END:
 
 - Horizontal traces :: {{hyperbolas}@0}
@@ -323,11 +323,11 @@ Image:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:28Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:49:48Z |
-|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:31Z |
-|        3 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:32Z |
-|        4 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:31Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:28Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:27Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:24Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:11Z |
+|        4 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:26Z |
 :END:
 
 - Horizontal traces :: {{ellipses}@0}
@@ -369,10 +369,10 @@ Image:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:28Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:01Z |
-|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:33Z |
-|        3 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:26Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:16Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:05Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:25Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:20Z |
 :END:
 
 - Horizontal traces :: in {{$z=k$}@0} are {{ellipses}@1}, if $k > c$
@@ -399,10 +399,10 @@ Image:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:17Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:21Z |
-|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:25Z |
-|        3 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:11Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:09Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:10Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:30Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:13Z |
 :END:
 Let $f$ be a function of two variables whose domain $D$ contains
 points arbitrarily close to $(a,b)$. We say that the limit of $f(x,y)$
@@ -434,9 +434,9 @@ does not exist at $(a,b)$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:30Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:49:56Z |
-|        2 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:29Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:28Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:21Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:14Z |
 :END:
 
 1. $\lim _{(x, y) \rightarrow(a, b)}(f(x, y) \pm g(x, y))=$ {{$\lim
@@ -458,14 +458,222 @@ does not exist at $(a,b)$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:37Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T12:50:36Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:07Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-26T14:05:32Z |
 :END:
 
 1. {{$|f(x, y)-L|$}@0} $\leq g(x, y) \forall(x, y) \text { close to }(a, b)$
 2. $\lim _{(x, y) \rightarrow(a, b)} g(x, y)=$ {{$0$}@1}
 
 Then $$\lim _{(x, y) \rightarrow(a, b)} f(x, y)=L$$.
+
+* Partial Derivatives, Chain Rule, Directional Derivatives
+
+** Clairaut's Theorem                                                    :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:21:49Z
+:FC_TYPE:  normal
+:ID:       8ca71792-090b-4089-be3b-217247bf7488
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T16:24:17Z |
+:END:
+
+$f$ defined on disk $D$ that contains $(a,b)$, if $f_{xy},f_{yx}$ are
+both continuous on $D$, then $f_{xy}(a,b) = f_{yx}(a,b)$
+
+** Equation of Tangent Plane                                             :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:22:26Z
+:FC_TYPE:  cloze
+:ID:       f9725186-95a4-4d8e-b470-a5a6b6cbad0b
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: deletion
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T16:38:18Z |
+:END:
+
+$S$ given by $z=f(x,y)$, normal vector to tangent plane to $S$ at
+$(a,b)$ is $\langle f_x(a,b), f_y(a,b), -1\rangle$.
+
+Tangent plane given by: 
+
+{{$$z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$$}@0}
+
+** Increment                                                             :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:23:28Z
+:FC_TYPE:  cloze
+:ID:       eb99c0e3-37ab-4d9b-b4be-6c969657b70f
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: deletion
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T16:24:02Z |
+:END:
+
+:FC_CREATED: 2020-02-25T16:23:02Z
+:FC_TYPE:  normal
+:ID:       c524e8dd-2274-42bc-bc24-177d5c3d480c
+
+$z=f(x,y)$, then $\Delta z =$ {{$f(a+ \Delta x, b + \Delta y) - f(a,b)$}@0}
+
+** Differentiable $\implies$ continuous                                  :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:25:00Z
+:FC_TYPE:  normal
+:ID:       34f26310-67e0-4c6c-90a1-108b4f456ea9
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:44:53Z |
+:END:
+
+$$\exists f'(x) = \lim\limits_{x \rightarrow
+x_0}\frac{f(x)-f(x_0)}{x-x_0} \implies \lim\limits_{x \rightarrow x_0}
+f(x)-f(x_0)= 0$$
+
+** Differentiability, 2 variables                                        :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:25:57Z
+:FC_TYPE:  cloze
+:ID:       cf0cf3b9-c603-4380-be82-f5443708acbb
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   1 |     0.01 | 2020-02-25T16:43:47Z |
+|        1 | 2.50 |   1 |     0.01 | 2020-02-25T16:45:22Z |
+:END:
+
+$z=f(x,y)$, $f$ is differentiable at $(a,b)$ if we can write $\Delta z
+=$ {{$f_x (a,b) \Delta x + f_y (a,b) \Delta y + \epsilon_1 \Delta x +
+\epsilon_2 \Delta y$ }@0}where $\epsilon_1$ and $\epsilon_2$ are
+functions of $\Delta x$ and $\Delta y$ which vanish as {{$(\Delta x,
+\Delta y) \rightarrow (0,0)$}@1}
+
+** Linear Approx                                                         :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:26:18Z
+:FC_TYPE:  normal
+:ID:       9dfbc586-01cb-4791-b2df-23c3c4008c09
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-02-26T16:31:01Z |
+:END:
+
+\begin{equation}
+  \Delta z \approx f_x (a,b) \Delta x + f_y (a,b) \Delta y
+\end{equation}
+
+** Chain Rule Cases                                                      :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:26:50Z
+:FC_TYPE:  normal
+:ID:       ab373a87-e10b-413f-8085-7b1de5713633
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:44:03Z |
+:END:
+
+$z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
+
+- $\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}$
+- $\frac{\partial z}{\partial s} =  \frac{\partial f}{\partial x}
+  \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}
+  \frac{\partial y}{\partial s}$
+
+** Implicit Differentiation                                              :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:28:10Z
+:FC_TYPE:  normal
+:ID:       07017654-60a3-49f1-a1e0-b0413f4d170b
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:44:44Z |
+:END:
+
+$z$ is an implicit function of $x$ and $y$ defined by $F(x,y,z)=0$ if
+for every choice of $x$ and $y$, the value of $z$ is determined by
+$F(x,y,z)=0$
+
+Suppose $F(x,y,z)=0$, then $\frac{\partial z}{\partial x} = -\frac{F_x
+(x,y,z)}{F_y (x,y,z)}, \frac{\partial z}{\partial y} = -\frac{F_y
+(x,y,z)}{F_z (x,y,z)}$ provided that $F_z(x,y,z) \neq 0$
+
+- $\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}$
+- $z=f(x,y)$ is a differentiable function of $x$ and $y$, $x=g(s,t)$
+  and $y=h(s,t)$ are both differentiable functions of $s$ and $t$,
+  then, $\frac{\partial z}{\partial s} = \frac{\partial f}{\partial x}
+  \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}
+  \frac{\partial y}{\partial s}$ and $\frac{\partial z}{\partial t} =
+  \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} +
+  \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}$
+
+** Rate of Change                                                        :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:28:14Z
+:FC_TYPE:  normal
+:ID:       4223e3cc-2597-4eb0-ad94-452b04a642d2
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:45:34Z |
+:END:
+
+$D_{\boldsymbol{u}} f(x_0,y_0)$ is the rate of change of function at
+point $(x_0, y_0)$ in direction given by $\boldsymbol{u}$
+
+** Directional Derivative                                                :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:28:37Z
+:FC_TYPE:  normal
+:ID:       1942c0a0-7bf7-4366-b069-7a32543cd72e
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:46:01Z |
+:END:
+
+Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
+f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
+\boldsymbol{u}$, note that $D_{\boldsymbol{n}}\phi = \triangledown
+\phi \cdot \boldsymbol{n}$
+
+** Gradient                                                              :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-25T16:29:02Z
+:FC_TYPE:  cloze
+:ID:       6d6a8ef8-bf41-4ac8-924b-4573ae5bed1f
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: deletion
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-02-26T16:31:20Z |
+:END:
+
+gradient of $f(x,y)$ is vector-valued function $\triangledown f(x,y)
+=$ {{$\langle f_x,f_y \rangle$}@0}
 
 * Setup
 
