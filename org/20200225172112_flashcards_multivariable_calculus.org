@@ -61,8 +61,8 @@
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   2 |     1.00 | 2020-02-26T09:54:31Z |
-|        1 | 2.50 |   2 |     1.00 | 2020-02-26T09:54:34Z |
+|        0 | 2.65 |   3 |     6.00 | 2020-03-03T10:24:32Z |
+|        1 | 2.65 |   3 |     6.00 | 2020-03-03T10:25:15Z |
 :END:
 
 $\vv{PS}$ is the vector projection of {{$\boldsymbol{b}$ onto $\boldsymbol{a}$}@0}, denoted by {{$\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$}@1}
@@ -117,7 +117,7 @@ component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:54:33Z |
+| front    | 2.65 |   3 |     6.00 | 2020-03-03T10:25:06Z |
 :END:
 
 \begin{equation}
@@ -133,7 +133,7 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:54:22Z |
+| front    | 2.20 |   0 |     0.00 | 2020-02-26T10:25:00Z |
 :END:
 
 \begin{equation}
@@ -150,7 +150,7 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-26T09:54:17Z |
+| front    | 2.20 |   0 |     0.00 | 2020-02-26T10:24:24Z |
 :END:
 \begin{equation}
   d = \frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}
@@ -495,7 +495,7 @@ both continuous on $D$, then $f_{xy}(a,b) = f_{yx}(a,b)$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T16:38:18Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-27T10:25:11Z |
 :END:
 
 $S$ given by $z=f(x,y)$, normal vector to tangent plane to $S$ at
@@ -534,7 +534,7 @@ $z=f(x,y)$, then $\Delta z =$ {{$f(a+ \Delta x, b + \Delta y) - f(a,b)$}@0}
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:44:53Z |
+| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:24:15Z |
 :END:
 
 $$\exists f'(x) = \lim\limits_{x \rightarrow
@@ -552,8 +552,8 @@ f(x)-f(x_0)= 0$$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   1 |     0.01 | 2020-02-25T16:43:47Z |
-|        1 | 2.50 |   1 |     0.01 | 2020-02-25T16:45:22Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-02-27T10:24:07Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-02-27T10:24:38Z |
 :END:
 
 $z=f(x,y)$, $f$ is differentiable at $(a,b)$ if we can write $\Delta z
@@ -587,7 +587,7 @@ functions of $\Delta x$ and $\Delta y$ which vanish as {{$(\Delta x,
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:44:03Z |
+| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:25:19Z |
 :END:
 
 $z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
@@ -606,7 +606,7 @@ $z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:44:44Z |
+| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:25:48Z |
 :END:
 
 $z$ is an implicit function of $x$ and $y$ defined by $F(x,y,z)=0$ if
@@ -614,17 +614,8 @@ for every choice of $x$ and $y$, the value of $z$ is determined by
 $F(x,y,z)=0$
 
 Suppose $F(x,y,z)=0$, then $\frac{\partial z}{\partial x} = -\frac{F_x
-(x,y,z)}{F_y (x,y,z)}, \frac{\partial z}{\partial y} = -\frac{F_y
+(x,y,z)}{F_z (x,y,z)}, \frac{\partial z}{\partial y} = -\frac{F_y
 (x,y,z)}{F_z (x,y,z)}$ provided that $F_z(x,y,z) \neq 0$
-
-- $\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}$
-- $z=f(x,y)$ is a differentiable function of $x$ and $y$, $x=g(s,t)$
-  and $y=h(s,t)$ are both differentiable functions of $s$ and $t$,
-  then, $\frac{\partial z}{\partial s} = \frac{\partial f}{\partial x}
-  \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}
-  \frac{\partial y}{\partial s}$ and $\frac{\partial z}{\partial t} =
-  \frac{\partial f}{\partial x} \frac{\partial x}{\partial t} +
-  \frac{\partial f}{\partial y} \frac{\partial y}{\partial t}$
 
 ** Rate of Change                                                        :fc:
 :PROPERTIES:
@@ -635,7 +626,7 @@ Suppose $F(x,y,z)=0$, then $\frac{\partial z}{\partial x} = -\frac{F_x
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:45:34Z |
+| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:25:23Z |
 :END:
 
 $D_{\boldsymbol{u}} f(x_0,y_0)$ is the rate of change of function at
@@ -650,7 +641,7 @@ point $(x_0, y_0)$ in direction given by $\boldsymbol{u}$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   1 |     0.01 | 2020-02-25T16:46:01Z |
+| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:24:09Z |
 :END:
 
 Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
