@@ -1,6 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
 #+HUGO_SLUG: learning_how_to_do_hard_things
+#+ROAM_KEY: cite:maciver_hard_things
 #+TITLE: Learning How To Do Hard Things
 
 - tags :: [[file:learning.org][Learning]]
