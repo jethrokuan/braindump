@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Numpy
 
-- tags :: [[file:data_science.org][§data_science]]
+- tags :: [[file:data_science.org][Data Science]]
 
 * Resources
 - [[https://www.labri.fr/perso/nrougier/from-python-to-numpy/][From Python to Numpy]]

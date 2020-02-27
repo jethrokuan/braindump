@@ -1,7 +1,7 @@
 +++
 title = "Designing Data-Intensive Applications"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-27T14:38:13+08:00
+lastmod = 2020-02-27T15:38:24+08:00
 slug = "designing_dataintensive_applications"
 draft = false
 +++
@@ -148,3 +148,27 @@ separate file, a query only needs to read and parse those columns that
 are used in that query.
 
 In addition, column-oriented storage is good for compression.
+
+How do columnar databases deal with slow writes? Vertica uses
+LSM-trees. All writes first go into an in-memory store, where they are
+added to a sorted tructure and prepared for writing to disk. When
+enough writes are accumulated, they are merged with the column files.
+
+Many column-oriented databases store (replicate) their data in
+different sort orders. This is the equivalent to having multiple
+sort-indexes. Different sort orders cater to different types of
+queries.
+
+
+### Materialized Views {#materialized-views}
+
+An aggregate function, such as `COUNT`, `SUM`, `AVG`, `MIN` or `MAX`
+in SQL, are commonly used in queries. Materialized views are actual
+copies of these results, written to disk, whereas virtual views are
+just shortcuts to writing the queries.
+
+Data cubes are a special case of these materialized views. Aggregation
+is done by collapsing dimensions of the cube. These materialized views
+make certain queries very fast. However, data cubes are limited in
+their capability: they cannot perform queries for dimensions that are
+not part of the data cube.

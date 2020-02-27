@@ -1,12 +1,12 @@
 +++
 title = "Numpy"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:31:17+08:00
+lastmod = 2020-02-27T14:59:36+08:00
 draft = false
 +++
 
 tags
-: [§data\_science]({{< relref "data_science" >}})
+: [Data Science]({{< relref "data_science" >}})
 
 
 ## Resources {#resources}
