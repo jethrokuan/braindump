@@ -1,7 +1,7 @@
 +++
 title = "Velocity Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:29:30+08:00
+lastmod = 2020-02-28T17:48:48+08:00
 draft = false
 +++
 

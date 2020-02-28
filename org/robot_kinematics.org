@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Robot Kinematics
 
+- tags :: [[file:velocity_motion_model.org][Velocity Motion Model]], [[file:odometry_motion_model.org][Odometry Motion Model]]
+
 Kinematics is the calculus describing the effect of control actions on
 the configuration of the robot. The configuration of a rigid mobile
 robot is commonly described by 6 variables relative to an external
@@ -38,7 +40,3 @@ of the robot's wheels. The downside is that odometry is obtained
 after-the-fact, meaning it cannot be used for motion planning. Hence,
 odometry models are used for state estimation, while velocity models
 for motion planning.
-
-* Related
-- [[file:velocity_motion_model.org][§velocity_motion_model]]
-- [[file:odometry_motion_model.org][§odometry_motion_model]]
