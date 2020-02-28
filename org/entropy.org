@@ -35,6 +35,3 @@ Entropy is additive if the ensembles are independent:
 \end{equation}
 
 Entropy is /decomposable/.
-
-
-

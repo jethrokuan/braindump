@@ -1,18 +1,18 @@
 +++
 title = "Reinforcement Learning ⭐"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-13T19:37:59+08:00
+lastmod = 2020-02-28T10:26:34+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
 tags
-: [§machine\_learning]({{< relref "machine_learning" >}})
+: [Machine Learning]({{< relref "machine_learning" >}})
 
 Reinforcement Learning is the field of learning and decision-making
 under uncertainty. An agent acts with a learnable behaviour policy in
 an environment with initially unknown dynamics and reward. The agent
-observes the environment's state (sometimes partially: [§pomdp]({{< relref "pomdp" >}})) and
+observes the environment's state (sometimes partially: [POMDPs]({{< relref "pomdp" >}})) and
 chooses an action.
 
 behaviour
@@ -33,7 +33,7 @@ dynamics
 reward
 : \\(R(r\_{t+1} | s\_t, a\_t)\\)
 
-The dynamics and rewards here reflect the [§markovian\_assumption]({{< relref "markovian_assumption" >}}).
+The dynamics and rewards here reflect the [markovian assumption]({{< relref "markovian_assumption" >}}).
 States can be represented in many ways: in a tabular fashion (state 1
 \\(\rightarrow\\) state 2) or as features.
 
@@ -332,7 +332,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orga97096f) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org14b2d9d) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 

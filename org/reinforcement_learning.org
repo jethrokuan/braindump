@@ -3,12 +3,12 @@
 #+HUGO_TAGS: machine-learning
 bibliographystyle:unsrt
 
-- tags :: [[file:machine_learning.org][§machine_learning]]
+- tags :: [[file:machine_learning.org][Machine Learning]]
 
 Reinforcement Learning is the field of learning and decision-making
 under uncertainty. An agent acts with a learnable behaviour policy in
 an environment with initially unknown dynamics and reward. The agent
-observes the environment's state (sometimes partially: [[file:pomdp.org][§pomdp]]) and
+observes the environment's state (sometimes partially: [[file:pomdp.org][POMDPs]]) and
 chooses an action.
 
 - behaviour :: $\Pi(a | s)$
@@ -18,7 +18,7 @@ chooses an action.
 - dynamics :: $T(s_{t+1} | s_t, a_t)$
 - reward :: $R(r_{t+1} | s_t, a_t)$
 
-The dynamics and rewards here reflect the [[file:markovian_assumption.org][§markovian_assumption]].
+The dynamics and rewards here reflect the [[file:markovian_assumption.org][markovian assumption]].
 States can be represented in many ways: in a tabular fashion (state 1
 $\rightarrow$ state 2) or as features.
 

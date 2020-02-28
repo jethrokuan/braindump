@@ -1,7 +1,7 @@
 +++
 title = "Entropy"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:33:36+08:00
+lastmod = 2020-02-28T10:12:42+08:00
 draft = false
 +++
 
