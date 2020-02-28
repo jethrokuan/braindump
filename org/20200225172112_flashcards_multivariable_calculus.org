@@ -271,7 +271,7 @@ paraboloid is given by
 |----------+------+-----+----------+----------------------|
 |        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:53Z |
 |        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:17Z |
-|        2 | 2.20 |   0 |     0.00 | 2020-02-27T08:51:58Z |
+|        2 | 2.20 |   1 |     0.01 | 2020-02-28T04:36:30Z |
 |        3 | 2.35 |   3 |     6.00 | 2020-03-02T14:04:00Z |
 :END:
 
@@ -325,9 +325,9 @@ Image:
 |----------+------+-----+----------+----------------------|
 |        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:14Z |
 |        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:22Z |
-|        2 | 2.20 |   1 |     0.01 | 2020-02-27T09:06:35Z |
+|        2 | 2.20 |   2 |     1.00 | 2020-02-29T04:21:04Z |
 |        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:10Z |
-|        4 | 2.20 |   1 |     0.01 | 2020-02-27T09:06:32Z |
+|        4 | 2.20 |   2 |     1.00 | 2020-02-29T04:21:50Z |
 :END:
 
 - Horizontal traces :: {{ellipses}@0}
@@ -495,7 +495,7 @@ both continuous on $D$, then $f_{xy}(a,b) = f_{yx}(a,b)$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   2 |     1.00 | 2020-02-27T10:25:11Z |
+|        0 | 2.65 |   3 |     6.00 | 2020-03-05T04:21:11Z |
 :END:
 
 $S$ given by $z=f(x,y)$, normal vector to tangent plane to $S$ at
@@ -534,7 +534,7 @@ $z=f(x,y)$, then $\Delta z =$ {{$f(a+ \Delta x, b + \Delta y) - f(a,b)$}@0}
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:24:15Z |
+| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:16Z |
 :END:
 
 $$\exists f'(x) = \lim\limits_{x \rightarrow
@@ -552,8 +552,8 @@ f(x)-f(x_0)= 0$$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   2 |     1.00 | 2020-02-27T10:24:07Z |
-|        1 | 2.50 |   2 |     1.00 | 2020-02-27T10:24:38Z |
+|        0 | 2.50 |   3 |     6.00 | 2020-03-05T04:21:28Z |
+|        1 | 2.65 |   3 |     6.00 | 2020-03-05T04:20:55Z |
 :END:
 
 $z=f(x,y)$, $f$ is differentiable at $(a,b)$ if we can write $\Delta z
@@ -587,7 +587,7 @@ functions of $\Delta x$ and $\Delta y$ which vanish as {{$(\Delta x,
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:25:19Z |
+| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:35Z |
 :END:
 
 $z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
@@ -606,7 +606,7 @@ $z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:25:48Z |
+| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:57Z |
 :END:
 
 $z$ is an implicit function of $x$ and $y$ defined by $F(x,y,z)=0$ if
@@ -626,7 +626,7 @@ Suppose $F(x,y,z)=0$, then $\frac{\partial z}{\partial x} = -\frac{F_x
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:25:23Z |
+| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:32Z |
 :END:
 
 $D_{\boldsymbol{u}} f(x_0,y_0)$ is the rate of change of function at
@@ -641,7 +641,7 @@ point $(x_0, y_0)$ in direction given by $\boldsymbol{u}$
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-02-27T10:24:09Z |
+| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:37Z |
 :END:
 
 Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
@@ -666,8 +666,3 @@ f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
 gradient of $f(x,y)$ is vector-valued function $\triangledown f(x,y)
 =$ {{$\langle f_x,f_y \rangle$}@0}
 
-* Setup
-
-# Local Variables:
-# eval: (org-hugo-auto-export-mode -1)
-# End:
