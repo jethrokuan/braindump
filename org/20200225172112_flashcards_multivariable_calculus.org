@@ -133,7 +133,7 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.20 |   2 |     1.00 | 2020-02-28T08:47:51Z |
+| front    | 2.35 |   3 |     6.00 | 2020-03-05T16:52:11Z |
 :END:
 
 \begin{equation}
@@ -150,7 +150,7 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 2.20 |   2 |     1.00 | 2020-02-28T08:47:35Z |
+| front    | 2.35 |   3 |     6.00 | 2020-03-05T16:52:29Z |
 :END:
 \begin{equation}
   d = \frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}
@@ -252,7 +252,7 @@ Equation:
 Image:
 
 #+DOWNLOADED: screenshot @ 2020-02-25 19:05:11
-{{[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-05-11_.png]]}@3}
+{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-05-11_.png]]}@3}
 
 The vertix will be shifted to $(x_0, y_0, z_0)$ if the elliptic
 paraboloid is given by
@@ -271,7 +271,7 @@ paraboloid is given by
 |----------+------+-----+----------+----------------------|
 |        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:53Z |
 |        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:17Z |
-|        2 | 2.20 |   1 |     0.01 | 2020-02-28T04:36:30Z |
+|        2 | 2.20 |   2 |     1.00 | 2020-02-29T16:52:27Z |
 |        3 | 2.35 |   3 |     6.00 | 2020-03-02T14:04:00Z |
 :END:
 
@@ -282,7 +282,7 @@ Equation:
 
 {{$$\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=\frac{z}{c}$$}@2}
 
-{{[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-13-32_.png]]}@3}
+{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-13-32_.png]]}@3}
 
 *** Ellipsoid                                                            :fc:
 :PROPERTIES:
@@ -310,7 +310,7 @@ Equation:
 
 Image:
 
-{{[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-15-07_.png]]}@3} 
+{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-15-07_.png]]}@3} 
 
 *** Elliptic Cone                                                        :fc:
 :PROPERTIES:
@@ -328,6 +328,7 @@ Image:
 |        2 | 2.20 |   2 |     1.00 | 2020-02-29T04:21:04Z |
 |        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:10Z |
 |        4 | 2.20 |   2 |     1.00 | 2020-02-29T04:21:50Z |
+|        5 | 2.50 |   2 |     1.00 | 2020-02-29T16:52:17Z |
 :END:
 
 - Horizontal traces :: {{ellipses}@0}
@@ -341,7 +342,7 @@ Equation:
 Image:
 
 #+DOWNLOADED: screenshot @ 2020-02-25 20:20:27
-[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-20-27_.png]]
+{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-20-27_.png]]}@5}
 
 *** Hyperboloid of 1 Sheet
 
@@ -353,7 +354,6 @@ Equation:
 {{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$$}@2}
 
 Image:
-
 
 #+DOWNLOADED: screenshot @ 2020-02-25 20:21:32
 [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-21-32_.png]]
@@ -373,6 +373,7 @@ Image:
 |        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:37Z |
 |        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:54Z |
 |        3 | 2.35 |   3 |     6.00 | 2020-03-04T08:50:22Z |
+|        4 | 2.50 |   2 |     1.00 | 2020-02-29T16:52:20Z |
 :END:
 
 - Horizontal traces :: in {{$z=k$}@0} are {{ellipses}@1}, if $k > c$
@@ -386,7 +387,7 @@ Equation:
 Image:
 
 #+DOWNLOADED: screenshot @ 2020-02-25 20:22:49
-[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-22-49_.png]]
+{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-22-49_.png]]}@4}
 
 ** Definition of Limits                                                  :fc:
 :PROPERTIES:
@@ -402,7 +403,7 @@ Image:
 |        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:25Z |
 |        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:06Z |
 |        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:55Z |
-|        3 | 2.20 |   2 |     1.00 | 2020-02-28T08:51:49Z |
+|        3 | 2.35 |   3 |     6.00 | 2020-03-05T16:52:23Z |
 :END:
 Let $f$ be a function of two variables whose domain $D$ contains
 points arbitrarily close to $(a,b)$. We say that the limit of $f(x,y)$

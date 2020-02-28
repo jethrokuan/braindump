@@ -1,5 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: zettels
+#+ROAM_KEY: https://github.com/jethrokuan/org-roam
 #+TITLE: Org-Roam
 
 Org-roam is a package I built trying to emulate [[file:roam_research.org][Roam Research]] in
