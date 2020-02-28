@@ -5,3 +5,4 @@
 /org/biblio/auto/
 **/*/private-*.md
 **/*/private-*.org
+/org/org-roam.db
