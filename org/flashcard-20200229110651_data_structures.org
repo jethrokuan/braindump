@@ -57,10 +57,10 @@ O(n)
 * Stack
 ** Average                                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_CREATED: 2020-02-29T17:37:39Z
 :FC_TYPE:  cloze
-:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
-:FC_CLOZE_MAX: 1
+:ID:       af3785bd-027a-4bad-946d-d75f7c9bf855
+:FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
@@ -83,146 +83,146 @@ O(n)
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box |   interval | due                    |
-|----------+------+-----+------------+------------------------|
-|        0 | 4.30 |  14 | 6250534.54 | +19133-07-19T01:32:34Z |
-|        1 | 3.85 |  11 |   99897.36 | 2293-09-02T21:13:02Z   |
-|        2 | 3.85 |  11 |  102169.96 | 2299-11-23T11:36:45Z   |
-|        3 | 3.55 |   9 |    5642.26 | 2035-08-11T18:59:33Z   |
+| position | ease | box |   interval | due                  |
+|----------+------+-----+------------+----------------------|
+|        0 | 4.30 |  14 | 6250534.54 | 2293-07-19T01:32:34Z |
+|        1 | 3.85 |  11 |   99897.36 | 2293-09-02T21:13:02Z |
+|        2 | 3.85 |  11 |  102169.96 | 2299-11-23T11:36:45Z |
+|        3 | 3.55 |   9 |    5642.26 | 2035-08-11T18:59:33Z |
 :END:
 | Access     | Search     | Insertion  | Deletion   |
 |------------+------------+------------+------------|
 | {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
 ** Space                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:59:27Z
+:FC_CREATED: 2020-02-29T17:38:17Z
 :FC_TYPE:  normal
-:ID:       8a4039f0-0e76-444d-854d-2b51fbe8f954
+:ID:       1c5f0400-d1f1-4ea6-a320-bdd280991774
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    | 3.40 |   8 |  1710.22 | 2024-11-04T17:58:56Z |
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T17:42:00Z |
 :END:
 O(n)
 * Queue
 ** Average                                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_CREATED: 2020-02-29T17:38:30Z
 :FC_TYPE:  cloze
-:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
-:FC_CLOZE_MAX: 1
+:ID:       6c6f505b-d5c7-4d50-8e30-c1af291a5bcb
+:FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        3 |  2.5 |   0 |        0 | 2020-02-29T03:59:13Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:11Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:10Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:12Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:03Z |
 :END:
 | Access     | Search     | Insertion  | Deletion     |
 |------------+------------+------------+--------------|
 | {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
 ** Worst                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:38Z
+:FC_CREATED: 2020-02-29T17:38:51Z
 :FC_TYPE:  cloze
-:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
-:FC_CLOZE_MAX: 0
+:ID:       442b39fb-3b54-4335-9f7a-945c1037304b
+:FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        3 |  2.5 |   0 |        0 | 2020-02-29T04:01:41Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:00Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:16Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:17Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:04Z |
 :END:
 | Access     | Search     | Insertion  | Deletion   |
 |------------+------------+------------+------------|
 | {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
 ** Space                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:59:27Z
+:FC_CREATED: 2020-02-29T17:39:03Z
 :FC_TYPE:  normal
-:ID:       8a4039f0-0e76-444d-854d-2b51fbe8f954
+:ID:       215f11c4-4798-45e4-ac02-25d08f74e514
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    |  2.5 |   0 |        0 | 2020-02-29T03:59:27Z |
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T17:42:03Z |
 :END:
 O(n)
 * Linked List
 ** Average                                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_CREATED: 2020-02-29T17:39:14Z
 :FC_TYPE:  cloze
-:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
-:FC_CLOZE_MAX: 1
+:ID:       72c8061f-bb97-4aac-afbd-2e10adfc0f2a
+:FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        3 |  2.5 |   0 |        0 | 2020-02-29T03:59:13Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:02Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:17Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:00Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:01Z |
 :END:
 | Access     | Search     | Insertion  | Deletion     |
 |------------+------------+------------+--------------|
 | {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
 ** Worst                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:38Z
+:FC_CREATED: 2020-02-29T17:39:28Z
 :FC_TYPE:  cloze
-:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
-:FC_CLOZE_MAX: 0
+:ID:       5b75ed0e-6115-47bc-9e7c-516f7a885531
+:FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        3 |  2.5 |   0 |        0 | 2020-02-29T04:01:36Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T17:41:59Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:11Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:14Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:00Z |
 :END:
 | Access     | Search     | Insertion  | Deletion   |
 |------------+------------+------------+------------|
 | {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
 ** Space                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:59:27Z
+:FC_CREATED: 2020-02-29T17:39:35Z
 :FC_TYPE:  normal
-:ID:       8a4039f0-0e76-444d-854d-2b51fbe8f954
+:ID:       d4987239-2ce5-4183-be48-31e91185c61c
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-| front    |  2.5 |   0 |        0 | 2020-02-29T03:59:27Z |
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T17:42:04Z |
 :END:
 O(n)
 * Skip List
 ** Average                                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_CREATED: 2020-02-29T17:39:44Z
 :FC_TYPE:  cloze
-:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
-:FC_CLOZE_MAX: 1
+:ID:       d910545a-6a34-4931-bd93-d3a22ecb8d7a
+:FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
-|        3 |  2.5 |   0 |        0 | 2020-02-29T03:59:13Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:01Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:04Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T17:42:10Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T17:41:59Z |
 :END:
 | Access         | Search         | Insertion      | Deletion       |
 |----------------+----------------+----------------+----------------|
@@ -230,41 +230,37 @@ O(n)
 
 ** Worst                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T03:58:38Z
-:FC_TYPE:  cloze
-:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
-:FC_CLOZE_MAX: 0
-:FC_CLOZE_TYPE: enumeration
+:FC_CREATED: 2020-02-29T17:39:51Z
+:FC_TYPE:  normal
+:ID:       70207872-fc17-491c-b66f-27009fad6162
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
-|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T17:42:01Z |
 :END:
 | Access     | Search     | Insertion  | Deletion   |
 |------------+------------+------------+------------|
 | {{O(n)}@0} | {{O(n)}@1} | {{O(n)}@2} | {{O(n)}@3} |
 ** Space                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T04:02:12Z
-:FC_TYPE:  normal
-:ID:       c3e288e6-9498-4737-ba8c-ca13bf2655f5
+:FC_CREATED: 2020-02-29T17:39:58Z
+:FC_TYPE:  cloze
+:ID:       db843d8e-c8f7-42af-b17e-3098890c95f1
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-03-01T04:11:11Z |
+| position | ease | box | interval | due |
+|----------+------+-----+----------+-----|
 :END:
 O(nlogn)
 * Hash Table
 ** Average                                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T04:03:32Z
+:FC_CREATED: 2020-02-29T17:40:05Z
 :FC_TYPE:  cloze
-:ID:       1bef5359-0c6b-4e1c-91be-80c6c6792261
+:ID:       f011047a-23af-4b77-a617-c10cf27d5ae7
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
@@ -280,9 +276,9 @@ O(nlogn)
 | {{O(1)}@0} | {{O(1)}@1} | {{O(1)}@2} |
 ** Worst                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T04:03:51Z
+:FC_CREATED: 2020-02-29T17:40:26Z
 :FC_TYPE:  cloze
-:ID:       6846727b-2d5f-41f8-86af-f2e175a06336
+:ID:       147b7f76-9f74-4c90-a0c9-57934647e77e
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
@@ -298,9 +294,9 @@ O(nlogn)
 | {{O(n)}@0} | {{O(n)}@1} | {{O(n)}@2} |
 ** Space                                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T04:04:01Z
+:FC_CREATED: 2020-02-29T17:40:32Z
 :FC_TYPE:  normal
-:ID:       b0fe6452-ad12-4c10-9117-3f9f71cd87ca
+:ID:       4c4404e5-4119-46ad-b8f1-e24aabe60a7c
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
@@ -311,19 +307,20 @@ O(n)
 * Binary Search Tree
 ** Average                                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-29T04:05:11Z
+:FC_CREATED: 2020-02-29T17:44:00Z
 :FC_TYPE:  cloze
-:ID:       0b49f884-5ea9-4d57-9c35-d06b08a243dd
+:ID:       f81387e2-e444-4929-80e8-520e2d188dfb
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 | 2.95 |   5 |    49.35 | 2020-04-18T21:01:52Z |
-|        1 | 2.95 |   5 |    51.03 | 2020-04-20T13:18:22Z |
-|        2 | 2.95 |   5 |    43.43 | 2020-04-12T23:03:46Z |
-|        3 | 2.95 |   5 |    48.86 | 2020-04-18T09:17:17Z |
+|        0 |  2.5 |   0 |        0 | 2020-02-29T17:44:00Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T17:44:00Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T17:44:00Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T17:44:00Z |
+:END:
 :END:
 | Access         | Search         | Insertion      | Deletion       |
 |----------------+----------------+----------------+----------------|
@@ -337,12 +334,12 @@ O(n)
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.95 |   5 |    45.87 | 2020-04-15T09:27:58Z |
-|        1 | 2.95 |   5 |    53.00 | 2020-04-22T12:35:25Z |
-|        2 | 2.95 |   5 |    55.73 | 2020-04-25T06:13:37Z |
-|        3 | 2.80 |   4 |    15.26 | 2020-03-15T18:50:53Z |
+| position | ease | box |   interval | due                  |
+|----------+------+-----+------------+----------------------|
+|        0 | 4.15 |  13 | 1145633.54 | 5156-10-20T06:44:44Z |
+|        1 | 4.15 |  13 | 1336922.92 | 5680-07-13T15:53:42Z |
+|        2 | 4.15 |  13 | 1545751.36 | 6252-04-15T02:16:49Z |
+|        3 | 4.00 |  12 |  174452.25 | 2497-10-17T23:46:09Z |
 :END:
 
 | Access     | Search     | Insertion  | Deletion   |
@@ -355,13 +352,13 @@ O(n)
 :ID:       b6bcf05f-0e5c-4679-b92e-6c69fc3be0f1
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 3.10 |   6 |   143.88 | 2020-07-22T09:40:16Z |
+| position | ease | box |   interval | due                    |
+|----------+------+-----+------------+------------------------|
+| front    | 4.30 |  14 | 6718827.96 | +20415-09-09T16:41:56Z |
 :END:
 O(n)
-* Red-Black/AVL Tree
-** Average                                                               :fc:
+* Red-Black/AVL Tree                                                     :fc:
+** Average
 :PROPERTIES:
 :FC_CREATED: 2020-02-29T04:05:11Z
 :FC_TYPE:  cloze
@@ -372,10 +369,10 @@ O(n)
 :REVIEW_DATA:
 | position | ease | box | interval | due                  |
 |----------+------+-----+----------+----------------------|
-|        0 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
-|        1 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
-|        2 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
-|        3 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T17:43:49Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T17:43:48Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T17:43:47Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T17:43:50Z |
 :END:
 | Access         | Search         | Insertion      | Deletion       |
 |----------------+----------------+----------------+----------------|
