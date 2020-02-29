@@ -1,0 +1,4 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: courtland_allen
+#+TITLE: Courtland Allen
