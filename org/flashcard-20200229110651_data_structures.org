@@ -1,0 +1,414 @@
+#+TITLE: Flashcard: Data Structures
+
+* Array
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:57:26Z
+:FC_TYPE:  cloze
+:ID:       966c3007-7baf-4fe8-9d23-91628010af38
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T04:07:26Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T04:06:50Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T04:10:15Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T04:07:56Z |
+:END:
+
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(1)}@0} | {{O(n)}@1} | {{O(n)}@2} | {{O(n)}@3} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:57:38Z
+:FC_TYPE:  cloze
+:ID:       c5e1f9a0-c854-4966-8758-07c14ecf5094
+:FC_CLOZE_MAX: 0
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T04:07:39Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T04:10:07Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T04:07:22Z |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-01T04:09:11Z |
+:END:
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(1)}@0} | {{O(n)}@1} | {{O(n)}@2} | {{O(n)}@3} |
+
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:57:48Z
+:FC_TYPE:  normal
+:ID:       65b002ff-53cb-44dd-95b8-97605697b733
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T04:10:40Z |
+:END:
+O(n)
+
+* Stack
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_TYPE:  cloze
+:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
+:FC_CLOZE_MAX: 1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 3.40 |   8 |  1683.99 | 2024-10-09T04:01:02Z |
+|        1 | 3.40 |   8 |  1713.13 | 2024-11-07T07:17:49Z |
+|        2 | 3.40 |   8 |  1815.57 | 2025-02-17T17:58:45Z |
+|        3 | 3.40 |   8 |  1838.35 | 2025-03-12T12:41:18Z |
+:END:
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:38Z
+:FC_TYPE:  cloze
+:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
+:FC_CLOZE_MAX: 0
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 3.70 |  10 | 22654.15 | 2082-03-09T07:49:24Z |
+|        1 | 3.40 |   8 |  1695.44 | 2024-10-20T14:45:19Z |
+|        2 | 3.40 |   8 |  1849.72 | 2025-03-23T21:24:40Z |
+|        3 | 3.25 |   7 |   467.66 | 2021-06-10T20:09:48Z |
+:END:
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:59:27Z
+:FC_TYPE:  normal
+:ID:       8a4039f0-0e76-444d-854d-2b51fbe8f954
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 3.10 |   6 |   130.26 | 2020-07-08T10:25:27Z |
+:END:
+O(n)
+* Queue
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_TYPE:  cloze
+:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
+:FC_CLOZE_MAX: 1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T03:59:13Z |
+:END:
+| Access     | Search     | Insertion  | Deletion     |
+|------------+------------+------------+--------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:38Z
+:FC_TYPE:  cloze
+:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
+:FC_CLOZE_MAX: 0
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T04:01:41Z |
+:END:
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:59:27Z
+:FC_TYPE:  normal
+:ID:       8a4039f0-0e76-444d-854d-2b51fbe8f954
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    |  2.5 |   0 |        0 | 2020-02-29T03:59:27Z |
+:END:
+O(n)
+* Linked List
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_TYPE:  cloze
+:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
+:FC_CLOZE_MAX: 1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T03:59:13Z |
+:END:
+| Access     | Search     | Insertion  | Deletion     |
+|------------+------------+------------+--------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:38Z
+:FC_TYPE:  cloze
+:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
+:FC_CLOZE_MAX: 0
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T04:01:36Z |
+:END:
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(1)}@2} | {{O(1)}@3} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:59:27Z
+:FC_TYPE:  normal
+:ID:       8a4039f0-0e76-444d-854d-2b51fbe8f954
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    |  2.5 |   0 |        0 | 2020-02-29T03:59:27Z |
+:END:
+O(n)
+* Skip List
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:34Z
+:FC_TYPE:  cloze
+:ID:       c862f392-a826-4101-aa4d-7feaf36e6f61
+:FC_CLOZE_MAX: 1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:34Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T03:59:13Z |
+:END:
+| Access         | Search         | Insertion      | Deletion       |
+|----------------+----------------+----------------+----------------|
+| {{O(nlogn)}@0} | {{O(nlogn)}@1} | {{O(nlogn)}@2} | {{O(nlogn)}@3} |
+
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T03:58:38Z
+:FC_TYPE:  cloze
+:ID:       5d4acea0-0b95-4b9a-9fb7-20634c1bd9c2
+:FC_CLOZE_MAX: 0
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+|        0 |  2.5 |   0 |        0 | 2020-02-29T03:58:38Z |
+:END:
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(n)}@2} | {{O(n)}@3} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:02:12Z
+:FC_TYPE:  normal
+:ID:       c3e288e6-9498-4737-ba8c-ca13bf2655f5
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T04:11:11Z |
+:END:
+O(nlogn)
+* Hash Table
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:03:32Z
+:FC_TYPE:  cloze
+:ID:       1bef5359-0c6b-4e1c-91be-80c6c6792261
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T04:09:47Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T04:06:41Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T04:11:15Z |
+:END:
+| Search     | Insertion  | Deletion   |
+|------------+------------+------------|
+| {{O(1)}@0} | {{O(1)}@1} | {{O(1)}@2} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:03:51Z
+:FC_TYPE:  cloze
+:ID:       6846727b-2d5f-41f8-86af-f2e175a06336
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.50 |   2 |     1.00 | 2020-03-01T04:11:12Z |
+|        1 | 2.50 |   2 |     1.00 | 2020-03-01T04:10:51Z |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-01T04:11:14Z |
+:END:
+| Search     | Insertion  | Deletion   |
+|------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(n)}@2} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:04:01Z
+:FC_TYPE:  normal
+:ID:       b0fe6452-ad12-4c10-9117-3f9f71cd87ca
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-03-01T04:08:26Z |
+:END:
+O(n)
+* Binary Search Tree
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:05:11Z
+:FC_TYPE:  cloze
+:ID:       0b49f884-5ea9-4d57-9c35-d06b08a243dd
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.80 |   4 |    18.11 | 2020-03-18T06:48:50Z |
+|        1 | 2.80 |   4 |    16.99 | 2020-03-17T04:04:20Z |
+|        2 | 2.80 |   4 |    15.68 | 2020-03-15T20:25:04Z |
+|        3 | 2.80 |   4 |    17.64 | 2020-03-17T19:35:08Z |
+:END:
+| Access         | Search         | Insertion      | Deletion       |
+|----------------+----------------+----------------+----------------|
+| {{O(nlogn)}@0} | {{O(nlogn)}@1} | {{O(nlogn)}@2} | {{O(nlogn)}@3} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:05:50Z
+:FC_TYPE:  cloze
+:ID:       26933460-0395-415c-aeee-252c8990728f
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 | 2.80 |   4 |    15.63 | 2020-03-15T19:12:37Z |
+|        1 | 2.80 |   4 |    18.41 | 2020-03-18T13:58:36Z |
+|        2 | 2.80 |   4 |    17.32 | 2020-03-17T11:53:58Z |
+|        3 | 2.65 |   3 |     6.00 | 2020-03-06T04:12:19Z |
+:END:
+
+| Access     | Search     | Insertion  | Deletion   |
+|------------+------------+------------+------------|
+| {{O(n)}@0} | {{O(n)}@1} | {{O(n)}@2} | {{O(n)}@3} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:05:36Z
+:FC_TYPE:  normal
+:ID:       b6bcf05f-0e5c-4679-b92e-6c69fc3be0f1
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    | 2.95 |   5 |    43.24 | 2020-04-12T10:00:55Z |
+:END:
+O(n)
+* Red-Black/AVL Tree
+** Average                                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:05:11Z
+:FC_TYPE:  cloze
+:ID:       0b49f884-5ea9-4d57-9c35-d06b08a243dd
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T04:05:11Z |
+:END:
+| Access         | Search         | Insertion      | Deletion       |
+|----------------+----------------+----------------+----------------|
+| {{O(nlogn)}@0} | {{O(nlogn)}@1} | {{O(nlogn)}@2} | {{O(nlogn)}@3} |
+** Worst                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:05:50Z
+:FC_TYPE:  cloze
+:ID:       26933460-0395-415c-aeee-252c8990728f
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+|        0 |  2.5 |   0 |        0 | 2020-02-29T04:05:50Z |
+|        1 |  2.5 |   0 |        0 | 2020-02-29T04:05:50Z |
+|        2 |  2.5 |   0 |        0 | 2020-02-29T04:05:50Z |
+|        3 |  2.5 |   0 |        0 | 2020-02-29T04:05:50Z |
+:END:
+
+| Access         | Search         | Insertion      | Deletion       |
+|----------------+----------------+----------------+----------------|
+| {{O(nlogn)}@0} | {{O(nlogn)}@1} | {{O(nlogn)}@2} | {{O(nlogn)}@3} |
+** Space                                                                 :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-02-29T04:05:36Z
+:FC_TYPE:  normal
+:ID:       b6bcf05f-0e5c-4679-b92e-6c69fc3be0f1
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                  |
+|----------+------+-----+----------+----------------------|
+| front    |  2.5 |   0 |        0 | 2020-02-29T04:05:36Z |
+:END:
+O(n)
