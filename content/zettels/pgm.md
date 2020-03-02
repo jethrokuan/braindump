@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:13:39+08:00
+lastmod = 2020-03-02T02:51:25+08:00
 draft = false
 +++
 
@@ -750,3 +750,8 @@ However, CRF requires labeled training data, and are slower to train.
 <a id="koller2009probabilistic" target="_blank">Koller, D., Friedman, N., & Bach, F., *Probabilistic graphical models: principles and techniques* (2009), : MIT press.</a> [↩](#5a9029278bdd1052b087d2ffe61df3ab)
 
 <a id="murphy2014machine" target="_blank">Murphy, K. P., *Machine learning: a probabilistic perspective. 2012*, Cit{\'e} en, *()*, 117 (2014). </a> [↩](#ad636e8b7bde174b3dcd3eb7da7aec45)
+
+
+## Resources {#resources}
+
+-   [Infer.NET Resources and References](https://dotnet.github.io/infer/userguide/Resources%20and%20References.html)

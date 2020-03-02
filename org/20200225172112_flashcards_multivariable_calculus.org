@@ -3,45 +3,43 @@
 * Vectors, Lines & Planes
 ** Important Properties                                                  :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T10:51:59Z
+:FC_CREATED: 2020-03-02T03:27:05
 :FC_TYPE:  cloze
-:ID:       c8b92411-bd57-4f87-aa7f-bbac54afa82e
+:ID:       ccd9fbdc-285b-4a28-991e-86ae19ccd67f
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:48:49Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:09Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:16Z |
-|        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:57Z |
-|        4 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:59Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
+|        4 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
 :END:
 - $||c\boldsymbol{u}|| =$ {{$|c| \, ||\boldsymbol{u}||$}@0}
 - $\boldsymbol{u} =$ {{$\boldsymbol{a}/||\boldsymbol{a}||$}@1}
 - $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{$||\boldsymbol{a}|| \, ||\boldsymbol{b}|| \cos \theta$}@2}
 - $\boldsymbol{a}$ and $\boldsymbol{b}$ are orthogonal iff {{$\boldsymbol{a} \cdot \boldsymbol{b} = 0$}@3}
 - $\boldsymbol{a} \times \boldsymbol{b}$ is {{orthogonal}@4} to $\boldsymbol{a}$ and $\boldsymbol{b}$
-
 ** Dot Product Properties                                                :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T10:50:41Z
+:FC_CREATED: 2020-03-02T03:27:15
 :FC_TYPE:  cloze
-:ID:       bfc492cf-fef4-4ee8-ad21-f12493202bc7
+:ID:       f85b7b0f-5233-48f1-a3e3-752bdc3438cb
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:27Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:24Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:19Z |
-|        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:19Z |
-|        4 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:11Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
+|        4 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
 :END:
-
 - Commutativity: $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{$\boldsymbol{b} \cdot \boldsymbol{a}$}@0}
 - Distributive: $\boldsymbol{a} \cdot (\boldsymbol{b} +
   \boldsymbol{c})=$ {{$\boldsymbol{a} \cdot \boldsymbol{b} +
@@ -52,19 +50,18 @@
 
 ** Projections                                                           :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T09:34:43Z
+:FC_CREATED: 2020-03-02T03:27:18
 :FC_TYPE:  cloze
-:ID:       eeef3d55-8040-4ec2-a964-685a8784f7f1
-:FC_CLOZE_MAX: 1
-:FC_CLOZE_TYPE: deletion
+:ID:       16fa8396-19f7-4389-a247-501d4ac09b9b
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-03T10:24:32Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-03T10:25:15Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:18 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:18 |
 :END:
-
 $\vv{PS}$ is the vector projection of {{$\boldsymbol{b}$ onto $\boldsymbol{a}$}@0}, denoted by {{$\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$}@1}
 
 Scalar projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$ (called
@@ -85,21 +82,20 @@ component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
 
 ** Cross Product                                                         :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T10:13:36Z
+:FC_CREATED: 2020-03-02T03:27:25
 :FC_TYPE:  cloze
-:ID:       aeaeafb8-cb1a-4136-a194-77d147b4c596
-:FC_CLOZE_MAX: -5
-:FC_CLOZE_TYPE: deletion
+:ID:       4a88c5e0-5a10-45c4-99d3-32d7e8e11936
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:48:13Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:04Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:06Z |
-|        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:17Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:25 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:25 |
+|        2 | 2.50 |   2 |     1.00 | 2020-03-03T07:51:16 |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-03T07:51:28 |
 :END:
-
 - $\boldsymbol{a} \times \boldsymbol{b} =$ {{$-\boldsymbol{b} \times \boldsymbol{a}$}@0}
 - $(d \boldsymbol{a}) \times \boldsymbol{b} =$ {{$d(\boldsymbol{a} \times
   \boldsymbol{b}) = \boldsymbol{a} \times (d\boldsymbol{b})$}@1}
@@ -110,32 +106,30 @@ component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
 
 ** Area of Parallelogram                                                 :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T09:26:16Z
+:FC_CREATED: 2020-03-02T03:27:31
 :FC_TYPE:  normal
-:ID:       a65f2c62-91c2-4b31-b0b3-00355fa6865c
+:ID:       96b9e7b1-0cb8-4d5a-acf8-0c19e4a2f712
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-03T10:25:06Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:31 |
 :END:
-
 \begin{equation}
 A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 \end{equation}
 
-** Distance of point (Q) to line ($\vv{PR}$)                                        :fc:
+** Distance of point (Q) to line ($\vv{PR}$)                             :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T09:26:31Z
+:FC_CREATED: 2020-03-02T03:27:38
 :FC_TYPE:  normal
-:ID:       801b1e54-63e5-47fd-9cf5-c941f0199c0f
+:ID:       17bb7423-9a5c-4cce-a10d-a7156a8b3f45
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.35 |   3 |     6.00 | 2020-03-05T16:52:11Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:38 |
 :END:
-
 \begin{equation}
   ||\vv{PQ}|| \sin \theta = \frac{||\vv{PQ} \times
     \vv{PR}||}{||\vv{PR}||}
@@ -143,14 +137,14 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 
 ** Distance of point $P(x_1,y_1,z_1)$ from plane $Ax+By+Cz+D=0$          :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T09:26:42Z
+:FC_CREATED: 2020-03-02T03:27:44
 :FC_TYPE:  normal
-:ID:       74266d9f-c0db-4503-a154-44cb8e2c54d6
+:ID:       e79e52bb-8418-4c54-bfbc-85039d662076
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.35 |   3 |     6.00 | 2020-03-05T16:52:29Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:44 |
 :END:
 \begin{equation}
   d = \frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}
@@ -158,16 +152,15 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 
 ** Vector Equation of Plane                                              :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T10:58:16Z
+:FC_CREATED: 2020-03-02T03:27:49
 :FC_TYPE:  normal
-:ID:       2082ef86-db79-4ebe-98ce-8a3fd534ef5d
+:ID:       9735d14b-ce72-4cd7-92ea-03885c5ed3fe
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-04T08:51:02Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:49 |
 :END:
-
 \begin{equation}
   \boldsymbol{n} \cdot (\boldsymbol{r} - \boldsymbol{r}_0) = 0
 \end{equation}
@@ -176,30 +169,27 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 
 *** Finding Angle Between Planes                                         :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T10:59:05Z
-:FC_TYPE:  cloze
-:ID:       491d49ed-a887-4e7b-be98-a89f1517bfd6
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: deletion
+:FC_CREATED: 2020-03-02T03:28:01
+:FC_TYPE:  normal
+:ID:       07678f96-e1f3-470f-a9cd-a7226b6ad7e7
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:51Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:01 |
 :END:
-
 Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ {{$\theta = \cos^{-1} \left( \frac{\boldsymbol{u} \cdot \boldsymbol{v}}{||\boldsymbol{u}|| \, ||\boldsymbol{v}||} \right)$}@0}
 
 *** Finding line of intesection between planes                           :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T11:00:51Z
+:FC_CREATED: 2020-03-02T03:28:04
 :FC_TYPE:  normal
-:ID:       f3577bb5-7471-4621-9a33-bd72f9381146
+:ID:       78cb07e9-4974-47e6-a009-96594d0f73c4
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-04T08:48:06Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:04 |
 :END:
 1. Solve for $x$
 2. Set both $x$ equal then let $y=t$ to obtain parametric equations
@@ -207,18 +197,17 @@ Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ {{$\theta = \cos^{-1} \l
 
 *** Distance between 2 Planes                                            :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T11:00:47Z
+:FC_CREATED: 2020-03-02T03:28:08
 :FC_TYPE:  cloze
-:ID:       0e2e3c81-6483-42eb-b9af-490ca130dd4f
+:ID:       d0ddfdd8-26f3-4263-b87b-ca66cd31d1cd
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:00Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:08 |
 :END:
-
 1. Find $\boldsymbol{u}$ vector that connects both planes
 2. distance $= ||\boldsymbol{u}|| \, |\cos \theta| =$ {{$\left| \frac{\boldsymbol{u} \cdot \boldsymbol{n}}{||\boldsymbol{n}||} \right|$}@0} 
 
@@ -226,22 +215,21 @@ Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ {{$\theta = \cos^{-1} \l
 ** Quadric Surfaces
 *** Elliptic Paraboloid                                                  :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T11:06:04Z
+:FC_CREATED: 2020-03-02T03:28:22
 :FC_TYPE:  cloze
-:ID:       e9c07516-edb6-4205-8f08-0bc3925463db
+:ID:       b3915d24-2f86-41f3-8706-3959dbec61ac
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:24Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:57Z |
-|        2 | 2.50 |   3 |     6.00 | 2020-03-04T08:50:34Z |
-|        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:22Z |
-|        4 | 2.50 |   3 |     6.00 | 2020-03-02T14:06:53Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
+|        4 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
 :END:
-
 - Horizontal trace :: {{ellipses}@0}
 - Vertical trace :: {{parabolas}@1}
 
@@ -260,21 +248,20 @@ paraboloid is given by
 
 *** Hyperbolic Paraboloid                                                :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T11:14:26Z
+:FC_CREATED: 2020-03-02T03:28:25
 :FC_TYPE:  cloze
-:ID:       407556ce-e833-4016-b461-4ac0c3f537e6
+:ID:       7e7834a3-744a-47ef-a541-f7cd30a6c4a0
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:53Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:51:17Z |
-|        2 | 2.35 |   3 |     6.00 | 2020-03-06T17:42:02Z |
-|        3 | 2.35 |   3 |     6.00 | 2020-03-02T14:04:00Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
 :END:
-
 - Horizontal traces :: {{hyperbolas}@0}
 - Vertical traces :: {{parabolas}@1}
 
@@ -286,21 +273,20 @@ Equation:
 
 *** Ellipsoid                                                            :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T11:15:35Z
+:FC_CREATED: 2020-03-02T03:28:28
 :FC_TYPE:  cloze
-:ID:       1b32c55c-fe3f-417c-bb90-5b25d349acce
+:ID:       484d6585-4aeb-47b4-843b-a1b2a1b40e80
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:37Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:37Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:48:31Z |
-|        3 | 2.50 |   3 |     6.00 | 2020-03-02T12:35:55Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
 :END:
-
 - Horizontal traces :: {{ellipses}@0}
 - Vertical traces :: {{ellipses}@1}
 
@@ -314,23 +300,22 @@ Image:
 
 *** Elliptic Cone                                                        :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T12:20:51Z
+:FC_CREATED: 2020-03-02T03:28:31
 :FC_TYPE:  cloze
-:ID:       ece7a5f5-a892-4531-b97b-7d31791cd8f3
+:ID:       27a6e7f4-7302-4466-b189-23bd13a4f0a7
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:14Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:22Z |
-|        2 | 2.35 |   3 |     6.00 | 2020-03-06T12:37:48Z |
-|        3 | 2.65 |   3 |     6.00 | 2020-03-04T08:47:10Z |
-|        4 | 2.20 |   3 |     6.00 | 2020-03-06T12:37:28Z |
-|        5 | 2.65 |   3 |     6.00 | 2020-03-06T17:42:09Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
+|        4 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
+|        5 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
 :END:
-
 - Horizontal traces :: {{ellipses}@0}
 - Vertical traces :: {{hyperbolas}@1} in the planes {{$x = k$ and $y =
   k$}@2}, where {{$k \ne 0$}@3}
@@ -344,7 +329,21 @@ Image:
 #+DOWNLOADED: screenshot @ 2020-02-25 20:20:27
 {{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-20-27_.png]]}@5}
 
-*** Hyperboloid of 1 Sheet
+*** Hyperboloid of 1 Sheet                                               :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-03-02T03:28:32
+:FC_TYPE:  cloze
+:ID:       90d7e014-6f1d-400a-a4fd-5037eeceafe7
+:FC_CLOZE_MAX: -1
+:FC_CLOZE_TYPE: enumeration
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:32 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:32 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:32 |
+:END:
 
 - Horizontal traces :: {{ellipses}@0}
 - Vertical traces :: {{hyperbolas}@1}
@@ -360,22 +359,21 @@ Image:
 
 *** Hyperboloid of 2 sheets                                              :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T12:23:00Z
+:FC_CREATED: 2020-03-02T03:28:33
 :FC_TYPE:  cloze
-:ID:       64c84cc9-cb52-43e6-adc8-af30fb0d322b
+:ID:       69a92018-21be-4331-ac98-0b0828740a0b
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:13Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:37Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:54Z |
-|        3 | 2.35 |   3 |     6.00 | 2020-03-04T08:50:22Z |
-|        4 | 2.65 |   3 |     6.00 | 2020-03-06T17:42:01Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
+|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
+|        4 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
 :END:
-
 - Horizontal traces :: in {{$z=k$}@0} are {{ellipses}@1}, if $k > c$
   or $k < -c$
 - Vertical traces :: {{hyperbolas}@2}
@@ -391,19 +389,19 @@ Image:
 
 ** Definition of Limits                                                  :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T12:25:26Z
+:FC_CREATED: 2020-03-02T03:28:36
 :FC_TYPE:  cloze
-:ID:       961cbe42-1f82-4a3c-a667-c80c1dda0bd6
+:ID:       d68c1b45-dc0e-4ce2-9a0b-07bfcda46dae
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:25Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:06Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:55Z |
-|        3 | 2.35 |   3 |     6.00 | 2020-03-05T16:52:23Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:36 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:36 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:36 |
+|        3 | 2.50 |   2 |     1.00 | 2020-03-03T07:51:27 |
 :END:
 Let $f$ be a function of two variables whose domain $D$ contains
 points arbitrarily close to $(a,b)$. We say that the limit of $f(x,y)$
@@ -417,29 +415,37 @@ if for any number {{$\epsilon > 0$}@0} there exists a number {{$\delta
 > 0$}@1} such that {{$|f(x, y)-L|<\epsilon$}@2} whenever
 {{$0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta$}@3}.
 
-** Showing a limit does not exist
+** Showing a limit does not exist                                        :fc:
+:PROPERTIES:
+:FC_CREATED: 2020-03-02T03:28:41
+:FC_TYPE:  normal
+:ID:       5753be11-00a9-4917-87e8-7762e99911de
+:END:
+:REVIEW_DATA:
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:41 |
+:END:
 
 If the limit along SOME paths at $(a,b)$ are different, then the limit
 does not exist at $(a,b)$
 
 ** Showing limits exist
-
 *** Properties of limits or continuity                                   :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T12:28:05Z
+:FC_CREATED: 2020-03-02T03:28:47
 :FC_TYPE:  cloze
-:ID:       5dcf9b26-3272-4b67-809b-2183fd8b812b
+:ID:       ef011386-64ad-483c-a8fa-6fedfb9554e6
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:25Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:50:26Z |
-|        2 | 2.65 |   3 |     6.00 | 2020-03-04T08:48:45Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:47 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:47 |
+|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:47 |
 :END:
-
 1. $\lim _{(x, y) \rightarrow(a, b)}(f(x, y) \pm g(x, y))=$ {{$\lim
    _{(x, y) \rightarrow(a, b)} f(x, y) \pm \lim _{(x, y)
    \rightarrow(a, b)} g(x, y)$}@0}
@@ -450,55 +456,51 @@ does not exist at $(a,b)$
 
 *** Squeeze Theorem                                                      :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T12:35:15Z
+:FC_CREATED: 2020-03-02T03:28:49
 :FC_TYPE:  cloze
-:ID:       0189e2d0-cff1-4d99-967c-7af5868e18f7
+:ID:       88bb9ff7-4eaa-48d3-b6cb-2131159950e8
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   3 |     6.00 | 2020-03-04T08:48:01Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:33Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:49 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:49 |
 :END:
-
 1. {{$|f(x, y)-L|$}@0} $\leq g(x, y) \forall(x, y) \text { close to }(a, b)$
 2. $\lim _{(x, y) \rightarrow(a, b)} g(x, y)=$ {{$0$}@1}
 
 Then $$\lim _{(x, y) \rightarrow(a, b)} f(x, y)=L$$.
 
 * Partial Derivatives, Chain Rule, Directional Derivatives
-
 ** Clairaut's Theorem                                                    :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:21:49Z
+:FC_CREATED: 2020-03-02T03:28:53
 :FC_TYPE:  normal
-:ID:       8ca71792-090b-4089-be3b-217247bf7488
+:ID:       c31f28c6-7c32-419e-a4d7-6364663289b4
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-04T08:48:41Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:53 |
 :END:
-
 $f$ defined on disk $D$ that contains $(a,b)$, if $f_{xy},f_{yx}$ are
 both continuous on $D$, then $f_{xy}(a,b) = f_{yx}(a,b)$
 
 ** Equation of Tangent Plane                                             :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:22:26Z
+:FC_CREATED: 2020-03-02T03:28:59
 :FC_TYPE:  cloze
-:ID:       f9725186-95a4-4d8e-b470-a5a6b6cbad0b
+:ID:       6d802ff9-1485-4cb6-8e6e-82e05773f2ee
 :FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: deletion
+:FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-05T04:21:11Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:59 |
 :END:
-
 $S$ given by $z=f(x,y)$, normal vector to tangent plane to $S$ at
 $(a,b)$ is $\langle f_x(a,b), f_y(a,b), -1\rangle$.
 
@@ -508,18 +510,17 @@ Tangent plane given by:
 
 ** Increment                                                             :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:23:28Z
+:FC_CREATED: 2020-03-02T03:29:08
 :FC_TYPE:  cloze
-:ID:       eb99c0e3-37ab-4d9b-b4be-6c969657b70f
+:ID:       1e2045b9-65ec-4162-8ede-a58cd23eccb6
 :FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: deletion
+:FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:48:37Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:29:08 |
 :END:
-
 :FC_CREATED: 2020-02-25T16:23:02Z
 :FC_TYPE:  normal
 :ID:       c524e8dd-2274-42bc-bc24-177d5c3d480c
@@ -528,35 +529,33 @@ $z=f(x,y)$, then $\Delta z =$ {{$f(a+ \Delta x, b + \Delta y) - f(a,b)$}@0}
 
 ** Differentiable $\implies$ continuous                                  :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:25:00Z
+:FC_CREATED: 2020-03-02T03:29:24
 :FC_TYPE:  normal
-:ID:       34f26310-67e0-4c6c-90a1-108b4f456ea9
+:ID:       a85ab851-df77-42a3-a705-60f0d1160ca9
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:16Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-03-03T07:51:19 |
 :END:
-
 $$\exists f'(x) = \lim\limits_{x \rightarrow
 x_0}\frac{f(x)-f(x_0)}{x-x_0} \implies \lim\limits_{x \rightarrow x_0}
 f(x)-f(x_0)= 0$$
 
 ** Differentiability, 2 variables                                        :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:25:57Z
+:FC_CREATED: 2020-03-02T03:29:26
 :FC_TYPE:  cloze
-:ID:       cf0cf3b9-c603-4380-be82-f5443708acbb
+:ID:       b65c6f23-0e54-4d83-9d20-a396fccd7cbb
 :FC_CLOZE_MAX: -1
 :FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.50 |   3 |     6.00 | 2020-03-05T04:21:28Z |
-|        1 | 2.65 |   3 |     6.00 | 2020-03-05T04:20:55Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:29:26 |
+|        1 |  2.5 |   0 |        0 | 2020-03-02T03:29:26 |
 :END:
-
 $z=f(x,y)$, $f$ is differentiable at $(a,b)$ if we can write $\Delta z
 =$ {{$f_x (a,b) \Delta x + f_y (a,b) \Delta y + \epsilon_1 \Delta x +
 \epsilon_2 \Delta y$ }@0}where $\epsilon_1$ and $\epsilon_2$ are
@@ -565,32 +564,30 @@ functions of $\Delta x$ and $\Delta y$ which vanish as {{$(\Delta x,
 
 ** Linear Approx                                                         :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:26:18Z
+:FC_CREATED: 2020-03-02T03:29:28
 :FC_TYPE:  normal
-:ID:       9dfbc586-01cb-4791-b2df-23c3c4008c09
+:ID:       da63d85e-cf7e-4287-995b-714bc1df1741
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-04T08:49:35Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:28 |
 :END:
-
 \begin{equation}
   \Delta z \approx f_x (a,b) \Delta x + f_y (a,b) \Delta y
 \end{equation}
 
 ** Chain Rule Cases                                                      :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:26:50Z
+:FC_CREATED: 2020-03-02T03:29:32
 :FC_TYPE:  normal
-:ID:       ab373a87-e10b-413f-8085-7b1de5713633
+:ID:       494f61c2-542d-4db4-bd35-ac41d8814c0f
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:35Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:32 |
 :END:
-
 $z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
 
 - $\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}$
@@ -600,16 +597,15 @@ $z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
 
 ** Implicit Differentiation                                              :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:28:10Z
+:FC_CREATED: 2020-03-02T03:29:42
 :FC_TYPE:  normal
-:ID:       07017654-60a3-49f1-a1e0-b0413f4d170b
+:ID:       1bb56ebd-c852-4817-b253-684983e19f9d
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:57Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:42 |
 :END:
-
 $z$ is an implicit function of $x$ and $y$ defined by $F(x,y,z)=0$ if
 for every choice of $x$ and $y$, the value of $z$ is determined by
 $F(x,y,z)=0$
@@ -620,31 +616,29 @@ Suppose $F(x,y,z)=0$, then $\frac{\partial z}{\partial x} = -\frac{F_x
 
 ** Rate of Change                                                        :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:28:14Z
+:FC_CREATED: 2020-03-02T03:29:45
 :FC_TYPE:  normal
-:ID:       4223e3cc-2597-4eb0-ad94-452b04a642d2
+:ID:       4c168f4b-7983-4f50-9a7e-56062d674e4e
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:32Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:45 |
 :END:
-
 $D_{\boldsymbol{u}} f(x_0,y_0)$ is the rate of change of function at
 point $(x_0, y_0)$ in direction given by $\boldsymbol{u}$
 
-** Directional Derivative                                                :fc:
+*** Directional Derivative                                               :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:28:37Z
+:FC_CREATED: 2020-03-02T03:29:48
 :FC_TYPE:  normal
-:ID:       1942c0a0-7bf7-4366-b069-7a32543cd72e
+:ID:       4cc1c891-d38c-43f3-bd92-70a83aa20b9f
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-| front    | 2.65 |   3 |     6.00 | 2020-03-05T04:21:37Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+| front    | 2.50 |   2 |     1.00 | 2020-03-03T03:31:09 |
 :END:
-
 Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
 f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
 \boldsymbol{u}$, note that $D_{\boldsymbol{n}}\phi = \triangledown
@@ -652,17 +646,16 @@ f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
 
 ** Gradient                                                              :fc:
 :PROPERTIES:
-:FC_CREATED: 2020-02-25T16:29:02Z
+:FC_CREATED: 2020-03-02T03:29:51
 :FC_TYPE:  cloze
-:ID:       6d6a8ef8-bf41-4ac8-924b-4573ae5bed1f
+:ID:       1a5d202c-cf6e-4fb2-9a32-690aded54718
 :FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: deletion
+:FC_CLOZE_TYPE: enumeration
 :END:
 :REVIEW_DATA:
-| position | ease | box | interval | due                  |
-|----------+------+-----+----------+----------------------|
-|        0 | 2.65 |   3 |     6.00 | 2020-03-04T08:49:16Z |
+| position | ease | box | interval | due                 |
+|----------+------+-----+----------+---------------------|
+|        0 |  2.5 |   0 |        0 | 2020-03-02T03:29:51 |
 :END:
-
 gradient of $f(x,y)$ is vector-valued function $\triangledown f(x,y)
 =$ {{$\langle f_x,f_y \rangle$}@0}
