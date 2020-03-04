@@ -1,0 +1,7 @@
+#+SETUPFILE:./hugo_setup.org
+#+ROAM_KEY: https://www.bmaho.com/articles/post-yc-depression
+#+HUGO_SLUG: post_yc_depression
+#+TITLE: Post YC Depression
+
+- source :: https://www.bmaho.com/articles/post-yc-depression
+

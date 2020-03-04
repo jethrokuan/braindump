@@ -1,5 +1,6 @@
-#+TITLE: When Bloom filters don't bloom
+#+SETUPFILE: ./hugo_setup.org
 #+ROAM_KEY: https://blog.cloudflare.com/when-bloom-filters-dont-bloom/
+#+TITLE: When Bloom filters don't bloom
 
 Modern CPUs are really good at sequential memory access, whet it's
 possible to predict memory fetch patterns. Random memory access is

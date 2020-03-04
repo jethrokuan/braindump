@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SLUG: introduction_to_d3_mit_visualization_group_observable
+#+ROAM_REF: https://observablehq.com/@mitvis/introduction-to-d3
+#+TITLE: Introduction to D3 / MIT Visualization Group / Observable
+
+- source :: https://observablehq.com/@mitvis/introduction-to-d3
