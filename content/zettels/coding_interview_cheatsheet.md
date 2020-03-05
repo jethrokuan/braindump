@@ -1,7 +1,7 @@
 +++
 title = "Coding Interview Cheatsheet"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-05T00:25:52+08:00
+lastmod = 2020-03-05T15:43:01+08:00
 slug = "coding_interview_cheatsheet"
 draft = false
 +++
@@ -128,7 +128,7 @@ stack.pop()
 ```
 
 
-### Buliding with Sunset View {#buliding-with-sunset-view}
+### Building with Sunset View {#building-with-sunset-view}
 
 ```python
 def examine_buildings_with_sunset(it):
@@ -151,6 +151,15 @@ def examine_buildings_with_sunset(it):
 Queue supports 2 operations, enqueue and dequeue. Queues can be
 implemented with a linked list. Doubled ended queues support
 insertions and deletions from both ends (doubly-linked list).
+
+```python
+collections.deque()
+
+q.append(x)
+q.appendleft(x)
+q.pop()
+q.popleft()
+```
 
 
 ## Binary Trees {#binary-trees}
@@ -300,3 +309,17 @@ students.sort(key = lambda: student: student.gpa) # in-place
 -   \\(O(\log n)\\) deletion
 -   \\(O(\log n)\\) lookup
 -   \\(O(\log n)\\) find
+
+
+## Graph {#graph}
+
+```python
+def dfs(node):
+    seen = {}
+    stack = [node]
+    while stack:
+        n = stack.pop()
+        for x in n.neighbours:
+            if x not in seen:
+                stack.append(s)
+```

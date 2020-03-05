@@ -112,7 +112,7 @@ stack.append(a)
 stack.pop()
 
 #+end_src
-** Buliding with Sunset View
+** Building with Sunset View
 #+begin_src python
   def examine_buildings_with_sunset(it):
       BuildingWithHeight = collections.namedtuple("BuildingWithHeight", ("id", "height"))
@@ -132,6 +132,14 @@ stack.pop()
 Queue supports 2 operations, enqueue and dequeue. Queues can be
 implemented with a linked list. Doubled ended queues support
 insertions and deletions from both ends (doubly-linked list).
+#+begin_src python
+  collections.deque()
+
+  q.append(x)
+  q.appendleft(x)
+  q.pop()
+  q.popleft()
+#+end_src
 
 * Binary Trees
 ** Traversal
@@ -260,3 +268,15 @@ Python provides min-heap via =heapq=.
 - $O(\log n)$ deletion
 - $O(\log n)$ lookup
 - $O(\log n)$ find
+* Graph
+#+begin_src python
+  def dfs(node):
+      seen = {}
+      stack = [node]
+      while stack:
+          n = stack.pop()
+          for x in n.neighbours:
+              if x not in seen:
+                  stack.append(s)
+#+end_src
+

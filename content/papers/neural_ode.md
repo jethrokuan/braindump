@@ -1,11 +1,14 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:38:23+08:00
-tags = ["machine-learning", "deep-learning"]
+lastmod = 2020-03-05T19:20:52+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}}), [§stochastic\_processes]({{< relref "stochastic_processes" >}})
+
+
 
 This is a paper review of the NIPS 2018 best paper award-winning paper
 [Neural Ordinary Differential Equations](https://arxiv.org/abs/1806.07366).

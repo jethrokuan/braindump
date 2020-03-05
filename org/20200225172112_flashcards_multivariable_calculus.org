@@ -1,72 +1,55 @@
+#+PROPERTY: ANKI_DECK Multivariable Calculus
 #+TITLE: Flashcards: Multivariable Calculus
 
 * Vectors, Lines & Planes
-** Important Properties                                                  :fc:
+** Important Properties
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:05
-:FC_TYPE:  cloze
-:ID:       ccd9fbdc-285b-4a28-991e-86ae19ccd67f
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_DECK: Multivariable Calculus
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426364242
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
-|        4 |  2.5 |   0 |        0 | 2020-03-02T03:27:05 |
-:END:
-- $||c\boldsymbol{u}|| =$ {{$|c| \, ||\boldsymbol{u}||$}@0}
-- $\boldsymbol{u} =$ {{$\boldsymbol{a}/||\boldsymbol{a}||$}@1}
-- $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{$||\boldsymbol{a}|| \, ||\boldsymbol{b}|| \cos \theta$}@2}
-- $\boldsymbol{a}$ and $\boldsymbol{b}$ are orthogonal iff {{$\boldsymbol{a} \cdot \boldsymbol{b} = 0$}@3}
-- $\boldsymbol{a} \times \boldsymbol{b}$ is {{orthogonal}@4} to $\boldsymbol{a}$ and $\boldsymbol{b}$
-** Dot Product Properties                                                :fc:
+*** Text
+- $||c\boldsymbol{u}|| =$ {{c1::$|c| \, ||\boldsymbol{u}||$:: what?}}
+- $\boldsymbol{u} =$ {{c2::$\boldsymbol{a}/||\boldsymbol{a}||$:: what?}}
+- $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{c3::$||\boldsymbol{a}||
+  \, ||\boldsymbol{b}|| \cos \theta$::what?}}
+- $\boldsymbol{a}$ and $\boldsymbol{b}$ are orthogonal iff
+  {{c4::$\boldsymbol{a} \cdot \boldsymbol{b} = 0$::what?}}
+- $\boldsymbol{a} \times \boldsymbol{b}$ is {{c5::orthogonal::what?}} to
+  $\boldsymbol{a}$ and $\boldsymbol{b}$
+** Dot Product Properties
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:15
-:FC_TYPE:  cloze
-:ID:       f85b7b0f-5233-48f1-a3e3-752bdc3438cb
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_DECK: Multivariable Calculus
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426364316
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
-|        4 |  2.5 |   0 |        0 | 2020-03-02T03:27:15 |
-:END:
-- Commutativity: $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{$\boldsymbol{b} \cdot \boldsymbol{a}$}@0}
+*** Text
+- Commutativity: $\boldsymbol{a} \cdot \boldsymbol{b} =$ {{c1::$\boldsymbol{b} \cdot \boldsymbol{a}$}}
 - Distributive: $\boldsymbol{a} \cdot (\boldsymbol{b} +
-  \boldsymbol{c})=$ {{$\boldsymbol{a} \cdot \boldsymbol{b} +
-  \boldsymbol{a} \cdot \boldsymbol{c}$}@1}
-- $\boldsymbol{0} \cdot \boldsymbol{a} =$  {{$0$}@2}
-- $\boldsymbol{a} \cdot \boldsymbol{a} =$ {{$||\boldsymbol{a}||^2$}@3}
-- $\boldsymbol{a} \cdot \boldsymbol{b} = 0 \nRightarrow$ {{$\boldsymbol{a} = \boldsymbol{0}$ or $\boldsymbol{b} = \boldsymbol{0}$}@4}
+  \boldsymbol{c})=$ {{c2::$\boldsymbol{a} \cdot \boldsymbol{b} +
+  \boldsymbol{a} \cdot \boldsymbol{c}$}}
+- $\boldsymbol{0} \cdot \boldsymbol{a} =$  {{c3::$0$}}
+- $\boldsymbol{a} \cdot \boldsymbol{a} =$ {{c4::$||\boldsymbol{a}||^2$}}
+- $\boldsymbol{a} \cdot \boldsymbol{b} = 0 \nRightarrow$ {{c5::$\boldsymbol{a} = \boldsymbol{0}$ or $\boldsymbol{b} = \boldsymbol{0}$}}
 
-** Projections                                                           :fc:
+** Projections
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:18
-:FC_TYPE:  cloze
-:ID:       16fa8396-19f7-4389-a247-501d4ac09b9b
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_DECK: Multivariable Calculus
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426365516
 :END:
-:REVIEW_DATA:
 | position | ease | box | interval | due                 |
 |----------+------+-----+----------+---------------------|
 |        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:18 |
 |        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:18 |
 :END:
-$\vv{PS}$ is the vector projection of {{$\boldsymbol{b}$ onto $\boldsymbol{a}$}@0}, denoted by {{$\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$}@1}
+**** Front
+$\vv{PS}$ is the vector projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$, denoted by $\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$
 
 Scalar projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$ (called
 component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
 
+**** Back
 \begin{equation}
   \text{comp}_{\boldsymbol{a}} \boldsymbol{b}=||\boldsymbol{b}||\cos
   \theta = \frac{\boldsymbol{a} \cdot
@@ -80,329 +63,353 @@ component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
 \boldsymbol{b}}{\boldsymbol{a} \cdot \boldsymbol{a}} \boldsymbol{a}
 \end{equation}
 
-** Cross Product                                                         :fc:
+** Cross Product
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:25
-:FC_TYPE:  cloze
-:ID:       4a88c5e0-5a10-45c4-99d3-32d7e8e11936
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_DECK: Multivariable Calculus
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426365591
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:27:25 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:25 |
-|        2 | 2.50 |   2 |     1.00 | 2020-03-03T07:51:16 |
-|        3 | 2.50 |   2 |     1.00 | 2020-03-03T07:51:28 |
-:END:
-- $\boldsymbol{a} \times \boldsymbol{b} =$ {{$-\boldsymbol{b} \times \boldsymbol{a}$}@0}
-- $(d \boldsymbol{a}) \times \boldsymbol{b} =$ {{$d(\boldsymbol{a} \times
-  \boldsymbol{b}) = \boldsymbol{a} \times (d\boldsymbol{b})$}@1}
+*** Text
+- $\boldsymbol{a} \times \boldsymbol{b} =$ {{c1::$-\boldsymbol{b} \times \boldsymbol{a}$}}
+- $(d \boldsymbol{a}) \times \boldsymbol{b} =$ {{c2::$d(\boldsymbol{a} \times
+  \boldsymbol{b}) = \boldsymbol{a} \times (d\boldsymbol{b})$}}
 - $\boldsymbol{a} \times (\boldsymbol{b} + \boldsymbol{c}) =$
-  {{$\boldsymbol{a} \times \boldsymbol{b} + \boldsymbol{a} \times \boldsymbol{c}$}@2}
-- $(\boldsymbol{a}+\boldsymbol{b})\times \boldsymbol{c}=$ {{$\boldsymbol{a}
-  \times \boldsymbol{c} + \boldsymbol{b} \times \boldsymbol{c}$}@3}
-
-** Area of Parallelogram                                                 :fc:
+  {{c3::$\boldsymbol{a} \times \boldsymbol{b} + \boldsymbol{a} \times \boldsymbol{c}$}}
+- $(\boldsymbol{a}+\boldsymbol{b})\times \boldsymbol{c}=$ {{c4::$\boldsymbol{a}
+  \times \boldsymbol{c} + \boldsymbol{b} \times \boldsymbol{c}$}}
+** Area of Parallelogram
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:31
-:FC_TYPE:  normal
-:ID:       96b9e7b1-0cb8-4d5a-acf8-0c19e4a2f712
+:ANKI_DECK: Multivariable Calculus
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426365641
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:31 |
-:END:
+*** Front
+Area of Parallelogram
+*** Back
 \begin{equation}
 A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 \end{equation}
-
-** Distance of point (Q) to line ($\vv{PR}$)                             :fc:
+** Distance of point Q to line PR
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:38
-:FC_TYPE:  normal
-:ID:       17bb7423-9a5c-4cce-a10d-a7156a8b3f45
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426365691
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:38 |
-:END:
+*** Front
+Distance of point (Q) to line ($\vv{PR}$)
+*** Back
 \begin{equation}
   ||\vv{PQ}|| \sin \theta = \frac{||\vv{PQ} \times
     \vv{PR}||}{||\vv{PR}||}
 \end{equation}
 
-** Distance of point $P(x_1,y_1,z_1)$ from plane $Ax+By+Cz+D=0$          :fc:
+** Distance of point $P(x_1,y_1,z_1)$ from plane $Ax+By+Cz+D=0$
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:44
-:FC_TYPE:  normal
-:ID:       e79e52bb-8418-4c54-bfbc-85039d662076
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426365742
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:44 |
-:END:
+*** Front
+Distance of point $P(x_1,y_1,z_1)$ from plane $Ax+By+Cz+D=0$
+*** Back
 \begin{equation}
   d = \frac{|Ax_1+By_1+Cz_1+D|}{\sqrt{A^2+B^2+C^2}}
 \end{equation}
 
-** Vector Equation of Plane                                              :fc:
+** Vector Equation of Plane
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:27:49
-:FC_TYPE:  normal
-:ID:       9735d14b-ce72-4cd7-92ea-03885c5ed3fe
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426365916
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:27:49 |
-:END:
+*** Front
+Vector Equation of Plane
+*** Back
 \begin{equation}
   \boldsymbol{n} \cdot (\boldsymbol{r} - \boldsymbol{r}_0) = 0
 \end{equation}
-
 ** Useful Techniques
-
-*** Finding Angle Between Planes                                         :fc:
+*** Finding Angle Between Planes
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:01
-:FC_TYPE:  normal
-:ID:       07678f96-e1f3-470f-a9cd-a7226b6ad7e7
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426365975
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:01 |
-:END:
-Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$ {{$\theta = \cos^{-1} \left( \frac{\boldsymbol{u} \cdot \boldsymbol{v}}{||\boldsymbol{u}|| \, ||\boldsymbol{v}||} \right)$}@0}
+**** Front
+Angle between $\boldsymbol{n}_1$ and $\boldsymbol{n}_2$
+**** Back
+\begin{equation}
+\theta = \cos^{-1} \left( \frac{\boldsymbol{u} \cdot \boldsymbol{v}}{||\boldsymbol{u}|| \, ||\boldsymbol{v}||} \right)
+\end{equation}
 
-*** Finding line of intesection between planes                           :fc:
+*** Finding line of intesection between planes
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:04
-:FC_TYPE:  normal
-:ID:       78cb07e9-4974-47e6-a009-96594d0f73c4
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366025
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:04 |
-:END:
+**** Front
+Line of Intersection between planes
+**** Back
 1. Solve for $x$
 2. Set both $x$ equal then let $y=t$ to obtain parametric equations
    for line
 
-*** Distance between 2 Planes                                            :fc:
+*** Distance between 2 Planes
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:08
-:FC_TYPE:  cloze
-:ID:       d0ddfdd8-26f3-4263-b87b-ca66cd31d1cd
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366076
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:08 |
-:END:
+**** Front
+Distance between 2 planes
+**** Back
 1. Find $\boldsymbol{u}$ vector that connects both planes
-2. distance $= ||\boldsymbol{u}|| \, |\cos \theta| =$ {{$\left| \frac{\boldsymbol{u} \cdot \boldsymbol{n}}{||\boldsymbol{n}||} \right|$}@0} 
+2. $distance = ||\boldsymbol{u}|| \, |\cos \theta| = \left| \frac{\boldsymbol{u} \cdot \boldsymbol{n}}{||\boldsymbol{n}||} \right| $
 
 * Function of 2 Variables, Surface, Limits and Continuity
 ** Quadric Surfaces
-*** Elliptic Paraboloid                                                  :fc:
+*** Elliptic Paraboloid
+**** Traces
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:22
-:FC_TYPE:  cloze
-:ID:       b3915d24-2f86-41f3-8706-3959dbec61ac
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366266
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
-|        4 |  2.5 |   0 |        0 | 2020-03-02T03:28:22 |
-:END:
-- Horizontal trace :: {{ellipses}@0}
-- Vertical trace :: {{parabolas}@1}
+***** Front
+Elliptic Paraboloid Traces
+***** Back
+- Horizontal trace :: {{c1::ellipses}}
+- Vertical trace :: {{c2::parabolas}}
 
-Equation: 
-
-{{$\frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{z}{c}$}@2}
-
-Image:
-
-#+DOWNLOADED: screenshot @ 2020-02-25 19:05:11
-{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-05-11_.png]]}@3}
-
-The vertix will be shifted to $(x_0, y_0, z_0)$ if the elliptic
-paraboloid is given by
-{{$\frac{\left(x-x_{0}\right)^{2}}{a^{2}}+\frac{\left(y-y_{0}\right)^{2}}{b^{2}}=\frac{\left(z-z_{0}\right)}{c}$}@4}
-
-*** Hyperbolic Paraboloid                                                :fc:
+**** Equation
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:25
-:FC_TYPE:  cloze
-:ID:       7e7834a3-744a-47ef-a541-f7cd30a6c4a0
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366325
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:25 |
+
+***** Front
+Elliptic Paraboloid Equation
+
+***** Back
+\begin{equation}
+\frac{x^2}{a^2} + \frac{y^2}{b^2} = \frac{z}{c}
+\end{equation}
+
+**** Image
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366392
 :END:
+
+***** Front
+Elliptic Paraboloid Image
+
+***** Back
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-05-11_.png]]
+
+*** Hyperbolic Paraboloid
+
+**** Traces
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366475
+:END:
+
+***** Front
+Hyperbolic Paraboloid Traces
+
+***** Back
 - Horizontal traces :: {{hyperbolas}@0}
 - Vertical traces :: {{parabolas}@1}
 
-Equation:
-
-{{$$\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=\frac{z}{c}$$}@2}
-
-{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-13-32_.png]]}@3}
-
-*** Ellipsoid                                                            :fc:
+**** Equation
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:28
-:FC_TYPE:  cloze
-:ID:       484d6585-4aeb-47b4-843b-a1b2a1b40e80
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366525
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:28 |
-:END:
-- Horizontal traces :: {{ellipses}@0}
-- Vertical traces :: {{ellipses}@1}
 
-Equation:
+***** Front
+Hyperbolic Paraboloid Equation
 
-{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1$$}@2}
+***** Back
+\begin{equation}
+\frac{x^{2}}{a^{2}}-\frac{y^{2}}{b^{2}}=\frac{z}{c}
+\end{equation}
 
-Image:
-
-{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-15-07_.png]]}@3} 
-
-*** Elliptic Cone                                                        :fc:
+**** Image
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:31
-:FC_TYPE:  cloze
-:ID:       27a6e7f4-7302-4466-b189-23bd13a4f0a7
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366691
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
-|        4 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
-|        5 |  2.5 |   0 |        0 | 2020-03-02T03:28:31 |
-:END:
-- Horizontal traces :: {{ellipses}@0}
-- Vertical traces :: {{hyperbolas}@1} in the planes {{$x = k$ and $y =
-  k$}@2}, where {{$k \ne 0$}@3}
 
-Equation:
+***** Front
+Hyperbolic Paraboloid Image
 
-{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=0$$}@4}
+***** Back
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-13-32_.png]]
 
-Image:
-
-#+DOWNLOADED: screenshot @ 2020-02-25 20:20:27
-{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-20-27_.png]]}@5}
-
-*** Hyperboloid of 1 Sheet                                               :fc:
+*** Ellipsoid
+**** Traces
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:32
-:FC_TYPE:  cloze
-:ID:       90d7e014-6f1d-400a-a4fd-5037eeceafe7
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
-:END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:32 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:32 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:32 |
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366767
 :END:
 
-- Horizontal traces :: {{ellipses}@0}
-- Vertical traces :: {{hyperbolas}@1}
+***** Front
+Ellipsoid Traces
 
-Equation:
+*****  Back
+- Horizontal traces :: ellipses
+- Vertical traces :: ellipses
 
-{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1$$}@2}
+**** Equation
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366816
+:END:
 
-Image:
+***** Front
+Ellpsoid Equation
 
-#+DOWNLOADED: screenshot @ 2020-02-25 20:21:32
+***** Back
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}+\frac{z^{2}}{c^{2}}=1
+\end{equation}
+
+**** Image
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426366891
+:END:
+
+***** Front
+Ellipsoid Image
+***** Back
+ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_19-15-07_.png]]
+
+*** Elliptic Cone
+***** Traces
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426367066
+:END:
+****** Front
+Elliptic Cone Traces
+****** Back
+- Horizontal traces :: ellipses
+- Vertical traces :: hyperbolas in the planes $x = k$ and $y = k$,
+  where $k \ne 0$
+
+***** Equation
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426367125
+:END:
+
+****** Front
+Elliptic Cone Equation
+****** Back
+
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=0
+\end{equation}
+
+***** Image
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426367192
+:END:
+
+****** Front
+Elliptic Cone Image
+****** Back
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-20-27_.png]]
+
+*** Hyperboloid of 1 Sheet
+
+**** Traces
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368316
+:END:
+
+***** Front
+Hyperboloid of 1 Sheet Traces
+
+****** Back
+- Horizontal traces :: ellipses
+- Vertical traces :: hyperbolas
+
+***** Equation
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368491
+:END:
+
+****** Front
+Hyperboloid of 1 Sheet Equation
+
+****** Back
+\begin{equation}
+  \frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=1
+\end{equation}
+
+***** Image
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368541
+:END:
+
+****** Front
+Hyperboloid of 1 Sheet Image
+
+****** Back
 [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-21-32_.png]]
 
-*** Hyperboloid of 2 sheets                                              :fc:
+*** Hyperboloid of 2 sheets
+
+**** Traces
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:33
-:FC_TYPE:  cloze
-:ID:       69a92018-21be-4331-ac98-0b0828740a0b
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368625
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
-|        3 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
-|        4 |  2.5 |   0 |        0 | 2020-03-02T03:28:33 |
-:END:
-- Horizontal traces :: in {{$z=k$}@0} are {{ellipses}@1}, if $k > c$
-  or $k < -c$
-- Vertical traces :: {{hyperbolas}@2}
 
-Equation:
+***** Front
+Hyperboloid of 2 sheets traces
 
-{{$$\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=-1$$}@3}
+***** Back
+- Horizontal traces :: in $z=k$ are ellipses if $k>c$ or $k<-c$
+- Vertical traces :: hyperbolas
 
-Image:
-
-#+DOWNLOADED: screenshot @ 2020-02-25 20:22:49
-{{ [[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-22-49_.png]]}@4}
-
-** Definition of Limits                                                  :fc:
+**** Equation
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:36
-:FC_TYPE:  cloze
-:ID:       d68c1b45-dc0e-4ce2-9a0b-07bfcda46dae
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368675
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:36 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:36 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:36 |
-|        3 | 2.50 |   2 |     1.00 | 2020-03-03T07:51:27 |
+
+***** Front
+Hyperboloid of 2 sheets Equation
+
+***** Back
+
+\begin{equation}
+\frac{x^{2}}{a^{2}}+\frac{y^{2}}{b^{2}}-\frac{z^{2}}{c^{2}}=-1
+\end{equation}
+
+**** Image
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368741
 :END:
+
+***** Front
+Hyperboloid of 2 sheets Image
+
+***** Back
+[[file:images/20200225172112_flashcards_multivariable_calculus/screenshot2020-02-25_20-22-49_.png]]
+
+** Definition of Limits
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426368916
+:END:
+
+*** Text
+
 Let $f$ be a function of two variables whose domain $D$ contains
 points arbitrarily close to $(a,b)$. We say that the limit of $f(x,y)$
 as $(x,y)$ approaches (a,b) is $L \in \mathcal{R}$, denoted by:
@@ -411,238 +418,161 @@ as $(x,y)$ approaches (a,b) is $L \in \mathcal{R}$, denoted by:
   \lim _{(x, y) \rightarrow(a, b)} f(x, y)=L
 \end{equation}
 
-if for any number {{$\epsilon > 0$}@0} there exists a number {{$\delta
-> 0$}@1} such that {{$|f(x, y)-L|<\epsilon$}@2} whenever
-{{$0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta$}@3}.
+if for any number {{c1::$\epsilon > 0$}} there exists a number {{c2::$\delta
+> 0$}} such that {{c3::$|f(x, y)-L|<\epsilon$}} whenever
+{{c4::$0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta$}}.
 
-** Showing a limit does not exist                                        :fc:
+** Showing a limit does not exist
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:41
-:FC_TYPE:  normal
-:ID:       5753be11-00a9-4917-87e8-7762e99911de
-:END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:41 |
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426368975
 :END:
 
+*** Front
+Showing a limit does not exist
+
+*** Back
 If the limit along SOME paths at $(a,b)$ are different, then the limit
 does not exist at $(a,b)$
 
 ** Showing limits exist
-*** Properties of limits or continuity                                   :fc:
+*** Properties of limits or continuity
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:47
-:FC_TYPE:  cloze
-:ID:       ef011386-64ad-483c-a8fa-6fedfb9554e6
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426369066
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:47 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:47 |
-|        2 |  2.5 |   0 |        0 | 2020-03-02T03:28:47 |
-:END:
-1. $\lim _{(x, y) \rightarrow(a, b)}(f(x, y) \pm g(x, y))=$ {{$\lim
+
+**** Text
+1. $\lim _{(x, y) \rightarrow(a, b)}(f(x, y) \pm g(x, y))=$ {{c1::$\lim
    _{(x, y) \rightarrow(a, b)} f(x, y) \pm \lim _{(x, y)
-   \rightarrow(a, b)} g(x, y)$}@0}
-2. $\lim _{(x, y) \rightarrow(a, b)} f(x, y) g(x, y)=$ {{$\left(\lim _{(x, y) \rightarrow(a, b)} f(x, y)\right)\left(\lim _{(x, y) \rightarrow(a, b)} g(x, y)\right)$}@1}
+   \rightarrow(a, b)} g(x, y)$}}
+2. $\lim _{(x, y) \rightarrow(a, b)} f(x, y) g(x, y)=$ {{c2::$\left(\lim _{(x, y) \rightarrow(a, b)} f(x, y)\right)\left(\lim _{(x, y) \rightarrow(a, b)} g(x, y)\right)$}}
 3. $\lim _{(x, y) \rightarrow(a, b) \rightarrow(a, b)} \frac{f(x,
    y)}{g(x, y)}=\frac{\lim _{(x, y) \rightarrow(a, b)} f(x, y)}{\lim
-   _{(x, y) \rightarrow(a, b)} g(x, y)}$ if {{$\lim _{(x, y) \rightarrow(a, b)} g(x, y) \neq 0$}@2}
+   _{(x, y) \rightarrow(a, b)} g(x, y)}$ if {{c3::$\lim _{(x, y) \rightarrow(a, b)} g(x, y) \neq 0$}}
 
-*** Squeeze Theorem                                                      :fc:
+*** Squeeze Theorem
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:49
-:FC_TYPE:  cloze
-:ID:       88bb9ff7-4eaa-48d3-b6cb-2131159950e8
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369141
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:49 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:28:49 |
-:END:
-1. {{$|f(x, y)-L|$}@0} $\leq g(x, y) \forall(x, y) \text { close to }(a, b)$
-2. $\lim _{(x, y) \rightarrow(a, b)} g(x, y)=$ {{$0$}@1}
+
+**** Front
+Squeeze Theorem
+
+**** Back
+1. $|f(x, y)-L| \leq g(x, y) \forall(x, y) \text { close to }(a, b)$$
+2. $\lim _{(x, y) \rightarrow(a, b)} g(x, y)= 0$
 
 Then $$\lim _{(x, y) \rightarrow(a, b)} f(x, y)=L$$.
 
 * Partial Derivatives, Chain Rule, Directional Derivatives
-** Clairaut's Theorem                                                    :fc:
+** Clairaut's Theorem
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:53
-:FC_TYPE:  normal
-:ID:       c31f28c6-7c32-419e-a4d7-6364663289b4
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369216
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:28:53 |
-:END:
+*** Front
+Clairaut's Theorem
+*** Back
 $f$ defined on disk $D$ that contains $(a,b)$, if $f_{xy},f_{yx}$ are
 both continuous on $D$, then $f_{xy}(a,b) = f_{yx}(a,b)$
 
-** Equation of Tangent Plane                                             :fc:
+** Equation of Tangent Plane
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:28:59
-:FC_TYPE:  cloze
-:ID:       6d802ff9-1485-4cb6-8e6e-82e05773f2ee
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369391
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:28:59 |
-:END:
+
+*** Front
 $S$ given by $z=f(x,y)$, normal vector to tangent plane to $S$ at
 $(a,b)$ is $\langle f_x(a,b), f_y(a,b), -1\rangle$.
 
-Tangent plane given by: 
+Tangent plane given by:
+*** Back
+\begin{equation}
+z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$$
+\end{equation}
 
-{{$$z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$$}@0}
-
-** Increment                                                             :fc:
+** Increment
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:08
-:FC_TYPE:  cloze
-:ID:       1e2045b9-65ec-4162-8ede-a58cd23eccb6
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426369441
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:29:08 |
-:END:
-:FC_CREATED: 2020-02-25T16:23:02Z
-:FC_TYPE:  normal
-:ID:       c524e8dd-2274-42bc-bc24-177d5c3d480c
 
-$z=f(x,y)$, then $\Delta z =$ {{$f(a+ \Delta x, b + \Delta y) - f(a,b)$}@0}
+*** Text
+$z=f(x,y)$, then $\Delta z =$ {{c1::$f(a+ \Delta x, b + \Delta y) - f(a,b)$}}
 
-** Differentiable $\implies$ continuous                                  :fc:
+** Differentiable $\implies$ continuous
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:24
-:FC_TYPE:  normal
-:ID:       a85ab851-df77-42a3-a705-60f0d1160ca9
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369516
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-03-03T07:51:19 |
-:END:
+
+*** Front
+Differentiable $\implies$ continuous
+*** Back
 $$\exists f'(x) = \lim\limits_{x \rightarrow
 x_0}\frac{f(x)-f(x_0)}{x-x_0} \implies \lim\limits_{x \rightarrow x_0}
 f(x)-f(x_0)= 0$$
 
-** Differentiability, 2 variables                                        :fc:
+** Differentiability, 2 variables
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:26
-:FC_TYPE:  cloze
-:ID:       b65c6f23-0e54-4d83-9d20-a396fccd7cbb
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: enumeration
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583426369566
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-|        0 |  2.5 |   0 |        0 | 2020-03-02T03:29:26 |
-|        1 |  2.5 |   0 |        0 | 2020-03-02T03:29:26 |
-:END:
-$z=f(x,y)$, $f$ is differentiable at $(a,b)$ if we can write $\Delta z
-=$ {{$f_x (a,b) \Delta x + f_y (a,b) \Delta y + \epsilon_1 \Delta x +
-\epsilon_2 \Delta y$ }@0}where $\epsilon_1$ and $\epsilon_2$ are
-functions of $\Delta x$ and $\Delta y$ which vanish as {{$(\Delta x,
-\Delta y) \rightarrow (0,0)$}@1}
 
-** Linear Approx                                                         :fc:
+*** Text
+$z=f(x,y)$, $f$ is differentiable at $(a,b)$ if we can write $\Delta z
+=$ {{c1::$f_x (a,b) \Delta x + f_y (a,b) \Delta y + \epsilon_1 \Delta x +
+\epsilon_2 \Delta y$ }} where $\epsilon_1$ and $\epsilon_2$ are
+functions of $\Delta x$ and $\Delta y$ which vanish as {{c2::$(\Delta x,
+\Delta y) \rightarrow (0,0)$}}
+
+** Linear Approx
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:28
-:FC_TYPE:  normal
-:ID:       da63d85e-cf7e-4287-995b-714bc1df1741
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369642
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:28 |
-:END:
+
+*** Front
+Linear Approximation
+*** Back
 \begin{equation}
   \Delta z \approx f_x (a,b) \Delta x + f_y (a,b) \Delta y
 \end{equation}
 
-** Chain Rule Cases                                                      :fc:
+** Chain Rule Cases
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:32
-:FC_TYPE:  normal
-:ID:       494f61c2-542d-4db4-bd35-ac41d8814c0f
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369817
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:32 |
-:END:
-$z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then:
+
+*** Front
+$z=f(x,y)$ differentiable function $x=g(t)$ and $y=h(t)$, then
+
+*** Back
 
 - $\frac{dz}{dt} = \frac{\partial f}{\partial x} \frac{dx}{dt} + \frac{\partial f}{\partial y} \frac{dy}{dt}$
 - $\frac{\partial z}{\partial s} =  \frac{\partial f}{\partial x}
   \frac{\partial x}{\partial s} + \frac{\partial f}{\partial y}
   \frac{\partial y}{\partial s}$
 
-** Implicit Differentiation                                              :fc:
+** Implicit Differentiation
 :PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:42
-:FC_TYPE:  normal
-:ID:       1bb56ebd-c852-4817-b253-684983e19f9d
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426369875
 :END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:42 |
-:END:
+
+*** Front
 $z$ is an implicit function of $x$ and $y$ defined by $F(x,y,z)=0$ if
 for every choice of $x$ and $y$, the value of $z$ is determined by
-$F(x,y,z)=0$
+$F(x,y,z)=0$. Suppose $F(x,y,z)=0$, then:
 
-Suppose $F(x,y,z)=0$, then $\frac{\partial z}{\partial x} = -\frac{F_x
+*** Back
+ $\frac{\partial z}{\partial x} = -\frac{F_x
 (x,y,z)}{F_z (x,y,z)}, \frac{\partial z}{\partial y} = -\frac{F_y
 (x,y,z)}{F_z (x,y,z)}$ provided that $F_z(x,y,z) \neq 0$
-
-** Rate of Change                                                        :fc:
-:PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:45
-:FC_TYPE:  normal
-:ID:       4c168f4b-7983-4f50-9a7e-56062d674e4e
-:END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    |  2.5 |   0 |        0 | 2020-03-02T03:29:45 |
-:END:
-$D_{\boldsymbol{u}} f(x_0,y_0)$ is the rate of change of function at
-point $(x_0, y_0)$ in direction given by $\boldsymbol{u}$
-
-*** Directional Derivative                                               :fc:
-:PROPERTIES:
-:FC_CREATED: 2020-03-02T03:29:48
-:FC_TYPE:  normal
-:ID:       4cc1c891-d38c-43f3-bd92-70a83aa20b9f
-:END:
-:REVIEW_DATA:
-| position | ease | box | interval | due                 |
-|----------+------+-----+----------+---------------------|
-| front    | 2.50 |   2 |     1.00 | 2020-03-03T03:31:09 |
-:END:
-Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
-f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
-\boldsymbol{u}$, note that $D_{\boldsymbol{n}}\phi = \triangledown
-\phi \cdot \boldsymbol{n}$
 
 ** Gradient                                                              :fc:
 :PROPERTIES:
@@ -659,3 +589,30 @@ f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
 :END:
 gradient of $f(x,y)$ is vector-valued function $\triangledown f(x,y)
 =$ {{$\langle f_x,f_y \rangle$}@0}
+** Rate of Change
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426370967
+:END:
+
+*** Front
+Rate of Change
+
+*** Back
+$D_{\boldsymbol{u}} f(x_0,y_0)$ is the rate of change of function at
+point $(x_0, y_0)$ in direction given by $\boldsymbol{u}$
+
+*** Directional Derivative
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583426371025
+:END:
+
+**** Front
+Directional Derivative
+
+**** Back
+Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
+f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
+\boldsymbol{u}$, note that $D_{\boldsymbol{n}}\phi = \triangledown
+\phi \cdot \boldsymbol{n}$
