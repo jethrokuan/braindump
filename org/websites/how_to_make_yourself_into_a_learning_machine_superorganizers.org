@@ -6,4 +6,3 @@
 - source ::
   https://superorganizers.substack.com/p/how-to-build-a-learning-machine
 - tags :: [[file:../spaced_repetition.org][Spaced Repetition]]
-

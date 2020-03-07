@@ -44,7 +44,7 @@
 |        1 |  2.5 |   0 |        0 | 2020-03-02T03:27:18 |
 :END:
 **** Front
-$\vv{PS}$ is the vector projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$, denoted by $\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$
+$PS$ is the vector projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$, denoted by $\text{proj}_{\boldsymbol{a}}\boldsymbol{b}$
 
 Scalar projection of $\boldsymbol{b}$ onto $\boldsymbol{a}$ (called
 component of $\boldsymbol{b}$ along $\boldsymbol{a}$),
@@ -95,11 +95,11 @@ A=||a|| \times ||b|| \sin \theta = ||\boldsymbol{a} \times \boldsymbol{b}||
 :ANKI_NOTE_ID: 1583426365691
 :END:
 *** Front
-Distance of point (Q) to line ($\vv{PR}$)
+Distance of point (Q) to line ($PR$)
 *** Back
 \begin{equation}
-  ||\vv{PQ}|| \sin \theta = \frac{||\vv{PQ} \times
-    \vv{PR}||}{||\vv{PR}||}
+  ||PQ|| \sin \theta = \frac{||PQ \times
+    PR||}{||PR||}
 \end{equation}
 
 ** Distance of point $P(x_1,y_1,z_1)$ from plane $Ax+By+Cz+D=0$
@@ -159,19 +159,19 @@ Line of Intersection between planes
 Distance between 2 planes
 **** Back
 1. Find $\boldsymbol{u}$ vector that connects both planes
-2. $distance = ||\boldsymbol{u}|| \, |\cos \theta| = \left| \frac{\boldsymbol{u} \cdot \boldsymbol{n}}{||\boldsymbol{n}||} \right| $
+2. $distance = ||\boldsymbol{u}|| \, |\cos \theta| = \left| \frac{\boldsymbol{u} \cdot \boldsymbol{n}}{||\boldsymbol{n}||} \right|$
 
 * Function of 2 Variables, Surface, Limits and Continuity
 ** Quadric Surfaces
 *** Elliptic Paraboloid
 **** Traces
 :PROPERTIES:
-:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_TYPE:Cloze
 :ANKI_NOTE_ID: 1583426366266
 :END:
-***** Front
+***** Text
 Elliptic Paraboloid Traces
-***** Back
+
 - Horizontal trace :: {{c1::ellipses}}
 - Vertical trace :: {{c2::parabolas}}
 
@@ -205,16 +205,13 @@ Elliptic Paraboloid Image
 
 **** Traces
 :PROPERTIES:
-:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_TYPE: Cloze
 :ANKI_NOTE_ID: 1583426366475
 :END:
 
-***** Front
-Hyperbolic Paraboloid Traces
-
-***** Back
-- Horizontal traces :: {{hyperbolas}@0}
-- Vertical traces :: {{parabolas}@1}
+***** Text
+- Horizontal traces :: {{c1::hyperbolas}}
+- Vertical traces :: {{c2::parabolas}}
 
 **** Equation
 :PROPERTIES:
@@ -420,7 +417,7 @@ as $(x,y)$ approaches (a,b) is $L \in \mathcal{R}$, denoted by:
 
 if for any number {{c1::$\epsilon > 0$}} there exists a number {{c2::$\delta
 > 0$}} such that {{c3::$|f(x, y)-L|<\epsilon$}} whenever
-{{c4::$0<\sqrt{(x-a)^{2}+(y-b)^{2}}<\delta$}}.
+{{c4::$0 < \sqrt{(x-a)^2+(y-b)^2}<\delta$}}.
 
 ** Showing a limit does not exist
 :PROPERTIES:
@@ -461,7 +458,7 @@ does not exist at $(a,b)$
 Squeeze Theorem
 
 **** Back
-1. $|f(x, y)-L| \leq g(x, y) \forall(x, y) \text { close to }(a, b)$$
+1. $|f(x, y)-L| \leq g(x, y) \forall(x, y) \text { close to }(a, b)$
 2. $\lim _{(x, y) \rightarrow(a, b)} g(x, y)= 0$
 
 Then $$\lim _{(x, y) \rightarrow(a, b)} f(x, y)=L$$.
@@ -490,9 +487,8 @@ $(a,b)$ is $\langle f_x(a,b), f_y(a,b), -1\rangle$.
 
 Tangent plane given by:
 *** Back
-\begin{equation}
-z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$$
-\end{equation}
+
+$$z=f(a,b)+f_x(a,b)(x-a)+f_y(a,b)(y-b)$$
 
 ** Increment
 :PROPERTIES:
@@ -538,9 +534,7 @@ functions of $\Delta x$ and $\Delta y$ which vanish as {{c2::$(\Delta x,
 *** Front
 Linear Approximation
 *** Back
-\begin{equation}
-  \Delta z \approx f_x (a,b) \Delta x + f_y (a,b) \Delta y
-\end{equation}
+$$\Delta z \approx f_x (a,b) \Delta x + f_y (a,b) \Delta y$$
 
 ** Chain Rule Cases
 :PROPERTIES:
