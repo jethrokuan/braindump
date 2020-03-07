@@ -63,5 +63,3 @@ boundaries. However, they lack interpretability, and require large
 amounts of training data.
 
 bibliography:./biblio/biblio.bib
-
-

@@ -1,7 +1,7 @@
 +++
 title = "Talks: Emacs Lisp Development Tips with John Wiegley"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-26T20:57:00+08:00
+lastmod = 2020-03-08T00:02:55+08:00
 slug = "emacs_lisp_development_tips_with_john_wiegley"
 draft = false
 +++
@@ -10,7 +10,7 @@ source
 : [2015-04-08 Emacs Lisp Development Tips with John Wiegley - YouTube](https://www.youtube.com/watch?v=QRBcm6jFJ3Q)
 
 author
-: [John Wiegley]({{< relref "20200226203934_john_wiegley" >}})
+: [John Wiegley]({{< relref "john_wiegley" >}})
 
 
 ## Interactive debugging {#interactive-debugging}

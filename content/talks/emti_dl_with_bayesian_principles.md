@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning With Bayesian Principles - Emtiyaz Khan"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-17T21:59:20+08:00
+lastmod = 2020-03-08T00:01:41+08:00
 draft = false
 +++
 
@@ -12,7 +12,7 @@ speaker
 : [Emtiyaz Khan]({{< relref "emtiyaz_khan" >}})
 
 tags
-: [Bayesian Deep Learning]({{< relref "bayesian_deep_learning" >}}), [NeurIPS]({{< relref "20200217215815_neurips" >}})
+: [Bayesian Deep Learning]({{< relref "bayesian_deep_learning" >}}), [NeurIPS]({{< relref "neurips" >}})
 
 
 ## Goals {#goals}

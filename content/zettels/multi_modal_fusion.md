@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Fusion"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:59:02+08:00
+lastmod = 2020-03-08T00:04:38+08:00
 slug = "multimodal_fusion"
 draft = false
 +++

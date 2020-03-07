@@ -1,13 +1,13 @@
 +++
 title = "Multi-modal Translation"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:44+08:00
+lastmod = 2020-03-08T00:05:14+08:00
 slug = "multimodal_translation"
 draft = false
 +++
 
 Multi-modal translation is a sub-challenge in [multi-modal machine
-learning]({{< relref "20200219115844_multimodal_machine_learning" >}}), involving the translation of one modality to another. Some
+learning]({{< relref "multimodal_machine_learning" >}}), involving the translation of one modality to another. Some
 applications of multi-modal translation involve speech synthesis,
 video description, and cross-modal retrieval. Image and video
 captioning is a particularly popular problem, with large multi-modal
