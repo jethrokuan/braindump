@@ -1,7 +1,7 @@
 +++
 title = "Reinforcement Learning ⭐"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-28T10:26:34+08:00
+lastmod = 2020-03-07T09:52:10+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -332,7 +332,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#org14b2d9d) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org5adbdfb) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
@@ -365,3 +365,23 @@ Tutoring Systems
 -   [§q\_learning]({{< relref "q_learning" >}})
 
 <biblio/rl.bib>
+
+
+## Backlinks {#backlinks}
+
+-   [Policy Gradients]({{< relref "policy_gradients" >}})
+-   [Control As Inference]({{< relref "control_as_inference" >}})
+-   [Exploration In Reinforcement Learning]({{< relref "exploration_in_rl" >}})
+-   [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
+-   [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
+-   [Q-Learning]({{< relref "q_learning" >}})
+-   [Generalization In Reinforcement Learning]({{< relref "generalization_in_rl" >}})
+-   [Neuroscience and Reinforcement Learning]({{< relref "neuroscience_rl" >}})
+-   [Neuroscience and Reinforcement Learning]({{< relref "neuroscience_rl" >}})
+-   [Distributed Reinforcement Learning]({{< relref "distributed_rl" >}})
+-   [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
+-   [Transfer Learning]({{< relref "transfer_learning" >}})
+-   [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})
+-   [A Distributional Code for Value in Dopamine-based Reinforcement Learning]({{< relref "dabney2020_distributional_rl" >}})
+-   [Free-Energy Reinforcement Learning]({{< relref "free_energy_rl" >}})
+-   [Meta Learning]({{< relref "meta_learning" >}})
