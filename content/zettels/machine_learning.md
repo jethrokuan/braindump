@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:48+08:00
+lastmod = 2020-03-08T00:39:27+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -661,7 +661,15 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 
 ## Backlinks {#backlinks}
 
--   [Saturday, 08 February 2020]({{< relref "private-2020-02-08" >}})
+-   [Recommender Systems]({{< relref "recommender_systems" >}})
+-   [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}})
+-   [Statistical Learning]({{< relref "statistical_learning" >}})
+-   [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
+-   [Likelihood Principle]({{< relref "likelihood_principle" >}})
+-   [Natural Language Processing]({{< relref "nlp" >}})
+-   [Quantization]({{< relref "quantization" >}})
+-   [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
+-   [Article: An Opinionated Guide to ML Research]({{< relref "20200217124441" >}})
 -   [Rademacher Complexity]({{< relref "rademacher" >}})
 -   [Probabilistic Graph Models]({{< relref "pgm" >}})
 -   [PAC Learning]({{< relref "pac_learning" >}})
@@ -673,12 +681,3 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 -   [Topic Modeling]({{< relref "topic_modelling" >}})
 -   [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 -   [Machine Teaching]({{< relref "machine_teaching" >}})
--   [Recommender Systems]({{< relref "recommender_systems" >}})
--   [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}})
--   [Statistical Learning]({{< relref "statistical_learning" >}})
--   [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
--   [Likelihood Principle]({{< relref "likelihood_principle" >}})
--   [Natural Language Processing]({{< relref "nlp" >}})
--   [Quantization]({{< relref "quantization" >}})
--   [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
--   [Article: An Opinionated Guide to ML Research]({{< relref "20200217124441" >}})

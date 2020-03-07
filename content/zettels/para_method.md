@@ -1,7 +1,7 @@
 +++
 title = "PARA Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:24+08:00
+lastmod = 2020-03-08T00:39:41+08:00
 draft = false
 +++
 
@@ -68,5 +68,4 @@ My personal thoughts:
 
 ## Backlinks {#backlinks}
 
--   [2020-01-22]({{< relref "private-2020-01-22" >}})
 -   [Progressive Summarization]({{< relref "progressive_summarization" >}})

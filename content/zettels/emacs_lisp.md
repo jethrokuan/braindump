@@ -1,7 +1,7 @@
 +++
 title = "Emacs Lisp"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:00+08:00
+lastmod = 2020-03-08T00:39:59+08:00
 draft = false
 +++
 
@@ -16,6 +16,6 @@ the code.
 
 ## Backlinks {#backlinks}
 
--   [Elisp: Buffer-passing Style]({{< relref "20200213143454" >}})
--   [Emacs Should Be Emacs Lisp - Tom Tromey]({{< relref "20200213214612" >}})
+-   [Elisp: Buffer-passing Style]({{< relref "elisp_buffer_passing_style" >}})
 -   [Emacs]({{< relref "emacs" >}})
+-   [Emacs Should Be Emacs Lisp - Tom Tromey]({{< relref "emacs_should_be_emacs_lisp" >}})

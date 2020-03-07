@@ -1,6 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+HUGO_SECTION: talks
 #+HUGO_SLUG: emacs_should_be_emacs_lisp
+#+ROAM_KEY: https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm
 #+TITLE: Emacs Should Be Emacs Lisp - Tom Tromey
 
 - talk :: https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm
@@ -22,4 +23,3 @@
 - GC
 - Library-only
 - FFI - [[http://github.com/tromey/emacs-ffi][tromey/emacs-ffi]]
-

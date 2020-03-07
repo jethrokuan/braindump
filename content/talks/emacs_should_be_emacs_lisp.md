@@ -1,7 +1,7 @@
 +++
 title = "Emacs Should Be Emacs Lisp - Tom Tromey"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:52+08:00
+lastmod = 2020-03-08T00:38:55+08:00
 slug = "emacs_should_be_emacs_lisp"
 draft = false
 +++
@@ -34,8 +34,3 @@ tags
 -   GC
 -   Library-only
 -   FFI - [tromey/emacs-ffi](http://github.com/tromey/emacs-ffi)
-
-
-## Backlinks {#backlinks}
-
--   [2020-02-13]({{< relref "private-2020-02-13" >}})
