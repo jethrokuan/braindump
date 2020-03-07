@@ -1,9 +1,8 @@
 +++
 title = "Art"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-31T15:58:09+08:00
+lastmod = 2020-03-07T23:43:18+08:00
 draft = false
-math = true
 +++
 
 ## Resources {#resources}

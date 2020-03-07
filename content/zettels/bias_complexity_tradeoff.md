@@ -1,10 +1,9 @@
 +++
 title = "The Bias-Complexity Tradeoff"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-20T18:53:07+08:00
+lastmod = 2020-03-07T23:43:05+08:00
 tags = ["machine-learning"]
 draft = false
-math = true
 +++
 
 Training data can mislead the learner, and result in overfitting. To

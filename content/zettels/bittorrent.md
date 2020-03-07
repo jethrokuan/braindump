@@ -1,9 +1,8 @@
 +++
 title = "BitTorrent"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-13T14:46:57+08:00
+lastmod = 2020-03-07T23:43:15+08:00
 draft = false
-math = true
 +++
 
 ## What is BitTorrent? {#what-is-bittorrent}

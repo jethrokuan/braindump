@@ -1,9 +1,8 @@
 +++
 title = "Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:36+08:00
+lastmod = 2020-03-07T23:42:43+08:00
 draft = false
-math = true
 +++
 
 ## Definition {#definition}
@@ -191,61 +190,58 @@ Models are trained offline using physical purchased GPUs.
 Deployment: Kubernetes on AWS, with generally small CPU servers.
 Overall latency is less than 200ms.
 
+-    Things they focused on as a company
 
-#### Things they focused on as a company {#things-they-focused-on-as-a-company}
+    1.  Tooling:
+        1.  Annotation System
+            1.  Complete annotation is crucial to detection training
+        2.  Training System
+            1.  Make it easy to change hyperparameters and retrain models
+            2.  Abstract away need for knowing deep learning
+            3.  Platform for tracking metrics
+        3.  Querylog pipeline
+            1.  Take user input as training data
+        4.  Evaluation System
+            1.  Both automatic evaluation via metrics and manual (AB testing)
+                is done before release
+            2.  Visualisations via T-SNE to see if clusters remain the
+                same/make sense, when new learnings are added: **learning
+                without forgetting**
+    2.  Business:
+        1.  Attend to customer requirements: e.g. if a company wants to sell
+            hats, model needs to be trained to detect hats, and these
+            learnings need to be added to the existing model without
+            affecting data earlier
 
-1.  Tooling:
-    1.  Annotation System
-        1.  Complete annotation is crucial to detection training
-    2.  Training System
-        1.  Make it easy to change hyperparameters and retrain models
-        2.  Abstract away need for knowing deep learning
-        3.  Platform for tracking metrics
-    3.  Querylog pipeline
-        1.  Take user input as training data
-    4.  Evaluation System
-        1.  Both automatic evaluation via metrics and manual (AB testing)
-            is done before release
-        2.  Visualisations via T-SNE to see if clusters remain the
-            same/make sense, when new learnings are added: **learning
-            without forgetting**
-2.  Business:
-    1.  Attend to customer requirements: e.g. if a company wants to sell
-        hats, model needs to be trained to detect hats, and these
-        learnings need to be added to the existing model without
-        affecting data earlier
+-    Visual Embeddings Used
 
+    At Visenze, they use multiple embeddings in different feature spaces
+    to measure similarity. The results are then combined before returned.
+    The 4 main embeddings are:
 
-#### Visual Embeddings Used {#visual-embeddings-used}
+    1.  Exact matches (same item)
+        1.  Trained with siamese network with batched triplet loss
+            (typically used in face recognition, but seems to work well with
+            product classification)
+    2.  Same Category
+        1.  Domain specific labels have been most helpful in achieving
+            state-of-the-art accuracy
+            1.  e.g for fashion, sleeve length, jeans length etc.
+    3.  Similar Categories
 
-At Visenze, they use multiple embeddings in different feature spaces
-to measure similarity. The results are then combined before returned.
-The 4 main embeddings are:
+-    Lessons Learnt
 
-1.  Exact matches (same item)
-    1.  Trained with siamese network with batched triplet loss
-        (typically used in face recognition, but seems to work well with
-        product classification)
-2.  Same Category
-    1.  Domain specific labels have been most helpful in achieving
-        state-of-the-art accuracy
-        1.  e.g for fashion, sleeve length, jeans length etc.
-3.  Similar Categories
-
-
-#### Lessons Learnt {#lessons-learnt}
-
-1.  Taxonomy Coverage
-2.  Training Data Coverage
-    1.  Obtaining training data from one source only can lead to severe
-        bias (e.g. detecting watermarks and using it as feature)
-3.  Overfitting
-4.  Continuous Improvement (Learning Without Forgetting)
-5.  Bad-case driven development
-    1.  Be quick to identify hard negatives, and add in similar
-        negative samples into training data to improve accuracy
-6.  Image quality, rotation
-7.  Re-ranking based on customer
+    1.  Taxonomy Coverage
+    2.  Training Data Coverage
+        1.  Obtaining training data from one source only can lead to severe
+            bias (e.g. detecting watermarks and using it as feature)
+    3.  Overfitting
+    4.  Continuous Improvement (Learning Without Forgetting)
+    5.  Bad-case driven development
+        1.  Be quick to identify hard negatives, and add in similar
+            negative samples into training data to improve accuracy
+    6.  Image quality, rotation
+    7.  Re-ranking based on customer
 
 
 ## Key Open Questions about Deep Learning Systems {#key-open-questions-about-deep-learning-systems}

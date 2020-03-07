@@ -1,9 +1,8 @@
 +++
 title = "Blockchain"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T20:53:05+08:00
+lastmod = 2020-03-07T23:43:04+08:00
 draft = false
-math = true
 +++
 
 ## Stellar {#stellar}
@@ -38,8 +37,7 @@ math = true
 -   Permissions-based
 -   Uses Byzantine Fault Tolerance (BFT)
 
-
-#### <span class="org-todo todo TODO">TODO</span> See 2 General Problem {#see-2-general-problem}
+-   <span class="org-todo todo TODO">TODO</span>  See 2 General Problem
 
 
 ### Stellar {#stellar}

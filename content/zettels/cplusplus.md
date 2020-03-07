@@ -1,13 +1,15 @@
 +++
 title = "C++"
 author = ["Jethro Kuan"]
-lastmod = 2019-02-24T17:28:54+08:00
-tags = ["proglang", "c++"]
+lastmod = 2020-03-07T23:42:56+08:00
 draft = false
-math = true
 +++
 
-## What is C++ {#what-is-c}
+tags
+: [§prog\_lang]({{< relref "prog_lang" >}})
+
+
+## What is C++ {#what-is-c-plus-plus}
 
 C++ is a compiled language. For a program to run, its source text has
 to be processed by a compiler, producing object files, which are
@@ -46,7 +48,7 @@ int count_x(const char* p, char x) {
 ```
 
 
-## C++ Guidelines {#c-guidelines}
+## C++ Guidelines {#c-plus-plus-guidelines}
 
 Follow the guidelines:
 <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md>
@@ -141,13 +143,7 @@ technique which binds the life cycle of a resource that must be
 acquired before use (allocated heap memory, thread of execution, open
 socket, open file, locked mutex, disk space, database
 connection—anything that exists in limited supply) to the lifetime of
-an object. <sup id="f0a899f30af8b1c819a39ca7a6c5c42b"><a href="#cppref_raii" title="@misc{cppref_raii,
-  author =       {nil},
-  howpublished = {https://en.cppreference.com/w/cpp/language/raii},
-  note =         {Online; accessed 25 January 2019},
-  title =        {RAII - cppreference.com},
-  year =         {nil},
-}">(nil, nil)</a></sup>
+an object. <a id="f0a899f30af8b1c819a39ca7a6c5c42b" href="#cppref_raii">(nil, nil)</a>
 
 The basic idea is that class destructors are always called when a
 particular instance of an object goes out of scope. This allows for
@@ -194,6 +190,55 @@ not in the stdlib, but is available as a C++ library.
 {{< figure src="/ox-hugo/screenshot_2019-02-24_17-27-51.png" caption="Figure 1: Tabular summary of smart pointers" >}}
 
 
+### shared\_ptr {#shared-ptr}
+
+The main advantage of shared pointers is that, we should not worry
+about calling delete or cleaning the memory in an explicit manner. The
+shared pointer will take care of it once it goes out of scope. To
+create a `shared_ptr`, use `make_shared`. It's fast in memory allocation
+compared to `new`. <a id="1ec5400d7db9917f3d3dfe2a47aff3b0" href="#codesbay_codes_cplus_smart">(CodesBay, nil)</a>
+
+```cpp
+class Sample {
+public:
+  Sample() { cout << "Constructor make_shared" << endl; }
+  ~Sample() { cout << "Destructor make_shared" << endl; }
+};
+int main() {
+  shared_ptr<Sample> sp = make_shared<Sample>();
+  return 0;
+}
+```
+
+
+### unique\_ptr {#unique-ptr}
+
+Like shared\_ptr<>, there is no need to call delete or clean the memory
+in an explicit manner. The unique pointer will take care of it once it
+goes out of scope. `shared_ptr<>` maintains reference counts where more
+than one shared\_ptr<> can refer to a single object.
+
+This is prevented by `unique_ptr<>` and the reason behind naming it as
+unique. In `unique_ptr<>`, one and only one `unique_ptr<>` has the
+ownership of the Object and manages its lifetime. <a id="1ec5400d7db9917f3d3dfe2a47aff3b0" href="#codesbay_codes_cplus_smart">(CodesBay, nil)</a>
+
+
+### std::move {#std-move}
+
+In unique\_ptr, std::move is used to transfer the ownership from one
+unique\_ptr to another, which is otherwise not possible.
+
+For shared\_ptr, std::move prevents the increment and immediate
+decrement of the reference count, making it an optimization. It's not
+strictly necessary. <a id="b8b43c9917af7c2b3e7ddd0097b735e0" href="#so_why_move_shared_ptr">(nil, 2019)</a>
+
+
+## not\_null {#not-null}
+
+not\_null is available in GSL, and with compile-time guarantees that a
+pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">(Bartek, 2017)</a>
+
+
 ## Books to read {#books-to-read}
 
 <http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list>
@@ -204,4 +249,10 @@ not in the stdlib, but is available as a C++ library.
 -   [C++ Patterns](https://cpppatterns.com/)
 
 # Bibliography
-<a id="cppref_raii"></a>nil,  (nil). *Raii - cppreference.com*. Retrieved from [https://en.cppreference.com/w/cpp/language/raii](https://en.cppreference.com/w/cpp/language/raii). Online; accessed 25 January 2019. [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
+<a id="cppref_raii" target="_blank">nil,  (nil). *Raii - cppreference.com*. Retrieved from [https://en.cppreference.com/w/cpp/language/raii](https://en.cppreference.com/w/cpp/language/raii). Online; accessed 25 January 2019.</a> [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
+
+<a id="codesbay_codes_cplus_smart" target="_blank">CodesBay,  (nil). *Github - codesbay/cplusplus_smartpointer: this repository contains description of c++11 and c++14 smart pointers trilogy of shared_ptr, unique_ptr and weak_ptr*. Retrieved from [https://github.com/CodesBay/CplusPlus_SmartPointer](https://github.com/CodesBay/CplusPlus_SmartPointer). Online; accessed 25 February 2019.</a> [↩](#1ec5400d7db9917f3d3dfe2a47aff3b0)
+
+<a id="so_why_move_shared_ptr" target="_blank">nil,  (2019). *C++ - why would i std::move an std::shared_ptr? - stack overflow*. Retrieved from [https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr](https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr). Online; accessed 25 February 2019.</a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
+
+<a id="17_bartek" target="_blank">Bartek,  (2017). *Bartek's coding blog: how not_null can improve your code?*. Retrieved from [https://www.bfilipek.com/2017/10/notnull.html](https://www.bfilipek.com/2017/10/notnull.html). Online; accessed 02 April 2019.</a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)

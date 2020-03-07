@@ -1,9 +1,8 @@
 +++
 title = "Theory Of Computation"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-03T16:37:53+08:00
+lastmod = 2020-03-07T23:43:14+08:00
 draft = false
-math = true
 +++
 
 ## Introduction {#introduction}
@@ -62,7 +61,7 @@ construction, the construction \\(X\_i\\) is valid.
 
 alphabet
 : An _alphabet_ is a finite, nonempty set of symbols. E.g.
-    \\(\Sigma = \{0, 1\}\\) represents the binary alphabet
+    \\(\Sigma = \\{0, 1\\}\\) represents the binary alphabet
 
 string
 : A _string_ is a finite sequence of symbols chosen from some
@@ -119,21 +118,20 @@ In proofs, we often talk about a DFA in "five-tuple" notation:
   A = \left(Q, \Sigma, \delta, q\_0, F \right)
 \end{equation}
 
+-    Simpler Notations
 
-#### Simpler Notations {#simpler-notations}
+    The two preferred notation for describing automata are:
 
-The two preferred notation for describing automata are:
+    transition diagrams
+    : a graph
 
-transition diagrams
-: a graph
+    {{< figure src="/ox-hugo/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" >}}
 
-{{< figure src="/ox-hugo/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg" >}}
+    transition table
+    : a tubular listing of the \\(\delta\\) function, which by
+        implication tells us the states and the input alphabet.
 
-transition table
-: a tubular listing of the \\(\delta\\) function, which by
-    implication tells us the states and the input alphabet.
-
-{{< figure src="/ox-hugo/jTETt_2018-08-14_12-49-00.png" >}}
+    {{< figure src="/ox-hugo/jTETt_2018-08-14_12-49-00.png" >}}
 
 
 ### Language of a DFA {#language-of-a-dfa}
@@ -142,7 +140,7 @@ We can define the _language_ of a DFA \\(A = \left(Q, \Sigma, q\_0, F\right)\\).
 This language is denoted \\(L(A)\\), and is defined by:
 
 \begin{equation}
-L(A) = \{ w | \delta(q\_0, w) \text{ is in } F\}
+L(A) = \\{ w | \delta(q\_0, w) \text{ is in } F\\}
 \end{equation}
 
 The language of \\(A\\) is the set of strings \\(w\\) that take the start
@@ -190,7 +188,7 @@ An NFA has:
 if \\(A = (Q, \Sigma, \delta, q\_0, F)\\) is an NFA, then
 
 \begin{equation}
-L(A) = \{w | \hat{\delta}(q\_0, w) \cap F \neq \emptyset\}
+L(A) = \\{w | \hat{\delta}(q\_0, w) \cap F \neq \emptyset\\}
 \end{equation}
 
 That is, \\(L(A)\\) is the set of strings \\(w\\) in \\(\Sigma^\*\\) such that
@@ -234,8 +232,8 @@ symbol of \\(w\\). Note that \\(a\\) is a member of \\(\Sigma\\); it cannot be &
 Then:
 
 \begin{align}
-  \text{Let } & \hat{\delta}(q, x) = \{p\_1, p\_2, \dots, p\_k\} \\\\\\
-   & \bigcup\limits\_{i=1}^k \delta(p\_i, a) = \{r\_1, r\_2, \dots, r\_m\} \\\\\\
+  \text{Let } & \hat{\delta}(q, x) = \\{p\_1, p\_2, \dots, p\_k\\} \\\\\\
+   & \bigcup\limits\_{i=1}^k \delta(p\_i, a) = \\{r\_1, r\_2, \dots, r\_m\\} \\\\\\
   \text{Then } & \hat{\delta}(q,w) = \bigcup\limits\_{j=1}^m ECLOSE(r\_j)
 \end{align}
 
@@ -255,11 +253,11 @@ Let \\(E = (Q\_E, \Sigma, \delta\_E, q\_0, F\_E)\\), then the equivalent DFA \\(
 2.  \\(q\_D = ECLOSE(q\_0)\\), we get the start state of \\(D\\) by closing the set
     consisting of only the start state of \\(E\\).
 3.  \\(F\_D\\) is those set of states that contain at least one accepting
-    state of \\(E\\). \\(F\_D = \{S | S \text{ is in } Q\_D \text{ and } S \cap F\_E
-       \neq \emptyset \}\\)
+    state of \\(E\\). \\(F\_D = \\{S | S \text{ is in } Q\_D \text{ and } S \cap F\_E
+       \neq \emptyset \\}\\)
 4.  \\(\delta\_D(S,a)\\) is computed for all \\(a\\) in \\(\Sigma\\) and sets \\(S\\) in \\(Q\_D\\) by:
-    1.  Let \\(S = \{p\_1, p\_2, \dots, p\_k\}\\)
-    2.  Compute \\(\bigcup\limits\_{i=1}^{k}\delta\_E(p\_i, a) = \{r\_1, r\_2, \dots, r\_m\}\\)
+    1.  Let \\(S = \\{p\_1, p\_2, \dots, p\_k\\}\\)
+    2.  Compute \\(\bigcup\limits\_{i=1}^{k}\delta\_E(p\_i, a) = \\{r\_1, r\_2, \dots, r\_m\\}\\)
     3.  Then \\(\delta\_D(S, a) = \bigcup\limits\_{j=1}^{m}ECLOSE(r\_j)\\)
 
 
@@ -290,9 +288,9 @@ We can describe regular expressions recursively. For each expression
 **BASIS**:
 
 1.  The constants \\(\epsilon\\) and \\(\emptyset\\) are regular expressions, denoting the
-    languages \\(\{\epsilon\}\\) and \\(\emptyset\\) respectively.
+    languages \\(\\{\epsilon\\}\\) and \\(\emptyset\\) respectively.
 2.  If \\(a\\) is a symbol, then \\(\mathbb{a}\\) is a regular expression. This
-    expression denotes the language \\(\{a\}\\).
+    expression denotes the language \\(\\{a\\}\\).
 
 **INDUCTION**:
 
@@ -322,162 +320,157 @@ We show this by showing that:
 
 {{< figure src="/ox-hugo/screenshot_2018-08-28_12-46-13.png" >}}
 
+-    From DFA to Regular Expression
 
-#### From DFA to Regular Expression {#from-dfa-to-regular-expression}
+    We can number the finite states in a DFA \\(A\\) with \\(1, 2, \dots, n\\).
 
-We can number the finite states in a DFA \\(A\\) with \\(1, 2, \dots, n\\).
+    Let \\(R\_{ij}^{(k)}\\) be the name of a regular expression whose language is the
+    set of strings \\(w\\) such that \\(w\\) is the label of a path from state \\(i\\)
+    to state \\(j\\) in a DFA \\(A\\), and the path has no intermediate node whose
+    number is greater than \\(k\\).
+    To construct the expression \\(R\_{ij}^{(k)}\\), we use the following inductive
+    definition, starting at \\(k= 0\\), and finally reaching \\(k=n\\).
 
-Let \\(R\_{ij}^{(k)}\\) be the name of a regular expression whose language is the
-set of strings \\(w\\) such that \\(w\\) is the label of a path from state \\(i\\)
-to state \\(j\\) in a DFA \\(A\\), and the path has no intermediate node whose
-number is greater than \\(k\\).
-To construct the expression \\(R\_{ij}^{(k)}\\), we use the following inductive
-definition, starting at \\(k= 0\\), and finally reaching \\(k=n\\).
+    BASIS: \\(k=0\\).
+    Since the states are numbered \\(1\\) or above, the restriction on paths
+    is that the paths have no intermediate states at all. There are only 2
+    kinds of paths that meet such a condition:
 
-BASIS: \\(k=0\\).
-Since the states are numbered \\(1\\) or above, the restriction on paths
-is that the paths have no intermediate states at all. There are only 2
-kinds of paths that meet such a condition:
+    1.  An arc from node (state) \\(i\\) to node \\(j\\).
+    2.  A path of length \\(0\\) that consists only of some node \\(i\\).
 
-1.  An arc from node (state) \\(i\\) to node \\(j\\).
-2.  A path of length \\(0\\) that consists only of some node \\(i\\).
+    If \\(i \ne j\\), then only case \\(1\\) is possible. We must examine DFA \\(A\\)
+    and find input symbols \\(a\\) such that there is a transition from state
+    \\(i\\) to state \\(j\\) on symbol \\(a\\).
 
-If \\(i \ne j\\), then only case \\(1\\) is possible. We must examine DFA \\(A\\)
-and find input symbols \\(a\\) such that there is a transition from state
-\\(i\\) to state \\(j\\) on symbol \\(a\\).
+    1.  If there is no such symbol \\(a\\), then \\(R\_{ij}^{(0)} = \emptyset\\).
+    2.  If there is exactly one such symbol \\(a\\), then \\(R\_{ij}^{(0)} = \mathbb{a}\\)
+    3.  If there are symbols \\(a\_1, a\_2, \dots, a\_k\\) that label arcs from
+        state \\(i\\) to state \\(j\\), then \\(R\_{ij}^{(0)} = \mathbb{a\_1} + \mathbb{a\_2} +
+           \dots + \mathbb{a\_k}\\)
 
-1.  If there is no such symbol \\(a\\), then \\(R\_{ij}^{(0)} = \emptyset\\).
-2.  If there is exactly one such symbol \\(a\\), then \\(R\_{ij}^{(0)} = \mathbb{a}\\)
-3.  If there are symbols \\(a\_1, a\_2, \dots, a\_k\\) that label arcs from
-    state \\(i\\) to state \\(j\\), then \\(R\_{ij}^{(0)} = \mathbb{a\_1} + \mathbb{a\_2} +
-       \dots + \mathbb{a\_k}\\)
+    In case (a), the expression becomes \\(\epsilon\\), in case (c), the expression
+    becomes \\(\epsilon + \mathbb{a\_1} + \mathbb{a\_2} + \dots + \mathbb{a\_k}\\).
 
-In case (a), the expression becomes \\(\epsilon\\), in case (c), the expression
-becomes \\(\epsilon + \mathbb{a\_1} + \mathbb{a\_2} + \dots + \mathbb{a\_k}\\).
+    INDUCTION: Suppose there is a path from state \\(i\\) to state \\(j\\) that
+    goes through no state higher than \\(k\\). Then either:
 
-INDUCTION: Suppose there is a path from state \\(i\\) to state \\(j\\) that
-goes through no state higher than \\(k\\). Then either:
+    1.  The path does not go through state \\(k\\) at all. In this case, the
+        label of the path is \\(R\_{ij}^{(k-1)}\\).
+    2.  The path goes through state \\(k\\) at least once. We can break the
+        path into several pieces:
 
-1.  The path does not go through state \\(k\\) at all. In this case, the
-    label of the path is \\(R\_{ij}^{(k-1)}\\).
-2.  The path goes through state \\(k\\) at least once. We can break the
-    path into several pieces:
+    {{< figure src="/ox-hugo/screenshot_2018-08-28_12-58-35.png" >}}
 
-{{< figure src="/ox-hugo/screenshot_2018-08-28_12-58-35.png" >}}
+    Then the set of labels for all paths of this type is represented by
+    the regular expression \\(R\_{ik}^{(k-1)}(R\_{kk}^{(k-1)})^\*R\_{kj}^{(k-1)}\\). Then, we can
+    combine the expressions for the paths of the two above:
 
-Then the set of labels for all paths of this type is represented by
-the regular expression \\(R\_{ik}^{(k-1)}(R\_{kk}^{(k-1)})^\*R\_{kj}^{(k-1)}\\). Then, we can
-combine the expressions for the paths of the two above:
+    \begin{equation}
+    R\_{ij}^{(k)} = R\_{ij}^{(k-1)} + R\_{ik}^{(k-1)}(R\_{kk}^{(k-1)})^\*R\_{kj}^{(k-1)}
+    \end{equation}
 
-\begin{equation}
-R\_{ij}^{(k)} = R\_{ij}^{(k-1)} + R\_{ik}^{(k-1)}(R\_{kk}^{(k-1)})^\*R\_{kj}^{(k-1)}
-\end{equation}
+    We can compute \\(R\_{ij}^{(n)}\\) for all \\(i\\) and \\(j\\), and the language of the
+    automaton is then the sum of all expressions \\(R\_{ij}^{(n)}\\) such that state
+    \\(j\\) is an accepting state.
 
-We can compute \\(R\_{ij}^{(n)}\\) for all \\(i\\) and \\(j\\), and the language of the
-automaton is then the sum of all expressions \\(R\_{ij}^{(n)}\\) such that state
-\\(j\\) is an accepting state.
+-    Converting DFAs to regular expressions by eliminating states
 
+    The above method of conversation always works, but is expensive. \\(n^3\\)
+    expressions have to be constructed for an n-state automaton, but the
+    length of the expression can grow by a factor of 4 on the average,
+    with each of the \\(n\\) inductive steps, and the expressions themselves
+    could reach on the order of \\(4^n\\) symbols.
 
-#### Converting DFAs to regular expressions by eliminating states {#converting-dfas-to-regular-expressions-by-eliminating-states}
+    The approach introduced here avoids duplicating work at some points,
+    by eliminating states. If we eliminate a state \\(s\\), then all paths
+    that went through \\(s\\) no longer exist in the automaton. To preserve
+    the language, we must include on an arc that goes directly from \\(q\\) to
+    \\(p\\), the labels of paths that went from some state \\(q\\) to \\(p\\) through
+    \\(s\\). This label now includes strings, but we can use a regular
+    expression to represent all such strings.
 
-The above method of conversation always works, but is expensive. \\(n^3\\)
-expressions have to be constructed for an n-state automaton, but the
-length of the expression can grow by a factor of 4 on the average,
-with each of the \\(n\\) inductive steps, and the expressions themselves
-could reach on the order of \\(4^n\\) symbols.
+    Hence, we can construct a regular expression from a finite automaton
+    as follows:
 
-The approach introduced here avoids duplicating work at some points,
-by eliminating states. If we eliminate a state \\(s\\), then all paths
-that went through \\(s\\) no longer exist in the automaton. To preserve
-the language, we must include on an arc that goes directly from \\(q\\) to
-\\(p\\), the labels of paths that went from some state \\(q\\) to \\(p\\) through
-\\(s\\). This label now includes strings, but we can use a regular
-expression to represent all such strings.
+    1.  For each accepting state \\(q\\), apply the reduction process to
+        produce an equivalent automaton with regular-expression labels on
+        the arcs. Eliminate all states except \\(q\\) and the start state \\(q\_0\\).
+    2.  If \\(q \neq q\_0\\), then a two-state automaton remains, as depicted. The
+        regular expression for the automaton is \\((R + SU^\*T)^\*SU^\*\\).
 
-Hence, we can construct a regular expression from a finite automaton
-as follows:
+    {{< figure src="/ox-hugo/screenshot_2018-08-28_23-30-02.png" >}}
 
-1.  For each accepting state \\(q\\), apply the reduction process to
-    produce an equivalent automaton with regular-expression labels on
-    the arcs. Eliminate all states except \\(q\\) and the start state \\(q\_0\\).
-2.  If \\(q \neq q\_0\\), then a two-state automaton remains, as depicted. The
-    regular expression for the automaton is \\((R + SU^\*T)^\*SU^\*\\).
+    1.  If the start state is also an accepting state, then we must perform
+        a state-elimination from the original automaton that gets rid of
+        every state but the start state, leaving a one-state automaton,
+        which accepts \\(R^\*\\).
 
-{{< figure src="/ox-hugo/screenshot_2018-08-28_23-30-02.png" >}}
+    {{< figure src="/ox-hugo/screenshot_2018-08-28_23-30-48.png" >}}
 
-1.  If the start state is also an accepting state, then we must perform
-    a state-elimination from the original automaton that gets rid of
-    every state but the start state, leaving a one-state automaton,
-    which accepts \\(R^\*\\).
+-    Converting regular expressions to automata
 
-{{< figure src="/ox-hugo/screenshot_2018-08-28_23-30-48.png" >}}
+    We can show every language defined by a regular expression is also
+    defined by a finite automaton, and we do so by converting any regular
+    expression \\(R\\) to an $&epsilon;$-NFA \\(E\\) with:
 
+    1.  Exactly one accepting state
+    2.  No arcs into initial state
+    3.  No arcs out of the accepting state
 
-#### Converting regular expressions to automata {#converting-regular-expressions-to-automata}
+    The proof is conducted by structural induction on R, following the
+    recursive definition of regular expressions.
 
-We can show every language defined by a regular expression is also
-defined by a finite automaton, and we do so by converting any regular
-expression \\(R\\) to an $&epsilon;$-NFA \\(E\\) with:
+    The basis of the induction involves constructing automatons for
+    regular expressions (a) \\(\epsilon\\), (b) \\(\emptyset\\) and (c) \\(\mathbb{a}\\). They are displayed
+    below:
 
-1.  Exactly one accepting state
-2.  No arcs into initial state
-3.  No arcs out of the accepting state
+    {{< figure src="/ox-hugo/screenshot_2018-08-28_23-36-18.png" >}}
 
-The proof is conducted by structural induction on R, following the
-recursive definition of regular expressions.
+    The inductive step consists of 4 cases: (a) The expression is \\(R + S\\)
+    for some smaller expressions \\(R\\) and \\(S\\). (b) The expression is \\(RS\\)
+    for smaller expressions \\(R\\) and \\(S\\). (c) The expression is \\(R\*\\) for
+    some smaller expression \\(R\\). (d) The expression is (R) for some
+    expression R. The automatons for (a), (b), and (c) are shown below:
 
-The basis of the induction involves constructing automatons for
-regular expressions (a) \\(\epsilon\\), (b) \\(\emptyset\\) and (c) \\(\mathbb{a}\\). They are displayed
-below:
+    {{< figure src="/ox-hugo/screenshot_2018-08-28_23-39-41.png" >}}
 
-{{< figure src="/ox-hugo/screenshot_2018-08-28_23-36-18.png" >}}
+    The automaton for \\(R\\) also serves as the automaton for \\(( R)\\).
 
-The inductive step consists of 4 cases: (a) The expression is \\(R + S\\)
-for some smaller expressions \\(R\\) and \\(S\\). (b) The expression is \\(RS\\)
-for smaller expressions \\(R\\) and \\(S\\). (c) The expression is \\(R\*\\) for
-some smaller expression \\(R\\). (d) The expression is (R) for some
-expression R. The automatons for (a), (b), and (c) are shown below:
+-    Algebraic law for regular expressions
 
-{{< figure src="/ox-hugo/screenshot_2018-08-28_23-39-41.png" >}}
+    commutativity
+    : \\(x + y = y + x\\).
 
-The automaton for \\(R\\) also serves as the automaton for \\(( R)\\).
+    associativity
+    : \\((x \times y) \times z = x \times (y \times z)\\).
 
+    distributive
+    : \\(x \times (y + z) = x \times y + x \times z\\)
 
-#### Algebraic law for regular expressions {#algebraic-law-for-regular-expressions}
+    <!--listend-->
 
-commutativity
-: \\(x + y = y + x\\).
+    -   \\(L + M = M + L\\)
+    -   \\((L + M) + N = L + (M + N)\\)
+    -   \\((LM)N = L(MN)\\)
+    -   \\(\emptyset + L = L + \emptyset = L\\). \\(\emptyset\\) is the identity for union.
+    -   \\(\epsilon L = L \epsilon = L\\). \\(\epsilon\\) is the identity for concatenation.
+    -   \\(\emptyset L = L\emptyset = \emptyset\\). \\(\emptyset\\) is the annihilator for concatenation.
+    -   \\(L(M + N) = LM + LN\\) (left distributive)
+    -   \\((M + N)L  = ML + NL\\) (right distributive)
+    -   \\(L + L = L\\) (idempotence law)
+    -   \\((L^\*)^\* = L^\*\\).
+    -   \\(\emptyset^\* = \epsilon\\)
+    -   \\(\epsilon^\* = \epsilon\\)
+    -   \\(L^{+} = LL^\* = L^\*L\\).
+    -   \\(L^\* = L^{+} + \epsilon\\)
+    -   \\(L? = \epsilon + L\\)
 
-associativity
-: \\((x \times y) \times z = x \times (y \times z)\\).
+-    Discovering laws for regular expressions
 
-distributive
-: \\(x \times (y + z) = x \times y + x \times z\\)
-
-<!--listend-->
-
--   \\(L + M = M + L\\)
--   \\((L + M) + N = L + (M + N)\\)
--   \\((LM)N = L(MN)\\)
--   \\(\emptyset + L = L + \emptyset = L\\). \\(\emptyset\\) is the identity for union.
--   \\(\epsilon L = L \epsilon = L\\). \\(\epsilon\\) is the identity for concatenation.
--   \\(\emptyset L = L\emptyset = \emptyset\\). \\(\emptyset\\) is the annihilator for concatenation.
--   \\(L(M + N) = LM + LN\\) (left distributive)
--   \\((M + N)L  = ML + NL\\) (right distributive)
--   \\(L + L = L\\) (idempotence law)
--   \\((L^\*)^\* = L^\*\\).
--   \\(\emptyset^\* = \epsilon\\)
--   \\(\epsilon^\* = \epsilon\\)
--   \\(L^{+} = LL^\* = L^\*L\\).
--   \\(L^\* = L^{+} + \epsilon\\)
--   \\(L? = \epsilon + L\\)
-
-
-#### Discovering laws for regular expressions {#discovering-laws-for-regular-expressions}
-
-The truth of a law reduces to the question of the equality of two
-languages. We show set equivalence: a string in one language must be
-in another, and vice-versa.
+    The truth of a law reduces to the question of the equality of two
+    languages. We show set equivalence: a string in one language must be
+    in another, and vice-versa.
 
 
 ## Properties of Regular Languages {#properties-of-regular-languages}
@@ -505,7 +498,7 @@ The pumping lemma lets us show that certain languages are not regular.
 <div class="theorem">
   <div></div>
 
-<a id="orgd3abc4e"></a>
+<a id="org96ec5b7"></a>
 Let \\(L\\) be a regular language. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(w\\) in \\(L\\) such that
 \\(| w |  \ge n\\), we can break \\(w\\) into three strings \\(w = xyz\\)
@@ -617,7 +610,7 @@ If \\(G = (V, T, P, S)\\) is a CFG, then the language of \\(G\\), denoted
 start symbol:
 
 \begin{equation}
-  L(G) = \right\{w in T^\* | S \Rightarrow\_{G}^\* w \left\}
+  L(G) = \right\\{w in T^\* | S \Rightarrow\_{G}^\* w \left\\}
 \end{equation}
 
 
@@ -637,42 +630,39 @@ which belongs to the language of one of the variables of the grammar.
 This tree is the data structure of choice when representing the source
 of a program.
 
+-    Construction
 
-#### Construction {#construction}
+    The parse trees for a CFG \\(G\\) are trees with the following conditions:
 
-The parse trees for a CFG \\(G\\) are trees with the following conditions:
+    1.  Each interior node is labeled by variable in \\(V\\).
+    2.  Each leaf is labeled by either a variable, a terminal, or \\(\epsilon\\).
+        However, if the leaf is labeled \\(\epsilon\\), then it must be the only child
+        of its parent.
+    3.  If an interior node is labeled \\(A\\), and its children are labeled
+        \\(X\_1, X\_2, \dots, X\_k\\), respectively from the left, then \\(A \rightarrow X\_1 X\_2 \dots
+           X\_k\\) is a production in \\(P\\).
 
-1.  Each interior node is labeled by variable in \\(V\\).
-2.  Each leaf is labeled by either a variable, a terminal, or \\(\epsilon\\).
-    However, if the leaf is labeled \\(\epsilon\\), then it must be the only child
-    of its parent.
-3.  If an interior node is labeled \\(A\\), and its children are labeled
-    \\(X\_1, X\_2, \dots, X\_k\\), respectively from the left, then \\(A \rightarrow X\_1 X\_2 \dots
-       X\_k\\) is a production in \\(P\\).
+-    The yield
 
+    The yield of the tree is the concatenation of the leaves of the parse
+    tree from the left. This yield is a terminal string (all leaves are
+    labeled either with a terminal or with \\(\epsilon\\)). The root is labeled by
+    the start symbol.
 
-#### The yield {#the-yield}
+-    Inferences and derivations
 
-The yield of the tree is the concatenation of the leaves of the parse
-tree from the left. This yield is a terminal string (all leaves are
-labeled either with a terminal or with \\(\epsilon\\)). The root is labeled by
-the start symbol.
+    The following statements are equivalent:
 
+    1.  The recursive inference procedure determines that terminal string
+        \\(w\\) is in the language of variable \\(A\\).
+    2.  \\(A \Rightarrow^\* w\\)
+    3.  \\(A \Rightarrow\_{lm}^\* w\\)
+    4.  \\(A \Rightarrow\_{rm}^\* w\\)
+    5.  There is a parse tree with root \\(A\\) and yield \\(w\\).
 
-#### Inferences and derivations {#inferences-and-derivations}
+    We can prove these equivalences using the following arcs:
 
-The following statements are equivalent:
-
-1.  The recursive inference procedure determines that terminal string
-    \\(w\\) is in the language of variable \\(A\\).
-2.  \\(A \Rightarrow^\* w\\)
-3.  \\(A \Rightarrow\_{lm}^\* w\\)
-4.  \\(A \Rightarrow\_{rm}^\* w\\)
-5.  There is a parse tree with root \\(A\\) and yield \\(w\\).
-
-We can prove these equivalences using the following arcs:
-
-{{< figure src="/ox-hugo/screenshot_2018-09-16_16-21-01.png" >}}
+    {{< figure src="/ox-hugo/screenshot_2018-09-16_16-21-01.png" >}}
 
 
 ### Linear Grammars {#linear-grammars}
@@ -813,81 +803,77 @@ The class of languages for PDAs that accept by final state and accept
 by empty stack are the same. We can show how to convert between the
 two.
 
+-    Acceptance by Final State
 
-#### Acceptance by Final State {#acceptance-by-final-state}
+    Let \\(P = (Q, \Sigma, \Gamma, \delta, q\_0, Z\_0, F)\\) be a PDA. Then \\(L(P)\\), the language
+    accepted by P by final state, is:
 
-Let \\(P = (Q, \Sigma, \Gamma, \delta, q\_0, Z\_0, F)\\) be a PDA. Then \\(L(P)\\), the language
-accepted by P by final state, is:
+    \begin{equation}
+    \\{w | (q\_0, w, Z\_0) \vdash^\* (q, \epsilon, \alpha) \\}
+    \end{equation}
 
-\begin{equation}
-\{w | (q\_0, w, Z\_0) \vdash^\* (q, \epsilon, \alpha) \}
-\end{equation}
+    for some state \\(q\\) in \\(F\\) and any stack string \\(\alpha\\).
 
-for some state \\(q\\) in \\(F\\) and any stack string \\(\alpha\\).
+-    Acceptance by Empty Stack
 
+    Let \\(P = (Q, \Sigma, \Gamma, \delta, q\_0, Z\_0, F)\\) be a PDA. We define \\(N(P) = \\{w |
+    (q\_0, w, Z\_0) \vdash^\* (q, \epsilon, \epsilon)\\}\\). That is \\(N(P)\\) is the set of inputs
+    \\(w\\) that \\(P\\) can consume and at the same time empty its stack.
 
-#### Acceptance by Empty Stack {#acceptance-by-empty-stack}
+-    From Empty Stack to Final State
 
-Let \\(P = (Q, \Sigma, \Gamma, \delta, q\_0, Z\_0, F)\\) be a PDA. We define \\(N(P) = \{w |
-(q\_0, w, Z\_0) \vdash^\* (q, \epsilon, \epsilon)\}\\). That is \\(N(P)\\) is the set of inputs
-\\(w\\) that \\(P\\) can consume and at the same time empty its stack.
+    **Theorem:**
 
+    If \\(L = N(P\_N)\\) for some PDA \\(P\_N\\), then there is a PDA \\(P\_F\\)
+    such that \\(L = L(P\_F)\\).
 
-#### From Empty Stack to Final State {#from-empty-stack-to-final-state}
+    **Proof**:
 
-**Theorem:**
+    We use a new symbol \\(X\_0\\), not a symbol of \\(\Gamma\\); \\(X\_0\\) is both the start
+    symbol of \\(P\_F\\) and a marker on the bottom of the stack that lets us
+    know when \\(P\_N\\) has reached an empty stack, then it knows that \\(P\_N\\)
+    would empty its stack on the same input.
 
-If \\(L = N(P\_N)\\) for some PDA \\(P\_N\\), then there is a PDA \\(P\_F\\)
-such that \\(L = L(P\_F)\\).
+    We also use a new start state \\(p\_0\\), whose sole function is to push
+    \\(Z\_0\\), the start symbol of \\(P\_N\\), onto the top of the stack and enter
+    \\(q\_0\\), the start state of \\(P\_N\\). \\(P\_F\\) simulates \\(P\_N\\), until the stack of
+    \\(P\_N\\) is empty, which \\(P\_F\\) detects because it sees \\(X\_0\\) on the top of
+    the stack.
 
-**Proof**:
+    {{< figure src="/ox-hugo/screenshot_2018-10-11_21-06-26.png" >}}
 
-We use a new symbol \\(X\_0\\), not a symbol of \\(\Gamma\\); \\(X\_0\\) is both the start
-symbol of \\(P\_F\\) and a marker on the bottom of the stack that lets us
-know when \\(P\_N\\) has reached an empty stack, then it knows that \\(P\_N\\)
-would empty its stack on the same input.
+    Hence, we can specify \\(P\_F = (Q \cup \\{p\_0, p\_f\\}, \Sigma, \Gamma \cup \\{X\_0\\}, \delta\_F, p\_0,
+    X\_0, \\{p\_f\\}\\):
 
-We also use a new start state \\(p\_0\\), whose sole function is to push
-\\(Z\_0\\), the start symbol of \\(P\_N\\), onto the top of the stack and enter
-\\(q\_0\\), the start state of \\(P\_N\\). \\(P\_F\\) simulates \\(P\_N\\), until the stack of
-\\(P\_N\\) is empty, which \\(P\_F\\) detects because it sees \\(X\_0\\) on the top of
-the stack.
+    1.  \\(\delta\_F(p\_0, \epsilon, x\_0) = \\{(q\_0, Z\_0, X\_0\\}\\).
+    2.  For all states \\(q\\) in \\(Q\\), inputs \\(a\\) in \\(\Sigma\\) or \\(a = \epsilon\\), and the
+        stack symbols \\(Y\\) in \\(\Gamma\\), \\(\delta\_F(q,a,Y)\\) contains all the pairs in
+        \\(\delta\_N(qa,Y)\\).
+    3.  \\(\delta\_F(q, \epsilon, X\_0\\) contains \\((p\_f, \epsilon)\\) iff w is in \\(N(P\_N)\\).
 
-{{< figure src="/ox-hugo/screenshot_2018-10-11_21-06-26.png" >}}
+-    From Final State to Empty Stack
 
-Hence, we can specify \\(P\_F = (Q \cup \{p\_0, p\_f\}, \Sigma, \Gamma \cup \{X\_0\}, \delta\_F, p\_0,
-X\_0, \{p\_f\}\\):
+    Whenever \\(P\_F\\) enters an accepting state after consuming input \\(w\\),
+    \\(P\_N\\) will empty its stack after consuming \\(w\\).
 
-1.  \\(\delta\_F(p\_0, \epsilon, x\_0) = \{(q\_0, Z\_0, X\_0\}\\).
-2.  For all states \\(q\\) in \\(Q\\), inputs \\(a\\) in \\(\Sigma\\) or \\(a = \epsilon\\), and the
-    stack symbols \\(Y\\) in \\(\Gamma\\), \\(\delta\_F(q,a,Y)\\) contains all the pairs in
-    \\(\delta\_N(qa,Y)\\).
-3.  \\(\delta\_F(q, \epsilon, X\_0\\) contains \\((p\_f, \epsilon)\\) iff w is in \\(N(P\_N)\\).
+    {{< figure src="/ox-hugo/screenshot_2018-10-11_21-10-12.png" >}}
 
+    To avoid simulating a situation where \\(P\_F\\) accidentally empties its
+    stack without accepting, \\(P\_N\\) also utilizes a marker \\(X\_0\\) on the
+    bottom of its stack.
 
-#### From Final State to Empty Stack {#from-final-state-to-empty-stack}
+    That is \\(P\_N = (Q \cup \\{p\_0, p\\}, \Sigma, \Gamma \cup \\{X\_0\\}, \delta\_N, p\_0, X\_0)\\), where \\(\delta\_N\\)
+    is:
 
-Whenever \\(P\_F\\) enters an accepting state after consuming input \\(w\\),
-\\(P\_N\\) will empty its stack after consuming \\(w\\).
-
-{{< figure src="/ox-hugo/screenshot_2018-10-11_21-10-12.png" >}}
-
-To avoid simulating a situation where \\(P\_F\\) accidentally empties its
-stack without accepting, \\(P\_N\\) also utilizes a marker \\(X\_0\\) on the
-bottom of its stack.
-
-That is \\(P\_N = (Q \cup \{p\_0, p\}, \Sigma, \Gamma \cup \{X\_0\}, \delta\_N, p\_0, X\_0)\\), where \\(\delta\_N\\)
-is:
-
-1.  \\(\delta\_N(p\_0, \epsilon, x\_0) = \{(q\_0, Z\_0, X\_0)\}\\)
-2.  For all states \\(q\\) in \\(Q\\), input symbols \\(a\\) in \\(\Sigma\\) or \\(a = \epsilon\\), \\(Y\\)
-    in \\(\Gamma\\), \\(\delta\_N(q, a, Y)\\) contains every pair that is in \\(\delta\_F(q, a Y)\\).
-3.  For all accepting states \\(q\\) in \\(F\\), and stack symbols \\(Y\\) in \\(\Gamma\\)
-    or \\(Y = X\_0\\), \\(\delta\_N(q, \epsilon, Y)\\) contains \\((p, \epsilon)\\). Whenever \\(P\_F\\)
-    accepts, \\(P\_N\\) can start emptying its stack without consuming any input.
-4.  For all stack symbols \\(Y\\) in \\(\Gamma\\) or \\(Y = X\_0\\), \\(\delta\_N(p, \epsilon, Y) = \{(p,
-       \epsilon)\}\\). Once in state \\(p\\), which only occurs when \\(P\_F\\) is accepted,
-    \\(P\_N\\) pops every symbol on its stack, until the stack is empty.
+    1.  \\(\delta\_N(p\_0, \epsilon, x\_0) = \\{(q\_0, Z\_0, X\_0)\\}\\)
+    2.  For all states \\(q\\) in \\(Q\\), input symbols \\(a\\) in \\(\Sigma\\) or \\(a = \epsilon\\), \\(Y\\)
+        in \\(\Gamma\\), \\(\delta\_N(q, a, Y)\\) contains every pair that is in \\(\delta\_F(q, a Y)\\).
+    3.  For all accepting states \\(q\\) in \\(F\\), and stack symbols \\(Y\\) in \\(\Gamma\\)
+        or \\(Y = X\_0\\), \\(\delta\_N(q, \epsilon, Y)\\) contains \\((p, \epsilon)\\). Whenever \\(P\_F\\)
+        accepts, \\(P\_N\\) can start emptying its stack without consuming any input.
+    4.  For all stack symbols \\(Y\\) in \\(\Gamma\\) or \\(Y = X\_0\\), \\(\delta\_N(p, \epsilon, Y) = \\{(p,
+           \epsilon)\\}\\). Once in state \\(p\\), which only occurs when \\(P\_F\\) is accepted,
+        \\(P\_N\\) pops every symbol on its stack, until the stack is empty.
 
 
 ### Equivalence of CFG and PDA {#equivalence-of-cfg-and-pda}
@@ -949,17 +935,16 @@ at \\(q\\) in the same condition as it was at \\(p\\).
 First, we simplify our task by modifying \\(P\\) slightly to give it the
 following three features.
 
+-    Deterministic Pushdown Automata
 
-#### Deterministic Pushdown Automata {#deterministic-pushdown-automata}
+    DPDAs accept a class of languages between the regular languages and
+    the CFLs.
 
-DPDAs accept a class of languages between the regular languages and
-the CFLs.
+    We can easily show that DPDAs accept all regular languages by making
+    it simulate a DFA (ignoring the stack).
 
-We can easily show that DPDAs accept all regular languages by making
-it simulate a DFA (ignoring the stack).
-
-While DPDAs cannot represent all CFLs, it is able to represent
-languages that have unambiguous grammars.
+    While DPDAs cannot represent all CFLs, it is able to represent
+    languages that have unambiguous grammars.
 
 
 ## Properties of Context-Free Languages {#properties-of-context-free-languages}
@@ -1017,7 +1002,7 @@ use several results, that we will state below.
 <div class="theorem">
   <div></div>
 
-<a id="org79f7b3a"></a>
+<a id="org83dfda1"></a>
 Let \\(L\\) be a CFL. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(z\\) in \\(L\\) such that
 \\(| z |  \ge n\\), we can break \\(z\\) into three strings \\(z = uvwxy\\)
@@ -1059,8 +1044,8 @@ CFLs are closed under:
 
 1.  Union
 
-\\(L\_1 \cup L\_2\\) is the language \\(s(L)\\), where \\(L\\) is the language \\(\{1,
-2\}\\), and \\(s(1) = L\_1\\) and \\(s(2) = L\_2\\).
+\\(L\_1 \cup L\_2\\) is the language \\(s(L)\\), where \\(L\\) is the language \\(\\{1,
+2\\}\\), and \\(s(1) = L\_1\\) and \\(s(2) = L\_2\\).
 
 1.  Concatenation
 
@@ -1070,12 +1055,12 @@ CFLs are closed under:
 1.  Closure, and positive closure (asterisk and plus)
 
 \\(L\\) is the language \\({1}^\*\\), and \\(s\\) is the substitution \\(s(1) = L\_1\\),
-then \\(L\_1^\* = s(L)\\). Similarly, for positive closure, \\(L = \{1\}^+\\) and
+then \\(L\_1^\* = s(L)\\). Similarly, for positive closure, \\(L = \\{1\\}^+\\) and
 \\(L\_1^+ = s(L)\\).
 
 1.  Homomorphism
 
-\\(s(a) = \{h(a)\}\\), for all \\(a\\) in \\(\Sigma\\). Then \\(h(L) = s(L)\\).
+\\(s(a) = \\{h(a)\\}\\), for all \\(a\\) in \\(\Sigma\\). Then \\(h(L) = s(L)\\).
 
 These are the base closure properties. CFLs are also closed under
 reversal. We can prove this by constructing a grammar for the reversed
@@ -1122,109 +1107,106 @@ to be chosen in the productions that come from each rule. Hence, the
 constructed grammar has length \\(O(n^3)\\), and can be constructed in
 cubic time.
 
+-    Running Time of Conversion to CNF
 
-#### Running Time of Conversion to CNF {#running-time-of-conversion-to-cnf}
+    1.  Detecting reachable and generating symbols can be done in \\(O(n)\\)
+        time, and removing useless symbols takes \\(O(n)\\) time and does not
+        increase the size of the grammar
+    2.  Constructing unit pairs and eliminating unit productions takes
+        \\(O(n^2)\\) time, and results in a grammar whose length is \\(O(n)\\).
+    3.  Replacing terminals by variables in production bodies takes \\(O(n)\\)
+        time and results in a grammar whose length is \\(O(n)\\).
+    4.  Breaking production bodies of length 3 or more takes \\(O(n)\\) time
+        and results in a grammar of length \\(O(n)\\).
 
-1.  Detecting reachable and generating symbols can be done in \\(O(n)\\)
-    time, and removing useless symbols takes \\(O(n)\\) time and does not
-    increase the size of the grammar
-2.  Constructing unit pairs and eliminating unit productions takes
-    \\(O(n^2)\\) time, and results in a grammar whose length is \\(O(n)\\).
-3.  Replacing terminals by variables in production bodies takes \\(O(n)\\)
-    time and results in a grammar whose length is \\(O(n)\\).
-4.  Breaking production bodies of length 3 or more takes \\(O(n)\\) time
-    and results in a grammar of length \\(O(n)\\).
+    However eliminating $&epsilon;$-productions is tricky. If we have a production
+    body of length \\(k\\), we can construct from that one production \\(2^{k-1}\\)
+    productions for the new grammar, so this part of the construction
+    could take \\(O(2^n)\\) time. However, we can break all long production
+    bodies into a sequence of productions with bodies of length 2. This
+    step takes \\(O(n)\\) time and grows only linearly, and makes eliminating
+    $&epsilon;$-productions run in \\(O(n)\\) time.
 
-However eliminating $&epsilon;$-productions is tricky. If we have a production
-body of length \\(k\\), we can construct from that one production \\(2^{k-1}\\)
-productions for the new grammar, so this part of the construction
-could take \\(O(2^n)\\) time. However, we can break all long production
-bodies into a sequence of productions with bodies of length 2. This
-step takes \\(O(n)\\) time and grows only linearly, and makes eliminating
-$&epsilon;$-productions run in \\(O(n)\\) time.
+    In all, converting to CNF form is a \\(O(n^2)\\) algorithm.
 
-In all, converting to CNF form is a \\(O(n^2)\\) algorithm.
+-    Testing for emptiness of CFL
 
+    This is equivalent to testing if \\(S\\) is generating. The algorithm goes
+    as follows:
 
-#### Testing for emptiness of CFL {#testing-for-emptiness-of-cfl}
+    We maintain an array indexed by variable, which tells whether or not
+    we have established that a variable is generating.For each variable
+    there is a chain of all the positions in which the variable occurs
+    (solid lines). The dashed lines suggest links from the productions to
+    their counts.
 
-This is equivalent to testing if \\(S\\) is generating. The algorithm goes
-as follows:
+    {{< figure src="/ox-hugo/screenshot_2018-10-12_17-24-55.png" >}}
 
-We maintain an array indexed by variable, which tells whether or not
-we have established that a variable is generating.For each variable
-there is a chain of all the positions in which the variable occurs
-(solid lines). The dashed lines suggest links from the productions to
-their counts.
+    For each production, we count the number of positions holding
+    variables whose ability to generate is not yet accounted for. Each
+    time the count for a head variable reaches 0, we put the variable on a
+    queue of generating variables whose consequences need to be explored.
 
-{{< figure src="/ox-hugo/screenshot_2018-10-12_17-24-55.png" >}}
+    This algorithm takes \\(O(n)\\) time:
 
-For each production, we count the number of positions holding
-variables whose ability to generate is not yet accounted for. Each
-time the count for a head variable reaches 0, we put the variable on a
-queue of generating variables whose consequences need to be explored.
+    1.  There are at most \\(n\\) variables in a grammar of size \\(n\\), creation
+        and initialization of the array can be done in \\(O(n)\\) time.
+    2.  Initialization of the links and counts can be done in \\(O(n)\\) time.
+    3.  When we discover a production has count 0:
+        1.  Discover a production has count \\(0\\), finding which variable is
+            at the head, checking whether it is already known to be
+            generating, and putting it on the queue if not. All these steps
+            are \\(O(1)\\) for each production so \\(O(n)\\) in total.
+        2.  work done when visiting the production bodies that have the head
+            variable \\(A\\). This work is proportional to the number of
+            positions with \\(A\\). Hence, \\(O(n)\\).
 
-This algorithm takes \\(O(n)\\) time:
+-    Testing Membership in a CFL
 
-1.  There are at most \\(n\\) variables in a grammar of size \\(n\\), creation
-    and initialization of the array can be done in \\(O(n)\\) time.
-2.  Initialization of the links and counts can be done in \\(O(n)\\) time.
-3.  When we discover a production has count 0:
-    1.  Discover a production has count \\(0\\), finding which variable is
-        at the head, checking whether it is already known to be
-        generating, and putting it on the queue if not. All these steps
-        are \\(O(1)\\) for each production so \\(O(n)\\) in total.
-    2.  work done when visiting the production bodies that have the head
-        variable \\(A\\). This work is proportional to the number of
-        positions with \\(A\\). Hence, \\(O(n)\\).
+    First, we can easily see that algorithms exponential in \\(n\\) can
+    decide membership. We can convert the grammar to CNF form. As the
+    parse trees are binary trees, there will be exactly \\(2n-1\\) nodes
+    labeled by variables in the tree for a string \\(w\\) of length \\(n\\). The
+    number of possible trees and node-labelings is only exponential in
+    \\(n\\).
 
+    Fortunately, more efficient techniques exist, based on the idea of
+    dynamic programming. Once such algorithm is the CYK Algorithm.
 
-#### Testing Membership in a CFL {#testing-membership-in-a-cfl}
+    We construct a triangular table, and begin the fill the table
+    row-by-row upwards. The horizontal axis corresponds to the positions
+    of the string \\(w = a\_1 a\_2 \dots a\_n\\), and the table entry \\(X\_ij\\) is the
+    set of variables $A such that \\(A \overset{\*}{\Rightarrow} a\_i a\_{i+1} \dots a\_j\\). We
+    are interested in whether \\(S\\) is in the set \\(X\_{1n}\\).
 
-First, we can easily see that algorithms exponential in \\(n\\) can
-decide membership. We can convert the grammar to CNF form. As the
-parse trees are binary trees, there will be exactly \\(2n-1\\) nodes
-labeled by variables in the tree for a string \\(w\\) of length \\(n\\). The
-number of possible trees and node-labelings is only exponential in
-\\(n\\).
+    {{< figure src="/ox-hugo/screenshot_2018-10-12_17-37-31.png" >}}
 
-Fortunately, more efficient techniques exist, based on the idea of
-dynamic programming. Once such algorithm is the CYK Algorithm.
+    It takes \\(O(n)\\) time to compute any one entry of the table. Hence, the
+    table-construction process takes \\(O(n^3)\\) time.
 
-We construct a triangular table, and begin the fill the table
-row-by-row upwards. The horizontal axis corresponds to the positions
-of the string \\(w = a\_1 a\_2 \dots a\_n\\), and the table entry \\(X\_ij\\) is the
-set of variables $A such that \\(A \overset{\*}{\Rightarrow} a\_i a\_{i+1} \dots a\_j\\). We
-are interested in whether \\(S\\) is in the set \\(X\_{1n}\\).
+    The algorithm for computing \\(X\_{ij}\\) is as such:
 
-{{< figure src="/ox-hugo/screenshot_2018-10-12_17-37-31.png" >}}
+    **BASIS**: We compute the first row as follows. Since the string beginning
+     and ending at position \\(i\\) is just the terminal \\(a\_i\\), and the grammar
+     is in \\(CNF\\),the only way to derive the string \\(a\_i\\) is to use a
+     production of the form \\(A \rightarrow a\_i\\). Hence \\(X\_ii\\) is the set of variables
+     \\(A\\) such that \\(A \rightarrow a\_i\\) is a production of \\(G\\).
 
-It takes \\(O(n)\\) time to compute any one entry of the table. Hence, the
-table-construction process takes \\(O(n^3)\\) time.
+    **INDUCTION**: To compute \\(X\_{ij}\\) that is in row \\(j - i + 1\\), we would have
+     computed all the \\(X\\) in the rows below i.e. we know about all strings
+     shorter than \\(a\_i a\_{i+1} \dots a\_j\\), and we know all the proper prefix
+     and proper suffixes of that string.
 
-The algorithm for computing \\(X\_{ij}\\) is as such:
+    For \\(A\\) to be in \\(X\_{ij}\\), we must find variables \\(B\\), \\(C\\), and integer
+    \\(k\\) such that:
 
-**BASIS**: We compute the first row as follows. Since the string beginning
- and ending at position \\(i\\) is just the terminal \\(a\_i\\), and the grammar
- is in \\(CNF\\),the only way to derive the string \\(a\_i\\) is to use a
- production of the form \\(A \rightarrow a\_i\\). Hence \\(X\_ii\\) is the set of variables
- \\(A\\) such that \\(A \rightarrow a\_i\\) is a production of \\(G\\).
+    1.  \\(i \le k < j\\)
+    2.  \\(B\\) is in \\(X\_{ik}\\)
+    3.  \\(C\\) is in \\(I\_{k+1,j}\\)
+    4.  \\(A \rightarrow BC\\) is a production of \\(G\\)
 
-**INDUCTION**: To compute \\(X\_{ij}\\) that is in row \\(j - i + 1\\), we would have
- computed all the \\(X\\) in the rows below i.e. we know about all strings
- shorter than \\(a\_i a\_{i+1} \dots a\_j\\), and we know all the proper prefix
- and proper suffixes of that string.
-
-For \\(A\\) to be in \\(X\_{ij}\\), we must find variables \\(B\\), \\(C\\), and integer
-\\(k\\) such that:
-
-1.  \\(i \le k < j\\)
-2.  \\(B\\) is in \\(X\_{ik}\\)
-3.  \\(C\\) is in \\(I\_{k+1,j}\\)
-4.  \\(A \rightarrow BC\\) is a production of \\(G\\)
-
-Finding such variables \\(A\\) requires us to compare at most \\(n\\) pairs of
-previously computed sets. Hence it can be done in \\(O(n)\\) time.
+    Finding such variables \\(A\\) requires us to compare at most \\(n\\) pairs of
+    previously computed sets. Hence it can be done in \\(O(n)\\) time.
 
 
 ## Turing Machines {#turing-machines}
@@ -1357,159 +1339,152 @@ importantly into decidability theory.
 
 ### Programming Techniques for Turing Machines {#programming-techniques-for-turing-machines}
 
+-    Storage in the State
 
-#### Storage in the State {#storage-in-the-state}
+    We can use the finite control not only to represent a position in the
+    "program" of a TM, but to hold a **finite amount of data**. We extend
+    the state as a tuple \\([q, A, B, C]\\), and having multiple tracks.
 
-We can use the finite control not only to represent a position in the
-"program" of a TM, but to hold a **finite amount of data**. We extend
-the state as a tuple \\([q, A, B, C]\\), and having multiple tracks.
+-    Multiple Tracks
 
+    One can also think of the tape of a Turing machine as composed of
+    several tracks. Each track can hold one symbol, and the tape alphabet
+    of the TM consists of tuples, with each component for each "track". A
+    common use of multiple tracks is to treat one track as holding the
+    data, and another track as holding a mark. We can check off each
+    symbol as we "use" it, or we can keep track of a small number of
+    positions within the data by only marking these positions.
 
-#### Multiple Tracks {#multiple-tracks}
+-    Subroutines
 
-One can also think of the tape of a Turing machine as composed of
-several tracks. Each track can hold one symbol, and the tape alphabet
-of the TM consists of tuples, with each component for each "track". A
-common use of multiple tracks is to treat one track as holding the
-data, and another track as holding a mark. We can check off each
-symbol as we "use" it, or we can keep track of a small number of
-positions within the data by only marking these positions.
+    A Turing machine subroutine is a set of states that perform some
+    useful process. This set of states includes a start state and another
+    state to pass control to whatever other set of states called the
+    subroutine. Since the TM has no mechanism for remembering a "return
+    address", that is, a state to go to after it finishes, should our
+    design of a TM call for one subroutine to be called from several
+    states, we can make copies of the subroutine, using a new set of
+    states for each copy. The "calls" are made to the start states of
+    different copies of the subroutine, and each copy "returns" to a
+    different state.
 
+-    Multitape Turing Machines
 
-#### Subroutines {#subroutines}
+    The device has a finite control (state), and some finite number of
+    tapes. Each tape is divided into cells, and each cell can hold any
+    symbol of the finite tape alphabet.
 
-A Turing machine subroutine is a set of states that perform some
-useful process. This set of states includes a start state and another
-state to pass control to whatever other set of states called the
-subroutine. Since the TM has no mechanism for remembering a "return
-address", that is, a state to go to after it finishes, should our
-design of a TM call for one subroutine to be called from several
-states, we can make copies of the subroutine, using a new set of
-states for each copy. The "calls" are made to the start states of
-different copies of the subroutine, and each copy "returns" to a
-different state.
+    Initially, the head of the first tape is at the left end of the input,
+    but all other tape heads are at some arbitrary cell.
 
+    {{< figure src="/ox-hugo/screenshot_2018-10-16_16-29-52.png" caption="Figure 3: A multitape Turing machine" >}}
 
-#### Multitape Turing Machines {#multitape-turing-machines}
+    A move on the multitape TM depends on the state and symbol scanned by
+    each of the tape heads. On each move:
 
-The device has a finite control (state), and some finite number of
-tapes. Each tape is divided into cells, and each cell can hold any
-symbol of the finite tape alphabet.
+    1.  the control enters a new state, which could be the same as a
+        previous state.
+    2.  On each tape, a new tape symbol is written on the cell scanned.
+        This symbol could be the same as the previous symbol.
+    3.  Each tape head makes a move, which can be either left, right or stationary.
 
-Initially, the head of the first tape is at the left end of the input,
-but all other tape heads are at some arbitrary cell.
+-    Equivalence of one-tape and multitape TMs
 
-{{< figure src="/ox-hugo/screenshot_2018-10-16_16-29-52.png" caption="Figure 3: A multitape Turing machine" >}}
+    Suppose language \\(L\\) is accepted by a k-tape TM \\(M\\). We simulate \\(M\\)
+    with a one-tape TM \\(N\\) whose tape we think of as having 2k tracks.
+    Half of these tracks hold the tapes of \\(M\\), and the other half of the
+    tracks each hold only a single marker that indicates where the head
+    for the corresponding tape of \\(M\\) is currently located.
 
-A move on the multitape TM depends on the state and symbol scanned by
-each of the tape heads. On each move:
+    {{< figure src="/ox-hugo/screenshot_2018-10-16_16-33-42.png" caption="Figure 4: Simulation of two-tape Turing machine by a one-tape Turing machine" >}}
 
-1.  the control enters a new state, which could be the same as a
-    previous state.
-2.  On each tape, a new tape symbol is written on the cell scanned.
-    This symbol could be the same as the previous symbol.
-3.  Each tape head makes a move, which can be either left, right or stationary.
+    To simulate a move of \\(M\\), \\(N\\)'s head must visit the \\(k\\) head markers.
+    So that \\(N\\) does not get lost, it must remember how many head markers
+    are to its left at all times. That count is stored as a component of
+    \\(N\\)'s finite control. After visiting each head marker and storing the
+    scanned symbol in a component of the finite control, \\(n\\) knows what
+    tape symbols have been scanned by each of \\(M\\)'s heads. \\(N\\) also knows
+    the state of \\(M\\), which it stores in \\(N\\)'s own finite control. Thus,
+    \\(N\\) knows what move \\(M\\) will make.
 
+    \\(N\\) can now revisit each of the head markers on its tape, changing the
+    symbol in the track representing the corresponding tapes of \\(M\\), and
+    move the head markers left or right, if necessary. \\(N\\)'s accepting
+    states are all the states that record \\(M\\)'s states as one of the
+    accepting states of \\(M\\). When the simulated \\(M\\) accepts, \\(N\\) also
+    accepts, and \\(N\\) does not accept otherwise.
 
-#### Equivalence of one-tape and multitape TMs {#equivalence-of-one-tape-and-multitape-tms}
+    The time taken by the one-tape TM \\(N\\) to simulate \\(n\\) moves of the
+    k-tape TM \\(M\\) is \\(O(n^2)\\).
 
-Suppose language \\(L\\) is accepted by a k-tape TM \\(M\\). We simulate \\(M\\)
-with a one-tape TM \\(N\\) whose tape we think of as having 2k tracks.
-Half of these tracks hold the tapes of \\(M\\), and the other half of the
-tracks each hold only a single marker that indicates where the head
-for the corresponding tape of \\(M\\) is currently located.
+-    Non-deterministic Turing Machines
 
-{{< figure src="/ox-hugo/screenshot_2018-10-16_16-33-42.png" caption="Figure 4: Simulation of two-tape Turing machine by a one-tape Turing machine" >}}
+    A NTM differs from the deterministic variety by having a transition
+    \\(\delta\\) such that for each state \\(q\\) and tape symbol \\(X\\), \\(\delta(q,X)\\) is a
+    set of triples \\(\\{(q\_1, Y\_1, D\_1), \dots, (q\_k, Y\_k, D\_k)\\}\\).
 
-To simulate a move of \\(M\\), \\(N\\)'s head must visit the \\(k\\) head markers.
-So that \\(N\\) does not get lost, it must remember how many head markers
-are to its left at all times. That count is stored as a component of
-\\(N\\)'s finite control. After visiting each head marker and storing the
-scanned symbol in a component of the finite control, \\(n\\) knows what
-tape symbols have been scanned by each of \\(M\\)'s heads. \\(N\\) also knows
-the state of \\(M\\), which it stores in \\(N\\)'s own finite control. Thus,
-\\(N\\) knows what move \\(M\\) will make.
+    The NTM can choose at each step any of the triples to be the next
+    move. We can show that NTM and TM are equivalent. The proof involves
+    showing that for every NTM \\(M\_N\\), we can construct a DTM \\(M\_D\\) that
+    explores the ID's that \\(M\_N\\) can reach by any sequence of its choices.
+    If \\(M\_D\\) has an accepting state, then \\(M\_D\\) enters an accepting state of
+    its own. \\(M\_D\\) must be systematic, putting new ID's on a queue, rather
+    than a stack, so \\(M\_D\\) would have simulated all sequences up to k moves
+    of \\(M\_N\\) after some finite time.
 
-\\(N\\) can now revisit each of the head markers on its tape, changing the
-symbol in the track representing the corresponding tapes of \\(M\\), and
-move the head markers left or right, if necessary. \\(N\\)'s accepting
-states are all the states that record \\(M\\)'s states as one of the
-accepting states of \\(M\\). When the simulated \\(M\\) accepts, \\(N\\) also
-accepts, and \\(N\\) does not accept otherwise.
+    \\(M\_D\\) is designed as a multi-tape TM. The first tape of \\(M\_D\\) holds a
+    sequence of ID's of \\(M\_N\\), including the state of \\(M\_N\\). One ID of \\(M\_N\\)
+    is marked as the current ID, whose successor ID's are in the process
+    of being discovered. All IDs to the left of the current one have been
+    explored and can be ignored subsequently.
 
-The time taken by the one-tape TM \\(N\\) to simulate \\(n\\) moves of the
-k-tape TM \\(M\\) is \\(O(n^2)\\).
+    {{< figure src="/ox-hugo/screenshot_2018-10-16_16-41-48.png" caption="Figure 5: Simulation of NTM by a DTM" >}}
 
+    To process the current ID, \\(M\_D\\) does:
 
-#### Non-deterministic Turing Machines {#non-deterministic-turing-machines}
+    1.  \\(M\_D\\) examines the state and scanned symbol of the current ID. Built
+        into the finite control of \\(M\_D\\) is the knowledge of what choices of
+        move \\(M\_N\\) has for each state and symbol. If the state in the
+        current ID is accepting, then \\(M\_D\\) accepts and simulates \\(M\_N\\) no further.
+    2.  However, if the state is not accepting, and the state-symbol
+        combination has \\(k\\) moves, then \\(M\_D\\) uses its second tape to copy
+        the ID and the make k copies of that ID at the end of the sequence
+        of ID's on tape 1.
+    3.  \\(M\_D\\) modifies each of those k ID's according to a different one of
+        the k choices of move that \\(M\_N\\) has from its current ID.
+    4.  \\(M\_D\\) returns to the marked current ID, erases the mark and moves to
+        the next ID to the right. The cycle the repeats with step (1).
 
-A NTM differs from the deterministic variety by having a transition
-\\(\delta\\) such that for each state \\(q\\) and tape symbol \\(X\\), \\(\delta(q,X)\\) is a
-set of triples \\(\{(q\_1, Y\_1, D\_1), \dots, (q\_k, Y\_k, D\_k)\}\\).
-
-The NTM can choose at each step any of the triples to be the next
-move. We can show that NTM and TM are equivalent. The proof involves
-showing that for every NTM \\(M\_N\\), we can construct a DTM \\(M\_D\\) that
-explores the ID's that \\(M\_N\\) can reach by any sequence of its choices.
-If \\(M\_D\\) has an accepting state, then \\(M\_D\\) enters an accepting state of
-its own. \\(M\_D\\) must be systematic, putting new ID's on a queue, rather
-than a stack, so \\(M\_D\\) would have simulated all sequences up to k moves
-of \\(M\_N\\) after some finite time.
-
-\\(M\_D\\) is designed as a multi-tape TM. The first tape of \\(M\_D\\) holds a
-sequence of ID's of \\(M\_N\\), including the state of \\(M\_N\\). One ID of \\(M\_N\\)
-is marked as the current ID, whose successor ID's are in the process
-of being discovered. All IDs to the left of the current one have been
-explored and can be ignored subsequently.
-
-{{< figure src="/ox-hugo/screenshot_2018-10-16_16-41-48.png" caption="Figure 5: Simulation of NTM by a DTM" >}}
-
-To process the current ID, \\(M\_D\\) does:
-
-1.  \\(M\_D\\) examines the state and scanned symbol of the current ID. Built
-    into the finite control of \\(M\_D\\) is the knowledge of what choices of
-    move \\(M\_N\\) has for each state and symbol. If the state in the
-    current ID is accepting, then \\(M\_D\\) accepts and simulates \\(M\_N\\) no further.
-2.  However, if the state is not accepting, and the state-symbol
-    combination has \\(k\\) moves, then \\(M\_D\\) uses its second tape to copy
-    the ID and the make k copies of that ID at the end of the sequence
-    of ID's on tape 1.
-3.  \\(M\_D\\) modifies each of those k ID's according to a different one of
-    the k choices of move that \\(M\_N\\) has from its current ID.
-4.  \\(M\_D\\) returns to the marked current ID, erases the mark and moves to
-    the next ID to the right. The cycle the repeats with step (1).
-
-This can be viewed as a breadth-first search on all possible IDs
-reached.
+    This can be viewed as a breadth-first search on all possible IDs
+    reached.
 
 
 ### Restricted Turing Machines {#restricted-turing-machines}
 
+-    Turing Machines with Semi-infinite Tapes
 
-#### Turing Machines with Semi-infinite Tapes {#turing-machines-with-semi-infinite-tapes}
+    We can assume the tape to be semi-infinite, having no cells to the
+    left of the initial head position, an still retain the full power of
+    TMs.
 
-We can assume the tape to be semi-infinite, having no cells to the
-left of the initial head position, an still retain the full power of
-TMs.
+    The trick behind the construction is to use two tracks on the
+    semi-infinite tape. The upper track represents the cells of the
+    original TM that are at or to the right of the initial head position,
+    but in reverse order. The upper track represents \\(X\_0 , X\_1 \dots\\) where
+    \\(X\_0\\) is the initial position of the head; \\(X\_1, X\_2\\) so on are the cells
+    to its right. The \\(\*\\) on the leftmost cell bottom track serves as an
+    end marker and prevents the head of the semi-infinite TM from falling
+    off the end of the tape.
 
-The trick behind the construction is to use two tracks on the
-semi-infinite tape. The upper track represents the cells of the
-original TM that are at or to the right of the initial head position,
-but in reverse order. The upper track represents \\(X\_0 , X\_1 \dots\\) where
-\\(X\_0\\) is the initial position of the head; \\(X\_1, X\_2\\) so on are the cells
-to its right. The \\(\*\\) on the leftmost cell bottom track serves as an
-end marker and prevents the head of the semi-infinite TM from falling
-off the end of the tape.
+    {{< figure src="/ox-hugo/screenshot_2018-10-30_09-22-16.png" >}}
 
-{{< figure src="/ox-hugo/screenshot_2018-10-30_09-22-16.png" >}}
+    Another restriction we make is to never write a blank. This combined
+    with the semi-infinite tape restriction means that the tape is at all
+    times a prefix of non-blank symbols followed by an infinity of blanks.
 
-Another restriction we make is to never write a blank. This combined
-with the semi-infinite tape restriction means that the tape is at all
-times a prefix of non-blank symbols followed by an infinity of blanks.
-
-We can construct an equivalent TM \\(M\_2\\) from a TM \\(M\_1\\) by restricting
-that \\(M\_1\\) never writes a blank, by creating a new tape symbol \\(B'\\)
-that functions as a blank, but is not the blank \\(B\\).
+    We can construct an equivalent TM \\(M\_2\\) from a TM \\(M\_1\\) by restricting
+    that \\(M\_1\\) never writes a blank, by creating a new tape symbol \\(B'\\)
+    that functions as a blank, but is not the blank \\(B\\).
 
 
 ### Multistack Machines {#multistack-machines}

@@ -1,0 +1,25 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: talks
+#+HUGO_SLUG: emacs_lisp_development_tips_with_john_wiegley
+#+TITLE: Talks: Emacs Lisp Development Tips with John Wiegley
+
+- source :: [[https://www.youtube.com/watch?v=QRBcm6jFJ3Q][2015-04-08 Emacs Lisp Development Tips with John Wiegley - YouTube]]
+- author :: [[file:john_wiegley.org][John Wiegley]]
+
+* Interactive debugging
+
+- In debug buffer: =e= to evaluate any lisp expression in stack-frame
+- use =(debug)= to enter debugger
+- =eldoc-mode= to show operation
+
+* Profiling
+- =elp-instrument-function=
+- =elp-instrument-package=
+
+* Speeding up Functions
+
+- mutation in place:
+  - =nconc=
+  - =nreverse=
+  - =setcar=
+  - =setcdr=

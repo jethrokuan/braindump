@@ -1,7 +1,7 @@
 +++
 title = "PARA Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:04:26+08:00
+lastmod = 2020-03-07T23:43:01+08:00
 draft = false
 +++
 

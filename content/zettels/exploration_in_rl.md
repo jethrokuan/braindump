@@ -1,7 +1,7 @@
 +++
 title = "Exploration In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T20:16:27+08:00
+lastmod = 2020-03-07T23:43:01+08:00
 draft = false
 +++
 

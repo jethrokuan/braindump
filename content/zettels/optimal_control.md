@@ -1,9 +1,8 @@
 +++
 title = "Optimal Control and Planning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-22T18:18:53+08:00
+lastmod = 2020-03-07T23:43:07+08:00
 draft = false
-math = true
 +++
 
 How can we make decisions if we know the dynamics of the environment?

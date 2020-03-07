@@ -1,0 +1,30 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: multimodal_alignment
+#+TITLE: Multi-modal Alignment
+
+Multi-modal alignment is a sub-challenge in [[file:20200219115844_multimodal_machine_learning.org][Multi-modal Machine
+Learning]], involving the finding of relationships and correspondences
+between sub-components of instances from two-or-more modalities. For
+example, we want to find areas of the image corresponding to the
+caption's words or phrases.
+
+In explicit multi-modal alignment, the objective of aligning
+sub-components in modalities is of interest. In implicit multi-modal
+alignment, this is typically an intermediate step for another task.
+
+* Explicit Alignmnt
+
+Explicit alignment algorithms can be further split into unsupervised
+and weakly-supervised algorithms.
+
+The unsupervised approaches do not require or use any direct alignment
+labels. [[file:dynamic_time_warping.org][Dynamic Time Warping]] is a dynamic progamming approach to align
+multi-view time series.
+
+* Implicit Alignment
+
+Implicit alignment allows for better performance in downstream tasks.
+Both graphical models and neural network approaches are used here.
+Examples of tasks where implicit alignment helps include machine
+translation.

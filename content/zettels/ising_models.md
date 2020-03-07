@@ -1,10 +1,9 @@
 +++
 title = "Ising Models"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-26T20:53:05+08:00
+lastmod = 2020-03-07T23:43:35+08:00
 tags = ["machine-learning"]
 draft = false
-math = true
 +++
 
 An Ising model is an array of spins (atoms that can take states \\(\pm

@@ -1,9 +1,8 @@
 +++
 title = "Simultaneous Localization and Mapping (SLAM)"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-12T13:02:58+08:00
+lastmod = 2020-03-07T23:43:21+08:00
 draft = false
-math = true
 +++
 
 In SLAM, the robot acquires a map of its environment while

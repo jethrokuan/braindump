@@ -1,10 +1,9 @@
 +++
 title = "Robotics Probabilistic Generative Laws"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-29T15:09:09+08:00
+lastmod = 2020-03-07T23:42:40+08:00
 tags = ["robotics"]
 draft = false
-math = true
 +++
 
 ## Notation {#notation}

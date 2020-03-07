@@ -1,7 +1,7 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:28:53+08:00
+lastmod = 2020-03-07T23:43:36+08:00
 draft = false
 +++
 

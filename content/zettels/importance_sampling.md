@@ -1,9 +1,8 @@
 +++
 title = "Importance Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T21:39:14+08:00
+lastmod = 2020-03-07T23:43:19+08:00
 draft = false
-math = true
 +++
 
 Importance sampling does not allow us to generate samples from \\(p(x)\\),

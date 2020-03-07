@@ -1,9 +1,8 @@
 +++
 title = "Markov Decision Process"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T15:47:26+08:00
+lastmod = 2020-03-07T23:43:44+08:00
 draft = false
-math = true
 +++
 
 A sequential decision problem for a fully observable, stochastic
@@ -44,7 +43,7 @@ that does not arise in deterministic search problems.
 \end{equation}
 
 
-## Learning Performance <sup id="fa8338b83ce7e1fef54aa80740d33fc3"><a href="#kaelbling1996reinforcement" title="Kaelbling, Littman \&amp; Moore, Reinforcement learning: A survey, {Journal of artificial intelligence research}, v(), 237--285 (1996).">(Kaelbling {\it et al.}, 1996)</a></sup> {#learning-performance}
+## Learning Performance <a id="fa8338b83ce7e1fef54aa80740d33fc3" href="#kaelbling1996reinforcement">(Kaelbling et al., 1996)</a> {#learning-performance}
 
 1.  Asymptotic convergence:
 
@@ -70,9 +69,9 @@ No notion of "many small mistakes", or "few major mistakes".
 
 1.  Uniform-PAC
 
-unifies notion of PAC and regret <sup id="b921dd1021cc889ee3e2cec8ef08a5a9"><a href="#dann2017unifying" title="Dann, Lattimore \&amp; Brunskill, Unifying PAC and regret: Uniform PAC bounds for episodic reinforcement learning, 5713--5723, in in: {Advances in Neural Information Processing Systems}, edited by (2017)">(Dann {\it et al.}, 2017)</a></sup>
+unifies notion of PAC and regret <a id="b921dd1021cc889ee3e2cec8ef08a5a9" href="#dann2017unifying">(Dann et al., 2017)</a>
 
 # Bibliography
-<a id="kaelbling1996reinforcement"></a>Kaelbling, L. P., Littman, M. L., & Moore, A. W., *Reinforcement learning: a survey*, Journal of artificial intelligence research, *4()*, 237–285 (1996).  [↩](#fa8338b83ce7e1fef54aa80740d33fc3)
+<a id="kaelbling1996reinforcement" target="_blank">Kaelbling, L. P., Littman, M. L., & Moore, A. W., *Reinforcement learning: a survey*, Journal of artificial intelligence research, *4()*, 237–285 (1996). </a> [↩](#fa8338b83ce7e1fef54aa80740d33fc3)
 
-<a id="dann2017unifying"></a>Dann, C., Lattimore, T., & Brunskill, E., *Unifying pac and regret: uniform pac bounds for episodic reinforcement learning*, In , Advances in Neural Information Processing Systems (pp. 5713–5723) (2017). : . [↩](#b921dd1021cc889ee3e2cec8ef08a5a9)
+<a id="dann2017unifying" target="_blank">Dann, C., Lattimore, T., & Brunskill, E., *Unifying pac and regret: uniform pac bounds for episodic reinforcement learning*, In , Advances in Neural Information Processing Systems (pp. 5713–5723) (2017). : .</a> [↩](#b921dd1021cc889ee3e2cec8ef08a5a9)

@@ -9,7 +9,7 @@ $\mathcal{A}_X$ is:
   D_{\textrm{KL}}(P||Q) = \sum_{x} P(x) \log \frac{P(x)}{Q(x)}
 \end{equation}
 
-Gibb's Inequality states that:
+Gibbs Inequality states that:
 
 \begin{equation}
   D_{\textrm{KL}}(P||Q) \ge 0

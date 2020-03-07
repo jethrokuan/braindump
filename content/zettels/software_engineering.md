@@ -1,9 +1,8 @@
 +++
 title = "Software Engineering"
 author = ["Derrick Chua", "Jethro Kuan"]
-lastmod = 2018-12-05T22:06:33+08:00
+lastmod = 2020-03-07T23:43:27+08:00
 draft = false
-math = true
 +++
 
 ## Object-Oriented Programming {#object-oriented-programming}
@@ -517,34 +516,32 @@ Logging is **The deliberate recording of certain information during
    mechanism, and the logger has different levels: SEVERE,
    INFO, WARNING etc.
 
+-    Build automation
 
-#### Build automation {#build-automation}
+    1.  Gradle
+        -   Automates tasks such as:
+            -   Running tests
+            -   Manage library dependencies
+            -   Analyse code for style compliance
 
-1.  Gradle
-    -   Automates tasks such as:
-        -   Running tests
-        -   Manage library dependencies
-        -   Analyse code for style compliance
+        -   Gradle configuration is defined in build script build.gradle
+        -   Gradle commands are run in gradlew (wrapper) which runs the
+            following commands by default:
+            -   clean
+            -   headless
+            -   allTests
+            -   coverage
 
-    -   Gradle configuration is defined in build script build.gradle
-    -   Gradle commands are run in gradlew (wrapper) which runs the
-        following commands by default:
-        -   clean
-        -   headless
-        -   allTests
-        -   coverage
+        -   Dependencies are updated automatically by other relevant Gradle
+            tasks
 
-    -   Dependencies are updated automatically by other relevant Gradle
-        tasks
+-    Continuous Integration (CI)
 
-
-#### Continuous Integration (CI) {#continuous-integration-ci}
-
-1.  Integration, building and testing happens automatically after code
-    change
-2.  Travis CI
-3.  Continuous Deployment (CD) - Changes are integreated, and deployed to
-    end-users at the same time (e.g. Travis)
+    1.  Integration, building and testing happens automatically after code
+        change
+    2.  Travis CI
+    3.  Continuous Deployment (CD) - Changes are integreated, and deployed to
+        end-users at the same time (e.g. Travis)
 
 
 ### Defensive Programming {#defensive-programming}
@@ -642,176 +639,166 @@ When testing, we execute a set of test cases, containing the **input**
 and the **expected behaviour**. Test cases can be determined based on
 the specification.
 
+-    Unit Testing
 
-#### Unit Testing {#unit-testing}
+    -   testing individual units to ensure each piece works correctly. In
+        OOP, this includes writing one or more unit tests for each public
+        method of a class.
+    -   A proper unit test requires the unit to be testing in isolation,
+        hence stubs are created for the dependencies.
+    -   **Dependency injection** is the process of replacing current
+        dependencies with another object, commonly seen with stubs.
+        Polymorphism can be used to implement this.
 
--   testing individual units to ensure each piece works correctly. In
-    OOP, this includes writing one or more unit tests for each public
-    method of a class.
--   A proper unit test requires the unit to be testing in isolation,
-    hence stubs are created for the dependencies.
--   **Dependency injection** is the process of replacing current
-    dependencies with another object, commonly seen with stubs.
-    Polymorphism can be used to implement this.
+-    Integration Testing
 
+    -   testing whether different parts of the software work together as
+        expected. It aims to discover bugs in the "glue code" related to how
+        components interact with each other.
 
-#### Integration Testing {#integration-testing}
+-    System Testing
 
--   testing whether different parts of the software work together as
-    expected. It aims to discover bugs in the "glue code" related to how
-    components interact with each other.
+    -   Takes the whole system and tests it against the system specification
+    -   System test cases are based on the specified external behaviour of
+        the system
+    -   System testing includes testing against non-functional requirements
 
+-    Others
 
-#### System Testing {#system-testing}
+    -   alpha testing is performed by the users, under controlled conditions
+        set by the software development team
+    -   beta testing is performed by a selected subset of users of the
+        system in their natural work setting
+    -   dogfooding is the creators of the product using their own product
+    -   developer testing is done by the developers themselves, so as to
+        locate the cause of test case failure or fixing bugs
+    -   regression testing is the retesting the SUT to detect regressions when a system is modified.
 
--   Takes the whole system and tests it against the system specification
--   System test cases are based on the specified external behaviour of
-    the system
--   System testing includes testing against non-functional requirements
+-    Exploratory vs Scripted Testing
 
+    -   Exploratory testing devises test cases on-the-fly, creating new test
+        cases based on the results of past test cases
+        -   dependent on the tester's prior experience and intuition
+    -   Scripted testing is a set of test cases based on the expected
+        behaviour of the SUT
+        -   more systematic, and hence likely to discover more bugs given
+            sufficient time
 
-#### Others {#others}
+-    Acceptance Testing
 
--   alpha testing is performed by the users, under controlled conditions
-    set by the software development team
--   beta testing is performed by a selected subset of users of the
-    system in their natural work setting
--   dogfooding is the creators of the product using their own product
--   developer testing is done by the developers themselves, so as to
-    locate the cause of test case failure or fixing bugs
--   regression testing is the retesting the SUT to detect regressions when a system is modified.
+    -   test the delivered system to ensure it meets the user requirements
 
+    | System Testing                        | Acceptance Testing                                 |
+    |---------------------------------------|----------------------------------------------------|
+    | done against the system specification | Done against the requirements specification        |
+    | done by testers on the project team   | done by a team that represents the customer        |
+    | done on the development environment   | done on the deployment site, or a close simulation |
+    | both negative and positive test cases | focus on positive test cases                       |
 
-#### Exploratory vs Scripted Testing {#exploratory-vs-scripted-testing}
+-    Coverage
 
--   Exploratory testing devises test cases on-the-fly, creating new test
-    cases based on the results of past test cases
-    -   dependent on the tester's prior experience and intuition
--   Scripted testing is a set of test cases based on the expected
-    behaviour of the SUT
-    -   more systematic, and hence likely to discover more bugs given
-        sufficient time
+    Coverage is the metric used to measure the extent to which  testing
+    exercises the code.
 
+    function/method coverage
+    : based on the functions executed
 
-#### Acceptance Testing {#acceptance-testing}
+    statement coverage
+    : based on the number of lines of code executed
 
--   test the delivered system to ensure it meets the user requirements
+    decision/branch coverage
+    : based on the decision points exercised
 
-| System Testing                        | Acceptance Testing                                 |
-|---------------------------------------|----------------------------------------------------|
-| done against the system specification | Done against the requirements specification        |
-| done by testers on the project team   | done by a team that represents the customer        |
-| done on the development environment   | done on the deployment site, or a close simulation |
-| both negative and positive test cases | focus on positive test cases                       |
+    condition coverage
+    : based on the boolean sub-expressions
 
+    path coverage
+    : in terms of possible paths through a given part of
+        the code executed
 
-#### Coverage {#coverage}
+    entry/exit coverage
+    : in terms of possible calls to and exits from
+        the operations in the SUT
 
-Coverage is the metric used to measure the extent to which  testing
-exercises the code.
+-    Test Case Design
 
-function/method coverage
-: based on the functions executed
+    black-box
+    : designed exclusively based on the SUT's specified
+        external behaviour
 
-statement coverage
-: based on the number of lines of code executed
+    white-box
+    : test cases are designed based on what is known about
+        the SUT's implementation
 
-decision/branch coverage
-: based on the decision points exercised
+    gray-box
+    : uses some important information about the
+        implementation.
 
-condition coverage
-: based on the boolean sub-expressions
+    Equivalence partitions are **groups of test inputs that are likely to
+    be processed by the SUTs in the same way**. This can be determined by
+    identifying:
 
-path coverage
-: in terms of possible paths through a given part of
-    the code executed
+    1.  target object of method call
+    2.  input parameters of method call
+    3.  other data objects accessed by the method, such as global
+        variables.
 
-entry/exit coverage
-: in terms of possible calls to and exits from
-    the operations in the SUT
+    Boundary Value analysis is a \*test case design heuristic that is
+    based on the observation that bugs often result from incorrect
+    handling of boundaries of equivalence partitions\*.
 
+    Other heuristics include:
 
-#### Test Case Design {#test-case-design}
-
-black-box
-: designed exclusively based on the SUT's specified
-    external behaviour
-
-white-box
-: test cases are designed based on what is known about
-    the SUT's implementation
-
-gray-box
-: uses some important information about the
-    implementation.
-
-Equivalence partitions are **groups of test inputs that are likely to
-be processed by the SUTs in the same way**. This can be determined by
-identifying:
-
-1.  target object of method call
-2.  input parameters of method call
-3.  other data objects accessed by the method, such as global
-    variables.
-
-Boundary Value analysis is a \*test case design heuristic that is
-based on the observation that bugs often result from incorrect
-handling of boundaries of equivalence partitions\*.
-
-Other heuristics include:
-
--   each valid input at least once in a positive test case
--   no more than 1 invalid input in a test case
+    -   each valid input at least once in a positive test case
+    -   no more than 1 invalid input in a test case
 
 
 ## Software Engineering Principles {#software-engineering-principles}
 
+-    Law of Demeter
 
-#### Law of Demeter {#law-of-demeter}
+    1.  An object should have limited knowledge of another object
+    2.  An object should have limited interaction with closely related
+        classes, if foo is coupled to bar, which is coupled to goo, foo
+        should not be coupled to goo
+    3.  Reduces coupling
 
-1.  An object should have limited knowledge of another object
-2.  An object should have limited interaction with closely related
-    classes, if foo is coupled to bar, which is coupled to goo, foo
-    should not be coupled to goo
-3.  Reduces coupling
+-    SOLID
 
+    Single Responsibility Principle
+    : every module or class should
+        have responsibility over a single part of the functionality
+        provided by the software, and that responsibility should be
+        entirely encapsulated by the class.
 
-#### SOLID {#solid}
+    Open-Closed Principle
+    : software entities (classes, modules,
+        functions, etc.) should be open for extension, but closed for
+        modification"; that is, such an entity can allow its behaviour to
+        be extended without modifying its source code.
 
-Single Responsibility Principle
-: every module or class should
-    have responsibility over a single part of the functionality
-    provided by the software, and that responsibility should be
-    entirely encapsulated by the class.
+    Liskov Substitution Principle
+    : Functions that use pointers or
+        references to base classes must be able to use objects of derived
+        classes without knowing it.- Interface Segregation Principle ::  no client should be forced to
+        depend on methods it does not use.
 
-Open-Closed Principle
-: software entities (classes, modules,
-    functions, etc.) should be open for extension, but closed for
-    modification"; that is, such an entity can allow its behaviour to
-    be extended without modifying its source code.
-
-Liskov Substitution Principle
-: Functions that use pointers or
-    references to base classes must be able to use objects of derived
-    classes without knowing it.- Interface Segregation Principle ::  no client should be forced to
-    depend on methods it does not use.
-
-Dependency Inversion Principle
-: high level modules should not
-    depend on low level modules; both should depend on abstractions.
-    Abstractions should not depend on details.
+    Dependency Inversion Principle
+    : high level modules should not
+        depend on low level modules; both should depend on abstractions.
+        Abstractions should not depend on details.
 
 
-YAGNI
-: a principle of extreme programming (XP) that states a
-    programmer should not add functionality until deemed
-    necessary.
+    YAGNI
+    : a principle of extreme programming (XP) that states a
+        programmer should not add functionality until deemed
+        necessary.
 
-DRY
-: Don't repeat yourself, i.e. No duplicate implementations
+    DRY
+    : Don't repeat yourself, i.e. No duplicate implementations
 
-Brook's Law
-: Adding people to a late project makes it later
+    Brook's Law
+    : Adding people to a late project makes it later
 
 
 ## Software Development Life Cycles {#software-development-life-cycles}
@@ -824,94 +811,88 @@ SDLC consists of different stages such as:
 -   Implementation
 -   Testing
 
+-    Sequential models
 
-#### Sequential models {#sequential-models}
+    1.  Software development as linear process
+    2.  Useful for problems that are well-understood and stable
+        -   Rarely applicable in real-world projects
 
-1.  Software development as linear process
-2.  Useful for problems that are well-understood and stable
-    -   Rarely applicable in real-world projects
+    3.  Each stage provides artifacts for use in next stage
 
-3.  Each stage provides artifacts for use in next stage
+-    Iterative models
 
+    1.  Several iterations
+    2.  Each iteration is a new version
+        -   Each iteration is a complete product
 
-#### Iterative models {#iterative-models}
+    3.  Either breadth-first (all major components in parallel) or
+        depth-first (Flesh out some components at a time)
+    4.  Most projects use both, i.e. iterative and incremental process
 
-1.  Several iterations
-2.  Each iteration is a new version
-    -   Each iteration is a complete product
+-    Agile models
 
-3.  Either breadth-first (all major components in parallel) or
-    depth-first (Flesh out some components at a time)
-4.  Most projects use both, i.e. iterative and incremental process
+    -   Individuals and interactions over processes and tools
+    -   Working software over comprehensive documentation
+    -   Customer collaboration over contract negotiation
+    -   Responding to change over following a plan
 
-
-#### Agile models {#agile-models}
-
--   Individuals and interactions over processes and tools
--   Working software over comprehensive documentation
--   Customer collaboration over contract negotiation
--   Responding to change over following a plan
-
--   Requirements based on needs of users, clarified regularly, factored
-    into developmental schedule when appropriate
--   Rough project plan, high level design that evolves as the project
-    goes on
--   Strong emphasis on transparency and responsibility sharing among
-    members
+    -   Requirements based on needs of users, clarified regularly, factored
+        into developmental schedule when appropriate
+    -   Rough project plan, high level design that evolves as the project
+        goes on
+    -   Strong emphasis on transparency and responsibility sharing among
+        members
 
 
 ### Popular SDLC process models {#popular-sdlc-process-models}
 
+-    Scrum
 
-#### Scrum {#scrum}
+    -   Scrum master
+    -   Development team
+    -   Product Owner
 
--   Scrum master
--   Development team
--   Product Owner
+    -   Divided into Sprints (basic unit of development)
+        -   Preceded by planning meeting
+        -   Potentially deliverable product increment is done during Sprint
+        -   Creates self-organising teams by encouraging co-location of team
+            members
+        -   Customers can change their minds about their wants and needs
+        -   Sprint backlog
+            -   To do
+    -   Daily scrums
+        -   What did you do?
+        -   What will you do?
+        -   Are there any impediments?
 
--   Divided into Sprints (basic unit of development)
-    -   Preceded by planning meeting
-    -   Potentially deliverable product increment is done during Sprint
-    -   Creates self-organising teams by encouraging co-location of team
-        members
-    -   Customers can change their minds about their wants and needs
-    -   Sprint backlog
-        -   To do
--   Daily scrums
-    -   What did you do?
-    -   What will you do?
-    -   Are there any impediments?
+-    Extreme Programming (XP)
 
+    1.  Stresses customer satisfaction
+    2.  Empowers developers to respond to changing customer requirements
+    3.  Emphasises teamwork
+    4.  Completes software project via:
+        -   Communication
+        -   Simplicity
+        -   Feedback
+        -   Respect
+        -   Courage
 
-#### Extreme Programming (XP) {#extreme-programming--xp}
+-    Unified process
 
-1.  Stresses customer satisfaction
-2.  Empowers developers to respond to changing customer requirements
-3.  Emphasises teamwork
-4.  Completes software project via:
-    -   Communication
-    -   Simplicity
-    -   Feedback
-    -   Respect
-    -   Courage
-
-
-#### Unified process {#unified-process}
-
--   Inception
-    -   Understand problem and requirements
-    -   Communicate
-    -   Plan
--   Elaboration
-    -   Refine and expands requirements
--   Construction
-    -   Major implementation to support use cases
-    -   Refine and flesh out design models
-    -   Testing of all levels
-    -   Multiple releases
--   Transition
-    -   Ready system for actual production use
-    -   Familiarise end users with the system
+    -   Inception
+        -   Understand problem and requirements
+        -   Communicate
+        -   Plan
+    -   Elaboration
+        -   Refine and expands requirements
+    -   Construction
+        -   Major implementation to support use cases
+        -   Refine and flesh out design models
+        -   Testing of all levels
+        -   Multiple releases
+    -   Transition
+        -   Ready system for actual production use
+        -   Familiarise end users with the system
 
 
 ### CMMI (Capability Maturity Model Integration) {#cmmi--capability-maturity-model-integration}

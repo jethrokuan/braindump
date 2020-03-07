@@ -1,9 +1,8 @@
 +++
 title = "Anti-fragile Ideas"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-13T23:44:40+08:00
+lastmod = 2020-03-07T23:43:18+08:00
 draft = false
-math = true
 +++
 
 This system was originally discussed by John Carmack [here](https://amasad.me/carmack). We want to

@@ -1,9 +1,8 @@
 +++
 title = "Partially Observable Markov Decision Processes (POMDPs)"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T15:33:14+08:00
+lastmod = 2020-03-07T23:43:26+08:00
 draft = false
-math = true
 +++
 
 ## Partially Observable MDPs (POMDPs) {#partially-observable-mdps--pomdps}

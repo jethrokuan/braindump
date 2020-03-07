@@ -25,28 +25,28 @@ a prefix * to access the value referred to by the reference. In
 addition, a reference cannot be made to refer to a different object
 after its initialization.
 
-#+begin_src c++
-  int count_x(const char* p, char x) {
-    if (p == nullptr) return 0;
-    int count = 0;
-    for (; *p != 0; ++p) {
-      if (*p == x) {
-        ++count;
-      }
+#+BEGIN_SRC c++
+int count_x(const char* p, char x) {
+  if (p == nullptr) return 0;
+  int count = 0;
+  for (; *p != 0; ++p) {
+    if (*p == x) {
+      ++count;
     }
-    return count;
   }
-#+end_src
+  return count;
+}
+#+END_SRC
 
 * C++ Guidelines
 Follow the guidelines:
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
 
 ** Use General ~{}~ style declarations
-#+begin_src c++
-  int i1 = 7.8; // i1 becomes 7
-  int i2 {7.8}; // error: floating-point to integer conversion
-#+end_src
+#+BEGIN_SRC c++
+int i1 = 7.8; // i1 becomes 7
+int i2 {7.8}; // error: floating-point to integer conversion
+#+END_SRC
 
 The old ~=~ style is traditional and dates back to C. Conversions that
 lose information, are allowed and implicitly applied. These are the
@@ -55,40 +55,40 @@ price paid for C compatibility.
 ** Use non-member begin and end
 non-member begin and end supports more containers, such as arrays.
 #+BEGIN_SRC c++
-  vector<int> v;
-  int a[100];
+vector<int> v;
+int a[100];
 
-  // C++98
-  sort(v.begin(), v.end());
-  sort(&a[0], &a[0] + sizeof(a)/sizeof(a[0]));
- 
-  // C++11
-  sort( begin(v), end(v) );
-  sort( begin(a), end(a) );
+// C++98
+sort(v.begin(), v.end());
+sort(&a[0], &a[0] + sizeof(a)/sizeof(a[0]));
+
+// C++11
+sort( begin(v), end(v) );
+sort( begin(a), end(a) );
 #+END_SRC
 
 ** Lambda functions
 variables get passed through the square brackets.
 #+BEGIN_SRC c++
-  const int factor = 2;
+const int factor = 2;
 
-  std::for_each(myVec.begin(), myVec.end(), [factor](int& elem){
-    elem *= factor;
-  });
+std::for_each(myVec.begin(), myVec.end(), [factor](int& elem){
+  elem *= factor;
+});
 #+END_SRC
 
 ** using
 using is like typedef, but has less quirks.
 #+BEGIN_SRC c++
-  using Month = int;
+using Month = int;
 
-  class Date {
-      // ...
-  public:
-      Month month() const;  // do
-      int month();          // don't
-      // ...
-  };
+class Date {
+    // ...
+public:
+    Month month() const;  // do
+    int month();          // don't
+    // ...
+};
 #+END_SRC
 ** avoid =endl=
 The endl manipulator is mostly equivalent to '\n' and "\n"; as most
@@ -142,7 +142,7 @@ cin/cout is actually faster; but C++ slows it down to sync it with
 C-style io. If using only one style (cin), you can achieve greater IO
 speed with:
 #+BEGIN_SRC c++
-  std::ios::sync_with_stdio(false);
+std::ios::sync_with_stdio(false);
 #+END_SRC
 
 * Smart pointers
@@ -150,7 +150,7 @@ speed with:
 Here's a summary of smart-pointers and their semantics. [[https://github.com/loopperfect/valuable][value_ptr]] is
 not in the stdlib, but is available as a C++ library.
 
-#+CAPTION: Tabular summary of smart pointers cite:buckar_c_packag_manag_missing
+#+CAPTION: Tabular summary of smart pointers
 [[file:images/cplusplus/screenshot_2019-02-24_17-27-51.png]]
 
 ** shared_ptr
@@ -160,17 +160,17 @@ shared pointer will take care of it once it goes out of scope. To
 create a ~shared_ptr~, use ~make_shared~. It's fast in memory allocation
 compared to ~new~. cite:codesbay_codes_cplus_smart
 
-#+begin_src cpp
-  class Sample {
-  public:
-    Sample() { cout << "Constructor make_shared" << endl; }
-    ~Sample() { cout << "Destructor make_shared" << endl; }
-  };
-  int main() {
-    shared_ptr<Sample> sp = make_shared<Sample>();
-    return 0;
-  }
-#+end_src
+#+BEGIN_SRC cpp
+class Sample {
+public:
+  Sample() { cout << "Constructor make_shared" << endl; }
+  ~Sample() { cout << "Destructor make_shared" << endl; }
+};
+int main() {
+  shared_ptr<Sample> sp = make_shared<Sample>();
+  return 0;
+}
+#+END_SRC
 
 ** unique_ptr
 Like shared_ptr<>, there is no need to call delete or clean the memory

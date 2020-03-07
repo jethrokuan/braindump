@@ -1,9 +1,8 @@
 +++
 title = "Markov Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T21:00:29+08:00
+lastmod = 2020-03-07T23:43:29+08:00
 draft = false
-math = true
 +++
 
 ## Markov Localization {#markov-localization}

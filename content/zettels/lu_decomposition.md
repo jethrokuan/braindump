@@ -1,9 +1,8 @@
 +++
 title = "LU Decomposition"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-08T14:00:02+08:00
+lastmod = 2020-03-07T23:43:30+08:00
 draft = false
-math = true
 +++
 
 The key problem of Linear Algebra ([§linear\_algebra]({{< relref "linear_algebra" >}})) is solving the

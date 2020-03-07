@@ -1,10 +1,13 @@
 +++
 title = "Temp Coding with Alpha Synaptic Function"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:38:05+08:00
+lastmod = 2020-03-07T23:09:38+08:00
 draft = false
-math = true
 +++
+
+tags
+: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})
+
 
 ## Temporal Coding with Alpha Synaptic Function <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ">(Comsa et al., 2019)</a> {#temporal-coding-with-alpha-synaptic-function}
 

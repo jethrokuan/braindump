@@ -1,7 +1,7 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T15:03:15+08:00
+lastmod = 2020-03-07T23:43:03+08:00
 draft = false
 +++
 

@@ -1,9 +1,8 @@
 +++
 title = "Gaussian Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-09T17:34:13+08:00
+lastmod = 2020-03-07T23:43:29+08:00
 draft = false
-math = true
 +++
 
 In supervised learning, we are given training data \\(\mathcal{D}\\), and

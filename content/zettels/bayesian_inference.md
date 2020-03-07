@@ -1,7 +1,7 @@
 +++
 title = "Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-22T21:20:02+08:00
+lastmod = 2020-03-07T23:43:46+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -169,7 +169,7 @@ Gaussians. <a id="c5f035041f058fd1352e35f072c0a5d4" href="#johndrow17_bayes_shri
 # Bibliography
 <a id="pati17_statis_optim_variat_bayes" target="_blank">Pati, D., Bhattacharya, A., & Yang, Y., *On statistical optimality of variational bayes*, CoRR, *()*,  (2017). </a> [↩](#2c492bb886c456a5902b643d9a6547e6)
 
-<a id="pmlr-v38-srivastava15" target="_blank">Srivastava, S., Cevher, V., Dinh, Q., & Dunson, D., *WASP: Scalable Bayes via barycenters of subset posteriors*, In G. Lebanon, & S. V. N. Vishwanathan, Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics (pp. 912–920) (2015). San Diego, California, USA: PMLR.</a> [↩](#fe703421bbe5a5c7e4c07c7126a629f3)
+<a id="pmlr-v38-srivastava15" target="_blank">Srivastava, S., Cevher, V., Dinh, Q., & Dunson, D., *Wasp: scalable bayes via barycenters of subset posteriors*, In G. Lebanon, & S. V. N. Vishwanathan, Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics (pp. 912–920) (2015). San Diego, California, USA: PMLR.</a> [↩](#fe703421bbe5a5c7e4c07c7126a629f3)
 
 <a id="li16_simpl_scalab_accur_poster_inter_estim" target="_blank">Li, C., Srivastava, S., & Dunson, D. B., *Simple, scalable and accurate posterior interval estimation*, CoRR, *()*,  (2016). </a> [↩](#3c24d71d7ae6f354df816d37ea172f1a)
 

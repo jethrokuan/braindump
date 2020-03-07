@@ -1,9 +1,8 @@
 +++
 title = "State Estimation"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T13:34:56+08:00
+lastmod = 2020-03-07T23:43:01+08:00
 draft = false
-math = true
 +++
 
 State estimation seeks to recover state variables from the data.

@@ -4,7 +4,7 @@
 
 - link :: [[https://slideslive.com/38921489/deep-learning-with-bayesian-principles][Mohammad Emtiyaz Khan | Deep Learning with Bayesian Principles · SlidesLive]]
 - speaker :: [[file:emtiyaz_khan.org][Emtiyaz Khan]]
-- tags :: [[file:bayesian_deep_learning.org][Bayesian Deep Learning]], [[file:20200217215815_neurips.org][NeurIPS]]
+- tags :: [[file:bayesian_deep_learning.org][Bayesian Deep Learning]], [[file:neurips.org][NeurIPS]]
 
 * Goals
 

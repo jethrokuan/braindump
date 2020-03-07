@@ -10,7 +10,7 @@
 - [[file:robot_motion.org][§robot_motion]]
 - [[file:range_finder_model.org][§range_finder_model]]
 - [[file:occupancy_grid_mapping.org][§occupancy_grid_mapping]]
-- [[file:slam.org][§slam]]
+- [[file:slam.org][Simultaneous Localization and Mapping (SLAM)]]
 
 * Tools
 - [[file:ros.org][§ros]]

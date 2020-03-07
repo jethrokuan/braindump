@@ -1,9 +1,8 @@
 +++
 title = "Google Cloud Platform"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:34+08:00
+lastmod = 2020-03-07T23:43:33+08:00
 draft = false
-math = true
 +++
 
 ## Cloud ML {#cloud-ml}

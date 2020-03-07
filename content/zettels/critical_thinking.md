@@ -1,9 +1,8 @@
 +++
 title = "Critical Thinking"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:30+08:00
+lastmod = 2020-03-07T23:42:50+08:00
 draft = false
-math = true
 +++
 
 ## Introduction {#introduction}

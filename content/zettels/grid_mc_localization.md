@@ -1,9 +1,8 @@
 +++
 title = "Grid & Monte Carlo Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T18:15:21+08:00
+lastmod = 2020-03-07T23:43:00+08:00
 draft = false
-math = true
 +++
 
 Grid & Monte Carlo Localization methods are able to solve global

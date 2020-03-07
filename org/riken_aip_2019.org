@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Riken AIP Workshop 2019
 
 * Weakly Supervised Classification

@@ -1,9 +1,8 @@
 +++
 title = "Two Levels Of Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-03T09:58:28+08:00
+lastmod = 2020-03-07T23:43:12+08:00
 draft = false
-math = true
 +++
 
 There are 2 levels of inference: model fitting and model comparison.

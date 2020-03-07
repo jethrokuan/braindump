@@ -1,9 +1,8 @@
 +++
 title = "Cryptography"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-13T13:51:32+08:00
+lastmod = 2020-03-07T23:42:57+08:00
 draft = false
-math = true
 +++
 
 ## Diffie-Hellman Algorithm {#diffie-hellman-algorithm}

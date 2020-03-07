@@ -1,7 +1,7 @@
 +++
 title = "Game API Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:12:02+08:00
+lastmod = 2020-03-07T23:42:44+08:00
 draft = false
 +++
 

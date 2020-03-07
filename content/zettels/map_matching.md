@@ -1,9 +1,8 @@
 +++
 title = "Map Matching"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-03T23:02:51+08:00
+lastmod = 2020-03-07T23:43:04+08:00
 draft = false
-math = true
 +++
 
 Map matching compiles small numbers of consecutive scans into

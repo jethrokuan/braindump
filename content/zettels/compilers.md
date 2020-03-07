@@ -1,10 +1,9 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-28T18:53:33+08:00
+lastmod = 2020-03-07T23:43:39+08:00
 tags = ["proglang", "compilers"]
 draft = false
-math = true
 +++
 
 ## What are compilers? {#what-are-compilers}

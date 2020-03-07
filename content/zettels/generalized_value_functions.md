@@ -1,9 +1,8 @@
 +++
 title = "Generalized Value Functions"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-15T13:45:20+08:00
+lastmod = 2020-03-07T23:43:05+08:00
 draft = false
-math = true
 +++
 
 (TODO)

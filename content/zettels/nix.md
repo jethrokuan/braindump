@@ -1,7 +1,7 @@
 +++
 title = "Nix/NixOS"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-11T18:54:10+08:00
+lastmod = 2020-03-07T23:43:12+08:00
 draft = false
 +++
 

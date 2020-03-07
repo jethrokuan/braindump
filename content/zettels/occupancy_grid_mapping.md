@@ -1,9 +1,8 @@
 +++
 title = "Occupancy Grid Mapping"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-06T15:55:54+08:00
+lastmod = 2020-03-07T23:43:00+08:00
 draft = false
-math = true
 +++
 
 In [§robot\_localization]({{< relref "robot_localization" >}}), it is assumed that the robot is given a map in

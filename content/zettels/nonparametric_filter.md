@@ -1,9 +1,8 @@
 +++
 title = "Non-parametric Filters"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T20:56:55+08:00
+lastmod = 2020-03-07T23:42:59+08:00
 draft = false
-math = true
 +++
 
 Non-parametric filters do not make strong assumptions on the posterior

@@ -1,10 +1,9 @@
 +++
 title = "Hopfield Network"
 author = ["Jethro Kuan"]
-lastmod = 2019-03-27T07:29:45+08:00
+lastmod = 2020-03-07T23:43:40+08:00
 tags = ["machine-learning"]
 draft = false
-math = true
 +++
 
 A Hopfield network is a fully connected [Ising model]({{< relref "ising_models" >}}) with a symmetric

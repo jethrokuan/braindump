@@ -1,9 +1,8 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-14T08:50:31+08:00
+lastmod = 2020-03-07T23:42:47+08:00
 draft = false
-math = true
 +++
 
 ## Definitions {#definitions}

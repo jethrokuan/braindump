@@ -1,7 +1,7 @@
 +++
 title = "Interval Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-18T23:26:36+08:00
+lastmod = 2020-03-07T23:43:14+08:00
 draft = false
 +++
 

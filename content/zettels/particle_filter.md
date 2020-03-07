@@ -1,9 +1,8 @@
 +++
 title = "Particle Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-05T21:39:56+08:00
+lastmod = 2020-03-07T23:43:38+08:00
 draft = false
-math = true
 +++
 
 Particle filters approximate the posterior by a finite number of

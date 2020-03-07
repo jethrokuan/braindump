@@ -1,7 +1,7 @@
 +++
 title = "Org-Mode"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-09T20:31:26+08:00
+lastmod = 2020-03-07T23:43:02+08:00
 draft = false
 +++
 

@@ -1,7 +1,6 @@
 +++
 title = "Experience Replay"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-19T18:18:26+08:00
+lastmod = 2020-03-07T23:43:31+08:00
 draft = false
-math = true
 +++

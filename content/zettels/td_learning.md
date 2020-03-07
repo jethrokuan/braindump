@@ -1,9 +1,8 @@
 +++
 title = "Temporal Difference Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T15:58:18+08:00
+lastmod = 2020-03-07T23:42:45+08:00
 draft = false
-math = true
 +++
 
 Observe samples \\(\left(s\_t, a\_t, r\_t, s\_{t+1} \right)\\). If value

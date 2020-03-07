@@ -1,7 +1,7 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T14:31:00+08:00
+lastmod = 2020-03-07T23:43:16+08:00
 draft = false
 +++
 

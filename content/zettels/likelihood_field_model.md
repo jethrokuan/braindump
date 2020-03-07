@@ -1,9 +1,8 @@
 +++
 title = "Likelihood Field Model"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-03T23:07:46+08:00
+lastmod = 2020-03-07T23:43:19+08:00
 draft = false
-math = true
 +++
 
 ## Key Idea {#key-idea}

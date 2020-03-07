@@ -1,27 +1,14 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2019-10-17T16:18:53+08:00
+lastmod = 2020-03-07T23:42:58+08:00
 draft = false
-math = true
 +++
 
 ## Introduction to ROS {#introduction-to-ros}
 
 
-### What is ROS? <a id="b049e1028daa027cae7888fe4de0456c" href="#nilil_ros_introd_ros_wiki" title="@misc{nilil_ros_introd_ros_wiki,
-  author =       {nil},
-  howpublished = {http://wiki.ros.org/ROS/Introduction},
-  note =         {Online; accessed 15 October 2019},
-  title =        {ROS/Introduction - ROS Wiki},
-  year =         {nil},
-}">@misc{nilil_ros_introd_ros_wiki,
-  author =       {nil},
-  howpublished = {http://wiki.ros.org/ROS/Introduction},
-  note =         {Online; accessed 15 October 2019},
-  title =        {ROS/Introduction - ROS Wiki},
-  year =         {nil},
-}</a> {#what-is-ros-a-id-b049e1028daa027cae7888fe4de0456c-href-nilil-ros-introd-ros-wiki-title-misc-nilil-ros-introd-ros-wiki-author-nil-howpublished-http-wiki-dot-ros-dot-org-ros-introduction-note-online-accessed-15-october-2019-title-ros-introduction-ros-wiki-year-nil-misc-nilil-ros-introd-ros-wiki-author-nil-howpublished-http-wiki-dot-ros-dot-org-ros-introduction-note-online-accessed-15-october-2019-title-ros-introduction-ros-wiki-year-nil-a}
+### What is ROS? <a id="b049e1028daa027cae7888fe4de0456c" href="#nilil_ros_introd_ros_wiki">(nil, nil)</a> {#what-is-ros}
 
 -    Left     :B_column:
 
@@ -299,25 +286,7 @@ rosparam list           # list parameter names
 ```
 
 
-## Pubsub <a id="0eb03dca701c737878a6bf71343edd56" href="#wiki_pubsub" title="@misc{wiki_pubsub,
-  author =       {nil},
-  howpublished =
-                  {http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber
-                  \%28python \%29},
-  note =         {Online; accessed 17 October 2019},
-  title =        {ROS/Tutorials/WritingPublisherSubscriber(python) -
-                  ROS Wiki},
-  year =         {nil},
-}">@misc{wiki_pubsub,
-  author =       {nil},
-  howpublished =
-                  {http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber
-                  \%28python \%29},
-  note =         {Online; accessed 17 October 2019},
-  title =        {ROS/Tutorials/WritingPublisherSubscriber(python) -
-                  ROS Wiki},
-  year =         {nil},
-}</a> {#pubsub-a-id-0eb03dca701c737878a6bf71343edd56-href-wiki-pubsub-title-misc-wiki-pubsub-author-nil-howpublished-http-wiki-dot-ros-dot-org-ros-tutorials-writingpublishersubscriber-28python-29-note-online-accessed-17-october-2019-title-ros-tutorials-writingpublishersubscriber--python--ros-wiki-year-nil-misc-wiki-pubsub-author-nil-howpublished-http-wiki-dot-ros-dot-org-ros-tutorials-writingpublishersubscriber-28python-29-note-online-accessed-17-october-2019-title-ros-tutorials-writingpublishersubscriber--python--ros-wiki-year-nil-a}
+## Pubsub <a id="0eb03dca701c737878a6bf71343edd56" href="#wiki_pubsub">(nil, nil)</a> {#pubsub}
 
 
 ### When do we use topics? {#when-do-we-use-topics}
@@ -439,25 +408,7 @@ rospy.spin()                    # spin
 ```
 
 
-## Services <a id="d9f8b17a885ac23c956840df53cacd3f" href="#wiki_service" title="@misc{wiki_service,
-  author =       {nil},
-  howpublished =
-                  {http://wiki.ros.org/ROS/Tutorials/WritingServiceClient
-                  \%28python \%29},
-  note =         {Online; accessed 17 October 2019},
-  title =        {ROS/Tutorials/WritingServiceClient(python) - ROS
-                  Wiki},
-  year =         {nil},
-}">@misc{wiki_service,
-  author =       {nil},
-  howpublished =
-                  {http://wiki.ros.org/ROS/Tutorials/WritingServiceClient
-                  \%28python \%29},
-  note =         {Online; accessed 17 October 2019},
-  title =        {ROS/Tutorials/WritingServiceClient(python) - ROS
-                  Wiki},
-  year =         {nil},
-}</a> {#services-a-id-d9f8b17a885ac23c956840df53cacd3f-href-wiki-service-title-misc-wiki-service-author-nil-howpublished-http-wiki-dot-ros-dot-org-ros-tutorials-writingserviceclient-28python-29-note-online-accessed-17-october-2019-title-ros-tutorials-writingserviceclient--python--ros-wiki-year-nil-misc-wiki-service-author-nil-howpublished-http-wiki-dot-ros-dot-org-ros-tutorials-writingserviceclient-28python-29-note-online-accessed-17-october-2019-title-ros-tutorials-writingserviceclient--python--ros-wiki-year-nil-a}
+## Services <a id="d9f8b17a885ac23c956840df53cacd3f" href="#wiki_service">(nil, nil)</a> {#services}
 
 
 ### Msg and Srv {#msg-and-srv}
@@ -655,19 +606,7 @@ source devel/setup.bash
 
 -    Ubuntu
 
-    Follow the instructions on ROS Wiki. <a id="74cf41bb1b0292dffcecca4fe9f40ef7" href="#nilil_instal_ubunt_ros_wiki" title="@misc{nilil_instal_ubunt_ros_wiki,
-      author =       {nil},
-      howpublished = {http://wiki.ros.org/melodic/Installation/Ubuntu},
-      note =         {Online; accessed 16 October 2019},
-      title =        {melodic/Installation/Ubuntu - ROS Wiki},
-      year =         {nil},
-    }">@misc{nilil_instal_ubunt_ros_wiki,
-      author =       {nil},
-      howpublished = {http://wiki.ros.org/melodic/Installation/Ubuntu},
-      note =         {Online; accessed 16 October 2019},
-      title =        {melodic/Installation/Ubuntu - ROS Wiki},
-      year =         {nil},
-    }</a>
+    Follow the instructions on ROS Wiki. <a id="74cf41bb1b0292dffcecca4fe9f40ef7" href="#nilil_instal_ubunt_ros_wiki">(nil, nil)</a>
 
 -    VM
 
@@ -677,13 +616,13 @@ source devel/setup.bash
 ## References {#references}
 
 # Bibliography
-<a id="nilil_ros_introd_ros_wiki"></a>nil,  (nil). *Ros/introduction - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Introduction](http://wiki.ros.org/ROS/Introduction). Online; accessed 15 October 2019. [↩](#b049e1028daa027cae7888fe4de0456c)
+<a id="nilil_ros_introd_ros_wiki" target="_blank">nil,  (nil). *Ros/introduction - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Introduction](http://wiki.ros.org/ROS/Introduction). Online; accessed 15 October 2019.</a> [↩](#b049e1028daa027cae7888fe4de0456c)
 
-<a id="wiki_pubsub"></a>nil,  (nil). *Ros/tutorials/writingpublishersubscriber(python) - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber \%28python \%29). Online; accessed 17 October 2019. [↩](#0eb03dca701c737878a6bf71343edd56)
+<a id="wiki_pubsub" target="_blank">nil,  (nil). *Ros/tutorials/writingpublishersubscriber(python) - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber \%28python \%29). Online; accessed 17 October 2019.</a> [↩](#0eb03dca701c737878a6bf71343edd56)
 
-<a id="wiki_service"></a>nil,  (nil). *Ros/tutorials/writingserviceclient(python) - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29). Online; accessed 17 October 2019. [↩](#d9f8b17a885ac23c956840df53cacd3f)
+<a id="wiki_service" target="_blank">nil,  (nil). *Ros/tutorials/writingserviceclient(python) - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29). Online; accessed 17 October 2019.</a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
 
-<a id="nilil_instal_ubunt_ros_wiki"></a>nil,  (nil). *Melodic/installation/ubuntu - ros wiki*. Retrieved from [http://wiki.ros.org/melodic/Installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu). Online; accessed 16 October 2019. [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
+<a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil,  (nil). *Melodic/installation/ubuntu - ros wiki*. Retrieved from [http://wiki.ros.org/melodic/Installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu). Online; accessed 16 October 2019.</a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
 
 [^fn:1]: Almost all these commands have tab completion!
 [^fn:2]: can also be done programatically

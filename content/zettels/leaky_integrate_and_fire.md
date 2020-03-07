@@ -1,7 +1,7 @@
 +++
 title = "Leaky Integrate-And-Fire"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:17:45+08:00
+lastmod = 2020-03-07T23:43:34+08:00
 draft = false
 +++
 

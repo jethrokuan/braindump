@@ -1,18 +1,18 @@
 +++
 title = "How To Know - Celeste Kidd"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-17T21:58:57+08:00
+lastmod = 2020-03-07T23:42:50+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "machine_learning" >}}), [NeurIPS]({{< relref "20200217215815_neurips" >}})
+: [Machine Learning]({{< relref "machine_learning" >}}), [NeurIPS]({{< relref "neurips" >}})
 
 link
 : [Celeste Kidd | How to Know · SlidesLive](https://slideslive.com/38921495/how-to-know)
 
 speaker
-: [Celeste Kidd]({{< relref "20200217215856_celeste_kidd" >}})
+: [Celeste Kidd]({{< relref "celeste_kidd" >}})
 
 Why are we curious about some things but not others? What are the core
 cognitive systems that people use to guide their learning about the

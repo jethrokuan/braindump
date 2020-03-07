@@ -1,9 +1,8 @@
 +++
 title = "Robot Motion"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T21:24:38+08:00
+lastmod = 2020-03-07T23:43:31+08:00
 draft = false
-math = true
 +++
 
 Probabilistic robotics generalizes kinematics equations to the fact

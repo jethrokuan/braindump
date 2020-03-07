@@ -1,7 +1,7 @@
 +++
 title = "Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-15T22:22:36+08:00
+lastmod = 2020-03-07T23:43:04+08:00
 draft = false
 +++
 

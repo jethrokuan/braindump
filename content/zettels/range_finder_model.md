@@ -1,9 +1,8 @@
 +++
 title = "Range Finder Model"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-03T22:49:21+08:00
+lastmod = 2020-03-07T23:43:21+08:00
 draft = false
-math = true
 +++
 
 ## Beam Model for Range Finders {#beam-model-for-range-finders}

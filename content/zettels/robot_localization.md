@@ -1,9 +1,8 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T18:15:55+08:00
+lastmod = 2020-03-07T23:43:37+08:00
 draft = false
-math = true
 +++
 
 Mobile robot localization is the problem of estimating the robots

@@ -1,9 +1,8 @@
 +++
 title = "Sleep"
 author = ["Jethro Kuan"]
-lastmod = 2019-10-11T15:43:54+08:00
+lastmod = 2020-03-07T23:42:50+08:00
 draft = false
-math = true
 +++
 
 ## Everyman {#everyman}

@@ -1,4 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
+#+TITLE: Rover
 
 * Landing a Rover
 Landing on Mars is challenging because there's is too much
@@ -22,7 +23,6 @@ Things to account for:
   parts were heated to operating temperature before functioning.
 - Have a system collecting heat output from energy
 
-* 
 
 bibliography:biblio/rover.bib
 

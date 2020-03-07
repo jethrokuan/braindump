@@ -1,9 +1,8 @@
 +++
 title = "LeCun's Cake Analogy"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:41:25+08:00
+lastmod = 2020-03-07T23:43:22+08:00
 draft = false
-math = true
 +++
 
 Yann LeCun gave this cake analogy in NIPS 2016:

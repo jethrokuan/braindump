@@ -1,7 +1,7 @@
 +++
 title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-28T10:13:01+08:00
+lastmod = 2020-03-07T23:44:40+08:00
 draft = false
 +++
 
@@ -13,7 +13,7 @@ distributions \\(P(x)\\) and \\(Q(x)\\) defined over the same alphabet
   D\_{\textrm{KL}}(P||Q) = \sum\_{x} P(x) \log \frac{P(x)}{Q(x)}
 \end{equation}
 
-Gibb's Inequality states that:
+Gibbs Inequality states that:
 
 \begin{equation}
   D\_{\textrm{KL}}(P||Q) \ge 0

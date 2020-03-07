@@ -1,9 +1,8 @@
 +++
 title = "Imitation Learning"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-15T14:51:29+08:00
+lastmod = 2020-03-07T23:43:19+08:00
 draft = false
-math = true
 +++
 
 ## Behavioural Cloning {#behavioural-cloning}
@@ -44,7 +43,7 @@ the algorithm, can we make \\(p\_{data}(o\_t) = p\_{\pi\_\theta}(o\_t)\\)?
         observation.
     2.  Perhaps a better model is to account for all observations.
     3.  Problem: history exacerbates causal confusion
-        <a id="97004a1ab6778a90f591ea58fde11d3c" href="#haan19_causal_confus_imitat_learn" title="Haan, Jayaraman, Levine \&amp; Sergey, Causal Confusion in Imitation Learning, {CoRR}, v(), (2019).">(Haan et al., 2019)</a>
+        <a id="97004a1ab6778a90f591ea58fde11d3c" href="#haan19_causal_confus_imitat_learn">(Haan et al., 2019)</a>
 
 2.  Multimodal behaviour
     1.  Solutions:
@@ -86,4 +85,4 @@ Assuming: \\(\pi\_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathb
 {{< figure src="/ox-hugo/screenshot2019-12-15_14-50-49_.png" caption="Figure 2: The tightrope walking problem" >}}
 
 # Bibliography
-<a id="haan19_causal_confus_imitat_learn"></a>Haan, P. d., Jayaraman, D., & Levine, S., *Causal confusion in imitation learning*, CoRR, *()*,  (2019).  [↩](#97004a1ab6778a90f591ea58fde11d3c)
+<a id="haan19_causal_confus_imitat_learn" target="_blank">Haan, P. d., Jayaraman, D., & Levine, S., *Causal confusion in imitation learning*, CoRR, *()*,  (2019). </a> [↩](#97004a1ab6778a90f591ea58fde11d3c)

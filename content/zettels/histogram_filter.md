@@ -1,9 +1,8 @@
 +++
 title = "Histogram Filter"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-01T20:27:27+08:00
+lastmod = 2020-03-07T23:43:06+08:00
 draft = false
-math = true
 +++
 
 The state space is decomposed into finitely many regions, and the

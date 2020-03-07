@@ -1,11 +1,11 @@
 +++
 title = "Slice Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-13T00:33:26+08:00
+lastmod = 2020-03-07T23:43:42+08:00
 draft = false
 +++
 
-Slice sampling has similarities to [Gibbs sampling]({{< relref "gibbs_sampling" >}}), [rejection sampling]({{< relref "rejection_sampling" >}})
+Slice sampling has similarities to [Gibbs sampling]({{< relref "gibbs_sampling" >}}), [Rejection Sampling]({{< relref "rejection_sampling" >}})
 and the [Metropolis-Hastings method]({{< relref "metropolis_hastings" >}}). The advantage over simple
 [Metropolis-Hastings]({{< relref "metropolis_hastings" >}}) methods is that it is robust to the choice of
 parameters. Like rejection sampling, it asymptotically draws samples

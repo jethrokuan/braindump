@@ -1,7 +1,7 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T16:38:23+08:00
+lastmod = 2020-03-07T23:42:51+08:00
 draft = false
 +++
 

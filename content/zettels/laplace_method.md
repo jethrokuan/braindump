@@ -1,9 +1,8 @@
 +++
 title = "Laplace's Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-02T21:14:26+08:00
+lastmod = 2020-03-07T23:43:31+08:00
 draft = false
-math = true
 +++
 
 Suppose we have an unnormalized probability density \\(P^\star(x)\\),

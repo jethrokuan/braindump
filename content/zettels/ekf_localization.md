@@ -1,9 +1,8 @@
 +++
 title = "EKF Localization"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-05T14:19:27+08:00
+lastmod = 2020-03-07T23:42:51+08:00
 draft = false
-math = true
 +++
 
 ## EKF localization {#ekf-localization}

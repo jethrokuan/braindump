@@ -1,9 +1,8 @@
 +++
 title = "Trigger List"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:40:34+08:00
+lastmod = 2020-03-07T23:43:20+08:00
 draft = false
-math = true
 +++
 
 ## Trigger List {#trigger-list}

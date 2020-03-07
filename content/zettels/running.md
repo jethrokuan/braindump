@@ -1,9 +1,8 @@
 +++
 title = "Running"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-11T12:54:22+08:00
+lastmod = 2020-03-07T23:43:15+08:00
 draft = false
-math = true
 +++
 
 ## Running Form {#running-form}

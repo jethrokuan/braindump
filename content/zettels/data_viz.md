@@ -1,9 +1,8 @@
 +++
 title = "Data Visualization"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T21:51:49+08:00
+lastmod = 2020-03-07T23:42:48+08:00
 draft = false
-math = true
 +++
 
 ## References {#references}
@@ -15,7 +14,7 @@ math = true
 
 ## Program {#program}
 
-{{< figure src="images/data_viz/program2_2018-07-30_09-16-28.png" >}}
+{{< figure src="/ox-hugo/program2_2018-07-30_09-16-28.png" >}}
 
 
 ## Tools {#tools}
@@ -104,7 +103,7 @@ DeepTree
 
 ### Gestalt Principles {#gestalt-principles}
 
-{{< figure src="images/data_viz/th_2018-07-30_09-47-57.jpeg" >}}
+{{< figure src="/ox-hugo/th_2018-07-30_09-47-57.jpeg" >}}
 
 Representations should be _correct_, _accurate_ and _truthful_.
 
@@ -131,35 +130,34 @@ visualization. Keep proportions and relative sizes.
 
 maximize data-ink ratio
 
+-    Steven's Psychological Power Law
 
-#### Steven's Psychological Power Law {#steven-s-psychological-power-law}
+    <https://en.wikipedia.org/wiki/Stevens%27s%5Fpower%5Flaw>
 
-<https://en.wikipedia.org/wiki/Stevens%27s%5Fpower%5Flaw>
+    ![](/ox-hugo/th_2018-07-30_11-04-03.jpeg)
+    Steven's psychophysical power law:
 
-![](images/data_viz/th_2018-07-30_11-04-03.jpeg)
-Steven's psychophysical power law:
+    \begin{equation}
+    \text{Perceived sensation} = \text{Physical Intensity}^T
+    \end{equation}
 
-\begin{equation}
-\text{Perceived sensation} = \text{Physical Intensity}^T
-\end{equation}
+    Compensating for human's over/underestimation:
 
-Compensating for human's over/underestimation:
+    {{< figure src="/ox-hugo/screenshot_2018-07-30_11-09-25.png" >}}
 
-{{< figure src="images/data_viz/screenshot_2018-07-30_11-09-25.png" >}}
+    Difficult to focus on one channel when multiple channels are
+    presented. (Redudancy is bad!)
 
-Difficult to focus on one channel when multiple channels are
-presented. (Redudancy is bad!)
+    Visual mapping - Separable vs integral visual channels
 
-Visual mapping - Separable vs integral visual channels
-
--   Color + position
--   Color + size
--   Width + height
--   Red + green\* Unfiled
--   <https://en.wikipedia.org/wiki/Tutte%5Fembedding>
--   Reingold-Tilford Algorithm
-    -   <https://stackoverflow.com/questions/13128750/what-are-the-step-to-the-reingold-tilford-algorithm-and-how-might-i-program-it>
--
+    -   Color + position
+    -   Color + size
+    -   Width + height
+    -   Red + green\* Unfiled
+    -   <https://en.wikipedia.org/wiki/Tutte%5Fembedding>
+    -   Reingold-Tilford Algorithm
+        -   <https://stackoverflow.com/questions/13128750/what-are-the-step-to-the-reingold-tilford-algorithm-and-how-might-i-program-it>
+    -
 
 
 ## Scientific Data Visualization - Stefan Bruckner {#scientific-data-visualization-stefan-bruckner}
@@ -205,212 +203,192 @@ Visual mapping - Separable vs integral visual channels
 -   Calculations within the data possible?
 -   Are the data structured?
 
+-    Regular Grid
 
-#### Regular Grid {#regular-grid}
+    -   Orthogonal, equidistant grid
+    -   Sample distances not equal
+    -   Implicit neighborhood-relationship
 
--   Orthogonal, equidistant grid
--   Sample distances not equal
--   Implicit neighborhood-relationship
+-    Rectilinear Grid
 
+    -   Orthogonal grid
+    -   Varying sample distances (\\(x[i], y[j]\\) given)
+    -   Allows you to place more samples in areas that are more important to
+        you, not wasting storage in uninterested areas
 
-#### Rectilinear Grid {#rectilinear-grid}
+-    Curvilinear Grid
 
--   Orthogonal grid
--   Varying sample distances (\\(x[i], y[j]\\) given)
--   Allows you to place more samples in areas that are more important to
-    you, not wasting storage in uninterested areas
+    -   Non-orthogonal grid
+    -   Grid-points explicitly given (\\(x[i,j]\\))
+    -   Implicit neighborhood relationship
 
+-    Block-structured Grid
 
-#### Curvilinear Grid {#curvilinear-grid}
+    -   Combination of structured grids
 
--   Non-orthogonal grid
--   Grid-points explicitly given (\\(x[i,j]\\))
--   Implicit neighborhood relationship
+-    Unstructured Grid
 
+    -   Grid-points and connections arbitrary
+    -   Grid-points and neighborhood explicitly given
+    -   Cells: tetrahedra
 
-#### Block-structured Grid {#block-structured-grid}
+-   <span class="org-todo todo TODO">TODO</span>  Other Grids SUMMARY OF GRID TYPES
 
--   Combination of structured grids
+    -   Non-cartesian Coordinates
 
+-    Scattered Data
 
-#### Unstructured Grid {#unstructured-grid}
+    -   Grid-free data
 
--   Grid-points and connections arbitrary
--   Grid-points and neighborhood explicitly given
--   Cells: tetrahedra
+    > Interesting to look at dimensionality of data space, vs dimensionality
+    > of data attributes
 
+-    Data Enhancement
 
-#### <span class="org-todo todo TODO">TODO</span> Other Grids SUMMARY OF GRID TYPES {#other-grids-summary-of-grid-types}
+    -   Filtering
+    -   Resampling
+    -   Data derivation
+    -   Data interpolation
 
--   Non-cartesian Coordinates
+-    Data, Visualization, Interaction
 
+    -   Coupling varies considerably
+        -   Data Generation (data acquisition)
+            -   Mesaurement, simulation, modelling
+            -   Can take very long, and be very costly
+        -   Visualization (rest of visualization pipeline)
+            -   Data enhancement, viz mapping, rendering
+            -   Depending on implementation, fast/slow
+        -   Interaction
+            -   How can the user intervene, vary parameters
 
-#### Scattered Data {#scattered-data}
+-    Interactive Steering
 
--   Grid-free data
+    -   Simulation and modelling generate data "on the fly"
+    -   Allows real-time insight of the data
+    -   User can interfere with the simulation, and change the design of the
+        simulations
 
-> Interesting to look at dimensionality of data space, vs dimensionality
-> of data attributes
+-    Volume Visualization
 
+    -   the visualization of 3D scalar fields
+    -   Mapping 3D -> 2D
+    -   Projection (e.g. MIP), slicing, volume rendering
+    -   Volume data is 3Dx1D data
+    -   Scalar data, 3D data space, space filling
+    -   User wants to gain insight into 3D data, find structures of special
+        interest + context
 
-#### Data Enhancement {#data-enhancement}
+    -    Organization of Volume Data
 
--   Filtering
--   Resampling
--   Data derivation
--   Data interpolation
+        1.  Cartesian or Regular grid
+            1.  CT/MR, often dx=dy<dz
+            2.  Data enhancement: iso-stack-calculation
+        2.  Curvilinear, unstructured grid
 
+-    Challenges
 
-#### Data, Visualization, Interaction {#data-visualization-interaction}
+    -   So much information, so few pixels
+    -   How to identify and enhance relevant features in the data.
+    -   Speed and interaction very important
 
--   Coupling varies considerably
-    -   Data Generation (data acquisition)
-        -   Mesaurement, simulation, modelling
-        -   Can take very long, and be very costly
-    -   Visualization (rest of visualization pipeline)
-        -   Data enhancement, viz mapping, rendering
-        -   Depending on implementation, fast/slow
-    -   Interaction
-        -   How can the user intervene, vary parameters
+-    Voxels vs Cells
 
+    -   pixels = picture element, voxels = volume element
+    -   A voxel is a point sample in 3D, not necessarily interpolated
+    -   Cell is a cube primitive, and the corners are 8 voxels. Values in
+        cell use interpolation.
 
-#### Interactive Steering {#interactive-steering}
+-    Linear Interpolation
 
--   Simulation and modelling generate data "on the fly"
--   Allows real-time insight of the data
--   User can interfere with the simulation, and change the design of the
-    simulations
+    -   Current GPUs automatically do trilinear interpolation of 3D textures
 
+-    Evaluating Quality of Reconstruction
 
-#### Volume Visualization {#volume-visualization}
+    -   Marshner-Lobb function is a common test signal to evaluate the
+        quality of reconstruction filters
+    -   Signal has a high amount of energy near its Nyquist frequency
 
--   the visualization of 3D scalar fields
--   Mapping 3D -> 2D
--   Projection (e.g. MIP), slicing, volume rendering
--   Volume data is 3Dx1D data
--   Scalar data, 3D data space, space filling
--   User wants to gain insight into 3D data, find structures of special
-    interest + context
+-    Classification
 
--    Organization of Volume Data
+    -   Using data values, gradiant and curvature, segment data into
+        multiple semantic regions
+    -   Often semi-automatic or fully manual
+    -   Automatic approximation: transfer functions
+        -   Simplest example of 1D transfer function: data value -> color
 
-    1.  Cartesian or Regular grid
-        1.  CT/MR, often dx=dy<dz
-        2.  Data enhancement: iso-stack-calculation
-    2.  Curvilinear, unstructured grid
+-    Visualization Approaches
 
+    Slicing
+    : display of 2D cross sections
 
-#### Challenges {#challenges}
+    Indirect Volume Rendering
+    : Extraction of an intermediate representation
 
--   So much information, so few pixels
--   How to identify and enhance relevant features in the data.
--   Speed and interaction very important
+    Direct Volume Rendering
+    : Direct display of representation
 
+-   <span class="org-todo todo TODO">TODO</span>  Isosurface Similarity
 
-#### Voxels vs Cells {#voxels-vs-cells}
+-    Visualization in the Spatial Domain
 
--   pixels = picture element, voxels = volume element
--   A voxel is a point sample in 3D, not necessarily interpolated
--   Cell is a cube primitive, and the corners are 8 voxels. Values in
-    cell use interpolation.
+    -    Slicing
 
+        -   Reduce the dimensionality of 3D t o2D by showing a cross section
+        -   Usually without a transfer function
+        -   Orthogonal slicing often used to slice along anatomical planes
+            in medical imagery
+        -   Oblique slicing has arbitrary slice orientation, often used in
+            an multi-planar reformation (MPR) setup.
+        -   Curved slices often tailored towards specific applications,
+            e.g. visualization of blood vessels.
 
-#### Linear Interpolation {#linear-interpolation}
+    -    Direct Volume Rendering
 
--   Current GPUs automatically do trilinear interpolation of 3D textures
+        -   Dense representation of underlying scalar field: transfer function
+            defines visible structure.
+        -   Image order (ray casting) fast and easy to implement, and are well
+            supported by current GPUs
+        -   Object order (splatting, texture slicing) also supported by older
+            GPUs, but difficult to skip non-visible regions. Easy to skip...(?)
+        -   Nowadays: shading/classification after interpolation/resampling
+        -   post/pre-interpolative classification order
 
+    -    Ray Tracing vs Ray Casting
 
-#### Evaluating Quality of Reconstruction {#evaluating-quality-of-reconstruction}
+        Ray tracing
+        : method from image generation, usig ray-object
+            intersection and tracing secondary rays.
 
--   Marshner-Lobb function is a common test signal to evaluate the
-    quality of reconstruction filters
--   Signal has a high amount of energy near its Nyquist frequency
+        Ray casting
+        : no objects, density values in 3D, only viewing rays.
 
+    -    Shading
 
-#### Classification {#classification}
+        lambertian reflection
+        : light reflected equally in all directions
 
--   Using data values, gradiant and curvature, segment data into
-    multiple semantic regions
--   Often semi-automatic or fully manual
--   Automatic approximation: transfer functions
-    -   Simplest example of 1D transfer function: data value -> color
+        specular reflection
+        : light reflected more in one direction
 
+        Make structures in volume data sets more realistic by applying an
+        illumination model
 
-#### Visualization Approaches {#visualization-approaches}
+        -   Shade each sample in the volume like a surface: [Blinn-Phong
+            illumination model](https://en.wikipedia.org/wiki/Blinn%25E2%2580%2593Phong%5Fshading%5Fmodel) commonly used.
+        -   Use normalized gradient vector as estimation for surface normal.
 
-Slicing
-: display of 2D cross sections
+-    Indirect Volume Rendering
 
-Indirect Volume Rendering
-: Extraction of an intermediate representation
+    -   Extract an intermediate representation from the volume (geometric
+        surface), then use traditional rendering methods
+    -   Cuberille regards each xovel as a little cube, classify as either
+        part of the object or not.
 
-Direct Volume Rendering
-: Direct display of representation
+    {{< figure src="/ox-hugo/th_2018-07-31_11-00-07.jpeg" >}}
 
-
-#### <span class="org-todo todo TODO">TODO</span> Isosurface Similarity {#isosurface-similarity}
-
-
-#### Visualization in the Spatial Domain {#visualization-in-the-spatial-domain}
-
--    Slicing
-
-    -   Reduce the dimensionality of 3D t o2D by showing a cross section
-    -   Usually without a transfer function
-    -   Orthogonal slicing often used to slice along anatomical planes
-        in medical imagery
-    -   Oblique slicing has arbitrary slice orientation, often used in
-        an multi-planar reformation (MPR) setup.
-    -   Curved slices often tailored towards specific applications,
-        e.g. visualization of blood vessels.
-
--    Direct Volume Rendering
-
-    -   Dense representation of underlying scalar field: transfer function
-        defines visible structure.
-    -   Image order (ray casting) fast and easy to implement, and are well
-        supported by current GPUs
-    -   Object order (splatting, texture slicing) also supported by older
-        GPUs, but difficult to skip non-visible regions. Easy to skip...(?)
-    -   Nowadays: shading/classification after interpolation/resampling
-    -   post/pre-interpolative classification order
-
--    Ray Tracing vs Ray Casting
-
-    Ray tracing
-    : method from image generation, usig ray-object
-        intersection and tracing secondary rays.
-
-    Ray casting
-    : no objects, density values in 3D, only viewing rays.
-
--    Shading
-
-    lambertian reflection
-    : light reflected equally in all directions
-
-    specular reflection
-    : light reflected more in one direction
-
-    Make structures in volume data sets more realistic by applying an
-    illumination model
-
-    -   Shade each sample in the volume like a surface: [Blinn-Phong
-        illumination model](https://en.wikipedia.org/wiki/Blinn%25E2%2580%2593Phong%5Fshading%5Fmodel) commonly used.
-    -   Use normalized gradient vector as estimation for surface normal.
-
-
-#### Indirect Volume Rendering {#indirect-volume-rendering}
-
--   Extract an intermediate representation from the volume (geometric
-    surface), then use traditional rendering methods
--   Cuberille regards each xovel as a little cube, classify as either
-    part of the object or not.
-
-{{< figure src="images/data_viz/th_2018-07-31_11-00-07.jpeg" >}}
-
-[Marching Cubes](https://en.wikipedia.org/wiki/Marching%5Fcubes) is a standard method for the extraction of isosurfaces
-from volume data
+    [Marching Cubes](https://en.wikipedia.org/wiki/Marching%5Fcubes) is a standard method for the extraction of isosurfaces
+    from volume data
 
 
 ### Flow Visualization {#flow-visualization}

@@ -1,9 +1,8 @@
 +++
 title = "Markovian Assumption"
 author = ["Jethro Kuan"]
-lastmod = 2019-11-29T15:41:04+08:00
+lastmod = 2020-03-07T23:42:44+08:00
 draft = false
-math = true
 +++
 
 **Key idea**: the past and future data are independent, conditioned on the

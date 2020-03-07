@@ -1,9 +1,8 @@
 +++
 title = "RSS Feeds"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-08T17:54:25+08:00
+lastmod = 2020-03-07T23:42:57+08:00
 draft = false
-math = true
 +++
 
 ## Feeds {#feeds}

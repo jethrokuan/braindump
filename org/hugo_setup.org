@@ -1,3 +1,5 @@
 #+HUGO_BASE_DIR: ..
+#+HUGO_SECTION: zettels
 #+hugo_auto_set_lastmod: t
 #+OPTIONS: H:2
+

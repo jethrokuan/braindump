@@ -1,10 +1,12 @@
 +++
 title = "Robot Kinematics"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-03T22:41:00+08:00
+lastmod = 2020-03-07T23:43:15+08:00
 draft = false
-math = true
 +++
+
+tags
+: [Velocity Motion Model]({{< relref "velocity_motion_model" >}}), [Odometry Motion Model]({{< relref "odometry_motion_model" >}})
 
 Kinematics is the calculus describing the effect of control actions on
 the configuration of the robot. The configuration of a rigid mobile
@@ -42,9 +44,3 @@ of the robot's wheels. The downside is that odometry is obtained
 after-the-fact, meaning it cannot be used for motion planning. Hence,
 odometry models are used for state estimation, while velocity models
 for motion planning.
-
-
-## Related {#related}
-
--   [§velocity\_motion\_model]({{< relref "velocity_motion_model" >}})
--   [§odometry\_motion\_model]({{< relref "odometry_motion_model" >}})

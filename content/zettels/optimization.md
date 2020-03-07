@@ -1,9 +1,8 @@
 +++
 title = "Optimization"
 author = ["Jethro Kuan"]
-lastmod = 2019-01-14T09:12:36+08:00
+lastmod = 2020-03-07T23:42:55+08:00
 draft = false
-math = true
 +++
 
 ## What is Convex Optimization? {#what-is-convex-optimization}

@@ -1,9 +1,8 @@
 +++
 title = "Dev Ops"
 author = ["Jethro Kuan"]
-lastmod = 2018-12-05T19:39:49+08:00
+lastmod = 2020-03-07T23:43:19+08:00
 draft = false
-math = true
 +++
 
 ## Kubernetes {#kubernetes}
@@ -101,3 +100,20 @@ The main arguments are:
 A response to the above article. Basically arguing that Kubernetes is
 very complex and has a lot of moving parts, which is wholly
 unnecessary for side projects.
+
+
+## Mesos {#mesos}
+
+Mesos is responsible for managing cluster resources (CPU, RAM, disk,
+etc) and the allocation of applications into those resources.
+
+[Dominant Resource Fairness](https://people.eecs.berkeley.edu/~alig/papers/drf.pdf)
+
+Two-level scheduler, compared to k8s one-level scheduler.
+
+Scheduler scales a lot better than k8s (earlier).
+
+
+##  {#}
+
+<biblio/scheduling.bib>

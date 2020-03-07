@@ -1,9 +1,8 @@
 +++
 title = "Investing In ETFs"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-02T09:55:13+08:00
+lastmod = 2020-03-07T23:43:39+08:00
 draft = false
-math = true
 +++
 
 ## Identifying good ETFs _(Joshua Giersch, Rich By Retirement)_ {#identifying-good-etfs--joshua-giersch-rich-by-retirement}

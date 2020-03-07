@@ -1,9 +1,8 @@
 +++
 title = "Monte Carlo Tree Search"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-22T18:12:28+08:00
+lastmod = 2020-03-07T23:42:52+08:00
 draft = false
-math = true
 +++
 
 ## Monte Carlo Tree Search {#monte-carlo-tree-search}

@@ -1,7 +1,7 @@
 +++
 title = "Gaussian Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T20:13:15+08:00
+lastmod = 2020-03-07T23:43:38+08:00
 draft = false
 +++
 

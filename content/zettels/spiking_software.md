@@ -1,7 +1,7 @@
 +++
 title = "SNN Software"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T20:26:52+08:00
+lastmod = 2020-03-07T23:43:25+08:00
 draft = false
 +++
 

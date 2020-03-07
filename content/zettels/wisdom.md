@@ -1,9 +1,8 @@
 +++
 title = "Wisdom"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-08T18:15:31+08:00
+lastmod = 2020-03-07T23:43:25+08:00
 draft = false
-math = true
 +++
 
 ## [Joe Rogan Experience #1309 - Naval Ravikant](https://www.youtube.com/watch?v=3qHkcs3kG44) {#joe-rogan-experience-1309-naval-ravikant}

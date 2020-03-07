@@ -1,7 +1,7 @@
 +++
 title = "Numpy"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-27T14:59:36+08:00
+lastmod = 2020-03-07T23:43:48+08:00
 draft = false
 +++
 

@@ -1,9 +1,8 @@
 +++
 title = "Portfolio Composition"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-02T14:00:12+08:00
+lastmod = 2020-03-07T23:42:53+08:00
 draft = false
-math = true
 +++
 
 ## General recommendations {#general-recommendations}

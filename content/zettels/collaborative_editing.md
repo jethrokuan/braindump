@@ -1,9 +1,8 @@
 +++
 title = "Collaborative Editing"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-14T12:55:10+08:00
+lastmod = 2020-03-07T23:42:46+08:00
 draft = false
-math = true
 +++
 
 Collaborative Editing software are powered either (or both) of these

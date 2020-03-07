@@ -1,10 +1,9 @@
 +++
 title = "Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2019-12-06T22:33:36+08:00
+lastmod = 2020-03-07T23:43:15+08:00
 tags = ["robotics"]
 draft = false
-math = true
 +++
 
 ## Theory {#theory}
@@ -16,7 +15,7 @@ math = true
 -   [§robot\_motion]({{< relref "robot_motion" >}})
 -   [§range\_finder\_model]({{< relref "range_finder_model" >}})
 -   [§occupancy\_grid\_mapping]({{< relref "occupancy_grid_mapping" >}})
--   [§slam]({{< relref "slam" >}})
+-   [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})
 
 
 ## Tools {#tools}
