@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Representation"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:20+08:00
+lastmod = 2020-03-07T23:51:50+08:00
 slug = "multimodal_representation"
 draft = false
 +++
@@ -62,14 +62,14 @@ superior performance, but is _unable to handle missing data naturally_.
 of latent random variables.
 
 A popular approach is [Deep Boltzmann Machines]({{< relref "deep_boltzmann_machines" >}}), which uses [Restricted
-Boltzmann machines]({{< relref "20200219122024_restricted_boltzmann_machines" >}}) as building blocks. Each successive layer of a DBM
+Boltzmann machines]({{< relref "restricted_boltzmann_machines" >}}) as building blocks. Each successive layer of a DBM
 is expected to represent the data at a higher level of abstraction.
 DBMs do not need supervised data for training. It is also possible to
 convert them into a deterministic neural network, but this loses the
 generative aspect of the model.
 
 One advantage of using multimodal DBMs is that they are [generative
-models]({{< relref "20200219123016_generative_models" >}}), allowing them to:
+models]({{< relref "generative_models" >}}), allowing them to:
 
 1.  Naturally deal with missing data.
 2.  Generate samples of one modality in the presence of at least 1

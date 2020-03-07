@@ -46,14 +46,14 @@ superior performance, but is /unable to handle missing data naturally/.
 [[file:pgm.org][Probabilistic Graph Models]] construct representations through the use
 of latent random variables.
 
-A popular approach is [[file:deep_boltzmann_machines.org][Deep Boltzmann Machines]], which uses [[file:20200219122024_restricted_boltzmann_machines.org][Restricted
+A popular approach is [[file:deep_boltzmann_machines.org][Deep Boltzmann Machines]], which uses [[file:restricted_boltzmann_machines.org][Restricted
 Boltzmann machines]] as building blocks. Each successive layer of a DBM
 is expected to represent the data at a higher level of abstraction.
 DBMs do not need supervised data for training. It is also possible to
 convert them into a deterministic neural network, but this loses the
 generative aspect of the model.
 
-One advantage of using multimodal DBMs is that they are [[file:20200219123016_generative_models.org][generative
+One advantage of using multimodal DBMs is that they are [[file:generative_models.org][generative
 models]], allowing them to:
  
 1. Naturally deal with missing data.

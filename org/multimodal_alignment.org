@@ -3,7 +3,7 @@
 #+HUGO_SLUG: multimodal_alignment
 #+TITLE: Multi-modal Alignment
 
-Multi-modal alignment is a sub-challenge in [[file:20200219115844_multimodal_machine_learning.org][Multi-modal Machine
+Multi-modal alignment is a sub-challenge in [[file:multimodal_machine_learning.org][Multi-modal Machine
 Learning]], involving the finding of relationships and correspondences
 between sub-components of instances from two-or-more modalities. For
 example, we want to find areas of the image corresponding to the

@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:03+08:00
+lastmod = 2020-03-07T23:52:25+08:00
 slug = "multimodal_machine_learning"
 draft = false
 +++
@@ -31,7 +31,7 @@ translation
 alignment
 : identifying the direct relationships between
     sub-elements of two or more different modalities (see [Multi-modal
-    Alignment]({{< relref "20200219163103_multimodal_alignment" >}}))
+    Alignment]({{< relref "multimodal_alignment" >}}))
 
 fusion
 : Join information from two ore more modalities to perform a

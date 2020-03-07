@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Fusion"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:46+08:00
+lastmod = 2020-03-07T23:59:02+08:00
 slug = "multimodal_fusion"
 draft = false
 +++
@@ -47,13 +47,13 @@ machine learning methods.
 
 These approaches are tailored towards handling multi-modal data.
 
-[Multiple Learning Kernel]({{< relref "multiple_learning_kernel" >}}) (MKL) methods extend kernel [Support Vector Machines]({{< relref "support_vector_machines" >}})
-to use different kernels for different modalities. Modality-specific
-kernels allow for better fusion of heterogeneous data. One advantage
-of MKL is that the loss function is convex, which leads to easy
-optimization and globally optimum solutions. However, MKL approaches
-rely on support vectors (training data) at test time, which means
-inference can be slow.
+[Multiple Learning Kernel]({{< relref "multiple_learning_kernel" >}}) (MKL) methods extend kernel [Support Vector
+Machines]({{< relref "support_vector_machines" >}}) to use different kernels for different modalities.
+Modality-specific kernels allow for better fusion of heterogeneous
+data. One advantage of MKL is that the loss function is convex, which
+leads to easy optimization and globally optimum solutions. However,
+MKL approaches rely on support vectors (training data) at test time,
+which means inference can be slow.
 
 Generative graphical models such as factorial hidden markov networks, or
 multi-stream hidden markov metods have been used. Discriminative

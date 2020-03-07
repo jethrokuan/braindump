@@ -10,6 +10,6 @@ Modern computers require cache-optimized algorithms. When working with
 large datasets, not fitting L3 cache, prefer optimizing for reduced
 number loads, over optimizing the amount of memory used.
 
-[[file:~/Dropbox/org/braindump/org/20200227141922_bloom_filter.org][Bloom Filters]] are great, as long as they fit into the L3 cache. They
+[[file:~/Dropbox/org/braindump/org/bloom_filter.org][Bloom Filters]] are great, as long as they fit into the L3 cache. They
 are optimized for memory usage, not memory access. A nice alternative
 is [[file:../cuckoo_filters.org][Cuckoo Filters]].

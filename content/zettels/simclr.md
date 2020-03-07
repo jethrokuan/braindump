@@ -1,13 +1,13 @@
 +++
 title = "SimCLR"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:59+08:00
+lastmod = 2020-03-07T23:57:08+08:00
 slug = "simclr"
 draft = false
 +++
 
 tags
-: [Unsupervised Learning]({{< relref "unsupervised_learning" >}}),
+: [Unsupervised Learning]({{< relref "unsupervised_learning" >}})
 
 SimCLR is a simple framework for contrastive learning of visual
 representations.

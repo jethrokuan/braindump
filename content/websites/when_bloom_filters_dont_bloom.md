@@ -1,7 +1,7 @@
 +++
 title = "When Bloom filters don't bloom"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:42+08:00
+lastmod = 2020-03-07T23:54:10+08:00
 draft = false
 +++
 
@@ -13,6 +13,6 @@ Modern computers require cache-optimized algorithms. When working with
 large datasets, not fitting L3 cache, prefer optimizing for reduced
 number loads, over optimizing the amount of memory used.
 
-[Bloom Filters]({{< relref "20200227141922_bloom_filter" >}}) are great, as long as they fit into the L3 cache. They
+[Bloom Filters]({{< relref "bloom_filter" >}}) are great, as long as they fit into the L3 cache. They
 are optimized for memory usage, not memory access. A nice alternative
 is [Cuckoo Filters]({{< relref "cuckoo_filters" >}}).

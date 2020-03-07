@@ -1,13 +1,13 @@
 +++
 title = "Multi-modal Alignment"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:37+08:00
+lastmod = 2020-03-07T23:51:07+08:00
 slug = "multimodal_alignment"
 draft = false
 +++
 
 Multi-modal alignment is a sub-challenge in [Multi-modal Machine
-Learning]({{< relref "20200219115844_multimodal_machine_learning" >}}), involving the finding of relationships and correspondences
+Learning]({{< relref "multimodal_machine_learning" >}}), involving the finding of relationships and correspondences
 between sub-components of instances from two-or-more modalities. For
 example, we want to find areas of the image corresponding to the
 caption's words or phrases.

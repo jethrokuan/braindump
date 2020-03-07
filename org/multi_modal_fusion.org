@@ -42,13 +42,13 @@ machine learning methods.
 
 These approaches are tailored towards handling multi-modal data.
 
-[[file:multiple_learning_kernel.org][Multiple Learning Kernel]] (MKL) methods extend kernel [[file:support_vector_machines.org][Support Vector Machines]]
-to use different kernels for different modalities. Modality-specific
-kernels allow for better fusion of heterogeneous data. One advantage
-of MKL is that the loss function is convex, which leads to easy
-optimization and globally optimum solutions. However, MKL approaches
-rely on support vectors (training data) at test time, which means
-inference can be slow.
+[[file:multiple_learning_kernel.org][Multiple Learning Kernel]] (MKL) methods extend kernel [[file:support_vector_machines.org][Support Vector
+Machines]] to use different kernels for different modalities.
+Modality-specific kernels allow for better fusion of heterogeneous
+data. One advantage of MKL is that the loss function is convex, which
+leads to easy optimization and globally optimum solutions. However,
+MKL approaches rely on support vectors (training data) at test time,
+which means inference can be slow.
 
 Generative graphical models such as factorial hidden markov networks, or
 multi-stream hidden markov metods have been used. Discriminative
