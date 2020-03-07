@@ -1,7 +1,7 @@
 +++
 title = "Monte Carlo Tree Search"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:52+08:00
+lastmod = 2020-03-08T00:26:14+08:00
 draft = false
 +++
 
@@ -86,3 +86,10 @@ include:
 
 -   [Introduction to Monte Carlo Tree Search - Jeff Bradberry](https://jeffbradberry.com/posts/2015/09/intro-to-monte-carlo-tree-search/)
 -   [A Deep Dive into Monte Carlo Tree Search](http://www.moderndescartes.com/essays/deep%5Fdive%5Fmcts/)
+
+
+## Backlinks {#backlinks}
+
+-   [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
+-   [Optimal Control and Planning]({{< relref "optimal_control" >}})
+-   [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

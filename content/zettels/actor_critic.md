@@ -1,7 +1,7 @@
 +++
 title = "Actor-Critic"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:48+08:00
+lastmod = 2020-03-08T00:26:10+08:00
 draft = false
 +++
 
@@ -202,3 +202,10 @@ Need to balance between learning speed, stability.
 ## Resources {#resources}
 
 -   [CS285 Fa19 9/18/19 - YouTube](https://www.youtube.com/watch?v=EKqxumCuAAY&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=7&t=0s)
+
+
+## Backlinks {#backlinks}
+
+-   [Q-Learning]({{< relref "q_learning" >}})
+-   [Q-Learning]({{< relref "q_learning" >}})
+-   [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

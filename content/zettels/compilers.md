@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:39+08:00
+lastmod = 2020-03-08T00:27:06+08:00
 tags = ["proglang", "compilers"]
 draft = false
 +++
@@ -896,3 +896,8 @@ Each pattern is a regular expression, which may use the definitions of
 the declaration section. The actions are fragments of code.
 
 The auxiliary functions section contains used in these actions.
+
+
+## Backlinks {#backlinks}
+
+-   [GCC]({{< relref "gcc" >}})

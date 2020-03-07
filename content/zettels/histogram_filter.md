@@ -1,7 +1,7 @@
 +++
 title = "Histogram Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:06+08:00
+lastmod = 2020-03-08T00:26:30+08:00
 draft = false
 +++
 
@@ -72,3 +72,8 @@ state space. A simple decomposition is a multi-dimensional grid.
 
 -   [§bayes\_filter]({{< relref "bayes_filter" >}})
 -   [§particle\_filter]({{< relref "particle_filter" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [Non-parametric Filters]({{< relref "nonparametric_filter" >}})

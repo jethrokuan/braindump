@@ -1,7 +1,7 @@
 +++
 title = "Computer Organization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:12+08:00
+lastmod = 2020-03-08T00:26:36+08:00
 draft = false
 +++
 
@@ -47,3 +47,8 @@ tags
 
 Data flow does not affect current instruction, but only influence
 later instructions.
+
+
+## Backlinks {#backlinks}
+
+-   [Branch Prediction]({{< relref "branch_prediction" >}})

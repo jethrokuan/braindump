@@ -1,7 +1,7 @@
 +++
 title = "Theory Of Computation"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:14+08:00
+lastmod = 2020-03-08T00:26:38+08:00
 draft = false
 +++
 
@@ -498,7 +498,7 @@ The pumping lemma lets us show that certain languages are not regular.
 <div class="theorem">
   <div></div>
 
-<a id="org96ec5b7"></a>
+<a id="org158298c"></a>
 Let \\(L\\) be a regular language. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(w\\) in \\(L\\) such that
 \\(| w |  \ge n\\), we can break \\(w\\) into three strings \\(w = xyz\\)
@@ -1002,7 +1002,7 @@ use several results, that we will state below.
 <div class="theorem">
   <div></div>
 
-<a id="org83dfda1"></a>
+<a id="org93f395c"></a>
 Let \\(L\\) be a CFL. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(z\\) in \\(L\\) such that
 \\(| z |  \ge n\\), we can break \\(z\\) into three strings \\(z = uvwxy\\)
@@ -1613,3 +1613,10 @@ Hence, if a computer:
 
 the Turing machine can simulate \\(n\\) steps of the computer in \\(O(n^3)\\)
 of its own steps.
+
+
+## Backlinks {#backlinks}
+
+-   [Compilers]({{< relref "compilers" >}})
+-   [Compilers]({{< relref "compilers" >}})
+-   [Compilers]({{< relref "compilers" >}})

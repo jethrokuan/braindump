@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:43+08:00
+lastmod = 2020-03-08T00:26:05+08:00
 draft = false
 +++
 
@@ -383,3 +383,11 @@ The bottleneck can't remember spatial information, and optimizing for
 \\(p(x|z)\\) puts heavy emphasis on exact recovery of spatial information.
 Solutions involve removing the bottleneck, or replacing the prior
 \\(p(z)\\) with one that has more structure.
+
+
+## Backlinks {#backlinks}
+
+-   [Deep Learning Tools]({{< relref "dl_tools" >}})
+-   [Natural Language Processing]({{< relref "nlp" >}})
+-   [Bayesian Deep Learning]({{< relref "bayesian_deep_learning" >}})
+-   [Definition of Deep Learning]({{< relref "20200216133849" >}})

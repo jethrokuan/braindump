@@ -1,7 +1,7 @@
 +++
 title = "LU Decomposition"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:30+08:00
+lastmod = 2020-03-08T00:26:56+08:00
 draft = false
 +++
 

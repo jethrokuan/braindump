@@ -1,7 +1,7 @@
 +++
 title = "Odometry Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:44+08:00
+lastmod = 2020-03-08T00:27:12+08:00
 draft = false
 +++
 
@@ -11,3 +11,10 @@ odometry motion model suffer from drift and slippage, the velocity
 motion model additionally suffers from the mismatch between the actual
 motion controller and the mathematical model. Odometry information are
 only available in retrospect, making the model unusable for planning.
+
+
+## Backlinks {#backlinks}
+
+-   [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})
+-   [Velocity Motion Model]({{< relref "velocity_motion_model" >}})
+-   [Robot Kinematics]({{< relref "robot_kinematics" >}})

@@ -1,7 +1,7 @@
 +++
 title = "EKF Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:51+08:00
+lastmod = 2020-03-08T00:26:13+08:00
 draft = false
 +++
 
@@ -56,3 +56,9 @@ the kidnapped robot problem.
 -   [§robot\_localization]({{< relref "robot_localization" >}})
 -   [§markov\_localization]({{< relref "markov_localization" >}})
 -   [§grid\_mc\_localization]({{< relref "grid_mc_localization" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
+-   [Robot Localization]({{< relref "robot_localization" >}})

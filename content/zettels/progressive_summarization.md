@@ -1,7 +1,7 @@
 +++
 title = "Progressive Summarization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:45+08:00
+lastmod = 2020-03-08T00:27:13+08:00
 draft = false
 +++
 
@@ -38,3 +38,8 @@ extracting key points from each note.
 ## Related {#related}
 
 -   [§para\_method]({{< relref "para_method" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [PARA Method]({{< relref "para_method" >}})

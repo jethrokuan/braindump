@@ -1,7 +1,7 @@
 +++
 title = "State Estimation"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:01+08:00
+lastmod = 2020-03-08T00:26:23+08:00
 draft = false
 +++
 
@@ -12,3 +12,8 @@ possible world states.
 Examples of state estimation include [§robot\_localization]({{< relref "robot_localization" >}}).
 
 [§bayes\_filter]({{< relref "bayes_filter" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [Robotics]({{< relref "robotics" >}})

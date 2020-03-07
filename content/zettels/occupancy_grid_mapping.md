@@ -1,7 +1,7 @@
 +++
 title = "Occupancy Grid Mapping"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:00+08:00
+lastmod = 2020-03-08T00:26:22+08:00
 draft = false
 +++
 
@@ -170,3 +170,9 @@ is still maximizable (MAP). This leads to maps that are more
 consistent with the data, but requires full availability of data.
 Another downside is that the MAP map does not capture the residual
 uncertainty in the map.
+
+
+## Backlinks {#backlinks}
+
+-   [Robotics]({{< relref "robotics" >}})
+-   [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})

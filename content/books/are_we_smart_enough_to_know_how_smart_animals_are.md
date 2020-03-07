@@ -1,7 +1,7 @@
 +++
 title = "Are We Smart Enough to Know How Smart Animals Are?"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T12:19:00+08:00
+lastmod = 2020-03-08T00:27:12+08:00
 draft = false
 +++
 

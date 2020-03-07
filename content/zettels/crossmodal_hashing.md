@@ -1,7 +1,7 @@
 +++
 title = "Cross-modal Hashing"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:06+08:00
+lastmod = 2020-03-08T00:26:29+08:00
 slug = "crossmodal_hashing"
 draft = false
 +++
@@ -22,3 +22,8 @@ papers.
 
 # Bibliography
 <a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\vsaitis, Tadas, Ahuja, C., & Morency, L., *Multimodal machine learning: a survey and taxonomy*, CoRR, *()*,  (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
+
+
+## Backlinks {#backlinks}
+
+-   [Multi-modal Representation]({{< relref "multimodal_representation" >}})

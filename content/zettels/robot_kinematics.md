@@ -1,7 +1,7 @@
 +++
 title = "Robot Kinematics"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:15+08:00
+lastmod = 2020-03-08T00:26:39+08:00
 draft = false
 +++
 
@@ -44,3 +44,8 @@ of the robot's wheels. The downside is that odometry is obtained
 after-the-fact, meaning it cannot be used for motion planning. Hence,
 odometry models are used for state estimation, while velocity models
 for motion planning.
+
+
+## Backlinks {#backlinks}
+
+-   [Robot Motion]({{< relref "robot_motion" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:08+08:00
+lastmod = 2020-03-08T00:26:31+08:00
 draft = false
 +++
 
@@ -32,3 +32,8 @@ comprehensive review.
 
 # Bibliography
 <a id="schliebs13_evolv_spikin_neural_networ_survey" target="_blank">Schliebs, S., & Kasabov, N., *Evolving Spiking Neural Network-A Survey*, Evolving Systems, *4(2)*, 87–98 (2013).  http://dx.doi.org/10.1007/s12530-013-9074-9</a> [↩](#2517787d2e251f350f5882e3a5702fc7)
+
+
+## Backlinks {#backlinks}
+
+-   [Evolving Connectionist Systems]({{< relref "evolving_connectionist_systems" >}})

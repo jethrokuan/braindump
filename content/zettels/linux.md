@@ -1,7 +1,7 @@
 +++
 title = "Linux"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:19+08:00
+lastmod = 2020-03-08T00:26:44+08:00
 draft = false
 +++
 
@@ -12,3 +12,12 @@ draft = false
     hostnames in the rules. Hence sudo requires both loopback and
     "real". ([Source](https://unix.stackexchange.com/questions/218145/why-does-sudo-need-the-loopback-interface))
 -   `pkexec` lets authorized users execute programs as another user.
+
+
+## Backlinks {#backlinks}
+
+-   [Unix]({{< relref "unix" >}})
+-   [Docker 101]({{< relref "docker" >}})
+-   [Nix/NixOS]({{< relref "nix" >}})
+-   [Systems Programming]({{< relref "systems_programming" >}})
+-   [Pdf Tools]({{< relref "pdf_tools" >}})

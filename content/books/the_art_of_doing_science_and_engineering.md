@@ -1,7 +1,7 @@
 +++
 title = "The Art Of Doing Science And Engineering"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-06T00:13:43+08:00
+lastmod = 2020-03-08T00:27:14+08:00
 draft = false
 +++
 

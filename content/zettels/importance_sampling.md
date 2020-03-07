@@ -1,7 +1,7 @@
 +++
 title = "Importance Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:19+08:00
+lastmod = 2020-03-08T00:26:43+08:00
 draft = false
 +++
 
@@ -46,3 +46,11 @@ which adjust the importance of each point in the estimator:
         factors because probabilities of points, despite being in the
         typical set, still differ by factors of order
         \\(\mathrm{exp}(\sqrt{N})\\), where \\(N\\) is the number of dimensions.
+
+
+## Backlinks {#backlinks}
+
+-   [Policy Gradients]({{< relref "policy_gradients" >}})
+-   [Policy Gradients]({{< relref "policy_gradients" >}})
+-   [Particle Filter]({{< relref "particle_filter" >}})
+-   [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})

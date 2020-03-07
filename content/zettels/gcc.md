@@ -1,7 +1,7 @@
 +++
 title = "GCC"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:29+08:00
+lastmod = 2020-03-08T00:26:55+08:00
 draft = false
 +++
 

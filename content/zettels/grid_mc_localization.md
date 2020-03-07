@@ -1,7 +1,7 @@
 +++
 title = "Grid & Monte Carlo Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:00+08:00
+lastmod = 2020-03-08T00:26:22+08:00
 draft = false
 +++
 
@@ -71,3 +71,9 @@ trick that works is to artificially inflate the amount of noise in the
 sensor. An alternative is to modify the sampling process, by reversing
 the role of the measurement and motion model for a small number of
 particles. This results in an algorithm called the _mixture MCL_.
+
+
+## Backlinks {#backlinks}
+
+-   [Robot Localization]({{< relref "robot_localization" >}})
+-   [EKF Localization]({{< relref "ekf_localization" >}})

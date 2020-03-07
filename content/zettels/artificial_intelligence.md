@@ -1,7 +1,7 @@
 +++
 title = "Artificial Intelligence"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:29+08:00
+lastmod = 2020-03-08T00:26:54+08:00
 draft = false
 +++
 
@@ -1269,3 +1269,9 @@ One can view the weights as the discrepancy between scaled rewards \\(r /
 
 In UREX, both the RAML objective and the expected reward objective is
 combined and jointly maximized.
+
+
+## Backlinks {#backlinks}
+
+-   [Cognitive Hierarchy Model]({{< relref "cognitive_hierarchy_model" >}})
+-   [Machine Learning]({{< relref "machine_learning" >}})

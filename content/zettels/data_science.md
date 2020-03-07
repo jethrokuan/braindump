@@ -1,7 +1,7 @@
 +++
 title = "Data Science"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:55+08:00
+lastmod = 2020-03-08T00:26:17+08:00
 draft = false
 +++
 
@@ -155,3 +155,11 @@ Transliteration and languages are the next frontier of opportunity.
     -   Systems (Hadoop, Distributed Systems)
     -   Programming (Scala, Scalding, SQL)
     -   Math (Statistics, Linear Algebra)
+
+
+## Backlinks {#backlinks}
+
+-   [Spark]({{< relref "spark" >}})
+-   [Numpy]({{< relref "numpy" >}})
+-   [Datacouncil.ai Conference Notes]({{< relref "data_council" >}})
+-   [Hadoop]({{< relref "hadoop" >}})

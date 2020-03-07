@@ -1,7 +1,11 @@
 +++
 title = "Multi-modal Autoencoders"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:34+08:00
+lastmod = 2020-03-08T00:27:00+08:00
 slug = "multimodal_autoencoders"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+-   [Co-learning]({{< relref "colearning" >}})

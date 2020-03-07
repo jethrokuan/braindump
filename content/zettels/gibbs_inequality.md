@@ -1,7 +1,7 @@
 +++
 title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:44:40+08:00
+lastmod = 2020-03-08T00:27:16+08:00
 draft = false
 +++
 
@@ -20,3 +20,8 @@ Gibbs Inequality states that:
 \end{equation}
 
 for any \\(P\\) and \\(Q\\).
+
+
+## Backlinks {#backlinks}
+
+-   [Entropy]({{< relref "entropy" >}})

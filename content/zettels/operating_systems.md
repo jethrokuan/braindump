@@ -1,7 +1,7 @@
 +++
 title = "Operating Systems"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:07+08:00
+lastmod = 2020-03-08T00:26:31+08:00
 draft = false
 +++
 
@@ -1484,3 +1484,15 @@ recommendation.
 
 
 ### <span class="org-todo todo TODO">TODO</span> [How new-lines affect the Linux kernel performance](https://nadav.amit.zone/blog/linux-inline) {#how-new-lines-affect-the-linux-kernel-performance}
+
+
+## Backlinks {#backlinks}
+
+-   [Computer Organization]({{< relref "computer_organization" >}})
+-   [Nix/NixOS]({{< relref "nix" >}})
+-   [Systems Programming]({{< relref "systems_programming" >}})
+-   [Config Management]({{< relref "config_management" >}})
+-   [Computer Networking]({{< relref "networking" >}})
+-   [ARM Assembly Programming]({{< relref "arm" >}})
+-   [Docker 101]({{< relref "docker" >}})
+-   [Branch Prediction]({{< relref "branch_prediction" >}})

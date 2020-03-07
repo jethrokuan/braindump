@@ -1,7 +1,7 @@
 +++
 title = "Likelihood Field Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:19+08:00
+lastmod = 2020-03-08T00:26:44+08:00
 draft = false
 +++
 
@@ -38,3 +38,10 @@ These issues can be addressed via extensions to the algorithm.
 
 -   [§range\_finder\_model]({{< relref "range_finder_model" >}})
 -   [§map\_matching]({{< relref "map_matching" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [Range Finder Model]({{< relref "range_finder_model" >}})
+-   [Map Matching]({{< relref "map_matching" >}})
+-   [Map Matching]({{< relref "map_matching" >}})

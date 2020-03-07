@@ -1,7 +1,7 @@
 +++
 title = "Markov Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:29+08:00
+lastmod = 2020-03-08T00:26:55+08:00
 draft = false
 +++
 
@@ -41,3 +41,10 @@ density, so in most scenarios, a narrow Gaussian centered around
 
 If the initial pose is unknown, \\(\mathrm{bel}(x\_0)\\) is initialized
 with a uniform distribution over the space of all legal poses in the map.
+
+
+## Backlinks {#backlinks}
+
+-   [Robot Localization]({{< relref "robot_localization" >}})
+-   [EKF Localization]({{< relref "ekf_localization" >}})
+-   [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:51+08:00
+lastmod = 2020-03-08T00:26:12+08:00
 draft = false
 +++
 
@@ -78,3 +78,14 @@ Ease of implementation
     (see [Robotics Probabilistic Generative Laws]({{< relref "robotics_probabilistic_generative_laws" >}})). Particle
     representations lend themselves to simple implementations for
     complex non-linear systems.
+
+
+## Backlinks {#backlinks}
+
+-   [Information Filter]({{< relref "information_filter" >}})
+-   [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
+-   [State Estimation]({{< relref "state_estimation" >}})
+-   [Histogram Filter]({{< relref "histogram_filter" >}})
+-   [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
+-   [Markov Localization]({{< relref "markov_localization" >}})
+-   [Gaussian Filter]({{< relref "gaussian_filter" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:56+08:00
+lastmod = 2020-03-08T00:26:18+08:00
 draft = false
 +++
 
@@ -514,3 +514,8 @@ analysis.
 ### Dimensionality Reduction (aka [Manifold Learning](https://link.springer.com/chapter/10.1007/978-1-84882-312-9%5F4)) {#dimensionality-reduction--aka-manifold-learning}
 
 -    [Linear tSNE optimization for the Web](https://arxiv.org/abs/1805.10817)
+
+
+## Backlinks {#backlinks}
+
+-   [SSNLP Conference Notes]({{< relref "ssnlp" >}})

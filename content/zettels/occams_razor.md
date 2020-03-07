@@ -1,7 +1,7 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:36+08:00
+lastmod = 2020-03-08T00:27:02+08:00
 draft = false
 +++
 
@@ -52,3 +52,8 @@ Maybe I'm missing something...
 ## Related {#related}
 
 -   [§two\_levels\_of\_inference]({{< relref "two_levels_of_inference" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [Two Levels Of Inference]({{< relref "two_levels_of_inference" >}})

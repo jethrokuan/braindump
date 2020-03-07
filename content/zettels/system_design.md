@@ -1,7 +1,7 @@
 +++
 title = "System Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:40+08:00
+lastmod = 2020-03-08T00:26:01+08:00
 draft = false
 +++
 
@@ -191,3 +191,8 @@ If adding new item, and it is full, remove tail of list,
 2.  So now the choice is between consistency and availability
 3.  Perform some estimations
     -
+
+
+## Backlinks {#backlinks}
+
+-   [Designing Data-Intensive Applications]({{< relref "designing_dataintensive_applications" >}})

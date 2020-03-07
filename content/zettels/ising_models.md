@@ -1,7 +1,7 @@
 +++
 title = "Ising Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:35+08:00
+lastmod = 2020-03-08T00:27:01+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -79,3 +79,8 @@ we can rewrite this in a form that looks similar to a Gaussian:
 \log \tilde{p}(\mathbb{y}) = - \frac{1}{2}(\mathbb{y} -
 \mathbb{\mu})^T \Sigma ^{-1} (\mathbb{y} - \mathbb{\mu}) + c
 \end{equation}
+
+
+## Backlinks {#backlinks}
+
+-   [Hopfield Network]({{< relref "hopfield_network" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning With Bayesian Principles - Emtiyaz Khan"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:01:41+08:00
+lastmod = 2020-03-08T00:26:23+08:00
 draft = false
 +++
 

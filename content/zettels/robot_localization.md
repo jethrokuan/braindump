@@ -1,7 +1,7 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:37+08:00
+lastmod = 2020-03-08T00:27:03+08:00
 draft = false
 +++
 
@@ -79,3 +79,12 @@ active localization
 -   [§markov\_localization]({{< relref "markov_localization" >}})
 -   [§ekf\_localization]({{< relref "ekf_localization" >}})
 -   [§grid\_mc\_localization]({{< relref "grid_mc_localization" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [EKF Localization]({{< relref "ekf_localization" >}})
+-   [Occupancy Grid Mapping]({{< relref "occupancy_grid_mapping" >}})
+-   [State Estimation]({{< relref "state_estimation" >}})
+-   [Robotics]({{< relref "robotics" >}})
+-   [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})

@@ -1,7 +1,12 @@
 +++
 title = "Bloom Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:53:29+08:00
+lastmod = 2020-03-08T00:26:24+08:00
 slug = "bloom_filter"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+-   [Designing Data-Intensive Applications]({{< relref "designing_dataintensive_applications" >}})
+-   [When Bloom filters don't bloom]({{< relref "when_bloom_filters_dont_bloom" >}})

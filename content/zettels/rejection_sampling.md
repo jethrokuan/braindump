@@ -1,7 +1,7 @@
 +++
 title = "Rejection Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:39+08:00
+lastmod = 2020-03-08T00:26:00+08:00
 draft = false
 +++
 
@@ -34,3 +34,9 @@ draft = false
     keeping \\(c\\) small
 2.  In high-dimensional settings, \\(c\\) will generally be so large that
     acceptances will be rare
+
+
+## Backlinks {#backlinks}
+
+-   [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
+-   [Slice Sampling]({{< relref "slice_sampling" >}})

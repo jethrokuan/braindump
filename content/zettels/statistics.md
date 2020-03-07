@@ -1,7 +1,7 @@
 +++
 title = "Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:17+08:00
+lastmod = 2020-03-08T00:26:41+08:00
 draft = false
 +++
 
@@ -565,3 +565,15 @@ test \\(H\_0 : \mu\_D = d\\), \\(t = \frac{\bar{D} - \mu\_D}{s\_D/\sqrt{n}}\\).
 \\(W\_+\\) is the sum of ranks among all positive \\(D\_i\\) and \\(W\_i\\) is the
 sum of ranks among all negative \\(D\_i\\). We want to reject \\(H\_0\\) if
 \\(W = min(W\_+, W\_-)\\) is too large.
+
+
+## Backlinks {#backlinks}
+
+-   [Information Theory]({{< relref "information_theory" >}})
+-   [Markov Chains]({{< relref "markov_chains" >}})
+-   [Probability Theory]({{< relref "probability_theory" >}})
+-   [Sufficient Statistics]({{< relref "sufficient_statistics" >}})
+-   [Statistical Learning]({{< relref "statistical_learning" >}})
+-   [Exponential Family]({{< relref "exponential_family" >}})
+-   [Random Variables]({{< relref "random_variables" >}})
+-   [Regression]({{< relref "regression" >}})

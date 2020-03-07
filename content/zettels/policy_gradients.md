@@ -1,7 +1,7 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:31+08:00
+lastmod = 2020-03-08T00:26:57+08:00
 draft = false
 +++
 
@@ -223,3 +223,10 @@ to approximate the function within that region.
 -   [Deep Reinforcement Learning Through Policy Optimization - NIPS 2016 Tutorial](https://nips.cc/Conferences/2016/Schedule?showEvent=6198)
 -   [CS285 Fa19 9/16/19 - YouTube](https://www.youtube.com/watch?v=Ds1trXd6pos&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=6&t=0s)
 -   [CS285 Fa19 9/30/19 - YouTube](https://www.youtube.com/watch?v=uR1Ubd2hAlE&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=10&t=0s)
+
+
+## Backlinks {#backlinks}
+
+-   [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+-   [Actor-Critic]({{< relref "actor_critic" >}})
+-   [Q-Learning]({{< relref "q_learning" >}})

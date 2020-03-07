@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:26+08:00
+lastmod = 2020-03-08T00:26:51+08:00
 draft = false
 +++
 
@@ -755,3 +755,11 @@ However, CRF requires labeled training data, and are slower to train.
 ## Resources {#resources}
 
 -   [Infer.NET Resources and References](https://dotnet.github.io/infer/userguide/Resources%20and%20References.html)
+
+
+## Backlinks {#backlinks}
+
+-   [Control As Inference]({{< relref "control_as_inference" >}})
+-   [Monte Carlo Methods]({{< relref "mc_methods" >}})
+-   [Variational Inference]({{< relref "variational_inference" >}})
+-   [Multi-modal Representation]({{< relref "multimodal_representation" >}})

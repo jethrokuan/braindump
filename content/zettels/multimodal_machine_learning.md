@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:52:25+08:00
+lastmod = 2020-03-08T00:26:26+08:00
 slug = "multimodal_machine_learning"
 draft = false
 +++
@@ -44,3 +44,11 @@ co-learning
     representation, and predictive models. (see [Co-learning]({{< relref "colearning" >}}))
 
 <./biblio/biblio.bib>
+
+
+## Backlinks {#backlinks}
+
+-   [Multi-modal Representation]({{< relref "multimodal_representation" >}})
+-   [Dynamic Time Warping]({{< relref "dynamic_time_warping" >}})
+-   [Multi-modal Alignment]({{< relref "multimodal_alignment" >}})
+-   [Multi-modal Translation]({{< relref "multimodal_translation" >}})

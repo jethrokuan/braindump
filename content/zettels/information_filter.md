@@ -1,7 +1,7 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:54+08:00
+lastmod = 2020-03-08T00:26:16+08:00
 draft = false
 +++
 
@@ -71,3 +71,9 @@ distance.
 1.  The update step requires the recovery of a state estimate,
     inverting the information matrix. Matrix inversion is
     computationally expensive.
+
+
+## Backlinks {#backlinks}
+
+-   [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
+-   [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})

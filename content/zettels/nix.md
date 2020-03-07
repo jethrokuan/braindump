@@ -1,7 +1,7 @@
 +++
 title = "Nix/NixOS"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:12+08:00
+lastmod = 2020-03-08T00:26:36+08:00
 draft = false
 +++
 
@@ -27,3 +27,8 @@ language]({{< relref "prog_lang" >}}) it is written in.
 ## Articles {#articles}
 
 -   [I was Wrong about Nix - Christine Dodrill](https://christine.website/blog/i-was-wrong-about-nix-2020-02-10)
+
+
+## Backlinks {#backlinks}
+
+-   [Python]({{< relref "python" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Robotics Probabilistic Generative Laws"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:40+08:00
+lastmod = 2020-03-08T00:26:01+08:00
 tags = ["robotics"]
 draft = false
 +++
@@ -44,3 +44,9 @@ all that happened in previous time-steps.
 
 The measurement at time-step \\(t\\) is often just a noisy projection of
 the world state at time-step \\(t\\).
+
+
+## Backlinks {#backlinks}
+
+-   [Bayes Filter]({{< relref "bayes_filter" >}})
+-   [Robotics]({{< relref "robotics" >}})

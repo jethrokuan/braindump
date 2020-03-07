@@ -1,7 +1,7 @@
 +++
 title = "Velocity Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:40+08:00
+lastmod = 2020-03-08T00:26:01+08:00
 draft = false
 +++
 
@@ -22,3 +22,10 @@ drawn from the error parameters of the kinematic motion model.
 \begin{equation}
   \left(\begin{array}{c}{\hat{v}} \\ {\hat{\omega}}\end{array}\right)=\left(\begin{array}{c}{v} \\ {\omega}\end{array}\right)+\left(\begin{array}{c}{\varepsilon\_{\alpha\_{1}|v|+\alpha\_{2}|\omega|}} \\ {\varepsilon\_{\alpha\_{3}|v|+\alpha\_{4}|\omega|}}\end{array}\right)
 \end{equation}
+
+
+## Backlinks {#backlinks}
+
+-   [Robot Kinematics]({{< relref "robot_kinematics" >}})
+-   [Odometry Motion Model]({{< relref "odometry_motion_model" >}})
+-   [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})

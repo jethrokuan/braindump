@@ -1,7 +1,7 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:32+08:00
+lastmod = 2020-03-08T00:26:58+08:00
 draft = false
 +++
 
@@ -165,3 +165,11 @@ This is provable by counting the typical set.
 
 -   [Andreas Kirsch | Better intuition for information theory](https://www.blackhc.net/blog/2019/better-intuition-for-information-theory/)
 -   [Visual Information Theory -- colah's blog](http://colah.github.io/posts/2015-09-Visual-Information/)
+
+
+## Backlinks {#backlinks}
+
+-   [Occam's Razor]({{< relref "occams_razor" >}})
+-   [Entropy]({{< relref "entropy" >}})
+-   [Jensen's Inequality]({{< relref "jensens_inequality" >}})
+-   [I-Diagrams]({{< relref "i-diagrams" >}})

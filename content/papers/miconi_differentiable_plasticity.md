@@ -1,7 +1,7 @@
 +++
 title = "Differentiable plasticity: training plastic neural networks with backpropagation"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T20:43:44+08:00
+lastmod = 2020-03-08T00:26:11+08:00
 draft = false
 +++
 

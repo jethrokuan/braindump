@@ -1,16 +1,15 @@
 +++
-title = "If You're Not Writing a Programming Language, Don't Use A Programming Language"
+title = "If You're Not Writing a Programming Language, Don't Use A Programming Language - Leslie Lamport"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-21T18:36:07+08:00
+lastmod = 2020-03-08T00:26:35+08:00
 draft = false
-math = true
 +++
 
 title
 : If You're Not Writing a Programming Language, Don't Use A Programming Language
 
 speaker
-: Leslie Lamport
+: [Leslie Lamport]({{< relref "leslie_lamport" >}})
 
 date
 : <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-01-16 Thu&gt;</span></span>

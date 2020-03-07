@@ -1,7 +1,7 @@
 +++
 title = "Smoothed Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:18+08:00
+lastmod = 2020-03-08T00:26:43+08:00
 draft = false
 +++
 
@@ -60,3 +60,8 @@ In the temporal coding setting, individual spikes carry significantly
 more information. This was first pioneered by SpikeProp. Firing times
 for hidden units were linearized, allowing to analytically compute
 approximate hidden layer gradients.
+
+
+## Backlinks {#backlinks}
+
+-   [Surrogate Gradient Learning In Spiking Neural Networks]({{< relref "neftci2019_surrogate_gradient_learning_snn" >}})

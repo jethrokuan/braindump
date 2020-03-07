@@ -1,7 +1,7 @@
 +++
 title = "Gaussian Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:38+08:00
+lastmod = 2020-03-08T00:27:04+08:00
 draft = false
 +++
 
@@ -44,3 +44,10 @@ These representations have a bijective mapping, and are functionally
 equivalent, but give rise to different algorithms.
 
 Using the moments representation gives rise to the [Kalman Filter]({{< relref "kalman_filter" >}}).
+
+
+## Backlinks {#backlinks}
+
+-   [Bayes Filter]({{< relref "bayes_filter" >}})
+-   [Information Filter]({{< relref "information_filter" >}})
+-   [Kalman Filter]({{< relref "kalman_filter" >}})

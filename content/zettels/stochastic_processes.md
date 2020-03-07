@@ -1,7 +1,7 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:15+08:00
+lastmod = 2020-03-08T00:26:40+08:00
 draft = false
 +++
 
@@ -56,3 +56,9 @@ sample(c(-1, 1), 10, replace=T)
 <a id="ross2014introduction" target="_blank">Ross, S. M., *Introduction to probability models* (2014), : Academic press.</a> [↩](#f5bf9e00e58b91654e7db48e02402403)
 
 <a id="pinsky2010introduction" target="_blank">Pinsky, M., & Karlin, S., *An introduction to stochastic modeling* (2010), : Academic press.</a> [↩](#685088059011ecabed3f6b757f8161de)
+
+
+## Backlinks {#backlinks}
+
+-   [Neural Ordinary Differential Equations (Review)]({{< relref "neural_ode" >}})
+-   [Markov Chains]({{< relref "markov_chains" >}})

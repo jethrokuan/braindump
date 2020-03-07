@@ -1,7 +1,7 @@
 +++
 title = "Dynamic Time Warping"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:22+08:00
+lastmod = 2020-03-08T00:26:47+08:00
 slug = "dynamic_time_warping"
 draft = false
 +++
@@ -18,3 +18,8 @@ extended to [Canonical Correlation Analysis]({{< relref "canonical_correlation_a
 in a coordinated space for [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}}). This allows
 for both aligning and mapping between different modalities jointly in
 ean unsupervised manner.
+
+
+## Backlinks {#backlinks}
+
+-   [Multi-modal Alignment]({{< relref "multimodal_alignment" >}})

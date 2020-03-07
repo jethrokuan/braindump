@@ -1,7 +1,7 @@
 +++
 title = "Transfer Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:18+08:00
+lastmod = 2020-03-08T00:26:43+08:00
 draft = false
 +++
 
@@ -112,3 +112,9 @@ concurrent multi-task learning. Policy distillation
 <a id="pmlr-v70-haarnoja17a" target="_blank">Haarnoja, T., Tang, H., Abbeel, P., & Levine, S., *Reinforcement learning with deep energy-based policies*, In D. Precup, & Y. W. Teh, Proceedings of the 34th International Conference on Machine Learning (pp. 1352–1361) (2017). International Convention Centre, Sydney, Australia: PMLR.</a> [↩](#1b37e467d7dc76e365875dfb5c03fa1e)
 
 <a id="rusu15_polic_distil" target="_blank">Rusu, A. A., Colmenarejo, S. G., Gulcehre, C., Desjardins, G., Kirkpatrick, J., Pascanu, R., Mnih, V., …, *Policy Distillation*, CoRR, *()*,  (2015). </a> [↩](#6c0f3e1b8610e021d4a59b9c6b7598dd)
+
+
+## Backlinks {#backlinks}
+
+-   [Co-learning]({{< relref "colearning" >}})
+-   [Co-learning]({{< relref "colearning" >}})

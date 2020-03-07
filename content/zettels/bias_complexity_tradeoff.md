@@ -1,7 +1,7 @@
 +++
 title = "The Bias-Complexity Tradeoff"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:05+08:00
+lastmod = 2020-03-08T00:26:28+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -64,3 +64,8 @@ class decreases the approximation error, but may increase the
 estimation error, as a rich \\(H\\) might lead to overfitting. Learning
 theory studies how rich we can make \\(H\\) while still maintaining
 reasonable estimation error.
+
+
+## Backlinks {#backlinks}
+
+-   [VC-Dimension]({{< relref "vc_dimension" >}})

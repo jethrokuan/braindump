@@ -1,7 +1,7 @@
 +++
 title = "C++"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:56+08:00
+lastmod = 2020-03-08T00:26:19+08:00
 draft = false
 +++
 
@@ -256,3 +256,8 @@ pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">
 <a id="so_why_move_shared_ptr" target="_blank">nil,  (2019). *C++ - why would i std::move an std::shared_ptr? - stack overflow*. Retrieved from [https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr](https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr). Online; accessed 25 February 2019.</a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
 
 <a id="17_bartek" target="_blank">Bartek,  (2017). *Bartek's coding blog: how not_null can improve your code?*. Retrieved from [https://www.bfilipek.com/2017/10/notnull.html](https://www.bfilipek.com/2017/10/notnull.html). Online; accessed 02 April 2019.</a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)
+
+
+## Backlinks {#backlinks}
+
+-   [CMake]({{< relref "cmake" >}})

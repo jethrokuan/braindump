@@ -1,7 +1,7 @@
 +++
 title = "Hindsight Experience Replay"
 author = ["Jethro Kuan"]
-lastmod = 2020-01-22T16:56:58+08:00
+lastmod = 2020-03-08T00:27:01+08:00
 draft = false
 +++
 
@@ -41,3 +41,9 @@ goal \\(g \in G\\).
 Goals used for replay naturally shift from simple to achieve goals
 achievable by a random agent, to more difficult ones. HER has no
 explicit control over the distribution of initial environment states.
+
+
+## Backlinks {#backlinks}
+
+-   [Playing Atari with Deep RL]({{< relref "mnih2013_atari_deeprl" >}})
+-   [LeCun's Cake Analogy]({{< relref "lecun_cake_analogy" >}})

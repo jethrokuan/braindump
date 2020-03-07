@@ -1,7 +1,7 @@
 +++
 title = "Two Levels Of Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:12+08:00
+lastmod = 2020-03-08T00:26:36+08:00
 draft = false
 +++
 
@@ -61,3 +61,8 @@ covariance matrix \\(\mathbf{A}^{-1}\\) (the inverse Hessian).
 ## Related {#related}
 
 -   [§occams\_razor]({{< relref "occams_razor" >}})
+
+
+## Backlinks {#backlinks}
+
+-   [Occam's Razor]({{< relref "occams_razor" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Optimal Control and Planning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:07+08:00
+lastmod = 2020-03-08T00:26:30+08:00
 draft = false
 +++
 
@@ -40,3 +40,9 @@ search ([§mcts]({{< relref "mcts" >}})) is typically used.
 
 -   Differentiable Dynamic Programming (DDP)
 -   LQR
+
+
+## Backlinks {#backlinks}
+
+-   [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
+-   [Control As Inference]({{< relref "control_as_inference" >}})

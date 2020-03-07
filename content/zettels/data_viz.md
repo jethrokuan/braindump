@@ -1,7 +1,7 @@
 +++
 title = "Data Visualization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:48+08:00
+lastmod = 2020-03-08T00:26:10+08:00
 draft = false
 +++
 
@@ -430,3 +430,8 @@ maximize data-ink ratio
 5.  Interactive visualization of deep learning
     1.  Toolkits: Tensorboard, Embedding Projector, Visdom
     2.  Advanced visual analytics systems: CNNVis, LSTMVis, DeepEyes
+
+
+## Backlinks {#backlinks}
+
+-   [Topic Modeling]({{< relref "topic_modelling" >}})

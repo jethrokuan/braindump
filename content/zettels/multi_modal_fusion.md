@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Fusion"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:04:38+08:00
+lastmod = 2020-03-08T00:26:08+08:00
 slug = "multimodal_fusion"
 draft = false
 +++
@@ -69,3 +69,9 @@ amounts of training data.
 
 # Bibliography
 <a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\vsaitis, Tadas, Ahuja, C., & Morency, L., *Multimodal machine learning: a survey and taxonomy*, CoRR, *()*,  (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
+
+
+## Backlinks {#backlinks}
+
+-   [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
+-   [Multi-modal Representation]({{< relref "multimodal_representation" >}})

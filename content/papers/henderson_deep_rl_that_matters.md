@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning That Matters"
 author = ["Jethro Kuan"]
-lastmod = 2020-02-10T15:02:16+08:00
+lastmod = 2020-03-08T00:26:21+08:00
 draft = false
 +++
 

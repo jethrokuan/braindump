@@ -1,7 +1,7 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:42:58+08:00
+lastmod = 2020-03-08T00:26:21+08:00
 draft = false
 +++
 
@@ -623,6 +623,11 @@ source devel/setup.bash
 <a id="wiki_service" target="_blank">nil,  (nil). *Ros/tutorials/writingserviceclient(python) - ros wiki*. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29). Online; accessed 17 October 2019.</a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
 
 <a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil,  (nil). *Melodic/installation/ubuntu - ros wiki*. Retrieved from [http://wiki.ros.org/melodic/Installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu). Online; accessed 16 October 2019.</a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
+
+
+## Backlinks {#backlinks}
+
+-   [Robotics]({{< relref "robotics" >}})
 
 [^fn:1]: Almost all these commands have tab completion!
 [^fn:2]: can also be done programatically

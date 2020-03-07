@@ -1,7 +1,7 @@
 +++
 title = "Imitation Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:19+08:00
+lastmod = 2020-03-08T00:26:43+08:00
 draft = false
 +++
 
@@ -86,3 +86,8 @@ Assuming: \\(\pi\_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathb
 
 # Bibliography
 <a id="haan19_causal_confus_imitat_learn" target="_blank">Haan, P. d., Jayaraman, D., & Levine, S., *Causal confusion in imitation learning*, CoRR, *()*,  (2019). </a> [↩](#97004a1ab6778a90f591ea58fde11d3c)
+
+
+## Backlinks {#backlinks}
+
+-   [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})

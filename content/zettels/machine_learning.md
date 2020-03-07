@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:23+08:00
+lastmod = 2020-03-08T00:26:48+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -657,3 +657,28 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 <a id="home_cookiec_data_scien" target="_blank">DrivenData,  (2019). *Home - cookiecutter data science*. Retrieved from [https://drivendata.github.io/cookiecutter-data-science/](https://drivendata.github.io/cookiecutter-data-science/). Online; accessed 06 January 2019.</a> [↩](#e0ca383893600291ac5eca0f379984fb)
 
 <a id="dan_reprod" target="_blank">Frank, D. (2016). *Reproducible research: stripe's approach to data science*. Retrieved from [https://stripe.com/blog/reproducible-research](https://stripe.com/blog/reproducible-research). Online; accessed 06 January 2019.</a> [↩](#77ac83a13ddf56f053f1ba225873677d)
+
+
+## Backlinks {#backlinks}
+
+-   [Saturday, 08 February 2020]({{< relref "private-2020-02-08" >}})
+-   [Rademacher Complexity]({{< relref "rademacher" >}})
+-   [Probabilistic Graph Models]({{< relref "pgm" >}})
+-   [PAC Learning]({{< relref "pac_learning" >}})
+-   [Artificial Intelligence]({{< relref "artificial_intelligence" >}})
+-   [Information Theory]({{< relref "information_theory" >}})
+-   [Single Layer XOR]({{< relref "single_layer_xor" >}})
+-   [Empirical Risk Minimization]({{< relref "erm" >}})
+-   [Occam's Razor]({{< relref "occams_razor" >}})
+-   [Topic Modeling]({{< relref "topic_modelling" >}})
+-   [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+-   [Machine Teaching]({{< relref "machine_teaching" >}})
+-   [Recommender Systems]({{< relref "recommender_systems" >}})
+-   [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}})
+-   [Statistical Learning]({{< relref "statistical_learning" >}})
+-   [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
+-   [Likelihood Principle]({{< relref "likelihood_principle" >}})
+-   [Natural Language Processing]({{< relref "nlp" >}})
+-   [Quantization]({{< relref "quantization" >}})
+-   [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
+-   [Article: An Opinionated Guide to ML Research]({{< relref "20200217124441" >}})

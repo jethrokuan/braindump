@@ -1,7 +1,7 @@
 +++
 title = "Investing In ETFs"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-07T23:43:39+08:00
+lastmod = 2020-03-08T00:27:05+08:00
 draft = false
 +++
 
@@ -14,3 +14,9 @@ Good ETFs satisfy the following conditions:
 3.  "Cash" or "physical", not "synthetic"
     1.  This is because if the counterparty collapses, the synthetic ETF
         will start tracking the bunch of miscellaneous stocks
+
+
+## Backlinks {#backlinks}
+
+-   [Portfolio Composition]({{< relref "portfolio_composition" >}})
+-   [Investment]({{< relref "investment" >}})
