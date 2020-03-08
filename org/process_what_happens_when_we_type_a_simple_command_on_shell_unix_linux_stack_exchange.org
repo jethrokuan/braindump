@@ -3,7 +3,7 @@
 #+HUGO_SLUG: what_happens_when_we_type_a_simple_command_on_shell
 #+ROAM_KEY: https://unix.stackexchange.com/questions/123457/what-happens-when-we-type-a-simple-command-on-shell
 
-- tags :: [[file:operating_systems.org][Operating Systems]] 
+- tags :: [[file:operating_systems.org][Operating Systems]]
 -source ::
 https://unix.stackexchange.com/questions/123457/what-happens-when-we-type-a-simple-command-on-shell
 
@@ -13,8 +13,8 @@ of subprocesses.
 
 * Fork()
 
-Fork creates a duplicate copy fo the calling process as its child.
-This is how most processes (except for init) begins.
+Fork creates a copy of the calling process as its child. This is how
+most processes (except for init) begins.
 
 * Exec()
 

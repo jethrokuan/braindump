@@ -1,14 +1,14 @@
 +++
 title = "PARA Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:42:55+08:00
+lastmod = 2020-03-08T20:20:23+08:00
 draft = false
 +++
 
 tags
 : [§productivity]({{< relref "productivity" >}})
 
-PARA is a method of organising digital information, designed by Tiago
+PARA is a method of organizing digital information, designed by Tiago
 Forte. Tiago Forte also proposed the method of [Progressive Summarization]({{< relref "progressive_summarization" >}}).
 
 PARA stands for:
@@ -47,9 +47,9 @@ outcomes. Knowing how projects connect to your long-term goals (areas)
 is important.
 
 
-## Contrasting with [§zettelkasten]({{< relref "zettelkasten" >}}) {#contrasting-with-zettelkasten--zettelkasten-dot-md}
+## Contrasting with [Zettelkasten]({{< relref "zettelkasten" >}}) {#contrasting-with-zettelkasten--zettelkasten-dot-md}
 
-This seems to be in contrast with other techniques like [§zettelkasten]({{< relref "zettelkasten" >}}),
+This seems to be in contrast with other techniques like [Zettelkasten]({{< relref "zettelkasten" >}}).
 which propose no such organization, instead using links between
 different information.
 
@@ -57,7 +57,7 @@ My personal thoughts:
 
 1.  PARA looks like it would form a good hierarchical overview of tasks
     and information. Zettelkasten does not provide this.
-2.  Zettelkasten still remains a useful tool for low-level,
+2.  Zettelkasten remains a useful tool for low-level,
     inter-project information-linking.
 
 

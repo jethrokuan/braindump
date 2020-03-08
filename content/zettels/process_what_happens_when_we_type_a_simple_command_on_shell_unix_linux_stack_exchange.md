@@ -1,7 +1,7 @@
 +++
 title = "What happens when we type a simple command on shell?"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T17:15:35+08:00
+lastmod = 2020-03-08T20:27:52+08:00
 slug = "what_happens_when_we_type_a_simple_command_on_shell"
 draft = false
 +++
@@ -19,8 +19,8 @@ of subprocesses.
 
 ## Fork() {#fork}
 
-Fork creates a duplicate copy fo the calling process as its child.
-This is how most processes (except for init) begins.
+Fork creates a copy of the calling process as its child. This is how
+most processes (except for init) begins.
 
 
 ## Exec() {#exec}

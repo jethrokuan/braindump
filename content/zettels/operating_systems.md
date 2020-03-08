@@ -1,7 +1,7 @@
 +++
 title = "Operating Systems"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:31+08:00
+lastmod = 2020-03-08T20:32:55+08:00
 draft = false
 +++
 
@@ -1488,11 +1488,12 @@ recommendation.
 
 ## Backlinks {#backlinks}
 
+-   [Docker 101]({{< relref "docker" >}})
+-   [Branch Prediction]({{< relref "branch_prediction" >}})
 -   [Computer Organization]({{< relref "computer_organization" >}})
 -   [Nix/NixOS]({{< relref "nix" >}})
 -   [Systems Programming]({{< relref "systems_programming" >}})
 -   [Config Management]({{< relref "config_management" >}})
 -   [Computer Networking]({{< relref "networking" >}})
 -   [ARM Assembly Programming]({{< relref "arm" >}})
--   [Docker 101]({{< relref "docker" >}})
--   [Branch Prediction]({{< relref "branch_prediction" >}})
+-   [What happens when we type a simple command on shell?]({{< relref "process_what_happens_when_we_type_a_simple_command_on_shell_unix_linux_stack_exchange" >}})
