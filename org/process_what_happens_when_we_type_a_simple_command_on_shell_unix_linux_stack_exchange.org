@@ -1,4 +1,6 @@
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: What happens when we type a simple command on shell?
+#+HUGO_SLUG: what_happens_when_we_type_a_simple_command_on_shell
 #+ROAM_KEY: https://unix.stackexchange.com/questions/123457/what-happens-when-we-type-a-simple-command-on-shell
 
 - tags :: [[file:operating_systems.org][Operating Systems]] 
