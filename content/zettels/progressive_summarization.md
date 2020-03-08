@@ -1,12 +1,12 @@
 +++
 title = "Progressive Summarization"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:27:13+08:00
+lastmod = 2020-03-08T01:50:33+08:00
 draft = false
 +++
 
 tags
-: [§productivity]({{< relref "productivity" >}})
+: [Productivity]({{< relref "productivity" >}})
 
 The idea of progressive summarization is to create notes such that
 their purpose is comprehensible in the future.
@@ -33,11 +33,6 @@ extracting key points from each note.
 ## Resources {#resources}
 
 -   [Implementing A Second Brain in Emacs and Org-Mode – Tasshin](https://tasshin.com/blog/implementing-a-second-brain-in-emacs-and-org-mode/)
-
-
-## Related {#related}
-
--   [§para\_method]({{< relref "para_method" >}})
 
 
 ## Backlinks {#backlinks}

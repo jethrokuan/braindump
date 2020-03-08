@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Progressive Summarization
 
-- tags :: [[file:productivity.org][§productivity]]
+- tags :: [[file:productivity.org][Productivity]]
 
 The idea of progressive summarization is to create notes such that
 their purpose is comprehensible in the future.
@@ -18,5 +18,3 @@ extracting key points from each note.
 * Resources
 - [[https://tasshin.com/blog/implementing-a-second-brain-in-emacs-and-org-mode/][Implementing A Second Brain in Emacs and Org-Mode – Tasshin]]
 
-* Related
-- [[file:para_method.org][§para_method]]
