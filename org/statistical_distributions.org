@@ -1,0 +1,7 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: statistical_distributions
+#+TITLE: Statistical Distributions
+
+* Overview of Distributions
+- [[http://www.math.wm.edu/~leemis/chart/UDR/UDR.html][Univariate Distribution Relationship Chart]]

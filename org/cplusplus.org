@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
-#+TITLE: C++
+#+TITLE: C++ Language
 
-- tags :: [[file:prog_lang.org][§prog_lang]]
+- tags :: [[file:prog_lang.org][Programming Languages]]
 
 * What is C++
 C++ is a compiled language. For a program to run, its source text has
@@ -200,4 +200,3 @@ http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list
 - [[https://cpppatterns.com/][C++ Patterns]]
 
 bibliography:biblio/cpp.bib
-

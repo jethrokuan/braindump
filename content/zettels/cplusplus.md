@@ -1,12 +1,12 @@
 +++
-title = "C++"
+title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:19+08:00
+lastmod = 2020-03-09T19:23:06+08:00
 draft = false
 +++
 
 tags
-: [§prog\_lang]({{< relref "prog_lang" >}})
+: [Programming Languages]({{< relref "prog_lang" >}})
 
 
 ## What is C++ {#what-is-c-plus-plus}
