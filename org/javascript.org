@@ -3,4 +3,4 @@
 #+TITLE: JavaScript
 
 JavaScript is an interpreted [[file:prog_lang.org][programming language]], originally designed
-for the [[file:web_dev.org][web]].
+for the [[file:web_dev.org][web]]. 

@@ -610,3 +610,348 @@ Unit vector $\boldsymbol{u}=\langle a,b \rangle$, $D_{\boldsymbol{u}}
 f(x,y) = f_x(x,y)a +f_y(x,y)b = \langle f_x,f_y \rangle \cdot
 \boldsymbol{u}$, note that $D_{\boldsymbol{n}}\phi = \triangledown
 \phi \cdot \boldsymbol{n}$
+
+* Gradient Vector, Extrema, & Lagrange Multiplier
+
+** Level Curve vs $\nabla f$
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583823033000
+:END:
+
+*** Text
+Suppose $f(x,y)$ is a differentiable function of $x$ and $y$ at $(x_0,
+y_0)$. Suppose $\nabla f(x_0, y_0) \ne 0$.
+
+Then $\nabla f(x_0, y_0)$ is {{c1:: normal to the level curve}}
+$f(x,y) = k$ that contains the point $(x_0, y_0)$.
+
+** Level Surface vs $\nabla f$
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583823033150
+:END:
+
+*** Text
+Suppose $F(x,y,z)$ is a differentiable function of $x$, $y$, and $z$ at $(x_0,
+y_0, z_0)$. Suppose $\nabla F(x_0, y_0, z_0) \ne 0$.
+
+Then $\nabla F(x_0, y_0, z_0)$ is {{c1:: normal to the level surface}}
+$F(x,y,z) = k$ that contains the point $(x_0, y_0, z_0)$.
+
+** Tangent Plane to Level Surface
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583823033253
+:END:
+
+*** Front
+Tangent Plane to Level Surface
+
+*** Back
+\begin{equation}
+  \nabla F (x_0, y_0, z_0) \cdot \langle x-x_0, y-y_0, z-z_0 \rangle = 0
+\end{equation}
+
+** Maximum Rate of Change
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583823033376
+:END:
+
+*** Text
+Maximum rate of change is given by {{c1:: $|\nabla f|$}}, and it
+occurs when direction $u$ points in the direction of {{c2:$\nabla f$}}.
+
+** Minimum Rate of Change
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583823033701
+:END:
+
+*** Text
+Minimum rate of change is given by {{c1:: $- |\nabla f|$}}, and it
+occurs when direction $u$ points in the direction of {{c2:$- \nabla f$}}.
+
+** Critical Points
+
+*** Local Maximum
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583823033800
+:END:
+
+**** Front
+Let $f(x,y) : D \rightarrow \mathcal{R}$. Then $f$ has a local maximum
+at $(a,b)$ if
+
+**** Back
+\begin{equation}
+f(x,y) \le f(a,b) \text{ for all the points close to } (a,b)
+\end{equation}
+
+*** Local Minimum
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583823033900
+:END:
+
+**** Front
+Let $f(x,y) : D \rightarrow \mathcal{R}$. Then $f$ has a local minimum
+at $(a,b)$ if
+
+**** Back
+\begin{equation}
+f(x,y) \ge f(a,b) \text{ for all the points close to } (a,b)
+\end{equation}
+
+*** Necessary Condition
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583823034000
+:END:
+
+**** Front
+If $f$ has a local minimum or maximum at $(a,b)$, and the first-order
+derivatives exist there, then:
+
+**** Back
+\begin{equation}
+  f_x(a,b) = f_y(a,b) = 0
+\end{equation}
+
+*** Saddle Point
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583823034100
+:END:
+
+**** Front
+Let $f(x,y) : D \rightarrow \mathcal{R}$. Then a point $(a,b)$ is a
+saddle point of $f$ if:
+
+**** Back
+- $f_x(a,b) = f_y(a,b) = 0$, and
+- every neighbourhood at $(a,b)$ contains points $(x,y) \in D$ for
+  which $f(x,y) < f(a,b)$ and points $(x,y) \in D$ for which $f(x,y) >
+  f(a,b)$
+
+** Closed Interval Method
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583823428749
+:END:
+
+*** Text
+To find the absolute maximum and minimum values, we used the Closed
+Interval Method:
+
+1. Find the values of $f$ at {{c1:: it's critical points in $D$}}
+2. Find the extreme values of $f$ on {{c2::the boundary}} of $D$
+3. The largest of the values from 1 and 2 is the {{c3::absolute
+   maximum value}}, the smallest is the {{c4::absolute minimum value}}
+
+** Lagrange Multiplier
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583823428849
+:END:
+
+*** Text
+Suppose $f(x,y,z)$ and $g(x,y,z)$ are differentiable functions such
+that $\nabla g(x,y,z) \ne 0$ on the constraint surface $g(x,y,z) = k$.
+
+Suppose that the minimum/maximum value of $f(x,y,z)$ subject to the
+constraint $g(x,y,z) = k$ occurs at $(x_0, y_0, z_0)$.
+
+Then {{c1::$$\nabla f(x,y,z) = \lambda g(x,y,z)$$ for some constant
+$\lambda$}}, called the {{c2::Lagrange Multiplier}}.
+
+* Double Integrals on the xy-plane
+
+** Properties of Double Integrals
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583824660975
+:END:
+
+*** Front
+Properties of Double Integrals
+
+*** Back
+\begin{array}{c}\iint_{D}(f(x, y)+g(x, y)) d A \\ =\iint_{D} f(x, y) d A+\iint_{D} g(x, y) d A \\ \iint_{D} c f(x, y) d A=c \iint_{D} f(x, y) d A\end{array}
+
+** Iterated Double Integral
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583824661076
+:END:
+
+*** Text
+The *iterated double integral* of $f$ on the rectangle $R = [a,b]
+\times [c,d]$ in the order $dy dx$ is defined to be:
+
+{{c1::$$\int_{a}^{b}\left(\int_{c}^{d} f(x, y) d y\right) d x$$}}
+
+The inner integral is computed first, followed by the outer integral.
+
+- The inner integral $\int_{c}^{d} f(x, y) d y$ is integrated with
+  respect to $y$ to $d$ by {{c2:: holding $x$ fixed}}
+
+** Region Types
+
+*** Type I Region
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583825571104
+:END:
+
+**** Text
+A plane region $D$ is said to be of Type I if it {{c1::lies between
+the graph of two continuous functions of $x$}}, that is,
+
+{{c2::$$D=\left\{(x, y): a \leq x \leq b, \quad g_{1}(x) \leq y \leq
+g_{2}(x)\right\}$$}}
+
+where $g_1(x)$, $g_2(x)$ are continuous on $[a, b]$.
+
+**** Example 1
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583825571322
+:END:
+
+***** Front
+Type of Region?
+
+#+DOWNLOADED: screenshot @ 2020-03-10 15:23:04
+[[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-23-04_.png]]
+
+***** Back
+Type I
+
+**** Example 2
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583825571500
+:END:
+
+***** Front
+Type of Region?
+
+#+DOWNLOADED: screenshot @ 2020-03-10 15:23:37
+[[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-23-37_.png]]
+
+***** Back
+Type I
+
+**** Example 3
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583825571675
+:END:
+
+***** Front
+Type of Region?
+
+#+DOWNLOADED: screenshot @ 2020-03-10 15:24:13
+[[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-24-13_.png]]
+
+***** Back
+Type I
+
+*** Type 2 Region
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583825631903
+:END:
+
+**** Text
+A plane region $D$ is said to be of Type II if {{c1::it lies between
+the graphs of two continuous functions of $y$}}, that is,
+
+\begin{equation}
+  D=\left\{(x, y): c \leq y \leq d, h_{1}(y) \leq x \leq h_{2}(y)\right\}
+\end{equation}
+
+where $h_1(y)$ and $h_2(y)$ are continuous on $[c,d]$.
+
+**** Example 1
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583825578725
+:END:
+
+***** Front
+Type of Region?
+
+#+DOWNLOADED: screenshot @ 2020-03-10 15:26:42
+[[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-26-42_.png]]
+
+***** Back
+Type II
+
+**** Example 2
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583825578878
+:END:
+
+***** Front
+Type of Region?
+
+#+DOWNLOADED: screenshot @ 2020-03-10 15:27:10
+[[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-27-10_.png]]
+
+***** Back
+Type II
+
+*** Double Integral over Type I domain
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583825578974
+:END:
+
+**** Text
+If $f$ is continuous on a Type I domain $D$ such that
+\begin{equation}
+D=\left\{(x, y): a \leq x \leq b, g_{1}(x) \leq y \leq g_{2}(x)\right\}
+\end{equation}
+
+then: {{c1::$$\iint_{D} f(x, y) d A=\int_{a}^{b}
+\int_{g_{1}(x)}^{g_{2}(x)} f(x, y) d y d x$$}}.
+
+*** Double Integral over Type II domain
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583825579050
+:END:
+
+**** Text
+If $f$ is continuous on a Type II domain $D$ such that:
+
+\begin{equation}
+D=\left\{(x, y): c \leq y \leq d, \quad h_{1}(y) \leq x \leq h_{2}(y)\right\}
+\end{equation}
+
+then: {{c1::$$\iint_{D} f(x, y) d A=\int_{c}^{d}
+\int_{h_{1}(y)}^{h_{2}(y)} f(x, y) d x d y$$}}
+
+*** Additivity & Area of a Plane Region
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583825579150
+:END:
+
+**** Front
+If $D$ is the union of domains $D_1 \dots D_n$, that do not overlap
+except possibly on boundary curves, then
+
+**** Back
+\begin{aligned}
+\iint_{D} f(x, y) d A & \\=\iint_{D_{1}} f(x, y) d A+\cdots+\iint_{D_{n}} f(x, y) d A
+\end{aligned}
+
+# local variables:
+# eval: (anki-editor-mode +1)
+# end:

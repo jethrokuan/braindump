@@ -1,0 +1,350 @@
+#+PROPERTY: ANKI_DECK Bayesian Statistics
+#+TITLE: Flashcards: Bayesian Statistics
+
+* Probability Recap
+
+** Conditional Probability
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832169715
+:END:
+
+*** Front
+Conditional Probability
+*** Back
+\begin{equation}
+\mathrm{P}(A | B)=\left\{\begin{array}{ll}\frac{\mathrm{P}(A, B)}{P(B)} & \text { if } \mathrm{P}(B)>0 \\ 0 & \text { otherwise }\end{array}\right.
+\end{equation}
+** Multiplicative Formula
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832169840
+:END:
+*** Front
+Multiplicative Formula
+*** Back
+\begin{equation}
+  \mathrm{P}(A, B)=P(A | B) P(B)=\mathrm{P}(B | A) \mathrm{P}(A)
+\end{equation}
+** Bayes Theorem
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832170068
+:END:
+
+*** Front
+Bayes' Theorem
+
+*** Back
+\begin{aligned}
+p(\theta | y) &=\frac{p(y, \theta)}{p(y)}=\frac{p(y, \theta)}{\int p\left(y, \theta^{\prime}\right) \mathrm{d} \theta^{\prime}} \\ &=\frac{p(y | \theta) p(\theta)}{\int p\left(y | \theta^{\prime}\right) p\left(\theta^{\prime}\right) \mathrm{d} \theta^{\prime}}
+\end{aligned}
+
+** Sampling Model
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832170165
+:END:
+
+*** Text
+The sampling model describes how $y$ depends on $\theta$. This is expressed as a probability density function $p(y | \theta)$, which we call the {{c1::likelihood function}}.
+
+** Prior Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832170239
+:END:
+
+*** Text
+The {{c1::prior distribution}} $p(\theta)$ expresses any prior knowledge or beliefs we have about their values before observing the data.
+
+** Posterior distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832170314
+:END:
+
+*** Text
+The {{c1::posterior distribution}} $p(\theta | y)$ is computed from the likelihood and prior using Bayes' Theorem.
+
+\begin{equation}
+p(\theta | y)=\frac{p(y | \theta) p(\theta)}{\int p\left(y | \theta^{\prime}\right) p\left(\theta^{\prime}\right) \mathrm{d} \theta^{\prime}}
+\end{equation}
+
+** Marginal Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832170390
+:END:
+
+*** Text
+The {{c1::marginal distribution}} of the data $m(y)$ is:
+
+\begin{equation}
+m(y)=\int p\left(y | \theta^{\prime}\right) p\left(\theta^{\prime}\right) \mathrm{d} \theta^{\prime}
+\end{equation}
+
+It does not depend on $\theta$.
+
+* One-parameter Models
+
+** Binomial Model
+
+*** Likelihood
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832170465
+:END:
+
+**** Text
+
+Suppose $Y \sim \text { Binomial }(n, \theta)$. The probaiblity of observation $y$ is:
+
+{{c1::$$\mathrm{P}(Y=y | \theta)=p(y | \theta)=\left(\begin{array}{l}n \\ y\end{array}\right) \theta^{y}(1-\theta)^{n-y}$$}}
+
+$\mathrm{E}(Y | \theta)=$ {{c2::$n \theta$}}, $\operatorname{Var}(Y | \theta)=$ {{c3::$n \theta(1-\theta)$}}.
+
+*** Conjugate Prior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832170690
+:END:
+
+**** Front
+A conjugate prior to the binomial distribution is:
+
+**** Back
+Beta distribution.
+
+*** Beta Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832170765
+:END:
+
+**** Front
+$\theta \sim Beta(a_0, b_0)$, then $p(\theta) \propto$?
+
+**** Back
+\begin{equation}
+p(\theta) \propto \theta^{a_{0}-1}(1-\theta)^{b_{0}-1}
+\end{equation}
+
+*** Uniform Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832170839
+:END:
+
+**** Text
+The Uniform distribution is a special case of {{c1::Beta distribution: $Beta(1,1)$}}.
+
+*** Posterior Distribution of Beta-Binomial Model
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832170940
+:END:
+
+**** Front
+If $\theta \sim Beta(a_0, b_0)$, $Y \sim Binomial(n, \theta)$, then $\theta | y \sim$?
+
+**** Back
+\begin{equation}
+\begin{array}{c}\theta \sim \operatorname{Beta}\left(a_{0}, b_{0}\right) \\ Y \sim \operatorname{Binomial}(n, \theta)\end{array} \Rightarrow \theta | y \sim \operatorname{Beta}\left(a_{0}+y, b_{0}+n-y\right)
+\end{equation}
+
+** Conjugacy
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832171015
+:END:
+
+*** Text
+A class of priors is conjugate to the sampling model if {{c1::the prior and posterior distributions come from the same family of distributions}}.
+
+** Sufficient Statistics
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832171240
+:END:
+
+*** Front
+The statistic $t$ is called a *sufficient statistic* for $\theta$ given $\boldsymbol{y}$ if
+
+*** Back
+\begin{equation}
+  p(\boldsymbol{y} | t, \theta)=p(\boldsymbol{y} | t)
+\end{equation}
+
+** Fisher-Neyman Theorem
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832171339
+:END:
+
+*** Front
+Fisher-Neyman Theorem
+
+*** Back
+A statistic $t$ is sufficient for $\theta$ given $\boldsymbol{y}$ if and only if there are functions $f$ and $g$ such that:
+
+\begin{equation}
+p(\boldsymbol{y} | \theta)=f(t, \theta) g(\boldsymbol{y})
+\end{equation}
+
+where $t$ is sufficient statistic $t=t(y)$.
+
+** Summarizing Posterior Distributions
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832171415
+:END:
+
+*** Text
+To obtain a point estimate $\hat{\theta}$ of $\theta$, we may select a summary feature of $p(\theta | y)$ such as its {{c1::mean, median or mode}}.
+
+** Quantile-based Confidence Interval
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832171514
+:END:
+
+*** Front
+Quantile-based Confidence Interval
+
+*** Back
+Find 2 numbers $\theta_{\alpha / 2}<\theta_{1-\alpha / 2}$, such that:
+
+\begin{equation}
+\mathrm{P}\left(\theta<\theta_{\alpha / 2} | y\right)=\alpha / 2 \quad \text { and } \quad \mathrm{P}\left(\theta>\theta_{1-\alpha / 2} | y\right)=\alpha / 2
+\end{equation}
+
+The $100(1-\alpha)%$ quantile-based CI is $\left[\theta_{\alpha / 2}, \theta_{1-\alpha / 2}\right]$.
+
+** Quantile-based CI (R)
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832171740
+:END:
+
+*** Front
+Find the 95% CI for a $Beta(3,9)$ distribution in R.
+
+*** Back
+#+begin_src R
+qbeta(c(0.025, 0.975), 3, 9)
+#+end_src
+
+** Highest Posterior Density Region
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583832171815
+:END:
+
+*** Text
+The highest posterior density (HPD) credible set is defined as the set:
+
+{{c1::$$\mathcal{C}=\{\theta \in \Theta: p(\theta | y) \geq k(\alpha)\}$$}}
+
+where $k(\alpha)$ is the largest constant satisfying
+
+{{c2::$$P(\theta \in \mathcal{C} | y) \geq 1-\alpha$$}}
+
+** HPD (R)
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583832184415
+:END:
+
+*** Front
+How to get HPD of Beta distribution in R?
+
+*** Back
+#+begin_src R
+  require(TeachingDemos)
+  hpd(qbeta, shape1=a, shape2=b, conf=0.90)
+#+end_src
+
+** Poisson Model
+
+*** Poisson Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583837485430
+:END:
+
+**** Front
+Poisson Distribution PDF
+
+**** Back
+A random variable $Y$ has Poisson distribution with mean $\theta$, $Y \sim Poisson(\theta)$ if:
+
+\begin{equation}
+  \mathrm{P}(Y=y | \theta)=\frac{\theta^{y}}{y !} \exp (-\theta) \text { for } y \in\{0,1,2, \ldots\}
+\end{equation}
+
+$\mathrm{E}(Y | \theta)=\operatorname{Var}(Y | \theta)=\theta$
+
+*** Sufficient Statistic for Poisson
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1583837485529
+:END:
+
+**** Text
+If $y \sim Poisson(\theta)$, then the joint pdf is:
+
+\begin{equation}
+\begin{aligned} p(\boldsymbol{y} | \theta)=\prod_{i=1}^{n} p\left(y_{i} | \theta\right) &=\prod_{i=1}^{n}\left\{\exp (-\theta) \frac{\theta^{y_{i}}}{y_{i} !}\right\} \\ &=\exp (-n \theta) \theta^{\sum_{i=1}^{n} y_{i}} \frac{1}{\prod_{i=1}^{n} y_{i} !} \end{aligned}
+\end{equation}
+
+From the factorization theorem, {{c1::$t=\sum_{i=1}^{n} y_{i}$}} is a sufficient statistic for $\theta$.
+
+*** Prior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583837485729
+:END:
+
+**** Front
+Prior distribution for Poisson sampling model
+
+**** Back
+Gamma distribution
+
+*** Gamma Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583837485829
+:END:
+
+**** Front
+PDF of Gamma distribution, and properties.
+
+**** Back
+\begin{equation}
+p(\theta)=\frac{b^{a}}{\Gamma(a)} \theta^{a-1} \exp (-b \theta) \text { for } \theta>0
+\end{equation}
+
+- $\mathrm{E}(\theta)=a / b, \operatorname{Var}(\theta)=a / b^{2}$
+- mode of $\theta$ is $(a-1) / b \text { if } a>1 \text { and } 0 \text { if } a \leq 1$.
+
+*** Predictive
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1583837485954
+:END:
+
+**** Front
+Predictive distribution under Poisson-Gamma model
+
+**** Back
+Negative Binomial distribution:
+
+\begin{equation}
+\begin{aligned} \tilde{Y} \boldsymbol{y} & \sim \mathrm{NB}\left(a, \frac{b}{b+1}\right) \\ \mathrm{E}(\tilde{Y} | \boldsymbol{y}) &=a \frac{1 /(b+1)}{b /(b+1)}=\frac{a}{b}=\mathrm{E}(\theta | \boldsymbol{y}) \\ \operatorname{Var}(\tilde{Y} | \boldsymbol{y}) &=a \frac{1 /(b+1)}{b^{2} /(b+1)^{2}}=\frac{a(b+1)}{b^{2}} \\ &=\operatorname{Var}(\theta | \boldsymbol{y})(b+1)=\mathrm{E}(\theta | \boldsymbol{y}) \frac{b+1}{b} \end{aligned}
+\end{equation}
+
+# Local Variables:
+# eval: (anki-editor-mode)
+# End:
