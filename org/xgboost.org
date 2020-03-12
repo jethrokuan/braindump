@@ -65,7 +65,6 @@ $h_i = \partial^2_{\hat{y}^{(t-1)}} l(y_i, \hat{y}^{(t-1)})$ are the
 first and second order gradient statistics (gradients and Hessians).
 Removing the constant terms, at step $t$, the objective is simplified to:
 
-
 \begin{equation}
   \tilde{L}^{(t)} = \sum_{i=1}^{n} g_i f_t(\mathbf{x}_i) + \frac{1}{2}h_i
   f_t^2(\mathbf{x}_i) + \Omega(f_t) 
@@ -104,5 +103,6 @@ The implementation of distributed XGBoost uses [[https://github.com/dmlc/rabit][
 Allreduce framework. XGBoost requires gradients and hessians from each
 distributed worker. This fit the allreduce framework, which broadcasts
 each worker's reduce result across all processes. cite:chen3rabit
+
 
 bibliography:biblio/xgboost.bib
