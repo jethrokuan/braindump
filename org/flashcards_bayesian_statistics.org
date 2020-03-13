@@ -345,6 +345,285 @@ Negative Binomial distribution:
 \begin{aligned} \tilde{Y} \boldsymbol{y} & \sim \mathrm{NB}\left(a, \frac{b}{b+1}\right) \\ \mathrm{E}(\tilde{Y} | \boldsymbol{y}) &=a \frac{1 /(b+1)}{b /(b+1)}=\frac{a}{b}=\mathrm{E}(\theta | \boldsymbol{y}) \\ \operatorname{Var}(\tilde{Y} | \boldsymbol{y}) &=a \frac{1 /(b+1)}{b^{2} /(b+1)^{2}}=\frac{a(b+1)}{b^{2}} \\ &=\operatorname{Var}(\theta | \boldsymbol{y})(b+1)=\mathrm{E}(\theta | \boldsymbol{y}) \frac{b+1}{b} \end{aligned}
 \end{equation}
 
+* Normal Model
+** Normal Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085099417
+:END:
+
+**** Front
+If $Y \sim N(\theta, \sigma^2)$, then pdf of $Y$ is
+
+**** Back
+\begin{equation}
+  p\left(y | \theta, \sigma^{2}\right)=\frac{1}{\sqrt{2 \pi} \sigma} \exp \left\{-\frac{(y-\theta)^{2}}{2 \sigma^{2}}\right\}, \quad-\infty<y<+\infty
+\end{equation}
+
+$Z = \frac{Y - \theta}{\sigma}$ has a standard normal distribution.
+
+** Inference for Mean when Variance is Known
+
+**** Sufficient Statistic
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584085099511
+:END:
+
+***** Text
+For a normal model with known variance, {{c1::$\bar{y}$}} is a sufficient statistic for $\theta$.
+
+The sufficient static $\bar{y}$ has the distribution:
+
+{{c2:$$\bar{y} | \theta \sim N\left(\theta, \frac{\sigma^{2}}{n}\right)$$}}
+
+**** Prior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085099626
+:END:
+
+***** Front
+Prior distribution of Normal model when variance is known
+
+***** Back
+Normal distribution
+
+**** Posterior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085099736
+:END:
+
+***** Front
+Posterior distribution of Normal model when variance is known
+
+***** Back
+Normal Distribution
+
+**** Variance and Precision
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085100043
+:END:
+
+***** Front
+Posterior Precision = ?
+
+***** Back
+Posterior precision = Data Precision + Prior Precision
+
+\begin{equation}
+  \frac{1}{\tau^{2}}=\frac{n}{\sigma^{2}}+\frac{1}{\tau_{0}^{2}}
+\end{equation}
+
+**** Predictive Distribution
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085100128
+:END:
+
+***** Front
+Predictive distribution for Normal model, mean when variance is known
+
+***** Back
+\begin{equation}
+  \tilde{y} | \boldsymbol{y} \sim N\left(\mu_{n}, \tau_{n}^{2}+\sigma^{2}\right)
+\end{equation}
+
+** Inference when both mean and variance unknown
+
+**** Prior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085100290
+:END:
+
+***** Front
+Conjugate prior for Normal model with mean and variance unknown
+
+***** Back
+\begin{equation}
+  p\left(\theta, \sigma^{2}\right)=p\left(\theta | \sigma^{2}\right) p\left(\sigma^{2}\right)
+\end{equation}
+
+where
+
+\begin{equation}
+  \theta | \sigma^{2} \sim \mathrm{N}\left(\mu_{0}, \frac{\sigma^{2}}{n_{0}}\right), \quad \sigma^{2} \sim \ln v-\operatorname{Gamma}\left(\frac{\nu_{0}}{2}, \frac{\nu_{0} \sigma_{0}^{2}}{2}\right)
+\end{equation}
+
+**** Inverse-Gamma PDF
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085100395
+:END:
+
+***** Front
+PDF of Inv-Gamma(a,b)
+
+***** Back
+\begin{equation}
+  p(x)=\frac{b^{a}}{\Gamma(a)}(x)^{-a-1} \exp \left(-\frac{b}{x}\right) \text { for } x>0
+\end{equation}
+
+** Improper Priors
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085100667
+:END:
+
+**** Front
+Improper priors can be combined with the likelihood to give a proper posterior
+
+**** Back
+\begin{equation}
+  p(\theta | y)=\frac{p(y | \theta) \cdot c}{\int p(y | \theta) \cdot c \mathrm{d} \theta}=\frac{p(y | \theta)}{\int p(y | \theta) \mathrm{d} \theta}
+\end{equation}
+
+** Reference Prior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584085100751
+:END:
+
+**** Text
+Uniform prior is not always invariant under {{c1::reparameterization}}. The {{c2::Jeffreys prior}} is.
+
+** Jeffreys Prior
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584085101898
+:END:
+
+**** Front
+What is the Jeffreys Prior?
+
+**** Back
+\begin{equation}
+  p(\theta) \propto \sqrt{I(\theta)}
+\end{equation}
+
+where $I(\theta)$ is the expected Fisher information in the model:
+
+\begin{equation}
+  I(\theta)=-\mathrm{E}_{\mathbf{Y} | \theta}\left[\frac{\partial^{2}}{\partial \theta^{2}} \log p(\boldsymbol{y} | \theta)\right]
+\end{equation}
+
+If $\theta$ is multi-dimensional, then:
+
+\begin{equation}
+  p(\boldsymbol{\theta}) \propto \sqrt{\operatorname{det}\{I(\boldsymbol{\theta})\}}
+\end{equation}
+
+and $I(\theta)$ is the expected Fisher information matrix:
+
+\begin{equation}
+  l_{i j}(\boldsymbol{\theta})=-\mathrm{E}_{\mathbf{Y} | \theta}\left[\frac{\partial^{2}}{\partial \theta_{i} \partial \theta_{j}} \log p(\boldsymbol{y} | \boldsymbol{\theta})\right]
+\end{equation}
+
+* Monte Carlo Approximation
+
+** Law of large numbers
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:END:
+
+***  Text
+
+/The law of large numbers/ says that if $\theta^{(1)}, \dots, \theta^{(s)}$ are i.i.d. samples from $p(\theta | \boldsymbol{y})$, then as $S \rightarrow \infty$,
+
+\begin{equation}
+\frac{1}{S} \sum_{s=1}^{S} g\left(\theta^{(s)}\right) \rightarrow \mathrm{E}[g(\theta) | \boldsymbol{y}]=\int g(\theta) p(\theta | \boldsymbol{y}) \mathrm{d} \theta
+\end{equation}
+
+In addition:
+
+- $\bar{\theta}=\frac{1}{S} \sum_{s=1}^{S} \theta^{(s)} \rightarrow \mathrm{E}(\theta | \boldsymbol{y})$
+- $\frac{1}{S-1} \sum_{s=1}^{S}\left(\theta^{(s)}-\bar{\theta}\right)^{2} \rightarrow \operatorname{Var}(\theta | \boldsymbol{y})$
+- $\frac{1}{S} \sum_{s=1}^{S} \mathbb{1}\left\{\theta^{(s)} \leq c\right\} \rightarrow \mathrm{P}(\theta \leq c | \boldsymbol{y}), \text { for any real number } c$
+- The empirical distribution of $\mathrm{f}\left\{\theta^{(1)}, \ldots, \theta^{(S)}\right\}$ converges to $p(\theta | \boldsymbol{y})$
+- The $\alpha \times 100$ percentile of $\left\{\theta^{(1)}, \ldots, \theta^{(S)}\right\} \rightarrow \theta_{\alpha}$, where $\mathrm{P}\left(\theta \leq \theta_{\alpha} | \boldsymbol{y}\right)=\alpha$
+
+
+* Normal and Laplace Approximation
+
+** $g(\theta)$
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:END:
+
+*** Text
+Suppose that the model is $p(\boldsymbol{y} | \theta)$, the prior is $p(\theta)$. Then let $g(\theta)$ be a known function of $\theta$, it is typically of interest to compute the posterior mean of $\theta$:
+
+{{c1::$$\mathrm{E}[g(\theta) | \boldsymbol{y}]=\frac{\int g(\theta) p(\boldsymbol{y} | \theta) p(\theta) \mathrm{d} \theta}{\int p(\boldsymbol{y} | \theta) p(\theta) \mathrm{d} \theta}$$}}
+
+** Normal Approximation of Posterior
+
+*** Mode Sharing
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:END:
+
+**** Text
+Let $\ell(\theta)=\log p(\theta | \boldsymbol{y})+C$, then $\ell(\theta)$ and $p(\theta | \boldsymbol{y})$ share the same {{c1::modes}}.
+
+*** Density
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:END:
+
+**** Front
+
+The normal approximation to the posterior density is given by:
+
+**** Back
+\begin{equation}
+  \theta | \boldsymbol{y} \sim \mathrm{N}\left(\hat{\theta},-\left[\ell^{\prime \prime}(\hat{\theta})\right]^{-1}\right)
+\end{equation}
+
+*** Finding the posterior mode
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:END:
+
+**** Text
+
+To apply the normal approximation, we need to find the posterior mode, i.e. $\theta$ such that {{c1::$\ell(l)'(\theta) =0$}}.
+
+One optimization algorithm for finding this mode is {{c2::Newton's method}}.
+
+*** Issues with Normal Approximation
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:END:
+
+**** Text
+The normal distribution is always symmetric, which makes it a bad approximation for posterior distributions that are {{c1::skewed}}.
+
+** Laplace Approximation
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:END:
+
+*** Front
+The Laplace method works for integrals of the following format:
+
+\begin{equation}
+  \mathcal{I}=\int f(\theta) \cdot \exp \{-n h(\theta)\} \mathrm{d} \theta
+\end{equation}
+
+The Laplace method approximates $\mathcal{I}$ with:
+
+*** Back
+\begin{equation}
+  \widehat{\mathcal{I}}=f(\hat{\theta}) \sqrt{\frac{2 \pi}{n}} \hat{\sigma} \exp \{-n h(\hat{\theta})\}
+\end{equation}
+
+where $\hat{\theta}$ is the minimizer of $h(\theta)$ and $\hat{\sigma}=\left[\left.h^{\prime \prime}(\theta)\right|_{\theta=\hat{\theta}_ { \theta = \hat { \theta } }\right]^{-1 / 2}$.
+
+The derivation is through a Taylor-series expansion at the mode.
+
 # Local Variables:
 # eval: (anki-editor-mode)
 # End:
