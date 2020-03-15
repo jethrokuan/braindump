@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: System Design
 
-- tags :: [[file:coding_interview.org][§coding_interview]], [[file:software_engineering.org][§software_engineering]]
+- tags :: [[file:software_engineering.org][Software Engineering]], [[file:coding_interview_cheatsheet.org][Coding Interview Cheatsheet]]
 
 * Basics
 1. SQL, noSQL

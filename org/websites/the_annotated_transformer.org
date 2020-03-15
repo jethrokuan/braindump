@@ -20,4 +20,3 @@ The Transformer model relies entirely on [[file:~/Dropbox/org/braindump/org/self
 * Model Architecture
 
 Most neural sequence transduction models have an encoder-decoder architecture. The encoder maps an input sequence of symbol representations $(x_1, \dots, x_n)$ to a sequence of continuous representations $\boldsymbol{z} = (z_1, \dots, z_n)$. Given $\boldsymbol{z}$, the decoder generates an output sequence $(y_1, \dots, y_n)$ of symbols one element at a time. The model is auto-regressive: it consumes the previously generated symbols as additional input when generating the text.
-

@@ -1,12 +1,12 @@
 +++
 title = "System Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-15T20:49:59+08:00
+lastmod = 2020-03-15T21:29:58+08:00
 draft = false
 +++
 
 tags
-: [§coding\_interview]({{< relref "coding_interview" >}}), [§software\_engineering]({{< relref "software_engineering" >}})
+: [Software Engineering]({{< relref "software_engineering" >}}), [Coding Interview Cheatsheet]({{< relref "coding_interview_cheatsheet" >}})
 
 ## Basics {#basics}
 
