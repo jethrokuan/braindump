@@ -527,6 +527,7 @@ and $I(\theta)$ is the expected Fisher information matrix:
 ** Law of large numbers
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584090565357
 :END:
 
 ***  Text
@@ -545,12 +546,12 @@ In addition:
 - The empirical distribution of $\mathrm{f}\left\{\theta^{(1)}, \ldots, \theta^{(S)}\right\}$ converges to $p(\theta | \boldsymbol{y})$
 - The $\alpha \times 100$ percentile of $\left\{\theta^{(1)}, \ldots, \theta^{(S)}\right\} \rightarrow \theta_{\alpha}$, where $\mathrm{P}\left(\theta \leq \theta_{\alpha} | \boldsymbol{y}\right)=\alpha$
 
-
 * Normal and Laplace Approximation
 
 ** $g(\theta)$
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584090565407
 :END:
 
 *** Text
@@ -563,6 +564,7 @@ Suppose that the model is $p(\boldsymbol{y} | \theta)$, the prior is $p(\theta)$
 *** Mode Sharing
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584090565458
 :END:
 
 **** Text
@@ -571,6 +573,7 @@ Let $\ell(\theta)=\log p(\theta | \boldsymbol{y})+C$, then $\ell(\theta)$ and $p
 *** Density
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584090565508
 :END:
 
 **** Front
@@ -585,6 +588,7 @@ The normal approximation to the posterior density is given by:
 *** Finding the posterior mode
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584090565633
 :END:
 
 **** Text
@@ -596,6 +600,7 @@ One optimization algorithm for finding this mode is {{c2::Newton's method}}.
 *** Issues with Normal Approximation
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Cloze
+:ANKI_NOTE_ID: 1584090565682
 :END:
 
 **** Text
@@ -604,6 +609,7 @@ The normal distribution is always symmetric, which makes it a bad approximation 
 ** Laplace Approximation
 :PROPERTIES:
 :ANKI_NOTE_TYPE: Basic
+:ANKI_NOTE_ID: 1584090566757
 :END:
 
 *** Front
@@ -624,6 +630,95 @@ where $\hat{\theta}$ is the minimizer of $h(\theta)$ and $\hat{\sigma}=\left[\le
 
 The derivation is through a Taylor-series expansion at the mode.
 
+* Rejection Sampling
+** Setup
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_FAILURE_REASON: cannot create note because it is a duplicate
+:END:
+
+*** Text
+In rejection sampling, we need to find another probability density $g(\theta)$, called the {{c1::enevelope functioni}} satisfying these conditions
+
+- It is easy to {{c2::simulate draws from $g$}}
+- The density $g$ resembles $p(\theta | \boldsymbol{y})$ in terms of {{c3::location and spread}}
+- $\exists$ a finite constant $M > 0$ such that {{c4:$f(\theta) \le Mg(\theta)$ for all $\theta \in \Theta$}}
+
+** Rejection Sampling Algorithm
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Basic
+:ANKI_FAILURE_REASON: cannot create note because it is a duplicate
+:END:
+
+*** Front
+Rejection Sampling Algorithm
+
+*** Back
+1. Generate $\theta^{(s)} \sim g(\theta)$
+2. Generate $U \sim Uniform[0,1]$,
+3. If $U<\frac{f\left(\theta^{(s)}\right)}{M g\left(\theta^{(s)}\right)}$, accept $\theta^{(s)}$, otherwise reject $\theta^{(s)}$.
+4. Repeat steps 1-3 until the desired sample is obtained. Members of this sample will be random variables from $p(\theta|\boldsymbol{y})$
+
+** Finding $M$
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_FAILURE_REASON: cannot create note because it is a duplicate
+:END:
+
+*** Text
+
+To setup the rejection algorithm in rejection sampling, we need to find the bounding constant $M$ such that $f(\theta) < M g(\theta)$ for all $\theta \in \Theta$.
+
+Equivalently, we want to find $\log M$ such that {{c1::$\log f(\theta) - \log g(\theta) \le \log M$}}. We find the {{c2::maximum value}} of the above over all $\theta \in \Theta$ using =optim=.
+
+* Importance Sampling
+
+** Setup
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_FAILURE_REASON: cannot create note because it is a duplicate
+:END:
+
+*** Text
+Importance Sampling setup: suppose that we can approximate $f(\theta)$ with some density $g(\theta)$ from which we can easily sample. Then we rewrite the posterior mean as:
+
+{{c1::$$\mathrm{E}[\varphi(\theta) | \boldsymbol{y}]=\frac{\int \varphi(\theta) \frac{f(\theta)}{g(\theta)} g(\theta) \mathrm{d} \theta}{\int \frac{f(\theta)}{g(\theta)} g(\theta) \mathrm{d} \theta}=\frac{\int \varphi(\theta) w(\theta) g(\theta) \mathrm{d} \theta}{\int w(\theta) g(\theta) \mathrm{d} \theta}$$}}
+
+where $w(\theta) = \frac{f(\theta)}{g(\theta)}$ is the *weight function*.
+
+then $E\left[\varphi(\theta) | \boldsymbol{y}\right] \approx$:
+
+{{c2::$$\mathrm{E}[\varphi(\theta) | \boldsymbol{y}] \approx \frac{\frac{1}{S} \sum_{s=1}^{S} \varphi\left(\theta^{(s)}\right) w\left(\theta^{(s)}\right)}{\frac{1}{S} \sum_{s^{\prime}=1}^{S} w\left(\theta^{\left(s^{\prime}\right)}\right)}=\sum_{s=1}^{S} W_{s} \varphi\left(\theta^{(s)}\right)=\widehat{\varphi}_{IS}$$}}
+
+where $W_S$ are called *normalized weights*.
+
+** Choosing G(\theta)
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_FAILURE_REASON: cannot create note because it is a duplicate
+:END:
+
+*** Text
+In important sampling, $g(\theta)$ should {{c1::mimic the posterior density}} $p(\theta | y)$, and have {{c2::flat tails}} so that the weight function $w(\theta)$ is bounded from above.
+
+* Sampling Importance Resampling (SIR)
+
+** Setup
+:PROPERTIES:
+:ANKI_NOTE_TYPE: Cloze
+:ANKI_FAILURE_REASON: cannot create note because it is a duplicate
+:END:
+
+*** Text
+
+Suppose we have obtained a sample $\left\{\theta^{(1)}, \ldots, \theta^{(S)}\right\}$ with corresponding normalized weights $\left\{W_{1}, \dots, W_{S}\right\}$ using importance resampling.
+
+We can obtain a new sampling $\left\{\theta^{*(1)}, \ldots, \theta^{*(S)}\right\}$ by {{c1:: sampling from the discrete distribution over $\left\{\theta^{(1)}, \ldots, \theta^{(S)}\right\}$ with respective probabilities $\left\{W_{1}, \dots, W_{S}\right\}$.}}
+
+This is called sampling importance resampling (SIR), a weighted {{c2:: bootstrap procedure}} where we sample with replacement.
+
 # Local Variables:
 # eval: (anki-editor-mode)
 # End:
+
+

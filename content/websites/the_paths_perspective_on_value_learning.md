@@ -1,7 +1,7 @@
 +++
 title = "The Paths Perspective on Value Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-12T13:26:47+08:00
+lastmod = 2020-03-15T16:03:53+08:00
 slug = "the_paths_perspective_on_value_learning"
 draft = false
 +++
@@ -12,9 +12,15 @@ source
 author
 : [Sam Greydanus]({{< relref "sam_greydanus" >}})
 
-[Temporal Difference Learning]({{< relref "td_learning" >}}) can be viewed as expanding the agent's experience by merging trajectories.
-TD averages over more trajectories than Monte Carlo methods, because there are never fewer simulated trajectories than real trajectories. This explains why TD learning outperforms Monte Carlo in tabular environments.
+[Temporal Difference Learning]({{< relref "td_learning" >}}) can be viewed as expanding the agent's experience
+by merging trajectories.
 
-However, with function approximators, Monte Carlo and TD can make bad value updates. TD learning **amplifies these errors dramatically**.
+TD averages over more trajectories than Monte Carlo methods, because there are
+never fewer simulated trajectories than real trajectories. This explains why TD
+learning outperforms Monte Carlo in tabular environments.
 
-Great article explaining why TD learning can be beneficial, and when it can be harmful.
+However, with function approximators, Monte Carlo and TD can make bad value
+updates. TD learning **amplifies these errors dramatically**.
+
+Great article explaining why TD learning can be beneficial, and when it can be
+harmful.

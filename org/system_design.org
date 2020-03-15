@@ -124,11 +124,9 @@ convert_to_base_62(md5(url + salt))[:6]
 *** Stateless application servers
 load balancers ensure application is available when a server dies, and
 client knows which server to talk to
-*** 
 
 * Implementing Search
 * Implementing a distributed key-store
 1. Data can't fit onto one machine
 2. So now the choice is between consistency and availability
 3. Perform some estimations
-   - 
