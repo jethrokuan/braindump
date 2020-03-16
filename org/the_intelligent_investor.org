@@ -1,0 +1,17 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: the_intelligent_investor
+#+TITLE: The Intelligent Investor
+
+- author :: [[file:benjamin_graham.org][Benjamin Graham]]
+- tags :: [[file:finance.org][Finance]]
+
+* Investor vs Speculator
+
+The investor must recognize the existence of a /speculative factor/ in their common-stock holdings, and keep this components within minor limits.
+
+The defensive investor must confine himself to the shares of important companies with a long record of profitable operations and in strong financial condition.
+
+1. Always thoroughly analyse a company, and the soundness of the underlying businesses, before buying its stock.
+2. Deliberate protect yourself against serious losses
+3. aspire to "adequate", not extraordinary performance
