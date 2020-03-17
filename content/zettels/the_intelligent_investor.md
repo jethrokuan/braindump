@@ -1,7 +1,7 @@
 +++
 title = "The Intelligent Investor"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-16T19:48:17+08:00
+lastmod = 2020-03-16T20:02:12+08:00
 slug = "the_intelligent_investor"
 draft = false
 +++
@@ -21,3 +21,11 @@ The defensive investor must confine himself to the shares of important companies
 1.  Always thoroughly analyse a company, and the soundness of the underlying businesses, before buying its stock.
 2.  Deliberate protect yourself against serious losses
 3.  aspire to "adequate", not extraordinary performance
+
+## Combating Inflation {#combating-inflation}
+
+Mild inflation allows companies to pass the increased costs of their own raw materials on to customers, but high inflation wreaks havoc-forcing customers to slash their purchases, depressing activity throughout the economy.
+
+To guard against inflation, a common advice is to buy stocks, but in truth stocks failed to keep up with inflation about one-fifth of the time.
+
+To combat inflation, additionally look into [REITs]({{< relref "reits" >}}), and government bonds.

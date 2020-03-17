@@ -15,3 +15,11 @@ The defensive investor must confine himself to the shares of important companies
 1. Always thoroughly analyse a company, and the soundness of the underlying businesses, before buying its stock.
 2. Deliberate protect yourself against serious losses
 3. aspire to "adequate", not extraordinary performance
+
+* Combating Inflation
+
+Mild inflation allows companies to pass the increased costs of their own raw materials on to customers, but high inflation wreaks havoc-forcing customers to slash their purchases, depressing activity throughout the economy.
+
+To guard against inflation, a common advice is to buy stocks, but in truth stocks failed to keep up with inflation about one-fifth of the time.
+
+To combat inflation, additionally look into [[file:reits.org][REITs]], and government bonds.
