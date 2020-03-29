@@ -1,21 +1,19 @@
 +++
 title = "Rejection Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:00+08:00
+lastmod = 2020-03-23T16:03:45+08:00
 draft = false
 +++
 
 **Goal**: To sample from unknown distribution \\(p(x)\\).
 
-
 ## Assumptions {#assumptions}
 
--   we cannot sample from \\(p(x)\\)
--   we have a simple proposal density \\(q(x)\\) we can evaluate within a
-    multiplicative factor \\(Z\_q\\)
--   We know the value of a constant \\(c\\), such that \\(cq^\star(x) >
-      p^\star(x)\\) for all \\(x\\)
-
+- we cannot sample from \\(p(x)\\)
+- we have a simple proposal density \\(q(x)\\) we can evaluate within a
+  multiplicative factor \\(Z_q\\)
+- We know the value of a constant \\(c\\), such that \\(cq^\star(x) >
+  p^\star(x)\\) for all \\(x\\)
 
 ## Method {#method}
 
@@ -27,7 +25,6 @@ draft = false
 5.  If \\(u > p^\star(x)\\), reject, else accept, and add \\(x\\) to the set of
     samples
 
-
 ## Difficulties {#difficulties}
 
 1.  Works well only when \\(q(x)\\) is a good approximation to \\(p(x)\\),
@@ -35,8 +32,7 @@ draft = false
 2.  In high-dimensional settings, \\(c\\) will generally be so large that
     acceptances will be rare
 
-
 ## Backlinks {#backlinks}
 
--   [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
--   [Slice Sampling]({{< relref "slice_sampling" >}})
+- [Slice Sampling]({{< relref "slice_sampling" >}})
+- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})

@@ -1,7 +1,7 @@
 +++
 title = "And the Bit Goes Down: Revisiting the Quantization of Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:13+08:00
+lastmod = 2020-03-23T16:02:41+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ tags
 : [Model Compression]({{< relref "model_compression" >}})
 
 paper
-: <a id="56497b51cc79dfdb43c364d93a9978c3" href="#stock19_and_bit_goes_down">(Stock et al., 2019)</a>
+: cite:stock19_and_bit_goes_down
 
 This method minimizes the loss reconstruction error for in-domain
 inputs, and does not require any labelled data.
@@ -27,8 +27,6 @@ high-dimensional space into a cartesian product of subspaces that are
 quantized separately. These are typically studied under the context of
 nearest neighbour search.
 
+## {#}
 
-##  {#}
-
-# Bibliography
-<a id="stock19_and_bit_goes_down" target="_blank">Stock, P., Joulin, A., Gribonval, R\'emi, Graham, B., & J\'egou, Herv\'e, *And the bit goes down: revisiting the quantization of neural networks*, CoRR, *()*,  (2019). </a> [↩](#56497b51cc79dfdb43c364d93a9978c3)
+bibliography:biblio/model_compression.bib
