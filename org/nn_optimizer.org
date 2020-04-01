@@ -2,4 +2,4 @@
 #+HUGO_SECTION: zettels
 #+TITLE: Neural Network Optimizer
 
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
+- tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]]

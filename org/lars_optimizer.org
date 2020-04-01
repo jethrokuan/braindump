@@ -2,10 +2,10 @@
 #+HUGO_SECTION: zettels
 #+TITLE: LARS Optimizer
 
-Layer-wise Adaptive Rate Scaling (LARS) is a [[file:nn_optimizer.org][§nn_optimizer]]. The
-technique allows [[file:large_batch_training.org][§large_batch_training]] without significant
-decrease in accuracy cite:you17_large_batch_train_convol_networ. One
-of the secondary goals is [[file:fast_nn_training.org][§fast_nn_training]].
+Layer-wise Adaptive Rate Scaling (LARS) is a [[file:nn_optimizer.org][Neural Network Optimizer]]. The
+technique allows [[file:large_batch_training.org][Large Batch Training]] without significant decrease in accuracy
+cite:you17_large_batch_train_convol_networ. One of the secondary goals is
+[[file:fast_nn_training.org][Fast Neural Network Training]].
 
 * Implementations
 - [[https://github.com/noahgolmant/pytorch-lars][pytorch-lars]]
