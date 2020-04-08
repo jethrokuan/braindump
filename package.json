@@ -29,6 +29,6 @@
     "toml": "^3.0.0"
   },
   "devDependencies": {
-    "@fullhuman/postcss-purgecss": "^2.1.0"
+    "@fullhuman/postcss-purgecss": "^2.1.2"
   }
 }
