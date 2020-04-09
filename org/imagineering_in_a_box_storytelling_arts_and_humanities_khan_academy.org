@@ -1,0 +1,6 @@
+#+TITLE: Imagineering in a Box | Storytelling | Arts and humanities | Khan Academy
+#+ROAM_KEY: https://www.khanacademy.org/humanities/hass-storytelling/imagineering-in-a-box
+
+- tags :: [[file:storytelling.org][Storytelling]]
+
+Disney's Imagineering team created a course on Khan Academy about how they design rides in theme parks.

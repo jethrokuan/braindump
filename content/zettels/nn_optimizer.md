@@ -1,7 +1,7 @@
 +++
 title = "Neural Network Optimizer"
 author = ["Jethro Kuan"]
-lastmod = 2020-04-01T11:40:07+08:00
+lastmod = 2020-04-01T11:56:21+08:00
 draft = false
 +++
 

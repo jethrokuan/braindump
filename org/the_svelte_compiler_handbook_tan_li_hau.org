@@ -1,0 +1,12 @@
+#+SETUPFILE: ./hugo_setup.org
+#+TITLE: The Svelte Compiler Handbook | Tan Li Hau
+#+ROAM_KEY: https://lihautan.com/the-svelte-compiler-handbook/
+
+- tags :: [[file:svelte.org][Svelte]], [[file:web_dev.org][Web Development]]
+
+Svelte's compilation process can be broken down into 4 steps:
+
+- parsing source code into an AST
+- tracking references and dependencies
+- creating code blocks and fragments
+- generating code
