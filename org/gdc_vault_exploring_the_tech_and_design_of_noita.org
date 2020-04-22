@@ -1,0 +1,12 @@
+#+TITLE: GDC Vault - Exploring the Tech and Design of 'Noita'
+#+ROAM_KEY: https://www.gdcvault.com/play/1025695/Exploring-the-Tech-and-Design
+
+- speaker :: [[file:petri_purho.org][Petri Purho]]
+- company :: [[file:nolla_games.org][Nolla Games]]
+- tags :: [[file:game_design.org][Game Design]]
+
+Noita uses a very simple falling sand simulation algorithm, liquids and gases are implemented similarly.
+
+Rigid bodies use a marching square algorithm.
+
+How to simulate all pixels in a big world? Multi-threading! The world is divided into $64 \times 64$ chunks. Each chunk keeps a dirty rectangle, containing all the pixels that need to be simulated.

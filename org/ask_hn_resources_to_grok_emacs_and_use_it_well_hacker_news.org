@@ -1,0 +1,4 @@
+#+TITLE: Ask HN: Resources to grok Emacs and use it well? | Hacker News
+#+ROAM_KEY: https://news.ycombinator.com/item?id=22881808
+
+[[file:emacs.org][Emacs]]

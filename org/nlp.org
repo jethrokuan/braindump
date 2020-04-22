@@ -1,4 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
+#+ROAM_ALIAS: NLP
 #+TITLE: Natural Language Processing
 
 - tags :: [[file:machine_learning.org][§machine_learning]], [[file:deep_learning.org][§deep_learning]]

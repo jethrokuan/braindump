@@ -2,4 +2,3 @@
 #+HUGO_SECTION: zettels
 #+HUGO_SLUG: deep_boltzmann_machines
 #+TITLE: Deep Boltzmann Machines
-

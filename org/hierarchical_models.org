@@ -1,0 +1,15 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SECTION: zettels
+#+HUGO_SLUG: hierarchical_models
+#+TITLE: Hierarchical Models
+
+- tags :: [[file:bayesian_statistics.org][Bayesian Statistics]]
+
+Bayesian hierachical modelling has many applications, e.g.:
+
+- Bayesian mixed effects models in psychology, epidemiology, economics etc.
+- [[file:latent_dirichlet_allocation.org][Latent Dirichlet Allocation]] in [[file:nlp.org][Natural Language Processing]]
+
+* Constructing a Hierarchical Prior
+
+An easy way is based on the prior belief of [[file:exchangeability.org][exchangeability]].
