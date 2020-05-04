@@ -1,7 +1,7 @@
 +++
 title = "Deep Boltzmann Machines"
 author = ["Jethro Kuan"]
-lastmod = 2020-04-16T18:28:52+08:00
+lastmod = 2020-04-30T13:42:26+08:00
 slug = "deep_boltzmann_machines"
 draft = false
 +++
