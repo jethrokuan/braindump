@@ -16,8 +16,7 @@ given by:
   p_\gamma (\gamma) = p(\theta)|J| = |J|
 \end{equation}
 
-where $|J| = \frac{d \theta}{d \gamma}$ from the [[file:20200216233609.org][Change of Variables
-Theorem]]. Then
+where $|J| = \frac{d \theta}{d \gamma}$ from the [[file:change_of_variables_theorem.org][Change of Variables Theorem]]. Then
 
 \begin{equation}
   p_\gamma (\gamma) = e^\gamma, - \infty < \gamma < + \infty
