@@ -1,12 +1,12 @@
 +++
 title = "Web Dev Tools"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-06T23:30:59+08:00
+lastmod = 2020-05-08T19:45:18+08:00
 draft = false
 +++
 
 tags
-: [Web Development]({{< relref "web_dv" >}})
+: [Web Development]({{< relref "web_dev" >}})
 
 
 ## SVG {#svg}
