@@ -1,7 +1,7 @@
 +++
 title = "How To Take Smart Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-12T02:19:26+08:00
+lastmod = 2020-05-12T02:26:43+08:00
 draft = false
 +++
 
@@ -22,10 +22,6 @@ recommended by
 
 
 ### A good, structured workflow puts us back in charge and increases our freedom to do the right thing at the right time. {#a-good-structured-workflow-puts-us-back-in-charge-and-increases-our-freedom-to-do-the-right-thing-at-the-right-time-dot}
-
-:PROPERTIES:
-:NOTER_PAGE: (7 . 1893)
-:END:nnn
 
 
 ### The simplicity of the structure allows complexity to build up where we want it: on the content level. {#the-simplicity-of-the-structure-allows-complexity-to-build-up-where-we-want-it-on-the-content-level-dot}

@@ -9,7 +9,7 @@
 * Book Notes
 :PROPERTIES:
 :NOTER_DOCUMENT: /home/jethro/Dropbox/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (201)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub
-:NOTER_PAGE: (7 . 2167)
+:NOTER_PAGE: (8 . 2176)
 :END:
 ** Consequently, these “written pieces” are also what most self-help books for academics or study guides focus on, but very few give guidance for the everyday note-taking that takes up the biggest chunk of our writing.
 :PROPERTIES:
@@ -18,7 +18,7 @@
 ** A good, structured workflow puts us back in charge and increases our freedom to do the right thing at the right time.
 :PROPERTIES:
 :NOTER_PAGE: (7 . 1893)
-:END:nnn
+:END:
 ** The simplicity of the structure allows complexity to build up where we want it: on the content level.
 :PROPERTIES:
 :NOTER_PAGE: (7 . 8263)
@@ -56,9 +56,6 @@ I should keep separate slipboxes for bibliographic content and main content.
 :PROPERTIES:
 :NOTER_PAGE: (7 . 31504)
 :END:
-
-
-
 
 * Motivations
 - There's a ton of books covering the art of writing, and very little
