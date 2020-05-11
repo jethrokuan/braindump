@@ -6,6 +6,60 @@
 - tags :: [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]], [[file:books.org][Books]], [[file:productivity.org][Productivity]]
 - recommended by :: [[file:/home/jethro/Dropbox/org/braindump/org/conor_white_sullivan.org][Conor White-Sullivan]]
 
+* Book Notes
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/jethro/Dropbox/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (201)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub
+:NOTER_PAGE: (7 . 2167)
+:END:
+** Consequently, these “written pieces” are also what most self-help books for academics or study guides focus on, but very few give guidance for the everyday note-taking that takes up the biggest chunk of our writing.
+:PROPERTIES:
+:NOTER_PAGE: (6 . 1229)
+:END:
+** A good, structured workflow puts us back in charge and increases our freedom to do the right thing at the right time.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 1893)
+:END:nnn
+** The simplicity of the structure allows complexity to build up where we want it: on the content level.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 8263)
+:END:
+** GTD relies on clearly defined objectives, whereas insight cannot be predetermined by definition.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 12196)
+:END:
+** one idea, one note was only as valuable as its context, which was not necessarily the context it was taken from.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 16424)
+:END:
+** “I only do what is easy. I only write when I immediately know how to do it. If I falter for a moment, I put the matter aside and do something else.”
+:PROPERTIES:
+:NOTER_PAGE: (7 . 22053)
+:END:
+** Luhmann had two slip-boxes: a bibliographical one, which contained the references and brief notes on the content of the literature, and the main one in which he collected and generated his ideas, mainly in response to what he read.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 27455)
+:END:
+I should keep separate slipboxes for bibliographic content and main content.
+** Whenever he read something, he would write the bibliographic information on one side of a card and make brief notes about the content on the other side
+:PROPERTIES:
+:NOTER_PAGE: (7 . 27755)
+:END:
+** More often than not, a new note would directly follow up on another note and would become part of a longer chain of notes.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 28844)
+:END:
+** Whenever he added a note, he checked his slip-box for other relevant notes to make possible connections between them.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 30545)
+:END:
+** The last element in his file system was an index, from which he would refer to one or two notes that would serve as a kind of entry point into a line of thought or topic.
+:PROPERTIES:
+:NOTER_PAGE: (7 . 31504)
+:END:
+
+
+
+
 * Motivations
 - There's a ton of books covering the art of writing, and very little
   on note-taking.
@@ -34,6 +88,7 @@ note-taking, it is important to understand that:
 
 In [[file:zettelkasten.org][Zettelkasten]], the most time-consuming portion is determining /the
 order/ for the notes in which to write about.
+
 
 * Concrete Changes
 
