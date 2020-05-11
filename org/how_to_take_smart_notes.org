@@ -1,5 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
+#+HUGO_SECTION: books
 #+TITLE: How To Take Smart Notes
 
 - author :: [[file:20200213121436.org][Sonke Ahrens]]
