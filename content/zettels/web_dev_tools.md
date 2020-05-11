@@ -1,7 +1,7 @@
 +++
 title = "Web Dev Tools"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-08T19:45:18+08:00
+lastmod = 2020-05-11T16:06:38+08:00
 draft = false
 +++
 
