@@ -487,4 +487,4 @@ layers.
 #+END_SRC
 
 *** 
-bibliography:biblio/dl_tools.bib
+bibliography:biblio.bib

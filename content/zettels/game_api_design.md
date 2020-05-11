@@ -1,7 +1,7 @@
 +++
 title = "Game API Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:26:05+08:00
+lastmod = 2020-05-11T20:24:36+08:00
 draft = false
 +++
 
@@ -44,8 +44,8 @@ tags
 <!--listend-->
 
 ```C
-ParsePNGFileResult result = ParsePNGFile(png_file_data);
-if (result.error) { /* handle error */ }
+  ParsePNGFileResult result = ParsePNGFile(png_file_data);
+  if (result.error) { /* handle error */ }
 ```
 
 # Bibliography

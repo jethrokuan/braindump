@@ -22,4 +22,4 @@ train the model [[file:td_learning.org][§td_learning]].
 * Related
 - [[file:generalized_value_functions.org][§generalized_value_functions]]
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib

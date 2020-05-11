@@ -29,4 +29,4 @@ nearest neighbour search.
 
 ## {#}
 
-bibliography:biblio/model_compression.bib
+bibliography:biblio.bib

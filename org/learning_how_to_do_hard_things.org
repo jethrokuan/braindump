@@ -22,4 +22,4 @@ work on it. This provides a direct feedback loop.
  5. If the original hard thing is now easy, you’re done. If not, go back to step 2.
 #+END_QUOTE
 
-bibliography:./biblio/learning.bib
+bibliography:biblio.bib

@@ -22,4 +22,4 @@ corresponding to the highest expected reward for the given state.
 Spiking neural networks can be used to implement RBMs, hence used for
 FERL cite:nakano11_spikin_neural_networ_model_free.
 
-bibliography:./biblio/biblio.bib
+bibliography:biblio.bib

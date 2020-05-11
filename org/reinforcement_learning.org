@@ -313,5 +313,5 @@ training sequences tends to infinity.
 - [[file:actor_critic.org][§actor_critic]]
 - [[file:q_learning.org][§q_learning]]
 
-bibliography:biblio/rl.bib
+bibliography:biblio.bib
 

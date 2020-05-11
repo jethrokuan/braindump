@@ -969,6 +969,6 @@ residuals can help check the linearity and normality assumptions.
 * References
 cite:chatterjee06_regres_analy_examp,james2013introduction
 
-bibliography:biblio/slt.bib
+bibliography:biblio.bib
 
 

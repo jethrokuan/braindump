@@ -55,4 +55,4 @@ solution, and enables you to provide directions for future research in
 the field.
 
 
-bibliography:./biblio/writing.bib
+bibliography:biblio.bib

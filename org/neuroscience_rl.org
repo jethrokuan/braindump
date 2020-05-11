@@ -11,4 +11,4 @@
 TD errors ([[file:td_learning.org][Temporal Difference Learning]]) model the activity of
 dopamine neurons cite:schultz97_neural_subst_predic_rewar
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib

@@ -112,4 +112,4 @@ Use TLA+.
 * Related
 - [[https://en.wikipedia.org/wiki/Hoare_logic][Hoare logic]]
 
-bibliography:./biblio/biblio.bib
+bibliography:biblio.bib

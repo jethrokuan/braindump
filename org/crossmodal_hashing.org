@@ -17,4 +17,4 @@ constraints are :
 cite:baltrusaitis17:_multim_machin_learn has some good reference
 papers.
 
-bibliography:./biblio/biblio.bib
+bibliography:biblio.bib

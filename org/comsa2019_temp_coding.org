@@ -167,4 +167,4 @@ layer occurring before the mean spike in the hidden layer.
 #+DOWNLOADED: /tmp/screenshot.png @ 2019-08-30 14:05:59
 [[file:images/temporal-coding-comsa/screenshot_2019-08-30_14-05-59.png]]
 
-bibliography:./biblio/spikingneurons.bib
+bibliography:biblio.bib

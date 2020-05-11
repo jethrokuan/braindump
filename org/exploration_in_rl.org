@@ -88,4 +88,4 @@ r_i^+ = r_i + \mathcal{B}(\hat{N}(s))
    
 There are many choices for the bonus.
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib

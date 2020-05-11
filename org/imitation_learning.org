@@ -80,4 +80,4 @@ Assuming: $\pi_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathbf{s
 #+CAPTION: The tightrope walking problem
 [[file:images/imitation_learning/screenshot2019-12-15_14-50-49_.png]]
 
-bibliography:biblio/rl.bib
+bibliography:biblio.bib

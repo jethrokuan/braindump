@@ -128,5 +128,5 @@ w.r.t $r_\psi$ brings us closer to the target distribution.
 - cite:abbeel2004apprenticeship
 - cite:ratliff2006maximum
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib
 

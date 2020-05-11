@@ -38,4 +38,4 @@ c_{|C|} \right\}$, it defines a Markov Logic Network as follows:
    ground formula is true, and 0 otherwise. The weight of the feature
    is the $w_i$ associated with $F_i$ in $L$.
 
-bibliography:./biblio/mln.bib
+bibliography:biblio.bib

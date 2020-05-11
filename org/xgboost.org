@@ -105,4 +105,4 @@ distributed worker. This fit the allreduce framework, which broadcasts
 each worker's reduce result across all processes. cite:chen3rabit
 
 
-bibliography:biblio/xgboost.bib
+bibliography:biblio.bib
