@@ -411,7 +411,7 @@ There are several problems with spike-compatible gradient-based
 methods. First, most of these methods cannot train neurons in the
 hidden layers: they can only train neurons at the final layer, that
 receive the desired target output pattern
-cite:urbanczik09_gradien_learn_rule_tempot,training_deep_snn_bpp_lee.
+cite:urbanczik09_gradien_learn_rule_tempot,10.3389/fnins.2016.00508.
 Second, the discontinuous, binary nature of spiking output needs to be
 addressed. For example, SpikeProp approximates the membrane
 threshold function at a local area with a linear function, introducing

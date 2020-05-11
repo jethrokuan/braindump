@@ -1,0 +1,11 @@
+#+TITLE: 10.3389/fnins.2016.00508: Training Deep Spiking Neural Networks Using Backpropagation
+#+ROAM_KEY: cite:10.3389/fnins.2016.00508
+
+* Training Deep Spiking Neural Networks Using Backpropagation
+  :PROPERTIES:
+  :Custom_ID: 10.3389/fnins.2016.00508
+  :URL:
+  :AUTHOR: Lee, J. H., Delbruck, T., & Pfeiffer, M.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/EUP5P3XN/Lee et al. - 2016 - Training deep spiking neural networks using backpr.pdf
+  :NOTER_PAGE: 1
+  :END:

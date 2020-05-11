@@ -4,7 +4,7 @@
 #+ROAM_KEY: cite:chen18_neural_ordin_differ_equat
 #+OPTIONS: toc:nil
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:stochastic_processes.org][Stochastic Processes]]
-
+- paper :: cite:chen18_neural_ordin_differ_equat
 bibliographystyle:unsrt
 
 This is a paper review of the NIPS 2018 best paper award-winning paper

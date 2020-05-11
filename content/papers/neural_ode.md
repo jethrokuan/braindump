@@ -1,12 +1,15 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-08T00:27:02+08:00
+lastmod = 2020-05-11T20:38:42+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}}), [§stochastic\_processes]({{< relref "stochastic_processes" >}})
+: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Stochastic Processes]({{< relref "stochastic_processes" >}})
+
+paper
+: <a id="603fb04abfb4b8763599566c9f531449" href="#chen18_neural_ordin_differ_equat">(Chen et al., 2018)</a>
 
 
 
@@ -297,13 +300,13 @@ EDIT: During NeurIPS 2019, [David Duvenaud reflects on the claims and
 the hype of the Neural ODE paper](https://slideslive.com/38921897/retrospectives-a-venue-for-selfreflection-in-ml-research-4).
 
 # Bibliography
+<a id="chen18_neural_ordin_differ_equat" target="_blank">Chen, R. T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D., *Neural Ordinary Differential Equations*, CoRR, *()*,  (2018). </a> [↩](#603fb04abfb4b8763599566c9f531449)
+
 <a id="he15_deep_resid_learn_image_recog" target="_blank">He, K., Zhang, X., Ren, S., & Sun, J., *Deep residual learning for image recognition*, CoRR, *()*,  (2015). </a> [↩](#8554cd7e8a313143abfac851fd6bbfd2)
 
 <a id="lu17_beyon_finit_layer_neural_networ" target="_blank">Lu, Y., Zhong, A., Li, Q., & Dong, B., *Beyond finite layer neural networks: bridging deep architectures and numerical differential equations*, CoRR, *()*,  (2017). </a> [↩](#f767e533e2e76ca630e0e8cdac86c399)
 
 <a id="haber17_stabl_archit_deep_neural_networ" target="_blank">Haber, E., & Ruthotto, L., *Stable architectures for deep neural networks*, CoRR, *()*,  (2017). </a> [↩](#9b9433cdb51d57b66e0e48760365e5e2)
-
-<a id="chen18_neural_ordin_differ_equat" target="_blank">Chen, R. T. Q., Rubanova, Y., Bettencourt, J., & Duvenaud, D., *Neural Ordinary Differential Equations*, CoRR, *()*,  (2018). </a> [↩](#603fb04abfb4b8763599566c9f531449)
 
 <a id="rackauckas19_diffeq" target="_blank">Rackauckas, C., Innes, M., Ma, Y., Bettencourt, J., White, L., & Dixit, V., *Diffeqflux.jl - a julia library for neural differential equations*, CoRR, *()*,  (2019). </a> [↩](#a8ae69ab153941fb09916913f187ba63)
 

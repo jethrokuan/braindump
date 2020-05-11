@@ -1,0 +1,17 @@
+#+TITLE: zhu18_overv_machin_teach: An overview of machine teaching
+#+ROAM_KEY: cite:zhu18_overv_machin_teach
+
+- tags :: [[file:machine_teaching.org][Machine Teaching]]
+
+* An overview of machine teaching
+  :PROPERTIES:
+  :Custom_ID: zhu18_overv_machin_teach
+  :URL:
+  :AUTHOR: Zhu, X., Singla, A., Zilles, S., & Rafferty, A. N.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/M3P8Z5DK/Zhu et al. - 2018 - An overview of machine teaching.pdf
+  :NOTER_PAGE: 2
+  :END:
+** Definition of Machine Teaching
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.5760233918128654)
+:END:
