@@ -9,3 +9,7 @@
   :NOTER_DOCUMENT: /home/jethro/Zotero/storage/EUP5P3XN/Lee et al. - 2016 - Training deep spiking neural networks using backpr.pdf
   :NOTER_PAGE: 1
   :END:
+** treats the membrane potentials of spiking neurons as differentiable signals, where discontinuities at spike times are considered as noise.
+:PROPERTIES:
+:NOTER_PAGE: (1 . 0.3853658536585366)
+:END:

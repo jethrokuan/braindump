@@ -1,7 +1,7 @@
 +++
 title = "Ask HN: How do I learn C properly? | Hacker News"
 author = ["Jethro Kuan"]
-lastmod = 2020-03-09T15:57:42+08:00
+lastmod = 2020-05-13T01:17:15+08:00
 slug = "ask_hn_how_do_i_learn_c_properly_hacker_news"
 draft = false
 +++
@@ -11,7 +11,6 @@ source
 
 tags
 : [The C Language]({{< relref "c_lang" >}})
-
 
 ## Book recommendations {#book-recommendations}
 

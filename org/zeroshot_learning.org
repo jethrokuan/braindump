@@ -4,4 +4,4 @@
 #+TITLE: Zero shot Learning
 
 Zero shot learning refers to recognizing a concept without having explicitly
-seen any examples of it. 
+seen any examples of it.

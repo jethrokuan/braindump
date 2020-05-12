@@ -9,7 +9,7 @@
 * Book Notes
 :PROPERTIES:
 :NOTER_DOCUMENT: /home/jethro/Dropbox/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (201)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub
-:NOTER_PAGE: (8 . 2176)
+:NOTER_PAGE: (13 . 14504)
 :END:
 ** Consequently, these “written pieces” are also what most self-help books for academics or study guides focus on, but very few give guidance for the everyday note-taking that takes up the biggest chunk of our writing.
 :PROPERTIES:
@@ -56,6 +56,48 @@ I should keep separate slipboxes for bibliographic content and main content.
 :PROPERTIES:
 :NOTER_PAGE: (7 . 31504)
 :END:
+** On Fleeting Notes
+:PROPERTIES:
+:NOTER_PAGE: (8 . 6066)
+:END:
+We should have something available to take notes with at all times. I use Telegram, and send messages to myself.
+** On Literature Notes
+:PROPERTIES:
+:NOTER_PAGE: (8 . 6823)
+:ID:       104f4b83-cf44-4bd4-bcec-fee48a75c7bb
+:END:
+Write literature notes, and keep the bibliographic sources.
+** On permanent notes
+:PROPERTIES:
+:NOTER_PAGE: (8 . 7243)
+:END:
+** Making sure you will be able to find this note later by either linking to it from your index or by making a link to it on a note that you use as an entry point to a discussion or topic and is itself linked to the index.
+:PROPERTIES:
+:NOTER_PAGE: (8 . 8709)
+:END:
+** Writing Is the Only Thing That Matters
+:PROPERTIES:
+:NOTER_PAGE: (12 . 5)
+:END:
+** Having a clear, tangible purpose when you attend a lecture, discussion or seminar will make you more engaged and sharpen your focus.
+:PROPERTIES:
+:NOTER_PAGE: (12 . 5284)
+:END:
+** In which context will I want to stumble upon it again?
+:PROPERTIES:
+:NOTER_PAGE: (13 . 5807)
+:END:
+** To achieve a critical mass, it is crucial to distinguish clearly between three types of notes
+:PROPERTIES:
+:NOTER_PAGE: (13 . 7682)
+:END:
+** why the threshold to write an idea down has to be as low as possible, but it is equally crucial to elaborate on them within a day or two
+:PROPERTIES:
+:NOTER_PAGE: (13 . 13465)
+:END:
+
+
+
 
 * Motivations
 - There's a ton of books covering the art of writing, and very little
