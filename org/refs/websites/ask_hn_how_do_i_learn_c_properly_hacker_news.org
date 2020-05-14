@@ -4,7 +4,7 @@
 #+TITLE: Ask HN: How do I learn C properly? | Hacker News
 
 - source :: https://news.ycombinator.com/item?id=22519876
-- tags :: [[file:../c_lang.org][The C Language]]
+- tags :: [[file:../../c_lang.org][The C Language]]
 
 * Book recommendations
 1. Hanson's C Interfaces and Implementations

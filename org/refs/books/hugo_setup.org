@@ -1,0 +1,4 @@
+#+HUGO_BASE_DIR: ../../..
+#+hugo_auto_set_lastmod: t
+#+HUGO_SECTION: books
+#+OPTIONS: H:2

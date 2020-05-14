@@ -1,15 +1,14 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: books
 #+TITLE: How To Take Smart Notes
 
-- author :: [[file:20200213121436.org][Sonke Ahrens]]
-- tags :: [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]], [[file:books.org][Books]], [[file:productivity.org][Productivity]]
-- recommended by :: [[file:/home/jethro/Dropbox/org/braindump/org/conor_white_sullivan.org][Conor White-Sullivan]]
+- author :: [[file:../../20200213121436.org][Sonke Ahrens]]
+- tags :: [[file:../../writing.org][Writing]], [[file:../../note_taking.org][Note-taking]], [[file:../../books.org][Books]], [[file:../../productivity.org][Productivity]]
+- recommended by :: [[file:../../conor_white_sullivan.org][Conor White-Sullivan]]
 
 * Book Notes
 :PROPERTIES:
 :NOTER_DOCUMENT: /home/jethro/Dropbox/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (201)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub
-:NOTER_PAGE: (13 . 14504)
+:NOTER_PAGE: (14 . 2292)
 :END:
 ** Consequently, these “written pieces” are also what most self-help books for academics or study guides focus on, but very few give guidance for the everyday note-taking that takes up the biggest chunk of our writing.
 :PROPERTIES:
@@ -95,6 +94,11 @@ Write literature notes, and keep the bibliographic sources.
 :PROPERTIES:
 :NOTER_PAGE: (13 . 13465)
 :END:
+** hermeneutic circle
+:PROPERTIES:
+:NOTER_PAGE: (14 . 2288)
+:END:
+The decision to read/write something does not come out of thin air
 
 
 
@@ -107,7 +111,7 @@ Write literature notes, and keep the bibliographic sources.
 
 #+begin_quote
 Notes aren't a record of my thinking process. They are my thinking
-process. -- [[file:20200213173516.org][Richard Feynman]]
+process. -- [[file:../../20200213121436.org][Sonke Ahrens]]
 #+end_quote
 
 The mind is extremely reliant of external scaffolding:
@@ -118,14 +122,14 @@ physics or other kinds of intellectual endeavour easier, they make it
 possible -- Neil Levy (Neuroethics and the Extended Mind)
 #+end_quote
 
-Hence, use the [[file:zettelkasten.org][Zettelkasten]] method. To get around this idea of
+Hence, use the [[file:../../zettelkasten.org][Zettelkasten]] method. To get around this idea of
 note-taking, it is important to understand that:
 
 1. Note sequences are meant for developing ideas, not storing them
 2. Links and indices are helpful, but not central features
 3. The workflow is streamlined to writing
 
-In [[file:zettelkasten.org][Zettelkasten]], the most time-consuming portion is determining /the
+In [[file:../../zettelkasten.org][Zettelkasten]], the most time-consuming portion is determining /the
 order/ for the notes in which to write about.
 
 
