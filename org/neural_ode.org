@@ -1,6 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
-#+HUGO_SECTION: papers
 #+TITLE: Neural Ordinary Differential Equations (Review)
+#+ROAM_ALIAS: "Neural ODE"
 #+ROAM_KEY: cite:chen18_neural_ordin_differ_equat
 #+OPTIONS: toc:nil
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:stochastic_processes.org][Stochastic Processes]]

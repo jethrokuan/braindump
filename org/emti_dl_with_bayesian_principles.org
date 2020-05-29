@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: talks
 #+TITLE: Deep Learning With Bayesian Principles - Emtiyaz Khan
 
 - link :: [[https://slideslive.com/38921489/deep-learning-with-bayesian-principles][Mohammad Emtiyaz Khan | Deep Learning with Bayesian Principles · SlidesLive]]

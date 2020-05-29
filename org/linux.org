@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Linux
 
 - ~127.0.1.1~ in ~/etc/hosts~ is to allow some applications like Gnome to

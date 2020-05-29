@@ -4,7 +4,6 @@ title = "Jethro's Braindump"
 theme = "cortex"
 
 [params]
-attributions = "Website built with ♥ with Org-mode, Hugo, and Netlify."
 email = "jethrokuan95@gmail.com"
 
 [markup]
@@ -35,3 +34,21 @@ email = "jethrokuan95@gmail.com"
     noClasses = true
     style = "github"
     tabWidth = 4
+
+[outputFormats]
+  [outputFormats.Embed]
+    baseName = "embed"
+    isPlainText = false
+    isHTML = true
+    mediaType = "text/html"
+    permalinkable = true
+  [outputFormats.Page]
+    baseName = "page"
+    isPlainText = false
+    isHTML = true
+    mediaType = "text/html"
+    permalinkable = true
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML", "EMBED", "PAGE"]

@@ -1,4 +1,3 @@
 #+HUGO_BASE_DIR: ../..
 #+hugo_auto_set_lastmod: t
-#+HUGO_SECTION: websites
 #+OPTIONS: H:2

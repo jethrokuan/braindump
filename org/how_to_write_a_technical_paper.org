@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: How To Write a Technical Paper
 
 - tags :: [[file:writing.org][Writing]], [[file:papers.org][Papers]]

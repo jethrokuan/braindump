@@ -1,8 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Git
 
-- tags :: [[file:unix.org][Unix]], [[file:20200215215504.org][Version Control]]
+- tags :: [[file:unix.org][Unix]], [[file:version_control.org][Version Control]]
 
 * Links
 ** TODO [[https://www.sbf5.com/~cduan/technical/git/][Understanding Git Conceptually]]

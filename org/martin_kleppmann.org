@@ -1,4 +1,3 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: martin_kleppmann
 #+TITLE: Martin Kleppmann

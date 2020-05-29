@@ -7,6 +7,6 @@ pkgs.mkShell {
     hugo
   ];
   shellHook = ''
-    alias start="hugo server -D --navigateToChanged"
+    alias start="hugo server"
   '';
 }

@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: designing_dataintensive_applications
 #+TITLE: Designing Data-Intensive Applications
 

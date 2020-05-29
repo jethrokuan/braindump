@@ -1,4 +1,3 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: red_black_tree
 #+TITLE: Red-Black Tree

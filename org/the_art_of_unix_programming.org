@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: books
 #+TITLE: The Art Of Unix Programming
 
 - title :: The Art Of Unix Programming

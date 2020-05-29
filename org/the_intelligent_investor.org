@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: the_intelligent_investor
 #+TITLE: The Intelligent Investor
 

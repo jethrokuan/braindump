@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Documentation Generators
 
 We use these to generate [[file:documentation.org][documentation]] for projects.

@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Point Estimation in Bayesian Statistics
 
 - tags :: [[file:bayesian_statistics.org][§bayesian_statistics]]

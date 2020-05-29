@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: PDF Cropping
 
 - tags :: [[file:pdf_tools.org][§pdf_tools]]

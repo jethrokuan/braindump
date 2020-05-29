@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Large Batch Training
 
 - tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]

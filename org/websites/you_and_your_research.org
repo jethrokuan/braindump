@@ -5,7 +5,7 @@
 
 - source :: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
 - author :: [[file:../richard_hamming.org][Richard Hamming]]
-- tags :: [[file:../20200217124503.org][Research]]
+- tags :: [[file:../research.org][Research]]
 
 #+begin_quote
 Our society frowns on people who set out to do really good work.

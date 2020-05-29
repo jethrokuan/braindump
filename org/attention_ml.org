@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Attention (ML)
 
 In typical encoder-decoder architectectures, the full sentence is

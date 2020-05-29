@@ -1,8 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: How To Take Smart Notes
 
-- author :: [[file:20200213121436.org][Sonke Ahrens]]
+- author :: [[file:sonke_ahrens.org][Sonke Ahrens]]
 - tags :: [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]], [[file:books.org][Books]], [[file:productivity.org][Productivity]]
 - recommended by :: [[file:/home/jethro/Dropbox/org/braindump/org/conor_white_sullivan.org][Conor White-Sullivan]]
 
@@ -14,7 +13,7 @@
 
 #+begin_quote
 Notes aren't a record of my thinking process. They are my thinking
-process. -- [[file:20200213173516.org][Richard Feynman]]
+process. -- [[file:richard_feynman.org][Richard Feynman]]
 #+end_quote
 
 The mind is extremely reliant of external scaffolding:

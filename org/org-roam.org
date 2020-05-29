@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+ROAM_KEY: https://github.com/jethrokuan/org-roam
 #+TITLE: Org-Roam
 

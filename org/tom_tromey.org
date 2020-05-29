@@ -1,0 +1,3 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SLUG: tom_tromey
+#+TITLE: Tom Tromey

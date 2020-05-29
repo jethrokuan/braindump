@@ -1,0 +1,6 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SLUG: robotics_algorithms
+#+TITLE: Robotics Algorithms
+
+* Resources
+- [[https://github.com/AtsushiSakai/PythonRobotics][AtsushiSakai/PythonRobotics]]

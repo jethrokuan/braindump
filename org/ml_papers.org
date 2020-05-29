@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Machine Learning Papers
 
 - tags :: [[file:papers.org][Papers]]

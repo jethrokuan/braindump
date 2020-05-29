@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: reits
 #+ROAM_ALIAS: REITs
 #+TITLE: Real Estate Investment Trusts

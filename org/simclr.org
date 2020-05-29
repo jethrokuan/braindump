@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: papers
 #+HUGO_SLUG: simclr
 #+ROAM_BIBKEYS: cite:chen20_simpl_framew_contr_learn_visual_repres
 #+TITLE: SimCLR

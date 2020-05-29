@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Spike Train Metrics
 
 - tags ::  [[file:spiking_neural_networks.org][Spiking Neural Networks]]

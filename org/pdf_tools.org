@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Pdf Tools
 
 - tags :: [[file:linux.org][§linux]]

@@ -9,7 +9,7 @@ Remove linearity assumption from the [[file:kalman_filter.org][Kalman Filter]]:
 
 \begin{align}
   x_t &= g(u_t, x_{t-1}) + \epsilon_t \\
-  z_t = h(x_t) + \gamma_t
+  z_t &= h(x_t) + \gamma_t
 \end{align}
 
 Where function $g$ and replaces $A_t, B_t$, and function $h$ replaces
@@ -24,7 +24,7 @@ for $g$ to construct a linear approximation to a function $g$ from its
 value and slope. The slope is given by the partial derivative:
 
 \begin{equation}
-  g' (u_t, x_{t-1}) := \frac{\partial g(u_t, x_{t-1})}{\partial x_{t-1}}}
+  g' (u_t, x_{t-1}) := \frac{\partial g(u_t, x_{t-1})}{\partial x_{t-1}}
 \end{equation}
 
 Both $g$ and the slope depend on the argument of $g$. We choose the
@@ -76,7 +76,3 @@ probes the function to be linearized at selected points, and
 calculates a linearized approximation based on the outcomes of the
 probes. Moments matching linearizes while preserving the true mean and
 true covariance of the posterior distribution.
-
-
-
-

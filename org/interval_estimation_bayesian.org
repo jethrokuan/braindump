@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Interval Estimation in Bayesian Statistics
 
 Suppose instead of [[file:point_estimation_bayesian.org][point estimation]], we'd like to identify a

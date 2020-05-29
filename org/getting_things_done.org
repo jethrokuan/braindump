@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Getting Things Done (GTD)
 
 [[https://gettingthingsdone.com/][GTD]] is a work-life management system created by David Allen. This

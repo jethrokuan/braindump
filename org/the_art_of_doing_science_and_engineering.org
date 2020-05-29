@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: books
 #+TITLE: The Art Of Doing Science And Engineering
 
 - title :: The Art Of Doing Science And Engineering

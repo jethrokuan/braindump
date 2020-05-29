@@ -1,4 +1,4 @@
-#+SETUPFIlE: ./hugo_setup.org
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: Gaussian Filter
 
 Gaussian Filters is a tractable implementation of the Bayes filter

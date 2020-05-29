@@ -1,3 +1,4 @@
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: The most successful malleable system in history | Malleable Systems Collective
 #+ROAM_KEY: https://malleable.systems/blog/2020/04/01/the-most-successful-malleable-system-in-history/
 

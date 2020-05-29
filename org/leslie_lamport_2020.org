@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: talks
 #+TITLE: If You're Not Writing a Programming Language, Don't Use A Programming Language - Leslie Lamport
 
 - title :: If You're Not Writing a Programming Language, Don't Use A Programming Language

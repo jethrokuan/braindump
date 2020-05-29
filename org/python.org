@@ -1,5 +1,4 @@
 #+SETUPFILE: ./hugo_setup.org
-#+HUGO_TAGS: python proglang
 #+TITLE: Python
 
 Python is an interpreted, general-purpose, high-level [[file:prog_lang.org][programming

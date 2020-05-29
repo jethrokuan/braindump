@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Nat Eliason
 
 Active user of [[file:roam_research.org][Roam Research]]

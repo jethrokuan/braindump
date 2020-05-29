@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: coding_interview_cheatsheet
 #+TITLE: Coding Interview Cheatsheet
 

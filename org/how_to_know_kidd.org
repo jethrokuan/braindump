@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: How To Know - Celeste Kidd
 
 - tags :: [[file:machine_learning.org][Machine Learning]], [[file:neurips.org][NeurIPS]]

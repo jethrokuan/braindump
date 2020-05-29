@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+HUGO_SLUG: convolutional_neural_networks
 #+ROAM_ALIAS: CNNs
 #+TITLE: Convolutional Neural Networks

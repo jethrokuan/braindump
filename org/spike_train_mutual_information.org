@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Spike Train Mutual Information
 
 Would be nice to compute the mutual information between multi-neuronal

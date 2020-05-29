@@ -1,9 +1,0 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
-#+HUGO_SLUG: web_performance
-#+TITLE: Web Performance
-
-- tags :: [[file:web_dev.org][Web Development]]
-
-* Resources
-- [[https://github.com/thedaviddias/Front-End-Performance-Checklist][thedaviddias/Front-End-Performance-Checklist]]

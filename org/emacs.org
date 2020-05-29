@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Emacs
 
 Much of Emacs is written in [[file:emacs_lisp.org][Emacs Lisp]].

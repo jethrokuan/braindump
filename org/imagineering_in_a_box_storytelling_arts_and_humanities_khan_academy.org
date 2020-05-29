@@ -1,3 +1,4 @@
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: Imagineering in a Box | Storytelling | Arts and humanities | Khan Academy
 #+ROAM_KEY: https://www.khanacademy.org/humanities/hass-storytelling/imagineering-in-a-box
 

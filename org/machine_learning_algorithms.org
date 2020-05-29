@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Machine Learning Algorithms
 
 - tags :: [[file:machine_learning.org][§machine_learning]]

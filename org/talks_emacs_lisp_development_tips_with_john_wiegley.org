@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: talks
 #+HUGO_SLUG: emacs_lisp_development_tips_with_john_wiegley
 #+TITLE: Talks: Emacs Lisp Development Tips with John Wiegley
 

@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Quantization
 
 - tags :: [[file:model_compression.org][Model Compression]], [[file:machine_learning.org][Machine Learning]]

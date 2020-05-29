@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Information Bottleneck in Deep Neural Networks
 
 The information bottleneck theory was recently used to study Deep

@@ -1,3 +1,4 @@
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: VisGel
 #+ROAM_KEY: http://visgel.csail.mit.edu/
 

@@ -1,3 +1,4 @@
+#+SETUPFILE: ./hugo_setup.org
 #+TITLE: Google - Site Reliability Engineering
 #+ROAM_KEY: https://landing.google.com/sre/books/
 

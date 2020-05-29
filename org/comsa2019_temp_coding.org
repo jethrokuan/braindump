@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: papers
 #+TITLE: Temp Coding with Alpha Synaptic Function
 
 - tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]

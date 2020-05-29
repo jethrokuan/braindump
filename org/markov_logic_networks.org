@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: papers
 #+TITLE: Markov Logic Networks
 
 - tags :: [[file:ml_papers.org][Machine Learning Papers]]

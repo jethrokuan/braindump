@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: And the Bit Goes Down: Revisiting the Quantization of Neural Networks
 
 - tags :: [[file:model_compression.org][Model Compression]]

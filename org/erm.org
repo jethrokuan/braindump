@@ -1,5 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
-#+HUGO_SECTION: zettels
 #+TITLE: Empirical Risk Minimization
 
 In [[file:machine_learning.org][Machine Learning]], the training set error is often called the

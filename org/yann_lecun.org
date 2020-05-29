@@ -1,0 +1,4 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SLUG: yann_lecun
+#+TITLE: Yann LeCun
+
