@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Occupancy Grid Mapping
 
-In [[file:robot_localization.org][§robot_localization]], it is assumed that the robot is given a map in
+In [[file:robot_localization.org][Robot Localization]], it is assumed that the robot is given a map in
 advance. This is sometimes not the case.
 
 Acquiring maps with mobile robots is a challenging task, because:

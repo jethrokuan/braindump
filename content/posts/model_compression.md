@@ -1,7 +1,7 @@
 +++
 title = "Model Compression"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-30T23:54:14+08:00
+lastmod = 2020-05-31T01:08:29+08:00
 draft = false
 +++
 

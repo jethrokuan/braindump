@@ -1,11 +1,11 @@
 +++
 title = "Occupancy Grid Mapping"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:11+08:00
+lastmod = 2020-05-31T01:09:39+08:00
 draft = false
 +++
 
-In [§robot\_localization]({{< relref "robot_localization" >}}), it is assumed that the robot is given a map in
+In [Robot Localization]({{< relref "robot_localization" >}}), it is assumed that the robot is given a map in
 advance. This is sometimes not the case.
 
 Acquiring maps with mobile robots is a challenging task, because:

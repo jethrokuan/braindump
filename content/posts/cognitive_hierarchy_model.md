@@ -1,17 +1,12 @@
 +++
 title = "Cognitive Hierarchy Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:38+08:00
+lastmod = 2020-05-31T01:09:08+08:00
 draft = false
 +++
 
-tags
-: [§artificial\_intelligence]({{< relref "artificial_intelligence" >}})
-
-## Cognitive Hierarchy Model {#cognitive-hierarchy-model}
-
-See <a id="594a0683300dc5bf8d8298fa511b13d2" href="#camerer2004cognitive">(Camerer et al., 2004)</a> for a nice introduction using Keynes'
-"beauty contest" game.
+See <a id="594a0683300dc5bf8d8298fa511b13d2" href="#camerer2004cognitive">(Camerer et al., 2004)</a> for a nice introduction using Keynes' "beauty
+contest" game.
 
 In the cognitive hierarchy model, each player believes that they
 understand the game better than other players. Decision rules reflect
@@ -26,8 +21,6 @@ according to some probability distribution. Step \\(k\\) thinkers assume
 that their opponents are distributed according to a normalized Poisson
 distribution, from step \\(0\\) to step \\(k-1\\), but ignore the possibility
 that some players may be doing as much or more.
-
-## {#}
 
 # Bibliography
 

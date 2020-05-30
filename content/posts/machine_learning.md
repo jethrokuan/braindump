@@ -1,10 +1,14 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-30T17:08:53+08:00
+lastmod = 2020-05-31T01:08:50+08:00
 tags = ["machine-learning"]
 draft = false
 +++
+
+## TOC {#toc}
+
+- [Natural Language Processing]({{< relref "nlp" >}})
 
 ## When do we need machine learning? {#when-do-we-need-machine-learning}
 

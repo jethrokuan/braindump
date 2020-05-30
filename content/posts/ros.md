@@ -1,7 +1,7 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:48+08:00
+lastmod = 2020-05-31T01:09:17+08:00
 draft = false
 +++
 
@@ -626,13 +626,13 @@ Write a client that sends the request and prints this response.
 
 # Bibliography
 
-<a id="nilil_ros_introd_ros_wiki" target="_blank">nil, (nil). _Ros/introduction - ros wiki_. Retrieved from [http://wiki.ros.org/ROS/Introduction](http://wiki.ros.org/ROS/Introduction). Online; accessed 15 October 2019.</a> [↩](#b049e1028daa027cae7888fe4de0456c)
+<a id="nilil_ros_introd_ros_wiki" target="_blank">nil, _ROS/Introduction - ROS wiki_, , _()_, (nil). </a> [↩](#b049e1028daa027cae7888fe4de0456c)
 
-<a id="wiki_pubsub" target="_blank">nil, (nil). _Ros/tutorials/writingpublishersubscriber(python) - ros wiki_. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingPublisherSubscriber \%28python \%29). Online; accessed 17 October 2019.</a> [↩](#0eb03dca701c737878a6bf71343edd56)
+<a id="wiki_pubsub" target="_blank">nil, _ROS/Tutorials/WritingPublisherSubscriber(python) - ROS wiki_, , _()_, (nil). </a> [↩](#0eb03dca701c737878a6bf71343edd56)
 
-<a id="wiki_service" target="_blank">nil, (nil). _Ros/tutorials/writingserviceclient(python) - ros wiki_. Retrieved from [http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29](http://wiki.ros.org/ROS/Tutorials/WritingServiceClient \%28python \%29). Online; accessed 17 October 2019.</a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
+<a id="wiki_service" target="_blank">nil, _ROS/Tutorials/WritingServiceClient(python) - ROS wiki_, , _()_, (nil). </a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
 
-<a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil, (nil). _Melodic/installation/ubuntu - ros wiki_. Retrieved from [http://wiki.ros.org/melodic/Installation/Ubuntu](http://wiki.ros.org/melodic/Installation/Ubuntu). Online; accessed 16 October 2019.</a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
+<a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil, _Melodic/Installation/Ubuntu - ROS wiki_, , _()_, (nil). </a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
 
 [^fn:1]: Almost all these commands have tab completion!
 [^fn:2]: can also be done programatically

@@ -1,7 +1,7 @@
 +++
 title = "Building a PC"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:02+08:00
+lastmod = 2020-05-31T01:09:31+08:00
 slug = "building_a_pc"
 draft = false
 +++

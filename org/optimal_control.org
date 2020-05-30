@@ -24,9 +24,8 @@ An extremely simple method, that's parallelizable:
 3. pick the elites $A_{i1}, \dots A_{im}$ with the highest value
 4. fit distribution $P(A) to the elites
 
-With continuous inputs, a multi-variate normal distribution is a
-common choice for $p(A)$. In the discrete Case, Monte-Carlo tree
-search ([[file:mcts.org][§mcts]]) is typically used.
+With continuous inputs, a multi-variate normal distribution is a common choice
+for $p(A)$. In the discrete case, [[file:mcts.org][Monte Carlo Tree Search]] is typically used.
 
 * Using Derivatives
 

@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:24+08:00
+lastmod = 2020-05-31T01:09:51+08:00
 draft = false
 +++
 
@@ -290,7 +290,7 @@ the hype of the Neural ODE paper](https://slideslive.com/38921897/retrospectives
 
 <a id="he15_deep_resid_learn_image_recog" target="_blank">He, K., Zhang, X., Ren, S., & Sun, J., _Deep residual learning for image recognition_, CoRR, _()_, (2015). </a> [↩](#8554cd7e8a313143abfac851fd6bbfd2)
 
-<a id="lu17_beyon_finit_layer_neural_networ" target="_blank">Lu, Y., Zhong, A., Li, Q., & Dong, B., _Beyond finite layer neural networks: bridging deep architectures and numerical differential equations_, CoRR, _()_, (2017). </a> [↩](#f767e533e2e76ca630e0e8cdac86c399)
+<a id="lu17_beyon_finit_layer_neural_networ" target="_blank">Lu, Y., Zhong, A., Li, Q., & Dong, B., _Beyond finite layer neural networks: Bridging deep architectures and numerical differential equations_, CoRR, _()_, (2017). </a> [↩](#f767e533e2e76ca630e0e8cdac86c399)
 
 <a id="haber17_stabl_archit_deep_neural_networ" target="_blank">Haber, E., & Ruthotto, L., _Stable architectures for deep neural networks_, CoRR, _()_, (2017). </a> [↩](#9b9433cdb51d57b66e0e48760365e5e2)
 

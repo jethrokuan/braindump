@@ -1,12 +1,12 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:02+08:00
+lastmod = 2020-05-31T01:08:36+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning]({{< relref "machine_learning" >}}), [§information\_theory]({{< relref "information_theory" >}})
+: [Information Theory]({{< relref "information_theory" >}})
 
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian
@@ -46,7 +46,3 @@ more complex models:
 
 I still don't see a contradiction with Mackay's proposed argument.
 Maybe I'm missing something...
-
-## Related {#related}
-
-- [§two\_levels\_of\_inference]({{< relref "two_levels_of_inference" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Jeffreys Prior"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:30+08:00
+lastmod = 2020-05-31T01:08:06+08:00
 slug = "jeffreys_prior"
 draft = false
 +++

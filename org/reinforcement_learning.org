@@ -305,13 +305,13 @@ training sequences tends to infinity.
 - [[https://slideslive.com/38921493/reinforcement-learning-past-present-and-future-perspectives][Katja Hofmann | Reinforcement Learning: Past, Present, and Future Perspective...]]
 
 * Related
-- [[file:markov_decision_process.org][§markov_decision_process]]
-- [[file:mcts.org][§mcts]]
-- [[file:deep_rl.org][§deep_rl]]
-- [[file:td_learning.org][§td_learning]]
-- [[file:policy_gradients.org][§policy_gradients]]
-- [[file:actor_critic.org][§actor_critic]]
-- [[file:q_learning.org][§q_learning]]
+- [[file:markov_decision_process.org][Markov Decision Process]]
+- [[file:mcts.org][Monte Carlo Tree Search]]
+- [[file:deep_rl.org][Deep Reinforcement Learning]]
+- [[file:td_learning.org][Temporal Difference Learning]]
+- [[file:policy_gradients.org][Policy Gradients]]
+- [[file:actor_critic.org][Actor-Critic]]
+- [[file:q_learning.org][Q-Learning]]
 
 bibliography:biblio.bib
 

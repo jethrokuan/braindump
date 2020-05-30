@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Translation"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:28+08:00
+lastmod = 2020-05-31T01:08:04+08:00
 slug = "multimodal_translation"
 draft = false
 +++
@@ -14,9 +14,9 @@ captioning is a particularly popular problem, with large multi-modal
 datasets available.
 
 Multi-modal translation can be categorized into _example-based_, and
-_generative_ approaches <a id="fe1ca450aa5e404428b89a0e174b2e99" href="#baltrusaitis17:_multim_machin_learn">(Baltru\vsaitis et al., 2017)</a>.
+_generative_ approaches <a id="fe1ca450aa5e404428b89a0e174b2e99" href="#baltrusaitis17:_multim_machin_learn">(Baltru\v saitis et al., 2017)</a>.
 
-{{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation <a id=\"fe1ca450aa5e404428b89a0e174b2e99\" href=\"#baltrusaitis17:_multim_machin_learn\">(Baltru\vsaitis et al., 2017)</a>" >}}
+{{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation <a id=\"fe1ca450aa5e404428b89a0e174b2e99\" href=\"#baltrusaitis17:_multim_machin_learn\">(Baltru\v saitis et al., 2017)</a>" >}}
 
 ## Example-based {#example-based}
 
@@ -70,4 +70,4 @@ temporal consistency between modalities.
 
 # Bibliography
 
-<a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\vsaitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: a survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
+<a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\v saitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: A survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)

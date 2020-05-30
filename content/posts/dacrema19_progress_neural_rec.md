@@ -1,7 +1,7 @@
 +++
 title = "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:07+08:00
+lastmod = 2020-05-31T01:08:41+08:00
 draft = false
 +++
 
@@ -38,4 +38,4 @@ To alleviate these issues:
 
 # Bibliography
 
-<a id="dacrema19_are_we_reall_makin_much_progr" target="_blank">Dacrema, M. F., Cremonesi, P., & Jannach, D., _Are we really making much progress? a worrying analysis of recent neural recommendation approaches_, CoRR, _()_, (2019). </a> [↩](#d3cb4e95df75aa1a78534232726eadd6)
+<a id="dacrema19_are_we_reall_makin_much_progr" target="_blank">Dacrema, M. F., Cremonesi, P., & Jannach, D., _Are we really making much progress? A worrying analysis of recent neural recommendation approaches_, CoRR, _()_, (2019). </a> [↩](#d3cb4e95df75aa1a78534232726eadd6)

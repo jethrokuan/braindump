@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Fusion"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:56+08:00
+lastmod = 2020-05-31T01:08:30+08:00
 slug = "multimodal_fusion"
 draft = false
 +++
@@ -19,7 +19,7 @@ Multi-modal fusion is motivated by 3 main reasons:
     missing
 
 Multi-modal fusion approaches can be classified as
-<a id="fe1ca450aa5e404428b89a0e174b2e99" href="#baltrusaitis17:_multim_machin_learn">(Baltru\vsaitis et al., 2017)</a>:
+<a id="fe1ca450aa5e404428b89a0e174b2e99" href="#baltrusaitis17:_multim_machin_learn">(Baltru\v saitis et al., 2017)</a>:
 
 - **Model-agnostic**
   - early fusion
@@ -67,4 +67,4 @@ amounts of training data.
 
 # Bibliography
 
-<a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\vsaitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: a survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
+<a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\v saitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: A survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)

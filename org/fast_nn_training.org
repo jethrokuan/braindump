@@ -1,4 +1,2 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Fast Neural Network Training
-
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]

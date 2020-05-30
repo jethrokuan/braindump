@@ -1,9 +1,12 @@
 +++
 title = "Two Levels Of Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:10+08:00
+lastmod = 2020-05-31T01:08:43+08:00
 draft = false
 +++
+
+tags
+: [Occam's Razor]({{< relref "occams_razor" >}})
 
 There are 2 levels of inference: model fitting and model comparison.
 In model fitting, assuming a model is true (say \\(\mathcal{H}\_i\\)), fit
@@ -56,7 +59,3 @@ comparison is a simple extension of maximum likelihood model
 selection: the evidence is obtained by multiplying the best-fit
 likelihood by the Occam factor, obtained from the determinant of the
 covariance matrix \\(\mathbf{A}^{-1}\\) (the inverse Hessian).
-
-## Related {#related}
-
-- [§occams\_razor]({{< relref "occams_razor" >}})

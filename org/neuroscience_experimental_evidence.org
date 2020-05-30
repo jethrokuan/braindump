@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Neuroscience Experimental Evidence
 
-- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]], [[file:neuroscience.org][§neuroscience]]
+- tags :: [[file:spiking_neural_networks.org][Spiking Neural Networks]], [[file:neuroscience.org][Neuroscience ⭐]]
 
 * Eligibility Traces
 

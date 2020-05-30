@@ -79,4 +79,4 @@ Parameters can be learnt from data via maximum likelihood estimation.
 2. Computationally expensive
 
 ** Alternatives
-- [[file:likelihood_field_model.org][§likelihood_field_model]]
+- [[file:likelihood_field_model.org][Likelihood Field Model]]

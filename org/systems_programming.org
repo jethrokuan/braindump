@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Systems Programming
 
-- tags :: [[file:operating_systems.org][§operating_systems]], [[file:linux.org][§linux]]
+- tags :: [[file:operating_systems.org][Operating Systems]], [[file:linux.org][Linux]]
 
 * Memory
 TODO: https://people.freebsd.org/~lstewart/articles/cpumemory.pdf

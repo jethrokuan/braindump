@@ -1,7 +1,7 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:28+08:00
+lastmod = 2020-05-31T01:08:59+08:00
 draft = false
 +++
 
@@ -140,6 +140,6 @@ w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 
 <a id="ziebart2008_maxentrl" target="_blank">Ziebart, B., Maas, A., Bagnell, J., & Dey, A., _Maximum Entropy Inverse Reinforcement Learning._, In , (pp. 1433–1438) (2008). : .</a> [↩](#78d223b81b3f438213caf1f4b12184f1)
 
-<a id="abbeel2004apprenticeship" target="_blank">Abbeel, P., & Ng, A. Y., _Apprenticeship learning via inverse reinforcement learning_, In , Proceedings of the twenty-first international conference on Machine learning (pp. 1) (2004). : .</a> [↩](#8b56bcc6746b685f5684ccf1402753fc)
+<a id="abbeel2004apprenticeship" target="_blank">Abbeel, P., & Ng, A. Y., _Apprenticeship learning via inverse reinforcement learning_, In , Proceedings of the Twenty-First International Conference on {{Machine}} Learning (pp. 1) (2004). : .</a> [↩](#8b56bcc6746b685f5684ccf1402753fc)
 
-<a id="ratliff2006maximum" target="_blank">Ratliff, N. D., Bagnell, J. A., & Zinkevich, M. A., _Maximum margin planning_, In , Proceedings of the 23rd international conference on Machine learning (pp. 729–736) (2006). : .</a> [↩](#d878ab6d38d5e3ab2f9ab484b7c27875)
+<a id="ratliff2006maximum" target="_blank">Ratliff, N. D., Bagnell, J. A., & Zinkevich, M. A., _Maximum Margin Planning_, In , Proceedings of the 23rd International Conference on {{Machine}} Learning (pp. 729–736) (2006). : .</a> [↩](#d878ab6d38d5e3ab2f9ab484b7c27875)

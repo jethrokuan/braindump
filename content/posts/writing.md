@@ -1,9 +1,12 @@
 +++
 title = "Writing"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:05+08:00
+lastmod = 2020-05-31T01:09:33+08:00
 draft = false
 +++
+
+- [Writing Books]({{< relref "writing_books" >}})
+- [Writing Articles]({{< relref "writing_articles" >}})
 
 ## Books {#books}
 

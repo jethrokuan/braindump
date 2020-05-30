@@ -1,7 +1,7 @@
 +++
 title = "How To Write a Technical Paper"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:16+08:00
+lastmod = 2020-05-31T01:09:43+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ tags
 : [Writing]({{< relref "writing" >}}), [Papers]({{< relref "papers" >}})
 
 paper
-: <a id="7a6b903918cb910a3f8207e8473a9ee3" href="#Whiteside2017HowTW">(James Whiteside, 2017)</a>
+: <a id="7a6b903918cb910a3f8207e8473a9ee3" href="#Whiteside2017HowTW">(Whiteside, 2017)</a>
 
 ## Abstract {#abstract}
 

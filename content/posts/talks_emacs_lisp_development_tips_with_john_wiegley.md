@@ -1,7 +1,7 @@
 +++
 title = "Talks: Emacs Lisp Development Tips with John Wiegley"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:07+08:00
+lastmod = 2020-05-31T01:09:34+08:00
 slug = "emacs_lisp_development_tips_with_john_wiegley"
 draft = false
 +++

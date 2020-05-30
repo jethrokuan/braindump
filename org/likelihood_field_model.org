@@ -1,11 +1,13 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Likelihood Field Model
 
+- tags :: [[file:map_matching.org][Map Matching]]
+
 * Key Idea
 Project an individual sensor measurement $z_t^k$ into the global
 coordinate frame of map $m$. Discards max-range readings.
 
-Assumes three types of noise, similar to [[file:range_finder_model.org][§range_finder_model]]:
+Assumes three types of noise, similar to [[file:range_finder_model.org][Range Finder Model]]:
 
 1. Measurement noise: Gaussian
 2. Failures: point-mass distribution at $z_{\text{max}}$
@@ -26,7 +28,3 @@ The model is a mixture of these 3 densities:
 3. Does not account for map uncertainty
 
 These issues can be addressed via extensions to the algorithm.
-
-* Related
-- [[file:range_finder_model.org][§range_finder_model]]
-- [[file:map_matching.org][§map_matching]]

@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Computer Networking
 
-- tags :: [[file:operating_systems.org][§operating_systems]]
+- tags :: [[file:operating_systems.org][Operating Systems]]
 
 * Introduction
 ** What is the Internet?

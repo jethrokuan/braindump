@@ -1,12 +1,9 @@
 +++
 title = "Normalizing Flows"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:20+08:00
+lastmod = 2020-05-31T01:09:47+08:00
 draft = false
 +++
-
-tags
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}})
 
 Normalizing flows provide a way of constructing probability
 distributions over continuous random variables. In flow-based

@@ -1,4 +1,2 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Pdf Tools
-
-- tags :: [[file:linux.org][§linux]]

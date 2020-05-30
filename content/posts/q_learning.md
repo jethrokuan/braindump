@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:23+08:00
+lastmod = 2020-05-31T01:09:50+08:00
 draft = false
 +++
 
@@ -74,7 +74,7 @@ Q(s_i', a_i')\\):
     \sum_i |Q\_{\phi}(s_i, a_i) - y_i |^2\\)
     1.3. goto 1.1 or 1
 
-This works, even for off-policy samples (unlike [§actor\_critic]({{< relref "actor_critic" >}})). In
+This works, even for off-policy samples (unlike [Actor-Critic]({{< relref "actor_critic" >}})). In
 addition, there is only one network, hence no high-variance policy
 gradient methods. However, _there are no convergence guarantees with
 non-linear function approximators_!
@@ -322,4 +322,4 @@ RL]({{< relref "mnih2013_atari_deeprl" >}})).
 
 # Bibliography
 
-<a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Z., Bubeck, S., & Jordan, M. I., _Is Q-Learning Provably Efficient?_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc.</a> [↩](#01672110f741e437a834e37dc0d172c4)
+<a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Zeyuan, Bubeck, S., & Jordan, M. I., _Is Q-Learning Provably Efficient?_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : {Curran Associates, Inc.}.</a> [↩](#01672110f741e437a834e37dc0d172c4)

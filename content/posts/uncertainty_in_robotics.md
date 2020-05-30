@@ -1,7 +1,7 @@
 +++
 title = "Uncertainty in Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:23+08:00
+lastmod = 2020-05-31T01:09:49+08:00
 draft = false
 +++
 
@@ -47,4 +47,4 @@ Computation
 
 # Bibliography
 
-<a id="thrun2005probabilistic" target="_blank">Thrun, S., Burgard, W., & Fox, D., _Probabilistic robotics_ (2005), : MIT press.</a> [↩](#835a6cfe6739deb9dedf830cd3072262)
+<a id="thrun2005probabilistic" target="_blank">Thrun, S., Burgard, W., & Fox, D., _Probabilistic Robotics_ (2005), : {MIT press}.</a> [↩](#835a6cfe6739deb9dedf830cd3072262)

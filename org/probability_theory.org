@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Probability Theory
 
-- tags :: [[file:statistics.org][§statistics]]
-
 * Setup
 
 Suppose that we are about to perform an experiment whose outcome is

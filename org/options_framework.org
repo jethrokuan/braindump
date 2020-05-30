@@ -16,10 +16,10 @@ abstraction. cite:stolle2002learning
 - models of options consist of reward until termination, and
   (discounted) transition to termination state
 
-They look a lot like value functions, and can use the TD error to
-train the model [[file:td_learning.org][§td_learning]].
+They look a lot like value functions, and can use the TD error to train the
+model ([[file:td_learning.org][Temporal Difference Learning]]).
 
 * Related
-- [[file:generalized_value_functions.org][§generalized_value_functions]]
+- [[file:generalized_value_functions.org][Generalized Value Functions]]
 
 bibliography:biblio.bib

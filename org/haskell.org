@@ -2,7 +2,7 @@
 #+TITLE: Haskell
 #+OPTIONS: toc:nil
 
-- tags :: [[file:prog_lang.org][§prog_lang]]
+- tags :: [[file:prog_lang.org][Programming Languages]]
 
 * Introduction
 ** Expressions

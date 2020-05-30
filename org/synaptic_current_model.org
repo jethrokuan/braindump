@@ -17,7 +17,7 @@ exponential decay. Synaptic currents are also assumed to sum linearly.
 A single LIF neuron can be simulated with 2 linear differential
 equations whose initial conditions change instantaneously when a spike
 occurs. Combining the reset term with the equation for the
-[[file:leaky_integrate_and_fire.org][§leaky_integrate_and_fire]] model, we get:
+[[file:leaky_integrate_and_fire.org][Leaky Integrate-And-Fire]] model, we get:
 
 \begin{equation} \label{eq:lif_with_reset}
   \frac{\mathrm{d} U_{i}^{(l)}}{\mathrm{d} t}=-\frac{1}{\tau_{\mathrm{mem}}}\left(\left(U_{i}^{(l)}-U_{\mathrm{rest}}\right)+R I_{i}^{(l)}\right)+S_{i}^{(l)}(t)\left(U_{\mathrm{rest}}-\vartheta\right)

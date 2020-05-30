@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Expectation Maximization and Mixture Models
 
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
-
 * Introduction
 
 If we define a joint distribution over observed and latent variables,

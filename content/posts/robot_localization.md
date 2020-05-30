@@ -1,7 +1,7 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:01+08:00
+lastmod = 2020-05-31T01:08:35+08:00
 draft = false
 +++
 
@@ -67,9 +67,3 @@ robot into a hazardous place.
 ## Summary {#summary}
 
 {{< figure src="/ox-hugo/screenshot2019-12-05_18-15-41_.png" caption="Figure 1: Comparisons between different Markov localization techniques" >}}
-
-## Related {#related}
-
-- [§markov\_localization]({{< relref "markov_localization" >}})
-- [§ekf\_localization]({{< relref "ekf_localization" >}})
-- [§grid\_mc\_localization]({{< relref "grid_mc_localization" >}})

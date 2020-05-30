@@ -1,14 +1,14 @@
 +++
 title = "LU Decomposition"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:59+08:00
+lastmod = 2020-05-31T01:08:32+08:00
 draft = false
 +++
 
-The key problem of Linear Algebra ([§linear\_algebra]({{< relref "linear_algebra" >}})) is solving the
-equation \\(Ax=b\\). We know that with Gaussian elimination, we can
-decompose \\(A = LU\\), where \\(L\\) is a lower-triangular matrix and \\(U\\) is
-an upper triangular matrix. An example speaks a thousand words:
+The key problem of [Linear Algebra]({{< relref "linear_algebra" >}}) is solving the equation \\(Ax=b\\). We know that
+with Gaussian elimination, we can decompose \\(A = LU\\), where \\(L\\) is a
+lower-triangular matrix and \\(U\\) is an upper triangular matrix. An example speaks
+a thousand words:
 
 \begin{equation}
 A x=\left[\begin{array}{ccc}{2} & {1} & {1} \\ {4} & {-6} & {0} \\ {-2} & {7} & {2}\end{array}\right]\left[\begin{array}{l}{u} \\ {v} \\ {w}\end{array}\right]=\left[\begin{array}{c}{5} \\ {-2} \\ {9}\end{array}\right]=b

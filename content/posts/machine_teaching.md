@@ -1,12 +1,9 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:45+08:00
+lastmod = 2020-05-31T01:09:15+08:00
 draft = false
 +++
-
-tags
-: [§machine\_learning]({{< relref "machine_learning" >}})
 
 ## Definitions <a id="b5c1005733dab7e951e8ecd46dff695f" href="#simard17_machin_teach">(Simard et al., 2017)</a> {#definitions}
 
@@ -153,7 +150,7 @@ Experiments showed that POMDP planning leads to faster teaching.
         reduce the dimensionality of the belief space into \\(S = X \times
         Y\\), where \\(X\\) is the space of all possible values fully
         observable variables, and \\(Y\\) is the space of partially
-        observable variables. <a id="b4b7f43790c8103452a6d9a6561a6727" href="#Du2010APA">(Yanzhu Du et al., 2010)</a> Since state variable \\(x\\)
+        observable variables. <a id="b4b7f43790c8103452a6d9a6561a6727" href="#Du2010APA">(Du et al., 2010)</a> Since state variable \\(x\\)
         is fully observable, we only need to maintain belief \\(b_Y\\) for
         the state variables in \\(Y\\).
 
@@ -276,7 +273,7 @@ inference:
 The intuition is that subsets of training data that lead a model to
 the same (or approximately similar) inference as the model trained on
 all the data should be useful for understanding the fitted model.
-<a id="f88402a68a48e8e87e35ad010169c296" href="#ravi_bayesian_teaching_mnist">(Ravi Sojitra, 2018)</a>
+<a id="f88402a68a48e8e87e35ad010169c296" href="#ravi_bayesian_teaching_mnist">(Sojitra, 2018)</a>
 
 Below is an example of using Bayesian teaching, limited to a teaching
 set of dimension 2, to understand an MNIST model.
@@ -308,7 +305,7 @@ Obtaining real-world training data can be expensive, and many RL
 algorithms are sample-inefficient. Hence, many models are trained in a
 simulated environment, and the "sim2real" gap causes these models to
 perform poorly on real-world tasks.
-<a id="1f99c4b9974f48e237e3ce698feb574b" href="#lilian_domain_random_sim2r_trans">(Lilian Weng, 2019)</a>
+<a id="1f99c4b9974f48e237e3ce698feb574b" href="#lilian_domain_random_sim2r_trans">(Weng, 2019)</a>
 
 There are several approaches to closing the sim2real gap:
 
@@ -442,22 +439,22 @@ environments.
 
 <a id="zhu18_overv_machin_teach" target="_blank">Zhu, X., Singla, A., Zilles, S., & Rafferty, A. N., _An overview of machine teaching_, CoRR, _()_, (2018). </a> [↩](#caa5573af457f4ae7bf053810593bdf7)
 
-<a id="Rafferty_2015" target="_blank">Rafferty, A. N., Brunskill, E., Griffiths, T. L., & Shafto, P., _Faster teaching via pomdp planning_, Cognitive Science, _40(6)_, 1290–1332 (2015). http://dx.doi.org/10.1111/cogs.12290</a> [↩](#20d8df4efc7c1861be90e93bf2bf9231)
+<a id="Rafferty_2015" target="_blank">Rafferty, A. N., Brunskill, E., Griffiths, T. L., & Shafto, P., _Faster teaching via POMDP planning_, Cognitive Science, _40(6)_, 1290–1332 (2015). http://dx.doi.org/10.1111/cogs.12290</a> [↩](#20d8df4efc7c1861be90e93bf2bf9231)
 
-<a id="Du2010APA" target="_blank">Du, Y., Hsu, D., Kurniawati, H., Lee, W. S., Ong, S. C. W., & Png, S. W., _A pomdp approach to robot motion planning under uncertainty_, In , (pp. ) (2010). : .</a> [↩](#b4b7f43790c8103452a6d9a6561a6727)
+<a id="Du2010APA" target="_blank">Du, Y., Hsu, D., Kurniawati, H., Lee, W. S., Ong, S. C. W., & Png, S. W., _A POMDP approach to robot motion planning under uncertainty_, In , (pp. ) (2010). : .</a> [↩](#b4b7f43790c8103452a6d9a6561a6727)
 
-<a id="brown18_machin_teach_inver_reinf_learn" target="_blank">Brown, D. S., & Niekum, S., _Machine teaching for inverse reinforcement learning: algorithms and applications_, CoRR, _()_, (2018). </a> [↩](#2729f1e86d52c599d1e5b0d6d75a3b47)
+<a id="brown18_machin_teach_inver_reinf_learn" target="_blank">Brown, D. S., & Niekum, S., _Machine teaching for inverse reinforcement learning: Algorithms and applications_, CoRR, _()_, (2018). </a> [↩](#2729f1e86d52c599d1e5b0d6d75a3b47)
 
 <a id="haug18_teach_inver_reinf_learn_via_featur_demon" target="_blank">Haug, L., Tschiatschek, S., & Singla, A., _Teaching inverse reinforcement learners via features and demonstrations_, CoRR, _()_, (2018). </a> [↩](#255bc1a536215d32ce8dfd159d3c4d7a)
 
-<a id="tschiatschek19_learn_aware_teach" target="_blank">Tschiatschek, S., Ghosh, A., Haug, L., Devidze, R., & Singla, A., _Learner-aware teaching: inverse reinforcement learning with preferences and constraints_, CoRR, _()_, (2019). </a> [↩](#2d73f677b073c0fc37c32e652da58e0d)
+<a id="tschiatschek19_learn_aware_teach" target="_blank">Tschiatschek, S., Ghosh, A., Haug, L., Devidze, R., & Singla, A., _Learner-aware teaching: Inverse reinforcement learning with preferences and constraints_, CoRR, _()_, (2019). </a> [↩](#2d73f677b073c0fc37c32e652da58e0d)
 
 <a id="kamalaruban19_inter_teach_algor_inver_reinf_learn" target="_blank">Kamalaruban, P., Devidze, R., Cevher, V., & Singla, A., _Interactive teaching algorithms for inverse reinforcement learning_, CoRR, _()_, (2019). </a> [↩](#d5cdce41e67580ca88216f11069230f8)
 
-<a id="ravi_bayesian_teaching_mnist" target="_blank">Sojitra, R. (2018). _Bayesian teaching as model explanation: an mnist example_. Retrieved from [https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html](https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html). Online; accessed 19 May 2019.</a> [↩](#f88402a68a48e8e87e35ad010169c296)
+<a id="ravi_bayesian_teaching_mnist" target="_blank">Sojitra, R., _Bayesian teaching as model explanation: An MNIST example_, , _()_, (2018). </a> [↩](#f88402a68a48e8e87e35ad010169c296)
 
 <a id="woodward19_learn_to_inter_learn_assis" target="_blank">Woodward, M., Finn, C., & Hausman, K., _Learning to interactively learn and assist_, CoRR, _()_, (2019). </a> [↩](#126795725ed501c93990ffff037191f4)
 
-<a id="lilian_domain_random_sim2r_trans" target="_blank">Weng, L. (2019). _Domain randomization for sim2real transfer_. Retrieved from [https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html](https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html). Online; accessed 28 June 2019.</a> [↩](#1f99c4b9974f48e237e3ce698feb574b)
+<a id="lilian_domain_random_sim2r_trans" target="_blank">Weng, L., _Domain randomization for Sim2Real transfer_, , _()_, (2019). </a> [↩](#1f99c4b9974f48e237e3ce698feb574b)
 
-<a id="arjovsky19_invar_risk_minim" target="_blank">Arjovsky, M., Bottou, L\'eon, Gulrajani, I., & Lopez-Paz, D., _Invariant Risk Minimization_, CoRR, _()_, (2019). </a> [↩](#5feb37b967977943f69738d540e822e8)
+<a id="arjovsky19_invar_risk_minim" target="_blank">Arjovsky, M., Bottou, L\'eon, Gulrajani, I., & Lopez-Paz, David, _Invariant Risk Minimization_, CoRR, _()_, (2019). </a> [↩](#5feb37b967977943f69738d540e822e8)

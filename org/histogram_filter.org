@@ -59,7 +59,3 @@ resolution to the posterior probability mass.
 /Selective updating/ chooses a subset of grid cells to update for the
 posterior. These are the grid cells whose posterior probability
 exceeds some user-set threshold.
-
-* Related
-- [[file:bayes_filter.org][§bayes_filter]]
-- [[file:particle_filter.org][§particle_filter]]

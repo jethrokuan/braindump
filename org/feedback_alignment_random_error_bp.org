@@ -1,9 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Feedback Alignment and Random Error Backpropagation
 
-- tag :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]], [[file:spiking_neural_networks.org][§spiking_neural_networks]],
-  [[file:neuroscience.org][§neuroscience]]
-
 Backpropagation is not biologically plausible because it the error
 signals to update the weights of the hidden layers need to be
 propagated back from the top layer.
@@ -26,5 +23,5 @@ layer:
   \delta_{i}^{(l)}=\sigma^{\prime}\left(a_{i}^{(l)}\right) \sum_{k} \delta_{k}^{(L)} H_{k i}^{(l)}
 \end{equation}
 
-Random BP applied to SNNs do not account for the temporal dynamics of
-neurons and synapses. SuperSpike solves this problem.
+Random BP applied to [[file:spiking_neural_networks.org][Spiking Neural Networks]] do not account for the temporal
+dynamics of neurons and synapses. SuperSpike solves this problem.

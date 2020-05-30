@@ -1,8 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Copy Editing
 
-- tags :: [[file:writing.org][§writing]]
-
 - series comma :: always use the Oxford comma (or series comma)
 - only comma :: use the /only comma/, where the subject is one of its
   kind: e.g. /His son, Juliet.../ where Juliet is the only son

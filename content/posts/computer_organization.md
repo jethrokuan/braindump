@@ -1,12 +1,12 @@
 +++
 title = "Computer Organization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:18+08:00
+lastmod = 2020-05-31T01:08:50+08:00
 draft = false
 +++
 
 tags
-: [§operating\_systems]({{< relref "operating_systems" >}})
+: [Operating Systems]({{< relref "operating_systems" >}})
 
 ## Pipelining {#pipelining}
 

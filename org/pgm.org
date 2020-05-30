@@ -3,8 +3,6 @@
 
 bibliographystyle:unsrt
 
-- tags :: [[file:machine_learning.org][§machine_learning]]
-
 * Motivation
 Most tasks require a person or an automated system to /reason/: to take
 the available information and reach conclusions, both about what might

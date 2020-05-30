@@ -1,2 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Web Development
+
+* Tools
+- [[https://jakearchibald.github.io/svgomg/][SVGOMG - SVGO's Missing GUI]]
+- [[https://uptimerobot.com][Uptime Robot]]

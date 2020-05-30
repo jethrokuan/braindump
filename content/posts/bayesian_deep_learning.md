@@ -1,13 +1,10 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:27+08:00
+lastmod = 2020-05-31T01:08:58+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
 +++
-
-tags
-: [§deep\_learning]({{< relref "deep_learning" >}})
 
 ## The Case For Bayesian Learning <a id="179a446e344f34ef9150164c2bd666ae" href="#wilson2019bayesian">(Wilson, 2019)</a> {#the-case-for-bayesian-learning}
 
@@ -16,7 +13,7 @@ tags
 - The success of ensembles encourages Bayesians, since ensembles
   approximate the Bayesian Model Average
 
-## Bayesian Perspective on Generalization <a id="b9a995db75df332d755d4fb40282c70d" href="#smith_quoc_bayes_generalization_sgd">(Sam Smith \& Quoc Le, 2018)</a> {#bayesian-perspective-on-generalization}
+## Bayesian Perspective on Generalization <a id="b9a995db75df332d755d4fb40282c70d" href="#smith_quoc_bayes_generalization_sgd">(Smith \& Le, 2018)</a> {#bayesian-perspective-on-generalization}
 
 Bayesian model comparisons were first made on Neural Networks by
 Mackay. Consider a classification model \\(M\\) with a single parameter

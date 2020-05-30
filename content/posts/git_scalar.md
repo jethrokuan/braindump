@@ -1,7 +1,7 @@
 +++
 title = "Git Scalar"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:53+08:00
+lastmod = 2020-05-31T01:09:21+08:00
 slug = "git_scalar"
 draft = false
 +++

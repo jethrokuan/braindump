@@ -1,14 +1,14 @@
 +++
 title = "Markov Logic Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:14+08:00
+lastmod = 2020-05-31T01:09:41+08:00
 draft = false
 +++
 
 tags
 : [Machine Learning Papers]({{< relref "ml_papers" >}})
 
-## Markov Logic Networks <a id="ffcf484ffbed70c6ebcf595884716056" href="#richardson06_markov_logic_networ">(Matthew Richardson \& Pedro Domingos, 2006)</a>. {#markov-logic-networks-dot}
+## Markov Logic Networks <a id="ffcf484ffbed70c6ebcf595884716056" href="#richardson06_markov_logic_networ">(Richardson \& Domingos, 2006)</a>. {#markov-logic-networks-dot}
 
 ### Problem {#problem}
 

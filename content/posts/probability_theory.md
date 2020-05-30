@@ -1,12 +1,9 @@
 +++
 title = "Probability Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:06+08:00
+lastmod = 2020-05-31T01:09:34+08:00
 draft = false
 +++
-
-tags
-: [§statistics]({{< relref "statistics" >}})
 
 ## Setup {#setup}
 

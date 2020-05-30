@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Arguments Against Bayesian Inference
 
-- tags :: [[file:bayesian_inference.org][§bayesian_inference]]
+- tags :: [[file:bayesian_inference.org][Bayesian Inference]]
 
 Whereas frequentist methods derive solutions via inventing estimators
 (a multitude of them may exist) and computing a likelihood function,

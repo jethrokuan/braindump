@@ -120,7 +120,7 @@ One can also add a temperature: $\pi(a_t | s_t) =
   p(s_t) \propto \beta_t(s_t) \alpha_t(s_t)
 \end{equation}
 
-same derivations as [[file:hidden_markov_model.org][§hidden_markov_model]]!
+same derivations as [[file:hidden_markov_model.org][Hidden Markov Model]]!
 
 #+DOWNLOADED: screenshot @ 2019-12-24 20:04:20
 [[file:images/human_behaviour_as_optimal_control/screenshot2019-12-24_20-04-20_.png]]

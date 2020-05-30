@@ -1,7 +1,7 @@
 +++
 title = "Empirical Risk Minimization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-30T15:38:13+08:00
+lastmod = 2020-05-31T01:08:59+08:00
 draft = false
 +++
 

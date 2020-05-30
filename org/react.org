@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: React
 
-- tags :: [[file:javascript.org][§javascript]]
+React is a [[file:web_dev.org][Web Development]] framework.
 
 * React Frameworks
 - https://evergreen.segment.com/

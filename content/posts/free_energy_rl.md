@@ -1,7 +1,7 @@
 +++
 title = "Free-Energy Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:24+08:00
+lastmod = 2020-05-31T01:08:00+08:00
 draft = false
 +++
 
@@ -24,7 +24,7 @@ variables fixed. The action with the lowest free energy is produced,
 corresponding to the highest expected reward for the given state.
 
 Spiking neural networks can be used to implement RBMs, hence used for
-FERL <a id="b05ffcb18862cf0b95a226a7afa8d36b" href="#nakano11_spikin_neural_networ_model_free">(Takashi Nakano \& Makoto Otsuka, 2011)</a>.
+FERL <a id="b05ffcb18862cf0b95a226a7afa8d36b" href="#nakano11_spikin_neural_networ_model_free">(Nakano \& Otsuka, 2011)</a>.
 
 # Bibliography
 

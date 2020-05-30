@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Writing Books
 
-- tags :: [[file:writing.org][§writing]]
+- tags :: [[file:writing.org][Writing]]
 
 - [[https://www.aristeia.com/authorAdvice.html][Scott Meyers: Advice to Prospective Book Authors]]
 - [[https://dev.to/trickvi/i-wrote-a-book-lfg][I wrote a book - DEV Community 👩‍💻👨‍💻]]

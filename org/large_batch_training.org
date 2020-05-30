@@ -1,4 +1,2 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Large Batch Training
-
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]

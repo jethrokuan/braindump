@@ -2,8 +2,6 @@
 #+ROAM_ALIAS: NLP
 #+TITLE: Natural Language Processing
 
-- tags :: [[file:machine_learning.org][§machine_learning]], [[file:deep_learning.org][§deep_learning]]
-
 * How to Represent Words
 http://ruder.io/word-embeddings-2017/index.html
 

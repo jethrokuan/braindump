@@ -1,7 +1,7 @@
 +++
 title = "Quantization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:52+08:00
+lastmod = 2020-05-31T01:09:21+08:00
 draft = false
 +++
 
@@ -21,5 +21,5 @@ Pytorch supports two libraries for quantization:
 
 ## Questions {#questions}
 
-- Can we quantize [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}})? They already do binary
+- Can we quantize [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})? They already do binary
   precision computation, what about the weights?

@@ -1,7 +1,7 @@
 +++
 title = "SimCLR"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:10+08:00
+lastmod = 2020-05-31T01:09:37+08:00
 slug = "simclr"
 draft = false
 +++
@@ -57,4 +57,4 @@ trained to be invariant to the data transformation. Thus \\(g\\) can
 remove information that may be useful for the downstream task, such as
 color or orientation of objects.
 
-<./biblio/biblio.bib>
+<biblio.bib>

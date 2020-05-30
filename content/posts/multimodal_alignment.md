@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Alignment"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:39+08:00
+lastmod = 2020-05-31T01:09:09+08:00
 slug = "multimodal_alignment"
 draft = false
 +++

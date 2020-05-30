@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Variational Inference
 
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]], [[file:pgm.org][§pgm]]
+- tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]]
 
 * TODO Variational Bounds of Mutual Information cite:poole19_variat_bound_mutual_infor
 

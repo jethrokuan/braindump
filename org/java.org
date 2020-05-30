@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Java
 
-- tags :: [[file:prog_lang.org][§prog_lang]]
+- tags :: [[file:prog_lang.org][Programming Languages]]
 
 * Hash Table
 Default java implementation:

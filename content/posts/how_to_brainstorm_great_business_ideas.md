@@ -1,7 +1,7 @@
 +++
 title = "How to brainstorm great business ideas"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:16+08:00
+lastmod = 2020-05-31T01:08:48+08:00
 slug = "how_to_brainstorm_great_business_ideas"
 draft = false
 +++

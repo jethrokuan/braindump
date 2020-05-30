@@ -1,7 +1,7 @@
 +++
 title = "Rover"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:39+08:00
+lastmod = 2020-05-31T01:09:09+08:00
 draft = false
 +++
 
@@ -30,6 +30,6 @@ Things to account for:
 
 # Bibliography
 
-<a id="lakdawalla18_curios" target="_blank">Lakdawalla, E., _The design and engineering of curiosity : how the mars rover performs its job_ (2018), Cham, Switzerland: Springer.</a> [↩](#6f880a9ac5f6924d2f9f0bca7a85ea37)
+<a id="lakdawalla18_curios" target="_blank">Lakdawalla, E., _The design and engineering of Curiosity : how the Mars Rover performs its job_ (2018), {Cham, Switzerland}: {Springer}.</a> [↩](#6f880a9ac5f6924d2f9f0bca7a85ea37)
 
-<a id="systemsengineering_6575245" target="_blank">R. Welch, D. Limonadi, & R. Manning, _Systems engineering the curiosity rover: a retrospective_, In , 2013 8th International Conference on System of Systems Engineering (pp. 70–75) (2013). : .</a> [↩](#369087cc65dd7d915ceacd6e1f3f4a5b)
+<a id="systemsengineering_6575245" target="_blank">Welch, R., Limonadi, D., & Manning, R., _Systems engineering the curiosity rover: A retrospective_, In , 2013 8th International Conference on System of Systems Engineering (pp. 70–75) (2013). : .</a> [↩](#369087cc65dd7d915ceacd6e1f3f4a5b)

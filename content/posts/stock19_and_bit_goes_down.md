@@ -1,7 +1,7 @@
 +++
 title = "And the Bit Goes Down: Revisiting the Quantization of Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:31+08:00
+lastmod = 2020-05-31T01:08:07+08:00
 draft = false
 +++
 
@@ -31,4 +31,4 @@ nearest neighbour search.
 
 # Bibliography
 
-<a id="stock19_and_bit_goes_down" target="_blank">Stock, P., Joulin, A., Gribonval, R\'emi, Graham, B., & J\'egou, Herv\'e, _And the bit goes down: revisiting the quantization of neural networks_, CoRR, _()_, (2019). </a> [↩](#56497b51cc79dfdb43c364d93a9978c3)
+<a id="stock19_and_bit_goes_down" target="_blank">Stock, P., Joulin, A., Gribonval, R\'emi, Graham, B., & J\'egou, Herv\'e, _And the bit goes down: Revisiting the quantization of neural networks_, CoRR, _()_, (2019). </a> [↩](#56497b51cc79dfdb43c364d93a9978c3)

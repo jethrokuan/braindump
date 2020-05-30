@@ -1,7 +1,7 @@
 +++
 title = "Artificial Intelligence"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-30T23:52:12+08:00
+lastmod = 2020-05-31T01:08:28+08:00
 draft = false
 +++
 

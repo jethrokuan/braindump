@@ -1,7 +1,7 @@
 +++
 title = "Hierarchical Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:08+08:00
+lastmod = 2020-05-31T01:09:35+08:00
 slug = "hierarchical_models"
 draft = false
 +++

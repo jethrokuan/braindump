@@ -1,12 +1,9 @@
 +++
 title = "Spark"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:09+08:00
+lastmod = 2020-05-31T01:09:37+08:00
 draft = false
 +++
-
-tags
-: [§data\_science]({{< relref "data_science" >}})
 
 ## What is Apache Spark? {#what-is-apache-spark}
 

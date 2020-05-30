@@ -2,7 +2,7 @@
 #+HUGO_TAGS: web
 #+TITLE: CSS
 
-- tags :: [[file:web_dev.org][§web_dev]], [[file:prog_lang.org][§prog_lang]]
+- tags :: [[file:web_dev.org][Web Development]]
 
  - Adding dark mode : [[https://kevq.uk/how-to-add-css-dark-mode-to-a-website/][How To Add CSS Dark Mode To A Website - Kev
    Quirk]]

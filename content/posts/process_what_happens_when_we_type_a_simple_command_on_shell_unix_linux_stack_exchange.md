@@ -1,7 +1,7 @@
 +++
 title = "What happens when we type a simple command on shell?"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:03+08:00
+lastmod = 2020-05-31T01:09:32+08:00
 slug = "what_happens_when_we_type_a_simple_command_on_shell"
 draft = false
 +++

@@ -2,6 +2,9 @@
 #+TITLE: Machine Learning
 #+HUGO_TAGS: machine-learning
 
+* TOC
+- [[file:nlp.org][Natural Language Processing]]
+
 * When do we need machine learning?
 Two aspects of a given problem may call for the use of programs that
 learn and improve on the basis of their "experience":

@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Branch Prediction
 
-- tags :: [[file:operating_systems.org][§operating_systems]], [[file:computer_organization.org][§computer_organization]]
+- tags :: [[file:operating_systems.org][Operating Systems]], [[file:linux.org][Linux]]
 
 * TODO https://comparch.net/2013/06/30/why-tage-is-the-best/
 - https://github.com/sjdesai16/tage

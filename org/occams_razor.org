@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Occam's Razor
 
-- tags :: [[file:machine_learning.org][§machine_learning]], [[file:information_theory.org][§information_theory]]
+- tags :: [[file:information_theory.org][Information Theory]]
 
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian
@@ -43,6 +43,3 @@ coefficients entirely.
 
 I still don't see a contradiction with Mackay's proposed argument.
 Maybe I'm missing something...
-
-* Related
-- [[file:two_levels_of_inference.org][§two_levels_of_inference]]

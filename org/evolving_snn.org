@@ -1,15 +1,13 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Evolving Spiking Neural Networks
 
-- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
-
-Early eSNN architectures use the [[file:leaky_integrate_and_fire.org][§leaky_integrate_and_fire]] model,
-and rank-order encoding. eSNNs can be used for classification. Given
-an input sample, the spike train is propagated through the SNN,
-resulting in the firing of output neurons. If no output neuron is
-activated, the classification result is undetermined. If one or more
-output neurons emit a spike, the label of the neuron with the shortest
-response time represents the classification result.
+Early evolving [[file:spiking_neural_networks.org][Spiking Neural Networks]] architectures use the [[file:leaky_integrate_and_fire.org][Leaky
+Integrate-And-Fire]] model, and rank-order encoding. eSNNs can be used for
+classification. Given an input sample, the spike train is propagated through the
+SNN, resulting in the firing of output neurons. If no output neuron is
+activated, the classification result is undetermined. If one or more output
+neurons emit a spike, the label of the neuron with the shortest response time
+represents the classification result.
 
 * Training an eSNN
 

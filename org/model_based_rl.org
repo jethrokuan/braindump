@@ -66,7 +66,7 @@ result in nonsensical behaviour.
 #+CAPTION: Overfitted model on small amounts of training samples
 [[file:images/model_based_rl/screenshot2019-12-23_14-31-15_.png]]
 We can use /uncertainty estimation/ to detect where the models may be
-wrong, for example by using [[file:gaussian_processes.org][§gaussian_processes]].
+wrong, for example by using [[file:gaussian_processes.org][Gaussian Processes]].
 
 For planning under uncertainty, one can use the expected value,
 optimistic value, or pessimistic value, depending on application.

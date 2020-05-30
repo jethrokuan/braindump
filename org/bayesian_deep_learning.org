@@ -3,8 +3,6 @@
 #+HUGO_TAGS: bayes deep-learning
 bibliographystyle:unsrt
 
-- tags :: [[file:deep_learning.org][§deep_learning]]
-
 * The Case For Bayesian Learning cite:wilson2019bayesian
 - Vague parameter prior + structured model (e.g. CNN) = structured
   function prior!

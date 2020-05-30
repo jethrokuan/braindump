@@ -1,7 +1,7 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:35+08:00
+lastmod = 2020-05-31T01:09:05+08:00
 draft = false
 +++
 
@@ -230,10 +230,10 @@ pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">
 
 # Bibliography
 
-<a id="cppref_raii" target="_blank">nil, (nil). _Raii - cppreference.com_. Retrieved from [https://en.cppreference.com/w/cpp/language/raii](https://en.cppreference.com/w/cpp/language/raii). Online; accessed 25 January 2019.</a> [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
+<a id="cppref_raii" target="_blank">nil, _RAII - cppreference.com_, , _()_, (nil). </a> [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
 
-<a id="codesbay_codes_cplus_smart" target="_blank">CodesBay, (nil). _Github - codesbay/cplusplus_smartpointer: this repository contains description of c++11 and c++14 smart pointers trilogy of shared_ptr, unique_ptr and weak_ptr_. Retrieved from [https://github.com/CodesBay/CplusPlus_SmartPointer](https://github.com/CodesBay/CplusPlus_SmartPointer). Online; accessed 25 February 2019.</a> [↩](#1ec5400d7db9917f3d3dfe2a47aff3b0)
+<a id="codesbay_codes_cplus_smart" target="_blank">CodesBay, _GitHub - CodesBay/CplusPlusSmartPointer: This repository contains description of C++11 and C++14 Smart Pointers Trilogy of sharedptr, uniqueptr and weakptr_, , _()_, (nil). </a> [↩](#1ec5400d7db9917f3d3dfe2a47aff3b0)
 
-<a id="so_why_move_shared_ptr" target="_blank">nil, (2019). _C++ - why would i std::move an std::shared_ptr? - stack overflow_. Retrieved from [https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr](https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr). Online; accessed 25 February 2019.</a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
+<a id="so_why_move_shared_ptr" target="_blank">nil, _C++ - Why would I std::move an std::sharedptr? - Stack Overflow_, , _()_, (2019). </a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
 
-<a id="17_bartek" target="_blank">Bartek, (2017). _Bartek's coding blog: how not_null can improve your code?_. Retrieved from [https://www.bfilipek.com/2017/10/notnull.html](https://www.bfilipek.com/2017/10/notnull.html). Online; accessed 02 April 2019.</a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)
+<a id="17_bartek" target="_blank">Bartek, _Bartek's coding blog: How notnull can improve your code?_, , _()_, (2017). </a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)

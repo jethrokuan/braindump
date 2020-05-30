@@ -1,7 +1,7 @@
 +++
 title = "Transfer Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:51+08:00
+lastmod = 2020-05-31T01:09:20+08:00
 draft = false
 +++
 
@@ -59,7 +59,7 @@ Fine tuning is popular in the supervised learning setting.
       2.  Little exploration at convergence
 
   To increase diversity and entropy, we can do maximum-entropy learning
-  which acts as randomly as possible while collecting high rewards <a id="1b37e467d7dc76e365875dfb5c03fa1e" href="#pmlr-v70-haarnoja17a">(Tuomas Haarnoja et al., 2017)</a>:
+  which acts as randomly as possible while collecting high rewards <a id="1b37e467d7dc76e365875dfb5c03fa1e" href="#pmlr-v70-haarnoja17a">(Haarnoja et al., 2017)</a>:
 
   \begin{equation}
   \pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
@@ -98,6 +98,6 @@ concurrent multi-task learning. Policy distillation
 
 # Bibliography
 
-<a id="pmlr-v70-haarnoja17a" target="_blank">Haarnoja, T., Tang, H., Abbeel, P., & Levine, S., _Reinforcement learning with deep energy-based policies_, In D. Precup, & Y. W. Teh, Proceedings of the 34th International Conference on Machine Learning (pp. 1352–1361) (2017). International Convention Centre, Sydney, Australia: PMLR.</a> [↩](#1b37e467d7dc76e365875dfb5c03fa1e)
+<a id="pmlr-v70-haarnoja17a" target="_blank">Haarnoja, T., Tang, H., Abbeel, P., & Levine, S., _Reinforcement learning with deep energy-based policies_, In D. Precup, & Y. W. Teh, Proceedings of the 34th International Conference on Machine Learning (pp. 1352–1361) (2017). {International Convention Centre, Sydney, Australia}: {PMLR}.</a> [↩](#1b37e467d7dc76e365875dfb5c03fa1e)
 
 <a id="rusu15_polic_distil" target="_blank">Rusu, A. A., Colmenarejo, S. G., Gulcehre, C., Desjardins, G., Kirkpatrick, J., Pascanu, R., Mnih, V., …, _Policy Distillation_, CoRR, _()_, (2015). </a> [↩](#6c0f3e1b8610e021d4a59b9c6b7598dd)

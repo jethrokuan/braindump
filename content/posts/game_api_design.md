@@ -1,12 +1,12 @@
 +++
 title = "Game API Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-30T17:05:29+08:00
+lastmod = 2020-05-31T01:08:41+08:00
 draft = false
 +++
 
 tags
-: [§software\_engineering]({{< relref "software_engineering" >}})
+: [Software Engineering]({{< relref "software_engineering" >}})
 
 ## Core Tenets from Handmade <a id="9eba6e4f7d26bb0e67deeb10da2c68db" href="#handmade_how_to_write_better">(Handmade, 2019)</a> {#core-tenets-from-handmade}
 

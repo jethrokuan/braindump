@@ -1,7 +1,7 @@
 +++
 title = "Hopfield Network"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:20+08:00
+lastmod = 2020-05-31T01:09:47+08:00
 tags = ["machine-learning"]
 draft = false
 +++

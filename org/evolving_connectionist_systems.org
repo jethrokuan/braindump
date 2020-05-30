@@ -9,8 +9,7 @@ created based on similarity between data samples either in the input
 space, or both in the input space and output space. These functions
 are represented in their connection weights.
 
-ECoS traditionally uses the simple sigmoid model of a neuron. Evolving
-Spiking Neural Networks ([[file:evolving_snn.org][§evolving_snn]]) architectures use a spiking neuron
-model. 
+ECoS traditionally uses the simple sigmoid model of a neuron. [[file:evolving_snn.org][Evolving Spiking
+Neural Networks]] architectures use a spiking neuron model.
 
 bibliography:biblio.bib

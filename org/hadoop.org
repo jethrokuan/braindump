@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Hadoop
 
-- tags :: [[file:data_science.org][§data_science]]
-
 Hadoop provides tools for working with big data, by raising the /level
 of abstraction/. 
 

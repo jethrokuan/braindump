@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Game API Design
 
-- tags :: [[file:software_engineering.org][§software_engineering]]
+- tags :: [[file:software_engineering.org][Software Engineering]]
 
 * Core Tenets from Handmade cite:handmade_how_to_write_better
 ** Maximize portability

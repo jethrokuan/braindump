@@ -1,13 +1,9 @@
 +++
 title = "Feedback Alignment and Random Error Backpropagation"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:52+08:00
+lastmod = 2020-05-31T01:09:21+08:00
 draft = false
 +++
-
-tag
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}}), [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}}),
-[§neuroscience]({{< relref "neuroscience" >}})
 
 Backpropagation is not biologically plausible because it the error
 signals to update the weights of the hidden layers need to be
@@ -31,5 +27,5 @@ layer:
 \delta\_{i}^{(l)}=\sigma^{\prime}\left(a\_{i}^{(l)}\right) \sum\_{k} \delta\_{k}^{(L)} H\_{k i}^{(l)}
 \end{equation}
 
-Random BP applied to SNNs do not account for the temporal dynamics of
-neurons and synapses. SuperSpike solves this problem.
+Random BP applied to [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) do not account for the temporal
+dynamics of neurons and synapses. SuperSpike solves this problem.

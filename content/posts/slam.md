@@ -1,14 +1,14 @@
 +++
 title = "Simultaneous Localization and Mapping (SLAM)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:12+08:00
+lastmod = 2020-05-31T01:09:39+08:00
 draft = false
 +++
 
 In SLAM, the robot acquires a map of its environment while
 simultaneously localizing itself relative to this map. It is a
-significantly more difficult problem compared to [§robot\_localization]({{< relref "robot_localization" >}})
-and [§occupancy\_grid\_mapping]({{< relref "occupancy_grid_mapping" >}}).
+significantly more difficult problem compared to [Robot Localization]({{< relref "robot_localization" >}})
+and [Occupancy Grid Mapping]({{< relref "occupancy_grid_mapping" >}}).
 
 There are 2 main forms of SLAM:
 
@@ -74,7 +74,7 @@ landmark, it is added in.
 Unlike EKF SLAM, the extended information form SLAM algorithm (EIF
 SLAM) solves the full SLAM problem. EIF represents the posterior
 gaussian in its canonical representation form, with the precision
-matrix and information state vector ([§information\_filter]({{< relref "information_filter" >}})).
+matrix and information state vector (See [Information Filter]({{< relref "information_filter" >}})).
 
 EIF SLAM is also not incremental: it calculates posteriors over a
 robot path. It is best suited for problems where a map needs to be

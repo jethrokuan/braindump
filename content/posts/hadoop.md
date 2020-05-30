@@ -1,12 +1,9 @@
 +++
 title = "Hadoop"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:32+08:00
+lastmod = 2020-05-31T01:09:03+08:00
 draft = false
 +++
-
-tags
-: [§data\_science]({{< relref "data_science" >}})
 
 Hadoop provides tools for working with big data, by raising the _level
 of abstraction_.
@@ -381,12 +378,12 @@ Instead of storing Thrift structures in the Thrift binary format,
 Parquet uses a data converter to convert Thrift structures into
 Parquet format, a compressed, columnar data representation.
 
-<a id="783b48bf91ec1e1990a77560e69421ea" href="#DBLP:books/oreilly/Kleppmann2014">(Martin Kleppmann, 2016)</a>
+<a id="783b48bf91ec1e1990a77560e69421ea" href="#DBLP:books/oreilly/Kleppmann2014">(Kleppmann, 2016)</a>
 
 ### Parquet's Columnar Storage {#parquet-s-columnar-storage}
 
 Parquet's columnar representation is inpired by Google's Dremel.
-<a id="ed2cfb2545d07ae55a02f3661a55156d" href="#dremel">(Sergey Melnik et al., 2010)</a>
+<a id="ed2cfb2545d07ae55a02f3661a55156d" href="#dremel">(Melnik et al., 2010)</a>
 
 Thrift and Protocol Buffer's binary representations are field values
 laid out sequentially. Using a columnar-striped representation enables
@@ -423,7 +420,7 @@ field values and levels for each field, and append the values
 sequentially to the output records.
 
 Efficient algorithms for record shredding and assembly are provided in
-Appendix A of the Dremel paper. <a id="ed2cfb2545d07ae55a02f3661a55156d" href="#dremel">(Sergey Melnik et al., 2010)</a>
+Appendix A of the Dremel paper. <a id="ed2cfb2545d07ae55a02f3661a55156d" href="#dremel">(Melnik et al., 2010)</a>
 
 ## Beyond MapReduce {#beyond-mapreduce}
 
@@ -439,8 +436,8 @@ processing workflows.
 
 # Bibliography
 
-<a id="White:2009:HDG:1717298" target="_blank">White, T., _Hadoop: the definitive guide_ (2009), : O'Reilly Media, Inc.</a> [↩](#e50b6ff0acbc468982f33753f532f6e6)
+<a id="White:2009:HDG:1717298" target="_blank">White, T., _Hadoop: The definitive guide_ (2009), : {O'Reilly Media, Inc.}.</a> [↩](#e50b6ff0acbc468982f33753f532f6e6)
 
-<a id="DBLP:books/oreilly/Kleppmann2014" target="_blank">Kleppmann, M., _Designing data-intensive applications: the big ideas behind reliable, scalable, and maintainable systems_ (2016), : O'Reilly.</a> [↩](#783b48bf91ec1e1990a77560e69421ea)
+<a id="DBLP:books/oreilly/Kleppmann2014" target="_blank">Kleppmann, M., _Designing data-intensive applications: The big ideas behind reliable, scalable, and maintainable systems_ (2016), : {O'Reilly}.</a> [↩](#783b48bf91ec1e1990a77560e69421ea)
 
-<a id="dremel" target="_blank">Melnik, S., Gubarev, A., Long, J. J., Romer, G., Shivakumar, S., Tolton, M., & Vassilakis, T., _Dremel: interactive analysis of web-scale datasets_, In , Proc. of the 36th Int'l Conf on Very Large Data Bases (pp. 330–339) (2010). : .</a> [↩](#ed2cfb2545d07ae55a02f3661a55156d)
+<a id="dremel" target="_blank">Melnik, S., Gubarev, A., Long, J. J., Romer, G., Shivakumar, S., Tolton, M., & Vassilakis, T., _Dremel: Interactive analysis of web-scale datasets_, In , Proc. of the 36th Int'l Conf on Very Large Data Bases (pp. 330–339) (2010). : .</a> [↩](#ed2cfb2545d07ae55a02f3661a55156d)

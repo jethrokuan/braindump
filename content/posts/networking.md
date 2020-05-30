@@ -1,12 +1,12 @@
 +++
 title = "Computer Networking"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:04+08:00
+lastmod = 2020-05-31T01:08:37+08:00
 draft = false
 +++
 
 tags
-: [§operating\_systems]({{< relref "operating_systems" >}})
+: [Operating Systems]({{< relref "operating_systems" >}})
 
 ## Introduction {#introduction}
 
@@ -426,7 +426,7 @@ that host's IP address. When an authoritative name server is
 queried by a root server, the authoritative name server responds
 with a reply containing the desired mapping.
 
-<biblio/networking.bib>
+<biblio.bib>
 
 ## Transport Layer {#transport-layer}
 

@@ -1,8 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: XGBoost
-#+HUGO_TAGS: machine-learning
-
-- tags :: [[file:machine_learning_algorithms.org][§machine_learning_algorithms]]
 
 XGboost is an end-to-end boosting system. It is sparsity-aware. cite:chen16_xgboos
 

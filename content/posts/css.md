@@ -1,13 +1,13 @@
 +++
 title = "CSS"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:54+08:00
+lastmod = 2020-05-31T01:09:23+08:00
 tags = ["web"]
 draft = false
 +++
 
 tags
-: [§web\_dev]({{< relref "web_dev" >}}), [§prog\_lang]({{< relref "prog_lang" >}}) - Adding dark mode : [How To Add CSS Dark Mode To A Website - Kev
+: [Web Development]({{< relref "web_dev" >}}) - Adding dark mode : [How To Add CSS Dark Mode To A Website - Kev
 Quirk](https://kevq.uk/how-to-add-css-dark-mode-to-a-website/)
 
 ## Flexbox {#flexbox}

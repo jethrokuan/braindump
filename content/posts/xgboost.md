@@ -1,13 +1,9 @@
 +++
 title = "XGBoost"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:07+08:00
-tags = ["machine-learning"]
+lastmod = 2020-05-31T01:08:40+08:00
 draft = false
 +++
-
-tags
-: [§machine\_learning\_algorithms]({{< relref "machine_learning_algorithms" >}})
 
 XGboost is an end-to-end boosting system. It is sparsity-aware. <a id="27bdf4df88994f426bdfbfa0603a3f15" href="#chen16_xgboos">(Chen \& Guestrin, 2016)</a>
 
@@ -112,4 +108,4 @@ each worker's reduce result across all processes. <a id="933022bde41826547b7bf7c
 
 <a id="chen16_xgboos" target="_blank">Chen, T., & Guestrin, C., _Xgboost: a scalable tree boosting system_, CoRR, _()_, (2016). </a> [↩](#27bdf4df88994f426bdfbfa0603a3f15)
 
-<a id="chen3rabit" target="_blank">Chen, T., Cano, I., & Zhou, T., _Rabit: a reliable allreduce and broadcast interface_, Transfer, _3(2)_, (). </a> [↩](#933022bde41826547b7bf7c18f1e9b41)
+<a id="chen3rabit" target="_blank">Chen, T., Cano, I., & Zhou, T., _RABIT: A reliable allreduce and broadcast interface_, Transfer, _3(2)_, (). </a> [↩](#933022bde41826547b7bf7c18f1e9b41)

@@ -1,7 +1,7 @@
 +++
 title = "Zettelkasten"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:40+08:00
+lastmod = 2020-05-31T01:08:15+08:00
 draft = false
 +++
 
@@ -32,6 +32,12 @@ project-related
 
 permanent
 : notes that are standalone, and make sense in their own context.
+
+## Arguments Against Zettelkasten {#arguments-against-zettelkasten}
+
+- Densely interconnecting ideas across domains results in complex
+  mental models, may obscure reality (Source: [Venkatesh Rao, 2016
+  podcast with Farnam Street](https://fs.blog/venkatesh-rao/))
 
 ## Why Zettelkasten {#why-zettelkasten}
 

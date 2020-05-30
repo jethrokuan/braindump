@@ -1,7 +1,7 @@
 +++
 title = "Optimal Control and Planning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:12+08:00
+lastmod = 2020-05-31T01:08:45+08:00
 draft = false
 +++
 
@@ -28,9 +28,8 @@ An extremely simple method, that's parallelizable:
 3.  pick the elites \\(A\_{i1}, \dots A\_{im}\\) with the highest value
 4.  fit distribution \$P(A) to the elites
 
-With continuous inputs, a multi-variate normal distribution is a
-common choice for \\(p(A)\\). In the discrete Case, Monte-Carlo tree
-search ([§mcts]({{< relref "mcts" >}})) is typically used.
+With continuous inputs, a multi-variate normal distribution is a common choice
+for \\(p(A)\\). In the discrete case, [Monte Carlo Tree Search]({{< relref "mcts" >}}) is typically used.
 
 ## Using Derivatives {#using-derivatives}
 

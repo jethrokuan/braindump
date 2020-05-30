@@ -1,12 +1,12 @@
 +++
 title = "Neuroscience Experimental Evidence"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:10+08:00
+lastmod = 2020-05-31T01:09:38+08:00
 draft = false
 +++
 
 tags
-: [§spiking\_neural\_networks]({{< relref "spiking_neural_networks" >}}), [§neuroscience]({{< relref "neuroscience" >}})
+: [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}), [Neuroscience ⭐]({{< relref "neuroscience" >}})
 
 ## Eligibility Traces {#eligibility-traces}
 

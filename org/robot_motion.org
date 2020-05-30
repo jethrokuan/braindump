@@ -4,7 +4,4 @@
 Probabilistic robotics generalizes kinematics equations to the fact
 that the outcome of a control is uncertain, due to control noise or
 exogenous effects. The outcome of a control is described as a
-posterior probability. 
-
-* Related
-[[file:robot_kinematics.org][§robot_kinematics]]
+posterior probability.

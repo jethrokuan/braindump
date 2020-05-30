@@ -1,7 +1,7 @@
 +++
 title = "Model-Based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:55+08:00
+lastmod = 2020-05-31T01:09:24+08:00
 draft = false
 +++
 
@@ -69,7 +69,7 @@ result in nonsensical behaviour.
 
 ![](/ox-hugo/screenshot2019-12-23_14-31-15_.png)
 We can use _uncertainty estimation_ to detect where the models may be
-wrong, for example by using [§gaussian\_processes]({{< relref "gaussian_processes" >}}).
+wrong, for example by using [Gaussian Processes]({{< relref "gaussian_processes" >}}).
 
 For planning under uncertainty, one can use the expected value,
 optimistic value, or pessimistic value, depending on application.

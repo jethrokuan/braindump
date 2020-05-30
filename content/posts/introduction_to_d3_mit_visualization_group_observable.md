@@ -1,7 +1,7 @@
 +++
 title = "Introduction to D3 / MIT Visualization Group / Observable"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:15+08:00
+lastmod = 2020-05-31T01:08:47+08:00
 slug = "introduction_to_d3_mit_visualization_group_observable"
 draft = false
 +++

@@ -1,8 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Sufficient Statistics
 
-- tags :: [[file:exponential_family.org][§exponential_family]], [[file:statistics.org][§statistics]]
-
 A statistic $t$ is called a sufficient statistic for $\theta$ for a
 given $\boldsymbol{y}$ if:
 
@@ -14,7 +12,6 @@ Let $Y_{i} \sim \text { Bernoulli }(\theta)$ for $i = 1, \dots, n$,
 and $T=\sum_{i=1}^{n} Y_{i}$. Then it can be shown that
 $t=\sum_{i=1}^{n} y_{i}$ is a sufficient statistic for $\theta$ given
 $y=\left(y_{1}, \ldots, y_{n}\right)$.
-
 
 * Fisher-Neyman Theorem
 

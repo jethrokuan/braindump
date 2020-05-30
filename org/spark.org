@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Spark
 
-- tags :: [[file:data_science.org][§data_science]]
-
 * What is Apache Spark?
 A cluster computing platform designed to be fast and general-purpose.
 It extends the MapReduce to support more types of computations, and

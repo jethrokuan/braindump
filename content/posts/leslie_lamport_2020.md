@@ -1,7 +1,7 @@
 +++
 title = "If You're Not Writing a Programming Language, Don't Use A Programming Language - Leslie Lamport"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:44+08:00
+lastmod = 2020-05-31T01:09:14+08:00
 draft = false
 +++
 
@@ -100,7 +100,7 @@ The next iteration of Virtuoso used the [TLA+] abstraction.
 
 Better algorithm led to 10x size decrease in Virtuoso.
 
-### Example 2: Amazon Web Services <a id="2f5505b2b6816d91e17a9a6c124e6bd6" href="#newcombe15_how_amazon_web_servic_uses_formal_method">(Chris Newcombe et al., 2015)</a> {#example-2-amazon-web-services}
+### Example 2: Amazon Web Services <a id="2f5505b2b6816d91e17a9a6c124e6bd6" href="#newcombe15_how_amazon_web_servic_uses_formal_method">(Newcombe et al., 2015)</a> {#example-2-amazon-web-services}
 
 AWS uses formal methods (TLA+). Key insights:
 

@@ -1,7 +1,7 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:49+08:00
+lastmod = 2020-05-31T01:09:18+08:00
 draft = false
 +++
 
@@ -53,6 +53,6 @@ Example of stochastic process: Gambler's ruin
 
 # Bibliography
 
-<a id="ross2014introduction" target="_blank">Ross, S. M., _Introduction to probability models_ (2014), : Academic press.</a> [↩](#f5bf9e00e58b91654e7db48e02402403)
+<a id="ross2014introduction" target="_blank">Ross, S. M., _Introduction to probability models_ (2014), : {Academic press}.</a> [↩](#f5bf9e00e58b91654e7db48e02402403)
 
-<a id="pinsky2010introduction" target="_blank">Pinsky, M., & Karlin, S., _An introduction to stochastic modeling_ (2010), : Academic press.</a> [↩](#685088059011ecabed3f6b757f8161de)
+<a id="pinsky2010introduction" target="_blank">Pinsky, M., & Karlin, S., _An introduction to stochastic modeling_ (2010), : {Academic press}.</a> [↩](#685088059011ecabed3f6b757f8161de)

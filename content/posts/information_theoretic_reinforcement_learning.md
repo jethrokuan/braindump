@@ -1,7 +1,7 @@
 +++
 title = "Information-Theoretic Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:24+08:00
+lastmod = 2020-05-31T01:09:51+08:00
 draft = false
 +++
 
@@ -33,6 +33,6 @@ empowerment
 
 # Bibliography
 
-<a id="pong19_skew_fit" target="_blank">Pong, V. H., Dalal, M., Lin, S., Nair, A., Bahl, S., & Levine, S., _Skew-fit: state-covering self-supervised reinforcement learning_, CoRR, _()_, (2019). </a> [↩](#3d4243b473ec81f5730e35c9021a5d81)
+<a id="pong19_skew_fit" target="_blank">Pong, V. H., Dalal, M., Lin, S., Nair, A., Bahl, S., & Levine, S., _Skew-fit: State-covering self-supervised reinforcement learning_, CoRR, _()_, (2019). </a> [↩](#3d4243b473ec81f5730e35c9021a5d81)
 
-<a id="eysenbach18_diver_is_all_you_need" target="_blank">Eysenbach, B., Gupta, A., Ibarz, J., & Levine, S., _Diversity is all you need: learning skills without a reward function_, CoRR, _()_, (2018). </a> [↩](#f03c9ba458a5ac2f065b970316dc2f45)
+<a id="eysenbach18_diver_is_all_you_need" target="_blank">Eysenbach, B., Gupta, A., Ibarz, J., & Levine, S., _Diversity is all you need: Learning skills without a reward function_, CoRR, _()_, (2018). </a> [↩](#f03c9ba458a5ac2f065b970316dc2f45)

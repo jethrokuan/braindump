@@ -1,13 +1,13 @@
 +++
 title = "Grid & Monte Carlo Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:36+08:00
+lastmod = 2020-05-31T01:09:07+08:00
 draft = false
 +++
 
 Grid & Monte Carlo Localization methods are able to solve global
-localization problems (in comparison to [§ekf\_localization]({{< relref "ekf_localization" >}}) and
-[§markov\_localization]({{< relref "markov_localization" >}})).
+localization problems (in comparison to [EKF Localization]({{< relref "ekf_localization" >}}) and
+[Markov Localization]({{< relref "markov_localization" >}})).
 
 They also:
 
@@ -39,7 +39,7 @@ filters from working altogether.
 
 ## Monte-Carlo Localization {#monte-carlo-localization}
 
-MC localization uses the particle filter ([§particle\_filter]({{< relref "particle_filter" >}})) to
+MC localization uses the [Particle Filter]({{< relref "particle_filter" >}}) to
 represent the posterior belief. The accuracy is determined by the size
 of the particle set.
 

@@ -1,7 +1,7 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:06+08:00
+lastmod = 2020-05-31T01:09:34+08:00
 draft = false
 +++
 
@@ -124,7 +124,7 @@ One can also add a temperature: \\(\pi(a_t | s_t) =
 p(s_t) \propto \beta_t(s_t) \alpha_t(s_t)
 \end{equation}
 
-same derivations as [§hidden\_markov\_model]({{< relref "hidden_markov_model" >}})!
+same derivations as [Hidden Markov Model]({{< relref "hidden_markov_model" >}})!
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-04-20_.png" >}}
 
@@ -140,4 +140,4 @@ For more, see <a id="bf624e2cac020327e631eac77ec9f4e9" href="#levine18_reinf_lea
 
 # Bibliography
 
-<a id="levine18_reinf_learn_contr_as_probab_infer" target="_blank">Levine, S., _Reinforcement learning and control as probabilistic inference: tutorial and review_, CoRR, _()_, (2018). </a> [↩](#bf624e2cac020327e631eac77ec9f4e9)
+<a id="levine18_reinf_learn_contr_as_probab_infer" target="_blank">Levine, S., _Reinforcement learning and control as probabilistic inference: Tutorial and review_, CoRR, _()_, (2018). </a> [↩](#bf624e2cac020327e631eac77ec9f4e9)

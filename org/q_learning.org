@@ -69,7 +69,7 @@ Q(s_i', a_i')$:
       \sum_i |Q_{\phi}(s_i, a_i) - y_i |^2$
    1.3. goto 1.1 or 1
 
-This works, even for off-policy samples (unlike [[file:actor_critic.org][§actor_critic]]). In
+This works, even for off-policy samples (unlike [[file:actor_critic.org][Actor-Critic]]). In
 addition, there is only one network, hence no high-variance policy
 gradient methods. However, /there are no convergence guarantees with
 non-linear function approximators/!

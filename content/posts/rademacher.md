@@ -1,12 +1,9 @@
 +++
 title = "Rademacher Complexity"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:49+08:00
+lastmod = 2020-05-31T01:09:18+08:00
 draft = false
 +++
-
-tags
-: [§machine\_learning]({{< relref "machine_learning" >}})
 
 In [PAC Learning]({{< relref "pac_learning" >}}), We have shown that [uniform convergence is a
 sufficient condition for learnability]({{< relref "pac_learning" >}}). Rademacher complexity measures

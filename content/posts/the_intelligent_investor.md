@@ -1,7 +1,7 @@
 +++
 title = "The Intelligent Investor"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:25+08:00
+lastmod = 2020-05-31T01:09:52+08:00
 slug = "the_intelligent_investor"
 draft = false
 +++

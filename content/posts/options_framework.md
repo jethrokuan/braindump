@@ -1,7 +1,7 @@
 +++
 title = "Options Framework"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:20+08:00
+lastmod = 2020-05-31T01:08:52+08:00
 draft = false
 +++
 
@@ -21,13 +21,13 @@ abstraction. <a id="bfaaf890a52310df11783efa26352d6f" href="#stolle2002learning"
 - models of options consist of reward until termination, and
   (discounted) transition to termination state
 
-They look a lot like value functions, and can use the TD error to
-train the model [§td\_learning]({{< relref "td_learning" >}}).
+They look a lot like value functions, and can use the TD error to train the
+model ([Temporal Difference Learning]({{< relref "td_learning" >}})).
 
 ## Related {#related}
 
-- [§generalized\_value\_functions]({{< relref "generalized_value_functions" >}})
+- [Generalized Value Functions]({{< relref "generalized_value_functions" >}})
 
 # Bibliography
 
-<a id="stolle2002learning" target="_blank">Stolle, M., & Precup, D., _Learning options in reinforcement learning_, In , International Symposium on abstraction, reformulation, and approximation (pp. 212–223) (2002). : .</a> [↩](#bfaaf890a52310df11783efa26352d6f)
+<a id="stolle2002learning" target="_blank">Stolle, M., & Precup, D., _Learning options in reinforcement learning_, In , International {{Symposium}} on Abstraction, Reformulation, and Approximation (pp. 212–223) (2002). : .</a> [↩](#bfaaf890a52310df11783efa26352d6f)

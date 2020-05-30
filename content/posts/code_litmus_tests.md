@@ -1,12 +1,12 @@
 +++
 title = "Code Litmus Tests"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:03:01+08:00
+lastmod = 2020-05-31T01:09:29+08:00
 draft = false
 +++
 
 tags
-: [§software\_engineering]({{< relref "software_engineering" >}})
+: [Software Engineering]({{< relref "software_engineering" >}})
 
 Here are some questions you can ask yourself when evaluating the code
 you write:

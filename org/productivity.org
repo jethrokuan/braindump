@@ -1,2 +1,5 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Productivity
+
+- [[file:para_method.org][PARA Method]]
+- [[file:zettelkasten.org][Zettelkasten]]

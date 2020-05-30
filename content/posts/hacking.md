@@ -1,7 +1,7 @@
 +++
 title = "Hacking"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:38+08:00
+lastmod = 2020-05-31T01:08:13+08:00
 draft = false
 +++
 
@@ -21,4 +21,4 @@ draft = false
 
 # Bibliography
 
-<a id="trimstray_se_hackers" target="_blank">trimstray, (2019). _Trimstray on twitter: &quot;search engines for hackers:&#10;&#10;https://t.co/awr3x88xu1&#10;https://t.co/03trswurnp&#10;https://t.co/b9ihx23mec&#10;https://t.co/uo1ofjb7eb&#10;https://t.co/ne7fsoqspl&#10;https://t.co/s2wg7coga5&#10;https://t.co/ubqtz7quud&#10;https://t.co/izx4b82wlq&#10;https://t.co/oa04gvdxtp&#10;https://t.co/tkjuuvu9il&#10;&#10;#it #tech&quot;_. Retrieved from [https://twitter.com/trimstray/status/1086705742793658369](https://twitter.com/trimstray/status/1086705742793658369). Online; accessed 09 February 2019.</a> [↩](#8145d0bc010004d1fdab0a7add7566bd)
+<a id="trimstray_se_hackers" target="_blank">trimstray, _Trimstray on Twitter: \&quot;Search Engines for Hackers:\&\#10;\&\#10;https://t.co/Awr3X88Xu1\&\#10;https://t.co/03trsWUrnP\&\#10;https://t.co/B9IHX23MeC\&\#10;https://t.co/uO1oFjB7Eb\&\#10;https://t.co/NE7FSOQsPl\&\#10;https://t.co/s2wG7cOGa5\&\#10;https://t.co/uBqtz7QuUD\&\#10;https://t.co/IZx4B82wLQ\&\#10;https://t.co/Oa04GvDxTp\&\#10;https://t.co/TKjuUVU9il\&\#10;\&\#10;\#it \#tech\&quot;_, , _()_, (2019). </a> [↩](#8145d0bc010004d1fdab0a7add7566bd)

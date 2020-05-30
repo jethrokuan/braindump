@@ -1,12 +1,12 @@
 +++
 title = "I-Diagrams"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:21+08:00
+lastmod = 2020-05-31T01:08:52+08:00
 draft = false
 +++
 
 tags
-: [§information\_theory]({{< relref "information_theory" >}})
+: [Information Theory]({{< relref "information_theory" >}})
 
 If we view random variables as sets, different information theory
 concepts can be represented using an information diagram.
