@@ -1,2 +1,0 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Soft Skills

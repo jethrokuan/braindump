@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Negotiation
 
-- tags :: [[file:soft_skills.org][§soft_skills]]
-
 1. A good negotiator prepares, going in, to be ready for possible
    surprises; a great negotiator aims to use their skills to reveal
    the surprise they are certain to find

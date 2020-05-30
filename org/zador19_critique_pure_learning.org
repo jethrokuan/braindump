@@ -22,7 +22,7 @@ Evolution acts on the brain only indirectly through the genome.
 
 1. There may be an outer-loop (evolution) that optimizes learning
    mechanisms, and an inner-loop that allows us to learn inductive
-   biases quickly (i.e. [[file:meta_learning.org][§meta_learning]])
+   biases quickly (i.e. [[file:meta_learning.org][Meta Learning]])
 2. ANNs should attempt as much as possible to build on solutions to
    related problems (transfer learning)
 3. Wiring rules and topology should be studies as a target for

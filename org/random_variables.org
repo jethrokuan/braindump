@@ -1,8 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Random Variables
-#+HUGO_TAGS: statistics
 
-- tags :: [[file:statistics.org][§statistics]]
+- tags :: [[file:statistics.org][Statistics]]
 
 * Introduction
 It frequently occurs that in performing an experiment, we are mainly

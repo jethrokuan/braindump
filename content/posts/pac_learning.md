@@ -1,12 +1,12 @@
 +++
 title = "PAC Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:46+08:00
+lastmod = 2020-05-30T23:49:18+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning]({{< relref "machine_learning" >}})
+: [Machine Learning]({{< relref "machine_learning" >}})
 
 ## ERM for finite hypothesis classes {#erm-for-finite-hypothesis-classes}
 

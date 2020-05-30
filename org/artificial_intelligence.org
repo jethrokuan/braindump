@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Artificial Intelligence
 
-- tags :: [[file:machine_learning.org][§machine_learning]]
-
 * What is Artificial Intelligence?
 Designing agents that act rationally (e.g. through maximising a reward
 function).

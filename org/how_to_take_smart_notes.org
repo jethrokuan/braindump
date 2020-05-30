@@ -5,6 +5,87 @@
 - tags :: [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]], [[file:books.org][Books]], [[file:productivity.org][Productivity]]
 - recommended by :: [[file:/home/jethro/Dropbox/org/braindump/org/conor_white_sullivan.org][Conor White-Sullivan]]
 
+* Book Notes
+:PROPERTIES:
+:NOTER_DOCUMENT: /home/jethro/Dropbox/Calibre/Sonke Ahrens/How to Take Smart Notes_ One Simple Technique to Boost Writing, Learning and Thinking - for Stu (201)/How to Take Smart Notes_ One Simple Techni - Sonke Ahrens.epub
+:NOTER_PAGE: (13 . 12264)
+:END:
+** You need something to capture ideas whenever and wherever they pop into your head.
+:PROPERTIES:
+:NOTER_PAGE: (9 . 3441)
+:END:
+** Focus on writing: rephrasing ideas into your own words, attending lectures with a clear purpose, focus on relevant aspects
+:PROPERTIES:
+:NOTER_PAGE: (12 . 6773)
+:END:
+** Standardize notes into the slipbox format, which can be understood without context
+:PROPERTIES:
+:NOTER_PAGE: (13 . 15441)
+:END:
+** Focus on what is interesting, let ideas accumulate and emerge without force
+:PROPERTIES:
+:NOTER_PAGE: (14 . 3533)
+:END:
+** academic writing is not a linear process
+:PROPERTIES:
+:NOTER_PAGE: (14 . 9610)
+:END:
+** Having frequent feedback loops helps learning
+:PROPERTIES:
+:NOTER_PAGE: (15 . 4825)
+:END:
+** Permanent notes must be written for an audience without context
+:PROPERTIES:
+:NOTER_PAGE: (18 . 23275)
+:END:
+** Reviewing is insufficient for learning, one learns best from elaboration
+:PROPERTIES:
+:NOTER_PAGE: (18 . 32502)
+:END:
+** The slip-box handles recall and information storage, while the brain is in charge of creative linking and understanding
+:PROPERTIES:
+:NOTER_PAGE: (18 . 34375)
+:END:
+** Read texts with questions in mind
+:PROPERTIES:
+:NOTER_PAGE: (19 . 311)
+:END:
+** Writing with an eye towards existing notes allow us to take into account more information
+:PROPERTIES:
+:NOTER_PAGE: (19 . 9860)
+:END:
+** Elaborate on ideas in different contexts
+:PROPERTIES:
+:NOTER_PAGE: (19 . 17017)
+:END:
+** Forgetting is important -- so we can focus on what's currently important
+:PROPERTIES:
+:NOTER_PAGE: (19 . 21562)
+:END:
+** References between notes are much more important!
+:PROPERTIES:
+:NOTER_PAGE: (20 . 3934)
+:END:
+** Make keywords specific, with context e.g. capital allocation problem
+:PROPERTIES:
+:NOTER_PAGE: (20 . 7433)
+:END:
+** Comparing new notes with old notes help us discover differences and insight
+:PROPERTIES:
+:NOTER_PAGE: (20 . 18800)
+:END:
+** Permanent notes require thinking about what's relevant for long-term thinking and idea development
+:PROPERTIES:
+:NOTER_PAGE: (21 . 5259)
+:END:
+** Ask questions like "what's interesting?" and "why should I note this down?"
+:PROPERTIES:
+:NOTER_PAGE: (21 . 11414)
+:END:
+
+
+
+
 * Motivations
 - There's a ton of books covering the art of writing, and very little
   on note-taking.

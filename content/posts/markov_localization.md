@@ -1,13 +1,13 @@
 +++
 title = "Markov Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:54+08:00
+lastmod = 2020-05-30T23:53:25+08:00
 draft = false
 +++
 
 ## Markov Localization {#markov-localization}
 
-A direct extension of the [§bayes\_filter]({{< relref "bayes_filter" >}}), but using the map \\(m\\) of the
+A direct extension of the [Bayes Filter]({{< relref "bayes_filter" >}}), but using the map \\(m\\) of the
 environment:
 
 \begin{algorithm}

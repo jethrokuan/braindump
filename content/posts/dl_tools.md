@@ -1,12 +1,12 @@
 +++
 title = "Deep Learning Tools"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:28+08:00
+lastmod = 2020-05-30T23:47:30+08:00
 draft = false
 +++
 
 tags
-: [§deep\_learning]({{< relref "deep_learning" >}})
+: [Deep Learning]({{< relref "deep_learning" >}})
 
 ## Tensorflow {#tensorflow}
 
@@ -537,6 +537,6 @@ layers.
 -
 
     # Bibliography
-    <a id="tensorflow_stand_keras" target="_blank">Tensorflow,  (2018). *Standardizing on keras: guidance on high-level apis in tensorflow 2.0*. Retrieved from [https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a](https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a). Online; accessed 07 January 2019.</a> [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
+    <a id="tensorflow_stand_keras" target="_blank">Tensorflow, *Standardizing on keras: Guidance on high-level APIs in TensorFlow 2.0*, , *()*,  (2018). </a> [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
 
-    <a id="home_keras_docum" target="_blank">Keras,  (2019). *Home Keras Documentation*. Retrieved from [https://keras.io/](https://keras.io/). Online; accessed 08 January 2019.</a> [↩](#2906663214b6eb9261d265af3a5c5b39)
+    <a id="home_keras_docum" target="_blank">Keras, *Home Keras Documentation*, , *()*,  (2019). </a> [↩](#2906663214b6eb9261d265af3a5c5b39)

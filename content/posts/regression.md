@@ -1,12 +1,12 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:25+08:00
+lastmod = 2020-05-30T23:43:49+08:00
 draft = false
 +++
 
 tags
-: [§statistics]({{< relref "statistics" >}}), [§bayesian\_statistics]({{< relref "bayesian_statistics" >}})
+: [Statistics]({{< relref "statistics" >}}), [Bayesian Statistics]({{< relref "bayesian_statistics" >}})
 
 ## Introduction {#introduction}
 
@@ -993,10 +993,10 @@ ignored.
 
 ## References {#references}
 
-<a id="a6f25d8e3790a685481657d76f53a002" href="#chatterjee06_regres_analy_examp">(Samprit Chatterjee \& Ali Hadi, 2006)</a><a>, </a><a id="47f776a94d6687b2efebf468b22650cb" href="#james2013introduction">(James et al., 2013)</a>
+<a id="a6f25d8e3790a685481657d76f53a002" href="#chatterjee06_regres_analy_examp">(Chatterjee \& Hadi, 2006)</a><a>, </a><a id="47f776a94d6687b2efebf468b22650cb" href="#james2013introduction">(James et al., 2013)</a>
 
 # Bibliography
 
-<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : Springer.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
+<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : {Springer}.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
 
-<a id="chatterjee06_regres_analy_examp" target="_blank">Chatterjee, S., & Hadi, A. S., _Regression analysis by example_ (2006), : John Wiley \& Sons, Inc.</a> [↩](#a6f25d8e3790a685481657d76f53a002)
+<a id="chatterjee06_regres_analy_examp" target="_blank">Chatterjee, S., & Hadi, A. S., _Regression analysis by example_ (2006), : {John Wiley \& Sons, Inc.}.</a> [↩](#a6f25d8e3790a685481657d76f53a002)

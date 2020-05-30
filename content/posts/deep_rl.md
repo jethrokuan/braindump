@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:43+08:00
+lastmod = 2020-05-30T23:48:28+08:00
 draft = false
 +++
 
@@ -36,7 +36,7 @@ actor-critic
 it to improve policy
 
 model-based RL
-: estimate the transition model, and then... - use it for planning (no explicit policy) - Trajectory optimization/optimal control (continuous spaces) - Discrete planning in discrete action spaces ([§mcts]({{< relref "mcts" >}})) - use it to improve a policy (e.g. via backpropagation, with some tricks) - use the model to learn a value function (e.g. through dynamic programming)
+: estimate the transition model, and then... - use it for planning (no explicit policy) - Trajectory optimization/optimal control (continuous spaces) - Discrete planning in discrete action spaces ([Monte Carlo Tree Search]({{< relref "mcts" >}})) - use it to improve a policy (e.g. via backpropagation, with some tricks) - use the model to learn a value function (e.g. through dynamic programming)
 
 ## Why so many RL algorithms? {#why-so-many-rl-algorithms}
 
@@ -99,4 +99,4 @@ or algorithms that adaptively adjust parameters:
 
 <a id="schulman15_high_dimen_contin_contr_using" target="_blank">Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., _High-Dimensional Continuous Control Using Generalized Advantage Estimation_, CoRR, _()_, (2015). </a> [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
 
-<a id="gu16_q_prop" target="_blank">Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., _Q-prop: sample-efficient policy gradient with an off-policy critic_, CoRR, _()_, (2016). </a> [↩](#23ad5881923885616b0afd34dad9df52)
+<a id="gu16_q_prop" target="_blank">Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., _Q-prop: Sample-efficient policy gradient with an off-policy critic_, CoRR, _()_, (2016). </a> [↩](#23ad5881923885616b0afd34dad9df52)

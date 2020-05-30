@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Config Management
 
-- [[file:operating_systems.org][§operating_systems]]
+- tags :: [[file:operating_systems.org][Operating Systems]]
 
 * Dotfiles
 

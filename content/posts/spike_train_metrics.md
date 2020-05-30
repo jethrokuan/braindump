@@ -1,7 +1,7 @@
 +++
 title = "Spike Train Metrics"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:23+08:00
+lastmod = 2020-05-30T19:50:03+08:00
 draft = false
 +++
 
@@ -180,8 +180,6 @@ d(A, B)=\left(\int\_{-\infty}^{\infty} \sum\_{l=1}^{L}\left|A\_{l}(t)-B\_{l}(t)\
 
 for each of their components.
 
-## References {#references}
-
 # Bibliography
 
-<a id="victor2005spike" target="_blank">Victor, J. D., _Spike train metrics_, Current opinion in neurobiology, _15(5)_, 585–592 (2005). </a> [↩](#a63689696e88c37b5fc0502e67a08383)
+<a id="victor2005spike" target="_blank">Victor, J. D., _Spike Train Metrics_, Current opinion in neurobiology, _15(5)_, 585–592 (2005). </a> [↩](#a63689696e88c37b5fc0502e67a08383)

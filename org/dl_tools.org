@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Deep Learning Tools
 
-- tags :: [[file:deep_learning.org][§deep_learning]]
+- tags :: [[file:deep_learning.org][Deep Learning]]
 
 * Tensorflow
 ** What is Tensorflow

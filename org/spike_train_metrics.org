@@ -175,6 +175,5 @@ d(A, B)=\left(\int_{-\infty}^{\infty} \sum_{l=1}^{L}\left|A_{l}(t)-B_{l}(t)\righ
 
 for each of their components.
 
-* References
 bibliography:biblio.bib
 

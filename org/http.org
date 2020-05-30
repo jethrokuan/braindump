@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: HTTP
 
-- tags :: [[file:web_dev.org][§web_dev]]
+- tags :: [[file:web_dev.org][Web Development]]
 
 * GET Requests and Request Body
 #+BEGIN_QUOTE

@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: ARM Assembly Programming
 
-- tags :: [[file:operating_systems.org][§operating_systems]], [[file:prog_lang.org][§prog_lang]]
+- tags :: [[file:operating_systems.org][Operating Systems]], [[file:prog_lang.org][Programming Languages]]
 
 * Background
 

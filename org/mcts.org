@@ -1,5 +1,6 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Monte Carlo Tree Search
+#+ROAM_ALIAS: mcts
 
 * Monte Carlo Tree Search
 

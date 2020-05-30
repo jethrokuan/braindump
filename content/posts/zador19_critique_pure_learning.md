@@ -1,7 +1,7 @@
 +++
 title = "A critique of pure learning and what artificial neural networks can learn from animal brains"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:27+08:00
+lastmod = 2020-05-30T23:48:39+08:00
 draft = false
 +++
 
@@ -26,7 +26,7 @@ Evolution acts on the brain only indirectly through the genome.
 
 1.  There may be an outer-loop (evolution) that optimizes learning
     mechanisms, and an inner-loop that allows us to learn inductive
-    biases quickly (i.e. [§meta\_learning]({{< relref "meta_learning" >}}))
+    biases quickly (i.e. [Meta Learning]({{< relref "meta_learning" >}}))
 2.  ANNs should attempt as much as possible to build on solutions to
     related problems (transfer learning)
 3.  Wiring rules and topology should be studies as a target for

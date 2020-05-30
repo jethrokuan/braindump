@@ -1,8 +1,6 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Studying
 
-- tags :: [[file:soft_skills.org][§soft_skills]]
-
 * The optimal studying strategy
 1. Glance at past year paper questions
 Rationale: understand the kind of questions to be asked, prime the

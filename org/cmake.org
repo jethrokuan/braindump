@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: CMake
 
-- tags :: [[file:c_lang.org][§c_lang]], [[file:cplusplus.org][§cplusplus]]
+- tags :: [[file:cplusplus.org][C++ Language]], [[file:c_lang.org][The C Language]]
 
 * Introduction
 

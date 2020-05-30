@@ -1,4 +1,4 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Spiking Neural Networks
 
-- tags :: [[file:machine_learning.org][§machine_learning]]
+- tags :: [[file:machine_learning.org][Machine Learning]]

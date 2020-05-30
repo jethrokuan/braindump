@@ -1,12 +1,12 @@
 +++
 title = "OCaml"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:34+08:00
+lastmod = 2020-05-30T23:47:37+08:00
 draft = false
 +++
 
 tags
-: [§prog\_lang]({{< relref "prog_lang" >}})
+: [Programming Languages]({{< relref "prog_lang" >}})
 
 ## Pattern Matching {#pattern-matching}
 

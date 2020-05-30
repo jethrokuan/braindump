@@ -28,7 +28,7 @@ bibliographystyle:unsrt
 - model-based RL :: estimate the transition model, and then...
   - use it for planning (no explicit policy)
     - Trajectory optimization/optimal control (continuous spaces)
-    - Discrete planning in discrete action spaces ([[file:mcts.org][§mcts]])
+    - Discrete planning in discrete action spaces ([[file:mcts.org][Monte Carlo Tree Search]])
   - use it to improve a policy (e.g. via backpropagation, with some tricks)
   - use the model to learn a value function (e.g. through dynamic programming)
 

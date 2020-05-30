@@ -4,7 +4,7 @@
 Parallelizing [[file:reinforcement_learning.org][Reinforcement Learning ⭐]].
 
 * History of Distributed RL
-1. DQN cite:mnih2013playing: [[file:mnih2013_atari_deeprl.org][§mnih2013_atari_deeprl]]
+1. DQN cite:mnih2013playing: [[file:mnih2013_atari_deeprl.org][Playing Atari with Deep RL]]
 2. GORILA cite:nair15_massiv_paral_method_deep_reinf_learn
 3. A3C cite:mnih16_async_method_deep_reinf_learn
 4. IMPALA cite:espeholt18_impal

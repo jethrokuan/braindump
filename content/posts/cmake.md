@@ -1,12 +1,12 @@
 +++
 title = "CMake"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:53+08:00
+lastmod = 2020-05-30T23:53:16+08:00
 draft = false
 +++
 
 tags
-: [§c\_lang]({{< relref "c_lang" >}}), [§cplusplus]({{< relref "cplusplus" >}})
+: [C++ Language]({{< relref "cplusplus" >}}), [The C Language]({{< relref "c_lang" >}})
 
 ## Introduction {#introduction}
 

@@ -1,9 +1,12 @@
 +++
 title = "EKF Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:42+08:00
+lastmod = 2020-05-30T23:48:05+08:00
 draft = false
 +++
+
+tags
+: [Robot Localization]({{< relref "robot_localization" >}}), [Markov Localization]({{< relref "markov_localization" >}}), [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
 
 ## EKF localization {#ekf-localization}
 
@@ -48,9 +51,3 @@ unable to process negative information (lack of a feature).
 
 These methods are furthermore unable to solve global localization and
 the kidnapped robot problem.
-
-## Related {#related}
-
-- [§robot\_localization]({{< relref "robot_localization" >}})
-- [§markov\_localization]({{< relref "markov_localization" >}})
-- [§grid\_mc\_localization]({{< relref "grid_mc_localization" >}})

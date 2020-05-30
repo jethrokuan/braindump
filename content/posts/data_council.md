@@ -1,12 +1,12 @@
 +++
 title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:57+08:00
+lastmod = 2020-05-30T23:54:22+08:00
 draft = false
 +++
 
 tags
-: [§conferences]({{< relref "conferences" >}}), [§data\_science]({{< relref "data_science" >}})
+: [Data Science]({{< relref "data_science" >}})
 
 ## Taking recommendation technology to the masses - Le Zhang (Microsoft) {#taking-recommendation-technology-to-the-masses-le-zhang--microsoft}
 
@@ -241,6 +241,6 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 <a id="guo17_deepf" target="_blank">Guo, H., Tang, R., Ye, Y., Li, Z., & He, X., _Deepfm: a factorization-machine based neural network for ctr prediction_, CoRR, _()_, (2017). </a> [↩](#892cd5bf0eb9a5acd1874032ba4ca28c)
 
-<a id="lian18_xdeep" target="_blank">Lian, J., Zhou, X., Zhang, F., Chen, Z., Xie, X., & Sun, G., _Xdeepfm: combining explicit and implicit feature interactions for recommender systems_, CoRR, _()_, (2018). </a> [↩](#e4d627ce64d7fbf933655db85b3057e0)
+<a id="lian18_xdeep" target="_blank">Lian, J., Zhou, X., Zhang, F., Chen, Z., Xie, X., & Sun, G., _Xdeepfm: Combining explicit and implicit feature interactions for recommender systems_, CoRR, _()_, (2018). </a> [↩](#e4d627ce64d7fbf933655db85b3057e0)
 
-<a id="wang18_dkn" target="_blank">Wang, H., Zhang, F., Xie, X., & Guo, M., _Dkn: deep knowledge-aware network for news recommendation_, CoRR, _()_, (2018). </a> [↩](#fef749252ffc4be87873f182cdba0fad)
+<a id="wang18_dkn" target="_blank">Wang, H., Zhang, F., Xie, X., & Guo, M., _Dkn: Deep knowledge-aware network for news recommendation_, CoRR, _()_, (2018). </a> [↩](#fef749252ffc4be87873f182cdba0fad)

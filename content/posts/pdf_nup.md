@@ -1,12 +1,12 @@
 +++
 title = "PDF Nup"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:55+08:00
+lastmod = 2020-05-30T23:50:05+08:00
 draft = false
 +++
 
 tags
-: [§pdf\_tools]({{< relref "pdf_tools" >}})
+: [Pdf Tools]({{< relref "pdf_tools" >}})
 
 This puts several pages of a PDF together. `2x1` is a particularly
 common combination.

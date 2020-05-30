@@ -1,12 +1,12 @@
 +++
 title = "HTTP"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:46+08:00
+lastmod = 2020-05-30T23:48:47+08:00
 draft = false
 +++
 
 tags
-: [§web\_dev]({{< relref "web_dev" >}})
+: [Web Development]({{< relref "web_dev" >}})
 
 ## GET Requests and Request Body {#get-requests-and-request-body}
 

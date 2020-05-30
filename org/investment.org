@@ -1,5 +1,5 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Investment
 
-- [[file:investing_in_etfs.org][§investing_in_etfs]]
-- [[file:portfolio_composition.org][§portfolio_composition]]
+- [[file:investing_in_etfs.org][Investing In ETFs]]
+- [[file:portfolio_composition.org][Portfolio Composition]]

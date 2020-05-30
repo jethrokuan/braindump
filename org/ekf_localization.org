@@ -1,6 +1,8 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: EKF Localization
 
+- tags :: [[file:robot_localization.org][Robot Localization]], [[file:markov_localization.org][Markov Localization]], [[file:grid_mc_localization.org][Grid & Monte Carlo Localization]]
+
 * EKF localization
 
 EKF localization assumes that the map is represented by a collection
@@ -37,9 +39,3 @@ far apart, and making sure that the robot's uncertainty is small.
 
 These methods are furthermore unable to solve global localization and
 the kidnapped robot problem.
-
-* Related
-- [[file:robot_localization.org][§robot_localization]]
-- [[file:markov_localization.org][§markov_localization]]
-- [[file:grid_mc_localization.org][§grid_mc_localization]]
-

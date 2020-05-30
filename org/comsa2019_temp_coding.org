@@ -1,7 +1,7 @@
 #+SETUPFILE:./hugo_setup.org
 #+TITLE: Temp Coding with Alpha Synaptic Function
 
-- tags :: [[file:spiking_neural_networks.org][§spiking_neural_networks]]
+- tags :: [[file:spiking_neural_networks.org][Spiking Neural Networks]]
 
 * Temporal Coding with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ
 
