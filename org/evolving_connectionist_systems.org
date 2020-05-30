@@ -13,4 +13,4 @@ ECoS traditionally uses the simple sigmoid model of a neuron. Evolving
 Spiking Neural Networks ([[file:evolving_snn.org][§evolving_snn]]) architectures use a spiking neuron
 model. 
 
-bibliography:./biblio/ml.bib
+bibliography:biblio.bib

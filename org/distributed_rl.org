@@ -14,4 +14,4 @@ Parallelizing [[file:reinforcement_learning.org][Reinforcement Learning ⭐]].
 * Resources
 - [[https://www.youtube.com/watch?v=oUnsDUtNsOQ&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=17&t=0s][CS285 Fa19 10/30/19 - YouTube]]
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib

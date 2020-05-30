@@ -56,4 +56,4 @@ Example of stochastic process: Gambler's ruin
 * Reference Textbooks
 cite:ross2014introduction,pinsky2010introduction
 
-bibliography:biblio/slt.bib
+bibliography:biblio.bib

@@ -54,4 +54,4 @@ and the membrane voltage $U_i$.
 * References
 - cite:neftci19_surrog_gradien_learn_spikin_neural_networ
 
-bibliography:./biblio/spikingneurons.bib
+bibliography:biblio.bib

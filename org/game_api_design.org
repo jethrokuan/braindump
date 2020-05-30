@@ -33,4 +33,4 @@
   if (result.error) { /* handle error */ }
 #+end_src
 
-bibliography:./biblio/api.bib
+bibliography:biblio.bib

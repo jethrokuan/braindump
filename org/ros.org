@@ -592,4 +592,4 @@ Follow the instructions on ROS Wiki. cite:nilil_instal_ubunt_ros_wiki
 :BEAMER_opt: allowframebreaks
 :END:
 
-bibliography:biblio/ros.bib
+bibliography:biblio.bib

@@ -24,4 +24,4 @@ between weight vectors), they are merged.
 See cite:schliebs13_evolv_spikin_neural_networ_survey for a
 comprehensive review.
 
-bibliography:./biblio/ml.bib
+bibliography:biblio.bib

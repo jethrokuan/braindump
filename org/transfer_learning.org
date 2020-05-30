@@ -92,4 +92,4 @@ cite:rusu15_polic_distil is able to:
 3. Improve the stability of the [[file:q_learning.org::*DQN][DQN learning algorithm]] by distilling
    online the policy of the best performing agent
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib

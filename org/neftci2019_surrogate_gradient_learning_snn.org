@@ -26,5 +26,5 @@ functions used are non-linear and monotonically increasing towards the
 firing threshold. This suggests that the details of the surrogate are
 not crucial in ensuring success of the method.
 
-bibliography:./biblio/spikingneurons.bib
+bibliography:biblio.bib
 

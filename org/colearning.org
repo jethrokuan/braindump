@@ -31,4 +31,4 @@ similar categories or concepts. Methods include [[file:transfer_learning.org][tr
 using coordinated multimodal representations, or [[file:concept_grounding.org][Concept Grounding]] via
 word similarity, or [[file:zeroshot_learning.org][zero-shot learning]].
 
-bibliography:./biblio/biblio.bib
+bibliography:biblio.bib

@@ -9,4 +9,4 @@ cite:you17_large_batch_train_convol_networ. One of the secondary goals is
 * Implementations
 - [[https://github.com/noahgolmant/pytorch-lars][pytorch-lars]]
 
-bibliography:./biblio/ml.bib
+bibliography:biblio.bib

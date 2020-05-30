@@ -423,4 +423,4 @@ Beam is an open source, unified model for defining and executing data
 processing workflows.
 
 * 
-bibliography:biblio/hadoop.bib
+bibliography:biblio.bib

@@ -50,4 +50,4 @@ order/ for the notes in which to write about.
 - [[https://vimeo.com/275530205][Sönke Ahrens - How to take smart notes on Vimeo]]
 - [[https://www.nateliason.com/blog/smart-notes][How to Take Smart Notes: A Step-by-Step Guide - Nat Eliason]]
 
-bibliography:./biblio/biblio.bib
+bibliography:biblio.bib

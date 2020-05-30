@@ -16,4 +16,4 @@ useful in [[file:large_batch_training.org][§large_batch_training]].
 [[file:images/gpipe/screenshot2020-02-05_23-05-00_.png]]
 
 
-bibliography:./biblio/ml.bib
+bibliography:biblio.bib

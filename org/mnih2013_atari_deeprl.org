@@ -36,4 +36,4 @@ rapidly.
 * References
 - [[https://davidsanwald.github.io/2016/12/11/Double-DQN-interfacing-OpenAi-Gym.html][Defeating the Deadly Triad: | random walks and lots of ♥s]]
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib

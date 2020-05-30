@@ -689,7 +689,7 @@ problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
 
-bibliography:biblio/pgm.bib
+bibliography:biblio.bib
 
 * Resources
 - [[https://dotnet.github.io/infer/userguide/Resources%20and%20References.html][Infer.NET Resources and References]]

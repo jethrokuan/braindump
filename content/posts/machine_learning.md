@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:18+08:00
+lastmod = 2020-05-30T17:08:53+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -644,13 +644,13 @@ uses the ubiquitous build tool `Make` to build data projects. <a id="e0ca3838936
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-Stripe's approach <a id="77ac83a13ddf56f053f1ba225873677d" href="#dan_reprod">(Dan Frank, 2016)</a> still primarily uses Jupyter notebooks, but
+Stripe's approach <a id="77ac83a13ddf56f053f1ba225873677d" href="#dan_reprod">(Frank, 2016)</a> still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
 # Bibliography
 
-<a id="home_cookiec_data_scien" target="_blank">DrivenData, (2019). _Home - cookiecutter data science_. Retrieved from [https://drivendata.github.io/cookiecutter-data-science/](https://drivendata.github.io/cookiecutter-data-science/). Online; accessed 06 January 2019.</a> [↩](#e0ca383893600291ac5eca0f379984fb)
+<a id="home_cookiec_data_scien" target="_blank">DrivenData, _Home - cookiecutter data science_, , _()_, (2019). </a> [↩](#e0ca383893600291ac5eca0f379984fb)
 
-<a id="dan_reprod" target="_blank">Frank, D. (2016). _Reproducible research: stripe's approach to data science_. Retrieved from [https://stripe.com/blog/reproducible-research](https://stripe.com/blog/reproducible-research). Online; accessed 06 January 2019.</a> [↩](#77ac83a13ddf56f053f1ba225873677d)
+<a id="dan_reprod" target="_blank">Frank, D., _Reproducible research: Stripe's approach to data science_, , _()_, (2016). </a> [↩](#77ac83a13ddf56f053f1ba225873677d)

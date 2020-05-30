@@ -24,6 +24,6 @@
 - co-learning :: Transferring knowledge between modalities, their
   representation, and predictive models. (see [[file:colearning.org][Co-learning]])
 
-bibliography:./biblio/biblio.bib
+bibliography:biblio.bib
 
 

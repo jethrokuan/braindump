@@ -315,4 +315,4 @@ In the presence of all three, learning is unstable. DQN is the first
 algorithm that stabilized deep Q-learning ([[file:mnih2013_atari_deeprl.org][Playing Atari with Deep
 RL]]).
   
-bibliography:biblio/rl.bib
+bibliography:biblio.bib

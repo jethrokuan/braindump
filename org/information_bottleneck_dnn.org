@@ -29,4 +29,4 @@ layer contains about the input and output respectively.
 TL;DR: SGD has 2 phases: ERM, and representation compression. The
 latter phase is an explanation for the lack of overfitting in DL.
 
-bibliography:./biblio/ml.bib
+bibliography:biblio.bib

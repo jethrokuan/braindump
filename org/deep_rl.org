@@ -86,4 +86,4 @@ or algorithms that adaptively adjust parameters:
    ([[https://github.com/openai/spinningup][Tensorflow]], [[https://github.com/kashif/firedup/][Pytorch]])
 3. [[https://www.icml.cc/2016/tutorials/deep_rl_tutorial.pdf][David Silver's Deep RL ICML Tutorial]]
 
-bibliography:./biblio/rl.bib
+bibliography:biblio.bib
