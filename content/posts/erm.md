@@ -1,12 +1,12 @@
 +++
 title = "Empirical Risk Minimization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:02:28+08:00
+lastmod = 2020-05-30T15:38:13+08:00
 draft = false
 +++
 
 In [Machine Learning]({{< relref "machine_learning" >}}), the training set error is often called the
-_empirical error_ or _empirical risk_, andn this is the error the
+_empirical error_ or _empirical risk_, and this is the error the
 classifier incurs over the sample:
 
 \begin{equation}

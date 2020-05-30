@@ -1,12 +1,12 @@
 +++
 title = "Topic Modeling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-29T21:01:24+08:00
+lastmod = 2020-05-30T15:39:30+08:00
 draft = false
 +++
 
 tags
-: [§machine\_learning]({{< relref "machine_learning" >}}), [§data\_viz]({{< relref "data_viz" >}})
+: [Machine Learning]({{< relref "machine_learning" >}})
 
 <http://www.cs.columbia.edu/~blei/topicmodeling.html>
 [LDA survey - Github](https://github.com/jethrokuan/lda-survey)

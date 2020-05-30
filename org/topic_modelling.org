@@ -1,7 +1,7 @@
 #+SETUPFILE: ./hugo_setup.org
 #+TITLE: Topic Modeling
 
-- tags :: [[file:machine_learning.org][§machine_learning]], [[file:data_viz.org][§data_viz]]
+- tags :: [[file:machine_learning.org][Machine Learning]]
 
 http://www.cs.columbia.edu/~blei/topicmodeling.html
 [[https://github.com/jethrokuan/lda-survey][LDA survey - Github]]

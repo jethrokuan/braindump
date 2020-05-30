@@ -2,7 +2,7 @@
 #+TITLE: Empirical Risk Minimization
 
 In [[file:machine_learning.org][Machine Learning]], the training set error is often called the
-/empirical error/ or /empirical risk/, andn this is the error the
+/empirical error/ or /empirical risk/, and this is the error the
 classifier incurs over the sample:
 
 \begin{equation}
