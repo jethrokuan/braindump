@@ -1,7 +1,7 @@
 +++
 title = "And the Bit Goes Down: Revisiting the Quantization of Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:07+08:00
+lastmod = 2020-05-31T02:57:13+08:00
 draft = false
 +++
 

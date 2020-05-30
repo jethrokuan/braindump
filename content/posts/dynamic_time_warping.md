@@ -1,7 +1,7 @@
 +++
 title = "Dynamic Time Warping"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:03+08:00
+lastmod = 2020-05-31T02:57:09+08:00
 slug = "dynamic_time_warping"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "The C Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:02+08:00
+lastmod = 2020-05-31T02:52:23+08:00
 draft = false
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Game API Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:41+08:00
+lastmod = 2020-05-31T02:57:56+08:00
 draft = false
 +++
 
@@ -46,4 +46,4 @@ tags
 
 # Bibliography
 
-<a id="handmade_how_to_write_better" target="_blank">Handmade, _How to write better (game) libraries | handmade.network Wiki_, , _()_, (2019). </a> [↩](#9eba6e4f7d26bb0e67deeb10da2c68db)
+<a id="handmade_how_to_write_better" target="_blank">Handmade, , _How to write better (game) libraries | handmade.network Wiki_, , _()_, (2019). </a> [↩](#9eba6e4f7d26bb0e67deeb10da2c68db)

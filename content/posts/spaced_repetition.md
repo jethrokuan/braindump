@@ -1,7 +1,7 @@
 +++
 title = "Spaced Repetition"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:01+08:00
+lastmod = 2020-05-31T02:52:22+08:00
 draft = false
 +++
 

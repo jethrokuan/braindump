@@ -245,18 +245,6 @@
   primaryClass = {cs.LG}
 }
 
-@article{chen18_neural_ordin_differ_equat,
-  title = {Neural Ordinary Differential Equations},
-  author = {Chen, Ricky T. Q. and Rubanova, Yulia and Bettencourt, Jesse and Duvenaud, David},
-  year = {2018},
-  abstract = {We introduce a new family of deep neural network models. Instead of specifying a discrete sequence of hidden layers, we parameterize the derivative of the hidden state using a neural network. The output of the network is computed using a black-box differential equation solver. These continuous-depth models have constant memory cost, adapt their evaluation strategy to each input, and can explicitly trade numerical precision for speed. We demonstrate these properties in continuous-depth residual networks and continuous-time latent variable models. We also construct continuous normalizing flows, a generative model that can train by maximum likelihood, without partitioning or ordering the data dimensions. For training, we show how to scalably backpropagate through any ODE solver, without access to its internal operations. This allows end-to-end training of ODEs within larger models.},
-  archivePrefix = {arXiv},
-  eprint = {1806.07366},
-  eprinttype = {arxiv},
-  journal = {CoRR},
-  primaryClass = {cs.LG}
-}
-
 @article{chen20_simpl_framew_contr_learn_visual_repres,
   title = {A Simple Framework for Contrastive Learning of Visual Representations},
   author = {Chen, Ting and Kornblith, Simon and Norouzi, Mohammad and Hinton, Geoffrey},
@@ -633,16 +621,15 @@
   primaryClass = {cs.CV}
 }
 
-@article{huh17_gradien_descen_spikin_neural_networ,
+@incollection{huh_gradient_2018,
   title = {Gradient Descent for Spiking Neural Networks},
-  author = {Huh, Dongsung and Sejnowski, Terrence J.},
-  year = {2017},
-  abstract = {Much of studies on neural computation are based on network models of static neurons that produce analog output, despite the fact that information processing in the brain is predominantly carried out by dynamic neurons that produce discrete pulses called spikes. Research in spike-based computation has been impeded by the lack of efficient supervised learning algorithm for spiking networks. Here, we present a gradient descent method for optimizing spiking network models by introducing a differentiable formulation of spiking networks and deriving the exact gradient calculation. For demonstration, we trained recurrent spiking networks on two dynamic tasks: one that requires optimizing fast ( millisecond) spike-based interactions for efficient encoding of information, and a delayed memory XOR task over extended duration ( second). The results show that our method indeed optimizes the spiking network dynamics on the time scale of individual spikes as well as behavioral time scales. In conclusion, our result offers a general purpose supervised learning algorithm for spiking neural networks, thus advancing further investigations on spike-based computation.},
-  archivePrefix = {arXiv},
-  eprint = {1706.04698},
-  eprinttype = {arxiv},
-  journal = {CoRR},
-  primaryClass = {q-bio.NC}
+  booktitle = {Advances in Neural Information Processing Systems 31},
+  author = {Huh, Dongsung and Sejnowski, Terrence J},
+  editor = {Bengio, S. and Wallach, H. and Larochelle, H. and Grauman, K. and {Cesa-Bianchi}, N. and Garnett, R.},
+  year = {2018},
+  pages = {1433--1443},
+  publisher = {{Curran Associates, Inc.}},
+  file = {/home/jethro/Zotero/storage/NPSS2Y37/Huh and Sejnowski - 2018 - Gradient descent for spiking neural networks.pdf}
 }
 
 @article{ivanov19_moder_deep_reinf_learn_algor,
@@ -1000,17 +987,6 @@
   publisher = {{Curran Associates, Inc.}}
 }
 
-@incollection{NIPS2018_7417,
-  title = {Gradient Descent for Spiking Neural Networks},
-  booktitle = {Advances in Neural Information Processing Systems 31},
-  author = {Huh, Dongsung and Sejnowski, Terrence J},
-  editor = {Bengio, S. and Wallach, H. and Larochelle, H. and Grauman, K. and {Cesa-Bianchi}, N. and Garnett, R.},
-  year = {2018},
-  pages = {1433--1443},
-  publisher = {{Curran Associates, Inc.}},
-  file = {/home/jethro/Zotero/storage/NPSS2Y37/Huh and Sejnowski - 2018 - Gradient descent for spiking neural networks.pdf}
-}
-
 @article{openai_gym,
   title = {{{OpenAI}} Gym},
   author = {{OpenAI}},
@@ -1340,16 +1316,8 @@
   journal = {2016 IEEE International Conference on Rebooting Computing (ICRC)}
 }
 
-@book{Shalev-Shwartz:2014:UML:2621980,
-  title = {Understanding Machine Learning: {{From}} Theory to Algorithms},
-  author = {{Shalev-Shwartz}, Shai and {Ben-David}, Shai},
-  year = {2014},
-  publisher = {{Cambridge University Press}},
-  address = {{New York, NY, USA}},
-  isbn = {1-107-05713-2 978-1-107-05713-5}
-}
-
 @book{shalev2014understanding,
+  ids = {Shalev-Shwartz:2014:UML:2621980},
   title = {Understanding Machine Learning: {{From}} Theory to Algorithms},
   author = {{Shalev-Shwartz}, Shai and {Ben-David}, Shai},
   year = {2014},

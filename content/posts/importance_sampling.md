@@ -1,7 +1,7 @@
 +++
 title = "Importance Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:21+08:00
+lastmod = 2020-05-31T02:57:30+08:00
 draft = false
 +++
 

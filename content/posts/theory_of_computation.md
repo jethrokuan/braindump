@@ -1,7 +1,7 @@
 +++
 title = "Theory Of Computation"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:41+08:00
+lastmod = 2020-05-31T02:57:54+08:00
 draft = false
 +++
 
@@ -489,7 +489,7 @@ The pumping lemma lets us show that certain languages are not regular.
 <div class="theorem">
   <div></div>
 
-<a id="org03c0447"></a>
+<a id="org5cfb5aa"></a>
 Let \\(L\\) be a regular language. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(w\\) in \\(L\\) such that
 \\(| w | \ge n\\), we can break \\(w\\) into three strings \\(w = xyz\\)
@@ -993,7 +993,7 @@ use several results, that we will state below.
 <div class="theorem">
   <div></div>
 
-<a id="orga0d664d"></a>
+<a id="org19e5a67"></a>
 Let \\(L\\) be a CFL. Then there exists a constant \\(n\\) (which
 depends on \\(L\\)) such that for every string \\(z\\) in \\(L\\) such that
 \\(| z | \ge n\\), we can break \\(z\\) into three strings \\(z = uvwxy\\)

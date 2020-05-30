@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:54+08:00
+lastmod = 2020-05-31T02:52:15+08:00
 slug = "multimodal_machine_learning"
 draft = false
 +++

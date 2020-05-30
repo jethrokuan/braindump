@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:50+08:00
+lastmod = 2020-05-31T02:52:09+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -655,6 +655,6 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 
 # Bibliography
 
-<a id="home_cookiec_data_scien" target="_blank">DrivenData, _Home - cookiecutter data science_, , _()_, (2019). </a> [↩](#e0ca383893600291ac5eca0f379984fb)
+<a id="home_cookiec_data_scien" target="_blank">DrivenData, , _Home - cookiecutter data science_, , _()_, (2019). </a> [↩](#e0ca383893600291ac5eca0f379984fb)
 
 <a id="dan_reprod" target="_blank">Frank, D., _Reproducible research: Stripe's approach to data science_, , _()_, (2016). </a> [↩](#77ac83a13ddf56f053f1ba225873677d)

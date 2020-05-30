@@ -1,7 +1,7 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:58+08:00
+lastmod = 2020-05-31T02:52:19+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
 +++

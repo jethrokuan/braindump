@@ -1,7 +1,7 @@
 +++
 title = "Hadoop"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:03+08:00
+lastmod = 2020-05-31T02:52:25+08:00
 draft = false
 +++
 
@@ -436,8 +436,8 @@ processing workflows.
 
 # Bibliography
 
-<a id="White:2009:HDG:1717298" target="_blank">White, T., _Hadoop: The definitive guide_ (2009), : {O'Reilly Media, Inc.}.</a> [↩](#e50b6ff0acbc468982f33753f532f6e6)
+<a id="White:2009:HDG:1717298" target="_blank">White, T., _Hadoop: The definitive guide_ (2009), : O'Reilly Media, Inc.</a> [↩](#e50b6ff0acbc468982f33753f532f6e6)
 
-<a id="DBLP:books/oreilly/Kleppmann2014" target="_blank">Kleppmann, M., _Designing data-intensive applications: The big ideas behind reliable, scalable, and maintainable systems_ (2016), : {O'Reilly}.</a> [↩](#783b48bf91ec1e1990a77560e69421ea)
+<a id="DBLP:books/oreilly/Kleppmann2014" target="_blank">Kleppmann, M., _Designing data-intensive applications: The big ideas behind reliable, scalable, and maintainable systems_ (2016), : O'Reilly.</a> [↩](#783b48bf91ec1e1990a77560e69421ea)
 
 <a id="dremel" target="_blank">Melnik, S., Gubarev, A., Long, J. J., Romer, G., Shivakumar, S., Tolton, M., & Vassilakis, T., _Dremel: Interactive analysis of web-scale datasets_, In , Proc. of the 36th Int'l Conf on Very Large Data Bases (pp. 330–339) (2010). : .</a> [↩](#ed2cfb2545d07ae55a02f3661a55156d)

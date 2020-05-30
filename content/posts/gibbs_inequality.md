@@ -1,7 +1,7 @@
 +++
 title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:31+08:00
+lastmod = 2020-05-31T02:57:43+08:00
 draft = false
 +++
 

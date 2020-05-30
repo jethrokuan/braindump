@@ -1,7 +1,7 @@
 +++
 title = "Variational Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:58+08:00
+lastmod = 2020-05-31T02:52:18+08:00
 draft = false
 +++
 

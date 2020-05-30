@@ -1,7 +1,7 @@
 +++
 title = "Temp Coding with Alpha Synaptic Function"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:02+08:00
+lastmod = 2020-05-31T02:57:07+08:00
 draft = false
 +++
 

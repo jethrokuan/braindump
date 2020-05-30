@@ -408,26 +408,23 @@ gradient-based training methods such as backpropagation has shown
 competitive performance. It is thus desirable to train spiking neural
 networks with these gradient-based methods.
 
-There are several problems with spike-compatible gradient-based
-methods. First, most of these methods cannot train neurons in the
-hidden layers: they can only train neurons at the final layer, that
-receive the desired target output pattern
-cite:urbanczik09_gradien_learn_rule_tempot,training_deep_snn_bpp_lee.
-Second, the discontinuous, binary nature of spiking output needs to be
-addressed. For example, SpikeProp approximates the membrane
-threshold function at a local area with a linear function, introducing
-gradients and computing the exact formulae for error backpropagation
-for synaptic weights and spike times cite:spikeprop. Others have
-modified the threshold function with a gate function
-cite:NIPS2018_7417, used the alpha transfer function to derive
-gradient update rules cite:comsa19_tempor_codin_spikin_neural_networ,
-and approximate the dirac-delta spikes with a probability density
-function cite:NIPS2018_7415.
+There are several problems with spike-compatible gradient-based methods. First,
+most of these methods cannot train neurons in the hidden layers: they can only
+train neurons at the final layer, that receive the desired target output pattern
+cite:urbanczik09_gradien_learn_rule_tempot. Second, the discontinuous, binary
+nature of spiking output needs to be addressed. For example, SpikeProp
+approximates the membrane threshold function at a local area with a linear
+function, introducing gradients and computing the exact formulae for error
+backpropagation for synaptic weights and spike times cite:spikeprop. Others have
+modified the threshold function with a gate function cite:huh_gradient_2018,
+used the alpha transfer function to derive gradient update rules
+cite:comsa19_tempor_codin_spikin_neural_networ, and approximate the dirac-delta
+spikes with a probability density function cite:NIPS2018_7415.
 
 Another approach is converting trained ANN models into SNNs
-cite:rueckauer16_theor_tools_conver_analog_to. Common ANN layers such
-as softmax, batch normalization and max-pooling layers have their
-corresponding spiking counterparts.
+cite:rueckauer16_theor_tools_conver_analog_to. Common ANN layers such as
+softmax, batch normalization and max-pooling layers have their corresponding
+spiking counterparts.
 
 Equilibrium Propagation was recently proposed to solve the
 neurobiological incompatibilities of backpropagation
@@ -448,10 +445,6 @@ a neuromorphic chip. In Intel's Loihi chip, each core contains a
 learning engine that can update synaptic weights using the 4-bit
 microcode-programmed learning rules that are associated with that
 synapse. This opens up areas for online learning.
-
-
-
-
 
 Neural network models can be classified into three generations,
 according to their computational units: perceptrons, non-linear
@@ -696,14 +689,14 @@ There are several problems with spike-compatible gradient-based
 methods. First, most of these methods cannot train neurons in the
 hidden layers: they can only train neurons at the final layer, that
 receive the desired target output pattern
-cite:urbanczik09_gradien_learn_rule_tempot,training_deep_snn_bpp_lee.
+cite:urbanczik09_gradien_learn_rule_tempot,10.3389/fnins.2016.00508.
 Second, the discontinuous, binary nature of spiking output needs to be
 addressed. For example, SpikeProp approximates the membrane
 threshold function at a local area with a linear function, introducing
 gradients and computing the exact formulae for error backpropagation
 for synaptic weights and spike times cite:spikeprop. Others have
 modified the threshold function with a gate function
-cite:NIPS2018_7417, used the alpha transfer function to derive
+cite:huh_gradient_2018, used the alpha transfer function to derive
 gradient update rules cite:comsa19_tempor_codin_spikin_neural_networ,
 and approximate the dirac-delta spikes with a probability density
 function cite:NIPS2018_7415.

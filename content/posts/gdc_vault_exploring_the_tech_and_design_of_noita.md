@@ -1,7 +1,7 @@
 +++
 title = "GDC Vault - Exploring the Tech and Design of 'Noita'"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:12+08:00
+lastmod = 2020-05-31T02:57:19+08:00
 draft = false
 +++
 

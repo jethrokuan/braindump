@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:03+08:00
+lastmod = 2020-05-31T02:52:25+08:00
 draft = false
 +++
 
@@ -471,10 +471,10 @@ make some assumptions about the form of the decision boundary.
 ## Reference Textbooks {#reference-textbooks}
 
 1.  An introduction to statistical learning <a id="47f776a94d6687b2efebf468b22650cb" href="#james2013introduction">(James et al., 2013)</a>
-2.  Understanding Machine Learning <a id="63e0a08c15f1a264659ec7862354748b" href="#Shalev-Shwartz:2014:UML:2621980">(Shalev-Shwartz \& Ben-David, 2014)</a>
+2.  Understanding Machine Learning <a id="acdb3458f18ecb92e5037975d277d0fb" href="#shalev2014understanding">(Shalev-Shwartz \& Ben-David, 2014)</a>
 
 # Bibliography
 
-<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : {Springer}.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
+<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : Springer.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
 
-<a id="Shalev-Shwartz:2014:UML:2621980" target="_blank">Shalev-Shwartz, Shai, & Ben-David, Shai, _Understanding machine learning: From theory to algorithms_ (2014), {New York, NY, USA}: {Cambridge University Press}.</a> [↩](#63e0a08c15f1a264659ec7862354748b)
+<a id="shalev2014understanding" target="_blank">Shalev-Shwartz}, S., & Ben-David, Shai, _Understanding machine learning: From theory to algorithms_ (2014), : Cambridge university press.</a> [↩](#acdb3458f18ecb92e5037975d277d0fb)

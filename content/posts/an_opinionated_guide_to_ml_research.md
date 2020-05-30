@@ -1,7 +1,7 @@
 +++
 title = "Article: An Opinionated Guide to ML Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:08:24+08:00
+lastmod = 2020-05-31T02:57:33+08:00
 slug = "an_opinionated_guide_to_ml_research"
 draft = false
 +++
