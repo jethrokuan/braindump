@@ -1,9 +1,13 @@
 +++
 title = "Gibbs Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:10+08:00
+lastmod = 2020-05-31T20:20:22+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Slice Sampling]({{< relref "slice_sampling" >}})
 
 Gibbs sampling is a special case of the [Metropolis-Hastings method]({{< relref "metropolis_hastings" >}}),
 where a sequence of proposal distributions \\(q\\) is defined in terms of
@@ -21,3 +25,7 @@ involves sampling one parameter at a time:
 
 1.  Suffers the same defects as [Metropolis-Hastings methods]({{< relref "metropolis_hastings" >}})
 2.  No adjustable parameters, so it's easy to start with
+
+### Backlinks {#backlinks}
+
+- [Slice Sampling]({{< relref "slice_sampling" >}})

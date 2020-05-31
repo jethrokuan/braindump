@@ -1,7 +1,7 @@
 +++
 title = "Google DNS"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:17+08:00
+lastmod = 2020-05-31T20:19:05+08:00
 slug = "google_dns"
 draft = false
 +++

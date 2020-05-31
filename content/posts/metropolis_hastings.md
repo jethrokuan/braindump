@@ -1,9 +1,14 @@
 +++
 title = "Metropolis-Hastings Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:22+08:00
+lastmod = 2020-05-31T20:20:09+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Gibbs Sampling]({{< relref "gibbs_sampling" >}})
+- [Slice Sampling]({{< relref "slice_sampling" >}})
 
 In [Importance Sampling]({{< relref "importance_sampling" >}}) and [Rejection Sampling]({{< relref "rejection_sampling" >}}), the proposal
 distribution \\(q(x)\\) needs to be similar to \\(p(x)\\). The
@@ -30,3 +35,8 @@ as a Gaussian centered on \\(x^(t)\\) can be used.
 
 Hamiltonian Monte-Carlo methods make use of gradient information to
 reduce random-walk behaviour.
+
+### Backlinks {#backlinks}
+
+- [Gibbs Sampling]({{< relref "gibbs_sampling" >}})
+- [Slice Sampling]({{< relref "slice_sampling" >}})

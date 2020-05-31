@@ -1,12 +1,27 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:09+08:00
+lastmod = 2020-05-31T20:19:56+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
-## TOC {#toc}
+### Backlinks {#backlinks}
+
+- [Information Theory]({{< relref "information_theory" >}})
+- [Recommender Systems]({{< relref "recommender_systems" >}})
+- [Single Layer XOR]({{< relref "single_layer_xor" >}})
+- [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
+- [Article: An Opinionated Guide to ML Research]({{< relref "an_opinionated_guide_to_ml_research" >}})
+- [Empirical Risk Minimization]({{< relref "erm" >}})
+- [Topic Modeling]({{< relref "topic_modelling" >}})
+- [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
+- [PAC Learning]({{< relref "pac_learning" >}})
+- [Quantization]({{< relref "quantization" >}})
+- [Likelihood Principle]({{< relref "likelihood_principle" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+
+## Table of Contents {#table-of-contents}
 
 - [Natural Language Processing]({{< relref "nlp" >}})
 

@@ -1,7 +1,7 @@
 +++
 title = "Principles of Effective Research | Michael Nielsen"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:08+08:00
+lastmod = 2020-05-31T20:19:55+08:00
 slug = "principles_of_effective_research_michael_nielsen"
 draft = false
 +++

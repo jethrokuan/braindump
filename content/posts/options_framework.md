@@ -1,7 +1,7 @@
 +++
 title = "Options Framework"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:11+08:00
+lastmod = 2020-05-31T20:19:58+08:00
 draft = false
 +++
 

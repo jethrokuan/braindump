@@ -1,9 +1,14 @@
 +++
 title = "Playing Atari with Deep RL"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:43+08:00
+lastmod = 2020-05-31T20:19:31+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Distributed Reinforcement Learning]({{< relref "distributed_rl" >}})
+- [Q-Learning]({{< relref "q_learning" >}})
 
 ## Playing Atari With Deep RL <a id="e3433750724eb4eebeebd0d71a7608d6" href="#mnih2013playing">(Mnih et al., 2013)</a> {#playing-atari-with-deep-rl}
 
@@ -53,3 +58,8 @@ rapidly.
 <a id="andrychowicz2017hindsight" target="_blank">Andrychowicz, M., Wolski, F., Ray, A., Schneider, J., Fong, R., Welinder, P., McGrew, B., …, _Hindsight Experience Replay_, In , Advances in Neural Information Processing Systems (pp. 5048–5058) (2017). : .</a> [↩](#ffaf2d08e446da500e82a251db070767)
 
 <a id="dabney2018distributional" target="_blank">Dabney, W., Rowland, M., Bellemare, M. G., & Munos, R\'emi, _Distributional reinforcement learning with quantile regression_, In , Thirty-Second {{AAAI}} Conference on Artificial Intelligence (pp. ) (2018). : .</a> [↩](#df0211097f3af68bb797b195f1e9d661)
+
+### Backlinks {#backlinks}
+
+- [Distributed Reinforcement Learning]({{< relref "distributed_rl" >}})
+- [Q-Learning]({{< relref "q_learning" >}})

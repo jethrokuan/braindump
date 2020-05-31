@@ -1,7 +1,7 @@
 +++
 title = "Google Cloud Platform"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:23+08:00
+lastmod = 2020-05-31T20:20:42+08:00
 draft = false
 +++
 

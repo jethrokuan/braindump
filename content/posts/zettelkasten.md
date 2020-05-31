@@ -1,9 +1,17 @@
 +++
 title = "Zettelkasten"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:22+08:00
+lastmod = 2020-05-31T20:19:10+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Roam Research]({{< relref "roam_research" >}})
+- [Writing with Zettekasten]({{< relref "writing_with_zettekasten" >}})
+- [How To Take Smart Notes]({{< relref "how_to_take_smart_notes" >}})
+- [PARA Method]({{< relref "para_method" >}})
+- [Productivity]({{< relref "productivity" >}})
 
 tags
 : [Productivity]({{< relref "productivity" >}}), [Note-taking]({{< relref "note_taking" >}})
@@ -46,3 +54,11 @@ permanent
     expansion
 
 [The Zettelkasten Method - LessWrong 2.0](https://www.lesswrong.com/posts/NfdHG6oHBJ8Qxc26s/the-zettelkasten-method-1)
+
+### Backlinks {#backlinks}
+
+- [Roam Research]({{< relref "roam_research" >}})
+- [Writing with Zettekasten]({{< relref "writing_with_zettekasten" >}})
+- [How To Take Smart Notes]({{< relref "how_to_take_smart_notes" >}})
+- [PARA Method]({{< relref "para_method" >}})
+- [Productivity]({{< relref "productivity" >}})

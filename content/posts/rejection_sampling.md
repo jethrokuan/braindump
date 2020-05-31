@@ -1,9 +1,14 @@
 +++
 title = "Rejection Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:07+08:00
+lastmod = 2020-05-31T20:18:55+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
+- [Slice Sampling]({{< relref "slice_sampling" >}})
 
 **Goal**: To sample from unknown distribution \\(p(x)\\).
 
@@ -31,3 +36,8 @@ draft = false
     keeping \\(c\\) small
 2.  In high-dimensional settings, \\(c\\) will generally be so large that
     acceptances will be rare
+
+### Backlinks {#backlinks}
+
+- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
+- [Slice Sampling]({{< relref "slice_sampling" >}})

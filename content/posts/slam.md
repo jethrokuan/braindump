@@ -1,9 +1,14 @@
 +++
 title = "Simultaneous Localization and Mapping (SLAM)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:39+08:00
+lastmod = 2020-05-31T20:21:08+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Google Cartographer]({{< relref "cartographer" >}})
+- [Robotics]({{< relref "robotics" >}})
 
 In SLAM, the robot acquires a map of its environment while
 simultaneously localizing itself relative to this map. It is a
@@ -115,3 +120,8 @@ The sparse EIF SLAM only maintains a posterior over the present robot
 pose and the map. Hence, they can be both run online, and are
 efficient. Unlike EKFs, they also maintain information representation
 of all knowledge.
+
+### Backlinks {#backlinks}
+
+- [Google Cartographer]({{< relref "cartographer" >}})
+- [Robotics]({{< relref "robotics" >}})

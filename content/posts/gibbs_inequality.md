@@ -1,9 +1,13 @@
 +++
 title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:43+08:00
+lastmod = 2020-05-31T20:19:31+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Entropy]({{< relref "entropy" >}})
 
 The relative entropy or [kl divergence]({{< relref "kl_divergence" >}}) between two probability
 distributions \\(P(x)\\) and \\(Q(x)\\) defined over the same alphabet
@@ -20,3 +24,7 @@ D\_{\textrm{KL}}(P||Q) \ge 0
 \end{equation}
 
 for any \\(P\\) and \\(Q\\).
+
+## Backlinks {#backlinks}
+
+- [Entropy]({{< relref "entropy" >}})

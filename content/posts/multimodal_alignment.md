@@ -1,10 +1,14 @@
 +++
 title = "Multi-modal Alignment"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:09+08:00
+lastmod = 2020-05-31T20:20:21+08:00
 slug = "multimodal_alignment"
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
 
 Multi-modal alignment is a sub-challenge in [Multi-modal Machine
 Learning]({{< relref "multimodal_machine_learning" >}}), involving the finding of relationships and correspondences
@@ -31,3 +35,7 @@ Implicit alignment allows for better performance in downstream tasks.
 Both graphical models and neural network approaches are used here.
 Examples of tasks where implicit alignment helps include machine
 translation.
+
+### Backlinks {#backlinks}
+
+- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})

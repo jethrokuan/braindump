@@ -1,10 +1,14 @@
 +++
 title = "Ising Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:33+08:00
+lastmod = 2020-05-31T20:20:58+08:00
 tags = ["machine-learning"]
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Hopfield Network]({{< relref "hopfield_network" >}})
 
 An Ising model is an array of spins (atoms that can take states \\(\pm
 1\\)) that are magnetically coupled to each other. If one spin is, say
@@ -79,3 +83,7 @@ we can rewrite this in a form that looks similar to a Gaussian:
 \log \tilde{p}(\mathbb{y}) = - \frac{1}{2}(\mathbb{y} -
 \mathbb{\mu})^T \Sigma ^{-1} (\mathbb{y} - \mathbb{\mu}) + c
 \end{equation}
+
+## Backlinks {#backlinks}
+
+- [Hopfield Network]({{< relref "hopfield_network" >}})

@@ -1,9 +1,14 @@
 +++
 title = "Actor-Critic"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:27+08:00
+lastmod = 2020-05-31T20:19:15+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+- [Q-Learning]({{< relref "q_learning" >}})
 
 Actor-Critic improves on [Policy Gradients]({{< relref "policy_gradients" >}}) methods by introducing a
 critic.
@@ -196,3 +201,8 @@ Need to balance between learning speed, stability.
 ## Resources {#resources}
 
 - [CS285 Fa19 9/18/19 - YouTube](https://www.youtube.com/watch?v=EKqxumCuAAY&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=7&t=0s)
+
+### Backlinks {#backlinks}
+
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+- [Q-Learning]({{< relref "q_learning" >}})

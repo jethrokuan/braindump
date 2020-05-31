@@ -1,9 +1,13 @@
 +++
 title = "Hadoop"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:25+08:00
+lastmod = 2020-05-31T20:20:11+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Designing Data-Intensive Applications]({{< relref "designing_dataintensive_applications" >}})
 
 Hadoop provides tools for working with big data, by raising the _level
 of abstraction_.
@@ -441,3 +445,7 @@ processing workflows.
 <a id="DBLP:books/oreilly/Kleppmann2014" target="_blank">Kleppmann, M., _Designing data-intensive applications: The big ideas behind reliable, scalable, and maintainable systems_ (2016), : O'Reilly.</a> [↩](#783b48bf91ec1e1990a77560e69421ea)
 
 <a id="dremel" target="_blank">Melnik, S., Gubarev, A., Long, J. J., Romer, G., Shivakumar, S., Tolton, M., & Vassilakis, T., _Dremel: Interactive analysis of web-scale datasets_, In , Proc. of the 36th Int'l Conf on Very Large Data Bases (pp. 330–339) (2010). : .</a> [↩](#ed2cfb2545d07ae55a02f3661a55156d)
+
+### Backlinks {#backlinks}
+
+- [Designing Data-Intensive Applications]({{< relref "designing_dataintensive_applications" >}})

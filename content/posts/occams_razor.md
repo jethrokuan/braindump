@@ -1,9 +1,13 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:48+08:00
+lastmod = 2020-05-31T20:19:36+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Two Levels Of Inference]({{< relref "two_levels_of_inference" >}})
 
 tags
 : [Information Theory]({{< relref "information_theory" >}})
@@ -46,3 +50,7 @@ more complex models:
 
 I still don't see a contradiction with Mackay's proposed argument.
 Maybe I'm missing something...
+
+### Backlinks {#backlinks}
+
+- [Two Levels Of Inference]({{< relref "two_levels_of_inference" >}})

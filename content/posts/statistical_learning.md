@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:25+08:00
+lastmod = 2020-05-31T20:20:12+08:00
 draft = false
 +++
 

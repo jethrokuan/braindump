@@ -1,9 +1,13 @@
 +++
 title = "Markov Decision Process"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:51+08:00
+lastmod = 2020-05-31T20:19:39+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 A sequential decision problem for a fully observable, stochastic
 environment with a Markovian transition model and additive rewards is
@@ -71,3 +75,7 @@ unifies notion of PAC and regret <a id="b921dd1021cc889ee3e2cec8ef08a5a9" href="
 <a id="kaelbling1996reinforcement" target="_blank">Kaelbling, L. P., Littman, M. L., & Moore, A. W., _Reinforcement learning: A survey_, Journal of artificial intelligence research, _4()_, 237–285 (1996). </a> [↩](#fa8338b83ce7e1fef54aa80740d33fc3)
 
 <a id="dann2017unifying" target="_blank">Dann, C., Lattimore, T., & Brunskill, E., _Unifying PAC and regret: Uniform PAC bounds for episodic reinforcement learning_, In , Advances in Neural Information Processing Systems (pp. 5713–5723) (2017). : .</a> [↩](#b921dd1021cc889ee3e2cec8ef08a5a9)
+
+### Backlinks {#backlinks}
+
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

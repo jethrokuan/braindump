@@ -1,7 +1,7 @@
 +++
 title = "Probability Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:34+08:00
+lastmod = 2020-05-31T20:20:59+08:00
 draft = false
 +++
 

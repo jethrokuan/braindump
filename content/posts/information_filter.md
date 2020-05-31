@@ -1,9 +1,14 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:40+08:00
+lastmod = 2020-05-31T20:21:09+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
+- [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})
 
 tags
 : [Gaussian Filter]({{< relref "gaussian_filter" >}}), [Bayes Filter]({{< relref "bayes_filter" >}})
@@ -67,3 +72,8 @@ distance.
 1.  The update step requires the recovery of a state estimate,
     inverting the information matrix. Matrix inversion is
     computationally expensive.
+
+### Backlinks {#backlinks}
+
+- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
+- [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})

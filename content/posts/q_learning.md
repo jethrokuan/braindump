@@ -1,9 +1,14 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:50+08:00
+lastmod = 2020-05-31T20:21:23+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Transfer Learning]({{< relref "transfer_learning" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 tags
 : [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Temporal Difference Learning]({{< relref "td_learning" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -322,4 +327,9 @@ RL]({{< relref "mnih2013_atari_deeprl" >}})).
 
 # Bibliography
 
-<a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Zeyuan, Bubeck, S., & Jordan, M. I., _Is Q-Learning Provably Efficient?_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : {Curran Associates, Inc.}.</a> [↩](#01672110f741e437a834e37dc0d172c4)
+<a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Zeyuan, Bubeck, S., & Jordan, M. I., _Is Q-Learning Provably Efficient?_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : Curran Associates, Inc.</a> [↩](#01672110f741e437a834e37dc0d172c4)
+
+### Backlinks {#backlinks}
+
+- [Transfer Learning]({{< relref "transfer_learning" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

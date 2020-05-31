@@ -1,9 +1,13 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:28+08:00
+lastmod = 2020-05-31T20:20:15+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [CMake]({{< relref "cmake" >}})
 
 tags
 : [Programming Languages]({{< relref "prog_lang" >}})
@@ -237,3 +241,7 @@ pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">
 <a id="so_why_move_shared_ptr" target="_blank">nil, , _C++ - Why would I std::move an std::sharedptr? - Stack Overflow_, , _()_, (2019). </a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
 
 <a id="17_bartek" target="_blank">Bartek, , _Bartek's coding blog: How notnull can improve your code?_, , _()_, (2017). </a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)
+
+### Backlinks {#backlinks}
+
+- [CMake]({{< relref "cmake" >}})

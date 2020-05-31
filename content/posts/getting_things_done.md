@@ -1,7 +1,7 @@
 +++
 title = "Getting Things Done (GTD)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:51+08:00
+lastmod = 2020-05-31T20:21:25+08:00
 draft = false
 +++
 

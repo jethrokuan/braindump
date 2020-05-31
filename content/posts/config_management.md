@@ -1,7 +1,7 @@
 +++
 title = "Config Management"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:35+08:00
+lastmod = 2020-05-31T20:19:23+08:00
 draft = false
 +++
 

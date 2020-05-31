@@ -1,10 +1,14 @@
 +++
 title = "The Bias-Complexity Tradeoff"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:10+08:00
+lastmod = 2020-05-31T20:20:23+08:00
 tags = ["machine-learning"]
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [VC-Dimension]({{< relref "vc_dimension" >}})
 
 Training data can mislead the learner, and result in overfitting. To
 overcome this problem, we can restrict the search space to some
@@ -62,3 +66,7 @@ class decreases the approximation error, but may increase the
 estimation error, as a rich \\(H\\) might lead to overfitting. Learning
 theory studies how rich we can make \\(H\\) while still maintaining
 reasonable estimation error.
+
+### Backlinks {#backlinks}
+
+- [VC-Dimension]({{< relref "vc_dimension" >}})

@@ -1,9 +1,13 @@
 +++
 title = "Progressive Summarization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:23+08:00
+lastmod = 2020-05-31T20:20:43+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [PARA Method]({{< relref "para_method" >}})
 
 tags
 : [Productivity]({{< relref "productivity" >}})
@@ -32,3 +36,7 @@ extracting key points from each note.
 ## Resources {#resources}
 
 - [Implementing A Second Brain in Emacs and Org-Mode – Tasshin](https://tasshin.com/blog/implementing-a-second-brain-in-emacs-and-org-mode/)
+
+### Backlinks {#backlinks}
+
+- [PARA Method]({{< relref "para_method" >}})

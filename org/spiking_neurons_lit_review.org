@@ -784,8 +784,8 @@ The short-termmemory of an LSTM network can accumulate, on a lower
 level of learning, knowledge during thecurrent learning task
 #+END_QUOTE
 
-* Gradient Descent for Spiking Neural Networks cite:huh17_gradien_descen_spikin_neural_networ
-
+* Gradient Descent for Spiking Neural Networks
+cite:huh_gradient_2018
 key idea: Replacing the non-differentiable model for membrane
 potential:
 
@@ -875,5 +875,4 @@ We divide time into short, discrete intervals $\delta t$. Then, we
 generate a sequence of random numbers $x[i]$ uniformly between 0
 and 1. For each interval, if $x[i] \le r \delta t$, generate a spike.
 
-* 
 bibliography:biblio.bib

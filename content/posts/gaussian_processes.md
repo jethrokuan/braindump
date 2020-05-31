@@ -1,9 +1,13 @@
 +++
 title = "Gaussian Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:11+08:00
+lastmod = 2020-05-31T20:19:57+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})
 
 In supervised learning, we are given training data \\(\mathcal{D}\\), and
 we need to learn a function \\(f\\) that can make predictions for all
@@ -36,3 +40,7 @@ the infinitely many other points.
 ## References {#references}
 
 - Gaussian Processes for Machine Learning
+
+### Backlinks {#backlinks}
+
+- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})

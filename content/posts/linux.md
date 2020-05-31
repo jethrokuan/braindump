@@ -1,9 +1,17 @@
 +++
 title = "Linux"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:37+08:00
+lastmod = 2020-05-31T20:21:04+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Nix/NixOS]({{< relref "nix" >}})
+- [Docker 101]({{< relref "docker" >}})
+- [Unix]({{< relref "unix" >}})
+- [Systems Programming]({{< relref "systems_programming" >}})
+- [Branch Prediction]({{< relref "branch_prediction" >}})
 
 - `127.0.1.1` in `/etc/hosts` is to allow some applications like Gnome to
   resolve the hostname to an ip address with a canonical fully
@@ -12,3 +20,11 @@ draft = false
   hostnames in the rules. Hence sudo requires both loopback and
   "real". ([Source](https://unix.stackexchange.com/questions/218145/why-does-sudo-need-the-loopback-interface))
 - `pkexec` lets authorized users execute programs as another user.
+
+## Backlinks {#backlinks}
+
+- [Nix/NixOS]({{< relref "nix" >}})
+- [Docker 101]({{< relref "docker" >}})
+- [Unix]({{< relref "unix" >}})
+- [Systems Programming]({{< relref "systems_programming" >}})
+- [Branch Prediction]({{< relref "branch_prediction" >}})

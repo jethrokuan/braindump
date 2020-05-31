@@ -1,7 +1,7 @@
 +++
 title = "XGBoost"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:55+08:00
+lastmod = 2020-05-31T20:19:43+08:00
 draft = false
 +++
 

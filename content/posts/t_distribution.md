@@ -1,7 +1,7 @@
 +++
 title = "t-distribution"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:25+08:00
+lastmod = 2020-05-31T20:19:13+08:00
 slug = "t_distribution"
 draft = false
 +++

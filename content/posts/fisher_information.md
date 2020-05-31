@@ -1,10 +1,14 @@
 +++
 title = "Fisher information"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:45+08:00
+lastmod = 2020-05-31T20:19:34+08:00
 slug = "fisher_information"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
 
 The Fisher information in a univariate model is given by:
 
@@ -18,3 +22,7 @@ matrix, has \\(ij\\) entry:
 \begin{equation}
 I\_{i j}(\boldsymbol{\theta})=-\mathrm{E}\_{\mathbf{Y} | \theta}\left[\frac{\partial^{2}}{\partial \theta\_{i} \partial \theta\_{j}} \log p(\boldsymbol{y} | \boldsymbol{\theta})\right]
 \end{equation}
+
+## Backlinks {#backlinks}
+
+- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})

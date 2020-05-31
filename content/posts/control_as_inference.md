@@ -1,9 +1,14 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:34+08:00
+lastmod = 2020-05-31T20:20:59+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
+- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
 
 tags
 : [Optimal Control and Planning]({{< relref "optimal_control" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -141,3 +146,8 @@ For more, see <a id="bf624e2cac020327e631eac77ec9f4e9" href="#levine18_reinf_lea
 # Bibliography
 
 <a id="levine18_reinf_learn_contr_as_probab_infer" target="_blank">Levine, S., _Reinforcement learning and control as probabilistic inference: Tutorial and review_, CoRR, _()_, (2018). </a> [↩](#bf624e2cac020327e631eac77ec9f4e9)
+
+### Backlinks {#backlinks}
+
+- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
+- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})

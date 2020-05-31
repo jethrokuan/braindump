@@ -1,7 +1,7 @@
 +++
 title = "The Svelte Compiler Handbook | Tan Li Hau"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:26+08:00
+lastmod = 2020-05-31T20:20:48+08:00
 draft = false
 +++
 

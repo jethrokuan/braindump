@@ -1,9 +1,15 @@
 +++
 title = "Emacs Lisp"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:29+08:00
+lastmod = 2020-05-31T20:19:17+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Emacs]({{< relref "emacs" >}})
+- [Elisp: Buffer-passing Style]({{< relref "elisp_buffer_passing_style" >}})
+- [Emacs Should Be Emacs Lisp - Tom Tromey]({{< relref "emacs_should_be_emacs_lisp" >}})
 
 tags
 : [Programming Languages]({{< relref "prog_lang" >}})
@@ -12,3 +18,9 @@ In preparation for submission to MELPA, one should run [package-lint](https://gi
 the code.
 
 - [GitHub - chrisdone/elisp-guide](https://github.com/chrisdone/elisp-guide)
+
+## Backlinks {#backlinks}
+
+- [Emacs]({{< relref "emacs" >}})
+- [Elisp: Buffer-passing Style]({{< relref "elisp_buffer_passing_style" >}})
+- [Emacs Should Be Emacs Lisp - Tom Tromey]({{< relref "emacs_should_be_emacs_lisp" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Non-parametric Filters"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:40+08:00
+lastmod = 2020-05-31T20:19:29+08:00
 draft = false
 +++
 

@@ -1,10 +1,14 @@
 +++
 title = "VFS for Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:32+08:00
+lastmod = 2020-05-31T20:20:56+08:00
 slug = "vfs_for_git"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Git Scalar]({{< relref "git_scalar" >}})
 
 VFS for [Git]({{< relref "git" >}}) is a virtualized filesystem used to bypass assumptions
 about repository size, allowing Git repositories to scale up to large
@@ -16,3 +20,7 @@ view of the working directory, and examining the commit history with
 git log.
 
 GVFS allows dynamically downloading objects as needed.
+
+## Backlinks {#backlinks}
+
+- [Git Scalar]({{< relref "git_scalar" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Data Structures and Algorithms"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:19+08:00
+lastmod = 2020-05-31T20:20:37+08:00
 draft = false
 +++
 

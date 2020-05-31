@@ -1,10 +1,28 @@
 +++
 title = "Reinforcement Learning ⭐"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:40+08:00
+lastmod = 2020-05-31T20:21:08+08:00
 tags = ["machine-learning"]
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Policy Gradients]({{< relref "policy_gradients" >}})
+- [Meta Learning]({{< relref "meta_learning" >}})
+- [Generalization In Reinforcement Learning]({{< relref "generalization_in_rl" >}})
+- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
+- [A Distributional Code for Value in Dopamine-based Reinforcement Learning]({{< relref "dabney2020_distributional_rl" >}})
+- [Neuroscience and Reinforcement Learning]({{< relref "neuroscience_rl" >}})
+- [Transfer Learning]({{< relref "transfer_learning" >}})
+- [Exploration In Reinforcement Learning]({{< relref "exploration_in_rl" >}})
+- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
+- [Free-Energy Reinforcement Learning]({{< relref "free_energy_rl" >}})
+- [Distributed Reinforcement Learning]({{< relref "distributed_rl" >}})
+- [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
+- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})
+- [Control As Inference]({{< relref "control_as_inference" >}})
+- [Q-Learning]({{< relref "q_learning" >}})
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}})
@@ -320,7 +338,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orgd45a78c) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org22a8606) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
@@ -350,3 +368,21 @@ Tutoring Systems
 - [Q-Learning]({{< relref "q_learning" >}})
 
 <biblio.bib>
+
+### Backlinks {#backlinks}
+
+- [Policy Gradients]({{< relref "policy_gradients" >}})
+- [Meta Learning]({{< relref "meta_learning" >}})
+- [Generalization In Reinforcement Learning]({{< relref "generalization_in_rl" >}})
+- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
+- [A Distributional Code for Value in Dopamine-based Reinforcement Learning]({{< relref "dabney2020_distributional_rl" >}})
+- [Neuroscience and Reinforcement Learning]({{< relref "neuroscience_rl" >}})
+- [Transfer Learning]({{< relref "transfer_learning" >}})
+- [Exploration In Reinforcement Learning]({{< relref "exploration_in_rl" >}})
+- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
+- [Free-Energy Reinforcement Learning]({{< relref "free_energy_rl" >}})
+- [Distributed Reinforcement Learning]({{< relref "distributed_rl" >}})
+- [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
+- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})
+- [Control As Inference]({{< relref "control_as_inference" >}})
+- [Q-Learning]({{< relref "q_learning" >}})

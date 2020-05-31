@@ -1,10 +1,14 @@
 +++
 title = "Concept Grounding"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:38+08:00
+lastmod = 2020-05-31T20:21:05+08:00
 slug = "concept_grounding"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Co-learning]({{< relref "colearning" >}})
 
 Conceptual grounding is the learning of semantic meanings or concepts
 via additional modalities. For example, while concept learning is
@@ -14,3 +18,7 @@ acoustic cues that can aid in grounding linguistic representations.
 Conceptual grounding is traditionally performed by finding a common
 latent space between representations, or by learning unimodal
 representations and then concatenating them.
+
+## Backlinks {#backlinks}
+
+- [Co-learning]({{< relref "colearning" >}})

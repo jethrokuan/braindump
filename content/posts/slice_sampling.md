@@ -1,7 +1,7 @@
 +++
 title = "Slice Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:49+08:00
+lastmod = 2020-05-31T20:19:37+08:00
 draft = false
 +++
 

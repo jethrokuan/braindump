@@ -1,10 +1,14 @@
 +++
 title = "Coding Interview Cheatsheet"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:22+08:00
+lastmod = 2020-05-31T20:20:08+08:00
 slug = "coding_interview_cheatsheet"
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [System Design]({{< relref "system_design" >}})
 
 ## Arrays {#arrays}
 
@@ -306,3 +310,7 @@ Python provides min-heap via `heapq`.
               if x not in seen:
                   stack.append(s)
 ```
+
+### Backlinks {#backlinks}
+
+- [System Design]({{< relref "system_design" >}})

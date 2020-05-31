@@ -1,9 +1,14 @@
 +++
 title = "Data Science"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:23+08:00
+lastmod = 2020-05-31T20:19:11+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Numpy]({{< relref "numpy" >}})
+- [Datacouncil.ai Conference Notes]({{< relref "data_council" >}})
 
 ## Twitter Data Science Event {#twitter-data-science-event}
 
@@ -179,3 +184,8 @@ Transliteration and languages are the next frontier of opportunity.
   - Systems (Hadoop, Distributed Systems)
   - Programming (Scala, Scalding, SQL)
   - Math (Statistics, Linear Algebra)
+
+### Backlinks {#backlinks}
+
+- [Numpy]({{< relref "numpy" >}})
+- [Datacouncil.ai Conference Notes]({{< relref "data_council" >}})

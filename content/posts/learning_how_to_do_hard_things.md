@@ -1,7 +1,7 @@
 +++
 title = "Learning How To Do Hard Things"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:27+08:00
+lastmod = 2020-05-31T20:20:48+08:00
 slug = "learning_how_to_do_hard_things"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Expectation Maximization and Mixture Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:21+08:00
+lastmod = 2020-05-31T20:20:08+08:00
 draft = false
 +++
 

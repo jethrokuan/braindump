@@ -1,9 +1,13 @@
 +++
 title = "Artificial Intelligence"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:37+08:00
+lastmod = 2020-05-31T20:19:25+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Machine Learning]({{< relref "machine_learning" >}})
 
 ## What is Artificial Intelligence? {#what-is-artificial-intelligence}
 
@@ -1259,3 +1263,7 @@ One can view the weights as the discrepancy between scaled rewards \\(r /
 
 In UREX, both the RAML objective and the expected reward objective is
 combined and jointly maximized.
+
+### Backlinks {#backlinks}
+
+- [Machine Learning]({{< relref "machine_learning" >}})

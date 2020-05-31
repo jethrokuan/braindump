@@ -1,9 +1,13 @@
 +++
 title = "Google Cartographer"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:35+08:00
+lastmod = 2020-05-31T20:19:23+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Robotics]({{< relref "robotics" >}})
 
 ## System Overview {#system-overview}
 
@@ -36,3 +40,7 @@ the optimization problem.
 # Bibliography
 
 <a id="googlecartographer" target="_blank">Hess, W., Kohler, D., Rapp, H., & Andor, D., _Real-time loop closure in 2D LIDAR SLAM_, In , 2016 {{IEEE}} International Conference on Robotics and Automation ({{ICRA}}) (pp. 1271–1278) (2016). : .</a> [↩](#2f17dae383ca00706c908bf72f9b4e21)
+
+### Backlinks {#backlinks}
+
+- [Robotics]({{< relref "robotics" >}})

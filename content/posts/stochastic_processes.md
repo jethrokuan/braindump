@@ -1,9 +1,14 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:18+08:00
+lastmod = 2020-05-31T20:20:36+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Neural Ordinary Differential Equations (Review)]({{< relref "neural_ode" >}})
+- [Markov Chains]({{< relref "markov_chains" >}})
 
 A stochastic process \\(X(t), t \in T\\) is a collection of random
 variables. For each \\(t \in T\\), \\(X(t)\\) is a random variable. The index
@@ -53,6 +58,11 @@ Example of stochastic process: Gambler's ruin
 
 # Bibliography
 
-<a id="ross2014introduction" target="_blank">Ross, S. M., _Introduction to probability models_ (2014), : {Academic press}.</a> [↩](#f5bf9e00e58b91654e7db48e02402403)
+<a id="ross2014introduction" target="_blank">Ross, S. M., _Introduction to probability models_ (2014), : Academic press.</a> [↩](#f5bf9e00e58b91654e7db48e02402403)
 
-<a id="pinsky2010introduction" target="_blank">Pinsky, M., & Karlin, S., _An introduction to stochastic modeling_ (2010), : {Academic press}.</a> [↩](#685088059011ecabed3f6b757f8161de)
+<a id="pinsky2010introduction" target="_blank">Pinsky, M., & Karlin, S., _An introduction to stochastic modeling_ (2010), : Academic press.</a> [↩](#685088059011ecabed3f6b757f8161de)
+
+### Backlinks {#backlinks}
+
+- [Neural Ordinary Differential Equations (Review)]({{< relref "neural_ode" >}})
+- [Markov Chains]({{< relref "markov_chains" >}})

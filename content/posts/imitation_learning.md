@@ -1,9 +1,13 @@
 +++
 title = "Imitation Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:24+08:00
+lastmod = 2020-05-31T20:19:12+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
 
 ## Behavioural Cloning {#behavioural-cloning}
 
@@ -84,3 +88,7 @@ Assuming: \\(\pi\_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathb
 # Bibliography
 
 <a id="haan19_causal_confus_imitat_learn" target="_blank">de Haan, P., Jayaraman, D., & Levine, S., _Causal confusion in imitation learning_, CoRR, _()_, (2019). </a> [↩](#97004a1ab6778a90f591ea58fde11d3c)
+
+### Backlinks {#backlinks}
+
+- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})

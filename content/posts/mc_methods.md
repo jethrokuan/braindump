@@ -1,7 +1,7 @@
 +++
 title = "Monte Carlo Methods"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:14+08:00
+lastmod = 2020-05-31T20:20:00+08:00
 draft = false
 +++
 

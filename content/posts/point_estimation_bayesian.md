@@ -1,9 +1,13 @@
 +++
 title = "Point Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:10+08:00
+lastmod = 2020-05-31T20:18:58+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
 
 tags
 : [Bayesian Statistics]({{< relref "bayesian_statistics" >}})
@@ -21,3 +25,7 @@ the posterior is also unimodal, then all 3 coincide.
 For asymmetric posteriors, the median is often preferred. The mode
 only considers the value corresponding to the maximum value of the
 density, while the mean may give too much weight to extreme outliers.
+
+## Backlinks {#backlinks}
+
+- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})

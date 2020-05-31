@@ -1,9 +1,14 @@
 +++
 title = "Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:27+08:00
+lastmod = 2020-05-31T20:20:13+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Git Scalar]({{< relref "git_scalar" >}})
+- [VFS for Git]({{< relref "vfs_for_git" >}})
 
 tags
 : [Unix]({{< relref "unix" >}}), [Version Control]({{< relref "version_control" >}})
@@ -43,3 +48,8 @@ tag
 ## Git Branching Models {#git-branching-models}
 
 [A successful Git branching model » nvie.com](https://nvie.com/posts/a-successful-git-branching-model/)
+
+### Backlinks {#backlinks}
+
+- [Git Scalar]({{< relref "git_scalar" >}})
+- [VFS for Git]({{< relref "vfs_for_git" >}})

@@ -1,9 +1,13 @@
 +++
 title = "Motion Model With Maps"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:51+08:00
+lastmod = 2020-05-31T20:19:39+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Velocity Motion Model]({{< relref "velocity_motion_model" >}})
 
 tags
 : [Velocity Motion Model]({{< relref "velocity_motion_model" >}}), [Odometry Motion Model]({{< relref "odometry_motion_model" >}})
@@ -23,3 +27,7 @@ small.
 \begin{equation}
 p\left(x\_{t} | u\_{t}, x\_{t-1}, m\right)=\eta p\left(x\_{t} | u\_{t}, x\_{t-1}\right) p\left(x\_{t} | m\right)
 \end{equation}
+
+## Backlinks {#backlinks}
+
+- [Velocity Motion Model]({{< relref "velocity_motion_model" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Documentation Generators"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:12+08:00
+lastmod = 2020-05-31T20:20:26+08:00
 draft = false
 +++
 

@@ -1,9 +1,14 @@
 +++
 title = "Leaky Integrate-And-Fire"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:39+08:00
+lastmod = 2020-05-31T20:21:07+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Synaptic Current Model]({{< relref "synaptic_current_model" >}})
+- [Evolving Spiking Neural Networks]({{< relref "evolving_snn" >}})
 
 tags
 : [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
@@ -38,3 +43,8 @@ Neurons emit spikes when the membrane voltage reaches firing threshold
 
 Equation [eq:lif](#eq:lif) only describes the dynamics of a LIF neuron
 sub-threshold.
+
+## Backlinks {#backlinks}
+
+- [Synaptic Current Model]({{< relref "synaptic_current_model" >}})
+- [Evolving Spiking Neural Networks]({{< relref "evolving_snn" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:06+08:00
+lastmod = 2020-05-31T20:18:54+08:00
 draft = false
 +++
 

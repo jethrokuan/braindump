@@ -1,9 +1,13 @@
 +++
 title = "Generalized Value Functions"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:49+08:00
+lastmod = 2020-05-31T20:21:22+08:00
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Options Framework]({{< relref "options_framework" >}})
 
 (TODO)
 
@@ -12,3 +16,7 @@ draft = false
   successor representation is given.
 - It is an example of a vectorized representation of a generalized
   value function
+
+## Backlinks {#backlinks}
+
+- [Options Framework]({{< relref "options_framework" >}})

@@ -1,9 +1,14 @@
 +++
 title = "PAC Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:28+08:00
+lastmod = 2020-05-31T20:19:16+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Rademacher Complexity]({{< relref "rademacher" >}})
+- [VC-Dimension]({{< relref "vc_dimension" >}})
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}})
@@ -302,3 +307,8 @@ learning theory states that in binary classification problems, uniform
 convergence is not only a sufficient condition for learnability, but
 is also a necessary condition. This is not the case for more general
 learning problems.
+
+### Backlinks {#backlinks}
+
+- [Rademacher Complexity]({{< relref "rademacher" >}})
+- [VC-Dimension]({{< relref "vc_dimension" >}})

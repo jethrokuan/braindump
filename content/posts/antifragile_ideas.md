@@ -1,7 +1,7 @@
 +++
 title = "Anti-fragile Ideas"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:17+08:00
+lastmod = 2020-05-31T20:20:33+08:00
 draft = false
 +++
 

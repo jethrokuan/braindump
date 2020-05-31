@@ -1,9 +1,15 @@
 +++
 title = "Importance Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:30+08:00
+lastmod = 2020-05-31T20:19:18+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Policy Gradients]({{< relref "policy_gradients" >}})
+- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
+- [Particle Filter]({{< relref "particle_filter" >}})
 
 Importance sampling does not allow us to generate samples from \\(p(x)\\),
 but allows us to estimate the expectation of a function \\(f(x)\\).
@@ -45,3 +51,9 @@ which adjust the importance of each point in the estimator:
         factors because probabilities of points, despite being in the
         typical set, still differ by factors of order
         \\(\mathrm{exp}(\sqrt{N})\\), where \\(N\\) is the number of dimensions.
+
+### Backlinks {#backlinks}
+
+- [Policy Gradients]({{< relref "policy_gradients" >}})
+- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
+- [Particle Filter]({{< relref "particle_filter" >}})

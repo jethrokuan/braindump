@@ -2,7 +2,7 @@
 #+TITLE: Machine Learning
 #+HUGO_TAGS: machine-learning
 
-* TOC
+* Table of Contents
 - [[file:nlp.org][Natural Language Processing]]
 
 * When do we need machine learning?

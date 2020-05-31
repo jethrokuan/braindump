@@ -1,9 +1,13 @@
 +++
 title = "Histogram Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:52:24+08:00
+lastmod = 2020-05-31T20:20:11+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
 
 The state space is decomposed into finitely many regions, and the
 cumulative posterior for each region is represented by a single
@@ -67,3 +71,7 @@ state space. A simple decomposition is a multi-dimensional grid.
   _Selective updating_ chooses a subset of grid cells to update for the
   posterior. These are the grid cells whose posterior probability
   exceeds some user-set threshold.
+
+### Backlinks {#backlinks}
+
+- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})

@@ -1,9 +1,13 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:42+08:00
+lastmod = 2020-05-31T20:21:12+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Evolving Connectionist Systems]({{< relref "evolving_connectionist_systems" >}})
 
 Early evolving [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) architectures use the [Leaky
 Integrate-And-Fire]({{< relref "leaky_integrate_and_fire" >}}) model, and rank-order encoding. eSNNs can be used for
@@ -29,3 +33,7 @@ comprehensive review.
 # Bibliography
 
 <a id="schliebs13_evolv_spikin_neural_networ_survey" target="_blank">Schliebs, S., & Kasabov, N., _Evolving spiking neural network-a survey_, Evolving Systems, _4(2)_, 87–98 (2013). http://dx.doi.org/10.1007/s12530-013-9074-9</a> [↩](#2517787d2e251f350f5882e3a5702fc7)
+
+### Backlinks {#backlinks}
+
+- [Evolving Connectionist Systems]({{< relref "evolving_connectionist_systems" >}})

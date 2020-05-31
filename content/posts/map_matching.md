@@ -1,9 +1,13 @@
 +++
 title = "Map Matching"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T01:09:42+08:00
+lastmod = 2020-05-31T20:21:11+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
 
 Map matching compiles small numbers of consecutive scans into
 local maps \\(m\_{\mathrm{local}}\\). Maps are then compared to the global
@@ -25,3 +29,7 @@ end-points.
 1.  No plausible physical explanation
 2.  Result of map matching may incorporate areas beyond actual
     measurement range.
+
+### Backlinks {#backlinks}
+
+- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})

@@ -1,10 +1,14 @@
 +++
 title = "Jeffreys Prior"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:12+08:00
+lastmod = 2020-05-31T20:19:00+08:00
 slug = "jeffreys_prior"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Reference Prior]({{< relref "reference_prior" >}})
 
 The Jeffrey's prior is an easy-to-compute reference prior that is
 invariant to transformation, used in [Bayesian Inference]({{< relref "bayesian_inference" >}}). If the model
@@ -27,3 +31,7 @@ where I is the [Fisher information matrix]({{< relref "fisher_information" >}}).
 dimensions is large, this method becomes cumbersome. A common approach
 is to obtain non-informative priors for the parameters individually,
 and form the joint prior as a product of these individual priors.
+
+## Backlinks {#backlinks}
+
+- [Reference Prior]({{< relref "reference_prior" >}})

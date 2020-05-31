@@ -1,10 +1,15 @@
 +++
 title = "Robotics Probabilistic Generative Laws"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:57+08:00
+lastmod = 2020-05-31T20:19:45+08:00
 tags = ["robotics"]
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Bayes Filter]({{< relref "bayes_filter" >}})
+- [Robotics]({{< relref "robotics" >}})
 
 ## Notation {#notation}
 
@@ -41,3 +46,8 @@ p(z_t | x\_{0:t}, z\_{1:t-1}, u\_{1:t}) = p(z_t | x_t)
 
 The measurement at time-step \\(t\\) is often just a noisy projection of
 the world state at time-step \\(t\\).
+
+### Backlinks {#backlinks}
+
+- [Bayes Filter]({{< relref "bayes_filter" >}})
+- [Robotics]({{< relref "robotics" >}})

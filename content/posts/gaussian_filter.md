@@ -1,9 +1,15 @@
 +++
 title = "Gaussian Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T02:57:57+08:00
+lastmod = 2020-05-31T20:19:45+08:00
 draft = false
 +++
+
+### Backlinks {#backlinks}
+
+- [Information Filter]({{< relref "information_filter" >}})
+- [Kalman Filter]({{< relref "kalman_filter" >}})
+- [Bayes Filter]({{< relref "bayes_filter" >}})
 
 Gaussian Filters is a tractable implementation of the Bayes filter
 ([Bayes Filter]({{< relref "bayes_filter" >}})) for continuous spaces.
@@ -41,3 +47,9 @@ These representations have a bijective mapping, and are functionally
 equivalent, but give rise to different algorithms.
 
 Using the moments representation gives rise to the [Kalman Filter]({{< relref "kalman_filter" >}}).
+
+### Backlinks {#backlinks}
+
+- [Information Filter]({{< relref "information_filter" >}})
+- [Kalman Filter]({{< relref "kalman_filter" >}})
+- [Bayes Filter]({{< relref "bayes_filter" >}})
