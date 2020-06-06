@@ -1,0 +1,9 @@
+#+SETUPFILE:./hugo_setup.org
+#+HUGO_SLUG: python_packaging
+#+TITLE: Python Packaging
+#+ROAM_KEY: https://packaging.python.org/overview/
+
+* [[https://packaging.python.org/tutorials/installing-packages/#id19][Python Distributions]]
+
+- sdist :: Source distribution packages are compressed archives containing one or more packages or modules
+- wheel :: A package format designed to ship libraries with compiled artifacts. The fastest installation option, preferred by ~pip~.

@@ -173,6 +173,22 @@
   publisher = {{springer}}
 }
 
+@article{blouw_benchmarking_2019,
+  title = {Benchmarking {{Keyword Spotting Efficiency}} on {{Neuromorphic Hardware}}},
+  author = {Blouw, Peter and Choo, Xuan and Hunsberger, Eric and Eliasmith, Chris},
+  year = {2019},
+  month = apr,
+  abstract = {Using Intel's Loihi neuromorphic research chip and ABR's Nengo Deep Learning toolkit, we analyze the inference speed, dynamic power consumption, and energy cost per inference of a two-layer neural network keyword spotter trained to recognize a single phrase. We perform comparative analyses of this keyword spotter running on more conventional hardware devices including a CPU, a GPU, Nvidia's Jetson TX1, and the Movidius Neural Compute Stick. Our results indicate that for this inference application, Loihi outperforms all of these alternatives on an energy cost per inference basis while maintaining equivalent inference accuracy. Furthermore, an analysis of tradeoffs between network size, inference speed, and energy cost indicates that Loihi's comparative advantage over other low-power computing devices improves for larger networks.},
+  annote = {Comment: Updated power measurements on Loihi after improvements to I/O speed. Updated discussion in light of results},
+  archivePrefix = {arXiv},
+  eprint = {1812.01739},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/2DLG3N7A/Blouw et al. - 2019 - Benchmarking Keyword Spotting Efficiency on Neurom.pdf;/home/jethro/Zotero/storage/54UJ72RY/1812.html},
+  journal = {arXiv:1812.01739 [cs, stat]},
+  keywords = {Computer Science - Machine Learning,Statistics - Machine Learning},
+  primaryClass = {cs, stat}
+}
+
 @article{borman2004expectation,
   title = {The Expectation Maximization Algorithm-a Short Tutorial},
   author = {Borman, Sean},
@@ -344,6 +360,23 @@
   author = {Dann, Christoph and Lattimore, Tor and Brunskill, Emma},
   year = {2017},
   pages = {5713--5723}
+}
+
+@article{davies_loihi_2018,
+  title = {Loihi: {{A Neuromorphic Manycore Processor}} with {{On}}-{{Chip Learning}}},
+  shorttitle = {Loihi},
+  author = {Davies, Mike and Srinivasa, Narayan and Lin, Tsung-Han and Chinya, Gautham and Cao, Yongqiang and Choday, Sri Harsha and Dimou, Georgios and Joshi, Prasad and Imam, Nabil and Jain, Shweta and Liao, Yuyun and Lin, Chit-Kwan and Lines, Andrew and Liu, Ruokun and Mathaikutty, Deepak and McCoy, Steven and Paul, Arnab and Tse, Jonathan and Venkataramanan, Guruguhanathan and Weng, Yi-Hsin and Wild, Andreas and Yang, Yoonseok and Wang, Hong},
+  year = {2018},
+  month = jan,
+  volume = {38},
+  pages = {82--99},
+  issn = {1937-4143},
+  doi = {10.1109/MM.2018.112130359},
+  abstract = {Loihi is a 60-mm2 chip fabricated in Intels 14-nm process that advances the state-of-the-art modeling of spiking neural networks in silicon. It integrates a wide range of novel features for the field, such as hierarchical connectivity, dendritic compartments, synaptic delays, and, most importantly, programmable synaptic learning rules. Running a spiking convolutional form of the Locally Competitive Algorithm, Loihi can solve LASSO optimization problems with over three orders of magnitude superior energy-delay-product compared to conventional solvers running on a CPU iso-process/voltage/area. This provides an unambiguous example of spike-based computation, outperforming all known conventional solutions.},
+  file = {/home/jethro/Zotero/storage/K68GKRLW/davies2018.pdf;/home/jethro/Zotero/storage/W945BY83/8259423.html},
+  journal = {IEEE Micro},
+  keywords = {Algorithm design and analysis,artificial intelligence,Biological neural networks,circuit optimisation,Computational modeling,Computer architecture,CPU iso-process-voltage-area,dendritic compartments,hierarchical connectivity,integrated circuit modelling,Intels process,LASSO optimization problems,learning (artificial intelligence),locally competitive algorithm,Loihi,machine learning,magnitude superior energy-delay-product,microprocessor chips,multiprocessing systems,neural chips,neuromorphic computing,neuromorphic manycore processor,Neuromorphics,Neurons,on-chip learning,programmable synaptic learning rules,size 14 nm,spike-based computation,spiking neural networks,synaptic delays},
+  number = {1}
 }
 
 @article{davies2018loihi,
