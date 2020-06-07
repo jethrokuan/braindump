@@ -1,7 +1,7 @@
 +++
 title = "How To Take Smart Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:06+08:00
+lastmod = 2020-06-07T17:26:05+08:00
 draft = false
 +++
 

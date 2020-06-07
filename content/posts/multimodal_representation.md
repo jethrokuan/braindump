@@ -1,15 +1,15 @@
 +++
 title = "Multi-modal Representation"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:57+08:00
+lastmod = 2020-06-07T17:25:53+08:00
 slug = "multimodal_representation"
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Canonical Correlation Analysis]({{< relref "canonical_correlation_analysis" >}})
 - [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
+- [Canonical Correlation Analysis]({{< relref "canonical_correlation_analysis" >}})
 - [Co-learning]({{< relref "colearning" >}})
 
 tags
@@ -97,9 +97,3 @@ order in the multimodal space. Another special case of this is
 # Bibliography
 
 <a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\v saitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: A survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
-
-### Backlinks {#backlinks}
-
-- [Canonical Correlation Analysis]({{< relref "canonical_correlation_analysis" >}})
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
-- [Co-learning]({{< relref "colearning" >}})

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Systems Programming
+#+setupfile: ./hugo_setup.org
+#+title: Systems Programming
 
 - tags :: [[file:operating_systems.org][Operating Systems]], [[file:linux.org][Linux]]
 

@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: web_performance
-#+TITLE: Web Performance
+#+setupfile:./hugo_setup.org
+#+hugo_slug: web_performance
+#+title: Web Performance
 
 - tags :: [[file:web_dev.org][Web Development]]
 

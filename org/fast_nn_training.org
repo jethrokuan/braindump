@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Fast Neural Network Training
+#+setupfile:./hugo_setup.org
+#+title: Fast Neural Network Training

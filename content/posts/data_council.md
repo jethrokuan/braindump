@@ -1,7 +1,7 @@
 +++
 title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:31+08:00
+lastmod = 2020-06-07T17:26:37+08:00
 draft = false
 +++
 

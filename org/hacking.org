@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Hacking
+#+setupfile: ./hugo_setup.org
+#+title: Hacking
 
 * Search engines for Hackers
 cite:trimstray_se_hackers

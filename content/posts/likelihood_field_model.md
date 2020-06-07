@@ -1,14 +1,14 @@
 +++
 title = "Likelihood Field Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:32+08:00
+lastmod = 2020-06-07T17:26:39+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Range Finder Model]({{< relref "range_finder_model" >}})
 - [Map Matching]({{< relref "map_matching" >}})
+- [Range Finder Model]({{< relref "range_finder_model" >}})
 
 tags
 : [Map Matching]({{< relref "map_matching" >}})
@@ -39,8 +39,3 @@ z\_{\mathrm{hit}} \cdot p\_{\mathrm{hit}}+z\_{\mathrm{rand}} \cdot p\_{\mathrm{r
 3.  Does not account for map uncertainty
 
 These issues can be addressed via extensions to the algorithm.
-
-### Backlinks {#backlinks}
-
-- [Range Finder Model]({{< relref "range_finder_model" >}})
-- [Map Matching]({{< relref "map_matching" >}})

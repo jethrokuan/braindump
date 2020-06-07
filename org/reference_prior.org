@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: reference_prior
-#+TITLE: Reference Prior
+#+setupfile:./hugo_setup.org
+#+hugo_slug: reference_prior
+#+title: Reference Prior
 
 The notion of reference prior is similar to that of a [[file:noninformative_priors.org][non-informative
 prior]], but there are subtle differences. The uniform prior is arguably

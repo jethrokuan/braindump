@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Databases
-#+HUGO_TAGS: database 
+#+setupfile: ./hugo_setup.org
+#+title: Databases
+#+hugo_tags: database
 
 * How ~JOINs~ work
 

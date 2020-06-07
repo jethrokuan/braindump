@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: simclr
-#+ROAM_BIBKEYS: cite:chen20_simpl_framew_contr_learn_visual_repres
-#+TITLE: SimCLR
+#+setupfile:./hugo_setup.org
+#+hugo_slug: simclr
+#+roam_bibkeys: cite:chen20_simpl_framew_contr_learn_visual_repres
+#+title: SimCLR
 
 - tags :: [[file:unsupervised_learning.org][Unsupervised Learning]] 
 

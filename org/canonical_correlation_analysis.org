@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: canonical_correlation_analysis
-#+TITLE: Canonical Correlation Analysis
+#+setupfile:./hugo_setup.org
+#+hugo_slug: canonical_correlation_analysis
+#+title: Canonical Correlation Analysis
 
 Canonical Correlation Analysis computes a linear projection which
 maximizes the correlation between two random variables andn enforces

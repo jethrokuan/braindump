@@ -1,11 +1,11 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: https://www.the-tls.co.uk/articles/the-opt-out-illusion/
-#+HUGO_SLUG: the_opt_out_illusion_technology_tls
-#+TITLE: The opt-out illusion - Technology - TLS
+#+setupfile:./hugo_setup.org
+#+roam_key: https://www.the-tls.co.uk/articles/the-opt-out-illusion/
+#+hugo_slug: the_opt_out_illusion_technology_tls
+#+title: The opt-out illusion - Technology - TLS
 
 - source :: https://www.the-tls.co.uk/articles/the-opt-out-illusion/
 - tags :: [[file:../privacy.org][Privacy]]
 
-#+BEGIN_QUOTE
+#+begin_quote
 Opting out is an illusion. The extraction of our behavioural data is non-negotiable.
-#+END_QUOTE
+#+end_quote

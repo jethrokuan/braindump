@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Q-Learning 
+#+setupfile:./hugo_setup.org
+#+title: Q-Learning
 
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:td_learning.org][Temporal Difference Learning]], [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
@@ -157,7 +157,7 @@ gradient clipping. See [[file:mnih2013_atari_deeprl.org][Playing Atari with Deep
 
 * Double DQN
 
-#+CAPTION: The predicted Q-values are much higher than the true Q-values
+#+caption: The predicted Q-values are much higher than the true Q-values
 [[file:images/q_learning/screenshot2019-12-17_15-54-23_.png]]
 
 It has been shown imperatively that the learnt Q-values are

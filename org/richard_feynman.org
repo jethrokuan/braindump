@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: richard_feynman
-#+TITLE: Richard Feynman
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: richard_feynman
+#+title: Richard Feynman

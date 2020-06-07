@@ -1,14 +1,14 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:14+08:00
+lastmod = 2020-06-07T17:26:15+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Deep Reinforcement Learning That Matters]({{< relref "henderson_deep_rl_that_matters" >}})
 - [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+- [Deep Reinforcement Learning That Matters]({{< relref "henderson_deep_rl_that_matters" >}})
 
 tags
 : [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -105,8 +105,3 @@ or algorithms that adaptively adjust parameters:
 <a id="schulman15_high_dimen_contin_contr_using" target="_blank">Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., _High-Dimensional Continuous Control Using Generalized Advantage Estimation_, CoRR, _()_, (2015). </a> [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
 
 <a id="gu16_q_prop" target="_blank">Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., _Q-prop: Sample-efficient policy gradient with an off-policy critic_, CoRR, _()_, (2016). </a> [↩](#23ad5881923885616b0afd34dad9df52)
-
-### Backlinks {#backlinks}
-
-- [Deep Reinforcement Learning That Matters]({{< relref "henderson_deep_rl_that_matters" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

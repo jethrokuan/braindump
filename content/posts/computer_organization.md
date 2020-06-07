@@ -1,7 +1,7 @@
 +++
 title = "Computer Organization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:56+08:00
+lastmod = 2020-06-07T17:27:13+08:00
 draft = false
 +++
 

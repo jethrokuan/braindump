@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: System Design
+#+setupfile: ./hugo_setup.org
+#+title: System Design
 
 - tags :: [[file:software_engineering.org][Software Engineering]], [[file:coding_interview_cheatsheet.org][Coding Interview Cheatsheet]]
 

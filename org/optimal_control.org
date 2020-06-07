@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Optimal Control and Planning
+#+setupfile:./hugo_setup.org
+#+title: Optimal Control and Planning
 
 How can we make decisions if we know the dynamics of the environment?
 

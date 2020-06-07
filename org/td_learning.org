@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Temporal Difference Learning
-#+ROAM_ALIAS: "TD Learning"
+#+setupfile:./hugo_setup.org
+#+title: Temporal Difference Learning
+#+roam_alias: "TD Learning"
 
 Observe samples $\left(s_t, a_t, r_t, s_{t+1} \right)$. If value
 estimates are accurate, the following must hold:

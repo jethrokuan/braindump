@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Laplace's Method
+#+setupfile:./hugo_setup.org
+#+title: Laplace's Method
 
 Suppose we have an unnormalized probability density $P^\star(x)$,
 whose normalizing constant:

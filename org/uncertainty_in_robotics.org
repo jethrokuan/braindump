@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Uncertainty in Robotics
+#+setupfile: ./hugo_setup.org
+#+title: Uncertainty in Robotics
 
 Robotic applications increasingly deal with more unstructured
 environments. Robots that can perceive and deal with uncertainty are
@@ -13,10 +13,10 @@ Uncertainty arises from:
 - Models :: models of the world inherently inaccurate
 - Computation :: many algorithms are approximate
 
-#+BEGIN_QUOTE
+#+begin_quote
 A robot that carries a notion of its own uncertainty that acts
 accordingly is superior to one that does not.
-#+END_QUOTE
+#+end_quote
 
 cite:thrun2005probabilistic
 

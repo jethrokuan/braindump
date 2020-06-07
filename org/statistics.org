@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Statistics
-#+AUTHOR: Jethro Kuan
+#+setupfile: ./hugo_setup.org
+#+title: Statistics
+#+author: Jethro Kuan
 
 * Basic Properties
 1. $E(X) = \sum x p(x)$
@@ -27,9 +27,9 @@ Let $S_n = \sum^{n}_{i=1}X_i$ where $X_1, X_2, ..., X_n$ IID.
 $\frac{S_n - n\mu}{\sqrt{n}\sigma} \xrightarrow[n]{\infty} \mathcal{N}(0,1)$
 * Distributions
 ** Poisson($\lambda$)
-#+BEGIN_EXPORT latex
+#+begin_export latex
 $Pr(X = k) = \frac{\lambda^{k} e^{-\lambda}}{k!}, k = 0,1,...$
-#+END_EXPORT
+#+end_export
 
 $E(X) = Var(X) = \lambda$
 ** Normal $X \sim \mathcal{N}(\mu, \sigma^2)$
@@ -77,11 +77,11 @@ Let $U \sim \chi_m^2, V \sim \chi_n^2$ be independent, $W =
 If $X \sim t_n$, $X^2 = \frac{\mathcal{Z}/1}{U_n/n}$ is an F
 distribution with (1,n) d.f, with $w \ge 0$:
 
-#+BEGIN_EXPORT latex
+#+begin_export latex
 $f(w) = \frac{\Gamma([(n+1)/2])}{\Gamma(m/2)\Gamma(n/2)}
 \frac{m}{n}^{\frac{m}{2}}w^{\frac{m}{2}-1}\left(1 +
 \frac{m}{n}w\right)^{-\frac{m+n}{2}}$
-#+END_EXPORT
+#+end_export
 
 For $n > 2$, $E(W) = \frac{n}{n-2}$
 * Sampling

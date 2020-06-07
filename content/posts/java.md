@@ -1,7 +1,7 @@
 +++
 title = "Java"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:48+08:00
+lastmod = 2020-06-07T17:27:02+08:00
 draft = false
 +++
 

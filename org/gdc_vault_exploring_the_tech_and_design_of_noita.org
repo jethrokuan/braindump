@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: GDC Vault - Exploring the Tech and Design of 'Noita'
-#+ROAM_KEY: https://www.gdcvault.com/play/1025695/Exploring-the-Tech-and-Design
+#+setupfile: ./hugo_setup.org
+#+title: GDC Vault - Exploring the Tech and Design of 'Noita'
+#+roam_key: https://www.gdcvault.com/play/1025695/Exploring-the-Tech-and-Design
 
 - speaker :: [[file:petri_purho.org][Petri Purho]]
 - company :: [[file:nolla_games.org][Nolla Games]]

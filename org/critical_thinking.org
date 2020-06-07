@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Critical Thinking
+#+setupfile: ./hugo_setup.org
+#+title: Critical Thinking
 
 * Introduction
 Critical thinking is reasonable and reflective thinking focused on

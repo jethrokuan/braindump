@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Machine Learning Algorithms
+#+setupfile:./hugo_setup.org
+#+title: Machine Learning Algorithms

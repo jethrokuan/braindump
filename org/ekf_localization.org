@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: EKF Localization
+#+setupfile:./hugo_setup.org
+#+title: EKF Localization
 
 - tags :: [[file:robot_localization.org][Robot Localization]], [[file:markov_localization.org][Markov Localization]], [[file:grid_mc_localization.org][Grid & Monte Carlo Localization]]
 

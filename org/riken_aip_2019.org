@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Riken AIP Workshop 2019
+#+setupfile:./hugo_setup.org
+#+title: Riken AIP Workshop 2019
 
 * Weakly Supervised Classification
 

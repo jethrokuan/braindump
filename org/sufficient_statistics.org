@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Sufficient Statistics
+#+setupfile:./hugo_setup.org
+#+title: Sufficient Statistics
 
 A statistic $t$ is called a sufficient statistic for $\theta$ for a
 given $\boldsymbol{y}$ if:

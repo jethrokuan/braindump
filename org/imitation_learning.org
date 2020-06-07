@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Imitation Learning
+#+setupfile:./hugo_setup.org
+#+title: Imitation Learning
 
 * Behavioural Cloning
 
@@ -45,7 +45,7 @@ the algorithm, can we make $p_{data}(o_t) = p_{\pi_\theta}(o_t)$?
          input)
       3. Autoregressive discretization
 
-#+CAPTION: Autoregressive Discretization discretizes one dimension of the action space at a time
+#+caption: Autoregressive Discretization discretizes one dimension of the action space at a time
 [[file:images/imitation_learning/screenshot2019-12-15_14-39-49_.png]]
 
 
@@ -77,7 +77,7 @@ The number of mistakes go up quadratically in the worst case:
 
 Assuming: $\pi_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathbf{s}\right) \leq \epsilon$
 
-#+CAPTION: The tightrope walking problem
+#+caption: The tightrope walking problem
 [[file:images/imitation_learning/screenshot2019-12-15_14-50-49_.png]]
 
 bibliography:biblio.bib

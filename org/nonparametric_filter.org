@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Non-parametric Filters
+#+setupfile: ./hugo_setup.org
+#+title: Non-parametric Filters
 
 - tags :: [[file:bayes_filter.org][Bayes Filter]], [[file:particle_filter.org][Particle Filter]], [[file:histogram_filter.org][Histogram Filter]]
 

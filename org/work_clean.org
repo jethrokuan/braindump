@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Work Clean
+#+setupfile:./hugo_setup.org
+#+title: Work Clean
 
 - title :: Work Clean
 - author :: Dan Charnas

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Security
+#+setupfile: ./hugo_setup.org
+#+title: Security
 * Exploitation (Halvar Flake)
 - Phrack
 - Stack Smashing

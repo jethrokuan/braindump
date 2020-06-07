@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: writing_with_zettekasten
-#+TITLE: Writing with Zettekasten
+#+setupfile:./hugo_setup.org
+#+hugo_slug: writing_with_zettekasten
+#+title: Writing with Zettekasten
 
 The status quo for [[file:writing.org][writing]] is:
 

@@ -1,5 +1,5 @@
-#+PROPERTY: ANKI_DECK Multivariable Calculus
-#+TITLE: Flashcards: Multivariable Calculus
+#+property: ANKI_DECK Multivariable Calculus
+#+title: Flashcards: Multivariable Calculus
 
 * Vectors, Lines & Planes
 ** Important Properties
@@ -824,7 +824,7 @@ where $g_1(x)$, $g_2(x)$ are continuous on $[a, b]$.
 ***** Front
 Type of Region?
 
-#+DOWNLOADED: screenshot @ 2020-03-10 15:23:04
+#+downloaded: screenshot @ 2020-03-10 15:23:04
 [[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-23-04_.png]]
 
 ***** Back
@@ -839,7 +839,7 @@ Type I
 ***** Front
 Type of Region?
 
-#+DOWNLOADED: screenshot @ 2020-03-10 15:23:37
+#+downloaded: screenshot @ 2020-03-10 15:23:37
 [[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-23-37_.png]]
 
 ***** Back
@@ -854,7 +854,7 @@ Type I
 ***** Front
 Type of Region?
 
-#+DOWNLOADED: screenshot @ 2020-03-10 15:24:13
+#+downloaded: screenshot @ 2020-03-10 15:24:13
 [[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-24-13_.png]]
 
 ***** Back
@@ -885,7 +885,7 @@ where $h_1(y)$ and $h_2(y)$ are continuous on $[c,d]$.
 ***** Front
 Type of Region?
 
-#+DOWNLOADED: screenshot @ 2020-03-10 15:26:42
+#+downloaded: screenshot @ 2020-03-10 15:26:42
 [[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-26-42_.png]]
 
 ***** Back
@@ -900,7 +900,7 @@ Type II
 ***** Front
 Type of Region?
 
-#+DOWNLOADED: screenshot @ 2020-03-10 15:27:10
+#+downloaded: screenshot @ 2020-03-10 15:27:10
 [[file:images/flashcards_multivariable_calculus/screenshot2020-03-10_15-27-10_.png]]
 
 ***** Back

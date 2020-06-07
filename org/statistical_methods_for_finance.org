@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Statistical Methods for Finance
+#+setupfile: ./hugo_setup.org
+#+title: Statistical Methods for Finance
 
 - tags :: [[file:finance.org][Finance]]
 

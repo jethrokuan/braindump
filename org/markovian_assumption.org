@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Markovian Assumption
+#+setupfile: ./hugo_setup.org
+#+title: Markovian Assumption
 
 *Key idea*: the past and future data are independent, conditioned on the
  present.

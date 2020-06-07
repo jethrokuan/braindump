@@ -1,7 +1,7 @@
 +++
 title = "Neural Ordinary Differential Equations (Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:25+08:00
+lastmod = 2020-06-07T17:28:59+08:00
 draft = false
 +++
 

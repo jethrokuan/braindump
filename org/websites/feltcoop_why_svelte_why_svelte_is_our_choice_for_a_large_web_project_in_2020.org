@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: https://github.com/feltcoop/why-svelte
-#+HUGO_SLUG: why_svelte_why_svelte_is_our_choice_for_a_large_web_project_in_2020
-#+TITLE: Why Svelte is our choice for a large web project in 2020
+#+setupfile:./hugo_setup.org
+#+roam_key: https://github.com/feltcoop/why-svelte
+#+hugo_slug: why_svelte_why_svelte_is_our_choice_for_a_large_web_project_in_2020
+#+title: Why Svelte is our choice for a large web project in 2020
 
 - source :: https://github.com/feltcoop/why-svelte
 - tag :: [[file:../web_dev.org][Web Development]], [[file:../svelte.org][Svelte]]

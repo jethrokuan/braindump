@@ -1,7 +1,7 @@
 +++
 title = "Gibbs Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:22+08:00
+lastmod = 2020-06-07T17:27:46+08:00
 draft = false
 +++
 
@@ -25,7 +25,3 @@ involves sampling one parameter at a time:
 
 1.  Suffers the same defects as [Metropolis-Hastings methods]({{< relref "metropolis_hastings" >}})
 2.  No adjustable parameters, so it's easy to start with
-
-### Backlinks {#backlinks}
-
-- [Slice Sampling]({{< relref "slice_sampling" >}})

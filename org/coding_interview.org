@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Coding Interview Preparation
+#+setupfile: ./hugo_setup.org
+#+title: Coding Interview Preparation
 
 * Data Structures Review
   Integers in Python
@@ -15,19 +15,19 @@ specified in =sys.float_info=.
 
 **** Bit Manipulation
 Computing the parity of a word.
-#+BEGIN_SRC python
+#+begin_src python
   def parity(x):
       result = 0
       while x:
           result ^= x & 1
           x >>= 1
       return result
-#+END_SRC
+#+end_src
 
 =x &= x - 1= Drops the lowest set bit of x. 
 
 The parity of 11011111 is the same as the parity of 1101 XORed with 1111.
-#+BEGIN_SRC python
+#+begin_src python
   def parity(x):
       x ^= x >> 32
       x ^= x >> 16
@@ -36,19 +36,19 @@ The parity of 11011111 is the same as the parity of 1101 XORed with 1111.
       x ^= x >> 2
       x ^= x >> 1
       return x & 0x1
-#+END_SRC
+#+end_src
 
 With time complexity of $O(\log n)$.
 
 **** Swapping Bits
-#+BEGIN_SRC python
+#+begin_src python
   def swap_bits(x, i, j):
       if (x >> i) & 1 != (x >> j) & 1: # if ith and jth bits differ
           bit_mask = (1 << i) | (1 << j)
           x ^= bit_mask
       return x
         
-#+END_SRC
+#+end_src
 **** Cheatsheet
 
 | expression | output                           |
@@ -66,37 +66,37 @@ new array with additional memory and copying over the entries from the
 original array.
 
 ** Linked List
-#+BEGIN_SRC python
+#+begin_src python
   class ListNode(object):
       def __init__(self, data=0, next_node=None):
           self.data = data
           self.next = next_node
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   def search_list(L, key):
       while L and L.data != key:
           L = L.next
       return L
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   def insert_after(node, new_node):
       new_node.next = node.next
       node.next = new_node
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   def delete_after(node):
       # Need to make sure there is something after to delete
       if node.next:
           node.next = node.next.next
-#+END_SRC
+#+end_src
 
 ** Queues
 
 *** Queues with Circular Buffer
-#+BEGIN_SRC python
+#+begin_src python
   class Queue:
       SCALING_FACTOR = 2
 
@@ -128,7 +128,7 @@ original array.
       @property
       def size(self):
           return self._num_queue_elements
-#+END_SRC
+#+end_src
 * Common Questions
 
 ** Find kth largest in array                                             :fc:
@@ -143,7 +143,7 @@ original array.
 | position | ease | box | interval | due |
 |----------+------+-----+----------+-----|
 :END:
-#+BEGIN_SRC python
+#+begin_src python
   import operator
 
   # The numbering starts from one, i.e., if A = [3, 1, -1, 2]
@@ -186,9 +186,9 @@ original array.
           raise IndexError('no k-th node in array A')
 
       return find_kth(operator.gt)
-#+END_SRC
+#+end_src
 
-#+RESULTS:
+#+results:
 
 ** Boyer-Moore String Search Algorithm
 The problem is to find a occurrences of string ~p~ in ~t~. The pattern ~p~
@@ -201,13 +201,13 @@ alignments.
 *Bad character rule*: Upon mismatch, skip alignments until (a) mismatch
 becomes a match (b) ~p~ moves past mismatched character
 
-#+BEGIN_SRC text
+#+begin_src text
   T: GCTTCTGCTATCTCTC
   P: CCTTTTGC
          ^ mismatch (right-to-left character comparison)
       ^ earliest C to make mismatch match
          CCTTTTGC
-#+END_SRC
+#+end_src
 
 *Good suffix rule*: Let ~t~ = matched by inner loop; skip until (a) there
 are no mismatches between ~p~ and ~t~, or (b) ~p~ moves past ~t~
@@ -216,7 +216,7 @@ Another linear-time string search algorithm is the [[https://en.wikipedia.org/wi
 algorithm]], which uses a rolling hash.
 
 ** Delete Duplicates in Linked List
-#+BEGIN_SRC python
+#+begin_src python
   def deleteDuplicates(A):
       head = A
       while A:
@@ -224,7 +224,7 @@ algorithm]], which uses a rolling hash.
               A.next = A.next.next
           A = A.next
       return head
-#+END_SRC
+#+end_src
 
 ** Longest Increasing Subsequence (LIS)
 
@@ -235,7 +235,7 @@ element of the LIS.
 Then $L(i) = 1 + max(L[j])$ where $0 < j < i$ and $arr[j] < arr[i]$ or
 $L[i] = 1$ if no such $j$ exists.
 
-#+BEGIN_SRC python
+#+begin_src python
   def longest_increasing_subsequence(arr):
       l = len(arr)
       # Initialize LIS
@@ -247,10 +247,10 @@ $L[i] = 1$ if no such $j$ exists.
                   lis[i] = max(lis[i], lis[j] + 1)
 
       return max(lis)
-#+END_SRC
+#+end_src
 
 ** Generating a Random Sample
-#+BEGIN_SRC python
+#+begin_src python
   import random
 
   def random_sample(k, A):
@@ -259,7 +259,7 @@ $L[i] = 1$ if no such $j$ exists.
           r = random.randint(i, len(A)-1)
           A[i], A[r] = A[r], A[i]
       return A[:k]
-#+END_SRC
+#+end_src
 
 ** Generate a random sample from a stream
 
@@ -267,7 +267,7 @@ The basic idea is that given the ~n+1~ element, and a random subset of
 size ~k~, where ~k<n~, then that element should belong to that new subset
 with probability ~k/(n+1)~.
 
-#+BEGIN_SRC python
+#+begin_src python
   import random
 
   def online_random_sample(it, A):
@@ -282,28 +282,28 @@ with probability ~k/(n+1)~.
               sampling_results[idx_to_replace] = x
 
       return sampling_results
-#+END_SRC
+#+end_src
 
 ** Checking sub-sequence
-#+BEGIN_SRC python :results output
+#+begin_src python :results output
   def is_subsequence(st, seq):
       it = iter(st)
       return all(c in it for c in seq)
 
   print(is_subsequence("hello", "el"))
   print(is_subsequence("hello", "no"))
-#+END_SRC
+#+end_src
 
-#+RESULTS:
+#+results:
 : True
 : False
 ** Flatten a List
-#+BEGIN_SRC python
+#+begin_src python
   def flatten(arr):
       return [item for sublist in l for item in sublist]
-#+END_SRC
+#+end_src
 ** has two sum
-#+BEGIN_SRC python
+#+begin_src python
   def has_two_sum(A, t):
       i, j = 0, len(A) - 1
 
@@ -315,11 +315,11 @@ with probability ~k/(n+1)~.
           else:  # A[i] + A[j] > t.
               j -= 1
       return False
-#+END_SRC
+#+end_src
 
 has three sum is the same, sort the array and run has two sum.
 ** Big Integer Multiply
-#+BEGIN_SRC python
+#+begin_src python
   def multiply(num1, num2):
       sign = -1 if (num1[0] < 0) ^ (num2[0] < 0) else 1
       num1[0] = abs(num1[0])
@@ -336,7 +336,7 @@ has three sum is the same, sort the array and run has two sum.
           i for i, x in enumerate(result) if x != 0), len(result)):] or [0]
       result[0] *= sign
       return result
-#+END_SRC
+#+end_src
 ** Next Permutation                                                      :fc:
 :PROPERTIES:
 :FC_CREATED: 2020-02-24T11:38:47Z
@@ -349,7 +349,7 @@ has three sum is the same, sort the array and run has two sum.
 | position | ease | box | interval | due |
 |----------+------+-----+----------+-----|
 :END:
-#+BEGIN_SRC python
+#+begin_src python
   def next_permutation(perm):
 
       # Find the first entry from the right that is smaller than the entry
@@ -374,4 +374,4 @@ has three sum is the same, sort the array and run has two sum.
       # so we simply reverse these entries to get the smallest dictionary order.
       perm[inversion_point + 1:] = reversed(perm[inversion_point + 1:])
       return perm
-#+END_SRC
+#+end_src

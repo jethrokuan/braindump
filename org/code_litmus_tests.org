@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Code Litmus Tests
+#+setupfile:./hugo_setup.org
+#+title: Code Litmus Tests
 
 - tags :: [[file:software_engineering.org][Software Engineering]]
 

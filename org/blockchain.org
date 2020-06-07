@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Blockchain
+#+setupfile: ./hugo_setup.org
+#+title: Blockchain
 
 * Stellar
 - Payment-focused crypto-currency.

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Linear Algebra
+#+setupfile: ./hugo_setup.org
+#+title: Linear Algebra
 
 * Definitions
 A matrix of dimensions M-by-N looks like:
@@ -79,7 +79,7 @@ Under a linear transformation, grid lines remain parallel and evenly
 spaced. This property allows us to compute the transformed vector,
 only by recording how the basis vectors are transformed.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 14:32:57
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 14:32:57
 [[file:images/linear_algebra/screenshot_2018-08-25_14-32-57.png]]
 
 * Matrix Multiplication as Composition
@@ -88,10 +88,10 @@ transformations composed together, for example, a rotation, followed
 by a shear. The composition of linear transformations is also a linear
 transformation, and can be described with a single matrix (see above).
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 14:36:56
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 14:36:56
 [[file:images/linear_algebra/screenshot_2018-08-25_14-36-56.png]]
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 14:41:53
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 14:41:53
 [[file:images/linear_algebra/screenshot_2018-08-25_14-41-53.png]]
 
 Hence, we can think about matrix multiplication as computing where the
@@ -107,7 +107,7 @@ of a unit square. If the determinant is negative, then the orientation
 of the resulting grid space is reversed.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 15:28:49
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 15:28:49
 [[file:images/linear_algebra/screenshot_2018-08-25_15-28-49.png]]
 
 In 3D space, the determinant is the volume of the parallelpiped. 
@@ -133,7 +133,7 @@ det \left( \begin{bmatrix}
 
 * Matrices for solving linear equations
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 15:40:10
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 15:40:10
 [[file:images/linear_algebra/screenshot_2018-08-25_15-40-10.png]]
 
 Suppose we want to compute $\vec{x}$ such that $A\vec{x} = \vec{v}$.
@@ -173,14 +173,14 @@ and we want to project it onto $\hat{\mu}$. By symmetry, it's the same
 value as when $\hat{\mu}$ is projected onto $\hat{i}$. However, this is
 just the $x$ coordinate value of $\hat{\mu}$.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:03:15
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 16:03:15
 [[file:images/linear_algebra/screenshot_2018-08-25_16-03-15.png]]
 
 Hence, $\hat{i}$ and $\hat{j}$ land at $\mu_x$ and $\mu_y$ respectively. We
 can easily see the duality between matrix-vector product and dot
 product here.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:05:08
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 16:05:08
 [[file:images/linear_algebra/screenshot_2018-08-25_16-05-08.png]]
 
 
@@ -201,17 +201,17 @@ parallelogram obtained by duplicating and shifting the two vectors.
 The sign of the cross product is determined using the right-hand rule.
 This vector is perpendicular to the parallelogram.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:29:46
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 16:29:46
 [[file:images/linear_algebra/screenshot_2018-08-25_16-29-46.png]]
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:33:08
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 16:33:08
 [[file:images/linear_algebra/screenshot_2018-08-25_16-33-08.png]]
 
 We want to find the dual vector $\hat{p}$ that corresponds to the
 cross product.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 16:39:00
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 16:39:00
 [[file:images/linear_algebra/screenshot_2018-08-25_16-39-00.png]]
 
 * How to translate a matrix
@@ -336,7 +336,7 @@ representing the strength of each concept, where $r$ is the rank of
 the matrix $A$. $V$ stores the right singular vectors, consisting of
 $n$ terms and $r$ concepts.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-25 17:26:42
+#+downloaded: /tmp/screenshot.png @ 2018-08-25 17:26:42
 [[file:images/linear_algebra/screenshot_2018-08-25_17-26-42.png]]
 
 It is always possible to decompose a real matrix $A$ into $A = U \Sigma
@@ -364,7 +364,7 @@ non-zero solution equal to the linear combination of the last few rows
 of $V^T$ corresponding to zero singular values.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-18 17:32:26
+#+downloaded: /tmp/screenshot.png @ 2018-11-18 17:32:26
 [[file:images/linear_algebra/screenshot_2018-11-18_17-32-26.png]]
 
 * References

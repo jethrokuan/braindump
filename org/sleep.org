@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Sleep
+#+setupfile: ./hugo_setup.org
+#+title: Sleep
 * Everyman
 https://www.polyphasicsociety.com/polyphasic-sleep/overviews/everyman/
 * Articles

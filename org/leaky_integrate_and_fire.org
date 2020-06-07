@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Leaky Integrate-And-Fire
+#+setupfile:./hugo_setup.org
+#+title: Leaky Integrate-And-Fire
 
 - tags :: [[file:spiking_neural_networks.org][Spiking Neural Networks]]
 

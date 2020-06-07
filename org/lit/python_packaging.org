@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: python_packaging
-#+TITLE: Python Packaging
-#+ROAM_KEY: https://packaging.python.org/overview/
+#+setupfile:./hugo_setup.org
+#+hugo_slug: python_packaging
+#+title: Python Packaging
+#+roam_key: https://packaging.python.org/overview/
 
 * [[https://packaging.python.org/tutorials/installing-packages/#id19][Python Distributions]]
 

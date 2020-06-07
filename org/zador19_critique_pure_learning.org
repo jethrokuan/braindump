@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: A critique of pure learning and what artificial neural networks can learn from animal brains
+#+setupfile:./hugo_setup.org
+#+title: A critique of pure learning and what artificial neural networks can learn from animal brains
 
 * The Genomic Bottleneck
 

@@ -1,7 +1,7 @@
 +++
 title = "How To Write a Technical Paper"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:13+08:00
+lastmod = 2020-06-07T17:28:45+08:00
 draft = false
 +++
 

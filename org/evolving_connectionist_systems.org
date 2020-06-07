@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Evolving Connectionist Systems
+#+setupfile:./hugo_setup.org
+#+title: Evolving Connectionist Systems
 
 Evolving Connectionist Systems (ECoS) learn local models from data
 through clustering the data and associating a local output function

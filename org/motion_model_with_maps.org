@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Motion Model With Maps
+#+setupfile:./hugo_setup.org
+#+title: Motion Model With Maps
 
 - tags :: [[file:velocity_motion_model.org][Velocity Motion Model]], [[file:odometry_motion_model.org][Odometry Motion Model]]
 

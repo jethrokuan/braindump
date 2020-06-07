@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: How To Take Smart Notes
+#+setupfile:./hugo_setup.org
+#+title: How To Take Smart Notes
 
 - author :: [[file:sonke_ahrens.org][Sonke Ahrens]]
 - tags :: [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]], [[file:books.org][Books]], [[file:productivity.org][Productivity]]

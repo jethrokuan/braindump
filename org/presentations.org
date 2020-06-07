@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Presentations
+#+setupfile:./hugo_setup.org
+#+title: Presentations
 
 * Creating Good Presentations
 
@@ -18,7 +18,7 @@
    audience to overcome the reluctance to change, and enter the world
    you are presenting.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-07-16 10:14:57
+#+downloaded: /tmp/screenshot.png @ 2019-07-16 10:14:57
 [[file:images/writing/screenshot_2019-07-16_10-14-57.png]]
 
 Familiar content is comforting, oppositional content is stimulating,

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Cognitive Hierarchy Model
+#+setupfile: ./hugo_setup.org
+#+title: Cognitive Hierarchy Model
 
 See cite:camerer2004cognitive for a nice introduction using Keynes' "beauty
 contest" game.

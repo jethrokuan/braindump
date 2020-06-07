@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Find (CLI Tool)
+#+setupfile:./hugo_setup.org
+#+title: Find (CLI Tool)
 
 - tags :: [[file:unix.org][Unix]]
 

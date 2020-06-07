@@ -1,7 +1,7 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:00+08:00
+lastmod = 2020-06-07T17:25:57+08:00
 draft = false
 +++
 
@@ -154,4 +154,4 @@ In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\
 
 # Bibliography
 
-<a id="shalev2014understanding" target="_blank">Shalev-Shwartz}, S., & Ben-David, Shai, _Understanding machine learning: From theory to algorithms_ (2014), : Cambridge university press.</a> [↩](#acdb3458f18ecb92e5037975d277d0fb)
+<a id="shalev2014understanding" target="_blank">Shalev-Shwartz, Shai, & Ben-David, Shai, _Understanding machine learning: From theory to algorithms_ (2014), : {Cambridge university press}.</a> [↩](#acdb3458f18ecb92e5037975d277d0fb)

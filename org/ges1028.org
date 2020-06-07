@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Singapore Society
+#+setupfile: ./hugo_setup.org
+#+title: Singapore Society
 * Introduction to Sociology
 ** Sociological Perspective
  Defined as seeing the general in the particular

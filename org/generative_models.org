@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: generative_models
-#+TITLE: Generative Models
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: generative_models
+#+title: Generative Models

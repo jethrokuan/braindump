@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Lsof
+#+setupfile:./hugo_setup.org
+#+title: Lsof
 
 - tags :: [[file:unix.org][Unix]]
 

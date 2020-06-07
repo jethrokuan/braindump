@@ -1,14 +1,14 @@
 +++
 title = "Optimal Control and Planning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:48+08:00
+lastmod = 2020-06-07T17:27:02+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
 - [Control As Inference]({{< relref "control_as_inference" >}})
+- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
 
 How can we make decisions if we know the dynamics of the environment?
 
@@ -40,8 +40,3 @@ for \\(p(A)\\). In the discrete case, [Monte Carlo Tree Search]({{< relref "mcts
 
 - Differentiable Dynamic Programming (DDP)
 - LQR
-
-### Backlinks {#backlinks}
-
-- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
-- [Control As Inference]({{< relref "control_as_inference" >}})

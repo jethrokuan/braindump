@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Options Framework
+#+setupfile:./hugo_setup.org
+#+title: Options Framework
 An option is defined as a tuple containing:
 
 1. An initiation function (precondition)

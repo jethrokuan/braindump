@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: jeffreys_prior
-#+TITLE: Jeffreys Prior
+#+setupfile:./hugo_setup.org
+#+hugo_slug: jeffreys_prior
+#+title: Jeffreys Prior
 
 The Jeffrey's prior is an easy-to-compute reference prior that is
 invariant to transformation, used in [[file:bayesian_inference.org][Bayesian Inference]]. If the model

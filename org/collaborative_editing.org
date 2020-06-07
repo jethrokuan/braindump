@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Collaborative Editing
+#+setupfile:./hugo_setup.org
+#+title: Collaborative Editing
 
 Collaborative Editing software are powered either (or both) of these
 two techniques: Conflict-free replicated data types (CRDTs) or

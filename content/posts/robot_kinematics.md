@@ -1,7 +1,7 @@
 +++
 title = "Robot Kinematics"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:18+08:00
+lastmod = 2020-06-07T17:28:51+08:00
 draft = false
 +++
 

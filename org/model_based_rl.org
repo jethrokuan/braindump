@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Model-Based Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Model-Based Reinforcement Learning
 
 In model-free [[file:reinforcement_learning.org][Reinforcement Learning ⭐]], we assumed that $p(s_{t+1} |
 s_t, a_t)$ is unknown, and no attempt is made to learn it. However, we
@@ -63,7 +63,7 @@ And this turns out to be hard. Below, the model is overfitted, and the
 planner might want to exploit going to this non-existent peak, and
 result in nonsensical behaviour.
 
-#+CAPTION: Overfitted model on small amounts of training samples
+#+caption: Overfitted model on small amounts of training samples
 [[file:images/model_based_rl/screenshot2019-12-23_14-31-15_.png]]
 We can use /uncertainty estimation/ to detect where the models may be
 wrong, for example by using [[file:gaussian_processes.org][Gaussian Processes]].

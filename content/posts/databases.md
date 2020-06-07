@@ -1,7 +1,7 @@
 +++
 title = "Databases"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:09+08:00
+lastmod = 2020-06-07T17:26:09+08:00
 tags = ["database"]
 draft = false
 +++
@@ -33,7 +33,3 @@ on how databases run queries. <a id="766d0b6e63144f3c2a5a9dff8e644056" href="#fe
 # Bibliography
 
 <a id="felipe_demys_join_algor" target="_blank">Carvalho, F. O., _Demystifying JOIN algorithms_, , _()_, (2019). </a> [↩](#766d0b6e63144f3c2a5a9dff8e644056)
-
-### Backlinks {#backlinks}
-
-- [Designing Data-Intensive Applications]({{< relref "designing_dataintensive_applications" >}})

@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: coding_interview_cheatsheet
-#+TITLE: Coding Interview Cheatsheet
+#+setupfile:./hugo_setup.org
+#+hugo_slug: coding_interview_cheatsheet
+#+title: Coding Interview Cheatsheet
 
 * Arrays
 ** Dutch Flag Partition
@@ -37,25 +37,25 @@
           self.next = next_node
 #+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   def search_list(L, key):
       while L and L.data != key:
           L = L.next
       return L
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   def insert_after(node, new_node):
       new_node.next = node.next
       node.next = new_node
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   def delete_after(node):
       # Need to make sure there is something after to delete
       if node.next:
           node.next = node.next.next
-#+END_SRC
+#+end_src
 ** Reverse Sublist
 
 #+begin_src python

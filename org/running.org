@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Running
+#+setupfile:./hugo_setup.org
+#+title: Running
 
 * Running Form
 

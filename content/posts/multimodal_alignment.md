@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Alignment"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:21+08:00
+lastmod = 2020-06-07T17:27:45+08:00
 slug = "multimodal_alignment"
 draft = false
 +++
@@ -35,7 +35,3 @@ Implicit alignment allows for better performance in downstream tasks.
 Both graphical models and neural network approaches are used here.
 Examples of tasks where implicit alignment helps include machine
 translation.
-
-### Backlinks {#backlinks}
-
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})

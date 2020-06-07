@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Nat Eliason
+#+setupfile:./hugo_setup.org
+#+title: Nat Eliason
 
 Active user of [[file:roam_research.org][Roam Research]]
 

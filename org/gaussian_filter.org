@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Gaussian Filter
+#+setupfile: ./hugo_setup.org
+#+title: Gaussian Filter
 
 Gaussian Filters is a tractable implementation of the Bayes filter
 ([[file:bayes_filter.org][Bayes Filter]]) for continuous spaces.

@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Programming Languages
+#+setupfile:./hugo_setup.org
+#+title: Programming Languages

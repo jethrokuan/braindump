@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: SNN Software
+#+setupfile:./hugo_setup.org
+#+title: SNN Software
 
 Software for [[file:spiking_neural_networks.org][Spiking Neural Networks]].
 

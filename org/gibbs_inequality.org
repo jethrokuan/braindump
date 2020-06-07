@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Gibbs' Inequality
+#+setupfile:./hugo_setup.org
+#+title: Gibbs' Inequality
 
 The relative entropy or [[file:kl_divergence.org][kl divergence]] between two probability
 distributions $P(x)$ and $Q(x)$ defined over the same alphabet

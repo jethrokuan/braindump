@@ -1,8 +1,8 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Neural Ordinary Differential Equations (Review)
-#+ROAM_ALIAS: "Neural ODE"
-#+ROAM_KEY: cite:chen18_neural_ordin_differ_equat
-#+OPTIONS: toc:nil
+#+setupfile: ./hugo_setup.org
+#+title: Neural Ordinary Differential Equations (Review)
+#+roam_alias: "Neural ODE"
+#+roam_key: cite:chen18_neural_ordin_differ_equat
+#+options: toc:nil
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:stochastic_processes.org][Stochastic Processes]]
 
 bibliographystyle:unsrt
@@ -200,7 +200,7 @@ that using ODE blocks they were able to achieve roughly equivalent
 test-error, with a third of the parameters (0.22M compared to 0.60M)
 and constant memory cost during training.
 
-#+ATTR_LATEX: :width 8cm
+#+attr_latex: :width 8cm
 [[file:images/neural_ode/screenshot_2019-04-13_22-21-54.png]]
 
 While this looks promising, it would be more instructive to train the

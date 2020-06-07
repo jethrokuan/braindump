@@ -1,21 +1,21 @@
 +++
 title = "Operating Systems"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:50+08:00
+lastmod = 2020-06-07T17:27:04+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
+- [Branch Prediction]({{< relref "branch_prediction" >}})
 - [What happens when we type a simple command on shell?]({{< relref "process_what_happens_when_we_type_a_simple_command_on_shell_unix_linux_stack_exchange" >}})
+- [Systems Programming]({{< relref "systems_programming" >}})
 - [Nix/NixOS]({{< relref "nix" >}})
-- [Docker 101]({{< relref "docker" >}})
+- [Computer Organization]({{< relref "computer_organization" >}})
 - [Config Management]({{< relref "config_management" >}})
 - [ARM Assembly Programming]({{< relref "arm" >}})
+- [Docker 101]({{< relref "docker" >}})
 - [Computer Networking]({{< relref "networking" >}})
-- [Computer Organization]({{< relref "computer_organization" >}})
-- [Systems Programming]({{< relref "systems_programming" >}})
-- [Branch Prediction]({{< relref "branch_prediction" >}})
 
 ## Operating System Key Concepts {#operating-system-key-concepts}
 
@@ -1531,15 +1531,3 @@ to stop the tick is made after the governor has made the
 recommendation.
 
 ### <span class="org-todo todo TODO">TODO</span> [How new-lines affect the Linux kernel performance](https://nadav.amit.zone/blog/linux-inline) {#how-new-lines-affect-the-linux-kernel-performance}
-
-### Backlinks {#backlinks}
-
-- [What happens when we type a simple command on shell?]({{< relref "process_what_happens_when_we_type_a_simple_command_on_shell_unix_linux_stack_exchange" >}})
-- [Nix/NixOS]({{< relref "nix" >}})
-- [Docker 101]({{< relref "docker" >}})
-- [Config Management]({{< relref "config_management" >}})
-- [ARM Assembly Programming]({{< relref "arm" >}})
-- [Computer Networking]({{< relref "networking" >}})
-- [Computer Organization]({{< relref "computer_organization" >}})
-- [Systems Programming]({{< relref "systems_programming" >}})
-- [Branch Prediction]({{< relref "branch_prediction" >}})

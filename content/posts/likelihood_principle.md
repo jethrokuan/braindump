@@ -1,7 +1,7 @@
 +++
 title = "Likelihood Principle"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:55+08:00
+lastmod = 2020-06-07T17:28:25+08:00
 draft = false
 +++
 

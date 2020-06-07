@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Bayesian Inference
-#+HUGO_TAGS: machine-learning
+#+setupfile: ./hugo_setup.org
+#+title: Bayesian Inference
+#+hugo_tags: machine-learning
 
 * Setup
 

@@ -1,4 +1,4 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Model Compression
+#+setupfile: ./hugo_setup.org
+#+title: Model Compression
 
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]]

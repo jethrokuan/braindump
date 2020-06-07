@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Writing
+#+setupfile: ./hugo_setup.org
+#+title: Writing
 
 - [[file:writing_books.org][Writing Books]]
 - [[file:writing_articles.org][Writing Articles]]

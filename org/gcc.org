@@ -1,5 +1,5 @@
-#+TITLE: GCC
-#+SETUPFILE: ./hugo_setup.org
+#+title: GCC
+#+setupfile: ./hugo_setup.org
 
 - tags :: [[file:compilers.org][Compilers]], [[file:c_lang.org][The C Language]]
 

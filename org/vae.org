@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Variational Autoencoders
+#+setupfile:./hugo_setup.org
+#+title: Variational Autoencoders
 
 * Links
 - [[https://github.com/matthewvowels1/Awesome-VAEs][matthewvowels1/Awesome-VAEs]]

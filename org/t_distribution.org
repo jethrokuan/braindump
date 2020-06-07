@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: t_distribution
-#+TITLE: t-distribution
+#+setupfile:./hugo_setup.org
+#+hugo_slug: t_distribution
+#+title: t-distribution
 
 The Student's t-distribution arises when estimating the mean of a
 normally distributed population, when the sample size is small and the

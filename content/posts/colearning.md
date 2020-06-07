@@ -1,7 +1,7 @@
 +++
 title = "Co-learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:20+08:00
+lastmod = 2020-06-07T17:26:22+08:00
 slug = "colearning"
 draft = false
 +++
@@ -42,7 +42,3 @@ word similarity, or [zero-shot learning]({{< relref "zeroshot_learning" >}}).
 # Bibliography
 
 <a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\v saitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: A survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
-
-### Backlinks {#backlinks}
-
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})

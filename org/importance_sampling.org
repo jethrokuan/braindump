@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Importance Sampling
+#+setupfile:./hugo_setup.org
+#+title: Importance Sampling
 
 Importance sampling does not allow us to generate samples from $p(x)$,
 but allows us to estimate the expectation of a function $f(x)$.

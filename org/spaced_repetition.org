@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Spaced Repetition
+#+setupfile:./hugo_setup.org
+#+title: Spaced Repetition
 
 - tags :: [[file:productivity.org][Productivity]]
 

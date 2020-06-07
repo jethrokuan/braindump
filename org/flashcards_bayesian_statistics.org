@@ -1,5 +1,5 @@
-#+PROPERTY: ANKI_DECK Bayesian Statistics
-#+TITLE: Flashcards: Bayesian Statistics
+#+property: ANKI_DECK Bayesian Statistics
+#+title: Flashcards: Bayesian Statistics
 
 * Probability Recap
 

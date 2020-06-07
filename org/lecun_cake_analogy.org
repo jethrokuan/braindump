@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: LeCun's Cake Analogy
+#+setupfile:./hugo_setup.org
+#+title: LeCun's Cake Analogy
 
 Yann LeCun gave this cake analogy in NIPS 2016:
 

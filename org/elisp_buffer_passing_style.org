@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: elisp_bufferpassing_style
-#+TITLE: Elisp: Buffer-passing Style
+#+setupfile:./hugo_setup.org
+#+hugo_slug: elisp_bufferpassing_style
+#+title: Elisp: Buffer-passing Style
 
 - tags :: [[file:/home/jethro/Dropbox/org/braindump/org/emacs_lisp.org][Emacs Lisp]]
 

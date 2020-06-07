@@ -1,15 +1,15 @@
 +++
 title = "Linux"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:04+08:00
+lastmod = 2020-06-07T17:28:35+08:00
 draft = false
 +++
 
 ## Backlinks {#backlinks}
 
-- [Nix/NixOS]({{< relref "nix" >}})
-- [Docker 101]({{< relref "docker" >}})
 - [Unix]({{< relref "unix" >}})
+- [Docker 101]({{< relref "docker" >}})
+- [Nix/NixOS]({{< relref "nix" >}})
 - [Systems Programming]({{< relref "systems_programming" >}})
 - [Branch Prediction]({{< relref "branch_prediction" >}})
 
@@ -20,11 +20,3 @@ draft = false
   hostnames in the rules. Hence sudo requires both loopback and
   "real". ([Source](https://unix.stackexchange.com/questions/218145/why-does-sudo-need-the-loopback-interface))
 - `pkexec` lets authorized users execute programs as another user.
-
-## Backlinks {#backlinks}
-
-- [Nix/NixOS]({{< relref "nix" >}})
-- [Docker 101]({{< relref "docker" >}})
-- [Unix]({{< relref "unix" >}})
-- [Systems Programming]({{< relref "systems_programming" >}})
-- [Branch Prediction]({{< relref "branch_prediction" >}})

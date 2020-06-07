@@ -1,20 +1,20 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Programming Methodology
-#+AUTHOR: Jethro Kuan
-#+LATEX_HEADER: \geometry{margin={0.3in,0.3in}, a4paper, landscape}
-#+LATEX_HEADER: \usepackage{multicol}
-#+LATEX_HEADER: \usepackage{minted}
-#+LATEX_HEADER: \usemintedstyle[javascript]{emacs}
+#+setupfile: ./hugo_setup.org
+#+title: Programming Methodology
+#+author: Jethro Kuan
+#+latex_header: \geometry{margin={0.3in,0.3in}, a4paper, landscape}
+#+latex_header: \usepackage{multicol}
+#+latex_header: \usepackage{minted}
+#+latex_header: \usemintedstyle[javascript]{emacs}
 
-#+OPTIONS: toc:nil
+#+options: toc:nil
 
-#+BEGIN_EXPORT latex
+#+begin_export latex
 \null\hfill\underline{\textbf{Jethro Kuan} -- \textit{\today}}
-#+END_EXPORT
+#+end_export
 
 * Source Specification
   Predefined in global env: =undefined=, =NaN=,  =Infinity=
-#+ATTR_LATEX: :environment tabularx :width \textwidth :align |l|X|
+#+attr_latex: :environment tabularx :width \textwidth :align |l|X|
 | fn                 | description                                                                                                |
 |--------------------+------------------------------------------------------------------------------------------------------------|
 | =Math.*=           | Functions dealing with Math. (eg. =Math.pow=, =Math.sqrt=, =Math.E=, =Math.PI=)                            |
@@ -23,7 +23,7 @@
 | =is_number(x)=     | Returns =true= if =x= is a number, =false= otherwise.                                                      |
 
 ** List
-#+ATTR_LATEX: :environment tabularx :width \textwidth :align |l|X|l|l|l|
+#+attr_latex: :environment tabularx :width \textwidth :align |l|X|l|l|l|
 | fn                            | description                                                                      | I/R | Time | Space |
 |-------------------------------+----------------------------------------------------------------------------------+-----+------+-------|
 | =is_pair(x)=                  | Returns =true= if =x= is a pair, =false= otherwise.                              |     |      |       |
@@ -51,7 +51,7 @@
 | =accumulate(op, initial, xs)= | =op(x1, op(x2, op(x3, ... op(xn, initial))))=.                                   | R   | O(n) | O(n)  |
 
 ** Stream
-#+ATTR_LATEX: :environment tabularx :width \textwidth :align |l|X|l|
+#+attr_latex: :environment tabularx :width \textwidth :align |l|X|l|
 | fn                       | description                                                                                     | Lazy? |
 |--------------------------+-------------------------------------------------------------------------------------------------+-------|
 | =stream_tail(s)=         | returns result of applying nullary function at tail.                                            | Y     |
@@ -75,7 +75,7 @@
 | =stream_ref(s,n)=        | Returns the element of stream =s= at position =n=.                                              | P     |
 
 ** Metacircular
-#+ATTR_LATEX: :environment tabularx :width \textwidth :align |l|X|
+#+attr_latex: :environment tabularx :width \textwidth :align |l|X|
 | fn                                              | description                                                                                                            |
 |-------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
 | =evaluate(stmt,env)=                            | Classifies =stmt= and directs the evaluation. Handles primitive forms, special forms and combinations.                 |
@@ -85,13 +85,13 @@
 | ~extend_environment(variables,values,base_env)~ | returns a new environment, with a new frame extended from ~base_env~, with the corresponding ~variables~ and ~values~. |
 | ~set_variable_value(var,value,env)~             | changes the binding of ~var~ in ~env~ to ~value~, signals error if unbound.                                            |
 
-#+BEGIN_EXPORT latex
+#+begin_export latex
 \pagebreak
 \begin{multicols*}{3}
-#+END_EXPORT
+#+end_export
 
 * Mutations
-#+BEGIN_SRC javascript
+#+begin_src javascript
     function mutable_reverse(xs) {
       function helper(prev,xs) {
         return prev;
@@ -115,9 +115,9 @@
         return temp;
       }
     }
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function make_circular_copy(xs) {
     function helper(rem,front_ptr) {
       if (is_empty_list(rem)) {
@@ -137,9 +137,9 @@
       return ys;
     }
   }
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function mergeB(xs,ys) {
     if (is_empty_list(xs) && is_empty_list(ys)) {
       return [];
@@ -153,10 +153,10 @@
       return xs;
     }
   }
-#+END_SRC
+#+end_src
 * Permutations and Combinations
 ** =permutations=
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function permutations(xs) {
     if (is_empty_list(xs)) {
       return list([]);
@@ -168,9 +168,9 @@
       }, [], xs);
     }
   }
-#+END_SRC
+#+end_src
 ** =n_permutations=
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function n_permutations(xs, n) {
     if(n === 0) {
       return list([]);
@@ -186,9 +186,9 @@
     }
   }
 
-#+END_SRC
+#+end_src
 ** =n_combinations=
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function n_combinations(xs, n) {
     if (n === 0) {
       return list([]);
@@ -202,10 +202,10 @@
         n_combinations(tail(xs), n));
     }
   }
-#+END_SRC
+#+end_src
 
 * OOP
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function Vector2D (x,y) {
     this.x = x;
     this.y = y;
@@ -222,10 +222,10 @@
   }
 
   Thrust.Inherits(Vector2D);
-#+END_SRC
+#+end_src
 * Streams
 ** Recursively defined streams
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function fibgen(a,b) {
     return pair(a,b function() {
       return fibgen(b, a+b);
@@ -245,10 +245,10 @@
   integers:   1 2 3 4 5
   ---------------------
   integers: 1 2 3 4 5 6
-#+END_SRC
+#+end_src
 
 ** Stream of primes
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function sieve(s) {
     return pair(head(s), function() {
       return sieve(stream_filter(function() {
@@ -258,10 +258,10 @@
   }
 
   var primes = sieve(integers_from(2));
-#+END_SRC
+#+end_src
 
 ** Iterations with streams
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function improve_guess(guess,x) {
     return average(guess, x/guess);
   }
@@ -287,10 +287,10 @@
 
     return guesses;
   }
-#+END_SRC
+#+end_src
 
 ** Interleave
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function interleave(s1,s2) {
     return pair(head(s1), function() {
       return pair(head(s2), function() {
@@ -299,10 +299,10 @@
       });
     });
   }
-#+END_SRC
+#+end_src
 
 ** Cartesian Product
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function pairs(s1,s2){
     if (is_empty_list(s1) || is_empty_list(s2)) {
       return [];
@@ -318,10 +318,10 @@
         });
     }
   }
-#+END_SRC
+#+end_src
 * Misc
 ** Towers of Hanoi
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function hanoi(disks, source,dest,aux) {
     if (disks === 0) {
       return [];
@@ -332,9 +332,9 @@
       hanoi(disks-1,aux,dest,source);
     }
   }
-#+END_SRC
+#+end_src
 ** Count Change
-#+BEGIN_SRC javascript
+#+begin_src javascript
   // denoms is a list of coin denominations:
   // eg. list(50,20,10,5)
   function count_change(amt, denoms) {
@@ -350,10 +350,10 @@
                      denoms);
     }
   }
-#+END_SRC
+#+end_src
 
 ** Power set
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function power_set(xs) {
     if (is_empty_list(xs)) {
       return list([]);
@@ -368,10 +368,10 @@
       return append(use_head,without_head);
     }
   }
-#+END_SRC
+#+end_src
 
 * Memoization
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function memo_fib(n) {
     var res = {};
     res[1]=0;
@@ -387,10 +387,10 @@
 
     return fib(n);
   }
-#+END_SRC
+#+end_src
 
 * Environment Model
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function make_withdraw(balance) {
     return function(amount) {
       if (balance >= amount) {
@@ -405,7 +405,7 @@
   var w = make_withdraw(100);     // Pic 2
   w(50);                          // Pic 3
   // Pic 4
-#+END_SRC
+#+end_src
 
 [[file:images/programming_methodology/1.png]]
 [[file:images/programming_methodology/2.png]]
@@ -414,7 +414,7 @@
 
 * Metacircular Interpreter
 ** Reverse Application Order
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function list_of_values(exps.env) {
     if (no_operands(exps)) {
       return []; 
@@ -426,9 +426,9 @@
                   r);
     }
   }
-#+END_SRC
+#+end_src
 ** Thunking
-#+BEGIN_SRC javascript
+#+begin_src javascript
   function list_of_values(exps,env) {
     if (no_operands(exps)) {
       return [];
@@ -475,8 +475,8 @@
     var val = env_loop(env);
     return val;
   }
-#+END_SRC
+#+end_src
 
-#+BEGIN_EXPORT latex
+#+begin_export latex
 \end{multicols*}
-#+END_EXPORT
+#+end_export

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Exponential Family
+#+setupfile:./hugo_setup.org
+#+title: Exponential Family
 
 - tags :: [[file:statistics.org][Statistics]]
 

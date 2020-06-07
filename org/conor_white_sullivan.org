@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Conor White-Sullivan
+#+setupfile:./hugo_setup.org
+#+title: Conor White-Sullivan
 
 Creator of [[file:roam_research.org][Roam Research]].
 

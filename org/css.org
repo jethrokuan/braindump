@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+HUGO_TAGS: web
-#+TITLE: CSS
+#+setupfile: ./hugo_setup.org
+#+hugo_tags: web
+#+title: CSS
 
 - tags :: [[file:web_dev.org][Web Development]]
 

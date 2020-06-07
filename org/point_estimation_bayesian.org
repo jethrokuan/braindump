@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Point Estimation in Bayesian Statistics
+#+setupfile:./hugo_setup.org
+#+title: Point Estimation in Bayesian Statistics
 
 - tags :: [[file:bayesian_statistics.org][Bayesian Statistics]]
 

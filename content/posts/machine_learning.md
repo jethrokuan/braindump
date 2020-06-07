@@ -1,25 +1,25 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:56+08:00
+lastmod = 2020-06-07T17:27:12+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Information Theory]({{< relref "information_theory" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+- [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
+- [Likelihood Principle]({{< relref "likelihood_principle" >}})
+- [Quantization]({{< relref "quantization" >}})
+- [Empirical Risk Minimization]({{< relref "erm" >}})
 - [Recommender Systems]({{< relref "recommender_systems" >}})
+- [Topic Modeling]({{< relref "topic_modelling" >}})
+- [Information Theory]({{< relref "information_theory" >}})
 - [Single Layer XOR]({{< relref "single_layer_xor" >}})
+- [PAC Learning]({{< relref "pac_learning" >}})
 - [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
 - [Article: An Opinionated Guide to ML Research]({{< relref "an_opinionated_guide_to_ml_research" >}})
-- [Empirical Risk Minimization]({{< relref "erm" >}})
-- [Topic Modeling]({{< relref "topic_modelling" >}})
-- [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
-- [PAC Learning]({{< relref "pac_learning" >}})
-- [Quantization]({{< relref "quantization" >}})
-- [Likelihood Principle]({{< relref "likelihood_principle" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 ## Table of Contents {#table-of-contents}
 
@@ -670,6 +670,6 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 
 # Bibliography
 
-<a id="home_cookiec_data_scien" target="_blank">DrivenData, , _Home - cookiecutter data science_, , _()_, (2019). </a> [↩](#e0ca383893600291ac5eca0f379984fb)
+<a id="home_cookiec_data_scien" target="_blank">DrivenData, _Home - cookiecutter data science_, , _()_, (2019). </a> [↩](#e0ca383893600291ac5eca0f379984fb)
 
 <a id="dan_reprod" target="_blank">Frank, D., _Reproducible research: Stripe's approach to data science_, , _()_, (2016). </a> [↩](#77ac83a13ddf56f053f1ba225873677d)

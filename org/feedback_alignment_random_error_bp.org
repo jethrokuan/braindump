@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Feedback Alignment and Random Error Backpropagation
+#+setupfile:./hugo_setup.org
+#+title: Feedback Alignment and Random Error Backpropagation
 
 Backpropagation is not biologically plausible because it the error
 signals to update the weights of the hidden layers need to be

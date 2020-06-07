@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: XGBoost
+#+setupfile: ./hugo_setup.org
+#+title: XGBoost
 
 XGboost is an end-to-end boosting system. It is sparsity-aware. cite:chen16_xgboos
 
@@ -16,7 +16,7 @@ model uses $K$ additive functions to predict the output:
 where $F$ is the space of regression trees, Each regression tree
 contains a continuous score on each of the leaf.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-05-24 12:35:28
+#+downloaded: /tmp/screenshot.png @ 2019-05-24 12:35:28
 [[file:images/xgboost/screenshot_2019-05-24_12-35-28.png]]
 
 source:

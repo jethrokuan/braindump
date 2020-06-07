@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: definition_of_deep_learning
-#+TITLE: Definition of Deep Learning
+#+setupfile:./hugo_setup.org
+#+hugo_slug: definition_of_deep_learning
+#+title: Definition of Deep Learning
 
 There are many conflicting definitions of [[file:deep_learning.org][Deep Learning]], here's some
 definitions by various people:

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Documentation Generators
+#+setupfile:./hugo_setup.org
+#+title: Documentation Generators
 
 We use these to generate [[file:documentation.org][documentation]] for projects.
 

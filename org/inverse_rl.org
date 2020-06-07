@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Inverse Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Inverse Reinforcement Learning
 
 - tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 

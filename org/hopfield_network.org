@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Hopfield Network
-#+HUGO_TAGS: machine-learning
+#+setupfile: ./hugo_setup.org
+#+title: Hopfield Network
+#+hugo_tags: machine-learning
 
 A Hopfield network is a fully connected [[file:ising_models.org][Ising model]] with a symmetric
 weight matrix, $\mathbf{W} = \mathbf{W^T}$. These weights plus the

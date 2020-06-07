@@ -1,4 +1,4 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Machine Learning Papers
+#+setupfile:./hugo_setup.org
+#+title: Machine Learning Papers
 
 - tags :: [[file:papers.org][Papers]]

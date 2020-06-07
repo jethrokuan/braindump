@@ -1,7 +1,7 @@
 +++
 title = "How To Know - Celeste Kidd"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:17+08:00
+lastmod = 2020-06-07T17:26:19+08:00
 draft = false
 +++
 

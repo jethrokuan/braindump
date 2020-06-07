@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Normalizing Flows
+#+setupfile:./hugo_setup.org
+#+title: Normalizing Flows
 
 Normalizing flows provide a way of constructing probability
 distributions over continuous random variables. In flow-based

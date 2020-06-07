@@ -1,4 +1,4 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: The C Language
+#+setupfile: ./hugo_setup.org
+#+title: The C Language
 
 - tags :: [[file:prog_lang.org][Programming Languages]]

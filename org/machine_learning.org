@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Machine Learning
-#+HUGO_TAGS: machine-learning
+#+setupfile: ./hugo_setup.org
+#+title: Machine Learning
+#+hugo_tags: machine-learning
 
 * Table of Contents
 - [[file:nlp.org][Natural Language Processing]]
@@ -467,7 +467,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 ** Designing a model for decaNLP
 - No task-specific modules or parameters because task ID assumed to be unavailable
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-02 14:52:23
+#+downloaded: /tmp/screenshot.png @ 2018-10-02 14:52:23
 [[file:images/machine_learning/screenshot_2018-10-02_14-52-23.png]]
 
 1. Start with a context
@@ -497,7 +497,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 Cookiecutter Data Science provides a decent project structure, and
 uses the ubiquitous build tool ~Make~ to build data projects. cite:home_cookiec_data_scien 
 
-#+BEGIN_SRC text
+#+begin_src text
 ├── LICENSE
 ├── Makefile           <- Makefile with commands like `make data` or `make train`
 ├── README.md          <- The top-level README for developers using this project.
@@ -542,7 +542,7 @@ uses the ubiquitous build tool ~Make~ to build data projects. cite:home_cookiec_
 │       └── visualize.py
 │
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
-#+END_SRC
+#+end_src
 
 Stripe's approach cite:dan_reprod still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter

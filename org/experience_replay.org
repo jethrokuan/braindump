@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Experience Replay
+#+setupfile:./hugo_setup.org
+#+title: Experience Replay

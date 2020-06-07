@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Markov Localization
+#+setupfile:./hugo_setup.org
+#+title: Markov Localization
 
 * Markov Localization
 A direct extension of the [[file:bayes_filter.org][Bayes Filter]], but using the map $m$ of the

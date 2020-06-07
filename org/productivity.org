@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Productivity
+#+setupfile: ./hugo_setup.org
+#+title: Productivity
 
 - [[file:para_method.org][PARA Method]]
 - [[file:zettelkasten.org][Zettelkasten]]

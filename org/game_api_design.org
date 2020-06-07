@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Game API Design
+#+setupfile:./hugo_setup.org
+#+title: Game API Design
 
 - tags :: [[file:software_engineering.org][Software Engineering]]
 

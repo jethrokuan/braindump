@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Surrogate Gradient Learning In Spiking Neural Networks
+#+setupfile:./hugo_setup.org
+#+title: Surrogate Gradient Learning In Spiking Neural Networks
 
 - paper :: https://arxiv.org/pdf/1901.09948v2.pdf
 

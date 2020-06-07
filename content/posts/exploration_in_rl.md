@@ -1,7 +1,7 @@
 +++
 title = "Exploration In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:24+08:00
+lastmod = 2020-06-07T17:27:48+08:00
 draft = false
 +++
 
@@ -95,4 +95,4 @@ There are many choices for the bonus.
 
 # Bibliography
 
-<a id="NIPS2016_6383" target="_blank">Bellemare, M., Srinivasan, S., Ostrovski, G., Schaul, T., Saxton, D., & Munos, R., _Unifying count-based exploration and intrinsic motivation_, In D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 29 (pp. 1471–1479) (2016). : Curran Associates, Inc.</a> [↩](#e8434a667b6a92e6ed91dbeac3bc0890)
+<a id="NIPS2016_6383" target="_blank">Bellemare, M., Srinivasan, S., Ostrovski, G., Schaul, T., Saxton, D., & Munos, R., _Unifying count-based exploration and intrinsic motivation_, In D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 29 (pp. 1471–1479) (2016). : {Curran Associates, Inc.}.</a> [↩](#e8434a667b6a92e6ed91dbeac3bc0890)

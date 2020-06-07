@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Distributed Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Distributed Reinforcement Learning
 
 Parallelizing [[file:reinforcement_learning.org][Reinforcement Learning ⭐]].
 

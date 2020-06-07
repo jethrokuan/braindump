@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Awk
+#+setupfile:./hugo_setup.org
+#+title: Awk
 
 - tags :: [[file:unix.org][Unix]]
 

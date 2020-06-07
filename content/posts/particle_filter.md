@@ -1,14 +1,14 @@
 +++
 title = "Particle Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:18+08:00
+lastmod = 2020-06-07T17:27:41+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
 - [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
+- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
 
 Particle filters approximate the posterior by a finite number of
 parameters. The posterior \\(\text{bel}(x_t)\\) is represented by a set of
@@ -105,8 +105,3 @@ There are four complimentary sources of approximation error:
     be no particles in the vicinity to the correct state. That is,
     the number of particles might be too small to cover all relevant
     regions of high likelihood.
-
-### Backlinks {#backlinks}
-
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
-- [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})

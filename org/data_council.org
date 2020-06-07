@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Datacouncil.ai Conference Notes
+#+setupfile: ./hugo_setup.org
+#+title: Datacouncil.ai Conference Notes
 
 - tags :: [[file:data_science.org][Data Science]]
 
@@ -199,7 +199,7 @@ Argo's DAG UI looks nice!
 * Data Architecture 101 for Your Business - Bence Faludi, Independent Consultant
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-07-17 12:06:32
+#+downloaded: /tmp/screenshot.png @ 2019-07-17 12:06:32
 [[file:images/data_council/screenshot_2019-07-17_12-06-32.png]]
 
 - How to handle unclean data?

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Expectation Maximization and Mixture Models
+#+setupfile: ./hugo_setup.org
+#+title: Expectation Maximization and Mixture Models
 
 * Introduction
 
@@ -120,7 +120,7 @@ and $p(z_k = 1) = \pi_k$. We can then define the joint distribution
 $p(\mathbf{x}, \mathbf{z})$ corresponding to the following graphical
 model.
 
-#+CAPTION: Mixture of Gaussians
+#+caption: Mixture of Gaussians
 [[file:images/em/screenshot_2019-03-28_15-06-34.png]]
 
 
@@ -308,7 +308,7 @@ and
     \frac{p(\mathbf{Z} | \mathbf{X}, \mathbf{\theta})}{q(\mathbf{Z})} \right\}
 \end{equation}
 
- #+DOWNLOADED: /tmp/screenshot.png @ 2018-04-03 10:56:25
+ #+downloaded: /tmp/screenshot.png @ 2018-04-03 10:56:25
  [[file:images/machine_learning/screenshot_2018-04-03_10-56-25.png]]
 
 The EM algorithm involves alternatingly computing a lower bound on the

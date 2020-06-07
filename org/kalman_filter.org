@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Kalman Filter
+#+setupfile: ./hugo_setup.org
+#+title: Kalman Filter
 
 - tags :: [[file:extended_kalman_filter.org][Extended Kalman Filter]], [[file:gaussian_filter.org][Gaussian Filter]]
 

@@ -1,7 +1,7 @@
 +++
 title = "Free-Energy Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:52+08:00
+lastmod = 2020-06-07T17:25:47+08:00
 draft = false
 +++
 

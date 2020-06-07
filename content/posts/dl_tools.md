@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning Tools"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:58+08:00
+lastmod = 2020-06-07T17:25:54+08:00
 draft = false
 +++
 
@@ -537,6 +537,6 @@ layers.
 -
 
     # Bibliography
-    <a id="tensorflow_stand_keras" target="_blank">Tensorflow, , *Standardizing on keras: Guidance on high-level APIs in TensorFlow 2.0*, , *()*,  (2018). </a> [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
+    <a id="tensorflow_stand_keras" target="_blank">Tensorflow, *Standardizing on keras: Guidance on high-level APIs in TensorFlow 2.0*, , *()*,  (2018). </a> [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
 
-    <a id="home_keras_docum" target="_blank">Keras, , *Home Keras Documentation*, , *()*,  (2019). </a> [↩](#2906663214b6eb9261d265af3a5c5b39)
+    <a id="home_keras_docum" target="_blank">Keras, *Home Keras Documentation*, , *()*,  (2019). </a> [↩](#2906663214b6eb9261d265af3a5c5b39)

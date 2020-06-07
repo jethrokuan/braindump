@@ -1,14 +1,14 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:50+08:00
+lastmod = 2020-06-07T17:28:19+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Computer Vision]({{< relref "computer_vision" >}})
 - [LU Decomposition]({{< relref "lu_decomposition" >}})
+- [Computer Vision]({{< relref "computer_vision" >}})
 
 ## Definitions {#definitions}
 
@@ -391,8 +391,3 @@ of \\(V^T\\) corresponding to zero singular values.
 1.  [Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE%5Fab)
 2.  [Lecture 47 - Singular Value Decomposition | Stanford University](https://www.youtube.com/watch?v=P5mlg91as1c)
 3.  [Immersive Linear Algebra](http://immersivemath.com/ila)
-
-### Backlinks {#backlinks}
-
-- [Computer Vision]({{< relref "computer_vision" >}})
-- [LU Decomposition]({{< relref "lu_decomposition" >}})

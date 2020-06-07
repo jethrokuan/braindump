@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Temp Coding with Alpha Synaptic Function
+#+setupfile:./hugo_setup.org
+#+title: Temp Coding with Alpha Synaptic Function
 
 - tags :: [[file:spiking_neural_networks.org][Spiking Neural Networks]]
 
@@ -47,7 +47,7 @@ Incoming exponential synaptic kernels are of the form $\epsilon(t) =
 membrane in response to the spike is then $u(t) = t e^{-\tau t}$. It
 has a gradual rise, and slow decay.
 
-#+CAPTION: Plot of $y = x e^{-10x}, x \in [0, 1]$ 
+#+caption: Plot of $y = x e^{-10x}, x \in [0, 1]$
 [[file:images/temporal-coding-comsa/screenshot_2019-08-30_13-21-44.png]]
 
 
@@ -163,7 +163,7 @@ Fast regime makes quick decisions, with the first spike in the output
 layer occurring before the mean spike in the hidden layer.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-30 14:05:59
+#+downloaded: /tmp/screenshot.png @ 2019-08-30 14:05:59
 [[file:images/temporal-coding-comsa/screenshot_2019-08-30_14-05-59.png]]
 
 bibliography:biblio.bib

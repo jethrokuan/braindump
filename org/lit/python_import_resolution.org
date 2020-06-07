@@ -1,12 +1,12 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: python_import_resolution
-#+TITLE: Python Import Resolution
+#+setupfile:./hugo_setup.org
+#+hugo_slug: python_import_resolution
+#+title: Python Import Resolution
 
 Say you have a Python import statement:
 
-#+BEGIN_SRC python
+#+begin_src python
 import abc
-#+END_SRC
+#+end_src
 
 Python will look up the following in order:
 

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Artificial Intelligence
+#+setupfile: ./hugo_setup.org
+#+title: Artificial Intelligence
 
 * What is Artificial Intelligence?
 Designing agents that act rationally (e.g. through maximising a reward
@@ -435,7 +435,7 @@ A hill-climbing algorithm that never makes 'downhill' moves towards
 states with lower-value is guaranteed to be incomplete, because it can
 be stuck on a local maximum.
 
-#+BEGIN_SRC text
+#+begin_src text
   function SIMULATED-ANNEALING(problem, schedule)
     inputs: problem, a problem
             schedule, a mapping from time to 'temperature'
@@ -448,7 +448,7 @@ be stuck on a local maximum.
       𝞓E ← next.VALUE - current.VALUE
       if 𝞓E > 0 then current ← next
       else current ← next only with probability e^(𝞓E/T)
-#+END_SRC
+#+end_src
 
 ** Local Beam Search
 :REFERENCES:
@@ -486,7 +486,7 @@ tendency with random exploration and exchange of information among
 parallel search threads. /crossover/ in genetic algorithms raises the
 level of granularity at which the search operates.
 
-#+BEGIN_SRC text
+#+begin_src text
   function GENETIC-ALGORITHM(population, FITNESS-FN) returns an individual
     inputs: population, a set of individuals
             FITNESS-FN, a function that measures the fitness of an
@@ -509,7 +509,7 @@ level of granularity at which the search operates.
 
     n ← LENGTH(x); c ← random(1,n)
     return APPEND(SUBSTRING(x,1,c), SUBSTRING(y, c+1, n))
-#+END_SRC
+#+end_src
 
 ** Local Search in Continuous Spaces
 One way to avoid continuous problems is simply to /discretize/ the
@@ -557,7 +557,7 @@ A solution for an AND-OR search problem is a subtree that:
 2. specifies one action at each of its OR nodes
 3. includes every outcome branch at each of its AND nodes
 
-#+BEGIN_SRC text
+#+begin_src text
   function AND-OR-GRAPH-SEARCH(problem) returns a conditional plan, or failure
     OR-SEARCH(problem, INITIAL-STATE, problem, [])
 
@@ -574,7 +574,7 @@ A solution for an AND-OR search problem is a subtree that:
       plan_i ← OR-SEARCH(s_i,problem,path)
       if plan_i = failure then return failure
     return [if s_1 then plan_1 else if s_2 then plan_2 ...]
-#+END_SRC
+#+end_src
 
 (stop at AIMA 4.4)
 
@@ -754,7 +754,7 @@ all ground actions that have $F$ in their delete list.
 6. Add action exclusion axioms: say that exactly one ground action can
    occur at each step.
 
-#+BEGIN_SRC text
+#+begin_src text
   function SATPLAN(init, transition, goal, Tmax) returns solution or failure
     ""inputs: init, transition, goal constitute the problem
       description
@@ -765,7 +765,7 @@ all ground actions that have $F$ in their delete list.
       if model is not null then
         return extract-solution(model)
     return failure
-#+END_SRC
+#+end_src
 
 * Decision Theory
 Reference: AIMA Chapter 16
@@ -916,7 +916,7 @@ as:
 Decision networks extend Bayesian networks with nodes for actions and
 utilities. An example of a decision network is below:
 
-#+DOWNLOADED: https://artint.info/figures/ch09/diagnosisDN.png @ 2018-09-01 16:50:40
+#+downloaded: https://artint.info/figures/ch09/diagnosisDN.png @ 2018-09-01 16:50:40
 [[file:images/artificial_intelligence/diagnosisDN_2018-09-01_16-50-40.png]]
 
 The notation is as such:
@@ -984,7 +984,7 @@ VPI is order independent. That is:
 we can implement a myopic information-gathering agent, by using the
 VPI formula shortsightedly.
 
-#+BEGIN_SRC text
+#+begin_src text
   function INFORMATION-GATHERING-AGENT(percept) returns an action
     persistent: D, a decision network
 
@@ -993,7 +993,7 @@ VPI formula shortsightedly.
   if VPI(E_j) > Cost(E_j)
     return REQUEST(E_j)
   else return the best action from D
-#+END_SRC
+#+end_src
 
 If we know the associated cost of observing evidence, it simply
 retrieves the evidence if the cost of observing it is less than the
@@ -1004,14 +1004,14 @@ value it provides.
 ** Simon's Ant
 Simon, noble prize in economics
 
-#+BEGIN_QUOTE
+#+begin_quote
 The complexity of the behaviour is the manifestation of the complexity
 of the environment and not the complexity of the program.
-#+END_QUOTE
+#+end_quote
 
 * REFILE
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-09 13:55:33
+#+downloaded: /tmp/screenshot.png @ 2018-11-09 13:55:33
 [[file:images/artificial_intelligence/screenshot_2018-11-09_13-55-33.png]]
 
 * Papers

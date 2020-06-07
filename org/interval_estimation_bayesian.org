@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Interval Estimation in Bayesian Statistics
+#+setupfile:./hugo_setup.org
+#+title: Interval Estimation in Bayesian Statistics
 
 Suppose instead of [[file:point_estimation_bayesian.org][point estimation]], we'd like to identify a
 region that is likely to contain the true value of parameter $\theta$.
@@ -52,7 +52,7 @@ that:
 The $100(1-\alpha)%$ quantile-based CI is $\left[\theta_{\alpha / 2},
 \theta_{1-\alpha / 2}\right]$.
 
-#+CAPTION: Quantile-based 95% CI for Beta(3,9)
+#+caption: Quantile-based 95% CI for Beta(3,9)
 [[file:images/interval_estimation_bayesian/screenshot2020-01-22_20-40-15_.png]]
 
 * Highest Posterior Density (HPD) region
@@ -77,7 +77,7 @@ at the mode of the posterior distribution, and the pushing it down
 until the corresponding values on the $\theta$ axis contains the
 appropriate probability.
 
-#+CAPTION: 90% and 95% HPD regions on a Beta(3,9) distribution
+#+caption: 90% and 95% HPD regions on a Beta(3,9) distribution
 [[file:images/interval_estimation_bayesian/screenshot2020-01-22_20-43-30_.png]]
 
 Computing HPD requires numerical methods. HPD might not be an interval

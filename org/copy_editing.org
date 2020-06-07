@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Copy Editing
+#+setupfile:./hugo_setup.org
+#+title: Copy Editing
 
 - series comma :: always use the Oxford comma (or series comma)
 - only comma :: use the /only comma/, where the subject is one of its

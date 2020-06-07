@@ -1,7 +1,7 @@
 +++
 title = "If You're Not Writing a Programming Language, Don't Use A Programming Language - Leslie Lamport"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:28+08:00
+lastmod = 2020-06-07T17:27:53+08:00
 draft = false
 +++
 

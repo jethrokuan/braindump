@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Podcasts
+#+setupfile: ./hugo_setup.org
+#+title: Podcasts
 * Podcasts
 - [[https://www.npr.org/sections/money/][Planet Money]]
 - [[https://www.indiehackers.com/podcast][The Indie Hackers Podcast]]

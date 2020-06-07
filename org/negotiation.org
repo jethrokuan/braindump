@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Negotiation
+#+setupfile: ./hugo_setup.org
+#+title: Negotiation
 
 1. A good negotiator prepares, going in, to be ready for possible
    surprises; a great negotiator aims to use their skills to reveal

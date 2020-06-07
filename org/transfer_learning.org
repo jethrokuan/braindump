@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Transfer Learning
+#+setupfile:./hugo_setup.org
+#+title: Transfer Learning
 
 - tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 

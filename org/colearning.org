@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: colearning
-#+TITLE: Co-learning
+#+setupfile:./hugo_setup.org
+#+hugo_slug: colearning
+#+title: Co-learning
 
 Co-learning is the technique of aiding of modeling of a
 (resource-poor) modality by exploiting knowledge from another

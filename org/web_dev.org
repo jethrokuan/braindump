@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Web Development
+#+setupfile:./hugo_setup.org
+#+title: Web Development
 
 * Tools
 - [[https://jakearchibald.github.io/svgomg/][SVGOMG - SVGO's Missing GUI]]

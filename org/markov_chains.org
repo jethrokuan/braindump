@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Markov Chains
+#+setupfile: ./hugo_setup.org
+#+title: Markov Chains
 
 - tags :: [[file:stochastic_processes.org][Stochastic Processes]]
 

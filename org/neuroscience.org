@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Neuroscience ⭐
+#+setupfile:./hugo_setup.org
+#+title: Neuroscience ⭐

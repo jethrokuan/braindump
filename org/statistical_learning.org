@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Statistical Learning
+#+setupfile: ./hugo_setup.org
+#+title: Statistical Learning
 
 * Introduction
 Statistical learning refers to a vast set of tools for /understanding
@@ -55,7 +55,7 @@ example of a non-parametric model is the [[https://en.wikipedia.org/wiki/Thin_pl
 
 ** The Trade-Off Between Prediction Accuracy and Model Interpretability
 
-#+CAPTION: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. cite:james2013introduction
+#+caption: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. cite:james2013introduction
 [[file:images/statistical_learning/screenshot_2019-01-07_16-19-48.png]]
 
 There are several reasons to choose a restrictive model over a

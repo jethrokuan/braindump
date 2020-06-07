@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Extended Kalman Filter
+#+setupfile: ./hugo_setup.org
+#+title: Extended Kalman Filter
 
 - tags :: [[file:bayes_filter.org][Bayes Filter]], [[file:kalman_filter.org][Kalman Filter]], [[file:information_filter.org][Information Filter]]
 

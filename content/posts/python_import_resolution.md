@@ -1,7 +1,7 @@
 +++
 title = "Python Import Resolution"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-06T21:25:50+08:00
+lastmod = 2020-06-07T17:26:45+08:00
 slug = "python_import_resolution"
 draft = false
 +++

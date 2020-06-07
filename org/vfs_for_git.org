@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: vfs_for_git
-#+TITLE: VFS for Git
+#+setupfile:./hugo_setup.org
+#+hugo_slug: vfs_for_git
+#+title: VFS for Git
 
 VFS for [[file:git.org][Git]] is a virtualized filesystem used to bypass assumptions
 about repository size, allowing Git repositories to scale up to large

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Neuroscience and Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Neuroscience and Reinforcement Learning
 
 - tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]], [[file:neuroscience.org][Neuroscience ⭐]]
 

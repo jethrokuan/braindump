@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Computer Networking
+#+setupfile: ./hugo_setup.org
+#+title: Computer Networking
 
 - tags :: [[file:operating_systems.org][Operating Systems]]
 
@@ -27,11 +27,11 @@ collectively as TCP/IP.
 
 ** What is a protocol?
 
-#+BEGIN_QUOTE
+#+begin_quote
 A protocol defines the format and the order of messages exchanged
 between two or more communicating entities, as well as the actions
 taken on the transmission and/or receipt of a message or other event.
-#+END_QUOTE
+#+end_quote
 
 ** The Network Edge
 
@@ -59,7 +59,7 @@ twisted togethter to reduce electrical interference from similar pairs
 close by.
 
 
-#+CAPTION: A Unshielded-Twisted-Pair (UTP) cable
+#+caption: A Unshielded-Twisted-Pair (UTP) cable
 [[file:images/networking/UTP-Cable-Picture_2019-01-14_11-24-30.jpg]]
 
 Coaxial cables consist of 2 copper conductors, but the two conductors
@@ -67,7 +67,7 @@ are concentric rather than parallel. These achieve high data
 transmission rates, and can be used as a guided shared medium. They
 are common in cable television systems.
 
-#+CAPTION: A Coaxial cable
+#+caption: A Coaxial cable
 [[file:images/networking/SW-33020-6_3_2019-01-14_11-25-43.jpg]]
 
 
@@ -135,7 +135,7 @@ from a third-party telecommunications provider to directly connect one
 of its routers to a router at the PoP. Any ISP may choose to
 multi-home, that is, to connect to two or more provider ISPs.
 
-#+CAPTION: Interconnection of ISPs
+#+caption: Interconnection of ISPs
 [[file:images/networking/screenshot_2019-01-14_12-14-13.png]]
 
 ** Delays in Packet-Switched Networks
@@ -173,7 +173,7 @@ The Internet Protocol stack consists of 5 layers: the physical link,
 network, transport, and application layers. The OSI reference model
 consists of 7 layers.
 
-#+CAPTION: IP stack and ISO OSI reference model
+#+caption: IP stack and ISO OSI reference model
 [[file:images/networking/screenshot_2019-01-14_12-23-06.png]]
 
 - Application layer :: network applications and application layer
@@ -226,7 +226,7 @@ socket. It is the interface between the application layer and
 transport layer within a host.
 
 
-#+CAPTION: Application processes, sockets, and underlying transport protocol
+#+caption: Application processes, sockets, and underlying transport protocol
 [[file:images/networking/screenshot_2019-01-25_10-53-43.png]]
 
 ** Addressing Processes
@@ -333,7 +333,7 @@ Here's an exmple of the HTTP Request message:
 
 The general form of a request message looks like this:
 
-#+CAPTION: Format of a HTTP request message
+#+caption: Format of a HTTP request message
 [[file:images/networking/screenshot_2019-01-25_11-21-44.png]]
 
 The response message looks like this:
@@ -351,7 +351,7 @@ The response message looks like this:
 #+end_src
 
 
-#+CAPTION: Format of a HTTP response message
+#+caption: Format of a HTTP response message
 [[file:images/networking/screenshot_2019-01-25_11-26-41.png]]
 
 ** User-server Interaction: Cookies
@@ -370,7 +370,7 @@ Cookie consists of 4 components:
    user's web browser
 4. A back-end database at the Web site
 
-#+CAPTION: Keeping user state with cookies
+#+caption: Keeping user state with cookies
 [[file:images/networking/screenshot_2019-01-25_11-29-28.png]]
 
 
@@ -566,7 +566,7 @@ building this into the application itself.
 
 *** UDP Segment Structure
 
-#+CAPTION: UDP segment structure
+#+caption: UDP segment structure
 [[file:images/networking/screenshot_2019-02-20_16-36-34.png]]
 
 The UDP segment structure is defined in RFC 768. The UDP header has
@@ -659,7 +659,7 @@ examining the value of a field in the arriving packet's header. and
 then using this header value to index into the router's forwarding
 table.
 
-#+CAPTION: Routing algorithm determines value in forwarding table
+#+caption: Routing algorithm determines value in forwarding table
 [[file:images/networking/screenshot_2019-03-20_09-06-04.png]]
 
 Link-layer switches base their forwarding decision on values in the
@@ -688,7 +688,7 @@ these include:
 The Internet's network layer protocol provides a single service,
 known as the best-effort service.
 
-#+CAPTION: Internet, ATM CBR and ATM ABR Service Models
+#+caption: Internet, ATM CBR and ATM ABR Service Models
 [[file:images/networking/screenshot_2019-03-20_09-12-33.png]]
 
 It may seem like the Internet network-layer protocol provides no
@@ -766,7 +766,7 @@ choose the link interface to forward the packet.
 
 ** The Internet Protocol (IP)
 
-#+CAPTION: Illustration of the Internet's network layer
+#+caption: Illustration of the Internet's network layer
 [[file:images/networking/screenshot_2019-03-20_09-50-50.png]]
 
 ** Datagram 
@@ -774,7 +774,7 @@ choose the link interface to forward the packet.
 The network-layer packet is referred to as a /datagram/. The format of a
 datagram is as follows:
 
-#+CAPTION: IPv4 datagram format
+#+caption: IPv4 datagram format
 [[file:images/networking/screenshot_2019-03-20_09-51-48.png]]
 
 The key fields include:
@@ -824,7 +824,7 @@ transport layer at the destination.
 To perform the reassembly task, IPv4 put identification, flag and
 fragmentation offset fields in the datgram header.
 
-#+CAPTION: IP fragments
+#+caption: IP fragments
 [[file:images/networking/screenshot_2019-03-20_10-04-20.png]]
 
 ** IPv4 addressing
@@ -897,7 +897,7 @@ For a newly arriving host, the DHCP protocol is a 4-step process:
 4. DHCP ACK: The server responds to the DHCP request message with a
    HCP ACK message, confirming the requested parameters.
 
-#+CAPTION: DHCP client-server interaction
+#+caption: DHCP client-server interaction
 [[file:images/networking/screenshot_2019-03-20_10-26-56.png]]
 
 *** NAT
@@ -915,7 +915,7 @@ These addresses can be used without coordination with IANA or an
 Internet registry. These IP addresses only have meaning within the
 private network.
 
-#+CAPTION: Network Address Translation
+#+caption: Network Address Translation
 [[file:images/networking/screenshot_2019-03-28_16-32-35.png]]
 
 *** Routing

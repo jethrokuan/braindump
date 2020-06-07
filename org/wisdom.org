@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Wisdom
+#+setupfile: ./hugo_setup.org
+#+title: Wisdom
 
 * [[https://www.youtube.com/watch?v=3qHkcs3kG44][Joe Rogan Experience #1309 - Naval Ravikant]]
 

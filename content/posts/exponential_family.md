@@ -1,7 +1,7 @@
 +++
 title = "Exponential Family"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:23+08:00
+lastmod = 2020-06-07T17:26:26+08:00
 draft = false
 +++
 
@@ -39,7 +39,3 @@ the posterior:
 
 which belongs to the same family as the prior distribution, with
 parameters \\(\nu + 1\\) and \\(\tau + t(y)\\).
-
-## Backlinks {#backlinks}
-
-- [Bayesian Inference]({{< relref "bayesian_inference" >}})

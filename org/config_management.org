@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Config Management
+#+setupfile:./hugo_setup.org
+#+title: Config Management
 
 - tags :: [[file:operating_systems.org][Operating Systems]]
 

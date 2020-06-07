@@ -1,3 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: red_black_tree
-#+TITLE: Red-Black Tree
+#+setupfile:./hugo_setup.org
+#+hugo_slug: red_black_tree
+#+title: Red-Black Tree

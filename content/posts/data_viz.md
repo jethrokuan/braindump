@@ -1,7 +1,7 @@
 +++
 title = "Data Visualization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:20+08:00
+lastmod = 2020-06-07T17:26:23+08:00
 draft = false
 +++
 

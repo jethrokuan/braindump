@@ -1,17 +1,17 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:35+08:00
+lastmod = 2020-06-07T17:26:42+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [EKF Localization]({{< relref "ekf_localization" >}})
-- [Robotics]({{< relref "robotics" >}})
-- [Occupancy Grid Mapping]({{< relref "occupancy_grid_mapping" >}})
 - [State Estimation]({{< relref "state_estimation" >}})
 - [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})
+- [Occupancy Grid Mapping]({{< relref "occupancy_grid_mapping" >}})
+- [Robotics]({{< relref "robotics" >}})
+- [EKF Localization]({{< relref "ekf_localization" >}})
 
 Mobile robot localization is the problem of estimating the robots
 coordinates in an external reference frame from sensor data, relative
@@ -75,11 +75,3 @@ robot into a hazardous place.
 ## Summary {#summary}
 
 {{< figure src="/ox-hugo/screenshot2019-12-05_18-15-41_.png" caption="Figure 1: Comparisons between different Markov localization techniques" >}}
-
-### Backlinks {#backlinks}
-
-- [EKF Localization]({{< relref "ekf_localization" >}})
-- [Robotics]({{< relref "robotics" >}})
-- [Occupancy Grid Mapping]({{< relref "occupancy_grid_mapping" >}})
-- [State Estimation]({{< relref "state_estimation" >}})
-- [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})

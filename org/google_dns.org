@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: google_dns
-#+TITLE: Google DNS
+#+setupfile:./hugo_setup.org
+#+hugo_slug: google_dns
+#+title: Google DNS
 
 Set the DHCP server to  addresses only, and value to =8.8.8.8,8.8.4.4=.

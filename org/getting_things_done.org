@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Getting Things Done (GTD)
+#+setupfile:./hugo_setup.org
+#+title: Getting Things Done (GTD)
 
 [[https://gettingthingsdone.com/][GTD]] is a work-life management system created by David Allen. This
 [[file:productivity.org][productivity]] is summarized nicely in [[https://hamberg.no/gtd/][this article]].

@@ -1,7 +1,7 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:29+08:00
+lastmod = 2020-06-07T17:27:55+08:00
 draft = false
 +++
 

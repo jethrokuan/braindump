@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Hadoop
+#+setupfile: ./hugo_setup.org
+#+title: Hadoop
 
 Hadoop provides tools for working with big data, by raising the /level
 of abstraction/. 
@@ -89,7 +89,7 @@ HDFS. If a node running the map task fails before the map output has
 been consumed by the reduce task, then Hadoop will automatically rerun
 the map task on another node to re-create the map output.
 
-#+CAPTION: Data-local (a), rack-local (b) and off-rack (c) map tasks
+#+caption: Data-local (a), rack-local (b) and off-rack (c) map tasks
 [[file:images/hadoop/screenshot_2019-06-06_14-35-45.png]]
 
 Reduce tasks don't have the advantage of data-locality; the input to a
@@ -291,12 +291,12 @@ failover.
 HDFS is just one implementation of the filesystem abstraction. There
 are several implementations, examples of which are listed below:
 
-#+CAPTION: Hadoop filesystems
+#+caption: Hadoop filesystems
 [[file:images/hadoop/screenshot_2019-06-06_15-50-35.png]]
 
 *** File writes
 
-#+CAPTION: A client writing data to HDFS
+#+caption: A client writing data to HDFS
 [[file:images/hadoop/screenshot_2019-06-06_16-28-05.png]]
 
 
@@ -313,7 +313,7 @@ these APIs are not typically used directly by user code. Instead,
 users write to higher-level APIs provided by distributed computing
 frameworks, such as Spark and MapReduce.
 
-#+CAPTION: YARN applications
+#+caption: YARN applications
 [[file:images/hadoop/screenshot_2019-06-06_17-14-16.png]]
 
 YARN provides its core services via two types of long-running daemon:
@@ -323,7 +323,7 @@ to launch and monitor containers. Depending on how YARN is configured,
 a container may be a Unix process, or a linux cgroup.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-06-06 17:15:46
+#+downloaded: /tmp/screenshot.png @ 2019-06-06 17:15:46
 [[file:images/hadoop/screenshot_2019-06-06_17-15-46.png]]
 
 To run an application on YARN, a client contacts the resource manager
@@ -389,10 +389,10 @@ levels/.
      $p$ could be undefined, are actually present.
 
 
-#+CAPTION: Two sample nested records and their schema
+#+caption: Two sample nested records and their schema
 [[file:images/hadoop/screenshot_2019-07-15_11-39-11.png]]
 
-#+CAPTION: Column-striped representation of the sample data
+#+caption: Column-striped representation of the sample data
 [[file:images/hadoop/screenshot_2019-07-15_11-39-51.png]]
 
 Each column is stored as a set of blocks, each block containing the

@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+ROAM_ALIAS: NLP
-#+TITLE: Natural Language Processing
+#+setupfile: ./hugo_setup.org
+#+roam_alias: NLP
+#+title: Natural Language Processing
 
 * How to Represent Words
 http://ruder.io/word-embeddings-2017/index.html
@@ -386,13 +386,13 @@ probabilities to the number of possible transitions (the output
 dimension).
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-01-20 15:36:45
+#+downloaded: /tmp/screenshot.png @ 2018-01-20 15:36:45
 [[file:images/nlp/screenshot_2018-01-20_15-36-45.png]]
 
 * Basic Visualization Techniques of Text Data
 
 ** Word Cloud
-#+DOWNLOADED: http://www.sensightsurveys.com/wp-content/uploads/2015/05/word-cloud.png @ 2018-08-02 10:16:54
+#+downloaded: http://www.sensightsurveys.com/wp-content/uploads/2015/05/word-cloud.png @ 2018-08-02 10:16:54
 [[file:images/nlp/word-cloud_2018-08-02_10-16-54.png]]
 
 In word cloud, it is difficult to determine optimal placing of words.
@@ -402,18 +402,18 @@ In addition, word clouds do not show relation between words.
 
 ** ThemeRiver
 
-#+DOWNLOADED: http://www.vizinsight.com/blog/wp-content/uploads/2011/08/VizInsight0808_05.jpg @ 2018-08-02 10:19:46
+#+downloaded: http://www.vizinsight.com/blog/wp-content/uploads/2011/08/VizInsight0808_05.jpg @ 2018-08-02 10:19:46
 [[file:images/nlp/VizInsight0808_05_2018-08-02_10-19-46.jpg]]
 
 Time-series representation: view which keywords occur more frequently
 over time. It is a type of visualization known as a /stacked linegraph/.
 
 ** TIARA Visualization
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-02 10:23:34
+#+downloaded: /tmp/screenshot.png @ 2018-08-02 10:23:34
 [[file:images/nlp/screenshot_2018-08-02_10-23-34.png]]
 
 ** Phrase Nets
-#+DOWNLOADED: https://www.betterevaluation.org/sites/default/files/phrase_net_eg1.jpg @ 2018-08-02 10:36:47
+#+downloaded: https://www.betterevaluation.org/sites/default/files/phrase_net_eg1.jpg @ 2018-08-02 10:36:47
 [[file:images/nlp/phrase_net_eg1_2018-08-02_10-36-47.jpg]]
 
 Phrasenets are useful for exploring how words are linked in a text and

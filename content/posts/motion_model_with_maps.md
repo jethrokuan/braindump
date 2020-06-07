@@ -1,7 +1,7 @@
 +++
 title = "Motion Model With Maps"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:39+08:00
+lastmod = 2020-06-07T17:26:50+08:00
 draft = false
 +++
 
@@ -27,7 +27,3 @@ small.
 \begin{equation}
 p\left(x\_{t} | u\_{t}, x\_{t-1}, m\right)=\eta p\left(x\_{t} | u\_{t}, x\_{t-1}\right) p\left(x\_{t} | m\right)
 \end{equation}
-
-## Backlinks {#backlinks}
-
-- [Velocity Motion Model]({{< relref "velocity_motion_model" >}})

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: LaTeX
+#+setupfile:./hugo_setup.org
+#+title: LaTeX
 
 * Useful Tools
 - [[https://mathpix.com/][Mathpix]] :: extracts LaTeX from PDFs

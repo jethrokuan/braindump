@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Histogram Filter
+#+setupfile:./hugo_setup.org
+#+title: Histogram Filter
 
 The state space is decomposed into finitely many regions, and the
 cumulative posterior for each region is represented by a single

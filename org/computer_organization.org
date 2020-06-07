@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Computer Organization
+#+setupfile: ./hugo_setup.org
+#+title: Computer Organization
 
 - tags :: [[file:operating_systems.org][Operating Systems]]
 

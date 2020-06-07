@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Grid & Monte Carlo Localization
+#+setupfile:./hugo_setup.org
+#+title: Grid & Monte Carlo Localization
 
 Grid & Monte Carlo Localization methods are able to solve global
 localization problems (in comparison to [[file:ekf_localization.org][EKF Localization]] and
@@ -39,7 +39,7 @@ MC localization uses the [[file:particle_filter.org][Particle Filter]] to
 represent the posterior belief. The accuracy is determined by the size
 of the particle set.
 
-#+CAPTION: Illustration of MC localization
+#+caption: Illustration of MC localization
 [[file:images/grid_mc_localization/screenshot2019-12-05_18-05-16_.png]]
 
 This algorithm is unable to recover when the pose is incorrect, hence

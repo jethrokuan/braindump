@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: C++ Language
+#+setupfile: ./hugo_setup.org
+#+title: C++ Language
 
 - tags :: [[file:prog_lang.org][Programming Languages]]
 
@@ -25,7 +25,7 @@ a prefix * to access the value referred to by the reference. In
 addition, a reference cannot be made to refer to a different object
 after its initialization.
 
-#+BEGIN_SRC c++
+#+begin_src c++
 int count_x(const char* p, char x) {
   if (p == nullptr) return 0;
   int count = 0;
@@ -36,17 +36,17 @@ int count_x(const char* p, char x) {
   }
   return count;
 }
-#+END_SRC
+#+end_src
 
 * C++ Guidelines
 Follow the guidelines:
 https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md
 
 ** Use General ~{}~ style declarations
-#+BEGIN_SRC c++
+#+begin_src c++
 int i1 = 7.8; // i1 becomes 7
 int i2 {7.8}; // error: floating-point to integer conversion
-#+END_SRC
+#+end_src
 
 The old ~=~ style is traditional and dates back to C. Conversions that
 lose information, are allowed and implicitly applied. These are the
@@ -54,7 +54,7 @@ price paid for C compatibility.
 
 ** Use non-member begin and end
 non-member begin and end supports more containers, such as arrays.
-#+BEGIN_SRC c++
+#+begin_src c++
 vector<int> v;
 int a[100];
 
@@ -65,21 +65,21 @@ sort(&a[0], &a[0] + sizeof(a)/sizeof(a[0]));
 // C++11
 sort( begin(v), end(v) );
 sort( begin(a), end(a) );
-#+END_SRC
+#+end_src
 
 ** Lambda functions
 variables get passed through the square brackets.
-#+BEGIN_SRC c++
+#+begin_src c++
 const int factor = 2;
 
 std::for_each(myVec.begin(), myVec.end(), [factor](int& elem){
   elem *= factor;
 });
-#+END_SRC
+#+end_src
 
 ** using
 using is like typedef, but has less quirks.
-#+BEGIN_SRC c++
+#+begin_src c++
 using Month = int;
 
 class Date {
@@ -89,7 +89,7 @@ public:
     int month();          // don't
     // ...
 };
-#+END_SRC
+#+end_src
 ** avoid =endl=
 The endl manipulator is mostly equivalent to '\n' and "\n"; as most
 commonly used it simply slows down output by doing redundant flush()s.
@@ -141,16 +141,16 @@ http://stackoverflow.com/questions/1461432/what-is-array-decaying
 cin/cout is actually faster; but C++ slows it down to sync it with
 C-style io. If using only one style (cin), you can achieve greater IO
 speed with:
-#+BEGIN_SRC c++
+#+begin_src c++
 std::ios::sync_with_stdio(false);
-#+END_SRC
+#+end_src
 
 * Smart pointers
 
 Here's a summary of smart-pointers and their semantics. [[https://github.com/loopperfect/valuable][value_ptr]] is
 not in the stdlib, but is available as a C++ library.
 
-#+CAPTION: Tabular summary of smart pointers
+#+caption: Tabular summary of smart pointers
 [[file:images/cplusplus/screenshot_2019-02-24_17-27-51.png]]
 
 ** shared_ptr
@@ -160,7 +160,7 @@ shared pointer will take care of it once it goes out of scope. To
 create a ~shared_ptr~, use ~make_shared~. It's fast in memory allocation
 compared to ~new~. cite:codesbay_codes_cplus_smart
 
-#+BEGIN_SRC cpp
+#+begin_src cpp
 class Sample {
 public:
   Sample() { cout << "Constructor make_shared" << endl; }
@@ -170,7 +170,7 @@ int main() {
   shared_ptr<Sample> sp = make_shared<Sample>();
   return 0;
 }
-#+END_SRC
+#+end_src
 
 ** unique_ptr
 Like shared_ptr<>, there is no need to call delete or clean the memory

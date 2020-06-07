@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: self_attention
-#+TITLE: Self-attention
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: self_attention
+#+title: Self-attention

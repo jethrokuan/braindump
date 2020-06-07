@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: git_scalar
-#+TITLE: Git Scalar
+#+setupfile:./hugo_setup.org
+#+hugo_slug: git_scalar
+#+title: Git Scalar
 
 - tags :: [[file:git.org][Git]]
 

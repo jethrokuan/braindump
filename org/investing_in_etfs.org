@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Investing In ETFs
+#+setupfile:./hugo_setup.org
+#+title: Investing In ETFs
 
 * Identifying good ETFs /(Joshua Giersch, Rich By Retirement)/
 

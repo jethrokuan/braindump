@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Variational Inference
+#+setupfile:./hugo_setup.org
+#+title: Variational Inference
 
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]]
 

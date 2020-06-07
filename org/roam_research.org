@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Roam Research
+#+setupfile:./hugo_setup.org
+#+title: Roam Research
 
 - webpage :: [[https://roamresearch.com][Roam Research]]
 - tags :: [[file:productivity.org][Productivity]], [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]]

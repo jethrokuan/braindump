@@ -1,13 +1,13 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Data Science
+#+setupfile: ./hugo_setup.org
+#+title: Data Science
 
 * Twitter Data Science Event
 
 ** Maya Hari, Twitter Managing Director APAC
 
-#+BEGIN_QUOTE
+#+begin_quote
 World's largest collection of human thought
-#+END_QUOTE
+#+end_quote
 
 Indonesia's flood relief effort empowered by geolocated tweets.
 
@@ -22,7 +22,7 @@ Transliteration and languages are the next frontier of opportunity.
 [[https://interactive.twitter.com/][Twitter #interactive visualizations]]
 [[http://drewconway.com/zia/2013/3/26/the-data-science-venn-diagram][The Data Science Venn Diagram — Drew Conway]]
 
-#+DOWNLOADED: https://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=1500w @ 2018-12-06 19:05:38
+#+downloaded: https://static1.squarespace.com/static/5150aec6e4b0e340ec52710a/t/51525c33e4b0b3e0d10f77ab/1364352052403/Data_Science_VD.png?format=1500w @ 2018-12-06 19:05:38
 [[file:images/data_science/Data_Science_VD_2018-12-06_19-05-38.png]]
 
 *** Data Science Organization in Twitter

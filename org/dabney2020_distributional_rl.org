@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: A Distributional Code for Value in Dopamine-based Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: A Distributional Code for Value in Dopamine-based Reinforcement Learning
 
 - paper :: [[https://www.nature.com/articles/s41586-019-1924-6][https://www.nature.com/articles/s41586-019-1924-6]]
 - related :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Zeigarnik Effect
+#+setupfile:./hugo_setup.org
+#+title: Zeigarnik Effect
 
 Simply put, the Zeigarnik effect is the observation that /interrupted
 tasks are better remembered than completed ones/. This has

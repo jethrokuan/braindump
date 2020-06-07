@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Information Bottleneck in Deep Neural Networks
+#+setupfile:./hugo_setup.org
+#+title: Information Bottleneck in Deep Neural Networks
 
 The information bottleneck theory was recently used to study Deep
 Neural Networks. Shwartz-Ziv and Tishby proposed that the information

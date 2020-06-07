@@ -1,7 +1,7 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:39+08:00
+lastmod = 2020-06-07T17:28:06+08:00
 draft = false
 +++
 
@@ -510,9 +510,3 @@ analysis.
 <!--list-separator-->
 
 - [Linear tSNE optimization for the Web](https://arxiv.org/abs/1805.10817)
-
-### Backlinks {#backlinks}
-
-- [Hierarchical Models]({{< relref "hierarchical_models" >}})
-- [SSNLP Conference Notes]({{< relref "ssnlp" >}})
-- [Machine Learning]({{< relref "machine_learning" >}})

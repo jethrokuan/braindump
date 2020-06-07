@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Progressive Summarization
+#+setupfile:./hugo_setup.org
+#+title: Progressive Summarization
 
 - tags :: [[file:productivity.org][Productivity]]
 

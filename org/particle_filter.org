@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Particle Filter
+#+setupfile:./hugo_setup.org
+#+title: Particle Filter
 
 Particle filters approximate the posterior by a finite number of
 parameters. The posterior $\text{bel}(x_t)$ is represented by a set of

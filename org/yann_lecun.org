@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: yann_lecun
-#+TITLE: Yann LeCun
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: yann_lecun
+#+title: Yann LeCun

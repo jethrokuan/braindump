@@ -1,7 +1,7 @@
 +++
 title = "Empirical Risk Minimization"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:07+08:00
+lastmod = 2020-06-07T17:27:27+08:00
 draft = false
 +++
 
@@ -20,8 +20,3 @@ L_S(h) = \frac{|\\{i \in [m] : h(x_i) \ne y_i\\}}{m}
 
 Given a hypothesis class \\(H\\), finding the hypothesis \\(h \in H\\) that
 minimizes the empirical risk is a simple learning strategy.
-
-## Backlinks {#backlinks}
-
-- [PAC Learning]({{< relref "pac_learning" >}})
-- [Machine Learning]({{< relref "machine_learning" >}})

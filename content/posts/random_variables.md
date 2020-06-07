@@ -1,7 +1,7 @@
 +++
 title = "Random Variables"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:51+08:00
+lastmod = 2020-06-07T17:25:45+08:00
 draft = false
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Canonical Correlation Analysis"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:33+08:00
+lastmod = 2020-06-07T17:26:40+08:00
 slug = "canonical_correlation_analysis"
 draft = false
 +++
@@ -18,8 +18,3 @@ representation]({{< relref "multimodal_representation" >}}) learning, where the 
 
 Extensions of CCA include Kernel CCA, which uses a non-linear
 projection, and Deep CCA, which addresses the scalability issues of KCCA.
-
-## Backlinks {#backlinks}
-
-- [Dynamic Time Warping]({{< relref "dynamic_time_warping" >}})
-- [Multi-modal Representation]({{< relref "multimodal_representation" >}})

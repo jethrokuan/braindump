@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Robotics Probabilistic Generative Laws
-#+HUGO_TAGS: robotics
+#+setupfile: ./hugo_setup.org
+#+title: Robotics Probabilistic Generative Laws
+#+hugo_tags: robotics
 
 * Notation
 - $x_t$ :: world state at time $t$

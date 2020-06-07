@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Computer Vision
+#+setupfile: ./hugo_setup.org
+#+title: Computer Vision
 
 * Prerequisites
 [[file:linear_algebra.org][Linear Algebra]]
@@ -11,12 +11,12 @@ A camera that typically uses a mirror and prism system that permits
 the photographer to view through the lens and see exactly what will be
 captured.
 
-#+DOWNLOADED: http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/imggo/slr2.gif @ 2018-11-18 23:35:22
+#+downloaded: http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/imggo/slr2.gif @ 2018-11-18 23:35:22
 [[file:images/computer_vision/slr2_2018-11-18_23-35-22.gif]]
 
 ** DSLR (Digital SLR)
 
-#+DOWNLOADED: https://sites.google.com/site/photointro/_/rsrc/1336899552607/dslrstructure/DSLR_stru.jpg?height=317&width=400 @ 2018-11-18 23:37:03
+#+downloaded: https://sites.google.com/site/photointro/_/rsrc/1336899552607/dslrstructure/DSLR_stru.jpg?height=317&width=400 @ 2018-11-18 23:37:03
 [[file:images/computer_vision/DSLR_stru_2018-11-18_23-37-03.jpeg]]
 
 1. Matte focusing screen: screen on which the light passing through
@@ -67,7 +67,7 @@ heavy emphasis will be placed on algorithms that are robust to noise,
 and are reasonably efficient.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-18 21:17:41
+#+downloaded: /tmp/screenshot.png @ 2018-08-18 21:17:41
 [[file:images/computer_vision/screenshot_2018-08-18_21-17-41.png]]
 
 The above figure shows a rough layout of the content of computer
@@ -156,7 +156,7 @@ The basic primitives introduced above can be transformed, the simplest
 of which occur in the 2D plane.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-19 13:49:15
+#+downloaded: /tmp/screenshot.png @ 2018-08-19 13:49:15
 [[file:images/computer_vision/screenshot_2018-08-19_13-49-15.png]]
 
 2D translations can be written as $\mathbf{x}' = \mathbf{x} +
@@ -224,7 +224,7 @@ $\tilde{\mathbf{H}}$ is homogeneous.
 Each of these transformation preserves some properties, and can be
 presented in a hierarchy.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-19 14:02:51
+#+downloaded: /tmp/screenshot.png @ 2018-08-19 14:02:51
 [[file:images/computer_vision/screenshot_2018-08-19_14-02-51.png]]
 
 Some transformations that cannot be classified so easily include:
@@ -236,7 +236,7 @@ Some transformations that cannot be classified so easily include:
 The set of 3D transformations are similar to the 2D
 transformations.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-19 14:05:15
+#+downloaded: /tmp/screenshot.png @ 2018-08-19 14:05:15
 [[file:images/computer_vision/screenshot_2018-08-19_14-05-15.png]]
 
 ** 3D Rotations
@@ -331,7 +331,7 @@ or $w$, but not both. Then quarternion division can be defined as:
 ** 3D to 2D projections
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-20 17:35:43
+#+downloaded: /tmp/screenshot.png @ 2018-08-20 17:35:43
 [[file:images/computer_vision/screenshot_2018-08-20_17-35-43.png]]
 
 We need to specify how 3D primitives are projected onto the image
@@ -514,7 +514,7 @@ displaced away (barrel distortion) or towards (pincushion distortion)
 the image center by an amount proportional to their radial distance.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-20 18:17:31
+#+downloaded: /tmp/screenshot.png @ 2018-08-20 18:17:31
 [[file:images/computer_vision/screenshot_2018-08-20_18-17-31.png]]
 
 *** Camera Calibration
@@ -620,14 +620,14 @@ And we write:
 \end{equation}
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-24 13:05:41
+#+downloaded: /tmp/screenshot.png @ 2018-11-24 13:05:41
 [[file:images/computer_vision/screenshot_2018-11-24_13-05-41.png]]
 
 The world to camera transformation matrix is the extrinsic parameter
 matrix (4x4).
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-24 13:10:13
+#+downloaded: /tmp/screenshot.png @ 2018-11-24 13:10:13
 [[file:images/computer_vision/screenshot_2018-11-24_13-10-13.png]]
 
 
@@ -702,14 +702,14 @@ this, we need to introduce skew coefficients:
 We can simplify this by expressing it in homogeneous coordinates:
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-24 13:18:11
+#+downloaded: /tmp/screenshot.png @ 2018-11-24 13:18:11
 [[file:images/computer_vision/screenshot_2018-11-24_13-18-11.png]]
 
 The 3x4 matrix is the intrinsic matrix.
 
 This can be represented in an easier way:
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-24 13:20:19
+#+downloaded: /tmp/screenshot.png @ 2018-11-24 13:20:19
 [[file:images/computer_vision/screenshot_2018-11-24_13-20-19.png]]
 
 And if we assume:
@@ -795,7 +795,7 @@ that is rotated by 180^\deg around the surface normal
 $\hat{\mathbf{n}}$.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-21 11:16:05
+#+downloaded: /tmp/screenshot.png @ 2018-08-21 11:16:05
 [[file:images/computer_vision/screenshot_2018-08-21_11-16-05.png]]
 
 **** Phong Shading
@@ -846,7 +846,7 @@ distribution (the given histogram of intensity values) to another
 distribution (a wider and, ideally, uniform distribution of intensity
 values).
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-30 16:43:39
+#+downloaded: /tmp/screenshot.png @ 2018-08-30 16:43:39
 [[file:images/computer_vision/screenshot_2018-08-30_16-43-39.png]]
 
 We may use the cumulative distribution function to remap the original
@@ -871,7 +871,7 @@ Median filtering is good for removing salt-and-pepper noise, or
 scratches in image
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-23 10:05:43
+#+downloaded: /tmp/screenshot.png @ 2018-11-23 10:05:43
 [[file:images/computer_vision/screenshot_2018-11-23_10-05-43.png]]
 ** Color
 A human retina has 2 kinds of light receptors: rods are sensitive to
@@ -1007,7 +1007,7 @@ image database retrieval.
 
 Interpreting the eigenvalues:
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-24 14:54:48
+#+downloaded: /tmp/screenshot.png @ 2018-11-24 14:54:48
 [[file:images/computer_vision/screenshot_2018-11-24_14-54-48.png]]
 
 In flat regions, the eigenvalues are both small, in edges, only one of
@@ -1016,7 +1016,7 @@ eigenvalues are large but the 2 eigenvalues of the same magnitude, the error
 $E$ increases in all directions.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-24 14:56:43
+#+downloaded: /tmp/screenshot.png @ 2018-11-24 14:56:43
 [[file:images/computer_vision/screenshot_2018-11-24_14-56-43.png]]
 
 The Harris corner response function essentially filters out the corners.
@@ -1162,7 +1162,7 @@ downsampled. Usually , the Gaussian filter is used to smoothen the
 image before scaling down.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-11-23 12:36:44
+#+downloaded: /tmp/screenshot.png @ 2018-11-23 12:36:44
 [[file:images/computer_vision/screenshot_2018-11-23_12-36-44.png]]
 
 * Homography
@@ -1197,7 +1197,7 @@ H \begin{bmatrix}
 The homography is a $3 \times 3$ matrix with 8 degrees of freedom, as it is
 estimated up to a scale.
 
-#+DOWNLOADED: https://docs.opencv.org/3.4.1/homography_perspective_correction_chessboard_matches.jpg @ 2018-10-19 11:08:50
+#+downloaded: https://docs.opencv.org/3.4.1/homography_perspective_correction_chessboard_matches.jpg @ 2018-10-19 11:08:50
 [[file:images/computer_vision/homography_perspective_correction_chessboard_matches_2018-10-19_11-08-50.jpg]]
 
 Homographies are used in:

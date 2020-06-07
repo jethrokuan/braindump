@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: an_opinionated_guide_to_ml_research
-#+TITLE: Article: An Opinionated Guide to ML Research
+#+setupfile:./hugo_setup.org
+#+hugo_slug: an_opinionated_guide_to_ml_research
+#+title: Article: An Opinionated Guide to ML Research
 
 - tags :: [[file:machine_learning.org][Machine Learning]], [[file:research.org][Research]]
 - author :: [[file:john_schulman.org][John Schulman]]

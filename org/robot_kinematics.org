@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Robot Kinematics
+#+setupfile:./hugo_setup.org
+#+title: Robot Kinematics
 
 - tags :: [[file:velocity_motion_model.org][Velocity Motion Model]], [[file:odometry_motion_model.org][Odometry Motion Model]]
 
@@ -19,7 +19,7 @@ orientation:
   \left(\begin{array}{l}{x} \\ {y} \\ {\theta}\end{array}\right)
 \end{equation}
 
-#+CAPTION: Robot pose
+#+caption: Robot pose
 [[file:images/robot_kinematics/screenshot2019-12-01_21-26-36_.png]]
 
 The motion model plays the role of the state transition model in

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Gibbs Sampling
+#+setupfile:./hugo_setup.org
+#+title: Gibbs Sampling
 
 Gibbs sampling is a special case of the [[file:metropolis_hastings.org][Metropolis-Hastings method]],
 where a sequence of proposal distributions $q$ is defined in terms of

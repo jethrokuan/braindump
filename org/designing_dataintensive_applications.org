@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: designing_dataintensive_applications
-#+TITLE: Designing Data-Intensive Applications
+#+setupfile:./hugo_setup.org
+#+hugo_slug: designing_dataintensive_applications
+#+title: Designing Data-Intensive Applications
 
 - tags :: [[file:system_design.org][System Design]], [[file:databases.org][Databases]], [[file:hadoop.org][Hadoop]]
 - author :: [[file:martin_kleppmann.org][Martin Kleppmann]]

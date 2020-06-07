@@ -1,7 +1,7 @@
 +++
 title = "Writing Articles"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:15+08:00
+lastmod = 2020-06-07T17:28:48+08:00
 draft = false
 +++
 
@@ -15,7 +15,3 @@ draft = false
 ## References {#references}
 
 - [A blogging style guide | Robert Heaton](https://robertheaton.com/2018/12/06/a-blogging-style-guide/)
-
-### Backlinks {#backlinks}
-
-- [Writing]({{< relref "writing" >}})

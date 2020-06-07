@@ -1,7 +1,7 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:15+08:00
+lastmod = 2020-06-07T17:27:37+08:00
 draft = false
 +++
 
@@ -234,14 +234,10 @@ pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">
 
 # Bibliography
 
-<a id="cppref_raii" target="_blank">nil, , _RAII - cppreference.com_, , _()_, (nil). </a> [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
+<a id="cppref_raii" target="_blank">nil, _RAII - cppreference.com_, , _()_, (nil). </a> [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
 
-<a id="codesbay_codes_cplus_smart" target="_blank">CodesBay, , _GitHub - CodesBay/CplusPlusSmartPointer: This repository contains description of C++11 and C++14 Smart Pointers Trilogy of sharedptr, uniqueptr and weakptr_, , _()_, (nil). </a> [↩](#1ec5400d7db9917f3d3dfe2a47aff3b0)
+<a id="codesbay_codes_cplus_smart" target="_blank">CodesBay, _GitHub - CodesBay/CplusPlusSmartPointer: This repository contains description of C++11 and C++14 Smart Pointers Trilogy of sharedptr, uniqueptr and weakptr_, , _()_, (nil). </a> [↩](#1ec5400d7db9917f3d3dfe2a47aff3b0)
 
-<a id="so_why_move_shared_ptr" target="_blank">nil, , _C++ - Why would I std::move an std::sharedptr? - Stack Overflow_, , _()_, (2019). </a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
+<a id="so_why_move_shared_ptr" target="_blank">nil, _C++ - Why would I std::move an std::sharedptr? - Stack Overflow_, , _()_, (2019). </a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
 
-<a id="17_bartek" target="_blank">Bartek, , _Bartek's coding blog: How notnull can improve your code?_, , _()_, (2017). </a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)
-
-### Backlinks {#backlinks}
-
-- [CMake]({{< relref "cmake" >}})
+<a id="17_bartek" target="_blank">Bartek, _Bartek's coding blog: How notnull can improve your code?_, , _()_, (2017). </a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Free-Energy Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Free-Energy Reinforcement Learning
 
 - tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
@@ -8,7 +8,7 @@ cite:sallans04a_ferl. The key insight is that a product of experts
 allows for model parameters to be learnt efficiently, because values
 and derivatives for the product of experts can be efficiently computed.
 
-#+CAPTION: Free-energy RL
+#+caption: Free-energy RL
 [[file:images/free_energy_rl/screenshot2020-01-16_23-15-12_.png]]
 
 The weights of the RBM are tweaked such that the free energy of a

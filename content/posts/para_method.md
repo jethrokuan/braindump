@@ -1,7 +1,7 @@
 +++
 title = "PARA Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:27+08:00
+lastmod = 2020-06-07T17:29:02+08:00
 draft = false
 +++
 
@@ -61,7 +61,3 @@ My personal thoughts:
 ## Resources {#resources}
 
 - [The PARA Method: A Universal System for Organizing Digital Information | Praxis](https://praxis.fortelabs.co/the-p-a-r-a-method-a-universal-system-for-organizing-digital-information-75a9da8bfb37/)
-
-### Backlinks {#backlinks}
-
-- [Productivity]({{< relref "productivity" >}})

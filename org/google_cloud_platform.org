@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Google Cloud Platform
+#+setupfile:./hugo_setup.org
+#+title: Google Cloud Platform
 * Cloud ML
 - Exactly one replica is designated the master. This task manages the
   others and reports status for the job as a whole. The training

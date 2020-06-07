@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Theory Of Computation
+#+setupfile: ./hugo_setup.org
+#+title: Theory Of Computation
 * Introduction
 Finite automata are a useful model for many kinds of important
 software and hardware. Automatas are found in compilers, software for
@@ -92,13 +92,13 @@ In proofs, we often talk about a DFA in "five-tuple" notation:
 The two preferred notation for describing automata are:
 - transition diagrams :: a graph
 
-#+DOWNLOADED: https://quickgrid.files.wordpress.com/2015/10/subset-construction-nfa-from-transition-table.jpg @ 2018-08-14 12:47:06
+#+downloaded: https://quickgrid.files.wordpress.com/2015/10/subset-construction-nfa-from-transition-table.jpg @ 2018-08-14 12:47:06
 [[file:images/theory_of_computation/subset-construction-nfa-from-transition-table_2018-08-14_12-47-06.jpg]]
 
 - transition table :: a tubular listing of the $\delta$ function, which by
      implication tells us the states and the input alphabet.
 
-#+DOWNLOADED: https://i.stack.imgur.com/jTETt.png @ 2018-08-14 12:49:00
+#+downloaded: https://i.stack.imgur.com/jTETt.png @ 2018-08-14 12:49:00
 [[file:images/theory_of_computation/jTETt_2018-08-14_12-49-00.png]]
 
 ** Language of a DFA
@@ -151,7 +151,7 @@ $\hat{\delta}(q_0, w)$.
 
 ** The Equivalence of DFA and NFA
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-14 13:44:15
+#+downloaded: /tmp/screenshot.png @ 2018-08-14 13:44:15
 [[file:images/theory_of_computation/screenshot_2018-08-14_13-44-15.png]]
 
 ** Finite Automata with Epsilon-Transitions
@@ -159,7 +159,7 @@ Transitions on \epsilon, the empty string, allow NFAs to make a transition
 spontaneously. This is sometimes referred to as \epsilon-NFAs, and are
 closely related to regular expressions.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-15 11:45:07
+#+downloaded: /tmp/screenshot.png @ 2018-08-15 11:45:07
 [[file:images/theory_of_computation/screenshot_2018-08-15_11-45-07.png]]
 
 Of particular interest is the transition from $q_0$ to $q_1$, where the
@@ -263,7 +263,7 @@ We show this by showing that:
 2. Every language defined by a regular expression is also defined by a
    $\epilon$-NFA, which we have already shown is equivalent to a DFA.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 12:46:13
+#+downloaded: /tmp/screenshot.png @ 2018-08-28 12:46:13
 [[file:images/theory_of_computation/screenshot_2018-08-28_12-46-13.png]]
 
 *** From DFA to Regular Expression
@@ -306,7 +306,7 @@ goes through no state higher than $k$. Then either:
    path into several pieces:
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 12:58:35
+#+downloaded: /tmp/screenshot.png @ 2018-08-28 12:58:35
 [[file:images/theory_of_computation/screenshot_2018-08-28_12-58-35.png]]
 
 Then the set of labels for all paths of this type is represented by
@@ -346,7 +346,7 @@ as follows:
    regular expression for the automaton is $(R + SU^*T)^*SU^*$.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 23:30:02
+#+downloaded: /tmp/screenshot.png @ 2018-08-28 23:30:02
 [[file:images/theory_of_computation/screenshot_2018-08-28_23-30-02.png]]
 
 3. If the start state is also an accepting state, then we must perform
@@ -355,7 +355,7 @@ as follows:
    which accepts $R^*$.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 23:30:48
+#+downloaded: /tmp/screenshot.png @ 2018-08-28 23:30:48
 [[file:images/theory_of_computation/screenshot_2018-08-28_23-30-48.png]]
 
 *** Converting regular expressions to automata
@@ -374,7 +374,7 @@ The basis of the induction involves constructing automatons for
 regular expressions (a) $\epsilon$, (b) $\emptyset$ and (c) $\mathbb{a}$. They are displayed
 below:
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 23:36:18
+#+downloaded: /tmp/screenshot.png @ 2018-08-28 23:36:18
 [[file:images/theory_of_computation/screenshot_2018-08-28_23-36-18.png]]
 
 The inductive step consists of 4 cases: (a) The expression is $R + S$
@@ -384,7 +384,7 @@ some smaller expression $R$. (d) The expression is (R) for some
 expression R. The automatons for (a), (b), and (c) are shown below:
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-08-28 23:39:41
+#+downloaded: /tmp/screenshot.png @ 2018-08-28 23:39:41
 [[file:images/theory_of_computation/screenshot_2018-08-28_23-39-41.png]]
 
 The automaton for $R$ also serves as the automaton for $(R)$.
@@ -435,8 +435,8 @@ number of states, and are finite.
 
 The pumping lemma lets us show that certain languages are not regular.
 
-#+ATTR_LATEX: :options [Pumping Lemma]
-#+BEGIN_theorem
+#+attr_latex: :options [Pumping Lemma]
+#+begin_theorem
 <<pumping-lemma>>
 Let $L$ be a regular language. Then there exists a constant $n$ (which
 depends on $L$) such that for every string $w$ in $L$ such that
@@ -446,7 +446,7 @@ such that:
 1. $y \ne \epsilon$
 2. $| xy | \le n$
 3. For all $k \ge 0$, the string $xy^k z$ is also in $L$
-#+END_theorem
+#+end_theorem
 
 That is, we can always find a non-empty string $y$ not too far from
 the beginning of $w$ that can be "pumped". This means repeating $y$
@@ -583,7 +583,7 @@ The following statements are equivalent:
 
 We can prove these equivalences using the following arcs:
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-16 16:21:01
+#+downloaded: /tmp/screenshot.png @ 2018-09-16 16:21:01
 [[file:images/theory_of_computation/screenshot_2018-09-16_16-21-01.png]]
 
 ** Linear Grammars
@@ -636,7 +636,7 @@ which it can store a string of "stack symbols".
 We can view the pushdown automaton informally as the device suggested
 below:
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-18 12:36:26
+#+downloaded: /tmp/screenshot.png @ 2018-09-18 12:36:26
 [[file:images/theory_of_computation/screenshot_2018-09-18_12-36-26.png]]
 
 A "finite-state-control" reads inputs, one symbol at a time. The
@@ -680,7 +680,7 @@ sees the $ again, it knows that the stack effectively is empty.
 We can also draw transition diagrams for PDAs. An example is shown
 below.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-11 20:52:24
+#+downloaded: /tmp/screenshot.png @ 2018-10-11 20:52:24
 [[file:images/theory_of_computation/screenshot_2018-10-11_20-52-24.png]]
 
 ** Instantaneous Descriptions
@@ -749,7 +749,7 @@ $P_N$ is empty, which $P_F$ detects because it sees $X_0$ on the top of
 the stack.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-11 21:06:26
+#+downloaded: /tmp/screenshot.png @ 2018-10-11 21:06:26
 [[file:images/theory_of_computation/screenshot_2018-10-11_21-06-26.png]]
 
 Hence, we can specify $P_F = (Q \cup \{p_0, p_f\}, \Sigma, \Gamma \cup \{X_0\}, \delta_F, p_0,
@@ -765,7 +765,7 @@ X_0, \{p_f\}$:
 Whenever $P_F$ enters an accepting state after consuming input $w$,
 $P_N$ will empty its stack after consuming $w$.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-11 21:10:12
+#+downloaded: /tmp/screenshot.png @ 2018-10-11 21:10:12
 [[file:images/theory_of_computation/screenshot_2018-10-11_21-10-12.png]]
 
 To avoid simulating a situation where $P_F$ accidentally empties its
@@ -904,8 +904,8 @@ use several results, that we will state below.
 2. For a CNF grammar $G = (V, T, P, S)$, if the length of the longest
    path is $n$, then $|w| \le 2^{n-1}$ for all terminal strings $w$.
 
-#+ATTR_LATEX: :options [Pumping Lemma for CFLs]
-#+BEGIN_theorem
+#+attr_latex: :options [Pumping Lemma for CFLs]
+#+begin_theorem
 <<pumping-lemma-cfl>>
 Let $L$ be a CFL. Then there exists a constant $n$ (which
 depends on $L$) such that for every string $z$ in $L$ such that
@@ -915,9 +915,9 @@ such that:
 1. $ vx \ne \epsilon$
 2. $| vwx | \le n$
 3. For all $i \ge 0$, the string $uv^i wx^i y$ is also in $L$
-#+END_theorem
+#+end_theorem
 
-#+DOWNLOADED: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Pumping_lemma_for_context-free_languages.svg/600px-Pumping_lemma_for_context-free_languages.svg.png @ 2018-10-09 12:22:03
+#+downloaded: https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Pumping_lemma_for_context-free_languages.svg/600px-Pumping_lemma_for_context-free_languages.svg.png @ 2018-10-09 12:22:03
 [[file:images/theory_of_computation/600px-Pumping_lemma_for_context-free_languages.svg_2018-10-09_12-22-03.png]]
 
 If $s$ is sufficiently long, its derivation tree w.r.t. a Chomsky
@@ -1037,7 +1037,7 @@ there is a chain of all the positions in which the variable occurs
 (solid lines). The dashed lines suggest links from the productions to
 their counts.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-12 17:24:55
+#+downloaded: /tmp/screenshot.png @ 2018-10-12 17:24:55
 [[file:images/theory_of_computation/screenshot_2018-10-12_17-24-55.png]]
 
 For each production, we count the number of positions holding
@@ -1081,7 +1081,7 @@ set of variables $A such that $A \overset{*}{\Rightarrow} a_i a_{i+1} \dots a_j$
 are interested in whether $S$ is in the set $X_{1n}$.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-12 17:37:31
+#+downloaded: /tmp/screenshot.png @ 2018-10-12 17:37:31
 [[file:images/theory_of_computation/screenshot_2018-10-12_17-37-31.png]]
 
 It takes $O(n)$ time to compute any one entry of the table. Hence, the
@@ -1123,8 +1123,8 @@ control/, which can be in any of a finite set of states. There is a
 tape divided into squares or /cells/; each cell can hold any one of a
 finite number of symbols.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-16 12:52:06
-#+CAPTION: A Turing Machine
+#+downloaded: /tmp/screenshot.png @ 2018-10-16 12:52:06
+#+caption: A Turing Machine
 [[file:images/theory_of_computation/screenshot_2018-10-16_12-52-06.png]]
 
 Initially, the input, which is a finite-length string of symbols
@@ -1194,8 +1194,8 @@ An arc from state $q$ to state $p$ is labelled by one or more items of
 the form $X/YD$, where $X$ and $Y$ are tape symbols, and $D$ is a
 direction from either $L (\leftarrow)$ or $R (\rightarrow)$.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-16 16:09:40
-#+CAPTION: Transition diagram for TM accepting $0^n 1^n$
+#+downloaded: /tmp/screenshot.png @ 2018-10-16 16:09:40
+#+caption: Transition diagram for TM accepting $0^n 1^n$
 [[file:images/theory_of_computation/screenshot_2018-10-16_16-09-40.png]]
 
 ** The Language of a TM
@@ -1255,8 +1255,8 @@ symbol of the finite tape alphabet.
 Initially, the head of the first tape is at the left end of the input,
 but all other tape heads are at some arbitrary cell.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-16 16:29:52
-#+CAPTION: A multitape Turing machine
+#+downloaded: /tmp/screenshot.png @ 2018-10-16 16:29:52
+#+caption: A multitape Turing machine
 [[file:images/theory_of_computation/screenshot_2018-10-16_16-29-52.png]]
 
 A move on the multitape TM depends on the state and symbol scanned by
@@ -1276,8 +1276,8 @@ tracks each hold only a single marker that indicates where the head
 for the corresponding tape of $M$ is currently located.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-16 16:33:42
-#+CAPTION: Simulation of two-tape Turing machine by a one-tape Turing machine
+#+downloaded: /tmp/screenshot.png @ 2018-10-16 16:33:42
+#+caption: Simulation of two-tape Turing machine by a one-tape Turing machine
 [[file:images/theory_of_computation/screenshot_2018-10-16_16-33-42.png]]
 
 To simulate a move of $M$, $N$'s head must visit the $k$ head markers.
@@ -1320,8 +1320,8 @@ of being discovered. All IDs to the left of the current one have been
 explored and can be ignored subsequently.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-16 16:41:48
-#+CAPTION: Simulation of NTM by a DTM
+#+downloaded: /tmp/screenshot.png @ 2018-10-16 16:41:48
+#+caption: Simulation of NTM by a DTM
 [[file:images/theory_of_computation/screenshot_2018-10-16_16-41-48.png]]
 
 To process the current ID, $M_D$ does:
@@ -1359,8 +1359,8 @@ end marker and prevents the head of the semi-infinite TM from falling
 off the end of the tape.
 
 
-#+CAPTION: A semi-infinite tape can simulate a two-way infinite tape.
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-30 09:22:16
+#+caption: A semi-infinite tape can simulate a two-way infinite tape.
+#+downloaded: /tmp/screenshot.png @ 2018-10-30 09:22:16
 [[file:images/theory_of_computation/screenshot_2018-10-30_09-22-16.png]]
 
 Another restriction we make is to never write a blank. This combined
@@ -1438,7 +1438,7 @@ $r-1$ tape symbols are used by the stack machine.
    amount of time that is at most some polynomial in the number of
    steps taken by the computer
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-10-30 10:13:41
+#+downloaded: /tmp/screenshot.png @ 2018-10-30 10:13:41
 [[file:images/theory_of_computation/screenshot_2018-10-30_10-13-41.png]]
 
 We can prove the latter by using a TM to simulate the instruction

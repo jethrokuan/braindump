@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: The Svelte Compiler Handbook | Tan Li Hau
-#+ROAM_KEY: https://lihautan.com/the-svelte-compiler-handbook/
+#+setupfile: ./hugo_setup.org
+#+title: The Svelte Compiler Handbook | Tan Li Hau
+#+roam_key: https://lihautan.com/the-svelte-compiler-handbook/
 
 - tags :: [[file:svelte.org][Svelte]], [[file:web_dev.org][Web Development]]
 

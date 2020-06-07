@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Multi-variable Calculus
+#+setupfile:./hugo_setup.org
+#+title: Multi-variable Calculus
 
 Study of generalizations of the fundamental theorem of calculus to
 higher dimensions:

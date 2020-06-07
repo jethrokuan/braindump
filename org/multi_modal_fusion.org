@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: multimodal_fusion
-#+TITLE: Multi-modal Fusion
+#+setupfile:./hugo_setup.org
+#+hugo_slug: multimodal_fusion
+#+title: Multi-modal Fusion
 
 Multi-modal fusion is the integration of information from multiple
 modalities with the goal of predicting an outcome measure (e.g.

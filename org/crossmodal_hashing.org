@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: crossmodal_hashing
-#+TITLE: Cross-modal Hashing
+#+setupfile:./hugo_setup.org
+#+hugo_slug: crossmodal_hashing
+#+title: Cross-modal Hashing
 
 Cross-modal hashing is the compression of high dimensional data into
 compact binary codes with similar binary codes for similar objects.

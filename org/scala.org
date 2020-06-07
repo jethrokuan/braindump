@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Scala
+#+setupfile: ./hugo_setup.org
+#+title: Scala
 
 - tags :: [[file:prog_lang.org][Programming Languages]]
 
@@ -41,7 +41,7 @@ immutable data types on top of those found in the Java APIs.
 
 * Basic Scala
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-05-31 22:00:22
+#+downloaded: /tmp/screenshot.png @ 2019-05-31 22:00:22
 [[file:images/scala/screenshot_2019-05-31_22-00-22.png]]
 
 Arrays are accessed with parantheses in Scala: =a(0)=.  This is

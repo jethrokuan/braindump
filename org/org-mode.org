@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Org-Mode
+#+setupfile:./hugo_setup.org
+#+title: Org-Mode
 
 - Can add headline with numbers with ~(org-num-mode)~
 - ~C-c C-x -~ runs ~org-timer-item~, which is useful for taking notes.

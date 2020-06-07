@@ -1,7 +1,7 @@
 +++
 title = "Emacs Should Be Emacs Lisp - Tom Tromey"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:00+08:00
+lastmod = 2020-06-07T17:28:31+08:00
 slug = "emacs_should_be_emacs_lisp"
 draft = false
 +++

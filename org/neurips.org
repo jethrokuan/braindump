@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: neurips
-#+TITLE: NeurIPS
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: neurips
+#+title: NeurIPS

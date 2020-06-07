@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Large Batch Training
+#+setupfile:./hugo_setup.org
+#+title: Large Batch Training

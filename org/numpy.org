@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Numpy
+#+setupfile:./hugo_setup.org
+#+title: Numpy
 
 - tags :: [[file:data_science.org][Data Science]]
 

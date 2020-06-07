@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Quantization
+#+setupfile:./hugo_setup.org
+#+title: Quantization
 
 - tags :: [[file:model_compression.org][Model Compression]], [[file:machine_learning.org][Machine Learning]]
 

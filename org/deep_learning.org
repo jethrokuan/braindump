@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Deep Learning
+#+setupfile: ./hugo_setup.org
+#+title: Deep Learning
 
 * Definition
 A class of machine learning algorithm that uses a cascade of multiple
@@ -59,10 +59,10 @@ subsets of the real space.
 
 * Measure Theory
 ** Kullback-Leiber (KL) divergence
-#+BEGIN_EXPORT latex
+#+begin_export latex
 D_{KL}(P||Q) = E_{x \sim P}\left[\log\frac{P(x)}{Q(x)}\right] = E_{x
   \sim P} \left[\log P(x) - \log Q(x)\right]
-#+END_EXPORT
+#+end_export
 
 The KL divergence is 0 iff P and Q are the same distribution in
 discrete variables, and equal almost everywhere in continuous
@@ -71,13 +71,13 @@ difference between the two distributions, it is soften conceptualised
 as some sort of distance, but it is not a true measure, because it is
 not symmetric.
 ** Cross Entropy
-#+BEGIN_EXPORT latex
+#+begin_export latex
 H(P,Q) = H(P) + D_{KL}(P||Q)
-#+END_EXPORT
+#+end_export
 
-#+BEGIN_EXPORT latex
+#+begin_export latex
 H(P,Q) = -E_{x\sim P} \log Q(x)
-#+END_EXPORT
+#+end_export
 
 Minimising the cross entropy with respect to Q is equivalent to
 minimising the KL divergence.

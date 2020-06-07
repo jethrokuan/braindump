@@ -1,7 +1,7 @@
 +++
 title = "Partially Observable Markov Decision Processes (POMDPs)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:33+08:00
+lastmod = 2020-06-07T17:26:39+08:00
 draft = false
 +++
 
@@ -136,7 +136,3 @@ The algorithm's complexity is dominated by the number of plans
 generated: given \\(|A|\\) possible actions and \\(|E|\\) possible
 observations, there are \\(|A|^{O(|E|^{d-1})}\\) distinct depth-d plans,
 making the algorithm hopelessly inefficient for larger problems.
-
-### Backlinks {#backlinks}
-
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

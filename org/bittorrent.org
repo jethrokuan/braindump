@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: BitTorrent
+#+setupfile: ./hugo_setup.org
+#+title: BitTorrent
 
 * What is BitTorrent?
 When a file is made available using HTTP, all upload cost is placed on

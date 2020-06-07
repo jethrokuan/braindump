@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Slice Sampling
+#+setupfile:./hugo_setup.org
+#+title: Slice Sampling
 
 Slice sampling has similarities to [[file:gibbs_sampling.org][Gibbs sampling]], [[file:rejection_sampling.org][Rejection Sampling]]
 and the [[file:metropolis_hastings.org][Metropolis-Hastings method]]. The advantage over simple

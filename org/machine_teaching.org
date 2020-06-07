@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Machine Teaching
+#+setupfile: ./hugo_setup.org
+#+title: Machine Teaching
 
 * Definitions cite:simard17_machin_teach
 - machine learning research :: machine learning research aims at
@@ -66,7 +66,7 @@ decision-theoretic approach to planning teaching. Assuming knowledge
 about the student's learning model, the teacher is able to find
 optimal teaching actions.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-05-18 12:53:37
+#+downloaded: /tmp/screenshot.png @ 2019-05-18 12:53:37
 [[file:images/machine_teaching/screenshot_2019-05-18_12-53-37.png]]
 
 A POMDP is specified as a tuple:
@@ -256,7 +256,7 @@ cite:ravi_bayesian_teaching_mnist
 Below is an example of using Bayesian teaching, limited to a teaching
 set of dimension 2, to understand an MNIST model.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-05-19 16:30:05
+#+downloaded: /tmp/screenshot.png @ 2019-05-19 16:30:05
 [[file:images/machine_teaching/screenshot_2019-05-19_16-30-05.png]]
 
 One can inspect the best and worst teaching sets to understand what

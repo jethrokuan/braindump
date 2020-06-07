@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Simultaneous Localization and Mapping (SLAM)
+#+setupfile:./hugo_setup.org
+#+title: Simultaneous Localization and Mapping (SLAM)
 
 In SLAM, the robot acquires a map of its environment while
 simultaneously localizing itself relative to this map. It is a

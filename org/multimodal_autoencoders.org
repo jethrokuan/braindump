@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: multimodal_autoencoders
-#+TITLE: Multi-modal Autoencoders
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: multimodal_autoencoders
+#+title: Multi-modal Autoencoders

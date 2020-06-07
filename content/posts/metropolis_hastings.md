@@ -1,7 +1,7 @@
 +++
 title = "Metropolis-Hastings Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:09+08:00
+lastmod = 2020-06-07T17:27:29+08:00
 draft = false
 +++
 
@@ -35,8 +35,3 @@ as a Gaussian centered on \\(x^(t)\\) can be used.
 
 Hamiltonian Monte-Carlo methods make use of gradient information to
 reduce random-walk behaviour.
-
-### Backlinks {#backlinks}
-
-- [Gibbs Sampling]({{< relref "gibbs_sampling" >}})
-- [Slice Sampling]({{< relref "slice_sampling" >}})

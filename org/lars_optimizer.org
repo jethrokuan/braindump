@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: LARS Optimizer
+#+setupfile:./hugo_setup.org
+#+title: LARS Optimizer
 
 Layer-wise Adaptive Rate Scaling (LARS) is a [[file:nn_optimizer.org][Neural Network Optimizer]]. The
 technique allows [[file:large_batch_training.org][Large Batch Training]] without significant decrease in accuracy

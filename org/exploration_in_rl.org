@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Exploration In Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Exploration In Reinforcement Learning
 
 In [[file:reinforcement_learning.org][Reinforcement Learning ⭐]], exploration is important where rewards
 are sparse, and not a direct indication of how good an action is. Some

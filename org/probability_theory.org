@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Probability Theory
+#+setupfile: ./hugo_setup.org
+#+title: Probability Theory
 
 * Setup
 

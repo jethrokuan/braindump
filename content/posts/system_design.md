@@ -1,7 +1,7 @@
 +++
 title = "System Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:35+08:00
+lastmod = 2020-06-07T17:26:43+08:00
 draft = false
 +++
 
@@ -175,7 +175,3 @@ If adding new item, and it is full, remove tail of list,
 1.  Data can't fit onto one machine
 2.  So now the choice is between consistency and availability
 3.  Perform some estimations
-
-### Backlinks {#backlinks}
-
-- [Designing Data-Intensive Applications]({{< relref "designing_dataintensive_applications" >}})

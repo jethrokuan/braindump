@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: support_vector_machines
-#+TITLE: Support Vector Machines
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: support_vector_machines
+#+title: Support Vector Machines

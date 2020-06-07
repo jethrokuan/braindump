@@ -1,7 +1,7 @@
 +++
 title = "Feynman Technique"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:27+08:00
+lastmod = 2020-06-07T17:27:52+08:00
 slug = "feynman_technique"
 draft = false
 +++

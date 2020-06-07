@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: http://nlp.seas.harvard.edu/2018/04/03/attention.html
-#+HUGO_SLUG: the_annotated_transformer
-#+TITLE: The Annotated Transformer
+#+setupfile:./hugo_setup.org
+#+roam_key: http://nlp.seas.harvard.edu/2018/04/03/attention.html
+#+hugo_slug: the_annotated_transformer
+#+title: The Annotated Transformer
 
 - source :: http://nlp.seas.harvard.edu/2018/04/03/attention.html
 - author :: [[file:../alexander_rush.org][Alexander Rush]]

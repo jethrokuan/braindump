@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Bayesian Statistics
+#+setupfile:./hugo_setup.org
+#+title: Bayesian Statistics

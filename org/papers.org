@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Papers
+#+setupfile:./hugo_setup.org
+#+title: Papers

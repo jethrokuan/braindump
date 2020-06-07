@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Hindsight Experience Replay
+#+setupfile:./hugo_setup.org
+#+title: Hindsight Experience Replay
 
 - paper ::
   https://papers.nips.cc/paper/7090-hindsight-experience-replay.pdf

@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons (Literature Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:17+08:00
+lastmod = 2020-06-07T17:27:40+08:00
 draft = false
 +++
 
@@ -981,15 +981,15 @@ and 1. For each interval, if \\(x[i] \le r \delta t\\), generate a spike.
 
 <a id="spikeprop" target="_blank">Bohte, S., Kok, J., & Poutr\'e, Johannes, _SpikeProp: backpropagation for networks of spiking neurons._, In , (pp. 419–424) (2000). : .</a> [↩](#41ed49a4572e3909921301127000035c)
 
-<a id="huh_gradient_2018" target="_blank">Huh, D., & Sejnowski, T. J., _Gradient descent for spiking neural networks_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 1433–1443) (2018). : Curran Associates, Inc.</a> [↩](#d48f27d158019a23bdb5d712746d0147)
+<a id="huh_gradient_2018" target="_blank">Huh, D., & Sejnowski, T. J., _Gradient descent for spiking neural networks_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 1433–1443) (2018). : {Curran Associates, Inc.}.</a> [↩](#d48f27d158019a23bdb5d712746d0147)
 
-<a id="NIPS2018_7415" target="_blank">Shrestha, S. B., & Orchard, G., _SLAYER: Spike layer error reassignment in time_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 1412–1421) (2018). : Curran Associates, Inc.</a> [↩](#123af3c690cf296b196d898878568449)
+<a id="NIPS2018_7415" target="_blank">Shrestha, S. B., & Orchard, G., _SLAYER: Spike layer error reassignment in time_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 1412–1421) (2018). : {Curran Associates, Inc.}.</a> [↩](#123af3c690cf296b196d898878568449)
 
 <a id="rueckauer16_theor_tools_conver_analog_to" target="_blank">Rueckauer, B., Lungu, I., Hu, Y., & Pfeiffer, M., _Theory and tools for the conversion of analog to spiking convolutional neural networks_, CoRR, _()_, (2016). </a> [↩](#f842b3cf76d4cc279ae01a4cf75c48ba)
 
 <a id="10.3389/fncom.2017.00024" target="_blank">Scellier, B., & Bengio, Y., _Equilibrium propagation: Bridging the gap between energy-based models and backpropagation_, Frontiers in Computational Neuroscience, _11()_, 24 (2017). http://dx.doi.org/10.3389/fncom.2017.00024</a> [↩](#38c93c265031c562bcf3ab3a89b9d896)
 
-<a id="pmlr-v89-o-connor19a" target="_blank">O'Connor, P., Gavves, E., & Welling, M., _Training a spiking neural network with equilibrium propagation_, In K. Chaudhuri, & M. Sugiyama, Proceedings of Machine Learning Research (pp. 1516–1523) (2019). : PMLR.</a> [↩](#d1886fb7b4cde1636a730b6072eb45c5)
+<a id="pmlr-v89-o-connor19a" target="_blank">O'Connor, P., Gavves, E., & Welling, M., _Training a spiking neural network with equilibrium propagation_, In K. Chaudhuri, & M. Sugiyama, Proceedings of Machine Learning Research (pp. 1516–1523) (2019). : {PMLR}.</a> [↩](#d1886fb7b4cde1636a730b6072eb45c5)
 
 <a id="10.3389/fnins.2016.00508" target="_blank">Lee, J. H., Delbruck, T., & Pfeiffer, M., _Training Deep Spiking Neural Networks Using Backpropagation_, Frontiers in Neuroscience, _10()_, 508 (2016). http://dx.doi.org/10.3389/fnins.2016.00508</a> [↩](#9567e8351cddaa1b3d5ad674e54e8e63)
 
@@ -1000,7 +1000,3 @@ and 1. For each interval, if \\(x[i] \le r \delta t\\), generate a spike.
 <a id="whittington19_theor_error_back_propag_brain" target="_blank">Whittington, J. C., & Bogacz, R., _Theories of error back-propagation in the brain_, Trends in Cognitive Sciences, _23(3)_, 235–250 (2019). http://dx.doi.org/10.1016/j.tics.2018.12.005</a> [↩](#87673c771a23a8ad0a1301cb565d0484)
 
 <a id="heeger2000poisson" target="_blank">Heeger, D., _Poisson model of spike generation_, Handout, University of Standford, _5()_, 1–13 (2000). </a> [↩](#15fef7332c23705120f84cb94df313f0)
-
-### Backlinks {#backlinks}
-
-- [Spiking Neurons (Literature Review)]({{< relref "spiking_neurons_lit_review" >}})

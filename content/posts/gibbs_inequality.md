@@ -1,7 +1,7 @@
 +++
 title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:31+08:00
+lastmod = 2020-06-07T17:26:38+08:00
 draft = false
 +++
 
@@ -24,7 +24,3 @@ D\_{\textrm{KL}}(P||Q) \ge 0
 \end{equation}
 
 for any \\(P\\) and \\(Q\\).
-
-## Backlinks {#backlinks}
-
-- [Entropy]({{< relref "entropy" >}})

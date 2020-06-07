@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Linux
+#+setupfile:./hugo_setup.org
+#+title: Linux
 
 - ~127.0.1.1~ in ~/etc/hosts~ is to allow some applications like Gnome to
   resolve the hostname to an ip address with a canonical fully

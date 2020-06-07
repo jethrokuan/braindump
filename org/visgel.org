@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: VisGel
-#+ROAM_KEY: http://visgel.csail.mit.edu/
+#+setupfile: ./hugo_setup.org
+#+title: VisGel
+#+roam_key: http://visgel.csail.mit.edu/
 
 - tags :: [[file:multimodal_machine_learning.org][Multi-modal Machine Learning]]
 

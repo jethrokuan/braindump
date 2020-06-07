@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: The art of storytelling | Pixar in a Box | Partner content | Khan Academy
-#+ROAM_KEY: https://www.khanacademy.org/partner-content/pixar/storytelling
+#+setupfile: ./hugo_setup.org
+#+title: The art of storytelling | Pixar in a Box | Partner content | Khan Academy
+#+roam_key: https://www.khanacademy.org/partner-content/pixar/storytelling
 
 - tags :: [[file:storytelling.org][Storytelling]]

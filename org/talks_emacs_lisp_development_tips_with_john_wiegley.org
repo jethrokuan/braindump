@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: emacs_lisp_development_tips_with_john_wiegley
-#+TITLE: Talks: Emacs Lisp Development Tips with John Wiegley
+#+setupfile:./hugo_setup.org
+#+hugo_slug: emacs_lisp_development_tips_with_john_wiegley
+#+title: Talks: Emacs Lisp Development Tips with John Wiegley
 
 - source :: [[https://www.youtube.com/watch?v=QRBcm6jFJ3Q][2015-04-08 Emacs Lisp Development Tips with John Wiegley - YouTube]]
 - author :: [[file:john_wiegley.org][John Wiegley]]

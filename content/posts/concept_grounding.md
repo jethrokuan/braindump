@@ -1,7 +1,7 @@
 +++
 title = "Concept Grounding"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:05+08:00
+lastmod = 2020-06-07T17:28:37+08:00
 slug = "concept_grounding"
 draft = false
 +++
@@ -18,7 +18,3 @@ acoustic cues that can aid in grounding linguistic representations.
 Conceptual grounding is traditionally performed by finding a common
 latent space between representations, or by learning unimodal
 representations and then concatenating them.
-
-## Backlinks {#backlinks}
-
-- [Co-learning]({{< relref "colearning" >}})

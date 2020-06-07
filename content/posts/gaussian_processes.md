@@ -1,7 +1,7 @@
 +++
 title = "Gaussian Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:57+08:00
+lastmod = 2020-06-07T17:27:14+08:00
 draft = false
 +++
 
@@ -40,7 +40,3 @@ the infinitely many other points.
 ## References {#references}
 
 - Gaussian Processes for Machine Learning
-
-### Backlinks {#backlinks}
-
-- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})

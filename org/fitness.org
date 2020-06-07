@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Fitness
+#+setupfile: ./hugo_setup.org
+#+title: Fitness
 
 * Posture
 

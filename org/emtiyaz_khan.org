@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Emtiyaz Khan
+#+setupfile:./hugo_setup.org
+#+title: Emtiyaz Khan

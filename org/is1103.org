@@ -1,7 +1,7 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: IS1103: Computing and Society
-#+AUTHOR: Jethro Kuan
-#+OPTIONS: toc:nil
+#+setupfile: ./hugo_setup.org
+#+title: IS1103: Computing and Society
+#+author: Jethro Kuan
+#+options: toc:nil
 
 * Introduction                                                     :noexport:
 ** Definitions
@@ -67,12 +67,12 @@ policies provide the ultimate standard against which moral decisions
 must be evaluated
 
 *** Utilitarianism
-#+BEGIN_QUOTE
+#+begin_quote
 An individual act (X) or a social policy (Y) is morally permissible if
 the consequences that result from (X) or (Y) produce the greatest
 amount of good for the greatest number of persons affected by the act
 or policy.
-#+END_QUOTE
+#+end_quote
 
  1. Social utility is superior to alternative criteria for evaluating
     moral systems.
@@ -85,19 +85,19 @@ Assumes:
 
 *Act Utilitarianism:*
 
-#+BEGIN_QUOTE
+#+begin_quote
 An act, X, is morally permissible if the consequences produced by
 doing X result in the greatest good for the greatest number of persons
 affected by Act X.
-#+END_QUOTE
+#+end_quote
 
 *Rule Utilitarianism:*
 
-#+BEGIN_QUOTE
+#+begin_quote
 An act, X, is morally permissible if the consequences of following the
 general rule, Y, of which act X is an instance, would bring about the
 greatest good for the greatest number.
-#+END_QUOTE
+#+end_quote
 
 *Critic against Utilitarianism:*
 
@@ -128,10 +128,10 @@ Kant bases deontology on two premises:
 
 *Categorical Imperative*:
 
-#+BEGIN_QUOTE
+#+begin_quote
 Act always on that maxim or principle (or rule) that can be
 universally binding, without exception, for all human beings.
-#+END_QUOTE
+#+end_quote
 
 This forms a system of universality and impartiality. The objective
 rule to be followed—that is, the litmus test for determining when an
@@ -198,7 +198,7 @@ rules.
 Character-based ethical systems would most likely flourish in cultures
 where the emphasis placed on community life is stronger than that
 accorded to the role of individuals themselves.
-#+ATTR_LATEX: :width \textwidth :align |X|X|X|
+#+attr_latex: :width \textwidth :align |X|X|X|
  | Type of Theory                  | Advantages                                         | Disadvantages                                                 |
  |---------------------------------+----------------------------------------------------+---------------------------------------------------------------|
  | Consequence-based (Utilitarian) | Stresses promotion of happiness and utility        | Ignores concerns of justice for the minority population       |
@@ -291,11 +291,11 @@ privacy with respect to the:
      exchange of that information.
 
 ** Moor's Account of Privacy
-#+BEGIN_QUOTE
+#+begin_quote
 An individual [has] privacy in a situation with regard to others if
 and only if in that situation the individual [is] protected from
 intrusion, interference, and information access by others.
-#+END_QUOTE
+#+end_quote
 
 *** Naturally private vs normatively private
 In a naturally private situation, individuals are protected from
@@ -347,7 +347,7 @@ authors have pointed out the social value that privacy also provides,
 noting that privacy is essential for democracy.
 
 * Security
-  #+ATTR_LATEX: :width \textwidth :align |c|X|
+  #+attr_latex: :width \textwidth :align |c|X|
 | Type    | What                                                                                    |
 |---------+-----------------------------------------------------------------------------------------|
 | Data    | Securing data that resides in computer databases; transmitted between computer systems  |
@@ -382,11 +382,11 @@ noting that privacy is essential for democracy.
 
 
 ** Cloud Computing
-#+BEGIN_QUOTE
+#+begin_quote
 a model for enabling ubiquitous, convenient, on-demand network access
 to a shared pool of configurable computing resources (e.g., networks,
 servers, storage, applications and services).
-#+END_QUOTE
+#+end_quote
 
 *** Major Concerns
  1. How users can control their data stored in the cloud—currently,
@@ -447,10 +447,10 @@ could distinguish authentic or “genuine” cybercrimes from other crimes
 that merely involve the use or the presence of cybertechnology. We
 propose a definition of a genuine cybercrime as a crime in which
 
-#+BEGIN_QUOTE
+#+begin_quote
 the criminal act can be carried out only through the use of
 cybertechnology and can take place only in the cyberrealm.
-#+END_QUOTE
+#+end_quote
 
 - Cyberpiracy :: using cybertechnology in unauthorized ways to (a)
                  reproduce copies of proprietary information, or (b)
@@ -469,14 +469,14 @@ cybertechnology and can take place only in the cyberrealm.
                     
 ** Pre-emptive hacking
 
-#+BEGIN_QUOTE
+#+begin_quote
 The goal of the ethical hacker is to help the organization take
 preemptive measures against malicious attacks by attacking the system
 himself; all the while staying within legal limits ... an Ethical
 Hacker is very similar to a Penetration Tester ... When it is done
 by request and under a contract between an Ethical Hacker and an
 organization, it is legal.
-#+END_QUOTE
+#+end_quote
 
 - Justified through utilitarian/consequentialist means :: Less harm
      overall, society gain benefits from a more robust system

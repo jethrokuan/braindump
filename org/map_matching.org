@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Map Matching
+#+setupfile:./hugo_setup.org
+#+title: Map Matching
 
 Map matching compiles small numbers of consecutive scans into
 local maps $m_{\mathrm{local}}$. Maps are then compared to the global

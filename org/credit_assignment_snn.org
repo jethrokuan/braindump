@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Credit Assignment in Spiking Neural Networks
+#+setupfile:./hugo_setup.org
+#+title: Credit Assignment in Spiking Neural Networks
 
 The problem of spatial and temporal credit assignment in RNNs are
 solved through backpropagating errors in the unrolled RNN.

@@ -1,12 +1,12 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: python_default_values
-#+TITLE: Python Default Parameter Values
+#+setupfile:./hugo_setup.org
+#+hugo_slug: python_default_values
+#+title: Python Default Parameter Values
 
 - source :: [[http://effbot.org/zone/default-values.htm][Default Parameter Values in Python]]
 
 Python has interesting behaviour for default values:
 
-#+BEGIN_SRC python :results output
+#+begin_src python :results output
   def a(v=[]):
       v.append(1)
       print(v)
@@ -15,9 +15,9 @@ Python has interesting behaviour for default values:
   a()
   a()
   a()
-#+END_SRC
+#+end_src
 
-#+RESULTS:
+#+results:
 : [1]
 : [1, 1]
 : [1, 1, 1]

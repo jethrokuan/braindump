@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Generalized Value Functions
+#+setupfile:./hugo_setup.org
+#+title: Generalized Value Functions
 (TODO)
 
 - Successor representation is the discounted occupancy of a state.

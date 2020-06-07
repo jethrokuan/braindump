@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: And the Bit Goes Down: Revisiting the Quantization of Neural Networks
+#+setupfile:./hugo_setup.org
+#+title: And the Bit Goes Down: Revisiting the Quantization of Neural Networks
 
 - tags :: [[file:model_compression.org][Model Compression]]
 - paper :: cite:stock19_and_bit_goes_down

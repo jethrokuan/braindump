@@ -1,10 +1,10 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: HTTP
+#+setupfile: ./hugo_setup.org
+#+title: HTTP
 
 - tags :: [[file:web_dev.org][Web Development]]
 
 * GET Requests and Request Body
-#+BEGIN_QUOTE
+#+begin_quote
 Yes. In other words, any HTTP request message is allowed to contain a
 message body, and thus must parse messages with that in mind. Server
 semantics for GET, however, are restricted such that a body, if any,
@@ -18,7 +18,7 @@ This is part of the layered design of HTTP/1.1 that will become clear
 again once the spec is partitioned (work in progress).
 
 -- Roy Fielding
-#+END_QUOTE
+#+end_quote
 
 Having servers return content based on the value of the request body
 in the GET request is a bad practice.

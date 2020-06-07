@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Rejection Sampling
+#+setupfile:./hugo_setup.org
+#+title: Rejection Sampling
 
 *Goal*: To sample from unknown distribution $p(x)$.
 

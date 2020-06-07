@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Quantitative Reasoning
+#+setupfile: ./hugo_setup.org
+#+title: Quantitative Reasoning
 * Chapter 1: Design
 ** What is a study?
 A study seeks to establish whether there is an /association/ between a
@@ -68,17 +68,17 @@ a.k.a. numerical, measurement
 ** Association
 A and Y are associated if
 
-#+BEGIN_SRC text
+#+begin_src text
 (1) rate(A|Y) != rate(A|!Y) OR
 (2) rate(Y|A) != rate(Y|!A)
-#+END_SRC
+#+end_src
 
 Consistency rule states than (1) iff (2), and vice-versa.
 
-#+BEGIN_SRC text
+#+begin_src text
 a/(a+c) != b/(b+d)
 a/(a+b) != c/(c+d)
-#+END_SRC
+#+end_src
 
 ** Adherence
 - Assignment may be random, but adherence is not
@@ -105,15 +105,15 @@ is not associated to exposure x tends to almost certainty.
 | B     | x | y     | x + y     |
 | not B | a | b     | a + b     |
 
-#+BEGIN_SRC text
+#+begin_src text
 risk (A | B) = x / (x+y)
 risk (A | !B) = a / (a+b)
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC text
+#+begin_src text
 RR = risk(A|B) / risk(A|!B)
 RR = 1 means no association
-#+END_SRC
+#+end_src
 
 - RR > 1 => first group has higher risk
 - Population risk cannot be estimated in case-control studies, even
@@ -124,13 +124,13 @@ RR = 1 means no association
 | B     | x | y     |
 | not B | a | b     |
 
-#+BEGIN_SRC text
+#+begin_src text
 odds(A|B) = x/y
 odds(A|!B)= a/b
 
 OR = bx/ay
 odds = risk/(1-risk)
-#+END_SRC
+#+end_src
 
 *** Population vs Estimated RR
 population sample size too large, calculation done based on samples.
@@ -172,19 +172,19 @@ Summarizes direction and strength of linear association: -1 <= r <= 1
 - r = 1 perfectly positive association
 - r value close to 0 weak association
 
-#+BEGIN_SRC text
+#+begin_src text
 weak   moderate    strong
 0    0.3        0.7       1
-#+END_SRC
+#+end_src
  
 Not affected by:
 1. Interchanging two variables
 2. Adding a number to all values of a variable
 3. Multiplying a number to all values of a variable
 *** Standard Unit
-#+BEGIN_SRC text
+#+begin_src text
 SU = (X - X_bar) / sd_x 
-#+END_SRC
+#+end_src
 
 To obtain r, obtain the product of standard unit of father-son pairs,
 then take the average of the products
@@ -215,11 +215,11 @@ Generalize the correlation based on individuals toward the aggregate
 level correlation 
 ** Association
 *** Attentuation Effect
-#+BEGIN_QUOTE
+#+begin_quote
 Due to range restriction in one variable, the correlation coefficient
 obtained tends to understate the strength of association between two
 variables.
-#+END_QUOTE
+#+end_quote
 Range restriction: bivariate data set formed based on criteria on one
 variable data for the other variable is only available for a limited
 range.
@@ -227,11 +227,11 @@ range.
 Range restriction tends to have diminishing influence on the strength
 of the association, called the attenuation effect.
 *** Regression fallacy
-#+BEGIN_QUOTE
+#+begin_quote
 In virtual test-retest situations, the bottom group on the first test
 will on average show some improvement on the second test, and the top
 group will, on average, fall back.
-#+END_QUOTE
+#+end_quote
 ** Prediction with linear regression
 Y = a + bX
 

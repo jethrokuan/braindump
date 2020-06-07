@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: restricted_boltzmann_machines
-#+TITLE: Restricted Boltzmann machines
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: restricted_boltzmann_machines
+#+title: Restricted Boltzmann machines

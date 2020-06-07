@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Are We Smart Enough to Know How Smart Animals Are?
+#+setupfile:./hugo_setup.org
+#+title: Are We Smart Enough to Know How Smart Animals Are?
 
 - title :: Are We Smart Enough to Know How Smart Animals Are? 
 - author :: Frans de Waal

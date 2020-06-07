@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Dev Ops
+#+setupfile: ./hugo_setup.org
+#+title: Dev Ops
 * Kubernetes
 [[https://www.opencontainers.org/][Open Containers Initiative]]
 ** Features of a COE

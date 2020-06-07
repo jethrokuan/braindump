@@ -1,7 +1,7 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:32+08:00
+lastmod = 2020-06-07T17:27:58+08:00
 draft = false
 +++
 
@@ -630,17 +630,13 @@ Write a client that sends the request and prints this response.
 
 # Bibliography
 
-<a id="nilil_ros_introd_ros_wiki" target="_blank">nil, , _ROS/Introduction - ROS wiki_, , _()_, (nil). </a> [↩](#b049e1028daa027cae7888fe4de0456c)
+<a id="nilil_ros_introd_ros_wiki" target="_blank">nil, _ROS/Introduction - ROS wiki_, , _()_, (nil). </a> [↩](#b049e1028daa027cae7888fe4de0456c)
 
-<a id="wiki_pubsub" target="_blank">nil, , _ROS/Tutorials/WritingPublisherSubscriber(python) - ROS wiki_, , _()_, (nil). </a> [↩](#0eb03dca701c737878a6bf71343edd56)
+<a id="wiki_pubsub" target="_blank">nil, _ROS/Tutorials/WritingPublisherSubscriber(python) - ROS wiki_, , _()_, (nil). </a> [↩](#0eb03dca701c737878a6bf71343edd56)
 
-<a id="wiki_service" target="_blank">nil, , _ROS/Tutorials/WritingServiceClient(python) - ROS wiki_, , _()_, (nil). </a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
+<a id="wiki_service" target="_blank">nil, _ROS/Tutorials/WritingServiceClient(python) - ROS wiki_, , _()_, (nil). </a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
 
-<a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil, , _Melodic/Installation/Ubuntu - ROS wiki_, , _()_, (nil). </a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
-
-### Backlinks {#backlinks}
-
-- [Robotics]({{< relref "robotics" >}})
+<a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil, _Melodic/Installation/Ubuntu - ROS wiki_, , _()_, (nil). </a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
 
 [^fn:1]: Almost all these commands have tab completion!
 [^fn:2]: can also be done programatically

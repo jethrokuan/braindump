@@ -1,7 +1,7 @@
 +++
 title = "Map Matching"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:11+08:00
+lastmod = 2020-06-07T17:28:43+08:00
 draft = false
 +++
 
@@ -29,7 +29,3 @@ end-points.
 1.  No plausible physical explanation
 2.  Result of map matching may incorporate areas beyond actual
     measurement range.
-
-### Backlinks {#backlinks}
-
-- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})

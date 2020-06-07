@@ -1,7 +1,7 @@
 +++
 title = "Portfolio Composition"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:21+08:00
+lastmod = 2020-06-07T17:28:55+08:00
 draft = false
 +++
 
@@ -26,7 +26,3 @@ draft = false
 - MBH, Nikko Asset Management SGD Investment-Grade Corporate Bond ETF
 - IWDA, the iShares Core MSCI World ETF
   - invests in every developed market in the world, 0.2% expense ratio
-
-### Backlinks {#backlinks}
-
-- [Investment]({{< relref "investment" >}})

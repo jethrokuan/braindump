@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Travel
+#+setupfile:./hugo_setup.org
+#+title: Travel
 
 * Useful Links
 - [[https://www.seat61.com/][The Man in Seat Sixty-One - the train travel guide...]]

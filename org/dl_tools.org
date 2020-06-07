@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Deep Learning Tools
+#+setupfile: ./hugo_setup.org
+#+title: Deep Learning Tools
 
 - tags :: [[file:deep_learning.org][Deep Learning]]
 
@@ -13,7 +13,7 @@ TensorFlow breaks up the graph into several chunks and run them in
 parallel across multiple CPUs or GPUs where possible, and also
 supports distributed computing.
 
-#+DOWNLOADED: https://3.bp.blogspot.com/-l2UT45WGdyw/Wbe7au1nfwI/AAAAAAAAD1I/GeQcQUUWezIiaFFRCiMILlX2EYdG49C0wCLcBGAs/s1600/image6.png @ 2018-09-15 14:26:09
+#+downloaded: https://3.bp.blogspot.com/-l2UT45WGdyw/Wbe7au1nfwI/AAAAAAAAD1I/GeQcQUUWezIiaFFRCiMILlX2EYdG49C0wCLcBGAs/s1600/image6.png @ 2018-09-15 14:26:09
 [[file:images/tensorflow/image6_2018-09-15_14-26-09.png]]
 
 ** Glossary
@@ -29,7 +29,7 @@ https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framewor
 
 Example of how to use tf.contrib.framework.arg_scope:
 
-#+BEGIN_SRC python
+#+begin_src python
   from third_party.tensorflow.contrib.layers.python import layers
 
   arg_scope = tf.contrib.framework.arg_scope
@@ -39,27 +39,27 @@ Example of how to use tf.contrib.framework.arg_scope:
                  regularizer=layers.l2_regularizer(0.05)):
     net = layers.conv2d(inputs, 64, [11, 11], 4, padding='VALID', scope='conv1')
     net = layers.conv2d(net, 256, [5, 5], scope='conv2')
-#+END_SRC
+#+end_src
 
 The first call to conv2d will behave as follows:
 
-#+BEGIN_SRC python
+#+begin_src python
   layers.conv2d(inputs, 64, [11, 11], 4, padding='VALID',
                 initializer=layers.variance_scaling_initializer(),
                 regularizer=layers.l2_regularizer(0.05), scope='conv1')
-#+END_SRC
+#+end_src
 The second call to conv2d will also use the arg_scope's default for
 padding:
 
-#+BEGIN_SRC python
+#+begin_src python
   layers.conv2d(inputs, 256, [5, 5], padding='SAME',
                 initializer=layers.variance_scaling_initializer(),
                 regularizer=layers.l2_regularizer(0.05), scope='conv2')
-#+END_SRC
+#+end_src
 
   Example of how to reuse an arg_scope:
 
-#+BEGIN_SRC python
+#+begin_src python
   with arg_scope([layers.conv2d], padding='SAME',
                  initializer=layers.variance_scaling_initializer(),
                  regularizer=layers.l2_regularizer(0.05)) as sc:
@@ -68,19 +68,19 @@ padding:
 
   with arg_scope(sc):
       net = layers.conv2d(net, 256, [5, 5], scope='conv2')
-#+END_SRC
+#+end_src
 
   Example of how to use tf.contrib.framework.add_arg_scope to enable your
   function to be called within an arg_scope later:
 
-#+BEGIN_SRC python
+#+begin_src python
   @tf.contrib.framework.add_arg_scope
   def conv2d(*args, **kwargs)
-#+END_SRC
+#+end_src
 ** TF Serve
 https://towardsdatascience.com/introducing-tfserve-simple-and-easy-http-server-for-tensorflow-model-inference-582ea1b07da8?source=rss----7f60cf5620c9---4
 ** TF Estimator
-#+DOWNLOADED: https://1.bp.blogspot.com/-njTtnjOq_cE/Wbe772URrgI/AAAAAAAAD1Y/h1mWj6MGSzYg_KDuVXWBYeNqA4z5WRSpACLcBGAs/s1600/image2.jpg @ 2018-09-15 14:42:49
+#+downloaded: https://1.bp.blogspot.com/-njTtnjOq_cE/Wbe772URrgI/AAAAAAAAD1Y/h1mWj6MGSzYg_KDuVXWBYeNqA4z5WRSpACLcBGAs/s1600/image2.jpg @ 2018-09-15 14:42:49
 [[file:images/tensorflow/image2_2018-09-15_14-42-49.jpg]]
 
 References:
@@ -109,7 +109,7 @@ communicates everything that the Estimator needs to know about the
 environment in which the model will be run: how many workers are
 available,, how to save intermediate checkpoints etc.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-16 22:17:13
+#+downloaded: /tmp/screenshot.png @ 2018-09-16 22:17:13
 [[file:images/tensorflow/screenshot_2018-09-16_22-17-13.png]]
 
 ~train~, ~evaluate~ and ~predict~ take an input function, which is expected
@@ -124,7 +124,7 @@ following information:
 1. the mode, which is ~tf.estimator.ModeKeys.PREDICT~
 2.  the prediction
 
-#+BEGIN_SRC python
+#+begin_src python
   # class_ids will be the model prediction for the class (Iris flower type)
   # The output node with the highest value is our prediction
   predictions = { 'class_ids': tf.argmax(input=logits, axis=1) }
@@ -132,37 +132,37 @@ following information:
   # Return our prediction
   if mode == tf.estimator.ModeKeys.PREDICT:
      return tf.estimator.EstimatorSpec(mode, predictions=predictions)
-#+END_SRC
+#+end_src
 
 *** Eval
 When ~model_fn~ is called with ~mode == ModeKeys.EVAL~, the model function must evaluate the model, returning loss. 
 
-#+BEGIN_SRC python
+#+begin_src python
   # To calculate the loss, we need to convert our labels
   # Our input labels have shape: [batch_size, 1]
   labels = tf.squeeze(labels, 1)          # Convert to shape [batch_size]
   loss = tf.losses.sparse_softmax_cross_entropy(labels=labels, logits=logits)
-#+END_SRC
+#+end_src
 
 We can also compute and return additional metrics.
-#+BEGIN_SRC python
+#+begin_src python
   # Calculate the accuracy between the true labels, and our predictions
   accuracy = tf.metrics.accuracy(labels, predictions['class_ids'])
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   if mode == tf.estimator.ModeKeys.EVAL:
      return tf.estimator.EstimatorSpec(
          mode,
          loss=loss,
          eval_metric_ops={'my_accuracy': accuracy})
-#+END_SRC
+#+end_src
 
 *** Train
 When ~model_fn~ is called with ~mode == ModeKeys.TRAIN~, the model
 function must train the model. 
 
-#+BEGIN_SRC python
+#+begin_src python
   optimizer = tf.train.AdagradOptimizer(0.05)
   train_op = optimizer.minimize(
      loss,
@@ -175,12 +175,12 @@ function must train the model.
      mode,
      loss=loss,
      train_op=train_op)
-#+END_SRC
+#+end_src
 ** TF Feature Columns
 Reference:
 https://developers.googleblog.com/2017/11/introducing-tensorflow-feature-columns.html
 
-#+DOWNLOADED: https://3.bp.blogspot.com/-3Wf_6BEn7GE/Wg4GiQ9TXDI/AAAAAAAAEGo/yoLiIyJW1c4Vh-VfP4vVjuaD92rcnVphACLcBGAs/s1600/2.jpg @ 2018-09-15 15:03:18
+#+downloaded: https://3.bp.blogspot.com/-3Wf_6BEn7GE/Wg4GiQ9TXDI/AAAAAAAAEGo/yoLiIyJW1c4Vh-VfP4vVjuaD92rcnVphACLcBGAs/s1600/2.jpg @ 2018-09-15 15:03:18
 [[file:images/tensorflow/2_2018-09-15_15-03-18.jpg]]
 
 Feature columns bridge raw data with the data your model needs. 
@@ -188,7 +188,7 @@ Feature columns bridge raw data with the data your model needs.
 There are nine functions in the ~tf.feature_column~ api.
 *** Numeric column
 
-#+BEGIN_SRC python
+#+begin_src python
   numeric_feature_column = tf.feature_column.numeric_column(key="SepalLength",
                                                             dtype=tf.float64)
 
@@ -197,7 +197,7 @@ There are nine functions in the ~tf.feature_column~ api.
 
   matrix_feature_column = tf.feature_column.numeric_column(key="MyMatrix",
                                                            shape=[10,5]) 
-#+END_SRC
+#+end_src
 
 *** Bucketized column
 
@@ -206,12 +206,12 @@ instead split its value into different categories based on numerical
 ranges. Consider the following bucketing scheme:
 
 
-#+DOWNLOADED: https://2.bp.blogspot.com/-qrTI2ZUBr7w/Wg4G9lWHk5I/AAAAAAAAEG0/v17Zqcix1Wou5ZRpTGxAQ8jMSBjCKmCAACLcBGAs/s1600/4.jpg @ 2018-09-15 15:09:59
+#+downloaded: https://2.bp.blogspot.com/-qrTI2ZUBr7w/Wg4G9lWHk5I/AAAAAAAAEG0/v17Zqcix1Wou5ZRpTGxAQ8jMSBjCKmCAACLcBGAs/s1600/4.jpg @ 2018-09-15 15:09:59
 [[file:images/tensorflow/4_2018-09-15_15-09-59.jpg]]
 
 We create the bucketized column from a numeric column:
 
-#+BEGIN_SRC python
+#+begin_src python
   # A numeric column for the raw input.
   numeric_feature_column = tf.feature_column.numeric_column("Year")
 
@@ -219,7 +219,7 @@ We create the bucketized column from a numeric column:
   bucketized_feature_column = tf.feature_column.bucketized_column(
       source_column = numeric_feature_column,
       boundaries = [1960, 1980, 2000])
-#+END_SRC
+#+end_src
 
 *** Categorical Identity Column
 
@@ -227,12 +227,12 @@ Categorical identity columns are a special case of bucketized columns.
 In a categorical identity column, each bucket represents a single,
 unique integer.
 
-#+DOWNLOADED: https://4.bp.blogspot.com/-cG-gEXRkohM/Wg4HGyFNWxI/AAAAAAAAEG4/qPzVWnap6PkxDDyZUWuYP_WYoRca3z7yQCLcBGAs/s1600/5.jpg @ 2018-09-15 15:20:10
+#+downloaded: https://4.bp.blogspot.com/-cG-gEXRkohM/Wg4HGyFNWxI/AAAAAAAAEG4/qPzVWnap6PkxDDyZUWuYP_WYoRca3z7yQCLcBGAs/s1600/5.jpg @ 2018-09-15 15:20:10
 [[file:images/tensorflow/5_2018-09-15_15-20-10.jpg]]
 
 This is a one-hot encoding, not a binary numerical encoding.
 
-#+BEGIN_SRC python
+#+begin_src python
   # Create a categorical output for input "feature_name_from_input_fn",
   # which must be of integer type. Value is expected to be >= 0 and < num_buckets
   identity_feature_column = tf.feature_column.categorical_column_with_identity(
@@ -247,19 +247,19 @@ This is a one-hot encoding, not a binary numerical encoding.
       ...<code>...
       return ({ 'Integer_1':[values], ..<etc>.., 'Integer_2':[values] },
               [Label_values])
-#+END_SRC
+#+end_src
 
 *** Categorical vocabulary column
 
 
-#+DOWNLOADED: https://1.bp.blogspot.com/-tATYn91S0Mw/Wg4HVJgTy6I/AAAAAAAAEG8/I0GiWJH0aBYSwfuyBFGwRiS0SHVVGrNngCLcBGAs/s1600/6.jpg @ 2018-09-15 15:20:30
+#+downloaded: https://1.bp.blogspot.com/-tATYn91S0Mw/Wg4HVJgTy6I/AAAAAAAAEG8/I0GiWJH0aBYSwfuyBFGwRiS0SHVVGrNngCLcBGAs/s1600/6.jpg @ 2018-09-15 15:20:30
 [[file:images/tensorflow/6_2018-09-15_15-20-30.jpg]]
 
 We cannot input strings directly to a model. Instead, we must first
 map strings to numeric or categorical values. Categorical vocabulary
 columns provide a good way to represent strings as a one-hot vector.
 
-#+BEGIN_SRC python
+#+begin_src python
   # Given input "feature_name_from_input_fn" which is a string,
   # create a categorical feature to our model by mapping the input to one of
   # the elements in the vocabulary list.
@@ -275,29 +275,29 @@ columns provide a good way to represent strings as a one-hot vector.
       tf.feature_column.categorical_column_with_vocabulary_list(
           key="feature_name_from_input_fn",
           vocabulary_list=["kitchenware", "electronics", "sports"]) 
-#+END_SRC
+#+end_src
 
 In many cases, the number of categories is large, and we can limit it
 via hashing:
 
 
-#+DOWNLOADED: https://3.bp.blogspot.com/--IhLgHs0JYE/Wg4INL8zoYI/AAAAAAAAEHI/Q_wl_7jrTYMgoxH__m1GAG5ilYAU_M4TgCLcBGAs/s1600/7.jpg @ 2018-09-15 15:20:51
+#+downloaded: https://3.bp.blogspot.com/--IhLgHs0JYE/Wg4INL8zoYI/AAAAAAAAEHI/Q_wl_7jrTYMgoxH__m1GAG5ilYAU_M4TgCLcBGAs/s1600/7.jpg @ 2018-09-15 15:20:51
 [[file:images/tensorflow/7_2018-09-15_15-20-51.jpg]]
 
-#+BEGIN_SRC python
+#+begin_src python
   # Create categorical output for input "feature_name_from_input_fn".
   # Category becomes: hash_value("feature_name_from_input_fn") % hash_bucket_size
   hashed_feature_column =
       tf.feature_column.categorical_column_with_hash_bucket(
           key = "feature_name_from_input_fn",
           hash_buckets_size = 100) # The number of categories
-#+END_SRC
+#+end_src
 
 *** Feature Crosses
 Combining features allows the model to learn separate weights
 specifically for whatever that feature combination means.
 
-#+BEGIN_SRC python
+#+begin_src python
   # In our input_fn, we convert input longitude and latitude to integer values
   # in the range [0, 100)
   def input_fn():
@@ -327,31 +327,31 @@ specifically for whatever that feature combination means.
   fc_san_francisco_boxed = tf.feature_column.crossed_column(
       keys=[latitude_fc, longitude_fc],
       hash_bucket_size=1000) # No precise rule, maybe 1000 buckets will be good?
-#+END_SRC
+#+end_src
 
 *** Indicator and Embedding columns
 Indicator columns treat each category as an element in a one-hot
 vector, where the matching category has value 1 and the rest have 0s.
 
 
-#+DOWNLOADED: https://4.bp.blogspot.com/-w6qEZq65F1o/Wg4J6-F6O3I/AAAAAAAAEHY/hU8xIK8P854Ehed8HUMCKe5m0nI7UiNSACLcBGAs/s1600/6.jpg @ 2018-09-15 15:21:01
+#+downloaded: https://4.bp.blogspot.com/-w6qEZq65F1o/Wg4J6-F6O3I/AAAAAAAAEHY/hU8xIK8P854Ehed8HUMCKe5m0nI7UiNSACLcBGAs/s1600/6.jpg @ 2018-09-15 15:21:01
 [[file:images/tensorflow/6_2018-09-15_15-21-01.jpg]]
 
-#+BEGIN_SRC python
+#+begin_src python
   indicator_column = tf.feature_column.indicator_column(categorical_column)
-#+END_SRC
+#+end_src
 
 An embedding column represents data as a lower-dimensional, ordinary
 vector in which each cell can contain any number.
 
 
-#+DOWNLOADED: https://2.bp.blogspot.com/-q7GLL9Z95uY/Wg4KIyRryYI/AAAAAAAAEHc/BckVSXOmT1M0qs79D60t2XMv1RFNSd89gCLcBGAs/s1600/image9.jpg @ 2018-09-15 15:22:02
+#+downloaded: https://2.bp.blogspot.com/-q7GLL9Z95uY/Wg4KIyRryYI/AAAAAAAAEHc/BckVSXOmT1M0qs79D60t2XMv1RFNSd89gCLcBGAs/s1600/image9.jpg @ 2018-09-15 15:22:02
 [[file:images/tensorflow/image9_2018-09-15_15-22-02.jpg]]
 
 As a guideline, the embedding vector dimension should be the 4th root
 of the number of categories.
 
-#+BEGIN_SRC python
+#+begin_src python
   categorical_column = ... # Create any categorical column
 
   # Represent the categorical column as an embedding column.
@@ -359,7 +359,7 @@ of the number of categories.
   embedding_column = tf.feature_column.embedding_column(
       categorical_column=categorical_column,
       dimension=dimension_of_embedding_vector)
-#+END_SRC
+#+end_src
 ** Hooks
 Hooks are useful for custom processing that has to happen alongside
 the main loop. For example, we can use hooks for recordkeeping,
@@ -367,7 +367,7 @@ debugging, monitoring or reporting. Hooks are activated by passing
 them to the ~train~ call. Estimators use hooks internally to implement
 checkpointing, summaries and more.
 
-#+BEGIN_SRC python
+#+begin_src python
   class TimeBasedStopHook(tf.train.SessionRunHook):
       def begin(self):
           self.started_at = time.time()
@@ -375,13 +375,13 @@ checkpointing, summaries and more.
       def after_run(self, run_context, run_values):
           if time.time() - self.started_at >= TRAIN_TIME:
               run_context.request_stop()
-#+END_SRC
+#+end_src
 ** Experiment
 The core of the distributed execution support is provided with the
 ~Experiment~ class.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-09-16 22:26:07
+#+downloaded: /tmp/screenshot.png @ 2018-09-16 22:26:07
 [[file:images/tensorflow/screenshot_2018-09-16_22-26-07.png]]
 
 In each TensorFlow cluster, there are several parameter servers, and
@@ -400,7 +400,7 @@ Came across this when working with Reinforcement Learning
 (Knowledge-base Completion). The problem required the network to take
 evaluate and obtain an action.
 
-#+BEGIN_SRC python
+#+begin_src python
   a = array_ops.placeholder(dtypes.float32, shape=[])
   b = array_ops.placeholder(dtypes.float32, shape=[])
   c = array_ops.placeholder(dtypes.float32, shape=[])
@@ -411,7 +411,7 @@ evaluate and obtain an action.
   res = sess.partial_run(h, r1, feed_dict={a: 1, b: 2})
   res = sess.partial_run(h, r2, feed_dict={c: res})
 
-#+END_SRC
+#+end_src
 
 Partial run continues the execution of a session with more feeds and
 fetches.
@@ -463,7 +463,7 @@ the primary API for building neural networks.
 The ~Sequential~ model is a simple model consisting of a linear stack of
 layers.
 
-#+BEGIN_SRC python
+#+begin_src python
   from keras.models import Sequential
   from keras.layers import Dense
 
@@ -484,7 +484,7 @@ layers.
 
   # Generate predictions on new data:
   classes = model.predict(x_test, batch_size=128)
-#+END_SRC
+#+end_src
 
 *** 
 bibliography:biblio.bib

@@ -1,7 +1,7 @@
 +++
 title = "Cognitive Hierarchy Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:20+08:00
+lastmod = 2020-06-07T17:27:43+08:00
 draft = false
 +++
 

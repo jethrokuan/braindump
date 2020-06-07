@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: mental_models
-#+TITLE: Mental Models
+#+setupfile:./hugo_setup.org
+#+hugo_slug: mental_models
+#+title: Mental Models
 
 * To Refile 
 ** TODO [[https://fs.blog/2020/02/mental-models-in-space/][An Astronaut's Guide to Mental Models]]

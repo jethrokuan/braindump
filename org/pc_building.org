@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: building_a_pc
-#+HUGO_SETUP: ./hugo_setup.org
-#+TITLE: Building a PC
+#+setupfile:./hugo_setup.org
+#+hugo_slug: building_a_pc
+#+hugo_setup: ./hugo_setup.org
+#+title: Building a PC
 
 * What's the difference between SYS_FAN and PUMP_FAN sockets?
 :PROPERTIES:

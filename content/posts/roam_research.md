@@ -1,16 +1,16 @@
 +++
 title = "Roam Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:06+08:00
+lastmod = 2020-06-07T17:26:04+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Org-Roam]({{< relref "org-roam" >}})
-- [Conor White-Sullivan]({{< relref "conor_white_sullivan" >}})
 - [Nat Eliason]({{< relref "nat_eliason" >}})
+- [Conor White-Sullivan]({{< relref "conor_white_sullivan" >}})
 - [Zettelkasten]({{< relref "zettelkasten" >}})
+- [Org-Roam]({{< relref "org-roam" >}})
 
 webpage
 : [Roam Research](https://roamresearch.com)
@@ -41,10 +41,3 @@ White-Sullivan]({{< relref "conor_white_sullivan" >}}). Roam adopts methods from
   - Highly similar to the above Nat Eliason video.
   - He uses file-tag metadata as well, "in what context do I want to
     see this idea?"
-
-### Backlinks {#backlinks}
-
-- [Org-Roam]({{< relref "org-roam" >}})
-- [Conor White-Sullivan]({{< relref "conor_white_sullivan" >}})
-- [Nat Eliason]({{< relref "nat_eliason" >}})
-- [Zettelkasten]({{< relref "zettelkasten" >}})

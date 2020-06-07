@@ -1,14 +1,14 @@
 +++
 title = "Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:59+08:00
+lastmod = 2020-06-07T17:27:16+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Definition of Deep Learning]({{< relref "definition_of_deep_learning" >}})
 - [Deep Learning Tools]({{< relref "dl_tools" >}})
+- [Definition of Deep Learning]({{< relref "definition_of_deep_learning" >}})
 
 ## Definition {#definition}
 
@@ -373,8 +373,3 @@ The bottleneck can't remember spatial information, and optimizing for
 \\(p(x|z)\\) puts heavy emphasis on exact recovery of spatial information.
 Solutions involve removing the bottleneck, or replacing the prior
 \\(p(z)\\) with one that has more structure.
-
-### Backlinks {#backlinks}
-
-- [Definition of Deep Learning]({{< relref "definition_of_deep_learning" >}})
-- [Deep Learning Tools]({{< relref "dl_tools" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:54+08:00
+lastmod = 2020-06-07T17:25:50+08:00
 draft = false
 +++
 
@@ -997,6 +997,6 @@ ignored.
 
 # Bibliography
 
-<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : Springer.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
+<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : {Springer}.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
 
-<a id="chatterjee06_regres_analy_examp" target="_blank">Chatterjee, S., & Hadi, A. S., _Regression analysis by example_ (2006), : John Wiley \& Sons, Inc.</a> [↩](#a6f25d8e3790a685481657d76f53a002)
+<a id="chatterjee06_regres_analy_examp" target="_blank">Chatterjee, S., & Hadi, A. S., _Regression analysis by example_ (2006), : {John Wiley \& Sons, Inc.}.</a> [↩](#a6f25d8e3790a685481657d76f53a002)

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Entropy
+#+setupfile:./hugo_setup.org
+#+title: Entropy
 - tags :: [[file:information_theory.org][Information Theory]], [[file:gibbs_inequality.org][Gibbs' Inequality]]
 
 * Definitions

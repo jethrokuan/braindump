@@ -1,9 +1,9 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Docker 101
-#+SUBTITLE: Hackerschool, NUS Hackers
-#+DATE: 2017/10/14
-#+AUTHOR: Jethro Kuan
-#+EMAIL: jethrokuan95@gmail.com
+#+setupfile: ./hugo_setup.org
+#+title: Docker 101
+#+subtitle: Hackerschool, NUS Hackers
+#+date: 2017/10/14
+#+author: Jethro Kuan
+#+email: jethrokuan95@gmail.com
 
 - tags :: [[file:linux.org][Linux]], [[file:operating_systems.org][Operating Systems]]
 
@@ -14,7 +14,7 @@
 ** Containers are Cheap
 [[file:images/docker/container_vm.png]]
 *** Containers are Cheap
-#+ATTR_HTML: :class build fade
+#+attr_html: :class build fade
 - Docker provides lightweight virtualization with almost zero
   overhead.
 - Start and stop containers within seconds.
@@ -33,11 +33,11 @@ host operating system with the same Linux kernel.
 ** 2006: Process Containers
 [[file:images/docker/cgroups.png]]
 ** 2008: LXC Containers, and 2013: Docker
-#+ATTR_HTML: :width 60%
+#+attr_html: :width 60%
 [[file:images/docker/lxc_docker.png]]
 * What is Docker?
 Docker is a toolchain for managing containers.
-#+ATTR_HTML: :width 60%
+#+attr_html: :width 60%
 [[file:images/docker/docker_architecture.png]]
 * What You'll Do Today
 You'll be packaging a simple application with Docker.
@@ -52,9 +52,9 @@ environment variables.
   :ARTICLE:  flexbox vleft auto-fadein
 :END:
 ** Pulling images
-#+BEGIN_SRC sh
+#+begin_src sh
   docker pull alpine
-#+END_SRC
+#+end_src
 *** Alpine?
 =alpine= is an image for a tiny Linux distribution, used by Docker for
 most of its official images.
@@ -66,54 +66,54 @@ runtime, system tools, system libraries, settings.
 =alpine= is pulled from the Docker Registry, where hundreds of
 thousands of images are hosted.
 ** Starting a container
-#+BEGIN_SRC sh
+#+begin_src sh
   docker run alpine
-#+END_SRC
+#+end_src
 
 What is happening here?
 ** Running a command
-#+BEGIN_SRC sh
+#+begin_src sh
   docker run alpine echo "Hello from alpine!"
-#+END_SRC
+#+end_src
 ** Docker Status
 List all docker images:
-#+BEGIN_SRC sh
+#+begin_src sh
   docker images
-#+END_SRC
+#+end_src
 
 List all running docker containers:
-#+BEGIN_SRC sh
+#+begin_src sh
   docker ps
-#+END_SRC
+#+end_src
 
 List all docker containers (including stopped containers):
-#+BEGIN_SRC sh
+#+begin_src sh
   docker ps -a
-#+END_SRC
+#+end_src
 ** Entering a Container Interactively
-#+BEGIN_SRC sh
+#+begin_src sh
   docker run -it alpine sh
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC sh
+#+begin_src sh
   uname -r                        # 4.9.41-moby
   hostname                        # container_id
   whoami                          # root
   id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
-#+END_SRC
+#+end_src
 * Inside =alpine=
  Docker images consist of multiple layers:
 
- #+ATTR_HTML: :width 60%
+ #+attr_html: :width 60%
  [[file:images/docker/container-layers.jpg]]
 ** Layers for the ubuntu image
  Observe the output for the following:
- #+BEGIN_SRC sh
+ #+begin_src sh
    docker pull ubuntu:15.04
    docker history ubuntu
- #+END_SRC
+ #+end_src
 ** Declare layers with a =Dockerfile=
-#+BEGIN_SRC docker-file
+#+begin_src docker-file
   FROM ubuntu
   MAINTAINER Kimbro Staken
 
@@ -128,7 +128,7 @@ List all docker containers (including stopped containers):
   ADD app.js /var/www/app.js
 
   CMD ["/usr/bin/node", "/var/www/app.js"] 
-#+END_SRC
+#+end_src
 ** Dockerfile Cheatsheet
    :PROPERTIES:
    :ARTICLE:  smaller
@@ -153,14 +153,14 @@ List all docker containers (including stopped containers):
 Docker creates three networks by default. We're mostly concerned with
 =bridge=.
 
-#+BEGIN_SRC text
+#+begin_src text
   $ docker network ls
 
   NETWORK ID          NAME                DRIVER
   7fca4eb8c647        bridge              bridge
   9f904ee27bf5        none                null
   cf03ee007fb4        host                host
-#+END_SRC
+#+end_src
 ** How =bridge= works 
 Unless specified otherwise, the docker container will connect to this
 default =bridge= network. This provides a means of Docker containers
@@ -170,26 +170,26 @@ kernel's =iptable=.
 By default, none of the ports are published and the outside world has
 no access to the docker containers.
 ** Running a Simple Webserver
-#+BEGIN_SRC sh
+#+begin_src sh
   nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
-#+END_SRC
+#+end_src
 ** Allowing Ingress
- #+BEGIN_SRC sh
+ #+begin_src sh
    docker run -p 5001:8080 alpine \
           nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
- #+END_SRC
+ #+end_src
 
  As a daemon:
- #+BEGIN_SRC sh
+ #+begin_src sh
    docker run -p 5001:8080 -d alpine \
           nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
- #+END_SRC
+ #+end_src
 * Exercise: package a Node.js Server with Docker
-#+BEGIN_SRC sh
+#+begin_src sh
   curl -i http://localhost:5001/
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC text
+#+begin_src text
   HTTP/1.1 200 OK
   X-Powered-By: Express
   Content-Type: text/html; charset=utf-8
@@ -199,11 +199,11 @@ no access to the docker containers.
   Connection: keep-alive
 
   Hello world!!
-#+END_SRC
+#+end_src
 ** Server code
-#+BEGIN_SRC text
+#+begin_src text
   https://git.io/vdXLC
-#+END_SRC
+#+end_src
 ** General Instructions
    1. Install the Node.js runtime (use Ubuntu)
    2. Copy the files into the container
@@ -211,12 +211,12 @@ no access to the docker containers.
    4. Run =npm install=
    5. Run =npm start= to start server
 * But... I want to change my files!
-#+BEGIN_SRC sh
+#+begin_src sh
   docker run -d my/webserver
   # Create file locally
   docker exec -it container_name sh
   ls #WAT
-#+END_SRC
+#+end_src
 ** Mounting Volumes
 There are three types of mounts:
 
@@ -226,9 +226,9 @@ There are three types of mounts:
 2. *Bind Mounts* may be stored anywhere on the host filesystem.
 3. *tmpfs mounts* are stored in the host system's memory only.
 ** Mounting the =/src= directory
-#+BEGIN_SRC sh
+#+begin_src sh
   docker run -p 5000:8080 -v ~/path/to/directory:/usr/src/app/src my/webserver
-#+END_SRC
+#+end_src
 * Beyond Docker
 Docker is the building block for many devops solutions.
 

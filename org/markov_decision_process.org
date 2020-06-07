@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Markov Decision Process
+#+setupfile:./hugo_setup.org
+#+title: Markov Decision Process
 
 A sequential decision problem for a fully observable, stochastic
 environment with a Markovian transition model and additive rewards is

@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: hierarchical_models
-#+TITLE: Hierarchical Models
+#+setupfile:./hugo_setup.org
+#+hugo_slug: hierarchical_models
+#+title: Hierarchical Models
 
 - tags :: [[file:bayesian_statistics.org][Bayesian Statistics]]
 

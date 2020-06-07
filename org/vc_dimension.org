@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: VC-Dimension
+#+setupfile: ./hugo_setup.org
+#+title: VC-Dimension
 
 - tags :: [[file:bias_complexity_tradeoff.org][Bias-Complexity Tradeoff]], [[file:pac_learning.org][PAC Learning]]
 

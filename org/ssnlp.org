@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: SSNLP Conference Notes
+#+setupfile: ./hugo_setup.org
+#+title: SSNLP Conference Notes
 
 - tags :: [[file:nlp.org][Natural Language Processing]]
 

@@ -1,17 +1,17 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:21+08:00
+lastmod = 2020-06-07T17:27:44+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
 - [Information Filter]({{< relref "information_filter" >}})
-- [Gaussian Filter]({{< relref "gaussian_filter" >}})
 - [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
 - [Markov Localization]({{< relref "markov_localization" >}})
+- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
+- [Gaussian Filter]({{< relref "gaussian_filter" >}})
 
 tags
 : [Gaussian Filter]({{< relref "gaussian_filter" >}})
@@ -83,11 +83,3 @@ arises from the form of the transition and measurement probabilities
 (see [Robotics Probabilistic Generative Laws]({{< relref "robotics_probabilistic_generative_laws" >}})). Particle
 representations lend themselves to simple implementations for
 complex non-linear systems.
-
-### Backlinks {#backlinks}
-
-- [Information Filter]({{< relref "information_filter" >}})
-- [Gaussian Filter]({{< relref "gaussian_filter" >}})
-- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
-- [Markov Localization]({{< relref "markov_localization" >}})

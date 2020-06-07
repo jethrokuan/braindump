@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Data Visualization
+#+setupfile: ./hugo_setup.org
+#+title: Data Visualization
 
 * References
 - [[http://www.cad.zju.edu.cn/home/vis-summer-school-2018/][Course website]]
@@ -7,7 +7,7 @@
 - [[https://www.tandfonline.com/doi/abs/10.1198/jcgs.2009.07098][A Layered Grammar Of Graphics]]
 
 * Program
-#+DOWNLOADED: http://www.cad.zju.edu.cn/home/vis-summer-school-2018/images/program2.png @ 2018-07-30 09:16:28
+#+downloaded: http://www.cad.zju.edu.cn/home/vis-summer-school-2018/images/program2.png @ 2018-07-30 09:16:28
 [[file:images/data_viz/program2_2018-07-30_09-16-28.png]]
 * Tools
 http://antv.alipay.com
@@ -51,17 +51,17 @@ http://www.visualcomplexity.com/vc/
 
 * Visual Design and Encoding - Westermann
 
-#+BEGIN_QUOTE
+#+begin_quote
 The purpose of visualization is *insight*, not pictures. - Schneiderman
-#+END_QUOTE
+#+end_quote
 
 ** Why use Interactivity?
 1. Handle data complexity
 2. A single static view can show only one aspect of data
 
-#+BEGIN_QUOTE
+#+begin_quote
 Overview first, zoom and filter, then details-on-demand
-#+END_QUOTE
+#+end_quote
 
 ** Why depend on vision?
 1. Visual system is high-bandwidth channel to brain
@@ -73,7 +73,7 @@ Overview first, zoom and filter, then details-on-demand
 
 ** Gestalt Principles
 
-#+DOWNLOADED: https://tse3.mm.bing.net/th?id=OIP.6mBvVtXeImAn7u9KM3MMQgHaEA&pid=Api @ 2018-07-30 09:47:57
+#+downloaded: https://tse3.mm.bing.net/th?id=OIP.6mBvVtXeImAn7u9KM3MMQgHaEA&pid=Api @ 2018-07-30 09:47:57
 [[file:images/data_viz/th_2018-07-30_09-47-57.jpeg]]
 
 Representations should be /correct/, /accurate/ and /truthful/.
@@ -101,7 +101,7 @@ maximize data-ink ratio
 *** Steven's Psychological Power Law
 https://en.wikipedia.org/wiki/Stevens%27s_power_law
 
-#+DOWNLOADED: https://tse2.mm.bing.net/th?id=OIP.GtQNeocV1CndIWqi5nDvngHaH-&pid=Api @ 2018-07-30 11:04:03
+#+downloaded: https://tse2.mm.bing.net/th?id=OIP.GtQNeocV1CndIWqi5nDvngHaH-&pid=Api @ 2018-07-30 11:04:03
 [[file:images/data_viz/th_2018-07-30_11-04-03.jpeg]]
 Steven's psychophysical power law: 
 
@@ -111,7 +111,7 @@ Steven's psychophysical power law:
 
 Compensating for human's over/underestimation:
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-07-30 11:09:25
+#+downloaded: /tmp/screenshot.png @ 2018-07-30 11:09:25
 [[file:images/data_viz/screenshot_2018-07-30_11-09-25.png]]
 
 Difficult to focus on one channel when multiple channels are
@@ -196,10 +196,10 @@ Visual mapping - Separable vs integral visual channels
  - Grid-free data
 
 
-#+BEGIN_QUOTE
+#+begin_quote
 Interesting to look at dimensionality of data space, vs dimensionality
 of data attributes
-#+END_QUOTE
+#+end_quote
 
 *** Data Enhancement
 - Filtering
@@ -314,7 +314,7 @@ illumination model
   surface), then use traditional rendering methods
 - Cuberille regards each xovel as a little cube, classify as either
   part of the object or not.
-#+DOWNLOADED: https://tse2.mm.bing.net/th?id=OIP.b6y8lI8JJa0FBYoH-7OPugHaHJ&pid=Api @ 2018-07-31 11:00:07
+#+downloaded: https://tse2.mm.bing.net/th?id=OIP.b6y8lI8JJa0FBYoH-7OPugHaHJ&pid=Api @ 2018-07-31 11:00:07
 [[file:images/data_viz/th_2018-07-31_11-00-07.jpeg]]
 
  [[https://en.wikipedia.org/wiki/Marching_cubes][Marching Cubes]] is a standard method for the extraction of isosurfaces

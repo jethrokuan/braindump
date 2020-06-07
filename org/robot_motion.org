@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Robot Motion
+#+setupfile:./hugo_setup.org
+#+title: Robot Motion
 
 Probabilistic robotics generalizes kinematics equations to the fact
 that the outcome of a control is uncertain, due to control noise or

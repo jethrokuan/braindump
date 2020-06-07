@@ -1,7 +1,7 @@
 +++
 title = "PDF Cropping"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:05+08:00
+lastmod = 2020-06-07T17:26:03+08:00
 draft = false
 +++
 

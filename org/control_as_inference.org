@@ -1,9 +1,9 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Control As Inference
+#+setupfile:./hugo_setup.org
+#+title: Control As Inference
 
 - tags :: [[file:optimal_control.org][Optimal Control and Planning]], [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
-#+CAPTION: PGM for decision making for the first 3 time-steps
+#+caption: PGM for decision making for the first 3 time-steps
 [[file:images/human_behaviour_as_optimal_control/screenshot2019-12-24_19-20-19_.png]]
 
 We introduce a binary variable for Optimality $\mathcal{O}_t$ at each
@@ -122,7 +122,7 @@ One can also add a temperature: $\pi(a_t | s_t) =
 
 same derivations as [[file:hidden_markov_model.org][Hidden Markov Model]]!
 
-#+DOWNLOADED: screenshot @ 2019-12-24 20:04:20
+#+downloaded: screenshot @ 2019-12-24 20:04:20
 [[file:images/human_behaviour_as_optimal_control/screenshot2019-12-24_20-04-20_.png]]
 
 

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Spiking Neurons (Literature Review)
+#+setupfile: ./hugo_setup.org
+#+title: Spiking Neurons (Literature Review)
 
 - tags :: [[file:spiking_neurons_lit_review.org][Spiking Neurons (Literature Review)]]
 
@@ -107,7 +107,7 @@ are thus reduced to points in time.
      synapse, the sending neuron is the presynaptic cell, and the
      receiving neuron is the postsynaptic cell
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-19 09:49:28
+#+downloaded: /tmp/screenshot.png @ 2019-08-19 09:49:28
 [[file:images/spiking_neurons/screenshot_2019-08-19_09-49-28.png]]
 
 - action potentials/spikes :: short electrical pulses, typically of
@@ -768,21 +768,21 @@ receive spike trains from a population $X$ of external input neurons.
 Results of computations are read out by a population $Y$ of external
 linear readout neurons.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-08-20 09:44:11
+#+downloaded: /tmp/screenshot.png @ 2019-08-20 09:44:11
 [[file:images/spiking_neurons/screenshot_2019-08-20_09-44-11.png]]
 
 BPTT is done by replacing the non-continuous membrane potential  with
 a pseudo derivative that smoothly increases from 0 to 1.
 
 ** Learning to Learn LSNNs
-#+BEGIN_QUOTE
+#+begin_quote
 LSTM networks are especially suited for L2L since they can
 accommodate two levelsof learning and representation of learned
 insight: Synaptic connections and weights can encode,on a higher
 level, a learning algorithm and prior knowledge on a large time-scale.
 The short-termmemory of an LSTM network can accumulate, on a lower
 level of learning, knowledge during thecurrent learning task
-#+END_QUOTE
+#+end_quote
 
 * Gradient Descent for Spiking Neural Networks
 cite:huh_gradient_2018

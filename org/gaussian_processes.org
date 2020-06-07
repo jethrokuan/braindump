@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Gaussian Processes
+#+setupfile:./hugo_setup.org
+#+title: Gaussian Processes
 
 In supervised learning, we are given training data $\mathcal{D}$, and
 we need to learn a function $f$ that can make predictions for all

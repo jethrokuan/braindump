@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Zettelkasten
+#+setupfile: ./hugo_setup.org
+#+title: Zettelkasten
 
 - tags :: [[file:productivity.org][Productivity]], [[file:note_taking.org][Note-taking]]
 

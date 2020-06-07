@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Bayesian Deep Learning
-#+HUGO_TAGS: bayes deep-learning
+#+setupfile: ./hugo_setup.org
+#+title: Bayesian Deep Learning
+#+hugo_tags: bayes deep-learning
 bibliographystyle:unsrt
 
 * The Case For Bayesian Learning cite:wilson2019bayesian

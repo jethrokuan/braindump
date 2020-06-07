@@ -1,15 +1,15 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:54+08:00
+lastmod = 2020-06-07T17:25:49+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
 - [Entropy]({{< relref "entropy" >}})
-- [Occam's Razor]({{< relref "occams_razor" >}})
 - [I-Diagrams]({{< relref "i-diagrams" >}})
+- [Occam's Razor]({{< relref "occams_razor" >}})
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}}), [Statistics]({{< relref "statistics" >}})
@@ -172,9 +172,3 @@ This is provable by counting the typical set.
 
 - [Andreas Kirsch | Better intuition for information theory](https://www.blackhc.net/blog/2019/better-intuition-for-information-theory/)
 - [Visual Information Theory -- colah's blog](http://colah.github.io/posts/2015-09-Visual-Information/)
-
-### Backlinks {#backlinks}
-
-- [Entropy]({{< relref "entropy" >}})
-- [Occam's Razor]({{< relref "occams_razor" >}})
-- [I-Diagrams]({{< relref "i-diagrams" >}})

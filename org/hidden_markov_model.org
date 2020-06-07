@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Hidden Markov Model
+#+setupfile:./hugo_setup.org
+#+title: Hidden Markov Model

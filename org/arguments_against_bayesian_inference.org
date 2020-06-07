@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Arguments Against Bayesian Inference
+#+setupfile:./hugo_setup.org
+#+title: Arguments Against Bayesian Inference
 
 - tags :: [[file:bayesian_inference.org][Bayesian Inference]]
 

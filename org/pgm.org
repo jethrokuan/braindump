@@ -1,5 +1,5 @@
-#+TITLE: Probabilistic Graph Models
-#+SETUPFILE: ./hugo_setup.org
+#+title: Probabilistic Graph Models
+#+setupfile: ./hugo_setup.org
 
 bibliographystyle:unsrt
 
@@ -52,7 +52,7 @@ high-dimensional space. In this graphical representation, the nodes
 correspond to the variables in our domain, and the edges correspond to
 direct probabilistic interactions between them.
 
-#+CAPTION: Different perspectives on probabilistic graphical models
+#+caption: Different perspectives on probabilistic graphical models
 [[file:images/pgm/screenshot_2019-02-09_17-01-23.png]]
 
 * Bayesian Networks
@@ -85,7 +85,7 @@ V$, one conditional probability distribution (CPD) p(x_i | x_{A_i})
 per node, specifying the probability of $x_i$ conditioned on its
 parent's values.
 
-#+CAPTION: Example of a Bayesian Network graph
+#+caption: Example of a Bayesian Network graph
 [[file:images/pgm/screenshot_2019-02-09_17-26-56.png]]
 
 This graph $G$ can be viewed in two very different ways:
@@ -316,7 +316,7 @@ well as the co-parents: variables corresponding to parents of node
 $x_k$ other than $x_i$. This set of nodes is called the /Markov Blanket/.
 
 
-#+CAPTION: An illustration of the Markov Blanket. ([[https://en.wikipedia.org/wiki/Markov_blanket][Source]])
+#+caption: An illustration of the Markov Blanket. ([[https://en.wikipedia.org/wiki/Markov_blanket][Source]])
 [[file:images/pgm/240px-Diagram_of_a_Markov_blanket.svg_2019-03-28_11-26-58.png]]
 
 ** Soundness and Completeness
@@ -462,7 +462,7 @@ required by a DGM is awkward. For example, if we're modelling an
 image, we might suppose that the neighbouring pixels are correlated.
 We may form a DAG model with a 2d lattice topology as such:
 
-#+CAPTION: 2d lattice represented as a DAG.
+#+caption: 2d lattice represented as a DAG.
 [[file:images/pgm/screenshot_2019-02-15_13-15-34.png]]
 
 However, representing the conditional probabilities in this way is
@@ -470,7 +470,7 @@ rather unnatural: the Markov blanket of node $X_8$ includes its
 non-neighbours. Instead, we may want to use a UGM, or Markov Random
 Field (MRF).
 
-#+CAPTION: UGM representation of the lattice topology.
+#+caption: UGM representation of the lattice topology.
 [[file:images/pgm/screenshot_2019-02-15_13-16-41.png]]
 
 ** Conditional Independence Properties of UGMs
@@ -496,7 +496,7 @@ The set of distributions that are perfectly represented by both DGMs
 and UGMs are termed /chordal./
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-02-15 14:17:02
+#+downloaded: /tmp/screenshot.png @ 2019-02-15 14:17:02
 [[file:images/pgm/screenshot_2019-02-15_14-17-02.png]]
 
 In general, CI properties in UGMs are monotonic, in the following
@@ -657,10 +657,10 @@ where inference is intractable, learning is also intractable. This
 motivates computationally faster alternatives to ML/MAP estimation,
 such as *pseudo likelihood*, and *stochastic maximum likelihood*.
 
-#+CAPTION: Stochastic maximum likelihood
+#+caption: Stochastic maximum likelihood
 [[file:images/pgm/screenshot_2019-02-15_15-11-06.png]]
 
-#+CAPTION: Iterative Proportional Fitting
+#+caption: Iterative Proportional Fitting
 [[file:images/pgm/screenshot_2019-02-15_15-11-45.png]]
 
 ** Conditional Random Fields (CRFs)

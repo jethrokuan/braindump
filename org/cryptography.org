@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Cryptography
+#+setupfile: ./hugo_setup.org
+#+title: Cryptography
 * Diffie-Hellman Algorithm
 :REFERENCE:
 https://www.youtube.com/watch?v=YEBfamv-_do&list=PL87386AD236727A1B&index=8
@@ -32,5 +32,5 @@ is uniformly distributed across all possible modulos. Modulo
 arithmetic is a great example on a one-way function, where computation
 is easy to perform in one direction, but difficult to perform in reverse.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-12-13 13:50:56
+#+downloaded: /tmp/screenshot.png @ 2018-12-13 13:50:56
 [[file:images/cryptography/screenshot_2018-12-13_13-50-56.png]]

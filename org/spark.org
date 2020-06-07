@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Spark
+#+setupfile: ./hugo_setup.org
+#+title: Spark
 
 * What is Apache Spark?
 A cluster computing platform designed to be fast and general-purpose.
@@ -39,11 +39,11 @@ filesystem (HDFS), it does not require Hadoop.
 * Getting Started
 Enter the shell with =spark-shell=, or =pyspark=. 
 
-#+BEGIN_SRC python
+#+begin_src python
   lines = sc.textFile("README.md")
   lines.count()
   lines.first()
-#+END_SRC
+#+end_src
 
 * Core Spark Concepts
 Every Spark application consists of a /driver program/ that launches
@@ -59,10 +59,10 @@ typically manage a number of nodes called /executors/. A lot of
 Spark's API revolves around passing functions to its operators to run
 them on the cluster.
 
-#+BEGIN_SRC python
+#+begin_src python
   lines = sc.textFile("README.md")
   lines.filter(lambda line: "Machine" in line)
-#+END_SRC
+#+end_src
 
 * Running a Python script on Spark
 =bin/spark-submit= includes the Spark dependencies, setting up the
@@ -72,12 +72,12 @@ script, simply run =spark-submit script.py=.
 After linking an application to Spark, we need to create a
 SparkContext.
 
-#+BEGIN_SRC python
+#+begin_src python
   from pyspark import SparkConf, SparkContext
 
   conf = SparkConf().setMaster("local").setAppName("My app")
   sc = SparkContext(conf=conf)
-#+END_SRC
+#+end_src
 
 * Programming with RDDs
 An RDD is a distributed collection of elements. All work is expressed
@@ -92,9 +92,9 @@ reuse an RDD in multiple actions,  we can use =rdd.persist=. In
 practice, =persist()= is often used to load a subset of data into
 memory to be queried repeatedly.
 
-#+BEGIN_SRC python
+#+begin_src python
   lines = sc.parallelize(["pandas", "i like pandas"])
-#+END_SRC
+#+end_src
 
 ** RDD Operations
 RDDs support /transformations/ and /actions/. Transformations are
@@ -102,11 +102,11 @@ operations on RDDs that return a new RDD (e.g. =map= and =filter=).
 Actions are operations that return a result to the driver program, or
 write it to storage,and kick off a computation.
 
-#+BEGIN_SRC python
+#+begin_src python
   errorsRDD = inputRDD.filter(lambda x: "error" in x)
   warningsRDD = inputRDD.filter(lambda x: "warning" in x)
   badLinesRDD = errorsRDD.union(warningsRDD)
-#+END_SRC
+#+end_src
 
 Spark keeps track of RDD dependencies from various transformations in
 a /lineage graph/, that way if a RDD is lost, it can be recreated from
@@ -141,7 +141,7 @@ Different level of persistence helps with making Spark jobs faster. If
 a node with persisted data goes down, Spark will recreate the RDD from
 the /lineage graph./
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2018-07-12 18:20:33
+#+downloaded: /tmp/screenshot.png @ 2018-07-12 18:20:33
 [[file:images/spark/screenshot_2018-07-12_18-20-33.png]]
 
 * Working with Key/Value Pairs
@@ -150,13 +150,13 @@ RDDs.
 
 For Python and Scala, the RDD needs to be composed of tuples:
 
-#+BEGIN_SRC python
+#+begin_src python
   pairs = lines.map(lambda x: (x.split(" ")[0], x))
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC scala
+#+begin_src scala
   val pairs = lines.map(x => (x.split(" ")(0), x))
-#+END_SRC
+#+end_src
 
 Java does not have a built-in tuple type, so it uses the
 =scala.Tuple2= class.
@@ -211,14 +211,14 @@ partitioning:
 
 Implementing a custom partitioner in Python is relatively simple:
 
-#+BEGIN_SRC python
+#+begin_src python
   import urlparse
 
   def hash_domain(url):
       return hash(urlparse.urlparse(url).netloc)
 
   rdd.partitionBy(20, hash_domain)
-#+END_SRC
+#+end_src
 
 The hash function will be compared by identity to that of other RDDs,
 so a global function object needs to be passed, rather than creating a
@@ -236,24 +236,24 @@ key/value pairs. They have sync markers that allow Spark to seek to a
 point in the file and then resynchronize with the record boundaries,
 allowing Spark to efficiently read them in parallel from multiple nodes.
 
-#+BEGIN_SRC python
+#+begin_src python
   data = sc.sequenceFile(inFile, # input file
                          "org.apache.hadoop.io.Text", # key Class
                          "org.apache.hadoop.io.IntWritable", # value Class
                          10 # min partitions
   ) 
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC python
+#+begin_src python
   data = sc.parallelize((("Panda", 3), ("Kay", 6)))
   data.saveAsSequenceFile(outputFile)
-#+END_SRC
+#+end_src
 
 
 ** SparkSQL
 SparkSQL can load any table supported by Apache Hive.
 
-#+BEGIN_SRC python
+#+begin_src python
   from pyspark.sql import HiveContext
 
   hiveCtx = HiveContext(sc)
@@ -261,18 +261,18 @@ SparkSQL can load any table supported by Apache Hive.
   firstRow = rows.first()
 
   print firstRow.name
-#+END_SRC
+#+end_src
 
 It even supports loading JSON files, if the JSON data has a consistent
 schema cross records.
 
-#+BEGIN_SRC python
+#+begin_src python
   # {"user": {"name": "Holden", "location": "SF"}, "text": "Nice"}
 
   tweets = hiveCtx.jsonFile("tweets.json")
   tweets.registerTempTable("tweets")
   results = hiveCtx.sql("SELECT user.name, text FROM tweets")
-#+END_SRC
+#+end_src
 
 * Advanced Spark Programming
   In this section, we look at some techniques that were not previously
@@ -280,7 +280,7 @@ schema cross records.
   information and /broadcast variables/ to efficiently distribute large
   values.
 
-#+BEGIN_SRC json
+#+begin_src json
   {
     "address": "address here",
     "band": "40m",
@@ -296,7 +296,7 @@ schema cross records.
     "mylat": "37.751952821",
     "mylong": "-122.4208688735"
   }
-#+END_SRC
+#+end_src
 
 ** Accumulators
 When we normally pass functions to Spark, they can use variables
@@ -305,7 +305,7 @@ variables are not progagated to the driver. Spark's shared variables
 relax this restriction for two common typess of communication
 patterns: aggregation of results and broadcasts.
 
-#+BEGIN_SRC python
+#+begin_src python
   file = sc.textFile(inputFile)
 
   blankLines = sc.accumulator(0)
@@ -317,7 +317,7 @@ patterns: aggregation of results and broadcasts.
       return line.split(" ")
 
   callSigns = file.flatMap(extractCallSigns)
-#+END_SRC
+#+end_src
 
 Tasks on worker nodes cannot access the accumulator's value. This
 allows accumulators to be implemented efficiently without having to

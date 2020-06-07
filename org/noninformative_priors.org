@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: noninformative_priors
-#+TITLE: Non-informative Priors
+#+setupfile:./hugo_setup.org
+#+hugo_slug: noninformative_priors
+#+title: Non-informative Priors
 
 Non-informative priors are used in [[file:bayesian_inference.org][Bayesian Inference]], in the
 situation where no prior information exists, or inference based

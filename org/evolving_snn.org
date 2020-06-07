@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Evolving Spiking Neural Networks
+#+setupfile:./hugo_setup.org
+#+title: Evolving Spiking Neural Networks
 
 Early evolving [[file:spiking_neural_networks.org][Spiking Neural Networks]] architectures use the [[file:leaky_integrate_and_fire.org][Leaky
 Integrate-And-Fire]] model, and rank-order encoding. eSNNs can be used for

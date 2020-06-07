@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Branch Prediction
+#+setupfile:./hugo_setup.org
+#+title: Branch Prediction
 
 - tags :: [[file:operating_systems.org][Operating Systems]], [[file:linux.org][Linux]]
 

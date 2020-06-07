@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Matplotlib
+#+setupfile:./hugo_setup.org
+#+title: Matplotlib

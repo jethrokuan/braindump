@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Trigger List
+#+setupfile: ./hugo_setup.org
+#+title: Trigger List
 * Trigger List
 Use this trigger list to recall items that are need require action:
 

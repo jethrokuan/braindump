@@ -1,17 +1,17 @@
 +++
 title = "Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:19+08:00
+lastmod = 2020-06-07T17:27:43+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
-- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
-- [Non-informative Priors]({{< relref "noninformative_priors" >}})
 - [Arguments Against Bayesian Inference]({{< relref "arguments_against_bayesian_inference" >}})
+- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
+- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
+- [Non-informative Priors]({{< relref "noninformative_priors" >}})
 
 ## Setup {#setup}
 
@@ -170,17 +170,10 @@ Gaussians. <a id="c5f035041f058fd1352e35f072c0a5d4" href="#johndrow17_bayes_shri
 
 <a id="pati17_statis_optim_variat_bayes" target="_blank">Pati, D., Bhattacharya, A., & Yang, Y., _On statistical optimality of variational bayes_, CoRR, _()_, (2017). </a> [↩](#2c492bb886c456a5902b643d9a6547e6)
 
-<a id="pmlr-v38-srivastava15" target="_blank">Srivastava, S., Cevher, V., Dinh, Q., & Dunson, D., _WASP: Scalable Bayes via barycenters of subset posteriors_, In G. Lebanon, & S. V. N. Vishwanathan, Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics (pp. 912–920) (2015). San Diego, California, USA: PMLR.</a> [↩](#fe703421bbe5a5c7e4c07c7126a629f3)
+<a id="pmlr-v38-srivastava15" target="_blank">Srivastava, S., Cevher, V., Dinh, Q., & Dunson, D., _WASP: Scalable Bayes via barycenters of subset posteriors_, In G. Lebanon, & S. V. N. Vishwanathan, Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics (pp. 912–920) (2015). {San Diego, California, USA}: {PMLR}.</a> [↩](#fe703421bbe5a5c7e4c07c7126a629f3)
 
 <a id="li16_simpl_scalab_accur_poster_inter_estim" target="_blank">Li, C., Srivastava, S., & Dunson, D. B., _Simple, scalable and accurate posterior interval estimation_, CoRR, _()_, (2016). </a> [↩](#3c24d71d7ae6f354df816d37ea172f1a)
 
 <a id="johndrow15_optim_approx_markov_chain_bayes_infer" target="_blank">Johndrow, J. E., Mattingly, J. C., Mukherjee, S., & Dunson, D., _Optimal approximating markov chains for bayesian inference_, CoRR, _()_, (2015). </a> [↩](#ab108353672c4542f6a76b91c9eebcbc)
 
 <a id="johndrow17_bayes_shrin_at_gwas_scale" target="_blank">Johndrow, J. E., Orenstein, P., & Bhattacharya, A., _Bayes shrinkage at gwas scale: Convergence and approximation theory of a scalable mcmc algorithm for the horseshoe prior_, CoRR, _()_, (2017). </a> [↩](#c5f035041f058fd1352e35f072c0a5d4)
-
-### Backlinks {#backlinks}
-
-- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
-- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
-- [Non-informative Priors]({{< relref "noninformative_priors" >}})
-- [Arguments Against Bayesian Inference]({{< relref "arguments_against_bayesian_inference" >}})

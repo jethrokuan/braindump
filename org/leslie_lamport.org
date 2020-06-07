@@ -1,2 +1,2 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Leslie Lamport
+#+setupfile:./hugo_setup.org
+#+title: Leslie Lamport

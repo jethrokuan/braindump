@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Optimization
+#+setupfile: ./hugo_setup.org
+#+title: Optimization
 
 * What is Convex Optimization?
 

@@ -1,7 +1,7 @@
 +++
 title = "Information Bottleneck in Deep Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:10+08:00
+lastmod = 2020-06-07T17:26:10+08:00
 draft = false
 +++
 
@@ -39,8 +39,4 @@ latter phase is an explanation for the lack of overfitting in DL.
 
 # Bibliography
 
-<a id="shwartz-ziv17_openin_black_box_deep_neural" target="_blank">Shwartz-Ziv}, R., & Tishby, N., _Opening the black box of deep neural networks via information_, CoRR, _()_, (2017). </a> [↩](#00d0d7c9b0a8cde4ee312e0caa42f584)
-
-### Backlinks {#backlinks}
-
-- [Spike Train Mutual Information]({{< relref "spike_train_mutual_information" >}})
+<a id="shwartz-ziv17_openin_black_box_deep_neural" target="_blank">Shwartz-Ziv, Ravid, & Tishby, N., _Opening the black box of deep neural networks via information_, CoRR, _()_, (2017). </a> [↩](#00d0d7c9b0a8cde4ee312e0caa42f584)

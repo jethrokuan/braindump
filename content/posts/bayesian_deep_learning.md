@@ -1,7 +1,7 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:05+08:00
+lastmod = 2020-06-07T17:27:25+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
 +++
@@ -55,7 +55,3 @@ the network to prefer broad minima.
 <a id="wilson2019bayesian" target="_blank">Wilson, A. G., _The case for Bayesian deep learning_, NYU Courant Technical Report, _()_, (2019). </a> [↩](#179a446e344f34ef9150164c2bd666ae)
 
 <a id="smith_quoc_bayes_generalization_sgd" target="_blank">Smith, S., & Le, Q. V., _A bayesian perspective on generalization and stochastic gradient descent_, In , (pp. ) (2018). : .</a> [↩](#b9a995db75df332d755d4fb40282c70d)
-
-### Backlinks {#backlinks}
-
-- [Deep Learning With Bayesian Principles - Emtiyaz Khan]({{< relref "emti_dl_with_bayesian_principles" >}})

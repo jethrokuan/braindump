@@ -1,7 +1,7 @@
 +++
 title = "VFS for Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:56+08:00
+lastmod = 2020-06-07T17:28:26+08:00
 slug = "vfs_for_git"
 draft = false
 +++
@@ -20,7 +20,3 @@ view of the working directory, and examining the commit history with
 git log.
 
 GVFS allows dynamically downloading objects as needed.
-
-## Backlinks {#backlinks}
-
-- [Git Scalar]({{< relref "git_scalar" >}})

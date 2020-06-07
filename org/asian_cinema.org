@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: asian_cinema
-#+TITLE: Asian Cinema
+#+setupfile:./hugo_setup.org
+#+hugo_slug: asian_cinema
+#+title: Asian Cinema
 
 Following the success of Parasite, there is heightened interest in
 Asian cinema.

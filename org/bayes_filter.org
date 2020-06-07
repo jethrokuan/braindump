@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Bayes Filter
+#+setupfile: ./hugo_setup.org
+#+title: Bayes Filter
 
 - tags :: [[file:gaussian_filter.org][Gaussian Filter]]
 

@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Google Cartographer
+#+setupfile: ./hugo_setup.org
+#+title: Google Cartographer
 
 * System Overview
 Google Cartographer provides a real-time solution for indoor mapping
@@ -26,7 +26,7 @@ find the scan in the submap, and if a good match is found within the
 currently estimated pose, it is added as a loop closing constraint to
 the optimization problem.
 
-#+DOWNLOADED: https://google-cartographer.readthedocs.io/en/latest/_images/high_level_system_overview.png @ 2019-11-05 14:15:55
+#+downloaded: https://google-cartographer.readthedocs.io/en/latest/_images/high_level_system_overview.png @ 2019-11-05 14:15:55
 [[file:images/cartographer/high_level_system_overview2019-11-05_14-15-55_.png]]
 
 bibliography:biblio.bib

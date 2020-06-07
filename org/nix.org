@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Nix/NixOS
-#+AUTHOR: Jethro Kuan
+#+setupfile: ./hugo_setup.org
+#+title: Nix/NixOS
+#+author: Jethro Kuan
 
 NixOS is a [[file:linux.org][Linux]] [[file:operating_systems.org][operating System]] built upon the Nix package manager. Nix
 refers to both the package manager, and the name of the [[file:prog_lang.org][programming

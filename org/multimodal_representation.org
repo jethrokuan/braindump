@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: multimodal_representation
-#+TITLE: Multi-modal Representation
+#+setupfile:./hugo_setup.org
+#+hugo_slug: multimodal_representation
+#+title: Multi-modal Representation
 
 - tags :: [[file:multimodal_machine_learning.org][Multi-modal Machine Learning]]
 

@@ -1,2 +1,2 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Shell
+#+setupfile: ./hugo_setup.org
+#+title: Shell

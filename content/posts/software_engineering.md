@@ -1,7 +1,7 @@
 +++
 title = "Software Engineering"
 author = ["Derrick Chua", "Jethro Kuan"]
-lastmod = 2020-05-31T20:21:14+08:00
+lastmod = 2020-06-07T17:28:47+08:00
 draft = false
 +++
 
@@ -905,9 +905,3 @@ SDLC consists of different stages such as:
   - Processes measured and controllers
 - Optimized
   - Focus on process improvement
-
-### Backlinks {#backlinks}
-
-- [System Design]({{< relref "system_design" >}})
-- [Game API Design]({{< relref "game_api_design" >}})
-- [Code Litmus Tests]({{< relref "code_litmus_tests" >}})

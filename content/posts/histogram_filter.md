@@ -1,7 +1,7 @@
 +++
 title = "Histogram Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:11+08:00
+lastmod = 2020-06-07T17:27:32+08:00
 draft = false
 +++
 
@@ -71,7 +71,3 @@ state space. A simple decomposition is a multi-dimensional grid.
   _Selective updating_ chooses a subset of grid cells to update for the
   posterior. These are the grid cells whose posterior probability
   exceeds some user-set threshold.
-
-### Backlinks {#backlinks}
-
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: LU Decomposition
+#+setupfile:./hugo_setup.org
+#+title: LU Decomposition
 
 The key problem of [[file:linear_algebra.org][Linear Algebra]] is solving the equation $Ax=b$. We know that
 with Gaussian elimination, we can decompose $A = LU$, where $L$ is a

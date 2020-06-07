@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Two Levels Of Inference
+#+setupfile:./hugo_setup.org
+#+title: Two Levels Of Inference
 
 - tags :: [[file:occams_razor.org][Occam's Razor]]
 

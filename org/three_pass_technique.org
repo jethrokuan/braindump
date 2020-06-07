@@ -1,3 +1,2 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Three-pass Technique
-
+#+setupfile: ./hugo_setup.org
+#+title: Three-pass Technique

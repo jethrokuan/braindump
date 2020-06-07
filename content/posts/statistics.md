@@ -1,15 +1,15 @@
 +++
 title = "Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:28+08:00
+lastmod = 2020-06-07T17:26:34+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
+- [Random Variables]({{< relref "random_variables" >}})
 - [Information Theory]({{< relref "information_theory" >}})
 - [Regression]({{< relref "regression" >}})
-- [Random Variables]({{< relref "random_variables" >}})
 - [Exponential Family]({{< relref "exponential_family" >}})
 
 ## Basic Properties {#basic-properties}
@@ -553,10 +553,3 @@ test \\(H_0 : \mu_D = d\\), \\(t = \frac{\bar{D} - \mu_D}{s_D/\sqrt{n}}\\).
 \\(W\_+\\) is the sum of ranks among all positive \\(D_i\\) and \\(W_i\\) is the
 sum of ranks among all negative \\(D_i\\). We want to reject \\(H_0\\) if
 \\(W = min(W\_+, W\_-)\\) is too large.
-
-### Backlinks {#backlinks}
-
-- [Information Theory]({{< relref "information_theory" >}})
-- [Regression]({{< relref "regression" >}})
-- [Random Variables]({{< relref "random_variables" >}})
-- [Exponential Family]({{< relref "exponential_family" >}})

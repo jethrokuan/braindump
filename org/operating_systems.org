@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Operating Systems
+#+setupfile: ./hugo_setup.org
+#+title: Operating Systems
 
 * Operating System Key Concepts
 ** Motivation
@@ -251,11 +251,11 @@ Assumptions made:
 
 ** Scheduling Metrics
 1. Turn-around time
-#+BEGIN_EXPORT latex
+#+begin_export latex
 \begin{equation}
 T_{turnaround} = T_{completion} - T_{arrival}
 \end{equation}
-#+END_EXPORT
+#+end_export
 
 ** First Come First Served (FCFS)
 Example:
@@ -387,7 +387,7 @@ address space for threads remain the same.
 
 ** Example Thread creation
 
-#+BEGIN_SRC c
+#+begin_src c
   #include <stdio.h>
   #include <assert.h>
   #include <pthread.h>
@@ -409,7 +409,7 @@ address space for threads remain the same.
     printf("main: end");
     return 0;
   }
-#+END_SRC
+#+end_src
 
 ** Issues with Uncontrolled Scheduling
 *** Race Condition
@@ -435,9 +435,9 @@ within the critical section, others will be prevented from doing so.
 *** The wish for atomicity
 What if we had a super-instruction like this:
 
-#+BEGIN_SRC text
+#+begin_src text
   memory-add 0x8044a1c, $0x1
-#+END_SRC
+#+end_src
 
 Assume this instruction adds a value to a memory location, and the
 hardware guarantees that it executes atomically. This would be easy if
@@ -448,14 +448,14 @@ Instead, we ask the hardware for a few useful instructions upon which
 we can build a general set of what is called /synchronisation
 primitives/.
 ** Thread API
-#+BEGIN_SRC c
+#+begin_src c
   #include <pthread.h>
 
   int pthread_create (pthread_t * thread,
                       const pthread_attr_t* attr,
                       void * (*start_routine) (void *)
                       void * arg);
-#+END_SRC
+#+end_src
 
 1. =thread= is a pointer to the structure of type =pthread_t=, used to
    interact with the thread
@@ -465,13 +465,13 @@ primitives/.
 3. =start_routine= is the function this thread should start running in
 4. =arg= is the argument =start_routine= requires.
 
-#+BEGIN_SRC c
+#+begin_src c
   int pthread_join(pthread_t trhead, void ** value_ptr);
-#+END_SRC
+#+end_src
 
 =pthread_join= waits for the thread's completion.
 *** Locks API
-#+BEGIN_SRC c
+#+begin_src c
   int pthread_mutex_lock(pthread_mutex_t *mutex);
   int pthread_mutex_unlock(pthread_mutex_t *mutex);
 
@@ -487,27 +487,27 @@ primitives/.
   // Critical section
   x = x + 1;
   pthread_mutex_unlock(&lock);
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC c
+#+begin_src c
   int pthread_mutex_trylock(pthread_mutex_t *mutex);
   int pthread_mutex_timedlock(pthread_mutex_t *mutex,
                               struct timespec *abs_timeout);
-#+END_SRC
+#+end_src
 
 These two calls are used in lock acquisition. =trylock= returns
 failure if the lock is already held, and =timedlock= returns after a
 timeout or after acquiring the lock, whichever happens first.
 *** Condition Variables
-#+BEGIN_SRC c
+#+begin_src c
   int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);
   int pthread_cond_signal(pthread_cond_t *cond);
-#+END_SRC
+#+end_src
 
 *condition variables* are useful when some kind of signalling must
  take place between threads.
 
-#+BEGIN_SRC c
+#+begin_src c
   pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
   pthread_cond_t init = PTHREAD_COND_INITIALIZER;
 
@@ -523,7 +523,7 @@ timeout or after acquiring the lock, whichever happens first.
   initialized = 1;
   pthread_cond_signal(&init);
   pthread_mutex_unlock(&lock);
-#+END_SRC
+#+end_src
 ** Properties of Correct CS Implementation
 - Mutual Exclusion :: If process P1 is executing in critical section,
      all other processes are prevented from entering the critical section
@@ -557,7 +557,7 @@ can be initialized to protect different critical sections.
 Using a special hardware instruction, turn off all interrupts during
 critical section:
 
-#+BEGIN_SRC c
+#+begin_src c
   void lock() {
     DisableInterrupts(); 
   }
@@ -565,7 +565,7 @@ critical section:
   void unlock() {
     EnableInterrupts();
   }
-#+END_SRC
+#+end_src
 **** Pros
 1. Simplicity
 **** Cons
@@ -616,7 +616,7 @@ Blocking Version contains 3 semaphores:
 2. !Full (initialized to 4) [!Full]
 3. !Empty (initialized to 0) [!Empty]
 
-#+BEGIN_SRC c
+#+begin_src c
   //Producer
   while (TRUE) {
     Produce Item;
@@ -641,7 +641,7 @@ Blocking Version contains 3 semaphores:
     Consume Item;
   }
 
-#+END_SRC
+#+end_src
 ** Readers/Writers
 Processes share a data structure D
 1. Reader: Retrieves information from D
@@ -649,7 +649,7 @@ Processes share a data structure D
 3. Writer must have exclusive access
 4. Readers can read with other readers
 
-#+BEGIN_SRC c
+#+begin_src c
   while (true) {
     wait(roomEmpty);
     //Modifies data;
@@ -672,12 +672,12 @@ Processes share a data structure D
     }
     signal(mutex);
   }
-#+END_SRC
+#+end_src
 ** Dining Philosophers
 Philosophers sitting in a circle, requiring resource from both left
 and right side.
 *** Tanenbaum Solution
-#+BEGIN_SRC C
+#+begin_src C
   #define N 5
   #define LEFT i
   #define RIGHT ((i+1)%N)
@@ -720,7 +720,7 @@ and right side.
     safeToEat(RIGHT);
     signal(mutex);
   }
-#+END_SRC
+#+end_src
 * Address Spaces
 While saving and storing register-level state is relatively fast,
 saving the entire contents of memory to disk is non-performant. We'd
@@ -826,12 +826,12 @@ A free list contains a set of elements that describe the free space
 still remaining in the heap. To track the size of allocated regions,
 the header contains the size of the allocated region.
 
-#+BEGIN_SRC c
+#+begin_src c
   typedef struct __header_t {
     int size;
     int magic;
   }
-#+END_SRC
+#+end_src
 ** Growing the Heap
 Traditional allocators start of with a small heap. When more memory is
 required, the =sbrk= system call is made to request for more memory.
@@ -937,10 +937,10 @@ hardware performs the translation.
 2. The system translates the virtual address (21) to the correct
    physical address:
 
-#+BEGIN_SRC c
+#+begin_src c
   VPN = (VirtualAddress & VPN_MASK) >> SHIFT
   PTEAddr = PageTableBaseRegister + (VPN * sizeof(PTE))
-#+END_SRC
+#+end_src
 
 In this example, =VPN_MASK= would be set to 0x30, or 110000 in binary,
 to extract the VPN bits. Once the PFN is obtained from the page table,
@@ -1089,7 +1089,7 @@ currently not in use. We call this the *swap space*.
 
  Below is the page-fault control algorithm:
 
- #+BEGIN_SRC c
+ #+begin_src c
    PFN = findFreePhysicalPage();
    if (PFN == -1) {                  /* can't find free page */
      PFN = EvictPage();              /* Evict some old page */
@@ -1098,7 +1098,7 @@ currently not in use. We call this the *swap space*.
    PTE.present = true;
    PTE.PFN = PFN;
    RetryInstruction();
- #+END_SRC
+ #+end_src
 
 *** When Replacements Really Occur
   The OS actively keeps a small portion of memory free. To do this, the

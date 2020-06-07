@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: how_to_brainstorm_great_business_ideas
-#+ROAM_KEY: https://www.indiehackers.com/post/how-to-brainstorm-great-business-ideas-ab51c3d51c
-#+TITLE: How to brainstorm great business ideas
+#+setupfile:./hugo_setup.org
+#+hugo_slug: how_to_brainstorm_great_business_ideas
+#+roam_key: https://www.indiehackers.com/post/how-to-brainstorm-great-business-ideas-ab51c3d51c
+#+title: How to brainstorm great business ideas
 
 - tags :: [[file:~/Dropbox/org/braindump/business.org][Business]]
 - author :: [[file:~/Dropbox/org/braindump/courtland_allen.org][Courtland Allen]]

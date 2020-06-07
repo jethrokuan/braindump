@@ -1,7 +1,7 @@
 +++
 title = "Sufficient Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:02+08:00
+lastmod = 2020-06-07T17:27:21+08:00
 draft = false
 +++
 

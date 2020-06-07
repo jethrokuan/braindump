@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
-#+HUGO_SLUG: you_and_your_research
-#+TITLE: You and Your Research - Richard Hamming
+#+setupfile:./hugo_setup.org
+#+roam_key: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
+#+hugo_slug: you_and_your_research
+#+title: You and Your Research - Richard Hamming
 
 - source :: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
 - author :: [[file:../richard_hamming.org][Richard Hamming]]

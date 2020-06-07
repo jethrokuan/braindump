@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Deep Reinforcement Learning
+#+setupfile: ./hugo_setup.org
+#+title: Deep Reinforcement Learning
 bibliographystyle:unsrt
 
 - tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
@@ -39,7 +39,7 @@ bibliographystyle:unsrt
       samples from that policy?
     - however, are samples cheap to obtain?
 
-#+CAPTION: Sample efficiency comparison
+#+caption: Sample efficiency comparison
 [[file:images/deep_rl/screenshot2019-12-16_01-35-50_.png]]
 
 - stability and ease of use (does it converge, and if so to what?)

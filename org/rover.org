@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Rover
+#+setupfile: ./hugo_setup.org
+#+title: Rover
 
 * Landing a Rover
 Landing on Mars is challenging because there's is too much

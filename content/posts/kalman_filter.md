@@ -1,14 +1,14 @@
 +++
 title = "Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:05+08:00
+lastmod = 2020-06-07T17:28:36+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Gaussian Filter]({{< relref "gaussian_filter" >}})
 - [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
+- [Gaussian Filter]({{< relref "gaussian_filter" >}})
 
 tags
 : [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}}), [Gaussian Filter]({{< relref "gaussian_filter" >}})
@@ -70,8 +70,3 @@ The linearity assumptions are often unfulfilled in practice. For
 example, circular trajectories cannot be described with linear state
 transitions. To overcome this difficulty, people use the [Extended
 Kalman Filter]({{< relref "extended_kalman_filter" >}}).
-
-### Backlinks {#backlinks}
-
-- [Gaussian Filter]({{< relref "gaussian_filter" >}})
-- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})

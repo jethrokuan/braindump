@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: https://arxiv.org/abs/1903.00138
-#+HUGO_SLUG: improving_grammatical_error_correction_via_pre_training_a_copy_augmented_architecture_with_unlabeled_data
-#+TITLE: Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data
+#+setupfile:./hugo_setup.org
+#+roam_key: https://arxiv.org/abs/1903.00138
+#+hugo_slug: improving_grammatical_error_correction_via_pre_training_a_copy_augmented_architecture_with_unlabeled_data
+#+title: Improving Grammatical Error Correction via Pre-Training a Copy-Augmented Architecture with Unlabeled Data
 
 - source :: https://arxiv.org/abs/1903.00138
 
@@ -33,6 +33,6 @@ Transformer encodes source sentence with stack of L identical blocks, each of th
   P_{t}(w)=\operatorname{softmax}\left(L^{\text{train}} h_{t}\right)
 \end{equation}
 
-#+DOWNLOADED: screenshot @ 2020-03-09 21:56:59
+#+downloaded: screenshot @ 2020-03-09 21:56:59
 [[file:images/1903_00138_improving_grammatical_error_correction_via_pre_training_a_copy_augmented_architecture_with_unlabeled_data/screenshot2020-03-09_21-56-59_.png]]
 

@@ -1,14 +1,14 @@
 +++
 title = "Meta Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:15+08:00
+lastmod = 2020-06-07T17:27:38+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Differentiable plasticity: training plastic neural networks with backpropagation]({{< relref "miconi_differentiable_plasticity" >}})
 - [A critique of pure learning and what artificial neural networks can learn from animal brains]({{< relref "zador19_critique_pure_learning" >}})
+- [Differentiable plasticity: training plastic neural networks with backpropagation]({{< relref "miconi_differentiable_plasticity" >}})
 
 tags
 : [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -40,8 +40,3 @@ Based on 2nd-order gradient descent:
 ## Resources {#resources}
 
 - [ICML 2019 Meta-learning Tutorial](https://sites.google.com/view/icml19metalearning)
-
-### Backlinks {#backlinks}
-
-- [Differentiable plasticity: training plastic neural networks with backpropagation]({{< relref "miconi_differentiable_plasticity" >}})
-- [A critique of pure learning and what artificial neural networks can learn from animal brains]({{< relref "zador19_critique_pure_learning" >}})

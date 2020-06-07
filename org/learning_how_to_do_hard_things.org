@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: learning_how_to_do_hard_things
-#+ROAM_KEY: cite:maciver_hard_things
-#+TITLE: Learning How To Do Hard Things
+#+setupfile:./hugo_setup.org
+#+hugo_slug: learning_how_to_do_hard_things
+#+roam_key: cite:maciver_hard_things
+#+title: Learning How To Do Hard Things
 
 - tags :: [[file:learning.org][Learning]]
 - paper :: cite:maciver_hard_things
@@ -9,7 +9,7 @@
 The key is to isolate one aspect of the problem that is difficult and
 work on it. This provides a direct feedback loop.
 
-#+BEGIN_QUOTE
+#+begin_quote
  1. Find something that is like the hard thing but is easy.
  2. Modify the easy thing so that it is like the hard thing in exactly one way that you find hard.
  3. Do the modified thing until it is no longer hard.
@@ -19,6 +19,6 @@ work on it. This provides a direct feedback loop.
     3.  Go ask an expert or a rubber duck for advice.
     4.  If you’re still stuck after trying the first three, it’s possible that you may have hit some sort of natural difficulty limit and may not be able to make progress. 
  5. If the original hard thing is now easy, you’re done. If not, go back to step 2.
-#+END_QUOTE
+#+end_quote
 
 bibliography:biblio.bib

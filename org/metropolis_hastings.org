@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Metropolis-Hastings Method
+#+setupfile:./hugo_setup.org
+#+title: Metropolis-Hastings Method
 
 In [[file:importance_sampling.org][Importance Sampling]] and [[file:rejection_sampling.org][Rejection Sampling]], the proposal
 distribution $q(x)$ needs to be similar to $p(x)$. The

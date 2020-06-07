@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Emacs Lisp
+#+setupfile:./hugo_setup.org
+#+title: Emacs Lisp
 
 - tags :: [[file:prog_lang.org][Programming Languages]]
 

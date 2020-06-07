@@ -1,14 +1,14 @@
 +++
 title = "Range Finder Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:06+08:00
+lastmod = 2020-06-07T17:27:25+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
 - [Robotics]({{< relref "robotics" >}})
+- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
 
 ## Beam Model for Range Finders {#beam-model-for-range-finders}
 
@@ -89,8 +89,3 @@ Parameters can be learnt from data via maximum likelihood estimation.
 ### Alternatives {#alternatives}
 
 - [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
-
-### Backlinks {#backlinks}
-
-- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
-- [Robotics]({{< relref "robotics" >}})

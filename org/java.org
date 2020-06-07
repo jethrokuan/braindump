@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Java
+#+setupfile: ./hugo_setup.org
+#+title: Java
 
 - tags :: [[file:prog_lang.org][Programming Languages]]
 
@@ -8,14 +8,14 @@ Default java implementation:
 1. =hashCode= returns memory location of the object
 2. Every object hashes to a different location
 ** Long
-#+BEGIN_SRC java
+#+begin_src java
   public int hashCode() {
       return (int) (value ^ (value >> 32));
   }
-#+END_SRC
+#+end_src
 
 ** String
-#+BEGIN_SRC java
+#+begin_src java
   public int hashCode() {
       int h = hash; // only caluclate hash once
       if (h == 0 && count > 0) { // empty = 0
@@ -29,12 +29,12 @@ Default java implementation:
           }
           return h;
   }
-#+END_SRC
+#+end_src
 
-#+BEGIN_SRC
+#+begin_src
 hash = s[0] * 31^(n-1)
       + s[1] * 32^(n-2)
-#+END_SRC
+#+end_src
 * Add vs Offer
 http://stackoverflow.com/questions/15591431/difference-between-offer-and-add-in-priority-queue-in-java
 

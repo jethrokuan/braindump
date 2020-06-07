@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Monte Carlo Methods
+#+setupfile:./hugo_setup.org
+#+title: Monte Carlo Methods
 
 - tags :: [[file:/home/jethro/Dropbox/org/braindump/org/machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:/home/jethro/Dropbox/org/braindump/org/pgm.org][Probabilistic Graph Models]]
 
@@ -30,10 +30,10 @@ $\hat{\phi}$ is the same as the expectation of $\phi$. The variance of
 $\hat{\phi}$ decreases as $\sigma^2/R$, where $\sigma^2$ is the
 variance of $\phi$. This is so important that it is restated here:
 
-#+BEGIN_QUOTE
+#+begin_quote
 The accuracy of the Monte Carlo estimate is dependent only on the
 variance of $\phi$, and not on the dimensionality of the space sampled.
-#+END_QUOTE
+#+end_quote
 
 * Why is sampling hard?
 

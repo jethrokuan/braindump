@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: State Estimation
+#+setupfile: ./hugo_setup.org
+#+title: State Estimation
 
 State estimation seeks to recover state variables from the data.
 Probabilistic state estimation computes belief distributions over

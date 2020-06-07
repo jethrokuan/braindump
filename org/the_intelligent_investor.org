@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: the_intelligent_investor
-#+TITLE: The Intelligent Investor
+#+setupfile:./hugo_setup.org
+#+hugo_slug: the_intelligent_investor
+#+title: The Intelligent Investor
 
 - author :: [[file:benjamin_graham.org][Benjamin Graham]]
 - tags :: [[file:finance.org][Finance]]

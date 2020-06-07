@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Partially Observable Markov Decision Processes (POMDPs)
+#+setupfile:./hugo_setup.org
+#+title: Partially Observable Markov Decision Processes (POMDPs)
 
 * Partially Observable MDPs (POMDPs)
 The assumption of full observability, accompanied with the Markov
@@ -107,7 +107,7 @@ whose depth-d-1 subplan for percept $e$ is $p.e$, then
 
 This recursion gives rise to a value iteration algorithm:
 
-#+BEGIN_SRC text
+#+begin_src text
   function POMDP-VALUE-ITERATION returns a utility function
     inputs: pomdp
             e, the maximum error allowed for utility
@@ -120,7 +120,7 @@ This recursion gives rise to a value iteration algorithm:
       U' <- REMOVE-DOMINATED-PLANS(U')
     until MAX-DIFFERENCE(U, U') < e(1-\gamma) / \gamma
     return U
-#+END_SRC
+#+end_src
 
 The algorithm's complexity is dominated by the number of plans
 generated: given $|A|$ possible actions and $|E|$ possible

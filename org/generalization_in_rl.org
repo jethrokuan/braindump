@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Generalization In Reinforcement Learning
+#+setupfile:./hugo_setup.org
+#+title: Generalization In Reinforcement Learning
 
 - tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 

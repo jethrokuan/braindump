@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Writing Books
+#+setupfile:./hugo_setup.org
+#+title: Writing Books
 
 - tags :: [[file:writing.org][Writing]]
 

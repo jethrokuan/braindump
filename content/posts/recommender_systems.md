@@ -1,7 +1,7 @@
 +++
 title = "Recommender Systems"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:49+08:00
+lastmod = 2020-06-07T17:25:44+08:00
 draft = false
 +++
 
@@ -11,7 +11,3 @@ draft = false
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}})
-
-## Backlinks {#backlinks}
-
-- [Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches]({{< relref "dacrema19_progress_neural_rec" >}})

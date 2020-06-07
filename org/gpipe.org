@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Gpipe
+#+setupfile:./hugo_setup.org
+#+title: Gpipe
 
 Gpipe is a scalable pipeline parallelism library published by Google
 Brain, which allows for efficient training of large, memory-consuming
@@ -12,7 +12,7 @@ mini-batch into smaller micro-batches, enabling different accelerators
 to work on different micro-batches simultaneously. This is especially
 useful in [[file:large_batch_training.org][Large Batch Training]].
 
-#+DOWNLOADED: screenshot @ 2020-02-05 23:05:00
+#+downloaded: screenshot @ 2020-02-05 23:05:00
 [[file:images/gpipe/screenshot2020-02-05_23-05-00_.png]]
 
 bibliography:biblio.bib

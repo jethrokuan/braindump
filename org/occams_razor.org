@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Occam's Razor
+#+setupfile:./hugo_setup.org
+#+title: Occam's Razor
 
 - tags :: [[file:information_theory.org][Information Theory]]
 

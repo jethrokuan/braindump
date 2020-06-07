@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Topic Modeling
+#+setupfile: ./hugo_setup.org
+#+title: Topic Modeling
 
 - tags :: [[file:machine_learning.org][Machine Learning]]
 

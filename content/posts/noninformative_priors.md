@@ -1,7 +1,7 @@
 +++
 title = "Non-informative Priors"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:19:29+08:00
+lastmod = 2020-06-07T17:26:35+08:00
 slug = "noninformative_priors"
 draft = false
 +++
@@ -18,7 +18,3 @@ value of \\(\theta\\) over another).
 
 An example of such a non-informative prior in the discrete space would
 be a uniform distribution over \\(\theta\\).
-
-## Backlinks {#backlinks}
-
-- [Reference Prior]({{< relref "reference_prior" >}})

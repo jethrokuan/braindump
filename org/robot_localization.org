@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Robot Localization
+#+setupfile: ./hugo_setup.org
+#+title: Robot Localization
 
 Mobile robot localization is the problem of estimating the robots
 coordinates in an external reference frame from sensor data, relative
@@ -51,5 +51,5 @@ integrating data over time is required to determine the pose.
 
 * Summary
 
-#+CAPTION: Comparisons between different Markov localization techniques
+#+caption: Comparisons between different Markov localization techniques
 [[file:images/robot_localization/screenshot2019-12-05_18-15-41_.png]]

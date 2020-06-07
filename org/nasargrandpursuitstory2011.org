@@ -1,5 +1,5 @@
-#+TITLE: nasarGrandPursuitStory2011: Grand pursuit: The story of economic genius
-#+ROAM_KEY: cite:nasarGrandPursuitStory2011
+#+title: nasarGrandPursuitStory2011: Grand pursuit: The story of economic genius
+#+roam_key: cite:nasarGrandPursuitStory2011
 
 * Grand pursuit: The story of economic genius
   :PROPERTIES:

@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Robotics
-#+HUGO_TAGS: robotics
+#+setupfile: ./hugo_setup.org
+#+title: Robotics
+#+hugo_tags: robotics
 
 * Theory
 - [[file:uncertainty_in_robotics.org][Uncertainty in Robotics]]

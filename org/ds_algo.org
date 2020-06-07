@@ -1,15 +1,15 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Data Structures and Algorithms
-#+OPTIONS: toc:nil
+#+setupfile: ./hugo_setup.org
+#+title: Data Structures and Algorithms
+#+options: toc:nil
 
-#+BEGIN_EXPORT latex
+#+begin_export latex
 \null\hfill\underline{\textbf{Jethro Kuan} -- \textit{\today}}
-#+END_EXPORT
+#+end_export
 
 * Java
 ** Access Modifier
 C: Class; P: Package; SC: Subclass; W: World
-#+ATTR_LATEX: :font \footnotesize
+#+attr_latex: :font \footnotesize
 | Modifier  | C | P | SC | W |
 |-----------+---+---+----+---|
 | public    | Y | Y | Y  | Y |
@@ -18,17 +18,17 @@ C: Class; P: Package; SC: Subclass; W: World
 | private   | Y | N | N  | N |
 ** Comparable
 Implement =Comparable<T>=:
-#+BEGIN_SRC text
+#+begin_src text
 int compareTo(T o)
-#+END_SRC
+#+end_src
 ** hashCode
 - If two objects are =equal=, =hashCode= must return the same result
 - hashCode must return the same result hen invoked on the same object
   more than once
-#+BEGIN_SRC text
+#+begin_src text
   int hashCode() {} 
   boolean equals(Object o) {}
-#+END_SRC
+#+end_src
 ** Common Issues
 Array out of bounds; divide by zero; infinite loop; exception thrown
 but not caught; access member variable in static method
@@ -55,7 +55,7 @@ $T(n) = aT(\frac{n}{b}) + f(n)$ where a \ge 1, b > 1
 - Dequeue :: double-ended queue
 * Searching
 - Binary Search $O(\log n)$
-#+BEGIN_SRC java
+#+begin_src java
   int binarySearch(int[] arr, int key) {
       int start = 0, end = arr.length - 1;
       int found = -1;
@@ -75,24 +75,24 @@ $T(n) = aT(\frac{n}{b}) + f(n)$ where a \ge 1, b > 1
       }
       return found;
   }
-#+END_SRC
+#+end_src
 - One sided Binary Search :: Suppose one side is bounded, eg [1,
      \infty). Use the sequence [1,2,4,8,16..., $2^k$...] If it works for
      $2^k$, then search on [$2^{k-1}, 2^k$]
 - Peak Finding :: A[j] in array A is peak if (i) A[j] > A[j-1] (ii)
                   A[j] > A[j+1]. If only one item in array, vacously true
 - 1D Peak Finding $O(\log n)$ :: D&C
-#+BEGIN_SRC text
+#+begin_src text
   if a[n/2] < a[n/2-1] look at 1..n/2-1
   else if a[n/2] < a[n/2+1] look at n/2+1..n
   else return a[n/2]
-#+END_SRC
+#+end_src
 - 2D Peak Finding $O(m + n)$ :: D&C
-#+BEGIN_SRC text
+#+begin_src text
   find max in border + cross O(m+n)
   if max is peak return
   else go into quadrant with higher number
-#+END_SRC
+#+end_src
 * Sorting
 - Bubble Sort :: Stable, In-place, W&A $O(n^2)$, B $O(n)$, S $O(1)$;
                  Invariant : At iteration i , the sub-array A[1 .. i]
@@ -159,29 +159,29 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 - store weight of tree in each node:
 - $w(v) = w(v.left) + w(v.right) + 1$
 - select(k) $O(\log n)$: finds node with rank $k$
-#+BEGIN_SRC text
+#+begin_src text
   rank = left.weight + 1;
     if (k == rank)
       return v
     else if (k < rank)
       return left.select(k)
     else return right.select(k-rank)
-#+END_SRC
+#+end_src
 - rank(v) $O(\log n)$: computes rank of node v
-#+BEGIN_SRC text
+#+begin_src text
   rank = v.left.weight + 1
     while (v != null) do
       if v is left child do nothing
       if v is right child,
          rank += v.parent.left.weight + 1
       v = v.parent
-#+END_SRC
+#+end_src
   
 *** Interval Trees
 - Each node is an interval $(m, n), m \le n$
 - Sort by $m$, augment node with maximum $n$ of children in each node
 - search(x) $O(\log n)$:
-#+BEGIN_SRC text
+#+begin_src text
   if x in c
     return c
   else if c has no left child
@@ -189,14 +189,14 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
   else if x > max endpoint in c.left
     search in right subtree
   else search in left subtree
-#+END_SRC
+#+end_src
 - findAll(x) $O(k \log n)$ for k overlapping intervals
-#+BEGIN_SRC text
+#+begin_src text
   search(x)
   store it somewhere else
   remove interval
   repeat until no intervals found
-#+END_SRC
+#+end_src
 *** Orthogonal Range Searching
 **** 1D
 
@@ -286,7 +286,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 ** Simple search
 - BFS/DFS do not explore all paths
 *** BFS $O(V+E)$
-#+BEGIN_SRC text
+#+begin_src text
   bfs(root)
     Q.enqueue(root)
 
@@ -297,7 +297,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
         if n not visited
           n.parent = current
           Q.enqueue(n)
-#+END_SRC
+#+end_src
 *** DFS $O(V+E)$
 - Same as BFS, but use stack instead of queue
 
@@ -309,11 +309,11 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 ** SSSP
 *** Bellman-Ford $O(EV)$
 - $O(V^3)$ if using Adj Matrix
-#+BEGIN_SRC text
+#+begin_src text
   do V number of times
     for (Edge e : graph)
       relax(e)
-#+END_SRC
+#+end_src
 - can terminate early if no improvement
 - can detect negative cycle: perform V times, then perform once more,
   if have changes it has negative cycle
@@ -323,7 +323,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 
 - Doesn't work with negative edge weights
 - can terminate once end is found
-#+BEGIN_SRC text
+#+begin_src text
   add start to PQ
   dist[i] = INF for all i
   dist[start] = 0
@@ -333,7 +333,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
       if edge is improvement
         update pq[w] O(logn)
         update dist[w]
-#+END_SRC
+#+end_src
 
 *** DAG
 - Toposort, relax in order
@@ -378,7 +378,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
    across cut is in MST
 *** Prim's $O(E \log V)$
 - Uses cycle property
-#+BEGIN_SRC text
+#+begin_src text
   T = {start}
   enqueue start's edges in PQ
   while PQ not empty
@@ -388,14 +388,14 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
     else
       ignore edge
   MST = T
-#+END_SRC
+#+end_src
 
 *** Kruskal's $O(E\log V)$
 - Uses UFDS
 - It is possible that some edge in the first $V-1$ edges will form a
   cycle with pre-existing MST solution
   
-#+BEGIN_SRC text
+#+begin_src text
   Sort E edges by increasing weight
   T = {}
   for (i = 0; i < edgeList.length; i++)
@@ -404,10 +404,10 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
       add e to T
       else ignore e
   MST = T
-#+END_SRC
+#+end_src
 
 *** Boruvka's $O(E\log V)$
-#+BEGIN_SRC text
+#+begin_src text
   T = { one-vertex trees }
   While T has more than one component:
    For each component C of T:
@@ -419,7 +419,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
      Add the cheapest edge in S to T
    Combine trees connected by edges
   MST = T
-#+END_SRC
+#+end_src
 
 *** Variants
 1. Same weight: BFS/DFS $O(E)$
@@ -475,7 +475,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
 - Shortest paths have overlapping subproblems
 - Idea: gradually allow usage of intermediate vertices
 - Invariant: At step k, shortest path via nodes 0 to k are correct
-#+BEGIN_SRC java
+#+begin_src java
   // precondition: A[i][j] contains weight
   //  of edge (i,j) or inf if no edge
   int[][] APSP(A) {
@@ -489,7 +489,7 @@ $h(v) = max\left(h(v.left), h(v.right)\right) + 1$
                              S[i][k] + S[k][j]);
     return S;
   }
-#+END_SRC
+#+end_src
 
 ** Network Flow
 - k-edge connected :: Source and target are k-edge connected if there
@@ -520,7 +520,7 @@ nodes connected and no other used edge. False otherwise. $O(V)$
 *** Min Vertex Cover
 - Idea: transform tree into DAG, run DP
 - only two possiblities for each vertex; taken or not
-#+BEGIN_SRC java
+#+begin_src java
   int MVC(int v, int flag) {
       int ans = 0;
       if (memo[v][flag] != -1)
@@ -540,7 +540,7 @@ nodes connected and no other used edge. False otherwise. $O(V)$
           }
       }
   }
-#+END_SRC
+#+end_src
 *** SSSP
 - On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
   obtain the shortest path to any vertice in $O(V)$
@@ -571,7 +571,7 @@ nodes connected and no other used edge. False otherwise. $O(V)$
 
 * Parallel Algorithms
 ** Parallel Fibonacci
-#+BEGIN_SRC text
+#+begin_src text
   parallelFib(n) {
     if(n < 2) then
     return n;
@@ -580,7 +580,7 @@ nodes connected and no other used edge. False otherwise. $O(V)$
     sync;
     return x + y;
   }
-#+END_SRC
+#+end_src
 
 - Critical Path: $T_\infty$, Parallelism = $T_1/T_\infty$
 - $T_\infty(n) = max(T_\infty(n - 1), T_\infty(n - 2)) + O(1) = O(n)$
@@ -594,7 +594,7 @@ Before:
 • Work analysis: $T_1(n) = O(n^2)$
 • critical path analysis: $T_\infty(n) = O(n^2)$
 After:
-#+BEGIN_SRC text
+#+begin_src text
   pMatAdd(A,B,C,i,j,n)
     if(n == 1)
       C[i,j] = A[i,j] + B[i,j];
@@ -604,13 +604,13 @@ After:
       spawn pMatAdd(A,B,C,i + n/2,j,n/2);
       spawn pMatAdd(A,B,C,i + n/2,j + n/2,n/2);
       sync;
-#+END_SRC
+#+end_src
 
 - Work Analysis: $T_1(n) = 4T_1(n/2) + O(1) = O(n^2)$
 - Critical Path Analysis: $T_\infty(n) = T_\infty(n/2) + O(1) = O(\log n)$
 
 ** Parallelized Merge Sort $O(\log^3n)$
-#+BEGIN_SRC text
+#+begin_src text
   pMerge(A[1..k], B[1..m], C[1..n])
     if (m > k) then pMerge(B, A, C);
     else if (n==1) then C[1] = A[1];
@@ -637,7 +637,7 @@ After:
       Y = spawn pMergeSort(A[n/2+1, n], n/2)
       synch;
       A = spawn pMerge(X, Y);
-#+END_SRC
+#+end_src
 
 *** Analyses                                                         :noexport:
 Critical Path Analysis:

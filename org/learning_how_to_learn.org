@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: learning_how_to_learn
-#+TITLE: Learning How To Learn
+#+setupfile:./hugo_setup.org
+#+hugo_slug: learning_how_to_learn
+#+title: Learning How To Learn
 
 - tags :: [[file:learning.org][Learning]]
 

@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Portfolio Composition
+#+setupfile:./hugo_setup.org
+#+title: Portfolio Composition
 
 * General recommendations
 

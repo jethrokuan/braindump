@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Emacs
+#+setupfile:./hugo_setup.org
+#+title: Emacs
 
 Much of Emacs is written in [[file:emacs_lisp.org][Emacs Lisp]].
 

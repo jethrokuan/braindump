@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Actor-Critic
+#+setupfile:./hugo_setup.org
+#+title: Actor-Critic
 
 Actor-Critic improves on [[file:policy_gradients.org][Policy Gradients]] methods by introducing a
 critic.
@@ -105,7 +105,7 @@ state with reward 0, and the probability of transitioning to this
 death state is $1 - \gamma$. This causes the agent to prefer better
 rewards now than later.
 
-#+CAPTION: $\gamma$ modified MDP
+#+caption: $\gamma$ modified MDP
 [[file:images/actor_critic/screenshot2019-12-16_17-50-22_.png]]
 
 
@@ -117,7 +117,7 @@ We can then modify $\hat{A}^\pi$:
 
 
 
-#+DOWNLOADED: screenshot @ 2019-12-16 17:56:52
+#+downloaded: screenshot @ 2019-12-16 17:56:52
 [[file:images/actor_critic/screenshot2019-12-16_17-56-52_.png]]
 
 $\gamma$ can be interpreted as a way to limit variance, and prevent
@@ -134,7 +134,7 @@ the infinite sum (think about what happens when $\gamma$ gets bigger).
 
 * Online Actor-critic
 
-#+DOWNLOADED: screenshot @ 2019-12-16 18:02:09
+#+downloaded: screenshot @ 2019-12-16 18:02:09
 [[file:images/actor_critic/screenshot2019-12-16_18-02-09_.png]]
 online actor-critic uses a single sample batch, which is a bad idea in
 large neural networks. We need to use multiple samples to perform
@@ -143,11 +143,11 @@ updates.
 The purpose of multiple workers here is not to make the algorithm
 faster, but to make it work by increasing the batch size.
 
-#+DOWNLOADED: screenshot @ 2019-12-16 18:02:03
+#+downloaded: screenshot @ 2019-12-16 18:02:03
 [[file:images/actor_critic/screenshot2019-12-16_18-02-03_.png]]
 
 
-#+DOWNLOADED: screenshot @ 2019-12-16 18:02:53
+#+downloaded: screenshot @ 2019-12-16 18:02:53
 [[file:images/actor_critic/screenshot2019-12-16_18-02-53_.png]]
 
 

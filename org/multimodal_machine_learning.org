@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: multimodal_machine_learning
-#+TITLE: Multi-modal Machine Learning
+#+setupfile:./hugo_setup.org
+#+hugo_slug: multimodal_machine_learning
+#+title: Multi-modal Machine Learning
 
 * Definitions
 - modality :: the way in which something happens or is experienced.

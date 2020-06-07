@@ -1,7 +1,7 @@
 +++
 title = "Extended Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:51+08:00
+lastmod = 2020-06-07T17:25:46+08:00
 draft = false
 +++
 
@@ -85,7 +85,3 @@ probes the function to be linearized at selected points, and
 calculates a linearized approximation based on the outcomes of the
 probes. Moments matching linearizes while preserving the true mean and
 true covariance of the posterior distribution.
-
-### Backlinks {#backlinks}
-
-- [Kalman Filter]({{< relref "kalman_filter" >}})

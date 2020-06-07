@@ -1,7 +1,7 @@
 +++
 title = "Temp Coding with Alpha Synaptic Function"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:18:55+08:00
+lastmod = 2020-06-07T17:25:51+08:00
 draft = false
 +++
 
@@ -167,7 +167,3 @@ layer occurring before the mean spike in the hidden layer.
 # Bibliography
 
 <a id="comsa19_tempor_codin_spikin_neural_networ" target="_blank">Comsa, I. M., Potempa, K., Versari, L., Fischbacher, T., Gesmundo, A., & Alakuijala, J., _Temporal coding in spiking neural networks with alpha synaptic function_, CoRR, _()_, (2019). </a> [↩](#caaddec51f6948e5fea79b6d41c79676)
-
-### Backlinks {#backlinks}
-
-- [Spiking Neurons (Literature Review)]({{< relref "spiking_neurons_lit_review" >}})

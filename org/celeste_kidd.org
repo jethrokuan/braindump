@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: celeste_kidd
-#+TITLE: Celeste Kidd
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: celeste_kidd
+#+title: Celeste Kidd

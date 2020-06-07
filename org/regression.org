@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Regression
+#+setupfile: ./hugo_setup.org
+#+title: Regression
 
 - tags :: [[file:statistics.org][Statistics]], [[file:bayesian_statistics.org][Bayesian Statistics]]
 
@@ -98,7 +98,7 @@ the data and the model. We need to address the following questions:
 2. For each of these assumptions, how do we determine if they are valid?
 3. What can be done in cases where assumptions do not hold?
 
-#+CAPTION: Flowchart illustrating the dynamic iterative regression process
+#+caption: Flowchart illustrating the dynamic iterative regression process
 [[file:images/regression/screenshot_2019-01-15_13-10-29.png]]
 
 
@@ -606,7 +606,7 @@ heteroscedasticity, from the presence of a funnel shape in the
 residual plot.
 
 
-#+CAPTION: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity cite:james2013introduction
+#+caption: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity cite:james2013introduction
 [[file:images/statistical_learning/screenshot_2019-01-08_15-14-34.png]]
 
 *** Outliers
@@ -641,7 +641,7 @@ difficult to separate out the individual effects of collinear
 variables on the response. A contour plot of the RSS associated with
 different possible coefficient estimates can show collinearity.
 
-#+CAPTION:Left: the minimum value is well defined, Right: because of collinearity, there are many pairs $(\beta_{\text{Limit}}, \beta_{\text{Rating}})$ with a similar value for RSS cite:james2013introduction
+#+caption:Left: the minimum value is well defined, Right: because of collinearity, there are many pairs $(\beta_{\text{Limit}}, \beta_{\text{Rating}})$ with a similar value for RSS cite:james2013introduction
 [[file:images/statistical_learning/screenshot_2019-01-08_15-22-30.png]]
 
 Another way to detect collinearity is to look at the correlation
@@ -963,7 +963,7 @@ residuals can help check the linearity and normality assumptions.
   independence of the errors.
 
 
-#+CAPTION: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity
+#+caption: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity
 [[file:images/regression/screenshot_2019-03-27_21-15-45.png]]
 
 * References

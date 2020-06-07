@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Random Variables
+#+setupfile: ./hugo_setup.org
+#+title: Random Variables
 
 - tags :: [[file:statistics.org][Statistics]]
 

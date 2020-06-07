@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Odometry Motion Model
+#+setupfile:./hugo_setup.org
+#+title: Odometry Motion Model
 
 The odometry model uses the relative information of the robot's
 internal odometry. While both the [[file:velocity_motion_model.org][velocity motion model]] and the

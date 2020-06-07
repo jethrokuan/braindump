@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Information Theory
+#+setupfile: ./hugo_setup.org
+#+title: Information Theory
 
 - tags :: [[file:machine_learning.org][Machine Learning]], [[file:statistics.org][Statistics]]
 
@@ -132,10 +132,10 @@ This is provable by counting the typical set.
 
 * Shannon's Noisy-Channel Coding Theorem
 
-#+BEGIN_QUOTE
+#+begin_quote
 Information can be communicated over a noisy channel at a non-zero
 rate with arbitrarily small error probability
-#+END_QUOTE
+#+end_quote
 
 * Articles
 - [[https://www.blackhc.net/blog/2019/better-intuition-for-information-theory/][Andreas Kirsch | Better intuition for information theory]]

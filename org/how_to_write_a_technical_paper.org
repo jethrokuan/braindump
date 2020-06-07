@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: How To Write a Technical Paper
+#+setupfile:./hugo_setup.org
+#+title: How To Write a Technical Paper
 
 - tags :: [[file:writing.org][Writing]], [[file:papers.org][Papers]]
 - paper :: cite:Whiteside2017HowTW

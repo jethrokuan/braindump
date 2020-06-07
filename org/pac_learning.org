@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: PAC Learning
+#+setupfile: ./hugo_setup.org
+#+title: PAC Learning
 
 - tags :: [[file:machine_learning.org][Machine Learning]]
 

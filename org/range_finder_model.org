@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Range Finder Model
+#+setupfile:./hugo_setup.org
+#+title: Range Finder Model
 
 * Beam Model for Range Finders
 
@@ -67,7 +67,7 @@ The four distributions are mixed by a weighted average:
   p\left(z_{t}^{k} | x_{t}, m\right)=\left(\begin{array}{c}{z_{\text {hit }}} \\ {z_{\text {short }}} \\ {z_{\text {max }}} \\ {z_{\text {rand }}}\end{array}\right)^{T} \cdot\left(\begin{array}{c}{p_{\text {hit }}\left(z_{t}^{k} | x_{t}, m\right)} \\ {p_{\text {short }}\left(z_{t}^{k} | x_{t}, m\right)} \\ {p_{\text {max }}\left(z_{t}^{k} | x_{t}, m\right)} \\ {p_{\text {rand }}\left(z_{t}^{k} | x_{t}, m\right)}\end{array}\right)
 \end{equation}
 
-#+DOWNLOADED: screenshot @ 2019-12-03 22:37:21
+#+downloaded: screenshot @ 2019-12-03 22:37:21
 [[file:images/range_finder_model/screenshot2019-12-03_22-37-21_.png]]
 
 Parameters can be learnt from data via maximum likelihood estimation.

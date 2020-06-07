@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Spiking Datasets
+#+setupfile:./hugo_setup.org
+#+title: Spiking Datasets
 
 Datasets for evaluating [[file:spiking_neural_networks.org][Spiking Neural Networks]].
 

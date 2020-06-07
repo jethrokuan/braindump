@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: PDF Nup
+#+setupfile:./hugo_setup.org
+#+title: PDF Nup
 
 - tags :: [[file:pdf_tools.org][Pdf Tools]]
 

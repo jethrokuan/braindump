@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Experimental Data Science
-#+HUGO_TAGS: data_science experiment
+#+setupfile: ./hugo_setup.org
+#+title: Experimental Data Science
+#+hugo_tags: data_science experiment
 
 * A/B Testing
 [[https://www.quora.com/When-should-A-B-testing-not-be-trusted-to-make-decisions][- When should A/B Testing not be Trusted to Make Decisions - Quora]]

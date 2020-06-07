@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: The Art Of Doing Science And Engineering
+#+setupfile:./hugo_setup.org
+#+title: The Art Of Doing Science And Engineering
 
 - title :: The Art Of Doing Science And Engineering
 - author :: Richard Hamming

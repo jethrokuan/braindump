@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Stochastic Processes
+#+setupfile: ./hugo_setup.org
+#+title: Stochastic Processes
 
 A stochastic process $X(t), t \in T$ is a collection of random
 variables. For each $t \in T$, $X(t)$ is a random variable. The index
@@ -41,7 +41,7 @@ Example of stochastic process: Gambler's ruin
   sample(c(-1, 1), 10, replace=T)
 #+end_src
 
-#+RESULTS:
+#+results:
 | -1 |
 | -1 |
 | -1 |

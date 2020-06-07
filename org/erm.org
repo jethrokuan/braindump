@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Empirical Risk Minimization
+#+setupfile:./hugo_setup.org
+#+title: Empirical Risk Minimization
 
 In [[file:machine_learning.org][Machine Learning]], the training set error is often called the
 /empirical error/ or /empirical risk/, and this is the error the

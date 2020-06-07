@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Neuroscience Experimental Evidence
+#+setupfile:./hugo_setup.org
+#+title: Neuroscience Experimental Evidence
 
 - tags :: [[file:spiking_neural_networks.org][Spiking Neural Networks]], [[file:neuroscience.org][Neuroscience ⭐]]
 

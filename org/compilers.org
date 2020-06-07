@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Compilers
-#+HUGO_TAGS: proglang compilers
+#+setupfile: ./hugo_setup.org
+#+title: Compilers
+#+hugo_tags: proglang compilers
 
 * What are compilers?
 
@@ -100,7 +100,7 @@ Since the lexical analyzer needs to split splits into token
 classes, it must be specify the set of strings that belongs into a
 token class. To do so, we use [[file:theory_of_computation.org::*Regular%20Expressions][regular languages]].
 
-#+CAPTION: Cycle of constructions
+#+caption: Cycle of constructions
 [[file:images/compilers/screenshot_2019-09-25_16-21-45.png]]
 
 *** Thompson's construction
@@ -117,7 +117,7 @@ implementation:
 4. Each state has at most 2 entering and 2 exiting \(\epsilon\)-moves,
    and at most one exiting move on a symbol in the alphabet.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-25 16:24:48
+#+downloaded: /tmp/screenshot.png @ 2019-09-25 16:24:48
 [[file:images/compilers/screenshot_2019-09-25_16-24-48.png]]
 
 * Syntax Definition
@@ -220,7 +220,7 @@ and $\beta$.
 The parse tree for an input string is constructed beginning from the
 leaves (bottom) and working up towards the root (the top).
 
-#+CAPTION: Bottom up parsing
+#+caption: Bottom up parsing
 [[file:images/compilers/screenshot_2019-09-10_10-25-22.png]]
 
 LR grammars can be parsed with shift-reduce parsers.
@@ -243,7 +243,7 @@ error, or until the stack contains the start symbol and the input is
 empty.
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-09-10 10:29:51
+#+downloaded: /tmp/screenshot.png @ 2019-09-10 10:29:51
 [[file:images/compilers/screenshot_2019-09-10_10-29-51.png]]
 
 The use of a stack in shift-reduce parsing is because the handle will
@@ -376,7 +376,7 @@ devices and other programs.
 An example of the run-time representation of an object program in the
 logical address space is shown below:
 
-#+CAPTION: Subdivision of run-time memory into code and data areas in C++
+#+caption: Subdivision of run-time memory into code and data areas in C++
 [[file:images/compilers/screenshot_2019-10-18_14-06-05.png]]
 The operating system maps logical addresses into physical addresses.
 Run-time storage typically comes in blocks of contiguous bytes, where
@@ -483,7 +483,7 @@ pointer to the array stored on the stack. This pointer are known
 offsets from the top-of-stack pointer, so the target code can access
 array elements through these pointers.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-10-18 15:24:27
+#+downloaded: /tmp/screenshot.png @ 2019-10-18 15:24:27
 [[file:images/compilers/screenshot_2019-10-18_15-24-27.png]]
 ** Data Access
 *** Without Nested Procedures
@@ -573,7 +573,7 @@ The desirable properties of a memory manager are:
 
 *** Memory Hierarchy
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-10-18 15:48:15
+#+downloaded: /tmp/screenshot.png @ 2019-10-18 15:48:15
 [[file:images/compilers/screenshot_2019-10-18_15-48-15.png]]
 
 *** Locality in programs
@@ -758,11 +758,11 @@ Each chunk is in 1 of 4 states:
              examine all pointers within it, and follow these
              pointers.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-10-18 16:28:48
+#+downloaded: /tmp/screenshot.png @ 2019-10-18 16:28:48
 [[file:images/compilers/screenshot_2019-10-18_16-28-48.png]]
 
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-10-18 16:30:17
+#+downloaded: /tmp/screenshot.png @ 2019-10-18 16:30:17
 [[file:images/compilers/screenshot_2019-10-18_16-30-17.png]]
 
 *** Mark-and-compact GCs

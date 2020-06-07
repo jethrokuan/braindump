@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Policy Gradients
+#+setupfile:./hugo_setup.org
+#+title: Policy Gradients
 
 - tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
 
@@ -56,7 +56,7 @@ The objective is an expectation under trajectories sampled under that
 policy. This can be tweaked into an off-policy method using
 [[file:importance_sampling.org][Importance Sampling]].
 
-#+CAPTION: Off-policy policy gradients
+#+caption: Off-policy policy gradients
 [[file:images/policy_gradients/screenshot2019-12-16_13-24-18_.png]]
 
 \begin{aligned} \nabla_{\theta^{\prime}} J\left(\theta^{\prime}\right) &=E_{\tau \sim \pi_{\theta}(\tau)}\left[\frac{\pi_{\theta^{\prime}}(\tau)}{\pi_{\theta}(\tau)} \nabla_{\theta^{\prime}} \log \pi_{\theta^{\prime}}(\tau) r(\tau)\right] \quad \text { when } \theta \neq \theta^{\prime} \\ &=E_{\tau \sim \pi_{\theta}(\tau)}\left[\left(\prod_{t=1}^{T} \frac{\pi_{\theta^{\prime}}\left(\mathbf{a}_{t} | \mathbf{s}_{t}\right)}{\pi_{\theta}\left(\mathbf{a}_{t} | \mathbf{s}_{t}\right)}\right)\left(\sum_{t=1}^{T} \nabla_{\theta^{\prime}} \log \pi_{\theta^{\prime}}\left(\mathbf{a}_{t} | \mathbf{s}_{t}\right)\right)\left(\sum_{t=1}^{T} r\left(\mathbf{s}_{t}, \mathbf{a}_{t}\right)\right)\right] \end{aligned}
@@ -94,7 +94,7 @@ variance. We can compute the optimal baseline, by evaluating the
 variance of the gradient, and setting the derivative of the variance
 with respect to $b$ to 0:
 
-#+CAPTION: Computing the optimal baseline
+#+caption: Computing the optimal baseline
 [[file:images/policy_gradients/screenshot2019-12-16_13-17-00_.png]]
 
 This is just expected reward, but weighted by gradient magnitudes.
@@ -169,7 +169,7 @@ use marginals representation, and [[file:importance_sampling.org][Importance Sam
 expectation under $\pi_\theta'$, but can we ignore the other
 distribution mismatch?
 
-#+DOWNLOADED: screenshot @ 2019-12-19 14:47:34
+#+downloaded: screenshot @ 2019-12-19 14:47:34
 [[file:images/policy_gradients/screenshot2019-12-19_14-47-34_.png]]
 
 We can bound the distribution change from $p_{\theta}(s_t)$ to

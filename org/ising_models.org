@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Ising Models
-#+HUGO_TAGS: machine-learning
+#+setupfile: ./hugo_setup.org
+#+title: Ising Models
+#+hugo_tags: machine-learning
 
 An Ising model is an array of spins (atoms that can take states $\pm
 1$) that are magnetically coupled to each other. If one spin is, say

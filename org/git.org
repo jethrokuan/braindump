@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Git
+#+setupfile:./hugo_setup.org
+#+title: Git
 
 - tags :: [[file:unix.org][Unix]], [[file:version_control.org][Version Control]]
 
@@ -10,11 +10,11 @@
 * Git Internals
 ** Content of .git folder
 Git stores snapshots (exact content of the files) at the point of a commit.
-#+BEGIN_SRC sh
+#+begin_src sh
 ls .git
-#+END_SRC
+#+end_src
 
-#+RESULTS:
+#+results:
 | COMMIT_EDITMSG |
 | config        |
 | description   |

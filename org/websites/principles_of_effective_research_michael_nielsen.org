@@ -1,7 +1,7 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: http://michaelnielsen.org/blog/principles-of-effective-research/
-#+HUGO_SLUG: principles_of_effective_research_michael_nielsen
-#+TITLE: Principles of Effective Research | Michael Nielsen
+#+setupfile:./hugo_setup.org
+#+roam_key: http://michaelnielsen.org/blog/principles-of-effective-research/
+#+hugo_slug: principles_of_effective_research_michael_nielsen
+#+title: Principles of Effective Research | Michael Nielsen
 
 - source :: http://michaelnielsen.org/blog/principles-of-effective-research/
 - author :: [[file:../michael_nielsen.org][Michael Nielsen]]

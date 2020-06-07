@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: PARA Method
+#+setupfile:./hugo_setup.org
+#+title: PARA Method
 
 PARA is a method of organizing digital information, designed by Tiago
 Forte. Tiago Forte also proposed the method of [[file:progressive_summarization.org][Progressive Summarization]].

@@ -1,14 +1,14 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:21:24+08:00
+lastmod = 2020-06-07T17:28:58+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Monte Carlo Methods]({{< relref "mc_methods" >}})
 - [Multi-modal Representation]({{< relref "multimodal_representation" >}})
+- [Monte Carlo Methods]({{< relref "mc_methods" >}})
 - [Control As Inference]({{< relref "control_as_inference" >}})
 
 ## Motivation {#motivation}
@@ -744,18 +744,12 @@ However, CRF requires labeled training data, and are slower to train.
 
 # Bibliography
 
-<a id="ucla_causal_discus" target="_blank">UCLSA, , _CAUSALITY - discussion_, , _()_, (nil). </a> [↩](#151bdec7a43a27209babe151afa6228e)
+<a id="ucla_causal_discus" target="_blank">UCLSA, _CAUSALITY - discussion_, , _()_, (nil). </a> [↩](#151bdec7a43a27209babe151afa6228e)
 
-<a id="koller2009probabilistic" target="_blank">Koller, D., Friedman, N., & Bach, F., _Probabilistic graphical models: principles and techniques_ (2009), : MIT press.</a> [↩](#5a9029278bdd1052b087d2ffe61df3ab)
+<a id="koller2009probabilistic" target="_blank">Koller, D., Friedman, N., & Bach, F., _Probabilistic graphical models: principles and techniques_ (2009), : {MIT press}.</a> [↩](#5a9029278bdd1052b087d2ffe61df3ab)
 
 <a id="murphy2014machine" target="_blank">Murphy, K. P., _Machine learning: a probabilistic perspective. 2012_, Cit\'e en, _()_, 117 (2014). </a> [↩](#ad636e8b7bde174b3dcd3eb7da7aec45)
 
 ## Resources {#resources}
 
 - [Infer.NET Resources and References](https://dotnet.github.io/infer/userguide/Resources%20and%20References.html)
-
-### Backlinks {#backlinks}
-
-- [Monte Carlo Methods]({{< relref "mc_methods" >}})
-- [Multi-modal Representation]({{< relref "multimodal_representation" >}})
-- [Control As Inference]({{< relref "control_as_inference" >}})

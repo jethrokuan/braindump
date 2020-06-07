@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+ROAM_KEY: https://github.com/jethrokuan/org-roam
-#+TITLE: Org-Roam
+#+setupfile:./hugo_setup.org
+#+roam_key: https://github.com/jethrokuan/org-roam
+#+title: Org-Roam
 
 Org-roam is a package I built trying to emulate [[file:roam_research.org][Roam Research]] in
 [[file:emacs.org][Emacs]] and [[file:org-mode.org][Org-Mode]].

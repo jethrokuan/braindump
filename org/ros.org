@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Robot Operating System (ROS)
+#+setupfile: ./hugo_setup.org
+#+title: Robot Operating System (ROS)
 
 #+begin_export latex
 \bibliographystyle{unsrt}
@@ -27,7 +27,7 @@
 :BEAMER_env: column
 :END:
 
-#+ATTR_LATEX: :width 0.4\textwidth
+#+attr_latex: :width 0.4\textwidth
 [[file:images/ros/ros-logo_2019-10-15_16-56-35.jpg]]
 
 ** Why use ROS?
@@ -143,14 +143,14 @@ We use the convenience script ~catkin_create_pkg~ to instantiate our package.
 
 ** What's in a ROS package?
 
-#+BEGIN_src text
+#+begin_src text
   workshop
       CMakeLists.txt          # Build instructions
       include                 # For cpp deps, if any
          workshop
       package.xml             # Details about the package
       src                     # Contains source code
-#+END_src
+#+end_src
 
 ** Starting ROS
 

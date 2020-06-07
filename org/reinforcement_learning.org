@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: Reinforcement Learning ⭐
-#+HUGO_TAGS: machine-learning
+#+setupfile: ./hugo_setup.org
+#+title: Reinforcement Learning ⭐
+#+hugo_tags: machine-learning
 bibliographystyle:unsrt
 
 - tags :: [[file:machine_learning.org][Machine Learning]]
@@ -148,8 +148,8 @@ state. We keep track of how often each action outcome occurs and
 estimate the transition probability $P(s' | s, a)$ from the frequency
 with which $s'$ is reached when executing $a$ in $s$.
 
-#+CAPTION: A passive RL agent based on ADP.
-#+BEGIN_SRC text
+#+caption: A passive RL agent based on ADP.
+#+begin_src text
   function PASSIVE-ADP_AGENT(percept) returns an action
     inputs: percept, indicating state s' and reward signal r'
     persistent: \pi, a fixed policy
@@ -166,7 +166,7 @@ with which $s'$ is reached when executing $a$ in $s$.
       U <- POLICY-EVALUATION(\pi, U, mdp)
     if s'.TERMINAL? then s,a <- null else s,a <- s', \pi[s']
     return a
-#+END_SRC
+#+end_src
 
 This approach is computationally intractable for large state spaces.
 In addition, it uses the maximum-likelihood estimation for learning
@@ -190,7 +190,7 @@ utilities such that the constraint equations are met.
 When a transition occurs from state $s$ to state $s'$, we apply the
 update rule:
 
-#+NAME: eqn:td-update
+#+name: eqn:td-update
 \begin{equation}
   U^\pi(s') \leftarrow U^\pi(s) + \alpha (R(s) + \gamma U^\pi(s') -U^\pi(s))
 \end{equation}
@@ -198,7 +198,7 @@ update rule:
 Where $\alpha$ is the learning rate. The difference in utilities gives rise
 to the name temporal-difference.
 
-#+BEGIN_SRC text
+#+begin_src text
   function PASSIVE-TD-AGENT(percept) returns an action
     inputs: percept, with current state s' and reward r'
     persistent: \pi, a fixed policy
@@ -212,7 +212,7 @@ to the name temporal-difference.
       U[s] <- U[s] + \alpha N_s[s] (r + \gamma U[s'] - U[s])
     if s'.TERMINAL? then s, a r <- null else s,a,r <- s', \pi[s'], r'
     return a
-#+END_SRC
+#+end_src
 
 TD learning learns slower than ADP and shows much higher variability,
 but is simpler and requires less computation. TD learning does not

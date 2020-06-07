@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: The most successful malleable system in history | Malleable Systems Collective
-#+ROAM_KEY: https://malleable.systems/blog/2020/04/01/the-most-successful-malleable-system-in-history/
+#+setupfile: ./hugo_setup.org
+#+title: The most successful malleable system in history | Malleable Systems Collective
+#+roam_key: https://malleable.systems/blog/2020/04/01/the-most-successful-malleable-system-in-history/
 
 [[file:emacs.org][Emacs]] as a [[https://malleable.systems/mission/][malleable system]].

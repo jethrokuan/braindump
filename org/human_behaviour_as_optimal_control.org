@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Human Behaviour As Optimal Control
+#+setupfile:./hugo_setup.org
+#+title: Human Behaviour As Optimal Control
 
 Does [[file:reinforcement_learning.org][Reinforcement Learning ⭐]] and [[file:optimal_control.org][Optimal Control]] provide a
 reasonable model of human behaviour? Is there a better explanation?

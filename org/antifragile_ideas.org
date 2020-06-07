@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Anti-fragile Ideas
+#+setupfile:./hugo_setup.org
+#+title: Anti-fragile Ideas
 
 This system was originally discussed by John Carmack [[https://amasad.me/carmack][here]]. We want to
 work on ideas that are not brittle, but how do we know they aren't?

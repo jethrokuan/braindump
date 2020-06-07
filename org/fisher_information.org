@@ -1,6 +1,6 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: fisher_information
-#+TITLE: Fisher information
+#+setupfile:./hugo_setup.org
+#+hugo_slug: fisher_information
+#+title: Fisher information
 
 The Fisher information in a univariate model is given by:
 

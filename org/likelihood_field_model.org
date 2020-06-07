@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Likelihood Field Model
+#+setupfile:./hugo_setup.org
+#+title: Likelihood Field Model
 
 - tags :: [[file:map_matching.org][Map Matching]]
 

@@ -1,6 +1,6 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: The Bias-Complexity Tradeoff
-#+HUGO_TAGS: machine-learning
+#+setupfile: ./hugo_setup.org
+#+title: The Bias-Complexity Tradeoff
+#+hugo_tags: machine-learning
 
 Training data can mislead the learner, and result in overfitting. To
 overcome this problem, we can restrict the search space to some

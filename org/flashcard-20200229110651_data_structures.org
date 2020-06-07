@@ -1,4 +1,4 @@
-#+TITLE: Flashcards: Data Structures
+#+title: Flashcards: Data Structures
 
 * Array
 ** Average                                                               :fc:

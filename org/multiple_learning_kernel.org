@@ -1,4 +1,3 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: multiple_learning_kernel
-#+TITLE: Multiple Learning Kernel
-
+#+setupfile:./hugo_setup.org
+#+hugo_slug: multiple_learning_kernel
+#+title: Multiple Learning Kernel

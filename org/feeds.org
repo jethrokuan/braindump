@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: RSS Feeds
+#+setupfile: ./hugo_setup.org
+#+title: RSS Feeds
 * Feeds                                                                :elfeed:
 ** Tech                                                               :tech:
 *** https://hnrss.org/newest?points=100

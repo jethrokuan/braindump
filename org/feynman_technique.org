@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+HUGO_SLUG: feynman_technique
-#+TITLE: Feynman Technique
+#+setupfile:./hugo_setup.org
+#+hugo_slug: feynman_technique
+#+title: Feynman Technique
 
 - tags :: [[file:richard_feynman.org][Richard Feynman]]

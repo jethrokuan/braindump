@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: The Art Of Unix Programming
+#+setupfile:./hugo_setup.org
+#+title: The Art Of Unix Programming
 
 - title :: The Art Of Unix Programming
 - author :: Ken Thompson

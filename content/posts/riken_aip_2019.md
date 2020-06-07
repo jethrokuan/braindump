@@ -1,7 +1,7 @@
 +++
 title = "Riken AIP Workshop 2019"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:52+08:00
+lastmod = 2020-06-07T17:28:22+08:00
 draft = false
 +++
 

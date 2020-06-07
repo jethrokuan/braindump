@@ -1,5 +1,5 @@
-#+SETUPFILE:./hugo_setup.org
-#+TITLE: Single Layer XOR
+#+setupfile:./hugo_setup.org
+#+title: Single Layer XOR
 
 - paper :: https://science.sciencemag.org/content/367/6473/83
 - tags :: [[file:neuroscience.org][Neuroscience ⭐]], [[file:machine_learning.org][Machine Learning]]

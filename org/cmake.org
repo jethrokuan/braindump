@@ -1,5 +1,5 @@
-#+SETUPFILE: ./hugo_setup.org
-#+TITLE: CMake
+#+setupfile: ./hugo_setup.org
+#+title: CMake
 
 - tags :: [[file:cplusplus.org][C++ Language]], [[file:c_lang.org][The C Language]]
 
@@ -30,7 +30,7 @@ Running CMake reads the ~CMakeLists.txt~ file, and creates project files
 in the build directory. The developer selects the type of project file
 to be created by choosing a particular project file generator.
 
-#+DOWNLOADED: /tmp/screenshot.png @ 2019-01-18 02:52:58
+#+downloaded: /tmp/screenshot.png @ 2019-01-18 02:52:58
 [[file:images/cmake/screenshot_2019-01-18_02-52-58.png]]
 
 * Best Practices

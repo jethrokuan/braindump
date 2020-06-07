@@ -1,7 +1,7 @@
 +++
 title = "Writing Books"
 author = ["Jethro Kuan"]
-lastmod = 2020-05-31T20:20:25+08:00
+lastmod = 2020-06-07T17:27:50+08:00
 draft = false
 +++
 
@@ -19,7 +19,3 @@ tags
 [Writing a Technical Book – zwischenzugs](https://zwischenzugs.com/2016/05/15/writing-a-technical-book/)
 
 <https://performancejs.com/post/31b361c/13-Tips-for-Writing-a-Technical-Book>
-
-## Backlinks {#backlinks}
-
-- [Writing]({{< relref "writing" >}})
