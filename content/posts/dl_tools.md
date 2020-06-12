@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning Tools"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:54+08:00
+lastmod = 2020-06-10T22:08:32+08:00
 draft = false
 +++
 
