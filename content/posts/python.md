@@ -1,12 +1,11 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-12T16:04:17+08:00
+lastmod = 2020-06-12T21:48:10+08:00
 draft = false
 +++
 
-Python is an interpreted, general-purpose, high-level [programming
-language]({{< relref "prog_lang" >}}). Some properties of Python include:
+Python is an interpreted, general-purpose, high-level [programming language]({{< relref "prog_lang" >}}). Some properties of Python include:
 
 - whitespaces being significant
 - dynamically-typed
