@@ -1,0 +1,3 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: cognitive_task_analysis
+#+title: Cognitive Task Analysis

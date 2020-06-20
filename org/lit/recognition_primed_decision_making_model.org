@@ -1,0 +1,4 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: recognition_primed_decision_making_model
+#+title: Recognition-primed Decision-making Model
+#+roam_alias: "RPD"
