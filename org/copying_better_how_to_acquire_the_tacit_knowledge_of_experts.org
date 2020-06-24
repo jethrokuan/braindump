@@ -1,7 +1,7 @@
 #+title: Copying Better: How To Acquire The Tacit Knowledge of Experts
 #+roam_key: https://commoncog.com/blog/how-to-learn-tacit-knowledge/
 
-- author :: [[file:private/cedric_chin.org][Cedric Chin]]
+- author :: [[file:lit/cedric_chin.org][Cedric Chin]]
 
 The [[file:lit/recognition_primed_decision_making_model.org][Recognition-primed Decision-making Model]] is all about pattern-matching to existing experiences.
 

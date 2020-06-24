@@ -3,9 +3,8 @@
 /node_modules/
 /resources/
 /org/biblio/auto/
-**/*/private-*.md
-**/*/private-*.org
 /org/org-roam.db
 /org/org-fc.tsv
 /public/
 /org/work/
+org/private/
