@@ -1,3 +1,4 @@
+#+setupfile: ./hugo_setup.org
 #+title: Copying Better: How To Acquire The Tacit Knowledge of Experts
 #+roam_key: https://commoncog.com/blog/how-to-learn-tacit-knowledge/
 
