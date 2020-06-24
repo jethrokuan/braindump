@@ -1,14 +1,14 @@
 +++
 title = "Metropolis-Hastings Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:29+08:00
+lastmod = 2020-06-24T16:09:32+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Gibbs Sampling]({{< relref "gibbs_sampling" >}})
 - [Slice Sampling]({{< relref "slice_sampling" >}})
+- [Gibbs Sampling]({{< relref "gibbs_sampling" >}})
 
 In [Importance Sampling]({{< relref "importance_sampling" >}}) and [Rejection Sampling]({{< relref "rejection_sampling" >}}), the proposal
 distribution \\(q(x)\\) needs to be similar to \\(p(x)\\). The

@@ -1,7 +1,7 @@
 +++
 title = "Human Behaviour As Optimal Control"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:04+08:00
+lastmod = 2020-06-24T16:08:30+08:00
 draft = false
 +++
 

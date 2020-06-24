@@ -1,17 +1,17 @@
 +++
 title = "Unix"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:58+08:00
+lastmod = 2020-06-24T16:08:26+08:00
 draft = false
 +++
 
 ## Backlinks {#backlinks}
 
-- [Awk]({{< relref "unix_awk" >}})
-- [Nix/NixOS]({{< relref "nix" >}})
-- [Git]({{< relref "git" >}})
-- [Find (CLI Tool)]({{< relref "unix_find" >}})
 - [Lsof]({{< relref "unix_lsof" >}})
+- [Find (CLI Tool)]({{< relref "unix_find" >}})
+- [Git]({{< relref "git" >}})
+- [Nix/NixOS]({{< relref "nix" >}})
+- [Awk]({{< relref "unix_awk" >}})
 
 tags
 : [Linux]({{< relref "linux" >}})

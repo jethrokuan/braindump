@@ -1,7 +1,7 @@
 +++
 title = "Markov Decision Process"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:50+08:00
+lastmod = 2020-06-24T16:09:04+08:00
 draft = false
 +++
 
@@ -42,7 +42,7 @@ E\left( \sum\_{t=0}^{\infty} \gamma^t r_t \right)
 \lim\_{h \rightarrow \infty} E\left( \sum\_{t=0}^{h} \frac{1}{h} r_t \right)
 \end{equation}
 
-## Learning Performance <a id="fa8338b83ce7e1fef54aa80740d33fc3" href="#kaelbling1996reinforcement">(Kaelbling et al., 1996)</a> {#learning-performance}
+## Learning Performance ([Kaelbling, Littman, and Moore 1996](#orgb038605)) {#learning-performance--kaelbling-littman-and-moore-1996--orgb038605}
 
 1.  Asymptotic convergence:
 
@@ -68,10 +68,10 @@ No notion of "many small mistakes", or "few major mistakes".
 
 1.  Uniform-PAC
 
-unifies notion of PAC and regret <a id="b921dd1021cc889ee3e2cec8ef08a5a9" href="#dann2017unifying">(Dann et al., 2017)</a>
+unifies notion of PAC and regret ([Dann, Lattimore, and Brunskill 2017](#org27ff442))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="kaelbling1996reinforcement" target="_blank">Kaelbling, L. P., Littman, M. L., & Moore, A. W., _Reinforcement learning: A survey_, Journal of artificial intelligence research, _4()_, 237–285 (1996). </a> [↩](#fa8338b83ce7e1fef54aa80740d33fc3)
+<a id="org27ff442"></a>Dann, Christoph, Tor Lattimore, and Emma Brunskill. 2017. “Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning.” In _Advances in Neural Information Processing Systems_, 5713–23.
 
-<a id="dann2017unifying" target="_blank">Dann, C., Lattimore, T., & Brunskill, E., _Unifying PAC and regret: Uniform PAC bounds for episodic reinforcement learning_, In , Advances in Neural Information Processing Systems (pp. 5713–5723) (2017). : .</a> [↩](#b921dd1021cc889ee3e2cec8ef08a5a9)
+<a id="orgb038605"></a>Kaelbling, Leslie Pack, Michael L Littman, and Andrew W Moore. 1996. “Reinforcement Learning: A Survey.” _Journal of Artificial Intelligence Research_ 4:237–85.

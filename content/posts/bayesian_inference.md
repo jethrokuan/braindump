@@ -1,17 +1,17 @@
 +++
 title = "Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:43+08:00
+lastmod = 2020-06-24T16:09:41+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Arguments Against Bayesian Inference]({{< relref "arguments_against_bayesian_inference" >}})
 - [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
 - [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
 - [Non-informative Priors]({{< relref "noninformative_priors" >}})
+- [Arguments Against Bayesian Inference]({{< relref "arguments_against_bayesian_inference" >}})
 
 ## Setup {#setup}
 
@@ -75,7 +75,7 @@ von Mises). This relies on:
 
 See [ICML 2018 Tutorial](http://www.tamarabroderick.com/tutorial%5F2018%5Ficml.html) by Tamara Broderick for an overview. In
 general, we have no clue how accurate the approximation is. See also
-<a id="2c492bb886c456a5902b643d9a6547e6" href="#pati17_statis_optim_variat_bayes">(Pati et al., 2017)</a>.
+([Pati, Bhattacharya, and Yang 2017](#org2493422)).
 
 ### Markov Chain Monte Carlo {#markov-chain-monte-carlo}
 
@@ -135,9 +135,9 @@ autocorrelated draws.
 A well designed MCMC algorithm with a good proposal should ideally
 exhibit rapid convergence and mixing.
 
-Embarrassingly Parallel MCMC e.g. <a id="fe703421bbe5a5c7e4c07c7126a629f3" href="#pmlr-v38-srivastava15">(Srivastava et al., 2015)</a><a>, </a><a id="3c24d71d7ae6f354df816d37ea172f1a" href="#li16_simpl_scalab_accur_poster_inter_estim">(Li et al., 2016)</a>
+Embarrassingly Parallel MCMC e.g. ([Srivastava et al. 2015](#org03332a8); [Li, Srivastava, and Dunson 2016](#org9fc8a83))
 
-We can replace expensive transition kernels with approximations <a id="ab108353672c4542f6a76b91c9eebcbc" href="#johndrow15_optim_approx_markov_chain_bayes_infer">(Johndrow et al., 2015)</a>. for
+We can replace expensive transition kernels with approximations ([Johndrow et al. 2015](#orgf7eb118)). for
 example, we approximate a conditional distribution in Gibbs sampler
 with a Gaussian or using a subsample of data, vastly speeding up MCMC
 sampling in high-dimensional settings.
@@ -162,18 +162,18 @@ tweaking the Bayesian paradigm to be inherently more robust.
 
 What's an appropriate \\(\pi(\beta)\\) for the high dimensional vector of
 coefficients? Most commonly used is a local-global scale mixture of
-Gaussians. <a id="c5f035041f058fd1352e35f072c0a5d4" href="#johndrow17_bayes_shrin_at_gwas_scale">(Johndrow et al., 2017)</a>
+Gaussians. ([Johndrow, Orenstein, and Bhattacharya 2017](#org0938c10))
 
 ### {#}
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="pati17_statis_optim_variat_bayes" target="_blank">Pati, D., Bhattacharya, A., & Yang, Y., _On statistical optimality of variational bayes_, CoRR, _()_, (2017). </a> [↩](#2c492bb886c456a5902b643d9a6547e6)
+<a id="orgf7eb118"></a>Johndrow, James E., Jonathan C. Mattingly, Sayan Mukherjee, and David Dunson. 2015. “Optimal Approximating Markov Chains for Bayesian Inference.” _CoRR_.
 
-<a id="pmlr-v38-srivastava15" target="_blank">Srivastava, S., Cevher, V., Dinh, Q., & Dunson, D., _WASP: Scalable Bayes via barycenters of subset posteriors_, In G. Lebanon, & S. V. N. Vishwanathan, Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics (pp. 912–920) (2015). {San Diego, California, USA}: {PMLR}.</a> [↩](#fe703421bbe5a5c7e4c07c7126a629f3)
+<a id="org0938c10"></a>Johndrow, James E., Paulo Orenstein, and Anirban Bhattacharya. 2017. “Bayes Shrinkage at Gwas Scale: Convergence and Approximation Theory of a Scalable Mcmc Algorithm for the Horseshoe Prior.” _CoRR_.
 
-<a id="li16_simpl_scalab_accur_poster_inter_estim" target="_blank">Li, C., Srivastava, S., & Dunson, D. B., _Simple, scalable and accurate posterior interval estimation_, CoRR, _()_, (2016). </a> [↩](#3c24d71d7ae6f354df816d37ea172f1a)
+<a id="org9fc8a83"></a>Li, Cheng, Sanvesh Srivastava, and David B. Dunson. 2016. “Simple, Scalable and Accurate Posterior Interval Estimation.” _CoRR_.
 
-<a id="johndrow15_optim_approx_markov_chain_bayes_infer" target="_blank">Johndrow, J. E., Mattingly, J. C., Mukherjee, S., & Dunson, D., _Optimal approximating markov chains for bayesian inference_, CoRR, _()_, (2015). </a> [↩](#ab108353672c4542f6a76b91c9eebcbc)
+<a id="org2493422"></a>Pati, Debdeep, Anirban Bhattacharya, and Yun Yang. 2017. “On Statistical Optimality of Variational Bayes.” _CoRR_.
 
-<a id="johndrow17_bayes_shrin_at_gwas_scale" target="_blank">Johndrow, J. E., Orenstein, P., & Bhattacharya, A., _Bayes shrinkage at gwas scale: Convergence and approximation theory of a scalable mcmc algorithm for the horseshoe prior_, CoRR, _()_, (2017). </a> [↩](#c5f035041f058fd1352e35f072c0a5d4)
+<a id="org03332a8"></a>Srivastava, Sanvesh, Volkan Cevher, Quoc Dinh, and David Dunson. 2015. “WASP: Scalable Bayes via Barycenters of Subset Posteriors.” In _Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics_, edited by Guy Lebanon and S. V. N. Vishwanathan, 38:912–20. Proceedings of Machine Learning Research. San Diego, California, USA: PMLR.

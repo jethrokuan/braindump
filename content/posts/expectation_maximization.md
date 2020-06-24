@@ -1,7 +1,7 @@
 +++
 title = "Expectation Maximization and Mixture Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:28+08:00
+lastmod = 2020-06-24T16:09:31+08:00
 draft = false
 +++
 
@@ -326,10 +326,10 @@ by seeking to partially optimize \\(L(q, \mathbf{\theta})\\) wrt
 
 ## References {#references}
 
-<a id="13e9f4b9751b28dd85f7356d699c6650" href="#borman2004expectation">(Borman, 2004)</a><a>, </a><a id="fa1cabca5f42fce421ffb108d3f60ec4" href="#bishop2006pattern">(Bishop, 2006)</a>
+([Borman 2004](#org354459e); [Bishop 2006](#org9e9aaec))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="borman2004expectation" target="_blank">Borman, S., _The expectation maximization algorithm-a short tutorial_, Submitted for publication, _41()_, (2004). </a> [↩](#13e9f4b9751b28dd85f7356d699c6650)
+<a id="org9e9aaec"></a>Bishop, Christopher M. 2006. _Pattern Recognition and Machine Learning_. springer.
 
-<a id="bishop2006pattern" target="_blank">Bishop, C. M., _Pattern recognition and machine learning_ (2006), : {springer}.</a> [↩](#fa1cabca5f42fce421ffb108d3f60ec4)
+<a id="org354459e"></a>Borman, Sean. 2004. “The Expectation Maximization Algorithm-a Short Tutorial.” _Submitted for Publication_ 41.

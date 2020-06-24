@@ -1,7 +1,7 @@
 +++
 title = "Fisher information"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:41+08:00
+lastmod = 2020-06-24T16:08:56+08:00
 slug = "fisher_information"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Single Layer XOR"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:09+08:00
+lastmod = 2020-06-24T16:08:34+08:00
 draft = false
 +++
 

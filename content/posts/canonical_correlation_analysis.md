@@ -1,7 +1,7 @@
 +++
 title = "Canonical Correlation Analysis"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:40+08:00
+lastmod = 2020-06-24T16:08:56+08:00
 slug = "canonical_correlation_analysis"
 draft = false
 +++

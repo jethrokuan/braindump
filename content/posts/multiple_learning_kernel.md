@@ -1,7 +1,7 @@
 +++
 title = "Multiple Learning Kernel"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:56+08:00
+lastmod = 2020-06-24T16:08:25+08:00
 slug = "multiple_learning_kernel"
 draft = false
 +++

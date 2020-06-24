@@ -1,11 +1,11 @@
 +++
 title = "XGBoost"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:55+08:00
+lastmod = 2020-06-24T16:09:08+08:00
 draft = false
 +++
 
-XGboost is an end-to-end boosting system. It is sparsity-aware. <a id="27bdf4df88994f426bdfbfa0603a3f15" href="#chen16_xgboos">(Chen \& Guestrin, 2016)</a>
+XGboost is an end-to-end boosting system. It is sparsity-aware. ([Chen and Guestrin 2016](#orgdce34ce))
 
 ## Regularized Learning Objective {#regularized-learning-objective}
 
@@ -102,10 +102,10 @@ g\_i \right)^2}{\sum\_{i \in I} h\_i + \lambda} \right]
 The implementation of distributed XGBoost uses [RABIT](https://github.com/dmlc/rabit), and the
 Allreduce framework. XGBoost requires gradients and hessians from each
 distributed worker. This fit the allreduce framework, which broadcasts
-each worker's reduce result across all processes. <a id="933022bde41826547b7bf7c18f1e9b41" href="#chen3rabit">(Chen et al., )</a>
+each worker's reduce result across all processes. ([Chen, Cano, and Zhou, n.d.](#org803ce84))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="chen16_xgboos" target="_blank">Chen, T., & Guestrin, C., _Xgboost: a scalable tree boosting system_, CoRR, _()_, (2016). </a> [↩](#27bdf4df88994f426bdfbfa0603a3f15)
+<a id="orgdce34ce"></a>Chen, Tianqi, and Carlos Guestrin. 2016. “Xgboost: A Scalable Tree Boosting System.” _CoRR_.
 
-<a id="chen3rabit" target="_blank">Chen, T., Cano, I., & Zhou, T., _RABIT: A reliable allreduce and broadcast interface_, Transfer, _3(2)_, (). </a> [↩](#933022bde41826547b7bf7c18f1e9b41)
+<a id="org803ce84"></a>Chen, Tianqi, Ignacio Cano, and Tianyi Zhou. n.d. “RABIT: A Reliable Allreduce and Broadcast Interface.” _Transfer_ 3 (2).

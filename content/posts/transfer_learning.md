@@ -1,7 +1,7 @@
 +++
 title = "Transfer Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:05+08:00
+lastmod = 2020-06-24T16:09:56+08:00
 draft = false
 +++
 
@@ -63,7 +63,7 @@ Fine tuning is popular in the supervised learning setting.
       2.  Little exploration at convergence
 
   To increase diversity and entropy, we can do maximum-entropy learning
-  which acts as randomly as possible while collecting high rewards <a id="1b37e467d7dc76e365875dfb5c03fa1e" href="#pmlr-v70-haarnoja17a">(Haarnoja et al., 2017)</a>:
+  which acts as randomly as possible while collecting high rewards ([Haarnoja et al. 2017](#org5456fe1)):
 
   \begin{equation}
   \pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
@@ -93,15 +93,15 @@ across multiple tasks.
 
 In model distillation, multiple policies are combined into one, for
 concurrent multi-task learning. Policy distillation
-<a id="6c0f3e1b8610e021d4a59b9c6b7598dd" href="#rusu15_polic_distil">(Rusu et al., 2015)</a> is able to:
+([Rusu et al. 2015](#orge588cc6)) is able to:
 
 1.  Compress policies learnt on single games into smaller models
 2.  Build agents capable of playing multiple games
 3.  Improve the stability of the [DQN learning algorithm]({{< relref "q_learning" >}}) by distilling
     online the policy of the best performing agent
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="pmlr-v70-haarnoja17a" target="_blank">Haarnoja, T., Tang, H., Abbeel, P., & Levine, S., _Reinforcement learning with deep energy-based policies_, In D. Precup, & Y. W. Teh, Proceedings of the 34th International Conference on Machine Learning (pp. 1352–1361) (2017). {International Convention Centre, Sydney, Australia}: {PMLR}.</a> [↩](#1b37e467d7dc76e365875dfb5c03fa1e)
+<a id="org5456fe1"></a>Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. 2017. “Reinforcement Learning with Deep Energy-Based Policies.” In _Proceedings of the 34th International Conference on Machine Learning_, edited by Doina Precup and Yee Whye Teh, 70:1352–61. Proceedings of Machine Learning Research. International Convention Centre, Sydney, Australia: PMLR.
 
-<a id="rusu15_polic_distil" target="_blank">Rusu, A. A., Colmenarejo, S. G., Gulcehre, C., Desjardins, G., Kirkpatrick, J., Pascanu, R., Mnih, V., …, _Policy Distillation_, CoRR, _()_, (2015). </a> [↩](#6c0f3e1b8610e021d4a59b9c6b7598dd)
+<a id="orge588cc6"></a>Rusu, Andrei A., Sergio Gomez Colmenarejo, Caglar Gulcehre, Guillaume Desjardins, James Kirkpatrick, Razvan Pascanu, Volodymyr Mnih, Koray Kavukcuoglu, and Raia Hadsell. 2015. “Policy Distillation.” _CoRR_.

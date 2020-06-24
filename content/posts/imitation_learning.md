@@ -1,7 +1,7 @@
 +++
 title = "Imitation Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:12+08:00
+lastmod = 2020-06-24T16:08:36+08:00
 draft = false
 +++
 
@@ -46,7 +46,7 @@ the algorithm, can we make \\(p\_{data}(o_t) = p\_{\pi\_\theta}(o_t)\\)?
         observation.
     2.  Perhaps a better model is to account for all observations.
     3.  Problem: history exacerbates causal confusion
-        <a id="97004a1ab6778a90f591ea58fde11d3c" href="#haan19_causal_confus_imitat_learn">(de Haan et al., 2019)</a>
+        ([Haan, Jayaraman, and Levine 2019](#org3cf9ab0))
 
 2.  Multimodal behaviour
     1.  Solutions:
@@ -85,6 +85,6 @@ Assuming: \\(\pi\_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathb
 
 {{< figure src="/ox-hugo/screenshot2019-12-15_14-50-49_.png" caption="Figure 2: The tightrope walking problem" >}}
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="haan19_causal_confus_imitat_learn" target="_blank">de Haan, P., Jayaraman, D., & Levine, S., _Causal confusion in imitation learning_, CoRR, _()_, (2019). </a> [↩](#97004a1ab6778a90f591ea58fde11d3c)
+<a id="org3cf9ab0"></a>Haan, Pim de, Dinesh Jayaraman, and Sergey Levine. 2019. “Causal Confusion in Imitation Learning.” _CoRR_.

@@ -1,7 +1,7 @@
 +++
 title = "Mental Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:53+08:00
+lastmod = 2020-06-24T16:10:27+08:00
 slug = "mental_models"
 draft = false
 +++

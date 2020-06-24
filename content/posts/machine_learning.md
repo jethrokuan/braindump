@@ -1,18 +1,13 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:12+08:00
+lastmod = 2020-06-24T16:09:20+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
-- [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
-- [Likelihood Principle]({{< relref "likelihood_principle" >}})
-- [Quantization]({{< relref "quantization" >}})
-- [Empirical Risk Minimization]({{< relref "erm" >}})
 - [Recommender Systems]({{< relref "recommender_systems" >}})
 - [Topic Modeling]({{< relref "topic_modelling" >}})
 - [Information Theory]({{< relref "information_theory" >}})
@@ -20,6 +15,11 @@ draft = false
 - [PAC Learning]({{< relref "pac_learning" >}})
 - [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
 - [Article: An Opinionated Guide to ML Research]({{< relref "an_opinionated_guide_to_ml_research" >}})
+- [Empirical Risk Minimization]({{< relref "erm" >}})
+- [Quantization]({{< relref "quantization" >}})
+- [Likelihood Principle]({{< relref "likelihood_principle" >}})
+- [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 ## Table of Contents {#table-of-contents}
 
@@ -614,7 +614,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 ## Structuring Data Science Projects {#structuring-data-science-projects}
 
 Cookiecutter Data Science provides a decent project structure, and
-uses the ubiquitous build tool `Make` to build data projects. <a id="e0ca383893600291ac5eca0f379984fb" href="#home_cookiec_data_scien">(DrivenData, 2019)</a>
+uses the ubiquitous build tool `Make` to build data projects. ([DrivenData 2019](#org66e938f))
 
 ```text
 ├── LICENSE
@@ -663,13 +663,13 @@ uses the ubiquitous build tool `Make` to build data projects. <a id="e0ca3838936
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-Stripe's approach <a id="77ac83a13ddf56f053f1ba225873677d" href="#dan_reprod">(Frank, 2016)</a> still primarily uses Jupyter notebooks, but
+Stripe's approach ([Frank 2016](#org69dce03)) still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="home_cookiec_data_scien" target="_blank">DrivenData, _Home - cookiecutter data science_, , _()_, (2019). </a> [↩](#e0ca383893600291ac5eca0f379984fb)
+<a id="org66e938f"></a>DrivenData. 2019. “Home - Cookiecutter Data Science.”
 
-<a id="dan_reprod" target="_blank">Frank, D., _Reproducible research: Stripe's approach to data science_, , _()_, (2016). </a> [↩](#77ac83a13ddf56f053f1ba225873677d)
+<a id="org69dce03"></a>Frank, Dan. 2016. “Reproducible Research: Stripe’s Approach to Data Science.”

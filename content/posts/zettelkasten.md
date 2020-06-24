@@ -1,17 +1,18 @@
 +++
 title = "Zettelkasten"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:10+08:00
+lastmod = 2020-06-24T16:08:35+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [PARA Method]({{< relref "para_method" >}})
 - [Writing with Zettekasten]({{< relref "writing_with_zettekasten" >}})
 - [Roam Research]({{< relref "roam_research" >}})
 - [Productivity]({{< relref "productivity" >}})
 - [How To Take Smart Notes]({{< relref "how_to_take_smart_notes" >}})
+- [What to write down when you’re reading to learn – Aceso Under Glass]({{< relref "what_to_write_down_when_you_re_reading_to_learn_aceso_under_glass" >}})
+- [PARA Method]({{< relref "para_method" >}})
 
 tags
 : [Productivity]({{< relref "productivity" >}}), [Note-taking]({{< relref "note_taking" >}})

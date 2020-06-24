@@ -1,7 +1,7 @@
 +++
 title = "NeurIPS"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:44+08:00
+lastmod = 2020-06-24T16:09:42+08:00
 slug = "neurips"
 draft = false
 +++

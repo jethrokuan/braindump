@@ -1,14 +1,14 @@
 +++
 title = "Hindsight Experience Replay"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:07+08:00
+lastmod = 2020-06-24T16:08:32+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [LeCun's Cake Analogy]({{< relref "lecun_cake_analogy" >}})
 - [Playing Atari with Deep RL]({{< relref "mnih2013_atari_deeprl" >}})
+- [LeCun's Cake Analogy]({{< relref "lecun_cake_analogy" >}})
 
 paper
 : <https://papers.nips.cc/paper/7090-hindsight-experience-replay.pdf>

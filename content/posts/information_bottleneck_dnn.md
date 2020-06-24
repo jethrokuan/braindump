@@ -1,7 +1,7 @@
 +++
 title = "Information Bottleneck in Deep Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:10+08:00
+lastmod = 2020-06-24T16:08:35+08:00
 draft = false
 +++
 
@@ -13,12 +13,12 @@ The information bottleneck theory was recently used to study Deep
 Neural Networks. Shwartz-Ziv and Tishby proposed that the information
 bottleneck expresses the tradeoff between the mutual information
 measures \\(I(X,T)\\) and \\(I(T,Y)\\)
-<a id="00d0d7c9b0a8cde4ee312e0caa42f584" href="#shwartz-ziv17_openin_black_box_deep_neural">(Shwartz-Ziv \& Tishby, 2017)</a>.
+([Shwartz-Ziv and Tishby 2017](#org21a3eb8)).
 
 \\(I(X,T)\\) and \\(I(X,Y)\\) quantifies the amount of information that the
 layer contains about the input and output respectively.
 
-## Key Findings from <a id="00d0d7c9b0a8cde4ee312e0caa42f584" href="#shwartz-ziv17_openin_black_box_deep_neural">(Shwartz-Ziv \& Tishby, 2017)</a> {#key-findings-from}
+## Key Findings from ([Shwartz-Ziv and Tishby 2017](#org21a3eb8)) {#key-findings-from--shwartz-ziv-and-tishby-2017--org21a3eb8}
 
 1.  Most of the training epochs are spent on compression of the input
     to efficient representation, and not on fitting the training labels
@@ -37,6 +37,6 @@ layer contains about the input and output respectively.
 TL;DR: SGD has 2 phases: ERM, and representation compression. The
 latter phase is an explanation for the lack of overfitting in DL.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="shwartz-ziv17_openin_black_box_deep_neural" target="_blank">Shwartz-Ziv, Ravid, & Tishby, N., _Opening the black box of deep neural networks via information_, CoRR, _()_, (2017). </a> [↩](#00d0d7c9b0a8cde4ee312e0caa42f584)
+<a id="org21a3eb8"></a>Shwartz-Ziv, Ravid, and Naftali Tishby. 2017. “Opening the Black Box of Deep Neural Networks via Information.” _CoRR_.

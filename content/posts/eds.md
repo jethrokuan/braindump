@@ -1,7 +1,7 @@
 +++
 title = "Experimental Data Science"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:20+08:00
+lastmod = 2020-06-24T16:10:06+08:00
 tags = ["data_science", "experiment"]
 draft = false
 +++

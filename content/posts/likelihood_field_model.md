@@ -1,14 +1,14 @@
 +++
 title = "Likelihood Field Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:39+08:00
+lastmod = 2020-06-24T16:08:55+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Map Matching]({{< relref "map_matching" >}})
 - [Range Finder Model]({{< relref "range_finder_model" >}})
+- [Map Matching]({{< relref "map_matching" >}})
 
 tags
 : [Map Matching]({{< relref "map_matching" >}})

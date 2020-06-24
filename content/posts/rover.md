@@ -1,7 +1,7 @@
 +++
 title = "Rover"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:45+08:00
+lastmod = 2020-06-24T16:09:43+08:00
 draft = false
 +++
 
@@ -10,9 +10,9 @@ draft = false
 Landing on Mars is challenging because there's is too much
 atmosphere to be ignored, but too little to cushion the landing.
 Hence, all Mars rovers will have a three phrases: Entry, Descent and
-Landing (abbrieviated EDL). <a id="6f880a9ac5f6924d2f9f0bca7a85ea37" href="#lakdawalla18_curios">(Lakdawalla, 2018)</a>
+Landing (abbrieviated EDL). ([Lakdawalla 2018](#org4f2054b))
 
-## <span class="org-todo todo TODO">TODO</span> Read <a id="369087cc65dd7d915ceacd6e1f3f4a5b" href="#systemsengineering_6575245">(Welch et al., 2013)</a> {#read}
+## <span class="org-todo todo TODO">TODO</span> Read ([Welch, Limonadi, and Manning 2013](#org6fd9cd1)) {#read--welch-limonadi-and-manning-2013--org6fd9cd1}
 
 ## How the Curiosity Rover worked {#how-the-curiosity-rover-worked}
 
@@ -28,8 +28,8 @@ Things to account for:
   parts were heated to operating temperature before functioning.
 - Have a system collecting heat output from energy
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="lakdawalla18_curios" target="_blank">Lakdawalla, E., _The design and engineering of Curiosity : how the Mars Rover performs its job_ (2018), {Cham, Switzerland}: {Springer}.</a> [↩](#6f880a9ac5f6924d2f9f0bca7a85ea37)
+<a id="org4f2054b"></a>Lakdawalla, Emily. 2018. _The Design and Engineering of Curiosity : How the Mars Rover Performs Its Job_. Cham, Switzerland: Springer.
 
-<a id="systemsengineering_6575245" target="_blank">Welch, R., Limonadi, D., & Manning, R., _Systems engineering the curiosity rover: A retrospective_, In , 2013 8th International Conference on System of Systems Engineering (pp. 70–75) (2013). : .</a> [↩](#369087cc65dd7d915ceacd6e1f3f4a5b)
+<a id="org6fd9cd1"></a>Welch, R., D. Limonadi, and R. Manning. 2013. “Systems Engineering the Curiosity Rover: A Retrospective.” In _2013 8th International Conference on System of Systems Engineering_, 70–75.

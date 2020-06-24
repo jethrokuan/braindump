@@ -1,7 +1,7 @@
 +++
 title = "Non-informative Priors"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:35+08:00
+lastmod = 2020-06-24T16:08:52+08:00
 slug = "noninformative_priors"
 draft = false
 +++

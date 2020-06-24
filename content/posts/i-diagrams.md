@@ -1,7 +1,7 @@
 +++
 title = "I-Diagrams"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:16+08:00
+lastmod = 2020-06-24T16:09:23+08:00
 draft = false
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Uncertainty in Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:57+08:00
+lastmod = 2020-06-24T16:10:30+08:00
 draft = false
 +++
 
@@ -33,7 +33,7 @@ Computation
 > A robot that carries a notion of its own uncertainty that acts
 > accordingly is superior to one that does not.
 
-<a id="835a6cfe6739deb9dedf830cd3072262" href="#thrun2005probabilistic">(Thrun et al., 2005)</a>
+([Thrun, Burgard, and Fox 2005](#orgb314b9f))
 
 ## Pros {#pros}
 
@@ -49,6 +49,6 @@ Computation
 - Relatively computationally inefficient
 - Requires approximation (exact posteriors are computationally intractable)
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="thrun2005probabilistic" target="_blank">Thrun, S., Burgard, W., & Fox, D., _Probabilistic Robotics_ (2005), : {MIT press}.</a> [↩](#835a6cfe6739deb9dedf830cd3072262)
+<a id="orgb314b9f"></a>Thrun, Sebastian, Wolfram Burgard, and Dieter Fox. 2005. _Probabilistic Robotics_. MIT press.

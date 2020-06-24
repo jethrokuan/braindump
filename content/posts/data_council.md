@@ -1,7 +1,7 @@
 +++
 title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:37+08:00
+lastmod = 2020-06-24T16:08:54+08:00
 draft = false
 +++
 
@@ -73,9 +73,9 @@ e.g. Factorization machines
 
 - <span class="org-todo todo TODO">TODO</span> xDeepFM
 
-  <a id="892cd5bf0eb9a5acd1874032ba4ca28c" href="#guo17_deepf">(Guo et al., 2017)</a><a>, </a><a id="e4d627ce64d7fbf933655db85b3057e0" href="#lian18_xdeep">(Lian et al., 2018)</a>
+  ([Guo et al. 2017](#org75cb99f); [Lian et al. 2018](#org2fc8c95))
 
-### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network <a id="fef749252ffc4be87873f182cdba0fad" href="#wang18_dkn">(Wang et al., 2018)</a> {#deep-knowledge-aware-network}
+### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al. 2018](#org866f82f)) {#deep-knowledge-aware-network--wang-et-al-dot-2018--org866f82f}
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -237,10 +237,10 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 ## {#}
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="guo17_deepf" target="_blank">Guo, H., Tang, R., Ye, Y., Li, Z., & He, X., _Deepfm: a factorization-machine based neural network for ctr prediction_, CoRR, _()_, (2017). </a> [↩](#892cd5bf0eb9a5acd1874032ba4ca28c)
+<a id="org75cb99f"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. 2017. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” _CoRR_.
 
-<a id="lian18_xdeep" target="_blank">Lian, J., Zhou, X., Zhang, F., Chen, Z., Xie, X., & Sun, G., _Xdeepfm: Combining explicit and implicit feature interactions for recommender systems_, CoRR, _()_, (2018). </a> [↩](#e4d627ce64d7fbf933655db85b3057e0)
+<a id="org2fc8c95"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. 2018. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” _CoRR_.
 
-<a id="wang18_dkn" target="_blank">Wang, H., Zhang, F., Xie, X., & Guo, M., _Dkn: Deep knowledge-aware network for news recommendation_, CoRR, _()_, (2018). </a> [↩](#fef749252ffc4be87873f182cdba0fad)
+<a id="org866f82f"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. 2018. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” _CoRR_.

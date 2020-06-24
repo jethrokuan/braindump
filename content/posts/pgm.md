@@ -1,7 +1,7 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:58+08:00
+lastmod = 2020-06-24T16:10:31+08:00
 draft = false
 +++
 
@@ -314,8 +314,7 @@ properties that we can read off directly from \\(G\\).
   independencies are precisely those that are guaranteed to hold for
   every distribution over \\(G\\).
 
-  A nice tutorial on d-separation can be found here.
-  <a id="151bdec7a43a27209babe151afa6228e" href="#ucla_causal_discus">(UCLSA, nil)</a>
+  A nice tutorial on d-separation can be found [here](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html).
 
 <!--list-separator-->
 
@@ -499,12 +498,12 @@ represents our model of the world.
   Unfortunately, not every distribution has a perfect map. There exists
   an algorithm for finding the DAG representing the P-map for a
   distribution of a P-map if it exists, but is quite involved. See
-  <a id="5a9029278bdd1052b087d2ffe61df3ab" href="#koller2009probabilistic">(Koller et al., 2009)</a>.
+  ([Koller, Friedman, and Bach 2009](#org18fa153)).
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
 (The bulk of the material is from Murphy's book
-<a id="ad636e8b7bde174b3dcd3eb7da7aec45" href="#murphy2014machine">(Murphy, 2014)</a>)
+([Murphy 2014](#org5ce6ab8)))
 
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -742,13 +741,11 @@ problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="ucla_causal_discus" target="_blank">UCLSA, _CAUSALITY - discussion_, , _()_, (nil). </a> [↩](#151bdec7a43a27209babe151afa6228e)
+<a id="org18fa153"></a>Koller, Daphne, Nir Friedman, and Francis Bach. 2009. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
 
-<a id="koller2009probabilistic" target="_blank">Koller, D., Friedman, N., & Bach, F., _Probabilistic graphical models: principles and techniques_ (2009), : {MIT press}.</a> [↩](#5a9029278bdd1052b087d2ffe61df3ab)
-
-<a id="murphy2014machine" target="_blank">Murphy, K. P., _Machine learning: a probabilistic perspective. 2012_, Cit\'e en, _()_, 117 (2014). </a> [↩](#ad636e8b7bde174b3dcd3eb7da7aec45)
+<a id="org5ce6ab8"></a>Murphy, Kevin P. 2014. “Machine Learning: A Probabilistic Perspective. 2012.” _Cité En_, 117.
 
 ## Resources {#resources}
 

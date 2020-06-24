@@ -1,7 +1,7 @@
 +++
 title = "Databases"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:09+08:00
+lastmod = 2020-06-24T16:08:34+08:00
 tags = ["database"]
 draft = false
 +++
@@ -28,8 +28,8 @@ draft = false
 Understanding the three classical `JOIN` algorithms – `NestedLoop`,
 `HashJoin`, `MergeJoin` – how they take advantage of different indexes and
 how they behave when there is no index can give you a lot of insight
-on how databases run queries. <a id="766d0b6e63144f3c2a5a9dff8e644056" href="#felipe_demys_join_algor">(Carvalho, 2019)</a>
+on how databases run queries. ([Carvalho 2019](#org81bbafb))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="felipe_demys_join_algor" target="_blank">Carvalho, F. O., _Demystifying JOIN algorithms_, , _()_, (2019). </a> [↩](#766d0b6e63144f3c2a5a9dff8e644056)
+<a id="org81bbafb"></a>Carvalho, Felipe Oliveira. 2019. “Demystifying JOIN Algorithms.”

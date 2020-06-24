@@ -1,15 +1,15 @@
 +++
 title = "Natural Language Processing"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:06+08:00
+lastmod = 2020-06-24T16:09:56+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Hierarchical Models]({{< relref "hierarchical_models" >}})
-- [SSNLP Conference Notes]({{< relref "ssnlp" >}})
 - [Machine Learning]({{< relref "machine_learning" >}})
+- [SSNLP Conference Notes]({{< relref "ssnlp" >}})
+- [Hierarchical Models]({{< relref "hierarchical_models" >}})
 
 ## How to Represent Words {#how-to-represent-words}
 

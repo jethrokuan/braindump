@@ -1,7 +1,7 @@
 +++
 title = "Ask HN: How do I learn C properly? | Hacker News"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:06+08:00
+lastmod = 2020-06-24T16:09:15+08:00
 slug = "ask_hn_how_do_i_learn_c_properly_hacker_news"
 draft = false
 +++

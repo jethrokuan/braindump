@@ -1,7 +1,7 @@
 +++
 title = "Spike Train Metrics"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:44+08:00
+lastmod = 2020-06-24T16:08:16+08:00
 draft = false
 +++
 
@@ -11,7 +11,7 @@ tags
 We study spike train metrics to quantify differences between event
 sequences. These metrics apply at both the single-neuron level and the
 multi-neuronal level. Studying these metrics helps us identify
-candidate features for neuronal codes. <a id="a63689696e88c37b5fc0502e67a08383" href="#victor2005spike">(Victor, 2005)</a>
+candidate features for neuronal codes. ([Victor 2005](#orgfab34c2))
 
 ## Spike Trains as Point Processes {#spike-trains-as-point-processes}
 
@@ -180,6 +180,6 @@ d(A, B)=\left(\int\_{-\infty}^{\infty} \sum\_{l=1}^{L}\left|A\_{l}(t)-B\_{l}(t)\
 
 for each of their components.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="victor2005spike" target="_blank">Victor, J. D., _Spike Train Metrics_, Current opinion in neurobiology, _15(5)_, 585–592 (2005). </a> [↩](#a63689696e88c37b5fc0502e67a08383)
+<a id="orgfab34c2"></a>Victor, Jonathan D. 2005. “Spike Train Metrics.” _Current Opinion in Neurobiology_ 15 (5). Elsevier:585–92.

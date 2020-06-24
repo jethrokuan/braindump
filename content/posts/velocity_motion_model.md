@@ -1,15 +1,15 @@
 +++
 title = "Velocity Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:31+08:00
+lastmod = 2020-06-24T16:10:13+08:00
 draft = false
 +++
 
 ## Backlinks {#backlinks}
 
-- [Robot Kinematics]({{< relref "robot_kinematics" >}})
 - [Odometry Motion Model]({{< relref "odometry_motion_model" >}})
 - [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})
+- [Robot Kinematics]({{< relref "robot_kinematics" >}})
 
 tags
 : [Odometry Motion Model]({{< relref "odometry_motion_model" >}}), [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})

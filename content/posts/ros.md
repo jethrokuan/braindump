@@ -1,7 +1,7 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:58+08:00
+lastmod = 2020-06-24T16:09:51+08:00
 draft = false
 +++
 
@@ -11,7 +11,7 @@ draft = false
 
 ## Introduction to ROS {#introduction-to-ros}
 
-### What is ROS? <a id="b049e1028daa027cae7888fe4de0456c" href="#nilil_ros_introd_ros_wiki">(nil, nil)</a> {#what-is-ros}
+### What is ROS? {#what-is-ros}
 
 <!--list-separator-->
 
@@ -319,7 +319,7 @@ data on the ROS Parameter server.&nbsp;[^fn:2]
   rosparam list           # list parameter names
 ```
 
-## Pubsub <a id="0eb03dca701c737878a6bf71343edd56" href="#wiki_pubsub">(nil, nil)</a> {#pubsub}
+## Pubsub {#pubsub}
 
 ### When do we use topics? {#when-do-we-use-topics}
 
@@ -432,7 +432,7 @@ We create a listener in `workshop/src/listener.py`
   rospy.spin()                    # spin
 ```
 
-## Services <a id="d9f8b17a885ac23c956840df53cacd3f" href="#wiki_service">(nil, nil)</a> {#services}
+## Services {#services}
 
 ### Msg and Srv {#msg-and-srv}
 
@@ -618,25 +618,13 @@ Write a client that sends the request and prints this response.
 
 - Ubuntu
 
-  Follow the instructions on ROS Wiki. <a id="74cf41bb1b0292dffcecca4fe9f40ef7" href="#nilil_instal_ubunt_ros_wiki">(nil, nil)</a>
+  Follow the instructions on ROS Wiki.
 
 <!--list-separator-->
 
 - VM
 
   [Download the VM image](https://drive.google.com/file/d/1SFU4rhWyAd2mlmDAIh0pvXkOvpxO5QuT/view) and load it.
-
-## References {#references}
-
-# Bibliography
-
-<a id="nilil_ros_introd_ros_wiki" target="_blank">nil, _ROS/Introduction - ROS wiki_, , _()_, (nil). </a> [↩](#b049e1028daa027cae7888fe4de0456c)
-
-<a id="wiki_pubsub" target="_blank">nil, _ROS/Tutorials/WritingPublisherSubscriber(python) - ROS wiki_, , _()_, (nil). </a> [↩](#0eb03dca701c737878a6bf71343edd56)
-
-<a id="wiki_service" target="_blank">nil, _ROS/Tutorials/WritingServiceClient(python) - ROS wiki_, , _()_, (nil). </a> [↩](#d9f8b17a885ac23c956840df53cacd3f)
-
-<a id="nilil_instal_ubunt_ros_wiki" target="_blank">nil, _Melodic/Installation/Ubuntu - ROS wiki_, , _()_, (nil). </a> [↩](#74cf41bb1b0292dffcecca4fe9f40ef7)
 
 [^fn:1]: Almost all these commands have tab completion!
 [^fn:2]: can also be done programatically

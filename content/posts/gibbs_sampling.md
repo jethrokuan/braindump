@@ -1,7 +1,7 @@
 +++
 title = "Gibbs Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:46+08:00
+lastmod = 2020-06-24T16:09:43+08:00
 draft = false
 +++
 

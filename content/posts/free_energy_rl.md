@@ -1,7 +1,7 @@
 +++
 title = "Free-Energy Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:47+08:00
+lastmod = 2020-06-24T16:08:18+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ tags
 : [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 This is a framework proposed by Sallans and Hinton in 2004
-<a id="bcefc9142eabe05927aeae8f8d450cbe" href="#sallans04a_ferl">(Sallans \& Hinton, 2004)</a>. The key insight is that a product of experts
+([Sallans and Hinton 2004](#org7c2b1d7)). The key insight is that a product of experts
 allows for model parameters to be learnt efficiently, because values
 and derivatives for the product of experts can be efficiently computed.
 
@@ -24,10 +24,10 @@ variables fixed. The action with the lowest free energy is produced,
 corresponding to the highest expected reward for the given state.
 
 Spiking neural networks can be used to implement RBMs, hence used for
-FERL <a id="b05ffcb18862cf0b95a226a7afa8d36b" href="#nakano11_spikin_neural_networ_model_free">(Nakano \& Otsuka, 2011)</a>.
+FERL ([Nakano and Otsuka 2011](#orgc8ab679)).
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="sallans04a_ferl" target="_blank">Sallans, B., & Hinton, G., _Reinforcement learning with factored states and actions._, Journal of Machine Learning Research, _5()_, 1063–1088 (2004). </a> [↩](#bcefc9142eabe05927aeae8f8d450cbe)
+<a id="orgc8ab679"></a>Nakano, Takashi, and Makoto Otsuka. 2011. “Spiking Neural Network Model of Free-Energy-Based Reinforcement Learning.” _BMC Neuroscience_ 12 (S1):P244.
 
-<a id="nakano11_spikin_neural_networ_model_free" target="_blank">Nakano, T., & Otsuka, M., _Spiking neural network model of free-energy-based reinforcement learning_, BMC Neuroscience, _12(S1)_, 244 (2011). http://dx.doi.org/10.1186/1471-2202-12-s1-p244</a> [↩](#b05ffcb18862cf0b95a226a7afa8d36b)
+<a id="org7c2b1d7"></a>Sallans, Brian, and Geoffrey Hinton. 2004. “Reinforcement Learning with Factored States and Actions.” _Journal of Machine Learning Research_ 5 (August):1063–88.

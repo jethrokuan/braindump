@@ -1,15 +1,15 @@
 +++
 title = "Odometry Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:21+08:00
+lastmod = 2020-06-24T16:08:43+08:00
 draft = false
 +++
 
 ## Backlinks {#backlinks}
 
-- [Robot Kinematics]({{< relref "robot_kinematics" >}})
-- [Velocity Motion Model]({{< relref "velocity_motion_model" >}})
 - [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})
+- [Velocity Motion Model]({{< relref "velocity_motion_model" >}})
+- [Robot Kinematics]({{< relref "robot_kinematics" >}})
 
 The odometry model uses the relative information of the robot's
 internal odometry. While both the [velocity motion model]({{< relref "velocity_motion_model" >}}) and the

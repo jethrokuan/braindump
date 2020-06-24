@@ -1,21 +1,21 @@
 +++
 title = "Programming Languages"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-16T16:16:03+08:00
+lastmod = 2020-06-24T16:09:28+08:00
 draft = false
 +++
 
 ## Backlinks {#backlinks}
 
-- [Haskell]({{< relref "haskell" >}})
-- [Nix/NixOS]({{< relref "nix" >}})
-- [C++ Language]({{< relref "cplusplus" >}})
-- [The C Language]({{< relref "c_lang" >}})
-- [Java]({{< relref "java" >}})
-- [Scala]({{< relref "scala" >}})
-- [ARM Assembly Programming]({{< relref "arm" >}})
-- [Emacs Lisp]({{< relref "emacs_lisp" >}})
-- [Swift]({{< relref "swift" >}})
-- [OCaml]({{< relref "ocaml" >}})
 - [JavaScript]({{< relref "javascript" >}})
+- [OCaml]({{< relref "ocaml" >}})
+- [Swift]({{< relref "swift" >}})
+- [Emacs Lisp]({{< relref "emacs_lisp" >}})
+- [ARM Assembly Programming]({{< relref "arm" >}})
+- [Scala]({{< relref "scala" >}})
+- [Java]({{< relref "java" >}})
+- [The C Language]({{< relref "c_lang" >}})
+- [Nix/NixOS]({{< relref "nix" >}})
+- [Haskell]({{< relref "haskell" >}})
 - [Python]({{< relref "python" >}})
+- [C++ Language]({{< relref "cplusplus" >}})

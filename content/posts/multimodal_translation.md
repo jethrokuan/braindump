@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Translation"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:55+08:00
+lastmod = 2020-06-24T16:08:24+08:00
 slug = "multimodal_translation"
 draft = false
 +++
@@ -18,9 +18,9 @@ captioning is a particularly popular problem, with large multi-modal
 datasets available.
 
 Multi-modal translation can be categorized into _example-based_, and
-_generative_ approaches <a id="fe1ca450aa5e404428b89a0e174b2e99" href="#baltrusaitis17:_multim_machin_learn">(Baltru\v saitis et al., 2017)</a>.
+_generative_ approaches ([Baltruv saitis, Ahuja, and Morency 2017](#org498ed33)).
 
-{{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation <a id=\"fe1ca450aa5e404428b89a0e174b2e99\" href=\"#baltrusaitis17:_multim_machin_learn\">(Baltru\v saitis et al., 2017)</a>" >}}
+{{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation" >}}
 
 ## Example-based {#example-based}
 
@@ -72,6 +72,6 @@ video-to-text. Encoder-decoder approaches are common used. Continuous
 generation models have to tackle the additional difficulty of
 temporal consistency between modalities.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\v saitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: A survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
+<a id="org498ed33"></a>Baltruv saitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. 2017. “Multimodal Machine Learning: A Survey and Taxonomy.” _CoRR_.

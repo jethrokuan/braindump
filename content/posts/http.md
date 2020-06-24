@@ -1,7 +1,7 @@
 +++
 title = "HTTP"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:19+08:00
+lastmod = 2020-06-24T16:08:41+08:00
 draft = false
 +++
 

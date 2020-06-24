@@ -1,7 +1,7 @@
 +++
 title = "Conditional Random Fields"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:51+08:00
+lastmod = 2020-06-24T16:09:46+08:00
 slug = "conditional_random_fields"
 draft = false
 +++

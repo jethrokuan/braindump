@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:34+08:00
+lastmod = 2020-06-24T16:09:35+08:00
 draft = false
 +++
 
@@ -61,7 +61,7 @@ example of a non-parametric model is the [thin-plate spline](https://en.wikipedi
 
 ### The Trade-Off Between Prediction Accuracy and Model Interpretability {#the-trade-off-between-prediction-accuracy-and-model-interpretability}
 
-{{< figure src="/ox-hugo/screenshot_2019-01-07_16-19-48.png" caption="Figure 1: A representation of the tradeoff between flexibility and interpretability, using different statistical methods. <a id=\"47f776a94d6687b2efebf468b22650cb\" href=\"#james2013introduction\">(James et al., 2013)</a>" >}}
+{{< figure src="/ox-hugo/screenshot_2019-01-07_16-19-48.png" caption="Figure 1: A representation of the tradeoff between flexibility and interpretability, using different statistical methods." >}}
 
 There are several reasons to choose a restrictive model over a
 flexible approach. First, if the interest is mainly in inference,
@@ -470,11 +470,11 @@ make some assumptions about the form of the decision boundary.
 
 ## Reference Textbooks {#reference-textbooks}
 
-1.  An introduction to statistical learning <a id="47f776a94d6687b2efebf468b22650cb" href="#james2013introduction">(James et al., 2013)</a>
-2.  Understanding Machine Learning <a id="acdb3458f18ecb92e5037975d277d0fb" href="#shalev2014understanding">(Shalev-Shwartz \& Ben-David, 2014)</a>
+1.  An introduction to statistical learning ([James et al. 2013](#org648820f))
+2.  Understanding Machine Learning ([Shalev-Shwartz and Ben-David 2014](#orgba2b8bb))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : {Springer}.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
+<a id="org648820f"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. _An Introduction to Statistical Learning_. Vol. 112. Springer.
 
-<a id="shalev2014understanding" target="_blank">Shalev-Shwartz, Shai, & Ben-David, Shai, _Understanding machine learning: From theory to algorithms_ (2014), : {Cambridge university press}.</a> [↩](#acdb3458f18ecb92e5037975d277d0fb)
+<a id="orgba2b8bb"></a>Shalev-Shwartz, Shai, and Shai Ben-David. 2014. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.

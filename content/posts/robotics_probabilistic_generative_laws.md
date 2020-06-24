@@ -1,15 +1,15 @@
 +++
 title = "Robotics Probabilistic Generative Laws"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:58+08:00
+lastmod = 2020-06-24T16:09:10+08:00
 tags = ["robotics"]
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Robotics]({{< relref "robotics" >}})
 - [Bayes Filter]({{< relref "bayes_filter" >}})
+- [Robotics]({{< relref "robotics" >}})
 
 ## Notation {#notation}
 

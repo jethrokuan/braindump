@@ -1,7 +1,7 @@
 +++
 title = "Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:57+08:00
+lastmod = 2020-06-24T16:09:09+08:00
 draft = false
 +++
 
@@ -10,7 +10,7 @@ title
 Recent Neural Recommendation Approaches
 
 paper
-: <a id="d3cb4e95df75aa1a78534232726eadd6" href="#dacrema19_are_we_reall_makin_much_progr">(Dacrema et al., 2019)</a>
+: ([Dacrema, Cremonesi, and Jannach 2019](#org284c9f0))
 
 tags
 : [Recommender Systems]({{< relref "recommender_systems" >}}), [Machine Learning Papers]({{< relref "ml_papers" >}})
@@ -36,6 +36,6 @@ To alleviate these issues:
 2.  Evaluate on appropriate datasets (size is important)
 3.  Release reproducible code
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="dacrema19_are_we_reall_makin_much_progr" target="_blank">Dacrema, M. F., Cremonesi, P., & Jannach, D., _Are we really making much progress? A worrying analysis of recent neural recommendation approaches_, CoRR, _()_, (2019). </a> [↩](#d3cb4e95df75aa1a78534232726eadd6)
+<a id="org284c9f0"></a>Dacrema, Maurizio Ferrari, Paolo Cremonesi, and Dietmar Jannach. 2019. “Are We Really Making Much Progress? a Worrying Analysis of Recent Neural Recommendation Approaches.” _CoRR_.

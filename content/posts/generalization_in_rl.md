@@ -1,7 +1,7 @@
 +++
 title = "Generalization In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:49+08:00
+lastmod = 2020-06-24T16:09:03+08:00
 draft = false
 +++
 

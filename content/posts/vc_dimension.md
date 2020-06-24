@@ -1,14 +1,14 @@
 +++
 title = "VC-Dimension"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:57+08:00
+lastmod = 2020-06-24T16:08:26+08:00
 draft = false
 +++
 
 tags
 : [Bias-Complexity Tradeoff]({{< relref "bias_complexity_tradeoff" >}}), [PAC Learning]({{< relref "pac_learning" >}})
 
-<a id="acdb3458f18ecb92e5037975d277d0fb" href="#shalev2014understanding">(Shalev-Shwartz \& Ben-David, 2014)</a>
+([Shalev-Shwartz and Ben-David 2014](#org18737fc))
 
 What makes one class learnable and another unlearnable? The family of
 learnable classes in the setup of binary valued classification with
@@ -152,6 +152,6 @@ In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\
 
 </div>
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="shalev2014understanding" target="_blank">Shalev-Shwartz, Shai, & Ben-David, Shai, _Understanding machine learning: From theory to algorithms_ (2014), : {Cambridge university press}.</a> [↩](#acdb3458f18ecb92e5037975d277d0fb)
+<a id="org18737fc"></a>Shalev-Shwartz, Shai, and Shai Ben-David. 2014. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.

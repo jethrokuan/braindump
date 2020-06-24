@@ -112,7 +112,7 @@ technique which binds the life cycle of a resource that must be
 acquired before use (allocated heap memory, thread of execution, open
 socket, open file, locked mutex, disk space, database
 connection—anything that exists in limited supply) to the lifetime of
-an object. cite:cppref_raii
+an object cite:noauthor_raii_nodate.
 
 The basic idea is that class destructors are always called when a
 particular instance of an object goes out of scope. This allows for
@@ -158,7 +158,7 @@ The main advantage of shared pointers is that, we should not worry
 about calling delete or cleaning the memory in an explicit manner. The
 shared pointer will take care of it once it goes out of scope. To
 create a ~shared_ptr~, use ~make_shared~. It's fast in memory allocation
-compared to ~new~. cite:codesbay_codes_cplus_smart
+compared to ~new~ cite:codesbay_codesbaycplusplus_smartpointer_2020.
 
 #+begin_src cpp
 class Sample {
@@ -180,7 +180,7 @@ than one shared_ptr<> can refer to a single object.
 
 This is prevented by ~unique_ptr<>~ and the reason behind naming it as
 unique. In ~unique_ptr<>~, one and only one ~unique_ptr<>~ has the
-ownership of the Object and manages its lifetime. cite:codesbay_codes_cplus_smart
+ownership of the Object and manages its lifetime cite:codesbay_codesbaycplusplus_smartpointer_2020.
 
 ** std::move
 In unique_ptr, std::move is used to transfer the ownership from one
@@ -192,7 +192,7 @@ strictly necessary. cite:so_why_move_shared_ptr
 
 * not_null
 not_null is available in GSL, and with compile-time guarantees that a
-pointer is not null. cite:17_bartek
+pointer is not null cite:bartek_barteks_2017.
 
 * Books to read
 http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list

@@ -1,7 +1,7 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:25+08:00
+lastmod = 2020-06-24T16:09:28+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
 +++
@@ -10,14 +10,14 @@ draft = false
 
 - [Deep Learning With Bayesian Principles - Emtiyaz Khan]({{< relref "emti_dl_with_bayesian_principles" >}})
 
-## The Case For Bayesian Learning <a id="179a446e344f34ef9150164c2bd666ae" href="#wilson2019bayesian">(Wilson, 2019)</a> {#the-case-for-bayesian-learning}
+## The Case For Bayesian Learning ([Wilson 2019](#org102f9dd)) {#the-case-for-bayesian-learning--wilson-2019--org102f9dd}
 
 - Vague parameter prior + structured model (e.g. CNN) = structured
   function prior!
 - The success of ensembles encourages Bayesians, since ensembles
   approximate the Bayesian Model Average
 
-## Bayesian Perspective on Generalization <a id="b9a995db75df332d755d4fb40282c70d" href="#smith_quoc_bayes_generalization_sgd">(Smith \& Le, 2018)</a> {#bayesian-perspective-on-generalization}
+## Bayesian Perspective on Generalization ([Smith and Le 2018](#org02ca4a8)) {#bayesian-perspective-on-generalization--smith-and-le-2018--org02ca4a8}
 
 Bayesian model comparisons were first made on Neural Networks by
 Mackay. Consider a classification model \\(M\\) with a single parameter
@@ -50,8 +50,8 @@ In models with many parameters, \\(P(y|x;M) \approx
 where the denominator can be thought of as an "Occam factor", causing
 the network to prefer broad minima.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="wilson2019bayesian" target="_blank">Wilson, A. G., _The case for Bayesian deep learning_, NYU Courant Technical Report, _()_, (2019). </a> [↩](#179a446e344f34ef9150164c2bd666ae)
+<a id="org02ca4a8"></a>Smith, Sam, and Quoc V. Le. 2018. “A Bayesian Perspective on Generalization and Stochastic Gradient Descent.”
 
-<a id="smith_quoc_bayes_generalization_sgd" target="_blank">Smith, S., & Le, Q. V., _A bayesian perspective on generalization and stochastic gradient descent_, In , (pp. ) (2018). : .</a> [↩](#b9a995db75df332d755d4fb40282c70d)
+<a id="org102f9dd"></a>Wilson, Andrew Gordon. 2019. “The Case for Bayesian Deep Learning.” _NYU Courant Technical Report_.

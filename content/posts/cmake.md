@@ -1,7 +1,7 @@
 +++
 title = "CMake"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:28+08:00
+lastmod = 2020-06-24T16:08:48+08:00
 draft = false
 +++
 

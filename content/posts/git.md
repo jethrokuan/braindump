@@ -1,14 +1,14 @@
 +++
 title = "Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:36+08:00
+lastmod = 2020-06-24T16:09:36+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [VFS for Git]({{< relref "vfs_for_git" >}})
 - [Git Scalar]({{< relref "git_scalar" >}})
+- [VFS for Git]({{< relref "vfs_for_git" >}})
 
 tags
 : [Unix]({{< relref "unix" >}}), [Version Control]({{< relref "version_control" >}})

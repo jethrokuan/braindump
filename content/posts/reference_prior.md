@@ -1,7 +1,7 @@
 +++
 title = "Reference Prior"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:51+08:00
+lastmod = 2020-06-24T16:09:05+08:00
 slug = "reference_prior"
 draft = false
 +++

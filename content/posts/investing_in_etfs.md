@@ -1,14 +1,14 @@
 +++
 title = "Investing In ETFs"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:17+08:00
+lastmod = 2020-06-24T16:09:23+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Portfolio Composition]({{< relref "portfolio_composition" >}})
 - [Investment]({{< relref "investment" >}})
+- [Portfolio Composition]({{< relref "portfolio_composition" >}})
 
 ## Identifying good ETFs _(Joshua Giersch, Rich By Retirement)_ {#identifying-good-etfs--joshua-giersch-rich-by-retirement}
 

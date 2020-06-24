@@ -1,7 +1,7 @@
 +++
 title = "Spiking Neurons (Literature Review)"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:40+08:00
+lastmod = 2020-06-24T16:09:39+08:00
 draft = false
 +++
 
@@ -17,7 +17,7 @@ tags
 While the project is equal part reinforcement learning and spiking
 neural networks, reinforcement learning is a popular field and has
 been extensively covered by researchers worldwide
-<a id="e4502bc8449685a4d2f3de467131d52b" href="#ivanov19_moder_deep_reinf_learn_algor">(Ivanov \& D'yakonov, 2019)</a><a>, </a><a id="d2a106a2198bf39695c45979d9300abc" href="#li18_deep_reinf_learn">(Li, 2018)</a>.
+([Ivanov and D’yakonov 2019](#org8003fa8); [Li 2018](#orgf866c55)).
 Hence, I have chosen instead to review the literature around spiking
 neural networks.
 
@@ -25,7 +25,7 @@ neural networks.
 
 Neural network models can be classified into three generations,
 according to their computational units: perceptrons, non-linear
-units, and spiking neurons <a id="622a28118bfc276eace4e2997e32387a" href="#MAASS19971659">(Maass, 1997)</a>.
+units, and spiking neurons ([Maass 1997](#org2816710)).
 
 Perceptrons can be composed to produce a variety of models, including
 Boltzmann machines and Hopfield networks. Non-linear units are
@@ -40,7 +40,7 @@ so much success. First, the computational power of these units is
 greater than that of first-generation neural networks. Networks built
 with second-generation computational units with one hidden layer are
 universal approximators for any continuous function with a compact
-domain and range <a id="6e22be1723df8ebb3d0e65e120ff8b92" href="#Cybenko1989">(Cybenko, 1989)</a>. Second, networks built with these
+domain and range ([Cybenko 1989](#org5febac1)). Second, networks built with these
 units are trainable with well-researched gradient-based methods, such
 as backpropagation.
 
@@ -305,20 +305,20 @@ spiking neural networks from various perspectives.
   To directly compare ANNs and SNNs, one can consider the real-valued
   outputs of ANNs to be the firing rate of a spiking neuron in steady
   state. In fact, such rate coding has been used to explain
-  computational processes in the brain <a id="ffec32504761d0b966ab6c36eee992a6" href="#pfeiffer2018deep">(Pfeiffer \& Pfeil, 2018)</a>. Spiking
+  computational processes in the brain ([Pfeiffer and Pfeil 2018](#org5c6c7f7)). Spiking
   neuron models encode information beyond the average firing rate: these
   models also utilize the relative timing between spikes
-  <a id="b77caeaea9e23a2bc9c87b5f10a91487" href="#guetig14_to_spike_or_when_to_spike">(G\"utig, 2014)</a>, or spike phases (in-phase or
+  ([Gütig 2014](#orgba3147d)), or spike phases (in-phase or
   out-of-phase). These time-dependent codes are termed temporal codes,
   and play an important role in biology. First, research has shown that
   different actions are taken based on single spikes
-  <a id="b7885fc5161a6ad3286ee312ffcc0c0b" href="#stemmler96_singl_spike_suffic">(Stemmler, 1996)</a>. Second, relying on the average firing rate
+  ([Stemmler 1996](#org8475ef3)). Second, relying on the average firing rate
   would greatly increase the latency of the brain, and our brain often
   requires decision-making long before several spikes are accumulated.
   It has also been successfully demonstrated that temporal coding
   achieves competitive empirical performance on classification tasks for
   both generated datasets, as well as image datasets like MNIST and
-  CIFAR <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ">(Comsa et al., 2019)</a>.
+  CIFAR ([Comsa et al. 2019](#org685fad5)).
 
 <!--list-separator-->
 
@@ -337,7 +337,7 @@ spiking neural networks from various perspectives.
   the continuous-valued activations of ANNs.
 
   Second, backpropagation as a learning procedure also presents
-  incompatibilities with the biological brain <a id="cf477ffda17db950a7fd58c9d833182b" href="#TAVANAEI201947">(Tavanaei et al., 2019)</a>.
+  incompatibilities with the biological brain ([Tavanaei et al. 2019](#org6b2242c)).
   Consider the chain rule in backpropagation:
 
   \begin{equation} \label{chainrule}
@@ -383,12 +383,12 @@ spiking neural networks from various perspectives.
 
   These integrated circuits are typically programmed with spiking neural
   networks. Examples of such chips include IBM's TrueNorth
-  <a id="ff5e58b063893165385318f053dc98c9" href="#Merolla668">(Merolla et al., 2014)</a> and Intel's Loihi <a id="8146155533911feae2a67ddf637b1e29" href="#davies2018loihi">(Davies et al., 2018)</a>. Because
+  ([Merolla et al. 2014](#orgf2f6a16)) and Intel's Loihi ([Davies et al. 2018](#org03b3fef)). Because
   spiking neural networks have not yet been successfully trained on many
   tasks, neuromorphic chips has seen little practical use. These chips
   have only recently been successfully used in robotic navigation
-  <a id="162706e1b73312c94623c3c6304f9856" href="#SnnSlam">(Tang et al., 2019)</a>, and solving graph problems by manual construction of the
-  network graph <a id="022dd7a783479dfb761bf88b30399ee3" href="#Severa2016SpikingNA">(Severa et al., 2016)</a>.
+  ([Tang, Shah, and Michmizos 2019](#orga656e22)), and solving graph problems by manual construction of the
+  network graph ([Severa et al. 2016](#org2fe14ce)).
 
 ### Training Spiking Neural Networks {#training-spiking-neural-networks}
 
@@ -422,7 +422,7 @@ certain optimization techniques.
   synapse is given a weight \\(0 \le w \le w\_{max}\\) , characterizing its
   strength, and its change depends on the exact moments \\(t\_{pre}\\) of
   pre-synaptic spikes and \\(t\_{post}\\) of post-synaptic spikes
-  <a id="5c8bcfe50f375b189e564db4d78fe1a3" href="#sboev18_spikin_neural_networ_reinf_learn">(Sboev et al., 2018)</a>:
+  ([Sboev et al. 2018](#org41a4d68)):
 
   \begin{equation}
   \Delta w=\left\\{\begin{array}{l}{-\alpha \lambda \cdot \exp
@@ -439,15 +439,15 @@ certain optimization techniques.
   experimentally.
 
   There are several libraries like BindsNET
-  <a id="b266899abe9f6133f1e6d55ad24513db" href="#10.3389/fninf.2018.00089">(Hazan et al., 2018)</a> that simulate SNNs on Von Neumann
+  ([Hazan et al. 2018](#orgc48b52f)) that simulate SNNs on Von Neumann
   computers implementing these rules. Recent attempts have been made to
   combine Reinforcement Learning and STDP: both in solving RL problems
-  <a id="b266899abe9f6133f1e6d55ad24513db" href="#10.3389/fninf.2018.00089">(Hazan et al., 2018)</a>, and using the reinforcement learning
+  ([Hazan et al. 2018](#orgc48b52f)), and using the reinforcement learning
   framework to train SNN
-  <a id="54e69da24e936643028e5c2591a092e6" href="#10.3389/fnbot.2019.00018">(Bing et al., 2019)</a><a>, </a><a id="cb84873c6f16a361dfb01de00ae1425a" href="#10.3389/fnins.2018.00435">(Lee et al., 2018)</a>. However, SNNs
+  ([Bing et al. 2019](#orgd283c70); [Lee et al. 2018](#orgb14d605)). However, SNNs
   trained using the STDP learning rule have yet to achieve comparable
   performance compared to ANNs on relatively simple datasets like MNIST
-  <a id="cf477ffda17db950a7fd58c9d833182b" href="#TAVANAEI201947">(Tavanaei et al., 2019)</a>.
+  ([Tavanaei et al. 2019](#org6b2242c)).
 
 <!--list-separator-->
 
@@ -461,31 +461,31 @@ certain optimization techniques.
   There are several problems with spike-compatible gradient-based methods. First,
   most of these methods cannot train neurons in the hidden layers: they can only
   train neurons at the final layer, that receive the desired target output pattern
-  <a id="78cca07dd56a8c50ebd16d663c3b095d" href="#urbanczik09_gradien_learn_rule_tempot">(Urbanczik \& Senn, 2009)</a>. Second, the discontinuous, binary
+  ([Urbanczik and Senn 2009](#org509403d)). Second, the discontinuous, binary
   nature of spiking output needs to be addressed. For example, SpikeProp
   approximates the membrane threshold function at a local area with a linear
   function, introducing gradients and computing the exact formulae for error
-  backpropagation for synaptic weights and spike times <a id="41ed49a4572e3909921301127000035c" href="#spikeprop">(Bohte et al., 2000)</a>. Others have
-  modified the threshold function with a gate function <a id="d48f27d158019a23bdb5d712746d0147" href="#huh_gradient_2018">(Huh \& Sejnowski, 2018)</a>,
+  backpropagation for synaptic weights and spike times ([Bohte, Kok, and Poutré 2000](#orgf7f5932)). Others have
+  modified the threshold function with a gate function ([Huh and Sejnowski 2018](#org1185e92)),
   used the alpha transfer function to derive gradient update rules
-  <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ">(Comsa et al., 2019)</a>, and approximate the dirac-delta
-  spikes with a probability density function <a id="123af3c690cf296b196d898878568449" href="#NIPS2018_7415">(Shrestha \& Orchard, 2018)</a>.
+  ([Comsa et al. 2019](#org685fad5)), and approximate the dirac-delta
+  spikes with a probability density function ([Shrestha and Orchard 2018](#org07300a3)).
 
   Another approach is converting trained ANN models into SNNs
-  <a id="f842b3cf76d4cc279ae01a4cf75c48ba" href="#rueckauer16_theor_tools_conver_analog_to">(Rueckauer et al., 2016)</a>. Common ANN layers such as
+  ([Rueckauer et al. 2016](#org6f4dfe8)). Common ANN layers such as
   softmax, batch normalization and max-pooling layers have their corresponding
   spiking counterparts.
 
   Equilibrium Propagation was recently proposed to solve the
   neurobiological incompatibilities of backpropagation
-  <a id="38c93c265031c562bcf3ab3a89b9d896" href="#10.3389/fncom.2017.00024">(Scellier \& Bengio, 2017)</a>. Because the gradients are defined only
+  ([Scellier and Bengio 2017](#orgaf2a9c1)). Because the gradients are defined only
   in terms of local perturbations, the synaptic updates correspond to
   the standard form of STDP. The propagated signal encodes the gradients
   of a well-defined objective function on energy-based models, where the
   goal is to minimize the energy of the model. To resolve the issue of
   communication using binary-valued signals, step-size annealing was
   used to train spiking neural networks with Equilibrium Propagation
-  <a id="d1886fb7b4cde1636a730b6072eb45c5" href="#pmlr-v89-o-connor19a">(O'Connor et al., 2019)</a>.
+  ([O’Connor, Gavves, and Welling 2019](#org2d5538b)).
 
 <!--list-separator-->
 
@@ -500,7 +500,7 @@ certain optimization techniques.
 
   Neural network models can be classified into three generations,
   according to their computational units: perceptrons, non-linear
-  units, and spiking neurons <a id="622a28118bfc276eace4e2997e32387a" href="#MAASS19971659">(Maass, 1997)</a>.
+  units, and spiking neurons ([Maass 1997](#org2816710)).
 
   Perceptrons can be composed to produce a variety of models, including
   Boltzmann machines and Hopfield networks. Non-linear units are
@@ -515,7 +515,7 @@ certain optimization techniques.
   greater than that of first-generation neural networks. Networks built
   with second-generation computational units with one hidden layer are
   universal approximators for any continuous function with a compact
-  domain and range <a id="6e22be1723df8ebb3d0e65e120ff8b92" href="#Cybenko1989">(Cybenko, 1989)</a>. Second, networks built with these
+  domain and range ([Cybenko 1989](#org5febac1)). Second, networks built with these
   units are trainable with well-researched gradient-based methods, such
   as backpropagation.
 
@@ -597,20 +597,20 @@ spiking neural networks from various perspectives.
   To directly compare ANNs and SNNs, one can consider the real-valued
   outputs of ANNs to be the firing rate of a spiking neuron in steady
   state. In fact, such rate coding has been used to explain
-  computational processes in the brain <a id="ffec32504761d0b966ab6c36eee992a6" href="#pfeiffer2018deep">(Pfeiffer \& Pfeil, 2018)</a>. Spiking
+  computational processes in the brain ([Pfeiffer and Pfeil 2018](#org5c6c7f7)). Spiking
   neuron models encode information beyond the average firing rate: these
   models also utilize the relative timing between spikes
-  <a id="b77caeaea9e23a2bc9c87b5f10a91487" href="#guetig14_to_spike_or_when_to_spike">(G\"utig, 2014)</a>, or spike phases (in-phase or
+  ([Gütig 2014](#orgba3147d)), or spike phases (in-phase or
   out-of-phase). These time-dependent codes are termed temporal codes,
   and play an important role in biology. First, research has shown that
   different actions are taken based on single spikes
-  <a id="b7885fc5161a6ad3286ee312ffcc0c0b" href="#stemmler96_singl_spike_suffic">(Stemmler, 1996)</a>. Second, relying on the average firing rate
+  ([Stemmler 1996](#org8475ef3)). Second, relying on the average firing rate
   would greatly increase the latency of the brain, and our brain often
   requires decision-making long before several spikes are accumulated.
   It has also been successfully demonstrated that temporal coding
   achieves competitive empirical performance on classification tasks for
   both generated datasets, as well as image datasets like MNIST and
-  CIFAR <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ">(Comsa et al., 2019)</a>.
+  CIFAR ([Comsa et al. 2019](#org685fad5)).
 
 <!--list-separator-->
 
@@ -629,7 +629,7 @@ spiking neural networks from various perspectives.
   the continuous-valued activations of ANNs.
 
   Second, backpropagation as a learning procedure also presents
-  incompatibilities with the biological brain <a id="cf477ffda17db950a7fd58c9d833182b" href="#TAVANAEI201947">(Tavanaei et al., 2019)</a>.
+  incompatibilities with the biological brain ([Tavanaei et al. 2019](#org6b2242c)).
   Consider the chain rule in backpropagation:
 
   \begin{equation} \label{chainrule}
@@ -675,12 +675,12 @@ spiking neural networks from various perspectives.
 
   These integrated circuits are typically programmed with spiking neural
   networks. Examples of such chips include IBM's TrueNorth
-  <a id="ff5e58b063893165385318f053dc98c9" href="#Merolla668">(Merolla et al., 2014)</a> and Intel's Loihi <a id="8146155533911feae2a67ddf637b1e29" href="#davies2018loihi">(Davies et al., 2018)</a>. Because
+  ([Merolla et al. 2014](#orgf2f6a16)) and Intel's Loihi ([Davies et al. 2018](#org03b3fef)). Because
   spiking neural networks have not yet been successfully trained on many
   tasks, neuromorphic chips has seen little practical use. These chips
   have only recently been successfully used in robotic navigation
-  <a id="162706e1b73312c94623c3c6304f9856" href="#SnnSlam">(Tang et al., 2019)</a>, and solving graph problems by manual construction of the
-  network graph <a id="022dd7a783479dfb761bf88b30399ee3" href="#Severa2016SpikingNA">(Severa et al., 2016)</a>.
+  ([Tang, Shah, and Michmizos 2019](#orga656e22)), and solving graph problems by manual construction of the
+  network graph ([Severa et al. 2016](#org2fe14ce)).
 
 ### Training Spiking Neural Networks {#training-spiking-neural-networks}
 
@@ -714,7 +714,7 @@ certain optimization techniques.
   synapse is given a weight \\(0 \le w \le w\_{max}\\) , characterizing its
   strength, and its change depends on the exact moments \\(t\_{pre}\\) of
   pre-synaptic spikes and \\(t\_{post}\\) of post-synaptic spikes
-  <a id="5c8bcfe50f375b189e564db4d78fe1a3" href="#sboev18_spikin_neural_networ_reinf_learn">(Sboev et al., 2018)</a>:
+  ([Sboev et al. 2018](#org41a4d68)):
 
   \begin{equation}
   \Delta w=\left\\{\begin{array}{l}{-\alpha \lambda \cdot \exp
@@ -731,15 +731,15 @@ certain optimization techniques.
   experimentally.
 
   There are several libraries like BindsNET
-  <a id="b266899abe9f6133f1e6d55ad24513db" href="#10.3389/fninf.2018.00089">(Hazan et al., 2018)</a> that simulate SNNs on Von Neumann
+  ([Hazan et al. 2018](#orgc48b52f)) that simulate SNNs on Von Neumann
   computers implementing these rules. Recent attempts have been made to
   combine Reinforcement Learning and STDP: both in solving RL problems
-  <a id="b266899abe9f6133f1e6d55ad24513db" href="#10.3389/fninf.2018.00089">(Hazan et al., 2018)</a>, and using the reinforcement learning
+  ([Hazan et al. 2018](#orgc48b52f)), and using the reinforcement learning
   framework to train SNN
-  <a id="54e69da24e936643028e5c2591a092e6" href="#10.3389/fnbot.2019.00018">(Bing et al., 2019)</a><a>, </a><a id="cb84873c6f16a361dfb01de00ae1425a" href="#10.3389/fnins.2018.00435">(Lee et al., 2018)</a>. However, SNNs
+  ([Bing et al. 2019](#orgd283c70); [Lee et al. 2018](#orgb14d605)). However, SNNs
   trained using the STDP learning rule have yet to achieve comparable
   performance compared to ANNs on relatively simple datasets like MNIST
-  <a id="cf477ffda17db950a7fd58c9d833182b" href="#TAVANAEI201947">(Tavanaei et al., 2019)</a>.
+  ([Tavanaei et al. 2019](#org6b2242c)).
 
 <!--list-separator-->
 
@@ -754,33 +754,33 @@ certain optimization techniques.
   methods. First, most of these methods cannot train neurons in the
   hidden layers: they can only train neurons at the final layer, that
   receive the desired target output pattern
-  <a id="78cca07dd56a8c50ebd16d663c3b095d" href="#urbanczik09_gradien_learn_rule_tempot">(Urbanczik \& Senn, 2009)</a><a>, </a><a id="9567e8351cddaa1b3d5ad674e54e8e63" href="#10.3389/fnins.2016.00508">(Lee et al., 2016)</a>.
+  ([Urbanczik and Senn 2009](#org509403d); [Lee, Delbruck, and Pfeiffer 2016](#org1089a23)).
   Second, the discontinuous, binary nature of spiking output needs to be
   addressed. For example, SpikeProp approximates the membrane
   threshold function at a local area with a linear function, introducing
   gradients and computing the exact formulae for error backpropagation
-  for synaptic weights and spike times <a id="41ed49a4572e3909921301127000035c" href="#spikeprop">(Bohte et al., 2000)</a>. Others have
+  for synaptic weights and spike times ([Bohte, Kok, and Poutré 2000](#orgf7f5932)). Others have
   modified the threshold function with a gate function
-  <a id="d48f27d158019a23bdb5d712746d0147" href="#huh_gradient_2018">(Huh \& Sejnowski, 2018)</a>, used the alpha transfer function to derive
-  gradient update rules <a id="caaddec51f6948e5fea79b6d41c79676" href="#comsa19_tempor_codin_spikin_neural_networ">(Comsa et al., 2019)</a>,
+  ([Huh and Sejnowski 2018](#org1185e92)), used the alpha transfer function to derive
+  gradient update rules ([Comsa et al. 2019](#org685fad5)),
   and approximate the dirac-delta spikes with a probability density
-  function <a id="123af3c690cf296b196d898878568449" href="#NIPS2018_7415">(Shrestha \& Orchard, 2018)</a>.
+  function ([Shrestha and Orchard 2018](#org07300a3)).
 
   Another approach is converting trained ANN models into SNNs
-  <a id="f842b3cf76d4cc279ae01a4cf75c48ba" href="#rueckauer16_theor_tools_conver_analog_to">(Rueckauer et al., 2016)</a>. Common ANN layers such
+  ([Rueckauer et al. 2016](#org6f4dfe8)). Common ANN layers such
   as softmax, batch normalization and max-pooling layers have their
   corresponding spiking counterparts.
 
   Equilibrium Propagation was recently proposed to solve the
   neurobiological incompatibilities of backpropagation
-  <a id="38c93c265031c562bcf3ab3a89b9d896" href="#10.3389/fncom.2017.00024">(Scellier \& Bengio, 2017)</a>. Because the gradients are defined only
+  ([Scellier and Bengio 2017](#orgaf2a9c1)). Because the gradients are defined only
   in terms of local perturbations, the synaptic updates correspond to
   the standard form of STDP. The propagated signal encodes the gradients
   of a well-defined objective function on energy-based models, where the
   goal is to minimize the energy of the model. To resolve the issue of
   communication using binary-valued signals, step-size annealing was
   used to train spiking neural networks with Equilibrium Propagation
-  <a id="d1886fb7b4cde1636a730b6072eb45c5" href="#pmlr-v89-o-connor19a">(O'Connor et al., 2019)</a>.
+  ([O’Connor, Gavves, and Welling 2019](#org2d5538b)).
 
 <!--list-separator-->
 
@@ -818,7 +818,7 @@ _post-synaptic_ neuron \\(i\\).
 The internal, analog state of each spiking neuron \\(i \in V\\) at time
 \\(t\\) is defined by its membrane potential \\(u\_{i,t}\\).
 
-## Long short-term memory and learning-to-learn in networks of spiking neurons <a id="4917683f67ccf52378654f00a9c9a141" href="#bellec18_long_short_term_memor_learn">(Bellec et al., 2018)</a> {#long-short-term-memory-and-learning-to-learn-in-networks-of-spiking-neurons}
+## Long short-term memory and learning-to-learn in networks of spiking neurons ([Bellec et al. 2018](#org9725f66)) {#long-short-term-memory-and-learning-to-learn-in-networks-of-spiking-neurons--bellec-et-al-dot-2018--org9725f66}
 
 **Key contribution**: Inclusion of adapting neurons into recurrent SNN
 models (RSNNs) increases computing and learning capability. By using a
@@ -850,7 +850,7 @@ a pseudo derivative that smoothly increases from 0 to 1.
 
 ## Gradient Descent for Spiking Neural Networks {#gradient-descent-for-spiking-neural-networks}
 
-<a id="d48f27d158019a23bdb5d712746d0147" href="#huh_gradient_2018">(Huh \& Sejnowski, 2018)</a>
+([Huh and Sejnowski 2018](#org1185e92))
 key idea: Replacing the non-differentiable model for membrane
 potential:
 
@@ -871,9 +871,9 @@ Exact gradient calculations can be done with BPTT, or real-time
 recurrent learning. The resultant gradients are similar to
 reward-modulated spike-time dependent plasticity.
 
-## <span class="org-todo todo TODO">TODO</span> Surrogate Gradient Learning in Spiking Neural Networks <a id="6c46e273de1ecbecce7f8f1ac7329a57" href="#neftci19_surrog_gradien_learn_spikin_neural_networ">(Neftci et al., 2019)</a> {#surrogate-gradient-learning-in-spiking-neural-networks}
+## <span class="org-todo todo TODO">TODO</span> Surrogate Gradient Learning in Spiking Neural Networks ([Neftci, Mostafa, and Zenke 2019](#org8cf5468)) {#surrogate-gradient-learning-in-spiking-neural-networks--neftci-mostafa-and-zenke-2019--org8cf5468}
 
-## <span class="org-todo todo TODO">TODO</span> Theories of Error Back-Propagation in the Brain <a id="87673c771a23a8ad0a1301cb565d0484" href="#whittington19_theor_error_back_propag_brain">(Whittington \& Bogacz, 2019)</a> {#theories-of-error-back-propagation-in-the-brain}
+## <span class="org-todo todo TODO">TODO</span> Theories of Error Back-Propagation in the Brain ([Whittington and Bogacz 2019](#orgc6654c4)) {#theories-of-error-back-propagation-in-the-brain--whittington-and-bogacz-2019--orgc6654c4}
 
 ## [Temp Coding with Alpha Synaptic Function]({{< relref "comsa2019_temp_coding" >}}) {#temp-coding-with-alpha-synaptic-function--comsa2019-temp-coding-dot-md}
 
@@ -898,7 +898,7 @@ This additive STDP rule requires also an additional constraint that
 explicitly prevents the weight from falling below 0 or exceeding the
 maximum value of 1.
 
-<a id="5c8bcfe50f375b189e564db4d78fe1a3" href="#sboev18_spikin_neural_networ_reinf_learn">(Sboev et al., 2018)</a>
+([Sboev et al. 2018](#org41a4d68))
 
 ## Loihi {#loihi}
 
@@ -924,7 +924,7 @@ for the neuron pair.
 
 ## Generating Spike Trains {#generating-spike-trains}
 
-### Poisson Model <a id="15fef7332c23705120f84cb94df313f0" href="#heeger2000poisson">(Heeger, 2000)</a> {#poisson-model}
+### Poisson Model ([Heeger 2000](#org57be6b7)) {#poisson-model--heeger-2000--org57be6b7}
 
 Independent spike hypothesis: the generation of each spike is
 independent of all other spikes. If the underlying instantaneous
@@ -941,62 +941,62 @@ We divide time into short, discrete intervals \\(\delta t\\). Then, we
 generate a sequence of random numbers \\(x[i]\\) uniformly between 0
 and 1. For each interval, if \\(x[i] \le r \delta t\\), generate a spike.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="ivanov19_moder_deep_reinf_learn_algor" target="_blank">Ivanov, S., & D'yakonov, A., _Modern Deep Reinforcement Learning Algorithms_, CoRR, _()_, (2019). </a> [↩](#e4502bc8449685a4d2f3de467131d52b)
+<a id="org9725f66"></a>Bellec, Guillaume, Darjan Salaj, Anand Subramoney, Robert Legenstein, and Wolfgang Maass. 2018. “Long Short-Term Memory and Learning-to-Learn in Networks of Spiking Neurons.” _CoRR_.
 
-<a id="li18_deep_reinf_learn" target="_blank">Li, Y., _Deep Reinforcement Learning_, CoRR, _()_, (2018). </a> [↩](#d2a106a2198bf39695c45979d9300abc)
+<a id="orgd283c70"></a>Bing, Zhenshan, Ivan Baumann, Zhuangyi Jiang, Kai Huang, Caixia Cai, and Alois Knoll. 2019. “Supervised Learning in SNN via Reward-Modulated Spike-Timing-Dependent Plasticity for a Target Reaching Vehicle.” _Frontiers in Neurorobotics_ 13:18.
 
-<a id="MAASS19971659" target="_blank">Maass, W., _Networks of spiking neurons: The third generation of neural network models_, Neural Networks, _10(9)_, 1659–1671 (1997). http://dx.doi.org/10.1016/S0893-6080(97)00011-7</a> [↩](#622a28118bfc276eace4e2997e32387a)
+<a id="orgf7f5932"></a>Bohte, Sander, Joost Kok, and Johannes Poutré. 2000. “SpikeProp: Backpropagation for Networks of Spiking Neurons.,” 48:419–24. ESANN.
 
-<a id="Cybenko1989" target="_blank">Cybenko, G., _Approximation by superpositions of a sigmoidal function_, Mathematics of Control, Signals and Systems, _2(4)_, 303–314 (1989). http://dx.doi.org/10.1007/BF02551274</a> [↩](#6e22be1723df8ebb3d0e65e120ff8b92)
+<a id="org685fad5"></a>Comsa, Iulia M., Krzysztof Potempa, Luca Versari, Thomas Fischbacher, Andrea Gesmundo, and Jyrki Alakuijala. 2019. “Temporal Coding in Spiking Neural Networks with Alpha Synaptic Function.” _CoRR_.
 
-<a id="pfeiffer2018deep" target="_blank">Pfeiffer, M., & Pfeil, T., _Deep learning with spiking neurons: opportunities and challenges_, Frontiers in neuroscience, _12()_, (2018). </a> [↩](#ffec32504761d0b966ab6c36eee992a6)
+<a id="org5febac1"></a>Cybenko, G. 1989. “Approximation by Superpositions of a Sigmoidal Function.” _Mathematics of Control, Signals and Systems_ 2 (4):303–14.
 
-<a id="guetig14_to_spike_or_when_to_spike" target="_blank">G\"utig, Robert, _To spike, or when to spike?_, Current Opinion in Neurobiology, _25(nil)_, 134–139 (2014). http://dx.doi.org/10.1016/j.conb.2014.01.004</a> [↩](#b77caeaea9e23a2bc9c87b5f10a91487)
+<a id="org03b3fef"></a>Davies, Mike, Narayan Srinivasa, Tsung-Han Lin, Gautham Chinya, Yongqiang Cao, Sri Harsha Choday, Georgios Dimou, et al. 2018. “Loihi: A Neuromorphic Manycore Processor with on-Chip Learning.” _IEEE Micro_ 38 (1). IEEE:82–99.
 
-<a id="stemmler96_singl_spike_suffic" target="_blank">Stemmler, M., _A single spike suffices: the simplest form of stochastic resonance in model neurons_, Network: Computation in Neural Systems, _7(4)_, 687–716 (1996). http://dx.doi.org/10.1088/0954-898x_7_4_005</a> [↩](#b7885fc5161a6ad3286ee312ffcc0c0b)
+<a id="orgba3147d"></a>Gütig, Robert. 2014. “To Spike, or When to Spike?” _Current Opinion in Neurobiology_ 25 (nil):134–39.
 
-<a id="comsa19_tempor_codin_spikin_neural_networ" target="_blank">Comsa, I. M., Potempa, K., Versari, L., Fischbacher, T., Gesmundo, A., & Alakuijala, J., _Temporal coding in spiking neural networks with alpha synaptic function_, CoRR, _()_, (2019). </a> [↩](#caaddec51f6948e5fea79b6d41c79676)
+<a id="orgc48b52f"></a>Hazan, Hananel, Daniel J. Saunders, Hassaan Khan, Devdhar Patel, Darpan T. Sanghavi, Hava T. Siegelmann, and Robert Kozma. 2018. “BindsNET: A Machine Learning-Oriented Spiking Neural Networks Library in Python.” _Frontiers in Neuroinformatics_ 12:89.
 
-<a id="TAVANAEI201947" target="_blank">Tavanaei, A., Ghodrati, M., Kheradpisheh, S. R., Masquelier, Timoth\'ee, & Maida, A., _Deep learning in spiking neural networks_, Neural Networks, _111()_, 47–63 (2019). http://dx.doi.org/10.1016/j.neunet.2018.12.002</a> [↩](#cf477ffda17db950a7fd58c9d833182b)
+<a id="org57be6b7"></a>Heeger, David. 2000. “Poisson Model of Spike Generation.” _Handout, University of Standford_ 5:1–13.
 
-<a id="Merolla668" target="_blank">Merolla, P. A., Arthur, J. V., Alvarez-Icaza, Rodrigo, Cassidy, A. S., Sawada, J., Akopyan, F., Jackson, B. L., …, _A million spiking-neuron integrated circuit with a scalable communication network and interface_, Science, _345(6197)_, 668–673 (2014). http://dx.doi.org/10.1126/science.1254642</a> [↩](#ff5e58b063893165385318f053dc98c9)
+<a id="org1185e92"></a>Huh, Dongsung, and Terrence J Sejnowski. 2018. “Gradient Descent for Spiking Neural Networks.” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 1433–43. Curran Associates, Inc.
 
-<a id="davies2018loihi" target="_blank">Davies, M., Srinivasa, N., Lin, T., Chinya, G., Cao, Y., Choday, S. H., Dimou, G., …, _Loihi: A neuromorphic manycore processor with on-chip learning_, IEEE Micro, _38(1)_, 82–99 (2018). </a> [↩](#8146155533911feae2a67ddf637b1e29)
+<a id="org8003fa8"></a>Ivanov, Sergey, and Alexander D’yakonov. 2019. “Modern Deep Reinforcement Learning Algorithms.” _CoRR_.
 
-<a id="SnnSlam" target="_blank">Tang, G., Shah, A., & Michmizos, K. P., _Spiking neural network on neuromorphic hardware for energy-efficient unidimensional slam_, CoRR, _()_, (2019). </a> [↩](#162706e1b73312c94623c3c6304f9856)
+<a id="orgb14d605"></a>Lee, Chankyu, Priyadarshini Panda, Gopalakrishnan Srinivasan, and Kaushik Roy. 2018. “Training Deep Spiking Convolutional Neural Networks with STDP-Based Unsupervised Pre-Training Followed by Supervised Fine-Tuning.” _Frontiers in Neuroscience_ 12:435.
 
-<a id="Severa2016SpikingNA" target="_blank">Severa, W., Parekh, O., Carlson, K. D., James, C. D., & Aimone, J. B., _Spiking network algorithms for scientific computing_, 2016 IEEE International Conference on Rebooting Computing (ICRC), _()_, 1–8 (2016). </a> [↩](#022dd7a783479dfb761bf88b30399ee3)
+<a id="org1089a23"></a>Lee, Jun Haeng, Tobi Delbruck, and Michael Pfeiffer. 2016. “Training Deep Spiking Neural Networks Using Backpropagation.” _Frontiers in Neuroscience_ 10:508.
 
-<a id="sboev18_spikin_neural_networ_reinf_learn" target="_blank">Sboev, A., Vlasov, D., Rybka, R., & Serenko, A., _Spiking neural network reinforcement learning method based on temporal coding and stdp_, Procedia Computer Science, _145(nil)_, 458–463 (2018). http://dx.doi.org/10.1016/j.procs.2018.11.107</a> [↩](#5c8bcfe50f375b189e564db4d78fe1a3)
+<a id="orgf866c55"></a>Li, Yuxi. 2018. “Deep Reinforcement Learning.” _CoRR_.
 
-<a id="10.3389/fninf.2018.00089" target="_blank">Hazan, H., Saunders, D. J., Khan, H., Patel, D., Sanghavi, D. T., Siegelmann, H. T., & Kozma, R., _BindsNET: A machine learning-oriented spiking neural networks library in python_, Frontiers in Neuroinformatics, _12()_, 89 (2018). http://dx.doi.org/10.3389/fninf.2018.00089</a> [↩](#b266899abe9f6133f1e6d55ad24513db)
+<a id="org2816710"></a>Maass, Wolfgang. 1997. “Networks of Spiking Neurons: The Third Generation of Neural Network Models.” _Neural Networks_ 10 (9):1659–71.
 
-<a id="10.3389/fnbot.2019.00018" target="_blank">Bing, Z., Baumann, I., Jiang, Z., Huang, K., Cai, C., & Knoll, A., _Supervised learning in SNN via reward-modulated spike-timing-dependent plasticity for a target reaching vehicle_, Frontiers in Neurorobotics, _13()_, 18 (2019). http://dx.doi.org/10.3389/fnbot.2019.00018</a> [↩](#54e69da24e936643028e5c2591a092e6)
+<a id="orgf2f6a16"></a>Merolla, Paul A., John V. Arthur, Rodrigo Alvarez-Icaza, Andrew S. Cassidy, Jun Sawada, Filipp Akopyan, Bryan L. Jackson, et al. 2014. “A Million Spiking-Neuron Integrated Circuit with a Scalable Communication Network and Interface.” _Science_ 345 (6197). American Association for the Advancement of Science:668–73.
 
-<a id="10.3389/fnins.2018.00435" target="_blank">Lee, C., Panda, P., Srinivasan, G., & Roy, K., _Training deep spiking convolutional neural networks with STDP-Based unsupervised pre-training followed by supervised fine-tuning_, Frontiers in Neuroscience, _12()_, 435 (2018). http://dx.doi.org/10.3389/fnins.2018.00435</a> [↩](#cb84873c6f16a361dfb01de00ae1425a)
+<a id="org8cf5468"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. 2019. “Surrogate Gradient Learning in Spiking Neural Networks.” _CoRR_.
 
-<a id="urbanczik09_gradien_learn_rule_tempot" target="_blank">Urbanczik, R., & Senn, W., _A gradient learning rule for the tempotron_, Neural Computation, _21(2)_, 340–352 (2009). http://dx.doi.org/10.1162/neco.2008.09-07-605</a> [↩](#78cca07dd56a8c50ebd16d663c3b095d)
+<a id="org2d5538b"></a>O’Connor, Peter, Efstratios Gavves, and Max Welling. 2019. “Training a Spiking Neural Network with Equilibrium Propagation.” In _Proceedings of Machine Learning Research_, edited by Kamalika Chaudhuri and Masashi Sugiyama, 89:1516–23. Proceedings of Machine Learning Research. PMLR.
 
-<a id="spikeprop" target="_blank">Bohte, S., Kok, J., & Poutr\'e, Johannes, _SpikeProp: backpropagation for networks of spiking neurons._, In , (pp. 419–424) (2000). : .</a> [↩](#41ed49a4572e3909921301127000035c)
+<a id="org5c6c7f7"></a>Pfeiffer, Michael, and Thomas Pfeil. 2018. “Deep Learning with Spiking Neurons: Opportunities and Challenges.” _Frontiers in Neuroscience_ 12. Frontiers Media SA.
 
-<a id="huh_gradient_2018" target="_blank">Huh, D., & Sejnowski, T. J., _Gradient descent for spiking neural networks_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 1433–1443) (2018). : {Curran Associates, Inc.}.</a> [↩](#d48f27d158019a23bdb5d712746d0147)
+<a id="org6f4dfe8"></a>Rueckauer, Bodo, Iulia-Alexandra Lungu, Yuhuang Hu, and Michael Pfeiffer. 2016. “Theory and Tools for the Conversion of Analog to Spiking Convolutional Neural Networks.” _CoRR_.
 
-<a id="NIPS2018_7415" target="_blank">Shrestha, S. B., & Orchard, G., _SLAYER: Spike layer error reassignment in time_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 1412–1421) (2018). : {Curran Associates, Inc.}.</a> [↩](#123af3c690cf296b196d898878568449)
+<a id="org41a4d68"></a>Sboev, Alexander, Danila Vlasov, Roman Rybka, and Alexey Serenko. 2018. “Spiking Neural Network Reinforcement Learning Method Based on Temporal Coding and Stdp.” _Procedia Computer Science_ 145 (nil):458–63.
 
-<a id="rueckauer16_theor_tools_conver_analog_to" target="_blank">Rueckauer, B., Lungu, I., Hu, Y., & Pfeiffer, M., _Theory and tools for the conversion of analog to spiking convolutional neural networks_, CoRR, _()_, (2016). </a> [↩](#f842b3cf76d4cc279ae01a4cf75c48ba)
+<a id="orgaf2a9c1"></a>Scellier, Benjamin, and Yoshua Bengio. 2017. “Equilibrium Propagation: Bridging the Gap Between Energy-Based Models and Backpropagation.” _Frontiers in Computational Neuroscience_ 11:24.
 
-<a id="10.3389/fncom.2017.00024" target="_blank">Scellier, B., & Bengio, Y., _Equilibrium propagation: Bridging the gap between energy-based models and backpropagation_, Frontiers in Computational Neuroscience, _11()_, 24 (2017). http://dx.doi.org/10.3389/fncom.2017.00024</a> [↩](#38c93c265031c562bcf3ab3a89b9d896)
+<a id="org2fe14ce"></a>Severa, William, Ojas Parekh, Kristofor D. Carlson, Conrad D. James, and James B. Aimone. 2016. “Spiking Network Algorithms for Scientific Computing.” _2016 IEEE International Conference on Rebooting Computing (ICRC)_, 1–8.
 
-<a id="pmlr-v89-o-connor19a" target="_blank">O'Connor, P., Gavves, E., & Welling, M., _Training a spiking neural network with equilibrium propagation_, In K. Chaudhuri, & M. Sugiyama, Proceedings of Machine Learning Research (pp. 1516–1523) (2019). : {PMLR}.</a> [↩](#d1886fb7b4cde1636a730b6072eb45c5)
+<a id="org07300a3"></a>Shrestha, Sumit Bam, and Garrick Orchard. 2018. “SLAYER: Spike Layer Error Reassignment in Time.” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 1412–21. Curran Associates, Inc.
 
-<a id="10.3389/fnins.2016.00508" target="_blank">Lee, J. H., Delbruck, T., & Pfeiffer, M., _Training Deep Spiking Neural Networks Using Backpropagation_, Frontiers in Neuroscience, _10()_, 508 (2016). http://dx.doi.org/10.3389/fnins.2016.00508</a> [↩](#9567e8351cddaa1b3d5ad674e54e8e63)
+<a id="org8475ef3"></a>Stemmler, Martin. 1996. “A Single Spike Suffices: The Simplest Form of Stochastic Resonance in Model Neurons.” _Network: Computation in Neural Systems_ 7 (4):687–716.
 
-<a id="bellec18_long_short_term_memor_learn" target="_blank">Bellec, G., Salaj, D., Subramoney, A., Legenstein, R., & Maass, W., _Long short-term memory and learning-to-learn in networks of spiking neurons_, CoRR, _()_, (2018). </a> [↩](#4917683f67ccf52378654f00a9c9a141)
+<a id="orga656e22"></a>Tang, Guangzhi, Arpit Shah, and Konstantinos P. Michmizos. 2019. “Spiking Neural Network on Neuromorphic Hardware for Energy-Efficient Unidimensional Slam.” _CoRR_.
 
-<a id="neftci19_surrog_gradien_learn_spikin_neural_networ" target="_blank">Neftci, E. O., Mostafa, H., & Zenke, F., _Surrogate gradient learning in spiking neural networks_, CoRR, _()_, (2019). </a> [↩](#6c46e273de1ecbecce7f8f1ac7329a57)
+<a id="org6b2242c"></a>Tavanaei, Amirhossein, Masoud Ghodrati, Saeed Reza Kheradpisheh, Timothée Masquelier, and Anthony Maida. 2019. “Deep Learning in Spiking Neural Networks.” _Neural Networks_ 111:47–63.
 
-<a id="whittington19_theor_error_back_propag_brain" target="_blank">Whittington, J. C., & Bogacz, R., _Theories of error back-propagation in the brain_, Trends in Cognitive Sciences, _23(3)_, 235–250 (2019). http://dx.doi.org/10.1016/j.tics.2018.12.005</a> [↩](#87673c771a23a8ad0a1301cb565d0484)
+<a id="org509403d"></a>Urbanczik, Robert, and Walter Senn. 2009. “A Gradient Learning Rule for the Tempotron.” _Neural Computation_ 21 (2):340–52.
 
-<a id="heeger2000poisson" target="_blank">Heeger, D., _Poisson model of spike generation_, Handout, University of Standford, _5()_, 1–13 (2000). </a> [↩](#15fef7332c23705120f84cb94df313f0)
+<a id="orgc6654c4"></a>Whittington, James C.R., and Rafal Bogacz. 2019. “Theories of Error Back-Propagation in the Brain.” _Trends in Cognitive Sciences_ 23 (3):235–50.

@@ -1,7 +1,7 @@
 +++
 title = "Variational Autoencoders"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:55+08:00
+lastmod = 2020-06-24T16:09:49+08:00
 draft = false
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Portfolio Composition"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:55+08:00
+lastmod = 2020-06-24T16:10:29+08:00
 draft = false
 +++
 

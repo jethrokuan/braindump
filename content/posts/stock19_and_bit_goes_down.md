@@ -1,7 +1,7 @@
 +++
 title = "And the Bit Goes Down: Revisiting the Quantization of Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:59+08:00
+lastmod = 2020-06-24T16:08:27+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ tags
 : [Model Compression]({{< relref "model_compression" >}})
 
 paper
-: <a id="56497b51cc79dfdb43c364d93a9978c3" href="#stock19_and_bit_goes_down">(Stock et al., 2019)</a>
+: ([Stock et al. 2019](#orge3c0353))
 
 This method minimizes the loss reconstruction error for in-domain
 inputs, and does not require any labelled data.
@@ -29,6 +29,6 @@ nearest neighbour search.
 
 ## {#}
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="stock19_and_bit_goes_down" target="_blank">Stock, P., Joulin, A., Gribonval, R\'emi, Graham, B., & J\'egou, Herv\'e, _And the bit goes down: Revisiting the quantization of neural networks_, CoRR, _()_, (2019). </a> [↩](#56497b51cc79dfdb43c364d93a9978c3)
+<a id="orge3c0353"></a>Stock, Pierre, Armand Joulin, Rémi Gribonval, Benjamin Graham, and Hervé Jégou. 2019. “And the Bit Goes down: Revisiting the Quantization of Neural Networks.” _CoRR_.

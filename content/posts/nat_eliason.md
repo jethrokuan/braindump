@@ -1,7 +1,7 @@
 +++
 title = "Nat Eliason"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:17+08:00
+lastmod = 2020-06-24T16:08:40+08:00
 draft = false
 +++
 

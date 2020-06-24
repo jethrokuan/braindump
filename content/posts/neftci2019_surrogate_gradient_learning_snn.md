@@ -1,7 +1,7 @@
 +++
 title = "Surrogate Gradient Learning In Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:49+08:00
+lastmod = 2020-06-24T16:09:45+08:00
 draft = false
 +++
 
@@ -26,11 +26,11 @@ hidden layers.
 
 There are many different available surrogate functions used, and all
 have reportedly some success
-<a id="6c46e273de1ecbecce7f8f1ac7329a57" href="#neftci19_surrog_gradien_learn_spikin_neural_networ">(Neftci et al., 2019)</a>. All of the
+([Neftci, Mostafa, and Zenke 2019](#org2d0db17)). All of the
 functions used are non-linear and monotonically increasing towards the
 firing threshold. This suggests that the details of the surrogate are
 not crucial in ensuring success of the method.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="neftci19_surrog_gradien_learn_spikin_neural_networ" target="_blank">Neftci, E. O., Mostafa, H., & Zenke, F., _Surrogate gradient learning in spiking neural networks_, CoRR, _()_, (2019). </a> [↩](#6c46e273de1ecbecce7f8f1ac7329a57)
+<a id="org2d0db17"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. 2019. “Surrogate Gradient Learning in Spiking Neural Networks.” _CoRR_.

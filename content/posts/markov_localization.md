@@ -1,14 +1,14 @@
 +++
 title = "Markov Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:32+08:00
+lastmod = 2020-06-24T16:08:50+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
 - [EKF Localization]({{< relref "ekf_localization" >}})
+- [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
 
 ## Markov Localization {#markov-localization}
 

@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:50+08:00
+lastmod = 2020-06-24T16:08:20+08:00
 draft = false
 +++
 
@@ -622,7 +622,7 @@ problems may occur. Most common among these are the following:
   heteroscedasticity, from the presence of a funnel shape in the
   residual plot.
 
-  {{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity <a id=\"47f776a94d6687b2efebf468b22650cb\" href=\"#james2013introduction\">(James et al., 2013)</a>" >}}
+  {{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity" >}}
 
 <!--list-separator-->
 
@@ -665,7 +665,7 @@ problems may occur. Most common among these are the following:
   variables on the response. A contour plot of the RSS associated with
   different possible coefficient estimates can show collinearity.
 
-  {{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS <a id=\"47f776a94d6687b2efebf468b22650cb\" href=\"#james2013introduction\">(James et al., 2013)</a>" >}}
+  {{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS" >}}
 
   Another way to detect collinearity is to look at the correlation
   matrix of the predictors. An element of this matrix that is large in
@@ -993,10 +993,10 @@ ignored.
 
 ## References {#references}
 
-<a id="a6f25d8e3790a685481657d76f53a002" href="#chatterjee06_regres_analy_examp">(Chatterjee \& Hadi, 2006)</a><a>, </a><a id="47f776a94d6687b2efebf468b22650cb" href="#james2013introduction">(James et al., 2013)</a>
+([Chatterjee and Hadi 2006](#org4f13a58); [James et al. 2013](#orgb251931))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="james2013introduction" target="_blank">James, G., Witten, D., Hastie, T., & Tibshirani, R., _An introduction to statistical learning_ (2013), : {Springer}.</a> [↩](#47f776a94d6687b2efebf468b22650cb)
+<a id="org4f13a58"></a>Chatterjee, Samprit, and Ali S. Hadi. 2006. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc.
 
-<a id="chatterjee06_regres_analy_examp" target="_blank">Chatterjee, S., & Hadi, A. S., _Regression analysis by example_ (2006), : {John Wiley \& Sons, Inc.}.</a> [↩](#a6f25d8e3790a685481657d76f53a002)
+<a id="orgb251931"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. _An Introduction to Statistical Learning_. Vol. 112. Springer.

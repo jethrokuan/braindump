@@ -1,14 +1,14 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:15+08:00
+lastmod = 2020-06-24T16:08:38+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 - [Deep Reinforcement Learning That Matters]({{< relref "henderson_deep_rl_that_matters" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 tags
 : [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -82,11 +82,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 - Trust region policy optimization
-  <a id="57393aa8ebb8846c7181c31bfd5fbe89" href="#schulman15_high_dimen_contin_contr_using">(Schulman et al., 2015)</a>
+  ([Schulman et al. 2015](#org3d8f054))
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop <a id="23ad5881923885616b0afd34dad9df52" href="#gu16_q_prop">(Gu et al., 2016)</a>
+- Q-Prop ([Gu et al. 2016](#org1f2f4fd))
 
 ### Problem Formulation {#problem-formulation}
 
@@ -100,8 +100,8 @@ or algorithms that adaptively adjust parameters:
     ([Tensorflow](https://github.com/openai/spinningup), [Pytorch](https://github.com/kashif/firedup/))
 3.  [David Silver's Deep RL ICML Tutorial](https://www.icml.cc/2016/tutorials/deep%5Frl%5Ftutorial.pdf)
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="schulman15_high_dimen_contin_contr_using" target="_blank">Schulman, J., Moritz, P., Levine, S., Jordan, M., & Abbeel, P., _High-Dimensional Continuous Control Using Generalized Advantage Estimation_, CoRR, _()_, (2015). </a> [↩](#57393aa8ebb8846c7181c31bfd5fbe89)
+<a id="org1f2f4fd"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. 2016. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” _CoRR_.
 
-<a id="gu16_q_prop" target="_blank">Gu, S., Lillicrap, T., Ghahramani, Z., Turner, R. E., & Levine, S., _Q-prop: Sample-efficient policy gradient with an off-policy critic_, CoRR, _()_, (2016). </a> [↩](#23ad5881923885616b0afd34dad9df52)
+<a id="org3d8f054"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. 2015. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” _CoRR_.

@@ -1,14 +1,14 @@
 +++
 title = "Markov Logic Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:42+08:00
+lastmod = 2020-06-24T16:10:20+08:00
 draft = false
 +++
 
 tags
 : [Machine Learning Papers]({{< relref "ml_papers" >}})
 
-## Markov Logic Networks <a id="ffcf484ffbed70c6ebcf595884716056" href="#richardson06_markov_logic_networ">(Richardson \& Domingos, 2006)</a>. {#markov-logic-networks-dot}
+## Markov Logic Networks ([Richardson and Domingos 2006](#org5cdef32)). {#markov-logic-networks--richardson-and-domingos-2006--org5cdef32---dot}
 
 ### Problem {#problem}
 
@@ -43,6 +43,6 @@ c\_{|C|} \right\\}\\), it defines a Markov Logic Network as follows:
     ground formula is true, and 0 otherwise. The weight of the feature
     is the \\(w_i\\) associated with \\(F_i\\) in \\(L\\).
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="richardson06_markov_logic_networ" target="_blank">Richardson, M., & Domingos, P., _Markov Logic Networks_, Machine Learning, _62(1-2)_, 107–136 (2006). http://dx.doi.org/10.1007/s10994-006-5833-1</a> [↩](#ffcf484ffbed70c6ebcf595884716056)
+<a id="org5cdef32"></a>Richardson, Matthew, and Pedro Domingos. 2006. “Markov Logic Networks.” _Machine Learning_ 62 (1-2):107–36.

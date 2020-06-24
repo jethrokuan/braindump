@@ -1,11 +1,11 @@
 +++
 title = "Cognitive Hierarchy Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:43+08:00
+lastmod = 2020-06-24T16:09:41+08:00
 draft = false
 +++
 
-See <a id="594a0683300dc5bf8d8298fa511b13d2" href="#camerer2004cognitive">(Camerer et al., 2004)</a> for a nice introduction using Keynes' "beauty
+See ([Camerer, Ho, and Chong 2004](#org3299312)) for a nice introduction using Keynes' "beauty
 contest" game.
 
 In the cognitive hierarchy model, each player believes that they
@@ -22,6 +22,6 @@ that their opponents are distributed according to a normalized Poisson
 distribution, from step \\(0\\) to step \\(k-1\\), but ignore the possibility
 that some players may be doing as much or more.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="camerer2004cognitive" target="_blank">Camerer, C. F., Ho, T., & Chong, J., _A cognitive hierarchy model of games_, The Quarterly Journal of Economics, _119(3)_, 861–898 (2004). </a> [↩](#594a0683300dc5bf8d8298fa511b13d2)
+<a id="org3299312"></a>Camerer, Colin F, Teck-Hua Ho, and Juin-Kuan Chong. 2004. “A Cognitive Hierarchy Model of Games.” _The Quarterly Journal of Economics_ 119 (3). MIT Press:861–98.

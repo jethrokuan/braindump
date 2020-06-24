@@ -1,7 +1,7 @@
 +++
 title = "Martin Kleppmann"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:45+08:00
+lastmod = 2020-06-24T16:08:16+08:00
 slug = "martin_kleppmann"
 draft = false
 +++

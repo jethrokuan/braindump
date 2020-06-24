@@ -1,29 +1,29 @@
 +++
 title = "Variational Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:23+08:00
+lastmod = 2020-06-24T16:09:27+08:00
 draft = false
 +++
 
 tags
 : [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}})
 
-## <span class="org-todo todo TODO">TODO</span> Variational Bounds of Mutual Information <a id="03aaa70b22ec63a2f916644ec4a63dfa" href="#poole19_variat_bound_mutual_infor">(Poole et al., 2019)</a> {#variational-bounds-of-mutual-information}
+## <span class="org-todo todo TODO">TODO</span> Variational Bounds of Mutual Information ([Poole et al. 2019](#org56295a6)) {#variational-bounds-of-mutual-information--poole-et-al-dot-2019--org56295a6}
 
-## <span class="org-todo todo TODO">TODO</span> Black Box Variational Inference <a id="3eabd5765f9fe3b95008c8b32882582a" href="#ranganath13_black_box_variat_infer">(Ranganath et al., 2013)</a> {#black-box-variational-inference}
+## <span class="org-todo todo TODO">TODO</span> Black Box Variational Inference ([Ranganath, Gerrish, and Blei 2013](#org4fef8f6)) {#black-box-variational-inference--ranganath-gerrish-and-blei-2013--org4fef8f6}
 
-## <span class="org-todo todo TODO">TODO</span> Unbiased Implicit Variational Inference <a id="7b6b053dec18fe5e07671a59166157b8" href="#titsias18_unbias_implic_variat_infer">(Titsias \& Ruiz, 2018)</a> {#unbiased-implicit-variational-inference}
+## <span class="org-todo todo TODO">TODO</span> Unbiased Implicit Variational Inference ([Titsias and Ruiz 2018](#org43f4ba1)) {#unbiased-implicit-variational-inference--titsias-and-ruiz-2018--org43f4ba1}
 
-## <span class="org-todo todo TODO">TODO</span> A Contrastive Divergence for Combining Variational Inference and MCMC <a id="4c999ee4f97f0b29c9fbd80625fc011b" href="#ruiz19_contr_diver_combin_variat_infer_mcmc">(Ruiz \& Titsias, 2019)</a> {#a-contrastive-divergence-for-combining-variational-inference-and-mcmc}
+## <span class="org-todo todo TODO">TODO</span> A Contrastive Divergence for Combining Variational Inference and MCMC ([Ruiz and Titsias 2019](#orge1d118a)) {#a-contrastive-divergence-for-combining-variational-inference-and-mcmc--ruiz-and-titsias-2019--orge1d118a}
 
 ## {#}
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="poole19_variat_bound_mutual_infor" target="_blank">Poole, B., Ozair, S., van den Oord, A., Alemi, A. A., & Tucker, G., _On variational bounds of mutual information_, CoRR, _()_, (2019). </a> [↩](#03aaa70b22ec63a2f916644ec4a63dfa)
+<a id="org56295a6"></a>Poole, Ben, Sherjil Ozair, Aaron van den Oord, Alexander A. Alemi, and George Tucker. 2019. “On Variational Bounds of Mutual Information.” _CoRR_.
 
-<a id="ranganath13_black_box_variat_infer" target="_blank">Ranganath, R., Gerrish, S., & Blei, D. M., _Black Box Variational Inference_, CoRR, _()_, (2013). </a> [↩](#3eabd5765f9fe3b95008c8b32882582a)
+<a id="org4fef8f6"></a>Ranganath, Rajesh, Sean Gerrish, and David M. Blei. 2013. “Black Box Variational Inference.” _CoRR_.
 
-<a id="titsias18_unbias_implic_variat_infer" target="_blank">Titsias, M. K., & Ruiz, F. J. R., _Unbiased Implicit Variational Inference_, CoRR, _()_, (2018). </a> [↩](#7b6b053dec18fe5e07671a59166157b8)
+<a id="orge1d118a"></a>Ruiz, Francisco J. R., and Michalis K. Titsias. 2019. “A Contrastive Divergence for Combining Variational Inference and Mcmc.” _CoRR_.
 
-<a id="ruiz19_contr_diver_combin_variat_infer_mcmc" target="_blank">Ruiz, F. J. R., & Titsias, M. K., _A contrastive divergence for combining variational inference and mcmc_, CoRR, _()_, (2019). </a> [↩](#4c999ee4f97f0b29c9fbd80625fc011b)
+<a id="org43f4ba1"></a>Titsias, Michalis K., and Francisco J. R. Ruiz. 2018. “Unbiased Implicit Variational Inference.” _CoRR_.

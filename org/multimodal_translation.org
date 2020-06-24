@@ -12,7 +12,7 @@ datasets available.
 Multi-modal translation can be categorized into /example-based/, and
 /generative/ approaches cite:baltrusaitis17:_multim_machin_learn.
 
-#+caption: Example-based and generative multi-modal translation cite:baltrusaitis17:_multim_machin_learn
+#+caption: Example-based and generative multi-modal translation
 [[file:images/20200219160409_multimodal_translation/screenshot2020-02-19_16-17-33_.png]]
 
 * Example-based

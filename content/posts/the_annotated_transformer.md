@@ -1,7 +1,7 @@
 +++
 title = "The Annotated Transformer"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:08+08:00
+lastmod = 2020-06-24T16:09:17+08:00
 slug = "the_annotated_transformer"
 draft = false
 +++

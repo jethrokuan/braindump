@@ -1,13 +1,13 @@
 +++
 title = "Hacking"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:08+08:00
+lastmod = 2020-06-24T16:08:33+08:00
 draft = false
 +++
 
 ## Search engines for Hackers {#search-engines-for-hackers}
 
-<a id="8145d0bc010004d1fdab0a7add7566bd" href="#trimstray_se_hackers">(trimstray, 2019)</a>
+([trimstray 2019](#org7888f73))
 
 - <https://censys.io/>
 - <https://www.shodan.io/>
@@ -19,6 +19,17 @@ draft = false
 - <https://hunter.io/>
 - <https://wigle.net/>
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="trimstray_se_hackers" target="_blank">trimstray, _Trimstray on Twitter: \&quot;Search Engines for Hackers:\&\#10;\&\#10;https://t.co/Awr3X88Xu1\&\#10;https://t.co/03trsWUrnP\&\#10;https://t.co/B9IHX23MeC\&\#10;https://t.co/uO1oFjB7Eb\&\#10;https://t.co/NE7FSOQsPl\&\#10;https://t.co/s2wG7cOGa5\&\#10;https://t.co/uBqtz7QuUD\&\#10;https://t.co/IZx4B82wLQ\&\#10;https://t.co/Oa04GvDxTp\&\#10;https://t.co/TKjuUVU9il\&\#10;\&\#10;\#it \#tech\&quot;_, , _()_, (2019). </a> [↩](#8145d0bc010004d1fdab0a7add7566bd)
+<a id="org7888f73"></a>trimstray. 2019. “Trimstray on Twitter: &Quot;Search Engines for Hackers:&#10;&#10;<//T.Co/Awr3X88Xu1
+Https://T.Co/03trsWUrnP
+Https://T.Co/B9IHX23MeC
+Https://T.Co/uO1oFjB7Eb
+Https://T.Co/NE7FSOQsPl
+Https://T.Co/s2wG7cOGa5
+Https://T.Co/uBqtz7QuUD
+Https://T.Co/IZx4B82wLQ
+Https://T.Co/Oa04GvDxTp
+Https://T.Co/TKjuUVU9il
+
+#It> #Tech&Quot;”

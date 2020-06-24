@@ -1,16 +1,16 @@
 +++
 title = "Roam Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:04+08:00
+lastmod = 2020-06-24T16:08:30+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Nat Eliason]({{< relref "nat_eliason" >}})
-- [Conor White-Sullivan]({{< relref "conor_white_sullivan" >}})
-- [Zettelkasten]({{< relref "zettelkasten" >}})
 - [Org-Roam]({{< relref "org-roam" >}})
+- [Zettelkasten]({{< relref "zettelkasten" >}})
+- [Conor White-Sullivan]({{< relref "conor_white_sullivan" >}})
+- [Nat Eliason]({{< relref "nat_eliason" >}})
 
 webpage
 : [Roam Research](https://roamresearch.com)

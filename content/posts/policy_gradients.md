@@ -1,15 +1,15 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:13+08:00
+lastmod = 2020-06-24T16:10:01+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Q-Learning]({{< relref "q_learning" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 - [Actor-Critic]({{< relref "actor_critic" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+- [Q-Learning]({{< relref "q_learning" >}})
 
 tags
 : [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

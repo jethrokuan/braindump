@@ -1,7 +1,7 @@
 +++
 title = "Deep Learning Tools"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-10T22:08:32+08:00
+lastmod = 2020-06-24T16:08:23+08:00
 draft = false
 +++
 
@@ -498,12 +498,12 @@ with/without graphs.
 ### Transitioning to TF 2.0 {#transitioning-to-tf-2-dot-0}
 
 If you are working on custom architectures, we suggest using tf.keras
-to build your models instead of Estimator. <a id="d02320ed14e4169a0e5a7cf353c1ae86" href="#tensorflow_stand_keras">(Tensorflow, 2018)</a>
+to build your models instead of Estimator. ([Tensorflow 2018](#org3a96ab1))
 
 ## Keras {#keras}
 
 Keras is a high-level neural networks API, compatible with multiple
-backends. <a id="2906663214b6eb9261d265af3a5c5b39" href="#home_keras_docum">(Keras, 2019)</a> As of Tensorflow 2.0, Keras will be
+backends. ([Keras 2019](#org0ee799b)) As of Tensorflow 2.0, Keras will be
 the primary API for building neural networks.
 
 The `Sequential` model is a simple model consisting of a linear stack of
@@ -536,7 +536,8 @@ layers.
 
 -
 
-    # Bibliography
-    <a id="tensorflow_stand_keras" target="_blank">Tensorflow, *Standardizing on keras: Guidance on high-level APIs in TensorFlow 2.0*, , *()*,  (2018). </a> [↩](#d02320ed14e4169a0e5a7cf353c1ae86)
+## Bibliography {#bibliography}
 
-    <a id="home_keras_docum" target="_blank">Keras, *Home Keras Documentation*, , *()*,  (2019). </a> [↩](#2906663214b6eb9261d265af3a5c5b39)
+<a id="org0ee799b"></a>Keras. 2019. “Home Keras Documentation.”
+
+<a id="org3a96ab1"></a>Tensorflow. 2018. “Standardizing on Keras: Guidance on High-Level APIs in TensorFlow 2.0.”

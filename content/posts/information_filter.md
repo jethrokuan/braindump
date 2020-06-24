@@ -1,7 +1,7 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:40+08:00
+lastmod = 2020-06-24T16:10:19+08:00
 draft = false
 +++
 

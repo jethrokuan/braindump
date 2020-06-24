@@ -1,7 +1,7 @@
 +++
 title = "Jensen's Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:57+08:00
+lastmod = 2020-06-24T16:09:50+08:00
 draft = false
 +++
 

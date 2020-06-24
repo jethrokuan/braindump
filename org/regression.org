@@ -606,7 +606,7 @@ heteroscedasticity, from the presence of a funnel shape in the
 residual plot.
 
 
-#+caption: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity cite:james2013introduction
+#+caption: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity
 [[file:images/statistical_learning/screenshot_2019-01-08_15-14-34.png]]
 
 *** Outliers
@@ -641,7 +641,7 @@ difficult to separate out the individual effects of collinear
 variables on the response. A contour plot of the RSS associated with
 different possible coefficient estimates can show collinearity.
 
-#+caption:Left: the minimum value is well defined, Right: because of collinearity, there are many pairs $(\beta_{\text{Limit}}, \beta_{\text{Rating}})$ with a similar value for RSS cite:james2013introduction
+#+caption:Left: the minimum value is well defined, Right: because of collinearity, there are many pairs $(\beta_{\text{Limit}}, \beta_{\text{Rating}})$ with a similar value for RSS
 [[file:images/statistical_learning/screenshot_2019-01-08_15-22-30.png]]
 
 Another way to detect collinearity is to look at the correlation
@@ -962,7 +962,6 @@ residuals can help check the linearity and normality assumptions.
   in serial order may be used to check the assumption of the
   independence of the errors.
 
-
 #+caption: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity
 [[file:images/regression/screenshot_2019-03-27_21-15-45.png]]
 
@@ -970,5 +969,3 @@ residuals can help check the linearity and normality assumptions.
 cite:chatterjee06_regres_analy_examp,james2013introduction
 
 bibliography:biblio.bib
-
-

@@ -1,7 +1,7 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:37+08:00
+lastmod = 2020-06-24T16:09:37+08:00
 draft = false
 +++
 
@@ -136,7 +136,7 @@ technique which binds the life cycle of a resource that must be
 acquired before use (allocated heap memory, thread of execution, open
 socket, open file, locked mutex, disk space, database
 connection—anything that exists in limited supply) to the lifetime of
-an object. <a id="f0a899f30af8b1c819a39ca7a6c5c42b" href="#cppref_raii">(nil, nil)</a>
+an object ([“RAII - Cppreference.Com,” n.d.](#org24003ef)).
 
 The basic idea is that class destructors are always called when a
 particular instance of an object goes out of scope. This allows for
@@ -185,7 +185,7 @@ The main advantage of shared pointers is that, we should not worry
 about calling delete or cleaning the memory in an explicit manner. The
 shared pointer will take care of it once it goes out of scope. To
 create a `shared_ptr`, use `make_shared`. It's fast in memory allocation
-compared to `new`. <a id="1ec5400d7db9917f3d3dfe2a47aff3b0" href="#codesbay_codes_cplus_smart">(CodesBay, nil)</a>
+compared to `new` ([CodesBay 2020](#org12c6e28)).
 
 ```cpp
 class Sample {
@@ -208,7 +208,7 @@ than one shared_ptr<> can refer to a single object.
 
 This is prevented by `unique_ptr<>` and the reason behind naming it as
 unique. In `unique_ptr<>`, one and only one `unique_ptr<>` has the
-ownership of the Object and manages its lifetime. <a id="1ec5400d7db9917f3d3dfe2a47aff3b0" href="#codesbay_codes_cplus_smart">(CodesBay, nil)</a>
+ownership of the Object and manages its lifetime ([CodesBay 2020](#org12c6e28)).
 
 ### std::move {#std-move}
 
@@ -217,12 +217,12 @@ unique_ptr to another, which is otherwise not possible.
 
 For shared_ptr, std::move prevents the increment and immediate
 decrement of the reference count, making it an optimization. It's not
-strictly necessary. <a id="b8b43c9917af7c2b3e7ddd0097b735e0" href="#so_why_move_shared_ptr">(nil, 2019)</a>
+strictly necessary. ([nil 2019](#orgd9a220e))
 
 ## not_null {#not-null}
 
 not_null is available in GSL, and with compile-time guarantees that a
-pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">(Bartek, 2017)</a>
+pointer is not null ([Bartek 2017](#org4e58e63)).
 
 ## Books to read {#books-to-read}
 
@@ -232,12 +232,12 @@ pointer is not null. <a id="f3bb84ae744282d41f1759fcf6309eeb" href="#17_bartek">
 
 - [C++ Patterns](https://cpppatterns.com/)
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="cppref_raii" target="_blank">nil, _RAII - cppreference.com_, , _()_, (nil). </a> [↩](#f0a899f30af8b1c819a39ca7a6c5c42b)
+<a id="org4e58e63"></a>Bartek. 2017. “Bartek’s Coding Blog: How Not_Null Can Improve Your Code?” _How Not_Null Can Improve Your Code?_
 
-<a id="codesbay_codes_cplus_smart" target="_blank">CodesBay, _GitHub - CodesBay/CplusPlusSmartPointer: This repository contains description of C++11 and C++14 Smart Pointers Trilogy of sharedptr, uniqueptr and weakptr_, , _()_, (nil). </a> [↩](#1ec5400d7db9917f3d3dfe2a47aff3b0)
+<a id="org12c6e28"></a>CodesBay. 2020. “CodesBay/CplusPlus_SmartPointer.”
 
-<a id="so_why_move_shared_ptr" target="_blank">nil, _C++ - Why would I std::move an std::sharedptr? - Stack Overflow_, , _()_, (2019). </a> [↩](#b8b43c9917af7c2b3e7ddd0097b735e0)
+<a id="orgd9a220e"></a>nil. 2019. “C++ - Why Would I Std:Move an Std:Sharedtextsubscriptptr? - Stack Overflow.”
 
-<a id="17_bartek" target="_blank">Bartek, _Bartek's coding blog: How notnull can improve your code?_, , _()_, (2017). </a> [↩](#f3bb84ae744282d41f1759fcf6309eeb)
+<a id="org24003ef"></a>“RAII - Cppreference.Com.” n.d.

@@ -1,14 +1,14 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:02+08:00
+lastmod = 2020-06-24T16:09:53+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Neural Ordinary Differential Equations (Review)]({{< relref "neural_ode" >}})
 - [Markov Chains]({{< relref "markov_chains" >}})
+- [Neural Ordinary Differential Equations (Review)]({{< relref "neural_ode" >}})
 
 A stochastic process \\(X(t), t \in T\\) is a collection of random
 variables. For each \\(t \in T\\), \\(X(t)\\) is a random variable. The index
@@ -54,10 +54,10 @@ Example of stochastic process: Gambler's ruin
 
 ## Reference Textbooks {#reference-textbooks}
 
-<a id="f5bf9e00e58b91654e7db48e02402403" href="#ross2014introduction">(Ross, 2014)</a><a>, </a><a id="685088059011ecabed3f6b757f8161de" href="#pinsky2010introduction">(Pinsky \& Karlin, 2010)</a>
+([Ross 2014](#org4508abb); [Pinsky and Karlin 2010](#orgcef9a96))
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="ross2014introduction" target="_blank">Ross, S. M., _Introduction to probability models_ (2014), : {Academic press}.</a> [↩](#f5bf9e00e58b91654e7db48e02402403)
+<a id="orgcef9a96"></a>Pinsky, Mark, and Samuel Karlin. 2010. _An Introduction to Stochastic Modeling_. Academic press.
 
-<a id="pinsky2010introduction" target="_blank">Pinsky, M., & Karlin, S., _An introduction to stochastic modeling_ (2010), : {Academic press}.</a> [↩](#685088059011ecabed3f6b757f8161de)
+<a id="org4508abb"></a>Ross, Sheldon M. 2014. _Introduction to Probability Models_. Academic press.

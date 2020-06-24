@@ -1,13 +1,9 @@
 #+setupfile: ./hugo_setup.org
 #+title: Robot Operating System (ROS)
 
-#+begin_export latex
-\bibliographystyle{unsrt}
-#+end_export
-
 * Introduction to ROS
 
-** What is ROS? cite:nilil_ros_introd_ros_wiki
+** What is ROS?
 
 *** Left                                                         :B_column:
 :PROPERTIES:
@@ -286,7 +282,7 @@ programatically]
   rosparam list           # list parameter names
 #+end_src
 
-* Pubsub cite:wiki_pubsub
+* Pubsub
 :PROPERTIES:
 :BEAMER_opt: allowframebreaks
 :END:
@@ -402,7 +398,7 @@ We create a listener in ~workshop/src/listener.py~
   rospy.spin()                    # spin
 #+end_src
 
-* Services cite:wiki_service
+* Services
 
 ** Msg and Srv
 
@@ -582,14 +578,8 @@ Write a client that sends the request and prints this response.
 
 ** ROS Installation
 *** Ubuntu
-Follow the instructions on ROS Wiki. cite:nilil_instal_ubunt_ros_wiki
+Follow the instructions on ROS Wiki.
+
 *** VM
 
 [[https://drive.google.com/file/d/1SFU4rhWyAd2mlmDAIh0pvXkOvpxO5QuT/view][Download the VM image]] and load it.
-
-* References
-:PROPERTIES:
-:BEAMER_opt: allowframebreaks
-:END:
-
-bibliography:biblio.bib

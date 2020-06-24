@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:57+08:00
+lastmod = 2020-06-24T16:10:30+08:00
 draft = false
 +++
 
@@ -295,7 +295,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting <a id="01672110f741e437a834e37dc0d172c4" href="#jin_q_learning_provably_efficient">(Jin et al., 2018)</a>.
+setting ([Jin et al. 2018](#org1c457e9)).
 
 ## Q-learning with function approximation {#q-learning-with-function-approximation}
 
@@ -325,6 +325,6 @@ In the presence of all three, learning is unstable. DQN is the first
 algorithm that stabilized deep Q-learning ([Playing Atari with Deep
 RL]({{< relref "mnih2013_atari_deeprl" >}})).
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="jin_q_learning_provably_efficient" target="_blank">Jin, C., Allen-Zhu, Zeyuan, Bubeck, S., & Jordan, M. I., _Is Q-Learning Provably Efficient?_, In S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. {Cesa-Bianchi}, & R. Garnett (Eds.), Advances in Neural Information Processing Systems 31 (pp. 4863–4873) (2018). : {Curran Associates, Inc.}.</a> [↩](#01672110f741e437a834e37dc0d172c4)
+<a id="org1c457e9"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. 2018. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc.

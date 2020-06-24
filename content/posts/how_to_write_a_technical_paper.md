@@ -1,7 +1,7 @@
 +++
 title = "How To Write a Technical Paper"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:28:45+08:00
+lastmod = 2020-06-24T16:10:22+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ tags
 : [Writing]({{< relref "writing" >}}), [Papers]({{< relref "papers" >}})
 
 paper
-: <a id="7a6b903918cb910a3f8207e8473a9ee3" href="#Whiteside2017HowTW">(Whiteside, 2017)</a>
+: ([Whiteside 2017](#orge8fcbdc))
 
 ## Abstract {#abstract}
 
@@ -69,6 +69,6 @@ approach. It also states limitations or disadvantages of your
 solution, and enables you to provide directions for future research in
 the field.
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="Whiteside2017HowTW" target="_blank">Whiteside, J. D., _How to write a technical paper_, In , (pp. ) (2017). : .</a> [↩](#7a6b903918cb910a3f8207e8473a9ee3)
+<a id="orge8fcbdc"></a>Whiteside, James D. 2017. “How to Write a Technical Paper.”

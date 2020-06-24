@@ -1,7 +1,7 @@
 +++
 title = "Trigger List"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:48+08:00
+lastmod = 2020-06-24T16:09:44+08:00
 draft = false
 +++
 

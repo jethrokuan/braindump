@@ -1,7 +1,7 @@
 +++
 title = "Gaussian Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-10T00:13:59+08:00
+lastmod = 2020-06-24T16:09:21+08:00
 draft = false
 +++
 

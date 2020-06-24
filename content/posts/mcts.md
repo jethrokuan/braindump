@@ -1,15 +1,15 @@
 +++
 title = "Monte Carlo Tree Search"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:13+08:00
+lastmod = 2020-06-24T16:09:20+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 - [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
 - [Optimal Control and Planning]({{< relref "optimal_control" >}})
+- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 ## Monte Carlo Tree Search {#monte-carlo-tree-search}
 

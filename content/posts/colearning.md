@@ -1,7 +1,7 @@
 +++
 title = "Co-learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:22+08:00
+lastmod = 2020-06-24T16:08:44+08:00
 slug = "colearning"
 draft = false
 +++
@@ -13,7 +13,7 @@ draft = false
 Co-learning is the technique of aiding of modeling of a
 (resource-poor) modality by exploiting knowledge from another
 (resource-rich) modality. The helper modality is only used in model
-training, and is not used during test-time. <a id="fe1ca450aa5e404428b89a0e174b2e99" href="#baltrusaitis17:_multim_machin_learn">(Baltru\v saitis et al., 2017)</a>
+training, and is not used during test-time. ([Baltruv saitis, Ahuja, and Morency 2017](#orge4a66a7))
 
 Parallel-data approaches require the data to be directly linked to
 observations in other modalites. Non-parallel approaches do not
@@ -39,6 +39,6 @@ similar categories or concepts. Methods include [transfer learning]({{< relref "
 using coordinated multimodal representations, or [Concept Grounding]({{< relref "concept_grounding" >}}) via
 word similarity, or [zero-shot learning]({{< relref "zeroshot_learning" >}}).
 
-# Bibliography
+## Bibliography {#bibliography}
 
-<a id="baltrusaitis17:_multim_machin_learn" target="_blank">Baltru\v saitis, Tadas, Ahuja, C., & Morency, L., _Multimodal machine learning: A survey and taxonomy_, CoRR, _()_, (2017). </a> [↩](#fe1ca450aa5e404428b89a0e174b2e99)
+<a id="orge4a66a7"></a>Baltruv saitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. 2017. “Multimodal Machine Learning: A Survey and Taxonomy.” _CoRR_.

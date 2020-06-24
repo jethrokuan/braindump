@@ -1,7 +1,7 @@
 +++
 title = "Point Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:25:54+08:00
+lastmod = 2020-06-24T16:08:24+08:00
 draft = false
 +++
 

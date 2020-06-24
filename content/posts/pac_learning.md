@@ -1,14 +1,14 @@
 +++
 title = "PAC Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:26:18+08:00
+lastmod = 2020-06-24T16:08:40+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Rademacher Complexity]({{< relref "rademacher" >}})
 - [VC-Dimension]({{< relref "vc_dimension" >}})
+- [Rademacher Complexity]({{< relref "rademacher" >}})
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}})

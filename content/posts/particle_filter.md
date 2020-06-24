@@ -1,14 +1,14 @@
 +++
 title = "Particle Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-07T17:27:41+08:00
+lastmod = 2020-06-24T16:09:40+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
-- [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
 - [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
+- [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
 
 Particle filters approximate the posterior by a finite number of
 parameters. The posterior \\(\text{bel}(x_t)\\) is represented by a set of

@@ -286,8 +286,7 @@ This set is also called the set of /global Markov independencies/. These
 independencies are precisely those that are guaranteed to hold for
 every distribution over $G$.
 
-A nice tutorial on d-separation can be found here.
-cite:ucla_causal_discus
+A nice tutorial on d-separation can be found [[http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html][here]].
 
 *** Markov Blanket
 
