@@ -181,7 +181,7 @@ solution together with the adjoint. One issue that the paper has
 failed to address is that their proposed method requires that the ODE
 integrator is time-reversible.  There are no ODE solvers for
 first-order ODEs that are time-reversible, implying that the method
-proposed will diverge on some systems. cite:rackauckas19_diffeq 
+proposed will diverge on some systems cite:rackauckas19_diffeq.
 
 In general, while the model is agnostic of the choice of ODE solver,
 the ideal choice of differential equation solver depends on the
