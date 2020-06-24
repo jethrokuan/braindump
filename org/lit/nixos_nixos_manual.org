@@ -1,0 +1,14 @@
+#+setupfile:./hugo_setup.org
+#+roam_key: https://nixos.org/nixos/manual/index.html
+#+hugo_slug: nixos_nixos_manual
+#+roam_tags: website
+#+title: NixOS - NixOS manual
+
+- source :: https://nixos.org/nixos/manual/index.html
+- tags :: [[file:../nix.org][Nix/NixOS]]
+
+  #+BEGIN_SRC nix
+{ x, y, ... }: x + y
+  #+END_SRC
+
+The above expression is a function that expects a set with x and y, ignoring all other attributes.
