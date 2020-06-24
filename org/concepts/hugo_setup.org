@@ -1,3 +1,2 @@
 #+hugo_base_dir: ../..
-#+hugo_section: concepts
 #+hugo_auto_set_lastmod: t

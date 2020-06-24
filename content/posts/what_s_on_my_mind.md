@@ -1,7 +1,7 @@
 +++
 title = "What's on my Mind?"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:12+08:00
+lastmod = 2020-06-24T16:39:42+08:00
 draft = false
 +++
 
