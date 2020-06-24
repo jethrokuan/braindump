@@ -1,7 +1,7 @@
 +++
 title = "Cognitive Task Analysis"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:20:51+08:00
+lastmod = 2020-06-24T16:44:52+08:00
 slug = "cognitive_task_analysis"
 draft = false
 +++
