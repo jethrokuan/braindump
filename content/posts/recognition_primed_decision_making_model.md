@@ -1,7 +1,7 @@
 +++
 title = "Recognition-primed Decision-making Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:01+08:00
+lastmod = 2020-06-24T16:20:47+08:00
 slug = "recognition_primed_decision_making_model"
 draft = false
 +++
