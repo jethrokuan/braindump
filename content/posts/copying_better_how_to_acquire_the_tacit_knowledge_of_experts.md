@@ -1,7 +1,7 @@
 +++
 title = "Copying Better: How To Acquire The Tacit Knowledge of Experts"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:47:06+08:00
+lastmod = 2020-06-24T16:52:15+08:00
 draft = false
 +++
 

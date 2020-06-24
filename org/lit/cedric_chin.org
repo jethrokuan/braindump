@@ -1,1 +1,2 @@
+#+setupfile: ./hugo_setup.org
 #+title: Cedric Chin
