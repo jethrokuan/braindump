@@ -6,9 +6,6 @@
 - tags :: [[file:finance.org][Finance]]
 
 * Investor vs Speculator
-:PROPERTIES:
-:ID:       5d91e6ef-e8a6-4081-b572-521100c54a76
-:END:
 
 The investor must recognize the existence of a /speculative factor/ in their common-stock holdings, and keep this components within minor limits.
 
@@ -19,9 +16,6 @@ The defensive investor must confine himself to the shares of important companies
 3. aspire to "adequate", not extraordinary performance
 
 * Combating Inflation
-:PROPERTIES:
-:ID:       5d91e6ef-e8a6-4081-b572-521100c54a76
-:END:
 
 Mild inflation allows companies to pass the increased costs of their own raw materials on to customers, but high inflation wreaks havoc-forcing customers to slash their purchases, depressing activity throughout the economy.
 

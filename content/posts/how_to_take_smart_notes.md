@@ -1,7 +1,7 @@
 +++
 title = "How To Take Smart Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:31+08:00
+lastmod = 2020-06-24T20:04:47+08:00
 draft = false
 +++
 
@@ -83,7 +83,7 @@ order_ for the notes in which to write about.
 1.  Instead of highlighting passages, manually create notes of the
     ideas you get as you read. These notes should be relevant to the
     contexts important to you, not just related to the book you read.
-    ([Eliason 2020](#org3481fca))
+    ([Eliason 2020](#orgddb6679))
 2.  Always reference the source. Cite, or indicate the page number.
 3.  When copying notes over, try to make the ideas standalone.
 4.  When filing notes, think instead about: _in which context will I
@@ -96,4 +96,4 @@ order_ for the notes in which to write about.
 
 ## Bibliography {#bibliography}
 
-<a id="org3481fca"></a>Eliason, Nat. 2020. “How to Take Smart Notes: A Step-by-Step Guide - Nat Eliason.”
+<a id="orgddb6679"></a>Eliason, Nat. 2020. “How to Take Smart Notes: A Step-by-Step Guide - Nat Eliason.”

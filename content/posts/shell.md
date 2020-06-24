@@ -1,7 +1,7 @@
 +++
 title = "Shell"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:37+08:00
+lastmod = 2020-06-24T20:04:53+08:00
 draft = false
 +++
 

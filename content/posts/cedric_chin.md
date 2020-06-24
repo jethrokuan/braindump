@@ -1,7 +1,7 @@
 +++
 title = "Cedric Chin"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:52:44+08:00
+lastmod = 2020-06-24T20:16:03+08:00
 draft = false
 +++
 
