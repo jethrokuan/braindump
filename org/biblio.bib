@@ -360,31 +360,17 @@
   pages = {5713--5723}
 }
 
-@article{davies_loihi_2018,
-  title = {Loihi: {{A Neuromorphic Manycore Processor}} with {{On}}-{{Chip Learning}}},
-  shorttitle = {Loihi},
-  author = {Davies, Mike and Srinivasa, Narayan and Lin, Tsung-Han and Chinya, Gautham and Cao, Yongqiang and Choday, Sri Harsha and Dimou, Georgios and Joshi, Prasad and Imam, Nabil and Jain, Shweta and Liao, Yuyun and Lin, Chit-Kwan and Lines, Andrew and Liu, Ruokun and Mathaikutty, Deepak and McCoy, Steven and Paul, Arnab and Tse, Jonathan and Venkataramanan, Guruguhanathan and Weng, Yi-Hsin and Wild, Andreas and Yang, Yoonseok and Wang, Hong},
-  year = {2018},
-  month = jan,
-  volume = {38},
-  pages = {82--99},
-  issn = {1937-4143},
-  doi = {10.1109/MM.2018.112130359},
-  abstract = {Loihi is a 60-mm2 chip fabricated in Intels 14-nm process that advances the state-of-the-art modeling of spiking neural networks in silicon. It integrates a wide range of novel features for the field, such as hierarchical connectivity, dendritic compartments, synaptic delays, and, most importantly, programmable synaptic learning rules. Running a spiking convolutional form of the Locally Competitive Algorithm, Loihi can solve LASSO optimization problems with over three orders of magnitude superior energy-delay-product compared to conventional solvers running on a CPU iso-process/voltage/area. This provides an unambiguous example of spike-based computation, outperforming all known conventional solutions.},
-  file = {/home/jethro/Zotero/storage/K68GKRLW/davies2018.pdf;/home/jethro/Zotero/storage/W945BY83/8259423.html},
-  journal = {IEEE Micro},
-  keywords = {Algorithm design and analysis,artificial intelligence,Biological neural networks,circuit optimisation,Computational modeling,Computer architecture,CPU iso-process-voltage-area,dendritic compartments,hierarchical connectivity,integrated circuit modelling,Intels process,LASSO optimization problems,learning (artificial intelligence),locally competitive algorithm,Loihi,machine learning,magnitude superior energy-delay-product,microprocessor chips,multiprocessing systems,neural chips,neuromorphic computing,neuromorphic manycore processor,Neuromorphics,Neurons,on-chip learning,programmable synaptic learning rules,size 14 nm,spike-based computation,spiking neural networks,synaptic delays},
-  number = {1}
-}
-
 @article{davies2018loihi,
+  ids = {davies\_loihi\_2018},
   title = {Loihi: {{A}} Neuromorphic Manycore Processor with on-Chip Learning},
   author = {Davies, Mike and Srinivasa, Narayan and Lin, Tsung-Han and Chinya, Gautham and Cao, Yongqiang and Choday, Sri Harsha and Dimou, Georgios and Joshi, Prasad and Imam, Nabil and Jain, Shweta and others},
   year = {2018},
   volume = {38},
   pages = {82--99},
   publisher = {{IEEE}},
+  file = {/home/jethro/Zotero/storage/K68GKRLW/davies2018.pdf;/home/jethro/Zotero/storage/W945BY83/8259423.html},
   journal = {IEEE Micro},
+  keywords = {Algorithm design and analysis,artificial intelligence,Biological neural networks,circuit optimisation,Computational modeling,Computer architecture,CPU iso-process-voltage-area,dendritic compartments,hierarchical connectivity,integrated circuit modelling,Intels process,LASSO optimization problems,learning (artificial intelligence),locally competitive algorithm,Loihi,machine learning,magnitude superior energy-delay-product,microprocessor chips,multiprocessing systems,neural chips,neuromorphic computing,neuromorphic manycore processor,Neuromorphics,Neurons,on-chip learning,programmable synaptic learning rules,size 14 nm,spike-based computation,spiking neural networks,synaptic delays},
   number = {1}
 }
 
@@ -476,18 +462,11 @@
 }
 
 @misc{filipek_how_nodate,
+  ids = {filipek\_how\_nodate-1},
   title = {How Not\_null Can Improve Your Code?},
   author = {Filipek, Bartlomiej},
   abstract = {Can not\_null from Core Guidelines help us and simplify code? Let's see a few examples.},
-  file = {/home/jethro/Zotero/storage/BBBAUYC4/notnull.html},
-  language = {en}
-}
-
-@misc{filipek_how_nodate-1,
-  title = {How Not\_null Can Improve Your Code?},
-  author = {Filipek, Bartlomiej},
-  abstract = {Can not\_null from Core Guidelines help us and simplify code? Let's see a few examples.},
-  file = {/home/jethro/Zotero/storage/HE2G6VHR/notnull.html},
+  file = {/home/jethro/Zotero/storage/BBBAUYC4/notnull.html;/home/jethro/Zotero/storage/HE2G6VHR/notnull.html},
   language = {en}
 }
 
@@ -513,6 +492,38 @@
   doi = {10.1109/SYNASC.2005.13},
   isbn = {0-7695-2453-2},
   series = {Proceedings - {{Seventh International Symposium}} on {{Symbolic}} and {{Numeric Algorithms}} for {{Scientific Computing}}, {{SYNASC}} 2005}
+}
+
+@article{gallego_event-based_2020,
+  ids = {gallego\_event-based\_2020-1},
+  title = {Event-Based {{Vision}}: {{A Survey}}},
+  shorttitle = {Event-Based {{Vision}}},
+  author = {Gallego, Guillermo and Delbruck, Tobi and Orchard, Garrick and Bartolozzi, Chiara and Taba, Brian and Censi, Andrea and Leutenegger, Stefan and Davison, Andrew and Conradt, Joerg and Daniilidis, Kostas and Scaramuzza, Davide},
+  year = {2020},
+  month = feb,
+  abstract = {Event cameras are bio-inspired sensors that work radically different from traditional cameras. Instead of capturing images at a fixed rate, they measure per-pixel brightness changes asynchronously. This results in a stream of events, which encode the time, location and sign of the brightness changes. Event cameras posses outstanding properties compared to traditional cameras: very high dynamic range (140 dB vs. 60 dB), high temporal resolution (in the order of microseconds), low power consumption, and do not suffer from motion blur. Hence, event cameras have a large potential for robotics and computer vision in challenging scenarios for traditional cameras, such as high speed and high dynamic range. However, novel methods are required to process the unconventional output of these sensors in order to unlock their potential. This paper provides a comprehensive overview of the emerging field of event-based vision, with a focus on the applications and the algorithms developed to unlock the outstanding properties of event cameras. We present event cameras from their working principle, the actual sensors that are available and the tasks that they have been used for, from low-level vision (feature detection and tracking, optic flow, etc.) to high-level vision (reconstruction, segmentation, recognition). We also discuss the techniques developed to process events, including learning-based techniques, as well as specialized processors for these novel sensors, such as spiking neural networks. Additionally, we highlight the challenges that remain to be tackled and the opportunities that lie ahead in the search for a more efficient, bio-inspired way for machines to perceive and interact with the world.},
+  archivePrefix = {arXiv},
+  eprint = {1904.08405},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/ARS3B6WS/Gallego et al. - 2020 - Event-based Vision A Survey.pdf;/home/jethro/Zotero/storage/JLC35NNQ/Gallego et al. - 2020 - Event-based Vision A Survey.pdf;/home/jethro/Zotero/storage/GFHS7GQ4/1904.html},
+  journal = {arXiv:1904.08405 [cs]},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Computer Science - Robotics},
+  primaryClass = {cs}
+}
+
+@inproceedings{gallego_focus_2019,
+  title = {Focus {{Is All You Need}}: {{Loss Functions}} for {{Event}}-{{Based Vision}}},
+  shorttitle = {Focus {{Is All You Need}}},
+  booktitle = {2019 {{IEEE}}/{{CVF Conference}} on {{Computer Vision}} and {{Pattern Recognition}} ({{CVPR}})},
+  author = {Gallego, Guillermo and Gehrig, Mathias and Scaramuzza, Davide},
+  year = {2019},
+  month = jun,
+  pages = {12272--12281},
+  issn = {2575-7075},
+  doi = {10.1109/CVPR.2019.01256},
+  abstract = {Event cameras are novel vision sensors that output pixel-level brightness changes ("events") instead of traditional video frames. These asynchronous sensors offer several advantages over traditional cameras, such as, high temporal resolution, very high dynamic range, and no motion blur. To unlock the potential of such sensors, motion compensation methods have been recently proposed. We present a collection and taxonomy of twenty two objective functions to analyze event alignment in motion compensation approaches. We call them focus loss functions since they have strong connections with functions used in traditional shape-from-focus applications. The proposed loss functions allow bringing mature computer vision tools to the realm of event cameras. We compare the accuracy and runtime performance of all loss functions on a publicly available dataset, and conclude that the variance, the gradient and the Laplacian magnitudes are among the best loss functions. The applicability of the loss functions is shown on multiple tasks: rotational motion, depth and optical flow estimation. The proposed focus loss functions allow to unlock the outstanding properties of event cameras.},
+  file = {/home/jethro/Zotero/storage/34Y4GKWU/Gallego et al. - 2019 - Focus Is All You Need Loss Functions for Event-Ba.pdf;/home/jethro/Zotero/storage/APLG47K4/8954483.html},
+  keywords = {asynchronous sensors,cameras,computer vision,computer vision tools,event cameras,Event-based Vision,event-based vision sensors,image resolution,image sensors,image sequences,Low-level Vision,Motion and Tracking,motion compensation,motion compensation methods,optical flow estimation,output pixel-level brightness,shape-from-focus applications,video frames}
 }
 
 @article{gary_networ_protoc,
