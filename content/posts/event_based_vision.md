@@ -1,7 +1,7 @@
 +++
 title = "Event-based Vision"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-26T16:35:17+08:00
+lastmod = 2020-06-27T21:25:06+08:00
 slug = "event_based_vision"
 draft = false
 +++
@@ -18,7 +18,7 @@ The incident light at a pixel is a product of scene illumination and surface ref
 
 ## [DVS Cameras]({{< relref "dvs_cameras" >}}) {#dvs-cameras--dvs-cameras-dot-md}
 
-DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled ([Gallego et al. 2020](#orgd5a886a)).
+DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled ([Gallego et al. 2020](#org34ebfad)).
 
 DVS events (x, y, t, p) can be used in many applications, but some also require static output (i.e. absolute brightness). Cameras have been developed to concurrently output both dynamic and static information.
 
@@ -84,14 +84,25 @@ Events are processed and transformed into alternative representations to facilit
 
   Deterministic filters such as space-time convolutions and activity filters have been used for noise reduction, feature extraction, image reconstruction, and brightness filtering. Probabilistic filters such as [Kalman Filter]({{< relref "kalman_filter" >}}) and [Particle Filter]({{< relref "particle_filter" >}}) have been used for pose tracking in [SLAM]({{< relref "slam" >}}). Incoming events are compared against additional information to update the filter state.
 
-  Alternatively, multi-layer ANNs that take in frames are trained using gradient-based methods, and then converted into SNNs that process data event-by-event.
+  Alternatively, multi-layer ANNs that take in frames are trained using
+  gradient-based methods, and then converted into SNNs that process data
+  event-by-event.
 
 <!--list-separator-->
 
 - Methods for Groups of Events
 
+  Each event carries little information, and is subject to noise. Hence, it is
+  common to process several events together to yield a sufficient signal-to-noise
+  ratio. [Time Surfaces]({{< relref "time_surface_ts" >}}) are useful for motion analysis and shape recognition,
+  because of their sensitivity to direction of motion and scene edges. Methods
+  using [Voxel Grids]({{< relref "voxel_grid" >}}) involve more memory and computation than lower-dimensional
+  representations.
+
+  [Motion compensation]({{< relref "motion_compensation" >}}) is a technique used to estimate the parameters of the motion that best fit a group of events. It has a continuous-time warping model that allows to exploit the fine temporal resolution of events.
+
 ## \_ {#}
 
 ## Bibliography {#bibliography}
 
-<a id="orgd5a886a"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _arXiv:1904.08405 [Cs]_, February.
+<a id="org34ebfad"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _arXiv:1904.08405 [Cs]_, February.

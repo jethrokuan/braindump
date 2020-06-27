@@ -77,10 +77,23 @@ Events are processed and transformed into alternative representations to facilit
 
 Deterministic filters such as space-time convolutions and activity filters have been used for noise reduction, feature extraction, image reconstruction, and brightness filtering. Probabilistic filters such as [[file:../kalman_filter.org][Kalman Filter]] and [[file:../particle_filter.org][Particle Filter]] have been used for pose tracking in [[file:../slam.org][SLAM]]. Incoming events are compared against additional information to update the filter state.
 
-Alternatively, multi-layer ANNs that take in frames are trained using gradient-based methods, and then converted into SNNs that process data event-by-event.
+Alternatively, multi-layer ANNs that take in frames are trained using
+gradient-based methods, and then converted into SNNs that process data
+event-by-event.
 
 *** Methods for Groups of Events
+:PROPERTIES:
+:ID:       7ac3c121-2569-4ae6-a3a4-0e93183cbc32
+:END:
 
+Each event carries little information, and is subject to noise. Hence, it is
+common to process several events together to yield a sufficient signal-to-noise
+ratio. [[file:time_surface_ts.org][Time Surfaces]] are useful for motion analysis and shape recognition,
+because of their sensitivity to direction of motion and scene edges. Methods
+using [[file:voxel_grid.org][Voxel Grids]] involve more memory and computation than lower-dimensional
+representations.
+
+[[file:motion_compensation.org][Motion compensation]] is a technique used to estimate the parameters of the motion that best fit a group of events. It has a continuous-time warping model that allows to exploit the fine temporal resolution of events.
 
 * _
 bibliography:../biblio.bib
