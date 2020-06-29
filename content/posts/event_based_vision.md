@@ -1,7 +1,7 @@
 +++
 title = "Event-based Vision"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-27T21:25:06+08:00
+lastmod = 2020-06-29T13:19:40+08:00
 slug = "event_based_vision"
 draft = false
 +++
@@ -18,7 +18,7 @@ The incident light at a pixel is a product of scene illumination and surface ref
 
 ## [DVS Cameras]({{< relref "dvs_cameras" >}}) {#dvs-cameras--dvs-cameras-dot-md}
 
-DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled ([Gallego et al. 2020](#org34ebfad)).
+DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled ([Gallego et al. 2020](#org8ba17e3)).
 
 DVS events (x, y, t, p) can be used in many applications, but some also require static output (i.e. absolute brightness). Cameras have been developed to concurrently output both dynamic and static information.
 
@@ -101,8 +101,45 @@ Events are processed and transformed into alternative representations to facilit
 
   [Motion compensation]({{< relref "motion_compensation" >}}) is a technique used to estimate the parameters of the motion that best fit a group of events. It has a continuous-time warping model that allows to exploit the fine temporal resolution of events.
 
+## Algorithms and Challenges {#algorithms-and-challenges}
+
+### Feature Detection and Tracking {#feature-detection-and-tracking}
+
+A key challenge to overcome is the variation of scene appearance from motion in event cameras. Tracking requires establishing correspondence between events at different times.
+
+tracking more complex, user-defined shapes can be done using event-by-event adaptations of the [Iterative Closed Point]({{< relref "iterative_closed_point" >}}) algorithm, gradient-descent, mean-shift and [Monte Carlo Methods]({{< relref "mc_methods" >}}), and [Particle Filter]({{< relref "particle_filter" >}}). (118, 119, 176, 177)
+
+### Corner Detection {#corner-detection}
+
+Event cameras naturally respond to edges in the scene, and shorten the detection of lower-level primitives such as keypoints or "corners". Corners can be computed as the intersection of two moving edges.
+
+### [Optical Flow Estimation]({{< relref "optical_flow_estimation" >}}) {#optical-flow-estimation--optical-flow-estimation-dot-md}
+
+Events do not contain enough data to determine flow, and need to be aggregated
+to produce an estimate. Computing flows from events is attractive, because they
+represent edges, which are parts of the scene where flow estimation is less
+ambiguous. Their low latency also allows for fine-grained computation of flow.
+
+### 3D reconstruction, Monocular and Stereo {#3d-reconstruction-monocular-and-stereo}
+
+Depth estimation with event cameras can be done in multiple ways. Most works target the problem of "instantaneous" depth estimation on a per-event basis, from two or more event cameras.
+
+### Image Reconstruction {#image-reconstruction}
+
+Events are a compressed per-pixel way of encoding visual content in the scene. Hence, the data can be decoded in the event stream, at very high frame rate. Since these cameras report offsets in brightness, a base offset image is required. Some works use spatial and/or temporal smoothing to reconstruct brightness from zero initial condition.
+
+### Motion Segmentation {#motion-segmentation}
+
+Segmentation of moving objects viewed by a stationary event camera is simple, because events are solely imputable to the motion of the objects (assuming constant illumination). However, when the camera is moving, events are triggered everywhere because the static scene appears to be moving as a result of the camera's ego-motion.
+
+### Neuromorphic Control {#neuromorphic-control}
+
+Event-based control changes the control commands asynchronously. It is justified by considering the trade-off between computation/communication cost. One should choose control frequencies based on changes in the plant dynamics. Event-triggered controllers can achieve the same performance with a fraction of computation.
+
+A key challenge is being able to find useful signals in the large number of events per second.
+
 ## \_ {#}
 
 ## Bibliography {#bibliography}
 
-<a id="org34ebfad"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _arXiv:1904.08405 [Cs]_, February.
+<a id="org8ba17e3"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _arXiv:1904.08405 [Cs]_, February.
