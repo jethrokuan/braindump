@@ -52,30 +52,59 @@ The contrast sensitivity $C$ is determined by pixel bias currents, which set the
 :ID:       9492b18a-9b24-4378-9b28-ddc2324c975f
 :END:
 
-Events are processed and transformed into alternative representations to facilitate the extraction of meaningful information to solve a given task.
+Events are processed and transformed into alternative representations to
+facilitate the extraction of meaningful information to solve a given task.
 
-*Individual Events* $e_{k} = (x_{k}, t_{k}, p_{k})$ are used by [[file:probabilistic_filters.org][probabilistic filters]] and [[file:../spiking_neural_networks.org][Spiking Neural Networks]]. Filters and SNNs fuse incoming events asynchronously to produce and output. (7, 24, 61, 96, 97)
+*Individual Events* $e_{k} = (x_{k}, t_{k}, p_{k})$ are used by [[file:probabilistic_filters.org][probabilistic
+filters]] and [[file:../spiking_neural_networks.org][Spiking Neural Networks]]. Filters and SNNs fuse incoming events
+asynchronously to produce and output. (7, 24, 61, 96, 97)
 
-*Event Packet* Events $\mathcal{E} \doteq\left\{e_{k}\right\}_{k}^{N_{e}}$ in a spatio-temporal neighbourhood are processed together to produce an output. Precise timestamp and polarity information is retained. Choosing the appropriate packet size $N_{e}$ is crucial to satisfy assumptions of the algorithm.
+*Event Packet* Events $\mathcal{E} \doteq\left\{e_{k}\right\}_{k}^{N_{e}}$ in a
+spatio-temporal neighbourhood are processed together to produce an output.
+Precise timestamp and polarity information is retained. Choosing the appropriate
+packet size $N_{e}$ is crucial to satisfy assumptions of the algorithm.
 
-*Event Frame* The events are converted in a simple way (e.g. pixel-wise by counting events, accumulating polarity) into an image, that can be fed into image-based computer vision algorithms. This discards sparsity, quantizes timestamps, and results in images that are sensitive to the number of events received. Hence, this is not the ideal representation, but have an intuitive interpretation and are compatible with traditional computer-vision algorithms.
+*Event Frame* The events are converted in a simple way (e.g. pixel-wise by
+counting events, accumulating polarity) into an image, that can be fed into
+image-based computer vision algorithms. This discards sparsity, quantizes
+timestamps, and results in images that are sensitive to the number of events
+received. Hence, this is not the ideal representation, but have an intuitive
+interpretation and are compatible with traditional computer-vision algorithms.
 
-*[[file:time_surface_ts.org][Time surface (TS)]]* A TS is a 2D map where each pixel stores a single time value. Events are converted into an image whose intensity is a function of the motion history at that location, with brighter values corresponding to more recent motion. TSs highly compress information as they only keep one timestamp per pixel, and their effectiveness degrades on textured scenes, where pixels spike frequently.
+*[[file:time_surface_ts.org][Time surface (TS)]]* A TS is a 2D map where each pixel stores a single time
+value. Events are converted into an image whose intensity is a function of the
+motion history at that location, with brighter values corresponding to more
+recent motion. TSs highly compress information as they only keep one timestamp
+per pixel, and their effectiveness degrades on textured scenes, where pixels
+spike frequently.
 
-*[[file:voxel_grid.org][Voxel Grid]]* is a space-time (3D) histogram of events, where each voxel represents a particular pixel and time interval. This representation preserves the temporal information of events by avoiding to collapse them on a 2D grid.
+*[[file:voxel_grid.org][Voxel Grid]]* is a space-time (3D) histogram of events, where each voxel
+represents a particular pixel and time interval. This representation preserves
+the temporal information of events by avoiding to collapse them on a 2D grid.
 
-*3D Point Set* Events in a spatio-temporal neighbourhood are treated as points in 3D space $(x_{k}, y_{k}, t_{k})$. The temporal dimension is transformed into a geometric one, to be used with point-based geometric processing methods such as PointNet.
+*3D Point Set* Events in a spatio-temporal neighbourhood are treated as points
+in 3D space $(x_{k}, y_{k}, t_{k})$. The temporal dimension is transformed into
+a geometric one, to be used with point-based geometric processing methods such
+as PointNet.
 
-*Point sets on image plane* Events are treated as an evolving set of 2D points on the image plane. Early shape tracking methods such as mean-shift or ICP work on this data.
+*Point sets on image plane* Events are treated as an evolving set of 2D points
+on the image plane. Early shape tracking methods such as mean-shift or ICP work
+on this data.
 
-*Motion-compensated event image* This representation depends not only on events but also on motion hypothesis.
+*Motion-compensated event image* This representation depends not only on events
+but also on motion hypothesis.
 
-*Reconstructed Images* Brightness images can be obtained by image reconstruction, that can be interpreted as a motion-invariant representation.
+*Reconstructed Images* Brightness images can be obtained by image
+reconstruction, that can be interpreted as a motion-invariant representation.
 
 ** Methods For Event Processing
 *** Event-by-event-based methods
 
-Deterministic filters such as space-time convolutions and activity filters have been used for noise reduction, feature extraction, image reconstruction, and brightness filtering. Probabilistic filters such as [[file:../kalman_filter.org][Kalman Filter]] and [[file:../particle_filter.org][Particle Filter]] have been used for pose tracking in [[file:../slam.org][SLAM]]. Incoming events are compared against additional information to update the filter state.
+Deterministic filters such as space-time convolutions and activity filters have
+been used for noise reduction, feature extraction, image reconstruction, and
+brightness filtering. Probabilistic filters such as [[file:../kalman_filter.org][Kalman Filter]] and [[file:../particle_filter.org][Particle
+Filter]] have been used for pose tracking in [[file:../slam.org][SLAM]]. Incoming events are compared
+against additional information to update the filter state.
 
 Alternatively, multi-layer ANNs that take in frames are trained using
 gradient-based methods, and then converted into SNNs that process data
