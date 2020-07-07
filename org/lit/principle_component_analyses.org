@@ -1,0 +1,4 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: principle_component_analyses
+#+title: Principle Component Analyses
+#+roam_alias: PCA
