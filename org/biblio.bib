@@ -255,6 +255,22 @@
   series = {Wiley Series in Probability and Statistics}
 }
 
+@article{chen_big_2020,
+  title = {Big {{Self}}-{{Supervised Models}} Are {{Strong Semi}}-{{Supervised Learners}}},
+  author = {Chen, Ting and Kornblith, Simon and Swersky, Kevin and Norouzi, Mohammad and Hinton, Geoffrey},
+  date = {2020-06-17},
+  url = {http://arxiv.org/abs/2006.10029},
+  urldate = {2020-07-08},
+  abstract = {One paradigm for learning from few labeled examples while making best use of a large amount of unlabeled data is unsupervised pretraining followed by supervised fine-tuning. Although this paradigm uses unlabeled data in a task-agnostic way, in contrast to most previous approaches to semi-supervised learning for computer vision, we show that it is surprisingly effective for semi-supervised learning on ImageNet. A key ingredient of our approach is the use of a big (deep and wide) network during pretraining and fine-tuning. We find that, the fewer the labels, the more this approach (task-agnostic use of unlabeled data) benefits from a bigger network. After fine-tuning, the big network can be further improved and distilled into a much smaller one with little loss in classification accuracy by using the unlabeled examples for a second time, but in a task-specific way. The proposed semi-supervised learning algorithm can be summarized in three steps: unsupervised pretraining of a big ResNet model using SimCLRv2 (a modification of SimCLR), supervised fine-tuning on a few labeled examples, and distillation with unlabeled examples for refining and transferring the task-specific knowledge. This procedure achieves 73.9\textbackslash\% ImageNet top-1 accuracy with just 1\textbackslash\% of the labels (\$\textbackslash le\$13 labeled images per class) using ResNet-50, a \$10\textbackslash times\$ improvement in label efficiency over the previous state-of-the-art. With 10\textbackslash\% of labels, ResNet-50 trained with our method achieves 77.5\textbackslash\% top-1 accuracy, outperforming standard supervised training with all of the labels.},
+  annotation = {Comment: code and pretrained models at https://github.com/google-research/simclr},
+  archivePrefix = {arXiv},
+  eprint = {2006.10029},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/E2QRPVJ6/Chen et al. - 2020 - Big Self-Supervised Models are Strong Semi-Supervi.pdf},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition,Computer Science - Machine Learning,Statistics - Machine Learning},
+  primaryClass = {cs, stat}
+}
+
 @article{chen16_xgboos,
   title = {Xgboost: A Scalable Tree Boosting System},
   author = {Chen, Tianqi and Guestrin, Carlos},
@@ -291,6 +307,7 @@
   archivePrefix = {arXiv},
   eprint = {2002.05709},
   eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/IWQD33L4/Chen et al. - 2020 - A simple framework for contrastive learning of vis.pdf},
   primaryClass = {cs.LG}
 }
 
@@ -676,6 +693,22 @@
   primaryClass = {cs.LG}
 }
 
+@article{he_momentum_2020,
+  title = {Momentum {{Contrast}} for {{Unsupervised Visual Representation Learning}}},
+  author = {He, Kaiming and Fan, Haoqi and Wu, Yuxin and Xie, Saining and Girshick, Ross},
+  date = {2020-03-23},
+  url = {http://arxiv.org/abs/1911.05722},
+  urldate = {2020-07-08},
+  abstract = {We present Momentum Contrast (MoCo) for unsupervised visual representation learning. From a perspective on contrastive learning as dictionary look-up, we build a dynamic dictionary with a queue and a moving-averaged encoder. This enables building a large and consistent dictionary on-the-fly that facilitates contrastive unsupervised learning. MoCo provides competitive results under the common linear protocol on ImageNet classification. More importantly, the representations learned by MoCo transfer well to downstream tasks. MoCo can outperform its supervised pre-training counterpart in 7 detection/segmentation tasks on PASCAL VOC, COCO, and other datasets, sometimes surpassing it by large margins. This suggests that the gap between unsupervised and supervised representation learning has been largely closed in many vision tasks.},
+  annotation = {Comment: CVPR 2020 camera-ready. Code: https://github.com/facebookresearch/moco},
+  archivePrefix = {arXiv},
+  eprint = {1911.05722},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/2DPSAS9V/He et al. - 2020 - Momentum Contrast for Unsupervised Visual Represen.pdf;/home/jethro/Zotero/storage/VP3WILQH/1911.html},
+  keywords = {Computer Science - Computer Vision and Pattern Recognition},
+  primaryClass = {cs}
+}
+
 @article{he15_deep_resid_learn_image_recog,
   title = {Deep Residual Learning for Image Recognition},
   author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
@@ -696,6 +729,22 @@
   journaltitle = {Handout, University of Standford},
   volume = {5},
   pages = {1--13}
+}
+
+@article{hjelm_learning_2019,
+  title = {Learning Deep Representations by Mutual Information Estimation and Maximization},
+  author = {Hjelm, R. Devon and Fedorov, Alex and Lavoie-Marchildon, Samuel and Grewal, Karan and Bachman, Phil and Trischler, Adam and Bengio, Yoshua},
+  date = {2019-02-22},
+  url = {http://arxiv.org/abs/1808.06670},
+  urldate = {2020-07-08},
+  abstract = {In this work, we perform unsupervised learning of representations by maximizing mutual information between an input and the output of a deep neural network encoder. Importantly, we show that structure matters: incorporating knowledge about locality of the input to the objective can greatly influence a representation's suitability for downstream tasks. We further control characteristics of the representation by matching to a prior distribution adversarially. Our method, which we call Deep InfoMax (DIM), outperforms a number of popular unsupervised learning methods and competes with fully-supervised learning on several classification tasks. DIM opens new avenues for unsupervised learning of representations and is an important step towards flexible formulations of representation-learning objectives for specific end-goals.},
+  annotation = {Comment: Accepted as an oral presentation at the International Conference for Learning Representations (ICLR), 2019},
+  archivePrefix = {arXiv},
+  eprint = {1808.06670},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/AX9WY9H5/Hjelm et al. - 2019 - Learning deep representations by mutual informatio.pdf;/home/jethro/Zotero/storage/43T4KEQQ/1808.html},
+  keywords = {Computer Science - Machine Learning,Contrastive Learning,Statistics - Machine Learning},
+  primaryClass = {cs, stat}
 }
 
 @article{home_cookiec_data_scien,

@@ -1,7 +1,7 @@
 +++
 title = "Elisp: Buffer-passing Style"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:27+08:00
+lastmod = 2020-07-08T14:55:07+08:00
 slug = "elisp_bufferpassing_style"
 draft = false
 +++

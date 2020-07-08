@@ -1,7 +1,7 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:11+08:00
+lastmod = 2020-07-08T14:56:02+08:00
 draft = false
 +++
 
@@ -137,7 +137,7 @@ same derivations as [Hidden Markov Model]({{< relref "hidden_markov_model" >}})!
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-18-55_.png" >}}
 
-For more, see ([Levine 2018](#org6ac6a92)).
+For more, see ([Levine, n.d.](#orga332bf4)).
 
 ## Resources {#resources}
 
@@ -145,4 +145,4 @@ For more, see ([Levine 2018](#org6ac6a92)).
 
 ## Bibliography {#bibliography}
 
-<a id="org6ac6a92"></a>Levine, Sergey. 2018. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” _CoRR_.
+<a id="orga332bf4"></a>Levine, Sergey. n.d. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” <http://arxiv.org/abs/1805.00909v3>.

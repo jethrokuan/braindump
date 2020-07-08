@@ -1,7 +1,7 @@
 +++
 title = "Normalizing Flows"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:27+08:00
+lastmod = 2020-07-08T14:56:22+08:00
 draft = false
 +++
 
@@ -156,8 +156,8 @@ equation (ODE) that describes the flow's evolution in time.
 
 ## Resources {#resources}
 
-- Normalizing Flows for Probabilistic Modeling and Inference ([Papamakarios et al. 2019](#org6815d08))
+- Normalizing Flows for Probabilistic Modeling and Inference ([Papamakarios et al., n.d.](#orgace3a59))
 
 ## Bibliography {#bibliography}
 
-<a id="org6815d08"></a>Papamakarios, George, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, and Balaji Lakshminarayanan. 2019. “Normalizing Flows for Probabilistic Modeling and Inference.” _CoRR_.
+<a id="orgace3a59"></a>Papamakarios, George, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, and Balaji Lakshminarayanan. n.d. “Normalizing Flows for Probabilistic Modeling and Inference.” <http://arxiv.org/abs/1912.02762v1>.

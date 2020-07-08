@@ -1,7 +1,7 @@
 +++
 title = "JavaScript"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:27+08:00
+lastmod = 2020-07-08T14:53:47+08:00
 draft = false
 +++
 

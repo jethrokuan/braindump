@@ -1,0 +1,3 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: mutual_information
+#+title: Mutual Information

@@ -1,7 +1,7 @@
 +++
 title = "Uncertainty in Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:30+08:00
+lastmod = 2020-07-08T14:56:26+08:00
 draft = false
 +++
 
@@ -33,7 +33,7 @@ Computation
 > A robot that carries a notion of its own uncertainty that acts
 > accordingly is superior to one that does not.
 
-([Thrun, Burgard, and Fox 2005](#orgb314b9f))
+([Thrun, Burgard, and Fox, n.d.](#org2ba2979))
 
 ## Pros {#pros}
 
@@ -51,4 +51,4 @@ Computation
 
 ## Bibliography {#bibliography}
 
-<a id="orgb314b9f"></a>Thrun, Sebastian, Wolfram Burgard, and Dieter Fox. 2005. _Probabilistic Robotics_. MIT press.
+<a id="org2ba2979"></a>Thrun, Sebastian, Wolfram Burgard, and Dieter Fox. n.d. _Probabilistic Robotics_. MIT press.

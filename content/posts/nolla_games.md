@@ -1,7 +1,7 @@
 +++
 title = "Nolla Games"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:10+08:00
+lastmod = 2020-07-08T14:54:44+08:00
 slug = "nolla_games"
 draft = false
 +++

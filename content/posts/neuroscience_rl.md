@@ -1,7 +1,7 @@
 +++
 title = "Neuroscience and Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:26+08:00
+lastmod = 2020-07-08T14:56:21+08:00
 draft = false
 +++
 
@@ -14,8 +14,8 @@ tags
 - Reward is often delayed
 
 TD errors ([Temporal Difference Learning]({{< relref "td_learning" >}})) model the activity of
-dopamine neurons ([Schultz, Dayan, and Montague 1997](#orge0c1b69))
+dopamine neurons ([Schultz, Dayan, and Montague, n.d.](#org909a496))
 
 ## Bibliography {#bibliography}
 
-<a id="orge0c1b69"></a>Schultz, W., P. Dayan, and P. R. Montague. 1997. “A Neural Substrate of Prediction and Reward.” _Science_ 275 (5306):1593–99.
+<a id="org909a496"></a>Schultz, W., P. Dayan, and P. R. Montague. n.d. “A Neural Substrate of Prediction and Reward” 275 (5306):1593–99. <https://doi.org/10.1126/science.275.5306.1593>.

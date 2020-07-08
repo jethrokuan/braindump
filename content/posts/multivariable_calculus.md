@@ -1,7 +1,7 @@
 +++
 title = "Multi-variable Calculus"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:36+08:00
+lastmod = 2020-07-08T14:53:57+08:00
 draft = false
 +++
 

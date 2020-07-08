@@ -1,7 +1,7 @@
 +++
 title = "Synaptic Current Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:08+08:00
+lastmod = 2020-07-08T14:55:57+08:00
 draft = false
 +++
 
@@ -57,8 +57,8 @@ and the membrane voltage \\(U_i\\).
 
 ## References {#references}
 
-- ([Neftci, Mostafa, and Zenke 2019](#orgbddc26c))
+- ([Neftci, Mostafa, and Zenke, n.d.](#orge668b1c))
 
 ## Bibliography {#bibliography}
 
-<a id="orgbddc26c"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. 2019. “Surrogate Gradient Learning in Spiking Neural Networks.” _CoRR_.
+<a id="orge668b1c"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. n.d. “Surrogate Gradient Learning in Spiking Neural Networks.” <http://arxiv.org/abs/1901.09948v2>.

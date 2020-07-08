@@ -1,7 +1,7 @@
 +++
 title = "Statistical Testing"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:28+08:00
+lastmod = 2020-07-08T14:55:08+08:00
 slug = "statistical_testing"
 draft = false
 +++

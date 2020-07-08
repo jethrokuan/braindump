@@ -1,7 +1,7 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:20+08:00
+lastmod = 2020-07-08T14:53:39+08:00
 draft = false
 +++
 
@@ -993,10 +993,10 @@ ignored.
 
 ## References {#references}
 
-([Chatterjee and Hadi 2006](#org4f13a58); [James et al. 2013](#orgb251931))
+([Chatterjee and Hadi, n.d.](#org4dd1a13); [James et al., n.d.](#org2090027))
 
 ## Bibliography {#bibliography}
 
-<a id="org4f13a58"></a>Chatterjee, Samprit, and Ali S. Hadi. 2006. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc.
+<a id="org4dd1a13"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
 
-<a id="orgb251931"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. 2013. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+<a id="org2090027"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.

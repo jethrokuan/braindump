@@ -1,0 +1,18 @@
+#+title: hjelm_learning_2019: Learning deep representations by mutual information estimation and maximization
+#+roam_key: cite:hjelm_learning_2019
+
+* Learning deep representations by mutual information estimation and maximization
+  :PROPERTIES:
+  :Custom_ID: hjelm_learning_2019
+  :URL: http://arxiv.org/abs/1808.06670
+  :AUTHOR: Hjelm, R. D., Fedorov, A., Lavoie-Marchildon, S., Grewal, K., Bachman, P., Trischler, A., & Bengio, Y.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/AX9WY9H5/Hjelm et al. - 2019 - Learning deep representations by mutual informatio.pdf
+  :NOTER_PAGE: 5
+  :END:
+** Local MI Maximization
+:PROPERTIES:
+:NOTER_PAGE: (5 . 0.2885948330182735)
+:ID:       d3efa4de-bd75-4f00-ab2d-03f4c56a60ed
+:END:
+
+Maximizing [[file:mutual_information.org][Mutual Information]] between the input and output may not be useful for the task. Trivial pixel-level noise is useless for image classification. By maximizing the average mutual information between the high-level representation and local patches of the image, one can encourage the encoding aspects of data that is shared across patches.

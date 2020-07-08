@@ -1,7 +1,7 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:38+08:00
+lastmod = 2020-07-08T14:53:59+08:00
 draft = false
 +++
 
@@ -82,11 +82,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 - Trust region policy optimization
-  ([Schulman et al. 2015](#org3d8f054))
+  ([Schulman et al., n.d.](#org2ce778c))
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop ([Gu et al. 2016](#org1f2f4fd))
+- Q-Prop ([Gu et al., n.d.](#orgb85556a))
 
 ### Problem Formulation {#problem-formulation}
 
@@ -102,6 +102,6 @@ or algorithms that adaptively adjust parameters:
 
 ## Bibliography {#bibliography}
 
-<a id="org1f2f4fd"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. 2016. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” _CoRR_.
+<a id="orgb85556a"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
 
-<a id="org3d8f054"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. 2015. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” _CoRR_.
+<a id="org2ce778c"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.

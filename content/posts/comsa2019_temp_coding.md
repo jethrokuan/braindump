@@ -1,7 +1,7 @@
 +++
 title = "Temp Coding with Alpha Synaptic Function"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:21+08:00
+lastmod = 2020-07-08T14:53:41+08:00
 draft = false
 +++
 
@@ -12,7 +12,7 @@ draft = false
 tags
 : [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
 
-## Temporal Coding with Alpha Synaptic Function ([Comsa et al. 2019](#orgdb8ad36)) {#temporal-coding-with-alpha-synaptic-function--comsa-et-al-dot-2019--orgdb8ad36}
+## Temporal Coding with Alpha Synaptic Function ([Comsa et al., n.d.](#org05d9a66)) {#temporal-coding-with-alpha-synaptic-function--comsa-et-al-dot-n-dot-d-dot--org05d9a66}
 
 ### Motivation {#motivation}
 
@@ -166,4 +166,4 @@ layer occurring before the mean spike in the hidden layer.
 
 ## Bibliography {#bibliography}
 
-<a id="orgdb8ad36"></a>Comsa, Iulia M., Krzysztof Potempa, Luca Versari, Thomas Fischbacher, Andrea Gesmundo, and Jyrki Alakuijala. 2019. “Temporal Coding in Spiking Neural Networks with Alpha Synaptic Function.” _CoRR_.
+<a id="org05d9a66"></a>Comsa, Iulia M., Krzysztof Potempa, Luca Versari, Thomas Fischbacher, Andrea Gesmundo, and Jyrki Alakuijala. n.d. “Temporal Coding in Spiking Neural Networks with Alpha Synaptic Function.” <http://arxiv.org/abs/1907.13223v1>.

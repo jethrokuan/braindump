@@ -1,7 +1,7 @@
 +++
 title = "Game Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:25+08:00
+lastmod = 2020-07-08T14:56:20+08:00
 slug = "game_design"
 draft = false
 +++

@@ -1,14 +1,14 @@
 +++
 title = "Game API Design"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:09+08:00
+lastmod = 2020-07-08T14:54:42+08:00
 draft = false
 +++
 
 tags
 : [Software Engineering]({{< relref "software_engineering" >}})
 
-## Core Tenets from Handmade ([Handmade 2019](#orgcb9397e)) {#core-tenets-from-handmade--handmade-2019--orgcb9397e}
+## Core Tenets from Handmade ([Handmade, n.d.](#orgd2bd409)) {#core-tenets-from-handmade--handmade-n-dot-d-dot--orgd2bd409}
 
 ### Maximize portability {#maximize-portability}
 
@@ -46,4 +46,4 @@ tags
 
 ## Bibliography {#bibliography}
 
-<a id="orgcb9397e"></a>Handmade. 2019. “How to Write Better (Game) Libraries | Handmade.Network Wiki.”
+<a id="orgd2bd409"></a>Handmade. n.d. “How to Write Better (Game) Libraries | Handmade.Network Wiki.” <https://handmade.network/wiki/7138-how%E2%82%9Co%5F%7Bw%7Drite%5F%7Bb%7Detter%5F%7Bg%7Dame%E2%82%97ibraries>.

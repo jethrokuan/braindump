@@ -1,7 +1,7 @@
 +++
 title = "Exponential Family"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:46+08:00
+lastmod = 2020-07-08T14:54:08+08:00
 draft = false
 +++
 

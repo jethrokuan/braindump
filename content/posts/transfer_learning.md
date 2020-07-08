@@ -1,7 +1,7 @@
 +++
 title = "Transfer Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:56+08:00
+lastmod = 2020-07-08T14:55:42+08:00
 draft = false
 +++
 
@@ -63,7 +63,7 @@ Fine tuning is popular in the supervised learning setting.
       2.  Little exploration at convergence
 
   To increase diversity and entropy, we can do maximum-entropy learning
-  which acts as randomly as possible while collecting high rewards ([Haarnoja et al. 2017](#org5456fe1)):
+  which acts as randomly as possible while collecting high rewards ([Haarnoja et al., n.d.](#org24e89f1)):
 
   \begin{equation}
   \pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
@@ -93,7 +93,7 @@ across multiple tasks.
 
 In model distillation, multiple policies are combined into one, for
 concurrent multi-task learning. Policy distillation
-([Rusu et al. 2015](#orge588cc6)) is able to:
+([Rusu et al., n.d.](#org671d29e)) is able to:
 
 1.  Compress policies learnt on single games into smaller models
 2.  Build agents capable of playing multiple games
@@ -102,6 +102,6 @@ concurrent multi-task learning. Policy distillation
 
 ## Bibliography {#bibliography}
 
-<a id="org5456fe1"></a>Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. 2017. “Reinforcement Learning with Deep Energy-Based Policies.” In _Proceedings of the 34th International Conference on Machine Learning_, edited by Doina Precup and Yee Whye Teh, 70:1352–61. Proceedings of Machine Learning Research. International Convention Centre, Sydney, Australia: PMLR.
+<a id="org24e89f1"></a>Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. n.d. “Reinforcement Learning with Deep Energy-Based Policies.” In _Proceedings of the 34th International Conference on Machine Learning_, edited by Doina Precup and Yee Whye Teh, 70:1352–61. Proceedings of Machine Learning Research. PMLR. <http://proceedings.mlr.press/v70/haarnoja17a.html>.
 
-<a id="orge588cc6"></a>Rusu, Andrei A., Sergio Gomez Colmenarejo, Caglar Gulcehre, Guillaume Desjardins, James Kirkpatrick, Razvan Pascanu, Volodymyr Mnih, Koray Kavukcuoglu, and Raia Hadsell. 2015. “Policy Distillation.” _CoRR_.
+<a id="org671d29e"></a>Rusu, Andrei A., Sergio Gomez Colmenarejo, Caglar Gulcehre, Guillaume Desjardins, James Kirkpatrick, Razvan Pascanu, Volodymyr Mnih, Koray Kavukcuoglu, and Raia Hadsell. n.d. “Policy Distillation.” <http://arxiv.org/abs/1511.06295v2>.

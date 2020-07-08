@@ -1,7 +1,7 @@
 +++
 title = "Event-based Vision"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-05T16:52:46+08:00
+lastmod = 2020-07-08T14:54:26+08:00
 slug = "event_based_vision"
 draft = false
 +++
@@ -18,7 +18,7 @@ The incident light at a pixel is a product of scene illumination and surface ref
 
 ## [DVS Cameras]({{< relref "dvs_cameras" >}}) {#dvs-cameras--dvs-cameras-dot-md}
 
-DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled ([Gallego et al. 2020](#org15a8360)).
+DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled ([Gallego et al., n.d.](#org4f29f35)).
 
 DVS events (x, y, t, p) can be used in many applications, but some also require static output (i.e. absolute brightness). Cameras have been developed to concurrently output both dynamic and static information.
 
@@ -171,4 +171,4 @@ A key challenge is being able to find useful signals in the large number of even
 
 ## Bibliography {#bibliography}
 
-<a id="org15a8360"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. 2020. “Event-Based Vision: A Survey.” _arXiv:1904.08405 [Cs]_, February.
+<a id="org4f29f35"></a>Gallego, Guillermo, Tobi Delbruck, Garrick Orchard, Chiara Bartolozzi, Brian Taba, Andrea Censi, Stefan Leutenegger, et al. n.d. “Event-Based Vision: A Survey.” <http://arxiv.org/abs/1904.08405>.

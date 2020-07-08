@@ -1,7 +1,7 @@
 +++
 title = "The Paths Perspective on Value Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:18+08:00
+lastmod = 2020-07-08T14:54:55+08:00
 slug = "the_paths_perspective_on_value_learning"
 draft = false
 +++

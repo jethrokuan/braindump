@@ -1,7 +1,7 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:30+08:00
+lastmod = 2020-07-08T14:56:26+08:00
 draft = false
 +++
 
@@ -295,7 +295,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting ([Jin et al. 2018](#org1c457e9)).
+setting ([Jin et al., n.d.](#orga834745)).
 
 ## Q-learning with function approximation {#q-learning-with-function-approximation}
 
@@ -327,4 +327,4 @@ RL]({{< relref "mnih2013_atari_deeprl" >}})).
 
 ## Bibliography {#bibliography}
 
-<a id="org1c457e9"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. 2018. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc.
+<a id="orga834745"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. n.d. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc. <http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf>.

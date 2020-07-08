@@ -1,7 +1,7 @@
 +++
 title = "Designing Data-Intensive Applications"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:47+08:00
+lastmod = 2020-07-08T14:54:10+08:00
 slug = "designing_dataintensive_applications"
 draft = false
 +++

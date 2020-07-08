@@ -1,7 +1,7 @@
 +++
 title = "Options Framework"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:22+08:00
+lastmod = 2020-07-08T14:55:00+08:00
 draft = false
 +++
 
@@ -12,7 +12,7 @@ An option is defined as a tuple containing:
 3.  A termination function (post-condition)
 
 This helps put learning and planning algorithms at the same level of
-abstraction. ([Stolle and Precup 2002](#org081f56d))
+abstraction. ([Stolle and Precup, n.d.](#org5886af4))
 
 ## Models vs Actions {#models-vs-actions}
 
@@ -30,4 +30,4 @@ model ([Temporal Difference Learning]({{< relref "td_learning" >}})).
 
 ## Bibliography {#bibliography}
 
-<a id="org081f56d"></a>Stolle, Martin, and Doina Precup. 2002. “Learning Options in Reinforcement Learning.” In _International Symposium on Abstraction, Reformulation, and Approximation_, 212–23. Springer.
+<a id="org5886af4"></a>Stolle, Martin, and Doina Precup. n.d. “Learning Options in Reinforcement Learning.” In _International Symposium on Abstraction, Reformulation, and Approximation_, 212–23. Springer.

@@ -1,7 +1,7 @@
 +++
 title = "Self-supervised Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T11:54:47+08:00
+lastmod = 2020-07-08T14:54:24+08:00
 slug = "self_supervised_learning"
 draft = false
 +++
@@ -9,6 +9,7 @@ draft = false
 ### Backlinks {#backlinks}
 
 - [zhu\_ev-flownet\_2018: EV-FlowNet: self-supervised optical flow estimation for event-based cameras]({{< relref "zhu_ev_flownet_2018" >}})
+- [Contrastive Methods]({{< relref "contrastive_methods" >}})
 
 [Prediction is the Essence of Intelligence]({{< relref "prediction_is_the_essence_of_intelligence" >}})
 

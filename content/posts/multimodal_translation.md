@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Translation"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:24+08:00
+lastmod = 2020-07-08T14:53:44+08:00
 slug = "multimodal_translation"
 draft = false
 +++
@@ -18,7 +18,7 @@ captioning is a particularly popular problem, with large multi-modal
 datasets available.
 
 Multi-modal translation can be categorized into _example-based_, and
-_generative_ approaches ([Baltruv saitis, Ahuja, and Morency 2017](#org498ed33)).
+_generative_ approaches ([Baltrušaitis, Ahuja, and Morency, n.d.](#org7004367)).
 
 {{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation" >}}
 
@@ -74,4 +74,4 @@ temporal consistency between modalities.
 
 ## Bibliography {#bibliography}
 
-<a id="org498ed33"></a>Baltruv saitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. 2017. “Multimodal Machine Learning: A Survey and Taxonomy.” _CoRR_.
+<a id="org7004367"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

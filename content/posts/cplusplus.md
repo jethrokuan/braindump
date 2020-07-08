@@ -1,7 +1,7 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:37+08:00
+lastmod = 2020-07-08T14:55:19+08:00
 draft = false
 +++
 
@@ -136,7 +136,7 @@ technique which binds the life cycle of a resource that must be
 acquired before use (allocated heap memory, thread of execution, open
 socket, open file, locked mutex, disk space, database
 connection—anything that exists in limited supply) to the lifetime of
-an object ([“RAII - Cppreference.Com,” n.d.](#org24003ef)).
+an object (NO_ITEM_DATA:noauthor_raii_nodate).
 
 The basic idea is that class destructors are always called when a
 particular instance of an object goes out of scope. This allows for
@@ -185,7 +185,7 @@ The main advantage of shared pointers is that, we should not worry
 about calling delete or cleaning the memory in an explicit manner. The
 shared pointer will take care of it once it goes out of scope. To
 create a `shared_ptr`, use `make_shared`. It's fast in memory allocation
-compared to `new` ([CodesBay 2020](#org12c6e28)).
+compared to `new` (NO_ITEM_DATA:codesbay_codesbaycplusplus_smartpointer_2020).
 
 ```cpp
 class Sample {
@@ -208,7 +208,7 @@ than one shared_ptr<> can refer to a single object.
 
 This is prevented by `unique_ptr<>` and the reason behind naming it as
 unique. In `unique_ptr<>`, one and only one `unique_ptr<>` has the
-ownership of the Object and manages its lifetime ([CodesBay 2020](#org12c6e28)).
+ownership of the Object and manages its lifetime (NO_ITEM_DATA:codesbay_codesbaycplusplus_smartpointer_2020).
 
 ### std::move {#std-move}
 
@@ -217,12 +217,12 @@ unique_ptr to another, which is otherwise not possible.
 
 For shared_ptr, std::move prevents the increment and immediate
 decrement of the reference count, making it an optimization. It's not
-strictly necessary. ([nil 2019](#orgd9a220e))
+strictly necessary. ([nil, n.d.](#orga7745e1))
 
 ## not_null {#not-null}
 
 not_null is available in GSL, and with compile-time guarantees that a
-pointer is not null ([Bartek 2017](#org4e58e63)).
+pointer is not null (NO_ITEM_DATA:bartek_barteks_2017).
 
 ## Books to read {#books-to-read}
 
@@ -234,10 +234,10 @@ pointer is not null ([Bartek 2017](#org4e58e63)).
 
 ## Bibliography {#bibliography}
 
-<a id="org4e58e63"></a>Bartek. 2017. “Bartek’s Coding Blog: How Not_Null Can Improve Your Code?” _How Not_Null Can Improve Your Code?_
+<a id="orga7745e1"></a>nil. n.d. “C++ - Why Would I Std:Move an Std:SharedₚTr? - Stack Overflow.” <https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr>.
 
-<a id="org12c6e28"></a>CodesBay. 2020. “CodesBay/CplusPlus_SmartPointer.”
+NO_ITEM_DATA:noauthor_raii_nodate
 
-<a id="orgd9a220e"></a>nil. 2019. “C++ - Why Would I Std:Move an Std:Sharedtextsubscriptptr? - Stack Overflow.”
+NO_ITEM_DATA:codesbay_codesbaycplusplus_smartpointer_2020
 
-<a id="org24003ef"></a>“RAII - Cppreference.Com.” n.d.
+NO_ITEM_DATA:bartek_barteks_2017

@@ -1,21 +1,27 @@
 +++
-title = "SimCLR"
+title = "chen20_simpl_framew_contr_learn_visual_repres: A simple framework for contrastive learning of visual representations"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:16+08:00
-slug = "simclr"
+lastmod = 2020-07-08T15:32:34+08:00
 draft = false
 +++
 
-tags
-: [Unsupervised Learning]({{< relref "unsupervised_learning" >}})
+### Backlinks {#backlinks}
 
-SimCLR is a simple framework for contrastive learning of visual
+- [chen\_big\_2020: Big Self-Supervised Models are Strong Semi-Supervised Learners]({{< relref "chen_big_2020" >}})
+
+SimCLR is a simple framework for [contrastive learning]({{< relref "contrastive_methods" >}}) of visual
 representations.
+
+## A simple framework for contrastive learning of visual representations {#chen20_simpl_framew_contr_learn_visual_repres}
+
+### We do not train the model with a memory bank {#we-do-not-train-the-model-with-a-memory-bank}
+
+Rather than train with a memory bank, they use a large batch size, and the [LARS Optimizer]({{< relref "lars_optimizer" >}}) to stabilize training.
 
 ## Key Contributions {#key-contributions}
 
 - Composition of data augmentation to form positive pairs
-- introduce a learnable nonlinear transformation between the
+- introduce a learnable non-linear transformation between the
   representation and the contrastive loss substantially improves the
   quality of the learned representations
 - Contrastive learning benefits from larger batch sizes and more

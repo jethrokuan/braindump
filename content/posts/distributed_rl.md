@@ -1,7 +1,7 @@
 +++
 title = "Distributed Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:22+08:00
+lastmod = 2020-07-08T14:53:41+08:00
 draft = false
 +++
 
@@ -9,12 +9,12 @@ Parallelizing [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >
 
 ## History of Distributed RL {#history-of-distributed-rl}
 
-1.  DQN ([Mnih et al. 2013](#org7470397)): [Playing Atari with Deep RL]({{< relref "mnih2013_atari_deeprl" >}})
-2.  GORILA ([Nair et al. 2015](#orgf41f604))
-3.  A3C ([Mnih et al. 2016](#orgdb10581))
-4.  IMPALA ([Espeholt et al. 2018](#org6c73faf))
-5.  Ape-X ([Horgan et al. 2018](#org9ac23fe))
-6.  R2D3 ([Paine et al. 2019](#org4d7a460))
+1.  DQN ([Mnih, Kavukcuoglu, et al., n.d.](#org5a96315)): [Playing Atari with Deep RL]({{< relref "mnih2013_atari_deeprl" >}})
+2.  GORILA ([Nair et al., n.d.](#org3c489d5))
+3.  A3C ([Mnih, Badia, et al., n.d.](#orgd8494c0))
+4.  IMPALA ([Espeholt et al., n.d.](#orgd467ad5))
+5.  Ape-X ([Horgan et al., n.d.](#org9e9677b))
+6.  R2D3 ([Paine et al., n.d.](#org4f31cca))
 
 ## Resources {#resources}
 
@@ -22,14 +22,14 @@ Parallelizing [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >
 
 ## Bibliography {#bibliography}
 
-<a id="org6c73faf"></a>Espeholt, Lasse, Hubert Soyer, Remi Munos, Karen Simonyan, Volodymir Mnih, Tom Ward, Yotam Doron, et al. 2018. “Impala: Scalable Distributed Deep-Rl with Importance Weighted Actor-Learner Architectures.” _CoRR_.
+<a id="orgd467ad5"></a>Espeholt, Lasse, Hubert Soyer, Remi Munos, Karen Simonyan, Volodymir Mnih, Tom Ward, Yotam Doron, et al. n.d. “Impala: Scalable Distributed Deep-Rl with Importance Weighted Actor-Learner Architectures.” <http://arxiv.org/abs/1802.01561v3>.
 
-<a id="org9ac23fe"></a>Horgan, Dan, John Quan, David Budden, Gabriel Barth-Maron, Matteo Hessel, Hado van Hasselt, and David Silver. 2018. “Distributed Prioritized Experience Replay.” _CoRR_.
+<a id="org9e9677b"></a>Horgan, Dan, John Quan, David Budden, Gabriel Barth-Maron, Matteo Hessel, Hado van Hasselt, and David Silver. n.d. “Distributed Prioritized Experience Replay.” <http://arxiv.org/abs/1803.00933v1>.
 
-<a id="orgdb10581"></a>Mnih, Volodymyr, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, Tim Harley, David Silver, and Koray Kavukcuoglu. 2016. “Asynchronous Methods for Deep Reinforcement Learning.” _CoRR_.
+<a id="orgd8494c0"></a>Mnih, Volodymyr, Adrià Puigdomènech Badia, Mehdi Mirza, Alex Graves, Timothy P. Lillicrap, Tim Harley, David Silver, and Koray Kavukcuoglu. n.d. “Asynchronous Methods for Deep Reinforcement Learning.” <http://arxiv.org/abs/1602.01783v2>.
 
-<a id="org7470397"></a>Mnih, Volodymyr, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. 2013. “Playing Atari with Deep Reinforcement Learning.” _arXiv Preprint arXiv:1312.5602_.
+<a id="org5a96315"></a>Mnih, Volodymyr, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. n.d. “Playing Atari with Deep Reinforcement Learning.”
 
-<a id="orgf41f604"></a>Nair, Arun, Praveen Srinivasan, Sam Blackwell, Cagdas Alcicek, Rory Fearon, Alessandro De Maria, Vedavyas Panneershelvam, et al. 2015. “Massively Parallel Methods for Deep Reinforcement Learning.” _CoRR_.
+<a id="org3c489d5"></a>Nair, Arun, Praveen Srinivasan, Sam Blackwell, Cagdas Alcicek, Rory Fearon, Alessandro De Maria, Vedavyas Panneershelvam, et al. n.d. “Massively Parallel Methods for Deep Reinforcement Learning.” <http://arxiv.org/abs/1507.04296v2>.
 
-<a id="org4d7a460"></a>Paine, Tom Le, Caglar Gulcehre, Bobak Shahriari, Misha Denil, Matt Hoffman, Hubert Soyer, Richard Tanburn, et al. 2019. “Making Efficient Use of Demonstrations to Solve Hard Exploration Problems.” _CoRR_.
+<a id="org4f31cca"></a>Paine, Tom Le, Caglar Gulcehre, Bobak Shahriari, Misha Denil, Matt Hoffman, Hubert Soyer, Richard Tanburn, et al. n.d. “Making Efficient Use of Demonstrations to Solve Hard Exploration Problems.” <http://arxiv.org/abs/1909.01387v1>.

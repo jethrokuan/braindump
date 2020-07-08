@@ -1,7 +1,7 @@
 +++
 title = "Yann LeCun"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:33+08:00
+lastmod = 2020-07-08T14:53:53+08:00
 slug = "yann_lecun"
 draft = false
 +++

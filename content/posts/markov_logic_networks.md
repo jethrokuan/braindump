@@ -1,14 +1,14 @@
 +++
 title = "Markov Logic Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:20+08:00
+lastmod = 2020-07-08T14:56:14+08:00
 draft = false
 +++
 
 tags
 : [Machine Learning Papers]({{< relref "ml_papers" >}})
 
-## Markov Logic Networks ([Richardson and Domingos 2006](#org5cdef32)). {#markov-logic-networks--richardson-and-domingos-2006--org5cdef32---dot}
+## Markov Logic Networks ([Richardson and Domingos, n.d.](#orga1c485d)). {#markov-logic-networks--richardson-and-domingos-n-dot-d-dot--orga1c485d---dot}
 
 ### Problem {#problem}
 
@@ -45,4 +45,4 @@ c\_{|C|} \right\\}\\), it defines a Markov Logic Network as follows:
 
 ## Bibliography {#bibliography}
 
-<a id="org5cdef32"></a>Richardson, Matthew, and Pedro Domingos. 2006. “Markov Logic Networks.” _Machine Learning_ 62 (1-2):107–36.
+<a id="orga1c485d"></a>Richardson, Matthew, and Pedro Domingos. n.d. “Markov Logic Networks” 62 (1-2):107–36. <https://doi.org/10.1007/s10994-006-5833-1>.

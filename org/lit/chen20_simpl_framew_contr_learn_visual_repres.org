@@ -1,16 +1,30 @@
-#+setupfile:./hugo_setup.org
-#+hugo_slug: simclr
+#+setupfile: ./hugo_setup.org
+#+title: chen20_simpl_framew_contr_learn_visual_repres: A simple framework for contrastive learning of visual representations
 #+roam_key: cite:chen20_simpl_framew_contr_learn_visual_repres
-#+title: SimCLR
+#+roam_alias: SimCLR
 
-- tags :: [[file:unsupervised_learning.org][Unsupervised Learning]] 
-
-SimCLR is a simple framework for contrastive learning of visual
+SimCLR is a simple framework for [[file:lit/contrastive_methods.org][contrastive learning]] of visual
 representations.
+
+* A simple framework for contrastive learning of visual representations
+  :PROPERTIES:
+  :Custom_ID: chen20_simpl_framew_contr_learn_visual_repres
+  :URL: http://arxiv.org/abs/2002.05709v1
+  :AUTHOR: Chen, T., Kornblith, S., Norouzi, M., & Hinton, G.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/IWQD33L4/Chen et al. - 2020 - A simple framework for contrastive learning of vis.pdf
+  :NOTER_PAGE: 17
+  :END:
+** We do not train the model with a memory bank
+:PROPERTIES:
+:NOTER_PAGE: (3 . 0.48068397720076)
+:END:
+
+Rather than train with a memory bank, they use a large batch size, and the [[file:../lars_optimizer.org][LARS Optimizer]] to stabilize training.
+
 
 * Key Contributions
 - Composition of data augmentation to form positive pairs
-- introduce a learnable nonlinear transformation between the
+- introduce a learnable non-linear transformation between the
   representation and the contrastive loss substantially improves the
   quality of the learned representations
 - Contrastive learning benefits from larger batch sizes and more
@@ -30,7 +44,7 @@ A neural network encoder $f(\cdot)$ extracts representation vectors
 from augmented data examples.
 
 A small network projection head $g(\cdot)$ maps representations to the
-space where contrastive loss is applied. 
+space where contrastive loss is applied.
 
 The loss function (normalized temperature-scaled cross entropy loss)
 is applied on the output of $g(\cdot)$.

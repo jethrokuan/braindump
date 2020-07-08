@@ -1,7 +1,7 @@
 +++
 title = "Systems Programming"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:00+08:00
+lastmod = 2020-07-08T14:55:48+08:00
 draft = false
 +++
 
@@ -12,8 +12,8 @@ tags
 
 TODO: <https://people.freebsd.org/~lstewart/articles/cpumemory.pdf>
 
-([Drepper 2007](#org6d24ff6))
+([Drepper, n.d.](#org660c2c3))
 
 ## Bibliography {#bibliography}
 
-<a id="org6d24ff6"></a>Drepper, Ulrich. 2007. “What Every Programmer Should Know About Memory.”
+<a id="org660c2c3"></a>Drepper, Ulrich. n.d. “What Every Programmer Should Know About Memory.”

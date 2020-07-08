@@ -1,15 +1,15 @@
 +++
 title = "Simultaneous Localization and Mapping (SLAM)"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-26T14:50:21+08:00
+lastmod = 2020-07-08T14:56:11+08:00
 draft = false
 +++
 
 ### Backlinks {#backlinks}
 
 - [Google Cartographer]({{< relref "cartographer" >}})
-- [Robotics]({{< relref "robotics" >}})
 - [Event-based Vision]({{< relref "event_based_vision" >}})
+- [Robotics]({{< relref "robotics" >}})
 
 In SLAM, the robot acquires a map of its environment while
 simultaneously localizing itself relative to this map. It is a

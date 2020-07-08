@@ -1,7 +1,7 @@
 +++
 title = "Statistical Distributions"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:28+08:00
+lastmod = 2020-07-08T14:56:24+08:00
 slug = "statistical_distributions"
 draft = false
 +++

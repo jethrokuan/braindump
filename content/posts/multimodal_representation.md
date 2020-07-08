@@ -1,7 +1,7 @@
 +++
 title = "Multi-modal Representation"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:23+08:00
+lastmod = 2020-07-08T14:53:42+08:00
 slug = "multimodal_representation"
 draft = false
 +++
@@ -27,7 +27,7 @@ a meaningful way is crucial to multimodal problems.
 
 ## Categories of multi-modal representations {#categories-of-multi-modal-representations}
 
-([Baltruv saitis, Ahuja, and Morency 2017](#org4cb43e2)) proposes two categories of
+([Baltrušaitis, Ahuja, and Morency, n.d.](#org5fb1e3e)) proposes two categories of
 multimodal representation:
 
 joint
@@ -96,4 +96,4 @@ order in the multimodal space. Another special case of this is
 
 ## Bibliography {#bibliography}
 
-<a id="org4cb43e2"></a>Baltruv saitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. 2017. “Multimodal Machine Learning: A Survey and Taxonomy.” _CoRR_.
+<a id="org5fb1e3e"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

@@ -1,7 +1,7 @@
 +++
 title = "Spike Train Mutual Information"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:25+08:00
+lastmod = 2020-07-08T14:56:19+08:00
 draft = false
 +++
 

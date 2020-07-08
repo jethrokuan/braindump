@@ -1,7 +1,7 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:22+08:00
+lastmod = 2020-07-08T14:56:15+08:00
 draft = false
 +++
 
@@ -27,9 +27,9 @@ threshold. This weight vector is compared to existing neurons in the
 repository. If neurons are too similar (e.g. small Euclidean distance
 between weight vectors), they are merged.
 
-See ([Schliebs and Kasabov 2013](#orge4d941a)) for a
+See ([Schliebs and Kasabov, n.d.](#org01fcd20)) for a
 comprehensive review.
 
 ## Bibliography {#bibliography}
 
-<a id="orge4d941a"></a>Schliebs, Stefan, and Nikola Kasabov. 2013. “Evolving Spiking Neural Network-a Survey.” _Evolving Systems_ 4 (2):87–98.
+<a id="org01fcd20"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.

@@ -1,7 +1,7 @@
 +++
 title = "Cross-modal Hashing"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:29+08:00
+lastmod = 2020-07-08T14:53:50+08:00
 slug = "crossmodal_hashing"
 draft = false
 +++
@@ -21,9 +21,9 @@ constraints are :
     hash code
 3.  The space has to be similarity-preserving
 
-([Baltruv saitis, Ahuja, and Morency 2017](#org51289f9)) has some good reference
+([Baltrušaitis, Ahuja, and Morency, n.d.](#org41b38e0)) has some good reference
 papers.
 
 ## Bibliography {#bibliography}
 
-<a id="org51289f9"></a>Baltruv saitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. 2017. “Multimodal Machine Learning: A Survey and Taxonomy.” _CoRR_.
+<a id="org41b38e0"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

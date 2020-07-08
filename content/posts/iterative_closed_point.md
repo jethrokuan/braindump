@@ -1,7 +1,11 @@
 +++
 title = "Iterative Closed Point"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-29T12:36:51+08:00
+lastmod = 2020-07-08T14:54:29+08:00
 slug = "iterative_closed_point"
 draft = false
 +++
+
+## Backlinks {#backlinks}
+
+- [Event-based Vision]({{< relref "event_based_vision" >}})

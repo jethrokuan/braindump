@@ -1,7 +1,7 @@
 +++
 title = "Art"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:40+08:00
+lastmod = 2020-07-08T14:55:23+08:00
 draft = false
 +++
 

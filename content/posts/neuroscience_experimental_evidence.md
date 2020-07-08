@@ -1,7 +1,7 @@
 +++
 title = "Neuroscience Experimental Evidence"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:16+08:00
+lastmod = 2020-07-08T14:56:08+08:00
 draft = false
 +++
 

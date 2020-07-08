@@ -1,7 +1,7 @@
 +++
 title = "You and Your Research - Richard Hamming"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:16+08:00
+lastmod = 2020-07-08T14:54:53+08:00
 slug = "you_and_your_research"
 draft = false
 +++

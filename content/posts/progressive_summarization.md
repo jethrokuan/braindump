@@ -1,7 +1,7 @@
 +++
 title = "Progressive Summarization"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:00+08:00
+lastmod = 2020-07-08T14:55:47+08:00
 draft = false
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:20+08:00
+lastmod = 2020-07-08T14:54:58+08:00
 tags = ["machine-learning"]
 draft = false
 +++
@@ -614,7 +614,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 ## Structuring Data Science Projects {#structuring-data-science-projects}
 
 Cookiecutter Data Science provides a decent project structure, and
-uses the ubiquitous build tool `Make` to build data projects. ([DrivenData 2019](#org66e938f))
+uses the ubiquitous build tool `Make` to build data projects. ([DrivenData, n.d.](#org1e12009))
 
 ```text
 ├── LICENSE
@@ -663,13 +663,13 @@ uses the ubiquitous build tool `Make` to build data projects. ([DrivenData 2019]
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-Stripe's approach ([Frank 2016](#org69dce03)) still primarily uses Jupyter notebooks, but
+Stripe's approach ([Frank, n.d.](#org35f9ad9)) still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
 ## Bibliography {#bibliography}
 
-<a id="org66e938f"></a>DrivenData. 2019. “Home - Cookiecutter Data Science.”
+<a id="org1e12009"></a>DrivenData. n.d. “Home - Cookiecutter Data Science.” <https://drivendata.github.io/cookiecutter-data-science/>.
 
-<a id="org69dce03"></a>Frank, Dan. 2016. “Reproducible Research: Stripe’s Approach to Data Science.”
+<a id="org35f9ad9"></a>Frank, Dan. n.d. “Reproducible Research: Stripe’s Approach to Data Science.” <https://stripe.com/blog/reproducible-research>.

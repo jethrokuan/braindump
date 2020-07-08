@@ -1,7 +1,7 @@
 +++
 title = "Business"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:55+08:00
+lastmod = 2020-07-08T14:54:18+08:00
 slug = "business"
 draft = false
 +++

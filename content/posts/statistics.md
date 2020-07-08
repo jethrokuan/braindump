@@ -1,7 +1,7 @@
 +++
 title = "Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:08:51+08:00
+lastmod = 2020-07-08T14:54:14+08:00
 draft = false
 +++
 
@@ -9,8 +9,8 @@ draft = false
 
 - [Random Variables]({{< relref "random_variables" >}})
 - [Information Theory]({{< relref "information_theory" >}})
-- [Exponential Family]({{< relref "exponential_family" >}})
 - [Regression]({{< relref "regression" >}})
+- [Exponential Family]({{< relref "exponential_family" >}})
 
 ## Basic Properties {#basic-properties}
 

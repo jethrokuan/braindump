@@ -1,7 +1,7 @@
 +++
 title = "Sam Greydanus"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:10:22+08:00
+lastmod = 2020-07-08T14:56:16+08:00
 slug = "sam_greydanus"
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Post YC Depression"
 author = ["Jethro Kuan"]
-lastmod = 2020-06-24T16:09:15+08:00
+lastmod = 2020-07-08T14:54:52+08:00
 slug = "post_yc_depression"
 draft = false
 +++
