@@ -26,4 +26,4 @@ We can also reinterpret [[file:principle_component_analyses.org][Principle Compo
 6. Train a dynamical system so that the dynamics goes to the data manifold
    - Denoising auto-encoder, masked auto-encoder
 7. Use a regularizer that limits the volume of space that has low energy
-   - Sparse coding, Sparse auto-encoder, LISTA & PSD, Variational auto-encoders
+   - Sparse coding, Sparse auto-encoder, LISTA & PSD, Variational auto-encoder
