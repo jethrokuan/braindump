@@ -1,3 +1,4 @@
+#+setupfile: ./hugo_setup.org
 #+title: zhu_ev-flownet_2018: EV-FlowNet: self-supervised optical flow estimation for event-based cameras
 #+roam_key: cite:zhu_ev-flownet_2018
 
@@ -7,7 +8,7 @@
   :URL: http://arxiv.org/abs/1802.06898
   :AUTHOR: Zhu, A. Z., Yuan, L., Chaney, K., & Daniilidis, K.
   :NOTER_DOCUMENT: /home/jethro/Zotero/storage/X9P55F47/Zhu et al. - 2018 - EV-FlowNet Self-Supervised Optical Flow Estimatio.pdf
-  :NOTER_PAGE: 4
+  :NOTER_PAGE: 9
   :END:
 ** Event data is well-suited for [[file:optical_flow_estimation.org][Optical Flow Estimation]]
 :PROPERTIES:
@@ -28,3 +29,18 @@ providing a fixed number of channels for any event stream.
 
 They also introduced a [[file:self_supervised_learning.org][Self-supervised Learning]] method, suing a photometric loss
 as a supervisory signal, without supervision from ground-truth flow.
+** Event Representation
+:PROPERTIES:
+:NOTER_PAGE: (3 . 0.6347517730496455)
+:END:
+
+The event stream is represented as a 4 channel image:
+
+1. Number of positive polarity events
+2. Number of negative polarity events
+3. Timestamp of most recent positive event
+4. Timestamp of most negative event
+
+This is similar to "Event-based Time Surfaces" cite:lagorce_hots_2017 and "Timestamp Images" cite:park_performance_2016
+
+bibliography:../biblio.bib

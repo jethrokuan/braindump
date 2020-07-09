@@ -1,3 +1,4 @@
+#+setupfile: ./hugo_setup.org
 #+title: hjelm_learning_2019: Learning deep representations by mutual information estimation and maximization
 #+roam_key: cite:hjelm_learning_2019
 
