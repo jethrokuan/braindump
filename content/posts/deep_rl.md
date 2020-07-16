@@ -1,14 +1,9 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:59+08:00
+lastmod = 2020-07-17T00:55:26+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Deep Reinforcement Learning That Matters]({{< relref "henderson_deep_rl_that_matters" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 tags
 : [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -82,11 +77,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 - Trust region policy optimization
-  ([Schulman et al., n.d.](#org2ce778c))
+  ([Schulman et al., n.d.](#org9d9d010))
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop ([Gu et al., n.d.](#orgb85556a))
+- Q-Prop ([Gu et al., n.d.](#org46bc8cd))
 
 ### Problem Formulation {#problem-formulation}
 
@@ -102,6 +97,6 @@ or algorithms that adaptively adjust parameters:
 
 ## Bibliography {#bibliography}
 
-<a id="orgb85556a"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
+<a id="org46bc8cd"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
 
-<a id="org2ce778c"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.
+<a id="org9d9d010"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.

@@ -1,7 +1,7 @@
 +++
 title = "How To Write a Technical Paper"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:16+08:00
+lastmod = 2020-07-17T00:57:53+08:00
 draft = false
 +++
 
@@ -9,7 +9,7 @@ tags
 : [Writing]({{< relref "writing" >}}), [Papers]({{< relref "papers" >}})
 
 paper
-: ([Whiteside, n.d.](#orga7b1744))
+: ([Whiteside, n.d.](#org393d6fa))
 
 ## Abstract {#abstract}
 
@@ -71,4 +71,4 @@ the field.
 
 ## Bibliography {#bibliography}
 
-<a id="orga7b1744"></a>Whiteside, James D. n.d. “How to Write a Technical Paper.”
+<a id="org393d6fa"></a>Whiteside, James D. n.d. “How to Write a Technical Paper.”

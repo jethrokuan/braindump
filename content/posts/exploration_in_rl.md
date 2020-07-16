@@ -1,7 +1,7 @@
 +++
 title = "Exploration In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:28+08:00
+lastmod = 2020-07-17T00:56:59+08:00
 draft = false
 +++
 
@@ -83,7 +83,7 @@ a = \mathrm{argmax} \hat{\mu}\_a + \sqrt{\frac{2 \ln T}{N(a)}}
 
 ## Extending Exploration to RL {#extending-exploration-to-rl}
 
-### Count-based exploration ([Bellemare et al., n.d.](#orgc3664d3)) {#count-based-exploration--bellemare-et-al-dot-n-dot-d-dot--orgc3664d3}
+### Count-based exploration ([Bellemare et al., n.d.](#orga2c223e)) {#count-based-exploration--bellemare-et-al-dot-n-dot-d-dot--orga2c223e}
 
 Use pseudo-counts:
 
@@ -95,4 +95,4 @@ There are many choices for the bonus.
 
 ## Bibliography {#bibliography}
 
-<a id="orgc3664d3"></a>Bellemare, Marc, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. n.d. “Unifying Count-Based Exploration and Intrinsic Motivation.” In _Advances in Neural Information Processing Systems 29_, edited by D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, 1471–79. Curran Associates, Inc. <http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf>.
+<a id="orga2c223e"></a>Bellemare, Marc, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. n.d. “Unifying Count-Based Exploration and Intrinsic Motivation.” In _Advances in Neural Information Processing Systems 29_, edited by D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, 1471–79. Curran Associates, Inc. <http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf>.

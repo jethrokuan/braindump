@@ -1,11 +1,11 @@
 +++
 title = "Machine Teaching"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:33+08:00
+lastmod = 2020-07-17T00:57:05+08:00
 draft = false
 +++
 
-## Definitions ([Simard et al., n.d.](#org4b689d4)) {#definitions--simard-et-al-dot-n-dot-d-dot--org4b689d4}
+## Definitions ([Simard et al., n.d.](#org19d8675)) {#definitions--simard-et-al-dot-n-dot-d-dot--org19d8675}
 
 machine learning research
 : machine learning research aims at
@@ -44,7 +44,7 @@ how unsatisfied the teacher is. The target model \\(\theta^\*\\) is folded
 into the teaching risk function. The teaching cost function is also
 generalized beyond the number of teaching items. For example,
 different teaching items may have different cognitive burdens for a
-human student to absorb. ([Zhu et al., n.d.](#org4f49eb8))
+human student to absorb. ([Zhu et al., n.d.](#orgf7f8629))
 
 There are other formulations of machine teaching that place different
 constraints on the teaching. For example, one may want to minimize the
@@ -65,7 +65,7 @@ model \\(\theta^\*\\) to a learner via training data. For example:
   data. An attacker knowing the algorithm may send specially designed
   training examples to manipulate the learning algorithm.
 
-## Faster Teaching Via POMDP Teaching ([Rafferty et al., n.d.](#orgcb3d14d)) {#faster-teaching-via-pomdp-teaching--rafferty-et-al-dot-n-dot-d-dot--orgcb3d14d}
+## Faster Teaching Via POMDP Teaching ([Rafferty et al., n.d.](#org38768de)) {#faster-teaching-via-pomdp-teaching--rafferty-et-al-dot-n-dot-d-dot--org38768de}
 
 The authors formulate teaching as a POMDP, and use a
 decision-theoretic approach to planning teaching. Assuming knowledge
@@ -150,11 +150,11 @@ Experiments showed that POMDP planning leads to faster teaching.
         reduce the dimensionality of the belief space into \\(S = X \times
         Y\\), where \\(X\\) is the space of all possible values fully
         observable variables, and \\(Y\\) is the space of partially
-        observable variables. ([Du et al., n.d.](#org59ec0a0)) Since state variable \\(x\\)
+        observable variables. ([Du et al., n.d.](#org35aff87)) Since state variable \\(x\\)
         is fully observable, we only need to maintain belief \\(b_Y\\) for
         the state variables in \\(Y\\).
 
-## Machine Teaching For Inverse Reinforcement Learning ([Brown and Niekum, n.d.](#orgf6d838f)) {#machine-teaching-for-inverse-reinforcement-learning--brown-and-niekum-n-dot-d-dot--orgf6d838f}
+## Machine Teaching For Inverse Reinforcement Learning ([Brown and Niekum, n.d.](#orge0afe34)) {#machine-teaching-for-inverse-reinforcement-learning--brown-and-niekum-n-dot-d-dot--orge0afe34}
 
 Optimal Teaching for IRL gives:
 
@@ -185,7 +185,7 @@ approximation algorithm that requires solving only a single
 policy-evaluation problem, using the Behavioural Equivalence Class
 (BEC) of the teacher's policy.
 
-## Teaching Inverse Reinforcement Learners via Features and Demonstrations ([Haug, Tschiatschek, and Singla, n.d.](#orgd6297d7)) {#teaching-inverse-reinforcement-learners-via-features-and-demonstrations--haug-tschiatschek-and-singla-n-dot-d-dot--orgd6297d7}
+## Teaching Inverse Reinforcement Learners via Features and Demonstrations ([Haug, Tschiatschek, and Singla, n.d.](#org41fe4ab)) {#teaching-inverse-reinforcement-learners-via-features-and-demonstrations--haug-tschiatschek-and-singla-n-dot-d-dot--org41fe4ab}
 
 It is difficult to specify a reward function that captures all
 important aspects. In these situations, learning from demonstrations
@@ -217,7 +217,7 @@ Limiting the set of teachable features, choosing features that allow
 for minimizing teaching risk experimentally shows better performance
 than randomly choosing features.
 
-## Learner-aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints ([Tschiatschek et al., n.d.](#orgd3d578d)) {#learner-aware-teaching-inverse-reinforcement-learning-with-preferences-and-constraints--tschiatschek-et-al-dot-n-dot-d-dot--orgd3d578d}
+## Learner-aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints ([Tschiatschek et al., n.d.](#orgd341a61)) {#learner-aware-teaching-inverse-reinforcement-learning-with-preferences-and-constraints--tschiatschek-et-al-dot-n-dot-d-dot--orgd341a61}
 
 This paper considers the setting where the learner has preferences.
 This captures:
@@ -230,7 +230,7 @@ Learner-aware teaching shows significant performance improvements
 
 _Math of the paper is beyond me right now._
 
-## Interactive Teaching Algorithms for Inverse Reinforcement Learning ([Kamalaruban et al., n.d.](#orgc8b69b2)) {#interactive-teaching-algorithms-for-inverse-reinforcement-learning--kamalaruban-et-al-dot-n-dot-d-dot--orgc8b69b2}
+## Interactive Teaching Algorithms for Inverse Reinforcement Learning ([Kamalaruban et al., n.d.](#orgb2f1cd1)) {#interactive-teaching-algorithms-for-inverse-reinforcement-learning--kamalaruban-et-al-dot-n-dot-d-dot--orgb2f1cd1}
 
 Considers the setting where the learner is assisted by a teacher. Two
 sub-settings are considered:
@@ -273,7 +273,7 @@ inference:
 The intuition is that subsets of training data that lead a model to
 the same (or approximately similar) inference as the model trained on
 all the data should be useful for understanding the fitted model.
-([Sojitra, n.d.](#orgf54f580))
+([Sojitra, n.d.](#orgf764cbc))
 
 Below is an example of using Bayesian teaching, limited to a teaching
 set of dimension 2, to understand an MNIST model.
@@ -287,7 +287,7 @@ particular number.
 Hence, Bayesian teaching is also useful in telling us which examples
 are most valuable: better suited to induce the desired target model.
 
-## Learning To Interactively Learn and Assist ([Woodward, Finn, and Hausman, n.d.](#org79e0696)) {#learning-to-interactively-learn-and-assist--woodward-finn-and-hausman-n-dot-d-dot--org79e0696}
+## Learning To Interactively Learn and Assist ([Woodward, Finn, and Hausman, n.d.](#orgc2cede0)) {#learning-to-interactively-learn-and-assist--woodward-finn-and-hausman-n-dot-d-dot--orgc2cede0}
 
 Rewards and demonstrations are often defined and collected before
 training begins, when the human is most uncertain about what
@@ -305,7 +305,7 @@ Obtaining real-world training data can be expensive, and many RL
 algorithms are sample-inefficient. Hence, many models are trained in a
 simulated environment, and the "sim2real" gap causes these models to
 perform poorly on real-world tasks.
-([Weng, n.d.](#org0af2b4c))
+([Weng, n.d.](#orgc613f2f))
 
 There are several approaches to closing the sim2real gap:
 
@@ -412,7 +412,7 @@ real data.
 
 - <span class="org-todo todo TODO">TODO</span> read <https://arxiv.org/abs/1805.09501>
 
-## Invariant Risk Minimization ([Arjovsky et al., n.d.](#org358186d)) {#invariant-risk-minimization--arjovsky-et-al-dot-n-dot-d-dot--org358186d}
+## Invariant Risk Minimization ([Arjovsky et al., n.d.](#org03c9680)) {#invariant-risk-minimization--arjovsky-et-al-dot-n-dot-d-dot--org03c9680}
 
 Key idea: To learn invariances across environments, find a data
 representation such that the optimal classifier on top of that
@@ -435,26 +435,26 @@ environments.
 
 ## Bibliography {#bibliography}
 
-<a id="org358186d"></a>Arjovsky, Martin, Léon Bottou, Ishaan Gulrajani, and David Lopez-Paz. n.d. “Invariant Risk Minimization.” <http://arxiv.org/abs/1907.02893v1>.
+<a id="org03c9680"></a>Arjovsky, Martin, Léon Bottou, Ishaan Gulrajani, and David Lopez-Paz. n.d. “Invariant Risk Minimization.” <http://arxiv.org/abs/1907.02893v1>.
 
-<a id="orgf6d838f"></a>Brown, Daniel S., and Scott Niekum. n.d. “Machine Teaching for Inverse Reinforcement Learning: Algorithms and Applications.” <http://arxiv.org/abs/1805.07687v6>.
+<a id="orge0afe34"></a>Brown, Daniel S., and Scott Niekum. n.d. “Machine Teaching for Inverse Reinforcement Learning: Algorithms and Applications.” <http://arxiv.org/abs/1805.07687v6>.
 
-<a id="org59ec0a0"></a>Du, Yanzhu, David Hsu, Hanna Kurniawati, Wee Sun Lee, Sylvie C. W. Ong, and Shao Wei Png. n.d. “A POMDP Approach to Robot Motion Planning Under Uncertainty.”
+<a id="org35aff87"></a>Du, Yanzhu, David Hsu, Hanna Kurniawati, Wee Sun Lee, Sylvie C. W. Ong, and Shao Wei Png. n.d. “A POMDP Approach to Robot Motion Planning Under Uncertainty.”
 
-<a id="orgd6297d7"></a>Haug, Luis, Sebastian Tschiatschek, and Adish Singla. n.d. “Teaching Inverse Reinforcement Learners via Features and Demonstrations.” <http://arxiv.org/abs/1810.08926v4>.
+<a id="org41fe4ab"></a>Haug, Luis, Sebastian Tschiatschek, and Adish Singla. n.d. “Teaching Inverse Reinforcement Learners via Features and Demonstrations.” <http://arxiv.org/abs/1810.08926v4>.
 
-<a id="orgc8b69b2"></a>Kamalaruban, Parameswaran, Rati Devidze, Volkan Cevher, and Adish Singla. n.d. “Interactive Teaching Algorithms for Inverse Reinforcement Learning.” <http://arxiv.org/abs/1905.11867v3>.
+<a id="orgb2f1cd1"></a>Kamalaruban, Parameswaran, Rati Devidze, Volkan Cevher, and Adish Singla. n.d. “Interactive Teaching Algorithms for Inverse Reinforcement Learning.” <http://arxiv.org/abs/1905.11867v3>.
 
-<a id="orgcb3d14d"></a>Rafferty, Anna N., Emma Brunskill, Thomas L. Griffiths, and Patrick Shafto. n.d. “Faster Teaching via POMDP Planning” 40 (6). Wiley:1290–1332. <http://dx.doi.org/10.1111/cogs.12290>.
+<a id="org38768de"></a>Rafferty, Anna N., Emma Brunskill, Thomas L. Griffiths, and Patrick Shafto. n.d. “Faster Teaching via POMDP Planning” 40 (6). Wiley:1290–1332. <http://dx.doi.org/10.1111/cogs.12290>.
 
-<a id="org4b689d4"></a>Simard, Patrice Y., Saleema Amershi, David M. Chickering, Alicia Edelman Pelton, Soroush Ghorashi, Christopher Meek, Gonzalo Ramos, et al. n.d. “Machine Teaching: A New Paradigm for Building Machine Learning Systems.” <http://arxiv.org/abs/1707.06742v3>.
+<a id="org19d8675"></a>Simard, Patrice Y., Saleema Amershi, David M. Chickering, Alicia Edelman Pelton, Soroush Ghorashi, Christopher Meek, Gonzalo Ramos, et al. n.d. “Machine Teaching: A New Paradigm for Building Machine Learning Systems.” <http://arxiv.org/abs/1707.06742v3>.
 
-<a id="orgf54f580"></a>Sojitra, Ravi. n.d. “Bayesian Teaching as Model Explanation: An MNIST Example.” <https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html>.
+<a id="orgf764cbc"></a>Sojitra, Ravi. n.d. “Bayesian Teaching as Model Explanation: An MNIST Example.” <https://ravisoji.com/2018/03/04/bayesian-teaching-as-explanation.html>.
 
-<a id="orgd3d578d"></a>Tschiatschek, Sebastian, Ahana Ghosh, Luis Haug, Rati Devidze, and Adish Singla. n.d. “Learner-Aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints.” <http://arxiv.org/abs/1906.00429v1>.
+<a id="orgd341a61"></a>Tschiatschek, Sebastian, Ahana Ghosh, Luis Haug, Rati Devidze, and Adish Singla. n.d. “Learner-Aware Teaching: Inverse Reinforcement Learning with Preferences and Constraints.” <http://arxiv.org/abs/1906.00429v1>.
 
-<a id="org0af2b4c"></a>Weng, Lilian. n.d. “Domain Randomization for Sim2Real Transfer.” <https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html>.
+<a id="orgc613f2f"></a>Weng, Lilian. n.d. “Domain Randomization for Sim2Real Transfer.” <https://lilianweng.github.io/lil-log/2019/05/05/domain-randomization.html>.
 
-<a id="org79e0696"></a>Woodward, Mark, Chelsea Finn, and Karol Hausman. n.d. “Learning to Interactively Learn and Assist.” <http://arxiv.org/abs/1906.10187v2>.
+<a id="orgc2cede0"></a>Woodward, Mark, Chelsea Finn, and Karol Hausman. n.d. “Learning to Interactively Learn and Assist.” <http://arxiv.org/abs/1906.10187v2>.
 
-<a id="org4f49eb8"></a>Zhu, Xiaojin, Adish Singla, Sandra Zilles, and Anna N. Rafferty. n.d. “An Overview of Machine Teaching.” <http://arxiv.org/abs/1801.05927v1>.
+<a id="orgf7f8629"></a>Zhu, Xiaojin, Adish Singla, Sandra Zilles, and Anna N. Rafferty. n.d. “An Overview of Machine Teaching.” <http://arxiv.org/abs/1801.05927v1>.

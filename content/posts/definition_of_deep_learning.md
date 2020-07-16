@@ -1,7 +1,7 @@
 +++
 title = "Definition of Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:52+08:00
+lastmod = 2020-07-17T00:56:22+08:00
 slug = "definition_of_deep_learning"
 draft = false
 +++

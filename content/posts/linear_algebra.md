@@ -1,14 +1,9 @@
 +++
 title = "Linear Algebra"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:54+08:00
+lastmod = 2020-07-17T00:57:27+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [LU Decomposition]({{< relref "lu_decomposition" >}})
-- [Computer Vision]({{< relref "computer_vision" >}})
 
 ## Definitions {#definitions}
 

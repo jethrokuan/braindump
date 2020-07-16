@@ -1,25 +1,10 @@
 +++
 title = "Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:58+08:00
+lastmod = 2020-07-17T00:56:28+08:00
 tags = ["machine-learning"]
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Recommender Systems]({{< relref "recommender_systems" >}})
-- [Topic Modeling]({{< relref "topic_modelling" >}})
-- [Information Theory]({{< relref "information_theory" >}})
-- [Single Layer XOR]({{< relref "single_layer_xor" >}})
-- [PAC Learning]({{< relref "pac_learning" >}})
-- [How To Know - Celeste Kidd]({{< relref "how_to_know_kidd" >}})
-- [Article: An Opinionated Guide to ML Research]({{< relref "an_opinionated_guide_to_ml_research" >}})
-- [Empirical Risk Minimization]({{< relref "erm" >}})
-- [Quantization]({{< relref "quantization" >}})
-- [Likelihood Principle]({{< relref "likelihood_principle" >}})
-- [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 ## Table of Contents {#table-of-contents}
 
@@ -614,7 +599,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 ## Structuring Data Science Projects {#structuring-data-science-projects}
 
 Cookiecutter Data Science provides a decent project structure, and
-uses the ubiquitous build tool `Make` to build data projects. ([DrivenData, n.d.](#org1e12009))
+uses the ubiquitous build tool `Make` to build data projects. ([DrivenData, n.d.](#org24f4fe8))
 
 ```text
 ├── LICENSE
@@ -663,13 +648,13 @@ uses the ubiquitous build tool `Make` to build data projects. ([DrivenData, n.d.
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 ```
 
-Stripe's approach ([Frank, n.d.](#org35f9ad9)) still primarily uses Jupyter notebooks, but
+Stripe's approach ([Frank, n.d.](#org8700b42)) still primarily uses Jupyter notebooks, but
 has 2 main points. First, they strip the results from the Jupyter
 notebooks before committing. Second, they ensure that the notebooks
 can be reproduced on the work laptops and on their cloud infrastructure.
 
 ## Bibliography {#bibliography}
 
-<a id="org1e12009"></a>DrivenData. n.d. “Home - Cookiecutter Data Science.” <https://drivendata.github.io/cookiecutter-data-science/>.
+<a id="org24f4fe8"></a>DrivenData. n.d. “Home - Cookiecutter Data Science.” <https://drivendata.github.io/cookiecutter-data-science/>.
 
-<a id="org35f9ad9"></a>Frank, Dan. n.d. “Reproducible Research: Stripe’s Approach to Data Science.” <https://stripe.com/blog/reproducible-research>.
+<a id="org8700b42"></a>Frank, Dan. n.d. “Reproducible Research: Stripe’s Approach to Data Science.” <https://stripe.com/blog/reproducible-research>.

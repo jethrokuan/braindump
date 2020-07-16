@@ -1,15 +1,9 @@
 +++
 title = "Information Theory"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:39+08:00
+lastmod = 2020-07-17T00:55:07+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Occam's Razor]({{< relref "occams_razor" >}})
-- [I-Diagrams]({{< relref "i-diagrams" >}})
-- [Entropy]({{< relref "entropy" >}})
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}}), [Statistics]({{< relref "statistics" >}})

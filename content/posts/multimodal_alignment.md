@@ -1,14 +1,10 @@
 +++
 title = "Multi-modal Alignment"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:25+08:00
+lastmod = 2020-07-17T00:56:56+08:00
 slug = "multimodal_alignment"
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
 
 Multi-modal alignment is a sub-challenge in [Multi-modal Machine
 Learning]({{< relref "multimodal_machine_learning" >}}), involving the finding of relationships and correspondences

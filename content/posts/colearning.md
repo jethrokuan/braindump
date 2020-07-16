@@ -1,19 +1,15 @@
 +++
 title = "Co-learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:05+08:00
+lastmod = 2020-07-17T00:55:32+08:00
 slug = "colearning"
 draft = false
 +++
 
-### Backlinks {#backlinks}
-
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
-
 Co-learning is the technique of aiding of modeling of a
 (resource-poor) modality by exploiting knowledge from another
 (resource-rich) modality. The helper modality is only used in model
-training, and is not used during test-time. ([Baltrušaitis, Ahuja, and Morency, n.d.](#org844b4fb))
+training, and is not used during test-time. ([Baltrušaitis, Ahuja, and Morency, n.d.](#orge44cafd))
 
 Parallel-data approaches require the data to be directly linked to
 observations in other modalites. Non-parallel approaches do not
@@ -41,4 +37,4 @@ word similarity, or [zero-shot learning]({{< relref "zeroshot_learning" >}}).
 
 ## Bibliography {#bibliography}
 
-<a id="org844b4fb"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="orge44cafd"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

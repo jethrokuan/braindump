@@ -1,14 +1,10 @@
 +++
 title = "Dynamic Time Warping"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:42+08:00
+lastmod = 2020-07-17T00:55:10+08:00
 slug = "dynamic_time_warping"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Multi-modal Alignment]({{< relref "multimodal_alignment" >}})
 
 Dynamic time warping (DTW) is a dynamic programming approach used to
 align multi-view time series. The similarity between two sequences are

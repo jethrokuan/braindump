@@ -1,15 +1,9 @@
 +++
 title = "Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:09+08:00
+lastmod = 2020-07-17T00:57:44+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
-- [Event-based Vision]({{< relref "event_based_vision" >}})
-- [Gaussian Filter]({{< relref "gaussian_filter" >}})
 
 tags
 : [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}}), [Gaussian Filter]({{< relref "gaussian_filter" >}})

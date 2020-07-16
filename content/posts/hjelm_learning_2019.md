@@ -1,7 +1,7 @@
 +++
 title = "hjelm_learning_2019: Learning deep representations by mutual information estimation and maximization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-09T14:33:36+08:00
+lastmod = 2020-07-17T00:55:58+08:00
 draft = false
 +++
 

@@ -1,7 +1,7 @@
 +++
 title = "lagorce_hots_2017: HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:18:05+08:00
+lastmod = 2020-07-17T00:56:00+08:00
 draft = false
 +++
 

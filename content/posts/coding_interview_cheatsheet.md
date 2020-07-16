@@ -1,14 +1,10 @@
 +++
 title = "Coding Interview Cheatsheet"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:12+08:00
+lastmod = 2020-07-17T00:56:42+08:00
 slug = "coding_interview_cheatsheet"
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [System Design]({{< relref "system_design" >}})
 
 ## Arrays {#arrays}
 

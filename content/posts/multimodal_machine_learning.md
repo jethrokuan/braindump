@@ -1,18 +1,10 @@
 +++
 title = "Multi-modal Machine Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:04+08:00
+lastmod = 2020-07-17T00:56:34+08:00
 slug = "multimodal_machine_learning"
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Dynamic Time Warping]({{< relref "dynamic_time_warping" >}})
-- [Multi-modal Representation]({{< relref "multimodal_representation" >}})
-- [Multi-modal Translation]({{< relref "multimodal_translation" >}})
-- [Multi-modal Alignment]({{< relref "multimodal_alignment" >}})
-- [VisGel]({{< relref "visgel" >}})
 
 ## Definitions {#definitions}
 

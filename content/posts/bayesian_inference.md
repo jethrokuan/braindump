@@ -1,17 +1,10 @@
 +++
 title = "Bayesian Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:24+08:00
+lastmod = 2020-07-17T00:56:54+08:00
 tags = ["machine-learning"]
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
-- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
-- [Non-informative Priors]({{< relref "noninformative_priors" >}})
-- [Arguments Against Bayesian Inference]({{< relref "arguments_against_bayesian_inference" >}})
 
 ## Setup {#setup}
 
@@ -75,7 +68,7 @@ von Mises). This relies on:
 
 See [ICML 2018 Tutorial](http://www.tamarabroderick.com/tutorial%5F2018%5Ficml.html) by Tamara Broderick for an overview. In
 general, we have no clue how accurate the approximation is. See also
-([Pati, Bhattacharya, and Yang, n.d.](#org3d360e4)).
+([Pati, Bhattacharya, and Yang, n.d.](#orgb010328)).
 
 ### Markov Chain Monte Carlo {#markov-chain-monte-carlo}
 
@@ -135,9 +128,9 @@ autocorrelated draws.
 A well designed MCMC algorithm with a good proposal should ideally
 exhibit rapid convergence and mixing.
 
-Embarrassingly Parallel MCMC e.g. ([Srivastava et al., n.d.](#org5ce588c); [Li, Srivastava, and Dunson, n.d.](#org5e99039))
+Embarrassingly Parallel MCMC e.g. ([Srivastava et al., n.d.](#orgb9faf9c); [Li, Srivastava, and Dunson, n.d.](#orgdf1e270))
 
-We can replace expensive transition kernels with approximations ([Johndrow et al., n.d.](#orgefb57de)). for
+We can replace expensive transition kernels with approximations ([Johndrow et al., n.d.](#org0dc4478)). for
 example, we approximate a conditional distribution in Gibbs sampler
 with a Gaussian or using a subsample of data, vastly speeding up MCMC
 sampling in high-dimensional settings.
@@ -162,18 +155,18 @@ tweaking the Bayesian paradigm to be inherently more robust.
 
 What's an appropriate \\(\pi(\beta)\\) for the high dimensional vector of
 coefficients? Most commonly used is a local-global scale mixture of
-Gaussians. ([Johndrow, Orenstein, and Bhattacharya, n.d.](#orgfa0ba34))
+Gaussians. ([Johndrow, Orenstein, and Bhattacharya, n.d.](#org2a558c9))
 
 ### {#}
 
 ## Bibliography {#bibliography}
 
-<a id="orgefb57de"></a>Johndrow, James E., Jonathan C. Mattingly, Sayan Mukherjee, and David Dunson. n.d. “Optimal Approximating Markov Chains for Bayesian Inference.” <http://arxiv.org/abs/1508.03387v3>.
+<a id="org0dc4478"></a>Johndrow, James E., Jonathan C. Mattingly, Sayan Mukherjee, and David Dunson. n.d. “Optimal Approximating Markov Chains for Bayesian Inference.” <http://arxiv.org/abs/1508.03387v3>.
 
-<a id="orgfa0ba34"></a>Johndrow, James E., Paulo Orenstein, and Anirban Bhattacharya. n.d. “Bayes Shrinkage at Gwas Scale: Convergence and Approximation Theory of a Scalable Mcmc Algorithm for the Horseshoe Prior.” <http://arxiv.org/abs/1705.00841v3>.
+<a id="org2a558c9"></a>Johndrow, James E., Paulo Orenstein, and Anirban Bhattacharya. n.d. “Bayes Shrinkage at Gwas Scale: Convergence and Approximation Theory of a Scalable Mcmc Algorithm for the Horseshoe Prior.” <http://arxiv.org/abs/1705.00841v3>.
 
-<a id="org5e99039"></a>Li, Cheng, Sanvesh Srivastava, and David B. Dunson. n.d. “Simple, Scalable and Accurate Posterior Interval Estimation.” <http://arxiv.org/abs/1605.04029v2>.
+<a id="orgdf1e270"></a>Li, Cheng, Sanvesh Srivastava, and David B. Dunson. n.d. “Simple, Scalable and Accurate Posterior Interval Estimation.” <http://arxiv.org/abs/1605.04029v2>.
 
-<a id="org3d360e4"></a>Pati, Debdeep, Anirban Bhattacharya, and Yun Yang. n.d. “On Statistical Optimality of Variational Bayes.” <http://arxiv.org/abs/1712.08983v1>.
+<a id="orgb010328"></a>Pati, Debdeep, Anirban Bhattacharya, and Yun Yang. n.d. “On Statistical Optimality of Variational Bayes.” <http://arxiv.org/abs/1712.08983v1>.
 
-<a id="org5ce588c"></a>Srivastava, Sanvesh, Volkan Cevher, Quoc Dinh, and David Dunson. n.d. “WASP: Scalable Bayes via Barycenters of Subset Posteriors.” In _Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics_, edited by Guy Lebanon and S. V. N. Vishwanathan, 38:912–20. Proceedings of Machine Learning Research. PMLR. <http://proceedings.mlr.press/v38/srivastava15.html>.
+<a id="orgb9faf9c"></a>Srivastava, Sanvesh, Volkan Cevher, Quoc Dinh, and David Dunson. n.d. “WASP: Scalable Bayes via Barycenters of Subset Posteriors.” In _Proceedings of the Eighteenth International Conference on Artificial Intelligence and Statistics_, edited by Guy Lebanon and S. V. N. Vishwanathan, 38:912–20. Proceedings of Machine Learning Research. PMLR. <http://proceedings.mlr.press/v38/srivastava15.html>.

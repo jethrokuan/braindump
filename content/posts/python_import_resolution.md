@@ -1,14 +1,10 @@
 +++
 title = "Python Import Resolution"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:26+08:00
+lastmod = 2020-07-17T00:55:52+08:00
 slug = "python_import_resolution"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Python]({{< relref "python" >}})
 
 Say you have a Python import statement:
 

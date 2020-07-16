@@ -1,13 +1,9 @@
 +++
 title = "Partially Observable Markov Decision Processes (POMDPs)"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:19+08:00
+lastmod = 2020-07-17T00:55:44+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 ## Partially Observable MDPs (POMDPs) {#partially-observable-mdps--pomdps}
 

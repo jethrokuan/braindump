@@ -1,13 +1,9 @@
 +++
 title = "Point Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:43+08:00
+lastmod = 2020-07-17T00:55:11+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Interval Estimation in Bayesian Statistics]({{< relref "interval_estimation_bayesian" >}})
 
 tags
 : [Bayesian Statistics]({{< relref "bayesian_statistics" >}})

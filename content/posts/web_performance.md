@@ -1,7 +1,7 @@
 +++
 title = "Web Performance"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:57+08:00
+lastmod = 2020-07-17T00:55:23+08:00
 slug = "web_performance"
 draft = false
 +++

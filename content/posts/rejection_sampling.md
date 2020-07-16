@@ -1,14 +1,9 @@
 +++
 title = "Rejection Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:40+08:00
+lastmod = 2020-07-17T00:55:08+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Slice Sampling]({{< relref "slice_sampling" >}})
-- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
 
 **Goal**: To sample from unknown distribution \\(p(x)\\).
 

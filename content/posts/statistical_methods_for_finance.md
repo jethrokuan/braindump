@@ -1,7 +1,7 @@
 +++
 title = "Statistical Methods for Finance"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:42+08:00
+lastmod = 2020-07-17T00:57:14+08:00
 draft = false
 +++
 

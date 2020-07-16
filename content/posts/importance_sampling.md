@@ -1,15 +1,9 @@
 +++
 title = "Importance Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:03+08:00
+lastmod = 2020-07-17T00:55:30+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Metropolis-Hastings Method]({{< relref "metropolis_hastings" >}})
-- [Particle Filter]({{< relref "particle_filter" >}})
-- [Policy Gradients]({{< relref "policy_gradients" >}})
 
 Importance sampling does not allow us to generate samples from \\(p(x)\\),
 but allows us to estimate the expectation of a function \\(f(x)\\).

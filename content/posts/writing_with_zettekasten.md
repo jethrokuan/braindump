@@ -1,7 +1,7 @@
 +++
 title = "Writing with Zettekasten"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:45+08:00
+lastmod = 2020-07-17T00:55:12+08:00
 slug = "writing_with_zettekasten"
 draft = false
 +++

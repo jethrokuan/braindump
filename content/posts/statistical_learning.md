@@ -1,7 +1,7 @@
 +++
 title = "Statistical Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:16+08:00
+lastmod = 2020-07-17T00:56:47+08:00
 draft = false
 +++
 
@@ -470,11 +470,11 @@ make some assumptions about the form of the decision boundary.
 
 ## Reference Textbooks {#reference-textbooks}
 
-1.  An introduction to statistical learning ([James et al., n.d.](#org17866c6))
-2.  Understanding Machine Learning ([Shalev-Shwartz and Ben-David, n.d.](#org4c8415d))
+1.  An introduction to statistical learning ([James et al., n.d.](#org96b2a28))
+2.  Understanding Machine Learning ([Shalev-Shwartz and Ben-David, n.d.](#org112d869))
 
 ## Bibliography {#bibliography}
 
-<a id="org17866c6"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+<a id="org96b2a28"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
 
-<a id="org4c8415d"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.
+<a id="org112d869"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.

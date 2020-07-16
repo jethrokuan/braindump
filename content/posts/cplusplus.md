@@ -1,13 +1,9 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:19+08:00
+lastmod = 2020-07-17T00:56:50+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [CMake]({{< relref "cmake" >}})
 
 tags
 : [Programming Languages]({{< relref "prog_lang" >}})
@@ -217,7 +213,7 @@ unique_ptr to another, which is otherwise not possible.
 
 For shared_ptr, std::move prevents the increment and immediate
 decrement of the reference count, making it an optimization. It's not
-strictly necessary. ([nil, n.d.](#orga7745e1))
+strictly necessary. ([nil, n.d.](#org77be700))
 
 ## not_null {#not-null}
 
@@ -234,7 +230,7 @@ pointer is not null (NO_ITEM_DATA:bartek_barteks_2017).
 
 ## Bibliography {#bibliography}
 
-<a id="orga7745e1"></a>nil. n.d. “C++ - Why Would I Std:Move an Std:SharedₚTr? - Stack Overflow.” <https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr>.
+<a id="org77be700"></a>nil. n.d. “C++ - Why Would I Std:Move an Std:SharedₚTr? - Stack Overflow.” <https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr>.
 
 NO_ITEM_DATA:noauthor_raii_nodate
 

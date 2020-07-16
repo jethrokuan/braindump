@@ -1,13 +1,9 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:15+08:00
+lastmod = 2020-07-17T00:57:52+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Evolving Connectionist Systems]({{< relref "evolving_connectionist_systems" >}})
 
 Early evolving [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) architectures use the [Leaky
 Integrate-And-Fire]({{< relref "leaky_integrate_and_fire" >}}) model, and rank-order encoding. eSNNs can be used for
@@ -27,9 +23,9 @@ threshold. This weight vector is compared to existing neurons in the
 repository. If neurons are too similar (e.g. small Euclidean distance
 between weight vectors), they are merged.
 
-See ([Schliebs and Kasabov, n.d.](#org01fcd20)) for a
+See ([Schliebs and Kasabov, n.d.](#orga0ff17c)) for a
 comprehensive review.
 
 ## Bibliography {#bibliography}
 
-<a id="org01fcd20"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.
+<a id="orga0ff17c"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.

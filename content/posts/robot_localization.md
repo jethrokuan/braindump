@@ -1,17 +1,9 @@
 +++
 title = "Robot Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:21+08:00
+lastmod = 2020-07-17T00:55:46+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [EKF Localization]({{< relref "ekf_localization" >}})
-- [Robotics]({{< relref "robotics" >}})
-- [Occupancy Grid Mapping]({{< relref "occupancy_grid_mapping" >}})
-- [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})
-- [State Estimation]({{< relref "state_estimation" >}})
 
 Mobile robot localization is the problem of estimating the robots
 coordinates in an external reference frame from sensor data, relative

@@ -1,14 +1,10 @@
 +++
 title = "Python Default Parameter Values"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:33+08:00
+lastmod = 2020-07-17T00:56:04+08:00
 slug = "python_default_values"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Python]({{< relref "python" >}})
 
 source
 : [Default Parameter Values in Python](http://effbot.org/zone/default-values.htm)

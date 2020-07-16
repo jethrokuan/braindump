@@ -1,13 +1,9 @@
 +++
 title = "Generalized Value Functions"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:25+08:00
+lastmod = 2020-07-17T00:58:02+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Options Framework]({{< relref "options_framework" >}})
 
 (TODO)
 

@@ -1,16 +1,10 @@
 +++
 title = "Multi-modal Representation"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:42+08:00
+lastmod = 2020-07-17T00:55:10+08:00
 slug = "multimodal_representation"
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Co-learning]({{< relref "colearning" >}})
-- [Canonical Correlation Analysis]({{< relref "canonical_correlation_analysis" >}})
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
 
 tags
 : [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
@@ -27,7 +21,7 @@ a meaningful way is crucial to multimodal problems.
 
 ## Categories of multi-modal representations {#categories-of-multi-modal-representations}
 
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org5fb1e3e)) proposes two categories of
+([Baltrušaitis, Ahuja, and Morency, n.d.](#org7670089)) proposes two categories of
 multimodal representation:
 
 joint
@@ -96,4 +90,4 @@ order in the multimodal space. Another special case of this is
 
 ## Bibliography {#bibliography}
 
-<a id="org5fb1e3e"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="org7670089"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

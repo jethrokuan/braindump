@@ -1,7 +1,7 @@
 +++
 title = "Asian Cinema"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:09+08:00
+lastmod = 2020-07-17T00:57:45+08:00
 slug = "asian_cinema"
 draft = false
 +++

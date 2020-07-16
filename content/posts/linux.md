@@ -1,17 +1,9 @@
 +++
 title = "Linux"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:08+08:00
+lastmod = 2020-07-17T00:57:42+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Unix]({{< relref "unix" >}})
-- [Docker 101]({{< relref "docker" >}})
-- [Nix/NixOS]({{< relref "nix" >}})
-- [Systems Programming]({{< relref "systems_programming" >}})
-- [Branch Prediction]({{< relref "branch_prediction" >}})
 
 - `127.0.1.1` in `/etc/hosts` is to allow some applications like Gnome to
   resolve the hostname to an ip address with a canonical fully

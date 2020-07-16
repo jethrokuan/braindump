@@ -1,14 +1,9 @@
 +++
 title = "Leaky Integrate-And-Fire"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:10+08:00
+lastmod = 2020-07-17T00:57:46+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Synaptic Current Model]({{< relref "synaptic_current_model" >}})
-- [Evolving Spiking Neural Networks]({{< relref "evolving_snn" >}})
 
 tags
 : [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}})

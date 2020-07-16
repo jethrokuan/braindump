@@ -1,14 +1,10 @@
 +++
 title = "Non-informative Priors"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:15+08:00
+lastmod = 2020-07-17T00:55:41+08:00
 slug = "noninformative_priors"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Reference Prior]({{< relref "reference_prior" >}})
 
 Non-informative priors are used in [Bayesian Inference]({{< relref "bayesian_inference" >}}), in the
 situation where no prior information exists, or inference based

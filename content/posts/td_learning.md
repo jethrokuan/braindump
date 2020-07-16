@@ -1,17 +1,9 @@
 +++
 title = "Temporal Difference Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:32+08:00
+lastmod = 2020-07-17T00:57:03+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [The Paths Perspective on Value Learning]({{< relref "the_paths_perspective_on_value_learning" >}})
-- [Options Framework]({{< relref "options_framework" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
-- [Neuroscience and Reinforcement Learning]({{< relref "neuroscience_rl" >}})
-- [Q-Learning]({{< relref "q_learning" >}})
 
 Observe samples \\(\left(s_t, a_t, r_t, s\_{t+1} \right)\\). If value
 estimates are accurate, the following must hold:

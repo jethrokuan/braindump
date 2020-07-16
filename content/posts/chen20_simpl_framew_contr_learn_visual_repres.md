@@ -1,13 +1,9 @@
 +++
 title = "chen20_simpl_framew_contr_learn_visual_repres: A simple framework for contrastive learning of visual representations"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T15:32:34+08:00
+lastmod = 2020-07-17T00:56:03+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [chen\_big\_2020: Big Self-Supervised Models are Strong Semi-Supervised Learners]({{< relref "chen_big_2020" >}})
 
 SimCLR is a simple framework for [contrastive learning]({{< relref "contrastive_methods" >}}) of visual
 representations.

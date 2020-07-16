@@ -1,14 +1,9 @@
 +++
 title = "Stochastic Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:39+08:00
+lastmod = 2020-07-17T00:57:11+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Markov Chains]({{< relref "markov_chains" >}})
-- [Neural Ordinary Differential Equations (Review)]({{< relref "neural_ode" >}})
 
 A stochastic process \\(X(t), t \in T\\) is a collection of random
 variables. For each \\(t \in T\\), \\(X(t)\\) is a random variable. The index
@@ -54,10 +49,10 @@ Example of stochastic process: Gambler's ruin
 
 ## Reference Textbooks {#reference-textbooks}
 
-([Ross, n.d.](#org3e31cbb); [Pinsky and Karlin, n.d.](#orgeeeb596))
+([Ross, n.d.](#orgd1106bd); [Pinsky and Karlin, n.d.](#org02cbecf))
 
 ## Bibliography {#bibliography}
 
-<a id="orgeeeb596"></a>Pinsky, Mark, and Samuel Karlin. n.d. _An Introduction to Stochastic Modeling_. Academic press.
+<a id="org02cbecf"></a>Pinsky, Mark, and Samuel Karlin. n.d. _An Introduction to Stochastic Modeling_. Academic press.
 
-<a id="org3e31cbb"></a>Ross, Sheldon M. n.d. _Introduction to Probability Models_. Academic press.
+<a id="orgd1106bd"></a>Ross, Sheldon M. n.d. _Introduction to Probability Models_. Academic press.

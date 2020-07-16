@@ -1,13 +1,9 @@
 +++
 title = "Map Matching"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:14+08:00
+lastmod = 2020-07-17T00:57:51+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
 
 Map matching compiles small numbers of consecutive scans into
 local maps \\(m\_{\mathrm{local}}\\). Maps are then compared to the global

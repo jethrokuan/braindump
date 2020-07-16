@@ -1,13 +1,9 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:36+08:00
+lastmod = 2020-07-17T00:57:08+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Robotics]({{< relref "robotics" >}})
 
 ## Introduction to ROS {#introduction-to-ros}
 

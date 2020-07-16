@@ -1,14 +1,10 @@
 +++
 title = "Concept Grounding"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:09+08:00
+lastmod = 2020-07-17T00:57:44+08:00
 slug = "concept_grounding"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Co-learning]({{< relref "colearning" >}})
 
 Conceptual grounding is the learning of semantic meanings or concepts
 via additional modalities. For example, while concept learning is

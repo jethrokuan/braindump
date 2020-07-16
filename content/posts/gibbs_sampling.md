@@ -1,13 +1,9 @@
 +++
 title = "Gibbs Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:26+08:00
+lastmod = 2020-07-17T00:56:57+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Slice Sampling]({{< relref "slice_sampling" >}})
 
 Gibbs sampling is a special case of the [Metropolis-Hastings method]({{< relref "metropolis_hastings" >}}),
 where a sequence of proposal distributions \\(q\\) is defined in terms of

@@ -1,14 +1,9 @@
 +++
 title = "Occupancy Grid Mapping"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:10+08:00
+lastmod = 2020-07-17T00:57:45+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Robotics]({{< relref "robotics" >}})
-- [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})
 
 In [Robot Localization]({{< relref "robot_localization" >}}), it is assumed that the robot is given a map in
 advance. This is sometimes not the case.

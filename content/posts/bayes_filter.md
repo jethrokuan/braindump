@@ -1,17 +1,9 @@
 +++
 title = "Bayes Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:25+08:00
+lastmod = 2020-07-17T00:56:56+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
-- [Markov Localization]({{< relref "markov_localization" >}})
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
-- [Gaussian Filter]({{< relref "gaussian_filter" >}})
-- [Information Filter]({{< relref "information_filter" >}})
 
 tags
 : [Gaussian Filter]({{< relref "gaussian_filter" >}})

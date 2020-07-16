@@ -1,14 +1,9 @@
 +++
 title = "Actor-Critic"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:00+08:00
+lastmod = 2020-07-17T00:55:27+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
-- [Q-Learning]({{< relref "q_learning" >}})
 
 Actor-Critic improves on [Policy Gradients]({{< relref "policy_gradients" >}}) methods by introducing a
 critic.

@@ -1,14 +1,9 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:02+08:00
+lastmod = 2020-07-17T00:57:36+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
-- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
 
 tags
 : [Optimal Control and Planning]({{< relref "optimal_control" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -137,7 +132,7 @@ same derivations as [Hidden Markov Model]({{< relref "hidden_markov_model" >}})!
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-18-55_.png" >}}
 
-For more, see ([Levine, n.d.](#orga332bf4)).
+For more, see ([Levine, n.d.](#orgeaced87)).
 
 ## Resources {#resources}
 
@@ -145,4 +140,4 @@ For more, see ([Levine, n.d.](#orga332bf4)).
 
 ## Bibliography {#bibliography}
 
-<a id="orga332bf4"></a>Levine, Sergey. n.d. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” <http://arxiv.org/abs/1805.00909v3>.
+<a id="orgeaced87"></a>Levine, Sergey. n.d. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” <http://arxiv.org/abs/1805.00909v3>.

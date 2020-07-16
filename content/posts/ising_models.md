@@ -1,14 +1,10 @@
 +++
 title = "Ising Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:01+08:00
+lastmod = 2020-07-17T00:57:35+08:00
 tags = ["machine-learning"]
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Hopfield Network]({{< relref "hopfield_network" >}})
 
 An Ising model is an array of spins (atoms that can take states \\(\pm
 1\\)) that are magnetically coupled to each other. If one spin is, say

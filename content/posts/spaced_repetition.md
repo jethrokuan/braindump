@@ -1,13 +1,9 @@
 +++
 title = "Spaced Repetition"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:12+08:00
+lastmod = 2020-07-17T00:56:43+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [How to Make Yourself Into a Learning Machine - Superorganizers]({{< relref "how_to_make_yourself_into_a_learning_machine_superorganizers" >}})
 
 tags
 : [Productivity]({{< relref "productivity" >}})

@@ -1,17 +1,12 @@
 +++
 title = "Time Surface"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T18:18:53+08:00
+lastmod = 2020-07-17T00:55:51+08:00
 slug = "time_surface_ts"
 draft = false
 +++
 
-### Backlinks {#backlinks}
-
-- [Event-based Vision]({{< relref "event_based_vision" >}})
-- [lagorce\_hots\_2017: HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition]({{< relref "lagorce_hots_2017" >}})
-
-Defined in ([Lagorce et al., n.d.](#org3d1e4bc))
+Defined in ([Lagorce et al., n.d.](#orgb98a4bb))
 
 Say we have a stream of visual events:
 
@@ -39,4 +34,4 @@ The time surface provides dynamic spatiotemporal context around an event, and th
 
 ## Bibliography {#bibliography}
 
-<a id="org3d1e4bc"></a>Lagorce, Xavier, Garrick Orchard, Francesco Galluppi, Bertram E. Shi, and Ryad B. Benosman. n.d. “HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition” 39 (7):1346–59.
+<a id="orgb98a4bb"></a>Lagorce, Xavier, Garrick Orchard, Francesco Galluppi, Bertram E. Shi, and Ryad B. Benosman. n.d. “HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition” 39 (7):1346–59.

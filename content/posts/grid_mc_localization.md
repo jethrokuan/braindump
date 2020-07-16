@@ -1,13 +1,9 @@
 +++
 title = "Grid & Monte Carlo Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:23+08:00
+lastmod = 2020-07-17T00:56:53+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [EKF Localization]({{< relref "ekf_localization" >}})
 
 Grid & Monte Carlo Localization methods are able to solve global
 localization problems (in comparison to [EKF Localization]({{< relref "ekf_localization" >}}) and

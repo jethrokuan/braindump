@@ -1,13 +1,9 @@
 +++
 title = "Gaussian Processes"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:59+08:00
+lastmod = 2020-07-17T00:56:30+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})
 
 In supervised learning, we are given training data \\(\mathcal{D}\\), and we need to
 learn a function \\(f\\) that can make predictions for all possible input values. To

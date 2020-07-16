@@ -1,13 +1,9 @@
 +++
 title = "Histogram Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:15+08:00
+lastmod = 2020-07-17T00:56:45+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Non-parametric Filters]({{< relref "nonparametric_filter" >}})
 
 The state space is decomposed into finitely many regions, and the
 cumulative posterior for each region is represented by a single

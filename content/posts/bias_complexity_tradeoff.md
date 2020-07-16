@@ -1,14 +1,10 @@
 +++
 title = "The Bias-Complexity Tradeoff"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:27+08:00
+lastmod = 2020-07-17T00:56:58+08:00
 tags = ["machine-learning"]
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [VC-Dimension]({{< relref "vc_dimension" >}})
 
 Training data can mislead the learner, and result in overfitting. To
 overcome this problem, we can restrict the search space to some

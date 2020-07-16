@@ -1,7 +1,7 @@
 +++
 title = "Contrastive Methods"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:28+08:00
+lastmod = 2020-07-17T00:55:58+08:00
 slug = "contrastive_methods"
 draft = false
 +++

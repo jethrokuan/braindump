@@ -1,7 +1,7 @@
 +++
 title = "Causality, part 1 - Bernhard Schölkopf - MLSS 2020, Tübingen - YouTube"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:18:00+08:00
+lastmod = 2020-07-17T00:55:49+08:00
 slug = "causality_part_1_bernhard_scholkopf_mlss_2020_tubingen_youtube"
 draft = false
 +++

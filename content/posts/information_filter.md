@@ -1,14 +1,9 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:12+08:00
+lastmod = 2020-07-17T00:57:48+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Extended Kalman Filter]({{< relref "extended_kalman_filter" >}})
-- [Simultaneous Localization and Mapping (SLAM)]({{< relref "slam" >}})
 
 tags
 : [Gaussian Filter]({{< relref "gaussian_filter" >}}), [Bayes Filter]({{< relref "bayes_filter" >}})

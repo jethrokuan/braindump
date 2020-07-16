@@ -1,13 +1,9 @@
 +++
 title = "Uncertainty in Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:26+08:00
+lastmod = 2020-07-17T00:58:03+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Robotics]({{< relref "robotics" >}})
 
 Robotic applications increasingly deal with more unstructured
 environments. Robots that can perceive and deal with uncertainty are
@@ -33,7 +29,7 @@ Computation
 > A robot that carries a notion of its own uncertainty that acts
 > accordingly is superior to one that does not.
 
-([Thrun, Burgard, and Fox, n.d.](#org2ba2979))
+([Thrun, Burgard, and Fox, n.d.](#org6457e3c))
 
 ## Pros {#pros}
 
@@ -51,4 +47,4 @@ Computation
 
 ## Bibliography {#bibliography}
 
-<a id="org2ba2979"></a>Thrun, Sebastian, Wolfram Burgard, and Dieter Fox. n.d. _Probabilistic Robotics_. MIT press.
+<a id="org6457e3c"></a>Thrun, Sebastian, Wolfram Burgard, and Dieter Fox. n.d. _Probabilistic Robotics_. MIT press.

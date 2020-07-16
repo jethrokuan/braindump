@@ -1,7 +1,7 @@
 +++
 title = "Credit Assignment in Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:35+08:00
+lastmod = 2020-07-17T00:57:06+08:00
 draft = false
 +++
 

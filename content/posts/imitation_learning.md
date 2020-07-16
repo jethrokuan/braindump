@@ -1,13 +1,9 @@
 +++
 title = "Imitation Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:57+08:00
+lastmod = 2020-07-17T00:55:24+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
 
 ## Behavioural Cloning {#behavioural-cloning}
 
@@ -46,7 +42,7 @@ the algorithm, can we make \\(p\_{data}(o_t) = p\_{\pi\_\theta}(o_t)\\)?
         observation.
     2.  Perhaps a better model is to account for all observations.
     3.  Problem: history exacerbates causal confusion
-        ([Haan, Jayaraman, and Levine, n.d.](#org85c43f1))
+        ([Haan, Jayaraman, and Levine, n.d.](#org262f461))
 
 2.  Multimodal behaviour
     1.  Solutions:
@@ -87,4 +83,4 @@ Assuming: \\(\pi\_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathb
 
 ## Bibliography {#bibliography}
 
-<a id="org85c43f1"></a>Haan, Pim de, Dinesh Jayaraman, and Sergey Levine. n.d. “Causal Confusion in Imitation Learning.” <http://arxiv.org/abs/1905.11979v2>.
+<a id="org262f461"></a>Haan, Pim de, Dinesh Jayaraman, and Sergey Levine. n.d. “Causal Confusion in Imitation Learning.” <http://arxiv.org/abs/1905.11979v2>.

@@ -1,7 +1,7 @@
 +++
 title = "Computer Vision"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:53+08:00
+lastmod = 2020-07-17T00:57:26+08:00
 draft = false
 +++
 

@@ -1,13 +1,9 @@
 +++
 title = "Motion Model With Maps"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:36+08:00
+lastmod = 2020-07-17T00:56:07+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Velocity Motion Model]({{< relref "velocity_motion_model" >}})
 
 tags
 : [Velocity Motion Model]({{< relref "velocity_motion_model" >}}), [Odometry Motion Model]({{< relref "odometry_motion_model" >}})

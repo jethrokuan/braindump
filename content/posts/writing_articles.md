@@ -1,13 +1,9 @@
 +++
 title = "Writing Articles"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:18+08:00
+lastmod = 2020-07-17T00:57:55+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Writing]({{< relref "writing" >}})
 
 - [Rule of Three](https://chrisshort.net/writing-technical-articles/): have 3 main topic points with no more than 3 subtopic
   points under them.

@@ -1,13 +1,9 @@
 +++
 title = "LeCun's Cake Analogy"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:04+08:00
+lastmod = 2020-07-17T00:56:35+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Self-supervised Learning]({{< relref "self_supervised_learning" >}})
 
 Yann LeCun gave this cake analogy in NIPS 2016:
 

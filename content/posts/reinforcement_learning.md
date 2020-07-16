@@ -1,29 +1,10 @@
 +++
 title = "Reinforcement Learning ⭐"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:12+08:00
+lastmod = 2020-07-17T00:57:47+08:00
 tags = ["machine-learning"]
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Free-Energy Reinforcement Learning]({{< relref "free_energy_rl" >}})
-- [Distributed Reinforcement Learning]({{< relref "distributed_rl" >}})
-- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
-- [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
-- [A Distributional Code for Value in Dopamine-based Reinforcement Learning]({{< relref "dabney2020_distributional_rl" >}})
-- [Self-supervised Learning]({{< relref "self_supervised_learning" >}})
-- [Generalization In Reinforcement Learning]({{< relref "generalization_in_rl" >}})
-- [Inverse Reinforcement Learning]({{< relref "inverse_rl" >}})
-- [Meta Learning]({{< relref "meta_learning" >}})
-- [Exploration In Reinforcement Learning]({{< relref "exploration_in_rl" >}})
-- [Transfer Learning]({{< relref "transfer_learning" >}})
-- [Model-Based Reinforcement Learning]({{< relref "model_based_rl" >}})
-- [Policy Gradients]({{< relref "policy_gradients" >}})
-- [Control As Inference]({{< relref "control_as_inference" >}})
-- [Neuroscience and Reinforcement Learning]({{< relref "neuroscience_rl" >}})
-- [Q-Learning]({{< relref "q_learning" >}})
 
 tags
 : [Machine Learning]({{< relref "machine_learning" >}})
@@ -339,7 +320,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orgfd4bd07) remains unchanged. IT can be shown that the TD
+[update rule for TD](#orgd91f195) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 

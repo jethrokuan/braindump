@@ -1,13 +1,9 @@
 +++
 title = "PARA Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:30+08:00
+lastmod = 2020-07-17T00:58:09+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Productivity]({{< relref "productivity" >}})
 
 PARA is a method of organizing digital information, designed by Tiago
 Forte. Tiago Forte also proposed the method of [Progressive Summarization]({{< relref "progressive_summarization" >}}).

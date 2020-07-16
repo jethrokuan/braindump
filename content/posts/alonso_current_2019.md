@@ -1,7 +1,7 @@
 +++
 title = "alonso_current_2019: Current Research Trends in Robot Grasping and Bin Picking"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:18:16+08:00
+lastmod = 2020-07-17T00:55:54+08:00
 draft = false
 +++
 

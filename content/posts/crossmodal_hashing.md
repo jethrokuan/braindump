@@ -1,14 +1,10 @@
 +++
 title = "Cross-modal Hashing"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:50+08:00
+lastmod = 2020-07-17T00:55:17+08:00
 slug = "crossmodal_hashing"
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Multi-modal Representation]({{< relref "multimodal_representation" >}})
 
 Cross-modal hashing is the compression of high dimensional data into
 compact binary codes with similar binary codes for similar objects.
@@ -21,9 +17,9 @@ constraints are :
     hash code
 3.  The space has to be similarity-preserving
 
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org41b38e0)) has some good reference
+([Baltrušaitis, Ahuja, and Morency, n.d.](#org8404f96)) has some good reference
 papers.
 
 ## Bibliography {#bibliography}
 
-<a id="org41b38e0"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="org8404f96"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

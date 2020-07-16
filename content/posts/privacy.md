@@ -1,11 +1,7 @@
 +++
 title = "Privacy"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:37+08:00
+lastmod = 2020-07-17T00:55:05+08:00
 slug = "privacy"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [The opt-out illusion - Technology - TLS]({{< relref "the_opt_out_illusion_technology_tls" >}})

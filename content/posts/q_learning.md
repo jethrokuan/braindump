@@ -1,14 +1,9 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:26+08:00
+lastmod = 2020-07-17T00:58:04+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Transfer Learning]({{< relref "transfer_learning" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 tags
 : [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Temporal Difference Learning]({{< relref "td_learning" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
@@ -295,7 +290,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting ([Jin et al., n.d.](#orga834745)).
+setting ([Jin et al., n.d.](#org5a6ffe2)).
 
 ## Q-learning with function approximation {#q-learning-with-function-approximation}
 
@@ -327,4 +322,4 @@ RL]({{< relref "mnih2013_atari_deeprl" >}})).
 
 ## Bibliography {#bibliography}
 
-<a id="orga834745"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. n.d. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc. <http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf>.
+<a id="org5a6ffe2"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. n.d. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc. <http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf>.

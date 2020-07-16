@@ -1,7 +1,7 @@
 +++
 title = "The opt-out illusion - Technology - TLS"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:55+08:00
+lastmod = 2020-07-17T00:56:26+08:00
 slug = "the_opt_out_illusion_technology_tls"
 draft = false
 +++

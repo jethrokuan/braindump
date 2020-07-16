@@ -1,15 +1,9 @@
 +++
 title = "Software Engineering"
 author = ["Derrick Chua", "Jethro Kuan"]
-lastmod = 2020-07-08T14:56:17+08:00
+lastmod = 2020-07-17T00:57:54+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [System Design]({{< relref "system_design" >}})
-- [Game API Design]({{< relref "game_api_design" >}})
-- [Code Litmus Tests]({{< relref "code_litmus_tests" >}})
 
 ## Object-Oriented Programming {#object-oriented-programming}
 

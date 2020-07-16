@@ -1,14 +1,10 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:13+08:00
+lastmod = 2020-07-17T00:56:44+08:00
 tags = ["proglang", "compilers"]
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [GCC]({{< relref "gcc" >}})
 
 ## What are compilers? {#what-are-compilers}
 

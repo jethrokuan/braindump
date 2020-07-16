@@ -1,14 +1,9 @@
 +++
 title = "Empirical Risk Minimization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:10+08:00
+lastmod = 2020-07-17T00:56:41+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [PAC Learning]({{< relref "pac_learning" >}})
-- [Machine Learning]({{< relref "machine_learning" >}})
 
 In [Machine Learning]({{< relref "machine_learning" >}}), the training set error is often called the
 _empirical error_ or _empirical risk_, and this is the error the

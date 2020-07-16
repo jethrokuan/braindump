@@ -1,15 +1,9 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:27+08:00
+lastmod = 2020-07-17T00:58:05+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Multi-modal Representation]({{< relref "multimodal_representation" >}})
-- [Monte Carlo Methods]({{< relref "mc_methods" >}})
-- [Control As Inference]({{< relref "control_as_inference" >}})
 
 ## Motivation {#motivation}
 
@@ -498,12 +492,12 @@ represents our model of the world.
   Unfortunately, not every distribution has a perfect map. There exists
   an algorithm for finding the DAG representing the P-map for a
   distribution of a P-map if it exists, but is quite involved. See
-  ([Koller, Friedman, and Bach, n.d.](#org516a3b6)).
+  ([Koller, Friedman, and Bach, n.d.](#orgbe63aae)).
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
 (The bulk of the material is from Murphy's book
-([Murphy, n.d.](#orgb8060b7)))
+([Murphy, n.d.](#orgdce798c)))
 
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -743,9 +737,9 @@ However, CRF requires labeled training data, and are slower to train.
 
 ## Bibliography {#bibliography}
 
-<a id="org516a3b6"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
+<a id="orgbe63aae"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
 
-<a id="orgb8060b7"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
+<a id="orgdce798c"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
 
 ## Resources {#resources}
 

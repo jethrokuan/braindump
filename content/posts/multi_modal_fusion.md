@@ -1,15 +1,10 @@
 +++
 title = "Multi-modal Fusion"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:16+08:00
+lastmod = 2020-07-17T00:55:42+08:00
 slug = "multimodal_fusion"
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Multi-modal Representation]({{< relref "multimodal_representation" >}})
-- [Multi-modal Machine Learning]({{< relref "multimodal_machine_learning" >}})
 
 Multi-modal fusion is the integration of information from multiple
 modalities with the goal of predicting an outcome measure (e.g.
@@ -24,7 +19,7 @@ Multi-modal fusion is motivated by 3 main reasons:
     missing
 
 Multi-modal fusion approaches can be classified as
-([Baltrušaitis, Ahuja, and Morency, n.d.](#orgf5d4226)):
+([Baltrušaitis, Ahuja, and Morency, n.d.](#orgc345b9f)):
 
 - **Model-agnostic**
   - early fusion
@@ -72,4 +67,4 @@ amounts of training data.
 
 ## Bibliography {#bibliography}
 
-<a id="orgf5d4226"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="orgc345b9f"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

@@ -1,11 +1,7 @@
 +++
 title = "Nolla Games"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:44+08:00
+lastmod = 2020-07-17T00:56:14+08:00
 slug = "nolla_games"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [GDC Vault - Exploring the Tech and Design of 'Noita']({{< relref "gdc_vault_exploring_the_tech_and_design_of_noita" >}})

@@ -1,15 +1,9 @@
 +++
 title = "Gaussian Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:43+08:00
+lastmod = 2020-07-17T00:56:14+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Bayes Filter]({{< relref "bayes_filter" >}})
-- [Kalman Filter]({{< relref "kalman_filter" >}})
-- [Information Filter]({{< relref "information_filter" >}})
 
 Gaussian Filters is a tractable implementation of the Bayes filter
 ([Bayes Filter]({{< relref "bayes_filter" >}})) for continuous spaces.

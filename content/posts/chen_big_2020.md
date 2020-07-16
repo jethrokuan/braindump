@@ -1,7 +1,7 @@
 +++
 title = "chen_big_2020: Big Self-Supervised Models are Strong Semi-Supervised Learners"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T15:37:52+08:00
+lastmod = 2020-07-17T00:55:51+08:00
 draft = false
 +++
 

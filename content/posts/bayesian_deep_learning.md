@@ -1,23 +1,19 @@
 +++
 title = "Bayesian Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:08+08:00
+lastmod = 2020-07-17T00:56:39+08:00
 tags = ["bayes", "deep-learning"]
 draft = false
 +++
 
-### Backlinks {#backlinks}
-
-- [Deep Learning With Bayesian Principles - Emtiyaz Khan]({{< relref "emti_dl_with_bayesian_principles" >}})
-
-## The Case For Bayesian Learning ([Wilson, n.d.](#orgbd4ee48)) {#the-case-for-bayesian-learning--wilson-n-dot-d-dot--orgbd4ee48}
+## The Case For Bayesian Learning ([Wilson, n.d.](#org802ef8b)) {#the-case-for-bayesian-learning--wilson-n-dot-d-dot--org802ef8b}
 
 - Vague parameter prior + structured model (e.g. CNN) = structured
   function prior!
 - The success of ensembles encourages Bayesians, since ensembles
   approximate the Bayesian Model Average
 
-## Bayesian Perspective on Generalization ([Smith and Le, n.d.](#org66eb863)) {#bayesian-perspective-on-generalization--smith-and-le-n-dot-d-dot--org66eb863}
+## Bayesian Perspective on Generalization ([Smith and Le, n.d.](#org4080bc4)) {#bayesian-perspective-on-generalization--smith-and-le-n-dot-d-dot--org4080bc4}
 
 Bayesian model comparisons were first made on Neural Networks by
 Mackay. Consider a classification model \\(M\\) with a single parameter
@@ -52,6 +48,6 @@ the network to prefer broad minima.
 
 ## Bibliography {#bibliography}
 
-<a id="org66eb863"></a>Smith, Sam, and Quoc V. Le. n.d. “A Bayesian Perspective on Generalization and Stochastic Gradient Descent.” <https://openreview.net/pdf?id=BJij4yg0Z>.
+<a id="org4080bc4"></a>Smith, Sam, and Quoc V. Le. n.d. “A Bayesian Perspective on Generalization and Stochastic Gradient Descent.” <https://openreview.net/pdf?id=BJij4yg0Z>.
 
-<a id="orgbd4ee48"></a>Wilson, Andrew Gordon. n.d. “The Case for Bayesian Deep Learning.”
+<a id="org802ef8b"></a>Wilson, Andrew Gordon. n.d. “The Case for Bayesian Deep Learning.”

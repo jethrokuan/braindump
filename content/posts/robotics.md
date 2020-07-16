@@ -1,7 +1,7 @@
 +++
 title = "Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:00+08:00
+lastmod = 2020-07-17T00:57:34+08:00
 tags = ["robotics"]
 draft = false
 +++

@@ -1,7 +1,7 @@
 +++
 title = "Feedback Alignment and Random Error Backpropagation"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:43+08:00
+lastmod = 2020-07-17T00:57:16+08:00
 draft = false
 +++
 

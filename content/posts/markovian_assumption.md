@@ -1,16 +1,9 @@
 +++
 title = "Markovian Assumption"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:45+08:00
+lastmod = 2020-07-17T00:56:16+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Bayes Filter]({{< relref "bayes_filter" >}})
-- [Policy Gradients]({{< relref "policy_gradients" >}})
-- [Kalman Filter]({{< relref "kalman_filter" >}})
-- [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
 
 **Key idea**: the past and future data are independent, conditioned on the
 present.

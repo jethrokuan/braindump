@@ -1,7 +1,7 @@
 +++
 title = "Byron Boots - Perspectives on Machine Learning and Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-15T19:35:25+08:00
+lastmod = 2020-07-17T00:55:49+08:00
 slug = "byron_boots_perspectives_on_machine_learning_and_robotics"
 draft = false
 +++

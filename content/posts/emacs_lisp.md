@@ -1,15 +1,9 @@
 +++
 title = "Emacs Lisp"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:02+08:00
+lastmod = 2020-07-17T00:55:29+08:00
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Emacs]({{< relref "emacs" >}})
-- [Elisp: Buffer-passing Style]({{< relref "elisp_buffer_passing_style" >}})
-- [Emacs Should Be Emacs Lisp - Tom Tromey]({{< relref "emacs_should_be_emacs_lisp" >}})
 
 tags
 : [Programming Languages]({{< relref "prog_lang" >}})

@@ -1,7 +1,7 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:10+08:00
+lastmod = 2020-07-17T00:56:40+08:00
 draft = false
 +++
 
@@ -84,7 +84,7 @@ r\_\psi(\tau\_i)] - E\_{\tau \sim p(\tau | \mathcal{O}\_{1:T},
 first term is estimated with expert samples, and the second with the
 soft optimal policy under current reward.
 
-## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org5eb54eb)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org5eb54eb}
+## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org214563b)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org214563b}
 
 1.  Given \\(\psi\\), compute [backward message]({{< relref "control_as_inference" >}}) \\(\beta(s_t, a_t)\\)
 2.  Given \\(\psi\\), compute [forward message]({{< relref "control_as_inference" >}}) \\(\alpha(s_t)\\)
@@ -133,13 +133,13 @@ w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 
 ## Papers {#papers}
 
-- ([Abbeel and Ng, n.d.](#orgfa04028))
-- ([Ratliff, Bagnell, and Zinkevich, n.d.](#orgeff011d))
+- ([Abbeel and Ng, n.d.](#org5bd70d5))
+- ([Ratliff, Bagnell, and Zinkevich, n.d.](#org615f4d7))
 
 ## Bibliography {#bibliography}
 
-<a id="orgfa04028"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
+<a id="org5bd70d5"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
 
-<a id="orgeff011d"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
+<a id="org615f4d7"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
 
-<a id="org5eb54eb"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.
+<a id="org214563b"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.

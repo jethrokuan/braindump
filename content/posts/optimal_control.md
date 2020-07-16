@@ -1,14 +1,9 @@
 +++
 title = "Optimal Control and Planning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:46+08:00
+lastmod = 2020-07-17T00:56:17+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Human Behaviour As Optimal Control]({{< relref "human_behaviour_as_optimal_control" >}})
-- [Control As Inference]({{< relref "control_as_inference" >}})
 
 How can we make decisions if we know the dynamics of the environment?
 

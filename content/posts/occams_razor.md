@@ -1,13 +1,9 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:23+08:00
+lastmod = 2020-07-17T00:55:48+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Two Levels Of Inference]({{< relref "two_levels_of_inference" >}})
 
 tags
 : [Information Theory]({{< relref "information_theory" >}})

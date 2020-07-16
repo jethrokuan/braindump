@@ -1,11 +1,7 @@
 +++
 title = "John Wiegley"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:07+08:00
+lastmod = 2020-07-17T00:55:33+08:00
 slug = "john_wiegley"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Talks: Emacs Lisp Development Tips with John Wiegley]({{< relref "talks_emacs_lisp_development_tips_with_john_wiegley" >}})

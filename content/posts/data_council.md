@@ -1,7 +1,7 @@
 +++
 title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:17+08:00
+lastmod = 2020-07-17T00:55:43+08:00
 draft = false
 +++
 
@@ -73,9 +73,9 @@ e.g. Factorization machines
 
 - <span class="org-todo todo TODO">TODO</span> xDeepFM
 
-  ([Guo et al., n.d.](#org3f1dd65); [Lian et al., n.d.](#org5050647))
+  ([Guo et al., n.d.](#orgde3b13c); [Lian et al., n.d.](#orgb97d778))
 
-### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#org1eaf79d)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--org1eaf79d}
+### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#org081f38a)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--org081f38a}
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -239,8 +239,8 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 ## Bibliography {#bibliography}
 
-<a id="org3f1dd65"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
+<a id="orgde3b13c"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
 
-<a id="org5050647"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
+<a id="orgb97d778"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
 
-<a id="org1eaf79d"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.
+<a id="org081f38a"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.

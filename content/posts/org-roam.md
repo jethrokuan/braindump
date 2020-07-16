@@ -1,14 +1,9 @@
 +++
 title = "Org-Roam"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:54+08:00
+lastmod = 2020-07-17T00:55:21+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Zettelkasten]({{< relref "zettelkasten" >}})
-- [Documentation Generators]({{< relref "documentation_generators" >}})
 
 Org-roam is a package I built trying to emulate [Roam Research]({{< relref "roam_research" >}}) in
 [Emacs]({{< relref "emacs" >}}) and [Org-Mode]({{< relref "org-mode" >}}).

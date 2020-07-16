@@ -1,17 +1,9 @@
 +++
 title = "Writing"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:56:01+08:00
+lastmod = 2020-07-17T00:57:35+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Writing with Zettekasten]({{< relref "writing_with_zettekasten" >}})
-- [Roam Research]({{< relref "roam_research" >}})
-- [How To Take Smart Notes]({{< relref "how_to_take_smart_notes" >}})
-- [Writing Books]({{< relref "writing_books" >}})
-- [How To Write a Technical Paper]({{< relref "how_to_write_a_technical_paper" >}})
 
 - [Writing Books]({{< relref "writing_books" >}})
 - [Writing Articles]({{< relref "writing_articles" >}})

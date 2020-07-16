@@ -1,7 +1,7 @@
 +++
 title = "Self-Supervised Representation Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-09T14:33:57+08:00
+lastmod = 2020-07-17T00:55:55+08:00
 slug = "self_supervised_representation_learning"
 draft = false
 +++

@@ -1,13 +1,9 @@
 +++
 title = "Smoothed Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:31+08:00
+lastmod = 2020-07-17T00:57:02+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Surrogate Gradient Learning In Spiking Neural Networks]({{< relref "neftci2019_surrogate_gradient_learning_snn" >}})
 
 Smoothed [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) ensure well-behaved gradients which are
 directly suitable for optimization. They come in 4 categories:

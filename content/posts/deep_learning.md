@@ -1,14 +1,9 @@
 +++
 title = "Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:01+08:00
+lastmod = 2020-07-17T00:56:31+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Deep Learning Tools]({{< relref "dl_tools" >}})
-- [Definition of Deep Learning]({{< relref "definition_of_deep_learning" >}})
 
 ## Definition {#definition}
 

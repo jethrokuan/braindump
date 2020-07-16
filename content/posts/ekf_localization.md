@@ -1,13 +1,9 @@
 +++
 title = "EKF Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:58+08:00
+lastmod = 2020-07-17T00:55:24+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
 
 tags
 : [Robot Localization]({{< relref "robot_localization" >}}), [Markov Localization]({{< relref "markov_localization" >}}), [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})

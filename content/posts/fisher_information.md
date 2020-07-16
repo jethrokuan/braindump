@@ -1,14 +1,10 @@
 +++
 title = "Fisher information"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:20+08:00
+lastmod = 2020-07-17T00:55:45+08:00
 slug = "fisher_information"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Jeffreys Prior]({{< relref "jeffreys_prior" >}})
 
 The Fisher information in a univariate model is given by:
 

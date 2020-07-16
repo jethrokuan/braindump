@@ -1,14 +1,7 @@
 +++
 title = "Note-taking"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:05+08:00
+lastmod = 2020-07-17T00:55:31+08:00
 slug = "notetaking"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Roam Research]({{< relref "roam_research" >}})
-- [How To Take Smart Notes]({{< relref "how_to_take_smart_notes" >}})
-- [Zettelkasten]({{< relref "zettelkasten" >}})
-- [Article: An Opinionated Guide to ML Research]({{< relref "an_opinionated_guide_to_ml_research" >}})

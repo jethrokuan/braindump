@@ -1,14 +1,9 @@
 +++
 title = "Meta Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:20+08:00
+lastmod = 2020-07-17T00:56:50+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [A critique of pure learning and what artificial neural networks can learn from animal brains]({{< relref "zador19_critique_pure_learning" >}})
-- [Differentiable plasticity: training plastic neural networks with backpropagation]({{< relref "miconi_differentiable_plasticity" >}})
 
 tags
 : [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})

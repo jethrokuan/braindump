@@ -1,14 +1,9 @@
 +++
 title = "Data Science"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:56+08:00
+lastmod = 2020-07-17T00:55:23+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Datacouncil.ai Conference Notes]({{< relref "data_council" >}})
-- [Numpy]({{< relref "numpy" >}})
 
 ## Twitter Data Science Event {#twitter-data-science-event}
 

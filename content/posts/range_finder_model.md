@@ -1,14 +1,9 @@
 +++
 title = "Range Finder Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:55:09+08:00
+lastmod = 2020-07-17T00:56:40+08:00
 draft = false
 +++
-
-### Backlinks {#backlinks}
-
-- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
-- [Robotics]({{< relref "robotics" >}})
 
 ## Beam Model for Range Finders {#beam-model-for-range-finders}
 

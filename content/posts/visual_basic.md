@@ -1,7 +1,7 @@
 +++
 title = "Visual Basic"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:54:29+08:00
+lastmod = 2020-07-17T00:55:59+08:00
 slug = "visual_basic"
 draft = false
 +++

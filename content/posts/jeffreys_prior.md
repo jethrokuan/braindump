@@ -1,14 +1,10 @@
 +++
 title = "Jeffreys Prior"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-08T14:53:46+08:00
+lastmod = 2020-07-17T00:55:13+08:00
 slug = "jeffreys_prior"
 draft = false
 +++
-
-## Backlinks {#backlinks}
-
-- [Reference Prior]({{< relref "reference_prior" >}})
 
 The Jeffrey's prior is an easy-to-compute reference prior that is
 invariant to transformation, used in [Bayesian Inference]({{< relref "bayesian_inference" >}}). If the model
