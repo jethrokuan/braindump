@@ -1,0 +1,11 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: robot_grasping
+#+title: Robot Grasping
+
+* Grasping Approaches
+
+- Dextrous manipulation :: manipulation with fingers
+- Enveloping grasps :: formed by wrapping both fingers and palm around object
+
+  Enveloping grasps have superior stability. Grasping Simulators such as
+  (GraspIt!) have been made available for theoretical research.

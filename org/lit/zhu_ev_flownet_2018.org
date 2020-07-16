@@ -8,7 +8,7 @@
   :URL: http://arxiv.org/abs/1802.06898
   :AUTHOR: Zhu, A. Z., Yuan, L., Chaney, K., & Daniilidis, K.
   :NOTER_DOCUMENT: /home/jethro/Zotero/storage/X9P55F47/Zhu et al. - 2018 - EV-FlowNet Self-Supervised Optical Flow Estimatio.pdf
-  :NOTER_PAGE: 9
+  :NOTER_PAGE: 4
   :END:
 ** Event data is well-suited for [[file:optical_flow_estimation.org][Optical Flow Estimation]]
 :PROPERTIES:
@@ -27,8 +27,9 @@ polarity at each pixel. This preserves spatial relationships between events,
 while maintaining the most recent temporal information at each pixel, and
 providing a fixed number of channels for any event stream.
 
-They also introduced a [[file:self_supervised_learning.org][Self-supervised Learning]] method, suing a photometric loss
+They also introduced a [[file:self_supervised_learning.org][Self-supervised Learning]] method, using a photometric loss
 as a supervisory signal, without supervision from ground-truth flow.
+
 ** Event Representation
 :PROPERTIES:
 :NOTER_PAGE: (3 . 0.6347517730496455)

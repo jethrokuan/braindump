@@ -1,0 +1,12 @@
+#+setupfile: ./hugo_setup.org
+#+title: jing_self-supervised_2019: Self-supervised Visual Feature Learning with Deep Neural Networks: A Survey
+#+roam_key: cite:jing_self-supervised_2019
+
+* Self-supervised Visual Feature Learning with Deep Neural Networks: A Survey
+  :PROPERTIES:
+  :Custom_ID: jing_self-supervised_2019
+  :URL: http://arxiv.org/abs/1902.06162
+  :AUTHOR: Jing, L., & Tian, Y.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/QAEMMAE7/Jing and Tian - 2019 - Self-supervised Visual Feature Learning with Deep .pdf
+  :NOTER_PAGE:
+  :END:
