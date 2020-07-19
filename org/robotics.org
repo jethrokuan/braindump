@@ -15,3 +15,7 @@
 * Tools
 - [[file:ros.org][Robot Operating System (ROS)]]
 - [[file:cartographer.org][Google Cartographer]]
+
+* Links
+- [[https://github.com/Kiloreux/awesome-robotics][Awesome Robotics]]
+-

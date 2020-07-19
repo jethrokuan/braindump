@@ -1,7 +1,7 @@
 +++
 title = "Robotics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T01:30:09+08:00
+lastmod = 2020-07-19T16:15:27+08:00
 tags = ["robotics"]
 draft = false
 +++
@@ -21,3 +21,8 @@ draft = false
 
 - [Robot Operating System (ROS)]({{< relref "ros" >}})
 - [Google Cartographer]({{< relref "cartographer" >}})
+
+## Links {#links}
+
+- [Awesome Robotics](https://github.com/Kiloreux/awesome-robotics)
+-
