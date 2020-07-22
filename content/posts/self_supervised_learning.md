@@ -1,12 +1,13 @@
 +++
 title = "Self-supervised Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:50+08:00
+lastmod = 2020-07-22T13:54:08+08:00
 slug = "self_supervised_learning"
 draft = false
 +++
 
 [Prediction is the Essence of Intelligence]({{< relref "prediction_is_the_essence_of_intelligence" >}})
+
 
 ## Self-supervised Learning vs Other Learning Paradigms {#self-supervised-learning-vs-other-learning-paradigms}
 
@@ -16,6 +17,7 @@ In [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}), the ma
 
 See [LeCun's Cake Analogy]({{< relref "lecun_cake_analogy" >}}).
 
+
 ## Image-based {#image-based}
 
 Exemplar-CNN creates surrogate training dataset with unlabeled image patches. Surrogate classes are created by applying image transformations, such as rotation.
@@ -23,6 +25,7 @@ Exemplar-CNN creates surrogate training dataset with unlabeled image patches. Su
 Another class of tasks involve extracting multiple patches from a single image, and asking the model to predict the relationship between the patches.
 
 The model can also be tasked to perform colorization: coloring a grayscale input image.
+
 
 ## Video-based {#video-based}
 

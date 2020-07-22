@@ -1,7 +1,7 @@
 +++
 title = "LeCun's Cake Analogy"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:35+08:00
+lastmod = 2020-07-22T13:52:48+08:00
 draft = false
 +++
 
