@@ -1,7 +1,7 @@
 +++
 title = "What I'm Doing Now"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-24T14:03:15+08:00
+lastmod = 2020-07-24T14:15:44+08:00
 slug = "now"
 draft = false
 +++
