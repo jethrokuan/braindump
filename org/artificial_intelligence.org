@@ -106,6 +106,9 @@ states according to exactly how good it is to the agent. An agent's
 An agent chooses actions to maximise its expected utility. A
 utility-based agents has to model and keep track of its environment.
 ** Learning agents
+:PROPERTIES:
+:ID:       13ee9429-7d8b-40c1-a3bc-e9db7326f580
+:END:
 A learning agent can be divided into four conceptual components.
 - learning element :: responsible for making improvements
 - performance element :: responsible for selecting extrenal actions

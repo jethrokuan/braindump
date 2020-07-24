@@ -212,6 +212,9 @@ Let $E = (Q_E, \Sigma, \delta_E, q_0, F_E)$, then the equivalent DFA $D = (Q_D, 
 
 
 * Regular Expressions
+:PROPERTIES:
+:ID:       06f1342f-29d6-4647-a8f2-05eadc695f55
+:END:
 Regular expressions may be thought of as a "programming language", in
 which many important applications like text search applications or
 compiler components can be expressed in.
@@ -473,6 +476,9 @@ closure properties of regular languages. Below is a summary:
 The above are all regular.
 
 * Context-free Grammars and Languages
+:PROPERTIES:
+:ID:       da28f8a3-35f4-42e9-9a8e-c54cc32555a0
+:END:
 Context-free languages are a larger class of languages, that have
 context-free grammars. We show how these grammars are defined, and how
 they define languages.
@@ -621,6 +627,9 @@ Chomsky normal form. This is because we can convert any grammar into
 Chomsky normal form.
 
 * Pushdown Automata
+:PROPERTIES:
+:ID:       1c414780-37b3-4266-a6be-26aba08babbb
+:END:
 
 Pushdown automata are equivalent in power to context-free grammars
 This equivalence is useful because it gives us two options for proving

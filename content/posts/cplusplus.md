@@ -1,7 +1,7 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:50+08:00
+lastmod = 2020-07-24T23:07:59+08:00
 draft = false
 +++
 
@@ -108,7 +108,7 @@ public:
 
 ### avoid `endl` {#avoid-endl}
 
-The endl manipulator is mostly equivalent to '\n' and "\n"; as most
+The endl manipulator is mostly equivalent to '' and ""; as most
 commonly used it simply slows down output by doing redundant flush()s.
 This slowdown can be significant compared to printf-style output.
 
@@ -132,7 +132,7 @@ technique which binds the life cycle of a resource that must be
 acquired before use (allocated heap memory, thread of execution, open
 socket, open file, locked mutex, disk space, database
 connection—anything that exists in limited supply) to the lifetime of
-an object (NO_ITEM_DATA:noauthor_raii_nodate).
+an object.
 
 The basic idea is that class destructors are always called when a
 particular instance of an object goes out of scope. This allows for
@@ -181,7 +181,7 @@ The main advantage of shared pointers is that, we should not worry
 about calling delete or cleaning the memory in an explicit manner. The
 shared pointer will take care of it once it goes out of scope. To
 create a `shared_ptr`, use `make_shared`. It's fast in memory allocation
-compared to `new` (NO_ITEM_DATA:codesbay_codesbaycplusplus_smartpointer_2020).
+compared to `new`.
 
 ```cpp
 class Sample {
@@ -204,7 +204,7 @@ than one shared_ptr<> can refer to a single object.
 
 This is prevented by `unique_ptr<>` and the reason behind naming it as
 unique. In `unique_ptr<>`, one and only one `unique_ptr<>` has the
-ownership of the Object and manages its lifetime (NO_ITEM_DATA:codesbay_codesbaycplusplus_smartpointer_2020).
+ownership of the Object and manages its lifetime.
 
 ### std::move {#std-move}
 
@@ -213,12 +213,12 @@ unique_ptr to another, which is otherwise not possible.
 
 For shared_ptr, std::move prevents the increment and immediate
 decrement of the reference count, making it an optimization. It's not
-strictly necessary. ([nil, n.d.](#org77be700))
+strictly necessary.
 
 ## not_null {#not-null}
 
 not_null is available in GSL, and with compile-time guarantees that a
-pointer is not null (NO_ITEM_DATA:bartek_barteks_2017).
+pointer is not null.
 
 ## Books to read {#books-to-read}
 
@@ -228,12 +228,9 @@ pointer is not null (NO_ITEM_DATA:bartek_barteks_2017).
 
 - [C++ Patterns](https://cpppatterns.com/)
 
-## Bibliography {#bibliography}
+<biblio.bib>
 
-<a id="org77be700"></a>nil. n.d. “C++ - Why Would I Std:Move an Std:SharedₚTr? - Stack Overflow.” <https://stackoverflow.com/questions/41871115/why-would-i-stdmove-an-stdshared-ptr>.
+## Backlinks {#backlinks}
 
-NO_ITEM_DATA:noauthor_raii_nodate
-
-NO_ITEM_DATA:codesbay_codesbaycplusplus_smartpointer_2020
-
-NO_ITEM_DATA:bartek_barteks_2017
+- [CMake]({{< relref "cmake" >}})
+- [All pages]({{< relref "sitemap" >}})

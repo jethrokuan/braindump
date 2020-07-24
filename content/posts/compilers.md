@@ -1,7 +1,7 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:44+08:00
+lastmod = 2020-07-24T21:44:37+08:00
 tags = ["proglang", "compilers"]
 draft = false
 +++
@@ -121,7 +121,7 @@ Attributes for tokens distinguish two lexemes belonging to the same symbol table
 
 Since the lexical analyzer needs to split splits into token
 classes, it must be specify the set of strings that belongs into a
-token class. To do so, we use [regular languages]({{< relref "theory_of_computation" >}}).
+token class. To do so, we use [regular languages](theory_of_computation.md).
 
 {{< figure src="/ox-hugo/screenshot_2019-09-25_16-21-45.png" caption="Figure 1: Cycle of constructions" >}}
 
@@ -145,7 +145,7 @@ token class. To do so, we use [regular languages]({{< relref "theory_of_computat
 
 ## Syntax Definition {#syntax-definition}
 
-We use [context-free grammars]({{< relref "theory_of_computation" >}}) to specify the syntax of a language.
+We use [Context-free Grammars](theory_of_computation.md) to specify the syntax of a language.
 
 A grammar for arithmetic expressions can be constructed from a table
 showing the associativity and precedence of operators.
@@ -170,7 +170,7 @@ precedence:
 
 ## Parsing {#parsing}
 
-Parsers use [pushdown automata]({{< relref "theory_of_computation" >}}) to do parsing. See [LR online parsing
+Parsers use [pushdown automata](theory_of_computation.md) to do parsing. See [LR online parsing
 machines](http://jsmachines.sourceforge.net/machines/) for an online parsing tool.
 
 ### Recursive-Descent Parsing {#recursive-descent-parsing}

@@ -98,7 +98,7 @@ Attributes for tokens distinguish two lexemes belonging to the same symbol table
 
 Since the lexical analyzer needs to split splits into token
 classes, it must be specify the set of strings that belongs into a
-token class. To do so, we use [[file:theory_of_computation.org::*Regular%20Expressions][regular languages]].
+token class. To do so, we use [[id:06f1342f-29d6-4647-a8f2-05eadc695f55][regular languages]].
 
 #+caption: Cycle of constructions
 [[file:images/compilers/screenshot_2019-09-25_16-21-45.png]]
@@ -122,7 +122,7 @@ implementation:
 
 * Syntax Definition
 
-We use [[file:theory_of_computation.org::*Context-free%20Grammars%20and%20Languages][context-free grammars]] to specify the syntax of a language.
+We use [[id:da28f8a3-35f4-42e9-9a8e-c54cc32555a0][Context-free Grammars]] to specify the syntax of a language.
 
 A grammar for arithmetic expressions can be constructed from a table
 showing the associativity and precedence of operators.
@@ -147,7 +147,7 @@ precedence:
 
 * Parsing
 
-Parsers use [[file:theory_of_computation.org::*Pushdown%20Automata][pushdown automata]] to do parsing. See [[http://jsmachines.sourceforge.net/machines/][LR online parsing
+Parsers use [[id:1c414780-37b3-4266-a6be-26aba08babbb][pushdown automata]] to do parsing. See [[http://jsmachines.sourceforge.net/machines/][LR online parsing
 machines]] for an online parsing tool.
 
 ** Recursive-Descent Parsing
