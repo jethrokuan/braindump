@@ -1,4 +1,0 @@
-#+setupfile:./hugo_setup.org
-#+title: What's on my Mind?
-
-This serves as my [[https://nownownow.com/][now page]].

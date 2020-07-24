@@ -876,6 +876,23 @@
   primaryClass = {eess.SP}
 }
 
+@article{jaskowski_improved_2018,
+  title = {Improved {{GQ}}-{{CNN}}: {{Deep Learning Model}} for {{Planning Robust Grasps}}},
+  shorttitle = {Improved {{GQ}}-{{CNN}}},
+  author = {Jaśkowski, Maciej and Świątkowski, Jakub and Zając, Michał and Klimek, Maciej and Potiuk, Jarek and Rybicki, Piotr and Polatowski, Piotr and Walczyk, Przemysław and Nowicki, Kacper and Cygan, Marek},
+  date = {2018-02-16},
+  url = {http://arxiv.org/abs/1802.05992},
+  urldate = {2020-07-22},
+  abstract = {Recent developments in the field of robot grasping have shown great improvements in the grasp success rates when dealing with unknown objects. In this work we improve on one of the most promising approaches, the Grasp Quality Convolutional Neural Network (GQ-CNN) trained on the DexNet 2.0 dataset. We propose a new architecture for the GQ-CNN and describe practical improvements that increase the model validation accuracy from 92.2\% to 95.8\% and from 85.9\% to 88.0\% on respectively image-wise and object-wise training and validation splits.},
+  annotation = {Comment: 6 pages, 3 figures},
+  archivePrefix = {arXiv},
+  eprint = {1802.05992},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/K5HDHIPE/Jaśkowski et al. - 2018 - Improved GQ-CNN Deep Learning Model for Planning .pdf;/home/jethro/Zotero/storage/A9NX64TT/1802.html},
+  keywords = {Computer Science - Artificial Intelligence,Computer Science - Machine Learning,Computer Science - Robotics,Statistics - Machine Learning},
+  primaryClass = {cs, stat}
+}
+
 @incollection{jin_q_learning_provably_efficient,
   title = {Is Q-Learning Provably Efficient?},
   booktitle = {Advances in Neural Information Processing Systems 31},
@@ -1038,6 +1055,15 @@
   primaryClass = {cs.LG}
 }
 
+@article{li_event-based_2020,
+  title = {Event-Based {{Robotic Grasping Detection}} with {{Neuromorphic Vision Sensor}} and {{Event}}-{{Stream Dataset}}},
+  author = {Li, Bin and Cao, Hu and Qu, Zhongnan and Hu, Yingbai and Wang, Zhanguo and Liang, Zichen},
+  date = {2020},
+  journaltitle = {ArXiv},
+  abstract = {Robotic grasping plays an important role in the field of robotics. The current state-of-the-art robotic grasping detection systems are usually built on the conventional vision, such as RGB-D camera. Compared to traditional frame-based computer vision, neuromorphic vision is a small and young community of research. Currently, there are limited event-based datasets due to the troublesome annotation of the asynchronous event stream. Annotating large scale vision dataset often takes lots of computation resources, especially the troublesome data for video-level annotation. In this work, we consider the problem of detecting robotic grasps in a moving camera view of a scene containing objects. To obtain more agile robotic perception, a neuromorphic vision sensor (DAVIS) attaching to the robot gripper is introduced to explore the potential usage in grasping detection. We construct a robotic grasping dataset named Event-Stream Dataset with 91 objects. A spatio-temporal mixed particle filter (SMP Filter) is proposed to track the led-based grasp rectangles which enables video-level annotation of a single grasp rectangle per object. As leds blink at high frequency, the Event-Stream dataset is annotated in a high frequency of 1 kHz. Based on the Event-Stream dataset, we develop a deep neural network for grasping detection which consider the angle learning problem as classification instead of regression. The method performs high detection accuracy on our Event-Stream dataset with 93\% precision at object-wise level. This work provides a large-scale and well-annotated dataset, and promotes the neuromorphic vision applications in agile robot.},
+  file = {/home/jethro/Zotero/storage/U4ZCQM2R/Li et al. - 2020 - Event-based Robotic Grasping Detection with Neurom.pdf}
+}
+
 @article{li16_simpl_scalab_accur_poster_inter_estim,
   title = {Simple, Scalable and Accurate Posterior Interval Estimation},
   author = {Li, Cheng and Srivastava, Sanvesh and Dunson, David B.},
@@ -1119,6 +1145,18 @@
   date = {2019},
   url = {https://www.drmaciver.com/2019/05/how-to-do-hard-things/},
   annotation = {Online; accessed 20 May 2019}
+}
+
+@online{mahler_efficient_2018,
+  title = {Efficient {{Policy Learning}} for {{Robust Robot Grasping}}},
+  author = {Mahler, Jeffrey},
+  date = {2018},
+  journaltitle = {undefined},
+  url = {/paper/Efficient-Policy-Learning-for-Robust-Robot-Grasping-Mahler/b32f3a46f6d2058699e44bf38d9aa0cc66025f24},
+  urldate = {2020-07-22},
+  abstract = {Author(s): Mahler, Jeffrey Brian | Advisor(s): Goldberg, Ken | Abstract: While humans can grasp and manipulate novel objects with ease, rapid and reliable robot grasping of a wide variety of objects is highly challenging due to sensor noise, partial observability, imprecise control, and hardware limitations.Analytic approaches to robot grasping use models from physics to predict grasp success but require precise knowledge of the robot and objects in the environment, making them well-suited for controlled industrial applications but difficult to scale to many objects.On the other hand, deep neural networks trained on large datasets of grasps labeled with empirical successes and failures can rapidly plan grasps across a diverse set of objects, but data collection is tedious, robot-specific, and prone to mislabeling.To improve the efficiency of learning deep grasping policies, we propose a hybrid method to automate dataset collection by generating millions of synthetic 3D point clouds, robot grasps, and success metrics using analytic models of contact, collision geometry, and image formation.We present the Dexterity-Network (Dex-Net), a framework for generating training datasets by analyzing mechanical models of contact forces and torques under stochastic perturbations across thousands of 3D object CAD models.We describe dataset generation models for training policies to lift and transport novel objects from a tabletop or cluttered bin using a 3D depth sensor and a parallel-jaw (two-finger) or suction cup gripper.To study the effects of learning from massive amounts of training data, we generate datasets containing millions of training examples using distributed Cloud computing, simulations, and parallel GPU processing.We use these datasets to train robust grasping policies based on Grasp Quality Convolutional Neural Networks (GQ-CNNs) that take as input a depth image and a candidate grasp with up to five degrees of freedom and predict the probability of grasp success on an object in the image.To transfer from simulation to reality, we develop novel analytic grasp success metrics based on resisting disturbing forces and torques under stochastic perturbations and bounding an object\&\#39;s mobility under an energy field such as gravity. In addition, we study techniques in algorithmic supervision to guide dataset collection using full knowledge of the object geometry and pose in simulation.We explore extensions to learning policies that sequentially pick novel objects from dense clutter in a bin and that can rapidly decide which gripper hardware is best in a particular scenario.To substantiate the method, we describe thousands of experimental trials on a physical robot which suggest that deep learning on synthetic Dex-Net datasets can be used to rapidly and reliably plan grasps across a diverse set of novel objects for a variety of depth sensors, robot grippers, and robot arms.Results suggest that policies trained on Dex-Net datasets can achieve up to 95\% success in picking novel objects from densely cluttered bins at a rate of over 310 mean picks per hour with no additional training or tuning on the physical system.},
+  file = {/home/jethro/Zotero/storage/J7I7WA9B/b32f3a46f6d2058699e44bf38d9aa0cc66025f24.html},
+  langid = {english}
 }
 
 @inproceedings{manderscheid_speed_2019,
@@ -1203,6 +1241,40 @@
   author = {Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David and Graves, Alex and Antonoglou, Ioannis and Wierstra, Daan and Riedmiller, Martin},
   date = {2013},
   journaltitle = {arXiv preprint arXiv:1312.5602}
+}
+
+@article{morrison_closing_2018,
+  title = {Closing the {{Loop}} for {{Robotic Grasping}}: {{A Real}}-Time, {{Generative Grasp Synthesis Approach}}},
+  shorttitle = {Closing the {{Loop}} for {{Robotic Grasping}}},
+  author = {Morrison, Douglas and Corke, Peter and Leitner, Jürgen},
+  date = {2018-05-15},
+  url = {http://arxiv.org/abs/1804.05172},
+  urldate = {2020-07-22},
+  abstract = {This paper presents a real-time, object-independent grasp synthesis method which can be used for closed-loop grasping. Our proposed Generative Grasping Convolutional Neural Network (GG-CNN) predicts the quality and pose of grasps at every pixel. This one-to-one mapping from a depth image overcomes limitations of current deep-learning grasping techniques by avoiding discrete sampling of grasp candidates and long computation times. Additionally, our GG-CNN is orders of magnitude smaller while detecting stable grasps with equivalent performance to current state-of-the-art techniques. The light-weight and single-pass generative nature of our GG-CNN allows for closed-loop control at up to 50Hz, enabling accurate grasping in non-static environments where objects move and in the presence of robot control inaccuracies. In our real-world tests, we achieve an 83\% grasp success rate on a set of previously unseen objects with adversarial geometry and 88\% on a set of household objects that are moved during the grasp attempt. We also achieve 81\% accuracy when grasping in dynamic clutter.},
+  annotation = {Comment: Robotics: Science and Systems (RSS), 2018. Code: http://github.com/dougsm/ggcnn Video: http://www.youtube.com/watch?v=7nOoxuGEcxA},
+  archivePrefix = {arXiv},
+  eprint = {1804.05172},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/CBZ9V2LL/Morrison et al. - 2018 - Closing the Loop for Robotic Grasping A Real-time.pdf;/home/jethro/Zotero/storage/JMMJ6IYI/1804.html},
+  keywords = {Computer Science - Robotics},
+  primaryClass = {cs}
+}
+
+@article{morrison_closing_2018-1,
+  title = {Closing the {{Loop}} for {{Robotic Grasping}}: {{A Real}}-Time, {{Generative Grasp Synthesis Approach}}},
+  shorttitle = {Closing the {{Loop}} for {{Robotic Grasping}}},
+  author = {Morrison, Douglas and Corke, Peter and Leitner, Jürgen},
+  date = {2018-05-15},
+  url = {http://arxiv.org/abs/1804.05172},
+  urldate = {2020-07-20},
+  abstract = {This paper presents a real-time, object-independent grasp synthesis method which can be used for closed-loop grasping. Our proposed Generative Grasping Convolutional Neural Network (GG-CNN) predicts the quality and pose of grasps at every pixel. This one-to-one mapping from a depth image overcomes limitations of current deep-learning grasping techniques by avoiding discrete sampling of grasp candidates and long computation times. Additionally, our GG-CNN is orders of magnitude smaller while detecting stable grasps with equivalent performance to current state-of-the-art techniques. The light-weight and single-pass generative nature of our GG-CNN allows for closed-loop control at up to 50Hz, enabling accurate grasping in non-static environments where objects move and in the presence of robot control inaccuracies. In our real-world tests, we achieve an 83\% grasp success rate on a set of previously unseen objects with adversarial geometry and 88\% on a set of household objects that are moved during the grasp attempt. We also achieve 81\% accuracy when grasping in dynamic clutter.},
+  annotation = {Comment: Robotics: Science and Systems (RSS), 2018. Code: http://github.com/dougsm/ggcnn Video: http://www.youtube.com/watch?v=7nOoxuGEcxA},
+  archivePrefix = {arXiv},
+  eprint = {1804.05172},
+  eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/9VD3F4AL/Morrison et al. - 2018 - Closing the Loop for Robotic Grasping A Real-time.pdf;/home/jethro/Zotero/storage/V8TICWQP/1804.html},
+  keywords = {Computer Science - Robotics},
+  primaryClass = {cs}
 }
 
 @article{murphy2014machine,
@@ -1391,6 +1463,7 @@ Our work is the first monocular pipeline that generates dense depth and optical 
   archivePrefix = {arXiv},
   eprint = {1912.02762},
   eprinttype = {arxiv},
+  file = {/home/jethro/Zotero/storage/34IWCA3A/Papamakarios et al. - 2019 - Normalizing flows for probabilistic modeling and i.pdf},
   primaryClass = {stat.ML}
 }
 
