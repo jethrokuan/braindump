@@ -35,21 +35,3 @@ footer = "Icon by Freepik. Built with ♥ with Org-mode and Hugo."
     noClasses = true
     style = "github"
     tabWidth = 4
-
-[outputFormats]
-  [outputFormats.Embed]
-    baseName = "embed"
-    isPlainText = false
-    isHTML = true
-    mediaType = "text/html"
-    permalinkable = true
-  [outputFormats.Page]
-    baseName = "page"
-    isPlainText = false
-    isHTML = true
-    mediaType = "text/html"
-    permalinkable = true
-
-[outputs]
-  home = ["HTML", "RSS"]
-  page = ["HTML", "EMBED", "PAGE"]

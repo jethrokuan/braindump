@@ -1,7 +1,7 @@
 +++
 title = "C++ Language"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-24T23:07:59+08:00
+lastmod = 2020-07-26T16:49:06+08:00
 draft = false
 +++
 
@@ -108,7 +108,7 @@ public:
 
 ### avoid `endl` {#avoid-endl}
 
-The endl manipulator is mostly equivalent to '' and ""; as most
+The endl manipulator is mostly equivalent to '\n' and "\n"; as most
 commonly used it simply slows down output by doing redundant flush()s.
 This slowdown can be significant compared to printf-style output.
 
@@ -229,8 +229,3 @@ pointer is not null.
 - [C++ Patterns](https://cpppatterns.com/)
 
 <biblio.bib>
-
-## Backlinks {#backlinks}
-
-- [CMake]({{< relref "cmake" >}})
-- [All pages]({{< relref "sitemap" >}})
