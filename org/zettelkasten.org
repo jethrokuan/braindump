@@ -20,7 +20,7 @@ topic, but more of an entry point.
 
 - fleeting :: notes taken as a reminder of what's in your head. These
   are to be removed after some time
-  - In [[file:roam_research.org][Roam Research]] and [[file:org-roam.org][Org-Roam]], make fleeting notes in daily notes
+  - In [[file:roam_research.org][Roam Research]] and Org-roam, make fleeting notes in daily notes
 - project-related :: notes related to a project
 - permanent :: notes that are standalone, and make sense in their own context.
 

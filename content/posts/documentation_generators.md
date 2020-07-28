@@ -1,7 +1,7 @@
 +++
 title = "Documentation Generators"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:01+08:00
+lastmod = 2020-07-28T12:27:49+08:00
 draft = false
 +++
 
@@ -15,7 +15,7 @@ We use these to generate [documentation]({{< relref "documentation" >}}) for pro
 - [Sphinx](https://www.sphinx-doc.org/en/master/)
 - [MkDocs](https://www.mkdocs.org/)
 
-By far my favourite now is MkDocs, and I'm using it for [Org-Roam]({{< relref "org-roam" >}})'s
+By far my favourite now is MkDocs, and I'm using it for Org-Roam's
 [documentation page](https://org-roam.readthedocs.io/en/latest/). It is built using mkdocs with:
 
 - [Material theme for MkDocs](https://squidfunk.github.io/mkdocs-material/)

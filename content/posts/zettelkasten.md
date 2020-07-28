@@ -1,7 +1,7 @@
 +++
 title = "Zettelkasten"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:23+08:00
+lastmod = 2020-07-28T12:28:02+08:00
 draft = false
 +++
 
@@ -25,7 +25,7 @@ topic, but more of an entry point.
 
 fleeting
 : notes taken as a reminder of what's in your head. These
-are to be removed after some time - In [Roam Research]({{< relref "roam_research" >}}) and [Org-Roam]({{< relref "org-roam" >}}), make fleeting notes in daily notes
+are to be removed after some time - In [Roam Research]({{< relref "roam_research" >}}) and Org-roam, make fleeting notes in daily notes
 
 project-related
 : notes related to a project

@@ -11,7 +11,7 @@ We use these to generate [[file:documentation.org][documentation]] for projects.
 - [[https://www.sphinx-doc.org/en/master/][Sphinx]]
 - [[https://www.mkdocs.org/][MkDocs]]
 
-By far my favourite now is MkDocs, and I'm using it for [[file:org-roam.org][Org-Roam]]'s
+By far my favourite now is MkDocs, and I'm using it for Org-Roam's
 [[https://org-roam.readthedocs.io/en/latest/][documentation page]]. It is built using mkdocs with:
 
 - [[https://squidfunk.github.io/mkdocs-material/][Material theme for MkDocs]]
