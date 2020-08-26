@@ -1,0 +1,9 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: prefer_active_verbs
+#+title: Prefer active verbs
+
+Using present tense immerses the reader in the immediacy of the experience.
+
+Use passive verbs to call attention to the receiver of the action. For example, "his eyes were frosted..." calls attention to the man's eyes.
+
+The verb "to be" links words and ideas.
