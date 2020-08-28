@@ -1,5 +1,5 @@
 #+setupfile:./hugo_setup.org
-#+title: Simultaneous Localization and Mapping (SLAM)
+#+title: Simultaneous Localization and Mapping
 #+roam_alias: SLAM
 
 In SLAM, the robot acquires a map of its environment while
@@ -86,7 +86,7 @@ The key insight is that information is sparse. Specifically,
   robot's pose at the time of measurement, forming constraints between
   pairs of variables.
 - Motion provides information between two subsequent poses, also
-  froming constraints
+  forming constraints
 
 EIF SLAM records all this information, through links that are defined
 between poses and features, and pairs of subsequent poses. However, this

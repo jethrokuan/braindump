@@ -10,7 +10,7 @@
 - [[file:robot_motion.org][Robot Motion]]
 - [[file:range_finder_model.org][Range Finder Model]]
 - [[file:occupancy_grid_mapping.org][Occupancy Grid Mapping]]
-- [[file:slam.org][Simultaneous Localization and Mapping (SLAM)]]
+- [[file:slam.org][Simultaneous Localization and Mapping]]
 
 * Tools
 - [[file:ros.org][Robot Operating System (ROS)]]
@@ -18,4 +18,3 @@
 
 * Links
 - [[https://github.com/Kiloreux/awesome-robotics][Awesome Robotics]]
--
