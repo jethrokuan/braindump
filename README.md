@@ -8,6 +8,26 @@ This braindump is generated via [ox-hugo][ox-hugo] and uses the
 The org files used to generate the markdown files are also hosted here
 for posterity. They can be found in [the org folder][org].
 
+## Installation instructions
+
+Install [hugo][hugo]. E.g., on a Mac with Homebrew:
+
+    $ brew install hugo
+
+Make sure the submodule containing the Hugo theme is installed:
+
+    $ git submodule init
+    $ git submodule update
+
+Now run hugo to generate the files (find them in `/public`):
+
+    $ hugo
+
+Or run the following to get an immediately browsable website on localhost:
+
+    $ hugo serve
+
+[hugo]: https://gohugo.io/
 [ox-hugo]: https://github.com/kaushalmodi/ox-hugo
 [cortex]: https://github.com/jethrokuan/cortex
 [org]: https://github.com/jethrokuan/braindump/tree/master/org
