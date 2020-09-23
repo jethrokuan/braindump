@@ -378,13 +378,16 @@ p(y|x) = argmax_y \frac{p(x|y)p(y)}{p(x)} = argmax_y p(x|y)p(y)$.
 
 
 *** Multivariate Normal Distribution
+:PROPERTIES:
+:ID:       9aa01f4a-0432-42d6-855a-cf17721449a1
+:END:
 A multivariate normal distribution is parameterized by a mean vector
 $\mu \in R^n$ and a covariance matrix $\Sigma \in R^{n \times n}$, where $\Sigma \ge
 0$ is symmetric and positive semi-definite.
 
 *** TODO Gaussian Discriminant Analysis
 In Gaussian Discriminant Analysis, p(x | y) is distributed to a
-[[*Multivariate Normal Distribution][multivariate normal distribution]].
+[[id:9aa01f4a-0432-42d6-855a-cf17721449a1][Multivariate Normal Distribution]].
 
 \begin{align}
   y &\sim Bernoulli(\phi) \\

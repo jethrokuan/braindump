@@ -19,3 +19,13 @@ manipulation of objects.
 
   Enveloping grasps have superior stability. Grasping Simulators such as
   (GraspIt!) have been made available for theoretical research.
+
+* Closed-loop Grasping
+
+Execution time is the primary reason why grasping systems remain open-loop.
+However, closed-loop control via visual feedback is desirable because they are
+able to adapt to dynamic environments, and require less precise position control
+or camera calibration. [[file:morrison_closing_2018.org][morrison_closing_2018: Closing the Loop for Robotic
+Grasping: A Real-time, Generative Grasp Synthesis Approach]] uses neural network
+to synthesize a grasp quality image in real-time to achieve closed-loop
+grasping.
