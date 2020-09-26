@@ -1,0 +1,3 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: perspective_n_point
+#+title: Perspective-n-Point
