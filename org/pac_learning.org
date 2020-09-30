@@ -221,6 +221,9 @@ L_D(h) \le \textrm{min}{h'\in \mathcal{H}} L_D(h') + \epsilon
 \end{equation}
 
 * Learning Via Uniform Convergence
+:PROPERTIES:
+:ID:       9425a198-9e63-46fd-ad0e-dae274f76a1a
+:END:
 
 Given a hypothesis class, $\mathcal{H}$ The ERM learning paradigm
 works as follows: upon receiving a training sample, $S$, the learner

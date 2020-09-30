@@ -1,10 +1,10 @@
 #+setupfile: ./hugo_setup.org
 #+title: Rademacher Complexity
 
-In [[file:pac_learning.org][PAC Learning]], We have shown that [[file:pac_learning.org::*Learning Via Uniform Convergence][uniform convergence is a
-sufficient condition for learnability]]. Rademacher complexity measures
-the rate of uniform convergence. Rademacher complexity can also be
-used to provide generalization bounds.
+In [[file:pac_learning.org][PAC Learning]], We have shown that [[id:9425a198-9e63-46fd-ad0e-dae274f76a1a][uniform convergence is a sufficient
+condition for learnability]]. Rademacher complexity measures the rate of uniform
+convergence. Rademacher complexity can also be used to provide generalization
+bounds.
 
 * Definition
 
