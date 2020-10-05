@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       60a9d2b9-7cf5-4414-a545-cdcfdbc332b7
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Awk
 
-- tags :: [[file:unix.org][Unix]]
+- tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]]
 
 * Links
 [[http://sparky.rice.edu/~hartigan/awk.html]]

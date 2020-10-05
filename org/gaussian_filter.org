@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       04af721e-9cee-4a00-a426-baec803b108c
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Gaussian Filter
 
 Gaussian Filters is a tractable implementation of the Bayes filter
-([[file:bayes_filter.org][Bayes Filter]]) for continuous spaces.
+([[id:155935aa-af99-4629-b232-dfa0b48ad239][Bayes Filter]]) for continuous spaces.
 
 * Key Idea
 
@@ -33,4 +36,4 @@ their own modes in the posterior.
 These representations have a bijective mapping, and are functionally
 equivalent, but give rise to different algorithms.
 
-Using the moments representation gives rise to the [[file:kalman_filter.org][Kalman Filter]].
+Using the moments representation gives rise to the [[id:f34829e1-86aa-4700-8c42-474ab7c24620][Kalman Filter]].

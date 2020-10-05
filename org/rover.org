@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a3aa643f-aac1-4078-b874-a68099d172e0
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Rover
 

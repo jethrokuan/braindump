@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       8a89e3ce-2115-437f-913c-6ada24526ddf
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: building_a_pc
 #+hugo_setup: ./hugo_setup.org

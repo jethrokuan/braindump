@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       db4f01d1-d51f-490d-b6d2-c3fd045d33cf
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: wu_stochastic_2020: Stochastic Normalizing Flows
 #+roam_key: cite:wu_stochastic_2020
 
-* Stochastic [[file:../normalizing_flows.org][Normalizing Flows]]
+* Stochastic [[id:0a267ec0-b62d-4d7d-b813-6fbb14dbcff0][Normalizing Flows]]
   :PROPERTIES:
   :Custom_ID: wu_stochastic_2020
   :URL: http://arxiv.org/abs/2002.06707

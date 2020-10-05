@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       8ef1961b-a71d-495e-b077-fe7dba9d5d63
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: mental_models
 #+title: Mental Models

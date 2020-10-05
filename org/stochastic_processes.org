@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       142c8033-00a7-4a2a-83e5-33e1349ade5a
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Stochastic Processes
 

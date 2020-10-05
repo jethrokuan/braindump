@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       f109cf98-f048-4f6c-b2cc-0588ce7531a3
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Occam's Razor
 
-- tags :: [[file:information_theory.org][Information Theory]]
+- tags :: [[id:f4be59db-9bdb-4832-82e2-327c16b3ce15][Information Theory]]
 
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian

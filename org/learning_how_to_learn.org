@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       b252454d-e61c-483e-baf2-159168f7fc23
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: learning_how_to_learn
 #+title: Learning How To Learn
 
-- tags :: [[file:learning.org][Learning]]
+- tags :: [[id:54c22d91-285c-4dd4-835c-9fc737534cc9][Learning]]
 
 * What is learning?
 

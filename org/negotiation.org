@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f7b36f1c-0cb9-494a-a6e7-4f5dacb26723
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Negotiation
 

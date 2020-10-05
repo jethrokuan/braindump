@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       70455587-806d-456a-b172-9a0f46346a18
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: prediction_is_the_essence_of_intelligence
 #+title: Prediction is the Essence of Intelligence

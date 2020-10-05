@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       c831177e-e629-4950-891d-62a9863dab03
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Meta Learning
 
-- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+- tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
 - Learning to learn: learn an update rule from related tasks
 

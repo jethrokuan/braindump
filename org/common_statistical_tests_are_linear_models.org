@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       77bc98a3-d895-4d73-bcdd-86fbf25cfcdd
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: common_statistical_tests_are_linear_models
 #+title: Common Statistical Tests Are Linear Models
@@ -5,7 +8,7 @@
 - source :: [[https://lindeloev.github.io/tests-as-linear/][Common statistical tests are linear models (or: how to
   teach stats)]]
 - author :: Jonas Kristoffer Lindeløv
-- tags :: [[file:statistical_testing.org][Statistical Testing]]
+- tags :: [[id:c05a1fd7-78b1-44f1-b250-ece91604546a][Statistical Testing]]
 
 Linear models underlie common parametric and "non-parametric" tests.
 Non-parametric tests are often simply the parametric tests, but in

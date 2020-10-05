@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       61723832-db9f-4ae1-857b-45c83e942c8a
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: object_pose_estimation
 #+title: Object Pose Estimation
@@ -13,7 +16,7 @@ For 2D planar grasps, target objects are constrained in a 2D workspace, so the
 
 Correspondence-based methods find correspondences between the observed input
 data, and some existing 3D object model. The 6D object pose can then be
-recovered through [[file:perspective_n_point.org][Perspective-n-Point]] algorithms.
+recovered through [[id:1b12a8e0-16cf-4c0c-8f5b-c2b61443c16f][Perspective-n-Point]] algorithms.
 
 2D image-based methods use 2D RGB images. Multiple images are rendered by
 projecting the existing 3D model from various angles, and then establishing

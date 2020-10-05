@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       5f4668fd-a3ab-49cb-972f-aafc4f1503e5
+:END:
 #+setupfile:./hugo_setup.org
 #+title: PDF Nup
 
-- tags :: [[file:pdf_tools.org][Pdf Tools]]
+- tags :: [[id:8742274c-9645-42a7-b744-48d5720e280c][Pdf Tools]]
 
 This puts several pages of a PDF together. ~2x1~ is a particularly
 common combination.

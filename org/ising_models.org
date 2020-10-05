@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       16cbac40-c161-447f-a4ad-102504a1353c
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Ising Models
 #+hugo_tags: machine-learning

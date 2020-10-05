@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       5321c291-6a31-4be1-9156-797086b80c14
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: sentences_should_branch_to_the_right
 #+title: Sentences should branch to the right

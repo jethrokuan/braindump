@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       c7edce30-d780-49f5-bc8a-fa9de993b1cc
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Google - Site Reliability Engineering
 #+roam_key: https://landing.google.com/sre/books/
 
-- tags :: [[file:site_reliability.org][Site Reliability]]
+- tags :: [[id:7fc3c0ad-1b12-46b3-a253-8692034d0601][Site Reliability]]

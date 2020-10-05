@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       f4be59db-9bdb-4832-82e2-327c16b3ce15
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Information Theory
 
-- tags :: [[file:machine_learning.org][Machine Learning]], [[file:statistics.org][Statistics]]
+- tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]], [[id:3ec39abc-ea53-4087-8523-7ace154c6aa6][Statistics]]
 
 * Introduction
 ** How can we achieve perfect communication over an imperfect noisy communication channel?

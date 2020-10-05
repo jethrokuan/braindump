@@ -1,15 +1,18 @@
+:PROPERTIES:
+:ID:       d69d1f3d-2a3f-48bd-a59c-0bb631b0430b
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Python
 
-Python is an interpreted, general-purpose, high-level [[file:prog_lang.org][programming language]]. Some properties of Python include:
+Python is an interpreted, general-purpose, high-level [[id:02f0d648-baae-478f-b738-448cf53e2a63][programming language]]. Some properties of Python include:
 
 - whitespaces being significant
 - dynamically-typed
 - garbage-collected
 
 * Index
-- [[file:lit/python_import_resolution.org][Python Import Resolution]]
-- [[file:lit/python_default_values.org][Python Default Parameter Values]]
+- [[id:09302077-32c2-4bbe-a2c3-4d7000a5e8aa][Python Import Resolution]]
+- [[id:73b06202-fa44-452c-9a5b-acc7889b2fdb][Python Default Parameter Values]]
 
 * Python Books
 ** TODO [[https://www.goodreads.com/book/show/22800567-fluent-python?ac=1&from_search=true&qid=Fo3rzgCJBZ&rank=1][Fluent Python]]

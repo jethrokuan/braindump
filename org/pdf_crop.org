@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       d7a3a41a-5d45-466c-a33d-e0a7492d429a
+:END:
 #+setupfile:./hugo_setup.org
 #+title: PDF Cropping
 
-- tags :: [[file:pdf_tools.org][Pdf Tools]]
+- tags :: [[id:8742274c-9645-42a7-b744-48d5720e280c][Pdf Tools]]
 
 Cropping PDFs can be done through ~pdfcrop~. ~pdfcrop~ only takes a
 single argument, use a bash function to batch crop:

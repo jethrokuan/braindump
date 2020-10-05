@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       46325268-88a7-4873-9b84-c3ffb7090325
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Emtiyaz Khan

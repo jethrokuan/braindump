@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       aa9bce5c-e59e-4c04-9bcd-941fa0a76c95
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Writing Articles
 

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       225d6194-03e3-4c6a-bea4-3877eaa34853
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: martin_kleppmann
 #+title: Martin Kleppmann

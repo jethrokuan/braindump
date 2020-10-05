@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       02ac1905-bb1c-400a-82e1-7203a1600d56
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Google Cartographer
 
@@ -6,7 +9,7 @@ Google Cartographer provides a real-time solution for indoor mapping
 in the form of a sensor-equipped backpack that generates 2D grid maps
 with a $r = 5cm$ resolution cite:googlecartographer. It is built to
 scale to large maps, where previous approaches face issues. For
-example, particle filter SLAM ([[file:slam.org][Simultaneous Localization and Mapping
+example, particle filter SLAM ([[id:521c87bc-95eb-47ca-990f-58695d65490d][Simultaneous Localization and Mapping
 (SLAM)]]) approaches become resource intensive as maps become large,
 since each particle filter must maintain a representation of the full
 system state in each particle.

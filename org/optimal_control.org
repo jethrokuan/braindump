@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f1f42d87-f292-4654-bfbf-949bfa18d88f
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Optimal Control and Planning
 
@@ -25,7 +28,7 @@ An extremely simple method, that's parallelizable:
 4. fit distribution $P(A) to the elites
 
 With continuous inputs, a multi-variate normal distribution is a common choice
-for $p(A)$. In the discrete case, [[file:mcts.org][Monte Carlo Tree Search]] is typically used.
+for $p(A)$. In the discrete case, [[id:4475a690-12be-4957-b98b-5b5d2ca3529e][Monte Carlo Tree Search]] is typically used.
 
 * Using Derivatives
 

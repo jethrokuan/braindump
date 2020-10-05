@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       c72313c7-8763-4e97-b132-1060b724597e
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Spike Train Metrics
 
-- tags ::  [[file:spiking_neural_networks.org][Spiking Neural Networks]]
+- tags ::  [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]
 
 We study spike train metrics to quantify differences between event
 sequences. These metrics apply at both the single-neuron level and the

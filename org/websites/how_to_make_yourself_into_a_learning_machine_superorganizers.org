@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7c59bdd5-d4a4-404d-9008-faf743eeefba
+:END:
 #+setupfile:./hugo_setup.org
 #+roam_key: https://superorganizers.substack.com/p/how-to-build-a-learning-machine###
 #+hugo_slug: how_to_make_yourself_into_a_learning_machine_superorganizers
@@ -5,4 +8,4 @@
 
 - source ::
   https://superorganizers.substack.com/p/how-to-build-a-learning-machine
-- tags :: [[file:../spaced_repetition.org][Spaced Repetition]]
+- tags :: [[id:55090bb9-dc8a-4c92-97fb-6617cf8d37b4][Spaced Repetition]]

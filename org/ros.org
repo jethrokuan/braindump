@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d711763d-b529-4f2b-98d2-c34b2bf8657c
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Robot Operating System (ROS)
 

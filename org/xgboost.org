@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a274de6a-d25b-458c-8d25-59f446997849
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: XGBoost
 

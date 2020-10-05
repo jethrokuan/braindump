@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3e6c472d-78ec-48e4-8d31-4262ef62c64d
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Travel
 

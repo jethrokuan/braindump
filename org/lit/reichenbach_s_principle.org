@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       87e2d47f-eaab-45e4-827c-3dfe587aa598
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: reichenbach_s_principle
 #+title: Reichenbach's principle

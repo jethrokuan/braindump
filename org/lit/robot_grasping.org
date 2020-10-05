@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       91baf5d1-80c6-42f6-b2bb-d16a1a277095
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: robot_grasping
 #+title: Robot Grasping
@@ -31,7 +34,7 @@ A typical robot grasp detection system can consist of 3 components.
 Execution time is the primary reason why grasping systems remain open-loop.
 However, closed-loop control via visual feedback is desirable because they are
 able to adapt to dynamic environments, and require less precise position control
-or camera calibration. [[file:morrison_closing_2018.org][morrison_closing_2018: Closing the Loop for Robotic
+or camera calibration. [[id:0570cdd6-baad-4709-b3f9-6edeceac90f6][morrison_closing_2018: Closing the Loop for Robotic
 Grasping: A Real-time, Generative Grasp Synthesis Approach]] uses neural network
 to synthesize a grasp quality image in real-time to achieve closed-loop
 grasping.

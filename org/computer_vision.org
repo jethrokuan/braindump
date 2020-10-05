@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       2778763e-640a-4353-94de-ad3919f00c2b
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Computer Vision
 
 * Prerequisites
-[[file:linear_algebra.org][Linear Algebra]]
+[[id:3319ef96-2df4-4c7e-98f4-3fc5978bd147][Linear Algebra]]
 
 * Camera Basics
 

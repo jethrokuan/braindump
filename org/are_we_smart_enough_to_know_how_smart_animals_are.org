@@ -1,10 +1,13 @@
+:PROPERTIES:
+:ID:       065ead08-5fe8-4645-9bbc-c446f6826833
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Are We Smart Enough to Know How Smart Animals Are?
 
 - title :: Are We Smart Enough to Know How Smart Animals Are? 
 - author :: Frans de Waal
 - personal rating :: 4/5
-- tags :: [[file:books.org][Books]], [[file:neuroscience.org][Neuroscience ⭐]]
+- tags :: [[id:d1125f42-4a2d-4287-b902-48a1df9a6761][Books]], [[id:cc7d1ffe-280d-4744-9fac-c38e70c5472c][Neuroscience ⭐]]
 
 Why is it that facial expression is universally consistent?
 

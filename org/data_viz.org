@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c9a2a8ea-13d5-48ee-908c-146833ce1a31
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Data Visualization
 

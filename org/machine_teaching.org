@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d80e6b9a-6348-42b6-8c1b-3cbf9cf3ad63
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Machine Teaching
 

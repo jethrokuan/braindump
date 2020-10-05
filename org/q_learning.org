@@ -1,12 +1,15 @@
+:PROPERTIES:
+:ID:       ae0b04fd-500b-4592-a20b-556f26a1b69d
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Q-Learning
 
-- tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:td_learning.org][Temporal Difference Learning]], [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+- tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]], [[id:6bcdf2f0-6f2b-47bf-95c1-180a1d81f497][Temporal Difference Learning]], [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
-The [[file:actor_critic.org][Actor-Critic]] algorithm fits 2 function approximators: one for the
+The [[id:fc5a34fb-b009-4e9a-a779-d043e3e4e2db][Actor-Critic]] algorithm fits 2 function approximators: one for the
 policy, and one for the value function. A key problem with the policy
 gradient method is the high variance in the gradient update. /Can we
-omit [[file:policy_gradients.org][Policy Gradients]] completely?/
+omit [[id:f90ef3b7-3d35-4af3-ba8f-00d27c6fa3c5][Policy Gradients]] completely?/
 
 * Key Ideas
 
@@ -69,7 +72,7 @@ Q(s_i', a_i')$:
       \sum_i |Q_{\phi}(s_i, a_i) - y_i |^2$
    1.3. goto 1.1 or 1
 
-This works, even for off-policy samples (unlike [[file:actor_critic.org][Actor-Critic]]). In
+This works, even for off-policy samples (unlike [[id:fc5a34fb-b009-4e9a-a779-d043e3e4e2db][Actor-Critic]]). In
 addition, there is only one network, hence no high-variance policy
 gradient methods. However, /there are no convergence guarantees with
 non-linear function approximators/!
@@ -153,7 +156,7 @@ changing in the inner loop.
 * DQN
 
 DQN is the result of using a replay buffer, target network and some
-gradient clipping. See [[file:mnih2013_atari_deeprl.org][Playing Atari with Deep RL]].
+gradient clipping. See [[id:48f41ab0-c757-4e91-97b9-62b8ee8914e3][Playing Atari with Deep RL]].
 
 * Double DQN
 
@@ -312,7 +315,7 @@ triad".
 3. Bootstrapping
 
 In the presence of all three, learning is unstable. DQN is the first
-algorithm that stabilized deep Q-learning ([[file:mnih2013_atari_deeprl.org][Playing Atari with Deep
+algorithm that stabilized deep Q-learning ([[id:48f41ab0-c757-4e91-97b9-62b8ee8914e3][Playing Atari with Deep
 RL]]).
   
 bibliography:biblio.bib

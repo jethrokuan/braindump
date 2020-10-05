@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       96858f4f-8174-44d1-ba24-91b9db21f35e
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Deep Reinforcement Learning
 bibliographystyle:unsrt
 
-- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+- tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
 * Why Deep Reinforcement Learning?
 
@@ -28,7 +31,7 @@ bibliographystyle:unsrt
 - model-based RL :: estimate the transition model, and then...
   - use it for planning (no explicit policy)
     - Trajectory optimization/optimal control (continuous spaces)
-    - Discrete planning in discrete action spaces ([[file:mcts.org][Monte Carlo Tree Search]])
+    - Discrete planning in discrete action spaces ([[id:4475a690-12be-4957-b98b-5b5d2ca3529e][Monte Carlo Tree Search]])
   - use it to improve a policy (e.g. via backpropagation, with some tricks)
   - use the model to learn a value function (e.g. through dynamic programming)
 

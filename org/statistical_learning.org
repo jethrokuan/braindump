@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e2b64e84-e7b3-408d-a04b-f8d99f5e2bf4
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Statistical Learning
 

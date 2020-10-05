@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d08c28f3-9c67-4ae5-b3b2-af600a1173c0
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Deep Learning
 

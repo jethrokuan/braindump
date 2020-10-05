@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       b3da9ae0-28d5-4e48-82ee-e72ce91db846
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Evolving Connectionist Systems
 
@@ -9,7 +12,7 @@ created based on similarity between data samples either in the input
 space, or both in the input space and output space. These functions
 are represented in their connection weights.
 
-ECoS traditionally uses the simple sigmoid model of a neuron. [[file:evolving_snn.org][Evolving Spiking
+ECoS traditionally uses the simple sigmoid model of a neuron. [[id:31ff2b41-5b94-41aa-b17b-76cc050dbe81][Evolving Spiking
 Neural Networks]] architectures use a spiking neuron model.
 
 bibliography:biblio.bib

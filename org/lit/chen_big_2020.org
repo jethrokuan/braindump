@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6066ff84-a152-4beb-bef0-dccd050fa232
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: chen_big_2020: Big Self-Supervised Models are Strong Semi-Supervised Learners
 #+roam_key: cite:chen_big_2020
@@ -17,7 +20,7 @@
 
 The paper proposes a three-step semi-supervised learning framework for visual data
 
-1. unsupervised or self-supervised pretraining using a modified [[file:chen20_simpl_framew_contr_learn_visual_repres.org][SimCLR]]
+1. unsupervised or self-supervised pretraining using a modified [[id:ecdb183b-2a18-48ea-9145-7428449a292b][SimCLR]]
 2. Supervised fine-tuning
 3. Distillation using unlabeled data
 

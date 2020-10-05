@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       66d74cb9-d8f3-4d9a-bcb0-de59cc9990ac
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: generative_models
 #+title: Generative Models

@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       188fe102-2f67-4ee9-b5a6-02870b955951
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Monte Carlo Methods
 
-- tags :: [[file:/home/jethro/Dropbox/org/braindump/org/machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:/home/jethro/Dropbox/org/braindump/org/pgm.org][Probabilistic Graph Models]]
+- tags :: [[file:../../../../Dropbox/org/braindump/org/machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:../../../../Dropbox/org/braindump/org/pgm.org][Probabilistic Graph Models]]
 
 Monte Carlo methods make use of random numbers to solve the following
 problems:

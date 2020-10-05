@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       17a012b9-d2fe-4865-af37-562f44e9c61d
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Quantitative Reasoning
 * Chapter 1: Design

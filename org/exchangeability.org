@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       8e42b567-cb26-438c-b7fe-18a2c79b1c0c
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: exchangeability
 #+title: Exchangeability

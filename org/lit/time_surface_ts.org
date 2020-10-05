@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f2fec0f4-ab90-4457-83ad-cd1093a8027e
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: time_surface_ts
 #+title: Time Surface

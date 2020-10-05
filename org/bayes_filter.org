@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       155935aa-af99-4629-b232-dfa0b48ad239
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Bayes Filter
 
-- tags :: [[file:gaussian_filter.org][Gaussian Filter]]
+- tags :: [[id:04af721e-9cee-4a00-a426-baec803b108c][Gaussian Filter]]
 
 * Notation
 - $\eta$ :: normalizing constant, to make probability distribution sum
@@ -33,7 +36,7 @@ update/.
 \end{algorithm}
 
 * Details
-Mathematical derivation makes the [[file:markovian_assumption.org][Markovian Assumption]].
+Mathematical derivation makes the [[id:40554b45-c938-4753-a9b5-2cea41d761e3][Markovian Assumption]].
 
 Exact techniques for belief calculation are reserved for specialized
 cases. In most scenarios, these beliefs have to be approximated, and
@@ -54,7 +57,7 @@ Approximations requires trading off:
   required for high accuracy.
 - Ease of implementation :: Difficulty in implementation typically
   arises from the form of the transition and measurement probabilities
-  (see [[file:robotics_probabilistic_generative_laws.org][Robotics Probabilistic Generative Laws]]). Particle
+  (see [[id:c147b46d-f3ae-4d36-b1a4-d3f3e83495b3][Robotics Probabilistic Generative Laws]]). Particle
   representations lend themselves to simple implementations for
   complex non-linear systems.
 

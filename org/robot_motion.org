@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       72afb7ef-945a-4213-a3aa-7bb34ef6d62e
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Robot Motion
 

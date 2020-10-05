@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       ec7e3528-ef89-489d-a446-9128501e44c1
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Information-Theoretic Reinforcement Learning
 

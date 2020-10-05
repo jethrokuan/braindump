@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       570144ef-554c-4c04-85eb-303a57ad6f4b
+:END:
 #+setupfile:./hugo_setup.org
 #+title: The Art Of Doing Science And Engineering
 
@@ -5,7 +8,7 @@
 - author :: Richard Hamming
 - links :: [[https://www.goodreads.com/book/show/530415.The_Art_of_Doing_Science_and_Engineering?ac=1&from_search=true&qid=JiicJZOxxt&rank=1][Goodreads]]
 - personal rating :: 4/5
-- tags :: [[file:books.org][Books]]
+- tags :: [[id:d1125f42-4a2d-4287-b902-48a1df9a6761][Books]]
 
 * Synopsis
 

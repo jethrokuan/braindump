@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       b3c6f8cb-e3fe-4a72-8f03-ddbe65024428
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: multimodal_fusion
 #+title: Multi-modal Fusion
@@ -41,7 +44,7 @@ machine learning methods.
 
 These approaches are tailored towards handling multi-modal data.
 
-[[file:multiple_learning_kernel.org][Multiple Learning Kernel]] (MKL) methods extend kernel [[file:support_vector_machines.org][Support Vector
+[[id:b74fd458-dbbe-40ce-8d51-721edc55fc5b][Multiple Learning Kernel]] (MKL) methods extend kernel [[id:4d01a82e-894b-421b-930d-04e1a0c83f75][Support Vector
 Machines]] to use different kernels for different modalities.
 Modality-specific kernels allow for better fusion of heterogeneous
 data. One advantage of MKL is that the loss function is convex, which
@@ -51,7 +54,7 @@ which means inference can be slow.
 
 Generative graphical models such as factorial hidden markov networks, or
 multi-stream hidden markov metods have been used. Discriminative
-models such as [[file:conditional_random_fields.org][Conditional Random Fields]] sacrifice the modeling of
+models such as [[id:b49a6ffd-be14-465b-aca1-9211a6309fbd][Conditional Random Fields]] sacrifice the modeling of
 joint probability for predictive power.
 
 Lastly, neural networks fuse temporal multimodal information through

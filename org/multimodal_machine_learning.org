@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c436cacf-5630-4dc6-99ff-e99d9484f85a
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: multimodal_machine_learning
 #+title: Multi-modal Machine Learning
@@ -11,18 +14,18 @@
 * Key Challenges
 - representation :: learning how to represent and summarize multimodal
   data in a way that exploits the complementarity and redundancy of
-  multiple modalities (see [[file:multimodal_representation.org][Multi-modal Representation]])
+  multiple modalities (see [[id:4394e05f-8c2d-4fa7-9dc5-6aa4d8723222][Multi-modal Representation]])
 - translation :: how to map data from one modality to another (see
-  [[file:multimodal_translation.org][Multi-modal Translation]])
+  [[id:94567a57-32b6-4090-b922-667c54481f7a][Multi-modal Translation]])
 - alignment :: identifying the direct relationships between
-  sub-elements of two or more different modalities (see [[file:multimodal_alignment.org][Multi-modal
+  sub-elements of two or more different modalities (see [[id:64eb6714-7710-4e1f-b2bc-69b0a63f9abb][Multi-modal
   Alignment]])
 - fusion :: Join information from two ore more modalities to perform a
   prediction (with possibly missing data from modalities). Different
   modalities may have varying predictive power and noise topology.
-  (see [[file:multi_modal_fusion.org][Multi-modal Fusion]])
+  (see [[id:b3c6f8cb-e3fe-4a72-8f03-ddbe65024428][Multi-modal Fusion]])
 - co-learning :: Transferring knowledge between modalities, their
-  representation, and predictive models. (see [[file:colearning.org][Co-learning]])
+  representation, and predictive models. (see [[id:2b6e2383-41f1-4b28-a353-c87e21594bdb][Co-learning]])
 
 bibliography:biblio.bib
 

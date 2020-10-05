@@ -1,10 +1,13 @@
+:PROPERTIES:
+:ID:       304fc3a7-2234-4247-aeec-4cd11fd5f50a
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Distributed Reinforcement Learning
 
-Parallelizing [[file:reinforcement_learning.org][Reinforcement Learning ⭐]].
+Parallelizing [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]].
 
 * History of Distributed RL
-1. DQN cite:mnih2013playing: [[file:mnih2013_atari_deeprl.org][Playing Atari with Deep RL]]
+1. DQN cite:mnih2013playing: [[id:48f41ab0-c757-4e91-97b9-62b8ee8914e3][Playing Atari with Deep RL]]
 2. GORILA cite:nair15_massiv_paral_method_deep_reinf_learn
 3. A3C cite:mnih16_async_method_deep_reinf_learn
 4. IMPALA cite:espeholt18_impal

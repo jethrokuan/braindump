@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       4a817202-7d27-43c8-90a7-8417d38c731b
+:END:
 #+setupfile: ./hugo_setup.org
 #+roam_alias: NLP
 #+title: Natural Language Processing

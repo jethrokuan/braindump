@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       f3124a3f-7f5c-4b59-8888-560eb62f91c2
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Quantization
 
-- tags :: [[file:model_compression.org][Model Compression]], [[file:machine_learning.org][Machine Learning]]
+- tags :: [[id:b96c5fa6-8300-479c-911b-3de4c397b1d5][Model Compression]], [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]]
 
 Quantization refers to techniques for performing computations and
 storing tensors at lower bitwidths than floating point precision.
@@ -16,6 +19,6 @@ Pytorch supports two libraries for quantization:
 
 * Questions
 
-- Can we quantize [[file:spiking_neural_networks.org][Spiking Neural Networks]]? They already do binary
+- Can we quantize [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]? They already do binary
   precision computation, what about the weights?
 

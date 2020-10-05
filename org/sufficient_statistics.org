@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       32863342-b542-41da-9c37-53c08a1c4f31
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Sufficient Statistics
 

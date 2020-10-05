@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       9bb4f873-24b3-42bb-9447-42772bc1c526
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: svelte
 #+title: Svelte

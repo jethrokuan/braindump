@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d0d868fd-e014-4299-a896-9e42b536fc99
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: online_learning
 #+title: Online Learning

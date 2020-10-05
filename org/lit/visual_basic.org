@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       1ffd00da-5f42-4ddf-bdee-832dba463841
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: visual_basic
 #+title: Visual Basic

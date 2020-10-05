@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       7cc38c50-54fd-487d-a81f-d1c963bb6654
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Non-parametric Filters
 
-- tags :: [[file:bayes_filter.org][Bayes Filter]], [[file:particle_filter.org][Particle Filter]], [[file:histogram_filter.org][Histogram Filter]]
+- tags :: [[id:155935aa-af99-4629-b232-dfa0b48ad239][Bayes Filter]], [[id:ea8fc8e1-c12b-41fc-a1ea-8eb54f670388][Particle Filter]], [[id:9363fa5a-afb0-4322-86f5-8dfa527a8dfc][Histogram Filter]]
 
 Non-parametric filters do not make strong assumptions on the posterior
 density, making them well suited for complex, multi-modal beliefs. The

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       73b06202-fa44-452c-9a5b-acc7889b2fdb
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: python_default_values
 #+title: Python Default Parameter Values

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       73a56c88-edbf-45cd-b67e-f626e69b9624
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: definition_of_deep_learning
 #+title: Definition of Deep Learning
 
-There are many conflicting definitions of [[file:deep_learning.org][Deep Learning]], here's some
+There are many conflicting definitions of [[id:d08c28f3-9c67-4ae5-b3b2-af600a1173c0][Deep Learning]], here's some
 definitions by various people:
 
 - [[file:yann_lecun.org][Yann LeCun]] :: DL is constructing networks of parameterized

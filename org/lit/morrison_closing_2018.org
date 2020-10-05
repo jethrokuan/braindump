@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       0570cdd6-baad-4709-b3f9-6edeceac90f6
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: morrison_closing_2018: Closing the Loop for Robotic Grasping: A Real-time, Generative Grasp Synthesis Approach
 #+roam_key: cite:morrison_closing_2018

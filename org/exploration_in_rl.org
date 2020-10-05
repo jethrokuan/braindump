@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       cb2a8b93-7256-4aba-a45c-d3d8fa4bcaca
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Exploration In Reinforcement Learning
 
-In [[file:reinforcement_learning.org][Reinforcement Learning ⭐]], exploration is important where rewards
+In [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]], exploration is important where rewards
 are sparse, and not a direct indication of how good an action is. Some
 environments where good exploration is necessary is Montezuma's
 revenge, where finishing a game only weakly correlates with rewarding

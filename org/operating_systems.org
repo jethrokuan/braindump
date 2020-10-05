@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e5f08144-5c0d-4a74-a10a-34a37b89b49c
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Operating Systems
 

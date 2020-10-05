@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       ed6e0839-d3e7-46ef-a856-2e9a4d0d9970
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: learning_how_to_do_hard_things
 #+roam_key: cite:maciver_hard_things
 #+title: Learning How To Do Hard Things
 
-- tags :: [[file:learning.org][Learning]]
+- tags :: [[id:54c22d91-285c-4dd4-835c-9fc737534cc9][Learning]]
 - paper :: cite:maciver_hard_things
 
 The key is to isolate one aspect of the problem that is difficult and

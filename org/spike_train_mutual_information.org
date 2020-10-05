@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       7c4ae029-b788-418a-850f-76f8d5caf91b
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Spike Train Mutual Information
 
 Would be nice to compute the mutual information between multi-neuronal spike
-trains in [[file:spiking_neural_networks.org][Spiking Neural Networks]]. Perhaps we can learn some low-level spike
-representation, and relate this somehow to [[file:information_bottleneck_dnn.org][Information Bottleneck in Deep Neural
+trains in [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]. Perhaps we can learn some low-level spike
+representation, and relate this somehow to [[id:1e986fb8-e87d-45f6-8f6f-446992d493d0][Information Bottleneck in Deep Neural
 Networks]].

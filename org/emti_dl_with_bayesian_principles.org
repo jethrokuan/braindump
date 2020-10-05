@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       97c31e31-b6b8-4ea0-8114-af023d1d740d
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Deep Learning With Bayesian Principles - Emtiyaz Khan
 
 - link :: [[https://slideslive.com/38921489/deep-learning-with-bayesian-principles][Mohammad Emtiyaz Khan | Deep Learning with Bayesian Principles · SlidesLive]]
-- speaker :: [[file:emtiyaz_khan.org][Emtiyaz Khan]]
-- tags :: [[file:bayesian_deep_learning.org][Bayesian Deep Learning]], [[file:neurips.org][NeurIPS]]
+- speaker :: [[id:46325268-88a7-4873-9b84-c3ffb7090325][Emtiyaz Khan]]
+- tags :: [[id:3d688bf9-889b-4ffa-a82d-202cab5010f5][Bayesian Deep Learning]], [[id:162e6047-b066-4a3b-a618-ddcab2c738f7][NeurIPS]]
 
 * Goals
 

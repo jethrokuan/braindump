@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a44605cb-a7ae-4138-a680-f948a4a2fc49
+:END:
 #+setupfile:./hugo_setup.org
 #+roam_key: https://nixos.org/nixos/manual/index.html
 #+hugo_slug: nixos_nixos_manual
@@ -5,7 +8,7 @@
 #+title: NixOS - NixOS manual
 
 - source :: https://nixos.org/nixos/manual/index.html
-- tags :: [[file:../nix.org][Nix/NixOS]]
+- tags :: [[id:3cbca54c-7431-4e1a-b248-32dfa82c743a][Nix/NixOS]]
 
   #+BEGIN_SRC nix
 { x, y, ... }: x + y

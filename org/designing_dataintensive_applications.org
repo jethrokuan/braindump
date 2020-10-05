@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       7cb5ccfd-e8d0-4512-a6c1-13ebdfe8b75c
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: designing_dataintensive_applications
 #+title: Designing Data-Intensive Applications
 
-- tags :: [[file:system_design.org][System Design]], [[file:databases.org][Databases]], [[file:hadoop.org][Hadoop]]
-- author :: [[file:martin_kleppmann.org][Martin Kleppmann]]
+- tags :: [[id:b59ddc91-fa3c-475b-9b06-58f1969b69e7][System Design]], [[id:e328eb8f-8c87-4406-b1ad-00cb7679d548][Databases]], [[id:7903f842-6de0-418f-9f97-0c3a0c78ade9][Hadoop]]
+- author :: [[id:225d6194-03e3-4c6a-bea4-3877eaa34853][Martin Kleppmann]]
 
 * Preface
 
@@ -31,7 +34,7 @@ to break the database down into segments, and always writes segments
 sequentially.
 
 - When a write comes in, add it into an in-memory balanced data
-  structure (e.g. [[file:red_black_tree.org][Red-Black Tree]]). This is sometimes referred to as a /memtable/.
+  structure (e.g. [[id:e5258b28-7243-4afd-a1a4-4d8cfefc6e31][Red-Black Tree]]). This is sometimes referred to as a /memtable/.
 - When the memtable becomes too big, write it out onto disk as an
   SSTable file. The SSTable file becomes the most recent segment of
   the database.
@@ -51,7 +54,7 @@ SSTables form the backbone of LSM-trees.
 The algorithm can be slow when looking up a key that does not exist in
 the database, because it will have to look through the /memtable/ and
 all segments before returning. Most database implementations such a
-[[https://github.com/google/leveldb][LevelDB]] and [[https://github.com/facebook/rocksdb][RocksDB]] use a [[file:bloom_filter.org][Bloom Filter]], which is a memory-efficient
+[[https://github.com/google/leveldb][LevelDB]] and [[https://github.com/facebook/rocksdb][RocksDB]] use a [[id:8880f01b-e5e1-4a31-aa3c-7fc5caabb95c][Bloom Filter]], which is a memory-efficient
 data structure for approximating the contents of a set.
 
 ** B-Trees

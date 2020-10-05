@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       e013e4ea-4fd4-4a39-b159-76d1849190f9
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Spiking Neurons (Literature Review)
 
-- tags :: [[file:spiking_neurons_lit_review.org][Spiking Neurons (Literature Review)]]
+- tags :: [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neurons (Literature Review)]]
 
 * Introduction to Spiking Neural Networks label:sec:snn
 
@@ -810,7 +813,7 @@ reward-modulated spike-time dependent plasticity.
 
 * TODO Theories of Error Back-Propagation in the Brain cite:whittington19_theor_error_back_propag_brain
 
-* [[file:comsa2019_temp_coding.org][Temp Coding with Alpha Synaptic Function]]
+* [[id:62a93e72-8b06-46dd-863c-e2eae004a071][Temp Coding with Alpha Synaptic Function]]
 * STDP
 
 STDP is a biologically inspired long-term plasticity model, in which

@@ -1,11 +1,14 @@
+:PROPERTIES:
+:ID:       a4388398-3a2a-4686-ae7a-b1ae5030ba94
+:END:
 #+setupfile:./hugo_setup.org
 #+roam_key: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
 #+hugo_slug: you_and_your_research
 #+title: You and Your Research - Richard Hamming
 
 - source :: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
-- author :: [[file:../richard_hamming.org][Richard Hamming]]
-- tags :: [[file:../research.org][Research]]
+- author :: [[id:b3b67b6b-d063-46e5-85b4-a06ee5e65404][Richard Hamming]]
+- tags :: [[id:63384aa8-5da8-41c5-96aa-17f7925c274f][Research]]
 
 #+begin_quote
 Our society frowns on people who set out to do really good work.

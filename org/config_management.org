@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       83565f85-558f-4144-962a-8ac0c8499af0
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Config Management
 
-- tags :: [[file:operating_systems.org][Operating Systems]]
+- tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]]
 
 * Dotfiles
 

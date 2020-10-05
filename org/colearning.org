@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       2b6e2383-41f1-4b28-a353-c87e21594bdb
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: colearning
 #+title: Co-learning
@@ -19,16 +22,16 @@ when we have few labeled samples in a multi-modal problem. Weak
 classifiers are built for each modality to bootstrap each other with
 labels for the unlabeled data.
 
-[[file:transfer_learning.org][Transfer learning]] exploits co-learning with parallel data, by building
-[[file:multimodal_representation.org][multi-modal representations]] with only some modalities used during test
-time. Approaches like these include multimodal [[file:deep_boltzmann_machines.org][Deep Boltzmann Machines]]
-and [[file:multimodal_autoencoders.org][Multi-modal Autoencoders]].
+[[id:4178c3b6-6b7c-42a2-9e49-cdc12f49f15b][Transfer learning]] exploits co-learning with parallel data, by building
+[[id:4394e05f-8c2d-4fa7-9dc5-6aa4d8723222][multi-modal representations]] with only some modalities used during test
+time. Approaches like these include multimodal [[id:e7fc725f-dc00-4f2c-9462-e76a78dafe88][Deep Boltzmann Machines]]
+and [[id:7b168351-19b0-4f84-bcca-2e2e0d8eb4eb][Multi-modal Autoencoders]].
 
 * Non-parallel data
 
 Non-parallel methods only require that different modalities share
-similar categories or concepts. Methods include [[file:transfer_learning.org][transfer learning]]
-using coordinated multimodal representations, or [[file:concept_grounding.org][Concept Grounding]] via
-word similarity, or [[file:zeroshot_learning.org][zero-shot learning]].
+similar categories or concepts. Methods include [[id:4178c3b6-6b7c-42a2-9e49-cdc12f49f15b][transfer learning]]
+using coordinated multimodal representations, or [[id:5cea9a5a-3901-423a-b253-374c379a4135][Concept Grounding]] via
+word similarity, or [[id:fceda897-3587-4a80-8059-1f58bb240778][zero-shot learning]].
 
 bibliography:biblio.bib

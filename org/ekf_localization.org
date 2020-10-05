@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       68db0a15-8952-46b1-8011-42b156941dd6
+:END:
 #+setupfile:./hugo_setup.org
 #+title: EKF Localization
 
-- tags :: [[file:robot_localization.org][Robot Localization]], [[file:markov_localization.org][Markov Localization]], [[file:grid_mc_localization.org][Grid & Monte Carlo Localization]]
+- tags :: [[id:9c0ebb8f-6582-4daf-bb84-7aa299c2d204][Robot Localization]], [[id:8f573bd6-87d8-4fe2-81e9-6357752469c4][Markov Localization]], [[id:589b03e3-0c60-434f-97f4-3b1f0ecb6abb][Grid & Monte Carlo Localization]]
 
 * EKF localization
 

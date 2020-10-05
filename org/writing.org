@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       464665d4-0806-422b-b984-e65bb0120e9f
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Writing
 
-- [[file:writing_books.org][Writing Books]]
-- [[file:writing_articles.org][Writing Articles]]
+- [[id:b892f37d-1ba1-4b2f-812c-1d0c5cfdecff][Writing Books]]
+- [[id:aa9bce5c-e59e-4c04-9bcd-941fa0a76c95][Writing Articles]]
 
 * Books
 

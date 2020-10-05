@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       186ecc17-3871-49f6-8d24-00232fe76077
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: china_economics
 #+roam_key: https://www.investopedia.com/articles/investing/040115/reasons-why-china-buys-us-treasury-bonds.asp

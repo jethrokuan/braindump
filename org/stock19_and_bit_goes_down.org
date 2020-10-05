@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       03bfa7bf-2ab6-4360-80df-76e46fab2200
+:END:
 #+setupfile:./hugo_setup.org
 #+title: And the Bit Goes Down: Revisiting the Quantization of Neural Networks
 
-- tags :: [[file:model_compression.org][Model Compression]]
+- tags :: [[id:b96c5fa6-8300-479c-911b-3de4c397b1d5][Model Compression]]
 - paper :: cite:stock19_and_bit_goes_down
 
 This method minimizes the loss reconstruction error for in-domain

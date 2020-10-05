@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       05e349f3-34e8-4438-8a30-5e7d7dd8835a
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Statistical Methods for Finance
 
-- tags :: [[file:finance.org][Finance]]
+- tags :: [[id:51187adb-36a9-448e-bee4-ed0975a46e0e][Finance]]
 
 * Returns
 

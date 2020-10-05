@@ -1,11 +1,14 @@
+:PROPERTIES:
+:ID:       71b27c1b-b851-4128-a5d5-1fed8dd900bb
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Roam Research
 
 - webpage :: [[https://roamresearch.com][Roam Research]]
-- tags :: [[file:productivity.org][Productivity]], [[file:writing.org][Writing]], [[file:note_taking.org][Note-taking]]
+- tags :: [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]], [[id:464665d4-0806-422b-b984-e65bb0120e9f][Writing]], [[id:05a63abc-36d6-4a04-8693-bd1bfd5c46c8][Note-taking]]
 
-Roam research is a tool for networked-thought, created by [[file:conor_white_sullivan.org][Conor
-White-Sullivan]]. Roam adopts methods from [[file:zettelkasten.org][Zettelkasten]].
+Roam research is a tool for networked-thought, created by [[id:23495ea8-dee7-44b6-b3a6-8b4072f6d432][Conor
+White-Sullivan]]. Roam adopts methods from [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]].
 
 * Roam Media
 - [[https://twitter.com/adam_keesling/status/1196864424725774336][Adam Keesling's Roam Thread]]
@@ -16,7 +19,7 @@ White-Sullivan]]. Roam adopts methods from [[file:zettelkasten.org][Zettelkasten
 * Roam Tutorials
 
 - [[https://www.youtube.com/watch?v=RvWic15iXjk][How to Use Roam to Outline a New Article in Under 20 Minutes -
-  YouTube]] by [[file:nat_eliason.org][Nat Eliason]]
+  YouTube]] by [[id:a3c8877b-1765-4fdc-8da9-3e4ca5456adb][Nat Eliason]]
   - Basic Idea is to pull out related notes from other sources (books,
     articles etc.)
   - Group them up into common themes (e.g. "Ease is not the Goal")

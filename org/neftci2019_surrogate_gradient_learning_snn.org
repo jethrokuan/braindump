@@ -1,16 +1,19 @@
+:PROPERTIES:
+:ID:       87bab6c2-5346-4253-9e11-697c4e63d62a
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Surrogate Gradient Learning In Spiking Neural Networks
 
 - paper :: https://arxiv.org/pdf/1901.09948v2.pdf
 
-[[file:spiking_neural_networks.org][Spiking Neural Networks]] enable power-efficient network models, which
+[[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]] enable power-efficient network models, which
 have become of increasing importance in embedded and auto-motive
 applications. The power efficiency stems from dispensing of expensive
 floating-point computations. 
 
 Surrogate gradient methods overcome the difficulties associated with
 the discontinuous non-linearity. Rather than changing the neuronal
-model ([[file:smoothed_snn.org][Smoothed Spiking Neural Networks]]), surrogate gradients are
+model ([[id:81796d94-28b9-441f-aee2-3194e4d59434][Smoothed Spiking Neural Networks]]), surrogate gradients are
 introduced to allow for numerical optimisation.
 
 Surrogate gradients can also improve the memory access overhead of the

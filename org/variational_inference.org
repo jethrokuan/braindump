@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       18357675-ffcf-4874-8cf3-9a12c8ee556c
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Variational Inference
 
-- tags :: [[file:machine_learning_algorithms.org][Machine Learning Algorithms]]
+- tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]]
 
 * TODO Variational Bounds of Mutual Information cite:poole19_variat_bound_mutual_infor
 

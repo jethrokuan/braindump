@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       efd66caf-279b-4d0a-8db4-537fec2baffd
+:END:
 #+setupfile: ./hugo_setup.org
 #+hugo_tags: web
 #+title: CSS
 
-- tags :: [[file:web_dev.org][Web Development]]
+- tags :: [[id:d5337a2c-871b-4761-b625-0f304fb46def][Web Development]]
 
  - Adding dark mode : [[https://kevq.uk/how-to-add-css-dark-mode-to-a-website/][How To Add CSS Dark Mode To A Website - Kev
    Quirk]]

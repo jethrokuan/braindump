@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       52cc5684-56d0-4df7-b4ac-7d225023f72b
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Documentation Generators
 
-We use these to generate [[file:documentation.org][documentation]] for projects.
+We use these to generate [[id:fcfa0f52-ea27-44b3-94c2-d214d69fedb0][documentation]] for projects.
 
 * Software
 

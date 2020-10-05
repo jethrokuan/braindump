@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       0f4fbdf9-76db-4dee-b559-702bb0a6b939
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: prefer_active_verbs
 #+title: Prefer active verbs

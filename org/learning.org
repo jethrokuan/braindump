@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       54c22d91-285c-4dd4-835c-9fc737534cc9
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Learning
 #+tags: learning

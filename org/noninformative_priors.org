@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       a967cbbd-0135-4a0f-b695-f493ce6edec8
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: noninformative_priors
 #+title: Non-informative Priors
 
-Non-informative priors are used in [[file:bayesian_inference.org][Bayesian Inference]], in the
+Non-informative priors are used in [[id:06635cd6-7ae1-4ba0-b82f-5a344871d94e][Bayesian Inference]], in the
 situation where no prior information exists, or inference based
 dominantly on the data is desired. We wish to find a distribution
 $p(\theta)$ that contained "no information" about $\theta$ (favours no

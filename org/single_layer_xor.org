@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       9ef192c8-f44b-4804-949d-930fa3c225da
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Single Layer XOR
 
 - paper :: https://science.sciencemag.org/content/367/6473/83
-- tags :: [[file:neuroscience.org][Neuroscience ⭐]], [[file:machine_learning.org][Machine Learning]]
+- tags :: [[id:cc7d1ffe-280d-4744-9fac-c38e70c5472c][Neuroscience ⭐]], [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]]
 
 
 * Finding

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       9c0ebb8f-6582-4daf-bb84-7aa299c2d204
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Robot Localization
 

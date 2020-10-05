@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e92e6f7d-b890-4a3a-b102-ee4a6d601e8a
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Data Structures and Algorithms
 #+options: toc:nil

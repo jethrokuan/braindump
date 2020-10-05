@@ -1,13 +1,16 @@
+:PROPERTIES:
+:ID:       3cbca54c-7431-4e1a-b248-32dfa82c743a
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Nix/NixOS
 #+author: Jethro Kuan
 
-NixOS is a [[file:linux.org][Linux]] [[file:operating_systems.org][operating System]] built upon the Nix package manager. Nix
-refers to both the package manager, and the name of the [[file:prog_lang.org][programming
+NixOS is a [[id:a5dfff84-6468-4b04-bb55-bbde427a686f][Linux]] [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][operating System]] built upon the Nix package manager. Nix
+refers to both the package manager, and the name of the [[id:02f0d648-baae-478f-b738-448cf53e2a63][programming
 language]] it is written in.
 
 * Nix Software
-- [[https://github.com/target/lorri][target/lorri]] provides great [[https://direnv.net/][direnv]] ([[file:unix.org][Unix]]) /nix-shell integration
+- [[https://github.com/target/lorri][target/lorri]] provides great [[https://direnv.net/][direnv]] ([[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]]) /nix-shell integration
 - [[https://github.com/nmattia/niv][nmattia/niv]] provides dependency management for Nix projects
 
 * Links

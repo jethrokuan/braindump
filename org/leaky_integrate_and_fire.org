@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       a22d942d-8772-43d9-b956-6aebae0e8913
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Leaky Integrate-And-Fire
 
-- tags :: [[file:spiking_neural_networks.org][Spiking Neural Networks]]
+- tags :: [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]
 
 A Leaky Integrate-and-Fire neuron at layer $l$ and index $i$ can be
 described in differential form as:

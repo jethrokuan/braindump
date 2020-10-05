@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       36cfa399-66bc-437e-9d05-06c04be4caa6
+:END:
 #+setupfile:./hugo_setup.org
 #+title: JavaScript
 
-JavaScript is an interpreted [[file:prog_lang.org][programming language]], originally designed
-for the [[file:web_dev.org][web]]. 
+JavaScript is an interpreted [[id:02f0d648-baae-478f-b738-448cf53e2a63][programming language]], originally designed
+for the [[id:d5337a2c-871b-4761-b625-0f304fb46def][web]]. 

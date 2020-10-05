@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       4637cce4-a608-4527-bed6-5d24cd4e49fe
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Deep Learning Tools
 
-- tags :: [[file:deep_learning.org][Deep Learning]]
+- tags :: [[id:d08c28f3-9c67-4ae5-b3b2-af600a1173c0][Deep Learning]]
 
 * Tensorflow
 ** What is Tensorflow

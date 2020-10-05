@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       8f573bd6-87d8-4fe2-81e9-6357752469c4
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Markov Localization
 
 * Markov Localization
-A direct extension of the [[file:bayes_filter.org][Bayes Filter]], but using the map $m$ of the
+A direct extension of the [[id:155935aa-af99-4629-b232-dfa0b48ad239][Bayes Filter]], but using the map $m$ of the
 environment:
 
 \begin{algorithm}

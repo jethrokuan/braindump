@@ -1,10 +1,13 @@
+:PROPERTIES:
+:ID:       55fc910b-5536-4123-a27f-85dad19f7eb0
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: GDC Vault - Exploring the Tech and Design of 'Noita'
 #+roam_key: https://www.gdcvault.com/play/1025695/Exploring-the-Tech-and-Design
 
-- speaker :: [[file:petri_purho.org][Petri Purho]]
-- company :: [[file:nolla_games.org][Nolla Games]]
-- tags :: [[file:game_design.org][Game Design]]
+- speaker :: [[id:7640cf0f-9611-4093-93cc-62b69d840271][Petri Purho]]
+- company :: [[id:117521ef-44a2-4346-8304-f8fbe032d62a][Nolla Games]]
+- tags :: [[id:38fb9783-1202-416a-bc59-4f0df0e1e633][Game Design]]
 
 Noita uses a very simple falling sand simulation algorithm, liquids and gases are implemented similarly.
 

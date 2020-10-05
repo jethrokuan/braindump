@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6bcdf2f0-6f2b-47bf-95c1-180a1d81f497
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Temporal Difference Learning
 #+roam_alias: "TD Learning"

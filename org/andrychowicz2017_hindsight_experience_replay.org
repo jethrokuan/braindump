@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       33b0e88f-317f-4fa1-b239-63ebbc04fa58
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Hindsight Experience Replay
 

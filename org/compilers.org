@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       b969b1f3-371c-42ae-a1f3-44836047659f
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Compilers
 #+hugo_tags: proglang compilers

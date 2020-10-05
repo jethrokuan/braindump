@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       f0b2a8e5-b68f-4ef3-a1ac-2f138ea3177c
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: writing_with_zettekasten
 #+title: Writing with Zettekasten
 
-The status quo for [[file:writing.org][writing]] is:
+The status quo for [[id:464665d4-0806-422b-b984-e65bb0120e9f][writing]] is:
 
 1. Find topic/research question
 2. Research/find literature
@@ -14,7 +17,7 @@ This process is extremely linear. The student actually has to do many
 other things that aren't part of writing the paper, and that has to
 happen before the process of writing begins.
 
-If we flip this process in [[file:zettelkasten.org][Zettelkasten]], and make the notes the
+If we flip this process in [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]], and make the notes the
 thinking process rather than /a record of/ of the thinking process. 
 
 1. Only written down ideas count

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       2a96393b-15af-43d6-8f65-cdb7e69b33bf
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Fitness
 

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       5b807e3e-58fc-4fcc-9b08-510513555161
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: vocabulary
 #+title: Vocabulary

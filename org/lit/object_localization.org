@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       4c6c6303-1f94-4c31-b708-f576cb718ba6
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: object_localization
 #+title: Object Localization
@@ -31,7 +34,7 @@ shown to outperform them.
 :END:
 
 Similar to the 2D methods, 3D methods fit 3D shape primitives (such as with
-[[file:ransac.org][RANSAC]]) or perform salient 3D object detection. However, 3D methods deal instead
+[[id:e430eb0b-5f62-4d81-b0ac-cc94c00331d9][RANSAC]]) or perform salient 3D object detection. However, 3D methods deal instead
 with point-cloud inputs.
 
 * Object Detection
@@ -49,7 +52,7 @@ scores in one evaluation.
 
 3D object detection methods often deal with objects on known shapes. The problem
 is transformed into a detection and 6D object pose estimation problem. The 6D
-pose of the object can be achieved through [[file:local_registration.org][local registration]].
+pose of the object can be achieved through [[id:869867af-c30b-405f-8e12-7cecfc07898f][local registration]].
 
 ** Generating 3D Object Proposals
 

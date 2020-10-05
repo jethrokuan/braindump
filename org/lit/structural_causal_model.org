@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       aa5c8002-a1ba-4d64-af54-38d1eafafdeb
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: structural_causal_model
 #+title: Structural Causal Model
@@ -9,4 +12,4 @@ A structural causal model satisfies the following conditions:
 3. Each observable $X_{i}$ is a density, with independent unexplained random
    variables $U_{i}, \dots, U_{n}$.
 
-The structural causal model satisfies the [[file:reichenbach_s_principle.org][Reichenbach's principle]].
+The structural causal model satisfies the [[id:87e2d47f-eaab-45e4-827c-3dfe587aa598][Reichenbach's principle]].

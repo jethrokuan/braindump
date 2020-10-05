@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       1fbe642b-01cc-47eb-a04e-48017bbdf8c6
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Computer Networking
 
-- tags :: [[file:operating_systems.org][Operating Systems]]
+- tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]]
 
 * Introduction
 ** What is the Internet?

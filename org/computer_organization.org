@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       b4a5a8bd-65fc-4ddf-b2d6-e7e9413d7a69
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Computer Organization
 
-- tags :: [[file:operating_systems.org][Operating Systems]]
+- tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]]
 
 * Pipelining
 - Increases throughput, but not latency

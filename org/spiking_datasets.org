@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       a392ab66-9130-418d-b2ab-310ff80e00b8
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Spiking Datasets
 
-Datasets for evaluating [[file:spiking_neural_networks.org][Spiking Neural Networks]].
+Datasets for evaluating [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]].
 
 - [[https://compneuro.net/][Spiking Heidelberg Digits (SHD) dataset and the Spiking Speech Command (SSC) dataset]]
 - [[https://www.garrickorchard.com/datasets][N-Caltech101, N-MNIST and Characters]]

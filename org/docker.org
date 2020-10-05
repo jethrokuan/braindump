@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       79ec0a7b-258d-49c6-b159-afcb2917e219
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Docker 101
 #+subtitle: Hackerschool, NUS Hackers
@@ -5,7 +8,7 @@
 #+author: Jethro Kuan
 #+email: jethrokuan95@gmail.com
 
-- tags :: [[file:linux.org][Linux]], [[file:operating_systems.org][Operating Systems]]
+- tags :: [[id:a5dfff84-6468-4b04-bb55-bbde427a686f][Linux]], [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]]
 
 * Why Containers
   :PROPERTIES:

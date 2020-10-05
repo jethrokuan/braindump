@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a836af39-c95b-4b89-8038-b183e30b1220
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: dbscan
 #+title: DBSCAN

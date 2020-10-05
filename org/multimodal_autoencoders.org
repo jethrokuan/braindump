@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7b168351-19b0-4f84-bcca-2e2e0d8eb4eb
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: multimodal_autoencoders
 #+title: Multi-modal Autoencoders

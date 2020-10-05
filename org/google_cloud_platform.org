@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       99e89fa5-342f-4a2a-8e98-114111d8c2a9
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Google Cloud Platform
 * Cloud ML

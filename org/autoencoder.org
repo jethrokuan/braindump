@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       407cf4c0-9002-47b4-a82c-d2c5b722fa17
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: autoencoder
 #+title: Autoencoder

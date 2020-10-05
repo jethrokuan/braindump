@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3319ef96-2df4-4c7e-98f4-3fc5978bd147
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Linear Algebra
 

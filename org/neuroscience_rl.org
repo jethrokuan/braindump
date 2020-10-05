@@ -1,14 +1,17 @@
+:PROPERTIES:
+:ID:       c3533928-26f7-4f05-843f-4140559487b3
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Neuroscience and Reinforcement Learning
 
-- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]], [[file:neuroscience.org][Neuroscience ⭐]]
+- tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]], [[id:cc7d1ffe-280d-4744-9fac-c38e70c5472c][Neuroscience ⭐]]
 
-[[file:reinforcement_learning.org][Reinforcement Learning ⭐]] is similar to how humans learn:
+[[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]] is similar to how humans learn:
 
 - Learning by trial-and-error
 - Reward is often delayed
 
-TD errors ([[file:td_learning.org][Temporal Difference Learning]]) model the activity of
+TD errors ([[id:6bcdf2f0-6f2b-47bf-95c1-180a1d81f497][Temporal Difference Learning]]) model the activity of
 dopamine neurons cite:schultz97_neural_subst_predic_rewar
 
 bibliography:biblio.bib

@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       d49cbba5-7b3c-437e-b51a-5da6b36e074c
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Two Levels Of Inference
 
-- tags :: [[file:occams_razor.org][Occam's Razor]]
+- tags :: [[id:f109cf98-f048-4f6c-b2cc-0588ce7531a3][Occam's Razor]]
 
 There are 2 levels of inference: model fitting and model comparison.
 In model fitting, assuming a model is true (say $\mathcal{H}_i$), fit

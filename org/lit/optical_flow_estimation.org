@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d7761f75-e74a-4c33-aedb-3f68b4c22689
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: optical_flow_estimation
 #+title: Optical Flow Estimation

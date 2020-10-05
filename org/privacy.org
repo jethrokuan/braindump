@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       eef00945-bc8b-4c52-ae3b-7ab76a23e98c
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: privacy
 #+title: Privacy

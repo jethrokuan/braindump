@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       67889359-5627-4321-8386-9af05aa00255
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: convolutional_neural_networks
 #+roam_alias: CNNs

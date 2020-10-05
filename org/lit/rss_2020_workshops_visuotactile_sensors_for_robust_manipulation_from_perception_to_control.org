@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       eeaaef13-b0f3-466e-b91c-d504c8f316ea
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: rss_2020_workshops_visuotactile_sensors_for_robust_manipulation_from_perception_to_control
 #+title: RSS 2020 Workshops: Visuotactile Sensors for Robust Manipulation - From Perception to Control

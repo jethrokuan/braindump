@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       ae3d1925-4c7e-49ba-a2ac-b7332de1f23d
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: motion_compensation
 #+title: Motion Compensation

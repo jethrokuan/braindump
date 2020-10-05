@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a5237797-e856-4eab-9966-55f098dc6e48
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: guildai
 #+title: GuildAI

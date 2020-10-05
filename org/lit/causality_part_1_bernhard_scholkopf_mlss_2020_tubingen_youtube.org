@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       ffb3e855-5d31-47c1-833e-ca99121f5e85
+:END:
 #+setupfile:./hugo_setup.org
 #+roam_key: https://www.youtube.com/watch?v=btmJtThWmhA
 #+hugo_slug: causality_part_1_bernhard_scholkopf_mlss_2020_tubingen_youtube
@@ -23,7 +26,7 @@ structure connecting the variables.
 An equation becomes structural by virtue of invariance to a domain of
 modifications.
 
-* [[file:structural_causal_model.org][Structural Causal Model]]
+* [[id:aa5c8002-a1ba-4d64-af54-38d1eafafdeb][Structural Causal Model]]
 :PROPERTIES:
 :ID:       7641ec39-6e89-4505-9363-d365b446a20a
 :END:

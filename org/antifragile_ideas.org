@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3b8e99f4-e49d-497b-b3f3-0d011b91c118
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Anti-fragile Ideas
 

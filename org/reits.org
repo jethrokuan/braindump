@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       ea338d3f-f51e-49f4-b962-203996d96a25
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: reits
 #+roam_alias: REITs

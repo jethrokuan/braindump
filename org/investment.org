@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       f8027182-bf9a-4649-82f9-bcf3a80469f5
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Investment
 
-- [[file:investing_in_etfs.org][Investing In ETFs]]
-- [[file:portfolio_composition.org][Portfolio Composition]]
+- [[id:b37ead31-5908-4a42-9e77-8343d8d0ae35][Investing In ETFs]]
+- [[id:1c59a56f-d466-462d-b309-9964addfa081][Portfolio Composition]]

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a61ee7c6-e642-4c0e-a309-5c7671f78552
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: IS1103: Computing and Society
 #+author: Jethro Kuan

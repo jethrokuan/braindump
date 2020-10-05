@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       397e2e11-2f27-474b-95c6-108bfa8e75fc
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Range Finder Model
 
@@ -79,4 +82,4 @@ Parameters can be learnt from data via maximum likelihood estimation.
 2. Computationally expensive
 
 ** Alternatives
-- [[file:likelihood_field_model.org][Likelihood Field Model]]
+- [[id:bc31b36d-8a2e-492c-af48-75f7794eefa4][Likelihood Field Model]]

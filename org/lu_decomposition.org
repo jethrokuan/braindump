@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       138dc0b3-983a-4d83-8cb6-da4a67f59692
+:END:
 #+setupfile:./hugo_setup.org
 #+title: LU Decomposition
 
-The key problem of [[file:linear_algebra.org][Linear Algebra]] is solving the equation $Ax=b$. We know that
+The key problem of [[id:3319ef96-2df4-4c7e-98f4-3fc5978bd147][Linear Algebra]] is solving the equation $Ax=b$. We know that
 with Gaussian elimination, we can decompose $A = LU$, where $L$ is a
 lower-triangular matrix and $U$ is an upper triangular matrix. An example speaks
 a thousand words:

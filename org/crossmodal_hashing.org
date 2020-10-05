@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       8e71e7a0-1ef8-4deb-9cb2-bd8ca223ce51
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: crossmodal_hashing
 #+title: Cross-modal Hashing

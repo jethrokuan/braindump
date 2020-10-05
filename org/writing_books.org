@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       b892f37d-1ba1-4b2f-812c-1d0c5cfdecff
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Writing Books
 
-- tags :: [[file:writing.org][Writing]]
+- tags :: [[id:464665d4-0806-422b-b984-e65bb0120e9f][Writing]]
 
 - [[https://www.aristeia.com/authorAdvice.html][Scott Meyers: Advice to Prospective Book Authors]]
 - [[https://dev.to/trickvi/i-wrote-a-book-lfg][I wrote a book - DEV Community 👩‍💻👨‍💻]]

@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       2ea101d6-dcdc-4198-afed-b4c11645b3fa
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: SSNLP Conference Notes
 
-- tags :: [[file:nlp.org][Natural Language Processing]]
+- tags :: [[id:4a817202-7d27-43c8-90a7-8417d38c731b][Natural Language Processing]]
 
 * AliNLP: the Text Processing Engine that Powers Alibaba's Business Applications
 

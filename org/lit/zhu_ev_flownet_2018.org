@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c03178ca-c893-4c48-9bd7-3b4f928ca45c
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: zhu_ev-flownet_2018: EV-FlowNet: self-supervised optical flow estimation for event-based cameras
 #+roam_key: cite:zhu_ev-flownet_2018
@@ -10,7 +13,7 @@
   :NOTER_DOCUMENT: /home/jethro/Zotero/storage/X9P55F47/Zhu et al. - 2018 - EV-FlowNet Self-Supervised Optical Flow Estimatio.pdf
   :NOTER_PAGE: 4
   :END:
-** Event data is well-suited for [[file:optical_flow_estimation.org][Optical Flow Estimation]]
+** Event data is well-suited for [[id:d7761f75-e74a-4c33-aedb-3f68b4c22689][Optical Flow Estimation]]
 :PROPERTIES:
 :NOTER_PAGE: (1 . 0.6910112359550562)
 :END:
@@ -27,7 +30,7 @@ polarity at each pixel. This preserves spatial relationships between events,
 while maintaining the most recent temporal information at each pixel, and
 providing a fixed number of channels for any event stream.
 
-They also introduced a [[file:self_supervised_learning.org][Self-supervised Learning]] method, using a photometric loss
+They also introduced a [[id:eecde484-c101-40f6-a099-9cf4a95b832a][Self-supervised Learning]] method, using a photometric loss
 as a supervisory signal, without supervision from ground-truth flow.
 
 ** Event Representation

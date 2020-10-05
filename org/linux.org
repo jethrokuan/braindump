@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a5dfff84-6468-4b04-bb55-bbde427a686f
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Linux
 

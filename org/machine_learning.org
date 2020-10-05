@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       5a6f15fa-e5d4-474e-8ead-56b22d890512
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Machine Learning
 #+hugo_tags: machine-learning
 
 * Table of Contents
-- [[file:nlp.org][Natural Language Processing]]
+- [[id:4a817202-7d27-43c8-90a7-8417d38c731b][Natural Language Processing]]
 
 * When do we need machine learning?
 Two aspects of a given problem may call for the use of programs that
@@ -71,7 +74,7 @@ summary, or compressed version of that data.
   \end{equation*}
 
   We are interested in finding a hypothesis $h$ that has a small risk,
-  or expected loss, typically using [[file:erm.org][Empirical Risk Minimization]].
+  or expected loss, typically using [[id:ff243a09-9980-4738-b638-0521cc2bbf42][Empirical Risk Minimization]].
 
 **** Assumptions Made ⚠
  1. One common assumption is that the data in the data generation

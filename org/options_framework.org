@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e938b343-115a-4f32-b00c-6e96626a308a
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Options Framework
 An option is defined as a tuple containing:
@@ -17,9 +20,9 @@ abstraction. cite:stolle2002learning
   (discounted) transition to termination state
 
 They look a lot like value functions, and can use the TD error to train the
-model ([[file:td_learning.org][Temporal Difference Learning]]).
+model ([[id:6bcdf2f0-6f2b-47bf-95c1-180a1d81f497][Temporal Difference Learning]]).
 
 * Related
-- [[file:generalized_value_functions.org][Generalized Value Functions]]
+- [[id:1afc2277-e96b-4049-a1c0-2ea9ff26e0b0][Generalized Value Functions]]
 
 bibliography:biblio.bib

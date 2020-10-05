@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       3c2974e5-3e49-4c9f-8612-ee79baf47341
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Regression
 
-- tags :: [[file:statistics.org][Statistics]], [[file:bayesian_statistics.org][Bayesian Statistics]]
+- tags :: [[id:3ec39abc-ea53-4087-8523-7ace154c6aa6][Statistics]], [[id:7f0fcd68-3fc2-4936-929c-51ef11ffe862][Bayesian Statistics]]
 
 * Introduction
 

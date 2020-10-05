@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       a273c750-9827-4083-a942-f720b5443349
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Inverse Reinforcement Learning
 
-- tags :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+- tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
-Standard [[file:imitation_learning.org][Imitation Learning]] copies actions performed by the expert,
+Standard [[id:7ecd7d57-00d1-4a58-9061-105e1c324850][Imitation Learning]] copies actions performed by the expert,
 and do not reason about the outcomes of the actions. However, humans
 copy the /intent/ of the actions, which result in vastly different
 actions.
@@ -80,8 +83,8 @@ soft optimal policy under current reward.
 
 * MaxEntropy Inverse RL cite:ziebart2008_maxentrl
 
-1. Given $\psi$, compute [[file:control_as_inference.org::*Backward Messages][backward message]] $\beta(s_t, a_t)$
-2. Given $\psi$, compute [[file:control_as_inference.org::*Forward Messages][forward message]] $\alpha(s_t)$
+1. Given $\psi$, compute [[id:0f3564b7-5a64-4191-b917-4d94399d193f][backward message]] $\beta(s_t, a_t)$
+2. Given $\psi$, compute [[id:0f3564b7-5a64-4191-b917-4d94399d193f][forward message]] $\alpha(s_t)$
 3. Compute $\mu_t(s_t, a_t) \propto \beta(s_t, a_t) \alpha(s_t)$
 4. Evaluate:
 

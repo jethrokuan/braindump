@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       51187adb-36a9-448e-bee4-ed0975a46e0e
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: finance
 #+title: Finance

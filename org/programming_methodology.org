@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       bc05cc5b-61f0-4fb1-aef7-1c75c8d63b00
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: Programming Methodology
 #+author: Jethro Kuan

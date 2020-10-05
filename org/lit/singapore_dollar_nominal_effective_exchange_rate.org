@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       8bc3bc49-5567-4694-8508-ff35d70db72a
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: singapore_dollar_nominal_effective_exchange_rate
 #+title: Singapore Dollar Nominal Effective Exchange Rate

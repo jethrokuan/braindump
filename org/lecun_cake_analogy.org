@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       cc520cb6-0a5c-4944-88e4-b1c0ce4be407
+:END:
 #+setupfile:./hugo_setup.org
 #+title: LeCun's Cake Analogy
 
@@ -10,4 +13,4 @@ data. Supervised learning forms the icing on the cake, and
 reinforcement learning is the cherry on top.
 
 In NIPS 2017, Pieter Abbeel reused this cake analogy to describe his paper
-[[file:andrychowicz2017_hindsight_experience_replay.org][Hindsight Experience Replay]]: "Intelligence is a cake with many cherries"
+[[id:33b0e88f-317f-4fa1-b239-63ebbc04fa58][Hindsight Experience Replay]]: "Intelligence is a cake with many cherries"

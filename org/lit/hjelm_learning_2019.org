@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7215ad6b-748f-46f1-8eee-7d07fc25a0a7
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: hjelm_learning_2019: Learning deep representations by mutual information estimation and maximization
 #+roam_key: cite:hjelm_learning_2019
@@ -16,4 +19,4 @@
 :ID:       d3efa4de-bd75-4f00-ab2d-03f4c56a60ed
 :END:
 
-Maximizing [[file:mutual_information.org][Mutual Information]] between the input and output may not be useful for the task. Trivial pixel-level noise is useless for image classification. By maximizing the average mutual information between the high-level representation and local patches of the image, one can encourage the encoding aspects of data that is shared across patches.
+Maximizing [[id:c9b8c63a-792b-420a-9326-c4f84d8da383][Mutual Information]] between the input and output may not be useful for the task. Trivial pixel-level noise is useless for image classification. By maximizing the average mutual information between the high-level representation and local patches of the image, one can encourage the encoding aspects of data that is shared across patches.

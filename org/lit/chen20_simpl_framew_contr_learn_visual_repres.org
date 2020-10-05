@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       ecdb183b-2a18-48ea-9145-7428449a292b
+:END:
 #+setupfile: ./hugo_setup.org
 #+title: chen20_simpl_framew_contr_learn_visual_repres: A simple framework for contrastive learning of visual representations
 #+roam_key: cite:chen20_simpl_framew_contr_learn_visual_repres
 #+roam_alias: SimCLR
 
-SimCLR is a simple framework for [[file:contrastive_methods.org][Contrastive Methods]] of visual representations.
+SimCLR is a simple framework for [[id:fae03f32-919e-4d7b-a895-056f496abdd7][Contrastive Methods]] of visual representations.
 
 * A simple framework for contrastive learning of visual representations
   :PROPERTIES:
@@ -18,7 +21,7 @@ SimCLR is a simple framework for [[file:contrastive_methods.org][Contrastive Met
 :NOTER_PAGE: (3 . 0.48068397720076)
 :END:
 
-Rather than train with a memory bank, they use a large batch size, and the [[file:../lars_optimizer.org][LARS Optimizer]] to stabilize training.
+Rather than train with a memory bank, they use a large batch size, and the [[id:92398d83-69a8-4024-be4b-908f2cc72ac1][LARS Optimizer]] to stabilize training.
 
 
 * Key Contributions

@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       60ed8384-5ce5-4205-8614-9cd6115b3008
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Differentiable plasticity: training plastic neural networks with backpropagation
 
-- tags :: [[file:ml_papers.org][Machine Learning Papers]]
+- tags :: [[id:2620cfa1-db1d-4841-bcce-db261e44479e][Machine Learning Papers]]
 - paper :: https://arxiv.org/abs/1804.02464
 
 * Goal
@@ -11,7 +14,7 @@ experience, inspired by synaptic plasticity. This is to bridge the gap
 with biological agents, which are able to learn quickly from prior
 experience, mastering environments with changing features.
 
-An alternative to [[file:meta_learning.org][Meta Learning]], synaptic plasticity strengthens and
+An alternative to [[id:c831177e-e629-4950-891d-62a9863dab03][Meta Learning]], synaptic plasticity strengthens and
 weakens connections between neurons based on neural activity: whether
 they fire together.
 

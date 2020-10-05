@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       8caa7d17-dfc0-4535-9016-8bd52892ff58
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: the_intelligent_investor
 #+title: The Intelligent Investor
 
-- author :: [[file:benjamin_graham.org][Benjamin Graham]]
-- tags :: [[file:finance.org][Finance]]
+- author :: [[id:f87d978f-2ecf-44ef-acee-92a07ec8720f][Benjamin Graham]]
+- tags :: [[id:51187adb-36a9-448e-bee4-ed0975a46e0e][Finance]]
 * Book Notes
 :PROPERTIES:
 :NOTER_DOCUMENT: /home/jethro/Dropbox/Calibre/Benjamin Graham, Jason Zweig/The Intelligent Investor (222)/The Intelligent Investor - Benjamin Graham, Jason Zweig.pdf
@@ -57,4 +60,4 @@ slash their purchases, depressing activity throughout the economy.
 To guard against inflation, a common advice is to buy stocks, but in truth
 stocks failed to keep up with inflation about one-fifth of the time.
 
-To combat inflation, additionally look into [[file:reits.org][REITs]], and government bonds.
+To combat inflation, additionally look into [[id:ea338d3f-f51e-49f4-b962-203996d96a25][REITs]], and government bonds.

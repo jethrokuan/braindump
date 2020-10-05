@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       688d9fa9-0b74-4477-95e2-e0dae890cf9a
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: restricted_boltzmann_machines
 #+title: Restricted Boltzmann machines

@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       6216e0a9-f46a-4bb7-9d8a-a463c7d5e86e
+:END:
 #+setupfile:./hugo_setup.org
 #+title: PARA Method
 
 PARA is a method of organizing digital information, designed by Tiago
-Forte. Tiago Forte also proposed the method of [[file:progressive_summarization.org][Progressive Summarization]].
+Forte. Tiago Forte also proposed the method of [[id:6adf5333-604c-49ec-bf27-4585d870aa5b][Progressive Summarization]].
 
 PARA stands for:
 
@@ -30,9 +33,9 @@ Commitments are towards projects -- responsibilities with tangible
 outcomes. Knowing how projects connect to your long-term goals (areas)
 is important.
 
-* Contrasting with [[file:zettelkasten.org][Zettelkasten]]
+* Contrasting with [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]]
 
-This seems to be in contrast with other techniques like [[file:zettelkasten.org][Zettelkasten]].
+This seems to be in contrast with other techniques like [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]].
 which propose no such organization, instead using links between
 different information.
 

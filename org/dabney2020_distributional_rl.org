@@ -1,8 +1,11 @@
+:PROPERTIES:
+:ID:       c6f55ad8-b2b5-4298-889a-80655ceeb650
+:END:
 #+setupfile:./hugo_setup.org
 #+title: A Distributional Code for Value in Dopamine-based Reinforcement Learning
 
 - paper :: [[https://www.nature.com/articles/s41586-019-1924-6][https://www.nature.com/articles/s41586-019-1924-6]]
-- related :: [[file:reinforcement_learning.org][Reinforcement Learning ⭐]]
+- related :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
 * Abstract
 Reward prediction errors are typically represented by a single scalar

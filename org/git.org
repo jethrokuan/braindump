@@ -1,7 +1,10 @@
+:PROPERTIES:
+:ID:       a731b432-3ed7-428a-b3bb-78d3eefc217e
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Git
 
-- tags :: [[file:unix.org][Unix]], [[file:version_control.org][Version Control]]
+- tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]], [[id:cea56b27-54fa-4d40-8820-02ec141b280f][Version Control]]
 
 * Links
 ** TODO [[https://www.sbf5.com/~cduan/technical/git/][Understanding Git Conceptually]]

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       6d4756c2-a98d-46d7-bffd-fa7f204d8375
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: double_entry_accounting
 #+title: Double-entry Accounting

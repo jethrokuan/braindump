@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c9b8c63a-792b-420a-9326-c4f84d8da383
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: mutual_information
 #+title: Mutual Information

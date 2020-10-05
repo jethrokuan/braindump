@@ -1,5 +1,8 @@
+:PROPERTIES:
+:ID:       0804353f-55ba-4e38-bd07-337699b5871d
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: feynman_technique
 #+title: Feynman Technique
 
-- tags :: [[file:richard_feynman.org][Richard Feynman]]
+- tags :: [[id:915ee121-8a13-46dd-9005-73eba3f730a2][Richard Feynman]]

@@ -1,9 +1,12 @@
+:PROPERTIES:
+:ID:       9f8b4294-0cd3-48dc-be00-a2f3a6d02ac5
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Work Clean
 
 - title :: Work Clean
 - author :: Dan Charnas
-- tags :: [[file:productivity.org][Productivity]]
+- tags :: [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]]
 
 * Preparation
 1. Always turn up early, greet the day

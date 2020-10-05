@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       cdfa2dbb-675e-4d6c-8d9f-69121c3c6762
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Gaussian Processes
 

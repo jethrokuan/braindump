@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       ee0573dc-f7c1-4bab-931c-992e10f81be7
+:END:
 #+setupfile:./hugo_setup.org
 #+title: Multi-variable Calculus
 

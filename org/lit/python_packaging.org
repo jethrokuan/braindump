@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c9f20d36-f299-43cb-974f-13a76c0277f0
+:END:
 #+setupfile:./hugo_setup.org
 #+hugo_slug: python_packaging
 #+title: Python Packaging
