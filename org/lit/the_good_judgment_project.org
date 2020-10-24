@@ -1,0 +1,9 @@
+#+setupfile:./hugo_setup.org
+#+hugo_slug: the_good_judgment_project
+#+roam_key: https://www.gjopen.com/
+#+title: The Good Judgment Project
+
+The Good Judgment Project (GJP) is a project "harnessing the wisdom of the crowd
+to forecast world events".
+
+Similar in virtue to the GJP is [[https://www.metaculus.com/questions/][Metaculus]].
