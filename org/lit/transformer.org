@@ -1,0 +1,7 @@
+#+hugo_slug: transformer
+#+title: Transformer
+
+Transformer are model architectures that have proven effective across range of
+domains such as [[id:4a817202-7d27-43c8-90a7-8417d38c731b][Natural Language Processing]] and [[id:2778763e-640a-4353-94de-ad3919f00c2b][Computer Vision]].
+
+These models are identified by the [[id:a1321d06-600d-477e-ada5-b402020c9d03][self-attention mechanism]].

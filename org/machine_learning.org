@@ -42,6 +42,7 @@ learn and improve on the basis of their "experience":
 *** Online vs Batch Learning
 In online learning, the hypothesis has to be updated each time a new
 label is received.
+
 *** Reinforcement Learning
  Each action in a state has an associated cost and a probability
  distribution of the next state.

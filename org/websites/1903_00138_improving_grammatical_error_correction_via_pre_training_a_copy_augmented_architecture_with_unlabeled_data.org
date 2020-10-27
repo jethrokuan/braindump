@@ -21,7 +21,6 @@ Unlike translation, GEC only changes several words of the source sentence -- rou
 The copying mechanism enables training a model with a small vocabulary, as it can copy unchanged and out-of-vocabulary words from the source input tokens. 
 
 * Architecture
-
 Transformer encodes source sentence with stack of L identical blocks, each of them applies multi-head self-attention over the source tokens followed by a position-wise feedforward layer to produce its context aware hidden state. The decoder is the same architecture as the encoder, with an additional attention layer over the encoder's hidden states.
 
 \begin{equation}
