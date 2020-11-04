@@ -1,7 +1,6 @@
 +++
 title = "Range Finder Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:40+08:00
 draft = false
 +++
 
@@ -83,4 +82,4 @@ Parameters can be learnt from data via maximum likelihood estimation.
 
 ### Alternatives {#alternatives}
 
-- [Likelihood Field Model]({{< relref "likelihood_field_model" >}})
+- [Likelihood Field Model]({{<relref "likelihood_field_model.md" >}})

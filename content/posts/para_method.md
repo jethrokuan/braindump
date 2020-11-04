@@ -1,12 +1,11 @@
 +++
 title = "PARA Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:09+08:00
 draft = false
 +++
 
 PARA is a method of organizing digital information, designed by Tiago
-Forte. Tiago Forte also proposed the method of [Progressive Summarization]({{< relref "progressive_summarization" >}}).
+Forte. Tiago Forte also proposed the method of [Progressive Summarization]({{<relref "progressive_summarization.md" >}}).
 
 PARA stands for:
 
@@ -41,9 +40,9 @@ Commitments are towards projects -- responsibilities with tangible
 outcomes. Knowing how projects connect to your long-term goals (areas)
 is important.
 
-## Contrasting with [Zettelkasten]({{< relref "zettelkasten" >}}) {#contrasting-with-zettelkasten--zettelkasten-dot-md}
+## Contrasting with [Zettelkasten]({{<relref "zettelkasten.md" >}}) {#contrasting-with-zettelkasten--zettelkasten-dot-md}
 
-This seems to be in contrast with other techniques like [Zettelkasten]({{< relref "zettelkasten" >}}).
+This seems to be in contrast with other techniques like [Zettelkasten]({{<relref "zettelkasten.md" >}}).
 which propose no such organization, instead using links between
 different information.
 

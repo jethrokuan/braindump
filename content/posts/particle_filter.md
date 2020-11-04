@@ -1,7 +1,6 @@
 +++
 title = "Particle Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:53+08:00
 draft = false
 +++
 
@@ -73,7 +72,7 @@ draws with replacement \\(M\\) particles from \\(\overline{X}\_t\\). Whereas
 \\(\overline{X}\_t\\) is distributed according to
 \\(\overline{\text{bel}}(x_t)\\), the resampling causes them to be
 distributed according to the posterior \\(\text{bel}(x_t) = \eta p(z_t |
-x_t^{[m]})\overline{\text{bel}}(x_t)\\). (see [Importance Sampling]({{< relref "importance_sampling" >}}))
+x_t^{[m]})\overline{\text{bel}}(x_t)\\). (see [Importance Sampling]({{<relref "importance_sampling.md" >}}))
 
 ## Properties {#properties}
 

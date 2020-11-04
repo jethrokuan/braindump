@@ -1,16 +1,15 @@
 +++
 title = "Extended Kalman Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:05+08:00
 draft = false
 +++
 
 tags
-: [Bayes Filter]({{< relref "bayes_filter" >}}), [Kalman Filter]({{< relref "kalman_filter" >}}), [Information Filter]({{< relref "information_filter" >}})
+: [Bayes Filter]({{<relref "bayes_filter.md" >}}), [Kalman Filter]({{<relref "kalman_filter.md" >}}), [Information Filter]({{<relref "information_filter.md" >}})
 
 ## Key Idea {#key-idea}
 
-Remove linearity assumption from the [Kalman Filter]({{< relref "kalman_filter" >}}):
+Remove linearity assumption from the [Kalman Filter]({{<relref "kalman_filter.md" >}}):
 
 \begin{align}
 x_t &= g(u_t, x\_{t-1}) + \epsilon_t \\\\\\

@@ -30,4 +30,4 @@ where $u_{x,y} \in \{-R, \dots, R\}$. Then $S_{i}(\mathbf{u}, p)$ is the obtaine
 
 The time surface provides dynamic spatiotemporal context around an event, and the exponential decay expands the activity of passed events and provides information about the history of the activity in the neighbourhood.
 
-bibliography:../biblio.bib
+bibliography:biblio.bib

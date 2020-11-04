@@ -1,7 +1,6 @@
 +++
 title = "Information-Theoretic Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:08+08:00
 draft = false
 +++
 
@@ -28,11 +27,11 @@ empowerment
 
 ## Papers {#papers}
 
-- Skew-Fit ([Pong et al., n.d.](#orgd279cdd))
-- Diversity is All your Need ([Eysenbach et al., n.d.](#org79a248d))
+- Skew-Fit ([Pong et al., n.d.](#org07fe483))
+- Diversity is All your Need ([Eysenbach et al., n.d.](#org661fd80))
 
 ## Bibliography {#bibliography}
 
-<a id="org79a248d"></a>Eysenbach, Benjamin, Abhishek Gupta, Julian Ibarz, and Sergey Levine. n.d. “Diversity Is All You Need: Learning Skills Without a Reward Function.” <http://arxiv.org/abs/1802.06070v6>.
+<a id="org661fd80"></a>Eysenbach, Benjamin, Abhishek Gupta, Julian Ibarz, and Sergey Levine. n.d. “Diversity Is All You Need: Learning Skills Without a Reward Function.” <http://arxiv.org/abs/1802.06070v6>.
 
-<a id="orgd279cdd"></a>Pong, Vitchyr H., Murtaza Dalal, Steven Lin, Ashvin Nair, Shikhar Bahl, and Sergey Levine. n.d. “Skew-Fit: State-Covering Self-Supervised Reinforcement Learning.” <http://arxiv.org/abs/1903.03698v2>.
+<a id="org07fe483"></a>Pong, Vitchyr H., Murtaza Dalal, Steven Lin, Ashvin Nair, Shikhar Bahl, and Sergey Levine. n.d. “Skew-Fit: State-Covering Self-Supervised Reinforcement Learning.” <http://arxiv.org/abs/1903.03698v2>.

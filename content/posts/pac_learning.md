@@ -1,16 +1,15 @@
 +++
 title = "PAC Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:28+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "machine_learning" >}})
+: [Machine Learning]({{<relref "machine_learning.md" >}})
 
 ## ERM for finite hypothesis classes {#erm-for-finite-hypothesis-classes}
 
-We note that [Empirical Risk Minimization]({{< relref "erm" >}}) can easily overfit
+We note that [Empirical Risk Minimization]({{<relref "erm.md" >}}) can easily overfit
 to the training data. To correct for this, we introduce inductive
 bias, restricting the hypothesis space \\(\mathcal{H}\\).
 
@@ -195,7 +194,8 @@ probability over labels for each domain point, \\(D(x,y) | x\\).
 
 For a probability distribution \\(D\\), one can measure how likely \\(h\\) is
 to make an error when labeled points are randomly drawn according to
-D. We redefine the true error to be:
+
+1.  We redefine the true error to be:
 
 \begin{equation}
 L_D(h) = D(\left\\{ (x,y): h(x) \ne y \right\\})

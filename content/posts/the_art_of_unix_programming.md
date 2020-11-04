@@ -1,7 +1,6 @@
 +++
 title = "The Art Of Unix Programming"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:06+08:00
 draft = false
 +++
 
@@ -15,7 +14,7 @@ personal rating
 : 5/5
 
 tags
-: [Books]({{< relref "books" >}})
+: [Books]({{<relref "books.md" >}})
 
 In The Art of Unix Programming, Ken Thompson was quoted to have
 provided the following design rules:

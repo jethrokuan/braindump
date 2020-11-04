@@ -1,12 +1,11 @@
 +++
 title = "Evolving Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:52+08:00
 draft = false
 +++
 
-Early evolving [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) architectures use the [Leaky
-Integrate-And-Fire]({{< relref "leaky_integrate_and_fire" >}}) model, and rank-order encoding. eSNNs can be used for
+Early evolving [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}}) architectures use the [Leaky
+Integrate-And-Fire]({{<relref "leaky_integrate_and_fire.md" >}}) model, and rank-order encoding. eSNNs can be used for
 classification. Given an input sample, the spike train is propagated through the
 SNN, resulting in the firing of output neurons. If no output neuron is
 activated, the classification result is undetermined. If one or more output
@@ -23,9 +22,9 @@ threshold. This weight vector is compared to existing neurons in the
 repository. If neurons are too similar (e.g. small Euclidean distance
 between weight vectors), they are merged.
 
-See ([Schliebs and Kasabov, n.d.](#orga0ff17c)) for a
+See ([Schliebs and Kasabov, n.d.](#org228ddc7)) for a
 comprehensive review.
 
 ## Bibliography {#bibliography}
 
-<a id="orga0ff17c"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.
+<a id="org228ddc7"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.

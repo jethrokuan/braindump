@@ -1,7 +1,6 @@
 +++
 title = "Compilers"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-24T21:44:37+08:00
 tags = ["proglang", "compilers"]
 draft = false
 +++
@@ -121,31 +120,29 @@ Attributes for tokens distinguish two lexemes belonging to the same symbol table
 
 Since the lexical analyzer needs to split splits into token
 classes, it must be specify the set of strings that belongs into a
-token class. To do so, we use [regular languages](theory_of_computation.md).
+token class. To do so, we use [regular languages]({{<relref "theory_of_computation.md" >}}).
 
 {{< figure src="/ox-hugo/screenshot_2019-09-25_16-21-45.png" caption="Figure 1: Cycle of constructions" >}}
 
-<!--list-separator-->
+#### Thompson's construction {#thompson-s-construction}
 
-- Thompson's construction
+Thompson's construction converts a regular expression into a NFA. The
+NFAs derived have several specific properties that simplify an
+implementation:
 
-  Thompson's construction converts a regular expression into a NFA. The
-  NFAs derived have several specific properties that simplify an
-  implementation:
+1.  Each NFA has one start state and one end state
+2.  No transition other than the initial transition, enters the start state
+3.  An \\(\epsilon\\)-transtition always connects two states that were,
+    earlier in the process, the start state and accepting state of NFAs
+    for some component REs
+4.  Each state has at most 2 entering and 2 exiting \\(\epsilon\\)-moves,
+    and at most one exiting move on a symbol in the alphabet.
 
-  1.  Each NFA has one start state and one end state
-  2.  No transition other than the initial transition, enters the start state
-  3.  An \\(\epsilon\\)-transtition always connects two states that were,
-      earlier in the process, the start state and accepting state of NFAs
-      for some component REs
-  4.  Each state has at most 2 entering and 2 exiting \\(\epsilon\\)-moves,
-      and at most one exiting move on a symbol in the alphabet.
-
-  {{< figure src="/ox-hugo/screenshot_2019-09-25_16-24-48.png" >}}
+{{< figure src="/ox-hugo/screenshot_2019-09-25_16-24-48.png" >}}
 
 ## Syntax Definition {#syntax-definition}
 
-We use [Context-free Grammars](theory_of_computation.md) to specify the syntax of a language.
+We use [Context-free Grammars]({{<relref "theory_of_computation.md" >}}) to specify the syntax of a language.
 
 A grammar for arithmetic expressions can be constructed from a table
 showing the associativity and precedence of operators.
@@ -170,7 +167,7 @@ precedence:
 
 ## Parsing {#parsing}
 
-Parsers use [pushdown automata](theory_of_computation.md) to do parsing. See [LR online parsing
+Parsers use [pushdown automata]({{<relref "theory_of_computation.md" >}}) to do parsing. See [LR online parsing
 machines](http://jsmachines.sourceforge.net/machines/) for an online parsing tool.
 
 ### Recursive-Descent Parsing {#recursive-descent-parsing}
@@ -198,57 +195,51 @@ of terminals \\(a\\) such that there exists a derivation of the form \\(S
 
 </div>
 
-<!--list-separator-->
+#### Computing First(X) {#computing-first--x}
 
-- Computing First(X)
+1.  If X is a terminal, then \\(First(X) = \\{ X \\}\\)
 
-  1.  If X is a terminal, then \\(First(X) = \\{ X \\}\\)
+2.  If X is a non-terminal and $X &rarr; Y\_1 Y\_2 &hellip; Y\_k is a
+    production for some \\(k \ge 1\\), then place \\(a\\) in \\(First(X)\\) for
+    some i, a in \\(First(Y\_i)\\), and &epsilon; is in all of \\(First(Y\_1),
+       \dots, First(Y\_{i-1})\\). If &epsilon; is in \\(First(Y\_j)\\), for all \\(j
+       = 1, \dots, k\\) then add $&epsilon; to \\(First(X)\\).
 
-  2.  If X is a non-terminal and $X &rarr; Y\_1 Y\_2 &hellip; Y\_k is a
-        production for some \\(k \ge 1\\), then place \\(a\\) in \\(First(X)\\) for
-        some i, a in \\(First(Y\_i)\\), and &epsilon; is in all of \\(First(Y\_1),
-           \dots, First(Y\_{i-1})\\). If &epsilon; is in \\(First(Y\_j)\\), for all \\(j
-           = 1, \dots, k\\) then add $&epsilon; to \\(First(X)\\).
+3.  If \\(X \rightarrow \epsilon\\) is a production, add \\(\epsilon\\) to \\(First(X)\\).
 
-  3.  If \\(X \rightarrow \epsilon\\) is a production, add \\(\epsilon\\) to \\(First(X)\\).
+#### Computing Follow(A) {#computing-follow--a}
 
-<!--list-separator-->
+1.  Place $ in \\(Follow(S)\\), where \\(S\\) is the start symbol, and $ is the
+    input right endmarker
 
-- Computing Follow(A)
+2.  If there is a production \\(A \rightarrow \alpha B \beta\\) then
+    everything in \\(First(\beta)\\) except \\(\epsilon\\) is in \\(Follow(B)\\).
 
-  1.  Place $ in \\(Follow(S)\\), where \\(S\\) is the start symbol, and $ is the
-      input right endmarker
+3.  IF there is a production \\(A \rightarrow \alpha \beta\\), or a
+    production \\(A \rightarrow \alpha B \beta\\), where \\(First(B)\\)
+    contains \\(\epsilon\\), then everything in \\(Follow(A)\\) is in
+    \\(Follow(B)\\).
 
-  2.  If there is a production \\(A \rightarrow \alpha B \beta\\) then
-      everything in \\(First(\beta)\\) except \\(\epsilon\\) is in \\(Follow(B)\\).
+[A good video showcasing the computations](https://www.youtube.com/watch?v=dDoo5BF9T4E)
 
-  3.  IF there is a production \\(A \rightarrow \alpha \beta\\), or a
-      production \\(A \rightarrow \alpha B \beta\\), where \\(First(B)\\)
-      contains \\(\epsilon\\), then everything in \\(Follow(A)\\) is in
-      \\(Follow(B)\\).
+#### LL(1) {#ll--1}
 
-  [A good video showcasing the computations](https://www.youtube.com/watch?v=dDoo5BF9T4E)
+A grammar \\(G\\) is LL(1) if and only if whenever \\(A \rightarrow \alpha |
+\beta\\) are two distinct productions of \\(G\\), the following conditions
+hold:
 
-<!--list-separator-->
+1.  For no terminal \$a4 do both \\(\alpha\\) and \\(\beta\\) derive strings
+    beginning with \\(a\\).
+2.  At most one of \\(\alpha\\) and \\(\beta\\) can derive the empty string.
+3.  If \\(\beta \overset{\*}{\Rightarrow} \epsilon\\) then \$&alpha; does n ot
+    derive any string beginning with a terminal in \\(Follow(A)\\), and
+    vice versa.
 
-- LL(1)
-
-  A grammar \\(G\\) is LL(1) if and only if whenever \\(A \rightarrow \alpha |
-  \beta\\) are two distinct productions of \\(G\\), the following conditions
-  hold:
-
-  1.  For no terminal \$a4 do both \\(\alpha\\) and \\(\beta\\) derive strings
-      beginning with \\(a\\).
-  2.  At most one of \\(\alpha\\) and \\(\beta\\) can derive the empty string.
-  3.  If \\(\beta \overset{\*}{\Rightarrow} \epsilon\\) then \$&alpha; does n ot
-      derive any string beginning with a terminal in \\(Follow(A)\\), and
-      vice versa.
-
-  Conditions 1 and 2 are equivalent to \\(First(\alpha)\\) and
-  \\(First(\beta)\\) being disjoint sets. The third condition is equivalent
-  to stating that if \\(\epsilon\\) is in \\(First(B)\\), then \\(First(\alpha)\\)
-  and \\(First(A)\\) are disjoint sets, and likewise interchanging \\(\alpha\\)
-  and \\(\beta\\).
+Conditions 1 and 2 are equivalent to \\(First(\alpha)\\) and
+\\(First(\beta)\\) being disjoint sets. The third condition is equivalent
+to stating that if \\(\epsilon\\) is in \\(First(B)\\), then \\(First(\alpha)\\)
+and \\(First(A)\\) are disjoint sets, and likewise interchanging \\(\alpha\\)
+and \\(\beta\\).
 
 ### Bottom-up Parsing {#bottom-up-parsing}
 
@@ -541,341 +532,315 @@ array elements through these pointers.
 
 ### Data Access {#data-access}
 
-<!--list-separator-->
+#### Without Nested Procedures {#without-nested-procedures}
 
-- Without Nested Procedures
+When procedures cannot be nested, allocation of storage for variables
+is simple:
 
-  When procedures cannot be nested, allocation of storage for variables
-  is simple:
+1.  Global variables are allocated static storage, the locations are
+    fixed and known at compile time. Access to any variable that is not
+    local to the currently existing procedure can be accessed using the
+    statically determined address.
+2.  Any other name must be local to the activation at the top of the
+    stack. These variables are accessed through the `top_sp` pointer of
+    the stack.
 
-  1.  Global variables are allocated static storage, the locations are
-      fixed and known at compile time. Access to any variable that is not
-      local to the currently existing procedure can be accessed using the
-      statically determined address.
-  2.  Any other name must be local to the activation at the top of the
-      stack. These variables are accessed through the `top_sp` pointer of
-      the stack.
+This allows declared procedures to be passed as parameters or returned
+as results (a pointer to the function), without changing the
+data-access strategy.
 
-  This allows declared procedures to be passed as parameters or returned
-  as results (a pointer to the function), without changing the
-  data-access strategy.
+#### With Nested Procedures {#with-nested-procedures}
 
-<!--list-separator-->
+Knowing at compile time that the declaration of p is immediately
+nested in q, says nothing about the relative positions of their
+activation records at run time.
 
-- With Nested Procedures
+Finding the declaration that applies to a nonlocal name x in a nested
+procedure p is a static decision, and can be done by extending the
+static-scope rule for blocks. The fix for this is to use access links.
 
-  Knowing at compile time that the declaration of p is immediately
-  nested in q, says nothing about the relative positions of their
-  activation records at run time.
+If a procedure p is nested immediately within procedure q in the
+source code, then the access link in any activation of p points to the
+most recent activation of q. Access links form a chain from the
+activation record at the top of the stack to a sequence of activations
+at progressively lower nesting depths.
 
-  Finding the declaration that applies to a nonlocal name x in a nested
-  procedure p is a static decision, and can be done by extending the
-  static-scope rule for blocks. The fix for this is to use access links.
+When procedure q calls procedure p, we consider 2 cases:
 
-  If a procedure p is nested immediately within procedure q in the
-  source code, then the access link in any activation of p points to the
-  most recent activation of q. Access links form a chain from the
-  activation record at the top of the stack to a sequence of activations
-  at progressively lower nesting depths.
+1.  Procedure p is at higher nesting depth than q. If so, then p must
+    be defined immediately within q, or the call by q would not be at a
+    position that is within the scope of prodecure p. Hence, the
+    nesting depth of p is exactly one greater than that of q. In this
+    case the access link for p is a pointer to the activation record of q.
+2.  The nesting depth \\(n_p \le n_q\\). In order for the call within q to
+    be in the scope of p, q must be nested within some procedure r,
+    while p is a procedure defined within r. The top activation record
+    for r can be found by following the chain of access links, starting
+    in the activation record for q, for \\(n_p - n_q + 1\\) hops. Then the
+    access link of p must go to activation of r, including recursive
+    calls. The chain of access links is followed for one hop, and the
+    access links for p and q are the same.
 
-  When procedure q calls procedure p, we consider 2 cases:
+When a procedure p is passed to another procedure q as a parameter,
+then q calls its parameter, it is possible that q does not know the
+context in which p appears in the program. Hence, the caller needs to
+pass the proper access link for that parameter.
 
-  1.  Procedure p is at higher nesting depth than q. If so, then p must
-      be defined immediately within q, or the call by q would not be at a
-      position that is within the scope of prodecure p. Hence, the
-      nesting depth of p is exactly one greater than that of q. In this
-      case the access link for p is a pointer to the activation record of q.
-  2.  The nesting depth \\(n_p \le n_q\\). In order for the call within q to
-      be in the scope of p, q must be nested within some procedure r,
-      while p is a procedure defined within r. The top activation record
-      for r can be found by following the chain of access links, starting
-      in the activation record for q, for \\(n_p - n_q + 1\\) hops. Then the
-      access link of p must go to activation of r, including recursive
-      calls. The chain of access links is followed for one hop, and the
-      access links for p and q are the same.
+The caller always knows the link, since if p is passed by procedure r
+as an actual parameter, then p must be a name accessible to r, and
+hence r can determine the access link for p as if p were being called
+by r directly.
 
-  When a procedure p is passed to another procedure q as a parameter,
-  then q calls its parameter, it is possible that q does not know the
-  context in which p appears in the program. Hence, the caller needs to
-  pass the proper access link for that parameter.
+#### Displays {#displays}
 
-  The caller always knows the link, since if p is passed by procedure r
-  as an actual parameter, then p must be a name accessible to r, and
-  hence r can determine the access link for p as if p were being called
-  by r directly.
+In practice, we use an auxilliary array \\(d[i]\\) called the display,
+holding a pointer to the activation records at varying nesting depths
+\\(i\\). Since the compiler knows \\(i\\), it can generate code to access
+nonlocals with a single access to the display.
 
-<!--list-separator-->
-
-- Displays
-
-  In practice, we use an auxilliary array \\(d[i]\\) called the display,
-  holding a pointer to the activation records at varying nesting depths
-  \\(i\\). Since the compiler knows \\(i\\), it can generate code to access
-  nonlocals with a single access to the display.
-
-  To maintain the display properly, we need to save previous values of
-  display entries in the new activation records.
+To maintain the display properly, we need to save previous values of
+display entries in the new activation records.
 
 ### Heap Management {#heap-management}
 
-<!--list-separator-->
+#### Memory Manager {#memory-manager}
 
-- Memory Manager
+The memory manager is a subsystem that allocates and deallocates space
+within the heap.
 
-  The memory manager is a subsystem that allocates and deallocates space
-  within the heap.
+The desirable properties of a memory manager are:
 
-  The desirable properties of a memory manager are:
+1.  **space efficiency**: minimizing the total heap space required by a
+    program. This allows larger programs to run in a fixed virtual
+    address space.
+2.  **program efficiency**: make good use of the memory subsystem to allow
+    programs to run faster. This includes exploiting locality.
+3.  **low overhead**: it should take as little time as possible to allocate
+    and deallocate space. This is however amortized over a large amount
+    of computation.
 
-  1.  **space efficiency**: minimizing the total heap space required by a
-      program. This allows larger programs to run in a fixed virtual
-      address space.
-  2.  **program efficiency**: make good use of the memory subsystem to allow
-      programs to run faster. This includes exploiting locality.
-  3.  **low overhead**: it should take as little time as possible to allocate
-      and deallocate space. This is however amortized over a large amount
-      of computation.
+#### Memory Hierarchy {#memory-hierarchy}
 
-<!--list-separator-->
+{{< figure src="/ox-hugo/screenshot_2019-10-18_15-48-15.png" >}}
 
-- Memory Hierarchy
+#### Locality in programs {#locality-in-programs}
 
-  {{< figure src="/ox-hugo/screenshot_2019-10-18_15-48-15.png" >}}
+temporal locality
+: memory locations it accesses are likely to be
+accessed again within a short period of time
 
-<!--list-separator-->
+spatial locality
+: memory access to locations nearby are likely to
+be accessed within a short period of time
 
-- Locality in programs
+Locality allows us to take advantage of the memory hierarchy, by
+placing the most common instructions into fast-but-small storage,
+leaving the rest in slow-but-large storage.
 
-  temporal locality
-  : memory locations it accesses are likely to be
-  accessed again within a short period of time
+#### Reducing fragmentation {#reducing-fragmentation}
 
-  spatial locality
-  : memory access to locations nearby are likely to
-  be accessed within a short period of time
+Free chunks of memory are called holes. With each allocation of
+memory, the memory manager must place the requested chunk of memory in
+a large enough hole. Over time, holes will be split into smaller holes
+for allocation.
 
-  Locality allows us to take advantage of the memory hierarchy, by
-  placing the most common instructions into fast-but-small storage,
-  leaving the rest in slow-but-large storage.
+Contiguous holes are coalesced into larger holes. However, free memory
+may end up being fragmented, where a large number of small,
+non-contiguous holes are available. In this case there is not enough
+aggregate free space to satisfy a future allocation request.
 
-<!--list-separator-->
+Best-fit spares the larger holes for future larger requests. First-fit
+allocates the first hole in which it fits. This takes a smaller amount
+of time to place objects, but has been found to be inferior to
+best-fit in overall performance.
 
-- Reducing fragmentation
+To implement best-fit, free space is chunked into bins, according to
+their sizes. One practical idea is to have many more bins for smaller
+sizes, because there are usually many more small objects. Larger-
 
-  Free chunks of memory are called holes. With each allocation of
-  memory, the memory manager must place the requested chunk of memory in
-  a large enough hole. Over time, holes will be split into smaller holes
-  for allocation.
+- If there is a bin for chunks of that size only, we may take any
+  chunk from that bin
+- For size that do not have a private bin, we find one bin that is
+  allowed to fit chunks of the desired size. Within that bin, we use
+  either a first-fit or best-fit strategy
+- If teh target bin is empty, or all chunks in that bin are too small
+  to satisfy the space request, then repeat the search on bins for
+  larger sizes.
 
-  Contiguous holes are coalesced into larger holes. However, free memory
-  may end up being fragmented, where a large number of small,
-  non-contiguous holes are available. In this case there is not enough
-  aggregate free space to satisfy a future allocation request.
+Best-fit placement tends to improve space utilization, but often at
+the expense of spatial locality. One modification is to modify the
+placement in the case when a chunk of the exact requested size cannot
+be found. The next-fit strategy tries to allocate the object in the
+chunk that has last been split, whenever enough space for the new
+object remains in that chunk.
 
-  Best-fit spares the larger holes for future larger requests. First-fit
-  allocates the first hole in which it fits. This takes a smaller amount
-  of time to place objects, but has been found to be inferior to
-  best-fit in overall performance.
+#### Coalescing Free Space {#coalescing-free-space}
 
-  To implement best-fit, free space is chunked into bins, according to
-  their sizes. One practical idea is to have many more bins for smaller
-  sizes, because there are usually many more small objects. Larger-
+When an object is deallocated, we may want to coalesce chunks with
+adjacent chunks in the heap to form a larger chunk. When we use
+binning, we may prefer not to do so. Instead, we can simply use a
+bitmap to indicate whether a chunk is occupied. When a chunk is
+deallocated, we change the bit from a 1 to 0.
 
-  - If there is a bin for chunks of that size only, we may take any
-    chunk from that bin
-  - For size that do not have a private bin, we find one bin that is
-    allowed to fit chunks of the desired size. Within that bin, we use
-    either a first-fit or best-fit strategy
-  - If teh target bin is empty, or all chunks in that bin are too small
-    to satisfy the space request, then repeat the search on bins for
-    larger sizes.
+There are 2 data structures that can be used for coalescing chunks
+when not using binning, or when moving the resultant coalesced chunk
+into a larger bin.
 
-  Best-fit placement tends to improve space utilization, but often at
-  the expense of spatial locality. One modification is to modify the
-  placement in the case when a chunk of the exact requested size cannot
-  be found. The next-fit strategy tries to allocate the object in the
-  chunk that has last been split, whenever enough space for the new
-  object remains in that chunk.
+1.  **Boundary tags**: at both the low and high ends of the chunk, we keep
+    a free/used bit that tells us whether or not the block is currently
+    allocated or available. Adjacent to each free/used bit is a count
+    of the total number of bytes in the chunk.
+2.  **Doubly-linked, embedded free list**: The free chunks are linked in a
+    doubly-linked list. The pointers for this list are within the
+    blocks themselves, e.g. adjacent to the boundary tags at either
+    end. No additional space is required for the free list, although
+    its existence place a lower bound on how small chunks can get: they
+    must accommodate 2 boundary tags and 2 pointers, even if the object
+    is a single byte. The order of chunks on the free list is
+    unspecified: it could be sorted by size to facilitate best-fit placement.
 
-<!--list-separator-->
+#### Garbage Collection {#garbage-collection}
 
-- Coalescing Free Space
+There are popular conventions and tools developed to cope with the
+complexity of managing memory:
 
-  When an object is deallocated, we may want to coalesce chunks with
-  adjacent chunks in the heap to form a larger chunk. When we use
-  binning, we may prefer not to do so. Instead, we can simply use a
-  bitmap to indicate whether a chunk is occupied. When a chunk is
-  deallocated, we change the bit from a 1 to 0.
+object ownership
+: An owner is associated with each object at all
+times. The owner is a pointer to the object, belonging to some
+function invocation. The owner is responsible for deleting or
+passing the object to another owner. Nonowning pointers exist,
+but cannot delete the object. This eliminates memory leaks, as
+well as attempts to delete the same object twice. This does not
+solve the dangling-pointer-reference problem, since it is
+possible to follow a nonowning pointer to an object that has been
+deleted. This is useful when an object's lifetime can be reasoned
+about statically.
 
-  There are 2 data structures that can be used for coalescing chunks
-  when not using binning, or when moving the resultant coalesced chunk
-  into a larger bin.
+Reference counting
+: A count is associated with each dynamically
+allocated object. Whenever a reference is removed, the count is
+decremented. When the count goes to zero, the object can be
+safely deleted. This does not catch circular data structures.
+However, it eradicates all dangling-pointer references. This is
+expensive because it imposes an overhead on every operation that
+stores a pointer. This is useful when an object's lifetime needs
+to be determined dynamically.
 
-  1.  **Boundary tags**: at both the low and high ends of the chunk, we keep
-      a free/used bit that tells us whether or not the block is currently
-      allocated or available. Adjacent to each free/used bit is a count
-      of the total number of bytes in the chunk.
-  2.  **Doubly-linked, embedded free list**: The free chunks are linked in a
-      doubly-linked list. The pointers for this list are within the
-      blocks themselves, e.g. adjacent to the boundary tags at either
-      end. No additional space is required for the free list, although
-      its existence place a lower bound on how small chunks can get: they
-      must accommodate 2 boundary tags and 2 pointers, even if the object
-      is a single byte. The order of chunks on the free list is
-      unspecified: it could be sorted by size to facilitate best-fit placement.
+Region-based allocation
+: When objects are created to be used only
+within some step of a computation, we can allocate all such
+objects in the same region. We then delete the region once the
+computational step completes. This has limited applicability but
+is efficient, since the deletion occurs in a wholesale fashion.
+This is useful when a collection of objects have lifetimes
+associated with phases of computation.
 
-<!--list-separator-->
+#### Garbage collection Design Goals {#garbage-collection-design-goals}
 
-- Garbage Collection
+We assume that objects have types that can be determined at run-time.
+This allows us to determine the size of the object, and which
+components of the object contain references to other objects. A user
+program called the mutator, modifies the collection of objects in the
+heap. Objects become garbage when the mutator program cannot reach
+them. The garbage collector finds these unreachable objects and
+reclaims their space by handing them to the memory manager for
+deallocation.
 
-  There are popular conventions and tools developed to cope with the
-  complexity of managing memory:
+Garbage collection can be expensive, so we often want to track
+performance metrics:
 
-  object ownership
-  : An owner is associated with each object at all
-  times. The owner is a pointer to the object, belonging to some
-  function invocation. The owner is responsible for deleting or
-  passing the object to another owner. Nonowning pointers exist,
-  but cannot delete the object. This eliminates memory leaks, as
-  well as attempts to delete the same object twice. This does not
-  solve the dangling-pointer-reference problem, since it is
-  possible to follow a nonowning pointer to an object that has been
-  deleted. This is useful when an object's lifetime can be reasoned
-  about statically.
+- overall execution time
+- space usage
+- pause time
+- program locality
 
-  Reference counting
-  : A count is associated with each dynamically
-  allocated object. Whenever a reference is removed, the count is
-  decremented. When the count goes to zero, the object can be
-  safely deleted. This does not catch circular data structures.
-  However, it eradicates all dangling-pointer references. This is
-  expensive because it imposes an overhead on every operation that
-  stores a pointer. This is useful when an object's lifetime needs
-  to be determined dynamically.
+#### Reachability {#reachability}
 
-  Region-based allocation
-  : When objects are created to be used only
-  within some step of a computation, we can allocate all such
-  objects in the same region. We then delete the region once the
-  computational step completes. This has limited applicability but
-  is efficient, since the deletion occurs in a wholesale fashion.
-  This is useful when a collection of objects have lifetimes
-  associated with phases of computation.
+We refer to all data that can be accessed by a program without
+de-referencing any pointer, as the root set. In Java, this
+corresponds to all static field members and all variables on its
+stack.
 
-<!--list-separator-->
+To find the correct root set, a compiler may have to:
 
-- Garbage collection Design Goals
+- restrict the invocation of garbage collection to only certain code
+  points in the program
+- write out information that the garbage collector can use to recover
+  all the references, such as specifying which registers contain
+  references, or how to compute the base address of an object given
+  its internal address
+- the compiler can assure that there is a reference to the base
+  address of all reachable objects whenever the garbage collector is
+  invoked
 
-  We assume that objects have types that can be determined at run-time.
-  This allows us to determine the size of the object, and which
-  components of the object contain references to other objects. A user
-  program called the mutator, modifies the collection of objects in the
-  heap. Objects become garbage when the mutator program cannot reach
-  them. The garbage collector finds these unreachable objects and
-  reclaims their space by handing them to the memory manager for
-  deallocation.
+The set of reachable objects changes as a program executes. There are
+four basic operations that a mutator performs to change the set:
 
-  Garbage collection can be expensive, so we often want to track
-  performance metrics:
+1.  Object allocations
+2.  Parameter passing, and return values
+3.  Reference assignments
+4.  Procedure returns
 
-  - overall execution time
-  - space usage
-  - pause time
-  - program locality
+There are 2 approaches to determining reachability:
 
-<!--list-separator-->
+1.  Reference counting as an approximation: maintain a count of
+    references to an boject, as the mutator performs actions that may
+    change the set. When the reference count becomes 0, the object is
+    no longer reachable
+2.  A trace-based GC labels all objects in the root as reachable, and
+    examines iteratively all references in them to find more reachable
+    objects, and labels them as such. Once the reachable set is
+    computed, it can find many unreachable objects at once. An option
+    is to relocate the reachable objects and reduce fragmentation.
 
-- Reachability
+#### Trace-based GCs {#trace-based-gcs}
 
-  We refer to all data that can be accessed by a program without
-  de-referencing any pointer, as the root set. In Java, this
-  corresponds to all static field members and all variables on its
-  stack.
+Each chunk is in 1 of 4 states:
 
-  To find the correct root set, a compiler may have to:
+free
+: ready to be allocated
 
-  - restrict the invocation of garbage collection to only certain code
-    points in the program
-  - write out information that the garbage collector can use to recover
-    all the references, such as specifying which registers contain
-    references, or how to compute the base address of an object given
-    its internal address
-  - the compiler can assure that there is a reference to the base
-    address of all reachable objects whenever the garbage collector is
-    invoked
+unreached
+: chunks presumed to be unreachable, unless proven
+reachable by tracing. A chunk is in this state at any
+point during GC if reachability has not yet been
+established. Whenever a chunk is allocated by the
+memory manager, its state is set to unreached. After a
+round of GC, it is reset to unreached for the next round.
 
-  The set of reachable objects changes as a program executes. There are
-  four basic operations that a mutator performs to change the set:
+unscanned
+: chunks that are known to be reachable are either in
+state of unscanned or scanned. A chunk is in the
+unscanned state if it is known to be reachable, but its
+pointers have not yet been scanned.
 
-  1.  Object allocations
-  2.  Parameter passing, and return values
-  3.  Reference assignments
-  4.  Procedure returns
+scanned
+: every unscanned object will eventually be scanned and
+transition to the scanned state. To scan an object, we
+examine all pointers within it, and follow these
+pointers.
 
-  There are 2 approaches to determining reachability:
+{{< figure src="/ox-hugo/screenshot_2019-10-18_16-28-48.png" >}}
 
-  1.  Reference counting as an approximation: maintain a count of
-      references to an boject, as the mutator performs actions that may
-      change the set. When the reference count becomes 0, the object is
-      no longer reachable
-  2.  A trace-based GC labels all objects in the root as reachable, and
-      examines iteratively all references in them to find more reachable
-      objects, and labels them as such. Once the reachable set is
-      computed, it can find many unreachable objects at once. An option
-      is to relocate the reachable objects and reduce fragmentation.
+{{< figure src="/ox-hugo/screenshot_2019-10-18_16-30-17.png" >}}
 
-<!--list-separator-->
+#### Mark-and-compact GCs {#mark-and-compact-gcs}
 
-- Trace-based GCs
+Relocating collectors move reachable objects around in the heap to
+eliminate memory fragmentation. There are 2 types:
 
-  Each chunk is in 1 of 4 states:
+1.  mark-and-compact, which compacts objects in place. This reduces
+    memory usage.
+2.  copying collector is more efficient, but extra space needs to be
+    reserved for relocation.
 
-  free
-  : ready to be allocated
+mark-and-compact has 3 phases:
 
-  unreached
-  : chunks presumed to be unreachable, unless proven
-  reachable by tracing. A chunk is in this state at any
-  point during GC if reachability has not yet been
-  established. Whenever a chunk is allocated by the
-  memory manager, its state is set to unreached. After a
-  round of GC, it is reset to unreached for the next round.
-
-  unscanned
-  : chunks that are known to be reachable are either in
-  state of unscanned or scanned. A chunk is in the
-  unscanned state if it is known to be reachable, but its
-  pointers have not yet been scanned.
-
-  scanned
-  : every unscanned object will eventually be scanned and
-  transition to the scanned state. To scan an object, we
-  examine all pointers within it, and follow these
-  pointers.
-
-  {{< figure src="/ox-hugo/screenshot_2019-10-18_16-28-48.png" >}}
-
-  {{< figure src="/ox-hugo/screenshot_2019-10-18_16-30-17.png" >}}
-
-<!--list-separator-->
-
-- Mark-and-compact GCs
-
-  Relocating collectors move reachable objects around in the heap to
-  eliminate memory fragmentation. There are 2 types:
-
-  1.  mark-and-compact, which compacts objects in place. This reduces
-      memory usage.
-  2.  copying collector is more efficient, but extra space needs to be
-      reserved for relocation.
-
-  mark-and-compact has 3 phases:
-
-  1.  marking phase
-  2.  scan the allocated section of the heap and compute new addresses
-      for each of the reachable objects.
-  3.  copies objects to the new locations, updating all references in
-      objects that point to the new locations.
+1.  marking phase
+2.  scan the allocated section of the heap and compute new addresses
+    for each of the reachable objects.
+3.  copies objects to the new locations, updating all references in
+    objects that point to the new locations.
 
 ## Tools {#tools}
 

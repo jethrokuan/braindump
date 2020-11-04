@@ -26,13 +26,13 @@ algorithms to exploit this structure?
 :END:
 
 [[id:ff243a09-9980-4738-b638-0521cc2bbf42][Empirical Risk Minimization]] is too strong: data is not i.i.d, not batched, not
-in the model class. Solution: use [[id:d0d868fd-e014-4299-a896-9e42b536fc99][online learning]], that makes minimal
+in the model class. Solution: use online learning, that makes minimal
 assumptions.
 
 Online learning has simple derivations, insights from optimization, and may
 suggest better algorithms.
 
-[[id:0bde6de4-b69d-4c36-9981-b364ed4fc96f][Model Predictive Control]] is an effective approach to handling challenging
+Model Predictive Control is an effective approach to handling challenging
 dynamic environments with simple models, because it allows for local
 optimization of simple policies.
 

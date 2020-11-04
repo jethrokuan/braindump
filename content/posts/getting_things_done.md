@@ -1,17 +1,16 @@
 +++
 title = "Getting Things Done (GTD)"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:07+08:00
 draft = false
 +++
 
 [GTD](https://gettingthingsdone.com/) is a work-life management system created by David Allen. This
-[productivity]({{< relref "productivity" >}}) is summarized nicely in [this article](https://hamberg.no/gtd/).
+[productivity]({{<relref "productivity.md" >}}) is summarized nicely in [this article](https://hamberg.no/gtd/).
 
 ## Org-mode {#org-mode}
 
-[Org-Mode]({{< relref "org-mode" >}}) has first-class support for this technique. There are several
-people who have documented their GTD workflow using [Org-Mode]({{< relref "org-mode" >}}). Here is
+[Org-Mode]({{<relref "org-mode.md" >}}) has first-class support for this technique. There are several
+people who have documented their GTD workflow using [Org-Mode]({{<relref "org-mode.md" >}}). Here is
 a list:
 
 - [Org Mode - Organize Your Life In Plain Text!](http://doc.norang.ca/org-mode.html) ⭐

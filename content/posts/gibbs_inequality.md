@@ -1,11 +1,10 @@
 +++
 title = "Gibbs' Inequality"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:43+08:00
 draft = false
 +++
 
-The relative entropy or [kl divergence]({{< relref "kl_divergence" >}}) between two probability
+The relative entropy or [kl divergence]({{<relref "kl_divergence.md" >}}) between two probability
 distributions \\(P(x)\\) and \\(Q(x)\\) defined over the same alphabet
 \\(\mathcal{A}\_X\\) is:
 

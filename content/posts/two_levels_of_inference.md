@@ -1,12 +1,11 @@
 +++
 title = "Two Levels Of Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:15+08:00
 draft = false
 +++
 
 tags
-: [Occam's Razor]({{< relref "occams_razor" >}})
+: [Occam's Razor]({{<relref "occams_razor.md" >}})
 
 There are 2 levels of inference: model fitting and model comparison.
 In model fitting, assuming a model is true (say \\(\mathcal{H}\_i\\)), fit

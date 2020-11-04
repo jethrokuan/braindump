@@ -46,4 +46,4 @@ The event stream is represented as a 4 channel image:
 
 This is similar to "Event-based Time Surfaces" cite:lagorce_hots_2017 and "Timestamp Images" cite:park_performance_2016
 
-bibliography:../biblio.bib
+bibliography:biblio.bib

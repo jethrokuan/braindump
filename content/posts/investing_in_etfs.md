@@ -1,7 +1,6 @@
 +++
 title = "Investing In ETFs"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:32+08:00
 draft = false
 +++
 

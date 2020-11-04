@@ -1,12 +1,11 @@
 +++
 title = "Topic Modeling"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:06+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "machine_learning" >}})
+: [Machine Learning]({{<relref "machine_learning.md" >}})
 
 <http://www.cs.columbia.edu/~blei/topicmodeling.html>
 [LDA survey - Github](https://github.com/jethrokuan/lda-survey)
@@ -17,113 +16,103 @@ tags
 <https://www.youtube.com/watch?v=FkckgwMHP2s>
 <http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf>
 
-<!--list-separator-->
+#### Dirichlet Distribution {#dirichlet-distribution}
 
-- Dirichlet Distribution
+<https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf>
 
-  <https://www2.ee.washington.edu/techsite/papers/documents/UWEETR-2010-0006.pdf>
+Dirichlet distribution is a family of continuous multivariate
+probability distributions parameterized by a vector α of positive
+reals.
 
-  Dirichlet distribution is a family of continuous multivariate
-  probability distributions parameterized by a vector α of positive
-  reals.
+\begin{equation}
+\theta \sim Dir(\alpha)
+\end{equation}
 
-  \begin{equation}
-  \theta \sim Dir(\alpha)
-  \end{equation}
+\begin{equation}
+p(\theta) = \frac{1}{\beta(\alpha)} \prod\_{i=1}^n \theta_i^{\alpha_i-1} I(\theta \in S)
+\end{equation}
 
-  \begin{equation}
-  p(\theta) = \frac{1}{\beta(\alpha)} \prod\_{i=1}^n \theta_i^{\alpha_i-1} I(\theta \in S)
-  \end{equation}
+Where \\(\theta = (\theta_1, \theta_2, \dots, \theta_n), \alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \alpha_i > 0\\) and
 
-  Where \\(\theta = (\theta_1, \theta_2, \dots, \theta_n), \alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \alpha_i > 0\\) and
+\begin{equation}
+S = \left\\{x \in \mathbb{R}^n : x_i \ge 0, \sum\_{i=1}^{n} x_i = 1 \right\\}
+\end{equation}
 
-  \begin{equation}
-  S = \left\\{x \in \mathbb{R}^n : x_i \ge 0, \sum\_{i=1}^{n} x_i = 1 \right\\}
-  \end{equation}
+and
+\\(\frac{1}{\beta(\alpha)} =
+\frac{\Gamma(\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_2)\dots\Gamma(\alpha_n)}\\)
 
-  and
-  \\(\frac{1}{\beta(\alpha)} =
-  \frac{\Gamma(\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_2)\dots\Gamma(\alpha_n)}\\)
+The infinite-dimensional generalization of the Dirichlet distribution
+is the Dirichlet process.
 
-  The infinite-dimensional generalization of the Dirichlet distribution
-  is the Dirichlet process.
+The Dirichlet distribution is the conjugate prior distribution of the
+categorical distribution (a generic discrete probability distribution
+with a given number of possible outcomes) and multinomial distribution
+(the distribution over observed counts of each possible category in a
+set of categorically distributed observations). This means that if a
+data point has either a categorical or multinomial distribution, and
+the prior distribution of the distribution's parameter (the vector of
+probabilities that generates the data point) is distributed as a
+Dirichlet, then the posterior distribution of the parameter is also a
+Dirichlet.
 
-  The Dirichlet distribution is the conjugate prior distribution of the
-  categorical distribution (a generic discrete probability distribution
-  with a given number of possible outcomes) and multinomial distribution
-  (the distribution over observed counts of each possible category in a
-  set of categorically distributed observations). This means that if a
-  data point has either a categorical or multinomial distribution, and
-  the prior distribution of the distribution's parameter (the vector of
-  probabilities that generates the data point) is distributed as a
-  Dirichlet, then the posterior distribution of the parameter is also a
-  Dirichlet.
+#### Exploring a Corpus with the posterior distribution {#exploring-a-corpus-with-the-posterior-distribution}
 
-<!--list-separator-->
+Quantities needed for exploring a corpus are the posterior
+expectations of hidden variables. Each of these quantities are
+conditioned on the observed corpus.
 
-- Exploring a Corpus with the posterior distribution
+Visualizing a topic is done by visualizing the posterior topics
+through their per-topic probabilities \\(\hat{\beta}\\).
 
-  Quantities needed for exploring a corpus are the posterior
-  expectations of hidden variables. Each of these quantities are
-  conditioned on the observed corpus.
+Visualizing a document uses the posterior topic proportions
+\\(\hat{\theta}\_{d,k}\\) and the posterior topic assignments
+\\(\hat{z}\_{d,k}\\).
 
-  Visualizing a topic is done by visualizing the posterior topics
-  through their per-topic probabilities \\(\hat{\beta}\\).
+Finding similar documents can be done through the _Hellinger
+distance_:
 
-  Visualizing a document uses the posterior topic proportions
-  \\(\hat{\theta}\_{d,k}\\) and the posterior topic assignments
-  \\(\hat{z}\_{d,k}\\).
+\begin{align\*}
+D\_{d,k} = \sum\_{k=1}^K \left( \sqrt{\hat{\theta}\_{d,k}} - \sqrt{\hat{\theta}\_{f,k}}\right)^2
+\end{align\*}
 
-  Finding similar documents can be done through the _Hellinger
-  distance_:
-
-  \begin{align\*}
-  D\_{d,k} = \sum\_{k=1}^K \left( \sqrt{\hat{\theta}\_{d,k}} - \sqrt{\hat{\theta}\_{f,k}}\right)^2
-  \end{align\*}
+#### Posterior Inference {#posterior-inference}
 
 <!--list-separator-->
 
-- Posterior Inference
+- Mean Field Variational Inference
 
-   <!--list-separator-->
+  Approximate intractable posterior distribution with a simpler
+  distribution containing free variational parameters. These parameters
+  are fit to approximate the true posterior.
 
-  - Mean Field Variational Inference
+  In contrast to the true posterior, the mean field variational
+  distribution for LDA is one where the variables are independent of
+  each other, with and each governed by a different variational
+  parameter.
 
-    Approximate intractable posterior distribution with a simpler
-    distribution containing free variational parameters. These parameters
-    are fit to approximate the true posterior.
+  We fit the variational parameters to minimise the KL-divergence to the
+  true posterior.
 
-    In contrast to the true posterior, the mean field variational
-    distribution for LDA is one where the variables are independent of
-    each other, with and each governed by a different variational
-    parameter.
+  The general approach to mean-field variational methods - update each
+  variational parameter with the parameter given by the expectation of
+  the true posterior under the variational distribution - is applicable
+  when the conditional distribution of each variable is the exponential
+  family.
 
-    We fit the variational parameters to minimise the KL-divergence to the
-    true posterior.
+#### Markov Chains {#markov-chains}
 
-    The general approach to mean-field variational methods - update each
-    variational parameter with the parameter given by the expectation of
-    the true posterior under the variational distribution - is applicable
-    when the conditional distribution of each variable is the exponential
-    family.
+<http://setosa.io/ev/markov-chains/>
 
-<!--list-separator-->
+#### Shortcomings {#shortcomings}
 
-- Markov Chains
-
-  <http://setosa.io/ev/markov-chains/>
-
-<!--list-separator-->
-
-- Shortcomings
-
-  - strong, potentially invalid statistical assumptions:
-    - topics have no correlation to one another (dirichlet assumes
-      nearly independent)
-      - solution: CTM: use a logistic normal distribution
-    - assumes order of documents don't matter
-      - solution: DTM: use logistic normal distribution to model topics
-        evolving over time
+- strong, potentially invalid statistical assumptions:
+  - topics have no correlation to one another (dirichlet assumes
+    nearly independent)
+    - solution: CTM: use a logistic normal distribution
+  - assumes order of documents don't matter
+    - solution: DTM: use logistic normal distribution to model topics
+      evolving over time
 
 ## TopicRNN {#topicrnn}
 

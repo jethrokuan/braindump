@@ -1,12 +1,11 @@
 +++
 title = "Computer Networking"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:05+08:00
 draft = false
 +++
 
 tags
-: [Operating Systems]({{< relref "operating_systems" >}})
+: [Operating Systems]({{<relref "operating_systems.md" >}})
 
 ## Introduction {#introduction}
 
@@ -74,61 +73,57 @@ are common in cable television systems.
 
 ### The Network Core {#the-network-core}
 
-<!--list-separator-->
+#### Packet Switching {#packet-switching}
 
-- Packet Switching
+In a network application, end systems exchange messages with each
+other. Messages can contain anything the application designer wants.
+To send a message from a source end system to a destination end
+system, the source breaks long messages into smaller chunks of data
+known as _packets_. Each packet travels through communication links and
+packet switches. Packets are transmitted over each communication link
+at a rate equal to the full transmission rate of the link. So if a
+source end system or a packet switch is sending a packet of \\(L\\) bits
+over a link with transmission rate \\(R\\) bits/sec, then the time to
+transmit the packet is \\(\frac{L}{R}\\) seconds.
 
-  In a network application, end systems exchange messages with each
-  other. Messages can contain anything the application designer wants.
-  To send a message from a source end system to a destination end
-  system, the source breaks long messages into smaller chunks of data
-  known as _packets_. Each packet travels through communication links and
-  packet switches. Packets are transmitted over each communication link
-  at a rate equal to the full transmission rate of the link. So if a
-  source end system or a packet switch is sending a packet of \\(L\\) bits
-  over a link with transmission rate \\(R\\) bits/sec, then the time to
-  transmit the packet is \\(\frac{L}{R}\\) seconds.
+Most packet switches use _store-and-forward transmission_ at the inputs
+to the links. This means that the packet switch must receive the
+entire packet before it can begin to transmit the first bit of the
+packet onto the outbound link.
 
-  Most packet switches use _store-and-forward transmission_ at the inputs
-  to the links. This means that the packet switch must receive the
-  entire packet before it can begin to transmit the first bit of the
-  packet onto the outbound link.
+Each packet switch has multiple links attached to it. For each
+attached link, the packet switch has an _output buffer_, which stores
+packets that the router is about to send into that link. If an
+arriving packet needs to be transmitted onto a link but finds the link
+busy with the transmission of another packet, the arriving packet must
+wait in the output buffer. This results in output buffer _queuing
+delays_. Packet loss will occur -- either the arriving packet or one of
+the already-queued packets will be dropped.
 
-  Each packet switch has multiple links attached to it. For each
-  attached link, the packet switch has an _output buffer_, which stores
-  packets that the router is about to send into that link. If an
-  arriving packet needs to be transmitted onto a link but finds the link
-  busy with the transmission of another packet, the arriving packet must
-  wait in the output buffer. This results in output buffer _queuing
-  delays_. Packet loss will occur -- either the arriving packet or one of
-  the already-queued packets will be dropped.
+How does a router determine which link it should forward the packet
+onto? In the Internet, each end system is assigned an IP address. The
+source end system includes the destination IP address in the packet's
+header. Each router has a _forwarding table_ that maps destination
+addresses to its outbound links.
 
-  How does a router determine which link it should forward the packet
-  onto? In the Internet, each end system is assigned an IP address. The
-  source end system includes the destination IP address in the packet's
-  header. Each router has a _forwarding table_ that maps destination
-  addresses to its outbound links.
+#### Circuit Switching {#circuit-switching}
 
-<!--list-separator-->
+In circuit-switched networks, the resources needed along apath
+(buffers, link transmission rate) to provide for communication between
+end-systems are reserved for the duration of the communication session
+between the end systems. Traditional telephone networks are examples
+of such circuit-switched networks.
 
-- Circuit Switching
+A circuit in a link is implemented with either _frequency-division
+multiplexing (FDM)_ or _time-division multiplexing (TDM)_. With FDM, the
+frequency spectrum of a link is divided up among the connections
+established across the link. For a TDM link, time is divided into
+frames of fixed duration, and each frame is divided into a fixed
+number of time slots.
 
-  In circuit-switched networks, the resources needed along apath
-  (buffers, link transmission rate) to provide for communication between
-  end-systems are reserved for the duration of the communication session
-  between the end systems. Traditional telephone networks are examples
-  of such circuit-switched networks.
-
-  A circuit in a link is implemented with either _frequency-division
-  multiplexing (FDM)_ or _time-division multiplexing (TDM)_. With FDM, the
-  frequency spectrum of a link is divided up among the connections
-  established across the link. For a TDM link, time is divided into
-  frames of fixed duration, and each frame is divided into a fixed
-  number of time slots.
-
-  Packet switching is offers better sharing of transmission capacity
-  than circuit switching, and is simpler and more efficient. However,
-  circuit switching can be more suitable for real-time services.
+Packet switching is offers better sharing of transmission capacity
+than circuit switching, and is simpler and more efficient. However,
+circuit switching can be more suitable for real-time services.
 
 ### A Network of Networks {#a-network-of-networks}
 
@@ -582,68 +577,66 @@ TCP cannot be employed with mulitcast, multicast applications run
 over UDP. It is possible to have reliable data transfer using UDP, by
 building this into the application itself.
 
-<!--list-separator-->
+#### UDP Segment Structure {#udp-segment-structure}
 
-- UDP Segment Structure
+{{< figure src="/ox-hugo/screenshot_2019-02-20_16-36-34.png" caption="Figure 9: UDP segment structure" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2019-02-20_16-36-34.png" caption="Figure 9: UDP segment structure" >}}
+The UDP segment structure is defined in RFC 768. The UDP header has
+only four fields, each consisting of 2 bytes. The port numbers allow
+the destination host to pass the application data to the correct
+process running on the destination end system. The length field
+specifies the number of bytes in the UDP segment (header plus data).
+An explicit length value is needed since the size of the data field
+may differ between UDP segments.
 
-  The UDP segment structure is defined in RFC 768. The UDP header has
-  only four fields, each consisting of 2 bytes. The port numbers allow
-  the destination host to pass the application data to the correct
-  process running on the destination end system. The length field
-  specifies the number of bytes in the UDP segment (header plus data).
-  An explicit length value is needed since the size of the data field
-  may differ between UDP segments.
+The checksum provides for error detection. It determines whether bits
+within the UDP segment have been altered as it moved from source to
+destination. UDP at the sender side performs the 1s complement of the
+sum of all the 16-bit words in the segment, with any overflow
+encountered during the sum being wrapped around. This result is put
+in the checksum field of the UDP segment.
 
-  The checksum provides for error detection. It determines whether bits
-  within the UDP segment have been altered as it moved from source to
-  destination. UDP at the sender side performs the 1s complement of the
-  sum of all the 16-bit words in the segment, with any overflow
-  encountered during the sum being wrapped around. This result is put
-  in the checksum field of the UDP segment.
+For example, suppose we have 3 16-bit words:
 
-  For example, suppose we have 3 16-bit words:
+```text
+0110011001100000
+0101010101010101
+1000111100001100
+```
 
-  ```text
-  0110011001100000
-  0101010101010101
-  1000111100001100
-  ```
+The sum of the first two words is:
 
-  The sum of the first two words is:
+```text
+0110011001100000
+0101010101010101
+----------------
+1011101110110101
+```
 
-  ```text
-  0110011001100000
-  0101010101010101
-  ----------------
-  1011101110110101
-  ```
+Adding the third word gives:
 
-  Adding the third word gives:
+```nil
+1011101110110101
+1000111100001100
+----------------
+0100101011000010
+```
 
-  ```nil
-  1011101110110101
-  1000111100001100
-  ----------------
-  0100101011000010
-  ```
+Note this last addition had overflow, which is wrapped around. Thus
+the 1s complement of the sum 0100101011000010 is 1011010100111101.
 
-  Note this last addition had overflow, which is wrapped around. Thus
-  the 1s complement of the sum 0100101011000010 is 1011010100111101.
-
-  UDP provides a checksum because there is no guarantee that all the
-  links between source and destination provide error checking. One of
-  the links may use a link-layer protocol that does not provide error
-  checking. Even if segments are correctly transferred across a link,
-  it's possible that bit errors could be introduced when a segment is
-  stored in a router's memory. Hence, UDP must provide error-detection
-  at the transport layer, on an end-end basis. Because IP is supposed to
-  run over just about any layer-2 protocol, it is useful for the
-  transport layer to provide error checking as a safety measure. UDP
-  provides nothing for error recovery. Some implementations of UDP
-  simply discard the damaged segment; others pass the damaged segment to
-  the application with a warning.
+UDP provides a checksum because there is no guarantee that all the
+links between source and destination provide error checking. One of
+the links may use a link-layer protocol that does not provide error
+checking. Even if segments are correctly transferred across a link,
+it's possible that bit errors could be introduced when a segment is
+stored in a router's memory. Hence, UDP must provide error-detection
+at the transport layer, on an end-end basis. Because IP is supposed to
+run over just about any layer-2 protocol, it is useful for the
+transport layer to provide error checking as a safety measure. UDP
+provides nothing for error recovery. Some implementations of UDP
+simply discard the damaged segment; others pass the damaged segment to
+the application with a warning.
 
 ### Principles of Reliable Data Transfer {#principles-of-reliable-data-transfer}
 
@@ -728,66 +721,62 @@ layer and connection service in the network layer are fundamentally
 different: the network-layer connection service is implemented in the
 routers in the network core, as well as in the end systems.
 
-<!--list-separator-->
+#### VC networks {#vc-networks}
 
-- VC networks
+A VC consists of:
 
-  A VC consists of:
+1.  a path between the source and destination hosts
+2.  VC numbers, one number for each link along the path
+3.  entries in the forwarding table in each router along the path
 
-  1.  a path between the source and destination hosts
-  2.  VC numbers, one number for each link along the path
-  3.  entries in the forwarding table in each router along the path
+A packet belonging to a virtual circuit will carry a VC number in its
+header. Because a virtual circuit may have a different VC number on
+each link, each intervening router must replace the VC number of each
+traversing packet with a new VC number. This VC number is obtained
+from the forwarding table.
 
-  A packet belonging to a virtual circuit will carry a VC number in its
-  header. Because a virtual circuit may have a different VC number on
-  each link, each intervening router must replace the VC number of each
-  traversing packet with a new VC number. This VC number is obtained
-  from the forwarding table.
+In a VC network, the network's routers must maintain connection staet
+information for the ongoing connections. Specifically, each time a new
+connection is established across a router, a new connection entry must
+be added to the router's forwarding table, and each time a connection
+is released, an entry must be removed from the table.
 
-  In a VC network, the network's routers must maintain connection staet
-  information for the ongoing connections. Specifically, each time a new
-  connection is established across a router, a new connection entry must
-  be added to the router's forwarding table, and each time a connection
-  is released, an entry must be removed from the table.
+There are 3 phases in a virtual circuit:
 
-  There are 3 phases in a virtual circuit:
+1.  VC Setup: The sending transport layer contacts teh network layer,
+    specifies the receiver address and waits for the network to set up
+    the VC. The network layer determines the path between sender and
+    receiver, that is, the series of links and routers through which
+    all packets of the VC will travel. The network layer also
+    determines the VC number for each link along the path. Finally, the
+    network layer adds an entry in the forwarding table in each router
+    along the path. The network layer may also reserve resources (e.g.
+    bandwidth) along the path of the VC during the setup.
+2.  Data transfer: the packet can begin to flow along the VC
+3.  VC Teardown: The sender (or receiver) informs the VC of its desire
+    to terminate the VC. The network layer typically informs the end
+    system on the other side of the network, and update the forwarding
+    tables in each of the packet routers on the path from source to
+    destination that the VC no longer exists.
 
-  1.  VC Setup: The sending transport layer contacts teh network layer,
-      specifies the receiver address and waits for the network to set up
-      the VC. The network layer determines the path between sender and
-      receiver, that is, the series of links and routers through which
-      all packets of the VC will travel. The network layer also
-      determines the VC number for each link along the path. Finally, the
-      network layer adds an entry in the forwarding table in each router
-      along the path. The network layer may also reserve resources (e.g.
-      bandwidth) along the path of the VC during the setup.
-  2.  Data transfer: the packet can begin to flow along the VC
-  3.  VC Teardown: The sender (or receiver) informs the VC of its desire
-      to terminate the VC. The network layer typically informs the end
-      system on the other side of the network, and update the forwarding
-      tables in each of the packet routers on the path from source to
-      destination that the VC no longer exists.
+The messages that are passed between routers to set up the VC are
+known as signalling messages, and the protocols to exchange these
+messages are referred to as signaling protocols.
 
-  The messages that are passed between routers to set up the VC are
-  known as signalling messages, and the protocols to exchange these
-  messages are referred to as signaling protocols.
+#### Datagram Networks {#datagram-networks}
 
-<!--list-separator-->
+In a datagram network, each time an end system wants to send a
+packet, it stamps the packet with the address of the destination end
+system and then pops the packet into the network. There is no VC
+setup, and routers do not maintain any state information.
 
-- Datagram Networks
+As a packet is transmitted from source to destination, it passes
+through a series of routers. Each of these routers use the packet's
+destination address to forward the packet.
 
-  In a datagram network, each time an end system wants to send a
-  packet, it stamps the packet with the address of the destination end
-  system and then pops the packet into the network. There is no VC
-  setup, and routers do not maintain any state information.
-
-  As a packet is transmitted from source to destination, it passes
-  through a series of routers. Each of these routers use the packet's
-  destination address to forward the packet.
-
-  Routers typically use the longest prefix matching rule, which matches
-  the packet's IP address to a prefix entry in the forwarding table to
-  choose the link interface to forward the packet.
+Routers typically use the longest prefix matching rule, which matches
+the packet's IP address to a prefix entry in the forwarding table to
+choose the link interface to forward the packet.
 
 ### The Internet Protocol (IP) {#the-internet-protocol--ip}
 
@@ -900,141 +889,133 @@ Interdomain Routing (CIDR). An organization is typically assigned a
 block of contiguous addresses, that is, a range of addresses with a
 common prefix.
 
-<!--list-separator-->
+#### Obtaining a block of addresses {#obtaining-a-block-of-addresses}
 
-- Obtaining a block of addresses
+The ISP itself may be allocated a block of IP addresses, for example
+200.23.16.0/20. The ISP can in turn divide its address block into
+equal-sized contiguous address blocks, and give these blocks to
+organizations. Internet Corporation for Assigned Names and Numbers
+(ICANN) is the global authority on managing IP addresses, and is also
+responsible for the DNS root servers.
 
-  The ISP itself may be allocated a block of IP addresses, for example
-  200.23.16.0/20. The ISP can in turn divide its address block into
-  equal-sized contiguous address blocks, and give these blocks to
-  organizations. Internet Corporation for Assigned Names and Numbers
-  (ICANN) is the global authority on managing IP addresses, and is also
-  responsible for the DNS root servers.
+#### Obtaining a host address: The dynamic host configuration protocol {#obtaining-a-host-address-the-dynamic-host-configuration-protocol}
 
-<!--list-separator-->
+Once an organization has obtained a block of addresses, it can assign
+individual IP addresses to the host and router interfaces in its
+organization. Host addresses can be configured via the Dynamic Host
+Configuration Protocol (DHCP). It allows a host to obtain (be
+allocated) an IP address automatically. A host may be assigned a
+temporary IP address that will be different each time the host
+connects to the network.
 
-- Obtaining a host address: The dynamic host configuration protocol
+For a newly arriving host, the DHCP protocol is a 4-step process:
 
-  Once an organization has obtained a block of addresses, it can assign
-  individual IP addresses to the host and router interfaces in its
-  organization. Host addresses can be configured via the Dynamic Host
-  Configuration Protocol (DHCP). It allows a host to obtain (be
-  allocated) an IP address automatically. A host may be assigned a
-  temporary IP address that will be different each time the host
-  connects to the network.
+1.  DHCP server discovery: A DHCP discover message is sent using a UDP
+    packet to port 67. The DHCP client creates an IP datagram
+    containing its DHCP discover message along with the broadcast IP
+    address of 255.255.255.255, and a "this host" source IP address of
+    0.0.0.0. The DHCP client passes the IP datagram to the link layer,
+    which broadcasts this rame to all nodes attached to the subnet.
+2.  DHCP server offer(s): A DHCP offer message is broadcast to all
+    nodes on the subnet, using the IP broadcast address of
+    255.255.255.255. The client may be able to choose from among
+    several offers, if there are several DHCP servers present on the
+    subnet. The DHCP offer message contains the transaction ID of the
+    received discover message, the proposed IP address, and an IP
+    address lease time.
+3.  DHCP request: the client will choose among the DHCP offers, and
+    respond to the selected offer with a DHCP request message, echoing
+    back its configuration parameters
+4.  DHCP ACK: The server responds to the DHCP request message with a
+    HCP ACK message, confirming the requested parameters.
 
-  For a newly arriving host, the DHCP protocol is a 4-step process:
+{{< figure src="/ox-hugo/screenshot_2019-03-20_10-26-56.png" caption="Figure 15: DHCP client-server interaction" >}}
 
-  1.  DHCP server discovery: A DHCP discover message is sent using a UDP
-      packet to port 67. The DHCP client creates an IP datagram
-      containing its DHCP discover message along with the broadcast IP
-      address of 255.255.255.255, and a "this host" source IP address of
-      0.0.0.0. The DHCP client passes the IP datagram to the link layer,
-      which broadcasts this rame to all nodes attached to the subnet.
-  2.  DHCP server offer(s): A DHCP offer message is broadcast to all
-      nodes on the subnet, using the IP broadcast address of
-      255.255.255.255. The client may be able to choose from among
-      several offers, if there are several DHCP servers present on the
-      subnet. The DHCP offer message contains the transaction ID of the
-      received discover message, the proposed IP address, and an IP
-      address lease time.
-  3.  DHCP request: the client will choose among the DHCP offers, and
-      respond to the selected offer with a DHCP request message, echoing
-      back its configuration parameters
-  4.  DHCP ACK: The server responds to the DHCP request message with a
-      HCP ACK message, confirming the requested parameters.
+#### NAT {#nat}
 
-  {{< figure src="/ox-hugo/screenshot_2019-03-20_10-26-56.png" caption="Figure 15: DHCP client-server interaction" >}}
+To address allocation of IP addresses in small networks, the network
+translation protocol (NAT) has foundn increasingly widespread use.
+There are address spaces reserved for private networks, or a realm of
+private addresses. These are:
 
-<!--list-separator-->
+- 10.0.0.0/8
+- 172.16.0.0/12
+- 192.168.0.0/16
 
-- NAT
+These addresses can be used without coordination with IANA or an
+Internet registry. These IP addresses only have meaning within the
+private network.
 
-  To address allocation of IP addresses in small networks, the network
-  translation protocol (NAT) has foundn increasingly widespread use.
-  There are address spaces reserved for private networks, or a realm of
-  private addresses. These are:
+{{< figure src="/ox-hugo/screenshot_2019-03-28_16-32-35.png" caption="Figure 16: Network Address Translation" >}}
 
-  - 10.0.0.0/8
-  - 172.16.0.0/12
-  - 192.168.0.0/16
+#### Routing {#routing}
 
-  These addresses can be used without coordination with IANA or an
-  Internet registry. These IP addresses only have meaning within the
-  private network.
+Recall that the Internet is a "network-of-networks": A hierarchy of
+Autonomous Systems (AS), e.g. ISPs each own routers and links. Due to
+the size and decentralized administration of the internet, routing on
+the Internet is done hierarchically.
 
-  {{< figure src="/ox-hugo/screenshot_2019-03-28_16-32-35.png" caption="Figure 16: Network Address Translation" >}}
+There are 2 forms of routing:
 
-<!--list-separator-->
+Intra-AS routing
+: intra-as routing finds a good patht between two
+routers within an AS. The 2 commonly used protocols are RIP and OSPF.
 
-- Routing
+Inter-AS routing
+: inter-as routing handles the interfaces between
+ASs. The de facto protocol for this is BGP.
 
-  Recall that the Internet is a "network-of-networks": A hierarchy of
-  Autonomous Systems (AS), e.g. ISPs each own routers and links. Due to
-  the size and decentralized administration of the internet, routing on
-  the Internet is done hierarchically.
+In intra-AS routing, there is a single administrator, so no policy
+decisions are needed. The routing policies here have a large focus on
+performance.
 
-  There are 2 forms of routing:
+In inter-AS routing, admins will often want control over how traffic
+is routed, or who routes through its net. In this situation, policy
+may be prioritized over performance.
 
-  Intra-AS routing
-  : intra-as routing finds a good patht between two
-  routers within an AS. The 2 commonly used protocols are RIP and OSPF.
+Routing can be viewed as a least-cost path problem between two
+vertices (routers) in a graph (network of routers).
 
-  Inter-AS routing
-  : inter-as routing handles the interfaces between
-  ASs. The de facto protocol for this is BGP.
+Routing algorithms are classified as follows:
 
-  In intra-AS routing, there is a single administrator, so no policy
-  decisions are needed. The routing policies here have a large focus on
-  performance.
+**Link state algorithms**. In this scenario, all routers have complete
+knowledge of the network topology, and the link costs. Routers
+periodically broadcast link costs to each other. Djikstra's algorithm
+is often used to compute the least-cost path locally.
 
-  In inter-AS routing, admins will often want control over how traffic
-  is routed, or who routes through its net. In this situation, policy
-  may be prioritized over performance.
+**Distance vector algorithms**. In this scenario, routers know
+physically-connected neighbours, and link costs to neighbours.
+Routers exchange "local views" and update their own "local views". An
+iterative process of computation is taken:
 
-  Routing can be viewed as a least-cost path problem between two
-  vertices (routers) in a graph (network of routers).
+1.  Swap local view with direct neighbours.
+2.  Update own's local view.
+3.  Repeat 1-2 until no more change to local view.
 
-  Routing algorithms are classified as follows:
+The Bellman-Ford equation is used to find the least-cost path:
 
-  **Link state algorithms**. In this scenario, all routers have complete
-  knowledge of the network topology, and the link costs. Routers
-  periodically broadcast link costs to each other. Djikstra's algorithm
-  is often used to compute the least-cost path locally.
+\begin{equation}
+d_x(y) = \textrm{min}\_v(c(x,v) + d_v(y))
+\end{equation}
 
-  **Distance vector algorithms**. In this scenario, routers know
-  physically-connected neighbours, and link costs to neighbours.
-  Routers exchange "local views" and update their own "local views". An
-  iterative process of computation is taken:
+To find the least cost path, \\(x\\) needs to know the cost from each
+of its direct neighbour to \\(y\\). Each neighbour \\(v\\) sends its distance
+vector \\((y, k)\\) to \\(x\\), telling \\(x\\) that the cost from \\(v\\) to \\(y\\) is
+\\(k\\).
 
-  1.  Swap local view with direct neighbours.
-  2.  Update own's local view.
-  3.  Repeat 1-2 until no more change to local view.
+In the Distance Vector algorithm, every router sends its distance
+vectors to its directly connected neighbours. When router $x4 finds
+out that $y4 is advertising a path to \\(z\\) than \\(x\\) currently knows:
 
-  The Bellman-Ford equation is used to find the least-cost path:
+- \\(x\\) will update its distance vector to \\(z\\) accordingly
+- \\(x\\) will note down that all packets for \\(z\\) should be sent to \\(y\\).
+  This information will be used to create the forwarding table of \\(x\\).
 
-  \begin{equation}
-  d_x(y) = \textrm{min}\_v(c(x,v) + d_v(y))
-  \end{equation}
+After every router has exchanged several rounds of updates, every
+router would be aware of the least-cost paths.
 
-  To find the least cost path, \\(x\\) needs to know the cost from each
-  of its direct neighbour to \\(y\\). Each neighbour \\(v\\) sends its distance
-  vector \\((y, k)\\) to \\(x\\), telling \\(x\\) that the cost from \\(v\\) to \\(y\\) is
-  \\(k\\).
-
-  In the Distance Vector algorithm, every router sends its distance
-  vectors to its directly connected neighbours. When router $x4 finds
-    out that $y4 is advertising a path to \\(z\\) than \\(x\\) currently knows:
-
-  - \\(x\\) will update its distance vector to \\(z\\) accordingly
-  - \\(x\\) will note down that all packets for \\(z\\) should be sent to \\(y\\).
-    This information will be used to create the forwarding table of \\(x\\).
-
-  After every router has exchanged several rounds of updates, every
-  router would be aware of the least-cost paths.
-
-  the Routing Information Protocol (RIP) implements the distance vector
-  algorithm. It uses **hop count** as the cost metric (insensitive to
-  network congestion). In RIP, entries in the routing table are
-  aggregated subnet masks (routing to destination subnet). Routing
-  tables are exchanged every 30 seconds over UDP port 520.
+the Routing Information Protocol (RIP) implements the distance vector
+algorithm. It uses **hop count** as the cost metric (insensitive to
+network congestion). In RIP, entries in the routing table are
+aggregated subnet masks (routing to destination subnet). Routing
+tables are exchanged every 30 seconds over UDP port 520.

@@ -1,11 +1,10 @@
 +++
 title = "Imagineering in a Box | Storytelling | Arts and humanities | Khan Academy"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:30+08:00
 draft = false
 +++
 
 tags
-: [Storytelling]({{< relref "storytelling" >}})
+: [Storytelling]({{<relref "storytelling.md" >}})
 
 Disney's Imagineering team created a course on Khan Academy about how they design rides in theme parks.

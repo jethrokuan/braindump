@@ -1,12 +1,11 @@
 +++
 title = "Transfer Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:14+08:00
 draft = false
 +++
 
 tags
-: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
 Prior understanding of problem structure can help us solve complex
 tasks quickly. Perhaps solving prior tasks would help acquire useful
@@ -47,29 +46,27 @@ broad and diverse.
 
 Fine tuning is popular in the supervised learning setting.
 
-<!--list-separator-->
+#### Why fine-tuning doesn't work well for RL {#why-fine-tuning-doesn-t-work-well-for-rl}
 
-- Why fine-tuning doesn't work well for RL
+1.  RL tasks tend to be narrow (not broad and diverse), and features
+    are less general
+2.  RL methods tend to learn deterministic policies, the policies that
+    are optimal in the fully-observed MDP.
+    1.  Low-entropy policies adapt very slowly to new settings
+    2.  Little exploration at convergence
 
-  1.  RL tasks tend to be narrow (not broad and diverse), and features
-      are less general
-  2.  RL methods tend to learn deterministic policies, the policies that
-      are optimal in the fully-observed MDP.
-      1.  Low-entropy policies adapt very slowly to new settings
-      2.  Little exploration at convergence
+To increase diversity and entropy, we can do maximum-entropy learning
+which acts as randomly as possible while collecting high rewards ([Haarnoja et al., n.d.](#org5343d53)):
 
-  To increase diversity and entropy, we can do maximum-entropy learning
-  which acts as randomly as possible while collecting high rewards ([Haarnoja et al., n.d.](#org43ec077)):
+\begin{equation}
+\pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
+\end{equation}
 
-  \begin{equation}
-  \pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
-  \end{equation}
+This optimizes
 
-  This optimizes
-
-  \begin{equation}
-  \sum_t E\_{\pi(s_t, a_t)}[r(s\_t, a\_t)] + E\_{\pi(s_t)}[\mathcal{H}(\pi(a\_t|s\_t))]
-  \end{equation}
+\begin{equation}
+\sum_t E\_{\pi(s_t, a_t)}[r(s\_t, a\_t)] + E\_{\pi(s_t)}[\mathcal{H}(\pi(a\_t|s\_t))]
+\end{equation}
 
 ### Manipulating the Source Domain {#manipulating-the-source-domain}
 
@@ -89,15 +86,15 @@ across multiple tasks.
 
 In model distillation, multiple policies are combined into one, for
 concurrent multi-task learning. Policy distillation
-([Rusu et al., n.d.](#orgd05c268)) is able to:
+([Rusu et al., n.d.](#orgab5ba11)) is able to:
 
 1.  Compress policies learnt on single games into smaller models
 2.  Build agents capable of playing multiple games
-3.  Improve the stability of the [DQN learning algorithm]({{< relref "q_learning" >}}) by distilling
+3.  Improve the stability of the [DQN learning algorithm]({{<relref "q_learning.md" >}}) by distilling
     online the policy of the best performing agent
 
 ## Bibliography {#bibliography}
 
-<a id="org43ec077"></a>Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. n.d. “Reinforcement Learning with Deep Energy-Based Policies.” In _Proceedings of the 34th International Conference on Machine Learning_, edited by Doina Precup and Yee Whye Teh, 70:1352–61. Proceedings of Machine Learning Research. PMLR. <http://proceedings.mlr.press/v70/haarnoja17a.html>.
+<a id="org5343d53"></a>Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. n.d. “Reinforcement Learning with Deep Energy-Based Policies.” In _Proceedings of the 34th International Conference on Machine Learning_, edited by Doina Precup and Yee Whye Teh, 70:1352–61. Proceedings of Machine Learning Research. PMLR. <http://proceedings.mlr.press/v70/haarnoja17a.html>.
 
-<a id="orgd05c268"></a>Rusu, Andrei A., Sergio Gomez Colmenarejo, Caglar Gulcehre, Guillaume Desjardins, James Kirkpatrick, Razvan Pascanu, Volodymyr Mnih, Koray Kavukcuoglu, and Raia Hadsell. n.d. “Policy Distillation.” <http://arxiv.org/abs/1511.06295v2>.
+<a id="orgab5ba11"></a>Rusu, Andrei A., Sergio Gomez Colmenarejo, Caglar Gulcehre, Guillaume Desjardins, James Kirkpatrick, Razvan Pascanu, Volodymyr Mnih, Koray Kavukcuoglu, and Raia Hadsell. n.d. “Policy Distillation.” <http://arxiv.org/abs/1511.06295v2>.

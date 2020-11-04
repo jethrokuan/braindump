@@ -1,18 +1,17 @@
 +++
 title = "What happens when we type a simple command on shell?"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:33+08:00
 slug = "what_happens_when_we_type_a_simple_command_on_shell"
 draft = false
 +++
 
 tags
-: [Operating Systems]({{< relref "operating_systems" >}})
+: [Operating Systems]({{<relref "operating_systems.md" >}})
 
 -source ::
 <https://unix.stackexchange.com/questions/123457/what-happens-when-we-type-a-simple-command-on-shell>
 
-The [shell]({{< relref "shell" >}}) is a program, that uses 2 important native C system calls:
+The [shell]({{<relref "shell.md" >}}) is a program, that uses 2 important native C system calls:
 `fork()` and `exec()`. These 2 system calls are used in the creation
 of subprocesses.
 

@@ -1,16 +1,15 @@
 +++
 title = "The Intelligent Investor"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-26T21:11:27+08:00
 slug = "the_intelligent_investor"
 draft = false
 +++
 
 author
-: [Benjamin Graham]({{< relref "benjamin_graham" >}})
+: [Benjamin Graham]({{<relref "benjamin_graham.md" >}})
 
 tags
-: [Finance]({{< relref "finance" >}})
+: [Finance]({{<relref "finance.md" >}})
 
 ## Book Notes {#book-notes}
 
@@ -49,4 +48,4 @@ slash their purchases, depressing activity throughout the economy.
 To guard against inflation, a common advice is to buy stocks, but in truth
 stocks failed to keep up with inflation about one-fifth of the time.
 
-To combat inflation, additionally look into [REITs]({{< relref "reits" >}}), and government bonds.
+To combat inflation, additionally look into [REITs]({{<relref "reits.md" >}}), and government bonds.

@@ -1,12 +1,11 @@
 +++
 title = "Zettelkasten"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-28T12:28:02+08:00
 draft = false
 +++
 
 tags
-: [Productivity]({{< relref "productivity" >}}), [Note-taking]({{< relref "note_taking" >}})
+: [Productivity]({{<relref "productivity.md" >}}), [Note-taking]({{<relref "note_taking.md" >}})
 
 ## The original Zettelkasten Method {#the-original-zettelkasten-method}
 
@@ -25,7 +24,7 @@ topic, but more of an entry point.
 
 fleeting
 : notes taken as a reminder of what's in your head. These
-are to be removed after some time - In [Roam Research]({{< relref "roam_research" >}}) and Org-roam, make fleeting notes in daily notes
+are to be removed after some time - In [Roam Research]({{<relref "roam_research.md" >}}) and Org-roam, make fleeting notes in daily notes
 
 project-related
 : notes related to a project

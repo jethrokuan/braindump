@@ -1,12 +1,11 @@
 +++
 title = "SSNLP Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:23+08:00
 draft = false
 +++
 
 tags
-: [Natural Language Processing]({{< relref "nlp" >}})
+: [Natural Language Processing]({{<relref "nlp.md" >}})
 
 ## AliNLP: the Text Processing Engine that Powers Alibaba's Business Applications {#alinlp-the-text-processing-engine-that-powers-alibaba-s-business-applications}
 

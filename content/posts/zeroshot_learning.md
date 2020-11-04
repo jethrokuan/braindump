@@ -1,7 +1,6 @@
 +++
 title = "Zero shot Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:16+08:00
 slug = "zeroshot_learning"
 draft = false
 +++

@@ -1,7 +1,6 @@
 +++
 title = "Prediction is the Essence of Intelligence"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-24T12:47:42+08:00
 slug = "prediction_is_the_essence_of_intelligence"
 draft = false
 +++

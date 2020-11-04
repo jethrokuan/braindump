@@ -1,12 +1,11 @@
 +++
 title = "Occam's Razor"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:48+08:00
 draft = false
 +++
 
 tags
-: [Information Theory]({{< relref "information_theory" >}})
+: [Information Theory]({{<relref "information_theory.md" >}})
 
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian

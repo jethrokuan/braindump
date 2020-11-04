@@ -1,11 +1,10 @@
 +++
 title = "Documentation Generators"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-28T12:27:49+08:00
 draft = false
 +++
 
-We use these to generate [documentation]({{< relref "documentation" >}}) for projects.
+We use these to generate [documentation]({{<relref "documentation.md" >}}) for projects.
 
 ## Software {#software}
 

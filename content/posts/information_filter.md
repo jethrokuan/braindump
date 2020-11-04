@@ -1,12 +1,11 @@
 +++
 title = "Information Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:48+08:00
 draft = false
 +++
 
 tags
-: [Gaussian Filter]({{< relref "gaussian_filter" >}}), [Bayes Filter]({{< relref "bayes_filter" >}})
+: [Gaussian Filter]({{<relref "gaussian_filter.md" >}}), [Bayes Filter]({{<relref "bayes_filter.md" >}})
 
 ## Key Idea {#key-idea}
 

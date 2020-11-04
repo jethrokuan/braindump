@@ -1,12 +1,11 @@
 +++
 title = "Statistical Methods for Finance"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:14+08:00
 draft = false
 +++
 
 tags
-: [Finance]({{< relref "finance" >}})
+: [Finance]({{<relref "finance.md" >}})
 
 ## Returns {#returns}
 

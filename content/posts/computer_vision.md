@@ -1,13 +1,12 @@
 +++
 title = "Computer Vision"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:26+08:00
 draft = false
 +++
 
 ## Prerequisites {#prerequisites}
 
-[Linear Algebra]({{< relref "linear_algebra" >}})
+[Linear Algebra]({{<relref "linear_algebra.md" >}})
 
 ## Camera Basics {#camera-basics}
 
@@ -243,95 +242,89 @@ The biggest difference between 2D and 3D coordinate transformations is
 that the parameterization of the 3D rotation matrix \\(\mathbf{R}\\) is
 not as straightforward.
 
-<!--list-separator-->
+#### Euler Angles {#euler-angles}
 
-- Euler Angles
+A rotation matrix can be formed as the product of three rotations
+around three cardinal axes, e.g. \\(x\\), \\(y\\), and \\(z\\). This is generally
+a bad idea, because the result depends on the order of
+transformations, and it is not always possible to move smoothly in a
+parameter space.
 
-  A rotation matrix can be formed as the product of three rotations
-  around three cardinal axes, e.g. \\(x\\), \\(y\\), and \\(z\\). This is generally
-  a bad idea, because the result depends on the order of
-  transformations, and it is not always possible to move smoothly in a
-  parameter space.
+#### Axis/angle (exponential twist) {#axis-angle--exponential-twist}
 
-<!--list-separator-->
+A rotation can be represented by a rotation axis \\(\hat{\mathbf{n}}\\)
+and an angle \\(\theta\\), or equivalently by a 3D vector \\(\mathbf{\omega} =
+\theta\hat{\mathbf{n}}\\). We can write the rotation matrix corresponding to
+a rotation by \\(\theta\\) around an axis \\(\hat{\mathbf{n}}\\) as:
 
-- Axis/angle (exponential twist)
+\begin{equation}
+\mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + \sin \theta
+[\hat{\mathbf{n}}]\_\times + \left(1-\cos\theta\right)[\hat{\mathbf{n}}]^2\_\times
+\end{equation}
 
-  A rotation can be represented by a rotation axis \\(\hat{\mathbf{n}}\\)
-  and an angle \\(\theta\\), or equivalently by a 3D vector \\(\mathbf{\omega} =
-  \theta\hat{\mathbf{n}}\\). We can write the rotation matrix corresponding to
-  a rotation by \\(\theta\\) around an axis \\(\hat{\mathbf{n}}\\) as:
+Also known as _Rodriguez's formula_.
 
-  \begin{equation}
-  \mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + \sin \theta
-  [\hat{\mathbf{n}}]\_\times + \left(1-\cos\theta\right)[\hat{\mathbf{n}}]^2\_\times
-  \end{equation}
+For small rotations, this is an excellent choice, as it simplifies to:
 
-  Also known as _Rodriguez's formula_.
+\begin{equation}
+\mathbf{R}(\mathbf{\omega}) \approx \mathbf{I} + \sin\theta[\hat{\mathbf{n}}]\_\times = \begin{bmatrix}
+1 & -\omega_x & -\omega_y \\\\\\
+\omega_z & 1 & -\omega_x \\\\\\
+-\omega_y & \omega_x & 1
+\end{bmatrix}
+\end{equation}
 
-  For small rotations, this is an excellent choice, as it simplifies to:
+This gives a nice linearized relationship between the rotation
+parameters \\(\omega\\) and \\(\mathbf{R}\\). We can also compute the derivative
+of \\(\mathbf{R}v\\) with respect to \\(\omega\\),
 
-  \begin{equation}
-  \mathbf{R}(\mathbf{\omega}) \approx \mathbf{I} + \sin\theta[\hat{\mathbf{n}}]\_\times = \begin{bmatrix}
-  1 & -\omega_x & -\omega_y \\\\\\
-  \omega_z & 1 & -\omega_x \\\\\\
-  -\omega_y & \omega_x & 1
-  \end{bmatrix}
-  \end{equation}
+\begin{equation}
+\frac{\partial \mathbf{R}v}{\partial \omega^T} = -[\mathbf{v}]\_\times = \begin{bmatrix}
+0 & z & -y \\\\\\
+-z & 0 & x \\\\\\
+y & -x & 0
+\end{bmatrix}
+\end{equation}
 
-  This gives a nice linearized relationship between the rotation
-  parameters \\(\omega\\) and \\(\mathbf{R}\\). We can also compute the derivative
-  of \\(\mathbf{R}v\\) with respect to \\(\omega\\),
+#### Unit Quarternions {#unit-quarternions}
 
-  \begin{equation}
-  \frac{\partial \mathbf{R}v}{\partial \omega^T} = -[\mathbf{v}]\_\times = \begin{bmatrix}
-  0 & z & -y \\\\\\
-  -z & 0 & x \\\\\\
-  y & -x & 0
-  \end{bmatrix}
-  \end{equation}
+<https://eater.net/quaternions>
+<https://www.youtube.com/watch?v=d4EgbgTm0Bg>
 
-<!--list-separator-->
+A unit quarternion is a unit length 4-vector whose components can be
+written as \\(\mathbf{q} = (x, y, z, w)\\). Unit quarternions live on the
+unit sphere \\(\lVert q \rVert = 1\\) and antipodal quartenions, \\(q\\) and
+\\(-q\\) represent the same rotation. This representation is continuous
+and are very popular representations for pose and for pose
+interpolation.
 
-- Unit Quarternions
+Quarternions can be derived from the axis/angle representation through
+the formula:
 
-  <https://eater.net/quaternions>
-  <https://www.youtube.com/watch?v=d4EgbgTm0Bg>
+\begin{equation}
+\mathbf{q} = (\mathbf{v}, w) = \left(\sin\frac{\theta}{2}\hat{\mathbf{n}}, \cos\frac{\theta}{2}\right)
+\end{equation}
 
-  A unit quarternion is a unit length 4-vector whose components can be
-  written as \\(\mathbf{q} = (x, y, z, w)\\). Unit quarternions live on the
-  unit sphere \\(\lVert q \rVert = 1\\) and antipodal quartenions, \\(q\\) and
-  \\(-q\\) represent the same rotation. This representation is continuous
-  and are very popular representations for pose and for pose
-  interpolation.
+where \\(\hat{\mathbf{n}}\\) and \\(\theta\\) are the rotation axis and angle.
+Rodriguez's formula can be converted to:
 
-  Quarternions can be derived from the axis/angle representation through
-  the formula:
+\begin{equation}
+\mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + 2w[\mathbf{v}]\_\times + 2[\mathbf{v}]^2\_\times
+\end{equation}
 
-  \begin{equation}
-  \mathbf{q} = (\mathbf{v}, w) = \left(\sin\frac{\theta}{2}\hat{\mathbf{n}}, \cos\frac{\theta}{2}\right)
-  \end{equation}
+The nicest aspect of unit quarternions is that there is a simple
+algebra for composing rotations expressed as unit quartenions:
 
-  where \\(\hat{\mathbf{n}}\\) and \\(\theta\\) are the rotation axis and angle.
-  Rodriguez's formula can be converted to:
+\begin{equation}
+\mathbf{q}\_2 = \mathbf{q}\_0 \mathbf{q}\_1 = (\mathbf{v}\_0 \times \mathbf{v}\_1 + w_0 \mathbf{v}\_1 + w_1 \mathbf{v}\_0, w_0 w_1 - \mathbf{v}\_0 \cdot \mathbf{v}\_1)
+\end{equation}
 
-  \begin{equation}
-  \mathbf{R}(\hat{\mathbf{n}}, \theta) = \mathbf{I} + 2w[\mathbf{v}]\_\times + 2[\mathbf{v}]^2\_\times
-  \end{equation}
+The inverse of a quarternion is just flipping the sign of \\(\mathbf{v}\\)
+or \\(w\\), but not both. Then quarternion division can be defined as:
 
-  The nicest aspect of unit quarternions is that there is a simple
-  algebra for composing rotations expressed as unit quartenions:
-
-  \begin{equation}
-  \mathbf{q}\_2 = \mathbf{q}\_0 \mathbf{q}\_1 = (\mathbf{v}\_0 \times \mathbf{v}\_1 + w_0 \mathbf{v}\_1 + w_1 \mathbf{v}\_0, w_0 w_1 - \mathbf{v}\_0 \cdot \mathbf{v}\_1)
-  \end{equation}
-
-  The inverse of a quarternion is just flipping the sign of \\(\mathbf{v}\\)
-  or \\(w\\), but not both. Then quarternion division can be defined as:
-
-  \begin{equation}
-  \mathbf{q}\_2 = \mathbf{q}\_0 / \mathbf{q}\_1 = (\mathbf{v}\_0 \times \mathbf{v}\_1 + w_0 \mathbf{v}\_1 - w_1 \mathbf{v}\_0, - w_0 w_1 - \mathbf{v}\_0 \cdot \mathbf{v}\_1)
-  \end{equation}
+\begin{equation}
+\mathbf{q}\_2 = \mathbf{q}\_0 / \mathbf{q}\_1 = (\mathbf{v}\_0 \times \mathbf{v}\_1 + w_0 \mathbf{v}\_1 - w_1 \mathbf{v}\_0, - w_0 w_1 - \mathbf{v}\_0 \cdot \mathbf{v}\_1)
+\end{equation}
 
 ### 3D to 2D projections {#3d-to-2d-projections}
 
@@ -343,424 +336,414 @@ to get the final (in-homogeneous) result. The more commonly used model
 is perspective, since this more accurately models the behavior of
 real cameras.
 
+#### Orthography {#orthography}
+
+An orthographic projection simply drops the \\(z\\) component of the
+three-dimensional coordinate \\(\mathbf{p}\\) to obtain the 2D point
+\\(\mathbf{x}\\).
+
+\begin{equation}
+\mathbf{x} = \left[\mathbf{I}\_{2\times 2} | \mathbf{0} \right] \mathbf{p}
+\end{equation}
+
+In practice, world coordinates need to be scaled to fit onto an image
+sensor, for this reason, _scaled orthography_ is actually more commonly
+used:
+
+\begin{equation}
+\mathbf{x} = \left[s\mathbf{I}\_{2 \times 2}\right | \mathbf{0}]\mathbf{p}
+\end{equation}
+
+This model is equivalent to first projecting the world points onto a
+local fronto-parallel image plane, and then scaling this image using
+regular perspective projection.
+
+A closely related model is called _para-perspective_, which projects the
+object points onto a local reference plane parallel to the image
+plane. However, rather than being projected orthogonally to this
+plane, they are projected parallel to the line of sight to the object
+center. This is followed by the usual projection onto the final image
+plane, and the combination of these two projections is affine.
+
+\begin{equation}
+\tilde{\mathbf{x}} = \begin{bmatrix}
+a\_{00} & a\_{01} & a\_{02} & a\_{03} \\\\\\
+a\_{10} & a\_{11} & a\_{12} & a\_{13} \\\\\\
+0 & 0 & 0 & 1
+\end{bmatrix}
+\tilde{\mathbf{p}}
+\end{equation}
+
+#### Perspective {#perspective}
+
+Points are projected onto the image plane by dividing them by their
+\\(z\\) component. Using homogeneous coordinates, this can be written as:
+
+\begin{equation}
+\tilde{\mathbf{x}} = \mathcal{P}\_z(\mathbf{p}) = \begin{bmatrix}
+x / z \\\\\\
+y / z \\\\\\
+1
+\end{bmatrix}
+\end{equation}
+
+In homogeneous coordinates, the projection has a simple linear form,
+
+\begin{equation}
+\tilde{\mathbf{x}} = \begin{bmatrix}
+1 & 0 & 0 & 0 \\\\\\
+0 & 1 & 0 & 0 \\\\\\
+0 & 0 & 1 & 0 \\\\\\
+\end{bmatrix}\tilde{\mathbf{p}}
+\end{equation}
+
+we drop the \\(w\\) component of \\(\mathbf{p}\\). Thus after projection, we
+are unable to recover the distance of the 3D point from the image.
+
+#### Camera Instrinsics {#camera-instrinsics}
+
+Once we have projected a 3D point through an ideal pinhole using a
+projection matrix, we must still transform the resulting coordinates
+according to the pixel sensor spacing and the relative position of the
+sensor plane to the origin.
+
+Image sensors return _pixel values_ indexed by integer pixel coordinates
+\\((x_s, y_s)\\). To map pixel centers to 3D coordinates, we first scale he
+\\((x_s, y_s)\\) values by the pixel spacings \\((s_x, s_y)\\), and then describe
+the orientation of the sensor array relative to the camera projection
+center \\(\mathbf{O}\_c\\) with an origin \\(\mathbf{c}\_s\\) and a 3D rotation
+\\(\mathbf{R}\_s\\).
+
+\begin{equation}
+\mathbf{p} = \left[\mathbf{R}\_s | \mathbf{c}\_s \right] \begin{bmatrix}
+s_x & 0 & 0 \\\\\\
+0 & s_y & 0 \\\\\\
+0 & 0 & 0 \\\\\\
+0 & 0 & 1
+\end{bmatrix} \begin{bmatrix}
+x_s \\\\\\
+y_s \\\\\\
+1
+\end{bmatrix} = \mathbf{M}\_s \hat{\mathbf{x}}\_s
+\end{equation}
+
+The first 2 columns of the \\(3 \times 3\\) matrix \\(\mathbf{M}\_s\\) are the 3D vectors
+corresponding to the unit steps in the image pixel array along the
+\\(x_s\\) and \\(y_s\\) directions, while the third column is the 3D image array
+origin \\(\mathbf{c}\_s\\).
+
+The matrix \\(\mathbf{M}\_s\\) is parameterized by 8 unknowns, and that
+makes estimating the camera model impractical, even though there are
+really only 7 degrees of freedom. Most practitioners assume a general
+\\(3 \times 3\\) homogeneous matrix form.
+
+<http://ksimek.github.io/2013/08/13/intrinsic/>
+
+\begin{align}
+P &= \overbrace{K}^\text{Intrinsic Matrix} \times \overbrace{[R \mid \mathbf{t}]}^\text{Extrinsic Matrix} \\\[0.5em]
+&=
+\overbrace{
+
+            \underbrace{
+                \left (
+                \begin{array}{ c c c}
+                 1  &  0  & x\_0 \\\\\\
+                 0  &  1  & y\_0 \\\\\\
+                 0  &  0  & 1
+                \end{array}
+                \right )
+            }\_\text{2D Translation}
+
+            \times
+
+            \underbrace{
+                \left (
+                \begin{array}{ c c c}
+                f\_x &  0  & 0 \\\\\\
+                 0  & f\_y & 0 \\\\\\
+                 0  &  0  & 1
+                \end{array}
+                \right )
+            }\_\text{2D Scaling}
+
+            \times
+
+            \underbrace{
+                \left (
+                \begin{array}{ c c c}
+                 1  &  s/f\_x  & 0 \\\\\\
+                 0  &    1    & 0 \\\\\\
+                 0  &    0    & 1
+                \end{array}
+                \right )
+            }\_\text{2D Shear}
+
+        }^\text{Intrinsic Matrix}
+
+        \times
+
+        \overbrace{
+        \underbrace{
+             \left( \begin{array}{c | c}
+            I & \mathbf{t}
+             \end{array}\right)
+        }\_\text{3D Translation}
+        \times
+        \underbrace{
+             \left( \begin{array}{c | c}
+            R & 0 \\ \hline
+            0 & 1
+             \end{array}\right)
+        }\_\text{3D Rotation}
+        }^\text{Extrinsic Matrix}
+    \end{align}
+
+#### Lens distortion {#lens-distortion}
+
+Thus far, it has been assumed that the cameras obey a linear
+projection model. In reality, many wide-angled lens suffer heavily
+from radial distortion, which manifests itself as a visible curvature
+in the projection of straight lines. Fortunately, compensating for
+radial distortion is not that difficult in practice. The radial
+distortion model says that the coordinates in the observed images are
+displaced away (barrel distortion) or towards (pincushion distortion)
+the image center by an amount proportional to their radial distance.
+
+{{< figure src="/ox-hugo/screenshot_2018-08-20_18-17-31.png" >}}
+
+#### Camera Calibration {#camera-calibration}
+
+We want to use the camera to tell us things about the world, so we
+need the relationship between coordinates in the world, and
+coordinates in the image.
+
+Geometric camera calibration is composed of:
+
+extrinsic parameters (camera pose)
+: from some arbitrary world
+coordinate system to the camera's 3D coordinate system
+
+intrinsic parameters
+: From the 3D coordinates in the camera frame
+to the 2D image plane via projection
+
 <!--list-separator-->
 
-- Orthography
+- Extrinsic Parameters
 
-  An orthographic projection simply drops the \\(z\\) component of the
-  three-dimensional coordinate \\(\mathbf{p}\\) to obtain the 2D point
-  \\(\mathbf{x}\\).
-
-  \begin{equation}
-  \mathbf{x} = \left[\mathbf{I}\_{2\times 2} | \mathbf{0} \right] \mathbf{p}
-  \end{equation}
-
-  In practice, world coordinates need to be scaled to fit onto an image
-  sensor, for this reason, _scaled orthography_ is actually more commonly
-  used:
-
-  \begin{equation}
-  \mathbf{x} = \left[s\mathbf{I}\_{2 \times 2}\right | \mathbf{0}]\mathbf{p}
-  \end{equation}
-
-  This model is equivalent to first projecting the world points onto a
-  local fronto-parallel image plane, and then scaling this image using
-  regular perspective projection.
-
-  A closely related model is called _para-perspective_, which projects the
-  object points onto a local reference plane parallel to the image
-  plane. However, rather than being projected orthogonally to this
-  plane, they are projected parallel to the line of sight to the object
-  center. This is followed by the usual projection onto the final image
-  plane, and the combination of these two projections is affine.
-
-  \begin{equation}
-  \tilde{\mathbf{x}} = \begin{bmatrix}
-  a\_{00} & a\_{01} & a\_{02} & a\_{03} \\\\\\
-  a\_{10} & a\_{11} & a\_{12} & a\_{13} \\\\\\
-  0 & 0 & 0 & 1
-  \end{bmatrix}
-  \tilde{\mathbf{p}}
-  \end{equation}
-
-<!--list-separator-->
-
-- Perspective
-
-  Points are projected onto the image plane by dividing them by their
-  \\(z\\) component. Using homogeneous coordinates, this can be written as:
-
-  \begin{equation}
-  \tilde{\mathbf{x}} = \mathcal{P}\_z(\mathbf{p}) = \begin{bmatrix}
-  x / z \\\\\\
-  y / z \\\\\\
-  1
-  \end{bmatrix}
-  \end{equation}
-
-  In homogeneous coordinates, the projection has a simple linear form,
-
-  \begin{equation}
-  \tilde{\mathbf{x}} = \begin{bmatrix}
-  1 & 0 & 0 & 0 \\\\\\
-  0 & 1 & 0 & 0 \\\\\\
-  0 & 0 & 1 & 0 \\\\\\
-  \end{bmatrix}\tilde{\mathbf{p}}
-  \end{equation}
-
-  we drop the \\(w\\) component of \\(\mathbf{p}\\). Thus after projection, we
-  are unable to recover the distance of the 3D point from the image.
-
-<!--list-separator-->
-
-- Camera Instrinsics
-
-  Once we have projected a 3D point through an ideal pinhole using a
-  projection matrix, we must still transform the resulting coordinates
-  according to the pixel sensor spacing and the relative position of the
-  sensor plane to the origin.
-
-  Image sensors return _pixel values_ indexed by integer pixel coordinates
-  \\((x_s, y_s)\\). To map pixel centers to 3D coordinates, we first scale he
-  \\((x_s, y_s)\\) values by the pixel spacings \\((s_x, s_y)\\), and then describe
-  the orientation of the sensor array relative to the camera projection
-  center \\(\mathbf{O}\_c\\) with an origin \\(\mathbf{c}\_s\\) and a 3D rotation
-  \\(\mathbf{R}\_s\\).
-
-  \begin{equation}
-  \mathbf{p} = \left[\mathbf{R}\_s | \mathbf{c}\_s \right] \begin{bmatrix}
-  s_x & 0 & 0 \\\\\\
-  0 & s_y & 0 \\\\\\
-  0 & 0 & 0 \\\\\\
-  0 & 0 & 1
-  \end{bmatrix} \begin{bmatrix}
-  x_s \\\\\\
-  y_s \\\\\\
-  1
-  \end{bmatrix} = \mathbf{M}\_s \hat{\mathbf{x}}\_s
-  \end{equation}
-
-  The first 2 columns of the \\(3 \times 3\\) matrix \\(\mathbf{M}\_s\\) are the 3D vectors
-  corresponding to the unit steps in the image pixel array along the
-  \\(x_s\\) and \\(y_s\\) directions, while the third column is the 3D image array
-  origin \\(\mathbf{c}\_s\\).
-
-  The matrix \\(\mathbf{M}\_s\\) is parameterized by 8 unknowns, and that
-  makes estimating the camera model impractical, even though there are
-  really only 7 degrees of freedom. Most practitioners assume a general
-  \\(3 \times 3\\) homogeneous matrix form.
-
-  <http://ksimek.github.io/2013/08/13/intrinsic/>
-
-  \begin{align}
-  P &= \overbrace{K}^\text{Intrinsic Matrix} \times \overbrace{[R \mid \mathbf{t}]}^\text{Extrinsic Matrix} \\\[0.5em]
-  &=
-  \overbrace{
-
-               \underbrace{
-                   \left (
-                   \begin{array}{ c c c}
-                    1  &  0  & x\_0 \\\\\\
-                    0  &  1  & y\_0 \\\\\\
-                    0  &  0  & 1
-                   \end{array}
-                   \right )
-               }\_\text{2D Translation}
-
-               \times
-
-               \underbrace{
-                   \left (
-                   \begin{array}{ c c c}
-                   f\_x &  0  & 0 \\\\\\
-                    0  & f\_y & 0 \\\\\\
-                    0  &  0  & 1
-                   \end{array}
-                   \right )
-               }\_\text{2D Scaling}
-
-               \times
-
-               \underbrace{
-                   \left (
-                   \begin{array}{ c c c}
-                    1  &  s/f\_x  & 0 \\\\\\
-                    0  &    1    & 0 \\\\\\
-                    0  &    0    & 1
-                   \end{array}
-                   \right )
-               }\_\text{2D Shear}
-
-           }^\text{Intrinsic Matrix}
-
-           \times
-
-           \overbrace{
-           \underbrace{
-                \left( \begin{array}{c | c}
-               I & \mathbf{t}
-                \end{array}\right)
-           }\_\text{3D Translation}
-           \times
-           \underbrace{
-                \left( \begin{array}{c | c}
-               R & 0 \\ \hline
-               0 & 1
-                \end{array}\right)
-           }\_\text{3D Rotation}
-           }^\text{Extrinsic Matrix}
-       \end{align}
-
-<!--list-separator-->
-
-- Lens distortion
-
-  Thus far, it has been assumed that the cameras obey a linear
-  projection model. In reality, many wide-angled lens suffer heavily
-  from radial distortion, which manifests itself as a visible curvature
-  in the projection of straight lines. Fortunately, compensating for
-  radial distortion is not that difficult in practice. The radial
-  distortion model says that the coordinates in the observed images are
-  displaced away (barrel distortion) or towards (pincushion distortion)
-  the image center by an amount proportional to their radial distance.
-
-  {{< figure src="/ox-hugo/screenshot_2018-08-20_18-17-31.png" >}}
-
-<!--list-separator-->
-
-- Camera Calibration
-
-  We want to use the camera to tell us things about the world, so we
-  need the relationship between coordinates in the world, and
-  coordinates in the image.
-
-  Geometric camera calibration is composed of:
-
-  extrinsic parameters (camera pose)
-  : from some arbitrary world
-  coordinate system to the camera's 3D coordinate system
-
-  intrinsic parameters
-  : From the 3D coordinates in the camera frame
-  to the 2D image plane via projection
+  The transform \\(T\\) is a transform that goes from the world to the
+  camera system.
 
    <!--list-separator-->
 
-  - Extrinsic Parameters
+  - Translation
 
-    The transform \\(T\\) is a transform that goes from the world to the
-    camera system.
-
-     <!--list-separator-->
-
-    - Translation
-
-      The coordinate \\(P\\) in \\(B\\)'s frame is the coordinate \\(P\\) in frame \\(A\\),
-      and the location of the camera in frame \\(B\\).
-
-      \begin{equation}
-      ^B P = ^A P + ^B O_A
-      \end{equation}
-
-      \begin{equation}
-      \begin{bmatrix}
-      ^B P \\\\\\
-      1
-      \end{bmatrix} = \begin{bmatrix}
-      I\_{3\times3} & ^B O_A \\\\\\
-      0^T & 1
-      \end{bmatrix} \begin{bmatrix}
-      ^A P \\\\\\
-      1
-      \end{bmatrix}
-      \end{equation}
-
-     <!--list-separator-->
-
-    - Rotation
-
-      We can similarly describe a rotation matrix:
-
-      \begin{equation}
-      ^B P = ^B \_A R ^AP
-      \end{equation}
-
-      \begin{equation}
-      ^B_A R = \begin{bmatrix}
-      ^B i_A & ^B j_A & ^B k_A
-      \end{bmatrix} =
-      \begin{bmatrix}
-      ^Ai_B^T \\\\\\
-      ^Aj_B^T \\\\\\
-      ^Ak_B^T
-      \end{bmatrix}
-      \end{equation}
-
-      Under homogeneous coordinates, rotation can also be expressed as a
-      matrix multiplication.
-
-      \begin{equation}
-      \begin{bmatrix}
-      ^B P \\\\\\
-      1
-      \end{bmatrix} = \begin{bmatrix}
-      ^B_AR & 0 \\\\\\
-      0^T & 1
-      \end{bmatrix} \begin{bmatrix}
-      ^A P \\\\\\
-      1
-      \end{bmatrix}
-      \end{equation}
-
-      Then, we can express rigid transformations as:
-
-      \begin{equation}
-      \begin{bmatrix}
-      ^B P \\\\\\
-      1
-      \end{bmatrix} = \begin{bmatrix}
-      1 & ^BO_A \\\\\\
-      0^T & 1 \\\\\\
-      \end{bmatrix} \begin{bmatrix}
-      ^B_AR & 0 \\\\\\
-      0^T & 1 \\\\\\
-      \end{bmatrix} \begin{bmatrix}
-      ^A P \\\\\\
-      1
-      \end{bmatrix} = \begin{bmatrix}
-      ^B_AR & ^BO_A \\\\\\
-      0^T & 1
-      \end{bmatrix} \begin{bmatrix}
-      ^A P \\\\\\
-      1
-      \end{equation}
-
-      And we write:
-
-      \begin{equation}
-      ^B_A T = \begin{bmatrix}
-      ^B_AR & ^BO_A \\\\\\
-      0^T & 1
-      \end{bmatrix}
-      \end{equation}
-
-      {{< figure src="/ox-hugo/screenshot_2018-11-24_13-05-41.png" >}}
-
-      The world to camera transformation matrix is the extrinsic parameter
-      matrix (4x4).
-
-      {{< figure src="/ox-hugo/screenshot_2018-11-24_13-10-13.png" >}}
-
-      The rotation matrix \\(R\\) has two important properties:
-
-      1.  \\(R\\) is orthonormal: \\(R^T R = I\\)
-      2.  \\(|R| = 1\\)
-
-      One can represent rotation using Euler angles:
-
-      pitch (\\(\omega\\))
-      : rotation about x-axis
-
-      yaw (\\(\phi\\))
-      : rotation about y-axis
-
-      roll (\\(\kappa\\))
-      : rotation about z-axis
-
-      Euler angles can be converted to rotation matrix:
-
-      \begin{align}
-      R &= R_x R_y R_z
-      \end{align}
-
-      Rotations can also be specified as a right-handed rotation by an angle
-      \\(\theta\\) about the axis specified by the unit vector \\(\left(\omega_x,
-      \omega_y, \omega_z \right)\\).
-
-      This has the same disadvantage as the Euler angle representation,
-      where algorithms are not numerically well-conditioned. Hence, the
-      preferred way is to use [quarternions](#unit-quarternions). Rotations are represented with
-      unit quarternions.
-
-   <!--list-separator-->
-
-  - Intrinsic Parameters
-
-    We have looked at perspective projection, and we obtain the ideal
-    coordinates:
-
-    \begin{align}
-    u &= f \frac{X}{Z} \\\\\\
-    v &= f \frac{Y}{Z}
-    \end{align}
-
-    However, pixels are arbitrary spatial units, so we introduce an alpha
-    to scale the value.
-
-    \begin{align}
-    u &= \alpha \frac{X}{Z} \\\\\\
-    v &= \alpha \frac{Y}{Z}
-    \end{align}
-
-    However, pixels may not necessarily be square, so we have to introduce
-    a different parameter for \\(u\\) and \\(v\\).
-
-    \begin{align}
-    u &= \alpha \frac{X}{Z} \\\\\\
-    v &= \beta \frac{Y}{Z}
-    \end{align}
-
-    We don't know the origin of our camera pixel coordinates, so we have
-    to add offsets:
-
-    \begin{align}
-    u &= \alpha \frac{X}{Z} + u_0 \\\\\\
-    v &= \beta \frac{Y}{Z} + v_0
-    \end{align}
-
-    We also assume here that \\(u\\) and \\(v\\) are perpendicular. To correct for
-    this, we need to introduce skew coefficients:
-
-    \begin{align}
-    u &= \alpha \frac{X}{Z} - \alpha \cot \theta \frac{Y}{Z} + u_0 \\\\\\
-    v &= \frac{\beta}{\sin \theta} \frac{Y}{Z} + v_0
-    \end{align}
-
-    We can simplify this by expressing it in homogeneous coordinates:
-
-    {{< figure src="/ox-hugo/screenshot_2018-11-24_13-18-11.png" >}}
-
-    The 3x4 matrix is the intrinsic matrix.
-
-    This can be represented in an easier way:
-
-    {{< figure src="/ox-hugo/screenshot_2018-11-24_13-20-19.png" >}}
-
-    And if we assume:
-
-    - pixels are square
-    - there is no skew
-    - and the optical center is in the center, then \\(K\\) reduces to
+    The coordinate \\(P\\) in \\(B\\)'s frame is the coordinate \\(P\\) in frame \\(A\\),
+    and the location of the camera in frame \\(B\\).
 
     \begin{equation}
-    K = \begin{bmatrix}
-    f & 0 & 0 \\\\\\
-    0 & f & 0 \\\\\\
-    0 & 0 & 1
+    ^B P = ^A P + ^B O_A
+    \end{equation}
+
+    \begin{equation}
+    \begin{bmatrix}
+    ^B P \\\\\\
+    1
+    \end{bmatrix} = \begin{bmatrix}
+    I\_{3\times3} & ^B O_A \\\\\\
+    0^T & 1
+    \end{bmatrix} \begin{bmatrix}
+    ^A P \\\\\\
+    1
     \end{bmatrix}
     \end{equation}
 
    <!--list-separator-->
 
-  - Combining Extrinsic and Intrinsic Calibration Parameters
+  - Rotation
 
-    We can write:
+    We can similarly describe a rotation matrix:
 
     \begin{equation}
-    p' = K \begin{bmatrix}
-    ^C_WR & ^C_Wt
-    \end{bmatrix} ^Wp
+    ^B P = ^B \_A R ^AP
     \end{equation}
+
+    \begin{equation}
+    ^B_A R = \begin{bmatrix}
+    ^B i_A & ^B j_A & ^B k_A
+    \end{bmatrix} =
+    \begin{bmatrix}
+    ^Ai_B^T \\\\\\
+    ^Aj_B^T \\\\\\
+    ^Ak_B^T
+    \end{bmatrix}
+    \end{equation}
+
+    Under homogeneous coordinates, rotation can also be expressed as a
+    matrix multiplication.
+
+    \begin{equation}
+    \begin{bmatrix}
+    ^B P \\\\\\
+    1
+    \end{bmatrix} = \begin{bmatrix}
+    ^B_AR & 0 \\\\\\
+    0^T & 1
+    \end{bmatrix} \begin{bmatrix}
+    ^A P \\\\\\
+    1
+    \end{bmatrix}
+    \end{equation}
+
+    Then, we can express rigid transformations as:
+
+    \begin{equation}
+    \begin{bmatrix}
+    ^B P \\\\\\
+    1
+    \end{bmatrix} = \begin{bmatrix}
+    1 & ^BO_A \\\\\\
+    0^T & 1 \\\\\\
+    \end{bmatrix} \begin{bmatrix}
+    ^B_AR & 0 \\\\\\
+    0^T & 1 \\\\\\
+    \end{bmatrix} \begin{bmatrix}
+    ^A P \\\\\\
+    1
+    \end{bmatrix} = \begin{bmatrix}
+    ^B_AR & ^BO_A \\\\\\
+    0^T & 1
+    \end{bmatrix} \begin{bmatrix}
+    ^A P \\\\\\
+    1
+    \end{equation}
+
+    And we write:
+
+    \begin{equation}
+    ^B_A T = \begin{bmatrix}
+    ^B_AR & ^BO_A \\\\\\
+    0^T & 1
+    \end{bmatrix}
+    \end{equation}
+
+    {{< figure src="/ox-hugo/screenshot_2018-11-24_13-05-41.png" >}}
+
+    The world to camera transformation matrix is the extrinsic parameter
+    matrix (4x4).
+
+    {{< figure src="/ox-hugo/screenshot_2018-11-24_13-10-13.png" >}}
+
+    The rotation matrix \\(R\\) has two important properties:
+
+    1.  \\(R\\) is orthonormal: \\(R^T R = I\\)
+    2.  \\(|R| = 1\\)
+
+    One can represent rotation using Euler angles:
+
+    pitch (\\(\omega\\))
+    : rotation about x-axis
+
+    yaw (\\(\phi\\))
+    : rotation about y-axis
+
+    roll (\\(\kappa\\))
+    : rotation about z-axis
+
+    Euler angles can be converted to rotation matrix:
+
+    \begin{align}
+    R &= R_x R_y R_z
+    \end{align}
+
+    Rotations can also be specified as a right-handed rotation by an angle
+    \\(\theta\\) about the axis specified by the unit vector \\(\left(\omega_x,
+    \omega_y, \omega_z \right)\\).
+
+    This has the same disadvantage as the Euler angle representation,
+    where algorithms are not numerically well-conditioned. Hence, the
+    preferred way is to use [quarternions](#unit-quarternions). Rotations are represented with
+    unit quarternions.
+
+<!--list-separator-->
+
+- Intrinsic Parameters
+
+  We have looked at perspective projection, and we obtain the ideal
+  coordinates:
+
+  \begin{align}
+  u &= f \frac{X}{Z} \\\\\\
+  v &= f \frac{Y}{Z}
+  \end{align}
+
+  However, pixels are arbitrary spatial units, so we introduce an alpha
+  to scale the value.
+
+  \begin{align}
+  u &= \alpha \frac{X}{Z} \\\\\\
+  v &= \alpha \frac{Y}{Z}
+  \end{align}
+
+  However, pixels may not necessarily be square, so we have to introduce
+  a different parameter for \\(u\\) and \\(v\\).
+
+  \begin{align}
+  u &= \alpha \frac{X}{Z} \\\\\\
+  v &= \beta \frac{Y}{Z}
+  \end{align}
+
+  We don't know the origin of our camera pixel coordinates, so we have
+  to add offsets:
+
+  \begin{align}
+  u &= \alpha \frac{X}{Z} + u_0 \\\\\\
+  v &= \beta \frac{Y}{Z} + v_0
+  \end{align}
+
+  We also assume here that \\(u\\) and \\(v\\) are perpendicular. To correct for
+  this, we need to introduce skew coefficients:
+
+  \begin{align}
+  u &= \alpha \frac{X}{Z} - \alpha \cot \theta \frac{Y}{Z} + u_0 \\\\\\
+  v &= \frac{\beta}{\sin \theta} \frac{Y}{Z} + v_0
+  \end{align}
+
+  We can simplify this by expressing it in homogeneous coordinates:
+
+  {{< figure src="/ox-hugo/screenshot_2018-11-24_13-18-11.png" >}}
+
+  The 3x4 matrix is the intrinsic matrix.
+
+  This can be represented in an easier way:
+
+  {{< figure src="/ox-hugo/screenshot_2018-11-24_13-20-19.png" >}}
+
+  And if we assume:
+
+  - pixels are square
+  - there is no skew
+  - and the optical center is in the center, then \\(K\\) reduces to
+
+  \begin{equation}
+  K = \begin{bmatrix}
+  f & 0 & 0 \\\\\\
+  0 & f & 0 \\\\\\
+  0 & 0 & 1
+  \end{bmatrix}
+  \end{equation}
+
+<!--list-separator-->
+
+- Combining Extrinsic and Intrinsic Calibration Parameters
+
+  We can write:
+
+  \begin{equation}
+  p' = K \begin{bmatrix}
+  ^C_WR & ^C_Wt
+  \end{bmatrix} ^Wp
+  \end{equation}
 
 ### Photometric image formation {#photometric-image-formation}
 
@@ -769,111 +752,107 @@ intensity values. Where do these values come from, and how do they
 relate to the lighting in the environment, surface properties and
 geometry, camera optics and sensor properties?
 
+#### Lighting {#lighting}
+
+To produce an image, a scene must be illuminated with one or more
+light sources.
+
+A point light source originates at a single location in space. In
+addition to its location, a point light source has an intensity and a
+colour spectrum (a distribution over wavelengths).
+
+An area light source with a diffuser can be modeled as a finite
+rectangular area emitting light equally in all directions. When the
+distribution is strongly directional, a four-dimensional lightfield
+can be used instead.
+
+#### Reflectance and shading {#reflectance-and-shading}
+
+When light hits an object surface, it is scattered and reflected. We
+look at some more specialized models, including the diffuse, specular
+and Phong shading models.
+
 <!--list-separator-->
 
-- Lighting
+- The Bidirectional Reflectance Distribution Function (BRDF)
 
-  To produce an image, a scene must be illuminated with one or more
-  light sources.
+  Relative to some local coordinate frame on the surface, the BRDF is a
+  four-dimensional function that describes how much of each wavelength
+  arriving at an incident direction \\(\hat{\mathbf{v}}\_i\\) is emitted in a
+  reflected direction \\(\hat{\mathbf{v}}\_r\\). The function can be written
+  in terms of the angles of the incident and reflected directions
+  relative to the surface frame as \\(f_r(\theta_i, \phi_i, \theta_r,
+  \phi_r;\lambda)\\).
 
-  A point light source originates at a single location in space. In
-  addition to its location, a point light source has an intensity and a
-  colour spectrum (a distribution over wavelengths).
-
-  An area light source with a diffuser can be modeled as a finite
-  rectangular area emitting light equally in all directions. When the
-  distribution is strongly directional, a four-dimensional lightfield
-  can be used instead.
+  BRDFs for a given surface can be obtained through physical modeling,
+  heuristic modeling or empirical observation. Typical BRDFs can be
+  split into their diffuse and specular components.
 
 <!--list-separator-->
 
-- Reflectance and shading
+- Diffuse Reflection
 
-  When light hits an object surface, it is scattered and reflected. We
-  look at some more specialized models, including the diffuse, specular
-  and Phong shading models.
+  The diffuse component scatters light uniformly in all directions and
+  is the phenomenon we most normally associate with shading. Diffuse
+  reflection also often imparts a strong body colour to the light.
 
-   <!--list-separator-->
+  When light is scattered uniformly in all directions, the BRDF is
+  constant:
 
-  - The Bidirectional Reflectance Distribution Function (BRDF)
+  \begin{equation}
+  f_d(\hat{\mathbf{v}}\_i, \mathbf{v}}\_r, \mathbf{n}};\lambda) = f_d(\lambda)
+  \end{equation}
 
-    Relative to some local coordinate frame on the surface, the BRDF is a
-    four-dimensional function that describes how much of each wavelength
-    arriving at an incident direction \\(\hat{\mathbf{v}}\_i\\) is emitted in a
-    reflected direction \\(\hat{\mathbf{v}}\_r\\). The function can be written
-    in terms of the angles of the incident and reflected directions
-    relative to the surface frame as \\(f_r(\theta_i, \phi_i, \theta_r,
-    \phi_r;\lambda)\\).
+  and the amount of light depends on the angle between the incident
+  light direction and the surface normal \\(\theta_i\\).
 
-    BRDFs for a given surface can be obtained through physical modeling,
-    heuristic modeling or empirical observation. Typical BRDFs can be
-    split into their diffuse and specular components.
+<!--list-separator-->
 
-   <!--list-separator-->
+- Specular Reflection
 
-  - Diffuse Reflection
+  The specular reflection component heavily depends on the direction of
+  the outgoing light. Incident light rays are reflected in a direction
+  that is rotated by 180^&deg; around the surface normal
+  \\(\hat{\mathbf{n}}\\).
 
-    The diffuse component scatters light uniformly in all directions and
-    is the phenomenon we most normally associate with shading. Diffuse
-    reflection also often imparts a strong body colour to the light.
+  {{< figure src="/ox-hugo/screenshot_2018-08-21_11-16-05.png" >}}
 
-    When light is scattered uniformly in all directions, the BRDF is
-    constant:
+<!--list-separator-->
 
-    \begin{equation}
-    f_d(\hat{\mathbf{v}}\_i, \mathbf{v}}\_r, \mathbf{n}};\lambda) = f_d(\lambda)
+- Phong Shading
+
+  Phong combined the diffuse and specular components of reflection with
+  another term, which he called the ambient illumination. This term
+  accounts for the fact that objects are generally illuminated not only
+  by point light sources but also by a general diffuse illumination
+  corresponding to inter-reflection or distance sources. In the Phong
+  model, the ambient term does not depend on surface orientation, but
+  depends on the colour of both the ambient illumination \\(L_a(\lambda)\\)
+  and the object \\(k_a(\lambda)\\),
+
+  \begin{equation}
+  f_a(\lambda) = k_a(\lambda) L_a(\lambda)
+  \end{equation}
+
+  The Phong shading model can then be fully specified as:
+
+  \begin{equation}
+  L_r(\hat{\mathbf{v}}\_r ; \lambda) = k_a(\lambda) L_a(\lambda)
+
+  - k_d(\lambda) \sum_i L_i(\lambda) [\hat{\mathbf{v}}\_i \cdot \hat{\mathbf{n}}]^+
+  - k_s(\lambda) \sum_i L_i(\lambda) (\hat{\mathbf{v}}\_r \cdot \hat{\mathbf{s}}\_i)^{k_e}
     \end{equation}
 
-    and the amount of light depends on the angle between the incident
-    light direction and the surface normal \\(\theta_i\\).
+  The Phong model has been superseded by other models in terms of
+  physical accuracy. These models include the di-chromatic reflection
+  model.
 
-   <!--list-separator-->
+<!--list-separator-->
 
-  - Specular Reflection
+- Optics
 
-    The specular reflection component heavily depends on the direction of
-    the outgoing light. Incident light rays are reflected in a direction
-    that is rotated by 180^&deg; around the surface normal
-    \\(\hat{\mathbf{n}}\\).
-
-    {{< figure src="/ox-hugo/screenshot_2018-08-21_11-16-05.png" >}}
-
-   <!--list-separator-->
-
-  - Phong Shading
-
-    Phong combined the diffuse and specular components of reflection with
-    another term, which he called the ambient illumination. This term
-    accounts for the fact that objects are generally illuminated not only
-    by point light sources but also by a general diffuse illumination
-    corresponding to inter-reflection or distance sources. In the Phong
-    model, the ambient term does not depend on surface orientation, but
-    depends on the colour of both the ambient illumination \\(L_a(\lambda)\\)
-    and the object \\(k_a(\lambda)\\),
-
-    \begin{equation}
-    f_a(\lambda) = k_a(\lambda) L_a(\lambda)
-    \end{equation}
-
-    The Phong shading model can then be fully specified as:
-
-    \begin{equation}
-    L_r(\hat{\mathbf{v}}\_r ; \lambda) = k_a(\lambda) L_a(\lambda)
-
-    - k_d(\lambda) \sum_i L_i(\lambda) [\hat{\mathbf{v}}\_i \cdot \hat{\mathbf{n}}]^+
-    - k_s(\lambda) \sum_i L_i(\lambda) (\hat{\mathbf{v}}\_r \cdot \hat{\mathbf{s}}\_i)^{k_e}
-      \end{equation}
-
-    The Phong model has been superseded by other models in terms of
-    physical accuracy. These models include the di-chromatic reflection
-    model.
-
-   <!--list-separator-->
-
-  - Optics
-
-    Once the light from a scene reaches a camera, it must still pass
-    through the lens before reaching the sensor.
+  Once the light from a scene reaches a camera, it must still pass
+  through the lens before reaching the sensor.
 
 ## Image Processing {#image-processing}
 
@@ -888,43 +867,39 @@ Examples of such operators include:
 
 ### Image Enhancement {#image-enhancement}
 
-<!--list-separator-->
+#### Histogram Equalization {#histogram-equalization}
 
-- Histogram Equalization
+<https://www.math.uci.edu/icamp/courses/math77c/demos/hist%5Feq.pdf>
 
-  <https://www.math.uci.edu/icamp/courses/math77c/demos/hist%5Feq.pdf>
+The underlying math behind histogram equalization involves mapping one
+distribution (the given histogram of intensity values) to another
+distribution (a wider and, ideally, uniform distribution of intensity
+values).
 
-  The underlying math behind histogram equalization involves mapping one
-  distribution (the given histogram of intensity values) to another
-  distribution (a wider and, ideally, uniform distribution of intensity
-  values).
+{{< figure src="/ox-hugo/screenshot_2018-08-30_16-43-39.png" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2018-08-30_16-43-39.png" >}}
+We may use the cumulative distribution function to remap the original
+distribution as an equally spread distribution simply by looking up
+each y-value in the original distribution and seeing where it should
+go in the equalized distribution.
 
-  We may use the cumulative distribution function to remap the original
-  distribution as an equally spread distribution simply by looking up
-  each y-value in the original distribution and seeing where it should
-  go in the equalized distribution.
+\begin{equation}
+g\_{i,j} = \left\lfloor \left( L - 1 \right) \sum\_{n = 0}^{f\_{i,j}}
+p_n \right\rfloor
+\end{equation}
 
-  \begin{equation}
-  g\_{i,j} = \left\lfloor \left( L - 1 \right) \sum\_{n = 0}^{f\_{i,j}}
-  p_n \right\rfloor
-  \end{equation}
+#### Convolutions {#convolutions}
 
-<!--list-separator-->
+Convolution is the process of adding each element of the image to its
+local neighbors, weighted by the kernel.
 
-- Convolutions
+Convolutions can be used to denoise, descratch, blur, unblur and even
+feature extraction.
 
-  Convolution is the process of adding each element of the image to its
-  local neighbors, weighted by the kernel.
+Median filtering is good for removing salt-and-pepper noise, or
+scratches in image
 
-  Convolutions can be used to denoise, descratch, blur, unblur and even
-  feature extraction.
-
-  Median filtering is good for removing salt-and-pepper noise, or
-  scratches in image
-
-  {{< figure src="/ox-hugo/screenshot_2018-11-23_10-05-43.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-11-23_10-05-43.png" >}}
 
 ### Color {#color}
 
@@ -994,41 +969,35 @@ Examples of subtracting combinations include mixing of color pigments
 or dyes. The primary colours used in these cases are normally cyan,
 magenta and yellow.
 
-<!--list-separator-->
+#### Measuring Colour Differences {#measuring-colour-differences}
 
-- Measuring Colour Differences
+The simplest metric is the euclidean distance between colours in the
+RGB space:
 
-  The simplest metric is the euclidean distance between colours in the
-  RGB space:
+\begin{equation}
+d(C_1, C_2) = \sqrt{\left( R_1 - R_2 \right)^2 + \left( G_1 - G_2
+\right)^2 + \left( B_1 - B_2 \right)^2}
+\end{equation}
 
-  \begin{equation}
-  d(C_1, C_2) = \sqrt{\left( R_1 - R_2 \right)^2 + \left( G_1 - G_2
-  \right)^2 + \left( B_1 - B_2 \right)^2}
-  \end{equation}
+However, the RGB space is not perceptually uniform, and this is
+inappropriate if one needs to match human perception. HSV, YCbCr are
+also not perceptually uniform. Some colour spaces that are more
+perceptually uniform are the Munsell, CIELAB and CIELUB colour spaces.
 
-  However, the RGB space is not perceptually uniform, and this is
-  inappropriate if one needs to match human perception. HSV, YCbCr are
-  also not perceptually uniform. Some colour spaces that are more
-  perceptually uniform are the Munsell, CIELAB and CIELUB colour spaces.
+#### Computing Means {#computing-means}
 
-<!--list-separator-->
+The usual formula of computing means \\(M = \frac{1}{n}S =
+\frac{1}{n}\sum\_{i=1}^n R_i\\) can lead to overflow even for small \\(n\\).
+One way to get around it is to use a floating point representation for
+\\(S\\). The second method is to do incremental averaging:
 
-- Computing Means
+\begin{equation}
+M_k = \frac{k-1}{k}M\_{k-1} + \frac{1}{k}R_k
+\end{equation}
 
-  The usual formula of computing means \\(M = \frac{1}{n}S =
-  \frac{1}{n}\sum\_{i=1}^n R_i\\) can lead to overflow even for small \\(n\\).
-  One way to get around it is to use a floating point representation for
-  \\(S\\). The second method is to do incremental averaging:
+#### Digital Cameras sensing colour {#digital-cameras-sensing-colour}
 
-  \begin{equation}
-  M_k = \frac{k-1}{k}M\_{k-1} + \frac{1}{k}R_k
-  \end{equation}
-
-<!--list-separator-->
-
-- Digital Cameras sensing colour
-
-  [Bayer filter](https://en.wikipedia.org/wiki/Bayer%5Ffilter)
+[Bayer filter](https://en.wikipedia.org/wiki/Bayer%5Ffilter)
 
 ## Change Detection {#change-detection}
 
@@ -1070,64 +1039,60 @@ and they can be used to minimize the amount of processed data for
 motion tracking, image stitching, building 2D mosaics, stereo vision,
 image representation and other related computer vision areas.
 
-<!--list-separator-->
+#### [Harris corner detector](https://en.wikipedia.org/wiki/Harris%5FCorner%5FDetector) {#harris-corner-detector}
 
-- [Harris corner detector](https://en.wikipedia.org/wiki/Harris%5FCorner%5FDetector)
+Compared to the Kanade-Lucas-Tomasi corner detector, the Harris corner
+detector provides good repeatability under changing illumination and
+rotation, and therefore, it is more often used in stereo matching and
+image database retrieval.
 
-  Compared to the Kanade-Lucas-Tomasi corner detector, the Harris corner
-  detector provides good repeatability under changing illumination and
-  rotation, and therefore, it is more often used in stereo matching and
-  image database retrieval.
+Interpreting the eigenvalues:
 
-  Interpreting the eigenvalues:
+{{< figure src="/ox-hugo/screenshot_2018-11-24_14-54-48.png" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2018-11-24_14-54-48.png" >}}
+In flat regions, the eigenvalues are both small, in edges, only one of
+the eigenvalues are large. On the other hand, in corners, both
+eigenvalues are large but the 2 eigenvalues of the same magnitude, the error
+\\(E\\) increases in all directions.
 
-  In flat regions, the eigenvalues are both small, in edges, only one of
-  the eigenvalues are large. On the other hand, in corners, both
-  eigenvalues are large but the 2 eigenvalues of the same magnitude, the error
-  \\(E\\) increases in all directions.
+{{< figure src="/ox-hugo/screenshot_2018-11-24_14-56-43.png" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2018-11-24_14-56-43.png" >}}
-
-  The Harris corner response function essentially filters out the corners.
-
-   <!--list-separator-->
-
-  - Properties
-
-    1.  Harris corner detector is invariant to rotation: Ellipse has the
-        same eigenvalues regardless of rotation.
-    2.  Mostly invariant to additive and multiplicative intensity changes
-        (threshold issue for multiplicative)
-    3.  Not invariant to image scale!
+The Harris corner response function essentially filters out the corners.
 
 <!--list-separator-->
 
-- Tomasi corner detector
+- Properties
 
-  \begin{equation}
-  \frac{1}{N} \sum\_{u} \sum_v \begin{bmatrix}
-  I_x^2 & I_x I_y \\\\\\
-  I_x I_y & I_y^2 \\\\\\
-  \end{bmatrix}
-  \end{equation}
+  1.  Harris corner detector is invariant to rotation: Ellipse has the
+      same eigenvalues regardless of rotation.
+  2.  Mostly invariant to additive and multiplicative intensity changes
+      (threshold issue for multiplicative)
+  3.  Not invariant to image scale!
 
-  where \\(I_x = \frac{\partial I}{\partial x}\\), \\(N\\) is the total number
-  of pixels in window of interest, \\(u\\) and \\(v\\) are the horizontal and
-  vertical index of the pixel in the window of interest.
+#### Tomasi corner detector {#tomasi-corner-detector}
 
-  Let the eigenvalues of the above matrix be \\(\lambda\_{max}\\) and
-  \\(\lambda\_{min}\\). Then the greater \\(\lambda\_{min}\\), the more
-  "cornerness" the feature.
+\begin{equation}
+\frac{1}{N} \sum\_{u} \sum_v \begin{bmatrix}
+I_x^2 & I_x I_y \\\\\\
+I_x I_y & I_y^2 \\\\\\
+\end{bmatrix}
+\end{equation}
 
-  Examples of feature descriptors include SIFT and SURF. The typical
-  workflow involves:
+where \\(I_x = \frac{\partial I}{\partial x}\\), \\(N\\) is the total number
+of pixels in window of interest, \\(u\\) and \\(v\\) are the horizontal and
+vertical index of the pixel in the window of interest.
 
-  1.  Detecting good features
-  2.  Building feature descriptors on each of these features
-  3.  Matching these descriptors on the second image to establish the
-      corresponding points
+Let the eigenvalues of the above matrix be \\(\lambda\_{max}\\) and
+\\(\lambda\_{min}\\). Then the greater \\(\lambda\_{min}\\), the more
+"cornerness" the feature.
+
+Examples of feature descriptors include SIFT and SURF. The typical
+workflow involves:
+
+1.  Detecting good features
+2.  Building feature descriptors on each of these features
+3.  Matching these descriptors on the second image to establish the
+    corresponding points
 
 ### Gradient-based {#gradient-based}
 
@@ -1163,86 +1128,84 @@ I}{\partial t}dt = 0
 We denote this as \\(I_x u + I_y v + I_t = 0\\), but this has 2 unknowns, and
 is unsolvable.
 
-<!--list-separator-->
+#### Lucas-Kanade method {#lucas-kanade-method}
 
-- Lucas-Kanade method
+Suppose an object moves by displacement \\(\mathbb{d} = (dx, dy)^T\\). Then
+\\(J(x+d) = I(x)\\), or \\(J(x) = I(x-d)\\).
 
-  Suppose an object moves by displacement \\(\mathbb{d} = (dx, dy)^T\\). Then
-  \\(J(x+d) = I(x)\\), or \\(J(x) = I(x-d)\\).
+Due to noise, there is some error at position \\(x\\):
 
-  Due to noise, there is some error at position \\(x\\):
+\begin{equation}
+e(x) = I(x - d) - J(x)
+\end{equation}
 
-  \begin{equation}
-  e(x) = I(x - d) - J(x)
-  \end{equation}
+We sum the errors over some window \\(W\\) at position \\(x\\):
 
-  We sum the errors over some window \\(W\\) at position \\(x\\):
+\begin{equation}
+E(x) = \sum\_{x \in W} w(x) \left[ I(x-d) - J(x) \right]^2
+\end{equation}
 
-  \begin{equation}
-  E(x) = \sum\_{x \in W} w(x) \left[ I(x-d) - J(x) \right]^2
-  \end{equation}
+If \\(E\\) is small, then the patterns in \\(I\\) and \\(J\\) match well. We find
+the \\(d\\) that minimises \\(E\\). If we expand \\(I(x-d)\\) with Taylor
+expansion:
 
-  If \\(E\\) is small, then the patterns in \\(I\\) and \\(J\\) match well. We find
-  the \\(d\\) that minimises \\(E\\). If we expand \\(I(x-d)\\) with Taylor
-  expansion:
+\begin{equation}
+I(x-dx, y-dy) = I(x,y) - dx I_x(x,y) - dy I_y (x,y) + \dots
+\end{equation}
 
-  \begin{equation}
-  I(x-dx, y-dy) = I(x,y) - dx I_x(x,y) - dy I_y (x,y) + \dots
-  \end{equation}
+Then,
 
-  Then,
+\begin{equation}
+J(x) = I(x - d) = I(x) - d^T g(x), g(x) = \begin{bmatrix}
+I_x(x) \\\\\\
+I_y(x)
+\end{bmatrix}
+\end{equation}
 
-  \begin{equation}
-  J(x) = I(x - d) = I(x) - d^T g(x), g(x) = \begin{bmatrix}
-  I_x(x) \\\\\\
-  I_y(x)
-  \end{bmatrix}
-  \end{equation}
+Where g(x) is the intensity gradient. Substituting the above equation,
+and setting \\(\frac{\partial E}{\partial d} = 0\\):
 
-  Where g(x) is the intensity gradient. Substituting the above equation,
-  and setting \\(\frac{\partial E}{\partial d} = 0\\):
+\begin{equation}
+\frac{\partial E}{\partial d} = -2 \sum\_{x \in W} w(x) \left[ I(x) -
+J(x) - d^T g(x) \right] g(x)
+\end{equation}
 
-  \begin{equation}
-  \frac{\partial E}{\partial d} = -2 \sum\_{x \in W} w(x) \left[ I(x) -
-  J(x) - d^T g(x) \right] g(x)
-  \end{equation}
+\begin{equation}
+\sum\_{x \in W} w(x)\left[ I(x) - J(x) \right] g(x) = \sum\_{x \in W}
+w(x) g(x) g^T(x) d
+\end{equation}
 
-  \begin{equation}
-  \sum\_{x \in W} w(x)\left[ I(x) - J(x) \right] g(x) = \sum\_{x \in W}
-  w(x) g(x) g^T(x) d
-  \end{equation}
+We denote this as:
 
-  We denote this as:
+\begin{equation}
+Z d = b
+\end{equation}
 
-  \begin{equation}
-  Z d = b
-  \end{equation}
+where
 
-  where
+\begin{equation}
+Z = \begin{bmatrix}
+\sum\_{x \in W} w I_x^2 & \sum\_{x \in W} w I_x I_y \\\\\\
+\sum\_{x \in W} wI_x I_y & \sum\_{x \in W} w I_y^2
+\end{bmatrix}, b = \begin{bmatrix}
+\sum\_{x \in W} w(I-J)I_x \\\\\\
+\sum\_{x \in W} w(I-J)I_y
+\end{bmatrix}
+\end{equation}
 
-  \begin{equation}
-  Z = \begin{bmatrix}
-  \sum\_{x \in W} w I_x^2 & \sum\_{x \in W} w I_x I_y \\\\\\
-  \sum\_{x \in W} wI_x I_y & \sum\_{x \in W} w I_y^2
-  \end{bmatrix}, b = \begin{bmatrix}
-  \sum\_{x \in W} w(I-J)I_x \\\\\\
-  \sum\_{x \in W} w(I-J)I_y
-  \end{bmatrix}
-  \end{equation}
+With 2 unknowns and 2 equations, we can solve for \\(d\\).
 
-  With 2 unknowns and 2 equations, we can solve for \\(d\\).
+Lucas-Kanade algorithm is often used with Harris/Tomasi's corner
+detectors. First, corner detectors are applied to detect good
+features, then LK method is applied to compute \\(d\\) for each pixel. \\(d\\)
+is then accepted only for good features.
 
-  Lucas-Kanade algorithm is often used with Harris/Tomasi's corner
-  detectors. First, corner detectors are applied to detect good
-  features, then LK method is applied to compute \\(d\\) for each pixel. \\(d\\)
-  is then accepted only for good features.
+The math of LK tracker assumes \\(d\\) is small, and would only work for
+small displacements. To handle large displacements, the image is
+downsampled. Usually , the Gaussian filter is used to smoothen the
+image before scaling down.
 
-  The math of LK tracker assumes \\(d\\) is small, and would only work for
-  small displacements. To handle large displacements, the image is
-  downsampled. Usually , the Gaussian filter is used to smoothen the
-  image before scaling down.
-
-  {{< figure src="/ox-hugo/screenshot_2018-11-23_12-36-44.png" >}}
+{{< figure src="/ox-hugo/screenshot_2018-11-23_12-36-44.png" >}}
 
 ## Homography {#homography}
 

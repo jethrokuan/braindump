@@ -1,7 +1,6 @@
 +++
 title = "Self-attention"
 author = ["Jethro Kuan"]
-lastmod = 2020-10-27T17:21:14+08:00
 slug = "self_attention"
 draft = false
 +++

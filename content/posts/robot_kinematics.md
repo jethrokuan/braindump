@@ -1,12 +1,11 @@
 +++
 title = "Robot Kinematics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:58+08:00
 draft = false
 +++
 
 tags
-: [Velocity Motion Model]({{< relref "velocity_motion_model" >}}), [Odometry Motion Model]({{< relref "odometry_motion_model" >}})
+: [Velocity Motion Model]({{<relref "velocity_motion_model.md" >}}), [Odometry Motion Model]({{<relref "odometry_motion_model.md" >}})
 
 Kinematics is the calculus describing the effect of control actions on
 the configuration of the robot. The configuration of a rigid mobile

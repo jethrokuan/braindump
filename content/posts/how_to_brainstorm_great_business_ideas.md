@@ -1,16 +1,15 @@
 +++
 title = "How to brainstorm great business ideas"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:25+08:00
 slug = "how_to_brainstorm_great_business_ideas"
 draft = false
 +++
 
 tags
-: [Business]({{< relref "business" >}})
+: [Business]({{<relref "business.md" >}})
 
 author
-: [Courtland Allen]({{< relref "courtland_allen" >}})
+: [Courtland Allen]({{<relref "courtland_allen.md" >}})
 
 Executing the ideas require being strong in four main components:
 

@@ -201,6 +201,9 @@ A code generation tool takes these definitions, and generate classes
 that implement this schema in various programming languages.
 
 ** Schema Evolution
+:PROPERTIES:
+:ID:       186aefc1-19f5-4a7c-b0fd-1f15ed1f3d62
+:END:
 
 In Thrift and Protobuf, one can only add new fields to the schema, and
 not remove them. This ensures that a field's tag always refers to the
@@ -221,7 +224,7 @@ records.
 
 There are 3 main scenarios where data encodings are important:
 
-1. Databases, process of writing toand reading from the database
+1. Databases, process of writing to and reading from the database
 2. RPC and REST APIs, where the client encodes a request, the server
    decodes the request and encodes a response, and finally the client
    decodes the response
@@ -229,3 +232,4 @@ There are 3 main scenarios where data encodings are important:
    communicate by passing messages encoded and decoded by the sender
    or receipient
 
+[[id:186aefc1-19f5-4a7c-b0fd-1f15ed1f3d62][Schema Evolution]]

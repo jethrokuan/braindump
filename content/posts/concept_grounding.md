@@ -1,7 +1,6 @@
 +++
 title = "Concept Grounding"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:44+08:00
 slug = "concept_grounding"
 draft = false
 +++

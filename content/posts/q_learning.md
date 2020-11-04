@@ -1,17 +1,16 @@
 +++
 title = "Q-Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:04+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Temporal Difference Learning]({{< relref "td_learning" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Machine Learning Algorithms]({{<relref "machine_learning_algorithms.md" >}}), [Temporal Difference Learning]({{<relref "td_learning.md" >}}), [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
-The [Actor-Critic]({{< relref "actor_critic" >}}) algorithm fits 2 function approximators: one for the
+The [Actor-Critic]({{<relref "actor_critic.md" >}}) algorithm fits 2 function approximators: one for the
 policy, and one for the value function. A key problem with the policy
 gradient method is the high variance in the gradient update. _Can we
-omit [Policy Gradients]({{< relref "policy_gradients" >}}) completely?_
+omit [Policy Gradients]({{<relref "policy_gradients.md" >}}) completely?_
 
 ## Key Ideas {#key-ideas}
 
@@ -74,7 +73,7 @@ Q(s_i', a_i')\\):
     \sum_i |Q\_{\phi}(s_i, a_i) - y_i |^2\\)
     1.3. goto 1.1 or 1
 
-This works, even for off-policy samples (unlike [Actor-Critic]({{< relref "actor_critic" >}})). In
+This works, even for off-policy samples (unlike [Actor-Critic]({{<relref "actor_critic.md" >}})). In
 addition, there is only one network, hence no high-variance policy
 gradient methods. However, _there are no convergence guarantees with
 non-linear function approximators_!
@@ -158,7 +157,7 @@ changing in the inner loop.
 ## DQN {#dqn}
 
 DQN is the result of using a replay buffer, target network and some
-gradient clipping. See [Playing Atari with Deep RL]({{< relref "mnih2013_atari_deeprl" >}}).
+gradient clipping. See [Playing Atari with Deep RL]({{<relref "mnih2013_atari_deeprl.md" >}}).
 
 ## Double DQN {#double-dqn}
 
@@ -290,7 +289,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting ([Jin et al., n.d.](#org5a6ffe2)).
+setting ([Jin et al., n.d.](#org5a3dcee)).
 
 ## Q-learning with function approximation {#q-learning-with-function-approximation}
 
@@ -318,8 +317,8 @@ triad".
 
 In the presence of all three, learning is unstable. DQN is the first
 algorithm that stabilized deep Q-learning ([Playing Atari with Deep
-RL]({{< relref "mnih2013_atari_deeprl" >}})).
+RL]({{<relref "mnih2013_atari_deeprl.md" >}})).
 
 ## Bibliography {#bibliography}
 
-<a id="org5a6ffe2"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. n.d. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc. <http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf>.
+<a id="org5a3dcee"></a>Jin, Chi, Zeyuan Allen-Zhu, Sebastien Bubeck, and Michael I Jordan. n.d. “Is Q-Learning Provably Efficient?” In _Advances in Neural Information Processing Systems 31_, edited by S. Bengio, H. Wallach, H. Larochelle, K. Grauman, N. Cesa-Bianchi, and R. Garnett, 4863–73. Curran Associates, Inc. <http://papers.nips.cc/paper/7735-is-q-learning-provably-efficient.pdf>.

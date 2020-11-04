@@ -1,7 +1,6 @@
 +++
 title = "Histogram Filter"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:45+08:00
 draft = false
 +++
 
@@ -47,23 +46,19 @@ state space. A simple decomposition is a multi-dimensional grid.
 
 ### Decomposition Techniques {#decomposition-techniques}
 
-<!--list-separator-->
+#### Static Techniques {#static-techniques}
 
-- Static Techniques
+Static techniques rely on a fixed decomposition that is chosen in
+advance. These are easier to implement, but can be computationally wasteful.
 
-  Static techniques rely on a fixed decomposition that is chosen in
-  advance. These are easier to implement, but can be computationally wasteful.
+#### Dynamic Techniques {#dynamic-techniques}
 
-<!--list-separator-->
+Dynamic techniques adapt the decomposition to the shape of the
+posterior distribution.
 
-- Dynamic Techniques
+_Density trees_ decompose the state space recursively, adapting the
+resolution to the posterior probability mass.
 
-  Dynamic techniques adapt the decomposition to the shape of the
-  posterior distribution.
-
-  _Density trees_ decompose the state space recursively, adapting the
-  resolution to the posterior probability mass.
-
-  _Selective updating_ chooses a subset of grid cells to update for the
-  posterior. These are the grid cells whose posterior probability
-  exceeds some user-set threshold.
+_Selective updating_ chooses a subset of grid cells to update for the
+posterior. These are the grid cells whose posterior probability
+exceeds some user-set threshold.

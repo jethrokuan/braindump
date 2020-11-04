@@ -1,7 +1,6 @@
 +++
 title = "China Economics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:59+08:00
 slug = "china_economics"
 draft = false
 +++

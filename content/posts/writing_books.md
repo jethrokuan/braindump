@@ -1,12 +1,11 @@
 +++
 title = "Writing Books"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:00+08:00
 draft = false
 +++
 
 tags
-: [Writing]({{< relref "writing" >}})
+: [Writing]({{<relref "writing.md" >}})
 
 [Scott Meyers: Advice to Prospective Book Authors](https://www.aristeia.com/authorAdvice.html)
 

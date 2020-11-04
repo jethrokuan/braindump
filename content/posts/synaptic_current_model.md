@@ -1,7 +1,6 @@
 +++
 title = "Synaptic Current Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:31+08:00
 draft = false
 +++
 
@@ -21,7 +20,7 @@ exponential decay. Synaptic currents are also assumed to sum linearly.
 A single LIF neuron can be simulated with 2 linear differential
 equations whose initial conditions change instantaneously when a spike
 occurs. Combining the reset term with the equation for the
-[Leaky Integrate-And-Fire]({{< relref "leaky_integrate_and_fire" >}}) model, we get:
+[Leaky Integrate-And-Fire]({{<relref "leaky_integrate_and_fire.md" >}}) model, we get:
 
 \begin{equation} \label{eq:lif_with_reset}
 \frac{\mathrm{d} U\_{i}^{(l)}}{\mathrm{d} t}=-\frac{1}{\tau\_{\mathrm{mem}}}\left(\left(U\_{i}^{(l)}-U\_{\mathrm{rest}}\right)+R I\_{i}^{(l)}\right)+S\_{i}^{(l)}(t)\left(U\_{\mathrm{rest}}-\vartheta\right)
@@ -57,8 +56,8 @@ and the membrane voltage \\(U_i\\).
 
 ## References {#references}
 
-- ([Neftci, Mostafa, and Zenke, n.d.](#org1110f25))
+- ([Neftci, Mostafa, and Zenke, n.d.](#orgc4eee5c))
 
 ## Bibliography {#bibliography}
 
-<a id="org1110f25"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. n.d. “Surrogate Gradient Learning in Spiking Neural Networks.” <http://arxiv.org/abs/1901.09948v2>.
+<a id="orgc4eee5c"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. n.d. “Surrogate Gradient Learning in Spiking Neural Networks.” <http://arxiv.org/abs/1901.09948v2>.

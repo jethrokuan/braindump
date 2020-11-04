@@ -1,7 +1,6 @@
 +++
 title = "The Technique of Inversion"
 author = ["Jethro Kuan"]
-lastmod = 2020-10-05T12:53:16+08:00
 slug = "the_technique_of_inversion"
 draft = false
 +++

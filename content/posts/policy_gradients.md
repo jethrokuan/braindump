@@ -1,12 +1,11 @@
 +++
 title = "Policy Gradients"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-26T16:48:56+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Machine Learning Algorithms]({{<relref "machine_learning_algorithms.md" >}}), [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
 ## Key Idea {#key-idea}
 
@@ -47,7 +46,7 @@ maximum likelihood
 ### Partial Observability {#partial-observability}
 
 The policy gradient method does not assume that the system follows the
-[Markovian Assumption]({{< relref "markovian_assumption" >}})! The algorithm only requires the ability to
+[Markovian Assumption]({{<relref "markovian_assumption.md" >}})! The algorithm only requires the ability to
 generate samples, and a function approximator for
 \\(\pi\_{\theta}(a_t |o_t)\\).
 
@@ -62,7 +61,7 @@ generate samples, and a function approximator for
 
 The objective is an expectation under trajectories sampled under that
 policy. This can be tweaked into an off-policy method using
-[Importance Sampling]({{< relref "importance_sampling" >}}).
+[Importance Sampling]({{<relref "importance_sampling.md" >}}).
 
 {{< figure src="/ox-hugo/screenshot2019-12-16_13-24-18_.png" caption="Figure 1: Off-policy policy gradients" >}}
 
@@ -139,7 +138,8 @@ R(\tau) \\\\\\
 \end{align}
 
 Actor critics use learned estimate (e.g. \$\hat{A}(s, a) = \hat{Q}(s,
-a) - \hat{V}(s).)
+
+1.  - \hat{V}(s).)
 
 ## Policy Gradients an Policy Iteration {#policy-gradients-an-policy-iteration}
 
@@ -174,7 +174,7 @@ V^{\pi\_\theta})(s\_t) \right] \\\\\\
 \end{align}
 
 We have an expectation under \\(\theta'\\), but samples under \\(\theta\\). We
-use marginals representation, and [Importance Sampling]({{< relref "importance_sampling" >}}) to remove the
+use marginals representation, and [Importance Sampling]({{<relref "importance_sampling.md" >}}) to remove the
 expectation under \\(\pi\_\theta'\\), but can we ignore the other
 distribution mismatch?
 

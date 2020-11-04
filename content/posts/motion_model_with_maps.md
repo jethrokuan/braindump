@@ -1,12 +1,11 @@
 +++
 title = "Motion Model With Maps"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:07+08:00
 draft = false
 +++
 
 tags
-: [Velocity Motion Model]({{< relref "velocity_motion_model" >}}), [Odometry Motion Model]({{< relref "odometry_motion_model" >}})
+: [Velocity Motion Model]({{<relref "velocity_motion_model.md" >}}), [Odometry Motion Model]({{<relref "odometry_motion_model.md" >}})
 
 Often, we are given map \\(m\\) of the environment, giving us further
 information about the robot pose \\(x_t\\). In general,

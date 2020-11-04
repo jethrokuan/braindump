@@ -1,16 +1,15 @@
 +++
 title = "Designing Data-Intensive Applications"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:36+08:00
 slug = "designing_dataintensive_applications"
 draft = false
 +++
 
 tags
-: [System Design]({{< relref "system_design" >}}), [Databases]({{< relref "databases" >}}), [Hadoop]({{< relref "hadoop" >}})
+: [System Design]({{<relref "system_design.md" >}}), [Databases]({{<relref "databases.md" >}}), [Hadoop]({{<relref "hadoop.md" >}})
 
 author
-: [Martin Kleppmann]({{< relref "martin_kleppmann" >}})
+: [Martin Kleppmann]({{<relref "martin_kleppmann.md" >}})
 
 ## Preface {#preface}
 
@@ -38,7 +37,7 @@ to break the database down into segments, and always writes segments
 sequentially.
 
 - When a write comes in, add it into an in-memory balanced data
-  structure (e.g. [Red-Black Tree]({{< relref "red_black_tree" >}})). This is sometimes referred to as a _memtable_.
+  structure (e.g. [Red-Black Tree]({{<relref "red_black_tree.md" >}})). This is sometimes referred to as a _memtable_.
 - When the memtable becomes too big, write it out onto disk as an
   SSTable file. The SSTable file becomes the most recent segment of
   the database.
@@ -58,7 +57,7 @@ SSTables form the backbone of LSM-trees.
 The algorithm can be slow when looking up a key that does not exist in
 the database, because it will have to look through the _memtable_ and
 all segments before returning. Most database implementations such a
-[LevelDB](https://github.com/google/leveldb) and [RocksDB](https://github.com/facebook/rocksdb) use a [Bloom Filter]({{< relref "bloom_filter" >}}), which is a memory-efficient
+[LevelDB](https://github.com/google/leveldb) and [RocksDB](https://github.com/facebook/rocksdb) use a [Bloom Filter]({{<relref "bloom_filter.md" >}}), which is a memory-efficient
 data structure for approximating the contents of a set.
 
 ### B-Trees {#b-trees}
@@ -229,10 +228,12 @@ records.
 
 There are 3 main scenarios where data encodings are important:
 
-1.  Databases, process of writing toand reading from the database
+1.  Databases, process of writing to and reading from the database
 2.  RPC and REST APIs, where the client encodes a request, the server
     decodes the request and encodes a response, and finally the client
     decodes the response
 3.  Asynchronous message passing (message brokers, actors) where nodes
     communicate by passing messages encoded and decoded by the sender
     or receipient
+
+[Schema Evolution](#schema-evolution)

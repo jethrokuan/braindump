@@ -1,7 +1,6 @@
 +++
 title = "You and Your Research - Richard Hamming"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:23+08:00
 slug = "you_and_your_research"
 draft = false
 +++
@@ -10,10 +9,10 @@ source
 : <http://www.cs.virginia.edu/~robins/YouAndYourResearch.html>
 
 author
-: [Richard Hamming]({{< relref "richard_hamming" >}})
+: [Richard Hamming]({{<relref "richard_hamming.md" >}})
 
 tags
-: [Research]({{< relref "research" >}})
+: [Research]({{<relref "research.md" >}})
 
 > Our society frowns on people who set out to do really good work.
 > You're not supposed to; luck is supposed to descend on you and you do

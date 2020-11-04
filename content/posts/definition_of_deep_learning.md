@@ -1,12 +1,11 @@
 +++
 title = "Definition of Deep Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:22+08:00
 slug = "definition_of_deep_learning"
 draft = false
 +++
 
-There are many conflicting definitions of [Deep Learning]({{< relref "deep_learning" >}}), here's some
+There are many conflicting definitions of [Deep Learning]({{<relref "deep_learning.md" >}}), here's some
 definitions by various people:
 
 [Yann LeCun]({{< relref "yann_lecun" >}})

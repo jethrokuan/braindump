@@ -1,7 +1,6 @@
 +++
 title = "Probabilistic Graph Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:05+08:00
 draft = false
 +++
 
@@ -132,96 +131,90 @@ graph \\(G\\) if and only if \\(P\\) is representable as a set of CPDs
 associated with the graph \\(G\\). We begin by formalizing the basic
 concepts.
 
-<!--list-separator-->
+#### I-Maps {#i-maps}
 
-- I-Maps
+Let \\(P\\) be a distribution over \\(\mathcal{X}\\). We define
+\\(\mathcal{I}(P)\\) to be the set of independence assertions of the form
+\\((X \perp Y | Z)\\) that hold in \\(P\\).
 
-  Let \\(P\\) be a distribution over \\(\mathcal{X}\\). We define
-  \\(\mathcal{I}(P)\\) to be the set of independence assertions of the form
-  \\((X \perp Y | Z)\\) that hold in \\(P\\).
+Now, we need to show that \\(\mathcal{I}\_l(G) \subseteq \mathcal{I}(P)\\).
 
-  Now, we need to show that \\(\mathcal{I}\_l(G) \subseteq \mathcal{I}(P)\\).
+Let \\(K\\) be any graph object associated with a set of independencies
+\\(\mathcal{I}(K)\\). We say that \\(K\\) is an I-map for a set of
+independencies \\(\mathcal{I}\\) if \\(\mathcal{I}(K) \subseteq
+\mathcal{I}\\).
 
-  Let \\(K\\) be any graph object associated with a set of independencies
-  \\(\mathcal{I}(K)\\). We say that \\(K\\) is an I-map for a set of
-  independencies \\(\mathcal{I}\\) if \\(\mathcal{I}(K) \subseteq
-  \mathcal{I}\\).
+Now, we can say we need to show that \\(G\\) is an I-map for \\(P\\).
 
-  Now, we can say we need to show that \\(G\\) is an I-map for \\(P\\).
+For \\(G\\) to be an I-map for \\(P\\), it is necessary that \\(G\\) does not
+mislead us regarding independencies of \\(P\\): any independence that \\(G\\)
+asserts must also hold in \\(P\\). Conversely, \\(P\\) may have additional
+independencies not reflected in \\(G\\).
 
-  For \\(G\\) to be an I-map for \\(P\\), it is necessary that \\(G\\) does not
-  mislead us regarding independencies of \\(P\\): any independence that \\(G\\)
-  asserts must also hold in \\(P\\). Conversely, \\(P\\) may have additional
-  independencies not reflected in \\(G\\).
+#### I-Map to Factorization {#i-map-to-factorization}
 
-<!--list-separator-->
+A BN structure \\(G\\) encodes a set of conditional independence
+assumptions; every distribution for which \\(G\\) is an I-map must
+satisfy these assumptions.
 
-- I-Map to Factorization
+Consider the joint distribution \\(P(I, D, G, L, S)\\); from the chain
+rule for probability, we can decompose the distribution in the
+following way:
 
-  A BN structure \\(G\\) encodes a set of conditional independence
-  assumptions; every distribution for which \\(G\\) is an I-map must
-  satisfy these assumptions.
+\begin{equation}
+P(I, D, G, L, S) = P(I) P(D|I) P(G|I, D) P(L | I, D, G) P(S | I, D,
+G, L)
+\end{equation}
 
-  Consider the joint distribution \\(P(I, D, G, L, S)\\); from the chain
-  rule for probability, we can decompose the distribution in the
-  following way:
+This decomposition requires no assumptions. We may however be able to
+apply our conditional independence assumptions induced from the BN.
 
-  \begin{equation}
-  P(I, D, G, L, S) = P(I) P(D|I) P(G|I, D) P(L | I, D, G) P(S | I, D,
-  G, L)
-  \end{equation}
+We say that a distribution \\(P\\) over the same space factorizes
+according to a BN graph \\(G\\) if \\(P\\) can be expressed as a product:
 
-  This decomposition requires no assumptions. We may however be able to
-  apply our conditional independence assumptions induced from the BN.
+\begin{equation}
+P(X_1, \dots, X_n) = \prod\_{i=1}^{n} P(X_i | \mathrm{Pa}\_{X_i}^G).
+\end{equation}
 
-  We say that a distribution \\(P\\) over the same space factorizes
-  according to a BN graph \\(G\\) if \\(P\\) can be expressed as a product:
+This equation is called the chain rule for BNs. The individual factors
+\\(P(X_i | \mathrm{Pa}\_{X_i}^G)\\) are called conditional probability
+distributions (CPDs) or local probabilistic models.
 
-  \begin{equation}
-  P(X_1, \dots, X_n) = \prod\_{i=1}^{n} P(X_i | \mathrm{Pa}\_{X_i}^G).
-  \end{equation}
+We can now show that if \\(G\\) is a BN structure over a set of random
+variables \\(X\\), and \\(P\\) be a joint distribution over the same space,
+then if \\(G\\) is an I-map for \\(P\\), \\(P\\) factorizes according to \\(G\\).
 
-  This equation is called the chain rule for BNs. The individual factors
-  \\(P(X_i | \mathrm{Pa}\_{X_i}^G)\\) are called conditional probability
-  distributions (CPDs) or local probabilistic models.
+**Proof**:
 
-  We can now show that if \\(G\\) is a BN structure over a set of random
-  variables \\(X\\), and \\(P\\) be a joint distribution over the same space,
-  then if \\(G\\) is an I-map for \\(P\\), \\(P\\) factorizes according to \\(G\\).
+Assume, without loss of generality, that \\(X_1, \dots, X_n\\) is a
+topological ordering of the variables in \\(X\\) relative to \\(G\\). First,
+we use the chain rule for probabilities:
 
-  **Proof**:
+\begin{equation}
+P(X_1, \dots, X_n) = \prod\_{i=1}^{n}P(X_i | X_1, \dots, X\_{i-1}).
+\end{equation}
 
-  Assume, without loss of generality, that \\(X_1, \dots, X_n\\) is a
-  topological ordering of the variables in \\(X\\) relative to \\(G\\). First,
-  we use the chain rule for probabilities:
+Now consider one of the factors \\(P(X_i|X_1, \dots, X\_{i-1})\\). As \\(G\\)
+is an I-map for \\(P\\), we have \\((X_i \perp \mathrm{ND}\_{X_i} |
+\mathrm{Pa}\_{X_i}^G) \in I(P)\\). By assumption, all of \\(X_i\\)'s parents
+are in the set \\(X_1, \dots, X\_{i-1}\\). Furthermore, none of \\(X_i\\)'s
+descendants can possibly be in the set. Hence
 
-  \begin{equation}
-  P(X_1, \dots, X_n) = \prod\_{i=1}^{n}P(X_i | X_1, \dots, X\_{i-1}).
-  \end{equation}
+\begin{equation}
+\left\\{ X_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X_i} \in \mathbf{Z}
+\end{equation}
 
-  Now consider one of the factors \\(P(X_i|X_1, \dots, X\_{i-1})\\). As \\(G\\)
-  is an I-map for \\(P\\), we have \\((X_i \perp \mathrm{ND}\_{X_i} |
-  \mathrm{Pa}\_{X_i}^G) \in I(P)\\). By assumption, all of \\(X_i\\)'s parents
-  are in the set \\(X_1, \dots, X\_{i-1}\\). Furthermore, none of \\(X_i\\)'s
-  descendants can possibly be in the set. Hence
+where \\(\mathbf{Z} \in \mathrm{ND}\_{X_i}\\). Form the local
+independencies for \\(X_i\\) and from the position property it follows
+that \\(X_i \perp \mathbf{Z} | \mathrm{Pa}\_{X_i}\\). Hence \\(P(X_i| X_1,
+\dots X\_{i-1}) = P(X_i | \mathrm{Pa}\_{X_i})\\).
 
-  \begin{equation}
-  \left\\{ X_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X_i} \in \mathbf{Z}
-  \end{equation}
+Applying this transformation to all of the factors in the chain rule
+decomposition gives the desired result.
 
-  where \\(\mathbf{Z} \in \mathrm{ND}\_{X_i}\\). Form the local
-  independencies for \\(X_i\\) and from the position property it follows
-  that \\(X_i \perp \mathbf{Z} | \mathrm{Pa}\_{X_i}\\). Hence \\(P(X_i| X_1,
-  \dots X\_{i-1}) = P(X_i | \mathrm{Pa}\_{X_i})\\).
+#### Factorization to I-map {#factorization-to-i-map}
 
-  Applying this transformation to all of the factors in the chain rule
-  decomposition gives the desired result.
-
-<!--list-separator-->
-
-- Factorization to I-map
-
-  This is simple to prove, by manipulation of probabilities.
+This is simple to prove, by manipulation of probabilities.
 
 ### Independencies in Graphs {#independencies-in-graphs}
 
@@ -236,109 +229,105 @@ structure.
 The immediate question that arises is whether there exist independence
 properties that we can read off directly from \\(G\\).
 
-<!--list-separator-->
+#### D-separation {#d-separation}
 
-- D-separation
+We want to be able to guarantee that an independence \\((\mathbf{X}
+\perp \mathbf{Y} | \mathbf{Z})\\), holds in a distribution associated
+with a BN structure \\(G\\). It helps to consider its converse: "Can we
+imagine a case where it does not?"
 
-  We want to be able to guarantee that an independence \\((\mathbf{X}
-  \perp \mathbf{Y} | \mathbf{Z})\\), holds in a distribution associated
-  with a BN structure \\(G\\). It helps to consider its converse: "Can we
-  imagine a case where it does not?"
+**Direct Connection**
 
-  **Direct Connection**
+If \\(X \rightarrow Y\\), then we can construct a distribution such that
+\\(X\\) and \\(Y\\) are correlated regardless of any evidence about of the
+other variables in the network. (e.g. \\(Val(X) = Val(Y)\\))
 
-  If \\(X \rightarrow Y\\), then we can construct a distribution such that
-  \\(X\\) and \\(Y\\) are correlated regardless of any evidence about of the
-  other variables in the network. (e.g. \\(Val(X) = Val(Y)\\))
+**Indirect Connection**
 
-  **Indirect Connection**
+Consider a 3-node network where \\(X\\) and \\(Z\\) are not directly connected
+but through \\(Y\\). There are four possible 2-edge trails:
 
-  Consider a 3-node network where \\(X\\) and \\(Z\\) are not directly connected
-  but through \\(Y\\). There are four possible 2-edge trails:
+{{< figure src="/ox-hugo/screenshot_2019-02-14_13-04-30.png" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2019-02-14_13-04-30.png" >}}
+We say that Q, W are _d-separated_ when variables \\(O\\) are observed if
+they are not connected by an _active path_. An undirected path in the
+Bayesian network \\(G\\) is called _active_ given observed variables \\(O\\)
+if for every triple of variables \\(X, Y, Z\\) on the path, one of the
+following holds:
 
-  We say that Q, W are _d-separated_ when variables \\(O\\) are observed if
-  they are not connected by an _active path_. An undirected path in the
-  Bayesian network \\(G\\) is called _active_ given observed variables \\(O\\)
-  if for every triple of variables \\(X, Y, Z\\) on the path, one of the
-  following holds:
+Casual trail
+: \\(X \leftarrow Y \leftarrow Z, Y \not\in O\\) active
+iff \\(Y\\) is not observed
 
-  Casual trail
-  : \\(X \leftarrow Y \leftarrow Z, Y \not\in O\\) active
-  iff \\(Y\\) is not observed
+Evidential trail
+: \\(X \rightarrow Y \rightarrow Z, Y \not\in O\\)
+active iff \\(Y\\) is not observed
 
-  Evidential trail
-  : \\(X \rightarrow Y \rightarrow Z, Y \not\in O\\)
-  active iff \\(Y\\) is not observed
+Common cause
+: \\(X \leftarrow Y \rightarrow Z, Y \not\in O\\) active
+iff \\(Y\\) is not observed
 
-  Common cause
-  : \\(X \leftarrow Y \rightarrow Z, Y \not\in O\\) active
-  iff \\(Y\\) is not observed
+Common effect
+: \\(X \rightarrow Y \leftarrow Z, Y \text{ or any
+descendants} \in O\\) active iff either \\(Y\\) or one of
+\\(Y\\)'s descendants is observed
 
-  Common effect
-  : \\(X \rightarrow Y \leftarrow Z, Y \text{ or any
-  descendants} \in O\\) active iff either \\(Y\\) or one of
-  \\(Y\\)'s descendants is observed
+Consider the general trail \\(X_1 \rightleftharpoons X_2
+\rightleftharpoons \dots \rightleftharpoons X_n\\). Let \\(\mathbf{Z}\\) be a
+subset of observed variables. Then the trail is active given
+\\(\mathbf{Z}\\) if:
 
-  Consider the general trail \\(X_1 \rightleftharpoons X_2
-  \rightleftharpoons \dots \rightleftharpoons X_n\\). Let \\(\mathbf{Z}\\) be a
-  subset of observed variables. Then the trail is active given
-  \\(\mathbf{Z}\\) if:
+- Whenever we have a v-structure \\(X\_{i-1} \rightarrow X_i \leftarrow
+  X\_{i+1}\\), then \\(X_i\\) or one of its descendants are in \\(\mathbf{Z}\\);
+- no other node along the trail is in \\(\mathbf{Z}\\).
 
-  - Whenever we have a v-structure \\(X\_{i-1} \rightarrow X_i \leftarrow
-    X\_{i+1}\\), then \\(X_i\\) or one of its descendants are in \\(\mathbf{Z}\\);
-  - no other node along the trail is in \\(\mathbf{Z}\\).
+Let \\(\mathbf{X}, \mathbf{Y}, \mathbf{Z}\\) be three sets of nodes in
+\\(\mathcal{G}\\). We say that \\(\mathbf{X}\\) and \\(\mathbf{Y}\\) are
+d-separated given \\(\mathbf{Z}\\), denoted
+\\(\mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z})\\),
+if there is no active trail between any node \\(X \in \mathbf{X}\\), and
+\\(Y \in \mathbf{Y}\\) given \\(\mathbf{Z}\\). We use
+\\(\mathcal{I}(\mathcal{G})\\) to denote this set of independencies that
+correspond to d-separation:
 
-  Let \\(\mathbf{X}, \mathbf{Y}, \mathbf{Z}\\) be three sets of nodes in
-  \\(\mathcal{G}\\). We say that \\(\mathbf{X}\\) and \\(\mathbf{Y}\\) are
-  d-separated given \\(\mathbf{Z}\\), denoted
-  \\(\mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z})\\),
-  if there is no active trail between any node \\(X \in \mathbf{X}\\), and
-  \\(Y \in \mathbf{Y}\\) given \\(\mathbf{Z}\\). We use
-  \\(\mathcal{I}(\mathcal{G})\\) to denote this set of independencies that
-  correspond to d-separation:
+\begin{equation}
+\mathcal{I}(\mathcal{G}) = \left\\{ (\mathbf{X} \perp \mathbf{Y} |
+\mathbf{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z}) \right\\}
+\end{equation}
 
-  \begin{equation}
-  \mathcal{I}(\mathcal{G}) = \left\\{ (\mathbf{X} \perp \mathbf{Y} |
-  \mathbf{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z}) \right\\}
-  \end{equation}
+This set is also called the set of _global Markov independencies_. These
+independencies are precisely those that are guaranteed to hold for
+every distribution over \\(G\\).
 
-  This set is also called the set of _global Markov independencies_. These
-  independencies are precisely those that are guaranteed to hold for
-  every distribution over \\(G\\).
+A nice tutorial on d-separation can be found [here](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html).
 
-  A nice tutorial on d-separation can be found [here](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html).
+#### Markov Blanket {#markov-blanket}
 
-<!--list-separator-->
+Consider a joint distribution \\(p(X_1, \dots, x_D)\\) represented by a
+directed graph having \\(D\\) nodes. Consider the conditional distribution
+of a particular node with variables \\(x_i\\) conditioned on all the
+remaining variables \\(x\_{j \ne i}\\). We have:
 
-- Markov Blanket
+\begin{equation}
+p(x_i | x\_{\\{j \ne i\\}}) = \frac{p(x_1, \dots, x_D)}{\int p(x_1,
+\dots, x_D) dx_i} = \frac{\prod\_{k}p(x_k | \textrm{pa}\_k)}{\prod_k
+p(x_k | \textrm{pa}\_k)dx_i}
+\end{equation}
 
-  Consider a joint distribution \\(p(X_1, \dots, x_D)\\) represented by a
-  directed graph having \\(D\\) nodes. Consider the conditional distribution
-  of a particular node with variables \\(x_i\\) conditioned on all the
-  remaining variables \\(x\_{j \ne i}\\). We have:
+We observe that any factor \\(p(x_k | \textrm{pa}\_k)\\) that does not have
+any functional dependence on \\(x_i\\) can be taken outside the integral,
+and will therefore cancel between the numerator and the denominator.
+The only factors that will remain are the conditional distribution
+\\(p(x_i | \textrm{pa}\_i)\\) for the node \\(x_i\\) itself, and conditional
+distributions for any nodes \\(x_k\\) such that node \\(x_i\\) is in teh
+conditioning set of \\(p(x_k | \textrm{pa}\_k)\\), in other words for which
+\\(x_i\\) is a parent of \\(x_k\\). The conditional \\(p(x_i | \textrm{pa}\_i)\\)
+will depend on the parents of node \\(x_i\\), and the conditionals
+\\(p(x_k | \textrm{pa}\_k)\\) will depend on nthe children of \\(x_i\\), as
+well as the co-parents: variables corresponding to parents of node
+\\(x_k\\) other than \\(x_i\\). This set of nodes is called the _Markov Blanket_.
 
-  \begin{equation}
-  p(x_i | x\_{\\{j \ne i\\}}) = \frac{p(x_1, \dots, x_D)}{\int p(x_1,
-  \dots, x_D) dx_i} = \frac{\prod\_{k}p(x_k | \textrm{pa}\_k)}{\prod_k
-  p(x_k | \textrm{pa}\_k)dx_i}
-  \end{equation}
-
-  We observe that any factor \\(p(x_k | \textrm{pa}\_k)\\) that does not have
-  any functional dependence on \\(x_i\\) can be taken outside the integral,
-  and will therefore cancel between the numerator and the denominator.
-  The only factors that will remain are the conditional distribution
-  \\(p(x_i | \textrm{pa}\_i)\\) for the node \\(x_i\\) itself, and conditional
-  distributions for any nodes \\(x_k\\) such that node \\(x_i\\) is in teh
-  conditioning set of \\(p(x_k | \textrm{pa}\_k)\\), in other words for which
-  \\(x_i\\) is a parent of \\(x_k\\). The conditional \\(p(x_i | \textrm{pa}\_i)\\)
-  will depend on the parents of node \\(x_i\\), and the conditionals
-  \\(p(x_k | \textrm{pa}\_k)\\) will depend on nthe children of \\(x_i\\), as
-  well as the co-parents: variables corresponding to parents of node
-  \\(x_k\\) other than \\(x_i\\). This set of nodes is called the _Markov Blanket_.
-
-  {{< figure src="/ox-hugo/240px-Diagram_of_a_Markov_blanket.svg_2019-03-28_11-26-58.png" caption="Figure 3: An illustration of the Markov Blanket. ([Source](https://en.wikipedia.org/wiki/Markov%5Fblanket))" >}}
+{{< figure src="/ox-hugo/240px-Diagram_of_a_Markov_blanket.svg_2019-03-28_11-26-58.png" caption="Figure 3: An illustration of the Markov Blanket. ([Source](https://en.wikipedia.org/wiki/Markov%5Fblanket))" >}}
 
 ### Soundness and Completeness {#soundness-and-completeness}
 
@@ -447,57 +436,53 @@ answering this question is an important contextual exercise, that h
 helps in understanding the process of constructing a BN that
 represents our model of the world.
 
-<!--list-separator-->
+#### Minimal I-maps {#minimal-i-maps}
 
-- Minimal I-maps
+One approach to finding a graph that represents a distribution \\(p\\) is
+simply to take any graph that is an I-map for \\(P\\). However, a complete
+graph is an I-map for any distribution, but it does not reveal any
+independencies in the distribution. This intuition leads us to the
+definition of a minimal I-map:
 
-  One approach to finding a graph that represents a distribution \\(p\\) is
-  simply to take any graph that is an I-map for \\(P\\). However, a complete
-  graph is an I-map for any distribution, but it does not reveal any
-  independencies in the distribution. This intuition leads us to the
-  definition of a minimal I-map:
+<div class="definition">
+  <div></div>
 
-   <div class="definition">
-     <div></div>
+A graph \\(K\\) is a minimal I-map for a set of independencies \\(i\\) if it
+is an I-map for \\(I\\), and if the removal of even a single edge from \\(K\\)
+renders it not an I-map.
 
-  A graph \\(K\\) is a minimal I-map for a set of independencies \\(i\\) if it
-  is an I-map for \\(I\\), and if the removal of even a single edge from \\(K\\)
-  renders it not an I-map.
+</div>
 
-   </div>
+To obtain a minimal I-map we simply follow a natural algorithm that
+arises through the factorization theorem. Note that the minimal I-map
+is not necessarily unique in this construction.
 
-  To obtain a minimal I-map we simply follow a natural algorithm that
-  arises through the factorization theorem. Note that the minimal I-map
-  is not necessarily unique in this construction.
+{{< figure src="/ox-hugo/screenshot_2019-02-14_13-43-46.png" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2019-02-14_13-43-46.png" >}}
+Minimal I-maps fail to capture all the independencies that hold in the
+distribution. Hence, that \\(G\\) is a minimal I-map for \\(P\\) is far from a
+guarantee that \\(G\\) captures the independence structure in \\(P\\).
 
-  Minimal I-maps fail to capture all the independencies that hold in the
-  distribution. Hence, that \\(G\\) is a minimal I-map for \\(P\\) is far from a
-  guarantee that \\(G\\) captures the independence structure in \\(P\\).
+#### Perfect Maps {#perfect-maps}
 
-<!--list-separator-->
+<div class="definition">
+  <div></div>
 
-- Perfect Maps
+A graph \\(K\\) is a P-map for a distribution \\(P\\), for a set of
+independencies \\(I\\) if we have that \\(I(K) = I\\). We say that \\(K\\) is a
+perfect map for \\(P\\) if \\(I(K) = I(P)\\).
 
-   <div class="definition">
-     <div></div>
+</div>
 
-  A graph \\(K\\) is a P-map for a distribution \\(P\\), for a set of
-  independencies \\(I\\) if we have that \\(I(K) = I\\). We say that \\(K\\) is a
-  perfect map for \\(P\\) if \\(I(K) = I(P)\\).
-
-   </div>
-
-  Unfortunately, not every distribution has a perfect map. There exists
-  an algorithm for finding the DAG representing the P-map for a
-  distribution of a P-map if it exists, but is quite involved. See
-  ([Koller, Friedman, and Bach, n.d.](#orgbe63aae)).
+Unfortunately, not every distribution has a perfect map. There exists
+an algorithm for finding the DAG representing the P-map for a
+distribution of a P-map if it exists, but is quite involved. See
+([Koller, Friedman, and Bach, n.d.](#org756c79d)).
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
 (The bulk of the material is from Murphy's book
-([Murphy, n.d.](#orgdce798c)))
+([Murphy, n.d.](#orgf1ecabd)))
 
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -737,9 +722,9 @@ However, CRF requires labeled training data, and are slower to train.
 
 ## Bibliography {#bibliography}
 
-<a id="orgbe63aae"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
+<a id="org756c79d"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
 
-<a id="orgdce798c"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
+<a id="orgf1ecabd"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
 
 ## Resources {#resources}
 

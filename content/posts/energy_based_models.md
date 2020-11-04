@@ -1,7 +1,6 @@
 +++
 title = "Energy-based Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:02+08:00
 slug = "energy_based_models"
 draft = false
 +++
@@ -10,7 +9,7 @@ The energy surface is a "contrast function" that takes low values on the data ma
 
 It is easy to make energy low on seen samples, but more difficult to make energy high on unseen samples.
 
-We can also reinterpret [Principle Component Analyses]({{< relref "principle_component_analyses" >}}) and [K-means]({{< relref "k_means" >}}) as energy-based models.
+We can also reinterpret Principle Component Analyses and [K-means]({{<relref "k_means.md" >}}) as energy-based models.
 
 ## Strategies to Shape the Energy Function {#strategies-to-shape-the-energy-function}
 

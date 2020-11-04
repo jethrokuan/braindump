@@ -1,7 +1,6 @@
 +++
 title = "Blockchain"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:06+08:00
 draft = false
 +++
 
@@ -32,9 +31,7 @@ draft = false
 - Permissions-based
 - Uses Byzantine Fault Tolerance (BFT)
 
-<!--list-separator-->
-
-- <span class="org-todo todo TODO">TODO</span> See 2 General Problem
+#### <span class="org-todo todo TODO">TODO</span> See 2 General Problem {#see-2-general-problem}
 
 ### Stellar {#stellar}
 

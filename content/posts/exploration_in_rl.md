@@ -1,11 +1,10 @@
 +++
 title = "Exploration In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:59+08:00
 draft = false
 +++
 
-In [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}), exploration is important where rewards
+In [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}}), exploration is important where rewards
 are sparse, and not a direct indication of how good an action is. Some
 environments where good exploration is necessary is Montezuma's
 revenge, where finishing a game only weakly correlates with rewarding
@@ -83,7 +82,7 @@ a = \mathrm{argmax} \hat{\mu}\_a + \sqrt{\frac{2 \ln T}{N(a)}}
 
 ## Extending Exploration to RL {#extending-exploration-to-rl}
 
-### Count-based exploration ([Bellemare et al., n.d.](#orga2c223e)) {#count-based-exploration--bellemare-et-al-dot-n-dot-d-dot--orga2c223e}
+### Count-based exploration ([Bellemare et al., n.d.](#org52abded)) {#count-based-exploration--bellemare-et-al-dot-n-dot-d-dot--org52abded}
 
 Use pseudo-counts:
 
@@ -95,4 +94,4 @@ There are many choices for the bonus.
 
 ## Bibliography {#bibliography}
 
-<a id="orga2c223e"></a>Bellemare, Marc, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. n.d. “Unifying Count-Based Exploration and Intrinsic Motivation.” In _Advances in Neural Information Processing Systems 29_, edited by D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, 1471–79. Curran Associates, Inc. <http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf>.
+<a id="org52abded"></a>Bellemare, Marc, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. n.d. “Unifying Count-Based Exploration and Intrinsic Motivation.” In _Advances in Neural Information Processing Systems 29_, edited by D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, 1471–79. Curran Associates, Inc. <http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf>.

@@ -1,13 +1,12 @@
 +++
 title = "Multi-modal Alignment"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:56+08:00
 slug = "multimodal_alignment"
 draft = false
 +++
 
 Multi-modal alignment is a sub-challenge in [Multi-modal Machine
-Learning]({{< relref "multimodal_machine_learning" >}}), involving the finding of relationships and correspondences
+Learning]({{<relref "multimodal_machine_learning.md" >}}), involving the finding of relationships and correspondences
 between sub-components of instances from two-or-more modalities. For
 example, we want to find areas of the image corresponding to the
 caption's words or phrases.
@@ -22,7 +21,7 @@ Explicit alignment algorithms can be further split into unsupervised
 and weakly-supervised algorithms.
 
 The unsupervised approaches do not require or use any direct alignment
-labels. [Dynamic Time Warping]({{< relref "dynamic_time_warping" >}}) is a dynamic progamming approach to align
+labels. [Dynamic Time Warping]({{<relref "dynamic_time_warping.md" >}}) is a dynamic progamming approach to align
 multi-view time series.
 
 ## Implicit Alignment {#implicit-alignment}

@@ -8,7 +8,7 @@ The energy surface is a "contrast function" that takes low values on the data ma
 
 It is easy to make energy low on seen samples, but more difficult to make energy high on unseen samples.
 
-We can also reinterpret [[id:d0fdb08f-6736-4e59-93d1-5d07c4c9e48a][Principle Component Analyses]] and [[id:6ae9a254-5d85-4497-b80a-f98e54fd9d4d][K-means]] as energy-based models.
+We can also reinterpret Principle Component Analyses and [[id:6ae9a254-5d85-4497-b80a-f98e54fd9d4d][K-means]] as energy-based models.
 
 * Strategies to Shape the Energy Function
 :PROPERTIES:

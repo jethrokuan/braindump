@@ -1,7 +1,6 @@
 +++
 title = "If You're Not Writing a Programming Language, Don't Use A Programming Language - Leslie Lamport"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:03+08:00
 draft = false
 +++
 
@@ -9,7 +8,7 @@ title
 : If You're Not Writing a Programming Language, Don't Use A Programming Language
 
 speaker
-: [Leslie Lamport]({{< relref "leslie_lamport" >}})
+: [Leslie Lamport]({{<relref "leslie_lamport.md" >}})
 
 date
 : <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-01-16 Thu&gt;</span></span>
@@ -100,7 +99,7 @@ The next iteration of Virtuoso used the [TLA+] abstraction.
 
 Better algorithm led to 10x size decrease in Virtuoso.
 
-### Example 2: Amazon Web Services ([Newcombe et al., n.d.](#orgcad5733)) {#example-2-amazon-web-services--newcombe-et-al-dot-n-dot-d-dot--orgcad5733}
+### Example 2: Amazon Web Services ([Newcombe et al., n.d.](#org2846e3c)) {#example-2-amazon-web-services--newcombe-et-al-dot-n-dot-d-dot--org2846e3c}
 
 AWS uses formal methods (TLA+). Key insights:
 
@@ -121,4 +120,4 @@ Use TLA+.
 
 ## Bibliography {#bibliography}
 
-<a id="orgcad5733"></a>Newcombe, Chris, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, and Michael Deardeuff. n.d. “How Amazon Web Services Uses Formal Methods” 58 (4):66–73. <https://doi.org/10.1145/2699417>.
+<a id="org2846e3c"></a>Newcombe, Chris, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, and Michael Deardeuff. n.d. “How Amazon Web Services Uses Formal Methods” 58 (4):66–73. <https://doi.org/10.1145/2699417>.

@@ -37,4 +37,4 @@ Given a set of $N$ input events $\left\{\left(x_{i}, y_{i}, t_{i}, p_{i}\right)\
 
   where $k_{b}(a)$ is the bilinear sampling kernel.
 
-  bibliography:../biblio.bib
+  bibliography:biblio.bib

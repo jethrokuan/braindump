@@ -1,6 +1,5 @@
 +++
-title = "Finance"
+title = "Local Registration"
 author = ["Jethro Kuan"]
-slug = "finance"
 draft = false
 +++

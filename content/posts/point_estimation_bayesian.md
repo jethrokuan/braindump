@@ -1,12 +1,11 @@
 +++
 title = "Point Estimation in Bayesian Statistics"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:11+08:00
 draft = false
 +++
 
 tags
-: [Bayesian Statistics]({{< relref "bayesian_statistics" >}})
+: [Bayesian Statistics]({{<relref "bayesian_statistics.md" >}})
 
 Suppose we have a posterior distribution over parameters \\(\theta\\).
 Sometimes, we would like to obtain a point estimate \\(\hat{\theta}\\) of

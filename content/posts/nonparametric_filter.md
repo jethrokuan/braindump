@@ -1,12 +1,11 @@
 +++
 title = "Non-parametric Filters"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:41+08:00
 draft = false
 +++
 
 tags
-: [Bayes Filter]({{< relref "bayes_filter" >}}), [Particle Filter]({{< relref "particle_filter" >}}), [Histogram Filter]({{< relref "histogram_filter" >}})
+: [Bayes Filter]({{<relref "bayes_filter.md" >}}), [Particle Filter]({{<relref "particle_filter.md" >}}), [Histogram Filter]({{<relref "histogram_filter.md" >}})
 
 Non-parametric filters do not make strong assumptions on the posterior
 density, making them well suited for complex, multi-modal beliefs. The

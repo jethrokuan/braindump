@@ -1,12 +1,11 @@
 +++
 title = "Velocity Motion Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:39+08:00
 draft = false
 +++
 
 tags
-: [Odometry Motion Model]({{< relref "odometry_motion_model" >}}), [Motion Model With Maps]({{< relref "motion_model_with_maps" >}})
+: [Odometry Motion Model]({{<relref "odometry_motion_model.md" >}}), [Motion Model With Maps]({{<relref "motion_model_with_maps.md" >}})
 
 The velocity motion model assumes that the robot is controlled through
 2 velocities: rotational and translational velocity:

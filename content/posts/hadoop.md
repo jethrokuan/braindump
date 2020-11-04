@@ -1,14 +1,13 @@
 +++
 title = "Hadoop"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:46+08:00
 draft = false
 +++
 
 Hadoop provides tools for working with big data, by raising the _level
 of abstraction_.
 
-Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#orge105e62))
+Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#org6460a67))
 
 ## Data Storage and Analysis {#data-storage-and-analysis}
 
@@ -157,170 +156,152 @@ expense of latency. Hence, HDFS is ill-suited for:
 
 ### HDFS Concepts {#hdfs-concepts}
 
-<!--list-separator-->
+#### Block Size {#block-size}
 
-- Block Size
+The block size is the minimum amount of data a disk can read or write.
+HDFS uses a relatively large block size (128MB by default). Unlike a
+filesystem for a single disk, a file in HDFS that is smaller than a
+single block does not occupy a full block's worth of underlying
+storage. HDFS block sizes are large compared to regular disk blocks to
+minimize the cost of seeks.
 
-  The block size is the minimum amount of data a disk can read or write.
-  HDFS uses a relatively large block size (128MB by default). Unlike a
-  filesystem for a single disk, a file in HDFS that is smaller than a
-  single block does not occupy a full block's worth of underlying
-  storage. HDFS block sizes are large compared to regular disk blocks to
-  minimize the cost of seeks.
+Having a block abstraction for a distributed filesystem brings several
+benefits. First, it allows a file to be larger than any single disk in
+the network, since blocks can be stored in any disk. Second, it
+simplifies the storage subsystem. Third, it fits well with
+replication, for providing fault tolerance and availability. A block
+that is unavailable can be replicated from alternative locations.
 
-  Having a block abstraction for a distributed filesystem brings several
-  benefits. First, it allows a file to be larger than any single disk in
-  the network, since blocks can be stored in any disk. Second, it
-  simplifies the storage subsystem. Third, it fits well with
-  replication, for providing fault tolerance and availability. A block
-  that is unavailable can be replicated from alternative locations.
+```bash
+  hadoop fs fsck / -files -blocks
+```
 
-  ```bash
-    hadoop fs fsck / -files -blocks
-  ```
+will list the blocks that make up each file in the filesystem.
 
-  will list the blocks that make up each file in the filesystem.
+#### Namenodes and Datanodes {#namenodes-and-datanodes}
 
-<!--list-separator-->
+The HDFS cluster has two types of nodes operating in a master-worker
+pattern: a namenode (the master) and a number of datanodes (workers).
+The namenode manages the filesystem namespace. It maintains the
+filesystem tree, and the metadata for all the files and directories in
+the tree. This information is persisted in the form of 2 files: the
+namespace image and the edit log. The namenode knows the datanodes on
+which all the blocks for a given file are located. This data is not
+persisted; it is reconstructed from datanodes when the system starts.
 
-- Namenodes and Datanodes
+A client accesses the filesystem on behalf of the user by
+communicating with the namenode and datanodes. The filesystem
+interface is similar to a Portable Operating System Interface (POSIX).
 
-  The HDFS cluster has two types of nodes operating in a master-worker
-  pattern: a namenode (the master) and a number of datanodes (workers).
-  The namenode manages the filesystem namespace. It maintains the
-  filesystem tree, and the metadata for all the files and directories in
-  the tree. This information is persisted in the form of 2 files: the
-  namespace image and the edit log. The namenode knows the datanodes on
-  which all the blocks for a given file are located. This data is not
-  persisted; it is reconstructed from datanodes when the system starts.
+Datanodes store and retrieve blocks when they are told to (by clients
+or the namenode), and report back to the namenode periodically about
+the blocks they are storing.
 
-  A client accesses the filesystem on behalf of the user by
-  communicating with the namenode and datanodes. The filesystem
-  interface is similar to a Portable Operating System Interface (POSIX).
+If the namenode is obliterated, all files on the filesystem would be
+lost, since there is no way to reconstruct the original files, given
+that this information was stored on the main node. To make the
+namenode resilient to failure, the files are backed up onto multiple
+filesystems. A secondary namenode that merges the namespace image with
+the edit log (to prevent the edit log from growing too large), runs on
+a separate machine. The state of the secondary namenode always lags
+behind the primary. Hence, it case of total primary namenode failure,
+the usual action is to copy the namenode's metadata files that are on
+a NFS to secondary, and run the secondary node as the primary.
 
-  Datanodes store and retrieve blocks when they are told to (by clients
-  or the namenode), and report back to the namenode periodically about
-  the blocks they are storing.
+#### Block Caching {#block-caching}
 
-  If the namenode is obliterated, all files on the filesystem would be
-  lost, since there is no way to reconstruct the original files, given
-  that this information was stored on the main node. To make the
-  namenode resilient to failure, the files are backed up onto multiple
-  filesystems. A secondary namenode that merges the namespace image with
-  the edit log (to prevent the edit log from growing too large), runs on
-  a separate machine. The state of the secondary namenode always lags
-  behind the primary. Hence, it case of total primary namenode failure,
-  the usual action is to copy the namenode's metadata files that are on
-  a NFS to secondary, and run the secondary node as the primary.
+Frequently accessed blocks may be explicitly cached in the datanode's
+memory, in an off-heap block cache. By default, a block is cached only
+in one datanode's memory, but this can be configured on a per-file
+basis. Job schedulers can take advantage of the cached blocks by
+running tasks on the datanode where the block is cached. A small
+lookup table used in a join is a good candidate for caching.
 
-<!--list-separator-->
+#### HDFS Federation {#hdfs-federation}
 
-- Block Caching
+Introduced in the 2.x release series, HDFS federation allows a custer
+to scale by adding namenodes. This is to scale namenodes, which grow
+quickly in size because it has to keep a reference to every file and
+block in the filesystem. To access a federated HDF cluster, clients
+use client-side mount tables to map file paths to namenodes. This is
+managed in configuration using `ViewFileSystem` and the `viewfs://` URLs.
 
-  Frequently accessed blocks may be explicitly cached in the datanode's
-  memory, in an off-heap block cache. By default, a block is cached only
-  in one datanode's memory, but this can be configured on a per-file
-  basis. Job schedulers can take advantage of the cached blocks by
-  running tasks on the datanode where the block is cached. A small
-  lookup table used in a join is a good candidate for caching.
+Under federation, each namenode manages a namespace volume, which is
+made up of the metadata for the namespace, and a block pool containing
+all the blocks for the files in the namespace. Namespace volumes are
+independent of each other, which means namenodes do not communicate
+with one another, and failure of one namenode does not affect teh
+availibility of the namespaces managed by other namenodes. Datanodes
+register with each namenode in the cluster and store blocks from
+multiple block pools.
 
-<!--list-separator-->
+#### HDFS High Availability {#hdfs-high-availability}
 
-- HDFS Federation
+When a namenode fails, recovery can take a long time: an administrator
+needs to start a new primary namenode, load the namespace image,
+replay the edit log, and receive block reports from the datanodes.
 
-  Introduced in the 2.x release series, HDFS federation allows a custer
-  to scale by adding namenodes. This is to scale namenodes, which grow
-  quickly in size because it has to keep a reference to every file and
-  block in the filesystem. To access a federated HDF cluster, clients
-  use client-side mount tables to map file paths to namenodes. This is
-  managed in configuration using `ViewFileSystem` and the `viewfs://` URLs.
+Hadoop 2 added HDFS high availibility. A pair of namenodes are in
+active-standby configuration. In the event of failure, the standby
+namenode takes over as the primary namenode without service
+interruption.
 
-  Under federation, each namenode manages a namespace volume, which is
-  made up of the metadata for the namespace, and a block pool containing
-  all the blocks for the files in the namespace. Namespace volumes are
-  independent of each other, which means namenodes do not communicate
-  with one another, and failure of one namenode does not affect teh
-  availibility of the namespaces managed by other namenodes. Datanodes
-  register with each namenode in the cluster and store blocks from
-  multiple block pools.
+For this to happen, architectural changes were needed:
 
-<!--list-separator-->
+1.  The namenodes must use highly-available shared storage to share the
+    edit log
+2.  Datanodes must send block reports to both namenodes
+3.  Clients must be configured to handle namenode failover
+4.  The secondary namenode's role is subsumed by the standby, which
+    takes periodic checkpoints of the active namenode's namespace
 
-- HDFS High Availability
+There are 2 choices for highly-available shared storage: an NFS filer,
+or a quorum journal manager (QJM). the QJM is a dedicated HDFS
+implementation, designed for the sole purpose of a highly available
+edit log, and is the recommended choice. The QJM runs as a group of
+journal nodes, and each edit must be written to a majority of the
+journal nodes. Typically, there are 3 journal nodes, so the system can
+tolerate the loss of 1 of them. This is similar to the way ZooKeeper
+works, but QJM does not use ZooKeeper underneath.
 
-  When a namenode fails, recovery can take a long time: an administrator
-  needs to start a new primary namenode, load the namespace image,
-  replay the edit log, and receive block reports from the datanodes.
+#### Failover and Fencing {#failover-and-fencing}
 
-  Hadoop 2 added HDFS high availibility. A pair of namenodes are in
-  active-standby configuration. In the event of failure, the standby
-  namenode takes over as the primary namenode without service
-  interruption.
+The transition from the active namenode to the standby is managed by a
+new entity in the system called the _failover controller_. There are
+various failover controllers but the system called the failover
+controller. There are varoious failover controllers, but the default
+implementation uses ZooKeeper to ensure that only one namenode is
+active. Each namenode runs a lightweight failover controller process
+whose job is to monitor its namenode for failures and trigger a
+failover should a namenode fail.
 
-  For this to happen, architectural changes were needed:
+The QJM only allows one namenode to write to the edit log at one time;
+however, it is still possible for the previously active namenode to
+serve stale read requests to clients, so setting up an SSH fencing
+command that will kill the namenode's process is a good idea. Stronger
+fencing methods are required with the NFS filer, since it is not
+possible to only allow one namenode to write at a time.
 
-  1.  The namenodes must use highly-available shared storage to share the
-      edit log
-  2.  Datanodes must send block reports to both namenodes
-  3.  Clients must be configured to handle namenode failover
-  4.  The secondary namenode's role is subsumed by the standby, which
-      takes periodic checkpoints of the active namenode's namespace
+Client failover is handled transparently by the client library. The
+simplest implementation uses client-side configuration to control
+failover.
 
-  There are 2 choices for highly-available shared storage: an NFS filer,
-  or a quorum journal manager (QJM). the QJM is a dedicated HDFS
-  implementation, designed for the sole purpose of a highly available
-  edit log, and is the recommended choice. The QJM runs as a group of
-  journal nodes, and each edit must be written to a majority of the
-  journal nodes. Typically, there are 3 journal nodes, so the system can
-  tolerate the loss of 1 of them. This is similar to the way ZooKeeper
-  works, but QJM does not use ZooKeeper underneath.
+#### Hadoop FileSystem Abstractions {#hadoop-filesystem-abstractions}
 
-<!--list-separator-->
+HDFS is just one implementation of the filesystem abstraction. There
+are several implementations, examples of which are listed below:
 
-- Failover and Fencing
+{{< figure src="/ox-hugo/screenshot_2019-06-06_15-50-35.png" caption="Figure 2: Hadoop filesystems" >}}
 
-  The transition from the active namenode to the standby is managed by a
-  new entity in the system called the _failover controller_. There are
-  various failover controllers but the system called the failover
-  controller. There are varoious failover controllers, but the default
-  implementation uses ZooKeeper to ensure that only one namenode is
-  active. Each namenode runs a lightweight failover controller process
-  whose job is to monitor its namenode for failures and trigger a
-  failover should a namenode fail.
+#### File writes {#file-writes}
 
-  The QJM only allows one namenode to write to the edit log at one time;
-  however, it is still possible for the previously active namenode to
-  serve stale read requests to clients, so setting up an SSH fencing
-  command that will kill the namenode's process is a good idea. Stronger
-  fencing methods are required with the NFS filer, since it is not
-  possible to only allow one namenode to write at a time.
+{{< figure src="/ox-hugo/screenshot_2019-06-06_16-28-05.png" caption="Figure 3: A client writing data to HDFS" >}}
 
-  Client failover is handled transparently by the client library. The
-  simplest implementation uses client-side configuration to control
-  failover.
+#### Hadoop distcp {#hadoop-distcp}
 
-<!--list-separator-->
-
-- Hadoop FileSystem Abstractions
-
-  HDFS is just one implementation of the filesystem abstraction. There
-  are several implementations, examples of which are listed below:
-
-  {{< figure src="/ox-hugo/screenshot_2019-06-06_15-50-35.png" caption="Figure 2: Hadoop filesystems" >}}
-
-<!--list-separator-->
-
-- File writes
-
-  {{< figure src="/ox-hugo/screenshot_2019-06-06_16-28-05.png" caption="Figure 3: A client writing data to HDFS" >}}
-
-<!--list-separator-->
-
-- Hadoop distcp
-
-  `distcp` is implemented as a MapReduce job where the work of copying is
-  done by the maps that run in parallel across the cluster. It is an
-  efficient, distributed copy program.
+`distcp` is implemented as a MapReduce job where the work of copying is
+done by the maps that run in parallel across the cluster. It is an
+efficient, distributed copy program.
 
 ## YARN {#yarn}
 
@@ -378,12 +359,12 @@ Instead of storing Thrift structures in the Thrift binary format,
 Parquet uses a data converter to convert Thrift structures into
 Parquet format, a compressed, columnar data representation.
 
-([Kleppmann, n.d.](#org809d1cf))
+([Kleppmann, n.d.](#org0913c77))
 
 ### Parquet's Columnar Storage {#parquet-s-columnar-storage}
 
 Parquet's columnar representation is inpired by Google's Dremel.
-([Melnik et al., n.d.](#orge8c95eb))
+([Melnik et al., n.d.](#org767338b))
 
 Thrift and Protocol Buffer's binary representations are field values
 laid out sequentially. Using a columnar-striped representation enables
@@ -420,7 +401,7 @@ field values and levels for each field, and append the values
 sequentially to the output records.
 
 Efficient algorithms for record shredding and assembly are provided in
-Appendix A of the Dremel paper. ([Melnik et al., n.d.](#orge8c95eb))
+Appendix A of the Dremel paper. ([Melnik et al., n.d.](#org767338b))
 
 ## Beyond MapReduce {#beyond-mapreduce}
 
@@ -436,8 +417,8 @@ processing workflows.
 
 ## Bibliography {#bibliography}
 
-<a id="org809d1cf"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
+<a id="org0913c77"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
 
-<a id="orge8c95eb"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
+<a id="org767338b"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
 
-<a id="orge105e62"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.
+<a id="org6460a67"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.

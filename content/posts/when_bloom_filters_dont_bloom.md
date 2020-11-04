@@ -1,7 +1,6 @@
 +++
 title = "When Bloom filters don't bloom"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:24+08:00
 draft = false
 +++
 
@@ -15,4 +14,4 @@ number loads, over optimizing the amount of memory used.
 
 [Bloom Filters]({{< relref "bloom_filter" >}}) are great, as long as they fit into the L3 cache. They
 are optimized for memory usage, not memory access. A nice alternative
-is [Cuckoo Filters]({{< relref "cuckoo_filters" >}}).
+is [Cuckoo Filters]({{<relref "cuckoo_filters.md" >}}).

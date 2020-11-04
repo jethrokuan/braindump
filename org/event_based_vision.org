@@ -168,4 +168,4 @@ Event-based control changes the control commands asynchronously. It is justified
 A key challenge is being able to find useful signals in the large number of events per second.
 
 * _
-bibliography:../biblio.bib
+bibliography:biblio.bib
