@@ -1,2 +1,4 @@
 #+title: Setting Up a Raspberry Pi
 
+* Guides
+- Setting up a Static IP Address on Raspberry Pi

@@ -82,7 +82,7 @@ a = \mathrm{argmax} \hat{\mu}\_a + \sqrt{\frac{2 \ln T}{N(a)}}
 
 ## Extending Exploration to RL {#extending-exploration-to-rl}
 
-### Count-based exploration ([Bellemare et al., n.d.](#org52abded)) {#count-based-exploration--bellemare-et-al-dot-n-dot-d-dot--org52abded}
+### Count-based exploration ([Bellemare et al., n.d.](#orgf55d408)) {#count-based-exploration--bellemare-et-al-dot-n-dot-d-dot--orgf55d408}
 
 Use pseudo-counts:
 
@@ -94,4 +94,4 @@ There are many choices for the bonus.
 
 ## Bibliography {#bibliography}
 
-<a id="org52abded"></a>Bellemare, Marc, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. n.d. “Unifying Count-Based Exploration and Intrinsic Motivation.” In _Advances in Neural Information Processing Systems 29_, edited by D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, 1471–79. Curran Associates, Inc. <http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf>.
+<a id="orgf55d408"></a>Bellemare, Marc, Sriram Srinivasan, Georg Ostrovski, Tom Schaul, David Saxton, and Remi Munos. n.d. “Unifying Count-Based Exploration and Intrinsic Motivation.” In _Advances in Neural Information Processing Systems 29_, edited by D. D. Lee, M. Sugiyama, U. V. Luxburg, I. Guyon, and R. Garnett, 1471–79. Curran Associates, Inc. <http://papers.nips.cc/paper/6383-unifying-count-based-exploration-and-intrinsic-motivation.pdf>.

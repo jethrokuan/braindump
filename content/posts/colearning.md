@@ -8,7 +8,7 @@ draft = false
 Co-learning is the technique of aiding of modeling of a
 (resource-poor) modality by exploiting knowledge from another
 (resource-rich) modality. The helper modality is only used in model
-training, and is not used during test-time. ([Baltrušaitis, Ahuja, and Morency, n.d.](#orga7e8885))
+training, and is not used during test-time. ([Baltrušaitis, Ahuja, and Morency, n.d.](#orgf86db95))
 
 Parallel-data approaches require the data to be directly linked to
 observations in other modalites. Non-parallel approaches do not
@@ -36,4 +36,4 @@ word similarity, or [zero-shot learning]({{<relref "zeroshot_learning.md" >}}).
 
 ## Bibliography {#bibliography}
 
-<a id="orga7e8885"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="orgf86db95"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
