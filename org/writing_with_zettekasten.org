@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f0b2a8e5-b68f-4ef3-a1ac-2f138ea3177c
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: writing_with_zettekasten
 #+title: Writing with Zettekasten
 

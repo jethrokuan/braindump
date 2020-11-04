@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a1321d06-600d-477e-ada5-b402020c9d03
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: self_attention
 #+title: Self-attention
 

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       04f11557-615e-4976-a230-7e6dcdb49632
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Optimization
 
 * What is Convex Optimization?

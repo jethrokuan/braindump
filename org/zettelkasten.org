@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       c178794c-78d1-459d-9725-15f2f6cd970a
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Zettelkasten
 
 - tags :: [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]], [[id:05a63abc-36d6-4a04-8693-bd1bfd5c46c8][Note-taking]]

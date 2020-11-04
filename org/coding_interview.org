@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       4f67fdf4-f31e-4ad8-9cd2-ec30d375f7da
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Coding Interview Preparation
 
 * Data Structures Review

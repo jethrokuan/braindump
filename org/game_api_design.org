@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       42cf00c4-c825-40d1-befa-10bb52b41b1d
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Game API Design
 
 - tags :: [[id:b7503ab8-1c6f-4b0f-bcee-019ac9ad723a][Software Engineering]]

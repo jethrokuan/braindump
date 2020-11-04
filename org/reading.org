@@ -1,6 +1,4 @@
 :PROPERTIES:
 :ID:       f35e7982-2d31-4e06-845a-62d588dd27c8
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: reading
 #+title: Reading

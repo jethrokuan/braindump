@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ebc9efc8-2675-48b6-b296-033b87eb64ea
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Lsof
 
 - tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]]

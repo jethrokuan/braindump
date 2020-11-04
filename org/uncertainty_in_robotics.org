@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       2391f312-dd1a-4cdf-9292-336cfaecbc04
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Uncertainty in Robotics
 
 Robotic applications increasingly deal with more unstructured

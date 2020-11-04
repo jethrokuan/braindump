@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       44103051-bbf6-4780-962b-f23f7f1ead90
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: interactive_closest_point
-#+roam_alias: ICP
-#+title: Interactive Closest Point

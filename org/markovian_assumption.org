@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       40554b45-c938-4753-a9b5-2cea41d761e3
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Markovian Assumption
 
 *Key idea*: the past and future data are independent, conditioned on the

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0abb14fa-8f59-4d93-bf19-8c8a2f1ea185
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: C++ Language
 
 - tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]

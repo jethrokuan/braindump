@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       d9de9c6d-fa8e-4c2b-9cb1-a1f1fa8ea99d
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Systems Programming
 
 - tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]], [[id:a5dfff84-6468-4b04-bb55-bbde427a686f][Linux]]

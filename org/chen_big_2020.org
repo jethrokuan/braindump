@@ -1,0 +1,26 @@
+:PROPERTIES:
+:ID:       6066ff84-a152-4beb-bef0-dccd050fa232
+:END:
+#+title: chen_big_2020: Big Self-Supervised Models are Strong Semi-Supervised Learners
+#+roam_key: cite:chen_big_2020
+
+* Big Self-Supervised Models are Strong Semi-Supervised Learners
+  :PROPERTIES:
+  :Custom_ID: chen_big_2020
+  :URL: http://arxiv.org/abs/2006.10029
+  :AUTHOR: Chen, T., Kornblith, S., Swersky, K., Norouzi, M., & Hinton, G.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/E2QRPVJ6/Chen et al. - 2020 - Big Self-Supervised Models are Strong Semi-Supervi.pdf
+  :NOTER_PAGE: 5
+  :END:
+** Key Idea
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.45014245014245013)
+:END:
+
+The paper proposes a three-step semi-supervised learning framework for visual data
+
+1. unsupervised or self-supervised pretraining using a modified [[id:ecdb183b-2a18-48ea-9145-7428449a292b][SimCLR]]
+2. Supervised fine-tuning
+3. Distillation using unlabeled data
+
+  [[file:images/chen_big_2020/screenshot_20200708_153337.png]]

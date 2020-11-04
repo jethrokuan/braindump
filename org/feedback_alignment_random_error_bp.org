@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b8b11fb6-8f9e-42f7-ab28-05c776512a9e
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Feedback Alignment and Random Error Backpropagation
 
 Backpropagation is not biologically plausible because it the error

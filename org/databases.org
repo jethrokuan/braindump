@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       e328eb8f-8c87-4406-b1ad-00cb7679d548
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Databases
 #+hugo_tags: database
 

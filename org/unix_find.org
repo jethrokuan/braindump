@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       2a82306a-ce41-417e-9b0c-7ca57145b579
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Find (CLI Tool)
 
 - tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]]

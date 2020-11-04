@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       8774e4a9-375a-4f15-9468-ba4b59d4fb1f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Robot Kinematics
 
 - tags :: [[id:b6b64269-6357-4c01-8ce7-8c6f5ee73956][Velocity Motion Model]], [[id:cde6efa7-e47e-4a22-a35d-98e87ff5ca9f][Odometry Motion Model]]

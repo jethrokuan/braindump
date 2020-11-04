@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       09302077-32c2-4bbe-a2c3-4d7000a5e8aa
+:END:
+#+title: Python Import Resolution
+
+Say you have a Python import statement:
+
+#+begin_src python
+import abc
+#+end_src
+
+Python will look up the following in order:
+
+1. [[https://docs.python.org/3/library/sys.html#sys.modules][sys.modules]]: this is the cache containing previously imported modules
+2. built-in modules
+3. [[https://docs.python.org/3/library/sys.html#sys.path][sys.path]]: Usually includes the current directory

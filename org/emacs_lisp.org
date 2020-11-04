@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       6102ba8c-baa2-4880-8cd9-699de2b25f1d
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Emacs Lisp
 
 - tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]

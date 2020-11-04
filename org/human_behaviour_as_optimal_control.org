@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       4b8ed6af-df3e-4b71-bf62-0749d3a509ba
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Human Behaviour As Optimal Control
 
 Does [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]] and [[id:f1f42d87-f292-4654-bfbf-949bfa18d88f][Optimal Control]] provide a

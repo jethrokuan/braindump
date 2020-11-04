@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       79ec0a7b-258d-49c6-b159-afcb2917e219
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Docker 101
 #+subtitle: Hackerschool, NUS Hackers
 #+date: 2017/10/14

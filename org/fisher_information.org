@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       560a3065-f4f9-4731-bc78-71a1a35ebf73
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: fisher_information
 #+title: Fisher information
 

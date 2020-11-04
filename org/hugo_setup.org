@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       42897f99-ec4f-48ec-8d7d-7022ef58ccb3
-:END:
-#+hugo_base_dir: ..
-#+hugo_auto_set_lastmod: t
-#+options: H:2

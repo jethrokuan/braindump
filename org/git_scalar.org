@@ -1,8 +1,6 @@
 :PROPERTIES:
 :ID:       3846be63-aa8d-4b06-a026-fc4c9ab9d98d
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: git_scalar
 #+title: Git Scalar
 
 - tags :: [[id:a731b432-3ed7-428a-b3bb-78d3eefc217e][Git]]

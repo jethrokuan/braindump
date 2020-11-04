@@ -1,0 +1,4 @@
+:PROPERTIES:
+:ID:       e430eb0b-5f62-4d81-b0ac-cc94c00331d9
+:END:
+#+title: RANSAC

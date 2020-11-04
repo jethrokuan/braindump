@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       7cb5ccfd-e8d0-4512-a6c1-13ebdfe8b75c
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: designing_dataintensive_applications
 #+title: Designing Data-Intensive Applications
 

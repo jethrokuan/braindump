@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       304fc3a7-2234-4247-aeec-4cd11fd5f50a
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Distributed Reinforcement Learning
 
 Parallelizing [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]].

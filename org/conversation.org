@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       318fefe2-5507-49d6-8d1f-7b2bc14b11da
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Conversation
+
 * Why study conversation?
 - Tt seems that everyone can conduct conversation
 - There are basic patterns and techniques

@@ -1,0 +1,30 @@
+:PROPERTIES:
+:ID:       ffb3e855-5d31-47c1-833e-ca99121f5e85
+:END:
+#+roam_key: https://www.youtube.com/watch?v=btmJtThWmhA
+#+roam_tags: website
+#+title: Causality, part 1 - Bernhard Schölkopf - MLSS 2020, Tübingen - YouTube
+
+- source :: https://www.youtube.com/watch?v=btmJtThWmhA&feature=youtu.be
+
+* Background and Motivation
+
+Consider a dataset of temperature $t$ vs altitude $a$. We typically see that the
+larger the altitude, the lower the temperature. How do we know if this is a
+causal effect?
+
+1. Intervention: we can raise the city, and find that the temperature changes
+2. Hypothetical intervention: expect that $t$ changes, since we can think of a
+   physical mechanism $p(t|a)$ that is independent of $p(a)$. We expect that
+   $p(t|a)$ is invariant across different countries in similar climate zone.
+
+A "structural" relation not only explains the observed data; it captures a
+structure connecting the variables.
+
+An equation becomes structural by virtue of invariance to a domain of
+modifications.
+
+* [[id:aa5c8002-a1ba-4d64-af54-38d1eafafdeb][Structural Causal Model]]
+:PROPERTIES:
+:ID:       7641ec39-6e89-4505-9363-d365b446a20a
+:END:

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       64eb6714-7710-4e1f-b2bc-69b0a63f9abb
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: multimodal_alignment
 #+title: Multi-modal Alignment
 

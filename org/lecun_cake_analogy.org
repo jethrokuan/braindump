@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       cc520cb6-0a5c-4944-88e4-b1c0ce4be407
 :END:
-#+setupfile:./hugo_setup.org
 #+title: LeCun's Cake Analogy
 
 Yann LeCun gave this cake analogy in NIPS 2016:

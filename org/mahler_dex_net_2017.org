@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       e0dc9aa5-d8d5-44d4-b0f9-490839667b61
+:END:
+#+title: mahler_dex-net_2017: Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics
+#+roam_key: cite:mahler_dex-net_2017
+
+* Dex-Net 2.0: Deep Learning to Plan Robust Grasps with Synthetic Point Clouds and Analytic Grasp Metrics
+  :PROPERTIES:
+  :Custom_ID: mahler_dex-net_2017
+  :URL: http://arxiv.org/abs/1703.09312
+  :AUTHOR: Mahler, J., Liang, J., Niyaz, S., Laskey, M., Doan, R., Liu, X., Ojea, J. A., …
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/59MPMXVX/Mahler et al. - 2017 - Dex-Net 2.0 Deep Learning to Plan Robust Grasps w.pdf
+  :NOTER_PAGE: 7
+  :END:
+** We learn a function that takes as input a candidate grasp and a depth image and outputs an estimate of robustness
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.8938879456706281)
+:END:
+
+DexNet is a function $f(\text{candidate grasp}, \text{depth image}) = P(\text{success})$.

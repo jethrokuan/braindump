@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       d0fdb08f-6736-4e59-93d1-5d07c4c9e48a
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: principle_component_analyses
-#+title: Principle Component Analyses
-#+roam_alias: PCA

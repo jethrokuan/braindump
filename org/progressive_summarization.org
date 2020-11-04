@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       6adf5333-604c-49ec-bf27-4585d870aa5b
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Progressive Summarization
 
 - tags :: [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]]

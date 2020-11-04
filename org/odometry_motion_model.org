@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       cde6efa7-e47e-4a22-a35d-98e87ff5ca9f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Odometry Motion Model
 
 The odometry model uses the relative information of the robot's

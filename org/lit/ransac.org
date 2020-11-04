@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       e430eb0b-5f62-4d81-b0ac-cc94c00331d9
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: ransac
-#+title: RANSAC

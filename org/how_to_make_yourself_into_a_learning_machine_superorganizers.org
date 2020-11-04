@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       7c59bdd5-d4a4-404d-9008-faf743eeefba
+:END:
+#+roam_key: https://superorganizers.substack.com/p/how-to-build-a-learning-machine###
+#+title: How to Make Yourself Into a Learning Machine - Superorganizers
+
+- source ::
+  https://superorganizers.substack.com/p/how-to-build-a-learning-machine
+- tags :: [[id:55090bb9-dc8a-4c92-97fb-6617cf8d37b4][Spaced Repetition]]

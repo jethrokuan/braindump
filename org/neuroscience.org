@@ -1,5 +1,4 @@
 :PROPERTIES:
 :ID:       cc7d1ffe-280d-4744-9fac-c38e70c5472c
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Neuroscience ⭐

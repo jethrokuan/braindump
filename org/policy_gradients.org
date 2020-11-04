@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f90ef3b7-3d35-4af3-ba8f-00d27c6fa3c5
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Policy Gradients
 
 - tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]], [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

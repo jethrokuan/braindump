@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       debf2f88-0d6f-429a-bf84-9e2b66f93a2a
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Riken AIP Workshop 2019
 
 * Weakly Supervised Classification

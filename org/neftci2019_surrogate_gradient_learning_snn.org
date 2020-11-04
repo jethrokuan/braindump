@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       87bab6c2-5346-4253-9e11-697c4e63d62a
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Surrogate Gradient Learning In Spiking Neural Networks
 
 - paper :: https://arxiv.org/pdf/1901.09948v2.pdf

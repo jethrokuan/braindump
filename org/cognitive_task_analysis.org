@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       80d39f2e-70ac-4277-b45b-a522520b96e4
+:END:
+#+hugo_slug: cognitive_task_analysis
+#+title: Cognitive Task Analysis

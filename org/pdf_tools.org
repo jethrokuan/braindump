@@ -1,5 +1,4 @@
 :PROPERTIES:
 :ID:       8742274c-9645-42a7-b744-48d5720e280c
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Pdf Tools

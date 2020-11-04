@@ -1,8 +1,7 @@
 :PROPERTIES:
 :ID:       be63d7a1-322e-40df-a184-90ad2b8aabb4
 :END:
-#+setupfile: ./hugo_setup.org
-#+title: Reinforcement Learning ⭐
+#+title: Reinforcement Learning
 #+hugo_tags: machine-learning
 bibliographystyle:unsrt
 

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ad0f8f03-f332-4484-9ef0-76e157b41eac
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: canonical_correlation_analysis
 #+title: Canonical Correlation Analysis
 

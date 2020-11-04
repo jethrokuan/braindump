@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       0b0db6ab-3e9e-4dda-8451-70ed97214bcd
+:END:
+#+title: Rust
+
+* Useful Crates
+
+- [[https://crates.io/crates/structopt][structopt]] + [[https://crates.io/crates/clap][clap]] :: CLI parsing
+- [[https://crates.io/crates/rayon][rayon]] :: data-parallelism for iterators
+- [[https://crates.io/crates/anyhow][anyhow]] + [[https://crates.io/crates/thiserror][thiserror]] :: idiomatic error handling

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       41015045-a7b0-4fb1-90eb-35be45b5c2bd
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Blockchain
 
 * Stellar

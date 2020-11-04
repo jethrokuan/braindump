@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       74238f6a-c29c-465f-871d-d32d551a50fe
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Arguments Against Bayesian Inference
 
 - tags :: [[id:06635cd6-7ae1-4ba0-b82f-5a344871d94e][Bayesian Inference]]

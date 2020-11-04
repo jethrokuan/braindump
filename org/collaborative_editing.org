@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       5c2afa41-4c5d-4bd1-8a72-372fb4b1f8a0
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Collaborative Editing
 
 Collaborative Editing software are powered either (or both) of these

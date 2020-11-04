@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f5aa19cb-636e-4fdc-a6eb-2f9b590b333a
 :END:
-#+setupfile:./hugo_setup.org
 #+title: How To Know - Celeste Kidd
 
 - tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]], [[id:162e6047-b066-4a3b-a618-ddcab2c738f7][NeurIPS]]

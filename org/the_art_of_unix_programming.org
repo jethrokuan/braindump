@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       eb189e27-605d-49a7-8f0a-1479a85f69a9
 :END:
-#+setupfile:./hugo_setup.org
 #+title: The Art Of Unix Programming
 
 - title :: The Art Of Unix Programming

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       c3538979-d93c-42fe-ba25-99bb29fca690
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Copy Editing
 
 - series comma :: always use the Oxford comma (or series comma)

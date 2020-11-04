@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       390138b9-9910-473d-94b6-329fdd253a7f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Partially Observable Markov Decision Processes (POMDPs)
 
 * Partially Observable MDPs (POMDPs)

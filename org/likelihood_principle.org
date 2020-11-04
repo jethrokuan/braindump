@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       e846da14-a2e2-43f5-91a6-f779ee2f74f5
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Likelihood Principle
 
 - tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]]

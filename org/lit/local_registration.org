@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       869867af-c30b-405f-8e12-7cecfc07898f
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: local_registration
-#+title: Local Registration

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       9f8b4294-0cd3-48dc-be00-a2f3a6d02ac5
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Work Clean
 
 - title :: Work Clean

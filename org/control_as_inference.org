@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0f3564b7-5a64-4191-b917-4d94399d193f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Control As Inference
 
 - tags :: [[id:f1f42d87-f292-4654-bfbf-949bfa18d88f][Optimal Control and Planning]], [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

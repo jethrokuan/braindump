@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       55fc910b-5536-4123-a27f-85dad19f7eb0
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: GDC Vault - Exploring the Tech and Design of 'Noita'
 #+roam_key: https://www.gdcvault.com/play/1025695/Exploring-the-Tech-and-Design
 

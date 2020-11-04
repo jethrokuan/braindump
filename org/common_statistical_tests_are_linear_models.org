@@ -1,8 +1,6 @@
 :PROPERTIES:
 :ID:       77bc98a3-d895-4d73-bcdd-86fbf25cfcdd
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: common_statistical_tests_are_linear_models
 #+title: Common Statistical Tests Are Linear Models
 
 - source :: [[https://lindeloev.github.io/tests-as-linear/][Common statistical tests are linear models (or: how to

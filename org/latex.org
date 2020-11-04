@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a268f669-98cc-4faf-9559-cc35973362eb
 :END:
-#+setupfile:./hugo_setup.org
 #+title: LaTeX
 
 * Useful Tools

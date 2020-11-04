@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       36cfa399-66bc-437e-9d05-06c04be4caa6
 :END:
-#+setupfile:./hugo_setup.org
 #+title: JavaScript
 
 JavaScript is an interpreted [[id:02f0d648-baae-478f-b738-448cf53e2a63][programming language]], originally designed

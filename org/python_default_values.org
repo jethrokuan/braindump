@@ -1,0 +1,32 @@
+:PROPERTIES:
+:ID:       73b06202-fa44-452c-9a5b-acc7889b2fdb
+:END:
+#+title: Python Default Parameter Values
+
+- source :: [[http://effbot.org/zone/default-values.htm][Default Parameter Values in Python]]
+
+Python has interesting behaviour for default values:
+
+#+begin_src python :results output
+  def a(v=[]):
+      v.append(1)
+      print(v)
+
+  a()
+  a()
+  a()
+  a()
+#+end_src
+
+#+results:
+: [1]
+: [1, 1]
+: [1, 1, 1]
+: [1, 1, 1, 1]
+
+Why does this happen? Default parameter values are always evaluated
+when, and only when, the “def” statement they belong to is executed.
+Also note that “def” is an executable statement in Python, and that
+default arguments are evaluated in the “def” statement’s environment.
+If you execute “def” multiple times, it’ll create a new function
+object (with freshly calculated default values) each time.

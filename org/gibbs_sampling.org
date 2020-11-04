@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       7b2a4732-4714-4ac6-bbbe-ac89981e74d5
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Gibbs Sampling
 
 Gibbs sampling is a special case of the [[id:a3f99d16-a138-41c8-95ed-1d2db58bf4ef][Metropolis-Hastings method]],

@@ -1,0 +1,15 @@
+:PROPERTIES:
+:ID:       808e3558-3b0d-425a-826a-d56f1c182c5a
+:END:
+#+roam_key: https://news.ycombinator.com/item?id=22519876
+#+hugo_slug: ask_hn_how_do_i_learn_c_properly_hacker_news
+#+title: Ask HN: How do I learn C properly? | Hacker News
+
+- source :: https://news.ycombinator.com/item?id=22519876
+- tags :: [[id:08aab063-2472-457a-8c11-6acd19ae29d2][The C Language]]
+
+* Book recommendations
+1. Hanson's C Interfaces and Implementations
+2. 21st Century C
+3. Reese's Understanding and Using C Pointers
+4. Linden's Expert C Programming: Deep C Secrets

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       2778763e-640a-4353-94de-ad3919f00c2b
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Computer Vision
 
 * Prerequisites

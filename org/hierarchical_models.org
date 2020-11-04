@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b3f4f4e8-0f71-47f6-ad58-1f7f60d2a68b
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: hierarchical_models
 #+title: Hierarchical Models
 

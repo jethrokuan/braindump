@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       96b9e89f-f1e9-4f1e-ba0c-4697c3f2fb12
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Wisdom
 
 * [[https://www.youtube.com/watch?v=3qHkcs3kG44][Joe Rogan Experience #1309 - Naval Ravikant]]

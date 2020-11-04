@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       8bdfed44-12fc-410e-ba0d-7078333f7b20
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: RSS Feeds
 * Feeds                                                                :elfeed:
 ** Tech                                                               :tech:

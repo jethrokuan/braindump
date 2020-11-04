@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       bf77052e-e8c2-411b-94d8-cbecc09519c2
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Information Filter
 
 - tags :: [[id:04af721e-9cee-4a00-a426-baec803b108c][Gaussian Filter]], [[id:155935aa-af99-4629-b232-dfa0b48ad239][Bayes Filter]]

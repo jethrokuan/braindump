@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       0bde6de4-b69d-4c36-9981-b364ed4fc96f
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: model_predictive_control
-#+title: Model Predictive Control

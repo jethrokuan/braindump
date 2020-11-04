@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       cf22f2e7-554b-42b5-9a38-4f0eadb2fc4d
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: The Svelte Compiler Handbook | Tan Li Hau
 #+roam_key: https://lihautan.com/the-svelte-compiler-handbook/
 

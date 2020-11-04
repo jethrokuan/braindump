@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       febdd0a2-2cab-43b9-b69d-032bde0c2bf3
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Exponential Family
 
 - tags :: [[id:3ec39abc-ea53-4087-8523-7ace154c6aa6][Statistics]]

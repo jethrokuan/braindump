@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       89fe2836-cd6a-430b-97ea-8f5732ee36e1
-:END:
-#+hugo_base_dir: ../..
-#+hugo_auto_set_lastmod: t

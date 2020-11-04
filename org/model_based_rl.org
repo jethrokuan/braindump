@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       1ff41c30-9e22-4753-b1fe-db98cf6017f4
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Model-Based Reinforcement Learning
 
 In model-free [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]], we assumed that $p(s_{t+1} |

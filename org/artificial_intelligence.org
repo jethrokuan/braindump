@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       62d5341c-751b-4e54-87a0-34d11d1ae105
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Artificial Intelligence
 
 * What is Artificial Intelligence?

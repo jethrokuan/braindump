@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       16f9812c-3186-48b3-9407-8e6aca57790a
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: coding_interview_cheatsheet
 #+title: Coding Interview Cheatsheet
 

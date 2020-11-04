@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0fd6c8da-467e-436f-8621-7e3ff5282854
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Spark
 
 * What is Apache Spark?

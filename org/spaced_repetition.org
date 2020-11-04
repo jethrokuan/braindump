@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       55090bb9-dc8a-4c92-97fb-6617cf8d37b4
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Spaced Repetition
 
 - tags :: [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]]

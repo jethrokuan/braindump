@@ -1,0 +1,11 @@
+:PROPERTIES:
+:ID:       3ee32180-41a2-4b27-a89c-6bccf1e6cfe7
+:END:
+#+title: Copying Better: How To Acquire The Tacit Knowledge of Experts
+#+roam_key: https://commoncog.com/blog/how-to-learn-tacit-knowledge/
+
+- author :: [[id:c1129129-0cab-40c0-a386-f4d9053446f4][Cedric Chin]]
+
+The [[id:b4d22cbf-8d33-40bf-af98-2dbac6f11dc6][Recognition-primed Decision-making Model]] is all about pattern-matching to existing experiences.
+
+There's standard methodology for teasing out mental prototypes from experts (as per [[id:80d39f2e-70ac-4277-b45b-a522520b96e4][Cognitive Task Analysis]]). Events should be described linearly, as experienced, without revealing more information than available at the time. Then, understand the cues the experts picked up, and they expect to happen next and why.

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       563dcf37-472a-4203-b037-5a1635084ae9
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Productivity
 
 - [[id:6216e0a9-f46a-4bb7-9d8a-a463c7d5e86e][PARA Method]]

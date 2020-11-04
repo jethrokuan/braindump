@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       5d4c6a77-df50-4c77-bc0c-ff8dcebe08b3
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Variational Autoencoders
 
 * Links

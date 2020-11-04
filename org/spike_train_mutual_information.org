@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       7c4ae029-b788-418a-850f-76f8d5caf91b
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Spike Train Mutual Information
 
 Would be nice to compute the mutual information between multi-neuronal spike

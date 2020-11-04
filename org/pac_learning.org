@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b35169d4-1829-401d-a473-0827592b2b78
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: PAC Learning
 
 - tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]]

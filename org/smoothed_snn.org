@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       81796d94-28b9-441f-aee2-3194e4d59434
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Smoothed Spiking Neural Networks
 
 Smoothed [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]] ensure well-behaved gradients which are

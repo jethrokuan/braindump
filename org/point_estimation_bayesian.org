@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       73aa2bb1-a052-46ce-8e94-0601fcd032f9
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Point Estimation in Bayesian Statistics
 
 - tags :: [[id:7f0fcd68-3fc2-4936-929c-51ef11ffe862][Bayesian Statistics]]

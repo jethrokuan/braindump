@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       9bf6a8cd-1d9f-477d-a047-6548068827d4
+:END:
+#+roam_key: https://www.youtube.com/watch?v=nfZGSMb01Yo
+#+hugo_slug: rss_2020_early_career_award_keynote_q_a_luca_carlone_youtube
+#+roam_tags: website
+#+title: RSS 2020, Early Career Award Keynote + Q&A: Luca Carlone - YouTube
+
+- source :: https://www.youtube.com/watch?v=nfZGSMb01Yo
+
+* Key Idea
+
+#+DOWNLOADED: screenshot @ 2020-07-21 11:34:11
+[[file:images/rss_2020_early_career_award_keynote_q_a_luca_carlone_youtube/screenshot2020-07-21_11-34-11_.png]]
+Convert a non-convex, hard problem into a convex problem that can be optimized
+in polynomial time. See [[https://github.com/MIT-SPARK/TEASER-plusplus][TEASER++]].

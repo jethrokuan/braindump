@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       82c97e2a-e092-4c69-a67b-703bf4e3f221
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: jeffreys_prior
 #+title: Jeffreys Prior
 

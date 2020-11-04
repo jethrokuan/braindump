@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       9fbcc0fd-09f6-477e-b986-23bd464a15df
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Markov Logic Networks
 
 - tags :: [[id:2620cfa1-db1d-4841-bcce-db261e44479e][Machine Learning Papers]]

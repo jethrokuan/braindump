@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       fa58ed3f-19a7-4f29-8a29-bc6ca5d63ebe
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Robotics
 #+hugo_tags: robotics
 

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b7503ab8-1c6f-4b0f-bcee-019ac9ad723a
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Software Engineering
 #+author: Derrick Chua, Jethro Kuan
 

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       8caa7d17-dfc0-4535-9016-8bd52892ff58
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: the_intelligent_investor
 #+title: The Intelligent Investor
 

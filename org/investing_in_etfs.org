@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b37ead31-5908-4a42-9e77-8343d8d0ae35
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Investing In ETFs
 
 * Identifying good ETFs /(Joshua Giersch, Rich By Retirement)/

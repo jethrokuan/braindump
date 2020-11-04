@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       1bc7c6a5-a438-489c-abb8-1852ae6e2248
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Expectation Maximization and Mixture Models
 
 * Introduction

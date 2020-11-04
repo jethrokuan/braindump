@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       96858f4f-8174-44d1-ba24-91b9db21f35e
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Deep Reinforcement Learning
+
 bibliographystyle:unsrt
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

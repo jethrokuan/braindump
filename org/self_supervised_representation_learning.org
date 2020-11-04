@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       01cf24df-5028-4f85-969c-434e02ff36a7
+:END:
+#+roam_key: https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html
+#+roam_tags: website
+#+title: Self-Supervised Representation Learning
+
+- source :: https://lilianweng.github.io/lil-log/2019/11/10/self-supervised-learning.html

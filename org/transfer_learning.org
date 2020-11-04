@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       4178c3b6-6b7c-42a2-9e49-cdc12f49f15b
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Transfer Learning
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

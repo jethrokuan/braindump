@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ea8fc8e1-c12b-41fc-a1ea-8eb54f670388
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Particle Filter
 
 Particle filters approximate the posterior by a finite number of

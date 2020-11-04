@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       48f41ab0-c757-4e91-97b9-62b8ee8914e3
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Playing Atari with Deep RL
 
 * Playing Atari With Deep RL cite:mnih2013playing

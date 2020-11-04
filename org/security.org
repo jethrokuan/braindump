@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       68f3b27c-01b8-4b27-adf4-e362279c474c
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Security
 * Exploitation (Halvar Flake)
 - Phrack

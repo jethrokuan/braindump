@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       c9f20d36-f299-43cb-974f-13a76c0277f0
+:END:
+#+title: Python Packaging
+#+roam_key: https://packaging.python.org/overview/
+
+* [[https://packaging.python.org/tutorials/installing-packages/#id19][Python Distributions]]
+
+- sdist :: Source distribution packages are compressed archives containing one or more packages or modules
+- wheel :: A package format designed to ship libraries with compiled artifacts. The fastest installation option, preferred by ~pip~.

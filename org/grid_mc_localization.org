@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       589b03e3-0c60-434f-97f4-3b1f0ecb6abb
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Grid & Monte Carlo Localization
 
 Grid & Monte Carlo Localization methods are able to solve global

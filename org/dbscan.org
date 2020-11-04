@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       a836af39-c95b-4b89-8038-b183e30b1220
+:END:
+#+hugo_slug: dbscan
+#+title: DBSCAN
+
+DBSCAN is an efficient clustering algorithm that can discover clusters of arbitrary shape, with good efficiency on large databases.

@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       a71f7a31-4b09-41f7-8ca4-d1ef597d2378
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Cryptography
+
 * Diffie-Hellman Algorithm
 :REFERENCE:
 https://www.youtube.com/watch?v=YEBfamv-_do&list=PL87386AD236727A1B&index=8

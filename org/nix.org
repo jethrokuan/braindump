@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       3cbca54c-7431-4e1a-b248-32dfa82c743a
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Nix/NixOS
 #+author: Jethro Kuan
 

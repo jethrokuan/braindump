@@ -1,0 +1,20 @@
+:PROPERTIES:
+:ID:       db4f01d1-d51f-490d-b6d2-c3fd045d33cf
+:END:
+#+title: wu_stochastic_2020: Stochastic Normalizing Flows
+#+roam_key: cite:wu_stochastic_2020
+
+* Stochastic [[id:0a267ec0-b62d-4d7d-b813-6fbb14dbcff0][Normalizing Flows]]
+  :PROPERTIES:
+  :Custom_ID: wu_stochastic_2020
+  :URL: http://arxiv.org/abs/2002.06707
+  :AUTHOR: Wu, H., Köhler, J., & Noé, F.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/IUAHQQ74/Wu et al. - 2020 - Stochastic Normalizing Flows.pdf
+  :NOTER_PAGE: 7
+  :END:
+** SNFs can be trained without computing exact generation probabilities by invoking ideas from nonequilibrium statistical mechanics
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.769544527532291)
+:END:
+
+

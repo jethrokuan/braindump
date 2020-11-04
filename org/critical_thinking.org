@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0e10abd0-015f-4478-9a46-802d3c39aacc
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Critical Thinking
 
 * Introduction

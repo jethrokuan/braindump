@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       09c3f011-7a51-4bf7-b65d-f7576abe077b
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Singapore Society
+
 * Introduction to Sociology
 ** Sociological Perspective
  Defined as seeing the general in the particular

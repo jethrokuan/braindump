@@ -1,5 +1,4 @@
 :PROPERTIES:
 :ID:       fb39fedd-bece-4d0c-998d-e57d7a712408
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Machine Learning Algorithms

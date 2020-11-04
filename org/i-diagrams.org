@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       48a25e39-b5fd-44c8-a003-3f9b43d97792
 :END:
-#+setupfile:./hugo_setup.org
 #+title: I-Diagrams
 
 - tags :: [[id:f4be59db-9bdb-4832-82e2-327c16b3ce15][Information Theory]]

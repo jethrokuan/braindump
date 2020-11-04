@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       83d4006c-f7b9-4702-b0f5-97d72808793f
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Probability Theory
 
 * Setup

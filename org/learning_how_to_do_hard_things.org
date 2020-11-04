@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ed6e0839-d3e7-46ef-a856-2e9a4d0d9970
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: learning_how_to_do_hard_things
 #+roam_key: cite:maciver_hard_things
 #+title: Learning How To Do Hard Things

@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       ddc48aa4-3521-4ff4-a4e6-3355c429f7a1
-:END:
-#+setupfile: ./hugo_setup.org
-#+title: Ask HN: Resources to grok Emacs and use it well? | Hacker News
-#+roam_key: https://news.ycombinator.com/item?id=22881808
-
-[[id:92f58861-2e04-43c9-8246-7cb4f4aaae66][Emacs]]

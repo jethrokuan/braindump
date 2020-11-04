@@ -1,6 +1,5 @@
 :PROPERTIES:
 :ID:       b74fd458-dbbe-40ce-8d51-721edc55fc5b
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: multiple_learning_kernel
 #+title: Multiple Learning Kernel

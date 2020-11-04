@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       fbbbc8ad-b081-40fe-b3d0-297dceb7430c
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Generalization In Reinforcement Learning
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       2e3f38f6-4bf1-42ca-bd92-51eeecdd004d
+:END:
+#+hugo_slug: the_technique_of_inversion
+#+title: The Technique of Inversion
+
+Inversion is the idea of approaching a problem in an inverted fashion: to study
+how to create X, it may be beneficial and simpler to consider what creates
+non-X.
+
+#+BEGIN_QUOTE
+All I want to know is where I'm going to die so I'll never go there -- Charlie Munger
+#+END_QUOTE
+
+* References
+:PROPERTIES:
+:ID:       e942d7d2-0fef-4680-98f8-38655ee7bccd
+:END:
+- [[https://commoncog.com/blog/using-inversion/][Using Inversion]]

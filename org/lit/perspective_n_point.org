@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       1b12a8e0-16cf-4c0c-8f5b-c2b61443c16f
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: perspective_n_point
-#+title: Perspective-n-Point

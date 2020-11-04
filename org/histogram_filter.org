@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       9363fa5a-afb0-4322-86f5-8dfa527a8dfc
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Histogram Filter
 
 The state space is decomposed into finitely many regions, and the

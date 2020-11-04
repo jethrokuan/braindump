@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       521c87bc-95eb-47ca-990f-58695d65490d
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Simultaneous Localization and Mapping
 #+roam_alias: SLAM
 

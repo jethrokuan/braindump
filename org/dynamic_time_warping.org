@@ -1,8 +1,6 @@
 :PROPERTIES:
 :ID:       36968d9e-d0bf-4e04-a41d-f583a022904f
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: dynamic_time_warping
 #+title: Dynamic Time Warping
 
 Dynamic time warping (DTW) is a dynamic programming approach used to

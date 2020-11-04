@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b7b15c7e-1b96-4a9b-90eb-0efff456326d
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Interval Estimation in Bayesian Statistics
 
 Suppose instead of [[id:73aa2bb1-a052-46ce-8e94-0601fcd032f9][point estimation]], we'd like to identify a

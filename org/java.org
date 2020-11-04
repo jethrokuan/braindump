@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       cb92c9e8-03b0-4fed-9847-5894c65d4394
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Java
 
 - tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]

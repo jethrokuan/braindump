@@ -1,0 +1,38 @@
+:PROPERTIES:
+:ID:       f4c5935b-5abb-4f9c-a17d-6d737dbbc3ba
+:END:
+#+title: alonso_current_2019: Current Research Trends in Robot Grasping and Bin Picking
+#+roam_key: cite:alonso_current_2019
+
+* Current Research Trends in Robot Grasping and Bin Picking
+  :PROPERTIES:
+  :Custom_ID: alonso_current_2019
+  :URL:
+  :AUTHOR: Alonso, M., Izaguirre, A., & Graña, M.
+  :NOTER_DOCUMENT: /home/jethro/Zotero/storage/3DYE53G7/Alonso et al. - 2019 - Current Research Trends in Robot Grasping and Bin .pdf
+  :NOTER_PAGE: 7
+  :END:
+** [[id:91baf5d1-80c6-42f6-b2bb-d16a1a277095][Robot Grasping]]
+:PROPERTIES:
+:NOTER_PAGE: (2 . 0.7170731707317073)
+:END:
+** Traditional Bin-picking Approaches
+:PROPERTIES:
+:NOTER_PAGE: (4 . 0.5590243902439025)
+:ID:       7267eb56-6fdd-4646-8531-f34b30f66d86
+:END:
+
+Most algorithms rely on segmentation of RGB-D data. 3D object recognition is
+done by matching 3D data to their known CAD models. [[id:44103051-bbf6-4780-962b-f23f7f1ead90][Interactive Closest Point]]
+can be used to calculate the alignment and best fitting of a cloud of points
+with respect to a reference CAD model.
+
+A fast voting scheme similar to the Generalized Hough Transform can be used improving the performance of [[id:44103051-bbf6-4780-962b-f23f7f1ead90][ICP]].
+** Deep Learning Methodologies for Bin Picking
+:PROPERTIES:
+:NOTER_PAGE: (5 . 0.7798594847775175)
+:ID:       1f41b785-4e36-4cc5-8419-7974f881c5ee
+:END:
+
+Deep Learning approaches used RGB-D images as input, and are able to predict
+grasp success and generalize to novel objects.

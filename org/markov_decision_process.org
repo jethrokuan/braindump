@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       c4816ea0-834b-4f78-ae53-cefd1b8e8a46
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Markov Decision Process
 
 A sequential decision problem for a fully observable, stochastic

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       71b27c1b-b851-4128-a5d5-1fed8dd900bb
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Roam Research
 
 - webpage :: [[https://roamresearch.com][Roam Research]]

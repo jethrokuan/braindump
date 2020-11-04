@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b023a664-ab3a-4b9a-95b2-7295a0306a71
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: asian_cinema
 #+title: Asian Cinema
 

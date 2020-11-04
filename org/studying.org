@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       afdb03c4-6cef-4635-89ba-3c9291b3d097
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Studying
 
 * The optimal studying strategy

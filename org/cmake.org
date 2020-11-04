@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       dd3a7864-fe2a-483e-a1a7-c52f02d8b9f5
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: CMake
 
 - tags :: [[id:0abb14fa-8f59-4d93-bf19-8c8a2f1ea185][C++ Language]], [[id:08aab063-2472-457a-8c11-6acd19ae29d2][The C Language]]

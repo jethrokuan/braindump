@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ef265ad6-7624-43e9-b2b0-e061c441a361
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Neural Ordinary Differential Equations (Review)
 #+roam_alias: "Neural ODE"
 #+roam_key: cite:chen18_neural_ordin_differ_equat

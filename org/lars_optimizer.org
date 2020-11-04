@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       92398d83-69a8-4024-be4b-908f2cc72ac1
 :END:
-#+setupfile:./hugo_setup.org
 #+title: LARS Optimizer
 
 Layer-wise Adaptive Rate Scaling (LARS) is a [[id:1be857e0-0197-44d1-853a-e0e5b74d1b7b][Neural Network Optimizer]]. The

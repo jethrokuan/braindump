@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       d5337a2c-871b-4761-b625-0f304fb46def
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Web Development
 
 * Tools

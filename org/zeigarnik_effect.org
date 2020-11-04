@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0f80a130-c5c6-4071-8829-3f1d9257f9ba
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Zeigarnik Effect
 
 Simply put, the Zeigarnik effect is the observation that /interrupted

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       97c31e31-b6b8-4ea0-8114-af023d1d740d
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Deep Learning With Bayesian Principles - Emtiyaz Khan
 
 - link :: [[https://slideslive.com/38921489/deep-learning-with-bayesian-principles][Mohammad Emtiyaz Khan | Deep Learning with Bayesian Principles · SlidesLive]]

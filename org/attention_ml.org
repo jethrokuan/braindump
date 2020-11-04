@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a56ca178-31d9-40a0-963e-2a6728ecd86f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Attention (ML)
 
 In typical encoder-decoder architectectures, the full sentence is

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       1c59a56f-d466-462d-b309-9964addfa081
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Portfolio Composition
 
 * General recommendations

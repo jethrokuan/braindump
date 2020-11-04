@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b3c6f8cb-e3fe-4a72-8f03-ddbe65024428
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: multimodal_fusion
 #+title: Multi-modal Fusion
 

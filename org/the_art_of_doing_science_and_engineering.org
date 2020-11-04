@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       570144ef-554c-4c04-85eb-303a57ad6f4b
 :END:
-#+setupfile:./hugo_setup.org
 #+title: The Art Of Doing Science And Engineering
 
 - title :: The Art Of Doing Science And Engineering

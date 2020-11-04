@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       db5dca18-06ed-4a40-8f6c-cc96915a0e7d
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Hopfield Network
 #+hugo_tags: machine-learning
 

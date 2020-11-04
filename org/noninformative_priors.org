@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a967cbbd-0135-4a0f-b695-f493ce6edec8
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: noninformative_priors
 #+title: Non-informative Priors
 

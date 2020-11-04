@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       188fe102-2f67-4ee9-b5a6-02870b955951
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Monte Carlo Methods
 
 - tags :: [[file:../../../../Dropbox/org/braindump/org/machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:../../../../Dropbox/org/braindump/org/pgm.org][Probabilistic Graph Models]]

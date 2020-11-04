@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a273c750-9827-4083-a942-f720b5443349
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Inverse Reinforcement Learning
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

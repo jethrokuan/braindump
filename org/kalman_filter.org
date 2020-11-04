@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f34829e1-86aa-4700-8c42-474ab7c24620
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Kalman Filter
 
 - tags :: [[id:456731e4-6e1c-438a-8667-b8863417257f][Extended Kalman Filter]], [[id:04af721e-9cee-4a00-a426-baec803b108c][Gaussian Filter]]

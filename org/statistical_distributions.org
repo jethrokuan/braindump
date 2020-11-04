@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ecf86077-01ff-424c-b5c2-6711475f6eef
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: statistical_distributions
 #+title: Statistical Distributions
 

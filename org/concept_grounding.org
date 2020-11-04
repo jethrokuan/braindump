@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       5cea9a5a-3901-423a-b253-374c379a4135
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: concept_grounding
 #+title: Concept Grounding
 

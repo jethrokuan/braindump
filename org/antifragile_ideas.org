@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       3b8e99f4-e49d-497b-b3f3-0d011b91c118
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Anti-fragile Ideas
 
 This system was originally discussed by John Carmack [[https://amasad.me/carmack][here]]. We want to

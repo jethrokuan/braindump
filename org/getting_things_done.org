@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       1692864f-0c36-47c1-8d73-91b5fd54d045
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Getting Things Done (GTD)
 
 [[https://gettingthingsdone.com/][GTD]] is a work-life management system created by David Allen. This

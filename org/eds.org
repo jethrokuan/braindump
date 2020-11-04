@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f372e325-b6d9-47f7-a4b5-a180419448f8
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Experimental Data Science
 #+hugo_tags: data_science experiment
 

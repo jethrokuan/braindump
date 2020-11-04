@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       60ed8384-5ce5-4205-8614-9cd6115b3008
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Differentiable plasticity: training plastic neural networks with backpropagation
 
 - tags :: [[id:2620cfa1-db1d-4841-bcce-db261e44479e][Machine Learning Papers]]

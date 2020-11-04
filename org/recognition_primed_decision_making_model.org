@@ -1,0 +1,5 @@
+:PROPERTIES:
+:ID:       b4d22cbf-8d33-40bf-af98-2dbac6f11dc6
+:END:
+#+title: Recognition-primed Decision-making Model
+#+roam_alias: "RPD"

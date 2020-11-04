@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       7c85eae2-dedf-49d1-88c3-226c8aa6a7bd
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: now
-#+title: What I'm Doing Now

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       d0d82350-5d1c-4b96-8522-827e902d9454
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: an_opinionated_guide_to_ml_research
 #+title: Article: An Opinionated Guide to ML Research
 

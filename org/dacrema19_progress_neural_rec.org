@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       415eeaf2-5ce3-4866-a4c0-024f016eba4a
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Are We Really Making Much Progress? A Worrying Analysis of Recent Neural Recommendation Approaches
 
 - title :: Are We Really Making Much Progress? A Worrying Analysis of

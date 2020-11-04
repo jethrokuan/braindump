@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       9c6b7b4f-dc7c-45d2-b67d-f298fcad92e7
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Entropy
 - tags :: [[id:f4be59db-9bdb-4832-82e2-327c16b3ce15][Information Theory]], [[id:871b5f62-1c26-4572-aca9-9a27c6b102f1][Gibbs' Inequality]]
 

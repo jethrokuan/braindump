@@ -1,8 +1,6 @@
 :PROPERTIES:
 :ID:       250a7633-854b-4d5f-b4bc-0288967a045d
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: reference_prior
 #+title: Reference Prior
 
 The notion of reference prior is similar to that of a [[id:a967cbbd-0135-4a0f-b695-f493ce6edec8][non-informative

@@ -1,8 +1,6 @@
 :PROPERTIES:
 :ID:       94567a57-32b6-4090-b922-667c54481f7a
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: multimodal_translation
 #+title: Multi-modal Translation
 
 Multi-modal translation is a sub-challenge in [[id:c436cacf-5630-4dc6-99ff-e99d9484f85a][multi-modal machine

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a274de6a-d25b-458c-8d25-59f446997849
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: XGBoost
 
 XGboost is an end-to-end boosting system. It is sparsity-aware. cite:chen16_xgboos

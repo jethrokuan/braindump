@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       d69d1f3d-2a3f-48bd-a59c-0bb631b0430b
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Python
 
 Python is an interpreted, general-purpose, high-level [[id:02f0d648-baae-478f-b738-448cf53e2a63][programming language]]. Some properties of Python include:

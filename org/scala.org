@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       2a9fc726-9da9-4146-a279-4ded1458ab6f
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Scala
 
 - tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]

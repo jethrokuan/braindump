@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       9eb68704-58e6-4c0e-b128-228fd261e26e
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: State Estimation
 
 State estimation seeks to recover state variables from the data.

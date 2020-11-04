@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       6b82ac38-0990-4029-9bdb-68c1a7fc5093
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Credit Assignment in Spiking Neural Networks
 
 The problem of spatial and temporal credit assignment in RNNs are

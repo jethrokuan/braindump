@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f1f42d87-f292-4654-bfbf-949bfa18d88f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Optimal Control and Planning
 
 How can we make decisions if we know the dynamics of the environment?

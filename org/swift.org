@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       42848a03-62ee-4d35-9f67-f1327414fb54
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Swift
 
 - tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]

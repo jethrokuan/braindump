@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ff243a09-9980-4738-b638-0521cc2bbf42
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Empirical Risk Minimization
 
 In [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]], the training set error is often called the

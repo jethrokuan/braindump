@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       6216e0a9-f46a-4bb7-9d8a-a463c7d5e86e
 :END:
-#+setupfile:./hugo_setup.org
 #+title: PARA Method
 
 PARA is a method of organizing digital information, designed by Tiago

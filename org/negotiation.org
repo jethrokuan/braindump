@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f7b36f1c-0cb9-494a-a6e7-4f5dacb26723
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Negotiation
 
 1. A good negotiator prepares, going in, to be ready for possible

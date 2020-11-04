@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       011be61f-9934-4996-9c6c-328a19eaff96
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Map Matching
 
 Map matching compiles small numbers of consecutive scans into

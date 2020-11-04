@@ -1,0 +1,33 @@
+:PROPERTIES:
+:ID:       69bc8be7-f2f7-4ae0-8bcd-47b7e84e5b5a
+:END:
+#+roam_key: http://nlp.seas.harvard.edu/2018/04/03/attention.html
+#+title: The Annotated Transformer
+
+- source :: http://nlp.seas.harvard.edu/2018/04/03/attention.html
+- author :: [[id:8c33d882-b7b7-4661-bcc9-3114ba813dd9][Alexander Rush]]
+  
+To reduce sequential computation, many models use [[id:67889359-5627-4321-8386-9af05aa00255][CNNs]] as building
+blocks., computing hidden representations in parallel for all input
+and output positions. However, the number of operations required to
+relate signals from two arbitrary input or output positions grows in
+the distance between the positions, making it /difficult to learn
+dependencies between distant positions/.
+
+*The transformer reduces this to a constant number of operations, at the cost of
+reduced effective resolution due to averaging attention-weighted positions. This
+effect is counteracted with multi-head attention.*
+
+The Transformer model relies entirely on [[file:self_attention.org][self-attention]] (or intra-attention) to
+compute representations of its input and output without using sequence-aligned
+RNNs or convolution.
+
+* Model Architecture
+
+Most neural sequence transduction models have an encoder-decoder architecture.
+The encoder maps an input sequence of symbol representations $(x_1, \dots, x_n)$
+to a sequence of continuous representations $\boldsymbol{z} = (z_1, \dots,
+z_n)$. Given $\boldsymbol{z}$, the decoder generates an output sequence $(y_1,
+\dots, y_n)$ of symbols one element at a time. The model is auto-regressive: it
+consumes the previously generated symbols as additional input when generating
+the text.

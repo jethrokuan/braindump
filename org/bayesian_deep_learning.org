@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       3d688bf9-889b-4ffa-a82d-202cab5010f5
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Bayesian Deep Learning
 #+hugo_tags: bayes deep-learning
 bibliographystyle:unsrt

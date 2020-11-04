@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a608fcd4-deeb-41c0-a5c2-f038d756422f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Gpipe
 
 Gpipe is a scalable pipeline parallelism library published by Google

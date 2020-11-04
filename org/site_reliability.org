@@ -1,6 +1,4 @@
 :PROPERTIES:
 :ID:       7fc3c0ad-1b12-46b3-a253-8692034d0601
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: site_reliability
 #+title: Site Reliability

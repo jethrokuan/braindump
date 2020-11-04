@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       c3533928-26f7-4f05-843f-4140559487b3
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Neuroscience and Reinforcement Learning
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]], [[id:cc7d1ffe-280d-4744-9fac-c38e70c5472c][Neuroscience ⭐]]

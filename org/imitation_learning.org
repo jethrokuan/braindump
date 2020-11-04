@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       7ecd7d57-00d1-4a58-9061-105e1c324850
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Imitation Learning
 
 * Behavioural Cloning

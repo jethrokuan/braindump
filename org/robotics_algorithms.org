@@ -1,8 +1,6 @@
 :PROPERTIES:
 :ID:       6a3c8286-0448-49c9-85bd-10e62259e5fc
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: robotics_algorithms
 #+title: Robotics Algorithms
 
 * Resources

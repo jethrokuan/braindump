@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       397e2e11-2f27-474b-95c6-108bfa8e75fc
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Range Finder Model
 
 * Beam Model for Range Finders

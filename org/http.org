@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       5fee4aea-f86a-4bd5-9c9a-c2bce69f74e1
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: HTTP
 
 - tags :: [[id:d5337a2c-871b-4761-b625-0f304fb46def][Web Development]]

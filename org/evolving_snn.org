@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       31ff2b41-5b94-41aa-b17b-76cc050dbe81
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Evolving Spiking Neural Networks
 
 Early evolving [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]] architectures use the [[id:a22d942d-8772-43d9-b956-6aebae0e8913][Leaky

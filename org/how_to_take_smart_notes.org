@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ea9dbdd4-cb1c-43bc-959f-afc2afc67b52
 :END:
-#+setupfile:./hugo_setup.org
 #+title: How To Take Smart Notes
 
 - author :: [[id:a9bf732e-4a81-463d-a49c-0c5777e94e35][Sonke Ahrens]]

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       e586c765-6a02-47f0-b92d-be313777de2f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Rejection Sampling
 
 *Goal*: To sample from unknown distribution $p(x)$.

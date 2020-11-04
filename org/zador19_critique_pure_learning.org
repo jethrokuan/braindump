@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a776ca1c-cdf7-4478-b576-3b56141ae5c6
 :END:
-#+setupfile:./hugo_setup.org
 #+title: A critique of pure learning and what artificial neural networks can learn from animal brains
 
 * The Genomic Bottleneck

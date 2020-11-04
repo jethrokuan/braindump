@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       ad49fd53-8d6d-4e51-a851-2c8a75d6ea74
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Theory Of Computation
+
 * Introduction
 Finite automata are a useful model for many kinds of important
 software and hardware. Automatas are found in compilers, software for

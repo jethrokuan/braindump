@@ -1,6 +1,5 @@
 :PROPERTIES:
 :ID:       3ec09638-fa2b-4e35-bc96-2938abc91457
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Recommender Systems
  - tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]]

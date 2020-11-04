@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       d7761f75-e74a-4c33-aedb-3f68b4c22689
-:END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: optical_flow_estimation
-#+title: Optical Flow Estimation
-
-Optical flow estimation is the problem of computing the velocity of objects on the image plane without knowledge about the scene geometry or motion. This problem is ill-posed, and requires regularization to become tractable.

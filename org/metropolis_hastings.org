@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a3f99d16-a138-41c8-95ed-1d2db58bf4ef
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Metropolis-Hastings Method
 
 In [[id:9a108a6e-8c01-49db-813d-6dcfe5825a4d][Importance Sampling]] and [[id:e586c765-6a02-47f0-b92d-be313777de2f][Rejection Sampling]], the proposal

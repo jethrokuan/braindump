@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       af1a9a10-1ade-4e87-a73a-743a053f1a34
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Presentations
 
 * Creating Good Presentations

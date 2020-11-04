@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       1afc2277-e96b-4049-a1c0-2ea9ff26e0b0
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Generalized Value Functions
 (TODO)
 

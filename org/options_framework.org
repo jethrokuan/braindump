@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       e938b343-115a-4f32-b00c-6e96626a308a
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Options Framework
+
 An option is defined as a tuple containing:
 
 1. An initiation function (precondition)

@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       60d4a2f3-1b46-4df9-940a-c4a7e47c80c3
+:END:
+#+roam_key: http://ai.stanford.edu/blog/selfsupervised-multimodal/
+#+hugo_slug: making_sense_of_vision_and_touch_multimodal_representations_for_contact_rich_tasks_sail_blog
+#+roam_tags: website
+#+title: Making Sense of Vision and Touch: Multimodal Representations for Contact-Rich Tasks | SAIL Blog
+
+- source :: http://ai.stanford.edu/blog/selfsupervised-multimodal/

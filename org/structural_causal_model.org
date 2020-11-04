@@ -1,0 +1,14 @@
+:PROPERTIES:
+:ID:       aa5c8002-a1ba-4d64-af54-38d1eafafdeb
+:END:
+#+hugo_slug: structural_causal_model
+#+title: Structural Causal Model
+
+A structural causal model satisfies the following conditions:
+
+1. It is a directed acyclic graph $G$ with vertices $X_{1}, \dots, X_{n}$
+2. Vertices are observables, and arrows represent direct causation
+3. Each observable $X_{i}$ is a density, with independent unexplained random
+   variables $U_{i}, \dots, U_{n}$.
+
+The structural causal model satisfies the [[id:87e2d47f-eaab-45e4-827c-3dfe587aa598][Reichenbach's principle]].

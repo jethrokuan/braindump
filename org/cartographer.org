@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       02ac1905-bb1c-400a-82e1-7203a1600d56
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Google Cartographer
 
 * System Overview

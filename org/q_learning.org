@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       ae0b04fd-500b-4592-a20b-556f26a1b69d
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Q-Learning
 
 - tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]], [[id:6bcdf2f0-6f2b-47bf-95c1-180a1d81f497][Temporal Difference Learning]], [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]

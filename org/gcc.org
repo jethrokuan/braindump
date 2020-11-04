@@ -2,7 +2,6 @@
 :ID:       b6b20502-ddfb-4576-8ed1-77520fd5c121
 :END:
 #+title: GCC
-#+setupfile: ./hugo_setup.org
 
 - tags :: [[id:b969b1f3-371c-42ae-a1f3-44836047659f][Compilers]], [[id:08aab063-2472-457a-8c11-6acd19ae29d2][The C Language]]
 

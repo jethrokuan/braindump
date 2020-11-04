@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0a267ec0-b62d-4d7d-b813-6fbb14dbcff0
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Normalizing Flows
 
 Normalizing flows provide a way of constructing probability

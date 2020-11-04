@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f713e0e4-e84e-41cd-b55b-fee0630dabb6
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Haskell
 #+options: toc:nil
 

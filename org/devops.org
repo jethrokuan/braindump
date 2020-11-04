@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       067a5827-a6a4-4234-9433-27d1a41f8d4f
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Dev Ops
 * Kubernetes
 [[https://www.opencontainers.org/][Open Containers Initiative]]

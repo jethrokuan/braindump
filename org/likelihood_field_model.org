@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       bc31b36d-8a2e-492c-af48-75f7794eefa4
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Likelihood Field Model
 
 - tags :: [[id:011be61f-9934-4996-9c6c-328a19eaff96][Map Matching]]

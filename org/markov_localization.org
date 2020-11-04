@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       8f573bd6-87d8-4fe2-81e9-6357752469c4
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Markov Localization
 
 * Markov Localization

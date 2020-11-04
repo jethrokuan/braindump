@@ -1,6 +1,4 @@
 :PROPERTIES:
 :ID:       921860c2-ae0a-4160-ad99-13c12887095c
 :END:
-#+setupfile:./hugo_setup.org
-#+hugo_slug: cuckoo_filters
 #+title: Cuckoo Filters

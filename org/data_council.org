@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       6179f955-64ae-4920-b2eb-c3c4bf718705
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Datacouncil.ai Conference Notes
 
 - tags :: [[id:ce4150a8-2082-4f49-ad40-aac2943dfe07][Data Science]]

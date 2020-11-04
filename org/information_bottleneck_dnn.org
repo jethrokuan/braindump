@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       1e986fb8-e87d-45f6-8f6f-446992d493d0
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Information Bottleneck in Deep Neural Networks
 
 The information bottleneck theory was recently used to study Deep

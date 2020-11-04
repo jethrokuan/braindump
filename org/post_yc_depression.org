@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       cc4ef664-2d7b-4a36-88b6-617291507ff6
+:END:
+#+roam_key: https://www.bmaho.com/articles/post-yc-depression
+#+hugo_slug: post_yc_depression
+#+title: Post YC Depression
+
+- source :: https://www.bmaho.com/articles/post-yc-depression
+

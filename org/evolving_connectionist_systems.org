@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       b3da9ae0-28d5-4e48-82ee-e72ce91db846
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Evolving Connectionist Systems
 
 Evolving Connectionist Systems (ECoS) learn local models from data

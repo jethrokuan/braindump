@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       62a93e72-8b06-46dd-863c-e2eae004a071
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Temp Coding with Alpha Synaptic Function
 
 - tags :: [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       065ead08-5fe8-4645-9bbc-c446f6826833
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Are We Smart Enough to Know How Smart Animals Are?
 
 - title :: Are We Smart Enough to Know How Smart Animals Are? 

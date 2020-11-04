@@ -1,6 +1,5 @@
 :PROPERTIES:
 :ID:       8880f01b-e5e1-4a31-aa3c-7fc5caabb95c
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: bloom_filter
 #+title: Bloom Filter

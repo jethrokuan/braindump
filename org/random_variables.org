@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       4f34c856-1cf9-4d18-b146-982d9c0b0f4a
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Random Variables
 
 - tags :: [[id:3ec39abc-ea53-4087-8523-7ace154c6aa6][Statistics]]

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       99b51aca-606c-4447-ad9f-4339807adf4f
 :END:
-#+setupfile:./hugo_setup.org
 #+title: If You're Not Writing a Programming Language, Don't Use A Programming Language - Leslie Lamport
 
 - title :: If You're Not Writing a Programming Language, Don't Use A Programming Language

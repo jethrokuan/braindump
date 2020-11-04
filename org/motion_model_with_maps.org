@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       a2ae7699-5207-4719-961d-deb297dffae2
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Motion Model With Maps
 
 - tags :: [[id:b6b64269-6357-4c01-8ce7-8c6f5ee73956][Velocity Motion Model]], [[id:cde6efa7-e47e-4a22-a35d-98e87ff5ca9f][Odometry Motion Model]]

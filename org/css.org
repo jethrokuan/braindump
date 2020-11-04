@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       efd66caf-279b-4d0a-8db4-537fec2baffd
 :END:
-#+setupfile: ./hugo_setup.org
 #+hugo_tags: web
 #+title: CSS
 

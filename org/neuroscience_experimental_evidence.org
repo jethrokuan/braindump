@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       071ccf84-f23c-4b79-8e5d-4f91feac68d5
 :END:
-#+setupfile:./hugo_setup.org
 #+title: Neuroscience Experimental Evidence
 
 - tags :: [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]], [[id:cc7d1ffe-280d-4744-9fac-c38e70c5472c][Neuroscience ⭐]]

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       8590c76b-dc7d-4f66-b6ee-484a9b1a0e6b
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Cognitive Hierarchy Model
 
 See cite:camerer2004cognitive for a nice introduction using Keynes' "beauty

@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       06635cd6-7ae1-4ba0-b82f-5a344871d94e
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Bayesian Inference
 #+hugo_tags: machine-learning
 

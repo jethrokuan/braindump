@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       55388376-e971-479d-be96-add8589c3237
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Markov Chains
 
 - tags :: [[id:142c8033-00a7-4a2a-83e5-33e1349ade5a][Stochastic Processes]]

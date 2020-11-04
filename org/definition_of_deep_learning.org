@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       73a56c88-edbf-45cd-b67e-f626e69b9624
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: definition_of_deep_learning
 #+title: Definition of Deep Learning
 

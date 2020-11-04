@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       fceda897-3587-4a80-8059-1f58bb240778
 :END:
-#+setupfile:./hugo_setup.org
 #+hugo_slug: zeroshot_learning
 #+title: Zero shot Learning
 

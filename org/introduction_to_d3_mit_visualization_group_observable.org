@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d0ee5a58-a524-49b2-ab70-001e53727672
+:END:
+#+hugo_slug: introduction_to_d3_mit_visualization_group_observable
+#+roam_key: https://observablehq.com/@mitvis/introduction-to-d3
+#+title: Introduction to D3 / MIT Visualization Group / Observable
+
+- source :: https://observablehq.com/@mitvis/introduction-to-d3

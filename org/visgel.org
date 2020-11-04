@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       4c6d0aab-d1b5-4f88-99ca-ca0404e9dce1
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: VisGel
 #+roam_key: http://visgel.csail.mit.edu/
 

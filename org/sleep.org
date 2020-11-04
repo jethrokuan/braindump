@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       0077acd3-79e7-4e34-bba0-39a5689c025c
 :END:
-#+setupfile: ./hugo_setup.org
 #+title: Sleep
 * Everyman
 https://www.polyphasicsociety.com/polyphasic-sleep/overviews/everyman/
