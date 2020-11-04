@@ -1,18 +1,17 @@
 +++
-title = "Reinforcement Learning ⭐"
+title = "Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:47+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "machine_learning" >}})
+: [Machine Learning]({{<relref "machine_learning.md" >}})
 
 Reinforcement Learning is the field of learning and decision-making
 under uncertainty. An agent acts with a learnable behaviour policy in
 an environment with initially unknown dynamics and reward. The agent
-observes the environment's state (sometimes partially: [POMDPs]({{< relref "pomdp" >}})) and
+observes the environment's state (sometimes partially: [POMDPs]({{<relref "pomdp.md" >}})) and
 chooses an action.
 
 behaviour
@@ -33,7 +32,7 @@ dynamics
 reward
 : \\(R(r\_{t+1} | s_t, a_t)\\)
 
-The dynamics and rewards here reflect the [markovian assumption]({{< relref "markovian_assumption" >}}).
+The dynamics and rewards here reflect the [markovian assumption]({{<relref "markovian_assumption.md" >}}).
 States can be represented in many ways: in a tabular fashion (state 1
 \\(\rightarrow\\) state 2) or as features.
 
@@ -320,7 +319,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orgd91f195) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org2eacf70) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 
@@ -341,12 +340,12 @@ Tutoring Systems
 
 ## Related {#related}
 
-- [Markov Decision Process]({{< relref "markov_decision_process" >}})
-- [Monte Carlo Tree Search]({{< relref "mcts" >}})
-- [Deep Reinforcement Learning]({{< relref "deep_rl" >}})
-- [Temporal Difference Learning]({{< relref "td_learning" >}})
-- [Policy Gradients]({{< relref "policy_gradients" >}})
-- [Actor-Critic]({{< relref "actor_critic" >}})
-- [Q-Learning]({{< relref "q_learning" >}})
+- [Markov Decision Process]({{<relref "markov_decision_process.md" >}})
+- [Monte Carlo Tree Search]({{<relref "mcts.md" >}})
+- [Deep Reinforcement Learning]({{<relref "deep_rl.md" >}})
+- [Temporal Difference Learning]({{<relref "td_learning.md" >}})
+- [Policy Gradients]({{<relref "policy_gradients.md" >}})
+- [Actor-Critic]({{<relref "actor_critic.md" >}})
+- [Q-Learning]({{<relref "q_learning.md" >}})
 
 <biblio.bib>

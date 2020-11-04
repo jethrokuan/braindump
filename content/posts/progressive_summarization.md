@@ -1,12 +1,11 @@
 +++
 title = "Progressive Summarization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:20+08:00
 draft = false
 +++
 
 tags
-: [Productivity]({{< relref "productivity" >}})
+: [Productivity]({{<relref "productivity.md" >}})
 
 The idea of progressive summarization is to create notes such that
 their purpose is comprehensible in the future.

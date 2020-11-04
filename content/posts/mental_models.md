@@ -1,8 +1,6 @@
 +++
 title = "Mental Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:00+08:00
-slug = "mental_models"
 draft = false
 +++
 

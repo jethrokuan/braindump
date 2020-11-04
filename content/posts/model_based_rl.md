@@ -1,11 +1,10 @@
 +++
 title = "Model-Based Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:20+08:00
 draft = false
 +++
 
-In model-free [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}}), we assumed that \\(p(s\_{t+1} |
+In model-free [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}}), we assumed that \\(p(s\_{t+1} |
 s_t, a_t)\\) is unknown, and no attempt is made to learn it. However, we
 often know the dynamics. For example, in games such as chess, and
 easily modeled systems, like car navigation.
@@ -69,7 +68,7 @@ result in nonsensical behaviour.
 
 ![](/ox-hugo/screenshot2019-12-23_14-31-15_.png)
 We can use _uncertainty estimation_ to detect where the models may be
-wrong, for example by using [Gaussian Processes]({{< relref "gaussian_processes" >}}).
+wrong, for example by using [Gaussian Processes]({{<relref "gaussian_processes.md" >}}).
 
 For planning under uncertainty, one can use the expected value,
 optimistic value, or pessimistic value, depending on application.

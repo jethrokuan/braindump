@@ -1,7 +1,6 @@
 +++
 title = "The Good Judgment Project"
 author = ["Jethro Kuan"]
-lastmod = 2020-10-24T21:44:22+08:00
 slug = "the_good_judgment_project"
 draft = false
 +++

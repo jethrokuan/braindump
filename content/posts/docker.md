@@ -1,12 +1,11 @@
 +++
 title = "Docker 101"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:38+08:00
 draft = false
 +++
 
 tags
-: [Linux]({{< relref "linux" >}}), [Operating Systems]({{< relref "operating_systems" >}})
+: [Linux]({{<relref "linux.md" >}}), [Operating Systems]({{<relref "operating_systems.md" >}})
 
 ## Why Containers {#why-containers}
 
@@ -14,18 +13,16 @@ tags
 
 {{< figure src="/ox-hugo/container_vm.png" >}}
 
-<!--list-separator-->
+#### Containers are Cheap {#containers-are-cheap}
 
-- Containers are Cheap
+<div class="build fade">
+  <div></div>
 
-   <div class="build fade">
-     <div></div>
+- Docker provides lightweight virtualization with almost zero
+  overhead.
+- Start and stop containers within seconds.
 
-  - Docker provides lightweight virtualization with almost zero
-    overhead.
-  - Start and stop containers within seconds.
-
-   </div>
+</div>
 
 ### Containers are Portable {#containers-are-portable}
 
@@ -72,19 +69,17 @@ environment variables.
   docker pull alpine
 ```
 
-<!--list-separator-->
+#### Alpine? {#alpine}
 
-- Alpine?
+`alpine` is an image for a tiny Linux distribution, used by Docker for
+most of its official images.
 
-  `alpine` is an image for a tiny Linux distribution, used by Docker for
-  most of its official images.
+A container image is a lightweight, stand-alone, executable package of
+a piece of software that includes everything needed to run it: code,
+runtime, system tools, system libraries, settings.
 
-  A container image is a lightweight, stand-alone, executable package of
-  a piece of software that includes everything needed to run it: code,
-  runtime, system tools, system libraries, settings.
-
-  `alpine` is pulled from the Docker Registry, where hundreds of
-  thousands of images are hosted.
+`alpine` is pulled from the Docker Registry, where hundreds of
+thousands of images are hosted.
 
 ### Starting a container {#starting-a-container}
 

@@ -1,11 +1,10 @@
 +++
 title = "Python"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:03+08:00
 draft = false
 +++
 
-Python is an interpreted, general-purpose, high-level [programming language]({{< relref "prog_lang" >}}). Some properties of Python include:
+Python is an interpreted, general-purpose, high-level [programming language]({{<relref "prog_lang.md" >}}). Some properties of Python include:
 
 - whitespaces being significant
 - dynamically-typed
@@ -13,8 +12,8 @@ Python is an interpreted, general-purpose, high-level [programming language]({{<
 
 ## Index {#index}
 
-- [Python Import Resolution]({{< relref "python_import_resolution" >}})
-- [Python Default Parameter Values]({{< relref "python_default_values" >}})
+- [Python Import Resolution]({{<relref "python_import_resolution.md" >}})
+- [Python Default Parameter Values]({{<relref "python_default_values.md" >}})
 
 ## Python Books {#python-books}
 

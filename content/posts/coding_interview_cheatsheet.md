@@ -1,7 +1,6 @@
 +++
 title = "Coding Interview Cheatsheet"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:42+08:00
 slug = "coding_interview_cheatsheet"
 draft = false
 +++

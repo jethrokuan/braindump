@@ -1,12 +1,11 @@
 +++
 title = "Exponential Family"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:34+08:00
 draft = false
 +++
 
 tags
-: [Statistics]({{< relref "statistics" >}})
+: [Statistics]({{<relref "statistics.md" >}})
 
 A one-parameter exponential family model is any model whose density
 can be expressed as:

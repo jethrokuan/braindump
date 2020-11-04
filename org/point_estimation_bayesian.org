@@ -17,4 +17,4 @@ the posterior is also unimodal, then all 3 coincide.
 
 For asymmetric posteriors, the median is often preferred. The mode
 only considers the value corresponding to the maximum value of the
-density, while the mean may give too much weight to extreme outliers.
+density, while the mean may give too much weight to extreme outliers

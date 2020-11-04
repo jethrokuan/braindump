@@ -1,8 +1,6 @@
 +++
 title = "Common Statistical Tests Are Linear Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:36+08:00
-slug = "common_statistical_tests_are_linear_models"
 draft = false
 +++
 
@@ -14,7 +12,7 @@ author
 : Jonas Kristoffer Lindeløv
 
 tags
-: [Statistical Testing]({{< relref "statistical_testing" >}})
+: [Statistical Testing]({{<relref "statistical_testing.md" >}})
 
 Linear models underlie common parametric and "non-parametric" tests.
 Non-parametric tests are often simply the parametric tests, but in

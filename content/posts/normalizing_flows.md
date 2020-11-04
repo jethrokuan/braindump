@@ -155,8 +155,8 @@ equation (ODE) that describes the flow's evolution in time.
 
 ## Resources {#resources}
 
-- Normalizing Flows for Probabilistic Modeling and Inference ([Papamakarios et al., n.d.](#orge69f953))
+- Normalizing Flows for Probabilistic Modeling and Inference ([Papamakarios et al., n.d.](#org62ddcc1))
 
 ## Bibliography {#bibliography}
 
-<a id="orge69f953"></a>Papamakarios, George, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, and Balaji Lakshminarayanan. n.d. “Normalizing Flows for Probabilistic Modeling and Inference.” <http://arxiv.org/abs/1912.02762v1>.
+<a id="org62ddcc1"></a>Papamakarios, George, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, and Balaji Lakshminarayanan. n.d. “Normalizing Flows for Probabilistic Modeling and Inference.” <http://arxiv.org/abs/1912.02762v1>.

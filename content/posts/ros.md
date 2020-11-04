@@ -1,7 +1,6 @@
 +++
 title = "Robot Operating System (ROS)"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:08+08:00
 draft = false
 +++
 
@@ -9,21 +8,17 @@ draft = false
 
 ### What is ROS? {#what-is-ros}
 
-<!--list-separator-->
+#### Left {#left}
 
-- Left :B_column:
+- Meta-operating system, providing low level services:
+  - process communication over a network
+  - device control
+  - hardware abstraction
+- Distributed framework of processes
 
-  - Meta-operating system, providing low level services:
-    - process communication over a network
-    - device control
-    - hardware abstraction
-  - Distributed framework of processes
+#### Right {#right}
 
-<!--list-separator-->
-
-- Right :B_column:
-
-  {{< figure src="/ox-hugo/ros-logo_2019-10-15_16-56-35.jpg" >}}
+{{< figure src="/ox-hugo/ros-logo_2019-10-15_16-56-35.jpg" >}}
 
 ### Why use ROS? {#why-use-ros}
 
@@ -36,54 +31,42 @@ draft = false
 
 ### ROS Concepts {#ros-concepts}
 
-<!--list-separator-->
+#### Computational Graph {#computational-graph}
 
-- Computational Graph
+- All computation is organized as a peer-to-peer network of communicating
+  processes.
 
-  - All computation is organized as a peer-to-peer network of communicating
-    processes.
+#### Nodes {#nodes}
 
-<!--list-separator-->
+- Processes that perform any form of computation.
+- Nodes can communicate with one another.
+- Example of nodes:
+  - Publish sensor readings
+  - Receiving teleop commands and running them
+- Written with ROS client libraries ([rospy](http://wiki.ros.org/rospy), [roscpp](http://wiki.ros.org/roscpp))
 
-- Nodes
+#### Master (Primary) Node {#master--primary--node}
 
-  - Processes that perform any form of computation.
-  - Nodes can communicate with one another.
-  - Example of nodes:
-    - Publish sensor readings
-    - Receiving teleop commands and running them
-  - Written with ROS client libraries ([rospy](http://wiki.ros.org/rospy), [roscpp](http://wiki.ros.org/roscpp))
+- Provides name registration, node lookup to all nodes in the
+  computational graph.
+- Enables communication between nodes.
 
-<!--list-separator-->
+#### Parameter Server {#parameter-server}
 
-- Master (Primary) Node
+- "Distributed" key-value store: all nodes can access data stored in
+  these keys.
 
-  - Provides name registration, node lookup to all nodes in the
-    computational graph.
-  - Enables communication between nodes.
+#### Topics {#topics}
 
-<!--list-separator-->
+- Nodes communicating via the publish-subscribe semantics do so by
+  publishing and subscribing to topics.
+- Every topic has a name, e.g. `/sensors/temp1`
+- No access permissions
 
-- Parameter Server
+#### Services {#services}
 
-  - "Distributed" key-value store: all nodes can access data stored in
-    these keys.
-
-<!--list-separator-->
-
-- Topics
-
-  - Nodes communicating via the publish-subscribe semantics do so by
-    publishing and subscribing to topics.
-  - Every topic has a name, e.g. `/sensors/temp1`
-  - No access permissions
-
-<!--list-separator-->
-
-- Services
-
-  - Request-response semantics (think Web servers)
-  - Requests are blocking
+- Request-response semantics (think Web servers)
+- Requests are blocking
 
 ### Example Computational Graph {#example-computational-graph}
 
@@ -121,26 +104,22 @@ Catkin is ROS' package manager, built on top of CMake.
 
 ### Exploring ROS shell commands [^fn:1] {#exploring-ros-shell-commands}
 
-<!--list-separator-->
+#### rospack {#rospack}
 
-- rospack
+`rospack find` locates ROS packages.
 
-  `rospack find` locates ROS packages.
+```bash
+  rospack find roscpp # /opt/ros/melodic/share/roscpp
+```
 
-  ```bash
-    rospack find roscpp # /opt/ros/melodic/share/roscpp
-  ```
+#### roscd {#roscd}
 
-<!--list-separator-->
+roscd changes you to the directory of the ros package.
 
-- roscd
-
-  roscd changes you to the directory of the ros package.
-
-  ```bash
-    roscd roscpp
-    pwd # /opt/ros/melodic/share/roscpp
-  ```
+```bash
+  roscd roscpp
+  pwd # /opt/ros/melodic/share/roscpp
+```
 
 ### Creating a ROS package {#creating-a-ros-package}
 
@@ -187,41 +166,37 @@ To kill it, press `Ctrl-C` in the same terminal.
 
 ### ROS Nodes {#ros-nodes}
 
-<!--list-separator-->
+#### rosnode {#rosnode}
 
-- rosnode
+rosnode let's us inspect available nodes:
 
-  rosnode let's us inspect available nodes:
+```bash
+  rosnode list                    # /rosout
+  rosnode info /rosout
+```
 
-  ```bash
-    rosnode list                    # /rosout
-    rosnode info /rosout
-  ```
+What happens if master is not running?
 
-  What happens if master is not running?
+```bash
+  rosnode list               # ERROR: Unable to communicate with master!
+```
 
-  ```bash
-    rosnode list               # ERROR: Unable to communicate with master!
-  ```
+#### Running a ROS node {#running-a-ros-node}
 
-<!--list-separator-->
+A ROS package may contain many ROS nodes.
 
-- Running a ROS node
+```bash
+  rosrun turtlesim <TAB>
+  # draw_square        mimic              turtlesim_node     turtle_teleop_key
+```
 
-  A ROS package may contain many ROS nodes.
+```bash
+  rosrun turtlesim turtlesim_node
+  # [ INFO] [1571214245.786246078]: Starting turtlesim with node name /turtlesim
+  # [ INFO] [1571214245.790986159]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
+```
 
-  ```bash
-    rosrun turtlesim <TAB>
-    # draw_square        mimic              turtlesim_node     turtle_teleop_key
-  ```
-
-  ```bash
-    rosrun turtlesim turtlesim_node
-    # [ INFO] [1571214245.786246078]: Starting turtlesim with node name /turtlesim
-    # [ INFO] [1571214245.790986159]: Spawning turtle [turtle1] at x=[5.544445], y=[5.544445], theta=[0.000000]
-  ```
-
-  Exercise: reinspect the node list.
+Exercise: reinspect the node list.
 
 ### ROS Topics {#ros-topics}
 
@@ -231,63 +206,55 @@ Now we have a visual simulation of a turtle. How do we make it move?
 rosrun turtesim turtle_teleop_key
 ```
 
-<!--list-separator-->
+#### What's going on? {#what-s-going-on}
 
-- What's going on?
+- `turtle_teleop_key` advertises on a ROS topic, and publishes each keystroke:
 
-  - `turtle_teleop_key` advertises on a ROS topic, and publishes each keystroke:
+<!--listend-->
 
-   <!--listend-->
+```bash
+  rostopic list
+  rostopic echo /turtle1/cmd_vel
+```
 
-  ```bash
-    rostopic list
-    rostopic echo /turtle1/cmd_vel
-  ```
+#### ROS Messages {#ros-messages}
 
-<!--list-separator-->
+- ROS messages are pre-defined formats. They are binarized and
+  compressed before they are sent over the wire.
 
-- ROS Messages
+<!--listend-->
 
-  - ROS messages are pre-defined formats. They are binarized and
-    compressed before they are sent over the wire.
+```bash
+  rostopic type /turtle1/cmd_vel   # geometry_msgs/Twist
+```
 
-   <!--listend-->
+#### Monitoring the Topic {#monitoring-the-topic}
 
-  ```bash
-    rostopic type /turtle1/cmd_vel   # geometry_msgs/Twist
-  ```
+- The rate at which messages is published is good to monitor (in Hz).
+- A topic that has too many messages can get congested, and buffer/drop
+  many messages, or congest the ROS network.
 
-<!--list-separator-->
+<!--listend-->
 
-- Monitoring the Topic
+```bash
+  rostopic hz /turtle1/cmd_vel
+  # subscribed to [/turtle1/cmd_vel]
+  # average rate: 13.933
+  # min: 0.072s max: 0.072s std dev: 0.00000s window: 2
+```
 
-  - The rate at which messages is published is good to monitor (in Hz).
-  - A topic that has too many messages can get congested, and buffer/drop
-    many messages, or congest the ROS network.
+#### Rosbag {#rosbag}
 
-   <!--listend-->
+- A bag is subscribes to one or more topics, and stores serialized
+  data that is received (for logging/replay)
 
-  ```bash
-    rostopic hz /turtle1/cmd_vel
-    # subscribed to [/turtle1/cmd_vel]
-    # average rate: 13.933
-    # min: 0.072s max: 0.072s std dev: 0.00000s window: 2
-  ```
+<!--listend-->
 
-<!--list-separator-->
-
-- Rosbag
-
-  - A bag is subscribes to one or more topics, and stores serialized
-    data that is received (for logging/replay)
-
-   <!--listend-->
-
-  ```bash
-    rosbag record /turtle1/cmd_vel
-    # [ INFO] [1571294982.145679913]: Subscribing to /turtle1/cmd_vel
-    # [ INFO] [1571294982.168808833]: Recording to 2019-10-17-14-49-42.bag
-  ```
+```bash
+  rosbag record /turtle1/cmd_vel
+  # [ INFO] [1571294982.145679913]: Subscribing to /turtle1/cmd_vel
+  # [ INFO] [1571294982.168808833]: Recording to 2019-10-17-14-49-42.bag
+```
 
 ### ROS Services {#ros-services}
 
@@ -610,17 +577,13 @@ Write a client that sends the request and prints this response.
 
 ### ROS Installation {#ros-installation}
 
-<!--list-separator-->
+#### Ubuntu {#ubuntu}
 
-- Ubuntu
+Follow the instructions on ROS Wiki.
 
-  Follow the instructions on ROS Wiki.
+#### VM {#vm}
 
-<!--list-separator-->
-
-- VM
-
-  [Download the VM image](https://drive.google.com/file/d/1SFU4rhWyAd2mlmDAIh0pvXkOvpxO5QuT/view) and load it.
+[Download the VM image](https://drive.google.com/file/d/1SFU4rhWyAd2mlmDAIh0pvXkOvpxO5QuT/view) and load it.
 
 [^fn:1]: Almost all these commands have tab completion!
 [^fn:2]: can also be done programatically

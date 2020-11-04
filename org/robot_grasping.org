@@ -9,8 +9,8 @@ manipulation of objects.
 
 A typical robot grasp detection system can consist of 3 components.
 
-- [[file:object_localization.org][Object localization]] :: determining the target object's location
-- [[file:object_pose_estimation.org][Object Pose Estimation]] :: obtaining a target object's 6D pose in the scene
+- Object localization :: determining the target object's location
+- Object Pose Estimation :: obtaining a target object's 6D pose in the scene
 - [[file:grasp_estimation.org][Grasp Estimation]] :: Estimating the grasp pose in the camera's coordinate frame
 
 * Challenges
@@ -32,7 +32,8 @@ A typical robot grasp detection system can consist of 3 components.
 Execution time is the primary reason why grasping systems remain open-loop.
 However, closed-loop control via visual feedback is desirable because they are
 able to adapt to dynamic environments, and require less precise position control
-or camera calibration. [[id:0570cdd6-baad-4709-b3f9-6edeceac90f6][morrison_closing_2018: Closing the Loop for Robotic
-Grasping: A Real-time, Generative Grasp Synthesis Approach]] uses neural network
+or camera calibration. cite:morrisonClosingLoopRobotic2018 uses neural network
 to synthesize a grasp quality image in real-time to achieve closed-loop
 grasping.
+
+bibliography:biblio.bib

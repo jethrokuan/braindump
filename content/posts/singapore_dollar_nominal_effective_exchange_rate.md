@@ -1,8 +1,6 @@
 +++
 title = "Singapore Dollar Nominal Effective Exchange Rate"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:50+08:00
-slug = "singapore_dollar_nominal_effective_exchange_rate"
 draft = false
 +++
 

@@ -1,7 +1,6 @@
 +++
 title = "Work Clean"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:09+08:00
 draft = false
 +++
 
@@ -12,7 +11,7 @@ author
 : Dan Charnas
 
 tags
-: [Productivity]({{< relref "productivity" >}})
+: [Productivity]({{<relref "productivity.md" >}})
 
 ## Preparation {#preparation}
 

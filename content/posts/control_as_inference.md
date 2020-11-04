@@ -1,12 +1,11 @@
 +++
 title = "Control As Inference"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:36+08:00
 draft = false
 +++
 
 tags
-: [Optimal Control and Planning]({{< relref "optimal_control" >}}), [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Optimal Control and Planning]({{<relref "optimal_control.md" >}}), [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_19-20-19_.png" caption="Figure 1: PGM for decision making for the first 3 time-steps" >}}
 
@@ -25,7 +24,7 @@ a_t)) \\\\\\
 r(s_t, a_t) \right)
 \end{align}
 
-With this [Probabilistic Graph Model]({{< relref "pgm" >}}), we can:
+With this [Probabilistic Graph Model]({{<relref "pgm.md" >}}), we can:
 
 1.  model sub-optimal behaviour (important for inverse RL)
 2.  can apply inference algorithms to solve control and planning problems
@@ -124,7 +123,7 @@ One can also add a temperature: \\(\pi(a_t | s_t) =
 p(s_t) \propto \beta_t(s_t) \alpha_t(s_t)
 \end{equation}
 
-same derivations as [Hidden Markov Model]({{< relref "hidden_markov_model" >}})!
+same derivations as [Hidden Markov Model]({{<relref "hidden_markov_model.md" >}})!
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-04-20_.png" >}}
 
@@ -132,7 +131,7 @@ same derivations as [Hidden Markov Model]({{< relref "hidden_markov_model" >}})!
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-18-55_.png" >}}
 
-For more, see ([Levine, n.d.](#orgeaced87)).
+For more, see ([Levine, n.d.](#orgcdd8f6b)).
 
 ## Resources {#resources}
 
@@ -140,4 +139,4 @@ For more, see ([Levine, n.d.](#orgeaced87)).
 
 ## Bibliography {#bibliography}
 
-<a id="orgeaced87"></a>Levine, Sergey. n.d. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” <http://arxiv.org/abs/1805.00909v3>.
+<a id="orgcdd8f6b"></a>Levine, Sergey. n.d. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” <http://arxiv.org/abs/1805.00909v3>.

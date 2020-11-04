@@ -1,11 +1,10 @@
 +++
 title = "Emacs"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:31+08:00
 draft = false
 +++
 
-Much of Emacs is written in [Emacs Lisp]({{< relref "emacs_lisp" >}}).
+Much of Emacs is written in [Emacs Lisp]({{<relref "emacs_lisp.md" >}}).
 
 ## Iconic Blog Posts {#iconic-blog-posts}
 

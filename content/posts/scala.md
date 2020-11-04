@@ -1,12 +1,11 @@
 +++
 title = "Scala"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:46+08:00
 draft = false
 +++
 
 tags
-: [Programming Languages]({{< relref "prog_lang" >}})
+: [Programming Languages]({{<relref "prog_lang.md" >}})
 
 ## Introduction to Scala {#introduction-to-scala}
 

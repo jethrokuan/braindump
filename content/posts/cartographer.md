@@ -1,7 +1,6 @@
 +++
 title = "Google Cartographer"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:35+08:00
 draft = false
 +++
 
@@ -9,10 +8,10 @@ draft = false
 
 Google Cartographer provides a real-time solution for indoor mapping
 in the form of a sensor-equipped backpack that generates 2D grid maps
-with a \\(r = 5cm\\) resolution ([Hess et al., n.d.](#org599a182)). It is built to
+with a \\(r = 5cm\\) resolution ([Hess et al., n.d.](#orgebbbf8c)). It is built to
 scale to large maps, where previous approaches face issues. For
 example, particle filter SLAM ([Simultaneous Localization and Mapping
-(SLAM)]({{< relref "slam" >}})) approaches become resource intensive as maps become large,
+(SLAM)]({{<relref "slam.md" >}})) approaches become resource intensive as maps become large,
 since each particle filter must maintain a representation of the full
 system state in each particle.
 
@@ -35,4 +34,4 @@ the optimization problem.
 
 ## Bibliography {#bibliography}
 
-<a id="org599a182"></a>Hess, Wolfgang, Damon Kohler, Holger Rapp, and Daniel Andor. n.d. “Real-Time Loop Closure in 2D LIDAR SLAM.” In _2016 IEEE International Conference on Robotics and Automation (ICRA)_, 1271–78.
+<a id="orgebbbf8c"></a>Hess, Wolfgang, Damon Kohler, Holger Rapp, and Daniel Andor. n.d. “Real-Time Loop Closure in 2D LIDAR SLAM.” In _2016 IEEE International Conference on Robotics and Automation (ICRA)_, 1271–78.

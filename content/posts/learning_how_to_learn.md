@@ -1,13 +1,11 @@
 +++
 title = "Learning How To Learn"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:57+08:00
-slug = "learning_how_to_learn"
 draft = false
 +++
 
 tags
-: [Learning]({{< relref "learning" >}})
+: [Learning]({{<relref "learning.md" >}})
 
 ## What is learning? {#what-is-learning}
 

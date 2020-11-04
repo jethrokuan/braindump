@@ -1,8 +1,6 @@
 +++
 title = "RSS 2020 Workshops: Visuotactile Sensors for Robust Manipulation - From Perception to Control"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:54+08:00
-slug = "rss_2020_workshops_visuotactile_sensors_for_robust_manipulation_from_perception_to_control"
 draft = false
 +++
 

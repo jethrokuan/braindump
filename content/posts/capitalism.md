@@ -1,8 +1,6 @@
 +++
 title = "Capitalism"
 author = ["Jethro Kuan"]
-lastmod = 2020-10-05T16:56:54+08:00
-slug = "capitalism"
 draft = false
 +++
 

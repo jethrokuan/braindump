@@ -1,11 +1,10 @@
 +++
 title = "Cognitive Hierarchy Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:55+08:00
 draft = false
 +++
 
-See ([Camerer, Ho, and Chong, n.d.](#orga904d80)) for a nice introduction using Keynes' "beauty
+See ([Camerer, Ho, and Chong, n.d.](#orgaab3749)) for a nice introduction using Keynes' "beauty
 contest" game.
 
 In the cognitive hierarchy model, each player believes that they
@@ -24,4 +23,4 @@ that some players may be doing as much or more.
 
 ## Bibliography {#bibliography}
 
-<a id="orga904d80"></a>Camerer, Colin F, Teck-Hua Ho, and Juin-Kuan Chong. n.d. “A Cognitive Hierarchy Model of Games” 119 (3). MIT Press:861–98.
+<a id="orgaab3749"></a>Camerer, Colin F, Teck-Hua Ho, and Juin-Kuan Chong. n.d. “A Cognitive Hierarchy Model of Games” 119 (3). MIT Press:861–98.

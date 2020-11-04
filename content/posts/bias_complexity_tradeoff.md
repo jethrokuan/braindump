@@ -1,7 +1,6 @@
 +++
 title = "The Bias-Complexity Tradeoff"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:58+08:00
 tags = ["machine-learning"]
 draft = false
 +++

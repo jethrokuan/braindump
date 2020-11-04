@@ -1,12 +1,11 @@
 +++
 title = "Datacouncil.ai Conference Notes"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:43+08:00
 draft = false
 +++
 
 tags
-: [Data Science]({{< relref "data_science" >}})
+: [Data Science]({{<relref "data_science.md" >}})
 
 ## Taking recommendation technology to the masses - Le Zhang (Microsoft) {#taking-recommendation-technology-to-the-masses-le-zhang--microsoft}
 
@@ -69,13 +68,11 @@ e.g. Factorization machines
 \sum\_{i=1}^{n}\sum\_{j=i+1}^n \langle v_i, v_j \rangle x_i x_j
 \end{equation}
 
-<!--list-separator-->
+#### <span class="org-todo todo TODO">TODO</span> xDeepFM {#xdeepfm}
 
-- <span class="org-todo todo TODO">TODO</span> xDeepFM
+([Guo et al., n.d.](#org17626a4); [Lian et al., n.d.](#org09ba7cd))
 
-  ([Guo et al., n.d.](#orgde3b13c); [Lian et al., n.d.](#orgb97d778))
-
-### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#org081f38a)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--org081f38a}
+### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#orgf5e5744)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--orgf5e5744}
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -239,8 +236,8 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 ## Bibliography {#bibliography}
 
-<a id="orgde3b13c"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
+<a id="org17626a4"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
 
-<a id="orgb97d778"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
+<a id="org09ba7cd"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
 
-<a id="org081f38a"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.
+<a id="orgf5e5744"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.

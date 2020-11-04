@@ -1,7 +1,6 @@
 +++
 title = "RSS 2020, Early Career Award Keynote + Q&A: Luca Carlone - YouTube"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-21T11:39:06+08:00
 slug = "rss_2020_early_career_award_keynote_q_a_luca_carlone_youtube"
 draft = false
 +++

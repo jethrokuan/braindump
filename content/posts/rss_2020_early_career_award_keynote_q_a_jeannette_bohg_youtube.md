@@ -1,8 +1,6 @@
 +++
 title = "RSS 2020, Early Career Award Keynote + Q&A: Jeannette Bohg - YouTube"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-19T19:57:49+08:00
-slug = "rss_2020_early_career_award_keynote_q_a_jeannette_bohg_youtube"
 draft = false
 +++
 
@@ -15,7 +13,7 @@ title
 : A Tale of Success and Failure in Robot Grasping and Manipulation
 
 related
-: [Robot Grasping]({{< relref "robot_grasping" >}})
+: [Robot Grasping]({{<relref "robot_grasping.md" >}})
 
 ## Motivation {#motivation}
 

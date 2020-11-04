@@ -8,12 +8,12 @@ The information bottleneck theory was recently used to study Deep
 Neural Networks. Shwartz-Ziv and Tishby proposed that the information
 bottleneck expresses the tradeoff between the mutual information
 measures \\(I(X,T)\\) and \\(I(T,Y)\\)
-([Shwartz-Ziv and Tishby, n.d.](#org8b83705)).
+([Shwartz-Ziv and Tishby, n.d.](#orga60f89b)).
 
 \\(I(X,T)\\) and \\(I(X,Y)\\) quantifies the amount of information that the
 layer contains about the input and output respectively.
 
-## Key Findings from ([Shwartz-Ziv and Tishby, n.d.](#org8b83705)) {#key-findings-from--shwartz-ziv-and-tishby-n-dot-d-dot--org8b83705}
+## Key Findings from ([Shwartz-Ziv and Tishby, n.d.](#orga60f89b)) {#key-findings-from--shwartz-ziv-and-tishby-n-dot-d-dot--orga60f89b}
 
 1.  Most of the training epochs are spent on compression of the input
     to efficient representation, and not on fitting the training labels
@@ -34,4 +34,4 @@ latter phase is an explanation for the lack of overfitting in DL.
 
 ## Bibliography {#bibliography}
 
-<a id="org8b83705"></a>Shwartz-Ziv, Ravid, and Naftali Tishby. n.d. “Opening the Black Box of Deep Neural Networks via Information.” <http://arxiv.org/abs/1703.00810v3>.
+<a id="orga60f89b"></a>Shwartz-Ziv, Ravid, and Naftali Tishby. n.d. “Opening the Black Box of Deep Neural Networks via Information.” <http://arxiv.org/abs/1703.00810v3>.

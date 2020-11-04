@@ -1,7 +1,6 @@
 +++
 title = "RSS Feeds"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:33+08:00
 draft = false
 +++
 
@@ -9,132 +8,74 @@ draft = false
 
 ### Tech {#tech}
 
-<!--list-separator-->
+#### <https://hnrss.org/newest?points=100> {#https-hnrss-dot-org-newest-points-100}
 
-- <https://hnrss.org/newest?points=100>
+#### <https://increment.com/feed.xml> {#https-increment-dot-com-feed-dot-xml}
 
-<!--list-separator-->
-
-- <https://increment.com/feed.xml>
-
-<!--list-separator-->
-
-- <https://lobste.rs/rss>
+#### <https://lobste.rs/rss> {#https-lobste-dot-rs-rss}
 
 ### Emacs {#emacs}
 
-<!--list-separator-->
+#### <http://planet.emacsen.org/atom.xml> {#http-planet-dot-emacsen-dot-org-atom-dot-xml}
 
-- <http://planet.emacsen.org/atom.xml>
-
-<!--list-separator-->
-
-- <https://www.reddit.com/r/emacs/>
+#### <https://www.reddit.com/r/emacs/> {#https-www-dot-reddit-dot-com-r-emacs}
 
 ### AI/ML {#ai-ml}
 
-<!--list-separator-->
+#### <https://reddit.com/r/MachineLearning/.rss> {#https-reddit-dot-com-r-machinelearning-dot-rss}
 
-- <https://reddit.com/r/MachineLearning/.rss>
+#### <https://medium.com/feed/mlreview/> {#https-medium-dot-com-feed-mlreview}
 
-<!--list-separator-->
+#### <https://distill.pub/rss.xml> {#https-distill-dot-pub-rss-dot-xml}
 
-- <https://medium.com/feed/mlreview/>
+#### <http://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss> {#http-www-dot-unofficialgoogledatascience-dot-com-feeds-posts-default-alt-rss}
 
-<!--list-separator-->
+#### <https://thegradient.pub/rss/> {#https-thegradient-dot-pub-rss}
 
-- <https://distill.pub/rss.xml>
-
-<!--list-separator-->
-
-- <http://www.unofficialgoogledatascience.com/feeds/posts/default?alt=rss>
-
-<!--list-separator-->
-
-- <https://thegradient.pub/rss/>
-
-<!--list-separator-->
-
-- <https://lilianweng.github.io/lil-log/feed.xml>
+#### <https://lilianweng.github.io/lil-log/feed.xml> {#https-lilianweng-dot-github-dot-io-lil-log-feed-dot-xml}
 
 ### Programming Languages {#programming-languages}
 
-<!--list-separator-->
-
-- <http://lambda-the-ultimate.org/rss.xml>
+#### <http://lambda-the-ultimate.org/rss.xml> {#http-lambda-the-ultimate-dot-org-rss-dot-xml}
 
 ### General {#general}
 
-<!--list-separator-->
+#### <https://www.fs.blog/feed/> {#https-www-dot-fs-dot-blog-feed}
 
-- <https://www.fs.blog/feed/>
+#### <http://feedproxy.google.com/brainpickings/rss> {#http-feedproxy-dot-google-dot-com-brainpickings-rss}
 
-<!--list-separator-->
+#### <http://feeds.feedburner.com/MeltingAsphalt> {#http-feeds-dot-feedburner-dot-com-meltingasphalt}
 
-- <http://feedproxy.google.com/brainpickings/rss>
+#### <https://commoncog.com/blog/rss/> {#https-commoncog-dot-com-blog-rss}
 
-<!--list-separator-->
-
-- <http://feeds.feedburner.com/MeltingAsphalt>
-
-<!--list-separator-->
-
-- <https://commoncog.com/blog/rss/>
-
-<!--list-separator-->
-
-- <https://weekly.nixos.org/feeds/all.rss.xml>
+#### <https://weekly.nixos.org/feeds/all.rss.xml> {#https-weekly-dot-nixos-dot-org-feeds-all-dot-rss-dot-xml}
 
 ### Company Blogs {#company-blogs}
 
-<!--list-separator-->
+#### <https://blogs.dropbox.com/tech/feed/> {#https-blogs-dot-dropbox-dot-com-tech-feed}
 
-- <https://blogs.dropbox.com/tech/feed/>
+#### <https://codeascraft.com/feed/> {#https-codeascraft-dot-com-feed}
 
-<!--list-separator-->
+#### <http://multithreaded.stitchfix.com/feed> {#http-multithreaded-dot-stitchfix-dot-com-feed}
 
-- <https://codeascraft.com/feed/>
+#### <https://engineering.pinterest.com/rss.xml> {#https-engineering-dot-pinterest-dot-com-rss-dot-xml}
 
-<!--list-separator-->
+#### <https://research.fb.com/feed/> {#https-research-dot-fb-dot-com-feed}
 
-- <http://multithreaded.stitchfix.com/feed>
+#### <https://medium.com/feed/airbnb-engineering/> {#https-medium-dot-com-feed-airbnb-engineering}
 
-<!--list-separator-->
+#### <https://tech.instacart.com/feed/> {#https-tech-dot-instacart-dot-com-feed}
 
-- <https://engineering.pinterest.com/rss.xml>
-
-<!--list-separator-->
-
-- <https://research.fb.com/feed/>
-
-<!--list-separator-->
-
-- <https://medium.com/feed/airbnb-engineering/>
-
-<!--list-separator-->
-
-- <https://tech.instacart.com/feed/>
-
-<!--list-separator-->
-
-- <http://research.baidu.com/feed/>
+#### <http://research.baidu.com/feed/> {#http-research-dot-baidu-dot-com-feed}
 
 ### Math {#math}
 
-<!--list-separator-->
+#### <http://feeds.feedburner.com/theendeavour> {#http-feeds-dot-feedburner-dot-com-theendeavour}
 
-- <http://feeds.feedburner.com/theendeavour>
-
-<!--list-separator-->
-
-- <http://andrewgelman.com/feed/>
+#### <http://andrewgelman.com/feed/> {#http-andrewgelman-dot-com-feed}
 
 ### Vocab {#vocab}
 
-<!--list-separator-->
+#### <https://wordsmith.org/awad/rss1.xml> {#https-wordsmith-dot-org-awad-rss1-dot-xml}
 
-- <https://wordsmith.org/awad/rss1.xml>
-
-<!--list-separator-->
-
-- <https://www.merriam-webster.com/wotd/feed/rss2>
+#### <https://www.merriam-webster.com/wotd/feed/rss2> {#https-www-dot-merriam-webster-dot-com-wotd-feed-rss2}

@@ -1,7 +1,6 @@
 +++
 title = "Ising Models"
 author = ["Jethro Kuan"]
-lastmod = 2020-08-25T12:40:31+08:00
 tags = ["machine-learning"]
 draft = false
 +++

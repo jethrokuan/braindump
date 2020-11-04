@@ -1,12 +1,11 @@
 +++
 title = "Generalization In Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:06+08:00
 draft = false
 +++
 
 tags
-: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
 Generalization using successor features (Dayan 1993).
 

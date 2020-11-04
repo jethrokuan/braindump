@@ -1,11 +1,10 @@
 +++
 title = "Playing Atari with Deep RL"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:43+08:00
 draft = false
 +++
 
-## Playing Atari With Deep RL ([Mnih et al., n.d.](#orge8c8d98)) {#playing-atari-with-deep-rl--mnih-et-al-dot-n-dot-d-dot--orge8c8d98}
+## Playing Atari With Deep RL (NO_ITEM_DATA:mnih2013playing) {#playing-atari-with-deep-rl--no-item-data-mnih2013playing}
 
 ### Preprocessing Steps {#preprocessing-steps}
 
@@ -17,7 +16,7 @@ draft = false
 
 ### DQN {#dqn}
 
-1.  Use of [Experience Replay]({{< relref "experience_replay" >}}) buffer
+1.  Use of [Experience Replay]({{<relref "experience_replay.md" >}}) buffer
 2.  Separate target network stabilizes optimization targets:
 
 \begin{equation}
@@ -33,10 +32,10 @@ rapidly.
 
 ## Improving DQN {#improving-dqn}
 
-- Double Q-learning reduces bias ([Van Hasselt, Guez, and Silver, n.d.](#org8a4647c))
-- Average Q-learning reduces variance ([Anschel, Baram, and Shimkin, n.d.](#org7241430))
-- [Hindsight Experience Replay]({{< relref "andrychowicz2017_hindsight_experience_replay" >}}) ([Andrychowicz et al., n.d.](#orgd6137a5))
-- Distributional RL ([Dabney et al., n.d.](#org2f09943))
+- Double Q-learning reduces bias ([Van Hasselt, Guez, and Silver, n.d.](#org620cfe9))
+- Average Q-learning reduces variance ([Anschel, Baram, and Shimkin, n.d.](#org165a0d8))
+- [Hindsight Experience Replay]({{<relref "andrychowicz2017_hindsight_experience_replay.md" >}}) ([Andrychowicz et al., n.d.](#orgc344bc0))
+- Distributional RL ([Dabney et al., n.d.](#org7e3f541))
 
 ## References {#references}
 
@@ -44,12 +43,12 @@ rapidly.
 
 ## Bibliography {#bibliography}
 
-<a id="orgd6137a5"></a>Andrychowicz, Marcin, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, and Wojciech Zaremba. n.d. “Hindsight Experience Replay.” In _Advances in Neural Information Processing Systems_, 5048–58.
+<a id="orgc344bc0"></a>Andrychowicz, Marcin, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, and Wojciech Zaremba. n.d. “Hindsight Experience Replay.” In _Advances in Neural Information Processing Systems_, 5048–58.
 
-<a id="org7241430"></a>Anschel, Oron, Nir Baram, and Nahum Shimkin. n.d. “Averaged-Dqn: Variance Reduction and Stabilization for Deep Reinforcement Learning.” In _Proceedings of the 34th International Conference on Machine Learning-Volume 70_, 176–85. JMLR. org.
+<a id="org165a0d8"></a>Anschel, Oron, Nir Baram, and Nahum Shimkin. n.d. “Averaged-Dqn: Variance Reduction and Stabilization for Deep Reinforcement Learning.” In _Proceedings of the 34th International Conference on Machine Learning-Volume 70_, 176–85. JMLR. org.
 
-<a id="org2f09943"></a>Dabney, Will, Mark Rowland, Marc G Bellemare, and Rémi Munos. n.d. “Distributional Reinforcement Learning with Quantile Regression.” In _Thirty-Second AAAI Conference on Artificial Intelligence_.
+<a id="org7e3f541"></a>Dabney, Will, Mark Rowland, Marc G Bellemare, and Rémi Munos. n.d. “Distributional Reinforcement Learning with Quantile Regression.” In _Thirty-Second AAAI Conference on Artificial Intelligence_.
 
-<a id="orge8c8d98"></a>Mnih, Volodymyr, Koray Kavukcuoglu, David Silver, Alex Graves, Ioannis Antonoglou, Daan Wierstra, and Martin Riedmiller. n.d. “Playing Atari with Deep Reinforcement Learning.”
+<a id="org620cfe9"></a>Van Hasselt, Hado, Arthur Guez, and David Silver. n.d. “Deep Reinforcement Learning with Double Q-Learning.” In _Thirtieth AAAI Conference on Artificial Intelligence_.
 
-<a id="org8a4647c"></a>Van Hasselt, Hado, Arthur Guez, and David Silver. n.d. “Deep Reinforcement Learning with Double Q-Learning.” In _Thirtieth AAAI Conference on Artificial Intelligence_.
+NO_ITEM_DATA:mnih2013playing

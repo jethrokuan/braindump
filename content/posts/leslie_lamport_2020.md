@@ -99,7 +99,7 @@ The next iteration of Virtuoso used the [TLA+] abstraction.
 
 Better algorithm led to 10x size decrease in Virtuoso.
 
-### Example 2: Amazon Web Services ([Newcombe et al., n.d.](#org7795a46)) {#example-2-amazon-web-services--newcombe-et-al-dot-n-dot-d-dot--org7795a46}
+### Example 2: Amazon Web Services ([Newcombe et al., n.d.](#orgb364222)) {#example-2-amazon-web-services--newcombe-et-al-dot-n-dot-d-dot--orgb364222}
 
 AWS uses formal methods (TLA+). Key insights:
 
@@ -120,4 +120,4 @@ Use TLA+.
 
 ## Bibliography {#bibliography}
 
-<a id="org7795a46"></a>Newcombe, Chris, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, and Michael Deardeuff. n.d. “How Amazon Web Services Uses Formal Methods” 58 (4):66–73. <https://doi.org/10.1145/2699417>.
+<a id="orgb364222"></a>Newcombe, Chris, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, and Michael Deardeuff. n.d. “How Amazon Web Services Uses Formal Methods” 58 (4):66–73. <https://doi.org/10.1145/2699417>.

@@ -1,7 +1,6 @@
 +++
 title = "Riken AIP Workshop 2019"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:30+08:00
 draft = false
 +++
 
@@ -83,7 +82,7 @@ Others: Similar-unlabelled etc.
 ## Fast Computation of Uncertainty in Deep Learning {#fast-computation-of-uncertainty-in-deep-learning}
 
 author
-: [Emtiyaz Khan]({{< relref "emtiyaz_khan" >}})
+: [Emtiyaz Khan]({{<relref "emtiyaz_khan.md" >}})
 
 links
 : <https://emtiyaz.github.io/>

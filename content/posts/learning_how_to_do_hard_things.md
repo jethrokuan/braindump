@@ -1,16 +1,15 @@
 +++
 title = "Learning How To Do Hard Things"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:25+08:00
 slug = "learning_how_to_do_hard_things"
 draft = false
 +++
 
 tags
-: [Learning]({{< relref "learning" >}})
+: [Learning]({{<relref "learning.md" >}})
 
 paper
-: ([MacIver, n.d.](#org3af7b4d))
+: ([MacIver, n.d.](#org95e46a9))
 
 The key is to isolate one aspect of the problem that is difficult and
 work on it. This provides a direct feedback loop.
@@ -27,4 +26,4 @@ work on it. This provides a direct feedback loop.
 
 ## Bibliography {#bibliography}
 
-<a id="org3af7b4d"></a>MacIver, David R. n.d. “How to Do Hard Things.” <https://www.drmaciver.com/2019/05/how-to-do-hard-things/>.
+<a id="org95e46a9"></a>MacIver, David R. n.d. “How to Do Hard Things.” <https://www.drmaciver.com/2019/05/how-to-do-hard-things/>.

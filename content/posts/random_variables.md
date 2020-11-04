@@ -1,12 +1,11 @@
 +++
 title = "Random Variables"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:04+08:00
 draft = false
 +++
 
 tags
-: [Statistics]({{< relref "statistics" >}})
+: [Statistics]({{<relref "statistics.md" >}})
 
 ## Introduction {#introduction}
 

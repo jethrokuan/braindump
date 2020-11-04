@@ -1,8 +1,6 @@
 +++
 title = "Python Default Parameter Values"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:04+08:00
-slug = "python_default_values"
 draft = false
 +++
 

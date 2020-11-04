@@ -1,8 +1,6 @@
 +++
 title = "Rust"
 author = ["Jethro Kuan"]
-lastmod = 2020-10-15T22:48:53+08:00
-slug = "rust"
 draft = false
 +++
 

@@ -56,8 +56,8 @@ The contrast sensitivity $C$ is determined by pixel bias currents, which set the
 Events are processed and transformed into alternative representations to
 facilitate the extraction of meaningful information to solve a given task.
 
-*Individual Events* $e_{k} = (x_{k}, t_{k}, p_{k})$ are used by [[id:7ae7754b-5b28-4d21-8fc8-4d11c6e4d268][probabilistic
-filters]] and [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]. Filters and SNNs fuse incoming events
+*Individual Events* $e_{k} = (x_{k}, t_{k}, p_{k})$ are used by probabilistic
+filters and [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]. Filters and SNNs fuse incoming events
 asynchronously to produce and output. (7, 24, 61, 96, 97)
 
 *Event Packet* Events $\mathcal{E} \doteq\left\{e_{k}\right\}_{k}^{N_{e}}$ in a
@@ -123,7 +123,7 @@ because of their sensitivity to direction of motion and scene edges. Methods
 using [[id:07d3d627-b04c-4a74-97cf-1bcd0b8afdce][Voxel Grids]] involve more memory and computation than lower-dimensional
 representations.
 
-[[id:ae3d1925-4c7e-49ba-a2ac-b7332de1f23d][Motion compensation]] is a technique used to estimate the parameters of the motion that best fit a group of events. It has a continuous-time warping model that allows to exploit the fine temporal resolution of events.
+Motion compensation is a technique used to estimate the parameters of the motion that best fit a group of events. It has a continuous-time warping model that allows to exploit the fine temporal resolution of events.
 
 * Algorithms and Challenges
 ** Feature Detection and Tracking
@@ -139,7 +139,7 @@ tracking more complex, user-defined shapes can be done using event-by-event adap
 
 Event cameras naturally respond to edges in the scene, and shorten the detection of lower-level primitives such as keypoints or "corners". Corners can be computed as the intersection of two moving edges.
 
-** [[id:d7761f75-e74a-4c33-aedb-3f68b4c22689][Optical Flow Estimation]]
+** Optical Flow Estimation
 :PROPERTIES:
 :ID:       d5265f52-499e-418b-810b-6629ce92a1ef
 :END:

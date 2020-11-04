@@ -1,11 +1,10 @@
 +++
 title = "Gibbs Sampling"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:57+08:00
 draft = false
 +++
 
-Gibbs sampling is a special case of the [Metropolis-Hastings method]({{< relref "metropolis_hastings" >}}),
+Gibbs sampling is a special case of the [Metropolis-Hastings method]({{<relref "metropolis_hastings.md" >}}),
 where a sequence of proposal distributions \\(q\\) is defined in terms of
 the conditional distributions of the joint distribution
 \\(p(\mathbf{x})\\), and proposals are always accepted.
@@ -19,5 +18,5 @@ involves sampling one parameter at a time:
 
 ## Pros and Cons {#pros-and-cons}
 
-1.  Suffers the same defects as [Metropolis-Hastings methods]({{< relref "metropolis_hastings" >}})
+1.  Suffers the same defects as [Metropolis-Hastings methods]({{<relref "metropolis_hastings.md" >}})
 2.  No adjustable parameters, so it's easy to start with

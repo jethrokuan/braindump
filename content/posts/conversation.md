@@ -1,7 +1,6 @@
 +++
 title = "Conversation"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:27+08:00
 draft = false
 +++
 
@@ -21,30 +20,26 @@ draft = false
 >
 > - Emile Durkheim
 
-<!--list-separator-->
+#### Garfinkel's 'breaching' experiment {#garfinkel-s-breaching-experiment}
 
-- Garfinkel's 'breaching' experiment
+- Spend from 15 minutes to an hour in their homes imagining that you
+  are boarders and act out this assumption. You should conduct
+  yourself in circumspect and polite fashion. Avoid getting personal,
+  to use formal address, to speak only when spoken to.
+- Clarify everything which may not be immediately understandable for
+  the non-family members
 
-  - Spend from 15 minutes to an hour in their homes imagining that you
-    are boarders and act out this assumption. You should conduct
-    yourself in circumspect and polite fashion. Avoid getting personal,
-    to use formal address, to speak only when spoken to.
-  - Clarify everything which may not be immediately understandable for
-    the non-family members
+We obey certain social rules, and make underlying social assumptions
+in all our interactions. This brings about social order.
 
-  We obey certain social rules, and make underlying social assumptions
-  in all our interactions. This brings about social order.
+#### What is a social situation? {#what-is-a-social-situation}
 
-<!--list-separator-->
-
-- What is a social situation?
-
-  > I would define a social situation as an environment of mutual
-  > monitoring possibilities... wherein an individual will find themselves
-  > accessible to the naked senses of all others who present -- and
-  > similarly, find those others accessible to him.
-  >
-  > - Erving Goffman
+> I would define a social situation as an environment of mutual
+> monitoring possibilities... wherein an individual will find themselves
+> accessible to the naked senses of all others who present -- and
+> similarly, find those others accessible to him.
+>
+> - Erving Goffman
 
 ### Linguistics {#linguistics}
 

@@ -1,16 +1,15 @@
 +++
 title = "Article: An Opinionated Guide to ML Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:33+08:00
 slug = "an_opinionated_guide_to_ml_research"
 draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "machine_learning" >}}), [Research]({{< relref "research" >}})
+: [Machine Learning]({{<relref "machine_learning.md" >}}), [Research]({{<relref "research.md" >}})
 
 author
-: [John Schulman]({{< relref "john_schulman" >}})
+: [John Schulman]({{<relref "john_schulman.md" >}})
 
 source
 : [An Opinionated Guide to ML Research](http://joschu.net/blog/opinionated-guide-ml-research.html)
@@ -44,7 +43,7 @@ with diferent methods across the literature. Develop your own
 methods to improve on them. - **Pros:** much more motivating. goals also give differentiating
 perspective from rest of the community.
 
-[John Schulman]({{< relref "john_schulman" >}}) recommends goal-driven research.
+[John Schulman]({{<relref "john_schulman.md" >}}) recommends goal-driven research.
 
 ### Tips for Goal-Driven research {#tips-for-goal-driven-research}
 
@@ -52,7 +51,7 @@ perspective from rest of the community.
     solutions.**
 2.  Aim high, and climb incrementally towards high goals
     1.  Keep a notebook, and record daily ideas and experiments
-        ([Note-taking]({{< relref "note_taking" >}})). [John Schulman]({{< relref "john_schulman" >}}) creates an entry for each day, and
+        ([Note-taking]({{<relref "note_taking.md" >}})). [John Schulman]({{<relref "john_schulman.md" >}}) creates an entry for each day, and
         conducts a review to condense entries every 1 or 2 weeks.
 3.  Know when to switch problems. Also, don't switch problems too
     often. Notice the dead-ends in half-finished projects, and if there

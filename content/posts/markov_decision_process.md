@@ -1,7 +1,6 @@
 +++
 title = "Markov Decision Process"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:07+08:00
 draft = false
 +++
 
@@ -38,7 +37,7 @@ E\left( \sum\_{t=0}^{\infty} \gamma^t r_t \right)
 \lim\_{h \rightarrow \infty} E\left( \sum\_{t=0}^{h} \frac{1}{h} r_t \right)
 \end{equation}
 
-## Learning Performance ([Kaelbling, Littman, and Moore, n.d.](#org4b230ad)) {#learning-performance--kaelbling-littman-and-moore-n-dot-d-dot--org4b230ad}
+## Learning Performance ([Kaelbling, Littman, and Moore, n.d.](#orgc0f8a5f)) {#learning-performance--kaelbling-littman-and-moore-n-dot-d-dot--orgc0f8a5f}
 
 1.  Asymptotic convergence:
 
@@ -64,10 +63,10 @@ No notion of "many small mistakes", or "few major mistakes".
 
 1.  Uniform-PAC
 
-unifies notion of PAC and regret ([Dann, Lattimore, and Brunskill, n.d.](#org121d6ad))
+unifies notion of PAC and regret ([Dann, Lattimore, and Brunskill, n.d.](#org83ff335))
 
 ## Bibliography {#bibliography}
 
-<a id="org121d6ad"></a>Dann, Christoph, Tor Lattimore, and Emma Brunskill. n.d. “Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning.” In _Advances in Neural Information Processing Systems_, 5713–23.
+<a id="org83ff335"></a>Dann, Christoph, Tor Lattimore, and Emma Brunskill. n.d. “Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning.” In _Advances in Neural Information Processing Systems_, 5713–23.
 
-<a id="org4b230ad"></a>Kaelbling, Leslie Pack, Michael L Littman, and Andrew W Moore. n.d. “Reinforcement Learning: A Survey” 4:237–85.
+<a id="orgc0f8a5f"></a>Kaelbling, Leslie Pack, Michael L Littman, and Andrew W Moore. n.d. “Reinforcement Learning: A Survey” 4:237–85.

@@ -1,19 +1,18 @@
 +++
 title = "Likelihood Field Model"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:44+08:00
 draft = false
 +++
 
 tags
-: [Map Matching]({{< relref "map_matching" >}})
+: [Map Matching]({{<relref "map_matching.md" >}})
 
 ## Key Idea {#key-idea}
 
 Project an individual sensor measurement \\(z_t^k\\) into the global
 coordinate frame of map \\(m\\). Discards max-range readings.
 
-Assumes three types of noise, similar to [Range Finder Model]({{< relref "range_finder_model" >}}):
+Assumes three types of noise, similar to [Range Finder Model]({{<relref "range_finder_model.md" >}}):
 
 1.  Measurement noise: Gaussian
 2.  Failures: point-mass distribution at \\(z\_{\text{max}}\\)

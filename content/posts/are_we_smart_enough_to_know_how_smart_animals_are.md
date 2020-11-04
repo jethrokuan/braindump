@@ -1,7 +1,6 @@
 +++
 title = "Are We Smart Enough to Know How Smart Animals Are?"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:25+08:00
 draft = false
 +++
 
@@ -15,7 +14,7 @@ personal rating
 : 4/5
 
 tags
-: [Books]({{< relref "books" >}}), [Neuroscience ⭐]({{< relref "neuroscience" >}})
+: [Books]({{<relref "books.md" >}}), [Neuroscience ⭐]({{<relref "neuroscience.md" >}})
 
 Why is it that facial expression is universally consistent?
 

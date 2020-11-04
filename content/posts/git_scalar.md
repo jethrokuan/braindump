@@ -1,16 +1,14 @@
 +++
 title = "Git Scalar"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:17+08:00
-slug = "git_scalar"
 draft = false
 +++
 
 tags
-: [Git]({{< relref "git" >}})
+: [Git]({{<relref "git.md" >}})
 
 Git has trouble handling large repositories. This problem is resolved
-using [VFS for Git]({{< relref "vfs_for_git" >}}). This is essentially a wrapper around GVFS,
+using [VFS for Git]({{<relref "vfs_for_git.md" >}}). This is essentially a wrapper around GVFS,
 replacing the `git` command.
 
 ## 1. Focusing on Files that Matter {#1-dot-focusing-on-files-that-matter}
@@ -29,7 +27,7 @@ the entire working directory to find which paths were modified.
 
 ## 2. Reducing Object Transfer {#2-dot-reducing-object-transfer}
 
-The [VFS for Git]({{< relref "vfs_for_git" >}}) protocol reduces object transfer.
+The [VFS for Git]({{<relref "vfs_for_git.md" >}}) protocol reduces object transfer.
 
 ## 3. Reducing Waiting for Expensive Operations {#3-dot-reducing-waiting-for-expensive-operations}
 

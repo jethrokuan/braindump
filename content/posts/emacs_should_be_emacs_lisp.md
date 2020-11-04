@@ -1,7 +1,6 @@
 +++
 title = "Emacs Should Be Emacs Lisp - Tom Tromey"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:39+08:00
 slug = "emacs_should_be_emacs_lisp"
 draft = false
 +++
@@ -10,10 +9,10 @@ talk
 : <https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm>
 
 speaker
-: [Tom Tromey]({{< relref "tom_tromey" >}})
+: [Tom Tromey]({{<relref "tom_tromey.md" >}})
 
 tags
-: [Emacs]({{< relref "emacs" >}}), [Emacs Lisp]({{< relref "emacs_lisp" >}})
+: [Emacs]({{<relref "emacs.md" >}}), [Emacs Lisp]({{<relref "emacs_lisp.md" >}})
 
 ## Several competing ideas and their problems {#several-competing-ideas-and-their-problems}
 

@@ -1,0 +1,5 @@
+(defun jethro/publish (file)
+  (with-current-buffer (find-file-noselect file)
+    (dtrt-indent-mode -1)
+    (setq org-hugo-base-dir "..")
+    (org-hugo-export-wim-to-md)))

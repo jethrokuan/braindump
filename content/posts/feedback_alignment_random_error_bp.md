@@ -1,7 +1,6 @@
 +++
 title = "Feedback Alignment and Random Error Backpropagation"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:16+08:00
 draft = false
 +++
 
@@ -27,5 +26,5 @@ layer:
 \delta\_{i}^{(l)}=\sigma^{\prime}\left(a\_{i}^{(l)}\right) \sum\_{k} \delta\_{k}^{(L)} H\_{k i}^{(l)}
 \end{equation}
 
-Random BP applied to [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) do not account for the temporal
+Random BP applied to [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}}) do not account for the temporal
 dynamics of neurons and synapses. SuperSpike solves this problem.

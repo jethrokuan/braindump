@@ -1,8 +1,6 @@
 +++
 title = "Python Packaging"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:02+08:00
-slug = "python_packaging"
 draft = false
 +++
 

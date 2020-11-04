@@ -1,7 +1,6 @@
 +++
 title = "Cryptography"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:09+08:00
 draft = false
 +++
 

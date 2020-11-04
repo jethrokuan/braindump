@@ -1,11 +1,10 @@
 +++
 title = "React"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:27+08:00
 draft = false
 +++
 
-React is a [Web Development]({{< relref "web_dev" >}}) framework.
+React is a [Web Development]({{<relref "web_dev.md" >}}) framework.
 
 ## React Frameworks {#react-frameworks}
 

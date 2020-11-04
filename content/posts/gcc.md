@@ -1,12 +1,11 @@
 +++
 title = "GCC"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:18+08:00
 draft = false
 +++
 
 tags
-: [Compilers]({{< relref "compilers" >}}), [The C Language]({{< relref "c_lang" >}})
+: [Compilers]({{<relref "compilers.md" >}}), [The C Language]({{<relref "c_lang.md" >}})
 
 ## Building GCC {#building-gcc}
 
@@ -69,87 +68,83 @@ Make-lang.in
 : a Makefile for building documentation, and
 installing the front-end
 
-<!--list-separator-->
+#### Invoking the Front-end {#invoking-the-front-end}
 
-- Invoking the Front-end
+The front-end is invoked once to parse the entire input, via
+`lang_hooks.parse_file()` in the `compile_file` function in
+`gcc/toplev.c:450`.
 
-  The front-end is invoked once to parse the entire input, via
-  `lang_hooks.parse_file()` in the `compile_file` function in
-  `gcc/toplev.c:450`.
+For C, `compile_file` does various things:
 
-  For C, `compile_file` does various things:
+1.  Initializes the call graph (cgraph)
+2.  Parses the file using the parser defined in `gcc/c/c-parser.c.`
+    1.  This parser is a recursive-descent parser, with the callback
+        `finish_function()` being called after each recursive-descent
+        function completes
 
-  1.  Initializes the call graph (cgraph)
-  2.  Parses the file using the parser defined in `gcc/c/c-parser.c.`
-      1.  This parser is a recursive-descent parser, with the callback
-          `finish_function()` being called after each recursive-descent
-          function completes
+`finish_function()` is declared in `gcc/c/c-decl.c`, which does multiple
+things:
 
-  `finish_function()` is declared in `gcc/c/c-decl.c`, which does multiple
-  things:
+1.  Converts C code to the GENERIC tree representation by calling
+    `c_genericize`
+2.  Calls `cgraph_node::finalize_function(fndecl, false)` at the end (if
+    nested, creates a call-graph node otherwise)
 
-  1.  Converts C code to the GENERIC tree representation by calling
-      `c_genericize`
-  2.  Calls `cgraph_node::finalize_function(fndecl, false)` at the end (if
-      nested, creates a call-graph node otherwise)
+#### cgraphunit {#cgraphunit}
 
-<!--list-separator-->
+This cgraph_node `finalize_function` is defined in `gcc/cgraphunit.c`,
+which acts as the interface between tree-based front-ends like GENERIC
+and the backend.
 
-- cgraphunit
+As mentioned earlier, `finalize_function` is called when the front-end
+is done parsing the body. It queues nodes for processing in the
+`enqueued_nodes` linked-list, for processing later.
 
-  This cgraph_node `finalize_function` is defined in `gcc/cgraphunit.c`,
-  which acts as the interface between tree-based front-ends like GENERIC
-  and the backend.
+In the `compile_file` function described earlier, after
+`lang_hooks.parse_file()`, `symtab->finalize_compilation_unit()` is
+called. This calls `cgraph_node::analyze_functions`, which loops
+through the `enqueue_nodes` and:
 
-  As mentioned earlier, `finalize_function` is called when the front-end
-  is done parsing the body. It queues nodes for processing in the
-  `enqueued_nodes` linked-list, for processing later.
+- Lowers representation into GIMPLE (gimplify)
+- build callgraph edges and references for all trivially needed
+  symbols and all symbols referred by them.
+- lowers thunks
+- calls compile(), which runs IPA passes (interprocedural
+  optimization). IPA uses information in the call graph to perform
+  transformations across function boundaries. IPA passes include
+  computation of reachability, and inlining functions.
+  - The GIMPLE representation is further lowered into SSA form, and
+    optimization techniques are done there, including:
+    - Dead code elimination
+    - Building the control flow graph
+    - Alias analysis
+    - Copy Renaming
+  - calls `expand_all_functions()` which further lowers to RTL form by
+    calling `init_function_start (decl)`. The RTL form generated is
+    target-dependent.
 
-  In the `compile_file` function described earlier, after
-  `lang_hooks.parse_file()`, `symtab->finalize_compilation_unit()` is
-  called. This calls `cgraph_node::analyze_functions`, which loops
-  through the `enqueue_nodes` and:
+All passes (optimization or otherwise) are managed by a pass
+manager to ensure they are executed in the correct order. The passes
+are defined in `gcc/passes.def`. Depending on the optimization level,
+different passes are run.
 
-  - Lowers representation into GIMPLE (gimplify)
-  - build callgraph edges and references for all trivially needed
-    symbols and all symbols referred by them.
-  - lowers thunks
-  - calls compile(), which runs IPA passes (interprocedural
-    optimization). IPA uses information in the call graph to perform
-    transformations across function boundaries. IPA passes include
-    computation of reachability, and inlining functions.
-    - The GIMPLE representation is further lowered into SSA form, and
-      optimization techniques are done there, including:
-      - Dead code elimination
-      - Building the control flow graph
-      - Alias analysis
-      - Copy Renaming
-    - calls `expand_all_functions()` which further lowers to RTL form by
-      calling `init_function_start (decl)`. The RTL form generated is
-      target-dependent.
+RTL generation is done in `gcc/emit-rtl.c`. Some RTL optimization passes
+are run over the RTL form, including:
 
-  All passes (optimization or otherwise) are managed by a pass
-  manager to ensure they are executed in the correct order. The passes
-  are defined in `gcc/passes.def`. Depending on the optimization level,
-  different passes are run.
+- common subexpression elimination
+- global subexpression elimination
+- web construction
+- LRA (local register allocation): virtual registers are converted
+  into physical registers, with spilling where necessary
+- basic-block reordering
+- peephole optimizations
 
-  RTL generation is done in `gcc/emit-rtl.c`. Some RTL optimization passes
-  are run over the RTL form, including:
+The files for backends are located in directories under `gcc/config`,
+e.g. `gcc/config/aarch64`.
 
-  - common subexpression elimination
-  - global subexpression elimination
-  - web construction
-  - LRA (local register allocation): virtual registers are converted
-    into physical registers, with spilling where necessary
-  - basic-block reordering
-  - peephole optimizations
-
-  The files for backends are located in directories under `gcc/config`,
-  e.g. `gcc/config/aarch64`.
-
-  The final pass converts RTL code into assembly code for output. The
-  source files are final.c plus insn-output.c. Finally, code for the
-  target host is output.
+The final pass converts RTL code into assembly code for output. The
+source files are final.c plus insn-output.c. Finally, code for the
+target host is output.
 
 ## The C Parser {#the-c-parser}
 

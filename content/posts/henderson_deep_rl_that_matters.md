@@ -1,12 +1,11 @@
 +++
 title = "Deep Reinforcement Learning That Matters"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:10+08:00
 draft = false
 +++
 
 tags
-: [Deep Reinforcement Learning]({{< relref "deep_rl" >}}), [Machine Learning Papers]({{< relref "ml_papers" >}})
+: [Deep Reinforcement Learning]({{<relref "deep_rl.md" >}}), [Machine Learning Papers]({{<relref "ml_papers.md" >}})
 
 This paper is a comprehensive study of several model-free policy
 gradient methods:

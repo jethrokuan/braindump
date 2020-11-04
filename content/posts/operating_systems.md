@@ -1,7 +1,6 @@
 +++
 title = "Operating Systems"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:21+08:00
 draft = false
 +++
 
@@ -103,74 +102,62 @@ OSes load these lazily, via the machinery of paging and swapping.
 
 ### Function Call {#function-call}
 
-<!--list-separator-->
+#### Control Flow issues {#control-flow-issues}
 
-- Control Flow issues
+1.  Need to jump to the function body
+2.  Need to resume when the function call is done
+3.  Minimally, need to store the PC of the caller
 
-  1.  Need to jump to the function body
-  2.  Need to resume when the function call is done
-  3.  Minimally, need to store the PC of the caller
+#### Data Storage issues {#data-storage-issues}
 
-<!--list-separator-->
+1.  Need to pass parameters to the function
+2.  Need to capture the return result
+3.  May have local variable declarations
 
-- Data Storage issues
+#### Stack Memory {#stack-memory}
 
-  1.  Need to pass parameters to the function
-  2.  Need to capture the return result
-  3.  May have local variable declarations
+Define new region of memory, called **stack memory**, for function
+invocations. A new hardware register, the **stack pointer**, stores
+the current memory address of the top of the stack.
 
-<!--list-separator-->
+When the stack grows, the stack pointer decreases. The stack grows
+from bottom up. This is true for most architectures.
 
-- Stack Memory
+#### Stack Frame {#stack-frame}
 
-  Define new region of memory, called **stack memory**, for function
-  invocations. A new hardware register, the **stack pointer**, stores
-  the current memory address of the top of the stack.
+The stack memory stores a bunch of stack frames, one stack frame for
+each function invocation. The stack frame stores:
 
-  When the stack grows, the stack pointer decreases. The stack grows
-  from bottom up. This is true for most architectures.
+1.  Local variables
+2.  Parameters
+3.  Return PC
+4.  Saved Registers
+5.  Saved Stack Pointer
+6.  Frame Pointer
 
-<!--list-separator-->
+#### Function Call Convention (FCC) {#function-call-convention--fcc}
 
-- Stack Frame
+There are different ways to setup stack frames. An example scheme is
+described below.
 
-  The stack memory stores a bunch of stack frames, one stack frame for
-  each function invocation. The stack frame stores:
+1.  Caller passes parameters with registers and/or stack
+2.  Caller saves return PC on stack
+3.  **Transfer Control from Caller to Callee**
+4.  Callee save registers used by callee. Save old SP and FP
+5.  Callee allocates space for local variables on stack
+6.  Callee updates stack pointer to top of stack
 
-  1.  Local variables
-  2.  Parameters
-  3.  Return PC
-  4.  Saved Registers
-  5.  Saved Stack Pointer
-  6.  Frame Pointer
+Teardown:
 
-<!--list-separator-->
+1.  Callee: Restore saved registers, FP, SP
+2.  **Transfer control from callee to caller using saved PC**
+3.  Caller: Continues execution in caller
 
-- Function Call Convention (FCC)
+#### Frame Pointer {#frame-pointer}
 
-  There are different ways to setup stack frames. An example scheme is
-  described below.
-
-  1.  Caller passes parameters with registers and/or stack
-  2.  Caller saves return PC on stack
-  3.  **Transfer Control from Caller to Callee**
-  4.  Callee save registers used by callee. Save old SP and FP
-  5.  Callee allocates space for local variables on stack
-  6.  Callee updates stack pointer to top of stack
-
-  Teardown:
-
-  1.  Callee: Restore saved registers, FP, SP
-  2.  **Transfer control from callee to caller using saved PC**
-  3.  Caller: Continues execution in caller
-
-<!--list-separator-->
-
-- Frame Pointer
-
-  Stack Pointer is hard to use as it can change. Frame pointer points to
-  a fixed location in a stack frame, and other items are accessed as
-  offsets from the frame pointer.
+Stack Pointer is hard to use as it can change. Frame pointer points to
+a fixed location in a stack frame, and other items are accessed as
+offsets from the frame pointer.
 
 ### Dynamic Memory Allocation {#dynamic-memory-allocation}
 
@@ -264,36 +251,32 @@ events occur. One such example is the hard-disk interrupt.
 
 ### Switching between processes {#switching-between-processes}
 
-<!--list-separator-->
+#### Cooperative Approach {#cooperative-approach}
 
-- Cooperative Approach
+Processes transfer control of the CPU to the OS by making system
+calls. The OS regains control of the CPU by waiting for a system call
+or an illegal operation of some kind to take place.
 
-  Processes transfer control of the CPU to the OS by making system
-  calls. The OS regains control of the CPU by waiting for a system call
-  or an illegal operation of some kind to take place.
+#### Non-cooperative Approach {#non-cooperative-approach}
 
-<!--list-separator-->
+The question is: what ca the OS do to ensure that a rogue process
+does not take over the machine?
 
-- Non-cooperative Approach
+The answer is: _timer interrupt_. A timer device is programmed to
+raise an interrupt at a fixed interval. Each time the interrupt is
+raised, a pre-configured interrupt handler in the OS runs.
 
-  The question is: what ca the OS do to ensure that a rogue process
-  does not take over the machine?
+At this time, the OS will decide whether to continue running the
+process, or switch to a different one. This is the role of the
+_scheduler_.
 
-  The answer is: _timer interrupt_. A timer device is programmed to
-  raise an interrupt at a fixed interval. Each time the interrupt is
-  raised, a pre-configured interrupt handler in the OS runs.
+If the decision is to switch processes, then the OS executes a
+low-level piece of code which is referred to as the _context
+switch_. The OS saves a few register values for the current
+executing process. This includes:
 
-  At this time, the OS will decide whether to continue running the
-  process, or switch to a different one. This is the role of the
-  _scheduler_.
-
-  If the decision is to switch processes, then the OS executes a
-  low-level piece of code which is referred to as the _context
-  switch_. The OS saves a few register values for the current
-  executing process. This includes:
-
-  1.  Program Counter (PC)
-  2.  Stack Pointer (Pointing to the new context)
+1.  Program Counter (PC)
+2.  Stack Pointer (Pointing to the new context)
 
 ### Exception and Interrupts {#exception-and-interrupts}
 
@@ -339,59 +322,47 @@ Example:
 Average Turnaround time:
 (10 + 20 + 30)/3 = 20
 
-<!--list-separator-->
+#### Pros {#pros}
 
-- Pros
+Easy to implement
 
-  Easy to implement
+#### Cons {#cons}
 
-<!--list-separator-->
+_Convoy effect_: a number of relatively-short potential consumers
+of a resource get queued behind a heavyweight resource consumer.
 
-- Cons
-
-  _Convoy effect_: a number of relatively-short potential consumers
-  of a resource get queued behind a heavyweight resource consumer.
-
-  - E.g. A takes 100 TU, B and C 10
-  - Average turnaround time: (100 + 110 + 120)/3
-  - if instead, B and C were scheduled before A, it would be (10 + 20+
-    120)/3
+- E.g. A takes 100 TU, B and C 10
+- Average turnaround time: (100 + 110 + 120)/3
+- if instead, B and C were scheduled before A, it would be (10 + 20+
+  120)/3
 
 ### Shortest Job First (SJF) {#shortest-job-first--sjf}
 
 Schedule the job that takes the shortest TU.
 
-<!--list-separator-->
+#### Pros {#pros}
 
-- Pros
+Optimizes for Turnaround time
 
-  Optimizes for Turnaround time
+#### Cons {#cons}
 
-<!--list-separator-->
-
-- Cons
-
-  Relies on unrealistic assumptions. For example, if A takes 100TU, and
-  B and C takes 10 TU, but B and C arrive only shortly after A, then A
-  will still get queued, and the turnaround time will be high (convoy
-  problem again)
+Relies on unrealistic assumptions. For example, if A takes 100TU, and
+B and C takes 10 TU, but B and C arrive only shortly after A, then A
+will still get queued, and the turnaround time will be high (convoy
+problem again)
 
 ### Shortest Time-to-Completion First (SRT) {#shortest-time-to-completion-first--srt}
 
 Any time a new job enters the system, it determines the job that has
 the least time left, and schedules that one first.
 
-<!--list-separator-->
+#### Pros {#pros}
 
-- Pros
+Good turnaround time
 
-  Good turnaround time
+#### Cons {#cons}
 
-<!--list-separator-->
-
-- Cons
-
-  Bad for response time and interactivity.
+Bad for response time and interactivity.
 
 ### Round Robin {#round-robin}
 
@@ -406,12 +377,10 @@ response-time metric. However, if the time slice is too short, there
 will be a lot of overhead, and the cost of context switching will
 dominate the overall performance.
 
-<!--list-separator-->
+#### Incorporating I/O {#incorporating-i-o}
 
-- Incorporating I/O
-
-  By treating each CPU burst as a job, the scheduler makes sure
-  processes that are "interactive" get run frequently.
+By treating each CPU burst as a job, the scheduler makes sure
+processes that are "interactive" get run frequently.
 
 ### Multi-level Feedback Queue (MLFQ) {#multi-level-feedback-queue--mlfq}
 
@@ -470,14 +439,12 @@ its allotment, it is demoted to the next priority queue.
   (regardless of how many times it has given up the CPU), its priority
   is reduced
 
-<!--list-separator-->
+#### Tuning MLFQ {#tuning-mlfq}
 
-- Tuning MLFQ
-
-  1.  Varying time-slice length across different queues. Shorter time
-      slices are comprised of interactive jobs, and quickly alternating
-      between them makes sense
-  2.  The low-priority queues are CPU bound, and longer time slices work well.
+1.  Varying time-slice length across different queues. Shorter time
+    slices are comprised of interactive jobs, and quickly alternating
+    between them makes sense
+2.  The low-priority queues are CPU bound, and longer time slices work well.
 
 ### Lottery Scheduling {#lottery-scheduling}
 
@@ -535,59 +502,53 @@ address space for threads remain the same.
 
 ### Issues with Uncontrolled Scheduling {#issues-with-uncontrolled-scheduling}
 
-<!--list-separator-->
+#### Race Condition {#race-condition}
 
-- Race Condition
+Context switches that occur at untimely points in the execution can
+result in the wrong result. Because multiple threads executing this
+code can result in a race condition, we call this code a _critical
+section_. What's required for this code to run properly is _mutual
+exclusion_. This property guarantees that if one thread is executing
+within the critical section, others will be prevented from doing so.
 
-  Context switches that occur at untimely points in the execution can
-  result in the wrong result. Because multiple threads executing this
-  code can result in a race condition, we call this code a _critical
-  section_. What's required for this code to run properly is _mutual
-  exclusion_. This property guarantees that if one thread is executing
-  within the critical section, others will be prevented from doing so.
+#### Key Terms {#key-terms}
 
-<!--list-separator-->
+Critical Section
+: piece of code that accesses a _shared_ resource,
+usually a variable or data structure
 
-- Key Terms
+Race Condition
+: A situation which arises if multiple threads of
+execution enter the critical section at roughly
+the same time; both attempt to update the shared
+data structure at the same time, leading to
+surprising and sometimes undesirable outcomes
 
-  Critical Section
-  : piece of code that accesses a _shared_ resource,
-  usually a variable or data structure
+Indeterminate Program
+: Consists of one or more race conditions;
+the output is non deterministic, something typically expected of
+computer programs
 
-  Race Condition
-  : A situation which arises if multiple threads of
-  execution enter the critical section at roughly
-  the same time; both attempt to update the shared
-  data structure at the same time, leading to
-  surprising and sometimes undesirable outcomes
+Mutual Exclusion
+: threads use _mutual exclusion_ primitives to
+avoid the problems that concurrency yields, such as race conditions
 
-  Indeterminate Program
-  : Consists of one or more race conditions;
-  the output is non deterministic, something typically expected of
-  computer programs
+#### The wish for atomicity {#the-wish-for-atomicity}
 
-  Mutual Exclusion
-  : threads use _mutual exclusion_ primitives to
-  avoid the problems that concurrency yields, such as race conditions
+What if we had a super-instruction like this:
 
-<!--list-separator-->
+```text
+  memory-add 0x8044a1c, $0x1
+```
 
-- The wish for atomicity
+Assume this instruction adds a value to a memory location, and the
+hardware guarantees that it executes atomically. This would be easy if
+the instruction set contained only 1 instruction. However, in the
+general case this is not possible.
 
-  What if we had a super-instruction like this:
-
-  ```text
-    memory-add 0x8044a1c, $0x1
-  ```
-
-  Assume this instruction adds a value to a memory location, and the
-  hardware guarantees that it executes atomically. This would be easy if
-  the instruction set contained only 1 instruction. However, in the
-  general case this is not possible.
-
-  Instead, we ask the hardware for a few useful instructions upon which
-  we can build a general set of what is called _synchronisation
-  primitives_.
+Instead, we ask the hardware for a few useful instructions upon which
+we can build a general set of what is called _synchronisation
+primitives_.
 
 ### Thread API {#thread-api}
 
@@ -616,67 +577,63 @@ address space for threads remain the same.
 
 `pthread_join` waits for the thread's completion.
 
-<!--list-separator-->
+#### Locks API {#locks-api}
 
-- Locks API
+```c
+  int pthread_mutex_lock(pthread_mutex_t *mutex);
+  int pthread_mutex_unlock(pthread_mutex_t *mutex);
 
-  ```c
-    int pthread_mutex_lock(pthread_mutex_t *mutex);
-    int pthread_mutex_unlock(pthread_mutex_t *mutex);
+  // Usage
+  //sets the lock to default values, making the lock usable
+  pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
 
-    // Usage
-    //sets the lock to default values, making the lock usable
-    pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+  // dynamic way to do it is to make a call:
+  int rc = pthread_mutex_init(&lock, NULL);
+  assert (rc == 0); //always check success!
 
-    // dynamic way to do it is to make a call:
-    int rc = pthread_mutex_init(&lock, NULL);
-    assert (rc == 0); //always check success!
+  pthread_mutex_lock(&lock);
+  // Critical section
+  x = x + 1;
+  pthread_mutex_unlock(&lock);
+```
 
-    pthread_mutex_lock(&lock);
-    // Critical section
-    x = x + 1;
-    pthread_mutex_unlock(&lock);
-  ```
+```c
+  int pthread_mutex_trylock(pthread_mutex_t *mutex);
+  int pthread_mutex_timedlock(pthread_mutex_t *mutex,
+                              struct timespec *abs_timeout);
+```
 
-  ```c
-    int pthread_mutex_trylock(pthread_mutex_t *mutex);
-    int pthread_mutex_timedlock(pthread_mutex_t *mutex,
-                                struct timespec *abs_timeout);
-  ```
+These two calls are used in lock acquisition. `trylock` returns
+failure if the lock is already held, and `timedlock` returns after a
+timeout or after acquiring the lock, whichever happens first.
 
-  These two calls are used in lock acquisition. `trylock` returns
-  failure if the lock is already held, and `timedlock` returns after a
-  timeout or after acquiring the lock, whichever happens first.
+#### Condition Variables {#condition-variables}
 
-<!--list-separator-->
+```c
+  int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);
+  int pthread_cond_signal(pthread_cond_t *cond);
+```
 
-- Condition Variables
+**condition variables** are useful when some kind of signalling must
+take place between threads.
 
-  ```c
-    int pthread_cond_wait(pthread_cond_t *cond, pthread_mutex_t *mutex);
-    int pthread_cond_signal(pthread_cond_t *cond);
-  ```
+```c
+  pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
+  pthread_cond_t init = PTHREAD_COND_INITIALIZER;
 
-  **condition variables** are useful when some kind of signalling must
-  take place between threads.
+  int rc = pthread_mutex_lock(&lock); assert(rc == 0);
+  while (initialized == 0) {
+    int rc = pthread_cond_wait(&init, &lock);
+    assert (rc == 0);
+  }
+  pthread_mutex_unlock(&lock);
 
-  ```c
-    pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
-    pthread_cond_t init = PTHREAD_COND_INITIALIZER;
-
-    int rc = pthread_mutex_lock(&lock); assert(rc == 0);
-    while (initialized == 0) {
-      int rc = pthread_cond_wait(&init, &lock);
-      assert (rc == 0);
-    }
-    pthread_mutex_unlock(&lock);
-
-    //Some other thread
-    pthread_mutex_lock(&lock);
-    initialized = 1;
-    pthread_cond_signal(&init);
-    pthread_mutex_unlock(&lock);
-  ```
+  //Some other thread
+  pthread_mutex_lock(&lock);
+  initialized = 1;
+  pthread_cond_signal(&init);
+  pthread_mutex_unlock(&lock);
+```
 
 ### Properties of Correct CS Implementation {#properties-of-correct-cs-implementation}
 
@@ -708,108 +665,98 @@ now available again. If no othre threads are waiting for the lock
 the lock is simply changed to free, if thee are waiting threads, one
 of them will acquire the lock.
 
+#### Pthread Locks {#pthread-locks}
+
+The name that the POSIX library uses for a lock is a **mutex**, as it is
+used to provide **mutual exclusion** between threads. Different locks
+can be initialized to protect different critical sections.
+
+#### Evaluating locks {#evaluating-locks}
+
+mutual exclusion
+: does the lock work, preventing multiple threads
+from entering a critical section?
+
+fairness
+: Does each thread contending for the lock get a fair shot?
+
+performance
+: Are the time overheads added by using the lock significant?
+
+#### Approach 1: Controlling Interrupts {#approach-1-controlling-interrupts}
+
+Using a special hardware instruction, turn off all interrupts during
+critical section:
+
+```c
+  void lock() {
+    DisableInterrupts();
+  }
+
+  void unlock() {
+    EnableInterrupts();
+  }
+```
+
 <!--list-separator-->
 
-- Pthread Locks
+- Pros
 
-  The name that the POSIX library uses for a lock is a **mutex**, as it is
-  used to provide **mutual exclusion** between threads. Different locks
-  can be initialized to protect different critical sections.
+  1.  Simplicity
 
 <!--list-separator-->
 
-- Evaluating locks
+- Cons
 
-  mutual exclusion
-  : does the lock work, preventing multiple threads
-  from entering a critical section?
+  1.  Requires calling thread to perform a _privileged_ operation
+  2.  Doesn't work on multiprocessor systems
+
+#### Approach 2: Test and Set {#approach-2-test-and-set}
+
+Hardware support for atomicity was created. This is known as the
+**test-and-set instruction**, or **atomic exchange**.
+
+The idea is to use a variable to indicate whether some thread has
+possession of a lock. Calling `lock()` then tests and sets that variable.
+
+However, this presents several issues:
+
+1.  **No Mutex**!
+2.  The thread waiting to acquire a lock is endlessly checking for the
+    value of flag, a technique known as **spin-waiting**, which wastes
+    time waiting for another thread to release a lock.
+
+With hardware support for **test-and-set**, we achieve mutex, and have a
+**spin lock**! To work correctly on a single processor, it requires a
+preemptive scheduler, one that will interrupt a thread via atimer, in
+order to run a different thread, from time to time.
+
+<!--list-separator-->
+
+- Evaluating the spin lock:
+
+  correctness
+  : YES
 
   fairness
-  : Does each thread contending for the lock get a fair shot?
+  : NO, a thread may spin forever under contention
 
   performance
-  : Are the time overheads added by using the lock significant?
+  : NO, high performance overheads
 
-<!--list-separator-->
+  Other hardware primitives one can use to write locks:
 
-- Approach 1: Controlling Interrupts
+  1.  LoadLinked and StoreConditional
+  2.  Fetch-And-Add (ticket lock)
 
-  Using a special hardware instruction, turn off all interrupts during
-  critical section:
+#### Two Phase Locks {#two-phase-locks}
 
-  ```c
-    void lock() {
-      DisableInterrupts();
-    }
-
-    void unlock() {
-      EnableInterrupts();
-    }
-  ```
-
-   <!--list-separator-->
-
-  - Pros
-
-    1.  Simplicity
-
-   <!--list-separator-->
-
-  - Cons
-
-    1.  Requires calling thread to perform a _privileged_ operation
-    2.  Doesn't work on multiprocessor systems
-
-<!--list-separator-->
-
-- Approach 2: Test and Set
-
-  Hardware support for atomicity was created. This is known as the
-  **test-and-set instruction**, or **atomic exchange**.
-
-  The idea is to use a variable to indicate whether some thread has
-  possession of a lock. Calling `lock()` then tests and sets that variable.
-
-  However, this presents several issues:
-
-  1.  **No Mutex**!
-  2.  The thread waiting to acquire a lock is endlessly checking for the
-      value of flag, a technique known as **spin-waiting**, which wastes
-      time waiting for another thread to release a lock.
-
-  With hardware support for **test-and-set**, we achieve mutex, and have a
-  **spin lock**! To work correctly on a single processor, it requires a
-  preemptive scheduler, one that will interrupt a thread via atimer, in
-  order to run a different thread, from time to time.
-
-   <!--list-separator-->
-
-  - Evaluating the spin lock:
-
-    correctness
-    : YES
-
-    fairness
-    : NO, a thread may spin forever under contention
-
-    performance
-    : NO, high performance overheads
-
-    Other hardware primitives one can use to write locks:
-
-    1.  LoadLinked and StoreConditional
-    2.  Fetch-And-Add (ticket lock)
-
-<!--list-separator-->
-
-- Two Phase Locks
-
-  A two-phase lock realises that spinning can be useful, particularly if
-  the lock is about to be released. In the first-phase, the lock spins
-  for a while, hoping that it can acquire a lock. However, if the lock
-  is not acquired during the first phase, the second phase is entered,
-  where the caller is put to sleep, and only woken up when the lock
-  becomes free later.
+A two-phase lock realises that spinning can be useful, particularly if
+the lock is about to be released. In the first-phase, the lock spins
+for a while, hoping that it can acquire a lock. However, if the lock
+is not acquired during the first phase, the second phase is entered,
+where the caller is put to sleep, and only woken up when the lock
+becomes free later.
 
 ### Semaphores vs Spinlocks {#semaphores-vs-spinlocks}
 
@@ -899,54 +846,52 @@ Processes share a data structure D
 Philosophers sitting in a circle, requiring resource from both left
 and right side.
 
-<!--list-separator-->
+#### Tanenbaum Solution {#tanenbaum-solution}
 
-- Tanenbaum Solution
+```C
+  #define N 5
+  #define LEFT i
+  #define RIGHT ((i+1)%N)
+  #define THINKING 1
+  #define HUNGRY 1
+  #define EATING 2
 
-  ```C
-    #define N 5
-    #define LEFT i
-    #define RIGHT ((i+1)%N)
-    #define THINKING 1
-    #define HUNGRY 1
-    #define EATING 2
+  int state[N];
 
-    int state[N];
-
-    void philosopher(int i) {
-      while(true) {
-        think();
-        hungry();
-        takeChpStcks(i);
-        eat();
-        putChpStcks(i);
-      }
+  void philosopher(int i) {
+    while(true) {
+      think();
+      hungry();
+      takeChpStcks(i);
+      eat();
+      putChpStcks(i);
     }
-    void takeChpStcks(i) {
-      wait(mutex);
-      state[i] = HUNGRY;
-      safeToEat(i);
-      signal(mutex);
-      wait(s[i]);
-    }
+  }
+  void takeChpStcks(i) {
+    wait(mutex);
+    state[i] = HUNGRY;
+    safeToEat(i);
+    signal(mutex);
+    wait(s[i]);
+  }
 
-    void safeToEat(i) {
-      if (state[i] == HUNGRY &&
-          state[LEFT] !=EATING &&
-          state[RIGHT] != EATING) {
-        state[i] = EATING;
-        signal(s[i]);
-      }
+  void safeToEat(i) {
+    if (state[i] == HUNGRY &&
+        state[LEFT] !=EATING &&
+        state[RIGHT] != EATING) {
+      state[i] = EATING;
+      signal(s[i]);
     }
+  }
 
-    void putChpStcks(i) {
-      wait(mutex);
-      state[i] = THINKING;
-      safeToEat(LEFT);
-      safeToEat(RIGHT);
-      signal(mutex);
-    }
-  ```
+  void putChpStcks(i) {
+    wait(mutex);
+    state[i] = THINKING;
+    safeToEat(LEFT);
+    safeToEat(RIGHT);
+    signal(mutex);
+  }
+```
 
 ## Address Spaces {#address-spaces}
 
@@ -1094,69 +1039,59 @@ the requesting process, and returns the value of the end of the new heap.
 
 ### Free Space Allocation Strategies {#free-space-allocation-strategies}
 
-<!--list-separator-->
+#### Best fit {#best-fit}
 
-- Best fit
+1.  Search the free list and find chunks of free memory that are as big
+    or bigger than the requested size
+2.  Return the smallest chunk
 
-  1.  Search the free list and find chunks of free memory that are as big
-      or bigger than the requested size
-  2.  Return the smallest chunk
+Naive implementations are slow because of the exhaustive search
+required to find the correct free block.
 
-  Naive implementations are slow because of the exhaustive search
-  required to find the correct free block.
+#### Worst fit {#worst-fit}
 
-<!--list-separator-->
+1.  Find the largest chunk
+2.  Return the requested size, keeping the remaining chunk on the free
+    list
 
-- Worst fit
+Exhaustive search is also required to determine the largest chunk, and
+studies have shown this still leads to excess fragmentation.
 
-  1.  Find the largest chunk
-  2.  Return the requested size, keeping the remaining chunk on the free
-      list
+#### Next Fit {#next-fit}
 
-  Exhaustive search is also required to determine the largest chunk, and
-  studies have shown this still leads to excess fragmentation.
+1.  Keep an extra pointer to the location within the list where one was
+    looking last
+2.  Spread searches for free space throughout the list more uniformly
 
-<!--list-separator-->
+Performance similar to first fit.
 
-- Next Fit
+#### Segregated Lists {#segregated-lists}
 
-  1.  Keep an extra pointer to the location within the list where one was
-      looking last
-  2.  Spread searches for free space throughout the list more uniformly
+If a particular application has one (or a few) popular-size requests
+that it makes, keep a separate list just to manage objects of that
+size; all other requests are forwarded to a more general memory
+allocator.
 
-  Performance similar to first fit.
+When the kernel boots up, it allocates a number of **object caches** for
+kernel objects that are likely to be requested frequently.
 
-<!--list-separator-->
+#### Buddy Allocation {#buddy-allocation}
 
-- Segregated Lists
+Free memory is conceptually thought of as one big space of size
+\\(2^N\\).
 
-  If a particular application has one (or a few) popular-size requests
-  that it makes, keep a separate list just to manage objects of that
-  size; all other requests are forwarded to a more general memory
-  allocator.
+When a request is made, search for free space recursively divides free
+space into 2 until a block big enough to accommodate the result is
+found.
 
-  When the kernel boots up, it allocates a number of **object caches** for
-  kernel objects that are likely to be requested frequently.
+Here is an example of a 64KB free space getting divided in the search
+for a 7KB block:
 
-<!--list-separator-->
+{{< figure src="/ox-hugo/screenshot_2017-11-05_16-27-35.png" >}}
 
-- Buddy Allocation
-
-  Free memory is conceptually thought of as one big space of size
-  \\(2^N\\).
-
-  When a request is made, search for free space recursively divides free
-  space into 2 until a block big enough to accommodate the result is
-  found.
-
-  Here is an example of a 64KB free space getting divided in the search
-  for a 7KB block:
-
-  {{< figure src="/ox-hugo/screenshot_2017-11-05_16-27-35.png" >}}
-
-  This scheme can suffer from **internal fragmentation**. Upon freeing a
-  block, the allocator checks its buddy and sees if the block is still
-  free. If so, it can coalesce the 2 blocks.
+This scheme can suffer from **internal fragmentation**. Upon freeing a
+block, the allocator checks its buddy and sees if the block is still
+free. If so, it can coalesce the 2 blocks.
 
 ## Paging {#paging}
 
@@ -1255,132 +1190,116 @@ To speed up address translation, a hardware feature called
 A TLB is a part of the chip's **memory management unit (MMU)**, and is a
 hardware cache of popular virtual-to-physical address translations.
 
-<!--list-separator-->
+#### TLB Basic Algorithm {#tlb-basic-algorithm}
 
-- TLB Basic Algorithm
+We first look up the virtual address in the TLB. If it exists in the
+TLB, then it is a **TLB Hit**, and the PFN is extracted from the TLB.
 
-  We first look up the virtual address in the TLB. If it exists in the
-  TLB, then it is a **TLB Hit**, and the PFN is extracted from the TLB.
+If the CPU does not find the translation in the **TLB**, this is a
+**TLB miss**. The hardware accesses the page table to find the
+translation, and updates the **TLB**.
 
-  If the CPU does not find the translation in the **TLB**, this is a
-  **TLB miss**. The hardware accesses the page table to find the
-  translation, and updates the **TLB**.
+TLB performance gains benefit from:
 
-  TLB performance gains benefit from:
+1.  Spatial locality: e.g. elements in an array are packed into the
+    same page, so only the first access is a TLB miss.
+2.  Temporal locality: elements accessed recently are more likely to be
+    accessed again.
 
-  1.  Spatial locality: e.g. elements in an array are packed into the
-      same page, so only the first access is a TLB miss.
-  2.  Temporal locality: elements accessed recently are more likely to be
-      accessed again.
+#### Managing TLB Misses {#managing-tlb-misses}
 
-<!--list-separator-->
+Old architectures had hardware -managed TLBs, where the hardware new
+exactly where the page tables were located (via registers), the page
+table's exact format: the hardware would "walk" the page table and
+find the correct page-table entry.
 
-- Managing TLB Misses
+Newer architectures have a software-managed TLB. On a TLB miss, the
+hardware raises an exception, which pauses the instruction stream,
+raises the privilege level to kernel mode, and jumps to a **trap
+handler**.
 
-  Old architectures had hardware -managed TLBs, where the hardware new
-  exactly where the page tables were located (via registers), the page
-  table's exact format: the hardware would "walk" the page table and
-  find the correct page-table entry.
+The primary advantage of software-managed TLBs is _flexibility_. The
+OS can use any data structure to implement the page table, without
+hardware change. The hardware also doesn't do much on a TLB miss: it
+simply raises an exception, and the OS TLB miss handler will handle
+the rest.
 
-  Newer architectures have a software-managed TLB. On a TLB miss, the
-  hardware raises an exception, which pauses the instruction stream,
-  raises the privilege level to kernel mode, and jumps to a **trap
-  handler**.
+#### Handling Context Switches {#handling-context-switches}
 
-  The primary advantage of software-managed TLBs is _flexibility_. The
-  OS can use any data structure to implement the page table, without
-  hardware change. The hardware also doesn't do much on a TLB miss: it
-  simply raises an exception, and the OS TLB miss handler will handle
-  the rest.
+The VPN-PFN mapping for different processes are different, and the TLB
+will need to account for context switching.
 
-<!--list-separator-->
+One approach is to flush the TLB on context switches. However, each
+time a process runs or resumes, it will incur TLB misses.
 
-- Handling Context Switches
+To reduce this overhead, some systems provide an **address space
+identifier (ASID)** in the TLB. the **ASID** acts as a process
+identifier, like the PID but with fewer bits.
 
-  The VPN-PFN mapping for different processes are different, and the TLB
-  will need to account for context switching.
+{{< figure src="/ox-hugo/screenshot_2017-11-05_19-43-58.png" >}}
 
-  One approach is to flush the TLB on context switches. However, each
-  time a process runs or resumes, it will incur TLB misses.
+#### TLB Replacement Policies {#tlb-replacement-policies}
 
-  To reduce this overhead, some systems provide an **address space
-  identifier (ASID)** in the TLB. the **ASID** acts as a process
-  identifier, like the PID but with fewer bits.
-
-  {{< figure src="/ox-hugo/screenshot_2017-11-05_19-43-58.png" >}}
-
-<!--list-separator-->
-
-- TLB Replacement Policies
-
-  1.  Least Recently Used (LRU)
-      - takes advantage of locality
-  2.  Random
-      - no weird corner cases that have pessimal behaviour
+1.  Least Recently Used (LRU)
+    - takes advantage of locality
+2.  Random
+    - no weird corner cases that have pessimal behaviour
 
 ### Making Page Tables Smaller {#making-page-tables-smaller}
 
 Simple array-based page tables are too big, taking up too much memory
 on physical systems.
 
-<!--list-separator-->
+#### Bigger Pages {#bigger-pages}
 
-- Bigger Pages
+Using larger pages will lead to a reduction in the number of page
+entries required, and reduce the size of the page table. However, this
+leads to a lot of wastage in each page (**internal fragmentation**).
 
-  Using larger pages will lead to a reduction in the number of page
-  entries required, and reduce the size of the page table. However, this
-  leads to a lot of wastage in each page (**internal fragmentation**).
+#### Paging and Segments {#paging-and-segments}
 
-<!--list-separator-->
+Instead of having a single page table for the entire address space of
+the process, have on per logical segment.
 
-- Paging and Segments
+The virtual address now looks like this:
 
-  Instead of having a single page table for the entire address space of
-  the process, have on per logical segment.
+{{< figure src="/ox-hugo/screenshot_2017-11-05_19-55-16.png" >}}
 
-  The virtual address now looks like this:
+The downsides for segmentation apply: segmentation is not flexible,
+and if the heap is rarely used, for example, then there is wastage.
 
-  {{< figure src="/ox-hugo/screenshot_2017-11-05_19-55-16.png" >}}
+#### Multi-level Page Tables {#multi-level-page-tables}
 
-  The downsides for segmentation apply: segmentation is not flexible,
-  and if the heap is rarely used, for example, then there is wastage.
+{{< figure src="/ox-hugo/screenshot_2017-11-05_19-57-42.png" >}}
 
-<!--list-separator-->
+A new data structure called the **page directory** is introduced. the
+page directory consists of a number of **page directory entries (PDE)**.
+A PDE has minimally a **valid bit** and a **page frame number**.
 
-- Multi-level Page Tables
+The page directory only allocates space proportional to the amount of
+address space being used, and is generally compact and supports
+sparse address spaces.
 
-  {{< figure src="/ox-hugo/screenshot_2017-11-05_19-57-42.png" >}}
+With the page directory, the added **level of indirection** allows us to
+place pages anywhere in physical memory. However, on a TLB miss, two
+loads from memory will be required to get the right translation
+information from the page table. Hence, there is a **time-space**
+tradeoff.
 
-  A new data structure called the **page directory** is introduced. the
-  page directory consists of a number of **page directory entries (PDE)**.
-  A PDE has minimally a **valid bit** and a **page frame number**.
+{{< figure src="/ox-hugo/screenshot_2017-11-05_20-02-30.png" >}}
 
-  The page directory only allocates space proportional to the amount of
-  address space being used, and is generally compact and supports
-  sparse address spaces.
+To extend this idea to multi-level page tables, we can partition the
+VPN even further:
 
-  With the page directory, the added **level of indirection** allows us to
-  place pages anywhere in physical memory. However, on a TLB miss, two
-  loads from memory will be required to get the right translation
-  information from the page table. Hence, there is a **time-space**
-  tradeoff.
+{{< figure src="/ox-hugo/screenshot_2017-11-05_20-03-35.png" >}}
 
-  {{< figure src="/ox-hugo/screenshot_2017-11-05_20-02-30.png" >}}
+#### Inverted Page Tables {#inverted-page-tables}
 
-  To extend this idea to multi-level page tables, we can partition the
-  VPN even further:
+Instead of having one page table per process, we can have a single
+page table for each physical physical page of the system.
 
-  {{< figure src="/ox-hugo/screenshot_2017-11-05_20-03-35.png" >}}
-
-<!--list-separator-->
-
-- Inverted Page Tables
-
-  Instead of having one page table per process, we can have a single
-  page table for each physical physical page of the system.
-
-  Finding the correct entry is expensive via a linear scan, and hash
-  tables are often built over the base structure to speed lookups.
+Finding the correct entry is expensive via a linear scan, and hash
+tables are often built over the base structure to speed lookups.
 
 ## Beyond Physical Memory {#beyond-physical-memory}
 
@@ -1391,74 +1310,66 @@ currently not in use. We call this the **swap space**.
 
 ### Mechanisms {#mechanisms}
 
-<!--list-separator-->
+#### Swap Space {#swap-space}
 
-- Swap Space
+**Swap space** is some space on disk reserved for moving pages back and
+forth. The OS will need to memorise the disk address of a given page.
 
-  **Swap space** is some space on disk reserved for moving pages back and
-  forth. The OS will need to memorise the disk address of a given page.
+The size of the swap space determines the number of pages it can
+stash.
 
-  The size of the swap space determines the number of pages it can
-  stash.
+#### The Present Bit {#the-present-bit}
 
-<!--list-separator-->
+When a TLB miss occurs, the OS will have to look at the swap space
+before to find if the page is present in physical memory.
 
-- The Present Bit
+When the hardware looks in the PTE, it may find that the page is not
+present in physical memory. We have to add one new piece of
+information in the PTE, called the **present bit**. If the present bit
+is set to one, then the page is present in physical memory and
+everything proceeds as above. If it set to 0, the page is on disk
+somewhere. Accessing a page not in physical memory is commonly
+referred to as a **page fault**.
 
-  When a TLB miss occurs, the OS will have to look at the swap space
-  before to find if the page is present in physical memory.
+Upon a **page fault**, the OS will run the **page-fault handler**, and
+fetch the page from disk and load it into memory. The OS will then
+update the page table to mark the page as present, and update the PFN
+field of the PTN to record the in-memory location of the newly fetched
+page.
 
-  When the hardware looks in the PTE, it may find that the page is not
-  present in physical memory. We have to add one new piece of
-  information in the PTE, called the **present bit**. If the present bit
-  is set to one, then the page is present in physical memory and
-  everything proceeds as above. If it set to 0, the page is on disk
-  somewhere. Accessing a page not in physical memory is commonly
-  referred to as a **page fault**.
+#### Page-replacement Policy {#page-replacement-policy}
 
-  Upon a **page fault**, the OS will run the **page-fault handler**, and
-  fetch the page from disk and load it into memory. The OS will then
-  update the page table to mark the page as present, and update the PFN
-  field of the PTN to record the in-memory location of the newly fetched
-  page.
+When memory is full, upon a page fault, the OS will have to decide
+which page in the memory to kick out. This replacement policy is known
+as the **page-replacement policy**.
 
-<!--list-separator-->
+Below is the page-fault control algorithm:
 
-- Page-replacement Policy
+```c
+   PFN = findFreePhysicalPage();
+   if (PFN == -1) {                  /* can't find free page */
+     PFN = EvictPage();              /* Evict some old page */
+    }
+   DiskRead(PTE.diskAddr, PFN);    /* sleep, waiting for IO */
+   PTE.present = true;
+   PTE.PFN = PFN;
+   RetryInstruction();
+```
 
-  When memory is full, upon a page fault, the OS will have to decide
-  which page in the memory to kick out. This replacement policy is known
-  as the **page-replacement policy**.
+#### When Replacements Really Occur {#when-replacements-really-occur}
 
-  Below is the page-fault control algorithm:
+The OS actively keeps a small portion of memory free. To do this, the
+OS maintains a **high watermark (HW)** and a **low watermark (LW)**. When
+the OS notices that there are fewer than LW pages available, a
+background thread runs, freeing memory. This is sometimes called a
+**swap daemon** or a **page daemon**.
 
-  ```c
-     PFN = findFreePhysicalPage();
-     if (PFN == -1) {                  /* can't find free page */
-       PFN = EvictPage();              /* Evict some old page */
-      }
-     DiskRead(PTE.diskAddr, PFN);    /* sleep, waiting for IO */
-     PTE.present = true;
-     PTE.PFN = PFN;
-     RetryInstruction();
-  ```
+Many systems cluster a number of pages and write them at once to the
+swap partition.
 
-<!--list-separator-->
-
-- When Replacements Really Occur
-
-  The OS actively keeps a small portion of memory free. To do this, the
-  OS maintains a **high watermark (HW)** and a **low watermark (LW)**. When
-  the OS notices that there are fewer than LW pages available, a
-  background thread runs, freeing memory. This is sometimes called a
-  **swap daemon** or a **page daemon**.
-
-  Many systems cluster a number of pages and write them at once to the
-  swap partition.
-
-  With the addition of a **page daemon**, the control flow algorithm can
-  be changed. The thread trying to read a page would simply wait for
-  the page daemon free up enough memory if the LW threshold is hit.
+With the addition of a **page daemon**, the control flow algorithm can
+be changed. The thread trying to read a page would simply wait for
+the page daemon free up enough memory if the LW threshold is hit.
 
 ### Policies {#policies}
 
@@ -1472,24 +1383,22 @@ future.
 The first few accesses when the cache begins in an empty state is a
 **cold-start miss**.
 
+#### FIFO {#fifo}
+
+In FIFO replacement, pages are placed in a queue when they enter the
+system, and when a replacement occurs, the page on the tail of the
+queue is evicted.
+
 <!--list-separator-->
 
-- FIFO
+- Belady's anomaly
 
-  In FIFO replacement, pages are placed in a queue when they enter the
-  system, and when a replacement occurs, the page on the tail of the
-  queue is evicted.
-
-   <!--list-separator-->
-
-  - Belady's anomaly
-
-    One would normally expect the cache hit rate to increase when the
-    cache gets larger. However, with FIFO, it gets worse, and this
-    phenomenon is called **Belady's anomaly**. LRU has the **stack property**:
-    for algorithms with this property, a cache of size N+1 naturally
-    includes the contents of a cache of size N. FIFO and Random (among
-    others) do not obey this stack property.
+  One would normally expect the cache hit rate to increase when the
+  cache gets larger. However, with FIFO, it gets worse, and this
+  phenomenon is called **Belady's anomaly**. LRU has the **stack property**:
+  for algorithms with this property, a cache of size N+1 naturally
+  includes the contents of a cache of size N. FIFO and Random (among
+  others) do not obey this stack property.
 
 ## Interesting Links {#interesting-links}
 

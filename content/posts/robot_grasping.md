@@ -1,14 +1,23 @@
 +++
 title = "Robot Grasping"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-24T13:58:22+08:00
-slug = "robot_grasping"
 draft = false
 +++
 
 Humans are able to perform dexterous manipulation of everyday, unseen objects
 with their limbs. Yet, it remains a challenge for robots to perform grasping and
 manipulation of objects.
+
+A typical robot grasp detection system can consist of 3 components.
+
+Object localization
+: determining the target object's location
+
+Object Pose Estimation
+: obtaining a target object's 6D pose in the scene
+
+[Grasp Estimation]({{< relref "grasp_estimation" >}})
+: Estimating the grasp pose in the camera's coordinate frame
 
 ## Challenges {#challenges}
 
@@ -26,3 +35,16 @@ Enveloping grasps
 
     Enveloping grasps have superior stability. Grasping Simulators such as
     (GraspIt!) have been made available for theoretical research.
+
+## Closed-loop Grasping {#closed-loop-grasping}
+
+Execution time is the primary reason why grasping systems remain open-loop.
+However, closed-loop control via visual feedback is desirable because they are
+able to adapt to dynamic environments, and require less precise position control
+or camera calibration. (NO_ITEM_DATA:morrisonClosingLoopRobotic2018) uses neural network
+to synthesize a grasp quality image in real-time to achieve closed-loop
+grasping.
+
+## Bibliography {#bibliography}
+
+NO_ITEM_DATA:morrisonClosingLoopRobotic2018

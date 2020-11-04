@@ -1,7 +1,6 @@
 +++
 title = "Robotics Probabilistic Generative Laws"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:14+08:00
 tags = ["robotics"]
 draft = false
 +++

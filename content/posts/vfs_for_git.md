@@ -1,12 +1,10 @@
 +++
 title = "VFS for Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:34+08:00
-slug = "vfs_for_git"
 draft = false
 +++
 
-VFS for [Git]({{< relref "git" >}}) is a virtualized filesystem used to bypass assumptions
+VFS for [Git]({{<relref "git.md" >}}) is a virtualized filesystem used to bypass assumptions
 about repository size, allowing Git repositories to scale up to large
 repositories.
 

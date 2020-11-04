@@ -1,18 +1,16 @@
 +++
 title = "chen20_simpl_framew_contr_learn_visual_repres: A simple framework for contrastive learning of visual representations"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:03+08:00
 draft = false
 +++
 
-SimCLR is a simple framework for [contrastive learning]({{< relref "contrastive_methods" >}}) of visual
-representations.
+SimCLR is a simple framework for [Contrastive Methods]({{<relref "contrastive_methods.md" >}}) of visual representations.
 
 ## A simple framework for contrastive learning of visual representations {#chen20_simpl_framew_contr_learn_visual_repres}
 
 ### We do not train the model with a memory bank {#we-do-not-train-the-model-with-a-memory-bank}
 
-Rather than train with a memory bank, they use a large batch size, and the [LARS Optimizer]({{< relref "lars_optimizer" >}}) to stabilize training.
+Rather than train with a memory bank, they use a large batch size, and the [LARS Optimizer]({{<relref "lars_optimizer.md" >}}) to stabilize training.
 
 ## Key Contributions {#key-contributions}
 

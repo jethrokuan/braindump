@@ -1,18 +1,17 @@
 +++
 title = "GDC Vault - Exploring the Tech and Design of 'Noita'"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:20+08:00
 draft = false
 +++
 
 speaker
-: [Petri Purho]({{< relref "petri_purho" >}})
+: [Petri Purho]({{<relref "petri_purho.md" >}})
 
 company
-: [Nolla Games]({{< relref "nolla_games" >}})
+: [Nolla Games]({{<relref "nolla_games.md" >}})
 
 tags
-: [Game Design]({{< relref "game_design" >}})
+: [Game Design]({{<relref "game_design.md" >}})
 
 Noita uses a very simple falling sand simulation algorithm, liquids and gases are implemented similarly.
 

@@ -1,13 +1,12 @@
 +++
 title = "Portfolio Composition"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:58:02+08:00
 draft = false
 +++
 
 ## General recommendations {#general-recommendations}
 
-1.  Invest in ETFs, not single stocks ([Investing In ETFs]({{< relref "investing_in_etfs" >}}))
+1.  Invest in ETFs, not single stocks ([Investing In ETFs]({{<relref "investing_in_etfs.md" >}}))
 2.  Invest "110 minus your age" into stocks, and the rest into bonds
 3.  For the stock component, half should be in local-stock ETF and half
     in global stock ETF

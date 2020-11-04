@@ -9,3 +9,5 @@
 /org/work/
 org/private/
 /org/lit/.auctex-auto/
+/.ninja_log
+/build.ninja

@@ -1,12 +1,11 @@
 +++
 title = "Regression"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:08+08:00
 draft = false
 +++
 
 tags
-: [Statistics]({{< relref "statistics" >}}), [Bayesian Statistics]({{< relref "bayesian_statistics" >}})
+: [Statistics]({{<relref "statistics.md" >}}), [Bayesian Statistics]({{<relref "bayesian_statistics.md" >}})
 
 ## Introduction {#introduction}
 
@@ -218,47 +217,43 @@ Once we have rejected the null hypothesis in favour of the alternative
 hypothesis, it is natural to want to quantify the extent to which the
 model fits the data.
 
-<!--list-separator-->
+#### Residual Standard Error (RSE) {#residual-standard-error--rse}
 
-- Residual Standard Error (RSE)
+After we compute the least square estimates of the parameters of a
+linear model, we can compute the following quantities:
 
-  After we compute the least square estimates of the parameters of a
-  linear model, we can compute the following quantities:
+\begin{align}
+\mathrm{SST} &= \sum(y_i - \bar{y})^2 \\\\\\
+\mathrm{SSR} &= \sum(\hat{y_i} - \bar{y})^2 \\\\\\
+\mathrm{SSE} &= \sum(y_i - \hat{y_i})^2
+\end{align}
 
-  \begin{align}
-  \mathrm{SST} &= \sum(y_i - \bar{y})^2 \\\\\\
-  \mathrm{SSR} &= \sum(\hat{y_i} - \bar{y})^2 \\\\\\
-  \mathrm{SSE} &= \sum(y_i - \hat{y_i})^2
-  \end{align}
+A fundamental equality in both simple and multiple regressions is
+given by \\(\mathrm{SST} = \mathrm{SSR} + \mathrm{SSE}\\). This can be
+interpreted as: The deviation from the mean is equal to the deviation
+due to fit, plus the residual.
 
-  A fundamental equality in both simple and multiple regressions is
-  given by \\(\mathrm{SST} = \mathrm{SSR} + \mathrm{SSE}\\). This can be
-  interpreted as: The deviation from the mean is equal to the deviation
-  due to fit, plus the residual.
+#### \\(R^2\\) statistic {#r-2--statistic}
 
-<!--list-separator-->
+The RSE provides an absolute measure of lack of fit of the model to
+the data. But since it is measured in the units of \\(Y\\), it is not
+always clear what constitutes a good RSE. The \\(R^2\\) statistic provides
+an alternative measure of fit. It takes a form of a proportion, and
+takes values between 0 and 1, independent of the scale of \\(Y\\).
 
-- \\(R^2\\) statistic
+\begin{equation} \label{eqn:dfn:r_squared}
+R^2 = \frac{\mathrm{SSR}}{\mathrm{SST}} = 1 - \frac{\mathrm{SSE}}{\mathrm{SST}}
+\end{equation}
 
-  The RSE provides an absolute measure of lack of fit of the model to
-  the data. But since it is measured in the units of \\(Y\\), it is not
-  always clear what constitutes a good RSE. The \\(R^2\\) statistic provides
-  an alternative measure of fit. It takes a form of a proportion, and
-  takes values between 0 and 1, independent of the scale of \\(Y\\).
+where \\(\mathrm{SST} = \sum(y_i - \bar{y})^2\\) is the _total sum of
+squares_. SST measures the total variance in the response \\(Y\\), and can
+be thought of as the amount of variability inherent in the response
+before the regression is performed. Hence, \\(R^2\\) measures the
+proportion of variability in \\(Y\\) that can be explained using \\(X\\).
 
-  \begin{equation} \label{eqn:dfn:r_squared}
-  R^2 = \frac{\mathrm{SSR}}{\mathrm{SST}} = 1 - \frac{\mathrm{SSE}}{\mathrm{SST}}
-  \end{equation}
-
-  where \\(\mathrm{SST} = \sum(y_i - \bar{y})^2\\) is the _total sum of
-  squares_. SST measures the total variance in the response \\(Y\\), and can
-  be thought of as the amount of variability inherent in the response
-  before the regression is performed. Hence, \\(R^2\\) measures the
-  proportion of variability in \\(Y\\) that can be explained using \\(X\\).
-
-  Note that the correlation coefficient \\(r = \mathrm{Cor}(X, Y)\\) is
-  related to the \\(R^2\\) in the simple linear regression setting: \\(r^2 =
-  R^2\\).
+Note that the correlation coefficient \\(r = \mathrm{Cor}(X, Y)\\) is
+related to the \\(R^2\\) in the simple linear regression setting: \\(r^2 =
+R^2\\).
 
 ## Multiple Linear Regression {#multiple-linear-regression}
 
@@ -588,111 +583,99 @@ problems may occur. Most common among these are the following:
 5.  High-leverage points
 6.  Collinearity
 
-<!--list-separator-->
+#### Non-linearity of the Data {#non-linearity-of-the-data}
 
-- Non-linearity of the Data
+The assumption of a linear relationship between response and
+predictors aren't always true. _Residual plots_ are a useful graphical
+tool for identifying non-linearity. This is obtained by plotting the
+residuals \\(e_i = y_i - \hat{y_i}\\) versus the predictor \\(x_i\\). Ideally
+the residual plot will show no discernible pattern. The presence of a
+pattern may indicate a problem with some aspect of the linear model.
 
-  The assumption of a linear relationship between response and
-  predictors aren't always true. _Residual plots_ are a useful graphical
-  tool for identifying non-linearity. This is obtained by plotting the
-  residuals \\(e_i = y_i - \hat{y_i}\\) versus the predictor \\(x_i\\). Ideally
-  the residual plot will show no discernible pattern. The presence of a
-  pattern may indicate a problem with some aspect of the linear model.
+If the residual plots show that there are non-linear associations in
+the data, then a simple approach is to use non-linear transformations
+of the predictors, such as \\(\log X\\), \\(\sqrt{X}\\) and \\(X^2\\).
 
-  If the residual plots show that there are non-linear associations in
-  the data, then a simple approach is to use non-linear transformations
-  of the predictors, such as \\(\log X\\), \\(\sqrt{X}\\) and \\(X^2\\).
+#### Correlation of Error Terms {#correlation-of-error-terms}
 
-<!--list-separator-->
+An important assumption of the linear regression model is that the
+error terms, \\(\epsilon_1, \epsilon_2, \dots, \epsilon_p\\) are
+uncorrelated. The standard errors for the estimated regression
+coefficients are computed based on this assumption. This is mostly
+mitigated by proper experiment design.
 
-- Correlation of Error Terms
+#### Non-constant Variance of Error Terms {#non-constant-variance-of-error-terms}
 
-  An important assumption of the linear regression model is that the
-  error terms, \\(\epsilon_1, \epsilon_2, \dots, \epsilon_p\\) are
-  uncorrelated. The standard errors for the estimated regression
-  coefficients are computed based on this assumption. This is mostly
-  mitigated by proper experiment design.
+Variances of the error terms may increase with the value of the
+response. One can identify non-constant variances in the errors, or
+heteroscedasticity, from the presence of a funnel shape in the
+residual plot.
 
-<!--list-separator-->
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity" >}}
 
-- Non-constant Variance of Error Terms
+#### Outliers {#outliers}
 
-  Variances of the error terms may increase with the value of the
-  response. One can identify non-constant variances in the errors, or
-  heteroscedasticity, from the presence of a funnel shape in the
-  residual plot.
+An outlier is a point from which \\(y_i\\) is far from the value predicted
+by the model. It is atypical for an outlier that does not have an
+unusual predictor value to have little effect on the least squares
+fit. However, it can cause other problems, such as dramatically
+altering the computed values of RSE, \\(R^2\\) and p-values.
 
-  {{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity" >}}
+Residual plots can clearly identify outliers. One solution is to
+simply remove the observation, but care must be taken to first
+identify whether the outlier is indicative of a deficiency with the
+model, such as a missing predictor.
 
-<!--list-separator-->
+#### High Leverage Points {#high-leverage-points}
 
-- Outliers
+Observations with high leverage have an unusual value for \\(x_i\\).
+High leverage observations typically have a substantial impact on the
+regression line. These are easy to identify, by looking for values
+outside the normal range of the observations. We can also compute the
+leverage statistic. for a simple linear regression:
 
-  An outlier is a point from which \\(y_i\\) is far from the value predicted
-  by the model. It is atypical for an outlier that does not have an
-  unusual predictor value to have little effect on the least squares
-  fit. However, it can cause other problems, such as dramatically
-  altering the computed values of RSE, \\(R^2\\) and p-values.
+\begin{equation}
+h_i = \frac{1}{n} + \frac{(x_i - \bar{x_i})^2}{\sum\_{i' =
+1}^n(x\_{i'} - \bar{x})^2}
+\end{equation}
 
-  Residual plots can clearly identify outliers. One solution is to
-  simply remove the observation, but care must be taken to first
-  identify whether the outlier is indicative of a deficiency with the
-  model, such as a missing predictor.
+#### Collinearity {#collinearity}
 
-<!--list-separator-->
+Collinearity refers to the situation in which two or more predictor
+variables are closely related to one another. The presence of
+collinearity can pose problems in the regression context: it can be
+difficult to separate out the individual effects of collinear
+variables on the response. A contour plot of the RSS associated with
+different possible coefficient estimates can show collinearity.
 
-- High Leverage Points
+{{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS" >}}
 
-  Observations with high leverage have an unusual value for \\(x_i\\).
-  High leverage observations typically have a substantial impact on the
-  regression line. These are easy to identify, by looking for values
-  outside the normal range of the observations. We can also compute the
-  leverage statistic. for a simple linear regression:
+Another way to detect collinearity is to look at the correlation
+matrix of the predictors. An element of this matrix that is large in
+absolute value indicates a pair of highly correlated variables, and
+therefore a collinearity problem in the data.
 
-  \begin{equation}
-  h_i = \frac{1}{n} + \frac{(x_i - \bar{x_i})^2}{\sum\_{i' =
-  1}^n(x\_{i'} - \bar{x})^2}
-  \end{equation}
+Not all collinearity problems can be detected by inspection of the
+correlation matrix: it is possible for collinearity to exist between
+three or more variables even if no pairs of variables has a
+particularly high correlation. This situation is called
+_multicollinearity_. We instead compute the _variance inflation factor_
+(VIF). The VIF is the ratio of the variance of \\(\hat{\beta_j}\\) when
+fitting the full model divided by the variance of \\(\hat{\beta_j}\\) if
+fit on its own. The smallest possible value for VIF is 1, indicating a
+complete absence of collinearity. As a rule of thumb, a VIF exceeding
+values of 5 or 10 indicates a problematic amount of collinearity.
 
-<!--list-separator-->
+\begin{equation} \label{eqn:dfn:vif}
+\mathrm{VIF}(\hat{\beta_j}) = \frac{1}{1-R^2\_{X_j|X\_{-j}}}
+\end{equation}
 
-- Collinearity
+where \\(R^2\_{X_j|X\_{-j}}\\) is the regression of \\(X_j\\) onto all of the
+other predictors.
 
-  Collinearity refers to the situation in which two or more predictor
-  variables are closely related to one another. The presence of
-  collinearity can pose problems in the regression context: it can be
-  difficult to separate out the individual effects of collinear
-  variables on the response. A contour plot of the RSS associated with
-  different possible coefficient estimates can show collinearity.
-
-  {{< figure src="/ox-hugo/screenshot_2019-01-08_15-22-30.png" caption="Figure 3: Left: the minimum value is well defined, Right: because of collinearity, there are many pairs \\((\beta\_{\text{Limit}}, \beta\_{\text{Rating}})\\) with a similar value for RSS" >}}
-
-  Another way to detect collinearity is to look at the correlation
-  matrix of the predictors. An element of this matrix that is large in
-  absolute value indicates a pair of highly correlated variables, and
-  therefore a collinearity problem in the data.
-
-  Not all collinearity problems can be detected by inspection of the
-  correlation matrix: it is possible for collinearity to exist between
-  three or more variables even if no pairs of variables has a
-  particularly high correlation. This situation is called
-  _multicollinearity_. We instead compute the _variance inflation factor_
-  (VIF). The VIF is the ratio of the variance of \\(\hat{\beta_j}\\) when
-  fitting the full model divided by the variance of \\(\hat{\beta_j}\\) if
-  fit on its own. The smallest possible value for VIF is 1, indicating a
-  complete absence of collinearity. As a rule of thumb, a VIF exceeding
-  values of 5 or 10 indicates a problematic amount of collinearity.
-
-  \begin{equation} \label{eqn:dfn:vif}
-  \mathrm{VIF}(\hat{\beta_j}) = \frac{1}{1-R^2\_{X_j|X\_{-j}}}
-  \end{equation}
-
-  where \\(R^2\_{X_j|X\_{-j}}\\) is the regression of \\(X_j\\) onto all of the
-  other predictors.
-
-  The data consists of \\(n\\) observations on a dependent or response
-  variable \\(Y\\), and \\(p\\) predictor or explanatory variables. The
-  relationship between \\(Y\\) and \\(X_1, X_2, \dots, X_p\\) is represented by:
+The data consists of \\(n\\) observations on a dependent or response
+variable \\(Y\\), and \\(p\\) predictor or explanatory variables. The
+relationship between \\(Y\\) and \\(X_1, X_2, \dots, X_p\\) is represented by:
 
 ## Linear Basis Function Models {#linear-basis-function-models}
 
@@ -910,93 +893,89 @@ ignored.
 
 ### Graphical methods {#graphical-methods}
 
-<!--list-separator-->
+#### Before fitting the model {#before-fitting-the-model}
 
-- Before fitting the model
+Graphs plotted before fitting the model serve as exploratory tools.
+There are four categories of graphs:
 
-  Graphs plotted before fitting the model serve as exploratory tools.
-  There are four categories of graphs:
+**1. One-dimensional graphs**
 
-  **1. One-dimensional graphs**
+One-dimensional graphs give a general idea of the distribution of each
+individual variable. One of the following graphs may be used:
 
-  One-dimensional graphs give a general idea of the distribution of each
-  individual variable. One of the following graphs may be used:
+- histogram
+- stem-and-leaf display
+- dot-plot
+- box-plot
 
-  - histogram
-  - stem-and-leaf display
-  - dot-plot
-  - box-plot
+These graphs indicate whether the variable is symmetric, or skewed.
+When a variable is skewed, it should be transformed, generally
+using a logarithmic transformation. Univariate graphs also point out
+the presence of outliers in the variables. However, no observations
+should be deleted at this stage.
 
-  These graphs indicate whether the variable is symmetric, or skewed.
-  When a variable is skewed, it should be transformed, generally
-  using a logarithmic transformation. Univariate graphs also point out
-  the presence of outliers in the variables. However, no observations
-  should be deleted at this stage.
+**2. Two-dimensional graphs**
 
-  **2. Two-dimensional graphs**
+We can take the variables in pairs and look at the scatter plots of
+each variable versus each other variable in the data set. These
+explore relationships between each pair of variables and identify
+general patterns. These pairwise plots can be arranged in a matrix
+format, known as the _draftsman's plot_ or the _plot matrix_. In simple
+regression, we expect the plot of \\(Y\\) versus \\(X\\) to show a linear
+pattern. However, scatter plots of \\(Y\\) versus each predictor variable
+may or may not show linear patterns.
 
-  We can take the variables in pairs and look at the scatter plots of
-  each variable versus each other variable in the data set. These
-  explore relationships between each pair of variables and identify
-  general patterns. These pairwise plots can be arranged in a matrix
-  format, known as the _draftsman's plot_ or the _plot matrix_. In simple
-  regression, we expect the plot of \\(Y\\) versus \\(X\\) to show a linear
-  pattern. However, scatter plots of \\(Y\\) versus each predictor variable
-  may or may not show linear patterns.
+Beyond these, there are rotation plots and dynamic graphs which serve
+as powerful visualizations of the data in more than 2 dimensions.
 
-  Beyond these, there are rotation plots and dynamic graphs which serve
-  as powerful visualizations of the data in more than 2 dimensions.
+#### Graphs after fitting a model {#graphs-after-fitting-a-model}
 
-<!--list-separator-->
+The graphs after fitting a model help check the assumptions and assess
+the adequacy of the fit of a given model.
 
-- Graphs after fitting a model
+1.  Graphs checking linearity and normality assumptions
 
-  The graphs after fitting a model help check the assumptions and assess
-  the adequacy of the fit of a given model.
+When the number of variables is small, the assumption of linearity can
+be checked by interactively and dynamically manipulating plots
+discussed in the previous section. However, this quickly becomes
+difficult with many predictor variables. Plotting the standardized
+residuals can help check the linearity and normality assumptions.
 
-  1.  Graphs checking linearity and normality assumptions
+- Normal probability plot of the standardized residuals: This is a
+  plot of the ordered standardized residuals versus the normal scores.
+  The normal scores are what we would expect to obtain if we take a
+  sample of size \\(n\\) from a standard normal distribution. If the
+  residuals are normally distributed, the ordered residuals should be
+  approximately the same as the ordered normal scores. Under the
+  normality assumption, this plot should resemble a straight line with
+  intercept zero and slope of 1.
 
-  When the number of variables is small, the assumption of linearity can
-  be checked by interactively and dynamically manipulating plots
-  discussed in the previous section. However, this quickly becomes
-  difficult with many predictor variables. Plotting the standardized
-  residuals can help check the linearity and normality assumptions.
+- Scatter plots of the standardized residual against each of the
+  predictor variables: Under the standard assumptions, the
+  standardized residuals are uncorrelated with each of the predictor
+  variables. If the assumptions hold, the plot should be a random
+  scatter of points.
 
-  - Normal probability plot of the standardized residuals: This is a
-    plot of the ordered standardized residuals versus the normal scores.
-    The normal scores are what we would expect to obtain if we take a
-    sample of size \\(n\\) from a standard normal distribution. If the
-    residuals are normally distributed, the ordered residuals should be
-    approximately the same as the ordered normal scores. Under the
-    normality assumption, this plot should resemble a straight line with
-    intercept zero and slope of 1.
+- Scatter plot of the standardized residual versus the fitted values:
+  Under the standard assumptions, the standardized residuals are also
+  uncorrelated with the fitted values. Hence, this plot should also be
+  a random scatter of points.
 
-  - Scatter plots of the standardized residual against each of the
-    predictor variables: Under the standard assumptions, the
-    standardized residuals are uncorrelated with each of the predictor
-    variables. If the assumptions hold, the plot should be a random
-    scatter of points.
+- Index plot of the standardized residuals: we display the
+  standardized residuals versus the observation number. If the order
+  in which the observations were taken is immaterial, this plot is not
+  needed. However, if the order is important, a plot of the residuals
+  in serial order may be used to check the assumption of the
+  independence of the errors.
 
-  - Scatter plot of the standardized residual versus the fitted values:
-    Under the standard assumptions, the standardized residuals are also
-    uncorrelated with the fitted values. Hence, this plot should also be
-    a random scatter of points.
-
-  - Index plot of the standardized residuals: we display the
-    standardized residuals versus the observation number. If the order
-    in which the observations were taken is immaterial, this plot is not
-    needed. However, if the order is important, a plot of the residuals
-    in serial order may be used to check the assumption of the
-    independence of the errors.
-
-  {{< figure src="/ox-hugo/screenshot_2019-03-27_21-15-45.png" caption="Figure 4: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity" >}}
+{{< figure src="/ox-hugo/screenshot_2019-03-27_21-15-45.png" caption="Figure 4: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity" >}}
 
 ## References {#references}
 
-([Chatterjee and Hadi, n.d.](#orge5909e1); [James et al., n.d.](#org0cffac1))
+([Chatterjee and Hadi, n.d.](#orgf3cbd13); [James et al., n.d.](#orgcfc7f52))
 
 ## Bibliography {#bibliography}
 
-<a id="orge5909e1"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
+<a id="orgf3cbd13"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
 
-<a id="org0cffac1"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+<a id="orgcfc7f52"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.

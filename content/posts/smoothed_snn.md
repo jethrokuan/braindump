@@ -1,11 +1,10 @@
 +++
 title = "Smoothed Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:02+08:00
 draft = false
 +++
 
-Smoothed [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}) ensure well-behaved gradients which are
+Smoothed [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}}) ensure well-behaved gradients which are
 directly suitable for optimization. They come in 4 categories:
 
 1.  Soft non-linearity models

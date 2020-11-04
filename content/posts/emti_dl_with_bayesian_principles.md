@@ -1,7 +1,6 @@
 +++
 title = "Deep Learning With Bayesian Principles - Emtiyaz Khan"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:16+08:00
 draft = false
 +++
 
@@ -9,10 +8,10 @@ link
 : [Mohammad Emtiyaz Khan | Deep Learning with Bayesian Principles · SlidesLive](https://slideslive.com/38921489/deep-learning-with-bayesian-principles)
 
 speaker
-: [Emtiyaz Khan]({{< relref "emtiyaz_khan" >}})
+: [Emtiyaz Khan]({{<relref "emtiyaz_khan.md" >}})
 
 tags
-: [Bayesian Deep Learning]({{< relref "bayesian_deep_learning" >}}), [NeurIPS]({{< relref "neurips" >}})
+: [Bayesian Deep Learning]({{<relref "bayesian_deep_learning.md" >}}), [NeurIPS]({{<relref "neurips.md" >}})
 
 ## Goals {#goals}
 

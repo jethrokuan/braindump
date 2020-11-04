@@ -1,13 +1,12 @@
 +++
 title = "Hacking"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:21+08:00
 draft = false
 +++
 
 ## Search engines for Hackers {#search-engines-for-hackers}
 
-([trimstray, n.d.](#org6ee7f69))
+([trimstray, n.d.](#org133cd6f))
 
 - <https://censys.io/>
 - <https://www.shodan.io/>
@@ -21,7 +20,7 @@ draft = false
 
 ## Bibliography {#bibliography}
 
-<a id="org6ee7f69"></a>trimstray. n.d. “Trimstray on Twitter: &Quot;Search Engines for Hackers:&#10;&#10;<//T.Co/Awr3X88Xu1
+<a id="org133cd6f"></a>trimstray. n.d. “Trimstray on Twitter: &Quot;Search Engines for Hackers:&#10;&#10;<//T.Co/Awr3X88Xu1
 Https://T.Co/03trsWUrnP
 Https://T.Co/B9IHX23MeC
 Https://T.Co/uO1oFjB7Eb

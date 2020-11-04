@@ -1,11 +1,10 @@
 +++
 title = "Metropolis-Hastings Method"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:43+08:00
 draft = false
 +++
 
-In [Importance Sampling]({{< relref "importance_sampling" >}}) and [Rejection Sampling]({{< relref "rejection_sampling" >}}), the proposal
+In [Importance Sampling]({{<relref "importance_sampling.md" >}}) and [Rejection Sampling]({{<relref "rejection_sampling.md" >}}), the proposal
 distribution \\(q(x)\\) needs to be similar to \\(p(x)\\). The
 Metropolis-Hastings method uses a proposal density \\(q(x;x^(t))\\) that
 is dependent on the current state \\(x^(t)\\). A simple distribution such

@@ -1,14 +1,13 @@
 +++
 title = "Credit Assignment in Spiking Neural Networks"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:06+08:00
 draft = false
 +++
 
 The problem of spatial and temporal credit assignment in RNNs are
 solved through backpropagating errors in the unrolled RNN.
 
-Algorithmic solutions to RNNs have 2 challenges in [Spiking Neural Networks]({{< relref "spiking_neural_networks" >}}).
+Algorithmic solutions to RNNs have 2 challenges in [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}}).
 First, spiking neurons have \$S(U(t)) = \\(\Theta(U(t) - \theta)\\). Their derivative
 is zero everywhere except at \\(U = \theta\\), where it is ill-defined. This binary
 spiking non-linearity stops gradients from flowing, and makes gradient-based

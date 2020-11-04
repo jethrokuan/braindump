@@ -1,12 +1,11 @@
 +++
 title = "Markov Chains"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:33+08:00
 draft = false
 +++
 
 tags
-: [Stochastic Processes]({{< relref "stochastic_processes" >}})
+: [Stochastic Processes]({{<relref "stochastic_processes.md" >}})
 
 ## Introduction {#introduction}
 

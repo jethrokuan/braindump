@@ -1,12 +1,11 @@
 +++
 title = "Git"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:48+08:00
 draft = false
 +++
 
 tags
-: [Unix]({{< relref "unix" >}}), [Version Control]({{< relref "version_control" >}})
+: [Unix]({{<relref "unix.md" >}}), [Version Control]({{<relref "version_control.md" >}})
 
 ## Links {#links}
 

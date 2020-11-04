@@ -1,12 +1,11 @@
 +++
 title = "Entropy"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:27+08:00
 draft = false
 +++
 
 tags
-: [Information Theory]({{< relref "information_theory" >}}), [Gibbs' Inequality]({{< relref "gibbs_inequality" >}})
+: [Information Theory]({{<relref "information_theory.md" >}}), [Gibbs' Inequality]({{<relref "gibbs_inequality.md" >}})
 
 ## Definitions {#definitions}
 

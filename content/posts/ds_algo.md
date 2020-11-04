@@ -1,7 +1,6 @@
 +++
 title = "Data Structures and Algorithms"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:13+08:00
 draft = false
 +++
 
@@ -60,15 +59,13 @@ kT(n)\\)
 - \\(f(n) \in O(n^c), c > \log_ba \text{ and } \exists k \\ \text{ st }
   af(\frac{n}{b})\le kf(n) \text{ then } T(n) \in \Theta(n^{\log_ba})\\)
 
-<!--list-separator-->
+#### Common Ones {#common-ones}
 
-- Common Ones
-
-  - \\(T(n) = T(n/2) + \Theta(1) = O(\log n)\\) (Binary Search)
-  - \\(T(n) = 2T(n/2) + \Theta(1) = O(n)\\) (Binary Tree Traversal)
-  - \\(T(n) = 2T(n/2) + \Theta(\log n) = O(n)\\) (Optimal Sorted Matrix
-    Search)
-  - \\(T(n) = 2T(n/2) + O(n) = O(n \log n)\\) (Merge Sort)
+- \\(T(n) = T(n/2) + \Theta(1) = O(\log n)\\) (Binary Search)
+- \\(T(n) = 2T(n/2) + \Theta(1) = O(n)\\) (Binary Tree Traversal)
+- \\(T(n) = 2T(n/2) + \Theta(\log n) = O(n)\\) (Optimal Sorted Matrix
+  Search)
+- \\(T(n) = 2T(n/2) + O(n) = O(n \log n)\\) (Merge Sort)
 
 ## Abstract Data Types {#abstract-data-types}
 
@@ -118,7 +115,7 @@ One sided Binary Search
 \\(2^k\\), then search on [\\(2^{k-1}, 2^k\\)]
 
 Peak Finding
-: A[j] in array A is peak if (i) A[j] > A[j-1](ii)
+: A[j] in array A is peak if (i) A[j] > A[j-1] (ii)
 A[j] > A[j+1]. If only one item in array, vacously true
 
 1D Peak Finding \\(O(\log n)\\)
@@ -232,105 +229,97 @@ Quick Sort
 
 ### Augmented Trees {#augmented-trees}
 
-<!--list-separator-->
+#### Rank Tree (Order Statistics) {#rank-tree--order-statistics}
 
-- Rank Tree (Order Statistics)
+- store weight of tree in each node:
+- \\(w(v) = w(v.left) + w(v.right) + 1\\)
+- select(k) \\(O(\log n)\\): finds node with rank \\(k\\)
 
-  - store weight of tree in each node:
-  - \\(w(v) = w(v.left) + w(v.right) + 1\\)
-  - select(k) \\(O(\log n)\\): finds node with rank \\(k\\)
+<!--listend-->
 
-   <!--listend-->
+```text
+  rank = left.weight + 1;
+    if (k == rank)
+      return v
+    else if (k < rank)
+      return left.select(k)
+    else return right.select(k-rank)
+```
 
-  ```text
-    rank = left.weight + 1;
-      if (k == rank)
-        return v
-      else if (k < rank)
-        return left.select(k)
-      else return right.select(k-rank)
-  ```
+- rank(v) \\(O(\log n)\\): computes rank of node v
 
-  - rank(v) \\(O(\log n)\\): computes rank of node v
+<!--listend-->
 
-   <!--listend-->
+```text
+  rank = v.left.weight + 1
+    while (v != null) do
+      if v is left child do nothing
+      if v is right child,
+         rank += v.parent.left.weight + 1
+      v = v.parent
+```
 
-  ```text
-    rank = v.left.weight + 1
-      while (v != null) do
-        if v is left child do nothing
-        if v is right child,
-           rank += v.parent.left.weight + 1
-        v = v.parent
-  ```
+#### Interval Trees {#interval-trees}
 
-<!--list-separator-->
+- Each node is an interval \\((m, n), m \le n\\)
+- Sort by \\(m\\), augment node with maximum \\(n\\) of children in each node
+- search(x) \\(O(\log n)\\):
 
-- Interval Trees
+<!--listend-->
 
-  - Each node is an interval \\((m, n), m \le n\\)
-  - Sort by \\(m\\), augment node with maximum \\(n\\) of children in each node
-  - search(x) \\(O(\log n)\\):
+```text
+  if x in c
+    return c
+  else if c has no left child
+    search in right subtree
+  else if x > max endpoint in c.left
+    search in right subtree
+  else search in left subtree
+```
 
-   <!--listend-->
+- findAll(x) \\(O(k \log n)\\) for k overlapping intervals
 
-  ```text
-    if x in c
-      return c
-    else if c has no left child
-      search in right subtree
-    else if x > max endpoint in c.left
-      search in right subtree
-    else search in left subtree
-  ```
+<!--listend-->
 
-  - findAll(x) \\(O(k \log n)\\) for k overlapping intervals
+```text
+  search(x)
+  store it somewhere else
+  remove interval
+  repeat until no intervals found
+```
 
-   <!--listend-->
-
-  ```text
-    search(x)
-    store it somewhere else
-    remove interval
-    repeat until no intervals found
-  ```
+#### Orthogonal Range Searching {#orthogonal-range-searching}
 
 <!--list-separator-->
 
-- Orthogonal Range Searching
+- 1D
 
-   <!--list-separator-->
-
-  - 1D
-
-    1.  use a binary tree search tree
-    2.  store all points in the leaves of the tree, internal nodes store
-        only copies
-    3.  each internal node v stores the max of any leaf in the left subtree
-    4.  Query Time: \\(O(k + \log n)\\)
-    5.  Building Tree: \\(O(n \log n)\\)
-
-   <!--list-separator-->
-
-  - k-dim Tree
-
-    1.  each node in the x-tree has a set of points in its subtree
-    2.  store the y-tree at each x-node containing all points
-    3.  Query Time: \\(O(k + \log^d n)\\)
-    4.  Building Tree: \\(O(n \log^{d-1}n)\\)
-    5.  Space: \\(O(n \log^{d-1}n)\\)
+  1.  use a binary tree search tree
+  2.  store all points in the leaves of the tree, internal nodes store
+      only copies
+  3.  each internal node v stores the max of any leaf in the left subtree
+  4.  Query Time: \\(O(k + \log n)\\)
+  5.  Building Tree: \\(O(n \log n)\\)
 
 <!--list-separator-->
 
-- Custom Augmentations
+- k-dim Tree
 
-  - **Average height of people taller**: augment nodes to include the
-    count of the number of nodes in that sub-tree, along with the sum
-    of the heights of all the people in that sub-tree. To return the
-    desired average, first search for the name in the hash table; assume
-    it is at node v; then find the sum of the heights of: the right-child
-    of v, and if w is on the path from v to the root and v is in w’s
-    left-subtree, then w’s right-subtree and w.
+  1.  each node in the x-tree has a set of points in its subtree
+  2.  store the y-tree at each x-node containing all points
+  3.  Query Time: \\(O(k + \log^d n)\\)
+  4.  Building Tree: \\(O(n \log^{d-1}n)\\)
+  5.  Space: \\(O(n \log^{d-1}n)\\)
+
+#### Custom Augmentations {#custom-augmentations}
+
+- **Average height of people taller**: augment nodes to include the
+  count of the number of nodes in that sub-tree, along with the sum
+  of the heights of all the people in that sub-tree. To return the
+  desired average, first search for the name in the hash table; assume
+  it is at node v; then find the sum of the heights of: the right-child
+  of v, and if w is on the path from v to the root and v is in w’s
+  left-subtree, then w’s right-subtree and w.
 
 ## Hash Tables {#hash-tables}
 
@@ -343,26 +332,20 @@ Quick Sort
 
 ### Hash Functions {#hash-functions}
 
-<!--list-separator-->
+#### Division {#division}
 
-- Division
+- \\(h(k) = k \text{ mod } m\\), choose m prime
 
-  - \\(h(k) = k \text{ mod } m\\), choose m prime
+#### Multiplication {#multiplication}
 
-<!--list-separator-->
+- fix table size: \\(m=2^r\\), for some \\(r\\)
+- fix word size: \\(w\\), size of key in bits
+- fix odd constant \\(A\\), \\(A > 2^{w-1}\\)
+- \\(h(k) = (Ak) \text{ mod } 2^w >> (w - r)\\)
 
-- Multiplication
+#### Rolling Hash {#rolling-hash}
 
-  - fix table size: \\(m=2^r\\), for some \\(r\\)
-  - fix word size: \\(w\\), size of key in bits
-  - fix odd constant \\(A\\), \\(A > 2^{w-1}\\)
-  - \\(h(k) = (Ak) \text{ mod } 2^w >> (w - r)\\)
-
-<!--list-separator-->
-
-- Rolling Hash
-
-  - When key changes by single character
+- When key changes by single character
 
 ### Chaining {#chaining}
 
@@ -427,90 +410,78 @@ Quick Sort
 
 - BFS/DFS do not explore all paths
 
-<!--list-separator-->
+#### BFS \\(O(V+E)\\) {#bfs--ov-plus-e}
 
-- BFS \\(O(V+E)\\)
+```text
+  bfs(root)
+    Q.enqueue(root)
 
-  ```text
-    bfs(root)
-      Q.enqueue(root)
+    while Q is not empty:
+      current = Q.dequeue()
+      visit(current)
+      for each node n adj to current
+        if n not visited
+          n.parent = current
+          Q.enqueue(n)
+```
 
-      while Q is not empty:
-        current = Q.dequeue()
-        visit(current)
-        for each node n adj to current
-          if n not visited
-            n.parent = current
-            Q.enqueue(n)
-  ```
+#### DFS \\(O(V+E)\\) {#dfs--ov-plus-e}
 
-<!--list-separator-->
+- Same as BFS, but use stack instead of queue
 
-- DFS \\(O(V+E)\\)
+#### Topological Sort (DAG) {#topological-sort--dag}
 
-  - Same as BFS, but use stack instead of queue
-
-<!--list-separator-->
-
-- Topological Sort (DAG)
-
-  - Post-order DFS
-  - Kahn's Algorithm (first append all nodes with no incoming edges to
-    result set, remove edges connected to these nodes and repeat,
-    also O(V+E))
+- Post-order DFS
+- Kahn's Algorithm (first append all nodes with no incoming edges to
+  result set, remove edges connected to these nodes and repeat,
+  also O(V+E))
 
 ### SSSP {#sssp}
 
-<!--list-separator-->
+#### Bellman-Ford \\(O(EV)\\) {#bellman-ford--oev}
 
-- Bellman-Ford \\(O(EV)\\)
+- \\(O(V^3)\\) if using Adj Matrix
 
-  - \\(O(V^3)\\) if using Adj Matrix
+<!--listend-->
 
-   <!--listend-->
+```text
+  do V number of times
+    for (Edge e : graph)
+      relax(e)
+```
 
-  ```text
-    do V number of times
-      for (Edge e : graph)
-        relax(e)
-  ```
+- can terminate early if no improvement
+- can detect negative cycle: perform V times, then perform once more,
+  if have changes it has negative cycle
+- if all weights are the same, use BFS
 
-  - can terminate early if no improvement
-  - can detect negative cycle: perform V times, then perform once more,
-    if have changes it has negative cycle
-  - if all weights are the same, use BFS
+#### Dijkstra \\(O(E\log V)\\) {#dijkstra--oe-log-v}
 
-<!--list-separator-->
+[Interesting article on how Dijkstra's algorithm is everywhere](https://blog.evjang.com/2018/08/dijkstras.html)
 
-- Dijkstra \\(O(E\log V)\\)
+- Doesn't work with negative edge weights
+- can terminate once end is found
 
-  [Interesting article on how Dijkstra's algorithm is everywhere](https://blog.evjang.com/2018/08/dijkstras.html)
+<!--listend-->
 
-  - Doesn't work with negative edge weights
-  - can terminate once end is found
+```text
+  add start to PQ
+  dist[i] = INF for all i
+  dist[start] = 0
+  while PQ not empty
+    w = pq.dequeue()
+    for each edge e connected to w
+      if edge is improvement
+        update pq[w] O(logn)
+        update dist[w]
+```
 
-   <!--listend-->
+#### DAG {#dag}
 
-  ```text
-    add start to PQ
-    dist[i] = INF for all i
-    dist[start] = 0
-    while PQ not empty
-      w = pq.dequeue()
-      for each edge e connected to w
-        if edge is improvement
-          update pq[w] O(logn)
-          update dist[w]
-  ```
-
-<!--list-separator-->
-
-- DAG
-
-  - Toposort, relax in order
-  - SSSP on DAG: run topo sort, and relax edges in that order in \\(O(V+E)\\)
-  - Single Source Longest Path problem is easy on DAG: multiply edge
-    weights by -1 and run SSSP
+- Toposort, relax in order
+- SSSP on DAG: run topo sort, and relax edges in that order in \\(O(V+E)\\)
+- Single Source Longest Path problem is easy on DAG: multiply edge
+  weights by -1 and run SSSP
 
 ### Heap {#heap}
 
@@ -524,173 +495,157 @@ Quick Sort
   - \\(right(x) = 2x + 2\\)
   - \\(parent(x) = \lfloor(x-1)/2\rfloor\\)
 
-<!--list-separator-->
+#### Heap Sort {#heap-sort}
 
-- Heap Sort
+1.  Heapify (insert n items) O(n log n)
+2.  Extract from heap n times (O(n log n))
 
-  1.  Heapify (insert n items) O(n log n)
-  2.  Extract from heap n times (O(n log n))
+3.  **Improvement**: recursively join 2 heaps and bubble root down (base
+    case single node) O(n)
+4.  O(n log n) worst case, deterministic, in-place
 
-  3.  **Improvement**: recursively join 2 heaps and bubble root down (base
-      case single node) O(n)
-  4.  O(n log n) worst case, deterministic, in-place
+#### UFDS (weighted) {#ufds--weighted}
 
-<!--list-separator-->
+- union(p,q) \\(O(\log n)\\)
+  - find parent of p and q
+  - make root of smaller tree root of larger tree
+- find(k) \\(O(\log n)\\)
 
-- UFDS (weighted)
+  - search up the tree, return the root
+  - (PC): update all traversed nodes parent to root
 
-  - union(p,q) \\(O(\log n)\\)
-    - find parent of p and q
-    - make root of smaller tree root of larger tree
-  - find(k) \\(O(\log n)\\)
-
-    - search up the tree, return the root
-    - (PC): update all traversed nodes parent to root
-
-  - WU with PC, union and find \\(O(\alpha(m,n))\\)
+- WU with PC, union and find \\(O(\alpha(m,n))\\)
 
 ### MST {#mst}
 
 - acyclic subset of edges that connects all nodes, and has minimum
   weight
 
-<!--list-separator-->
+#### Properties {#properties}
 
-- Properties
+1.  Cutting edge in MST results in 2 MSTs
+2.  **Cycle Poperty**: \\(\forall\\) cycle, max weight edge is not in MST
+3.  **Cut Property**: \\(\forall\\) partitions, min weight edge
+    across cut is in MST
 
-  1.  Cutting edge in MST results in 2 MSTs
-  2.  **Cycle Poperty**: \\(\forall\\) cycle, max weight edge is not in MST
-  3.  **Cut Property**: \\(\forall\\) partitions, min weight edge
-      across cut is in MST
+#### Prim's \\(O(E \log V)\\) {#prim-s--oe-log-v}
 
-<!--list-separator-->
+- Uses cycle property
 
-- Prim's \\(O(E \log V)\\)
+<!--listend-->
 
-  - Uses cycle property
+```text
+  T = {start}
+  enqueue start's edges in PQ
+  while PQ not empty
+    e = PQ.dequeue()
+    if (vertex v linked with e not in T)
+      T = T U {v, e}
+    else
+      ignore edge
+  MST = T
+```
 
-   <!--listend-->
+#### Kruskal's \\(O(E\log V)\\) {#kruskal-s--oe-log-v}
 
-  ```text
-    T = {start}
-    enqueue start's edges in PQ
-    while PQ not empty
-      e = PQ.dequeue()
-      if (vertex v linked with e not in T)
-        T = T U {v, e}
-      else
-        ignore edge
-    MST = T
-  ```
+- Uses UFDS
+- It is possible that some edge in the first \\(V-1\\) edges will form a
+  cycle with pre-existing MST solution
 
-<!--list-separator-->
+<!--listend-->
 
-- Kruskal's \\(O(E\log V)\\)
+```text
+  Sort E edges by increasing weight
+  T = {}
+  for (i = 0; i < edgeList.length; i++)
+    if adding e = edgelist[i] does
+    not form a cycle
+      add e to T
+      else ignore e
+  MST = T
+```
 
-  - Uses UFDS
-  - It is possible that some edge in the first \\(V-1\\) edges will form a
-    cycle with pre-existing MST solution
+#### Boruvka's \\(O(E\log V)\\) {#boruvka-s--oe-log-v}
 
-   <!--listend-->
+```text
+  T = { one-vertex trees }
+  While T has more than one component:
+   For each component C of T:
+     Begin with an empty set of edges S
+     For each vertex v in C:
+       Find the cheapest edge from v
+       to a vertex outside of C, and
+       add it to S
+     Add the cheapest edge in S to T
+   Combine trees connected by edges
+  MST = T
+```
 
-  ```text
-    Sort E edges by increasing weight
-    T = {}
-    for (i = 0; i < edgeList.length; i++)
-      if adding e = edgelist[i] does
-      not form a cycle
-        add e to T
-        else ignore e
-    MST = T
-  ```
+#### Variants {#variants}
 
-<!--list-separator-->
+1.  Same weight: BFS/DFS \\(O(E)\\)
+2.  Edges have weight \\(1..k\\):
+    - Kruskal's
+      - Bucket sort Edges \\(O(E)\\)
+      - Union/check \\(O(\alpha (V))\\)
+      - Total cost: \\(O(\alpha(V)E)\\)
+    - Prim's
+      - Use array of size k as PQ, each slot holds linked
+        list of nodes
+    - insert/remove nodes \\(O(V)\\)
+    - decreaseKey \\(O(E)\\)
+3.  Directed MST
+    - \\(\forall\\) node except root, add minimum incoming edge \\(O(E)\\)
+4.  MaxST
+    - negate all weights, run MST algo
 
-- Boruvka's \\(O(E\log V)\\)
-
-  ```text
-    T = { one-vertex trees }
-    While T has more than one component:
-     For each component C of T:
-       Begin with an empty set of edges S
-       For each vertex v in C:
-         Find the cheapest edge from v
-         to a vertex outside of C, and
-         add it to S
-       Add the cheapest edge in S to T
-     Combine trees connected by edges
-    MST = T
-  ```
-
-<!--list-separator-->
-
-- Variants
-
-  1.  Same weight: BFS/DFS \\(O(E)\\)
-  2.  Edges have weight \\(1..k\\):
-      - Kruskal's
-        - Bucket sort Edges \\(O(E)\\)
-        - Union/check \\(O(\alpha (V))\\)
-        - Total cost: \\(O(\alpha(V)E)\\)
-      - Prim's
-        - Use array of size k as PQ, each slot holds linked
-          list of nodes
-      - insert/remove nodes \\(O(V)\\)
-      - decreaseKey \\(O(E)\\)
-  3.  Directed MST
-      - \\(\forall\\) node except root, add minimum incoming edge \\(O(E)\\)
-  4.  MaxST
-      - negate all weights, run MST algo
+#### MST Problems {#mst-problems}
 
 <!--list-separator-->
 
-- MST Problems
+- How do I add an edge (A,B) of weight k into graph G and find MST quickly?
 
-   <!--list-separator-->
+  - Use cycle property; max edge in any cycle is not in MST
+  - only add (A,B) if k is not the max weight edge
+  - O(V + E) time to find max edge along A → B with DFS
 
-  - How do I add an edge (A,B) of weight k into graph G and find MST quickly?
+<!--list-separator-->
 
-    - Use cycle property; max edge in any cycle is not in MST
-    - only add (A,B) if k is not the max weight edge
-    - O(V + E) time to find max edge along A → B with DFS
+- Given an undirected graph with \\(K\\) power plants, find the minimum cost to connect all other sites.
 
-   <!--list-separator-->
+  - run Prim’s, use super source
+  - weight of new edges are zero
+  - this is a single MST
 
-  - Given an undirected graph with \\(K\\) power plants, find the minimum cost to connect all other sites.
+<!--list-separator-->
 
-    - run Prim’s, use super source
-    - weight of new edges are zero
-    - this is a single MST
+- How do I make Kruskal run faster when sorting?
 
-   <!--list-separator-->
+  - Store edges in separate linked lists
+  - To process edges in increasing weight, process all edges in one
+    linked list then the next
+  - Time: \\(O(E)\\) or \\(O(E\alpha(m, n))\\)
+  - Space: \\(O(E)\\), need to store all \\(E\\) edges
 
-  - How do I make Kruskal run faster when sorting?
+<!--list-separator-->
 
-    - Store edges in separate linked lists
-    - To process edges in increasing weight, process all edges in one
-      linked list then the next
-    - Time: \\(O(E)\\) or \\(O(E\alpha(m, n))\\)
-    - Space: \\(O(E)\\), need to store all \\(E\\) edges
+- Minimum Bottleneck Spanning Tree (MBST)
 
-   <!--list-separator-->
+  - General idea: If I use some edge e that is not in the MST to replace
+    some edge e’ in the MST, then my max. edge is max (max edge on
+    original MST, e).
+  - Intuitively, my MST would then fulfill the condition of MBST.
+  - Note: Every MST is an MBST, but not every MBST is an MST
 
-  - Minimum Bottleneck Spanning Tree (MBST)
+<!--list-separator-->
 
-    - General idea: If I use some edge e that is not in the MST to replace
-      some edge e’ in the MST, then my max. edge is max (max edge on
-      original MST, e).
-    - Intuitively, my MST would then fulfill the condition of MBST.
-    - Note: Every MST is an MBST, but not every MBST is an MST
+- Find maximum distance between 2 vertices in MST
 
-   <!--list-separator-->
-
-  - Find maximum distance between 2 vertices in MST
-
-    - Bruteforce: perform DFS starting from every single location since
-      there is only one path from any node to another
-    - DFS: \\(O(V+E)\\), doing it \\(V\\) times, \\(O(V(V+E)) =O(V^2)\\) since \\(E =
-      V - 1\\)
-    - Space: \\(O(V)\\), need to store all the edges in MST
+  - Bruteforce: perform DFS starting from every single location since
+    there is only one path from any node to another
+  - DFS: \\(O(V+E)\\), doing it \\(V\\) times, \\(O(V(V+E)) =O(V^2)\\) since \\(E =
+    V - 1\\)
+  - Space: \\(O(V)\\), need to store all the edges in MST
 
 ### Floyd-Warshall (APSP) {#floyd-warshall--apsp}
 
@@ -736,87 +691,75 @@ Augmenting Path
 : path in residual graph from s to t that has no 0
 weight edges
 
-<!--list-separator-->
+#### Ford-Fulkerson {#ford-fulkerson}
 
-- Ford-Fulkerson
+1.  Start with 0 flow
+2.  While there exists augmenting path:
+    - find an augmenting path
+    - compute bottleneck (min edge)
+    - increase flow on the path by bottleneck capacity
 
-  1.  Start with 0 flow
-  2.  While there exists augmenting path:
-      - find an augmenting path
-      - compute bottleneck (min edge)
-      - increase flow on the path by bottleneck capacity
+Time Complexity:
 
-  Time Complexity:
-
-  - DFS: \\(O(|F|E)\\)
-  - BFS(Edmonds-Karp, shortest augmenting path): \\(O(VE^2)\\)
-  - Dinitz: \\(O(V^2E)\\)
+- DFS: \\(O(|F|E)\\)
+- BFS(Edmonds-Karp, shortest augmenting path): \\(O(VE^2)\\)
+- Dinitz: \\(O(V^2E)\\)
 
 ### Graph Algorithms on Trees {#graph-algorithms-on-trees}
 
-<!--list-separator-->
+#### Check if connected graph is tree {#check-if-connected-graph-is-tree}
 
-- Check if connected graph is tree
+Run DFS, stop when after traversing \\(V-1\\) edges, return true if all
+nodes connected and no other used edge. False otherwise. \\(O(V)\\)
 
-  Run DFS, stop when after traversing \\(V-1\\) edges, return true if all
-  nodes connected and no other used edge. False otherwise. \\(O(V)\\)
+#### Min Vertex Cover {#min-vertex-cover}
 
-<!--list-separator-->
+- Idea: transform tree into DAG, run DP
+- only two possiblities for each vertex; taken or not
 
-- Min Vertex Cover
+<!--listend-->
 
-  - Idea: transform tree into DAG, run DP
-  - only two possiblities for each vertex; taken or not
+```java
+  int MVC(int v, int flag) {
+      int ans = 0;
+      if (memo[v][flag] != -1)
+          return memo[v][flag];
+      else if (leaf[v]) //if v is leaf
+          ans = flag;
+      else if (flag == 0) {
+          ans = 0;
+          for(child : adjList[v]) {
+              ans+= MVC(child, 1);
+          }
+      }
+      else if (flag == 1) {
+          for (child : adjList[v]) {
+              ans += min(MVC(child,1),
+                         MVC(child,0));
+          }
+      }
+  }
+```
 
-   <!--listend-->
+#### SSSP {#sssp}
 
-  ```java
-    int MVC(int v, int flag) {
-        int ans = 0;
-        if (memo[v][flag] != -1)
-            return memo[v][flag];
-        else if (leaf[v]) //if v is leaf
-            ans = flag;
-        else if (flag == 0) {
-            ans = 0;
-            for(child : adjList[v]) {
-                ans+= MVC(child, 1);
-            }
-        }
-        else if (flag == 1) {
-            for (child : adjList[v]) {
-                ans += min(MVC(child,1),
-                           MVC(child,0));
-            }
-        }
-    }
-  ```
+- On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
+  obtain the shortest path to any vertice in \\(O(V)\\)
+- Weight of shortest path between two vertices is the sum of the
+  weights of edges on the unique path
 
-<!--list-separator-->
+#### ASSP {#assp}
 
-- SSSP
+- Run SSSP on V vertices in total \\(O(V^2)\\), compared to \\(O(V^3)\\) FW algorithm
 
-  - On a weighted tree, any graph traversal algorithm (eg. DFS, BFS) can
-    obtain the shortest path to any vertice in \\(O(V)\\)
-  - Weight of shortest path between two vertices is the sum of the
-    weights of edges on the unique path
+#### Diameter {#diameter}
 
-<!--list-separator-->
-
-- ASSP
-
-  - Run SSSP on V vertices in total \\(O(V^2)\\), compared to \\(O(V^3)\\) FW algorithm
-
-<!--list-separator-->
-
-- Diameter
-
-  - Originally, run FW in \\(O(V^3)\\) and do an \\(O(V^2)\\) all-pairs check,
-    to total \\(O(V^2)\\).
-  - Now, only need 2 \\(O(V)\\) traversals: DFS/BFS from any vertex \\(s\\) to find
-    the furthest vertex \\(x\\). Then do a DFS/BFS one more time from vertex
-    \\(x\\) to find furthest vertex \\(y\\). Length of unique path along x to y
-    is the diameter of the tree.
+- Originally, run FW in \\(O(V^3)\\) and do an \\(O(V^2)\\) all-pairs check,
+  to total \\(O(V^2)\\).
+- Now, only need 2 \\(O(V)\\) traversals: DFS/BFS from any vertex \\(s\\) to find
+  the furthest vertex \\(x\\). Then do a DFS/BFS one more time from vertex
+  \\(x\\) to find furthest vertex \\(y\\). Length of unique path along x to y
+  is the diameter of the tree.
 
 ### Graph Modelling Techniques {#graph-modelling-techniques}
 

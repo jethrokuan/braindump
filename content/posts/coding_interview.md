@@ -1,7 +1,6 @@
 +++
 title = "Coding Interview Preparation"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:49+08:00
 draft = false
 +++
 
@@ -115,43 +114,41 @@ original array.
 
 ### Queues {#queues}
 
-<!--list-separator-->
+#### Queues with Circular Buffer {#queues-with-circular-buffer}
 
-- Queues with Circular Buffer
+```python
+  class Queue:
+      SCALING_FACTOR = 2
 
-  ```python
-    class Queue:
-        SCALING_FACTOR = 2
+      def __init__(self, capacity):
+          self._entries = [None] * capacity
+          self._head = self._tail = self._num_queue_elements = 0
 
-        def __init__(self, capacity):
-            self._entries = [None] * capacity
-            self._head = self._tail = self._num_queue_elements = 0
+      def enqueue(self, x):
+          if self._num_queue_elements == len(self._entries):
+              # Need to resize
+              self._entries = (
+                  self._entries[self._head:] + self._entries[:self._head])
+              self._head, self._tail = 0, self._num_queue_elements
+              self._entries += [None] * (len(self._entries) * Queue.SCALING_FACTOR)
 
-        def enqueue(self, x):
-            if self._num_queue_elements == len(self._entries):
-                # Need to resize
-                self._entries = (
-                    self._entries[self._head:] + self._entries[:self._head])
-                self._head, self._tail = 0, self._num_queue_elements
-                self._entries += [None] * (len(self._entries) * Queue.SCALING_FACTOR)
+          self._entries[self._tail] = x
+          self._tail = (self._tail + 1) % self._num_queue_elements
+          self._num_queue_elements += 1
 
-            self._entries[self._tail] = x
-            self._tail = (self._tail + 1) % self._num_queue_elements
-            self._num_queue_elements += 1
+      def dequeue(self, x):
+          if not self._num_queue_elements:
+              raise IndexError("Empty queue")
 
-        def dequeue(self, x):
-            if not self._num_queue_elements:
-                raise IndexError("Empty queue")
+          self._num_queue_elements -= 1
+          ret = self._entries[self._head]
+          self._head = (self._head + 1) % len(self._entries)
+          return ert
 
-            self._num_queue_elements -= 1
-            ret = self._entries[self._head]
-            self._head = (self._head + 1) % len(self._entries)
-            return ert
-
-        @property
-        def size(self):
-            return self._num_queue_elements
-  ```
+      @property
+      def size(self):
+          return self._num_queue_elements
+```
 
 ## Common Questions {#common-questions}
 

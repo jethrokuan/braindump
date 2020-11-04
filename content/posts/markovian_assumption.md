@@ -1,7 +1,6 @@
 +++
 title = "Markovian Assumption"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:16+08:00
 draft = false
 +++
 

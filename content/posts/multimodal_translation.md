@@ -1,20 +1,18 @@
 +++
 title = "Multi-modal Translation"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:11+08:00
-slug = "multimodal_translation"
 draft = false
 +++
 
 Multi-modal translation is a sub-challenge in [multi-modal machine
-learning]({{< relref "multimodal_machine_learning" >}}), involving the translation of one modality to another. Some
+learning]({{<relref "multimodal_machine_learning.md" >}}), involving the translation of one modality to another. Some
 applications of multi-modal translation involve speech synthesis,
 video description, and cross-modal retrieval. Image and video
 captioning is a particularly popular problem, with large multi-modal
 datasets available.
 
 Multi-modal translation can be categorized into _example-based_, and
-_generative_ approaches ([Baltrušaitis, Ahuja, and Morency, n.d.](#org7260f51)).
+_generative_ approaches ([Baltrušaitis, Ahuja, and Morency, n.d.](#orgdf785e8)).
 
 {{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation" >}}
 
@@ -70,4 +68,4 @@ temporal consistency between modalities.
 
 ## Bibliography {#bibliography}
 
-<a id="org7260f51"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="orgdf785e8"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

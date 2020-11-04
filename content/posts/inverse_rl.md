@@ -1,14 +1,13 @@
 +++
 title = "Inverse Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:40+08:00
 draft = false
 +++
 
 tags
-: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
-Standard [Imitation Learning]({{< relref "imitation_learning" >}}) copies actions performed by the expert,
+Standard [Imitation Learning]({{<relref "imitation_learning.md" >}}) copies actions performed by the expert,
 and do not reason about the outcomes of the actions. However, humans
 copy the _intent_ of the actions, which result in vastly different
 actions.
@@ -84,10 +83,10 @@ r\_\psi(\tau\_i)] - E\_{\tau \sim p(\tau | \mathcal{O}\_{1:T},
 first term is estimated with expert samples, and the second with the
 soft optimal policy under current reward.
 
-## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org214563b)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org214563b}
+## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org0601695)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org0601695}
 
-1.  Given \\(\psi\\), compute [backward message]({{< relref "control_as_inference" >}}) \\(\beta(s_t, a_t)\\)
-2.  Given \\(\psi\\), compute [forward message]({{< relref "control_as_inference" >}}) \\(\alpha(s_t)\\)
+1.  Given \\(\psi\\), compute [backward message]({{<relref "control_as_inference.md" >}}) \\(\beta(s_t, a_t)\\)
+2.  Given \\(\psi\\), compute [forward message]({{<relref "control_as_inference.md" >}}) \\(\alpha(s_t)\\)
 3.  Compute \\(\mu_t(s_t, a_t) \propto \beta(s_t, a_t) \alpha(s_t)\\)
 4.  Evaluate:
 
@@ -133,13 +132,13 @@ w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 
 ## Papers {#papers}
 
-- ([Abbeel and Ng, n.d.](#org5bd70d5))
-- ([Ratliff, Bagnell, and Zinkevich, n.d.](#org615f4d7))
+- ([Abbeel and Ng, n.d.](#org62a28ce))
+- ([Ratliff, Bagnell, and Zinkevich, n.d.](#org65a9a00))
 
 ## Bibliography {#bibliography}
 
-<a id="org5bd70d5"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
+<a id="org62a28ce"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
 
-<a id="org615f4d7"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
+<a id="org65a9a00"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
 
-<a id="org214563b"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.
+<a id="org0601695"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.

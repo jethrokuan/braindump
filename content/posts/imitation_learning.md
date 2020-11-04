@@ -41,7 +41,7 @@ the algorithm, can we make \\(p\_{data}(o_t) = p\_{\pi\_\theta}(o_t)\\)?
         observation.
     2.  Perhaps a better model is to account for all observations.
     3.  Problem: history exacerbates causal confusion
-        ([Haan, Jayaraman, and Levine, n.d.](#org99ebc69))
+        ([Haan, Jayaraman, and Levine, n.d.](#orgfdd1fe5))
 
 2.  Multimodal behaviour
     1.  Solutions:
@@ -82,4 +82,4 @@ Assuming: \\(\pi\_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathb
 
 ## Bibliography {#bibliography}
 
-<a id="org99ebc69"></a>Haan, Pim de, Dinesh Jayaraman, and Sergey Levine. n.d. “Causal Confusion in Imitation Learning.” <http://arxiv.org/abs/1905.11979v2>.
+<a id="orgfdd1fe5"></a>Haan, Pim de, Dinesh Jayaraman, and Sergey Levine. n.d. “Causal Confusion in Imitation Learning.” <http://arxiv.org/abs/1905.11979v2>.

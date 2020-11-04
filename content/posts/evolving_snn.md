@@ -22,9 +22,9 @@ threshold. This weight vector is compared to existing neurons in the
 repository. If neurons are too similar (e.g. small Euclidean distance
 between weight vectors), they are merged.
 
-See ([Schliebs and Kasabov, n.d.](#orge46ecbd)) for a
+See ([Schliebs and Kasabov, n.d.](#org71db767)) for a
 comprehensive review.
 
 ## Bibliography {#bibliography}
 
-<a id="orge46ecbd"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.
+<a id="org71db767"></a>Schliebs, Stefan, and Nikola Kasabov. n.d. “Evolving Spiking Neural Network-a Survey” 4 (2):87–98. <https://doi.org/10.1007/s12530-013-9074-9>.

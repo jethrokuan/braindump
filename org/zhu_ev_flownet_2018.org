@@ -12,7 +12,7 @@
   :NOTER_DOCUMENT: /home/jethro/Zotero/storage/X9P55F47/Zhu et al. - 2018 - EV-FlowNet Self-Supervised Optical Flow Estimatio.pdf
   :NOTER_PAGE: 4
   :END:
-** Event data is well-suited for [[id:d7761f75-e74a-4c33-aedb-3f68b4c22689][Optical Flow Estimation]]
+** Event data is well-suited for Optical Flow Estimation
 :PROPERTIES:
 :NOTER_PAGE: (1 . 0.6910112359550562)
 :END:

@@ -7,7 +7,7 @@ draft = false
 tags
 : [Machine Learning Papers]({{<relref "ml_papers.md" >}})
 
-## Markov Logic Networks ([Richardson and Domingos, n.d.](#org3d73938)). {#markov-logic-networks--richardson-and-domingos-n-dot-d-dot--org3d73938---dot}
+## Markov Logic Networks ([Richardson and Domingos, n.d.](#org8759d47)). {#markov-logic-networks--richardson-and-domingos-n-dot-d-dot--org8759d47---dot}
 
 ### Problem {#problem}
 
@@ -44,4 +44,4 @@ c\_{|C|} \right\\}\\), it defines a Markov Logic Network as follows:
 
 ## Bibliography {#bibliography}
 
-<a id="org3d73938"></a>Richardson, Matthew, and Pedro Domingos. n.d. “Markov Logic Networks” 62 (1-2):107–36. <https://doi.org/10.1007/s10994-006-5833-1>.
+<a id="org8759d47"></a>Richardson, Matthew, and Pedro Domingos. n.d. “Markov Logic Networks” 62 (1-2):107–36. <https://doi.org/10.1007/s10994-006-5833-1>.

@@ -1,12 +1,11 @@
 +++
 title = "Likelihood Principle"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:32+08:00
 draft = false
 +++
 
 tags
-: [Machine Learning]({{< relref "machine_learning" >}})
+: [Machine Learning]({{<relref "machine_learning.md" >}})
 
 Given a generative model for data \\(d\\) given parameters
 \\(\mathrm{\theta}\\), \\(P(d|\mathrm{\theta})\\), and having observed a

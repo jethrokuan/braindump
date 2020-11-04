@@ -1,12 +1,11 @@
 +++
 title = "EKF Localization"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:24+08:00
 draft = false
 +++
 
 tags
-: [Robot Localization]({{< relref "robot_localization" >}}), [Markov Localization]({{< relref "markov_localization" >}}), [Grid & Monte Carlo Localization]({{< relref "grid_mc_localization" >}})
+: [Robot Localization]({{<relref "robot_localization.md" >}}), [Markov Localization]({{<relref "markov_localization.md" >}}), [Grid & Monte Carlo Localization]({{<relref "grid_mc_localization.md" >}})
 
 ## EKF localization {#ekf-localization}
 

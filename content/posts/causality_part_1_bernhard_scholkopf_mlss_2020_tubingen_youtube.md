@@ -1,8 +1,6 @@
 +++
 title = "Causality, part 1 - Bernhard Schölkopf - MLSS 2020, Tübingen - YouTube"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:49+08:00
-slug = "causality_part_1_bernhard_scholkopf_mlss_2020_tubingen_youtube"
 draft = false
 +++
 
@@ -26,4 +24,4 @@ structure connecting the variables.
 An equation becomes structural by virtue of invariance to a domain of
 modifications.
 
-## [Structural Causal Model]({{< relref "structural_causal_model" >}}) {#structural-causal-model--structural-causal-model-dot-md}
+## [Structural Causal Model]({{<relref "structural_causal_model.md" >}}) {#structural-causal-model--structural-causal-model-dot-md}

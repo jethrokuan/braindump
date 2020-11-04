@@ -1,7 +1,6 @@
 +++
 title = "The Art Of Doing Science And Engineering"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:19+08:00
 draft = false
 +++
 
@@ -18,7 +17,7 @@ personal rating
 : 4/5
 
 tags
-: [Books]({{< relref "books" >}})
+: [Books]({{<relref "books.md" >}})
 
 ## Synopsis {#synopsis}
 

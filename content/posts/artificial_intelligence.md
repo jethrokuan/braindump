@@ -1,7 +1,6 @@
 +++
 title = "Artificial Intelligence"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-24T21:37:49+08:00
 draft = false
 +++
 
@@ -170,42 +169,34 @@ modified to do better in the future.
 
 ### State representations {#state-representations}
 
-<!--list-separator-->
+#### Atomic Representation {#atomic-representation}
 
-- Atomic Representation
+In an atomic representation each state of the world is indivisible,
+and has no internal structure. Search, game-playing, hidden Markov
+models and Markov decision processes all work with atomic
+representations.
 
-  In an atomic representation each state of the world is indivisible,
-  and has no internal structure. Search, game-playing, hidden Markov
-  models and Markov decision processes all work with atomic
-  representations.
+#### Factored Representation {#factored-representation}
 
-<!--list-separator-->
+A factored representation splits up each state into a fixed set of
+**variables** or **attributes**, each of which can have a **value**.
 
-- Factored Representation
+Constraint satisfaction algorithms, propositional logic, planning,
+Bayesian networks and machine learning algorithms work with factored
+representations.
 
-  A factored representation splits up each state into a fixed set of
-  **variables** or **attributes**, each of which can have a **value**.
+#### Structured Representations {#structured-representations}
 
-  Constraint satisfaction algorithms, propositional logic, planning,
-  Bayesian networks and machine learning algorithms work with factored
-  representations.
+Structured representations underlie relational databases and
+first-order logic, first-order probability models, knowledge-based
+learning and much of natural language understanding.
 
-<!--list-separator-->
+#### Implications {#implications}
 
-- Structured Representations
-
-  Structured representations underlie relational databases and
-  first-order logic, first-order probability models, knowledge-based
-  learning and much of natural language understanding.
-
-<!--list-separator-->
-
-- Implications
-
-  A more expressive representation can capture, at least as concisely, a
-  everything a more expressive one can capture, plus more. On the other
-  hand, reasoning and learning become more complex as the expressive
-  power of the representation increases.
+A more expressive representation can capture, at least as concisely, a
+everything a more expressive one can capture, plus more. On the other
+hand, reasoning and learning become more complex as the expressive
+power of the representation increases.
 
 ## Problem-Solving {#problem-solving}
 
@@ -262,185 +253,169 @@ space complexity
 
 ### Uninformed Search Strategies {#uninformed-search-strategies}
 
-<!--list-separator-->
+#### Breadth-first Search {#breadth-first-search}
 
-- Breadth-first Search
+The root node is expanded first, then all the successors of the root
+node are expanded next, then their successors, and so on.
 
-  The root node is expanded first, then all the successors of the root
-  node are expanded next, then their successors, and so on.
+| performance      | rating       |
+| ---------------- | ------------ |
+| completeness     | YES          |
+| optimal          | NO           |
+| time complexity  | \\(O(b^d)\\) |
+| space complexity | \\(O(b^d)\\) |
 
-  | performance      | rating       |
-  | ---------------- | ------------ |
-  | completeness     | YES          |
-  | optimal          | NO           |
-  | time complexity  | \\(O(b^d)\\) |
-  | space complexity | \\(O(b^d)\\) |
+The shallowest node may not be the most optimal node.
 
-  The shallowest node may not be the most optimal node.
+The space used in the _explored set_ is \\(O(b^{d-1})\\) and the space
+used in the _frontier_ is \\(O(b^d)\\).
 
-  The space used in the _explored set_ is \\(O(b^{d-1})\\) and the space
-  used in the _frontier_ is \\(O(b^d)\\).
+In general, exponential-complexity search problems cannot be solved by
+uninformed methods for any but the smallest instances.
 
-  In general, exponential-complexity search problems cannot be solved by
-  uninformed methods for any but the smallest instances.
+#### Uniform-cost Search {#uniform-cost-search}
 
-<!--list-separator-->
+Uniform-cost search expands the node \\(n\\) with the lowest path
+cost \\(g(n)\\). The goal test is applied to a node when it is selected
+for expansion rather than when it is first generated.
 
-- Uniform-cost Search
+This is equivalent to BFS if all step costs are qual.
 
-  Uniform-cost search expands the node \\(n\\) with the lowest path
-  cost \\(g(n)\\). The goal test is applied to a node when it is selected
-  for expansion rather than when it is first generated.
+| performance  | rating                                                                                      |
+| ------------ | ------------------------------------------------------------------------------------------- |
+| completeness | MAYBE                                                                                       |
+| optimal      | YES                                                                                         |
+| time         | \\(O(b^{1+\lfloor{\frac{C^\*}{\epsilon}}\rfloor})\\), where \\(C^\*\\) is the optimal cost. |
+| space        | \\(O(b^{1+\lfloor{\frac{C^\*}{\epsilon}}\rfloor})\\)                                        |
 
-  This is equivalent to BFS if all step costs are qual.
+Completeness is guaranteed only if the cost of every step exceeds some
+small positive constant \\(\epsilon\\). an infinite loop may occur if
+there is a path with an infinite sequence of zero-cost actions.
 
-  | performance  | rating                                                                                      |
-  | ------------ | ------------------------------------------------------------------------------------------- |
-  | completeness | MAYBE                                                                                       |
-  | optimal      | YES                                                                                         |
-  | time         | \\(O(b^{1+\lfloor{\frac{C^\*}{\epsilon}}\rfloor})\\), where \\(C^\*\\) is the optimal cost. |
-  | space        | \\(O(b^{1+\lfloor{\frac{C^\*}{\epsilon}}\rfloor})\\)                                        |
+#### Depth-first Search {#depth-first-search}
 
-  Completeness is guaranteed only if the cost of every step exceeds some
-  small positive constant \\(\epsilon\\). an infinite loop may occur if
-  there is a path with an infinite sequence of zero-cost actions.
+Always expands the _deepest_ node in the current frontier of the
+search tree.
 
-<!--list-separator-->
+| performance      | rating                                |
+| ---------------- | ------------------------------------- |
+| completeness     | YES                                   |
+| optimal          | NO                                    |
+| time complexity  | \\(O(b^m)\\)                          |
+| space complexity | \\(O(b^m)\\), \\(O(m)\\) if backtrack |
 
-- Depth-first Search
+The time complexity of DFS may be worse than BFS: \\(O(b^m)\\) might be
+larger than \\(O(b^d)\\).
 
-  Always expands the _deepest_ node in the current frontier of the
-  search tree.
+DFS only requires storage of \\(O(bm)\\) nodes, where \\(m\\) is the maximum
+depth of any node. **backtracking search** only generates one successor
+at a time, modifying the current state description rather than copying
+it. Memory requirements reduce to one state description and \\(O(m)\\)
+actions.
 
-  | performance      | rating                                |
-  | ---------------- | ------------------------------------- |
-  | completeness     | YES                                   |
-  | optimal          | NO                                    |
-  | time complexity  | \\(O(b^m)\\)                          |
-  | space complexity | \\(O(b^m)\\), \\(O(m)\\) if backtrack |
+#### Depth-limited Search {#depth-limited-search}
 
-  The time complexity of DFS may be worse than BFS: \\(O(b^m)\\) might be
-  larger than \\(O(b^d)\\).
+In depth-limited search, nodes at depth of pre-determined limit \\(l\\)
+are treated as if they had no successors. This limit solves the
+infinite-path problem.
 
-  DFS only requires storage of \\(O(bm)\\) nodes, where \\(m\\) is the maximum
-  depth of any node. **backtracking search** only generates one successor
-  at a time, modifying the current state description rather than copying
-  it. Memory requirements reduce to one state description and \\(O(m)\\)
-  actions.
+| performance      | rating                                |
+| ---------------- | ------------------------------------- |
+| completeness     | YES                                   |
+| optimal          | NO                                    |
+| time complexity  | \\(O(b^l)\\)                          |
+| space complexity | \\(O(b^l)\\), \\(O(l)\\) if backtrack |
 
-<!--list-separator-->
+#### Iterative Deepening Depth-first Search {#iterative-deepening-depth-first-search}
 
-- Depth-limited Search
+Key idea is to gradually increase the depth limit: first 0, then
+1, then 2... until a goal is found.
 
-  In depth-limited search, nodes at depth of pre-determined limit \\(l\\)
-  are treated as if they had no successors. This limit solves the
-  infinite-path problem.
+{{< figure src="/ox-hugo/screenshot_2018-01-22_15-26-50.png" >}}
 
-  | performance      | rating                                |
-  | ---------------- | ------------------------------------- |
-  | completeness     | YES                                   |
-  | optimal          | NO                                    |
-  | time complexity  | \\(O(b^l)\\)                          |
-  | space complexity | \\(O(b^l)\\), \\(O(l)\\) if backtrack |
+\\(N(IDS) = (d)b + (d-1)b^2 + \dots + (1)b^d\\), which gives a time
+complexity of \\(O(b^d)\\)
 
-<!--list-separator-->
+| performance      | rating                                |
+| ---------------- | ------------------------------------- |
+| completeness     | YES                                   |
+| optimal          | NO (unless step cost is 1)            |
+| time complexity  | \\(O(b^d)\\)                          |
+| space complexity | \\(O(b^d)\\), \\(O(m)\\) if backtrack |
 
-- Iterative Deepening Depth-first Search
+1.  BFS and IDS are complete if \\(b\\) is finite.
+2.  UCS is complete if \\(b\\) is finite and step cost is \\(\ge \epsilon\\).
+3.  BFS and IDS are optimal if all step costs are identical.
 
-  Key idea is to gradually increase the depth limit: first 0, then
-  1, then 2... until a goal is found.
+#### Bidirectional Search {#bidirectional-search}
 
-  {{< figure src="/ox-hugo/screenshot_2018-01-22_15-26-50.png" >}}
-
-  \\(N(IDS) = (d)b + (d-1)b^2 + \dots + (1)b^d\\), which gives a time
-  complexity of \\(O(b^d)\\)
-
-  | performance      | rating                                |
-  | ---------------- | ------------------------------------- |
-  | completeness     | YES                                   |
-  | optimal          | NO (unless step cost is 1)            |
-  | time complexity  | \\(O(b^d)\\)                          |
-  | space complexity | \\(O(b^d)\\), \\(O(m)\\) if backtrack |
-
-  1.  BFS and IDS are complete if \\(b\\) is finite.
-  2.  UCS is complete if \\(b\\) is finite and step cost is \\(\ge \epsilon\\).
-  3.  BFS and IDS are optimal if all step costs are identical.
-
-<!--list-separator-->
-
-- Bidirectional Search
-
-  Conduct two simultaneous searches -- one forward from the initial
-  state, and the other backward from the goal. This is implemented by
-  replacing the goal test with a check to see whether the frontiers of
-  two searches intersect. This reduces the time ad space complexity to \\(O(b^{d/2})\\).
+Conduct two simultaneous searches -- one forward from the initial
+state, and the other backward from the goal. This is implemented by
+replacing the goal test with a check to see whether the frontiers of
+two searches intersect. This reduces the time ad space complexity to \\(O(b^{d/2})\\).
 
 ### Informed Search Strategies {#informed-search-strategies}
 
-<!--list-separator-->
+#### Greedy best-first search {#greedy-best-first-search}
 
-- Greedy best-first search
+_Greedy best-first search_ tries to expand the node that is closest to
+the goal, on the grounds that this is likely to lead to a solution
+quickly. It evaluates nodes by using just the heuristic function:
+\\(f(n) = h(n)\\).
 
-  _Greedy best-first search_ tries to expand the node that is closest to
-  the goal, on the grounds that this is likely to lead to a solution
-  quickly. It evaluates nodes by using just the heuristic function:
-  \\(f(n) = h(n)\\).
+Greedy best-first tree search is incomplete even in a finite state
+space. The graph search version is complete in finite spaces, but not
+in infinite ones. The worst case time and space complexity is
+\\(O(b^m)\\). However, with a good heuristic function, the complexity can
+be reduced substantially.
 
-  Greedy best-first tree search is incomplete even in a finite state
-  space. The graph search version is complete in finite spaces, but not
-  in infinite ones. The worst case time and space complexity is
-  \\(O(b^m)\\). However, with a good heuristic function, the complexity can
-  be reduced substantially.
+#### A\* search {#a-search}
 
-<!--list-separator-->
+It evaluates nodes by combining \\(g(n)\\) the cost to reach the node, and
+\\(h(n)\\) the cost to get to the goal: \\(f(n) = g(n) + h(n)\\). Since \\(g(n)\\)
+gives the path cost from the start node to node \\(n\\), and \\(h(n)\\) is the
+estimated cost of the cheapest path from \\(n\\) to the goal,$f(n) = $
+estimated cost of the cheapest solution through \\(n\\).
 
-- A\* search
+\\(h(n)\\) is an _admissible heuristic_ iff it never overestimates the
+cost to reach the goal. For A\*, this means that \\(f(n)\\) would never
+overestimate the cost of a solution along the current path.
 
-  It evaluates nodes by combining \\(g(n)\\) the cost to reach the node, and
-  \\(h(n)\\) the cost to get to the goal: \\(f(n) = g(n) + h(n)\\). Since \\(g(n)\\)
-  gives the path cost from the start node to node \\(n\\), and \\(h(n)\\) is the
-  estimated cost of the cheapest path from \\(n\\) to the goal,$f(n) = $
-  estimated cost of the cheapest solution through \\(n\\).
+Admissible heuristics are by nature optimistic because they think the
+cost of solving the problem is less than it actually is.
 
-  \\(h(n)\\) is an _admissible heuristic_ iff it never overestimates the
-  cost to reach the goal. For A\*, this means that \\(f(n)\\) would never
-  overestimate the cost of a solution along the current path.
+A second, slightly stronger condition is called _consistency_, and is
+required only for applications of A\* to graph search. A heuristic
+\\(h(n)\\) is _consistent_ iff for every node \\(n\\) and every successor \\(n'\\)
+of \\(n\\) generated by any action \\(a\\), the estimated cost of reaching the
+goal from \\(n\\) is no greater than the step cost of getting to \\(n'\\) plus
+the estimated cost of reaching the goal from \\(n'\\): \\(h(n) \le
+c(n,a,n') + h(n')\\). This is a form of the general triangle inequality.
 
-  Admissible heuristics are by nature optimistic because they think the
-  cost of solving the problem is less than it actually is.
+A\* search is complete, optimal and optimally efficient with a
+consistent heuristic. The latter means that no other optimal algorithm
+is guaranteed to expand fewer nodes than A\*.
 
-  A second, slightly stronger condition is called _consistency_, and is
-  required only for applications of A\* to graph search. A heuristic
-  \\(h(n)\\) is _consistent_ iff for every node \\(n\\) and every successor \\(n'\\)
-  of \\(n\\) generated by any action \\(a\\), the estimated cost of reaching the
-  goal from \\(n\\) is no greater than the step cost of getting to \\(n'\\) plus
-  the estimated cost of reaching the goal from \\(n'\\): \\(h(n) \le
-  c(n,a,n') + h(n')\\). This is a form of the general triangle inequality.
+However, for most problems, the number of states within the goal
+contour search space is still exponential in the length of the
+solution.
 
-  A\* search is complete, optimal and optimally efficient with a
-  consistent heuristic. The latter means that no other optimal algorithm
-  is guaranteed to expand fewer nodes than A\*.
+The _absolute error_ of a heuristic is defined as \\(\Delta = h^\*-h\\),
+and the _relative error_ is defined as \\(\epsilon = \frac{h^\*-h}{h\*}\\).
+The complexity results depend strongly on the assumptions made about
+the state space. For constant step costs, it is \\(O(b^{\epsilon d})\\),
+and the effective branching factor is \\(b^\epsilon\\).
 
-  However, for most problems, the number of states within the goal
-  contour search space is still exponential in the length of the
-  solution.
+A\* keeps all generated nodes in memory, and hence it usually runs out
+of space long before it runs of time. Hence, it is not practical for
+large-scale problems.
 
-  The _absolute error_ of a heuristic is defined as \\(\Delta = h^\*-h\\),
-  and the _relative error_ is defined as \\(\epsilon = \frac{h^\*-h}{h\*}\\).
-  The complexity results depend strongly on the assumptions made about
-  the state space. For constant step costs, it is \\(O(b^{\epsilon d})\\),
-  and the effective branching factor is \\(b^\epsilon\\).
+Other memory-bounded heuristic searches include:
 
-  A\* keeps all generated nodes in memory, and hence it usually runs out
-  of space long before it runs of time. Hence, it is not practical for
-  large-scale problems.
-
-  Other memory-bounded heuristic searches include:
-
-  - iterative-deepening A\* (IDA\*)
-  - Recursive best-first search (RBFS)
-  - Memory-bounded A\* (MA\*)
-  - simplified MA\* (SMA\*)
+- iterative-deepening A\* (IDA\*)
+- Recursive best-first search (RBFS)
+- Memory-bounded A\* (MA\*)
+- simplified MA\* (SMA\*)
 
 ### Learning to Search Better {#learning-to-search-better}
 
@@ -462,41 +437,35 @@ feasible.
 
 ### Generating Admissible Heuristics {#generating-admissible-heuristics}
 
-<!--list-separator-->
+#### From Relaxed Problems {#from-relaxed-problems}
 
-- From Relaxed Problems
+Because the relaxed problem adds edges to the state space, any optimal
+solution in the original problem is, by definition, also a solution in
+the relaxed problem. Hence, the cost of an optimal solution to a
+relaxed problem is an admissible heuristic for the original problem.
+Because the derived heuristic is an exact cost for the relaxed
+problem, it must obey the triangle inequality and is therefore
+consistent.
 
-  Because the relaxed problem adds edges to the state space, any optimal
-  solution in the original problem is, by definition, also a solution in
-  the relaxed problem. Hence, the cost of an optimal solution to a
-  relaxed problem is an admissible heuristic for the original problem.
-  Because the derived heuristic is an exact cost for the relaxed
-  problem, it must obey the triangle inequality and is therefore
-  consistent.
+#### From Subproblems: Pattern Databases {#from-subproblems-pattern-databases}
 
-<!--list-separator-->
+_Pattern Databases_ store exact solution costs for every possible
+subproblem instance. In the case of the 8-puzzle, every possible
+configuration of the four tiles and the blank. Each pattern database
+yields an admissible heuristic, and these heuristics can be combined
+by taking the maximum value. Solutions to subproblems can overlap:
+_disjoint pattern databases_ account for this. These work by dividing
+the problem in a way that each move affects only one subproblem.
 
-- From Subproblems: Pattern Databases
+#### From Experience {#from-experience}
 
-  _Pattern Databases_ store exact solution costs for every possible
-  subproblem instance. In the case of the 8-puzzle, every possible
-  configuration of the four tiles and the blank. Each pattern database
-  yields an admissible heuristic, and these heuristics can be combined
-  by taking the maximum value. Solutions to subproblems can overlap:
-  _disjoint pattern databases_ account for this. These work by dividing
-  the problem in a way that each move affects only one subproblem.
+Inductive learning methods work best when supplied with _features_ of
+a state that are relevant to predicting the state's value. A common
+approach to combining features would be through a linear combination:
+\\(h(n) = c_1x_1(n) + c_2x_2(n)\\).
 
-<!--list-separator-->
-
-- From Experience
-
-  Inductive learning methods work best when supplied with _features_ of
-  a state that are relevant to predicting the state's value. A common
-  approach to combining features would be through a linear combination:
-  \\(h(n) = c_1x_1(n) + c_2x_2(n)\\).
-
-  These heuristics satisfy the requirement that \\(h(n) = 0\\) for goal
-  states, but are not necessarily admissible or consistent.
+These heuristics satisfy the requirement that \\(h(n) = 0\\) for goal
+states, but are not necessarily admissible or consistent.
 
 ## Beyond Classical Search {#beyond-classical-search}
 
@@ -545,25 +514,23 @@ Hill-climbing algorithms can get stuck for the following reasons:
 - flat local maximum, or _shoulder_, from which progress
   is possible.
 
-<!--list-separator-->
+#### Variants {#variants}
 
-- Variants
+stochastic hill-climbing
+: chooses at random from among the uphill
+moves; the probability of selection can vary with the steepness
+of the uphill move. Usually converges more slowly, but finds
+better solutions.
 
-  stochastic hill-climbing
-  : chooses at random from among the uphill
-  moves; the probability of selection can vary with the steepness
-  of the uphill move. Usually converges more slowly, but finds
-  better solutions.
+first-choice hill-climbing
+: stochastic hill-climbing with randomly
+generated successors until one is generated that is better than
+the current state. Good when state has many successors.
 
-  first-choice hill-climbing
-  : stochastic hill-climbing with randomly
-  generated successors until one is generated that is better than
-  the current state. Good when state has many successors.
-
-  random-restart hill-climbing
-  : conducts hill-climbing searches from
-  randomly generated initial states, until a goal is found.
-  Trivially complete with probability approaching 1.
+random-restart hill-climbing
+: conducts hill-climbing searches from
+randomly generated initial states, until a goal is found.
+Trivially complete with probability approaching 1.
 
 ### Simulated Annealing {#simulated-annealing}
 
@@ -688,38 +655,36 @@ _contingency plan_
 The solutions for no-deterministic problems can contain nested
 if-then-else statements, meaning they are trees and not sequences.
 
-<!--list-separator-->
+#### AND-OR search trees {#and-or-search-trees}
 
-- AND-OR search trees
+A solution for an AND-OR search problem is a subtree that:
 
-  A solution for an AND-OR search problem is a subtree that:
+1.  includes every outcome branch leaf
+2.  specifies one action at each of its OR nodes
+3.  includes every outcome branch at each of its AND nodes
 
-  1.  includes every outcome branch leaf
-  2.  specifies one action at each of its OR nodes
-  3.  includes every outcome branch at each of its AND nodes
+<!--listend-->
 
-   <!--listend-->
+```text
+  function AND-OR-GRAPH-SEARCH(problem) returns a conditional plan, or failure
+    OR-SEARCH(problem, INITIAL-STATE, problem, [])
 
-  ```text
-    function AND-OR-GRAPH-SEARCH(problem) returns a conditional plan, or failure
-      OR-SEARCH(problem, INITIAL-STATE, problem, [])
+  function OR-SEARCH(state,problem,path) returns a conditional plan, or failure
+    if problem, GOAL-TEST(state) then return the empty plan
+    if state is on path then return failure
+    for each action in problem, ACTIONS(state) do
+      plan ← AND-SEARCH(RESULTS(state,action), problem, [state | path])
+      if plan ≠ failure then return [action | plan]
+    return failure
 
-    function OR-SEARCH(state,problem,path) returns a conditional plan, or failure
-      if problem, GOAL-TEST(state) then return the empty plan
-      if state is on path then return failure
-      for each action in problem, ACTIONS(state) do
-        plan ← AND-SEARCH(RESULTS(state,action), problem, [state | path])
-        if plan ≠ failure then return [action | plan]
-      return failure
+  function AND-SEARCH(states,problem,path) returns a conditional plan, or failure
+    for each s_i in states do
+      plan_i ← OR-SEARCH(s_i,problem,path)
+      if plan_i = failure then return failure
+    return [if s_1 then plan_1 else if s_2 then plan_2 ...]
+```
 
-    function AND-SEARCH(states,problem,path) returns a conditional plan, or failure
-      for each s_i in states do
-        plan_i ← OR-SEARCH(s_i,problem,path)
-        if plan_i = failure then return failure
-      return [if s_1 then plan_1 else if s_2 then plan_2 ...]
-  ```
-
-  (stop at AIMA 4.4)
+(stop at AIMA 4.4)
 
 ## Adversarial Search {#adversarial-search}
 
@@ -1029,172 +994,164 @@ between \\(S\\) and the lottery. This is done for each prize \\(S\\).
 When outcomes are characterized by two or more attributes, we need a
 multi-attribute utility function.
 
+#### Dominance {#dominance}
+
+We say that there is strict dominance of \\(S_1\\) over \\(S_2\\) if \\(S_2\\) is
+lower on all attributes as compared to \\(S_1\\). Under uncertainty, we use
+a more useful generalization: **stochastic dominance**.
+
+If \\(A_1\\) stochastically dominates \\(A_2\\), then for any monotonically
+increasing utility function \\(U(x)\\), the expected utility of \\(A_1\\) is at
+least as high as the expected utility of \\(A_2\\). We can understand this
+via the cumulative distribution. For any action \\(A_1\\) and \\(A_2\\), that
+lead to probability distributions \\(p_1(x)\\) and \\(p_2(x)\\) on the random
+variable \\(X\\):
+
+\begin{equation}
+\forall x \int\_{-\infty}^{x} p_1(x')dx' \le \int\_{-\infty}^{x} p_2(x')dx'
+\end{equation}
+
+#### Preference structure and multi-attribute utility {#preference-structure-and-multi-attribute-utility}
+
+Multi-attribute utility theory is based on the supposition that
+preferences of typical agents have structure. This alleviates the
+difficulty in expressing a utility function with many attributes and
+possible distinct values.
+
+One simple regularity in preference structures is called preference
+independence. Two attributes \\(X_1\\) and \\(X_2\\) are preferentially
+independent if the preference between outcomes \\((x_1, x_2, x_3)\\) and
+\\((x_1', x_2', x_3)\\) does not depend on the value of the value \\(x_3\\) of
+attribute \\(X_3\\).
+
+If all attributes are mutually preferentially independent, then an
+agent's preference can be described by maximising the function:
+
+\begin{equation}
+V(x_1, x_2, \dots, x_n) = \sum_i V_i(x_i)
+\end{equation}
+
+An example is:
+
+\begin{equation}
+V(noise, cost, deaths) = - noise \times 10^4 - cost - deaths \times 10^{12}
+\end{equation}
+
+Under uncertainty, the mathematics gets a bit more complicated.
+Utility independence extends preference independence to cover
+lotteries: a set of attributes \\(\mathbb{X}\\) is utility independent of
+a set of attributes \\(\mathbb{Y}\\) if preference between lotteries on
+the attributes in \\(\mathbb{X}\\) are independent of the particular
+values of the attributes in \\(\mathbb{Y}\\).
+
+Mutual utility independence implies that the agent's behaviour can be
+described using a multiplicative utility function. If we denote \\(U_i\\)
+to be \\(U_i(x_i)\\), then a 3 attribute utility function can be expressed
+as:
+
+\begin{equation}
+U = k_1U_1 + k_2U_2 + k_3U_3 + k_1k_2U_1U_2 + k_1k_3U_1U_3 +
+k_2k_3U_2U_3 + k_1k_2k_3U_1U_2U_3
+\end{equation}
+
+#### Decision Networks {#decision-networks}
+
+Decision networks extend Bayesian networks with nodes for actions and
+utilities. An example of a decision network is below:
+
+{{< figure src="/ox-hugo/diagnosisDN_2018-09-01_16-50-40.png" >}}
+
+The notation is as such:
+
+chance nodes (oval)
+: these represent random variables
+
+decision nodes (rectangles)
+: these represent points where the
+decision maker has a choice of actions.
+
+utility nodes (diamonds)
+: represent the agent's utility function
+
+A simplified form is used in many cases. The notation remains
+identical, but the chance nodes describing the outcome state are
+omitted. Rather than representing a utility function on outcome states,
+the utility node represents the expected utility associated with each
+action. This node is associated with an action-utility function (also
+known as Q-function).
+
+#### Information Value Theory {#information-value-theory}
+
+The value of a given piece of information is defined to be the
+difference in expected value between the best action before and after
+information is obtained. This is one of the most important parts of
+decision-making: knowing what information to obtain. Information has
+value to the extent that it is likely to cause a change of plan and to
+the extent that the new plan is significantly better than the old
+plan.
+
+Mathematically, the value of perfect information (VPI) is defined as:
+
+\begin{equation}
+VPI_e(E_j) = \left( \sum_k P(E_j = e\_{jk} | \mathbb{e})
+MEU(\alpha\_{e\_{jk}} | \mathbb{e}, E_j = e\_{jk}) \right) - MEU(\alpha |
+\mathbb{e})
+\end{equation}
+
+This is obtained by considering the best action (maximum expected
+utility) before and after obtaining the information, and averaging it
+across all possible values for the new information, using our current
+beliefs of its value.
+
 <!--list-separator-->
 
-- Dominance
+- Properties of the value of information
 
-  We say that there is strict dominance of \\(S_1\\) over \\(S_2\\) if \\(S_2\\) is
-  lower on all attributes as compared to \\(S_1\\). Under uncertainty, we use
-  a more useful generalization: **stochastic dominance**.
-
-  If \\(A_1\\) stochastically dominates \\(A_2\\), then for any monotonically
-  increasing utility function \\(U(x)\\), the expected utility of \\(A_1\\) is at
-  least as high as the expected utility of \\(A_2\\). We can understand this
-  via the cumulative distribution. For any action \\(A_1\\) and \\(A_2\\), that
-  lead to probability distributions \\(p_1(x)\\) and \\(p_2(x)\\) on the random
-  variable \\(X\\):
+  First, the expected value of information is non-negative.
 
   \begin{equation}
-  \forall x \int\_{-\infty}^{x} p_1(x')dx' \le \int\_{-\infty}^{x} p_2(x')dx'
+  \forall \mathbb{e}, E_j VPI\_{\mathbb{e}} (E_j) \ge 0
+  \end{equation}
+
+  The theorem is about the expected value, and not the real value. This
+  means that information can sometimes lead to a plan that is harmful.
+
+  It is important to note that VPI is dependent on the current state of
+  information. VPI is not additive in general:
+
+  \begin{equation}
+  VPI\_{\mathbb{e}}(E_j, E_k) \ne VPI\_{\mathbb{e}}(E_j) + VPI\_{\mathbb{e}}(E_k)
+  \end{equation}
+
+  VPI is order independent. That is:
+
+  \begin{equation}
+  VPI\_{\mathbb{e}}(E_j, E_k) = VPI\_{\mathbb{e}}(E_j) +
+  VPI\_{\mathbb{e}, e_j}(E_k) = VPI\_{\mathbb{e}}(E_k) +
+  VPI\_{\mathbb{e}, e_k}(E_j)
   \end{equation}
 
 <!--list-separator-->
 
-- Preference structure and multi-attribute utility
+- Information Gathering Agents
 
-  Multi-attribute utility theory is based on the supposition that
-  preferences of typical agents have structure. This alleviates the
-  difficulty in expressing a utility function with many attributes and
-  possible distinct values.
+  we can implement a myopic information-gathering agent, by using the
+  VPI formula shortsightedly.
 
-  One simple regularity in preference structures is called preference
-  independence. Two attributes \\(X_1\\) and \\(X_2\\) are preferentially
-  independent if the preference between outcomes \\((x_1, x_2, x_3)\\) and
-  \\((x_1', x_2', x_3)\\) does not depend on the value of the value \\(x_3\\) of
-  attribute \\(X_3\\).
+  ```text
+    function INFORMATION-GATHERING-AGENT(percept) returns an action
+      persistent: D, a decision network
 
-  If all attributes are mutually preferentially independent, then an
-  agent's preference can be described by maximising the function:
+    integrate percept into D
+    j <- the value that maximises VPI(E_j) / Cost(E_j)
+    if VPI(E_j) > Cost(E_j)
+      return REQUEST(E_j)
+    else return the best action from D
+  ```
 
-  \begin{equation}
-  V(x_1, x_2, \dots, x_n) = \sum_i V_i(x_i)
-  \end{equation}
-
-  An example is:
-
-  \begin{equation}
-  V(noise, cost, deaths) = - noise \times 10^4 - cost - deaths \times 10^{12}
-  \end{equation}
-
-  Under uncertainty, the mathematics gets a bit more complicated.
-  Utility independence extends preference independence to cover
-  lotteries: a set of attributes \\(\mathbb{X}\\) is utility independent of
-  a set of attributes \\(\mathbb{Y}\\) if preference between lotteries on
-  the attributes in \\(\mathbb{X}\\) are independent of the particular
-  values of the attributes in \\(\mathbb{Y}\\).
-
-  Mutual utility independence implies that the agent's behaviour can be
-  described using a multiplicative utility function. If we denote \\(U_i\\)
-  to be \\(U_i(x_i)\\), then a 3 attribute utility function can be expressed
-  as:
-
-  \begin{equation}
-  U = k_1U_1 + k_2U_2 + k_3U_3 + k_1k_2U_1U_2 + k_1k_3U_1U_3 +
-  k_2k_3U_2U_3 + k_1k_2k_3U_1U_2U_3
-  \end{equation}
-
-<!--list-separator-->
-
-- Decision Networks
-
-  Decision networks extend Bayesian networks with nodes for actions and
-  utilities. An example of a decision network is below:
-
-  {{< figure src="/ox-hugo/diagnosisDN_2018-09-01_16-50-40.png" >}}
-
-  The notation is as such:
-
-  chance nodes (oval)
-  : these represent random variables
-
-  decision nodes (rectangles)
-  : these represent points where the
-  decision maker has a choice of actions.
-
-  utility nodes (diamonds)
-  : represent the agent's utility function
-
-  A simplified form is used in many cases. The notation remains
-  identical, but the chance nodes describing the outcome state are
-  omitted. Rather than representing a utility function on outcome states,
-  the utility node represents the expected utility associated with each
-  action. This node is associated with an action-utility function (also
-  known as Q-function).
-
-<!--list-separator-->
-
-- Information Value Theory
-
-  The value of a given piece of information is defined to be the
-  difference in expected value between the best action before and after
-  information is obtained. This is one of the most important parts of
-  decision-making: knowing what information to obtain. Information has
-  value to the extent that it is likely to cause a change of plan and to
-  the extent that the new plan is significantly better than the old
-  plan.
-
-  Mathematically, the value of perfect information (VPI) is defined as:
-
-  \begin{equation}
-  VPI_e(E_j) = \left( \sum_k P(E_j = e\_{jk} | \mathbb{e})
-  MEU(\alpha\_{e\_{jk}} | \mathbb{e}, E_j = e\_{jk}) \right) - MEU(\alpha |
-  \mathbb{e})
-  \end{equation}
-
-  This is obtained by considering the best action (maximum expected
-  utility) before and after obtaining the information, and averaging it
-  across all possible values for the new information, using our current
-  beliefs of its value.
-
-   <!--list-separator-->
-
-  - Properties of the value of information
-
-    First, the expected value of information is non-negative.
-
-    \begin{equation}
-    \forall \mathbb{e}, E_j VPI\_{\mathbb{e}} (E_j) \ge 0
-    \end{equation}
-
-    The theorem is about the expected value, and not the real value. This
-    means that information can sometimes lead to a plan that is harmful.
-
-    It is important to note that VPI is dependent on the current state of
-    information. VPI is not additive in general:
-
-    \begin{equation}
-    VPI\_{\mathbb{e}}(E_j, E_k) \ne VPI\_{\mathbb{e}}(E_j) + VPI\_{\mathbb{e}}(E_k)
-    \end{equation}
-
-    VPI is order independent. That is:
-
-    \begin{equation}
-    VPI\_{\mathbb{e}}(E_j, E_k) = VPI\_{\mathbb{e}}(E_j) +
-    VPI\_{\mathbb{e}, e_j}(E_k) = VPI\_{\mathbb{e}}(E_k) +
-    VPI\_{\mathbb{e}, e_k}(E_j)
-    \end{equation}
-
-   <!--list-separator-->
-
-  - Information Gathering Agents
-
-    we can implement a myopic information-gathering agent, by using the
-    VPI formula shortsightedly.
-
-    ```text
-      function INFORMATION-GATHERING-AGENT(percept) returns an action
-        persistent: D, a decision network
-
-      integrate percept into D
-      j <- the value that maximises VPI(E_j) / Cost(E_j)
-      if VPI(E_j) > Cost(E_j)
-        return REQUEST(E_j)
-      else return the best action from D
-    ```
-
-    If we know the associated cost of observing evidence, it simply
-    retrieves the evidence if the cost of observing it is less than the
-    value it provides.
+  If we know the associated cost of observing evidence, it simply
+  retrieves the evidence if the cost of observing it is less than the
+  value it provides.
 
 ## RANDOM {#random}
 

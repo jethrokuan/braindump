@@ -1,12 +1,11 @@
 +++
 title = "Deep Reinforcement Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:26+08:00
 draft = false
 +++
 
 tags
-: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
 ## Why Deep Reinforcement Learning? {#why-deep-reinforcement-learning}
 
@@ -36,7 +35,7 @@ actor-critic
 it to improve policy
 
 model-based RL
-: estimate the transition model, and then... - use it for planning (no explicit policy) - Trajectory optimization/optimal control (continuous spaces) - Discrete planning in discrete action spaces ([Monte Carlo Tree Search]({{< relref "mcts" >}})) - use it to improve a policy (e.g. via backpropagation, with some tricks) - use the model to learn a value function (e.g. through dynamic programming)
+: estimate the transition model, and then... - use it for planning (no explicit policy) - Trajectory optimization/optimal control (continuous spaces) - Discrete planning in discrete action spaces ([Monte Carlo Tree Search]({{<relref "mcts.md" >}})) - use it to improve a policy (e.g. via backpropagation, with some tricks) - use the model to learn a value function (e.g. through dynamic programming)
 
 ## Why so many RL algorithms? {#why-so-many-rl-algorithms}
 
@@ -77,11 +76,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 - Trust region policy optimization
-  ([Schulman et al., n.d.](#org9d9d010))
+  ([Schulman et al., n.d.](#orgb4f539b))
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop ([Gu et al., n.d.](#org46bc8cd))
+- Q-Prop ([Gu et al., n.d.](#org4bd0b19))
 
 ### Problem Formulation {#problem-formulation}
 
@@ -97,6 +96,6 @@ or algorithms that adaptively adjust parameters:
 
 ## Bibliography {#bibliography}
 
-<a id="org46bc8cd"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
+<a id="org4bd0b19"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
 
-<a id="org9d9d010"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.
+<a id="orgb4f539b"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.

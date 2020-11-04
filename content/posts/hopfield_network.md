@@ -1,12 +1,11 @@
 +++
 title = "Hopfield Network"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:59+08:00
 tags = ["machine-learning"]
 draft = false
 +++
 
-A Hopfield network is a fully connected [Ising model]({{< relref "ising_models" >}}) with a symmetric
+A Hopfield network is a fully connected [Ising model]({{<relref "ising_models.md" >}}) with a symmetric
 weight matrix, \\(\mathbf{W} = \mathbf{W^T}\\). These weights plus the
 bias term \\(\mathbf{b}\\), can be learned from training data, using
 (approximate) maximum likelihood.

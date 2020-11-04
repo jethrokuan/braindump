@@ -1,7 +1,6 @@
 +++
 title = "Map Matching"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:57:51+08:00
 draft = false
 +++
 
@@ -17,7 +16,7 @@ probabilities in the pose parameter \\(x_t\\). One solution is to convolve
 the map with a Gaussian smoothness kernel before running map matching.
 
 Map matching considers the free-space in the scoring of 2 maps,
-compared to the [Likelihood Field Model]({{< relref "likelihood_field_model" >}}) which uses only the
+compared to the [Likelihood Field Model]({{<relref "likelihood_field_model.md" >}}) which uses only the
 end-points.
 
 ## Issues {#issues}

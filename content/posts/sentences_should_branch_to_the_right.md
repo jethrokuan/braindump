@@ -1,7 +1,6 @@
 +++
 title = "Sentences should branch to the right"
 author = ["Jethro Kuan"]
-lastmod = 2020-08-24T16:00:44+08:00
 slug = "sentences_should_branch_to_the_right"
 draft = false
 +++

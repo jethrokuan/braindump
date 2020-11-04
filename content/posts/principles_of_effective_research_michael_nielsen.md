@@ -1,8 +1,6 @@
 +++
 title = "Principles of Effective Research | Michael Nielsen"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:27+08:00
-slug = "principles_of_effective_research_michael_nielsen"
 draft = false
 +++
 
@@ -10,14 +8,16 @@ source
 : <http://michaelnielsen.org/blog/principles-of-effective-research/>
 
 author
-: [Michael Nielsen]({{< relref "michael_nielsen" >}})
+: [Michael Nielsen]({{<relref "michael_nielsen.md" >}})
 
 tags
-: [Research]({{< relref "research" >}})
+: [Research]({{<relref "research.md" >}})
 
 > “We are what we repeatedly do. Excellence, then, is not an act but a habit.” -- Aristotle
 
-_The foundation of effective research is a strong motivation or desire to do research._ Motivation and desire, however, is insufficient. One needs to be healthy, have fun, and spend quality time doing other things.
+_The foundation of effective research is a strong motivation or desire to do
+research._ Motivation and desire, however, is insufficient. One needs to be
+healthy, have fun, and spend quality time doing other things.
 
 ## Aspects of Personal Behaviour {#aspects-of-personal-behaviour}
 
@@ -25,26 +25,37 @@ _The foundation of effective research is a strong motivation or desire to do res
 2.  Work proactively towards the vision
 3.  Take personal responsibility for successes and failures
 
-Develop disciplined work habits, and achieve balance between self-development and the actual creative research process.
+Develop disciplined work habits, and achieve balance between self-development
+and the actual creative research process.
 
-Vision is not something you develop overnight. The vision informs your everyday and every week decisions, giving you a genuinely exciting goal to work towards.
+Vision is not something you develop overnight. The vision informs your everyday
+and every week decisions, giving you a genuinely exciting goal to work towards.
 
-Self-discipline requires clarity in what you want to achieve, and how yo u go about achieving it. A social environment that encourages the development of research skills and excellence is important.
+Self-discipline requires clarity in what you want to achieve, and how yo u go
+about achieving it. A social environment that encourages the development of
+research skills and excellence is important.
 
 ## Aspects of Research {#aspects-of-research}
 
-People who concentrate mostly on self-development usually make earl y exits in their research careers. The academic systems ensures that the failure to churn out good research is recognized, and consequently have trouble finding jobs.
+People who concentrate mostly on self-development usually make earl y exits in
+their research careers. The academic systems ensures that the failure to churn
+out good research is recognized, and consequently have trouble finding jobs.
 
-Early on in the research career, there are many advantages to publishing a lot of papers. It gives the opportunity to learn to write and communicate well. However, the long-term costs are significant.
+Early on in the research career, there are many advantages to publishing a lot
+of papers. It gives the opportunity to learn to write and communicate well.
+However, the long-term costs are significant.
 
-## Staying Current ([Reading]({{< relref "reading" >}})) {#staying-current--reading--dot-dot-reading-dot-md}
+## Staying Current ([Reading]({{<relref "reading.md" >}})) {#staying-current--reading-reading-dot-md}
 
-1.  Quickly skim a great deal of work, to keep track of what is known, what sort of problems people are thinking about
-2.  Pick a dozen or so papers each year to read deeply, in the belief that they contain the most important results of the year.
+1.  Quickly skim a great deal of work, to keep track of what is known, what sort
+    of problems people are thinking about
+2.  Pick a dozen or so papers each year to read deeply, in the belief that they
+    contain the most important results of the year.
 
 ## Research Styles {#research-styles}
 
-Different people have different styles of creative work. There are two different styles: problem-solver and problem-creator, that may be useful ways of thinking.
+Different people have different styles of creative work. There are two different
+styles: problem-solver and problem-creator, that may be useful ways of thinking.
 
 problem-solver
 : a person who works intensively on a well-posed
@@ -56,7 +67,9 @@ interesting questions, or pose problems in a new way
 
 ### Problem-creator {#problem-creator}
 
-Problem-solvers have social advantages in research, and are more common. However, there is a sizeable comparative advantage being a problem-creator. To be a good problem creator, one must:
+Problem-solvers have social advantages in research, and are more common.
+However, there is a sizeable comparative advantage being a problem-creator. To
+be a good problem creator, one must:
 
 1.  Develop a taste for what's important
 2.  Know the internal and external standards for what is important

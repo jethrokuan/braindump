@@ -1,7 +1,6 @@
 +++
 title = "Roam Research"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:18+08:00
 draft = false
 +++
 
@@ -9,10 +8,10 @@ webpage
 : [Roam Research](https://roamresearch.com)
 
 tags
-: [Productivity]({{< relref "productivity" >}}), [Writing]({{< relref "writing" >}}), [Note-taking]({{< relref "note_taking" >}})
+: [Productivity]({{<relref "productivity.md" >}}), [Writing]({{<relref "writing.md" >}}), [Note-taking]({{<relref "note_taking.md" >}})
 
 Roam research is a tool for networked-thought, created by [Conor
-White-Sullivan]({{< relref "conor_white_sullivan" >}}). Roam adopts methods from [Zettelkasten]({{< relref "zettelkasten" >}}).
+White-Sullivan]({{<relref "conor_white_sullivan.md" >}}). Roam adopts methods from [Zettelkasten]({{<relref "zettelkasten.md" >}}).
 
 ## Roam Media {#roam-media}
 
@@ -24,7 +23,7 @@ White-Sullivan]({{< relref "conor_white_sullivan" >}}). Roam adopts methods from
 ## Roam Tutorials {#roam-tutorials}
 
 - [How to Use Roam to Outline a New Article in Under 20 Minutes -
-  YouTube](https://www.youtube.com/watch?v=RvWic15iXjk) by [Nat Eliason]({{< relref "nat_eliason" >}})
+  YouTube](https://www.youtube.com/watch?v=RvWic15iXjk) by [Nat Eliason]({{<relref "nat_eliason.md" >}})
   - Basic Idea is to pull out related notes from other sources (books,
     articles etc.)
   - Group them up into common themes (e.g. "Ease is not the Goal")

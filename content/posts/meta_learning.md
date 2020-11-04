@@ -1,12 +1,11 @@
 +++
 title = "Meta Learning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:50+08:00
 draft = false
 +++
 
 tags
-: [Reinforcement Learning ⭐]({{< relref "reinforcement_learning" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
 
 Learning to learn: learn an update rule from related tasks
 

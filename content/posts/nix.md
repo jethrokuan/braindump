@@ -1,17 +1,16 @@
 +++
 title = "Nix/NixOS"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:57+08:00
 draft = false
 +++
 
-NixOS is a [Linux]({{< relref "linux" >}}) [operating System]({{< relref "operating_systems" >}}) built upon the Nix package manager. Nix
+NixOS is a [Linux]({{<relref "linux.md" >}}) [operating System]({{<relref "operating_systems.md" >}}) built upon the Nix package manager. Nix
 refers to both the package manager, and the name of the [programming
-language]({{< relref "prog_lang" >}}) it is written in.
+language]({{<relref "prog_lang.md" >}}) it is written in.
 
 ## Nix Software {#nix-software}
 
-- [target/lorri](https://github.com/target/lorri) provides great [direnv](https://direnv.net/) ([Unix]({{< relref "unix" >}})) /nix-shell integration
+- [target/lorri](https://github.com/target/lorri) provides great [direnv](https://direnv.net/) ([Unix]({{<relref "unix.md" >}})) /nix-shell integration
 - [nmattia/niv](https://github.com/nmattia/niv) provides dependency management for Nix projects
 
 ## Links {#links}

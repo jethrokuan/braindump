@@ -1,7 +1,6 @@
 +++
 title = "Optimal Control and Planning"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:56:17+08:00
 draft = false
 +++
 
@@ -29,7 +28,7 @@ An extremely simple method, that's parallelizable:
 4.  fit distribution \$P(A) to the elites
 
 With continuous inputs, a multi-variate normal distribution is a common choice
-for \\(p(A)\\). In the discrete case, [Monte Carlo Tree Search]({{< relref "mcts" >}}) is typically used.
+for \\(p(A)\\). In the discrete case, [Monte Carlo Tree Search]({{<relref "mcts.md" >}}) is typically used.
 
 ## Using Derivatives {#using-derivatives}
 

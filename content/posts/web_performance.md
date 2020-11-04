@@ -1,13 +1,11 @@
 +++
 title = "Web Performance"
 author = ["Jethro Kuan"]
-lastmod = 2020-07-17T00:55:23+08:00
-slug = "web_performance"
 draft = false
 +++
 
 tags
-: [Web Development]({{< relref "web_dev" >}})
+: [Web Development]({{<relref "web_dev.md" >}})
 
 ## Resources {#resources}
 
