@@ -10,6 +10,20 @@ for posterity. They can be found in [the org folder][org].
 
 ## Installation instructions
 
+I use the [Ninja](https://ninja-build.org/ "Ninja") build tool to convert my Org
+files into Markdown locally. This is so that only changed Org files get
+reprocessed into Markdown files. Ninja spawns many Emacs instances in batch mode
+running `ox-hugo`, parallelizing the job of exporting the Org files.
+
+To convert all Org files into Markdown, run:
+
+```bash
+./build.py
+```
+
+`build.py` is simple enough to inspect. Once the Markdown files are generated,
+we can use Hugo to generate the website.
+
 Install [hugo][hugo]. E.g., on a Mac with Homebrew:
 
     $ brew install hugo
