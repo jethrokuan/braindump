@@ -4,9 +4,6 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-tags
-: [Deep Reinforcement Learning]({{<relref "deep_rl.md" >}}), [Machine Learning Papers]({{<relref "ml_papers.md" >}})
-
 This paper is a comprehensive study of several model-free policy
 gradient methods:
 

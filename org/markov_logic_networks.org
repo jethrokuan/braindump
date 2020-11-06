@@ -3,8 +3,6 @@
 :END:
 #+title: Markov Logic Networks
 
-- tags :: [[id:2620cfa1-db1d-4841-bcce-db261e44479e][Machine Learning Papers]]
-
 * Markov Logic Networks cite:richardson06_markov_logic_networ.
 ** Problem
 

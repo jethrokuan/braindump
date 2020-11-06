@@ -9,10 +9,10 @@ title
 Recent Neural Recommendation Approaches
 
 paper
-: ([Dacrema, Cremonesi, and Jannach, n.d.](#orgb49fe23))
+: ([Dacrema, Cremonesi, and Jannach, n.d.](#org6395b34))
 
 tags
-: [Recommender Systems]({{<relref "recommender_systems.md" >}}), [Machine Learning Papers]({{<relref "ml_papers.md" >}})
+: [Recommender Systems]({{<relref "recommender_systems.md" >}})
 
 The authors analyzed various recent publications on recommendation
 systems techniques, and found that these have:
@@ -37,4 +37,4 @@ To alleviate these issues:
 
 ## Bibliography {#bibliography}
 
-<a id="orgb49fe23"></a>Dacrema, Maurizio Ferrari, Paolo Cremonesi, and Dietmar Jannach. n.d. “Are We Really Making Much Progress? a Worrying Analysis of Recent Neural Recommendation Approaches.” <http://arxiv.org/abs/1907.06902v1>.
+<a id="org6395b34"></a>Dacrema, Maurizio Ferrari, Paolo Cremonesi, and Dietmar Jannach. n.d. “Are We Really Making Much Progress? a Worrying Analysis of Recent Neural Recommendation Approaches.” <http://arxiv.org/abs/1907.06902v1>.

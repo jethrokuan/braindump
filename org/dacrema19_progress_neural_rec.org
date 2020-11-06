@@ -6,7 +6,7 @@
 - title :: Are We Really Making Much Progress? A Worrying Analysis of
   Recent Neural Recommendation Approaches
 - paper :: cite:dacrema19_are_we_reall_makin_much_progr
-- tags :: [[id:3ec09638-fa2b-4e35-bc96-2938abc91457][Recommender Systems]], [[id:2620cfa1-db1d-4841-bcce-db261e44479e][Machine Learning Papers]]
+- tags :: [[id:3ec09638-fa2b-4e35-bc96-2938abc91457][Recommender Systems]]
 
 The authors analyzed various recent publications on recommendation
 systems techniques, and found that these have:

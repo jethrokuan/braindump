@@ -4,12 +4,6 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-tags
-: [Machine Learning Papers]({{<relref "ml_papers.md" >}})
-
-paper
-: <https://arxiv.org/abs/1804.02464>
-
 ## Goal {#goal}
 
 To build networks that are plastic: quick and efficient learning from
