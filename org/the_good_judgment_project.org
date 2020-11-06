@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       7d98a4c0-1fd1-429a-a288-7ab9849aa617
 :END:
-#+hugo_slug: the_good_judgment_project
 #+roam_key: https://www.gjopen.com/
 #+title: The Good Judgment Project
 

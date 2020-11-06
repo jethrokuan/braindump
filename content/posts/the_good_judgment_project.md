@@ -1,7 +1,6 @@
 +++
 title = "The Good Judgment Project"
 author = ["Jethro Kuan"]
-slug = "the_good_judgment_project"
 draft = false
 +++
 
