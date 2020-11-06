@@ -6,7 +6,7 @@ type = "index"
 draft = false
 +++
 
-## Hi! {#hi}
+# Hi! {#hi}
 
 I'm [Jethro](https://www.jethro.dev/), and you've chanced upon my braindump.
 This website contains my working notes accumulated over some years. They're in a
