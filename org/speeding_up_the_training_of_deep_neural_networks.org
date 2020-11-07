@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       4b8e5eef-7de5-4201-959f-519367b88535
+:END:
+#+title: Speeding Up the Training of Deep Neural Networks
+
+Distributed training architectures rely on two concepts: [[file:all_reduce.org][all-reduce]] or a
+[[file:parameter_servers.org][parameter server]].
+
+
+* BytePS cite:jiangUnifiedArchitectureAccelerating2020
+:PROPERTIES:
+:CODE:     https://github.com/bytedance/byteps
+:END:
+
+BytePS provides a unifying framework for [[file:all_reduce.org][All-reduce]] and [[file:parameter_servers.org][parameter server]]
+architectures, showing communication optimality. Intra-machine communication is
+optimized. It also proposes a "Summation Service", which accelerates DNN
+training by running gradient summation on CPUs, while performing parameter
+updates on GPUs.
+
+bibliography:biblio.bib
