@@ -1,0 +1,31 @@
+:PROPERTIES:
+:ID:       64eb2dcf-1fcd-410d-a2a2-3a28294bbe4b
+:END:
+#+title: Outside/Inside View
+
+The terminology of outside/inside view was coined by [[file:daniel_kahneman.org][Daniel Kahneman]] and Dan
+Lovallo in 1993 cite:kahnemanTimidChoicesBold1993, whose main claim is this:
+
+#+begin_quote
+Decision makers are excessively prone to treat problems as unique, neglecting
+both the statistics of the past and the multiple opportunities in the future.
+#+end_quote
+
+These are the result of two biases.
+
+1. The forecasts of future outcomes are anchored on plans and scenarios of
+   success, rather than on past results, and are hence overly optimistic
+2. Evaluations of single risky prospects neglect the possibility of pooling
+   risks
+
+There are two distinct modes applied to forecasting. The /inside view/ of the
+problem focuses on the case at hand, by considering the plans and obstacles to
+its completion, and constructing scenarios of future progress. This is the mode
+commonly adopted.
+
+The /outside view/ ignores the details of the case at hand, and focuses on
+statistics of cases similar to the present one.
+
+When making a forecast, it is useful to consider the outside view first to
+obtain a ball-park number. Then, use the insider view to adjust the previous
+estimation up and down.
