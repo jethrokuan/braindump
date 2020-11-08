@@ -24,4 +24,4 @@ starting and ending point to reduce the \\(n\\) parts\$. Each node sends
 bytes.
 
 In the _all-gather_ phase, each node broadcasts its reduced part to the other
-\\(n-1\\) nodes using a ring.
+\\(n-1\\) nodes using a ring. Each node sends \\(\frac{(n-1)M}{n}\\) of traffic.

@@ -33,5 +33,5 @@ footer = "Icon by Freepik. Built with ♥ with Org-mode and Hugo."
     lineNos = false
     lineNumbersInTable = true
     noClasses = true
-    style = "github"
+    style = "friendly"
     tabWidth = 4

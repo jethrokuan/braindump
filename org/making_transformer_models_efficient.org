@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c1f7763a-aac4-46ce-ab01-86ee4b29d3cf
+:END:
 #+title: Making Transformer Models Efficient
 
 The traditional [[file:transformer.org][Transformer]] model has memory and computational complexities that

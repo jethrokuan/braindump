@@ -20,6 +20,9 @@ A typical robot grasp detection system can consist of 3 components.
    in perception, and perturbations to the robot itself.
 
 * Grasping Approaches
+:PROPERTIES:
+:ID:       b06cb91f-7270-45b6-add8-23cb6efc7564
+:END:
 
 - Dexterous manipulation :: manipulation with fingers
 - Enveloping grasps :: formed by wrapping both fingers and palm around object

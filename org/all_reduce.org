@@ -20,4 +20,4 @@ $\frac{(n-1)M}{n}$ traffic. While each of the other $n-1$ rings sends $M/n$
 bytes.
 
 In the /all-gather/ phase, each node broadcasts its reduced part to the other
-$n-1$ nodes using a ring.
+$n-1$ nodes using a ring. Each node sends $\frac{(n-1)M}{n}$ of traffic.
