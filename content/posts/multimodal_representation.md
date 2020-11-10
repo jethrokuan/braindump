@@ -20,7 +20,7 @@ a meaningful way is crucial to multimodal problems.
 
 ## Categories of multi-modal representations {#categories-of-multi-modal-representations}
 
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org360e680)) proposes two categories of
+([Baltrušaitis, Ahuja, and Morency, n.d.](#orgbf937fa)) proposes two categories of
 multimodal representation:
 
 joint
@@ -89,4 +89,4 @@ order in the multimodal space. Another special case of this is
 
 ## Bibliography {#bibliography}
 
-<a id="org360e680"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="orgbf937fa"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

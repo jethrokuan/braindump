@@ -1,11 +1,10 @@
 :PROPERTIES:
 :ID:       ef265ad6-7624-43e9-b2b0-e061c441a361
 :END:
-#+title: Neural Ordinary Differential Equations (Review)
+#+title: Neural Ordinary Differential Equations
 #+roam_alias: "Neural ODE"
 #+roam_key: cite:chen18_neural_ordin_differ_equat
 #+options: toc:nil
-- tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]], [[id:142c8033-00a7-4a2a-83e5-33e1349ade5a][Stochastic Processes]]
 
 bibliographystyle:unsrt
 
@@ -17,7 +16,7 @@ This is a paper review of the NIPS 2018 best paper award-winning paper
 In this section, I motivate the benefits of Neural Ordinary
 Differential Equations (ODEs). Many physical phenomena can be modeled
 naturally with the language of differential equations. These include
-populations of predator and prey, or in physics with regards to motion
+populations of predator and prey, or in physics with regard to motion
 between bodies. Differential equations shine where it is easier to
 model changes in the systems over time rather than the value
 themselves.
@@ -65,19 +64,19 @@ sequential data.
 
 * The Analogy to Residual Neural Networks 
 
-In neural networks, every layer introduces error that compounds through the neural
-network, hindering overall performance. The only way to bypass this is
-to add more layers, and limit the complexity of each step. This means
-that the highest performing neural networks would have infinite
-layers, and infinitesimal step-changes, an infeasible task.
+In neural networks, every layer introduces error that compounds through the
+neural network, hindering overall performance. The only way to bypass this is to
+add more layers, and limit the complexity of each step. This means that the
+highest performing neural networks would have infinite layers, and infinitesimal
+step-changes, an infeasible task.
 
 To address this problem, deep residual neural networks were presented
-cite:he15_deep_resid_learn_image_recog. 
+cite:he15_deep_resid_learn_image_recog.
 
-Instead of learning $h_{t+1} = f(h_t, \theta_t)$, deep residual neural
-networks now learn the difference between the layers: $h_{t+1} = h_t +
-f(h_t, \theta_t)$. For example, feed-forward residual neural networks
-have a composition that looks like these:
+Instead of learning $h_{t+1} = f(h_t, \theta_t)$, deep [[file:residual_neural_networks.org][residual neural networks]]
+now learn the difference between the layers: $h_{t+1} = h_t + f(h_t, \theta_t)$.
+For example, feed-forward residual neural networks have a composition that looks
+like these:
 
 \begin{align*}
   h_1 &= h_0 + f(h_0, \theta_0) \\
@@ -99,29 +98,28 @@ network:
   \frac{d\mathbf{h}(t)}{dt} = f(\mathbf{h}(t), t, \theta)
 \end{equation}
 
-where the neural network has parameters $\theta$. The equivalent of
-having $T$ layers in the network, is finding the solution to this ODE at
-time $T$.
+where the neural network has parameters $\theta$. The equivalent of having $T$
+layers in the network, is finding the solution to this ODE at time $T$.
 
-The analogy between ODEs and neural networks is not new, and has been
-discussed in previous papers
+The analogy between ODEs and neural networks is not new, and has been discussed
+in previous papers
 cite:lu17_beyon_finit_layer_neural_networ,haber17_stabl_archit_deep_neural_networ.
-This paper popularized this idea, by proposing a new method for
-scalable backpropagation through ODE solvers, allowing end-to-end
-training within larger models.
+This paper popularized this idea, by proposing a new method for scalable
+backpropagation through ODE solvers, allowing end-to-end training within larger
+models.
 
 * The NeuralODE Model
 
-The Neural ODE model introduces a new type of block the authors term the
-ODE block. This block replaces the ResNet-like skip connections, with
-an ODE that models the neural network's dynamics:
+The Neural ODE model introduces a new type of block the authors term the ODE
+block. This block replaces the ResNet-like skip connections, with an ODE that
+models the neural network's dynamics:
 
 \begin{equation}
   \frac{d\mathbf{h}(t)}{dt} = f(\mathbf{h}(t), t, \theta)
 \end{equation}
 
-This ODE can then be solved using a black box solver, with the output
-state being used to compute the loss:
+This ODE can then be solved using a black box solver, with the output state
+being used to compute the loss:
 
 \begin{equation}
   L(\mathbf{z}(t_1)) = L\left( \mathbf{z}(t_0) + \int_{t_0}^{t_1}

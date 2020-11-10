@@ -3,8 +3,6 @@
 :END:
 #+title: Spiking Neurons (Literature Review)
 
-- tags :: [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neurons (Literature Review)]]
-
 * Introduction to Spiking Neural Networks label:sec:snn
 
 While the project is equal part reinforcement learning and spiking

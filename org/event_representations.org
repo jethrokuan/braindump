@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       9a490777-fe90-409c-9842-5ca4b17d577c
-:END:
-#+hugo_slug: event_representations
-#+title: Event Representations

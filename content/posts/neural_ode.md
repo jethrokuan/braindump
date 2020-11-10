@@ -1,11 +1,8 @@
 +++
-title = "Neural Ordinary Differential Equations (Review)"
+title = "Neural Ordinary Differential Equations"
 author = ["Jethro Kuan"]
 draft = false
 +++
-
-tags
-: [Machine Learning Algorithms]({{<relref "machine_learning_algorithms.md" >}}), [Stochastic Processes]({{<relref "stochastic_processes.md" >}})
 
 This is a paper review of the NIPS 2018 best paper award-winning paper
 [Neural Ordinary Differential Equations](https://arxiv.org/abs/1806.07366).
@@ -15,7 +12,7 @@ This is a paper review of the NIPS 2018 best paper award-winning paper
 In this section, I motivate the benefits of Neural Ordinary
 Differential Equations (ODEs). Many physical phenomena can be modeled
 naturally with the language of differential equations. These include
-populations of predator and prey, or in physics with regards to motion
+populations of predator and prey, or in physics with regard to motion
 between bodies. Differential equations shine where it is easier to
 model changes in the systems over time rather than the value
 themselves.
@@ -63,19 +60,19 @@ sequential data.
 
 ## The Analogy to Residual Neural Networks {#the-analogy-to-residual-neural-networks}
 
-In neural networks, every layer introduces error that compounds through the neural
-network, hindering overall performance. The only way to bypass this is
-to add more layers, and limit the complexity of each step. This means
-that the highest performing neural networks would have infinite
-layers, and infinitesimal step-changes, an infeasible task.
+In neural networks, every layer introduces error that compounds through the
+neural network, hindering overall performance. The only way to bypass this is to
+add more layers, and limit the complexity of each step. This means that the
+highest performing neural networks would have infinite layers, and infinitesimal
+step-changes, an infeasible task.
 
 To address this problem, deep residual neural networks were presented
-([He et al., n.d.](#org6972a9f)).
+([He et al., n.d.](#org001b07d)).
 
-Instead of learning \\(h\_{t+1} = f(h_t, \theta_t)\\), deep residual neural
-networks now learn the difference between the layers: \\(h\_{t+1} = h_t +
-f(h_t, \theta_t)\\). For example, feed-forward residual neural networks
-have a composition that looks like these:
+Instead of learning \\(h\_{t+1} = f(h_t, \theta_t)\\), deep [residual neural networks]({{< relref "residual_neural_networks" >}})
+now learn the difference between the layers: \\(h\_{t+1} = h_t + f(h_t, \theta_t)\\).
+For example, feed-forward residual neural networks have a composition that looks
+like these:
 
 \begin{align\*}
 h_1 &= h_0 + f(h_0, \theta_0) \\\\\\
@@ -88,7 +85,7 @@ h\_{t+1} &= h_t + f(h_t, \theta_t) \\\\\\
 These iterative updates correspond to the infinitesimal step-changes
 described earlier, and can be seen to be analogous to an Euler
 discretization of a continuous transformation
-([Lu et al., n.d.](#org33fed0c)). In the limit, one can
+([Lu et al., n.d.](#org2d99ff7)). In the limit, one can
 instead represent the continuous dynamics between the hidden units
 using an ordinary differential equation (ODE) specified by some neural
 network:
@@ -97,29 +94,28 @@ network:
 \frac{d\mathbf{h}(t)}{dt} = f(\mathbf{h}(t), t, \theta)
 \end{equation}
 
-where the neural network has parameters \\(\theta\\). The equivalent of
-having \\(T\\) layers in the network, is finding the solution to this ODE at
-time \\(T\\).
+where the neural network has parameters \\(\theta\\). The equivalent of having \\(T\\)
+layers in the network, is finding the solution to this ODE at time \\(T\\).
 
-The analogy between ODEs and neural networks is not new, and has been
-discussed in previous papers
-([Lu et al., n.d.](#org33fed0c); [Haber and Ruthotto, n.d.](#org703714c)).
-This paper popularized this idea, by proposing a new method for
-scalable backpropagation through ODE solvers, allowing end-to-end
-training within larger models.
+The analogy between ODEs and neural networks is not new, and has been discussed
+in previous papers
+([Lu et al., n.d.](#org2d99ff7); [Haber and Ruthotto, n.d.](#orgc9c7db4)).
+This paper popularized this idea, by proposing a new method for scalable
+backpropagation through ODE solvers, allowing end-to-end training within larger
+models.
 
 ## The NeuralODE Model {#the-neuralode-model}
 
-The Neural ODE model introduces a new type of block the authors term the
-ODE block. This block replaces the ResNet-like skip connections, with
-an ODE that models the neural network's dynamics:
+The Neural ODE model introduces a new type of block the authors term the ODE
+block. This block replaces the ResNet-like skip connections, with an ODE that
+models the neural network's dynamics:
 
 \begin{equation}
 \frac{d\mathbf{h}(t)}{dt} = f(\mathbf{h}(t), t, \theta)
 \end{equation}
 
-This ODE can then be solved using a black box solver, with the output
-state being used to compute the loss:
+This ODE can then be solved using a black box solver, with the output state
+being used to compute the loss:
 
 \begin{equation}
 L(\mathbf{z}(t_1)) = L\left( \mathbf{z}(t_0) + \int\_{t_0}^{t_1}
@@ -166,7 +162,7 @@ represented with yet another ODE. Obtaining the gradients would
 require a single solve by recomputing \\(z(t)\\) backwards together with
 the adjoint. The derivations are provided in the appendix of the
 paper, and will not be repeated here.
-([Chen et al., n.d.](#orgf232e4c))
+([Chen et al., n.d.](#orge4b6f91))
 
 Since a large part of the paper's contribution is the ability to
 bridge many years of mathematical advancements on solving differential
@@ -181,7 +177,7 @@ solution together with the adjoint. One issue that the paper has
 failed to address is that their proposed method requires that the ODE
 integrator is time-reversible. There are no ODE solvers for
 first-order ODEs that are time-reversible, implying that the method
-proposed will diverge on some systems ([Rackauckas et al., n.d.](#orgd227999)).
+proposed will diverge on some systems ([Rackauckas et al., n.d.](#orgafdff20)).
 
 In general, while the model is agnostic of the choice of ODE solver,
 the ideal choice of differential equation solver depends on the
@@ -209,7 +205,7 @@ ODEnet on different datasets.
 It turns out that because of the continuous limit, there is a class of
 functions that Neural ODEs. In particular, Neural ODEs can only learn
 features that are homeomorphic to the input space.
-([Dupont, Doucet, and Teh, n.d.](#org467e619)) The errors arising from
+([Dupont, Doucet, and Teh, n.d.](#org800b540)) The errors arising from
 discretization allow ResNet trajectories to cross, allowing them to
 represent certain flows that Neural ODEs cannot.
 
@@ -287,14 +283,14 @@ the hype of the Neural ODE paper](https://slideslive.com/38921897/retrospectives
 
 ## Bibliography {#bibliography}
 
-<a id="orgf232e4c"></a>Chen, Ricky T. Q., Yulia Rubanova, Jesse Bettencourt, and David Duvenaud. n.d. “Neural Ordinary Differential Equations.” <http://arxiv.org/abs/1806.07366v4>.
+<a id="orge4b6f91"></a>Chen, Ricky T. Q., Yulia Rubanova, Jesse Bettencourt, and David Duvenaud. n.d. “Neural Ordinary Differential Equations.” <http://arxiv.org/abs/1806.07366v4>.
 
-<a id="org467e619"></a>Dupont, Emilien, Arnaud Doucet, and Yee Whye Teh. n.d. “Augmented Neural Odes.” <http://arxiv.org/abs/1904.01681v1>.
+<a id="org800b540"></a>Dupont, Emilien, Arnaud Doucet, and Yee Whye Teh. n.d. “Augmented Neural Odes.” <http://arxiv.org/abs/1904.01681v1>.
 
-<a id="org703714c"></a>Haber, Eldad, and Lars Ruthotto. n.d. “Stable Architectures for Deep Neural Networks.” <http://arxiv.org/abs/1705.03341v3>.
+<a id="orgc9c7db4"></a>Haber, Eldad, and Lars Ruthotto. n.d. “Stable Architectures for Deep Neural Networks.” <http://arxiv.org/abs/1705.03341v3>.
 
-<a id="org6972a9f"></a>He, Kaiming, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. n.d. “Deep Residual Learning for Image Recognition.” <http://arxiv.org/abs/1512.03385v1>.
+<a id="org001b07d"></a>He, Kaiming, Xiangyu Zhang, Shaoqing Ren, and Jian Sun. n.d. “Deep Residual Learning for Image Recognition.” <http://arxiv.org/abs/1512.03385v1>.
 
-<a id="org33fed0c"></a>Lu, Yiping, Aoxiao Zhong, Quanzheng Li, and Bin Dong. n.d. “Beyond Finite Layer Neural Networks: Bridging Deep Architectures and Numerical Differential Equations.” <http://arxiv.org/abs/1710.10121v2>.
+<a id="org2d99ff7"></a>Lu, Yiping, Aoxiao Zhong, Quanzheng Li, and Bin Dong. n.d. “Beyond Finite Layer Neural Networks: Bridging Deep Architectures and Numerical Differential Equations.” <http://arxiv.org/abs/1710.10121v2>.
 
-<a id="orgd227999"></a>Rackauckas, Chris, Mike Innes, Yingbo Ma, Jesse Bettencourt, Lyndon White, and Vaibhav Dixit. n.d. “Diffeqflux.Jl - a Julia Library for Neural Differential Equations.” <http://arxiv.org/abs/1902.02376v1>.
+<a id="orgafdff20"></a>Rackauckas, Chris, Mike Innes, Yingbo Ma, Jesse Bettencourt, Lyndon White, and Vaibhav Dixit. n.d. “Diffeqflux.Jl - a Julia Library for Neural Differential Equations.” <http://arxiv.org/abs/1902.02376v1>.

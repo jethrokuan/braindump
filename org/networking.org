@@ -953,10 +953,10 @@ periodically broadcast link costs to each other. Djikstra's algorithm
 is often used to compute the least-cost path locally.
 
 
-*Distance vector algorithms*. In this scenario, routers know
- physically-connected neighbours, and link costs to neighbours.
- Routers exchange "local views" and update their own "local views". An
- iterative process of computation is taken:
+*Distance vector algorithms*. In this scenario, routers know physically
+connected neighbours, and link costs to neighbours. Routers exchange "local
+views" and update their own "local views". An iterative process of computation
+is taken:
 
 1. Swap local view with direct neighbours.
 2. Update own's local view.

@@ -4,6 +4,9 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
+PROPERTIES:
+:ID: 79ec0a7b-258d-49c6-b159-afcb2917e219
+
 tags
 : [Linux]({{<relref "linux.md" >}}), [Operating Systems]({{<relref "operating_systems.md" >}})
 

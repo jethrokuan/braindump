@@ -1,5 +1,5 @@
 +++
-title = "Restricted Boltzmann machines"
+title = "Restricted Boltzmann Machines"
 author = ["Jethro Kuan"]
 draft = false
 +++

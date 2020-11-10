@@ -29,7 +29,6 @@ Joint representations are mostly used in tasks where multimodal data
 is present during both training and inference.
 
 ** Neural Networks
-
 A common approach is to use deep neural networks to create abstract
 representations of unimodal data, beore combining them in the last
 layer (for example, via concatenation). The hidden layers project the

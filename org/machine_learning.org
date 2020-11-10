@@ -4,9 +4,6 @@
 #+title: Machine Learning
 #+hugo_tags: machine-learning
 
-* Table of Contents
-- [[id:4a817202-7d27-43c8-90a7-8417d38c731b][Natural Language Processing]]
-
 * When do we need machine learning?
 Two aspects of a given problem may call for the use of programs that
 learn and improve on the basis of their "experience":

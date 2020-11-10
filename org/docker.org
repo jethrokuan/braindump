@@ -1,4 +1,4 @@
-:PROPERTIES:
+PROPERTIES:
 :ID:       79ec0a7b-258d-49c6-b159-afcb2917e219
 :END:
 #+title: Docker 101
