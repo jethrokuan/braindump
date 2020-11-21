@@ -1,0 +1,17 @@
+#+title: Setting up Emacs on Mac
+
+* Dired
+
+Setting up Dired requires the GNU version of ~ls~. One can install it via Homebrew:
+
+#+begin_src bash
+brew install coreutils
+#+end_src
+
+* OpenPGP
+
+Download GnuPG using Homebrew:
+
+#+begin_src bash
+brew install gnupg
+#+end_src
