@@ -1,0 +1,24 @@
+#+title: High Performance Natural Language Processing
+#+roam_key: https://slideslive.com/38940826a
+
+We need high-performance [[id:4a817202-7d27-43c8-90a7-8417d38c731b][natural language processing]] to scale up NLP systems in
+production.
+
+There are several approaches to achieving speeding up NLP systems.
+
+* [[file:knowledge_distillation.org][Knowledge Distillation]]
+** TODO DistillBert
+** TODO MobileBert
+
+* [[id:c1f7763a-aac4-46ce-ab01-86ee4b29d3cf][Making Transformer Models Efficient]]
+
+* Pruning
+
+Pruning removes "unimportant" weights from a network.
+E.g. Prune based on second-order derivatives: "Optimal Brain Damage" and "Optimal Brain Surgeon"
+
+** TODO [[file:lottery_ticket_hypothesis.org][Lottery Ticket Hypothesis]] in Transformer cite:brixSuccessfullyApplyingStabilized2020
+
+bibliography:biblio.bib
+
+
