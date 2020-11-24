@@ -1,5 +1,5 @@
 +++
-title = "What I'm Doing Now"
+title = "🌿 What I'm Doing Now"
 author = ["Jethro Kuan"]
 slug = "now"
 draft = false
@@ -7,13 +7,8 @@ draft = false
 
 This is a regularly updated log of what I'm currently looking into.
 
-- Looking into the deep ends of [Robot Grasping]({{<relref "robot_grasping.md" >}}) and [Bin Picking]({{<relref "bin_picking.md" >}}). My task is
-  pretty specific and simple for now, but I'm still getting used to ROS, and
-  trying to setup a simple controller for the robot.
-- Keeping tabs on [Event-based Vision]({{<relref "event_based_vision.md" >}}) and other things to do with neuromorphic
-  hardware. I think there is a strong future in event-based sensing with
-  low-power robotics, and also with tasks that require high temporal resolution
-  such as slippage detection.
+- [High Performance Natural Language Processing]({{< relref "high_performance_natural_language_processing" >}}). The research conducted here is
+  part of my day job.
 - Working on [Org-roam](https://www.orgroam.com/), as usual. Developmental progress on it has sort of
   stalled. Now that I'm getting back into research, the flaws and things I want
   are starting to show, and I want to sit on my workflow a bit more before

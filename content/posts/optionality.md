@@ -4,6 +4,12 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
+Author
+: Richard Meadows
+
+Goodreads
+: <https://www.goodreads.com/book/show/55738971-optionality>
+
 Optionality is the right, but not obligation, to take an action.
 
 ## Restrict Your Choices {#restrict-your-choices}
@@ -46,3 +52,9 @@ We can classify options based on their risk-reward ratio:
     modest gains, in exchange for taking modest risk.
 3.  **Treasure Chests**: Low risk, high reward. E.g. scalable side-hustles: selling
     software over and over again with little marginal cost.
+
+## Themes {#themes}
+
+- [Bad Is Stronger Than Good]({{< relref "bad_is_stronger_than_good" >}})
+- [Everything Compounds]({{< relref "everything_compounds" >}})
+- [The Law of Diminishing Returns]({{< relref "the_law_of_diminishing_returns" >}})

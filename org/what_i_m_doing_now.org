@@ -2,17 +2,12 @@
 :ID:       fe9f2b99-b9ae-49d7-8345-4ba1e9b1a5e1
 :END:
 #+hugo_slug: now
-#+title: What I'm Doing Now
+#+title: 🌿 What I'm Doing Now
 
 This is a regularly updated log of what I'm currently looking into.
 
-- Looking into the deep ends of [[id:91baf5d1-80c6-42f6-b2bb-d16a1a277095][Robot Grasping]] and [[id:d182d7e9-d380-4a11-a024-6357bea704dd][Bin Picking]]. My task is
-  pretty specific and simple for now, but I'm still getting used to ROS, and
-  trying to setup a simple controller for the robot.
-- Keeping tabs on [[id:39f98604-fb7a-4d5d-a77c-23a268d13604][Event-based Vision]] and other things to do with neuromorphic
-  hardware. I think there is a strong future in event-based sensing with
-  low-power robotics, and also with tasks that require high temporal resolution
-  such as slippage detection.
+- [[file:high_performance_natural_language_processing.org][High Performance Natural Language Processing]]. The research conducted here is
+  part of my day job.
 - Working on [[https://www.orgroam.com/][Org-roam]], as usual. Developmental progress on it has sort of
   stalled. Now that I'm getting back into research, the flaws and things I want
   are starting to show, and I want to sit on my workflow a bit more before
@@ -20,3 +15,4 @@ This is a regularly updated log of what I'm currently looking into.
 - Pruning this digital garden. There are a lot of unnecessary notes. It always
   feels wasteful to delete notes, but I think it will eventually be for the
   best.
+- Reading [[file:optionality.org][Optionality]]
