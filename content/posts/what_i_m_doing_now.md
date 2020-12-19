@@ -16,3 +16,4 @@ This is a regularly updated log of what I'm currently looking into.
 - Pruning this digital garden. There are a lot of unnecessary notes. It always
   feels wasteful to delete notes, but I think it will eventually be for the
   best.
+- Reading [Optionality]({{< relref "optionality" >}})

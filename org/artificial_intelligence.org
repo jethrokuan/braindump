@@ -107,6 +107,7 @@ states according to exactly how good it is to the agent. An agent's
 *utility function* is an internalisation of the performance measure.
 An agent chooses actions to maximise its expected utility. A
 utility-based agents has to model and keep track of its environment.
+
 ** Learning agents
 :PROPERTIES:
 :ID:       13ee9429-7d8b-40c1-a3bc-e9db7326f580
