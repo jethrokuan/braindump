@@ -32,10 +32,10 @@ rapidly.
 
 ## Improving DQN {#improving-dqn}
 
-- Double Q-learning reduces bias ([Van Hasselt, Guez, and Silver, n.d.](#org620cfe9))
-- Average Q-learning reduces variance ([Anschel, Baram, and Shimkin, n.d.](#org165a0d8))
-- [Hindsight Experience Replay]({{<relref "andrychowicz2017_hindsight_experience_replay.md" >}}) ([Andrychowicz et al., n.d.](#orgc344bc0))
-- Distributional RL ([Dabney et al., n.d.](#org7e3f541))
+- Double Q-learning reduces bias ([Van Hasselt, Guez, and Silver, n.d.](#org031439c))
+- Average Q-learning reduces variance ([Anschel, Baram, and Shimkin, n.d.](#org12c02a4))
+- [Hindsight Experience Replay]({{<relref "andrychowicz2017_hindsight_experience_replay.md" >}}) ([Andrychowicz et al., n.d.](#orge9ee620))
+- Distributional RL ([Dabney et al., n.d.](#orgeedf423))
 
 ## References {#references}
 
@@ -43,12 +43,12 @@ rapidly.
 
 ## Bibliography {#bibliography}
 
-<a id="orgc344bc0"></a>Andrychowicz, Marcin, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, and Wojciech Zaremba. n.d. “Hindsight Experience Replay.” In _Advances in Neural Information Processing Systems_, 5048–58.
+<a id="orge9ee620"></a>Andrychowicz, Marcin, Filip Wolski, Alex Ray, Jonas Schneider, Rachel Fong, Peter Welinder, Bob McGrew, Josh Tobin, OpenAI Pieter Abbeel, and Wojciech Zaremba. n.d. “Hindsight Experience Replay.” In _Advances in Neural Information Processing Systems_, 5048–58.
 
-<a id="org165a0d8"></a>Anschel, Oron, Nir Baram, and Nahum Shimkin. n.d. “Averaged-Dqn: Variance Reduction and Stabilization for Deep Reinforcement Learning.” In _Proceedings of the 34th International Conference on Machine Learning-Volume 70_, 176–85. JMLR. org.
+<a id="org12c02a4"></a>Anschel, Oron, Nir Baram, and Nahum Shimkin. n.d. “Averaged-Dqn: Variance Reduction and Stabilization for Deep Reinforcement Learning.” In _Proceedings of the 34th International Conference on Machine Learning-Volume 70_, 176–85. JMLR. org.
 
-<a id="org7e3f541"></a>Dabney, Will, Mark Rowland, Marc G Bellemare, and Rémi Munos. n.d. “Distributional Reinforcement Learning with Quantile Regression.” In _Thirty-Second AAAI Conference on Artificial Intelligence_.
+<a id="orgeedf423"></a>Dabney, Will, Mark Rowland, Marc G Bellemare, and Rémi Munos. n.d. “Distributional Reinforcement Learning with Quantile Regression.” In _Thirty-Second AAAI Conference on Artificial Intelligence_.
 
-<a id="org620cfe9"></a>Van Hasselt, Hado, Arthur Guez, and David Silver. n.d. “Deep Reinforcement Learning with Double Q-Learning.” In _Thirtieth AAAI Conference on Artificial Intelligence_.
+<a id="org031439c"></a>Van Hasselt, Hado, Arthur Guez, and David Silver. n.d. “Deep Reinforcement Learning with Double Q-Learning.” In _Thirtieth AAAI Conference on Artificial Intelligence_.
 
 NO_ITEM_DATA:mnih2013playing

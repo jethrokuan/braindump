@@ -7,7 +7,7 @@ draft = false
 tags
 : [Software Engineering]({{<relref "software_engineering.md" >}})
 
-## Core Tenets from Handmade ([Handmade, n.d.](#org3361e63)) {#core-tenets-from-handmade--handmade-n-dot-d-dot--org3361e63}
+## Core Tenets from Handmade ([Handmade, n.d.](#orga879038)) {#core-tenets-from-handmade--handmade-n-dot-d-dot--orga879038}
 
 ### Maximize portability {#maximize-portability}
 
@@ -45,4 +45,4 @@ tags
 
 ## Bibliography {#bibliography}
 
-<a id="org3361e63"></a>Handmade. n.d. “How to Write Better (Game) Libraries | Handmade.Network Wiki.” <https://handmade.network/wiki/7138-how%E2%82%9Co%5F%7Bw%7Drite%5F%7Bb%7Detter%5F%7Bg%7Dame%E2%82%97ibraries>.
+<a id="orga879038"></a>Handmade. n.d. “How to Write Better (Game) Libraries | Handmade.Network Wiki.” <https://handmade.network/wiki/7138-how%E2%82%9Co%5F%7Bw%7Drite%5F%7Bb%7Detter%5F%7Bg%7Dame%E2%82%97ibraries>.

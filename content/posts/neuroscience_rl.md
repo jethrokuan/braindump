@@ -13,8 +13,8 @@ tags
 - Reward is often delayed
 
 TD errors ([Temporal Difference Learning]({{<relref "td_learning.md" >}})) model the activity of
-dopamine neurons ([Schultz, Dayan, and Montague, n.d.](#orgc89814b))
+dopamine neurons ([Schultz, Dayan, and Montague, n.d.](#orgac44cd9))
 
 ## Bibliography {#bibliography}
 
-<a id="orgc89814b"></a>Schultz, W., P. Dayan, and P. R. Montague. n.d. “A Neural Substrate of Prediction and Reward” 275 (5306):1593–99. <https://doi.org/10.1126/science.275.5306.1593>.
+<a id="orgac44cd9"></a>Schultz, W., P. Dayan, and P. R. Montague. n.d. “A Neural Substrate of Prediction and Reward” 275 (5306):1593–99. <https://doi.org/10.1126/science.275.5306.1593>.

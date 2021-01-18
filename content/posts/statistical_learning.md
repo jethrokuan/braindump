@@ -469,11 +469,11 @@ make some assumptions about the form of the decision boundary.
 
 ## Reference Textbooks {#reference-textbooks}
 
-1.  An introduction to statistical learning ([James et al., n.d.](#org0b30050))
-2.  Understanding Machine Learning ([Shalev-Shwartz and Ben-David, n.d.](#org32a8ebc))
+1.  An introduction to statistical learning ([James et al., n.d.](#org123e25a))
+2.  Understanding Machine Learning ([Shalev-Shwartz and Ben-David, n.d.](#orgdc47df6))
 
 ## Bibliography {#bibliography}
 
-<a id="org0b30050"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+<a id="org123e25a"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
 
-<a id="org32a8ebc"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.
+<a id="orgdc47df6"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.

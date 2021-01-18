@@ -1,6 +1,5 @@
 +++
-title = "Vocabulary"
+title = "Evergreen Notes"
 author = ["Jethro Kuan"]
-slug = "vocabulary"
 draft = false
 +++

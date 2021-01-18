@@ -18,7 +18,7 @@ Multi-modal fusion is motivated by 3 main reasons:
     missing
 
 Multi-modal fusion approaches can be classified as
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org08a5e8e)):
+([Baltrušaitis, Ahuja, and Morency, n.d.](#orgd3915d5)):
 
 - **Model-agnostic**
   - early fusion
@@ -66,4 +66,4 @@ amounts of training data.
 
 ## Bibliography {#bibliography}
 
-<a id="org08a5e8e"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="orgd3915d5"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

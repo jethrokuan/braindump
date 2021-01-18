@@ -11,7 +11,7 @@ An option is defined as a tuple containing:
 3.  A termination function (post-condition)
 
 This helps put learning and planning algorithms at the same level of
-abstraction. ([Stolle and Precup, n.d.](#orga2b6b3a))
+abstraction. ([Stolle and Precup, n.d.](#org977aa81))
 
 ## Models vs Actions {#models-vs-actions}
 
@@ -29,4 +29,4 @@ model ([Temporal Difference Learning]({{<relref "td_learning.md" >}})).
 
 ## Bibliography {#bibliography}
 
-<a id="orga2b6b3a"></a>Stolle, Martin, and Doina Precup. n.d. “Learning Options in Reinforcement Learning.” In _International Symposium on Abstraction, Reformulation, and Approximation_, 212–23. Springer.
+<a id="org977aa81"></a>Stolle, Martin, and Doina Precup. n.d. “Learning Options in Reinforcement Learning.” In _International Symposium on Abstraction, Reformulation, and Approximation_, 212–23. Springer.

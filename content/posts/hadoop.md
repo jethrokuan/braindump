@@ -7,7 +7,7 @@ draft = false
 Hadoop provides tools for working with big data, by raising the _level
 of abstraction_.
 
-Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#org5bfbbfb))
+Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#org167adc4))
 
 ## Data Storage and Analysis {#data-storage-and-analysis}
 
@@ -359,12 +359,12 @@ Instead of storing Thrift structures in the Thrift binary format,
 Parquet uses a data converter to convert Thrift structures into
 Parquet format, a compressed, columnar data representation.
 
-([Kleppmann, n.d.](#orgb35ece1))
+([Kleppmann, n.d.](#org20aaada))
 
 ### Parquet's Columnar Storage {#parquet-s-columnar-storage}
 
 Parquet's columnar representation is inpired by Google's Dremel.
-([Melnik et al., n.d.](#org16d2a16))
+([Melnik et al., n.d.](#org4d34603))
 
 Thrift and Protocol Buffer's binary representations are field values
 laid out sequentially. Using a columnar-striped representation enables
@@ -401,7 +401,7 @@ field values and levels for each field, and append the values
 sequentially to the output records.
 
 Efficient algorithms for record shredding and assembly are provided in
-Appendix A of the Dremel paper. ([Melnik et al., n.d.](#org16d2a16))
+Appendix A of the Dremel paper. ([Melnik et al., n.d.](#org4d34603))
 
 ## Beyond MapReduce {#beyond-mapreduce}
 
@@ -417,8 +417,8 @@ processing workflows.
 
 ## Bibliography {#bibliography}
 
-<a id="orgb35ece1"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
+<a id="org20aaada"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
 
-<a id="org16d2a16"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
+<a id="org4d34603"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
 
-<a id="org5bfbbfb"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.
+<a id="org167adc4"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.

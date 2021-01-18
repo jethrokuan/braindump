@@ -9,7 +9,7 @@ tags
 : [Learning]({{<relref "learning.md" >}})
 
 paper
-: ([MacIver, n.d.](#org95e46a9))
+: ([MacIver, n.d.](#orga0fb7a2))
 
 The key is to isolate one aspect of the problem that is difficult and
 work on it. This provides a direct feedback loop.
@@ -26,4 +26,4 @@ work on it. This provides a direct feedback loop.
 
 ## Bibliography {#bibliography}
 
-<a id="org95e46a9"></a>MacIver, David R. n.d. “How to Do Hard Things.” <https://www.drmaciver.com/2019/05/how-to-do-hard-things/>.
+<a id="orga0fb7a2"></a>MacIver, David R. n.d. “How to Do Hard Things.” <https://www.drmaciver.com/2019/05/how-to-do-hard-things/>.

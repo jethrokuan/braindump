@@ -16,9 +16,9 @@ constraints are :
     hash code
 3.  The space has to be similarity-preserving
 
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org042e1a4)) has some good reference
+([Baltrušaitis, Ahuja, and Morency, n.d.](#org53458be)) has some good reference
 papers.
 
 ## Bibliography {#bibliography}
 
-<a id="org042e1a4"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="org53458be"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

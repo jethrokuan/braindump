@@ -70,9 +70,9 @@ e.g. Factorization machines
 
 #### <span class="org-todo todo TODO">TODO</span> xDeepFM {#xdeepfm}
 
-([Guo et al., n.d.](#org17626a4); [Lian et al., n.d.](#org09ba7cd))
+([Guo et al., n.d.](#org5ee2bda); [Lian et al., n.d.](#orgbd0f022))
 
-### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#orgf5e5744)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--orgf5e5744}
+### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#orgaa41e23)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--orgaa41e23}
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -236,8 +236,8 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 ## Bibliography {#bibliography}
 
-<a id="org17626a4"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
+<a id="org5ee2bda"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
 
-<a id="org09ba7cd"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
+<a id="orgbd0f022"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
 
-<a id="orgf5e5744"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.
+<a id="orgaa41e23"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.

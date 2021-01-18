@@ -45,7 +45,7 @@ Early on in the research career, there are many advantages to publishing a lot
 of papers. It gives the opportunity to learn to write and communicate well.
 However, the long-term costs are significant.
 
-## Staying Current ([Reading]({{<relref "reading.md" >}})) {#staying-current--reading-reading-dot-md}
+## Staying Current {#staying-current}
 
 1.  Quickly skim a great deal of work, to keep track of what is known, what sort
     of problems people are thinking about

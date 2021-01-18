@@ -319,7 +319,7 @@ is traded off against curiosity. The function should be increasing in
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#org2eacf70) remains unchanged. IT can be shown that the TD
+[update rule for TD](#orgf4e5573) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
 

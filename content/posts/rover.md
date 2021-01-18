@@ -9,9 +9,9 @@ draft = false
 Landing on Mars is challenging because there's is too much
 atmosphere to be ignored, but too little to cushion the landing.
 Hence, all Mars rovers will have a three phrases: Entry, Descent and
-Landing (abbrieviated EDL). ([Lakdawalla, n.d.](#org12aa97f))
+Landing (abbrieviated EDL). ([Lakdawalla, n.d.](#orgd33b1dc))
 
-## <span class="org-todo todo TODO">TODO</span> Read ([Welch, Limonadi, and Manning, n.d.](#orge31c57a)) {#read--welch-limonadi-and-manning-n-dot-d-dot--orge31c57a}
+## <span class="org-todo todo TODO">TODO</span> Read ([Welch, Limonadi, and Manning, n.d.](#org851afc0)) {#read--welch-limonadi-and-manning-n-dot-d-dot--org851afc0}
 
 ## How the Curiosity Rover worked {#how-the-curiosity-rover-worked}
 
@@ -29,6 +29,6 @@ Things to account for:
 
 ## Bibliography {#bibliography}
 
-<a id="org12aa97f"></a>Lakdawalla, Emily. n.d. _The Design and Engineering of Curiosity : How the Mars Rover Performs Its Job_. Springer.
+<a id="orgd33b1dc"></a>Lakdawalla, Emily. n.d. _The Design and Engineering of Curiosity : How the Mars Rover Performs Its Job_. Springer.
 
-<a id="orge31c57a"></a>Welch, R., D. Limonadi, and R. Manning. n.d. “Systems Engineering the Curiosity Rover: A Retrospective.” In _2013 8th International Conference on System of Systems Engineering_, 70–75.
+<a id="org851afc0"></a>Welch, R., D. Limonadi, and R. Manning. n.d. “Systems Engineering the Curiosity Rover: A Retrospective.” In _2013 8th International Conference on System of Systems Engineering_, 70–75.

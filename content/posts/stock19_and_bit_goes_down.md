@@ -8,7 +8,7 @@ tags
 : [Model Compression]({{<relref "model_compression.md" >}})
 
 paper
-: ([Stock et al., n.d.](#orga379d49))
+: ([Stock et al., n.d.](#org24f8374))
 
 This method minimizes the loss reconstruction error for in-domain
 inputs, and does not require any labelled data.
@@ -30,4 +30,4 @@ nearest neighbour search.
 
 ## Bibliography {#bibliography}
 
-<a id="orga379d49"></a>Stock, Pierre, Armand Joulin, Rémi Gribonval, Benjamin Graham, and Hervé Jégou. n.d. “And the Bit Goes down: Revisiting the Quantization of Neural Networks.” <http://arxiv.org/abs/1907.05686v2>.
+<a id="org24f8374"></a>Stock, Pierre, Armand Joulin, Rémi Gribonval, Benjamin Graham, and Hervé Jégou. n.d. “And the Bit Goes down: Revisiting the Quantization of Neural Networks.” <http://arxiv.org/abs/1907.05686v2>.

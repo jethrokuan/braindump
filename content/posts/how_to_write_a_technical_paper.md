@@ -8,7 +8,7 @@ tags
 : [Writing]({{<relref "writing.md" >}}), [Papers]({{<relref "papers.md" >}})
 
 paper
-: ([Whiteside, n.d.](#org5b4b6c9))
+: ([Whiteside, n.d.](#orgb68a3e2))
 
 ## Abstract {#abstract}
 
@@ -70,4 +70,4 @@ the field.
 
 ## Bibliography {#bibliography}
 
-<a id="org5b4b6c9"></a>Whiteside, James D. n.d. “How to Write a Technical Paper.”
+<a id="orgb68a3e2"></a>Whiteside, James D. n.d. “How to Write a Technical Paper.”

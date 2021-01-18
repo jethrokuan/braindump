@@ -972,10 +972,10 @@ residuals can help check the linearity and normality assumptions.
 
 ## References {#references}
 
-([Chatterjee and Hadi, n.d.](#orgf3cbd13); [James et al., n.d.](#orgcfc7f52))
+([Chatterjee and Hadi, n.d.](#org9262c5b); [James et al., n.d.](#orgf1e56a5))
 
 ## Bibliography {#bibliography}
 
-<a id="orgf3cbd13"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
+<a id="org9262c5b"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
 
-<a id="orgcfc7f52"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+<a id="orgf1e56a5"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.

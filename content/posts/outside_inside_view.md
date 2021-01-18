@@ -5,7 +5,7 @@ draft = false
 +++
 
 The terminology of outside/inside view was coined by [Daniel Kahneman]({{< relref "daniel_kahneman" >}}) and Dan
-Lovallo in 1993 ([Kahneman and Lovallo, n.d.](#orgee68c5f)), whose main claim is this:
+Lovallo in 1993 ([Kahneman and Lovallo, n.d.](#org778635a)), whose main claim is this:
 
 > Decision makers are excessively prone to treat problems as unique, neglecting
 > both the statistics of the past and the multiple opportunities in the future.
@@ -31,4 +31,4 @@ estimation up and down.
 
 ## Bibliography {#bibliography}
 
-<a id="orgee68c5f"></a>Kahneman, Daniel, and Dan Lovallo. n.d. “Timid Choices and Bold Forecasts: A Cognitive Perspective on Risk Taking.” INFORMS. <https://pubsonline.informs.org/doi/abs/10.1287/mnsc.39.1.17>.
+<a id="org778635a"></a>Kahneman, Daniel, and Dan Lovallo. n.d. “Timid Choices and Bold Forecasts: A Cognitive Perspective on Risk Taking.” INFORMS. <https://pubsonline.informs.org/doi/abs/10.1287/mnsc.39.1.17>.

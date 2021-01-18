@@ -56,8 +56,8 @@ and the membrane voltage \\(U_i\\).
 
 ## References {#references}
 
-- ([Neftci, Mostafa, and Zenke, n.d.](#org2248ea8))
+- ([Neftci, Mostafa, and Zenke, n.d.](#orgdb54489))
 
 ## Bibliography {#bibliography}
 
-<a id="org2248ea8"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. n.d. “Surrogate Gradient Learning in Spiking Neural Networks.” <http://arxiv.org/abs/1901.09948v2>.
+<a id="orgdb54489"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. n.d. “Surrogate Gradient Learning in Spiking Neural Networks.” <http://arxiv.org/abs/1901.09948v2>.

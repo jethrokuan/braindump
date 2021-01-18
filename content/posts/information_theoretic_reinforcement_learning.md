@@ -27,11 +27,11 @@ empowerment
 
 ## Papers {#papers}
 
-- Skew-Fit ([Pong et al., n.d.](#orgf6d21f3))
-- Diversity is All your Need ([Eysenbach et al., n.d.](#orgb75109f))
+- Skew-Fit ([Pong et al., n.d.](#orgd6efb07))
+- Diversity is All your Need ([Eysenbach et al., n.d.](#org43522e3))
 
 ## Bibliography {#bibliography}
 
-<a id="orgb75109f"></a>Eysenbach, Benjamin, Abhishek Gupta, Julian Ibarz, and Sergey Levine. n.d. “Diversity Is All You Need: Learning Skills Without a Reward Function.” <http://arxiv.org/abs/1802.06070v6>.
+<a id="org43522e3"></a>Eysenbach, Benjamin, Abhishek Gupta, Julian Ibarz, and Sergey Levine. n.d. “Diversity Is All You Need: Learning Skills Without a Reward Function.” <http://arxiv.org/abs/1802.06070v6>.
 
-<a id="orgf6d21f3"></a>Pong, Vitchyr H., Murtaza Dalal, Steven Lin, Ashvin Nair, Shikhar Bahl, and Sergey Levine. n.d. “Skew-Fit: State-Covering Self-Supervised Reinforcement Learning.” <http://arxiv.org/abs/1903.03698v2>.
+<a id="orgd6efb07"></a>Pong, Vitchyr H., Murtaza Dalal, Steven Lin, Ashvin Nair, Shikhar Bahl, and Sergey Levine. n.d. “Skew-Fit: State-Covering Self-Supervised Reinforcement Learning.” <http://arxiv.org/abs/1903.03698v2>.

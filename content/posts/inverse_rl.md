@@ -83,7 +83,7 @@ r\_\psi(\tau\_i)] - E\_{\tau \sim p(\tau | \mathcal{O}\_{1:T},
 first term is estimated with expert samples, and the second with the
 soft optimal policy under current reward.
 
-## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org0601695)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org0601695}
+## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org345b04e)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org345b04e}
 
 1.  Given \\(\psi\\), compute [backward message]({{<relref "control_as_inference.md" >}}) \\(\beta(s_t, a_t)\\)
 2.  Given \\(\psi\\), compute [forward message]({{<relref "control_as_inference.md" >}}) \\(\alpha(s_t)\\)
@@ -132,13 +132,13 @@ w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 
 ## Papers {#papers}
 
-- ([Abbeel and Ng, n.d.](#org62a28ce))
-- ([Ratliff, Bagnell, and Zinkevich, n.d.](#org65a9a00))
+- ([Abbeel and Ng, n.d.](#org9dce430))
+- ([Ratliff, Bagnell, and Zinkevich, n.d.](#org088a2d7))
 
 ## Bibliography {#bibliography}
 
-<a id="org62a28ce"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
+<a id="org9dce430"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
 
-<a id="org65a9a00"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
+<a id="org088a2d7"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
 
-<a id="org0601695"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.
+<a id="org345b04e"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.

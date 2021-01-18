@@ -30,10 +30,10 @@ The event stream is represented as a 4 channel image:
 3.  Timestamp of most recent positive event
 4.  Timestamp of most negative event
 
-This is similar to "Event-based Time Surfaces" (NO_ITEM_DATA:lagorce_hots_2017) and "Timestamp Images" (NO_ITEM_DATA:park_performance_2016)
+This is similar to "Event-based Time Surfaces" ([Lagorce et al., n.d.](#org6673966)) and "Timestamp Images" ([Park et al., n.d.](#org499677b))
 
 ## Bibliography {#bibliography}
 
-NO_ITEM_DATA:lagorce_hots_2017
+<a id="org6673966"></a>Lagorce, Xavier, Garrick Orchard, Francesco Galluppi, Bertram E. Shi, and Ryad B. Benosman. n.d. “HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition” 39 (7):1346–59.
 
-NO_ITEM_DATA:park_performance_2016
+<a id="org499677b"></a>Park, Paul K. J., Baek Hwan Cho, Jin Man Park, Kyoobin Lee, Ha Young Kim, Hyo Ah Kang, Hyun Goo Lee, et al. n.d. “Performance Improvement of Deep Learning Based Gesture Recognition Using Spatiotemporal Demosaicing Technique.” In _2016 IEEE International Conference on Image Processing (ICIP)_, 1624–28.

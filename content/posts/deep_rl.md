@@ -76,11 +76,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 - Trust region policy optimization
-  ([Schulman et al., n.d.](#orgb4f539b))
+  ([Schulman et al., n.d.](#org28758be))
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop ([Gu et al., n.d.](#org4bd0b19))
+- Q-Prop ([Gu et al., n.d.](#orgb8ad47f))
 
 ### Problem Formulation {#problem-formulation}
 
@@ -96,6 +96,6 @@ or algorithms that adaptively adjust parameters:
 
 ## Bibliography {#bibliography}
 
-<a id="org4bd0b19"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
+<a id="orgb8ad47f"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
 
-<a id="orgb4f539b"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.
+<a id="org28758be"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.

@@ -44,6 +44,6 @@ The event stream is represented as a 4 channel image:
 3. Timestamp of most recent positive event
 4. Timestamp of most negative event
 
-This is similar to "Event-based Time Surfaces" cite:lagorce_hots_2017 and "Timestamp Images" cite:park_performance_2016
+This is similar to "Event-based Time Surfaces" cite:lagorceHOTSHierarchyEventBased2017 and "Timestamp Images" cite:parkPerformanceImprovementDeep2016
 
 bibliography:biblio.bib
