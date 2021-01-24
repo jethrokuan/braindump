@@ -21,5 +21,14 @@ workflow is something like this.
 3. Mark the piece of content as done.
 
 * The List
-** TO-READ [[https://thinkingthrough.substack.com/p/context-switching-cost-more-than][Context switching costs more than we give it credit for. - Thinking Through]] :productivity:
+** DONE [[https://thinkingthrough.substack.com/p/context-switching-cost-more-than][Context switching costs more than we give it credit for. - Thinking Through]] :productivity:
+CLOSED: [2021-01-20 Wed 00:09]
+:LOGBOOK:
+CLOCK: [2021-01-20 Wed 00:09]--[2021-01-20 Wed 00:09] =>  0:00
+CLOCK: [2021-01-20 Wed 00:09]--[2021-01-20 Wed 00:09] =>  0:00
+CLOCK: [2021-01-19 Tue 22:23]--[2021-01-20 Wed 00:09] =>  1:46
+:END:
 ** TO-READ [[https://notes.andymatuschak.org/Evergreen_notes?stackedNotes=z3PBVkZ2SvsAgFXkjHsycBeyS6Cw1QXf7kcD8][Evergreen notes | Executable strategy for writing]] :productivity:
+** TO-READ [[http://www.expectationsinvesting.com/default.shtml][Expectations Investing]] :finance:
+** TO-READ [[https://libertyrpf.substack.com/p/interview-with-david-kim-aka-scuttleblurb][Interview with David Kim a.k.a. Scuttleblurb - Liberty’s Highlights]]
+** TO-READ [[https://arxiv.org/abs/1711.02281][[1711.02281] Non-Autoregressive Neural Machine Translation]] :ml:

@@ -19,5 +19,3 @@
 
 * Advanced
  - [[https://blogs.igalia.com/mrego/2019/01/11/an-introduction-to-css-containment/][An introduction to CSS Containment - Rego's Everyday Life]]
-
- 
