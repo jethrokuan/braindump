@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       5ea97273-c7e9-40d2-86a6-b8dc489d55f2
+:END:
 #+title: Statistical Mechanics in Financial Markets
 
 Statistical physics describes the complex behaviour of physical systems that

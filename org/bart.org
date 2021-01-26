@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       2d46e0b0-6cb0-44f7-9471-4385683a89bf
+:END:
 #+title: BART
 
 BART is a denoising auto-encoder for pretraining sequence-to-sequence models. BART is trained by:

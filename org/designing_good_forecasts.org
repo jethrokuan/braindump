@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       72e01320-f3f5-4687-b1d6-87e1651252be
+:END:
 #+title: Designing Good Forecasts
 
 Good forecasts must satisfy the following conditions:

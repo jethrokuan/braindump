@@ -108,13 +108,13 @@ states according to exactly how good it is to the agent. An agent's
 An agent chooses actions to maximise its expected utility. A
 utility-based agents has to model and keep track of its environment.
 
-** Learning agents
+** Learning Agents
 :PROPERTIES:
 :ID:       13ee9429-7d8b-40c1-a3bc-e9db7326f580
 :END:
 A learning agent can be divided into four conceptual components.
 - learning element :: responsible for making improvements
-- performance element :: responsible for selecting extrenal actions
+- performance element :: responsible for selecting external actions
 - problem generator :: suggests actions that will lead to new and
      informative experiences
 
@@ -149,6 +149,9 @@ hand, reasoning and learning become more complex as the expressive
 power of the representation increases.
 
 * Problem-Solving
+:PROPERTIES:
+:ID:       bb98e72e-045d-4406-8c3c-8ccbccb1366d
+:END:
 
 Problem-solving agents use /atomic/ representations, as compared to
 goal-based agents, which use more advanced factored or structured
@@ -164,6 +167,9 @@ This addresses observable, deterministic, and known environments where
 the solution is a sequence of actions.
 
 ** How Search Algorithms Work
+:PROPERTIES:
+:ID:       1faf332f-e7e5-4e73-bcee-e0c841902a64
+:END:
 Search algorithms consider various possible action sequences. The
 possible action sequences start at the initial state form a /search
 tree/.

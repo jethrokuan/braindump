@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       75c4c211-544e-43fd-a2e8-efcc368ef044
+:END:
 #+title: How To Be a Good Forecaster
 
 The following ten commandments are lifted from /Superforecasting/ by Tetlock.

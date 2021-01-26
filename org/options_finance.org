@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7f1ffaf3-23c6-4f2d-ab80-2f03101f2bce
+:END:
 #+title: Options (Finance)
 
 Options may be written on any kind of underlying assets, such as stocks, bonds,

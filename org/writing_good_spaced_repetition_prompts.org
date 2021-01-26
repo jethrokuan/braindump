@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       5e5266ce-c878-43b1-95ef-c9b009b8ee6b
+:END:
 #+title: Writing Good Spaced Repetition Prompts
 
 A spaced repetition repetition system is only as good as its prompts. To

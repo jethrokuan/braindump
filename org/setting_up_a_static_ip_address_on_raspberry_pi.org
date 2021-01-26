@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d251ebc0-b460-4ed2-90ec-c5d06eebffa6
+:END:
 #+title: Setting up a Static IP Address on Raspberry Pi
 
 This really just involves editing ~/etc/dhcpcd.conf~. The configuration here looks like:

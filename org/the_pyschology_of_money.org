@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       98a4affb-34a7-46fe-923d-b19c88c85309
+:END:
 #+title: The Pyschology of Money
 
 * Meta

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c106ce3e-d228-49be-a07d-44437e0562a5
+:END:
 #+title: Attention Allocation in Open Source
 
 How does one appropriately allocate attention to open source projects?

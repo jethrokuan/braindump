@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       997c1c58-2888-47ba-ad57-c33d5800a4f4
+:END:
 #+title: Setting Up a Raspberry Pi
 
 * Guides

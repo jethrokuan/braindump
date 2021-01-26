@@ -23,12 +23,16 @@ learn and improve on the basis of their "experience":
  must be measurable, E must exist. See [[id:13ee9429-7d8b-40c1-a3bc-e9db7326f580][Learning agents]].
 
 *** Inductive Bias
+:PROPERTIES:
+:ID:       103b141a-045b-43f1-bb78-09811bdccaf9
+:END:
  The incorporation of prior knowledge biases the learning mechanism.
  This is also called /inductive bias/. The incorporation of prior
  knowledge is inevitable for the success of learning algorithms (the
  no-free-lunch theorem). The stronger the prior knowledge that one
  starts the learning process with, the easier it is to learn from
  further examples.
+
 ** Types of Learning
 *** Active vs Passive Learning
 

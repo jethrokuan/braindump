@@ -6,4 +6,7 @@
 - tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]]
 
 * Links
+:PROPERTIES:
+:ID:       af4bd34e-1964-4879-aff1-8f8fa577c984
+:END:
 [[http://sparky.rice.edu/~hartigan/awk.html]]

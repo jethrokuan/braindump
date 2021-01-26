@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a5d51b2d-9a6e-471c-ae80-a3c4fe3de7cf
+:END:
 #+title: Setting up Emacs on Mac
 
 * Dired

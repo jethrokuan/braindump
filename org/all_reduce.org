@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       9ecea56e-328e-4676-9235-c768c4256757
+:END:
 #+title: All-reduce
 
 All-reduce is a architecture for the distributed machine learning training.

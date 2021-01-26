@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f3a5b29f-6d27-48a5-bfca-ac7dd62a025d
+:END:
 #+title: Lottery Ticket Hypothesis
 
 The Lottery Ticket hypothesis states that:

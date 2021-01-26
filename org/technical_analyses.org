@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e292a334-54e7-4634-aae0-9f5b81bb3fc4
+:END:
 #+title: Technical Analyses
 
 The three tenets of technical analyses are:

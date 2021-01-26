@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       934898c7-9e49-4f62-8acf-ba1bc39dfad6
+:END:
 #+title: Applying Forecasting in Finance
 
 The success of an investment is dependent on four tasks:

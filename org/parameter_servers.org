@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c5cb05b8-35da-4bad-8fa4-6993f34272a1
+:END:
 #+title: Parameter Servers
 
 Parameter servers are used in the distributed training of neural networks. Both

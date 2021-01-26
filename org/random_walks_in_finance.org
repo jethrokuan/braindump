@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       5aeb3797-355a-41e2-8f72-674cb7c55a11
+:END:
 #+title: Random Walks in Finance
 
 Bachelier's 1900 thesis entitled "Théorie de la Spéculation" contained both the

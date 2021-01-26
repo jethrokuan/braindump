@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       7978d65b-5bd7-42f8-9715-3d9a30fe6894
+:END:
 #+title: Optionality
 
 - Author :: Richard Meadows

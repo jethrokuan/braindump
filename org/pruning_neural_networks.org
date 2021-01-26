@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       c64afaa7-3cc8-4958-8f3d-8b7948e951f3
+:END:
 #+title: Pruning Neural Networks
 
 Pruning is the process of compressing neural networks. This typically involves

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       1e625d8a-e44e-421f-8a98-0aa62f1dad8a
+:END:
 #+title: Setting up Dynamic DNS on Raspberry Pi
 
 We want to expose the device to the external web, but our external IP address is

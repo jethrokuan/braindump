@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       9cbc8889-003e-4f27-98ea-10339215a896
+:END:
 #+title: High Performance Natural Language Processing
 #+roam_key: https://slideslive.com/38940826
 

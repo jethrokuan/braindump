@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       46aac18b-5f53-43fb-a7eb-30b7a642bfe5
+:END:
 #+title: Futures Contract
 
 A futures contract involves the delivery of an asset at a fixed time in the

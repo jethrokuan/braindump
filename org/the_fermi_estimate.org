@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       3e6df0fa-ce24-4ab0-b063-a0627f364796
+:END:
 #+title: The Fermi Estimate
 
 Physicist Enrico Fermi was a master at guesstimation. Consider questions like

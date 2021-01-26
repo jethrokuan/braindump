@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       cdda9422-0b5d-4124-a3f8-02c43b76106e
+:END:
 #+title: Financial Derivative
 
 Financial derivatives are based on other underlying financial instruments.

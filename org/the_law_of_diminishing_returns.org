@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       e8526a72-5da5-4226-9cb9-14432b7766b4
+:END:
 #+title: The Law of Diminishing Returns
 
 All components of [[file:optionality.org][optionality]] face diminishing returns: after some point, the

@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       9dec5ad8-e3f8-4c9a-a28d-efcae562afcb
+:END:
 #+roam_key: https://zettelkasten.de/posts/collectors-fallacy/
 #+roam_tags: website
 #+title: The Collector’s Fallacy • Zettelkasten Method

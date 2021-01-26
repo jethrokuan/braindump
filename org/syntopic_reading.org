@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       d812a3fe-a1a1-47a7-ae73-b3d5852e69ab
+:END:
 #+title: Syntopic Reading
 
 Syntopic reading is reading to build up an understanding on an entire

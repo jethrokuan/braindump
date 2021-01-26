@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       43d5b868-8202-462c-bca0-ec67e0fc43a6
+:END:
 #+title: Wood Wide Web
 
 Trees are able to establish working relationships with fungi. In return for a

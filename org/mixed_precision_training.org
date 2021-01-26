@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       a7545225-6e24-4895-8c43-0dd828b6adcd
+:END:
 #+title: Mixed Precision Training
 
 Using numerical formats that have lower precision than the common 32-bit

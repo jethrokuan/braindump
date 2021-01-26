@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       f032febc-7ce2-46b2-b9e7-a8398f7db689
+:END:
 #+title: Forward Contracts
 #+roam_tags: finance
 

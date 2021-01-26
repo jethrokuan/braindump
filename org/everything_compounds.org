@@ -1,3 +1,6 @@
+:PROPERTIES:
+:ID:       955a4e56-fa01-45eb-b656-b1ec74749bdd
+:END:
 #+title: Everything Compounds
 
 Most things in life have compounding interest: money, health, knowledge capital.

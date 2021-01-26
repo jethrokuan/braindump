@@ -1,2 +1,5 @@
+:PROPERTIES:
+:ID:       c84ecd83-ef66-42e9-904a-adb17526e88a
+:END:
 #+title: Knowledge Distillation
 
