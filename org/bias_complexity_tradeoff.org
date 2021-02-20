@@ -41,7 +41,7 @@ $\epsilon_{\textrm{est}} = L_D(h_S) - \epsilon_{\textrm{app}}$.
 *The approximation error* is the minimum risk achievable by a predictor
 in the hypothesis class. This term measures how much risk we have
 because we restrict ourselves to a specific class (how much
-inductive bias we have). This approximation error does not depend on
+[[id:103b141a-045b-43f1-bb78-09811bdccaf9][inductive bias]] we have). This approximation error does not depend on
 the sample size, and is solely determined by the hypothesis class
 chosen.
 
