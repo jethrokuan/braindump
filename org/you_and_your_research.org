@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       a4388398-3a2a-4686-ae7a-b1ae5030ba94
+:ROAM_REFS: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
 :END:
-#+roam_key: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
+
 #+hugo_slug: you_and_your_research
 #+title: You and Your Research - Richard Hamming
 

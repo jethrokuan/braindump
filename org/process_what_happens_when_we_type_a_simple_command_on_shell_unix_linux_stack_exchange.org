@@ -1,9 +1,10 @@
 :PROPERTIES:
 :ID:       4b81ab84-751d-4b74-9527-f51f8345bb32
+:ROAM_REFS: https://unix.stackexchange.com/questions/123457/what-happens-when-we-type-a-simple-command-on-shell
 :END:
 #+title: What happens when we type a simple command on shell?
 #+hugo_slug: what_happens_when_we_type_a_simple_command_on_shell
-#+roam_key: https://unix.stackexchange.com/questions/123457/what-happens-when-we-type-a-simple-command-on-shell
+
 
 - tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]]
 -source ::

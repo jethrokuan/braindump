@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       4c6d0aab-d1b5-4f88-99ca-ca0404e9dce1
+:ROAM_REFS: http://visgel.csail.mit.edu/
 :END:
 #+title: VisGel
-#+roam_key: http://visgel.csail.mit.edu/
+
 
 - tags :: [[id:c436cacf-5630-4dc6-99ff-e99d9484f85a][Multi-modal Machine Learning]]
 

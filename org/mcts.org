@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       4475a690-12be-4957-b98b-5b5d2ca3529e
+:ROAM_ALIASES: mcts
 :END:
 #+title: Monte Carlo Tree Search
-#+roam_alias: mcts
 
 * Monte Carlo Tree Search
 

@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       1c5fc68f-d928-4518-87ae-4fdd52ff5f8d
+:ROAM_REFS: https://distill.pub/2019/paths-perspective-on-value-learning/
 :END:
-#+roam_key: https://distill.pub/2019/paths-perspective-on-value-learning/
+
 #+hugo_slug: the_paths_perspective_on_value_learning
 #+title: The Paths Perspective on Value Learning
 

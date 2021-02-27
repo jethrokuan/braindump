@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       6bcdf2f0-6f2b-47bf-95c1-180a1d81f497
+:ROAM_ALIASES: "\"TD Learning\""
 :END:
 #+title: Temporal Difference Learning
-#+roam_alias: "TD Learning"
+
 
 Observe samples $\left(s_t, a_t, r_t, s_{t+1} \right)$. If value
 estimates are accurate, the following must hold:

@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       1ddc044e-0888-4280-9c54-1bfaf35750af
+:ROAM_REFS: cite:meisterIfBeamSearch2020
 :END:
 #+title: Beam Search Promotes Uniform Information Density
-#+roam_key: cite:meisterIfBeamSearch2020
+
 
 Using beam search for text generation shockingly produces text better than using
 exact search, despite the high search error rate. Why is this so?

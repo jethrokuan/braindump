@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       808e3558-3b0d-425a-826a-d56f1c182c5a
+:ROAM_REFS: https://news.ycombinator.com/item?id=22519876
 :END:
-#+roam_key: https://news.ycombinator.com/item?id=22519876
+
 #+hugo_slug: ask_hn_how_do_i_learn_c_properly_hacker_news
 #+title: Ask HN: How do I learn C properly? | Hacker News
 

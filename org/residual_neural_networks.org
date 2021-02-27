@@ -2,5 +2,3 @@
 :ID:       d5cf4d0f-9087-4e7c-99bc-3a53d33234c6
 :END:
 #+title: Residual Neural Networks
-
-[[id:ef265ad6-7624-43e9-b2b0-e061c441a361][Neural Ordinary Differential Equations]]

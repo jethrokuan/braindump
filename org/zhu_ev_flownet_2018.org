@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       c03178ca-c893-4c48-9bd7-3b4f928ca45c
+:ROAM_REFS: cite:zhu_ev-flownet_2018
 :END:
 #+title: zhu_ev-flownet_2018: EV-FlowNet: self-supervised optical flow estimation for event-based cameras
-#+roam_key: cite:zhu_ev-flownet_2018
+
 
 * EV-FlowNet: self-supervised optical flow estimation for event-based cameras
   :PROPERTIES:

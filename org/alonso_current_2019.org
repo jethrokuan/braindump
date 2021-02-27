@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       f4c5935b-5abb-4f9c-a17d-6d737dbbc3ba
+:ROAM_REFS: cite:alonso_current_2019
 :END:
 #+title: alonso_current_2019: Current Research Trends in Robot Grasping and Bin Picking
-#+roam_key: cite:alonso_current_2019
+
 
 * Current Research Trends in Robot Grasping and Bin Picking
   :PROPERTIES:

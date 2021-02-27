@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       60ed8384-5ce5-4205-8614-9cd6115b3008
+:ROAM_REFS: https://arxiv.org/abs/1804.02464
 :END:
 #+title: Differentiable plasticity: training plastic neural networks with backpropagation
-#+roam_key: https://arxiv.org/abs/1804.02464
+
 
 * Goal
 

@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       8bc3bc49-5567-4694-8508-ff35d70db72a
+:ROAM_ALIASES: S$NEER
 :END:
 #+title: Singapore Dollar Nominal Effective Exchange Rate
-#+roam_alias: S$NEER
+
 
 * Definition
 S$NEER is the exchange rate between the Singdollar and a basket of currencies of

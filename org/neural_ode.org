@@ -1,10 +1,10 @@
 :PROPERTIES:
 :ID:       ef265ad6-7624-43e9-b2b0-e061c441a361
+:ROAM_ALIASES: "Neural ODE"
+:ROAM_REFS: cite:chen18_neural_ordin_differ_equat
+:ROAM_REFS: https://arxiv.org/abs/1806.07366
 :END:
 #+title: Neural Ordinary Differential Equations
-#+roam_alias: "Neural ODE"
-#+roam_key: cite:chen18_neural_ordin_differ_equat
-#+options: toc:nil
 
 bibliographystyle:unsrt
 

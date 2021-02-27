@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       ea338d3f-f51e-49f4-b962-203996d96a25
+:ROAM_ALIASES: REITs
 :END:
 #+hugo_slug: reits
-#+roam_alias: REITs
+
 #+title: Real Estate Investment Trusts
 
 REITs are companies that own and collect rent from commercial and residential properties.

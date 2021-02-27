@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       6ca1facb-6c47-4e2a-b115-a9898d3c1ed9
+:ROAM_REFS: https://www.indiehackers.com/post/how-to-brainstorm-great-business-ideas-ab51c3d51c
 :END:
 #+hugo_slug: how_to_brainstorm_great_business_ideas
-#+roam_key: https://www.indiehackers.com/post/how-to-brainstorm-great-business-ideas-ab51c3d51c
+
 #+title: How to brainstorm great business ideas
 
 - tags :: [[id:242b8d43-d61d-4d41-b193-db903e181291][Business]]

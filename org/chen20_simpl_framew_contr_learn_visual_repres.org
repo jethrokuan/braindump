@@ -1,9 +1,11 @@
 :PROPERTIES:
 :ID:       ecdb183b-2a18-48ea-9145-7428449a292b
+:ROAM_REFS: cite:chen20_simpl_framew_contr_learn_visual_repres
+:ROAM_ALIASES: SimCLR
 :END:
 #+title: chen20_simpl_framew_contr_learn_visual_repres: A simple framework for contrastive learning of visual representations
-#+roam_key: cite:chen20_simpl_framew_contr_learn_visual_repres
-#+roam_alias: SimCLR
+
+
 
 SimCLR is a simple framework for [[id:fae03f32-919e-4d7b-a895-056f496abdd7][Contrastive Methods]] of visual representations.
 

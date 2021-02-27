@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       39f98604-fb7a-4d5d-a77c-23a268d13604
+:ROAM_REFS: cite:gallego_event-based_2020
 :END:
-#+roam_key: cite:gallego_event-based_2020
 #+title: Event-based Vision
 
 Event-based cameras are bio-inspired sensors. They asynchronously measure per-pixel brightness changes, and output a stream of digital events (or spikes) that encode the time, location and sign of the brightness changes.

@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       c073c401-9a55-44b6-8bd5-f3a44a78c1f4
+:ROAM_REFS: https://acesounderglass.com/2020/06/10/what-to-write-down-when-youre-reading-to-learn/
 :END:
-#+roam_key: https://acesounderglass.com/2020/06/10/what-to-write-down-when-youre-reading-to-learn/
+
 #+hugo_slug: what_to_write_down_when_you_re_reading_to_learn_aceso_under_glass
 #+roam_tags: website
 #+title: What to write down when you’re reading to learn – Aceso Under Glass

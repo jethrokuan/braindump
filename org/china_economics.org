@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       186ecc17-3871-49f6-8d24-00232fe76077
+:ROAM_REFS: https://www.investopedia.com/articles/investing/040115/reasons-why-china-buys-us-treasury-bonds.asp
 :END:
 #+hugo_slug: china_economics
-#+roam_key: https://www.investopedia.com/articles/investing/040115/reasons-why-china-buys-us-treasury-bonds.asp
+
 #+title: China Economics
 
 China has steadily accumulated U.S. Treasury securities over the decades. In December 2019, China owns about 5% ($1.07 trillion) of the U.S. national debt.

@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       6066ff84-a152-4beb-bef0-dccd050fa232
+:ROAM_REFS: cite:chen_big_2020
 :END:
 #+title: chen_big_2020: Big Self-Supervised Models are Strong Semi-Supervised Learners
-#+roam_key: cite:chen_big_2020
+
 
 * Big Self-Supervised Models are Strong Semi-Supervised Learners
   :PROPERTIES:

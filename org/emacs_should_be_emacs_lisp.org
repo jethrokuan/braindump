@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       db0b2f61-75fc-40a4-98ee-a18b13ca4b72
+:ROAM_REFS: https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm
 :END:
 #+hugo_slug: emacs_should_be_emacs_lisp
-#+roam_key: https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm
+
 #+title: Emacs Should Be Emacs Lisp - Tom Tromey
 
 - talk :: https://ftp.fau.de/fosdem/2020/UD2.119/emacsthoughts.webm

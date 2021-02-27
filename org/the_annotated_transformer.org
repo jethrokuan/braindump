@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       69bc8be7-f2f7-4ae0-8bcd-47b7e84e5b5a
+:ROAM_REFS: http://nlp.seas.harvard.edu/2018/04/03/attention.html
 :END:
-#+roam_key: http://nlp.seas.harvard.edu/2018/04/03/attention.html
+
 #+title: The Annotated Transformer
 
 - source :: http://nlp.seas.harvard.edu/2018/04/03/attention.html

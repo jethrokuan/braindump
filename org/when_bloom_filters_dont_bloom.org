@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       479b713b-8c35-471c-a989-aeb5e804555b
+:ROAM_REFS: https://blog.cloudflare.com/when-bloom-filters-dont-bloom/
 :END:
-#+roam_key: https://blog.cloudflare.com/when-bloom-filters-dont-bloom/
+
 #+title: When Bloom filters don't bloom
 
 Modern CPUs are really good at sequential memory access, whet it's

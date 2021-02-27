@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       5643d617-aa4e-4d67-86b0-bfe25d6c2929
+:ROAM_REFS: cite:nasarGrandPursuitStory2011
 :END:
 #+title: nasarGrandPursuitStory2011: Grand pursuit: The story of economic genius
-#+roam_key: cite:nasarGrandPursuitStory2011
+
 
 * Grand pursuit: The story of economic genius
   :PROPERTIES:

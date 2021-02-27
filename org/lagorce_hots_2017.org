@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       b9965ad8-c85a-44aa-9227-ee0be99b5141
+:ROAM_REFS: cite:lagorce_hots_2017
 :END:
 #+title: lagorce_hots_2017: HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition
-#+roam_key: cite:lagorce_hots_2017
+
 
 * HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition
   :PROPERTIES:

@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       3052fa60-59b8-4d4c-88e1-988431ba1fb1
-:ROAM_REF: https://sqlite.org/np1queryprob.html
+:ROAM_REFS: https://sqlite.org/np1queryprob.html
 :END:
 #+title: Small Queries Are Efficient in SQLite
 

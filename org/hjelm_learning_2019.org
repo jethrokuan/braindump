@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       7215ad6b-748f-46f1-8eee-7d07fc25a0a7
+:ROAM_REFS: cite:hjelm_learning_2019
 :END:
 #+title: hjelm_learning_2019: Learning deep representations by mutual information estimation and maximization
-#+roam_key: cite:hjelm_learning_2019
+
 
 * Learning deep representations by mutual information estimation and maximization
   :PROPERTIES:

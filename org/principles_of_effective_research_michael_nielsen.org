@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       6ec6e356-ac36-42ba-bc81-60a918e3f355
+:ROAM_REFS: http://michaelnielsen.org/blog/principles-of-effective-research/
 :END:
-#+roam_key: http://michaelnielsen.org/blog/principles-of-effective-research/
+
 #+title: Principles of Effective Research | Michael Nielsen
 
 - source :: http://michaelnielsen.org/blog/principles-of-effective-research/

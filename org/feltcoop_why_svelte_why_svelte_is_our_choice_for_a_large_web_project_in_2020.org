@@ -1,8 +1,7 @@
 :PROPERTIES:
 :ID:       a6ee34db-92dc-4a0b-b222-bcf9796dcb6e
+:ROAM_REFS: https://github.com/feltcoop/why-svelte
 :END:
-#+roam_key: https://github.com/feltcoop/why-svelte
-#+hugo_slug: why_svelte_why_svelte_is_our_choice_for_a_large_web_project_in_2020
 #+title: Why Svelte is our choice for a large web project in 2020
 
 - source :: https://github.com/feltcoop/why-svelte

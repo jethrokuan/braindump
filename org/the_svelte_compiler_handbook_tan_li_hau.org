@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       cf22f2e7-554b-42b5-9a38-4f0eadb2fc4d
+:ROAM_REFS: https://lihautan.com/the-svelte-compiler-handbook/
 :END:
 #+title: The Svelte Compiler Handbook | Tan Li Hau
-#+roam_key: https://lihautan.com/the-svelte-compiler-handbook/
+
 
 - tags :: [[id:9bb4f873-24b3-42bb-9447-42772bc1c526][Svelte]], [[id:d5337a2c-871b-4761-b625-0f304fb46def][Web Development]]
 

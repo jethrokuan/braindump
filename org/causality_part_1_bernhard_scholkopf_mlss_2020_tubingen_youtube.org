@@ -1,7 +1,8 @@
 :PROPERTIES:
 :ID:       ffb3e855-5d31-47c1-833e-ca99121f5e85
+:ROAM_REFS: https://www.youtube.com/watch?v=btmJtThWmhA
 :END:
-#+roam_key: https://www.youtube.com/watch?v=btmJtThWmhA
+
 #+roam_tags: website
 #+title: Causality, part 1 - Bernhard Schölkopf - MLSS 2020, Tübingen - YouTube
 

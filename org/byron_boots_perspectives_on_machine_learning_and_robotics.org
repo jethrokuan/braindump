@@ -1,9 +1,10 @@
 :PROPERTIES:
 :ID:       5f98a234-3fce-41bd-a912-35f7ae7158eb
+:ROAM_REFS: https://www.youtube.com/watch?v=lBcFMa83yC8
 :END:
 #+hugo_slug: byron_boots_perspectives_on_machine_learning_and_robotics
 #+title: Byron Boots - Perspectives on Machine Learning and Robotics
-#+roam_key: https://www.youtube.com/watch?v=lBcFMa83yC8
+
 
 Robotics can be approached from 3 different perspectives.
 
