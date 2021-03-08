@@ -3,6 +3,29 @@
 :END:
 #+title: Transformer Models
 
+Transformer are model architectures that have proven effective across range of
+domains such as [[id:4a817202-7d27-43c8-90a7-8417d38c731b][Natural Language Processing]] and [[id:2778763e-640a-4353-94de-ad3919f00c2b][Computer Vision]].
+
+* How Transformers work
+:PROPERTIES:
+:ID:       69bc8be7-f2f7-4ae0-8bcd-47b7e84e5b5a
+:ROAM_REFS: http://nlp.seas.harvard.edu/2018/04/03/attention.html
+:END:
+
+To reduce sequential computation, many models use [[id:67889359-5627-4321-8386-9af05aa00255][CNNs]] as building blocks.,
+computing hidden representations in parallel for all input and output positions.
+However, the number of operations required to relate signals from two arbitrary
+input or output positions grows in the distance between the positions, making it
+/difficult to learn dependencies between distant positions/.
+
+*The transformer reduces this to a constant number of operations, at the cost of
+reduced effective resolution due to averaging attention-weighted positions. This
+effect is counteracted with multi-head attention.*
+
+The Transformer model relies entirely on [[file:self_attention.org][self-attention]] (or intra-attention) to
+compute representations of its input and output without using sequence-aligned
+RNNs or convolution.
+
 * Making Transformer Models Efficient
 :PROPERTIES:
 :ID:       cb299df5-e052-4a8a-b885-9f749c7d6222
@@ -49,3 +72,4 @@ BART can then be fine-tuned for downstream applications:
   generates auto-regressively.
   
 bibliography:biblio.bib
+** TODO T5

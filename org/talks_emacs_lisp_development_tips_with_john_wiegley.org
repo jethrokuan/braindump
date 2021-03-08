@@ -1,11 +1,8 @@
 :PROPERTIES:
 :ID:       508cc7a7-915b-458d-be00-580b4b6440e4
+:ROAM_REFS: https://www.youtube.com/watch?v=QRBcm6jFJ3Q
 :END:
-#+hugo_slug: emacs_lisp_development_tips_with_john_wiegley
 #+title: Talks: Emacs Lisp Development Tips with John Wiegley
-
-- source :: [[https://www.youtube.com/watch?v=QRBcm6jFJ3Q][2015-04-08 Emacs Lisp Development Tips with John Wiegley - YouTube]]
-- author :: [[id:69151471-0247-4cc7-b49e-ff633833da43][John Wiegley]]
 
 * Interactive debugging
 

@@ -152,8 +152,3 @@ We can construct flows in continuous time by parameterizing the flow's
 infinitesimal dynamics, and then integrating to find the corresponding
 transformation. The flow is defined by an ordinary differential
 equation (ODE) that describes the flow's evolution in time.
-
-* Resources
-- Normalizing Flows for Probabilistic Modeling and Inference cite:papamakarios19_normal_flows_probab_model_infer
-
-bibliography:biblio.bib

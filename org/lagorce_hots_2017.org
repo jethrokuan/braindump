@@ -4,10 +4,8 @@
 :END:
 #+title: lagorce_hots_2017: HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition
 
-
 * HOTS: A Hierarchy of Event-Based Time-Surfaces for Pattern Recognition
   :PROPERTIES:
-  :Custom_ID: lagorce_hots_2017
   :URL:
   :AUTHOR: Lagorce, X., Orchard, G., Galluppi, F., Shi, B. E., & Benosman, R. B.
   :NOTER_DOCUMENT: /home/jethro/Zotero/storage/GCNVZRA5/Lagorce et al. - 2017 - HOTS A Hierarchy of Event-Based Time-Surfaces for.pdf

@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       69151471-0247-4cc7-b49e-ff633833da43
-:END:
-#+hugo_slug: john_wiegley
-#+title: John Wiegley

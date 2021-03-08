@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       69feab4b-1d50-4b12-a432-ceaf7bccffb5
-:END:
-#+hugo_slug: dvs_cameras
-#+title: DVS Cameras

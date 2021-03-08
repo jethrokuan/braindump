@@ -277,7 +277,7 @@ choice of the ODE solver is still important.
 
 In this review, I did not cover the applications of Neural ODEs in
 other areas. First, they have a particularly convenient formulation
-for Continuous Normalizing Flows. Normalizing flows is a technique for
+for Continuous Normalizing Flows. [[id:0a267ec0-b62d-4d7d-b813-6fbb14dbcff0][Normalizing flows]] is a technique for
 sampling from complex distributions via sampling from a simple
 distribution, and has applications in techniques like variational
 inference. 

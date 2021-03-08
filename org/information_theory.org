@@ -3,8 +3,6 @@
 :END:
 #+title: Information Theory
 
-- tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]], [[id:3ec39abc-ea53-4087-8523-7ace154c6aa6][Statistics]]
-
 * Introduction
 ** How can we achieve perfect communication over an imperfect noisy communication channel?
 The physical solution is to improve the characteristics of the

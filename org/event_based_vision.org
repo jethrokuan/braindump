@@ -14,7 +14,7 @@ An event consists of the location (x, y), the time (t), and the polarity of the 
 
 The incident light at a pixel is a product of scene illumination and surface reflectance. Hence, changes in log intensity in the scene generally signals a reflectance change (e.g. as a result of movement in the scene), as the illumination is usually constant. This is why event cameras are invariant to scene illumination.
 
-* [[id:69feab4b-1d50-4b12-a432-ceaf7bccffb5][DVS Cameras]]
+* DVS Cameras
 :PROPERTIES:
 :ID:       55110410-a77e-4769-aff6-9ab86a2587df
 :END:

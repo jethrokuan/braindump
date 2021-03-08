@@ -12,22 +12,31 @@ Say we have a stream of visual events:
   e v_{i}=\left[\mathbf{x}_{\mathbf{i}}, t_{i}, p_{i}\right]^{T}, \quad i \in \mathbb{N}
 \end{equation}
 
-where $ev_{i}$ is the ith event, and consists of a location $\mathbf{x}_{\mathbf{i}}$, time $t_{i}$ and polarity $p_{i} \in \{-1, 1\}$.
+where $ev_{i}$ is the ith event, and consists of a location
+$\mathbf{x}_{\mathbf{i}}$, time $t_{i}$ and polarity $p_{i} \in \{-1, 1\}$.
 
-Time surface $S_{i}$ of event $ev_{i}$ keeps track of the activity surrounding the spatial location $\mathbf{x}_{\mathbf{i}}$.
+Time surface $S_{i}$ of event $ev_{i}$ keeps track of the activity surrounding
+the spatial location $\mathbf{x}_{\mathbf{i}}$.
 
-We define the time-context \mathcal{T}_{i}(\mathbf{u}, p) around an incoming event $ev_{i}$ as the array of most recent event times at $t_{i}$ for the pixels in the $(2R+1) \times (2R+1)$ square neighbourhood centered at $\mathbf{x}_{\mathbf{i}}$ as:
+We define the time-context \mathcal{T}_{i}(\mathbf{u}, p) around an incoming
+event $ev_{i}$ as the array of most recent event times at $t_{i}$ for the pixels
+in the $(2R+1) \times (2R+1)$ square neighbourhood centered at
+$\mathbf{x}_{\mathbf{i}}$ as:
 
 \begin{equation}
   \mathcal{T}_{i}(\mathbf{u}, p)=\max _{i \leq i}\left\{t_{j} \mid \mathbf{x}_{\mathbf{j}}=\left(\mathbf{x}_{\mathbf{i}}+\mathbf{u}\right), p_{j}=p\right\}
 \end{equation}
 
-where $u_{x,y} \in \{-R, \dots, R\}$. Then $S_{i}(\mathbf{u}, p)$ is the obtained by applying an exponential decay kernel with time constant $\tau$ on $\mathcal{T}$:
+where $u_{x,y} \in \{-R, \dots, R\}$. Then $S_{i}(\mathbf{u}, p)$ is the
+obtained by applying an exponential decay kernel with time constant $\tau$ on
+$\mathcal{T}$:
 
 \begin{equation}
   \mathcal{S}_{i}(\mathbf{u}, p)=e^{-\left(t_{i}-\mathcal{T}_{i}(\mathbf{u}, p)\right) / \tau}
 \end{equation}
 
-The time surface provides dynamic spatiotemporal context around an event, and the exponential decay expands the activity of passed events and provides information about the history of the activity in the neighbourhood.
+The time surface provides dynamic spatiotemporal context around an event, and
+the exponential decay expands the activity of passed events and provides
+information about the history of the activity in the neighbourhood.
 
 bibliography:biblio.bib

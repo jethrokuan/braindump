@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       5f280d3a-d80b-46a0-83b0-b358db719447
+:END:
+#+title: Respect the Base Rate
+
+* Collection of Base Rates
+:PROPERTIES:
+:ID:       2ed1a21b-73b0-4b0b-9c6e-95c6c130afee
+:END:
+- It takes 60 years for us to change energy sources (coal -> oil -> natural gas)

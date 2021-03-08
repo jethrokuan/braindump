@@ -45,5 +45,18 @@ My personal thoughts:
 2. Zettelkasten remains a useful tool for low-level,
    inter-project information-linking.
 
+* The PARA Interface
+1. Overview Level
+   - List favourite problems
+   - List ongoing projects
+2. Project level
+   - Creating a project (define time-frame, outcome)
+   - Visiting a project
+     - View tasks, resources, notes
+   - Archiving a project
+   - Capturing a resource to a project (download file/webpage, save to defined folder)
+3. Resource level
+   - Create note for resource + tools to perform progressive summarization
+
 * Resources
 - [[https://praxis.fortelabs.co/the-p-a-r-a-method-a-universal-system-for-organizing-digital-information-75a9da8bfb37/][The PARA Method: A Universal System for Organizing Digital Information | Praxis]]

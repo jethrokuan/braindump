@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       8c33d882-b7b7-4661-bcc9-3114ba813dd9
-:END:
-#+hugo_slug: alexander_rush
-#+title: Alexander Rush
