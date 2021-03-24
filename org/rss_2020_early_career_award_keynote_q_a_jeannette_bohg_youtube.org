@@ -2,8 +2,6 @@
 :ID:       7a796712-7ae4-43ed-a88e-a9ee66a605f4
 :ROAM_REFS: https://www.youtube.com/watch?v=yD_0lUYo5fI&feature=emb_title
 :END:
-
-#+roam_tags: website
 #+title: RSS 2020, Early Career Award Keynote + Q&A: Jeannette Bohg - YouTube
 
 * Meta

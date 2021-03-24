@@ -63,8 +63,3 @@ school curriculum, but is crucial to being a successful practitioner.
   is removed if the repeater is able to correct for it. Do we have an
   internal error-correction mechanism when sending discrete binary
   signals across neurons?
-* Synopsis
-
-The goal of this book is to teach the art of thinking about science
-and engineering. Hamming argues that this art is not taught in the
-school curriculum, but is crucial to being a successful practitioner.

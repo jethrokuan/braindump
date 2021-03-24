@@ -2,7 +2,6 @@
 :ID:       f032febc-7ce2-46b2-b9e7-a8398f7db689
 :END:
 #+title: Forward Contracts
-#+roam_tags: finance
 
 A forward contract is a contract between two parties on the delivery of an asset
 at a certain time in the future, the maturity of the contract, at a certain
