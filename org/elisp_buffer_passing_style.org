@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       f3b97409-b5ef-472b-8381-ba34bd187d78
 :END:
-#+hugo_slug: elisp_bufferpassing_style
 #+title: Elisp: Buffer-passing Style
 
 - tags :: [[file:../../../../Dropbox/org/braindump/org/emacs_lisp.org][Emacs Lisp]]

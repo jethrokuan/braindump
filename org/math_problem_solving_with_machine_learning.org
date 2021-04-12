@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       2e210ea3-87d4-418a-a8fa-f6e9dc228bdd
+:END:
+#+title: Math Problem-solving with Machine Learning
+
+* Papers
+** TODO https://arxiv.org/pdf/2103.03874.pdf MATH Dataset (GPT-3 < 10% accuracy)

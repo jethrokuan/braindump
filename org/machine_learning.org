@@ -176,7 +176,7 @@ The goal is to search for a hypothesis $h \in H$ that is consistent
 with $D$.
 ** Exploit Structure in Concept Learning
 $h_j$ is more general than or equal to $h_k$ (denoted $h_j \ge_{g}
-h_k$) iff any input instance $x$ that satisfies $h_j$ also satisfies
+ph_k$) iff any input instance $x$ that satisfies $h_j$ also satisfies
 $h_k$.
 
 This is relation is a *partial order*.
@@ -560,4 +560,7 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 bibliography:biblio.bib
 
 * Footnotes
+:PROPERTIES:
+:ID:       1371694e-10f2-49a7-befa-1d7e12c231b2
+:END:
 [fn:1] See [[https://drivendata.github.io/cookiecutter-data-science/][Home - Cookiecutter Data Science]].

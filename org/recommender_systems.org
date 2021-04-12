@@ -2,4 +2,30 @@
 :ID:       3ec09638-fa2b-4e35-bc96-2938abc91457
 :END:
 #+title: Recommender Systems
- - tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]]
+
+* Are We Really Making Much Progress? cite:dacrema19_are_we_reall_makin_much_progr
+:PROPERTIES:
+:ID:       e0b936d9-c24a-47d5-9c6e-ab469f9c8f43
+:END:
+The authors analyzed various recent publications on recommendation
+systems techniques, and found that these have:
+
+1. Weak baselines
+2. Establish weak methods as baselines
+3. Are outperformed by simple, sometimes non-neural approaches
+
+The simple approaches that work well include ItemKNN, a
+collaborative-filtering approach that uses k-nearest neighbours and
+item-item similarities:
+
+\begin{equation}
+  s_{ij} = \frac{r_i \dot r_j}{\lvert r_i \rvert \lvert r_j \rvert + h}
+\end{equation}
+
+To alleviate these issues:
+
+1. Use appropriate evaluation methods
+2. Evaluate on appropriate datasets (size is important)
+3. Release reproducible code
+
+bibliography:biblio.bib

@@ -14,6 +14,6 @@ All I want to know is where I'm going to die so I'll never go there -- Charlie M
 
 * References
 :PROPERTIES:
-:ID:       e942d7d2-0fef-4680-98f8-38655ee7bccd
+:ID:       3572edf0-7706-47d3-ac5c-cd7adb9fa97e
 :END:
 - [[https://commoncog.com/blog/using-inversion/][Using Inversion]]

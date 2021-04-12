@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       23495ea8-dee7-44b6-b3a6-8b4072f6d432
-:END:
-#+title: Conor White-Sullivan
-
-Creator of [[id:71b27c1b-b851-4128-a5d5-1fed8dd900bb][Roam Research]].
-
-- socials :: [[https://twitter.com/Conaw][Twitter]]

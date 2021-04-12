@@ -147,6 +147,9 @@ This kind of optimization is natural when dealing with granular data
 types such as pixels.
 
 * Continuous Flows
+:PROPERTIES:
+:ID:       8f6c0c82-bd29-4569-be4f-8a8322130496
+:END:
 
 We can construct flows in continuous time by parameterizing the flow's
 infinitesimal dynamics, and then integrating to find the corresponding

@@ -58,6 +58,9 @@ school curriculum, but is crucial to being a successful practitioner.
     3. Giving informal presentations as they occur
 
 * Non-essentials
+:PROPERTIES:
+:ID:       aa1539b3-f16e-4a92-b754-dcbac6b3acf3
+:END:
 - Errors in continuous signals are amplified, but in discrete
   signalling using repeaters rather than amplifiers, noise introduced
   is removed if the repeater is able to correct for it. Do we have an

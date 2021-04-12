@@ -19,4 +19,7 @@
 - [[id:02ac1905-bb1c-400a-82e1-7203a1600d56][Google Cartographer]]
 
 * Links
+:PROPERTIES:
+:ID:       354b5442-0080-4e51-8d6d-6a91402744b0
+:END:
 - [[https://github.com/Kiloreux/awesome-robotics][Awesome Robotics]]

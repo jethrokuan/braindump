@@ -10,4 +10,4 @@ Operational Transforms (OT).
 I once gave a talk on OT: [[https://docs.google.com/presentation/d/1qMi_zQxm6E9fxXi8RFnfhaOvvCHEGzD-NPQjpD_F63w/edit?usp=sharing][Real-time Collaboration - Google Slides]]
 
 * Readings
-  - [[https://www.tiny.cloud/blog/real-time-collaboration-ot-vs-crdt/][Building real-time collaboration applications: OT vs CRDT]] 
+  - [[https://www.tiny.cloud/blog/real-time-collaboration-ot-vs-crdt/][Building real-time collaboration applications: OT vs CRDT]]

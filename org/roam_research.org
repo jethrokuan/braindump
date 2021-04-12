@@ -6,8 +6,8 @@
 - webpage :: [[https://roamresearch.com][Roam Research]]
 - tags :: [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]], [[id:464665d4-0806-422b-b984-e65bb0120e9f][Writing]], [[id:05a63abc-36d6-4a04-8693-bd1bfd5c46c8][Note-taking]]
 
-Roam research is a tool for networked-thought, created by [[id:23495ea8-dee7-44b6-b3a6-8b4072f6d432][Conor
-White-Sullivan]]. Roam adopts methods from [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]].
+Roam research is a tool for networked-thought, created by Conor
+White-Sullivan. Roam adopts methods from [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]].
 
 * Roam Media
 - [[https://twitter.com/adam_keesling/status/1196864424725774336][Adam Keesling's Roam Thread]]
