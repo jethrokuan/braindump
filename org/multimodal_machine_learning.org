@@ -27,5 +27,3 @@
   representation, and predictive models. (see [[id:2b6e2383-41f1-4b28-a353-c87e21594bdb][Co-learning]])
 
 bibliography:biblio.bib
-
-

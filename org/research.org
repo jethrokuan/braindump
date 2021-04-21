@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       63384aa8-5da8-41c5-96aa-17f7925c274f
-:END:
-#+hugo_slug: research
-#+title: Research

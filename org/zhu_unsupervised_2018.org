@@ -4,7 +4,6 @@
 :END:
 #+title: zhu_unsupervised_2018: Unsupervised Event-based Learning of Optical Flow, Depth, and Egomotion
 
-
 * Unsupervised Event-based Learning of Optical Flow, Depth, and Egomotion
   :PROPERTIES:
   :Custom_ID: zhu_unsupervised_2018

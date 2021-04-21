@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       a04a2164-4756-47b6-b1a9-5dbff42eba7a
-:END:
-#+hugo_slug: yann_lecun
-#+title: Yann LeCun

@@ -133,18 +133,7 @@ original array.
 #+end_src
 * Common Questions
 
-** Find kth largest in array                                             :fc:
-:PROPERTIES:
-:FC_CREATED: 2020-02-24T11:41:16Z
-:FC_TYPE:  cloze
-:ID:       12ce202e-8e12-43b2-8a37-62f841d20d81
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: single
-:END:
-:REVIEW_DATA:
-| position | ease | box | interval | due |
-|----------+------+-----+----------+-----|
-:END:
+** Find kth largest in array
 #+begin_src python
   import operator
 
@@ -339,18 +328,8 @@ has three sum is the same, sort the array and run has two sum.
       result[0] *= sign
       return result
 #+end_src
-** Next Permutation                                                      :fc:
-:PROPERTIES:
-:FC_CREATED: 2020-02-24T11:38:47Z
-:FC_TYPE:  cloze
-:ID:       bf7dbfc9-c18c-45c8-b5c3-7d26133bc415
-:FC_CLOZE_MAX: -1
-:FC_CLOZE_TYPE: single
-:END:
-:REVIEW_DATA:
-| position | ease | box | interval | due |
-|----------+------+-----+----------+-----|
-:END:
+
+** Next Permutation
 #+begin_src python
   def next_permutation(perm):
 

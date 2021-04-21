@@ -2,8 +2,6 @@
 :ID:       a4388398-3a2a-4686-ae7a-b1ae5030ba94
 :ROAM_REFS: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
 :END:
-
-#+hugo_slug: you_and_your_research
 #+title: You and Your Research - Richard Hamming
 
 - source :: http://www.cs.virginia.edu/~robins/YouAndYourResearch.html
