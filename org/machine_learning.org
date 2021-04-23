@@ -2,7 +2,7 @@
 :ID:       5a6f15fa-e5d4-474e-8ead-56b22d890512
 :END:
 #+title: Machine Learning
-#+hugo_tags: machine-learning
+#+filetags: ml
 
 * When do we need machine learning?
 Two aspects of a given problem may call for the use of programs that
@@ -560,7 +560,4 @@ can be reproduced on the work laptops and on their cloud infrastructure.
 bibliography:biblio.bib
 
 * Footnotes
-:PROPERTIES:
-:ID:       1371694e-10f2-49a7-befa-1d7e12c231b2
-:END:
 [fn:1] See [[https://drivendata.github.io/cookiecutter-data-science/][Home - Cookiecutter Data Science]].

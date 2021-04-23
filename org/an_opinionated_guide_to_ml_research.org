@@ -1,17 +1,12 @@
 :PROPERTIES:
 :ID:       d0d82350-5d1c-4b96-8522-827e902d9454
+:ROAM_REFS: http://joschu.net/blog/opinionated-guide-ml-research.html
 :END:
-#+hugo_slug: an_opinionated_guide_to_ml_research
-#+title: Article: An Opinionated Guide to ML Research
+#+title: Article: An Opinionated Guide to Machine Learning Research
 
-- tags :: [[id:5a6f15fa-e5d4-474e-8ead-56b22d890512][Machine Learning]], [[id:63384aa8-5da8-41c5-96aa-17f7925c274f][Research]]
-- author :: [[id:582d5676-7892-4aef-9222-b90191a788f0][John Schulman]]
-- source :: [[http://joschu.net/blog/opinionated-guide-ml-research.html][An Opinionated Guide to ML Research]]
-
-- The keys to success are *working on the right problems, making
-  continual progress on them, and achieving continual personal
-  growth.* This essay is comprised of three sections, each covering
-  one of these topics.
+The keys to success are *working on the right problems, making continual
+progress on them, and achieving continual personal growth.* This essay is
+comprised of three sections, each covering one of these topics.
 
 * Choosing Problems
 
@@ -37,7 +32,7 @@ Develop good taste for what problems to work on.
   - Pros :: much more motivating. goals also give differentiating
     perspective from rest of the community.
 
-[[id:582d5676-7892-4aef-9222-b90191a788f0][John Schulman]] recommends goal-driven research.
+John Schulman recommends goal-driven research.
 
 ** Tips for Goal-Driven research
 
@@ -45,7 +40,7 @@ Develop good taste for what problems to work on.
    solutions.*
 2. Aim high, and climb incrementally towards high goals
    1. Keep a notebook, and record daily ideas and experiments
-      ([[id:05a63abc-36d6-4a04-8693-bd1bfd5c46c8][Note-taking]]). [[id:582d5676-7892-4aef-9222-b90191a788f0][John Schulman]] creates an entry for each day, and
+      ([[id:05a63abc-36d6-4a04-8693-bd1bfd5c46c8][Note-taking]]). John Schulman creates an entry for each day, and
       conducts a review to condense entries every 1 or 2 weeks.
 3. Know when to switch problems. Also, don't switch problems too
    often. Notice the dead-ends in half-finished projects, and if there

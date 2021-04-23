@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       582d5676-7892-4aef-9222-b90191a788f0
-:END:
-#+hugo_slug: john_schulman
-#+title: John Schulman

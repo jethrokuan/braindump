@@ -1,7 +1,6 @@
 :PROPERTIES:
 :ID:       c436cacf-5630-4dc6-99ff-e99d9484f85a
 :END:
-#+hugo_slug: multimodal_machine_learning
 #+title: Multi-modal Machine Learning
 
 * Definitions

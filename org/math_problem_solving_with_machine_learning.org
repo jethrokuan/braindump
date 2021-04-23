@@ -5,6 +5,3 @@
 
 * Papers
 ** TODO https://arxiv.org/pdf/2103.03874.pdf MATH Dataset (GPT-3 < 10% accuracy)
-:PROPERTIES:
-:ID:       499874af-6286-4072-a0f7-eba7ee57b963
-:END:
