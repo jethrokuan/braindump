@@ -1165,4 +1165,5 @@ In Linux kernel <= 4.16, the decision to stop the tick is made before
 the governor makes a recommendation. In 4.17 the decision of whether
 to stop the tick is made after the governor has made the
 recommendation.
+
 ** TODO [[https://nadav.amit.zone/blog/linux-inline][How new-lines affect the Linux kernel performance]]

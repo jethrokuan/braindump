@@ -3,8 +3,6 @@
 :END:
 #+title: Git
 
-- tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]], [[id:cea56b27-54fa-4d40-8820-02ec141b280f][Version Control]]
-
 * Links
 ** TODO [[https://www.sbf5.com/~cduan/technical/git/][Understanding Git Conceptually]]
 ** TODO [[https://github.com/pluralsight/git-internals-pdf][GitHub - pluralsight/git-internals-pdf: PDF on Git Internals]]
@@ -42,3 +40,18 @@ of objects:
 
 * Git Branching Models
 [[https://nvie.com/posts/a-successful-git-branching-model/][A successful Git branching model » nvie.com]]
+
+* VFS for Git
+:PROPERTIES:
+:ID:       0fb958db-0f41-4cff-a621-704db9ad269e
+:END:
+VFS for Git is a virtualized filesystem used to bypass assumptions
+about repository size, allowing Git repositories to scale up to large
+repositories.
+
+With GVFS, an initial clone downloads a set of pack-files containing
+only commits and trees. These objects are sufficient for generating a
+view of the working directory, and examining the commit history with
+git log.
+
+GVFS allows dynamically downloading objects as needed.

@@ -23,7 +23,21 @@ structure connecting the variables.
 An equation becomes structural by virtue of invariance to a domain of
 modifications.
 
-* [[id:aa5c8002-a1ba-4d64-af54-38d1eafafdeb][Structural Causal Model]]
+* Structural Causal Model
 :PROPERTIES:
 :ID:       7641ec39-6e89-4505-9363-d365b446a20a
+:END:
+
+A structural causal model satisfies the following conditions:
+
+1. It is a directed acyclic graph $G$ with vertices $X_{1}, \dots, X_{n}$
+2. Vertices are observables, and arrows represent direct causation
+3. Each observable $X_{i}$ is a density, with independent unexplained random
+   variables $U_{i}, \dots, U_{n}$.
+
+The structural causal model satisfies the [[id:87e2d47f-eaab-45e4-827c-3dfe587aa598][Reichenbach's principle]].
+
+* TODO Reichenbach's principle
+:PROPERTIES:
+:ID:       87e2d47f-eaab-45e4-827c-3dfe587aa598
 :END:

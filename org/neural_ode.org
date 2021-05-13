@@ -4,6 +4,8 @@
 :ROAM_REFS: cite:chen18_neural_ordin_differ_equat
 :ROAM_REFS: https://arxiv.org/abs/1806.07366
 :END:
+#+roam_key: cite:chen18_neural_ordin_differ_equat
+#+roam_key: https://arxiv.org/abs/1806.07366
 #+title: Neural Ordinary Differential Equations
 
 bibliographystyle:unsrt

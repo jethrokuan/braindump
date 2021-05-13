@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       d8e82fa2-bef2-42f6-b2e9-62ac794cca58
-:END:
-#+title: Unix
-
-- tags :: [[id:a5dfff84-6468-4b04-bb55-bbde427a686f][Linux]]

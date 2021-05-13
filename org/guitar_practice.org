@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       9fa71df6-be69-4a0c-9092-2661285d5d45
+:END:
+#+title: Guitar Practice
+
+I've had an acoustic guitar for a while, and for various reasons I've decided to
+become more serious about guitar practice. At the time of writing, I'm a
+complete novice, unable to transition between chords smoothly.
