@@ -2,5 +2,4 @@
 :ID:       08aab063-2472-457a-8c11-6acd19ae29d2
 :END:
 #+title: The C Language
-
-- tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
+#+filetags: prog-lang

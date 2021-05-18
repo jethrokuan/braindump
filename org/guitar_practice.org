@@ -1,8 +1,29 @@
 :PROPERTIES:
 :ID:       9fa71df6-be69-4a0c-9092-2661285d5d45
+:DIR:      /Users/jethrokuan/Dropbox/org/braindump/org/guitar
 :END:
 #+title: Guitar Practice
 
 I've had an acoustic guitar for a while, and for various reasons I've decided to
 become more serious about guitar practice. At the time of writing, I'm a
 complete novice, unable to transition between chords smoothly.
+
+* Guitar Practice
+** [[id:419f4de0-e55c-43bf-ad06-ced6b1039de3][2021-05-17]]
+- 1h guitar lesson with Zhengyong
+- Around 2h of practice of Itsumo Nando Demo (Always With Me) - Joe Hiraishi
+** [[id:a411a645-e6d7-4248-b3e1-f541a70a5046][2021-05-18]]
+-
+
+* Guitar Schedule
+** Week of [[id:419f4de0-e55c-43bf-ad06-ced6b1039de3][2021-05-17]] :ATTACH:
+
+| Type             | Exercise                                                       | Purpose                       |
+|------------------+----------------------------------------------------------------+-------------------------------|
+| Warmup           | [[https://www.youtube.com/watch?v=B0vE6WJQzDQ][Spider-crawl]] (with metronome)                                  | dexterity, accuracy, strength |
+| Warmup           | 7-nation Army riff (7-7-10-5-3-2) with pinky                   | pinky strength                |
+| Fingerstyle      | [[attachment:1_SPIRITED_AWAY_ITSUMO_NANDO_ALWAYS_WITH_ME_INTERACTIVE_TAB_by_Misc.pdf][Itsumo Nando Demo (Always With Me) Simplified]]                  |                               |
+| Chord Transition | Shaping chords on fretboard                                    |                               |
+| Chord Transition | Shaping chords in mid-air                                      |                               |
+| Chord Transition | G-D-Em-D (D DU UDU) Wake Me Up When September Ends (Green Day) |                               |
+| Music Theory     | C-major major/minor chords                                     | learn music theory            |

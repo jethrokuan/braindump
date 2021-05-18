@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       02f0d648-baae-478f-b738-448cf53e2a63
-:END:
-#+title: Programming Languages
