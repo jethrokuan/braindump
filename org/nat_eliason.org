@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       a3c8877b-1765-4fdc-8da9-3e4ca5456adb
-:END:
-#+title: Nat Eliason
-
-Active user of [[id:71b27c1b-b851-4128-a5d5-1fed8dd900bb][Roam Research]]
-
-- socials :: [[https://www.nateliason.com/][website]], [[https://twitter.com/nateliason][twitter]]

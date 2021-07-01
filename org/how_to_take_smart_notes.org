@@ -5,7 +5,6 @@
 
 - author :: [[id:a9bf732e-4a81-463d-a49c-0c5777e94e35][Sonke Ahrens]]
 - tags :: [[id:464665d4-0806-422b-b984-e65bb0120e9f][Writing]], [[id:05a63abc-36d6-4a04-8693-bd1bfd5c46c8][Note-taking]], [[id:d1125f42-4a2d-4287-b902-48a1df9a6761][Books]], [[id:563dcf37-472a-4203-b037-5a1635084ae9][Productivity]]
-- recommended by :: [[file:../../../../Dropbox/org/braindump/org/conor_white_sullivan.org][Conor White-Sullivan]]
 
 * Book Notes
 :PROPERTIES:

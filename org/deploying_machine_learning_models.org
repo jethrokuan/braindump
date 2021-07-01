@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       f43a7c0d-5ac4-4a00-acae-821401b132c6
+:ROAM_ALIASES: "Deploying ML Models"
+:END:
+#+title: Deploying Machine Learning Models
+
+* TorchScript
+:PROPERTIES:
+:ID:       6c968d61-8804-470c-b253-5aec67b2386e
+:ROAM_REFS: https://pytorch.org/tutorials/beginner/Intro_to_TorchScript_tutorial.html
+:END:
+
+TorchScript is an intermediate representation of a PyTorch model, that can be run in a high-performance such as C++.

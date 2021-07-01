@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       9fa71df6-be69-4a0c-9092-2661285d5d45
-:DIR:      /Users/jethrokuan/Dropbox/org/braindump/org/guitar
+:DIR:      ./guitar
 :END:
 #+title: Guitar Practice
 
@@ -12,8 +12,28 @@ complete novice, unable to transition between chords smoothly.
 ** [[id:419f4de0-e55c-43bf-ad06-ced6b1039de3][2021-05-17]]
 - 1h guitar lesson with Zhengyong
 - Around 2h of practice of Itsumo Nando Demo (Always With Me) - Joe Hiraishi
+
 ** [[id:a411a645-e6d7-4248-b3e1-f541a70a5046][2021-05-18]]
--
+- Resting my fingers because they are really sore from the previous day's practice
+- Working on music theory (C-major scale, writing out the chords)
+- Watched a bit of Youtube
+
+** [[id:e8be16d0-d641-4f14-8487-1aedfd2a2316][2021-05-19]]
+- Practiced some more of Itsumo Nando Demo (~1h)
+
+** [[id:a57b1754-f1bf-420a-8bf8-4bf70b4afe98][2021-05-20]]
+- Spider crawl exercise Level 1 100bpm x 10
+- Spider crawl exercise Level 2 100bpm x 10
+- Chord transition G-D-Em-D 100bpm 4/4 x 20
+
+** [[id:1ef9cde1-a4af-4fd7-8bf0-6a4e71de7dce][2021-05-21]]
+- Spider crawl exercise Level 1 100bpm x 10
+- Spider crawl exercise Level 2 100bpm x 10
+- Chord transition G-D-Em-D 100bpm 4/4 x 20
+
+** [[id:a56f4248-240d-4ab3-959b-04a34a416d84][2021-05-23]]
+- Strumming workout ([[https://www.youtube.com/watch?v=hCLp1g8KilA][level 1]], [[https://www.youtube.com/watch?v=RbbAaI03a_8][level 2]])
+
 
 * Guitar Schedule
 ** Week of [[id:419f4de0-e55c-43bf-ad06-ced6b1039de3][2021-05-17]] :ATTACH:
@@ -27,3 +47,10 @@ complete novice, unable to transition between chords smoothly.
 | Chord Transition | Shaping chords in mid-air                                      |                               |
 | Chord Transition | G-D-Em-D (D DU UDU) Wake Me Up When September Ends (Green Day) |                               |
 | Music Theory     | C-major major/minor chords                                     | learn music theory            |
+
+
+* Guitar Songs
+- Black Bird - The Beatles
+- Tears in Heaven - Eric Clapton
+- Hey There Delilah - Plain White Ts
+- Fire and Rain - James Taylor

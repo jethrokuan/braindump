@@ -18,8 +18,8 @@ White-Sullivan. Roam adopts methods from [[id:c178794c-78d1-459d-9725-15f2f6cd97
 * Roam Tutorials
 
 - [[https://www.youtube.com/watch?v=RvWic15iXjk][How to Use Roam to Outline a New Article in Under 20 Minutes -
-  YouTube]] by [[id:a3c8877b-1765-4fdc-8da9-3e4ca5456adb][Nat Eliason]]
-  - Basic Idea is to pull out related notes from other sources (books,
+  YouTube]] by Nat Eliason
+  - Basic idea is to pull out related notes from other sources (books,
     articles etc.)
   - Group them up into common themes (e.g. "Ease is not the Goal")
   - Polish after pulling out relevant notes

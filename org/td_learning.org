@@ -4,7 +4,6 @@
 :END:
 #+title: Temporal Difference Learning
 
-
 Observe samples $\left(s_t, a_t, r_t, s_{t+1} \right)$. If value
 estimates are accurate, the following must hold:
 
@@ -23,4 +22,3 @@ To learn better estimates - minimize $\gamma $ TD(0):
 \begin{equation}
   V(s) \leftarrow V(s) + \alpha \left( r_t + \gamma V(s_{t+1}) - V(s_t) \right)
 \end{equation}
-
