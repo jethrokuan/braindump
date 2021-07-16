@@ -4,7 +4,7 @@
 #+title: Options (Finance)
 
 Options may be written on any kind of underlying assets, such as stocks, bonds,
-commodities or [[file:futures_contract.org][futures]]. There are 2 basic types of options:
+commodities or [[id:46aac18b-5f53-43fb-a7eb-30b7a642bfe5][futures]]. There are 2 basic types of options:
 
 - call options :: these give the holder the right to buy
 - put options :: these give the holder the right to sell the underlying asset in

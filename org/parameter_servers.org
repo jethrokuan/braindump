@@ -9,5 +9,5 @@ a central parameter server. The parameter server then uses an optimizer such as
 SGD or Adam, computing the gradient updates.
 
 Parameter servers offer better performance over all-reduce because of its
-ability to utilize CPUs (unlike [[file:all_reduce.org][All-reduce]]), but in practice the performance
+ability to utilize CPUs (unlike [[id:9ecea56e-328e-4676-9235-c768c4256757][All-reduce]]), but in practice the performance
 leaves much to be desired.

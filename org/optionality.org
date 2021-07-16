@@ -51,6 +51,6 @@ We can classify options based on their risk-reward ratio:
    
 * Themes
 
-- [[file:bad_is_stronger_than_good.org][Bad Is Stronger Than Good]]
-- [[file:everything_compounds.org][Everything Compounds]]
-- [[file:the_law_of_diminishing_returns.org][The Law of Diminishing Returns]]
+- [[id:c2a1ae20-5fa6-4d5c-91c0-5130eab41cb6][Bad Is Stronger Than Good]]
+- [[id:955a4e56-fa01-45eb-b656-b1ec74749bdd][Everything Compounds]]
+- [[id:e8526a72-5da5-4226-9cb9-14432b7766b4][The Law of Diminishing Returns]]

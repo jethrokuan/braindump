@@ -6,7 +6,7 @@
 
 This is a regularly updated log of what I'm currently looking into.
 
-- [[file:high_performance_natural_language_processing.org][High Performance Natural Language Processing]]. The research conducted here is
+- [[id:9cbc8889-003e-4f27-98ea-10339215a896][High Performance Natural Language Processing]]. The research conducted here is
   part of my day job.
 - Working on [[https://www.orgroam.com/][Org-roam]], as usual. Developmental progress on it has sort of
   stalled. Now that I'm getting back into research, the flaws and things I want

@@ -5,7 +5,7 @@
 
 Financial derivatives are based on other underlying financial instruments.
 
-- [[file:forward_contracts.org][Forward Contracts]]
-- [[file:futures_contract.org][Futures Contract]]
-- [[file:options_finance.org][Options (Finance)]]
+- [[id:f032febc-7ce2-46b2-b9e7-a8398f7db689][Forward Contracts]]
+- [[id:46aac18b-5f53-43fb-a7eb-30b7a642bfe5][Futures Contract]]
+- [[id:7f1ffaf3-23c6-4f2d-ab80-2f03101f2bce][Options (Finance)]]
 

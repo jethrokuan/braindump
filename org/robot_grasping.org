@@ -11,7 +11,7 @@ A typical robot grasp detection system can consist of 3 components.
 
 - Object localization :: determining the target object's location
 - Object Pose Estimation :: obtaining a target object's 6D pose in the scene
-- [[file:grasp_estimation.org][Grasp Estimation]] :: Estimating the grasp pose in the camera's coordinate frame
+- [[id:9904c5cb-25ac-4a8f-8173-7109c4102aca][Grasp Estimation]] :: Estimating the grasp pose in the camera's coordinate frame
 
 * Challenges
 

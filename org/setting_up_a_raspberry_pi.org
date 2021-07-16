@@ -7,5 +7,5 @@
 :PROPERTIES:
 :ID:       76be60cd-1264-4977-b6d1-9654c0b26960
 :END:
-- [[file:setting_up_a_static_ip_address_on_raspberry_pi.org][Setting up a Static IP Address on Raspberry Pi]]
-- [[file:setting_up_dynamic_dns_on_raspberry_pi.org][Setting up Dynamic DNS on Raspberry Pi]]
+- [[id:d251ebc0-b460-4ed2-90ec-c5d06eebffa6][Setting up a Static IP Address on Raspberry Pi]]
+- [[id:1e625d8a-e44e-421f-8a98-0aa62f1dad8a][Setting up Dynamic DNS on Raspberry Pi]]

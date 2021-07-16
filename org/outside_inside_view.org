@@ -3,7 +3,7 @@
 :END:
 #+title: Outside/Inside View
 
-The terminology of outside/inside view was coined by [[file:daniel_kahneman.org][Daniel Kahneman]] and Dan
+The terminology of outside/inside view was coined by [[id:e14fe3a6-16e2-4b3c-819a-ac073fd70d6f][Daniel Kahneman]] and Dan
 Lovallo in 1993 cite:kahnemanTimidChoicesBold1993, whose main claim is this:
 
 #+begin_quote

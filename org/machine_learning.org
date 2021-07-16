@@ -36,9 +36,9 @@ learn and improve on the basis of their "experience":
 ** Types of Learning
 *** Active vs Passive Learning
 
- An active learner interacts with the environment at training time,
- (e.g. by posing queries or performing experiments), while a passive
- learner only observes the information provided by the environment.
+An active learner interacts with the environment at training time,
+(e.g. by posing queries or performing experiments), while a passive
+learner only observes the information provided by the environment.
 
 *** Online vs Batch Learning
 In online learning, the hypothesis has to be updated each time a new

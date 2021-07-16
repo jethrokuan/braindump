@@ -22,7 +22,7 @@ input or output positions grows in the distance between the positions, making it
 reduced effective resolution due to averaging attention-weighted positions. This
 effect is counteracted with multi-head attention.*
 
-The Transformer model relies entirely on [[file:self_attention.org][self-attention]] (or intra-attention) to
+The Transformer model relies entirely on [[id:a1321d06-600d-477e-ada5-b402020c9d03][self-attention]] (or intra-attention) to
 compute representations of its input and output without using sequence-aligned
 RNNs or convolution.
 

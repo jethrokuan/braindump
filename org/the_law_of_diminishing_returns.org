@@ -3,7 +3,7 @@
 :END:
 #+title: The Law of Diminishing Returns
 
-All components of [[file:optionality.org][optionality]] face diminishing returns: after some point, the
+All components of [[id:7978d65b-5bd7-42f8-9715-3d9a30fe6894][optionality]] face diminishing returns: after some point, the
 advantages gained start to level off. For example, as a newbie fitness training
 may reap massive gains, but the improvement slows as time passes.
 

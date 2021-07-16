@@ -3,7 +3,7 @@
 :END:
 #+title: Elisp: Buffer-passing Style
 
-- tags :: [[file:../../../../Dropbox/org/braindump/org/emacs_lisp.org][Emacs Lisp]]
+- tags :: [[id:6102ba8c-baa2-4880-8cd9-699de2b25f1d][Emacs Lisp]]
 
 Rather than have the callee instantiate the buffer, the caller
 instantiates the buffer, and passes it implicitly as the current

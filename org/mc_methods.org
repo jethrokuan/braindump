@@ -3,7 +3,7 @@
 :END:
 #+title: Monte Carlo Methods
 
-- tags :: [[file:../../../../Dropbox/org/braindump/org/machine_learning_algorithms.org][Machine Learning Algorithms]], [[file:../../../../Dropbox/org/braindump/org/pgm.org][Probabilistic Graph Models]]
+- tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]], [[id:8b667a99-5a9a-40db-b3c2-58888c4edc46][Probabilistic Graph Models]]
 
 Monte Carlo methods make use of random numbers to solve the following
 problems:
