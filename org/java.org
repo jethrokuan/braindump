@@ -3,8 +3,6 @@
 :END:
 #+title: Java
 
-- tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
-
 * Hash Table
 Default java implementation:
 1. =hashCode= returns memory location of the object

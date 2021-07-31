@@ -3,8 +3,6 @@
 :END:
 #+title: C++ Language
 
-- tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
-
 * What is C++
 C++ is a compiled language. For a program to run, its source text has
 to be processed by a compiler, producing object files, which are

@@ -3,8 +3,6 @@
 :END:
 #+title: OCaml
 
-- tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
-
 * Pattern Matching
 Patterns cannot be used to expressed arbitrary conditions. this is a
 design choice, that allows better support for patterns in the

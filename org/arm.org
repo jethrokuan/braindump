@@ -3,7 +3,7 @@
 :END:
 #+title: ARM Assembly Programming
 
-- tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]], [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
+- tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]]
 
 * Background
 

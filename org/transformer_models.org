@@ -31,7 +31,7 @@ RNNs or convolution.
 :ID:       cb299df5-e052-4a8a-b885-9f749c7d6222
 :END:
 
-The traditional [[file:transformer.org][Transformer]] model has memory and computational complexities that
+The traditional Transformer model has memory and computational complexities that
 are quadratic with the input sequence length ($O(N^2)$). This limits the utility
 of Transformer models, since their main benefit is the ability to learn
 alignments across long sequences.
@@ -72,4 +72,5 @@ BART can then be fine-tuned for downstream applications:
   generates auto-regressively.
   
 bibliography:biblio.bib
+
 ** TODO T5

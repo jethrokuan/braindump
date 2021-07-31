@@ -3,8 +3,6 @@
 :END:
 #+title: Emacs Lisp
 
-- tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
-
 In preparation for submission to MELPA, one should run [[https://github.com/purcell/package-lint][package-lint]] on
 the code.
 

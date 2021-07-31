@@ -18,7 +18,7 @@ complete novice, unable to transition between chords smoothly.
 - Working on music theory (C-major scale, writing out the chords)
 - Watched a bit of Youtube
 
-** [[id:e8be16d0-d641-4f14-8487-1aedfd2a2316][2021-05-19]]
+** 2021-05-19
 - Practiced some more of Itsumo Nando Demo (~1h)
 
 ** [[id:a57b1754-f1bf-420a-8bf8-4bf70b4afe98][2021-05-20]]

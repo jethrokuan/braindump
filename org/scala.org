@@ -3,8 +3,6 @@
 :END:
 #+title: Scala
 
-- tags :: [[id:02f0d648-baae-478f-b738-448cf53e2a63][Programming Languages]]
-
 * Introduction to Scala
 
 Scala's primary signature is its blend of object-oriented and

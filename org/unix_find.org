@@ -3,7 +3,5 @@
 :END:
 #+title: Find (CLI Tool)
 
-- tags :: [[id:d8e82fa2-bef2-42f6-b2e9-62ac794cca58][Unix]]
-
 * Links
 - [[http://www.grymoire.com/Unix/Find.html][Find]]

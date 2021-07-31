@@ -1,0 +1,35 @@
+:PROPERTIES:
+:ID:       9e40e695-6a07-42e4-863a-8ce253e33757
+:END:
+#+title: Generalisation Error
+
+We can define generalisation error as the discrepancy between $E_in$
+and $E_out$. The Hoeffding Inequality characterises the generalization
+error with a probabilistic bound:
+
+\begin{align}
+P[|E_{in}(g) - E_{out}(g)| > \epsilon] \le 2Me^{-2\epsilon^2N}
+\end{align}
+
+Pick a tolerance level $\delta$, and assert with probability
+$1-\delta$ that
+
+\begin{align}
+  E_{out}(g) \le E_{in}(g) + \sqrt{\frac{1}{2N}\ln \frac{2M}{\delta}}
+\end{align}
+
+Notice the error bound depends on $M$, the size of the hypothesis
+set $H$. Most learning models have infinite $H$, including the simple
+perceptron. Hence, to study generalisation in such models, we need to
+derive a counterpart that deals with infinite $H$.
+
+Notice that the $M$ factor was obtained by taking the disjunction of
+events. Let $B_m$ be the bad event that $|E_{in}(h_m) - E_{out}(h_m)|
+> \epsilon$. Notice that these bad events are often strongly
+overlapping, and the disjunction of these events form a much smaller
+area.
+
+The mathematical theory of generalisation hinges on this observation.
+Upon accounting for the overlaps of different hypotheses, we will be
+able to replace the number of hypotheses $M$ with an effective finite
+number, even while $M$ is infinite.

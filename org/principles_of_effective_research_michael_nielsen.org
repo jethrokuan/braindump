@@ -7,7 +7,6 @@
 
 - source :: http://michaelnielsen.org/blog/principles-of-effective-research/
 - author :: [[id:3652626a-b6f0-41e9-9e12-ea6e028edc93][Michael Nielsen]]
-- tags :: [[id:63384aa8-5da8-41c5-96aa-17f7925c274f][Research]]
 
 #+begin_quote
 “We are what we repeatedly do. Excellence, then, is not an act but a habit.”  -- Aristotle

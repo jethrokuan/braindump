@@ -2,9 +2,10 @@
 :ID:       5a6f15fa-e5d4-474e-8ead-56b22d890512
 :END:
 #+title: Machine Learning
-#+filetags: ml
+#+filetags: :ml:
 
 * When do we need machine learning?
+
 Two aspects of a given problem may call for the use of programs that
 learn and improve on the basis of their "experience":
 
@@ -13,136 +14,13 @@ learn and improve on the basis of their "experience":
    driving, are ill-suited for coding by hand. Tasks that are beyond
    human capabilities such as the analysis of large datasets also fall
    in this category.
+
 2. *Adaptivity*: Programmed tools are rigid, while machine learning
    tools allows for adaptation to the environment they interact with.
 
-* The Learning Problem
-** What is Learning?
- An agent is said to be /learning/ if it improves its performance P on
- task T based on experience/observations/data E. T must be fixed, P
- must be measurable, E must exist. See [[id:13ee9429-7d8b-40c1-a3bc-e9db7326f580][Learning agents]].
-
-*** Inductive Bias
-:PROPERTIES:
-:ID:       103b141a-045b-43f1-bb78-09811bdccaf9
-:END:
- The incorporation of prior knowledge biases the learning mechanism.
- This is also called /inductive bias/. The incorporation of prior
- knowledge is inevitable for the success of learning algorithms (the
- no-free-lunch theorem). The stronger the prior knowledge that one
- starts the learning process with, the easier it is to learn from
- further examples.
-
-** Types of Learning
-*** Active vs Passive Learning
-
-An active learner interacts with the environment at training time,
-(e.g. by posing queries or performing experiments), while a passive
-learner only observes the information provided by the environment.
-
-*** Online vs Batch Learning
-In online learning, the hypothesis has to be updated each time a new
-label is received.
-
-*** Reinforcement Learning
- Each action in a state has an associated cost and a probability
- distribution of the next state.
-
- Goal is to learn a policy (mapping from state to action) that
- minimizes the sum of expected current and future costs.
-
-*** Supervised Learning
-
-Since learning involves an interaction between the learner and the
-environment, one can divide tasks according to the nature of that
-interaction.
-
-Supervised learning describes a scenario in which the training
-examples contain significant information that is missing in the unseen
-"test examples". In unsupervised learning, there is no distinction
-between the training and test data. The goal is to come up with some
-summary, or compressed version of that data.
-
-**** Measure of success
-  A loss function helps measure our success. Given a set $H$ of
-  hypothesis of models, and a domain $Z$, let $l$ be a function from $H
-  \times Z$ to non-negative real numbers $l: $H \times Z \rightarrow
-  \mathbb{R}_{+}$.
-
-  The /risk function/ is the expected loss of the hypothesis,
-
-  \begin{equation*}
-    L_D(h) = E_{z \sim D}[l(h,z)]
-  \end{equation*}
-
-  We are interested in finding a hypothesis $h$ that has a small risk,
-  or expected loss, typically using [[id:ff243a09-9980-4738-b638-0521cc2bbf42][Empirical Risk Minimization]].
-
-**** Assumptions Made ⚠
- 1. One common assumption is that the data in the data generation
-    process is independently and identically distributed (IID),
-    according to the distribution $D$.
-
- Q: Given a large enough training set, do you expect the long term test
- error to be similar to the training error?
-
- - If IID, then yes
- - If not, there is likely dependencies, but under certain conditions,
-   yes.
-   - If sampling mixes well, it will not take long for D' to look
-     like a steady set distribution.
- - If dependencies are exploited, there is a possibility of attaining
-   lower training and test error.
-
-** Is Learning Feasible?
-The target function $f$ that we want to learn is unknown. The
-performance of a hypothesis on the training set $D$ tells us nothing
-about the performance on the data outside of $D$.
-
-As long as $f$ is unknown, knowing $D$ cannot exclude any patterns of
-$f$ outside of $D$, and the predictions of $g$ would be meaningless.
-*** Probabilistic View
-If we accept a probabilistic answer, that is $D$ tells us something
-likely about $f$ outside of $D$, then learning is feasible, only with
-a small price.
-
-Learning a hypothesis $g$ approximates the target function $f$ well,
-i.e. $E_{out}(g) \approx 0$. However, probabilistic analysis via
-Hoeffding's Inequality gives $E_{out}(g) \approx E_{in}(g)$.
-Therefore, we still need to ensure $E_{in}(g) \approx 0$.
-
 * Training vs Testing
-** Generalisation Error
-We can define generalisation error as the discrepancy between $E_in$
-and $E_out$. The Hoeffding Inequality characterises the generalization
-error with a probabilistic bound:
+- [[id:9e40e695-6a07-42e4-863a-8ce253e33757][Generalisation Error]]
 
-\begin{align}
-P[|E_{in}(g) - E_{out}(g)| > \epsilon] \le 2Me^{-2\epsilon^2N}
-\end{align}
-
-Pick a tolerance level $\delta$, and assert with probability
-$1-\delta$ that
-
-\begin{align}
-  E_{out}(g) \le E_{in}(g) + \sqrt{\frac{1}{2N}\ln \frac{2M}{\delta}}
-\end{align}
-
-Notice the error bound depends on $M$, the size of the hypothesis
-set $H$. Most learning models have infinite $H$, including the simple
-perceptron. Hence, to study generalisation in such models, we need to
-derive a counterpart that deals with infinite $H$.
-
-Notice that the $M$ factor was obtained by taking the disjunction of
-events. Let $B_m$ be the bad event that $|E_{in}(h_m) - E_{out}(h_m)|
-> \epsilon$. Notice that these bad events are often strongly
-overlapping, and the disjunction of these events form a much smaller
-area.
-
-The mathematical theory of generalisation hinges on this observation.
-Upon accounting for the overlaps of different hypotheses, we will be
-able to replace the number of hypotheses $M$ with an effective finite
-number, even while $M$ is infinite.
 ** Growth Function
 The /growth function/ is the quantity that will formalize the
 effective number of hypotheses.
@@ -154,73 +32,6 @@ $+1$. We then formally define dichotomies as follows:
 H(x_1, \dots, x_n) = \left\{ h(x_1), h(x_2), \dots, h(x_n) | h \in H \right\}
 \end{align}
 
-* Concept Learning
-A concept is a boolean-valued function over a set of input instances
-(each comprising input attributes). Concept learning is a form of
-supervised learning. Infer an unknown boolean-valued function from
-training-examples.
-** Hypothesis
-There is a trade-off between /expressive power/ and smaller
-/hypothesis space/. Large hypothesis spaces are bad, because search is
-going to take a long time, and also requires more data. Humans exploit
-structure in the hypothesis space to guide search and learn faster.
-
-A hypothesis $h$ is consistent with a set of training examples $D$ iff
-$h(x) = c(x)$ for all $<x,c(x)> \in D$.
-** Inductive Learning
-Any hypothesis found to approximate the target function well over a
-sufficient large set of *training examples* will also approximate the
-target function well over other *unobserved examples*.
-** Concept Learning is Search
-The goal is to search for a hypothesis $h \in H$ that is consistent
-with $D$.
-** Exploit Structure in Concept Learning
-$h_j$ is more general than or equal to $h_k$ (denoted $h_j \ge_{g}
-ph_k$) iff any input instance $x$ that satisfies $h_j$ also satisfies
-$h_k$.
-
-This is relation is a *partial order*.
-
-** Find-S Algorithm
-Intuition: Start with the most specific hypothesis $h$. Whenever it
-wrongly classifies a positive training example, we "minimally"
-generalize it to satisfy its input instance.
-*** Limitations
-1. Can't tell whether Find-S has learnt the target concept
-2. Can't tell when training examples are /inconsistent/
-3. Picks a maximally specific $h$
-4. Depending on $H$, there may be several solutions
-** Version Space
-\begin{equation*}
-  VS_{H,D} = {h \in H | h \text{ is consistent with }D}
-\end{equation*}
- 
-- If $c \in H$, then D can reduce $VS_{H,D}$ to ${c}$.
-- If D is insufficient, then $VS_{H,D}$ represents the /uncertainty/
-  of what the target concept is
-- $VS_{H,D}$ contains all consistent hypotheses, including maximally
-  specific hypotheses
-
-The *general boundary* G of $VS_{H,D}$ is the set of maximally general
-members of $H$ consistent with $D$.
-
-The *specific boundary* S of $VS_{H,D}$ is the set of maximally general
-members of $H$ consistent with $D$.
-
-\begin{equation*}
-  VS_{H,D} = {h \in H | \exists s \in S \exists g \in G g \ge_g h
-    \ge_g s }
-\end{equation*}
-
-** List-Then-Eliminate Algorithm
-Iterate through all hypotheses in $H$, and eliminate any hypothesis
-found inconsistent with any training example. This algorithm is often
-prohibitively expensive.
-
-** Candidate-Elimination Algorithm
-Start with most general and specific hypotheses. Each training example
-"minimally" generalizes S and specializes G to remove inconsistent
-hypotheses from version space.
 * Decision Tree Learning
 /Decision Tree Learning/ is a method of learning which approximates
 discrete-valued functions that is robust to noisy data, and is capable
@@ -418,7 +229,7 @@ Then, the log-likelihood of the data is:
 We maximize $l$ with respect to the parameters.
 
 * The Natural Language Decathlon: Multitask Learning as Question Answering: Richard Socher
-[[https://einstein.ai/static/images/pages/research/decaNLP/decaNLP.pdf][pawper]]
+[[https://einstein.ai/static/images/pages/research/decaNLP/decaNLP.pdf][paper]]
 
 - Joint work with Bryan McCann, Nitish Keskar and Caiming Xiong
 
@@ -500,6 +311,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 - Curriculum learning doesn't work
 - Anti-curriculum training works instead
   - Start with a really hard task
+
 
 * Structuring Data Science Projects
 Cookiecutter Data Science provides a decent project structure, and
