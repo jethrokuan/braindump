@@ -3,7 +3,7 @@
 :END:
 #+title: SNN Software
 
-Software for [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]].
+Software for [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]].
 
 * Python
 - [[https://github.com/BindsNET/bindsnet][GitHub - BindsNET/bindsnet: Simulation of spiking neural networks (SNNs) usin...]]

@@ -7,7 +7,7 @@
 There are many conflicting definitions of [[id:d08c28f3-9c67-4ae5-b3b2-af600a1173c0][Deep Learning]], here's some
 definitions by various people:
 
-- [[file:yann_lecun.org][Yann LeCun]] :: DL is constructing networks of parameterized
+- Yann LeCun :: DL is constructing networks of parameterized
   functional modules & training them from examples using
   gradient-based optimization ([[https://www.facebook.com/722677142/posts/10156463919392143/][Source]])
   - Definition is orthogonal to the learning paradigm: paradigm,

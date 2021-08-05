@@ -4,15 +4,13 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-tags
-: [Programming Languages]({{<relref "prog_lang.md" >}})
-
 ## Hash Table {#hash-table}
 
 Default java implementation:
 
 1.  `hashCode` returns memory location of the object
 2.  Every object hashes to a different location
+
 
 ### Long {#long}
 
@@ -21,6 +19,7 @@ Default java implementation:
       return (int) (value ^ (value >> 32));
   }
 ```
+
 
 ### String {#string}
 
@@ -45,6 +44,7 @@ hash = s[0] * 31^(n-1)
       + s[1] * 32^(n-2)
 ```
 
+
 ## Add vs Offer {#add-vs-offer}
 
 <http://stackoverflow.com/questions/15591431/difference-between-offer-and-add-in-priority-queue-in-java>
@@ -52,8 +52,8 @@ hash = s[0] * 31^(n-1)
 The two functions come from two different interfaces that
 PriorityQueue implements:
 
-- add() comes from Collection.
-- offer() comes from Queue.
+-   add() comes from Collection.
+-   offer() comes from Queue.
 
 For a capacity-constrained queue, the difference is that add() always
 returns true and throws an exception if it can't add the element,

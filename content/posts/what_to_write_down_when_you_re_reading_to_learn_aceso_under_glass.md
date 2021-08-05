@@ -9,6 +9,6 @@ source
 : <https://acesounderglass.com/2020/06/10/what-to-write-down-when-youre-reading-to-learn/>
 
 tags
-: [Zettelkasten]({{<relref "zettelkasten.md" >}})
+: [Zettelkasten]({{<relref "zettelkasten.md#" >}})
 
 For deep research, write down things you find interesting. A good indication of what's interesting is when an author makes you pause to think. Write down things that you're thinking about.

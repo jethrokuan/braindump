@@ -5,13 +5,14 @@ draft = false
 +++
 
 Grid & Monte Carlo Localization methods are able to solve global
-localization problems (in comparison to [EKF Localization]({{<relref "ekf_localization.md" >}}) and
-[Markov Localization]({{<relref "markov_localization.md" >}})).
+localization problems (in comparison to [EKF Localization]({{<relref "ekf_localization.md#" >}}) and
+[Markov Localization]({{<relref "markov_localization.md#" >}})).
 
 They also:
 
-- process raw sensor measurements
-- are non-parametric: not bound to uni-modal distributions
+-   process raw sensor measurements
+-   are non-parametric: not bound to uni-modal distributions
+
 
 ## Grid Localization {#grid-localization}
 
@@ -21,24 +22,25 @@ computational-complexity tradeoff. A grid too coarse might prevent the
 filters from working altogether.
 
 \begin{algorithm}
-\caption{Grid Localization}
-\label{grid_localization}
-\begin{algorithmic}[1]
-\Procedure{Grid Localization}{$\\{p\_{k, t-1}\\}, u\_t, z\_t, m$}
-\ForAll{$k$}
-\State $\overline{p}\_{k,t} = \sum\_i p\_{i, t-1}
+  \caption{Grid Localization}
+  \label{grid\_localization}
+  \begin{algorithmic}[1]
+    \Procedure{Grid Localization}{$\\{p\_{k, t-1}\\}, u\_t, z\_t, m$}
+    \ForAll{$k$}
+    \State $\overline{p}\_{k,t} = \sum\_i p\_{i, t-1}
     \mathbf{\mathrm{motion model}}(\mathrm{mean}(x\_k), u\_t, \mathrm{mean}(x\_i))$
-\State $p\_{k,t} = \eta \textbf{measurement model}(z\_t,
+    \State $p\_{k,t} = \eta \textbf{measurement model}(z\_t,
     \mathrm{mean}(x\_k), m)$
-\EndFor
-\State \Return $p\_{k,t}$
-\EndProcedure
-\end{algorithmic}
+    \EndFor
+    \State \Return $p\_{k,t}$
+    \EndProcedure
+  \end{algorithmic}
 \end{algorithm}
+
 
 ## Monte-Carlo Localization {#monte-carlo-localization}
 
-MC localization uses the [Particle Filter]({{<relref "particle_filter.md" >}}) to
+MC localization uses the [Particle Filter]({{<relref "particle_filter.md#" >}}) to
 represent the posterior belief. The accuracy is determined by the size
 of the particle set.
 

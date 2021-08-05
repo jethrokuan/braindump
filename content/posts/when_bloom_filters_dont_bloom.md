@@ -12,6 +12,6 @@ Modern computers require cache-optimized algorithms. When working with
 large datasets, not fitting L3 cache, prefer optimizing for reduced
 number loads, over optimizing the amount of memory used.
 
-[Bloom Filters]({{< relref "bloom_filter" >}}) are great, as long as they fit into the L3 cache. They
+Bloom filters are great, as long as they fit into the L3 cache. They
 are optimized for memory usage, not memory access. A nice alternative
-is [Cuckoo Filters]({{<relref "cuckoo_filters.md" >}}).
+is [Cuckoo Filters]({{<relref "cuckoo_filters.md#" >}}).

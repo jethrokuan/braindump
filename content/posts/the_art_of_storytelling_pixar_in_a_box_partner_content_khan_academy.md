@@ -5,4 +5,4 @@ draft = false
 +++
 
 tags
-: [Storytelling]({{<relref "storytelling.md" >}})
+: [Storytelling]({{<relref "storytelling.md#" >}})

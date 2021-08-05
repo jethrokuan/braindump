@@ -3,7 +3,7 @@
 :END:
 #+title: Temp Coding with Alpha Synaptic Function
 
-- tags :: [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]
+- tags :: [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]]
 
 * Temporal Coding with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ
 

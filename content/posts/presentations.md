@@ -12,7 +12,7 @@ draft = false
 
 2.  Has a clear beginning, middle and end
 
-3.  Has identifiable inherent structure
+3.  Has identifiable  inherent structure
 
 4.  The first plot point is an incident that captures the audience's
     intrigue and interest

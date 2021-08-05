@@ -6,14 +6,16 @@ draft = false
 
 ## Operating System Key Concepts {#operating-system-key-concepts}
 
+
 ### Motivation {#motivation}
 
 1.  Abstraction
-    - Presents common high level functionality to users
-    - Efficient and Portable
+    -   Presents common high level functionality to users
+    -   Efficient and Portable
 2.  Resource Allocator
 3.  Program Control
-    - Monitor execution of program, and manage resource access privileges
+    -   Monitor execution of program, and manage resource access privileges
+
 
 ### Alarm signal {#alarm-signal}
 
@@ -21,12 +23,14 @@ The alarm signal causes the operating system to suspend whatever it is
 doing, save its registers on the stack, and start running a special
 signal-handling procedure.
 
+
 ### Identification {#identification}
 
 Each person authorized to use the OS is assigned a UID (User
 Identification). Each process started has the UID of the person who
 started it. The child process inherits the UID from the parent. Users
 can also be members of groups, each with a GID (Group Identification).
+
 
 ### File systems {#file-systems}
 
@@ -44,6 +48,7 @@ file, and access a particular block to read it. **character special
 files** are used to model printers, modems and other devices that
 accept or output a character stream.
 
+
 ### Pipe {#pipe}
 
 A sort of pseudofile that can be used to connect two processes. If
@@ -52,9 +57,11 @@ advance.
 
 {{< figure src="/ox-hugo/posix.png" >}}
 
+
 ### Process segments {#process-segments}
 
 {{< figure src="/ox-hugo/process_segments.png" >}}
+
 
 ### Files in UNIX {#files-in-unix}
 
@@ -63,6 +70,7 @@ it. The i-number is an index into a table of **i-nodes**, one per file,
 telling who owns the file, where its disk-blocks are and so one. A
 directory is a file containing a set of (i-number, ASCII name) pairs.
 
+
 ### Hypervisors {#hypervisors}
 
 In practice, the real distinction between a type 1 hypervisor and a
@@ -70,6 +78,7 @@ type 2 hypervisor is that a type 2 makes uses of a host operating
 system and its file system to create processes, store files, and so
 on. A type 1 hypervisor has no underlying sup- port and must perform
 all these functions itself.
+
 
 ## Process {#process}
 
@@ -85,6 +94,7 @@ A suspended process consists of its address space, and its entry in
 the process table, which contains the contents of the registers and
 other items required to resume the process later on.
 
+
 ### Process Creation {#process-creation}
 
 OS needs to load its code and any static data (e.g. initialized
@@ -92,15 +102,17 @@ variables) into memory, into the address space of the process. Modern
 OSes load these lazily, via the machinery of paging and swapping.
 
 1.  Run-time stack
-    - Used for local variables, function parameters and return
-      addresses
+    -   Used for local variables, function parameters and return
+        addresses
 2.  Heap
-    - Dynamically allocated data, programs request this space by
-      calling `malloc()` and free it explicitly using `free()`
+    -   Dynamically allocated data, programs request this space by
+        calling `malloc()` and free it explicitly using `free()`
 3.  I/O related tasks
-    - 3 open file descriptors: `stdin`, `stdout` and `stderr`
+    -   3 open file descriptors: `stdin`, `stdout` and `stderr`
+
 
 ### Function Call {#function-call}
+
 
 #### Control Flow issues {#control-flow-issues}
 
@@ -108,11 +120,13 @@ OSes load these lazily, via the machinery of paging and swapping.
 2.  Need to resume when the function call is done
 3.  Minimally, need to store the PC of the caller
 
+
 #### Data Storage issues {#data-storage-issues}
 
 1.  Need to pass parameters to the function
 2.  Need to capture the return result
 3.  May have local variable declarations
+
 
 #### Stack Memory {#stack-memory}
 
@@ -122,6 +136,7 @@ the current memory address of the top of the stack.
 
 When the stack grows, the stack pointer decreases. The stack grows
 from bottom up. This is true for most architectures.
+
 
 #### Stack Frame {#stack-frame}
 
@@ -134,6 +149,7 @@ each function invocation. The stack frame stores:
 4.  Saved Registers
 5.  Saved Stack Pointer
 6.  Frame Pointer
+
 
 #### Function Call Convention (FCC) {#function-call-convention--fcc}
 
@@ -153,11 +169,13 @@ Teardown:
 2.  **Transfer control from callee to caller using saved PC**
 3.  Caller: Continues execution in caller
 
+
 #### Frame Pointer {#frame-pointer}
 
 Stack Pointer is hard to use as it can change. Frame pointer points to
 a fixed location in a stack frame, and other items are accessed as
 offsets from the frame pointer.
+
 
 ### Dynamic Memory Allocation {#dynamic-memory-allocation}
 
@@ -171,34 +189,37 @@ Hence, a new region is needed, called the heap. Heap memory is a lot
 trickier to manage. Variable size, and allocation/deallocation timing
 is not known before hand.
 
+
 ### Process Identification {#process-identification}
 
 To distinguish processes from each other, a process ID (PID) is
 assigned to each process.
 
+
 ### 5-state Process Model {#5-state-process-model}
 
 New
 : The process creation is started, but has not been
-allocated the required resources.
+    allocated the required resources.
 
 Ready
 : Process is ready to run, but the OS has not chosen to run
-it yet.
+    it yet.
 
 Running
 : A process is running if it is executing instructions on
-the processor.
+    the processor.
 
 Blocked
 : Process has performed some kind of operation that
-makes it not ready to run until another event has
-taken place, e.g. being blocked by I/O.
+    makes it not ready to run until another event has
+    taken place, e.g. being blocked by I/O.
 
 Terminated
 : Process is finished, may require OS cleanup.
 
 {{< figure src="/ox-hugo/process_lifecycle.png" >}}
+
 
 ### Data structures required {#data-structures-required}
 
@@ -210,12 +231,14 @@ PCB
 
 {{< figure src="/ox-hugo/process_ds.png" >}}
 
+
 ### Mechanism: Limited Direct Execution {#mechanism-limited-direct-execution}
 
 The OS must virtualize the CPU in an efficient manner, while retaining
 control over the system. To do so, both hardware and operating systems
 support will be required. The OS will often use a judicious bit of
 hardware support in order to accomplish its work effectively.
+
 
 ### Access Control {#access-control}
 
@@ -233,6 +256,7 @@ trap table, and informs the hardware of the location of specialised
 _trap handlers_, which is the code to run when certain exceptional
 events occur. One such example is the hard-disk interrupt.
 
+
 ### General System Call Mechanism {#general-system-call-mechanism}
 
 1.  User program invokes the library call, using the normal function
@@ -249,13 +273,16 @@ events occur. One such example is the hard-disk interrupt.
 7.  Library call return to user program, via normal function
     return mechanism
 
+
 ### Switching between processes {#switching-between-processes}
+
 
 #### Cooperative Approach {#cooperative-approach}
 
 Processes transfer control of the CPU to the OS by making system
 calls. The OS regains control of the CPU by waiting for a system call
 or an illegal operation of some kind to take place.
+
 
 #### Non-cooperative Approach {#non-cooperative-approach}
 
@@ -278,6 +305,7 @@ executing process. This includes:
 1.  Program Counter (PC)
 2.  Stack Pointer (Pointing to the new context)
 
+
 ### Exception and Interrupts {#exception-and-interrupts}
 
 Executing a machine level instruction can lead to exceptions, for
@@ -299,6 +327,7 @@ A handler does the following:
 3.  Restore Register/CPU
 4.  Return from interrupt
 
+
 ## Scheduling {#scheduling}
 
 Assumptions made:
@@ -308,41 +337,48 @@ Assumptions made:
 3.  All jobs only use the CPU (i.e. they perform no I/O)
 4.  The run-time of each job is known
 
+
 ### Scheduling Metrics {#scheduling-metrics}
 
 1.  Turn-around time
+
 
 ### First Come First Served (FCFS) {#first-come-first-served--fcfs}
 
 Example:
 
-- A, B and C arrived at time T=0.
-- A runs first, followed by B, then C
+-   A, B and C arrived at time T=0.
+-   A runs first, followed by B, then C
 
 Average Turnaround time:
 (10 + 20 + 30)/3 = 20
 
+
 #### Pros {#pros}
 
 Easy to implement
+
 
 #### Cons {#cons}
 
 _Convoy effect_: a number of relatively-short potential consumers
 of a resource get queued behind a heavyweight resource consumer.
 
-- E.g. A takes 100 TU, B and C 10
-- Average turnaround time: (100 + 110 + 120)/3
-- if instead, B and C were scheduled before A, it would be (10 + 20+
-  120)/3
+-   E.g. A takes 100 TU, B and C 10
+-   Average turnaround time: (100 + 110 + 120)/3
+-   if instead, B and C were scheduled before A, it would be (10 + 20+
+    120)/3
+
 
 ### Shortest Job First (SJF) {#shortest-job-first--sjf}
 
 Schedule the job that takes the shortest TU.
 
+
 #### Pros {#pros}
 
 Optimizes for Turnaround time
+
 
 #### Cons {#cons}
 
@@ -351,18 +387,22 @@ B and C takes 10 TU, but B and C arrive only shortly after A, then A
 will still get queued, and the turnaround time will be high (convoy
 problem again)
 
+
 ### Shortest Time-to-Completion First (SRT) {#shortest-time-to-completion-first--srt}
 
 Any time a new job enters the system, it determines the job that has
 the least time left, and schedules that one first.
 
+
 #### Pros {#pros}
 
 Good turnaround time
 
+
 #### Cons {#cons}
 
 Bad for response time and interactivity.
+
 
 ### Round Robin {#round-robin}
 
@@ -377,10 +417,12 @@ response-time metric. However, if the time slice is too short, there
 will be a lot of overhead, and the cost of context switching will
 dominate the overall performance.
 
+
 #### Incorporating I/O {#incorporating-i-o}
 
 By treating each CPU burst as a job, the scheduler makes sure
 processes that are "interactive" get run frequently.
+
 
 ### Multi-level Feedback Queue (MLFQ) {#multi-level-feedback-queue--mlfq}
 
@@ -395,19 +437,19 @@ MLFQ has a number of distinct queues, each assigned a different
 _priority level_. At any given time, a job that is ready to run is on
 a single queue.
 
-- Rule 1: If Priority(A) > Priority(B), A runs
-- Rule 2: If Priority(A) = Priority(B), A and B run in RR
+-   Rule 1: If Priority(A) > Priority(B), A runs
+-   Rule 2: If Priority(A) = Priority(B), A and B run in RR
 
 Note that job priority _changes_ over time.
 
 First try at MLFQ:
 
-- Rule 3: When a job enters the system, it is placed at the highest
-  priority (the top most queue)
-- Rule 4a: If a job uses up an entire time slice while running, its
-  priority is _reduced_ (it moves down one queue)
-- Rule 4b: If a job gives up the CPU before the time slice is up, it
-  stays at the same _priority_ level.
+-   Rule 3: When a job enters the system, it is placed at the highest
+    priority (the top most queue)
+-   Rule 4a: If a job uses up an entire time slice while running, its
+    priority is _reduced_ (it moves down one queue)
+-   Rule 4b: If a job gives up the CPU before the time slice is up, it
+    stays at the same _priority_ level.
 
 Problems:
 
@@ -419,8 +461,8 @@ Problems:
 
 Attempt 2:
 
-- Rule 5: After some time period S, move all the jobs in the system to
-  the topmost queue
+-   Rule 5: After some time period S, move all the jobs in the system to
+    the topmost queue
 
 This solves two problems:
 
@@ -435,9 +477,10 @@ Instead of forgetting how much of a time slice a process used at a
 given level, the scheduler should keep track, once a process has used
 its allotment, it is demoted to the next priority queue.
 
-- Rule 4: Once a job uses up its time allotment at a given level
-  (regardless of how many times it has given up the CPU), its priority
-  is reduced
+-   Rule 4: Once a job uses up its time allotment at a given level
+    (regardless of how many times it has given up the CPU), its priority
+    is reduced
+
 
 #### Tuning MLFQ {#tuning-mlfq}
 
@@ -446,11 +489,13 @@ its allotment, it is demoted to the next priority queue.
     between them makes sense
 2.  The low-priority queues are CPU bound, and longer time slices work well.
 
+
 ### Lottery Scheduling {#lottery-scheduling}
 
 Tickets are used to represent the share of a resource that a process
 should receive. Lottery scheduling achieves probabilistic fair sharing
 of the CPU resources.
+
 
 ## Concurrency {#concurrency}
 
@@ -460,6 +505,7 @@ time.
 
 Now, we will examine the abstraction for running a single process:
 that of a thread.
+
 
 ## Thread {#thread}
 
@@ -473,6 +519,7 @@ each thread of a process. Unlike the context switch for processes, the
 address space for threads remain the same.
 
 {{< figure src="/ox-hugo/thread_add_space.png" >}}
+
 
 ### Example Thread creation {#example-thread-creation}
 
@@ -500,7 +547,9 @@ address space for threads remain the same.
   }
 ```
 
+
 ### Issues with Uncontrolled Scheduling {#issues-with-uncontrolled-scheduling}
+
 
 #### Race Condition {#race-condition}
 
@@ -511,27 +560,29 @@ section_. What's required for this code to run properly is _mutual
 exclusion_. This property guarantees that if one thread is executing
 within the critical section, others will be prevented from doing so.
 
+
 #### Key Terms {#key-terms}
 
 Critical Section
 : piece of code that accesses a _shared_ resource,
-usually a variable or data structure
+    usually a variable or data structure
 
 Race Condition
 : A situation which arises if multiple threads of
-execution enter the critical section at roughly
-the same time; both attempt to update the shared
-data structure at the same time, leading to
-surprising and sometimes undesirable outcomes
+    execution enter the critical section at roughly
+    the same time; both attempt to update the shared
+    data structure at the same time, leading to
+    surprising and sometimes undesirable outcomes
 
 Indeterminate Program
 : Consists of one or more race conditions;
-the output is non deterministic, something typically expected of
-computer programs
+    the output is non deterministic, something typically expected of
+    computer programs
 
 Mutual Exclusion
 : threads use _mutual exclusion_ primitives to
-avoid the problems that concurrency yields, such as race conditions
+    avoid the problems that concurrency yields, such as race conditions
+
 
 #### The wish for atomicity {#the-wish-for-atomicity}
 
@@ -549,6 +600,7 @@ general case this is not possible.
 Instead, we ask the hardware for a few useful instructions upon which
 we can build a general set of what is called _synchronisation
 primitives_.
+
 
 ### Thread API {#thread-api}
 
@@ -576,6 +628,7 @@ primitives_.
 ```
 
 `pthread_join` waits for the thread's completion.
+
 
 #### Locks API {#locks-api}
 
@@ -607,6 +660,7 @@ These two calls are used in lock acquisition. `trylock` returns
 failure if the lock is already held, and `timedlock` returns after a
 timeout or after acquiring the lock, whichever happens first.
 
+
 #### Condition Variables {#condition-variables}
 
 ```c
@@ -615,7 +669,7 @@ timeout or after acquiring the lock, whichever happens first.
 ```
 
 **condition variables** are useful when some kind of signalling must
-take place between threads.
+ take place between threads.
 
 ```c
   pthread_mutex_t lock = PTHREAD_MUTEX_INITIALIZER;
@@ -635,24 +689,26 @@ take place between threads.
   pthread_mutex_unlock(&lock);
 ```
 
+
 ### Properties of Correct CS Implementation {#properties-of-correct-cs-implementation}
 
 Mutual Exclusion
 : If process P1 is executing in critical section,
-all other processes are prevented from entering the critical section
+    all other processes are prevented from entering the critical section
 
 Progress
 : If no process is in a critical section, one of the
-waiting processes should be granted access
+    waiting processes should be granted access
 
 Bounded Wait
 : After process p1 request to enter critical section,
-there exists an upperbound of number of times other
-processes can enter the critical section before p1
+    there exists an upperbound of number of times other
+    processes can enter the critical section before p1
 
 Independence
 : Process **not** executing in critical section should
-never block other process
+    never block other process
+
 
 ### Locks {#locks}
 
@@ -665,23 +721,26 @@ now available again. If no othre threads are waiting for the lock
 the lock is simply changed to free, if thee are waiting threads, one
 of them will acquire the lock.
 
+
 #### Pthread Locks {#pthread-locks}
 
 The name that the POSIX library uses for a lock is a **mutex**, as it is
 used to provide **mutual exclusion** between threads. Different locks
 can be initialized to protect different critical sections.
 
+
 #### Evaluating locks {#evaluating-locks}
 
 mutual exclusion
 : does the lock work, preventing multiple threads
-from entering a critical section?
+    from entering a critical section?
 
 fairness
 : Does each thread contending for the lock get a fair shot?
 
 performance
 : Are the time overheads added by using the lock significant?
+
 
 #### Approach 1: Controlling Interrupts {#approach-1-controlling-interrupts}
 
@@ -700,16 +759,17 @@ critical section:
 
 <!--list-separator-->
 
-- Pros
+-  Pros
 
-  1.  Simplicity
+    1.  Simplicity
 
 <!--list-separator-->
 
-- Cons
+-  Cons
 
-  1.  Requires calling thread to perform a _privileged_ operation
-  2.  Doesn't work on multiprocessor systems
+    1.  Requires calling thread to perform a _privileged_ operation
+    2.  Doesn't work on multiprocessor systems
+
 
 #### Approach 2: Test and Set {#approach-2-test-and-set}
 
@@ -728,26 +788,27 @@ However, this presents several issues:
 
 With hardware support for **test-and-set**, we achieve mutex, and have a
 **spin lock**! To work correctly on a single processor, it requires a
-preemptive scheduler, one that will interrupt a thread via atimer, in
+preemptive scheduler, one that will interrupt a thread via  atimer, in
 order to run a different thread, from time to time.
 
 <!--list-separator-->
 
-- Evaluating the spin lock:
+-  Evaluating the spin lock:
 
-  correctness
-  : YES
+    correctness
+    : YES
 
-  fairness
-  : NO, a thread may spin forever under contention
+    fairness
+    : NO, a thread may spin forever under contention
 
-  performance
-  : NO, high performance overheads
+    performance
+    : NO, high performance overheads
 
-  Other hardware primitives one can use to write locks:
+    Other hardware primitives one can use to write locks:
 
-  1.  LoadLinked and StoreConditional
-  2.  Fetch-And-Add (ticket lock)
+    1.  LoadLinked and StoreConditional
+    2.  Fetch-And-Add (ticket lock)
+
 
 #### Two Phase Locks {#two-phase-locks}
 
@@ -758,13 +819,16 @@ is not acquired during the first phase, the second phase is entered,
 where the caller is put to sleep, and only woken up when the lock
 becomes free later.
 
+
 ### Semaphores vs Spinlocks {#semaphores-vs-spinlocks}
 
 Spinlocks are more efficient if locking only for a short period of
 time: the CPU cycles used during busy waiting could take a much
 shorter time than making context switches.
 
+
 ## Classical Synchronization Problems {#classical-synchronization-problems}
+
 
 ### Producer/Consumer {#producer-consumer}
 
@@ -805,6 +869,7 @@ Blocking Version contains 3 semaphores:
 
 ```
 
+
 ### Readers/Writers {#readers-writers}
 
 Processes share a data structure D
@@ -841,10 +906,12 @@ Processes share a data structure D
   }
 ```
 
+
 ### Dining Philosophers {#dining-philosophers}
 
 Philosophers sitting in a circle, requiring resource from both left
 and right side.
+
 
 #### Tanenbaum Solution {#tanenbaum-solution}
 
@@ -893,6 +960,7 @@ and right side.
   }
 ```
 
+
 ## Address Spaces {#address-spaces}
 
 While saving and storing register-level state is relatively fast,
@@ -903,35 +971,39 @@ allowing the OS to implement time sharing efficiently.
 The OS will need to create an **easy to use** abstraction of physical
 memory. This abstraction is called the _address space_.
 
+
 ### Goals of Virtual Memory {#goals-of-virtual-memory}
 
 transparency
 : invisible to the running program, and the program
-behaves as if it has its own private virtual memory
+    behaves as if it has its own private virtual memory
 
 efficiency
 : time and space efficient, via hardware support such
-as TLBs.
+    as TLBs.
 
 protection
 : protects processes from one another, delivering the
-property of **isolation** among processes.
+    property of **isolation** among processes.
+
 
 ### Types of Memory {#types-of-memory}
 
 stack memory
 : allocations and de-allocations are handled
-implicitly by the compiler
+    implicitly by the compiler
 
 heap memory
 : allocations and de-allocations are explicitly
-handled by programmer
+    handled by programmer
+
 
 ### Address translation {#address-translation}
 
 The hardware transforms each memory access, changing the virtual
 address provided by the instruction to a physical address where the
 desired information is actually located.
+
 
 ### 1950's **base and bounds** technique {#1950-s-base-and-bounds-technique}
 
@@ -964,6 +1036,7 @@ Dynamic relocation is inefficient. If the space inside the allocated
 unit is not all used, it is wasted, and this is called **internal
 fragmentation**.
 
+
 ### Segmentation {#segmentation}
 
 A segment is a contiguous portion of the address space of a particular
@@ -988,6 +1061,7 @@ The hardware would need to know how the segments grow to translate
 virtual address differently. In the case of the stack, a negative
 offset is added to the base to calculate the correct physical address.
 
+
 ### Sharing {#sharing}
 
 To save memory, it useful to share certain memory segments, like
@@ -998,6 +1072,7 @@ segment, indicating whether or not a program can read or write to a
 segment.
 
 {{< figure src="/ox-hugo/screenshot_2017-11-04_20-57-25.png" >}}
+
 
 ### OS support {#os-support}
 
@@ -1017,6 +1092,7 @@ keep large extents of memory for allocation. Algorithms include:
 3.  First-fit
 4.  Buddy System
 
+
 ## Free Space Management {#free-space-management}
 
 A free list contains a set of elements that describe the free space
@@ -1030,6 +1106,7 @@ the header contains the size of the allocated region.
   }
 ```
 
+
 ### Growing the Heap {#growing-the-heap}
 
 Traditional allocators start of with a small heap. When more memory is
@@ -1037,7 +1114,9 @@ required, the `sbrk` system call is made to request for more memory.
 The OS finds free physical pages, maps them to the address space of
 the requesting process, and returns the value of the end of the new heap.
 
+
 ### Free Space Allocation Strategies {#free-space-allocation-strategies}
+
 
 #### Best fit {#best-fit}
 
@@ -1048,6 +1127,7 @@ the requesting process, and returns the value of the end of the new heap.
 Naive implementations are slow because of the exhaustive search
 required to find the correct free block.
 
+
 #### Worst fit {#worst-fit}
 
 1.  Find the largest chunk
@@ -1057,6 +1137,7 @@ required to find the correct free block.
 Exhaustive search is also required to determine the largest chunk, and
 studies have shown this still leads to excess fragmentation.
 
+
 #### Next Fit {#next-fit}
 
 1.  Keep an extra pointer to the location within the list where one was
@@ -1064,6 +1145,7 @@ studies have shown this still leads to excess fragmentation.
 2.  Spread searches for free space throughout the list more uniformly
 
 Performance similar to first fit.
+
 
 #### Segregated Lists {#segregated-lists}
 
@@ -1074,6 +1156,7 @@ allocator.
 
 When the kernel boots up, it allocates a number of **object caches** for
 kernel objects that are likely to be requested frequently.
+
 
 #### Buddy Allocation {#buddy-allocation}
 
@@ -1093,6 +1176,7 @@ This scheme can suffer from **internal fragmentation**. Upon freeing a
 block, the allocator checks its buddy and sees if the block is still
 free. If so, it can coalesce the 2 blocks.
 
+
 ## Paging {#paging}
 
 Instead of splitting the address space into logical segments, we
@@ -1105,6 +1189,7 @@ To record where each virtual page of the address place is placed in
 physical memory, the OS keeps a _per-process_ data structure known as
 a **page table**. The page table stores **address translations** for each
 of the virtual pages of the address space.
+
 
 ### Address Translation {#address-translation}
 
@@ -1120,6 +1205,7 @@ Suppose the page size is 16 bytes, in a 64-byte address space. We need
 to be able to select 4 pages, and the first 2 bits of the address can
 do just that, giving us a 2 bit VPN.
 
+
 ### Inside Page Tables {#inside-page-tables}
 
 The simplest form of a page table is the **linear page table**, which is
@@ -1131,26 +1217,27 @@ Within each PTE, a number of different bits are stored.
 
 valid bit
 : indicates whether a particular transaction is valid.
-This is crucial for supporting a sparse address space.
+    This is crucial for supporting a sparse address space.
 
 protection bit
 : indicating whether a page can be read from,
-written to, or executed from.
+    written to, or executed from.
 
 present bit
 : indicates whether this page is in physical memory or
-in disk (swapped out).
+    in disk (swapped out).
 
 dirty bit
 : indicates whether a page has been modified since it was
-brought into memory.
+    brought into memory.
 
 reference bit
 : track whether a page has been accessed, and can be
-useful in deciding which pages to swap out (e.g.
-swapping out the least popular pages).
+    useful in deciding which pages to swap out (e.g.
+    swapping out the least popular pages).
 
 {{< figure src="/ox-hugo/screenshot_2017-11-05_16-38-47.png" >}}
+
 
 ### How Paging Works {#how-paging-works}
 
@@ -1178,6 +1265,7 @@ it is left-shifted, and OR'd with the offset to form the final address.
 Notice each memory reference requires performing one extra memory
 reference, which is very costly.
 
+
 ### Speeding up Paging with TLBs {#speeding-up-paging-with-tlbs}
 
 Paging alone shows high performance overheads. This is because the
@@ -1190,12 +1278,13 @@ To speed up address translation, a hardware feature called
 A TLB is a part of the chip's **memory management unit (MMU)**, and is a
 hardware cache of popular virtual-to-physical address translations.
 
+
 #### TLB Basic Algorithm {#tlb-basic-algorithm}
 
 We first look up the virtual address in the TLB. If it exists in the
 TLB, then it is a **TLB Hit**, and the PFN is extracted from the TLB.
 
-If the CPU does not find the translation in the **TLB**, this is a
+If the CPU does not find the translation in the **TLB**,  this is a
 **TLB miss**. The hardware accesses the page table to find the
 translation, and updates the **TLB**.
 
@@ -1205,6 +1294,7 @@ TLB performance gains benefit from:
     same page, so only the first access is a TLB miss.
 2.  Temporal locality: elements accessed recently are more likely to be
     accessed again.
+
 
 #### Managing TLB Misses {#managing-tlb-misses}
 
@@ -1224,6 +1314,7 @@ hardware change. The hardware also doesn't do much on a TLB miss: it
 simply raises an exception, and the OS TLB miss handler will handle
 the rest.
 
+
 #### Handling Context Switches {#handling-context-switches}
 
 The VPN-PFN mapping for different processes are different, and the TLB
@@ -1238,23 +1329,27 @@ identifier, like the PID but with fewer bits.
 
 {{< figure src="/ox-hugo/screenshot_2017-11-05_19-43-58.png" >}}
 
+
 #### TLB Replacement Policies {#tlb-replacement-policies}
 
 1.  Least Recently Used (LRU)
-    - takes advantage of locality
+    -   takes advantage of locality
 2.  Random
-    - no weird corner cases that have pessimal behaviour
+    -   no weird corner cases that have pessimal behaviour
+
 
 ### Making Page Tables Smaller {#making-page-tables-smaller}
 
 Simple array-based page tables are too big, taking up too much memory
 on physical systems.
 
+
 #### Bigger Pages {#bigger-pages}
 
 Using larger pages will lead to a reduction in the number of page
 entries required, and reduce the size of the page table. However, this
 leads to a lot of wastage in each page (**internal fragmentation**).
+
 
 #### Paging and Segments {#paging-and-segments}
 
@@ -1267,6 +1362,7 @@ The virtual address now looks like this:
 
 The downsides for segmentation apply: segmentation is not flexible,
 and if the heap is rarely used, for example, then there is wastage.
+
 
 #### Multi-level Page Tables {#multi-level-page-tables}
 
@@ -1293,6 +1389,7 @@ VPN even further:
 
 {{< figure src="/ox-hugo/screenshot_2017-11-05_20-03-35.png" >}}
 
+
 #### Inverted Page Tables {#inverted-page-tables}
 
 Instead of having one page table per process, we can have a single
@@ -1301,6 +1398,7 @@ page table for each physical physical page of the system.
 Finding the correct entry is expensive via a linear scan, and hash
 tables are often built over the base structure to speed lookups.
 
+
 ## Beyond Physical Memory {#beyond-physical-memory}
 
 Sometimes the address space of a running process does not fit into
@@ -1308,7 +1406,9 @@ memory. In that case, we require an additional level in the memory
 hierachy, some place to stash portions of the address space that is
 currently not in use. We call this the **swap space**.
 
+
 ### Mechanisms {#mechanisms}
+
 
 #### Swap Space {#swap-space}
 
@@ -1317,6 +1417,7 @@ forth. The OS will need to memorise the disk address of a given page.
 
 The size of the swap space determines the number of pages it can
 stash.
+
 
 #### The Present Bit {#the-present-bit}
 
@@ -1337,6 +1438,7 @@ update the page table to mark the page as present, and update the PFN
 field of the PTN to record the in-memory location of the newly fetched
 page.
 
+
 #### Page-replacement Policy {#page-replacement-policy}
 
 When memory is full, upon a page fault, the OS will have to decide
@@ -1356,6 +1458,7 @@ Below is the page-fault control algorithm:
    RetryInstruction();
 ```
 
+
 #### When Replacements Really Occur {#when-replacements-really-occur}
 
 The OS actively keeps a small portion of memory free. To do this, the
@@ -1371,6 +1474,7 @@ With the addition of a **page daemon**, the control flow algorithm can
 be changed. The thread trying to read a page would simply wait for
 the page daemon free up enough memory if the LW threshold is hit.
 
+
 ### Policies {#policies}
 
 The main memory can be viewed as a cache mechanism. Knowing the number
@@ -1383,6 +1487,7 @@ future.
 The first few accesses when the cache begins in an empty state is a
 **cold-start miss**.
 
+
 #### FIFO {#fifo}
 
 In FIFO replacement, pages are placed in a queue when they enter the
@@ -1391,16 +1496,18 @@ queue is evicted.
 
 <!--list-separator-->
 
-- Belady's anomaly
+-  Belady's anomaly
 
-  One would normally expect the cache hit rate to increase when the
-  cache gets larger. However, with FIFO, it gets worse, and this
-  phenomenon is called **Belady's anomaly**. LRU has the **stack property**:
-  for algorithms with this property, a cache of size N+1 naturally
-  includes the contents of a cache of size N. FIFO and Random (among
-  others) do not obey this stack property.
+    One would normally expect the cache hit rate to increase when the
+    cache gets larger. However, with FIFO, it gets worse, and this
+    phenomenon is called **Belady's anomaly**. LRU has the **stack property**:
+    for algorithms with this property, a cache of size N+1 naturally
+    includes the contents of a cache of size N. FIFO and Random (among
+    others) do not obey this stack property.
+
 
 ## Interesting Links {#interesting-links}
+
 
 ### [What is a CPU to do when it has nothing to do?](https://lwn.net/SubscriberLink/767630/594421f913c3d00a/) {#what-is-a-cpu-to-do-when-it-has-nothing-to-do}
 
@@ -1426,5 +1533,6 @@ In Linux kernel <= 4.16, the decision to stop the tick is made before
 the governor makes a recommendation. In 4.17 the decision of whether
 to stop the tick is made after the governor has made the
 recommendation.
+
 
 ### <span class="org-todo todo TODO">TODO</span> [How new-lines affect the Linux kernel performance](https://nadav.amit.zone/blog/linux-inline) {#how-new-lines-affect-the-linux-kernel-performance}

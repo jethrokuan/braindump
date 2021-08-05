@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Machine Learning Algorithms]({{< relref "machine_learning_algorithms" >}}), [Probabilistic Graph Models]({{< relref "pgm" >}})
+: [Machine Learning Algorithms]({{<relref "machine_learning_algorithms.md#" >}}), [Probabilistic Graph Models]({{<relref "pgm.md#" >}})
 
 Monte Carlo methods make use of random numbers to solve the following
 problems:
@@ -15,7 +15,7 @@ problems:
 2.  Estimate expectation of functions under this distribution:
 
 \begin{equation}
-\Phi = \langle \phi(x) \rangle = \int d^N P(x) \phi(x)
+  \Phi = \langle \phi(x) \rangle = \int d^N P(x) \phi(x)
 \end{equation}
 
 This probability distribution is called the _target density_. The
@@ -26,7 +26,7 @@ If we solve the first problem of sampling, then these samples can be
 used to solve the second problem via the Monte Carlo estimator:
 
 \begin{equation}
-\hat{\phi} = \frac{1}{R}\sum\_{r} \phi(\mathbf{x}^{( r)})
+  \hat{\phi} = \frac{1}{R}\sum\_{r} \phi(\mathbf{x}^{( r)})
 \end{equation}
 
 If the samples are generated from \\(P(x)\\), then the expectation of
@@ -37,10 +37,11 @@ variance of \\(\phi\\). This is so important that it is restated here:
 > The accuracy of the Monte Carlo estimate is dependent only on the
 > variance of \\(\phi\\), and not on the dimensionality of the space sampled.
 
+
 ## Why is sampling hard? {#why-is-sampling-hard}
 
 Suppose we can evaluate \\(P(x)\\) up to a multiplicative constant \\(Z\\):
-\$P^\*(x) = \\(P(x) Z\\). To generate samples from \\(P(x)\\), we need to
+$P^*(x) = \\(P(x) Z\\). To generate samples from \\(P(x)\\), we need to
 know the normalizing constant \\(Z\\). Even if we knew \\(Z\\), there is no
 obvious way to sample without enumerating most or all of the possible
 states.

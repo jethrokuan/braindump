@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md#" >}})
+
 
 ## Why Deep Reinforcement Learning? {#why-deep-reinforcement-learning}
 
@@ -17,10 +18,11 @@ tags
         so transferable across tasks
     2.  Features are informed by the task
 
+
 ## Anatomy of Deep RL algorithms {#anatomy-of-deep-rl-algorithms}
 
 \begin{equation}
-\theta^{\star}=\arg \max \_{\theta} E\_{\tau \sim p\_{\theta}(\tau)}\left[\sum\_{t} r\left(\mathbf{s}\_{t}, \mathbf{a}\_{t}\right)\right]
+  \theta^{\star}=\arg \max \_{\theta} E\_{\tau \sim p\_{\theta}(\tau)}\left[\sum\_{t} r\left(\mathbf{s}\_{t}, \mathbf{a}\_{t}\right)\right]
 \end{equation}
 
 policy gradients
@@ -28,64 +30,74 @@ policy gradients
 
 value-based
 : estimate value/q-function of the optimal policy (no
-explicit policy)
+    explicit policy)
 
 actor-critic
 : estimate value/q-function of the current policy, use
-it to improve policy
+    it to improve policy
 
 model-based RL
-: estimate the transition model, and then... - use it for planning (no explicit policy) - Trajectory optimization/optimal control (continuous spaces) - Discrete planning in discrete action spaces ([Monte Carlo Tree Search]({{<relref "mcts.md" >}})) - use it to improve a policy (e.g. via backpropagation, with some tricks) - use the model to learn a value function (e.g. through dynamic programming)
+: estimate the transition model, and then...
+    -   use it for planning (no explicit policy)
+        -   Trajectory optimization/optimal control (continuous spaces)
+        -   Discrete planning in discrete action spaces ([Monte Carlo Tree Search]({{<relref "mcts.md#" >}}))
+    -   use it to improve a policy (e.g. via backpropagation, with some tricks)
+    -   use the model to learn a value function (e.g. through dynamic programming)
+
 
 ## Why so many RL algorithms? {#why-so-many-rl-algorithms}
 
-- Different tradeoffs
-  - sample efficiency
-    - is it off policy: can improve policy without generating new
-      samples from that policy?
-    - however, are samples cheap to obtain?
+-   Different tradeoffs
+    -   sample efficiency
+        -   is it off policy: can improve policy without generating new
+            samples from that policy?
+        -   however, are samples cheap to obtain?
 
 {{< figure src="/ox-hugo/screenshot2019-12-16_01-35-50_.png" caption="Figure 1: Sample efficiency comparison" >}}
 
-- stability and ease of use (does it converge, and if so to what?)
-  - Q-learning: fixed point iteration
-  - Model-based RL: model is not optimized for expected reward
-- Different assumptions
-  - fully observable?
-    - generally assumed by value function fitting methods (mitigated
-      by adding recurrence)
-    - episodic learning
-      - generally assumed by pure policy gradient methods
-      - assumed by some model-based RL methods
-    - continuity or smoothness?
-      - assumed by some continuous value function learning methods
-      - often assumed by some model-based RL methods
-  - stochastic or deterministic?
-- Different things are easy or hard in different settings
-  - easier to represent the policy?
-  - easier to represent the model?
+-   stability and ease of use (does it converge, and if so to what?)
+    -   Q-learning: fixed point iteration
+    -   Model-based RL: model is not optimized for expected reward
+-   Different assumptions
+    -   fully observable?
+        -   generally assumed by value function fitting methods (mitigated
+            by adding recurrence)
+        -   episodic learning
+            -   generally assumed by pure policy gradient methods
+            -   assumed by some model-based RL methods
+        -   continuity or smoothness?
+            -   assumed by some continuous value function learning methods
+            -   often assumed by some model-based RL methods
+    -   stochastic or deterministic?
+-   Different things are easy or hard in different settings
+    -   easier to represent the policy?
+    -   easier to represent the model?
+
 
 ## Challenges in Deep RL {#challenges-in-deep-rl}
 
+
 ### Stability and Hyperparameter Tuning {#stability-and-hyperparameter-tuning}
 
-- Devising stable RL algorithms is hard
-- Can't run hyperparameter sweeps in the real world
+-   Devising stable RL algorithms is hard
+-   Can't run hyperparameter sweeps in the real world
 
 Would like algorithms with favourable improvement and convergence
 properties:
 
-- Trust region policy optimization
-  ([Schulman et al., n.d.](#org28758be))
+-   Trust region policy optimization
+    ([Schulman et al., n.d.](#orge5e033c))
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop ([Gu et al., n.d.](#orgb8ad47f))
+-   Q-Prop ([Gu et al., n.d.](#org73faa46))
+
 
 ### Problem Formulation {#problem-formulation}
 
-- Multi-task reinforcement learning and generalization
-- Unsupervised or self-supervised learning
+-   Multi-task reinforcement learning and generalization
+-   Unsupervised or self-supervised learning
+
 
 ## Resources {#resources}
 
@@ -94,8 +106,9 @@ or algorithms that adaptively adjust parameters:
     ([Tensorflow](https://github.com/openai/spinningup), [Pytorch](https://github.com/kashif/firedup/))
 3.  [David Silver's Deep RL ICML Tutorial](https://www.icml.cc/2016/tutorials/deep%5Frl%5Ftutorial.pdf)
 
+
 ## Bibliography {#bibliography}
 
-<a id="orgb8ad47f"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an Off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
+<a id="org73faa46"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
 
-<a id="org28758be"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.
+<a id="orge5e033c"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.

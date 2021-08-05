@@ -1,7 +1,7 @@
 :PROPERTIES:
 :ID:       e013e4ea-4fd4-4a39-b159-76d1849190f9
 :END:
-#+title: Spiking Neurons (Literature Review)
+#+title: Spiking Neural Networks
 
 * Introduction to Spiking Neural Networks label:sec:snn
 

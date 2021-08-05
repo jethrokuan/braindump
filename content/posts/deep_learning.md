@@ -10,6 +10,7 @@ A class of machine learning algorithm that uses a cascade of multiple
 layeprs of non-linear processing units for feature extraction and
 transformation
 
+
 ## Introduction {#introduction}
 
 Sensory perception is plagued with large amounts of nuisance
@@ -37,18 +38,20 @@ complex concepts out of simpler concepts.
 The key inspiration from neuroscience is to build up feature
 selectivity and tolerance over multiple layers in a hierarchy.
 
+
 ## Model/task categorisation {#model-task-categorisation}
 
 supervised learning
 : input -> otuput, learning the pattern from
-labeled training data
+    labeled training data
 
 unsupervised learning
 : learning to differentiate/cluster
-unlabeled data
+    unlabeled data
 
 reinforcement learning
 : learning from trial-and-error through rewards
+
 
 ## Bayesian probability {#bayesian-probability}
 
@@ -71,6 +74,7 @@ Model parameters `w` are chosen to maximise the likelihood function
 decreasing function, minimising it is equivalent to maximising
 likelihood.
 
+
 ## Universal Approximation Theorem {#universal-approximation-theorem}
 
 <https://en.wikipedia.org/wiki/Universal%5Fapproximation%5Ftheorem>
@@ -78,7 +82,9 @@ A feed-forward network with a single hidden layer containing a finite
 number of neurons can approximate continuous functions on compact
 subsets of the real space.
 
+
 ## Measure Theory {#measure-theory}
+
 
 ### Kullback-Leiber (KL) divergence {#kullback-leiber--kl--divergence}
 
@@ -89,44 +95,49 @@ difference between the two distributions, it is soften conceptualised
 as some sort of distance, but it is not a true measure, because it is
 not symmetric.
 
+
 ### Cross Entropy {#cross-entropy}
 
 Minimising the cross entropy with respect to Q is equivalent to
 minimising the KL divergence.
 
+
 ## Object Detection {#object-detection}
 
-- Region Proposal Networks find blobby regions that are likely to
-  contain objects, and are relatively fast to run
-  - e.g. Selective Search, gives about 2000 region proposals in a few
-    seconds on CPU.
-  - <https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib>
-- R-CNN uses a RPN like selective search to generate region proposals,
-  followed by a convnet and an SVM on top to predict image labels.
-  There is also a bounding box regression loss, which predicts
-  correction to the proposals generated.
-- Fast R-CNN passes the image through a convnet, and run the RPN to
-  generate image proposals on a particular feature map of the image.
-  These crops go through a RoI pooling layer.
-- Faster R-CNN trains the region proposal network, and is jointly
-  trained with 4 losses:
-  - RPN classify object/not object
-  - RPN regress box coordinates
-  - Final classification score (object classes)
-  - Final object coordinates
+-   Region Proposal Networks find blobby regions that are likely to
+    contain objects, and are relatively fast to run
+    -   e.g. Selective Search, gives about 2000 region proposals in a few
+        seconds on CPU.
+    -   <https://ivi.fnwi.uva.nl/isis/publications/bibtexbrowser.php?key=UijlingsIJCV2013&bib=all.bib>
+-   R-CNN uses a RPN like selective search to generate region proposals,
+    followed by a convnet and an SVM on top to predict image labels.
+    There is also a bounding box regression loss, which predicts
+    correction to the proposals generated.
+-   Fast R-CNN passes the image through a convnet, and run the RPN to
+    generate image proposals on a particular feature map of the image.
+    These crops go through a RoI pooling layer.
+-   Faster R-CNN trains the region proposal network, and is jointly
+    trained with 4 losses:
+    -   RPN classify object/not object
+    -   RPN regress box coordinates
+    -   Final classification score (object classes)
+    -   Final object coordinates
+
 
 ### Detection Without Proposals: YOLO / SSD {#detection-without-proposals-yolo-ssd}
 
 Within each grid cell:
 
-- Regress from each of the B base boxes to a final box with 5 numbers:
-  dx, dy, dh, dw, confidence
-- Predict scores for each of C classes (including background as a
-  class)
+-   Regress from each of the B base boxes to a final box with 5 numbers:
+    dx, dy, dh, dw, confidence
+-   Predict scores for each of C classes (including background as a
+    class)
 
 Output: \\(7 \* 7 \*(5\*B + C)\\)
 
+
 ## Learning Rates {#learning-rates}
+
 
 ### Learning Rate Annealing {#learning-rate-annealing}
 
@@ -137,11 +148,14 @@ after several iterations to try to find local minima that is largely
 flat, and doesn't change so much in any direction. (Generalises
 better)
 
+
 ## Reinforcement Learning {#reinforcement-learning}
 
 <https://towardsdatascience.com/introduction-to-various-reinforcement-learning-algorithms-i-q-learning-sarsa-dqn-ddpg-72a5e0cb6287>
 
+
 ## How Companies use Deep Learning {#how-companies-use-deep-learning}
+
 
 ### ViSenze {#visenze}
 
@@ -175,6 +189,7 @@ Models are trained offline using physical purchased GPUs.
 Deployment: Kubernetes on AWS, with generally small CPU servers.
 Overall latency is less than 200ms.
 
+
 #### Things they focused on as a company {#things-they-focused-on-as-a-company}
 
 1.  Tooling:
@@ -198,6 +213,7 @@ Overall latency is less than 200ms.
         learnings need to be added to the existing model without
         affecting data earlier
 
+
 #### Visual Embeddings Used {#visual-embeddings-used}
 
 At Visenze, they use multiple embeddings in different feature spaces
@@ -214,6 +230,7 @@ The 4 main embeddings are:
         1.  e.g for fashion, sleeve length, jeans length etc.
 3.  Similar Categories
 
+
 #### Lessons Learnt {#lessons-learnt}
 
 1.  Taxonomy Coverage
@@ -228,6 +245,7 @@ The 4 main embeddings are:
 6.  Image quality, rotation
 7.  Re-ranking based on customer
 
+
 ## Key Open Questions about Deep Learning Systems {#key-open-questions-about-deep-learning-systems}
 
 1.  How and why do they work? Can we derive their structure from first
@@ -241,6 +259,7 @@ The 4 main embeddings are:
 4.  Can we guide the search for better
     architectures/algorithms/performance in applied DL?
 
+
 ### Concrete Theoretical Questions {#concrete-theoretical-questions}
 
 1.  What are the implicit modelling assumptions?
@@ -250,18 +269,20 @@ The 4 main embeddings are:
 5.  What modeling assumptions are being violated in failures? How can
     we improve the models, tasks and algorithms?
 
+
 ## ConvNets from First Principles {#convnets-from-first-principles}
 
 There are many architectures, but just a few key operations and
 objectives:
 
-- 2D (De)Convolution, Spatial max-(un)pooling, ReLu, Skip-connections
-- Batch Normalization
-- DropOut, Noise Corruption
-- Data Augmentation
-- Objectives: XEnt, NLL, Reconstruction Error, Mutual Information
+-   2D (De)Convolution, Spatial max-(un)pooling, ReLu, Skip-connections
+-   Batch Normalization
+-   DropOut, Noise Corruption
+-   Data Augmentation
+-   Objectives: XEnt, NLL, Reconstruction Error, Mutual Information
 
 We focus on the properties conserved across all species of Convnets.
+
 
 ### Finding a generative model {#finding-a-generative-model}
 
@@ -277,6 +298,7 @@ We reverse engineer a Convnet by building a generative model
     inference, learning from unlabeled data, hyperparameter
     optimization
 
+
 ## Variational Inference and Deep Learning {#variational-inference-and-deep-learning}
 
 <https://www.youtube.com/watch?v=h0UE8FzdE8U>
@@ -289,13 +311,13 @@ Latent variables give our model structure and can make training more
 tractable. With latent variables \\(\bar{z}\\), we have:
 
 \begin{equation}
-p(x) = \sum_z p(x,z) = \sum_z p(x | z)p(z)
+  p(x) = \sum\_z p(x,z) =  \sum\_z p(x | z)p(z)
 \end{equation}
 
 Putting log-likelihood and latent variables together, we get:
 
 \begin{equation}
-L = \sum_i \log \left( \sum_z p(x_i, z)\right)
+L = \sum\_i \log \left( \sum\_z p(x\_i, z)\right)
 \end{equation}
 
 Usually, we want to sample one example and one value for the latent
@@ -304,40 +326,42 @@ variable at a time, for tractable optimization. This only works for a sum.
 We compare the above structure with this equation:
 
 \begin{equation}
-L = \sum_i \left( \sum_z \log p(x_i, z)\right)
+L = \sum\_i \left( \sum\_z \log p(x\_i, z)\right)
 \end{equation}
 
 Intuitively the new equation says that every latent variable value
 needs to do a good job of explaining the data
 
+
 ### Derivation of the Variational Bound {#derivation-of-the-variational-bound}
 
 \begin{equation}
-p(x) = \sum_i \log (\sum_z p(x_i, z))
+  p(x) = \sum\_i \log (\sum\_z p(x\_i, z))
 \end{equation}
 
 \begin{equation}
-p(x) = \sum_i \log(\sum_z \frac{q(z|x_i) p(x_i, z)}{q(z|x_i)})
+p(x) = \sum\_i \log(\sum\_z \frac{q(z|x\_i) p(x\_i, z)}{q(z|x\_i)})
 \end{equation}
 
 By Jensen's Inequality (concavity of the log function),
 
 \begin{equation}
-p(x) \ge \sum_i \sum_z q(z|x_i) \log \frac{p(x_i, z)}{q(z|x_i)}
+p(x) \ge \sum\_i \sum\_z q(z|x\_i) \log \frac{p(x\_i, z)}{q(z|x\_i)}
 \end{equation}
 
 \begin{equation}
-p(x) \ge \sum_i q(z|x_i) \sum_z \log (p(x_i | z)) + \log \frac{p(z)}{q(z|x_i)}
+  p(x) \ge \sum\_i q(z|x\_i) \sum\_z \log (p(x\_i | z)) + \log \frac{p(z)}{q(z|x\_i)}
 \end{equation}
 
 \begin{equation}
-p(x) \ge \mathbb{E}\_{z \sim q(z|x_i)} \log (p(x_i | z)) - KL(q(z|x_i) || p(z))
+  p(x) \ge \mathbb{E}\_{z \sim q(z|x\_i)} \log (p(x\_i | z)) - KL(q(z|x\_i) || p(z))
 \end{equation}
 
 The first term is the conditional likelihood of our observation if we
 used a sampled z value from the approximated posterior \\(q(z | x)\\). The
 second term is a divergence between the approximate posterior and the
 prior. This is often well defined.
+
 
 ### Variational Autoencoder {#variational-autoencoder}
 
@@ -351,7 +375,7 @@ In the simplest case, we make both \\(q(z|x)\\) and \\(p(z)\\) independent
 Gaussians:
 
 \begin{equation}
-KL(q(z|x_i) || p(z)) = \sum_j \mu_j^2 + \sigma_j^2 - \log(\sigma_j^2)
+  KL(q(z|x\_i) || p(z)) = \sum\_j \mu\_j^2 + \sigma\_j^2 - \log(\sigma\_j^2)
 \end{equation}
 
 \\(q(z|x)\\) has parameters \\(\mu\\) and \\(\sigma\\) which are just outputs from our

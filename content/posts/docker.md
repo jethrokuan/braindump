@@ -5,27 +5,33 @@ draft = false
 +++
 
 PROPERTIES:
-:ID: 79ec0a7b-258d-49c6-b159-afcb2917e219
+:ID:       79ec0a7b-258d-49c6-b159-afcb2917e219
+
+:END:
 
 tags
-: [Linux]({{<relref "linux.md" >}}), [Operating Systems]({{<relref "operating_systems.md" >}})
+: [Linux]({{<relref "linux.md#" >}}), [Operating Systems]({{<relref "operating_systems.md#" >}})
+
 
 ## Why Containers {#why-containers}
+
 
 ### Containers are Cheap {#containers-are-cheap}
 
 {{< figure src="/ox-hugo/container_vm.png" >}}
+
 
 #### Containers are Cheap {#containers-are-cheap}
 
 <div class="build fade">
   <div></div>
 
-- Docker provides lightweight virtualization with almost zero
-  overhead.
-- Start and stop containers within seconds.
+-   Docker provides lightweight virtualization with almost zero
+    overhead.
+-   Start and stop containers within seconds.
 
 </div>
+
 
 ### Containers are Portable {#containers-are-portable}
 
@@ -35,27 +41,32 @@ application.
 Once a container is built, you can be sure it runs "the same way" on any
 host operating system with the same Linux kernel.
 
+
 ## Containers in OSes {#containers-in-oses}
 
 | Year |                                                                |
-| ---- | -------------------------------------------------------------- |
+|------|----------------------------------------------------------------|
 | 2006 | Process Containers, later renamed to cgroups                   |
 | 2008 | LXC: implemented using cgroups and kernel namespaces           |
 | 2013 | Docker: initially built on LXC, but now runs on `libcontainer` |
+
 
 ### 2006: Process Containers {#2006-process-containers}
 
 {{< figure src="/ox-hugo/cgroups.png" >}}
 
+
 ### 2008: LXC Containers, and 2013: Docker {#2008-lxc-containers-and-2013-docker}
 
 {{< figure src="/ox-hugo/lxc_docker.png" width="60%" >}}
+
 
 ## What is Docker? {#what-is-docker}
 
 Docker is a toolchain for managing containers.
 
 {{< figure src="/ox-hugo/docker_architecture.png" width="60%" >}}
+
 
 ## What You'll Do Today {#what-you-ll-do-today}
 
@@ -64,13 +75,16 @@ You'll be packaging a simple application with Docker.
 If time permits, we'll cover additional things, such as passing
 environment variables.
 
+
 ## Docker Basics {#docker-basics}
+
 
 ### Pulling images {#pulling-images}
 
 ```sh
   docker pull alpine
 ```
+
 
 #### Alpine? {#alpine}
 
@@ -84,6 +98,7 @@ runtime, system tools, system libraries, settings.
 `alpine` is pulled from the Docker Registry, where hundreds of
 thousands of images are hosted.
 
+
 ### Starting a container {#starting-a-container}
 
 ```sh
@@ -92,11 +107,13 @@ thousands of images are hosted.
 
 What is happening here?
 
+
 ### Running a command {#running-a-command}
 
 ```sh
   docker run alpine echo "Hello from alpine!"
 ```
+
 
 ### Docker Status {#docker-status}
 
@@ -118,6 +135,7 @@ List all docker containers (including stopped containers):
   docker ps -a
 ```
 
+
 ### Entering a Container Interactively {#entering-a-container-interactively}
 
 ```sh
@@ -131,11 +149,13 @@ List all docker containers (including stopped containers):
   id                              # uid=0(root) gid=0(root) groups=0(root),1(bin)...
 ```
 
+
 ## Inside `alpine` {#inside-alpine}
 
 Docker images consist of multiple layers:
 
 {{< figure src="/ox-hugo/container-layers.jpg" width="60%" >}}
+
 
 ### Layers for the ubuntu image {#layers-for-the-ubuntu-image}
 
@@ -145,6 +165,7 @@ Observe the output for the following:
    docker pull ubuntu:15.04
    docker history ubuntu
 ```
+
 
 ### Declare layers with a `Dockerfile` {#declare-layers-with-a-dockerfile}
 
@@ -165,10 +186,11 @@ Observe the output for the following:
   CMD ["/usr/bin/node", "/var/www/app.js"]
 ```
 
+
 ### Dockerfile Cheatsheet {#dockerfile-cheatsheet}
 
 | Command    | Info                                                                                    |
-| ---------- | --------------------------------------------------------------------------------------- |
+|------------|-----------------------------------------------------------------------------------------|
 | FROM       | Sets the Base Image for subsequent instructions.                                        |
 | RUN        | execute any commands in a new layer on top of the current image and commit the results. |
 | CMD        | provide defaults for an executing container.                                            |
@@ -180,6 +202,7 @@ Observe the output for the following:
 | WORKDIR    | sets the working directory.                                                             |
 | ARG        | defines a build-time variable.                                                          |
 | LABEL      | apply key/value metadata to your images, containers, or daemons.                        |
+
 
 ## Docker Networking {#docker-networking}
 
@@ -195,6 +218,7 @@ Docker creates three networks by default. We're mostly concerned with
   cf03ee007fb4        host                host
 ```
 
+
 ### How `bridge` works {#how-bridge-works}
 
 Unless specified otherwise, the docker container will connect to this
@@ -205,11 +229,13 @@ kernel's `iptable`.
 By default, none of the ports are published and the outside world has
 no access to the docker containers.
 
+
 ### Running a Simple Webserver {#running-a-simple-webserver}
 
 ```sh
   nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
 ```
+
 
 ### Allowing Ingress {#allowing-ingress}
 
@@ -224,6 +250,7 @@ As a daemon:
    docker run -p 5001:8080 -d alpine \
           nc -ll -p 8080 -e /bin/echo -e "HTTP/1.1 200 OK\n\n$(date)\n"
 ```
+
 
 ## Exercise: package a Node.js Server with Docker {#exercise-package-a-node-dot-js-server-with-docker}
 
@@ -243,11 +270,13 @@ As a daemon:
   Hello world!!
 ```
 
+
 ### Server code {#server-code}
 
 ```text
   https://git.io/vdXLC
 ```
+
 
 ### General Instructions {#general-instructions}
 
@@ -257,6 +286,7 @@ As a daemon:
 4.  Run `npm install`
 5.  Run `npm start` to start server
 
+
 ## But... I want to change my files! {#but-dot-dot-dot-i-want-to-change-my-files}
 
 ```sh
@@ -265,6 +295,7 @@ As a daemon:
   docker exec -it container_name sh
   ls #WAT
 ```
+
 
 ### Mounting Volumes {#mounting-volumes}
 
@@ -276,11 +307,13 @@ There are three types of mounts:
 2.  **Bind Mounts** may be stored anywhere on the host filesystem.
 3.  **tmpfs mounts** are stored in the host system's memory only.
 
+
 ### Mounting the `/src` directory {#mounting-the-src-directory}
 
 ```sh
   docker run -p 5000:8080 -v ~/path/to/directory:/usr/src/app/src my/webserver
 ```
+
 
 ## Beyond Docker {#beyond-docker}
 

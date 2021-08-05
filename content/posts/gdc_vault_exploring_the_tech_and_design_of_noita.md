@@ -5,13 +5,13 @@ draft = false
 +++
 
 speaker
-: [Petri Purho]({{<relref "petri_purho.md" >}})
+: [Petri Purho]({{<relref "petri_purho.md#" >}})
 
 company
-: [Nolla Games]({{<relref "nolla_games.md" >}})
+: [Nolla Games]({{<relref "nolla_games.md#" >}})
 
 tags
-: [Game Design]({{<relref "game_design.md" >}})
+: [Game Design]({{<relref "game_design.md#" >}})
 
 Noita uses a very simple falling sand simulation algorithm, liquids and gases are implemented similarly.
 

@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Information Theory]({{<relref "information_theory.md" >}})
+: [Information Theory]({{<relref "information_theory.md#" >}})
 
 Occam's razor is the principle that states a preference for simpler
 models. This is not just a philosophical choice: Bayesian
@@ -15,8 +15,8 @@ quantitatively. To see this, we evaluate 2 alternative theories
 \\(\mathcal{D}\\).
 
 \begin{equation}
-\frac{P(\mathcal{H}\_1|\mathcal{D})}{P(\mathcal{H}\_2|\mathcal{D})} =
-\frac{P(\mathcal{H}\_1)}{P(\mathcal{H}\_2)} \frac{P(\mathcal{D}|\mathcal{H}\_1)}{P(\mathcal{D}|\mathcal{H}\_2)}
+  \frac{P(\mathcal{H}\_1|\mathcal{D})}{P(\mathcal{H}\_2|\mathcal{D})} =
+  \frac{P(\mathcal{H}\_1)}{P(\mathcal{H}\_2)} \frac{P(\mathcal{D}|\mathcal{H}\_1)}{P(\mathcal{D}|\mathcal{H}\_2)}
 \end{equation}
 
 The ratio \\(\frac{P(\mathcal{H}\_1)}{P(\mathcal{H}\_2)}\\) denotes how much
@@ -30,6 +30,7 @@ hypothesis space. In the case where the data are compatible with both
 theories, the simpler \\(\mathcal{H}\_1\\) would turn out to be more
 probable than the more complex \\(\mathcal{H}\_2\\). Hence the second term
 automatically embodies the Occam's razor.
+
 
 ## Gelman on the Occam Factor {#gelman-on-the-occam-factor}
 

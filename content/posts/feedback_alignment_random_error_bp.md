@@ -12,7 +12,7 @@ Feedback alignment side-steps this problem by replacing the weights in
 the backpropagation rule with random ones:
 
 \begin{equation}
-\delta\_{i}^{(l)}=\sigma^{\prime}\left(a\_{i}^{(l)}\right) \sum\_{k} \delta\_{k}^{(l+1)} G\_{k i}^{(l)}
+  \delta\_{i}^{(l)}=\sigma^{\prime}\left(a\_{i}^{(l)}\right) \sum\_{k} \delta\_{k}^{(l+1)} G\_{k i}^{(l)}
 \end{equation}
 
 where \\(G^{(l)}\\) is a fixed, random matrix with the same dimensions as
@@ -23,8 +23,8 @@ errors in each layer with a random propagation of errors to each
 layer:
 
 \begin{equation}
-\delta\_{i}^{(l)}=\sigma^{\prime}\left(a\_{i}^{(l)}\right) \sum\_{k} \delta\_{k}^{(L)} H\_{k i}^{(l)}
+  \delta\_{i}^{(l)}=\sigma^{\prime}\left(a\_{i}^{(l)}\right) \sum\_{k} \delta\_{k}^{(L)} H\_{k i}^{(l)}
 \end{equation}
 
-Random BP applied to [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}}) do not account for the temporal
+Random BP applied to [Spiking Neural Networks]({{<relref "spiking_neurons_lit_review.md#" >}}) do not account for the temporal
 dynamics of neurons and synapses. SuperSpike solves this problem.

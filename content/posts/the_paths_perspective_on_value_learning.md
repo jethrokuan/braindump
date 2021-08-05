@@ -9,9 +9,9 @@ source
 : <https://distill.pub/2019/paths-perspective-on-value-learning/>
 
 author
-: [Sam Greydanus]({{<relref "sam_greydanus.md" >}})
+: [Sam Greydanus]({{<relref "sam_greydanus.md#" >}})
 
-[Temporal Difference Learning]({{<relref "td_learning.md" >}}) can be viewed as expanding the agent's experience
+[Temporal Difference Learning]({{<relref "td_learning.md#" >}}) can be viewed as expanding the agent's experience
 by merging trajectories.
 
 TD averages over more trajectories than Monte Carlo methods, because there are

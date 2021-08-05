@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Pdf Tools]({{<relref "pdf_tools.md" >}})
+: [Pdf Tools]({{<relref "pdf_tools.md#" >}})
 
 This puts several pages of a PDF together. `2x1` is a particularly
 common combination.

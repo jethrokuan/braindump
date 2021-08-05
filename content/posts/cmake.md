@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [C++ Language]({{<relref "cplusplus.md" >}}), [The C Language]({{<relref "c_lang.md" >}})
+: [C++ Language]({{<relref "cplusplus.md#" >}}), [The C Language]({{<relref "c_lang.md#" >}})
+
 
 ## Introduction {#introduction}
 
@@ -28,6 +29,7 @@ control systems more difficult.
 Hence, the preference is to have an out-of-source build arrangement.
 The build directory will be called `build`.
 
+
 ## Generating Project Files {#generating-project-files}
 
 Running CMake reads the `CMakeLists.txt` file, and creates project files
@@ -35,6 +37,7 @@ in the build directory. The developer selects the type of project file
 to be created by choosing a particular project file generator.
 
 {{< figure src="/ox-hugo/screenshot_2019-01-18_02-52-58.png" >}}
+
 
 ## Best Practices {#best-practices}
 

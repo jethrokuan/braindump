@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Bayesian Statistics]({{<relref "bayesian_statistics.md" >}})
+: [Bayesian Statistics]({{<relref "bayesian_statistics.md#" >}})
 
 Suppose we have a posterior distribution over parameters \\(\theta\\).
 Sometimes, we would like to obtain a point estimate \\(\hat{\theta}\\) of

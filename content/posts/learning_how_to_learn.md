@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Learning]({{<relref "learning.md" >}})
+: [Learning]({{<relref "learning.md#" >}})
+
 
 ## What is learning? {#what-is-learning}
 
@@ -18,6 +19,7 @@ Tips:
 2.  When learning something new, take time to rest and come back to it.
     One effective method is to sleep right after learning something.
 3.  Sleep and exercise are important.
+
 
 ## Chunking {#chunking}
 
@@ -37,6 +39,7 @@ Tips:
 8.  Interleave problems from different chapters. This helps connect
     different chunks of information.
 
+
 ## Procrastination {#procrastination}
 
 Habit is an energy saver, it reduces the need for focus when
@@ -49,17 +52,19 @@ Getting rid of procrastination can be done by:
 3.  Reward yourself for achieving step goals towards breaking the habits.
 4.  Change the underlying belief that causes the bad habit.
 
+
 ## Memory {#memory}
 
-- Visual memory is powerful. Images help encapsulate a hard to
-  remember concept.
-- Consider spaced repetition.
-- Create meaningful structure to help remember.
-- Numbers can be memorised by linking to events.
-- Memory palace technique: use a familiar place, and associate visual
-  images of things with physical places.
-- Use metaphors and analogies to help memorise and understand
-  different concepts
+-   Visual memory is powerful. Images help encapsulate a hard to
+    remember concept.
+-   Consider spaced repetition.
+-   Create meaningful structure to help remember.
+-   Numbers can be memorised by linking to events.
+-   Memory palace technique: use a familiar place, and associate visual
+    images of things with physical places.
+-   Use metaphors and analogies to help memorise and understand
+    different concepts
+
 
 ## Studying Practices {#studying-practices}
 
@@ -72,6 +77,7 @@ Checklist:
 1.  Did you make a serious effort to understand the text?
 2.  Did you attempt to outline every homework problem solution?
 3.  Did you understand all your homework problem's solutions?
+
 
 ## Test-taking Technique {#test-taking-technique}
 

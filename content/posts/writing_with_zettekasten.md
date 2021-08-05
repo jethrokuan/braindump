@@ -5,7 +5,7 @@ slug = "writing_with_zettekasten"
 draft = false
 +++
 
-The status quo for [writing]({{<relref "writing.md" >}}) is:
+The status quo for [writing]({{<relref "writing.md#" >}}) is:
 
 1.  Find topic/research question
 2.  Research/find literature
@@ -17,7 +17,7 @@ This process is extremely linear. The student actually has to do many
 other things that aren't part of writing the paper, and that has to
 happen before the process of writing begins.
 
-If we flip this process in [Zettelkasten]({{<relref "zettelkasten.md" >}}), and make the notes the
+If we flip this process in [Zettelkasten]({{<relref "zettelkasten.md#" >}}), and make the notes the
 thinking process rather than _a record of_ of the thinking process.
 
 1.  Only written down ideas count

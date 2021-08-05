@@ -20,7 +20,9 @@ The BitTorrent protocol faces some issues:
 3.  The strategy for allocating upload to users needs to be fair
     (proportional to download rate).
 
+
 ## How does BitTorrent work? {#how-does-bittorrent-work}
+
 
 ### Deployment {#deployment}
 
@@ -46,6 +48,7 @@ downloader reports to all its peers what pieces it has. To verify data
 integrity, the SHA1 hash of each piece is included in the `.torrent`
 file.
 
+
 ### Pipelining {#pipelining}
 
 When transferring data over TCP, like BitTorrent does, it is important
@@ -55,6 +58,7 @@ further into sub-pieces over the wire, typically several kilobytes in
 size, and always keeping some number, typically five, requests
 pipelined at once. Every time a sub-piece arrives a new request is
 sent. This can reliably saturate most connections.
+
 
 ### Piece selection {#piece-selection}
 
@@ -78,6 +82,7 @@ requests for sub-pieces from all peers. Cancels are sent to peers for
 sub-pieces have already arrived to reduce bandwidth wastage, but in
 practice, this wastage is small.
 
+
 ### Choking Algorithms {#choking-algorithms}
 
 BitTorrent does no central resource allocation. Peers are responsible
@@ -85,9 +90,9 @@ for maximizing their own download rate. The choking algorithm in
 BitTorrent is not part of the wire protocol, but is necessary for good
 performance. It should aim to:
 
-- utilize all available resources
-- provide reasonable download rates for everyone
-- be somewhat resistant to peers only downloading and not uploading
+-   utilize all available resources
+-   provide reasonable download rates for everyone
+-   be somewhat resistant to peers only downloading and not uploading
 
 Pareto efficiency is the concept where no two counterparties can make
 an exchange and both be happier. BitTorrent achieves pareto efficiency
@@ -133,6 +138,7 @@ upload rates to.
 The current scaling bottleneck in the real world seems to be the
 bandwidth overhead of the tracker.
 
+
 ## References {#references}
 
-- [Incentives Build Robustness in BitTorrent](http://bittorrent.org/bittorrentecon.pdf)
+-   [Incentives Build Robustness in BitTorrent](http://bittorrent.org/bittorrentecon.pdf)

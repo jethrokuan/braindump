@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Productivity]({{<relref "productivity.md" >}})
+: [Productivity]({{<relref "productivity.md#" >}})
 
 > what srs does is makes it easier to reconstruct a graph on the fly, by
 > memorizing certain nodes once you have certain node density, you can
@@ -13,7 +13,8 @@ tags
 >
 > -- Siaw Young Lau (02/08/2020)
 
+
 ## SRS Software {#srs-software}
 
-- [Anki](https://apps.ankiweb.net/)
-- [l3kn/org-fc](https://github.com/l3kn/org-fc/)
+-   [Anki](https://apps.ankiweb.net/)
+-   [l3kn/org-fc](https://github.com/l3kn/org-fc/)

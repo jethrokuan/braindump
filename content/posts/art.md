@@ -6,5 +6,5 @@ draft = false
 
 ## Resources {#resources}
 
-- [Art Resources and Tutorials](https://artres.xyz/)
-- [Drawabox](https://drawabox.com/)
+-   [Art Resources and Tutorials](https://artres.xyz/)
+-   [Drawabox](https://drawabox.com/)

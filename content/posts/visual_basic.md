@@ -8,10 +8,11 @@ draft = false
 ## Variables {#variables}
 
 | Concept   | Explanation                      | Examples                                |
-| --------- | -------------------------------- | --------------------------------------- |
+|-----------|----------------------------------|-----------------------------------------|
 | Variables | Use Dim to declare variables     | `Dim Name As String = "lijin"`          |
 |           |                                  | `Dim Year as Integer = 2020`            |
 | Arrays    | Arrays have brackets beside them | `Dim Arr() As String = {"OCBC", "UOB"}` |
+
 
 ## Conditionals {#conditionals}
 
@@ -38,6 +39,7 @@ Select Case Apple
 End Select
 ```
 
+
 ## Looping {#looping}
 
 ```visual-basic
@@ -59,6 +61,7 @@ For Each item As String In groceryItems
   Console.WriteLine(item)
 Next
 ```
+
 
 ## Methods, Subroutines and Classes {#methods-subroutines-and-classes}
 

@@ -12,6 +12,7 @@ Goodreads
 
 Optionality is the right, but not obligation, to take an action.
 
+
 ## Restrict Your Choices {#restrict-your-choices}
 
 Consumer capitalism is designed to give us the illusion of great choice, even
@@ -24,6 +25,7 @@ include:
 1.  The clothes your wear every day
 2.  The food you eat every day
 
+
 ## Generate Better Options {#generate-better-options}
 
 Generating better options is much more important than being a perfect
@@ -34,6 +36,7 @@ important.
 Money, however, is only valuable so long as it continues to open up options:
 after some point, it isn't.
 
+
 ## Acting Dead {#acting-dead}
 
 Frugality does not equate to acting dead.
@@ -41,6 +44,7 @@ Frugality does not equate to acting dead.
 Are you spending as little money as possible? Are you escaping work? These are
 all things that your dead grandpa already has you beat. A good litmus test for
 acting dead is inverting the advice, and see if it still sounds wise.
+
 
 ## Classifying Options {#classifying-options}
 
@@ -53,8 +57,9 @@ We can classify options based on their risk-reward ratio:
 3.  **Treasure Chests**: Low risk, high reward. E.g. scalable side-hustles: selling
     software over and over again with little marginal cost.
 
+
 ## Themes {#themes}
 
-- [Bad Is Stronger Than Good]({{< relref "bad_is_stronger_than_good" >}})
-- [Everything Compounds]({{< relref "everything_compounds" >}})
-- [The Law of Diminishing Returns]({{< relref "the_law_of_diminishing_returns" >}})
+-   [Bad Is Stronger Than Good]({{<relref "bad_is_stronger_than_good.md#" >}})
+-   [Everything Compounds]({{<relref "everything_compounds.md#" >}})
+-   [The Law of Diminishing Returns]({{<relref "the_law_of_diminishing_returns.md#" >}})

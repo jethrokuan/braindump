@@ -4,13 +4,13 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-Actor-Critic improves on [Policy Gradients]({{<relref "policy_gradients.md" >}}) methods by introducing a
+Actor-Critic improves on [Policy Gradients]({{<relref "policy_gradients.md#" >}}) methods by introducing a
 critic.
 
 Recall the objective:
 
 \begin{equation}
-\nabla\_{\theta} J(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N} \sum\_{t=1}^{T} \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i, t} | \mathbf{s}\_{i, t}\right) \hat{Q}\_{i, t}
+  \nabla\_{\theta} J(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N} \sum\_{t=1}^{T} \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i, t} | \mathbf{s}\_{i, t}\right) \hat{Q}\_{i, t}
 \end{equation}
 
 The question we want to address is: **can we get a better estimate of
@@ -20,35 +20,36 @@ Originally, we were using the single-trajectory estimate of the
 reward-to-go. If we knew the true expected reward-to-go, then we would
 have a lower variance version of the policy gradient.
 
-We define the advantage function as \\(A^\pi(s_t,a_t) = Q^\pi(s_t,
-a_t) - V^\pi(s_t)\\). \\(V^\pi(s_t)\\) can be used as baseline \\(b\\), and we
+We define the advantage function as \\(A^\pi(s\_t,a\_t) = Q^\pi(s\_t,
+a\_t) - V^\pi(s\_t)\\). \\(V^\pi(s\_t)\\) can be used as baseline \\(b\\), and we
 obtain the objective:
 
 \begin{equation}
 \nabla\_{\theta} J(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N} \sum\_{t=1}^{T} \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i, t} | \mathbf{s}\_{i, t}\right) A^\pi(s\_{i,t}, a\_{i,t})
 \end{equation}
 
+
 ## Value Function Fitting {#value-function-fitting}
 
 Recall:
 
 \begin{array}{l}
-{Q^{\pi}\left(\mathbf{s}\_{t},
-\mathbf{a}\_{t}\right)=\sum\_{t^{\prime}=t}^{T}
-E\_{\pi\_{\theta}}\left[r\left(\mathbf{s}\_{t^{\prime}},
-\mathbf{a}\_{t^{\prime}}\right) | \mathbf{s}\_{t},
-\mathbf{a}\_{t}\right]} \\\\\\
-{V^{\pi}\left(\mathbf{s}\_{t}\right)=E\_{\mathbf{a}\_{t} \sim
-\pi\_{\theta}\left(\mathbf{a}\_{t} |
-\mathbf{s}\_{t}\right)}\left[Q^{\pi}\left(\mathbf{s}\_{t},
-\mathbf{a}\_{t}\right)\right]} \\\\\\
-{A^{\pi}\left(\mathbf{s}\_{t},
-\mathbf{a}\_{t}\right)=Q^{\pi}\left(\mathbf{s}\_{t},
-\mathbf{a}\_{t}\right)-V^{\pi}\left(\mathbf{s}\_{t}\right)} \\\\\\
-{\nabla\_{\theta} J(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N}
-\sum\_{t=1}^{T} \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i,
-t} | \mathbf{s}\_{i, t}\right) A^{\pi}\left(\mathbf{s}\_{i, t},
-\mathbf{a}\_{i, t}\right)}
+  {Q^{\pi}\left(\mathbf{s}\_{t},
+  \mathbf{a}\_{t}\right)=\sum\_{t^{\prime}=t}^{T}
+  E\_{\pi\_{\theta}}\left[r\left(\mathbf{s}\_{t^{\prime}},
+  \mathbf{a}\_{t^{\prime}}\right) | \mathbf{s}\_{t},
+  \mathbf{a}\_{t}\right]} \\\\\\
+  {V^{\pi}\left(\mathbf{s}\_{t}\right)=E\_{\mathbf{a}\_{t} \sim
+  \pi\_{\theta}\left(\mathbf{a}\_{t} |
+  \mathbf{s}\_{t}\right)}\left[Q^{\pi}\left(\mathbf{s}\_{t},
+  \mathbf{a}\_{t}\right)\right]} \\\\\\
+  {A^{\pi}\left(\mathbf{s}\_{t},
+  \mathbf{a}\_{t}\right)=Q^{\pi}\left(\mathbf{s}\_{t},
+  \mathbf{a}\_{t}\right)-V^{\pi}\left(\mathbf{s}\_{t}\right)} \\\\\\
+  {\nabla\_{\theta} J(\theta) \approx \frac{1}{N} \sum\_{i=1}^{N}
+  \sum\_{t=1}^{T} \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i,
+  t} | \mathbf{s}\_{i, t}\right) A^{\pi}\left(\mathbf{s}\_{i, t},
+  \mathbf{a}\_{i, t}\right)}
 \end{array}
 
 We can choose to fit \\(Q^{\pi}\\), \\(V^{\pi}\\) or \\(A^{\pi}\\), each have
@@ -57,21 +58,21 @@ their pros and cons.
 We can write:
 
 \begin{equation}
-Q^\pi (s_t, a_t) \approx r(s_t, a_t) + V^{\pi}(s\_{t+1})
+  Q^\pi (s\_t, a\_t) \approx r(s\_t, a\_t) + V^{\pi}(s\_{t+1})
 \end{equation}
 
 \begin{equation}
-A^{\pi}(s_t, a_t) \approx r(s_t, a_t) + V^{\pi}(s\_{t+1}) - V^{\pi}(s_t)
+  A^{\pi}(s\_t, a\_t) \approx r(s\_t, a\_t) + V^{\pi}(s\_{t+1}) - V^{\pi}(s\_t)
 \end{equation}
 
 Classic actor-critic algorithms fit \\(V^\pi\\), and pay the cost of 1
 time-step to get \\(Q^\pi\\).
 
 We do Monte Carlo evaluation with function approximation, estimating
-\\(V^\pi (s_t)\\) as:
+\\(V^\pi (s\_t)\\) as:
 
 \begin{equation}
-V^\pi (s_t) \approx \sum\_{t'=t}^{T}r(s\_{t'}, a\_{t'})
+  V^\pi (s\_t) \approx \sum\_{t'=t}^{T}r(s\_{t'}, a\_{t'})
 \end{equation}
 
 Our training data consists of \\(\left\\{\left(s\_{i,t}, \sum\_{t'=t}^T r
@@ -82,14 +83,15 @@ Alternatively, we can decompose the ideal target, and use the old
 \\(V^\pi\\):
 
 \begin{equation}
-y\_{i,t} = \sum\_{t'=t}^{T} E\_{\pi\_{\theta}} [r(s\_{t'}, a\_t') |
-s\_{i,t}] \approx r(s\_{i,t}, a\_{i,t}) + \hat{V}\_{\phi}^\pi(s\_{i,t+1})
+  y\_{i,t} = \sum\_{t'=t}^{T} E\_{\pi\_{\theta}} [r(s\_{t'}, a\_t') |
+  s\_{i,t}] \approx r(s\_{i,t}, a\_{i,t}) + \hat{V}\_{\phi}^\pi(s\_{i,t+1})
 \end{equation}
 
 This is a biased estimate, but might have much lower variance. This
 works when the policy does not change much and the previous value
 function is a decent estimate. Since it is using a the previous value
 function, it is also called a bootstrapped estimate.
+
 
 ## Discount Factors {#discount-factors}
 
@@ -98,7 +100,7 @@ problems, \\(\hat{V}\_\phi^\pi\\) can get infinitely large. A simple trick
 is to use a discount factor:
 
 \begin{equation}
-y\_{i,t} \approx r(s\_{i,t}, a\_{i,t}) + \gamma \hat{V}\_\phi^\pi(s\_{i,t+1})
+  y\_{i,t} \approx r(s\_{i,t}, a\_{i,t}) + \gamma \hat{V}\_\phi^\pi(s\_{i,t+1})
 \end{equation}
 
 where \\(\gamma \in [0,1]\\).
@@ -113,7 +115,7 @@ rewards now than later.
 We can then modify \\(\hat{A}^\pi\\):
 
 \begin{equation}
-\hat{A}^{\pi}(s_t, a_t) \approx r(s_t, a_t) + \gamma \hat{V}^{\pi}(s\_{t+1}) - \hat{V}^{\pi}(s_t)
+  \hat{A}^{\pi}(s\_t, a\_t) \approx r(s\_t, a\_t) + \gamma \hat{V}^{\pi}(s\_{t+1}) - \hat{V}^{\pi}(s\_t)
 \end{equation}
 
 {{< figure src="/ox-hugo/screenshot2019-12-16_17-56-52_.png" >}}
@@ -121,14 +123,16 @@ We can then modify \\(\hat{A}^\pi\\):
 \\(\gamma\\) can be interpreted as a way to limit variance, and prevent
 the infinite sum (think about what happens when \\(\gamma\\) gets bigger).
 
+
 ## Algorithm {#algorithm}
 
-1.  sample \\(\left\\{s_i, a_i\right\\}\\) from \\(\pi\_{\theta}(a\s)\\)
+1.  sample \\(\left\\{s\_i, a\_i\right\\}\\) from \\(\pi\_{\theta}(a\s)\\)
 2.  Fit \\(\hat{V}\_\phi^{\pi}(s)\\) to the sampled reward sums
-3.  Evaluate \\(\hat{A}^\pi(s_i, a_i) = r(s_i a_i) + \hat{V}\_\phi^\pi(s_i')-\hat{V}\_\phi^\pi(s_i)\\)
-4.  \\(\nabla\_{\theta} J(\theta) \approx \sum_i \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i} | \mathbf{s}\_{i}\right) \hat{A}^{\pi}\left(\mathbf{s}\_{i},
-    \mathbf{a}\_{i}\right)\\)
+3.  Evaluate \\(\hat{A}^\pi(s\_i, a\_i) = r(s\_i a\_i) + \hat{V}\_\phi^\pi(s\_i')-\hat{V}\_\phi^\pi(s\_i)\\)
+4.  \\(\nabla\_{\theta} J(\theta) \approx \sum\_i \nabla\_{\theta} \log \pi\_{\theta}\left(\mathbf{a}\_{i} | \mathbf{s}\_{i}\right) \hat{A}^{\pi}\left(\mathbf{s}\_{i},
+       \mathbf{a}\_{i}\right)\\)
 5.  \\(\theta \leftarrow \theta + \alpha \nabla\_{\theta}J(\theta)\\)
+
 
 ## Online Actor-critic {#online-actor-critic}
 
@@ -144,24 +148,25 @@ faster, but to make it work by increasing the batch size.
 
 {{< figure src="/ox-hugo/screenshot2019-12-16_18-02-53_.png" >}}
 
+
 ## Generalized Advantage Estimation {#generalized-advantage-estimation}
 
 \begin{equation}
-\hat{A}\_{n}^\pi (s_t, a_t) = \sum\_{t'=t}^{t+n}\gamma^{t'-t}
-r(s\_{t'}, a\_{t'}) - \hat{V}\_{\phi}^\pi (s_t) + \gamma^n \hat{V}\_\phi^\pi(s\_{t+n})
+  \hat{A}\_{n}^\pi (s\_t, a\_t) = \sum\_{t'=t}^{t+n}\gamma^{t'-t}
+  r(s\_{t'}, a\_{t'}) - \hat{V}\_{\phi}^\pi (s\_t) + \gamma^n \hat{V}\_\phi^\pi(s\_{t+n})
 \end{equation}
 
 \begin{equation}
-\hat{A}\_{GAE}^\pi (s_t, a_t) = \sum\_{n=1}^{\infty} w_n \hat{A}\_n^\pi
-(s_t, a_t)
+  \hat{A}\_{GAE}^\pi (s\_t, a\_t) = \sum\_{n=1}^{\infty} w\_n \hat{A}\_n^\pi
+  (s\_t, a\_t)
 \end{equation}
 
-is some weighted combination of n-step returns. If we choose \\(w_n
+is some weighted combination of n-step returns. If we choose \\(w\_n
 \propto \lambda^{n-1}\\), we can show that:
 
 \begin{equation}
-\hat{A}\_{GAE}^\pi (s_t, a_t) = \sum\_{n=1}^{\infty} (\gamma
-\lambda)^{t'-t} \delta\_{t'}
+  \hat{A}\_{GAE}^\pi (s\_t, a\_t) = \sum\_{n=1}^{\infty} (\gamma
+  \lambda)^{t'-t} \delta\_{t'}
 \end{equation}
 
 where
@@ -175,23 +180,24 @@ similar, trading off bias and variance!**
 
 Need to balance between learning speed, stability.
 
-- Conservative Policy Iteration (CPI)
-  - propose surrogate objective, guarantee monotonic improvement under
-    specific state distribution
-- Trust Region Policy Optimization (TRPO)
-  - approximates CPI with trust region constraint
-- Proximal Policy Optimization (PPO)
-  - replaces TRPO constraint with RL penalty + clipping
-    (computationally efficient)
-- Soft Actor-Critic (SAC)
-  - stabilize learning by jointly maximizing expected reward and
-    policy entropy (based on maximum entropy RL)
-- Optimistic Actor Critic (OAC)
-  - Focus on exploration in deep Actor critic approaches.
-  - **Key insight**: existing approaches tend to explore conservatively
-  - **Key result**: Optimistic exploration leads to efficient, stable
-    learning in modern Actor Critic methods
+-   Conservative Policy Iteration (CPI)
+    -   propose surrogate objective, guarantee monotonic improvement under
+        specific state distribution
+-   Trust Region Policy Optimization (TRPO)
+    -   approximates CPI with trust region constraint
+-   Proximal Policy Optimization (PPO)
+    -   replaces TRPO constraint with RL penalty + clipping
+        (computationally efficient)
+-   Soft Actor-Critic (SAC)
+    -   stabilize learning by jointly maximizing expected reward and
+        policy entropy (based on maximum entropy RL)
+-   Optimistic Actor Critic (OAC)
+    -   Focus on exploration in deep Actor critic approaches.
+    -   **Key insight**: existing approaches tend to explore conservatively
+    -   **Key result**: Optimistic exploration leads to efficient, stable
+        learning in modern Actor Critic methods
+
 
 ## Resources {#resources}
 
-- [CS285 Fa19 9/18/19 - YouTube](https://www.youtube.com/watch?v=EKqxumCuAAY&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=7&t=0s)
+-   [CS285 Fa19 9/18/19 - YouTube](https://www.youtube.com/watch?v=EKqxumCuAAY&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=7&t=0s)

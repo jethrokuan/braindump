@@ -5,4 +5,4 @@ draft = false
 +++
 
 tags
-: [Site Reliability]({{<relref "site_reliability.md" >}})
+: [Site Reliability]({{<relref "site_reliability.md#" >}})

@@ -4,7 +4,7 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-Losing \$100,000 feels much worse than winning the same amount feels good. This
+Losing $100,000 feels much worse than winning the same amount feels good. This
 asymmetry was summed up by Roy Baumeister and his colleagues in his paper titled
 "Bad Is Stronger Than Good".
 

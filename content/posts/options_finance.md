@@ -5,14 +5,14 @@ draft = false
 +++
 
 Options may be written on any kind of underlying assets, such as stocks, bonds,
-commodities or [futures]({{< relref "futures_contract" >}}). There are 2 basic types of options:
+commodities or [futures]({{<relref "futures_contract.md#" >}}). There are 2 basic types of options:
 
 call options
 : these give the holder the right to buy
 
 put options
 : these give the holder the right to sell the underlying asset in
-the future at a specified strike price
+    the future at a specified strike price
 
 The writer of the option has the obligation to sell (call) or buy (put) the
 asset. For European options, this right can only be exercised at the date of

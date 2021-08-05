@@ -6,4 +6,4 @@ draft = false
 
 ## Resources {#resources}
 
-- [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)
+-   [AtsushiSakai/PythonRobotics](https://github.com/AtsushiSakai/PythonRobotics)

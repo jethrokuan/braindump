@@ -8,7 +8,8 @@ paper
 : [https://www.nature.com/articles/s41586-019-1924-6](https://www.nature.com/articles/s41586-019-1924-6)
 
 related
-: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md" >}})
+: [Reinforcement Learning ⭐]({{<relref "reinforcement_learning.md#" >}})
+
 
 ## Abstract {#abstract}
 
@@ -21,6 +22,7 @@ Imbalances between these scalings cause each channel to learn a
 different value prediction, and collectively represent a distribution
 over possible rewards.
 
+
 ## Resources {#resources}
 
-- [Distributional RL – Simple Machine Learning](https://mtomassoli.github.io/2017/12/08/distributional%5Frl/)
+-   [Distributional RL – Simple Machine Learning](https://mtomassoli.github.io/2017/12/08/distributional%5Frl/)

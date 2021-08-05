@@ -7,7 +7,8 @@ draft = false
 Hadoop provides tools for working with big data, by raising the _level
 of abstraction_.
 
-Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#org167adc4))
+Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#orgf75dbda))
+
 
 ## Data Storage and Analysis {#data-storage-and-analysis}
 
@@ -58,6 +59,7 @@ On the other hand, high-performance computing (HPCs) provides APIs as
 the Message Passing Interface (MPI), which requires that users
 explicitly handle the mechanics of data flow. Processing in Hadoop
 operates at a higher level.
+
 
 ## Data Flow and MapReduce {#data-flow-and-mapreduce}
 
@@ -142,6 +144,7 @@ Hadoop uses Unix standard streams as the interface between Hadoop and
 programs, so any language that can read and write to standard output
 can be used to write the MapReduce program.
 
+
 ## The Hadoop Distributed Filesystem (HDFS) {#the-hadoop-distributed-filesystem--hdfs}
 
 HDFS is designed for storing very large files with streaming data
@@ -154,7 +157,9 @@ expense of latency. Hence, HDFS is ill-suited for:
 1.  Low-latency file access
 2.  Lots of small files
 
+
 ### HDFS Concepts {#hdfs-concepts}
+
 
 #### Block Size {#block-size}
 
@@ -177,6 +182,7 @@ that is unavailable can be replicated from alternative locations.
 ```
 
 will list the blocks that make up each file in the filesystem.
+
 
 #### Namenodes and Datanodes {#namenodes-and-datanodes}
 
@@ -208,6 +214,7 @@ behind the primary. Hence, it case of total primary namenode failure,
 the usual action is to copy the namenode's metadata files that are on
 a NFS to secondary, and run the secondary node as the primary.
 
+
 #### Block Caching {#block-caching}
 
 Frequently accessed blocks may be explicitly cached in the datanode's
@@ -216,6 +223,7 @@ in one datanode's memory, but this can be configured on a per-file
 basis. Job schedulers can take advantage of the cached blocks by
 running tasks on the datanode where the block is cached. A small
 lookup table used in a join is a good candidate for caching.
+
 
 #### HDFS Federation {#hdfs-federation}
 
@@ -234,6 +242,7 @@ with one another, and failure of one namenode does not affect teh
 availibility of the namespaces managed by other namenodes. Datanodes
 register with each namenode in the cluster and store blocks from
 multiple block pools.
+
 
 #### HDFS High Availability {#hdfs-high-availability}
 
@@ -264,6 +273,7 @@ journal nodes. Typically, there are 3 journal nodes, so the system can
 tolerate the loss of 1 of them. This is similar to the way ZooKeeper
 works, but QJM does not use ZooKeeper underneath.
 
+
 #### Failover and Fencing {#failover-and-fencing}
 
 The transition from the active namenode to the standby is managed by a
@@ -286,6 +296,7 @@ Client failover is handled transparently by the client library. The
 simplest implementation uses client-side configuration to control
 failover.
 
+
 #### Hadoop FileSystem Abstractions {#hadoop-filesystem-abstractions}
 
 HDFS is just one implementation of the filesystem abstraction. There
@@ -293,15 +304,18 @@ are several implementations, examples of which are listed below:
 
 {{< figure src="/ox-hugo/screenshot_2019-06-06_15-50-35.png" caption="Figure 2: Hadoop filesystems" >}}
 
+
 #### File writes {#file-writes}
 
 {{< figure src="/ox-hugo/screenshot_2019-06-06_16-28-05.png" caption="Figure 3: A client writing data to HDFS" >}}
+
 
 #### Hadoop distcp {#hadoop-distcp}
 
 `distcp` is implemented as a MapReduce job where the work of copying is
 done by the maps that run in parallel across the cluster. It is an
 efficient, distributed copy program.
+
 
 ## YARN {#yarn}
 
@@ -329,6 +343,7 @@ resource managers, and use them to run a distributed computation. This
 is what a MapReduce application does. Most non-trivial YARN
 applications use some form of remote communication to pass status
 updates and results around, but these are application specific.
+
 
 ## Data Serialization {#data-serialization}
 
@@ -359,12 +374,13 @@ Instead of storing Thrift structures in the Thrift binary format,
 Parquet uses a data converter to convert Thrift structures into
 Parquet format, a compressed, columnar data representation.
 
-([Kleppmann, n.d.](#org20aaada))
+([Kleppmann, n.d.](#orge0b9d8e))
+
 
 ### Parquet's Columnar Storage {#parquet-s-columnar-storage}
 
 Parquet's columnar representation is inpired by Google's Dremel.
-([Melnik et al., n.d.](#org4d34603))
+([Melnik et al., n.d.](#org79f3ca6))
 
 Thrift and Protocol Buffer's binary representations are field values
 laid out sequentially. Using a columnar-striped representation enables
@@ -378,11 +394,11 @@ levels_.
 
 Repetition levels
 : repetition levels tell us at what repeated
-field in the field's path the value has repeated.
+    field in the field's path the value has repeated.
 
 Definition levels
 : definition levels tell us how many fields in
-\\(p\\) could be undefined, are actually present.
+    \\(p\\) could be undefined, are actually present.
 
 {{< figure src="/ox-hugo/screenshot_2019-07-15_11-39-11.png" caption="Figure 5: Two sample nested records and their schema" >}}
 
@@ -401,7 +417,8 @@ field values and levels for each field, and append the values
 sequentially to the output records.
 
 Efficient algorithms for record shredding and assembly are provided in
-Appendix A of the Dremel paper. ([Melnik et al., n.d.](#org4d34603))
+Appendix A of the Dremel paper. ([Melnik et al., n.d.](#org79f3ca6))
+
 
 ## Beyond MapReduce {#beyond-mapreduce}
 
@@ -413,12 +430,14 @@ MillWheel - <http://research.google.com/pubs/pub41378.html>
 Beam is an open source, unified model for defining and executing data
 processing workflows.
 
-## {#}
+
+##  {#}
+
 
 ## Bibliography {#bibliography}
 
-<a id="org20aaada"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas Behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
+<a id="orge0b9d8e"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
 
-<a id="org4d34603"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
+<a id="org79f3ca6"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
 
-<a id="org167adc4"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.
+<a id="orgf75dbda"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.

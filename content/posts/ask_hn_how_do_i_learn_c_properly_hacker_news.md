@@ -9,7 +9,8 @@ source
 : <https://news.ycombinator.com/item?id=22519876>
 
 tags
-: [The C Language]({{<relref "c_lang.md" >}})
+: [The C Language]({{<relref "c_lang.md#" >}})
+
 
 ## Book recommendations {#book-recommendations}
 

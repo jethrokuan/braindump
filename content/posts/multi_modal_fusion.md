@@ -18,16 +18,17 @@ Multi-modal fusion is motivated by 3 main reasons:
     missing
 
 Multi-modal fusion approaches can be classified as
-([Baltrušaitis, Ahuja, and Morency, n.d.](#orgd3915d5)):
+([Baltrušaitis, Ahuja, and Morency, n.d.](#org94e2faf)):
 
-- **Model-agnostic**
-  - early fusion
-  - hybrid fusion
-  - late fusion
-- **Model-based**
-  - kernel-based
-  - graphical models
-  - neural networks
+-   **Model-agnostic**
+    -   early fusion
+    -   hybrid fusion
+    -   late fusion
+-   **Model-based**
+    -   kernel-based
+    -   graphical models
+    -   neural networks
+
 
 ## Model-agnostic Approaches {#model-agnostic-approaches}
 
@@ -40,12 +41,13 @@ individual unimodal predictors.
 Model-agnostic approaches are easy to implement using uni-modal
 machine learning methods.
 
+
 ## Model-based Approaches {#model-based-approaches}
 
 These approaches are tailored towards handling multi-modal data.
 
-[Multiple Learning Kernel]({{<relref "multiple_learning_kernel.md" >}}) (MKL) methods extend kernel [Support Vector
-Machines]({{<relref "support_vector_machines.md" >}}) to use different kernels for different modalities.
+[Multiple Learning Kernel]({{<relref "multiple_learning_kernel.md#" >}}) (MKL) methods extend kernel [Support Vector
+Machines]({{<relref "support_vector_machines.md#" >}}) to use different kernels for different modalities.
 Modality-specific kernels allow for better fusion of heterogeneous
 data. One advantage of MKL is that the loss function is convex, which
 leads to easy optimization and globally optimum solutions. However,
@@ -54,7 +56,7 @@ which means inference can be slow.
 
 Generative graphical models such as factorial hidden markov networks, or
 multi-stream hidden markov metods have been used. Discriminative
-models such as [Conditional Random Fields]({{<relref "conditional_random_fields.md" >}}) sacrifice the modeling of
+models such as [Conditional Random Fields]({{<relref "conditional_random_fields.md#" >}}) sacrifice the modeling of
 joint probability for predictive power.
 
 Lastly, neural networks fuse temporal multimodal information through
@@ -64,6 +66,7 @@ from large amounts of data, and are able to learn complex decision
 boundaries. However, they lack interpretability, and require large
 amounts of training data.
 
+
 ## Bibliography {#bibliography}
 
-<a id="orgd3915d5"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="org94e2faf"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

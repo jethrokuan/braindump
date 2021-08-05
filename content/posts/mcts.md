@@ -19,14 +19,14 @@ domain-independent.
 UCB1 constructs statistical confidence intervals:
 
 \begin{equation}
-\bar{x_i} \pm \sqrt{\frac{2 \ln n}{n_i}}
+  \bar{x\_i} \pm \sqrt{\frac{2 \ln n}{n\_i}}
 \end{equation}
 
 where:
 
-- \\(\bar{x_i}\\) is the mean payout for action \\(i\\)
-- \\(n_i\\) is the number of simulations of action \\(i\\)
-- \\(n\\) is the total number of plays
+-   \\(\bar{x\_i}\\) is the mean payout for action \\(i\\)
+-   \\(n\_i\\) is the number of simulations of action \\(i\\)
+-   \\(n\\) is the total number of plays
 
 The strategy is to pick the action with the highest upper bound each time.
 
@@ -40,14 +40,16 @@ MCTS constructs the statistics tree at the starting point.
 
 Selection
 : All child nodes have now been visited at least once.
-Now AI can select the best child node. - based on how good the statistics are - how much the child node has been "ignored"
+    Now AI can select the best child node.
+    -   based on how good the statistics are
+    -   how much the child node has been "ignored"
 
 Expansion
 : Add a new node that the AI will investigate
 
 Simulation
 : starting from position represented by left child node,
-make random moves repeatedly until the game is won or lost
+    make random moves repeatedly until the game is won or lost
 
 Update
 : Depending on win or loss, update left child node in stats
@@ -75,10 +77,11 @@ their win count incremented.
 Some great references for productionized implementations of MCTS
 include:
 
-- [minigo/strategies.py](https://github.com/tensorflow/minigo/blob/master/strategies.py)
-- [minigo/mcts.py](https://github.com/tensorflow/minigo/blob/master/mcts.py)
+-   [minigo/strategies.py](https://github.com/tensorflow/minigo/blob/master/strategies.py)
+-   [minigo/mcts.py](https://github.com/tensorflow/minigo/blob/master/mcts.py)
+
 
 ## References {#references}
 
-- [Introduction to Monte Carlo Tree Search - Jeff Bradberry](https://jeffbradberry.com/posts/2015/09/intro-to-monte-carlo-tree-search/)
-- [A Deep Dive into Monte Carlo Tree Search](http://www.moderndescartes.com/essays/deep%5Fdive%5Fmcts/)
+-   [Introduction to Monte Carlo Tree Search - Jeff Bradberry](https://jeffbradberry.com/posts/2015/09/intro-to-monte-carlo-tree-search/)
+-   [A Deep Dive into Monte Carlo Tree Search](http://www.moderndescartes.com/essays/deep%5Fdive%5Fmcts/)

@@ -5,7 +5,7 @@
 
 - paper :: https://arxiv.org/pdf/1901.09948v2.pdf
 
-[[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]] enable power-efficient network models, which
+[[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]] enable power-efficient network models, which
 have become of increasing importance in embedded and auto-motive
 applications. The power efficiency stems from dispensing of expensive
 floating-point computations. 

@@ -10,9 +10,9 @@ but allows us to estimate the expectation of a function \\(f(x)\\).
 Suppose we cannot sample from \\(p(x)\\)
 
 \begin{aligned}
-E\_{x \sim p(x)}[f(x)] &=\int p(x) f(x) d x \\ &=\int
-\frac{q(x)}{q(x)} p(x) f(x) d x \\ &=\int q(x) \frac{p(x)}{q(x)}
-f(x) d x \\ &=E\_{x \sim q(x)}\left[\frac{p(x)}{q(x)} f(x)\right]
+  E\_{x \sim p(x)}[f(x)] &=\int p(x) f(x) d x \\ &=\int
+  \frac{q(x)}{q(x)} p(x) f(x) d x \\ &=\int q(x) \frac{p(x)}{q(x)}
+  f(x) d x \\ &=E\_{x \sim q(x)}\left[\frac{p(x)}{q(x)} f(x)\right]
 \end{aligned}
 
 \\(R\\) samples are generated from \\(q(x)\\). Values of \\(x\\) where \\(q(x)\\) is
@@ -20,14 +20,15 @@ greater than that of \\(p(x)\\) are over-represented, and vice-versa.
 Hence, importance weights are introduced:
 
 \begin{equation}
-w_r \equiv \frac{p^\star(x^{( r)})}{q^\star(x^{( r)})}
+  w\_r \equiv \frac{p^\star(x^{( r)})}{q^\star(x^{( r)})}
 \end{equation}
 
 which adjust the importance of each point in the estimator:
 
 \begin{equation}
-\hat{\Phi} = \frac{\sum\_{r} w_r f(x^{( r)})}{\sum_r w_r}
+  \hat{\Phi} = \frac{\sum\_{r} w\_r f(x^{( r)})}{\sum\_r w\_r}
 \end{equation}
+
 
 ## Difficulties {#difficulties}
 

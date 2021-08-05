@@ -8,13 +8,14 @@ A statistic \\(t\\) is called a sufficient statistic for \\(\theta\\) for a
 given \\(\boldsymbol{y}\\) if:
 
 \begin{equation}
-p(\boldsymbol{y} | t, \theta)=p(\boldsymbol{y} | t)
+  p(\boldsymbol{y} | t, \theta)=p(\boldsymbol{y} | t)
 \end{equation}
 
 Let \\(Y\_{i} \sim \text { Bernoulli }(\theta)\\) for \\(i = 1, \dots, n\\),
 and \\(T=\sum\_{i=1}^{n} Y\_{i}\\). Then it can be shown that
 \\(t=\sum\_{i=1}^{n} y\_{i}\\) is a sufficient statistic for \\(\theta\\) given
 \\(y=\left(y\_{1}, \ldots, y\_{n}\right)\\).
+
 
 ## Fisher-Neyman Theorem {#fisher-neyman-theorem}
 
@@ -25,7 +26,7 @@ A statistic \\(t\\) is sufficient for \\(\theta\\) if and only if there are
 functions \\(f\\) and \\(g\\) such that:
 
 \begin{equation}
-p(\boldsymbol{y} | \theta)=f(t, \theta) g(\boldsymbol{y})
+  p(\boldsymbol{y} | \theta)=f(t, \theta) g(\boldsymbol{y})
 \end{equation}
 
 where \\(t=t(\boldsymbol{y})\\).

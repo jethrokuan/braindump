@@ -1,15 +1,14 @@
 +++
 title = "Learning How To Do Hard Things"
 author = ["Jethro Kuan"]
-slug = "learning_how_to_do_hard_things"
 draft = false
 +++
 
 tags
-: [Learning]({{<relref "learning.md" >}})
+: [Learning]({{<relref "learning.md#" >}})
 
 paper
-: ([MacIver, n.d.](#orga0fb7a2))
+: ([MacIver, n.d.](#orged6e122))
 
 The key is to isolate one aspect of the problem that is difficult and
 work on it. This provides a direct feedback loop.
@@ -24,6 +23,7 @@ work on it. This provides a direct feedback loop.
 >     4.  If you’re still stuck after trying the first three, it’s possible that you may have hit some sort of natural difficulty limit and may not be able to make progress.
 > 5.  If the original hard thing is now easy, you’re done. If not, go back to step 2.
 
+
 ## Bibliography {#bibliography}
 
-<a id="orga0fb7a2"></a>MacIver, David R. n.d. “How to Do Hard Things.” <https://www.drmaciver.com/2019/05/how-to-do-hard-things/>.
+<a id="orged6e122"></a>MacIver, David R. n.d. “How to Do Hard Things.” <https://www.drmaciver.com/2019/05/how-to-do-hard-things/>.

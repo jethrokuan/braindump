@@ -1,12 +1,11 @@
 +++
 title = "Elisp: Buffer-passing Style"
 author = ["Jethro Kuan"]
-slug = "elisp_bufferpassing_style"
 draft = false
 +++
 
 tags
-: [Emacs Lisp]({{< relref "emacs_lisp" >}})
+: [Emacs Lisp]({{<relref "emacs_lisp.md#" >}})
 
 Rather than have the callee instantiate the buffer, the caller
 instantiates the buffer, and passes it implicitly as the current

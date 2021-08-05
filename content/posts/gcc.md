@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Compilers]({{<relref "compilers.md" >}}), [The C Language]({{<relref "c_lang.md" >}})
+: [Compilers]({{<relref "compilers.md#" >}}), [The C Language]({{<relref "c_lang.md#" >}})
+
 
 ## Building GCC {#building-gcc}
 
@@ -24,6 +25,7 @@ mkdir build && cd build
     --enable-languages=c,c++,d,fortran,go,objc,obj-c++
 make
 ```
+
 
 ## Compiler Flow {#compiler-flow}
 
@@ -44,6 +46,7 @@ The driver calls `toplev_main`, which in turn calls `do_compile`.
 4.  Calls `compile_file()` to compile the file.
 5.  Calls `finalize()` to shut down.
 
+
 ### Front-end {#front-end}
 
 The front-end is responsible for preprocessing, lexing, and parsing
@@ -62,11 +65,12 @@ In each language folder, there are 2 important files:
 
 config-lang.in
 : a shell script containing important variables
-concerning the language
+    concerning the language
 
 Make-lang.in
 : a Makefile for building documentation, and
-installing the front-end
+    installing the front-end
+
 
 #### Invoking the Front-end {#invoking-the-front-end}
 
@@ -90,9 +94,10 @@ things:
 2.  Calls `cgraph_node::finalize_function(fndecl, false)` at the end (if
     nested, creates a call-graph node otherwise)
 
+
 #### cgraphunit {#cgraphunit}
 
-This cgraph_node `finalize_function` is defined in `gcc/cgraphunit.c`,
+This cgraph\_node `finalize_function` is defined in `gcc/cgraphunit.c`,
 which acts as the interface between tree-based front-ends like GENERIC
 and the backend.
 
@@ -105,23 +110,23 @@ In the `compile_file` function described earlier, after
 called. This calls `cgraph_node::analyze_functions`, which loops
 through the `enqueue_nodes` and:
 
-- Lowers representation into GIMPLE (gimplify)
-- build callgraph edges and references for all trivially needed
-  symbols and all symbols referred by them.
-- lowers thunks
-- calls compile(), which runs IPA passes (interprocedural
-  optimization). IPA uses information in the call graph to perform
-  transformations across function boundaries. IPA passes include
-  computation of reachability, and inlining functions.
-  - The GIMPLE representation is further lowered into SSA form, and
-    optimization techniques are done there, including:
-    - Dead code elimination
-    - Building the control flow graph
-    - Alias analysis
-    - Copy Renaming
-  - calls `expand_all_functions()` which further lowers to RTL form by
-    calling `init_function_start (decl)`. The RTL form generated is
-    target-dependent.
+-   Lowers representation into GIMPLE (gimplify)
+-   build callgraph edges and references for all trivially needed
+    symbols and all symbols referred by them.
+-   lowers thunks
+-   calls compile(), which runs IPA passes (interprocedural
+    optimization). IPA uses information in the call graph to perform
+    transformations across function boundaries. IPA passes include
+    computation of reachability, and inlining functions.
+    -   The GIMPLE representation is further lowered into SSA form, and
+        optimization techniques are done there, including:
+        -   Dead code elimination
+        -   Building the control flow graph
+        -   Alias analysis
+        -   Copy Renaming
+    -   calls `expand_all_functions()` which further lowers to RTL form by
+        calling `init_function_start (decl)`. The RTL form generated is
+        target-dependent.
 
 All passes (optimization or otherwise) are managed by a pass
 manager to ensure they are executed in the correct order. The passes
@@ -131,13 +136,13 @@ different passes are run.
 RTL generation is done in `gcc/emit-rtl.c`. Some RTL optimization passes
 are run over the RTL form, including:
 
-- common subexpression elimination
-- global subexpression elimination
-- web construction
-- LRA (local register allocation): virtual registers are converted
-  into physical registers, with spilling where necessary
-- basic-block reordering
-- peephole optimizations
+-   common subexpression elimination
+-   global subexpression elimination
+-   web construction
+-   LRA (local register allocation): virtual registers are converted
+    into physical registers, with spilling where necessary
+-   basic-block reordering
+-   peephole optimizations
 
 The files for backends are located in directories under `gcc/config`,
 e.g. `gcc/config/aarch64`.
@@ -145,6 +150,7 @@ e.g. `gcc/config/aarch64`.
 The final pass converts RTL code into assembly code for output. The
 source files are final.c plus insn-output.c. Finally, code for the
 target host is output.
+
 
 ## The C Parser {#the-c-parser}
 
@@ -156,11 +162,11 @@ Simplicity
 
 Performance
 : Handwriting the parser enables for handwritten
-optimization
+    optimization
 
 Error Recovery
 : We can handwrite rules for common syntatic errors
-and recover from them.
+    and recover from them.
 
 The C parser used to be a generated parser via Bison, but extending
 the parser was difficult. Historically, Objective-C and OpenMP support
@@ -171,34 +177,43 @@ other portions in GCC, such as optimization, so it is reasonable to
 handwrite the parser to ensure that the parse trees obtained are
 deterministic and easy to debug.
 
+
 ## The Intermediate Code Formats {#the-intermediate-code-formats}
 
 We list the intermediate code formats in descending order of level.
 
 GENERIC
 : The purpose of GENERIC is to represent functions in a
-tree representation that is `language-independent`. The
-transition point is `c_genericize` in `gcc/c-decl.c`
+    tree representation that is `language-independent`. The
+    transition point is `c_genericize` in `gcc/c-decl.c`
 
 GIMPLE
 : GIMPLE is derived from GENERIC, by converting it into a
-three-address representation. The three-address
-representation allows for several higher-level
-optimization passes. The transition point is
-`gimplify_function_tree` in `cgraphunit.c:669`. Some
-optimization passes include: - vectorization - empty loops - loop parallelization
+    three-address representation. The three-address
+    representation allows for several higher-level
+    optimization passes. The transition point is
+    `gimplify_function_tree` in `cgraphunit.c:669`. Some
+    optimization passes include:
+    -   vectorization
+    -   empty loops
+    -   loop parallelization
 
 RTL
 : The Register Transfer Language is lowest level IR, where
-instructions are output one-by-one. RTL is closest to the
-machine language, and more optimizations can be done at this
-level. This also includes machine-specific optimizations, as
-different machines have different instruction sets. The
-entry-point to RTL generation happens in the CFG expansion
-pass, defined in `gcc/cfgexpand.c`. The source files for RTL
-generation include stmt.c, calls.c, expr.c, explow.c,
-expmed.c, function.c, optabs.c and emit-rtl.c. Some
-optimization passes include: - loop optimization - (global) common subexpression elimination - Instruction scheduling - Register allocation
+    instructions are output one-by-one. RTL is closest to the
+    machine language, and more optimizations can be done at this
+    level. This also includes machine-specific optimizations, as
+    different machines have different instruction sets. The
+    entry-point to RTL generation happens in the CFG expansion
+    pass, defined in `gcc/cfgexpand.c`. The source files for RTL
+    generation include stmt.c, calls.c, expr.c, explow.c,
+    expmed.c, function.c, optabs.c and emit-rtl.c. Some
+    optimization passes include:
+    -   loop optimization
+    -   (global) common subexpression elimination
+    -   Instruction scheduling
+    -   Register allocation
+
 
 ## GCC's RTL representation {#gcc-s-rtl-representation}
 
@@ -278,6 +293,7 @@ In `(insn 5 2 6 2 ...)`, 5 is the current instruction, the first 2 is the previo
 instruction, 6 is the next instruction and the final 2 is the basic
 block ID.
 
+
 ## Peephole Optimizations {#peephole-optimizations}
 
 Peephole optimizations in GCC are defined in markdown files in
@@ -303,12 +319,13 @@ example, `match_operand` constrains the operands allowed for that
 instruction. and captures it into group 1.
 
 `match_dup` assumes that operand number n has already been determined by
-a match_operand appearing earlier in the recognition template, and it
+a match\_operand appearing earlier in the recognition template, and it
 matches only an identical-looking expression.
 
 All of the peephole examples below are machine-dependent:
 specifically, the instruction set of the machine is an important
 factor.
+
 
 ### Example 1: `gcc/config/arm/arm.md:L9208` {#example-1-gcc-config-arm-arm-dot-md-l9208}
 
@@ -333,7 +350,8 @@ factor.
     )
 ```
 
-Here we look for instructions of the form: `Rd = (eq (reg1) (const_int0))`. We substitute it for ARM instructions of the form:
+Here we look for instructions of the form: `Rd = (eq (reg1)
+(const_int0))`. We substitute it for ARM instructions of the form:
 
 ```text
   negs Rd, reg1
@@ -342,6 +360,7 @@ Here we look for instructions of the form: `Rd = (eq (reg1) (const_int0))`. We s
 
 which is shorter and more efficient. We do it where the target machine
 is 32-bits.
+
 
 ### Example 2: `gcc/config/i386/i386.md:L12671` {#example-2-gcc-config-i386-i386-dot-md-l12671}
 
@@ -357,6 +376,7 @@ is 32-bits.
 ```
 
 Combines the simple jump instruction into a single instruction.
+
 
 ### Example 3: `gcc/config/aarch64/aarch64.md:L1852` {#example-3-gcc-config-aarch64-aarch64-dot-md-l1852}
 

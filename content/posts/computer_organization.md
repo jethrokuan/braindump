@@ -5,23 +5,28 @@ draft = false
 +++
 
 tags
-: [Operating Systems]({{<relref "operating_systems.md" >}})
+: [Operating Systems]({{<relref "operating_systems.md#" >}})
+
 
 ## Pipelining {#pipelining}
 
-- Increases throughput, but not latency
+-   Increases throughput, but not latency
+
 
 ### Structural Hazard {#structural-hazard}
 
+
 ### Data Hazard {#data-hazard}
 
-- Resolved with extra hardware
+-   Resolved with extra hardware
+
 
 ### Control Hazard {#control-hazard}
 
-- Branch instructions need to tell which branch, but have only just
-  read from memory
-- Branch prediction (static/dynamic)
+-   Branch instructions need to tell which branch, but have only just
+    read from memory
+-   Branch prediction (static/dynamic)
+
 
 ## Pipelined Datapath and Control {#pipelined-datapath-and-control}
 
@@ -30,6 +35,7 @@ tags
 3.  EX: Execution or address calculation
 4.  MEM: Data memory access
 5.  WB: Write Back
+
 
 ### Issues {#issues}
 

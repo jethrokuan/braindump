@@ -5,16 +5,18 @@ draft = false
 +++
 
 tags
-: [Machine Learning]({{<relref "machine_learning.md" >}})
+: [Machine Learning]({{<relref "machine_learning.md#" >}})
 
 <http://www.cs.columbia.edu/~blei/topicmodeling.html>
 [LDA survey - Github](https://github.com/jethrokuan/lda-survey)
+
 
 ## LDA {#lda}
 
 [The Little Book on LDA](https://ldabook.com/)
 <https://www.youtube.com/watch?v=FkckgwMHP2s>
 <http://www.cs.columbia.edu/~blei/papers/Blei2012.pdf>
+
 
 #### Dirichlet Distribution {#dirichlet-distribution}
 
@@ -25,22 +27,22 @@ probability distributions parameterized by a vector α of positive
 reals.
 
 \begin{equation}
-\theta \sim Dir(\alpha)
+  \theta \sim Dir(\alpha)
 \end{equation}
 
 \begin{equation}
-p(\theta) = \frac{1}{\beta(\alpha)} \prod\_{i=1}^n \theta_i^{\alpha_i-1} I(\theta \in S)
+  p(\theta) = \frac{1}{\beta(\alpha)} \prod\_{i=1}^n \theta\_i^{\alpha\_i-1} I(\theta \in S)
 \end{equation}
 
-Where \\(\theta = (\theta_1, \theta_2, \dots, \theta_n), \alpha = (\alpha_1, \alpha_2, \dots, \alpha_n), \alpha_i > 0\\) and
+Where \\(\theta = (\theta\_1, \theta\_2, \dots, \theta\_n), \alpha = (\alpha\_1, \alpha\_2, \dots, \alpha\_n), \alpha\_i > 0\\) and
 
 \begin{equation}
-S = \left\\{x \in \mathbb{R}^n : x_i \ge 0, \sum\_{i=1}^{n} x_i = 1 \right\\}
+  S = \left\\{x \in \mathbb{R}^n : x\_i \ge 0, \sum\_{i=1}^{n} x\_i = 1 \right\\}
 \end{equation}
 
 and
 \\(\frac{1}{\beta(\alpha)} =
-\frac{\Gamma(\alpha_0)}{\Gamma(\alpha_1)\Gamma(\alpha_2)\dots\Gamma(\alpha_n)}\\)
+\frac{\Gamma(\alpha\_0)}{\Gamma(\alpha\_1)\Gamma(\alpha\_2)\dots\Gamma(\alpha\_n)}\\)
 
 The infinite-dimensional generalization of the Dirichlet distribution
 is the Dirichlet process.
@@ -55,6 +57,7 @@ the prior distribution of the distribution's parameter (the vector of
 probabilities that generates the data point) is distributed as a
 Dirichlet, then the posterior distribution of the parameter is also a
 Dirichlet.
+
 
 #### Exploring a Corpus with the posterior distribution {#exploring-a-corpus-with-the-posterior-distribution}
 
@@ -73,46 +76,50 @@ Finding similar documents can be done through the _Hellinger
 distance_:
 
 \begin{align\*}
-D\_{d,k} = \sum\_{k=1}^K \left( \sqrt{\hat{\theta}\_{d,k}} - \sqrt{\hat{\theta}\_{f,k}}\right)^2
+  D\_{d,k} = \sum\_{k=1}^K \left( \sqrt{\hat{\theta}\_{d,k}} - \sqrt{\hat{\theta}\_{f,k}}\right)^2
 \end{align\*}
+
 
 #### Posterior Inference {#posterior-inference}
 
 <!--list-separator-->
 
-- Mean Field Variational Inference
+-  Mean Field Variational Inference
 
-  Approximate intractable posterior distribution with a simpler
-  distribution containing free variational parameters. These parameters
-  are fit to approximate the true posterior.
+    Approximate intractable posterior distribution with a simpler
+    distribution containing free variational parameters. These parameters
+    are fit to approximate the true posterior.
 
-  In contrast to the true posterior, the mean field variational
-  distribution for LDA is one where the variables are independent of
-  each other, with and each governed by a different variational
-  parameter.
+    In contrast to the true posterior, the mean field variational
+    distribution for LDA is one where the variables are independent of
+    each other, with and each governed by a different variational
+    parameter.
 
-  We fit the variational parameters to minimise the KL-divergence to the
-  true posterior.
+    We fit the variational parameters to minimise the KL-divergence to the
+    true posterior.
 
-  The general approach to mean-field variational methods - update each
-  variational parameter with the parameter given by the expectation of
-  the true posterior under the variational distribution - is applicable
-  when the conditional distribution of each variable is the exponential
-  family.
+    The general approach to mean-field variational methods - update each
+    variational parameter with the parameter given by the expectation of
+    the true posterior under the variational distribution - is applicable
+    when the conditional distribution of each variable is the exponential
+    family.
+
 
 #### Markov Chains {#markov-chains}
 
 <http://setosa.io/ev/markov-chains/>
 
+
 #### Shortcomings {#shortcomings}
 
-- strong, potentially invalid statistical assumptions:
-  - topics have no correlation to one another (dirichlet assumes
-    nearly independent)
-    - solution: CTM: use a logistic normal distribution
-  - assumes order of documents don't matter
-    - solution: DTM: use logistic normal distribution to model topics
-      evolving over time
+-   strong, potentially invalid statistical assumptions:
+    -   topics have no correlation to one another (dirichlet assumes
+        nearly independent)
+        -   solution: CTM: use a logistic normal distribution
+    -   assumes order of documents don't matter
+        -   solution: DTM: use logistic normal distribution to model topics
+            evolving over time
+
 
 ## TopicRNN {#topicrnn}
 
@@ -122,6 +129,8 @@ In TopicRNN, latent topic models are used to capture global semantic
 dependencies so that the RNN can focus its modeling capacity on the
 local dynamics of the sequences
 
+
 ## Potential Research Topics {#potential-research-topics}
+
 
 ### <span class="org-todo todo TODO">TODO</span> Visualization of Perplexity for topic models as a potential topic? {#visualization-of-perplexity-for-topic-models-as-a-potential-topic}

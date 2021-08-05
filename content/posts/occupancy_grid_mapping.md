@@ -4,7 +4,7 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-In [Robot Localization]({{<relref "robot_localization.md" >}}), it is assumed that the robot is given a map in
+In [Robot Localization]({{<relref "robot_localization.md#" >}}), it is assumed that the robot is given a map in
 advance. This is sometimes not the case.
 
 Acquiring maps with mobile robots is a challenging task, because:
@@ -16,6 +16,7 @@ Acquiring maps with mobile robots is a challenging task, because:
     referred to as the simultaneous localization and mapping (SLAM)
     problem.
 
+
 ## Factors in hardness of mapping {#factors-in-hardness-of-mapping}
 
 size
@@ -26,12 +27,13 @@ noise in perception
 
 perceptual ambiguity
 : the more frequently different places look
-alike, the harder to establish correspondence in different points in time
+    alike, the harder to establish correspondence in different points in time
 
 cycles
 : cycles in the environment are particularly difficult to
-map. Cycles make robots return via different paths, resulting in
-large amounts of accumulated odometric errors.
+    map. Cycles make robots return via different paths, resulting in
+    large amounts of accumulated odometric errors.
+
 
 ## Occupancy Grid Mapping {#occupancy-grid-mapping}
 
@@ -48,7 +50,7 @@ The gold standard of any occupancy grid mapping algorithm is to
 calculate the posterior over maps given the data:
 
 \begin{equation}
-p( m | z\_{1:t},x\_{1:t})
+  p( m | z\_{1:t},x\_{1:t})
 \end{equation}
 
 The controls \\(u\_{1:t}\\) play no role, since the robot pose is known.
@@ -60,10 +62,10 @@ Let \\(m\_{i}\\) done the grid cell with index \\(i\\). An occupancy grid map
 partitions the space into finitely many grid cells:
 
 \begin{equation}
-m=\sum\_{i} \mathbf{m}\_{i}
+  m=\sum\_{i} \mathbf{m}\_{i}
 \end{equation}
 
-Each \\(m_i\\) is attached a binary occupancy value, which specifies
+Each \\(m\_i\\) is attached a binary occupancy value, which specifies
 whether the cell is occupied.
 
 With this decomposition, the problem remains computationally
@@ -71,45 +73,46 @@ intractable. The standard approach further breaks down the problem,
 instead estimating:
 
 \begin{equation}
-p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)
+  p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)
 \end{equation}
 
 Assuming conditional independence between grid cells, the posterior
 over maps is approximated as:
 
 \begin{equation}
-p\left(m | z\_{1: t}, x\_{1: t}\right)=\prod_i p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)
+  p\left(m | z\_{1: t}, x\_{1: t}\right)=\prod\_i p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)
 \end{equation}
 
 Occupancy is often represented in its log-odds form:
 
 \begin{equation}
-l\_{t, i}=\log \frac{p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)}{1-p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)}
+  l\_{t, i}=\log \frac{p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)}{1-p\left(\mathbf{m}\_{i} | z\_{1: t}, x\_{1: t}\right)}
 \end{equation}
 
 The algorithm is as follows:
 
 \begin{algorithm}
-\caption{Occupancy Grid Mapping}
-\label{occupancy_grid_mapping}
-\begin{algorithmic}[1]
-\Procedure{Occupancy Grid Mapping}{$\\{l\_{t-1, i}\\}, x\_t, z\_t$}
-\ForAll{cells $\mathbf{m}\_i$}
-\If {$\mathbf{m}\_i$ in perceptual field of $z\_t$}
-\State $l\_{t,i} = l\_{t-1,i} + \mathrm{inverse sensor
+  \caption{Occupancy Grid Mapping}
+  \label{occupancy\_grid\_mapping}
+  \begin{algorithmic}[1]
+    \Procedure{Occupancy Grid Mapping}{$\\{l\_{t-1, i}\\}, x\_t, z\_t$}
+    \ForAll{cells $\mathbf{m}\_i$}
+    \If {$\mathbf{m}\_i$ in perceptual field of $z\_t$}
+    \State $l\_{t,i} = l\_{t-1,i} + \mathrm{inverse sensor
       model}(\mathbf{m}\_i, x\_t,z\_t) - l\_0$
-\Else
-\State $l\_{t,i} = l\_{t-1,i}$
-\EndIf
-\State \Return $l\_{t,i}$
-\EndProcedure
-\end{algorithmic}
+    \Else
+    \State $l\_{t,i} = l\_{t-1,i}$
+    \EndIf
+    \State \Return $l\_{t,i}$
+    \EndProcedure
+  \end{algorithmic}
 \end{algorithm}
 
 Occupancy grid mapping requires an _inverse sensor model_. One can
 also utilize the space claimed by the robot itself during mapping, by
 returning a large negative number for all grid cells occupied by the
-robot when at \\(x_t\\).
+robot when at \\(x\_t\\).
+
 
 ## Multi-sensor integration {#multi-sensor-integration}
 
@@ -125,6 +128,7 @@ data from multiple sensors:
 
 2 is the more appropriate approach.
 
+
 ## Inverting the Measurement Model {#inverting-the-measurement-model}
 
 The occupancy grid mapping algorithm requires a marginalized inverse
@@ -134,8 +138,8 @@ termed "inverse" because it reasons from effects to causes.
 We can do so by using Bayes rule, assuming \\(p(m|x) = p(m)\\):
 
 \begin{aligned}
-p(m | x, z) &=\frac{p(z | x, m) p(m | x)}{p(z | x)} \\ &=\eta p(z |
-x, m) p(m)
+  p(m | x, z) &=\frac{p(z | x, m) p(m | x)}{p(z | x)} \\ &=\eta p(z |
+  x, m) p(m)
 \end{aligned}
 
 However, the occupancy grid mapping algorithm approximates the
@@ -143,14 +147,15 @@ posterior over maps by its marginals, so the inverse model for the ith
 grid cell is obtained via:
 
 \begin{equation}
-p\left(\mathbf{m}\_{i} | x, z\right)=\eta \int\_{m: m(i)=\mathbf{m}\_{i}} p(z | x, m) p(m) d m
+  p\left(\mathbf{m}\_{i} | x, z\right)=\eta \int\_{m: m(i)=\mathbf{m}\_{i}} p(z | x, m) p(m) d m
 \end{equation}
 
 Which is impossible to compute given the large space of all maps. It
 is often approximated via sampling. One simple way is to generate
 random triplets of pose, measurements and map occupancy values for any
-grid cell \\(m_i\\). From which we can learn a simple network to predict
+grid cell \\(m\_i\\). From which we can learn a simple network to predict
 occupancy values.
+
 
 ## Maintaining Dependencies in Grid Cells {#maintaining-dependencies-in-grid-cells}
 

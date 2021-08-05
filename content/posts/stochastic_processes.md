@@ -16,24 +16,24 @@ process.
 
 Focus: _Discrete time, discrete state space Markov Chain_
 
-- Stochastic = random
-- A stochastic process describes random phenomena that change over
-  time
+-   Stochastic = random
+-   A stochastic process describes random phenomena that change over
+    time
 
-- values that \\(X_t\\)'s take
-- set of all possible states, denoted by \\(\mathcal{S}\\).
-- can be thought of as time. If \\(T = \\{0, 1, 2, \dots \\}\\)
-  then it is a discrete-time process. If \\(T\\) is an
-  interval, it is a continuous time process.
+-   values that \\(X\_t\\)'s take
+-   set of all possible states, denoted by \\(\mathcal{S}\\).
+-   can be thought of as time. If \\(T = \\{0, 1, 2, \dots \\}\\)
+    then it is a discrete-time process. If \\(T\\) is an
+    interval, it is a continuous time process.
 
-Each \\(X_t\\) is a random variable.
+Each \\(X\_t\\) is a random variable.
 
 Example of stochastic process: Gambler's ruin
 
 1.  A gambler starts with an initial fortune of \\(k\\) dollars.
 2.  The gambler plays against \\(B\\) with an initial fortune of \\(N-k\\) dollars.
-3.  Each game he bets \$1, wins with probability \\(p\\)
-4.  Let \\(\\{X_t = t = 0,1,2 \dots\\}\\) represent his fortune as the
+3.  Each game he bets $1, wins with probability \\(p\\)
+4.  Let \\(\\{X\_t = t = 0,1,2 \dots\\}\\) represent his fortune as the
     betting goes on.
 5.  Game only stops when either gambler or \\(B\\) is ruined.
 6.  Here \\(\mathcal{S} = \\{0,1,\dots,N\\}\\)
@@ -46,12 +46,14 @@ Example of stochastic process: Gambler's ruin
   sample(c(-1, 1), 10, replace=T)
 ```
 
+
 ## Reference Textbooks {#reference-textbooks}
 
-([Ross, n.d.](#orgb3774ee); [Pinsky and Karlin, n.d.](#orga00898e))
+([Ross, n.d.](#orgb1c3675); [Pinsky and Karlin, n.d.](#org7955735))
+
 
 ## Bibliography {#bibliography}
 
-<a id="orga00898e"></a>Pinsky, Mark, and Samuel Karlin. n.d. _An Introduction to Stochastic Modeling_. Academic press.
+<a id="org7955735"></a>Pinsky, Mark, and Samuel Karlin. n.d. _An Introduction to Stochastic Modeling_. Academic press.
 
-<a id="orgb3774ee"></a>Ross, Sheldon M. n.d. _Introduction to Probability Models_. Academic press.
+<a id="orgb1c3675"></a>Ross, Sheldon M. n.d. _Introduction to Probability Models_. Academic press.

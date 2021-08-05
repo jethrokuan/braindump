@@ -6,4 +6,4 @@ draft = false
 
 ## Useful Links {#useful-links}
 
-- [The Man in Seat Sixty-One - the train travel guide...](https://www.seat61.com/)
+-   [The Man in Seat Sixty-One - the train travel guide...](https://www.seat61.com/)

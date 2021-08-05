@@ -5,6 +5,6 @@ draft = false
 +++
 
 tags
-: [Storytelling]({{<relref "storytelling.md" >}})
+: [Storytelling]({{<relref "storytelling.md#" >}})
 
 Disney's Imagineering team created a course on Khan Academy about how they design rides in theme parks.

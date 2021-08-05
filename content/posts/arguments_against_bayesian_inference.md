@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Bayesian Inference]({{<relref "bayesian_inference.md" >}})
+: [Bayesian Inference]({{<relref "bayesian_inference.md#" >}})
 
 Whereas frequentist methods derive solutions via inventing estimators
 (a multitude of them may exist) and computing a likelihood function,

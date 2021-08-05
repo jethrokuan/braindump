@@ -7,6 +7,7 @@ draft = false
 source
 : <https://www.youtube.com/watch?v=btmJtThWmhA&feature=youtu.be>
 
+
 ## Background and Motivation {#background-and-motivation}
 
 Consider a dataset of temperature \\(t\\) vs altitude \\(a\\). We typically see that the
@@ -24,4 +25,17 @@ structure connecting the variables.
 An equation becomes structural by virtue of invariance to a domain of
 modifications.
 
-## [Structural Causal Model]({{<relref "structural_causal_model.md" >}}) {#structural-causal-model--structural-causal-model-dot-md}
+
+## Structural Causal Model {#structural-causal-model}
+
+A structural causal model satisfies the following conditions:
+
+1.  It is a directed acyclic graph \\(G\\) with vertices \\(X\_{1}, \dots, X\_{n}\\)
+2.  Vertices are observables, and arrows represent direct causation
+3.  Each observable \\(X\_{i}\\) is a density, with independent unexplained random
+    variables \\(U\_{i}, \dots, U\_{n}\\).
+
+The structural causal model satisfies the [Reichenbach's principle](#reichenbach-s-principle).
+
+
+## <span class="org-todo todo TODO">TODO</span> Reichenbach's principle {#reichenbach-s-principle}

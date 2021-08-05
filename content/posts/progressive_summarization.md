@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Productivity]({{<relref "productivity.md" >}})
+: [Productivity]({{<relref "productivity.md#" >}})
 
 The idea of progressive summarization is to create notes such that
 their purpose is comprehensible in the future.
@@ -28,6 +28,7 @@ Layer 5
 All of these steps are optional. I think of these as distillation,
 extracting key points from each note.
 
+
 ## Resources {#resources}
 
-- [Implementing A Second Brain in Emacs and Org-Mode – Tasshin](https://tasshin.com/blog/implementing-a-second-brain-in-emacs-and-org-mode/)
+-   [Implementing A Second Brain in Emacs and Org-Mode – Tasshin](https://tasshin.com/blog/implementing-a-second-brain-in-emacs-and-org-mode/)

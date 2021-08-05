@@ -8,7 +8,7 @@ draft = false
 
 Your current posture is the result of your body's adaptations to the
 demands you place on it. Your body builds strength and flexibility
-where demaind is placed on it, and loses strength and flexibility when
+where demand is placed on it, and loses strength and flexibility when
 no stressors are applied.
 
 The factors that lead to increased incidence of back pain are
@@ -18,9 +18,10 @@ factors.
 The key to resolving pain and discomfort is improving strength and
 endurance of the appropriate musculature.
 
+
 ### Understanding Pain {#understanding-pain}
 
-One of the first models of pain was the gate ocntrol theory. This
+One of the first models of pain was the gate control theory. This
 quickly became outdated, and 2 primary models remain: The neuromatrix
 theory of pain, and the biopsychosocial model.
 
@@ -66,6 +67,7 @@ instability, or weakness. Your muscles may become tight to protect you
 from injury. Exercises that are aimed at strengthening and stabilizing
 the back tend to clear up such instances of back pain and tightness.
 
+
 ### Posture in real life {#posture-in-real-life}
 
 Posture is a very complex interplay between the neurological and
@@ -79,6 +81,7 @@ injury.
 We need to think about posture in the context of moving well, and the
 ability to adapt effectively to your environment while avoiding
 injury-prone positioning.
+
 
 ### Correcting Posture {#correcting-posture}
 
@@ -101,6 +104,7 @@ exercise is like a bandage. It will help cover a wound and protect it,
 but the real healing comes from your body engaging in the healing
 process. Mindfulness and sustained habits that aid this process are
 key.
+
 
 ### Corrective Exercises {#corrective-exercises}
 

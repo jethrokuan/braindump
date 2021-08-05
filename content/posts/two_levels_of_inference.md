@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Occam's Razor]({{<relref "occams_razor.md" >}})
+: [Occam's Razor]({{<relref "occams_razor.md#" >}})
 
 There are 2 levels of inference: model fitting and model comparison.
 In model fitting, assuming a model is true (say \\(\mathcal{H}\_i\\)), fit
@@ -13,7 +13,7 @@ the model to the data by inferring what values its free parameters
 should possibly take.
 
 \begin{equation}
-P\left(\mathbf{w} | D, \mathcal{H}\_{i}\right)=\frac{P\left(D | \mathbf{w}, \mathcal{H}\_{i}\right) P\left(\mathbf{w} | \mathcal{H}\_{i}\right)}{P\left(D | \mathcal{H}\_{i}\right)}
+  P\left(\mathbf{w} | D, \mathcal{H}\_{i}\right)=\frac{P\left(D | \mathbf{w}, \mathcal{H}\_{i}\right) P\left(\mathbf{w} | \mathcal{H}\_{i}\right)}{P\left(D | \mathcal{H}\_{i}\right)}
 \end{equation}
 
 The normalizing constant is irrelevant to the first level of
@@ -48,7 +48,7 @@ How do Bayesian methods perform model comparison? The posterior
 probability for each model is:
 
 \begin{equation}
-P\left(\mathcal{H}\_{i} | D\right) \propto P\left(D | \mathcal{H}\_{i}\right) P\left(\mathcal{H}\_{i}\right)
+  P\left(\mathcal{H}\_{i} | D\right) \propto P\left(D | \mathcal{H}\_{i}\right) P\left(\mathcal{H}\_{i}\right)
 \end{equation}
 
 Hence, if we assign equal priors to the alternative models, models

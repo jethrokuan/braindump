@@ -18,6 +18,5 @@ Pytorch supports two libraries for quantization:
 
 * Questions
 
-- Can we quantize [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]? They already do binary
+- Can we quantize [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]]? They already do binary
   precision computation, what about the weights?
-

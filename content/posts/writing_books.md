@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Writing]({{<relref "writing.md" >}})
+: [Writing]({{<relref "writing.md#" >}})
+
 
 [Scott Meyers: Advice to Prospective Book Authors](https://www.aristeia.com/authorAdvice.html)
 

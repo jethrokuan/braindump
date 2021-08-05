@@ -4,9 +4,6 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-tags
-: [Programming Languages]({{<relref "prog_lang.md" >}})
-
 ## What is C++ {#what-is-c-plus-plus}
 
 C++ is a compiled language. For a program to run, its source text has
@@ -23,6 +20,7 @@ The ISO C++ standard defines 2 kinds of entities:
 
 C++ is statically typed: the type of each entity must be known to the
 compiler at its point of use.
+
 
 ## References vs Pointers {#references-vs-pointers}
 
@@ -44,10 +42,12 @@ int count_x(const char* p, char x) {
 }
 ```
 
+
 ## C++ Guidelines {#c-plus-plus-guidelines}
 
 Follow the guidelines:
 <https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md>
+
 
 ### Use General `{}` style declarations {#use-general-style-declarations}
 
@@ -59,6 +59,7 @@ int i2 {7.8}; // error: floating-point to integer conversion
 The old `=` style is traditional and dates back to C. Conversions that
 lose information, are allowed and implicitly applied. These are the
 price paid for C compatibility.
+
 
 ### Use non-member begin and end {#use-non-member-begin-and-end}
 
@@ -77,6 +78,7 @@ sort( begin(v), end(v) );
 sort( begin(a), end(a) );
 ```
 
+
 ### Lambda functions {#lambda-functions}
 
 variables get passed through the square brackets.
@@ -88,6 +90,7 @@ std::for_each(myVec.begin(), myVec.end(), [factor](int& elem){
   elem *= factor;
 });
 ```
+
 
 ### using {#using}
 
@@ -105,11 +108,13 @@ public:
 };
 ```
 
+
 ### avoid `endl` {#avoid-endl}
 
 The endl manipulator is mostly equivalent to '\n' and "\n"; as most
 commonly used it simply slows down output by doing redundant flush()s.
 This slowdown can be significant compared to printf-style output.
+
 
 ### Prefer using STL array or vector instead of a C array {#prefer-using-stl-array-or-vector-instead-of-a-c-array}
 
@@ -120,9 +125,11 @@ a built-in array, a stack-allocated std::array keeps its elements on
 the stack. For a variable-length array, use std::vector, which
 additionally can change its size and handles memory allocation.
 
+
 ### On Namespacing {#on-namespacing}
 
 [How do you properly use namespaces in C++? - Stack Overflow](https://stackoverflow.com/questions/41590/how-do-you-properly-use-namespaces-in-c)
+
 
 ### RAII {#raii}
 
@@ -143,9 +150,10 @@ at the pointer. Once this reference count hits 0, the object is
 released.
 
 For `unique_ptr`, there is no reference count within the class. once
-this unique_ptr goes out of scope, the object at the pointer is
+this unique\_ptr goes out of scope, the object at the pointer is
 released. For this reason, `unique_ptr` are more lightweight than
 `shared_ptr`, and cannot be copied. `unique_ptr` can only be moved.
+
 
 ## Array Decaying {#array-decaying}
 
@@ -157,6 +165,7 @@ dimension; numbers decay into int\* by losing the dimension information
 
 <http://stackoverflow.com/questions/1461432/what-is-array-decaying>
 
+
 ## cin/cout vs scanf/printf {#cin-cout-vs-scanf-printf}
 
 cin/cout is actually faster; but C++ slows it down to sync it with
@@ -167,14 +176,16 @@ speed with:
 std::ios::sync_with_stdio(false);
 ```
 
+
 ## Smart pointers {#smart-pointers}
 
-Here's a summary of smart-pointers and their semantics. [value_ptr](https://github.com/loopperfect/valuable) is
+Here's a summary of smart-pointers and their semantics. [value\_ptr](https://github.com/loopperfect/valuable) is
 not in the stdlib, but is available as a C++ library.
 
 {{< figure src="/ox-hugo/screenshot_2019-02-24_17-27-51.png" caption="Figure 1: Tabular summary of smart pointers" >}}
 
-### shared_ptr {#shared-ptr}
+
+### shared\_ptr {#shared-ptr}
 
 The main advantage of shared pointers is that, we should not worry
 about calling delete or cleaning the memory in an explicit manner. The
@@ -194,37 +205,42 @@ int main() {
 }
 ```
 
-### unique_ptr {#unique-ptr}
 
-Like shared_ptr<>, there is no need to call delete or clean the memory
+### unique\_ptr {#unique-ptr}
+
+Like shared\_ptr<>, there is no need to call delete or clean the memory
 in an explicit manner. The unique pointer will take care of it once it
 goes out of scope. `shared_ptr<>` maintains reference counts where more
-than one shared_ptr<> can refer to a single object.
+than one shared\_ptr<> can refer to a single object.
 
 This is prevented by `unique_ptr<>` and the reason behind naming it as
 unique. In `unique_ptr<>`, one and only one `unique_ptr<>` has the
 ownership of the Object and manages its lifetime.
 
+
 ### std::move {#std-move}
 
-In unique_ptr, std::move is used to transfer the ownership from one
-unique_ptr to another, which is otherwise not possible.
+In unique\_ptr, std::move is used to transfer the ownership from one
+unique\_ptr to another, which is otherwise not possible.
 
-For shared_ptr, std::move prevents the increment and immediate
+For shared\_ptr, std::move prevents the increment and immediate
 decrement of the reference count, making it an optimization. It's not
 strictly necessary.
 
-## not_null {#not-null}
 
-not_null is available in GSL, and with compile-time guarantees that a
+## not\_null {#not-null}
+
+not\_null is available in GSL, and with compile-time guarantees that a
 pointer is not null.
+
 
 ## Books to read {#books-to-read}
 
 <http://stackoverflow.com/questions/388242/the-definitive-c-book-guide-and-list>
 
+
 ## Links {#links}
 
-- [C++ Patterns](https://cpppatterns.com/)
+-   [C++ Patterns](https://cpppatterns.com/)
 
 <biblio.bib>

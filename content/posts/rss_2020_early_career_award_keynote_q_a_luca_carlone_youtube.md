@@ -1,12 +1,12 @@
 +++
 title = "RSS 2020, Early Career Award Keynote + Q&A: Luca Carlone - YouTube"
 author = ["Jethro Kuan"]
-slug = "rss_2020_early_career_award_keynote_q_a_luca_carlone_youtube"
 draft = false
 +++
 
 source
 : <https://www.youtube.com/watch?v=nfZGSMb01Yo>
+
 
 ## Key Idea {#key-idea}
 

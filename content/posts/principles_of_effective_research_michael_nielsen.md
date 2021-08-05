@@ -8,16 +8,14 @@ source
 : <http://michaelnielsen.org/blog/principles-of-effective-research/>
 
 author
-: [Michael Nielsen]({{<relref "michael_nielsen.md" >}})
+: [Michael Nielsen]({{<relref "michael_nielsen.md#" >}})
 
-tags
-: [Research]({{<relref "research.md" >}})
-
-> “We are what we repeatedly do. Excellence, then, is not an act but a habit.” -- Aristotle
+> “We are what we repeatedly do. Excellence, then, is not an act but a habit.”  -- Aristotle
 
 _The foundation of effective research is a strong motivation or desire to do
 research._ Motivation and desire, however, is insufficient. One needs to be
 healthy, have fun, and spend quality time doing other things.
+
 
 ## Aspects of Personal Behaviour {#aspects-of-personal-behaviour}
 
@@ -35,6 +33,7 @@ Self-discipline requires clarity in what you want to achieve, and how yo u go
 about achieving it. A social environment that encourages the development of
 research skills and excellence is important.
 
+
 ## Aspects of Research {#aspects-of-research}
 
 People who concentrate mostly on self-development usually make earl y exits in
@@ -45,12 +44,14 @@ Early on in the research career, there are many advantages to publishing a lot
 of papers. It gives the opportunity to learn to write and communicate well.
 However, the long-term costs are significant.
 
+
 ## Staying Current {#staying-current}
 
 1.  Quickly skim a great deal of work, to keep track of what is known, what sort
     of problems people are thinking about
 2.  Pick a dozen or so papers each year to read deeply, in the belief that they
     contain the most important results of the year.
+
 
 ## Research Styles {#research-styles}
 
@@ -59,11 +60,12 @@ styles: problem-solver and problem-creator, that may be useful ways of thinking.
 
 problem-solver
 : a person who works intensively on a well-posed
-problem
+    problem
 
 problem-creator
 : a person who writes simple papers, but asks
-interesting questions, or pose problems in a new way
+    interesting questions, or pose problems in a new way
+
 
 ### Problem-creator {#problem-creator}
 
@@ -79,6 +81,7 @@ be a good problem creator, one must:
     3.  Be above some minimum threshold of interest and difficulty
 4.  Be ahead of the game
 5.  Identify the messes. What's currently difficult to understand?
+
 
 ### Problem-solver {#problem-solver}
 

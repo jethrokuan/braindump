@@ -26,8 +26,8 @@ Understand the problems that typically come out from this chapter.
 Form big picture.
 
 1.  Read textbook with 2 passes minimum.
-    - First pass to get general feel, less math
-    - Second pass to understand deeper
+    -   First pass to get general feel, less math
+    -   Second pass to understand deeper
 
 Work through the example problems at least once after first pass, when
 encountered during second pass. Attempt to recall during break, in a

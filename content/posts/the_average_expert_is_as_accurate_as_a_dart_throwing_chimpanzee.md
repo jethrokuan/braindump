@@ -10,4 +10,4 @@ simply stories told in a compelling fashion. These predictions rarely survive
 the test of time.
 
 However, there is a subset of experts that seem to be able predict the future
-better than the rest (see [The Good Judgment Project]({{<relref "the_good_judgment_project.md" >}})).
+better than the rest (see [The Good Judgment Project]({{<relref "the_good_judgment_project.md#" >}})).

@@ -8,7 +8,7 @@ title
 : If You're Not Writing a Programming Language, Don't Use A Programming Language
 
 speaker
-: [Leslie Lamport]({{<relref "leslie_lamport.md" >}})
+: [Leslie Lamport]({{<relref "leslie_lamport.md#" >}})
 
 date
 : <span class="timestamp-wrapper"><span class="timestamp">&lt;2020-01-16 Thu&gt;</span></span>
@@ -20,6 +20,7 @@ program. The best way to describe these algorithms is with mathematics.
 
 Don't be "brainwashed" by programming languages. Free your mind with mathematics.
 
+
 ## Algorithms vs Programs {#algorithms-vs-programs}
 
 Programs tend to contain more low-level details:
@@ -30,18 +31,19 @@ Programs tend to contain more low-level details:
 
 **Key insights:**
 
-- Programs are hard to debug, because we're debugging an algorithm at
-  the code level.
-- Algorithms are hard to optimize at the code level
+-   Programs are hard to debug, because we're debugging an algorithm at
+    the code level.
+-   Algorithms are hard to optimize at the code level
 
 **Solution: Describe algorithms in math!**
+
 
 ## Describing an execution of an algorithm {#describing-an-execution-of-an-algorithm}
 
 Algorithms are described by a sequence of states, characterized by a
 set of behaviours. Set of behaviours are described by an initial
-predicate on state \\(s_1\\), and predicates on pairs of states \\(s_m,
-s_n\\).
+predicate on state \\(s\_1\\), and predicates on pairs of states \\(s\_m,
+s\_n\\).
 
 E.g. Euclid's algorithm:
 
@@ -49,17 +51,19 @@ E.g. Euclid's algorithm:
 2.  Next state predicate:
 
 \begin{equation}
-\text{Next}\_E : ((x > y) \wedge (x' = x - y) \wedge (y' = y)) \vee
-((y > x) \wedge (y' = y - x) \wedge (x' = x))
+  \text{Next}\_E : ((x > y) \wedge (x' = x - y) \wedge (y' = y)) \vee
+  ((y > x) \wedge (y' = y - x) \wedge (x' = x))
 \end{equation}
+
 
 ### Predicate on Behaviours {#predicate-on-behaviours}
 
 This can be written as:
 
 \begin{equation}
-\mathrm{Init}\_E \wedge \Box \mathrm{Next}\_E
+  \mathrm{Init}\_E \wedge \Box \mathrm{Next}\_E
 \end{equation}
+
 
 ### Safety and Liveness {#safety-and-liveness}
 
@@ -72,24 +76,27 @@ liveness
 Any property can be expressed as \\(\text{safety} \wedge
 \text{liveness}\\).
 
+
 ### Invariance {#invariance}
 
 If Euclid's algorithm has terminated, then \\(x = GCD(M, N)\\). This can
 be expressed as a property:
 
 \begin{equation}
-\Box ((x = y) \rightarrow (x = GCD(M,N)))
+  \Box ((x = y) \rightarrow (x = GCD(M,N)))
 \end{equation}
 
 Invariance can be proved by showing:
 
 \begin{equation}
-\text{Init}\_E \wedge \Box \text{Next}\_E \rightarrow \Box I_E
+  \text{Init}\_E \wedge \Box \text{Next}\_E \rightarrow \Box I\_E
 \end{equation}
 
-where \\(I_E\\) is the invariance property.
+where \\(I\_E\\) is the invariance property.
+
 
 ## Impact of Using Math to Describe Systems {#impact-of-using-math-to-describe-systems}
+
 
 ### Example 1: Virtuoso {#example-1-virtuoso}
 
@@ -99,25 +106,29 @@ The next iteration of Virtuoso used the [TLA+] abstraction.
 
 Better algorithm led to 10x size decrease in Virtuoso.
 
-### Example 2: Amazon Web Services ([Newcombe et al., n.d.](#org154fe59)) {#example-2-amazon-web-services--newcombe-et-al-dot-n-dot-d-dot--org154fe59}
+
+### Example 2: Amazon Web Services ([Newcombe et al., n.d.](#orgc41f550)) {#example-2-amazon-web-services--newcombe-et-al-dot-n-dot-d-dot--orgc41f550}
 
 AWS uses formal methods (TLA+). Key insights:
 
-- Formal methods allow for finding bugs that other methods cannot discover
-- Formal methods are routinely applied to the design of complex,
-  real-world software
-- They are surprisingly applicable to daily work
+-   Formal methods allow for finding bugs that other methods cannot discover
+-   Formal methods are routinely applied to the design of complex,
+    real-world software
+-   They are surprisingly applicable to daily work
 
 TLA+ is also used at Microsoft.
+
 
 ## TL;DR {#tl-dr}
 
 Use TLA+.
 
+
 ## Related {#related}
 
-- [Hoare logic](https://en.wikipedia.org/wiki/Hoare%5Flogic)
+-   [Hoare logic](https://en.wikipedia.org/wiki/Hoare%5Flogic)
+
 
 ## Bibliography {#bibliography}
 
-<a id="org154fe59"></a>Newcombe, Chris, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, and Michael Deardeuff. n.d. “How Amazon Web Services Uses Formal Methods” 58 (4):66–73. <https://doi.org/10.1145/2699417>.
+<a id="orgc41f550"></a>Newcombe, Chris, Tim Rath, Fan Zhang, Bogdan Munteanu, Marc Brooker, and Michael Deardeuff. n.d. “How Amazon Web Services Uses Formal Methods” 58 (4):66–73. <https://doi.org/10.1145/2699417>.

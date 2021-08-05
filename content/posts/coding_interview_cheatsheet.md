@@ -7,6 +7,7 @@ draft = false
 
 ## Arrays {#arrays}
 
+
 ### Dutch Flag Partition {#dutch-flag-partition}
 
 ```python
@@ -33,6 +34,7 @@ draft = false
               A[i], A[larger] = A[larger], A[i]
               larger -= 1
 ```
+
 
 ## Linked List {#linked-list}
 
@@ -63,6 +65,7 @@ draft = false
           node.next = node.next.next
 ```
 
+
 ### Reverse Sublist {#reverse-sublist}
 
 ```python
@@ -80,6 +83,7 @@ draft = false
 
       return dummy_head.next
 ```
+
 
 ### Test Cycle {#test-cycle}
 
@@ -112,6 +116,7 @@ draft = false
       return None
 ```
 
+
 ## Stacks {#stacks}
 
 ```python
@@ -120,6 +125,7 @@ stack.append(a)
 stack.pop()
 
 ```
+
 
 ### Building with Sunset View {#building-with-sunset-view}
 
@@ -138,6 +144,7 @@ stack.pop()
 
 ```
 
+
 ## Queues {#queues}
 
 Queue supports 2 operations, enqueue and dequeue. Queues can be
@@ -153,7 +160,9 @@ insertions and deletions from both ends (doubly-linked list).
   q.popleft()
 ```
 
+
 ## Binary Trees {#binary-trees}
+
 
 ### Traversal {#traversal}
 
@@ -166,6 +175,7 @@ insertions and deletions from both ends (doubly-linked list).
           traverse(tree.right)
           print(f"{postorder {tree.data}}")
 ```
+
 
 ### Height Balanced {#height-balanced}
 
@@ -192,6 +202,7 @@ insertions and deletions from both ends (doubly-linked list).
       return check_balanced(tree).balanced
 ```
 
+
 ### Find Successor {#find-successor}
 
 Successor is leftmost element in node's right subtree.
@@ -210,13 +221,14 @@ Successor is leftmost element in node's right subtree.
       return node.parent
 ```
 
+
 ## Heaps {#heaps}
 
 Python provides min-heap via `heapq`.
 
-- \\(O(\log n)\\) insertions
-- \\(O(1)\\) min element
-- \\(O(\log n)\\) deletion of min element
+-   \\(O(\log n)\\) insertions
+-   \\(O(1)\\) min element
+-   \\(O(\log n)\\) deletion of min element
 
 <!--listend-->
 
@@ -229,6 +241,7 @@ Python provides min-heap via `heapq`.
   heapq.heappushpop(h, a)         # pushes a on heap and pops and returns smallest element
   e = h[0]                        # return min element
 ```
+
 
 ### Merge k sorted arrays {#merge-k-sorted-arrays}
 
@@ -254,6 +267,7 @@ Python provides min-heap via `heapq`.
 
 ```
 
+
 ## Searching {#searching}
 
 ```python
@@ -269,6 +283,7 @@ Python provides min-heap via `heapq`.
               R = M - 1
       return -1
 ```
+
 
 ## Sorting {#sorting}
 
@@ -286,12 +301,14 @@ Python provides min-heap via `heapq`.
   students.sort(key = lambda: student: student.gpa) # in-place
 ```
 
+
 ## Binary Search Trees {#binary-search-trees}
 
-- \\(O(\log n)\\) insertion
-- \\(O(\log n)\\) deletion
-- \\(O(\log n)\\) lookup
-- \\(O(\log n)\\) find
+-   \\(O(\log n)\\) insertion
+-   \\(O(\log n)\\) deletion
+-   \\(O(\log n)\\) lookup
+-   \\(O(\log n)\\) find
+
 
 ## Graph {#graph}
 

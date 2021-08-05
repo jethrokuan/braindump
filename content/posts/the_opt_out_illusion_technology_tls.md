@@ -9,6 +9,6 @@ source
 : <https://www.the-tls.co.uk/articles/the-opt-out-illusion/>
 
 tags
-: [Privacy]({{<relref "privacy.md" >}})
+: [Privacy]({{<relref "privacy.md#" >}})
 
 > Opting out is an illusion. The extraction of our behavioural data is non-negotiable.

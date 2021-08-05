@@ -5,7 +5,7 @@ slug = "building_a_pc"
 draft = false
 +++
 
-## What's the difference between SYS_FAN and PUMP_FAN sockets? {#what-s-the-difference-between-sys-fan-and-pump-fan-sockets}
+## What's the difference between SYS\_FAN and PUMP\_FAN sockets? {#what-s-the-difference-between-sys-fan-and-pump-fan-sockets}
 
 Pump fans normally run at 100% all the time. Sys fans are either
 constant or can be set to scale with overall system temperature.

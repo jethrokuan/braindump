@@ -4,22 +4,26 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-SimCLR is a simple framework for [Contrastive Methods]({{<relref "contrastive_methods.md" >}}) of visual representations.
+SimCLR is a simple framework for [Contrastive Methods]({{<relref "contrastive_methods.md#" >}}) of visual representations.
+
 
 ## A simple framework for contrastive learning of visual representations {#chen20_simpl_framew_contr_learn_visual_repres}
 
+
 ### We do not train the model with a memory bank {#we-do-not-train-the-model-with-a-memory-bank}
 
-Rather than train with a memory bank, they use a large batch size, and the [LARS Optimizer]({{<relref "lars_optimizer.md" >}}) to stabilize training.
+Rather than train with a memory bank, they use a large batch size, and the [LARS Optimizer]({{<relref "lars_optimizer.md#" >}}) to stabilize training.
+
 
 ## Key Contributions {#key-contributions}
 
-- Composition of data augmentation to form positive pairs
-- introduce a learnable non-linear transformation between the
-  representation and the contrastive loss substantially improves the
-  quality of the learned representations
-- Contrastive learning benefits from larger batch sizes and more
-  training steps compared to supervised learning
+-   Composition of data augmentation to form positive pairs
+-   introduce a learnable non-linear transformation between the
+    representation and the contrastive loss substantially improves the
+    quality of the learned representations
+-   Contrastive learning benefits from larger batch sizes and more
+    training steps compared to supervised learning
+
 
 ## Data Augmentation {#data-augmentation}
 
@@ -28,9 +32,9 @@ correlated views of the same example, denoted \\(\tilde{x}\_i\\) and
 \\(\tilde{x}\_j\\), which is considered a positive pair. Some of these
 augmentations include:
 
-- random cropping
-- random color distortions
-- random Gaussian blur
+-   random cropping
+-   random color distortions
+-   random Gaussian blur
 
 A neural network encoder \\(f(\cdot)\\) extracts representation vectors
 from augmented data examples.
@@ -48,6 +52,7 @@ negative examples.
 \begin{equation}
 \ell\_{i, j}=-\log \frac{\exp \left(\operatorname{sim}\left(\boldsymbol{z}\_{i}, \boldsymbol{z}\_{j}\right) / \tau\right)}{\sum\_{k=1}^{2 N} \mathbb{1}\_{[k \neq i]} \exp \left(\operatorname{sim}\left(\boldsymbol{z}\_{i}, \boldsymbol{z}\_{k}\right) / \tau\right)}
 \end{equation}
+
 
 ## The Importance of the Projection Head {#the-importance-of-the-projection-head}
 

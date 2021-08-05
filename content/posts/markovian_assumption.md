@@ -5,7 +5,7 @@ draft = false
 +++
 
 **Key idea**: the past and future data are independent, conditioned on the
-present.
+ present.
 
 The Markovian assumption can be violated in many ways:
 

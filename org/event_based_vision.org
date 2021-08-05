@@ -57,7 +57,7 @@ Events are processed and transformed into alternative representations to
 facilitate the extraction of meaningful information to solve a given task.
 
 *Individual Events* $e_{k} = (x_{k}, t_{k}, p_{k})$ are used by probabilistic
-filters and [[id:54691107-81a0-4d7b-8c51-d8a74bde7f86][Spiking Neural Networks]]. Filters and SNNs fuse incoming events
+filters and [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]]. Filters and SNNs fuse incoming events
 asynchronously to produce and output. (7, 24, 61, 96, 97)
 
 *Event Packet* Events $\mathcal{E} \doteq\left\{e_{k}\right\}_{k}^{N_{e}}$ in a

@@ -4,16 +4,15 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-tags
-: [Programming Languages]({{<relref "prog_lang.md" >}})
-
 ## Introduction {#introduction}
+
 
 ### Expressions {#expressions}
 
-- Expressions include concrete values, variables, and also functions
-- Functions are expressions that are applied to an argument, and hence
-  can be _reduced_ or _evaluated_
+-   Expressions include concrete values, variables, and also functions
+-   Functions are expressions that are applied to an argument, and hence
+    can be _reduced_ or _evaluated_
+
 
 ### Infix/Prefix {#infix-prefix}
 
@@ -22,11 +21,13 @@ tags
    + (infix) -> (+) (prefix)
 ```
 
+
 ### Let vs Where {#let-vs-where}
 
 Let introduces an expression, so it can be used wherever you can have
 an expression, but where is a declaration and is bound to a
 surrounding syntactic construct.
+
 
 ### Typeclasses {#typeclasses}
 
@@ -35,12 +36,14 @@ reusable across all the types that have instances of that typeclass.
 `Num` is a typeclass for most numeric types, that provide the basic
 operators `(+)`, `(-)`, `(*)` , `(/)` etc.
 
+
 ### Datatype declaration {#datatype-declaration}
 
 A datatype declaration defines a type constructor and data
 constructors. Data constructors are the values of a particular type,
 and are also functions that let us create data, or values, of a
 particular type.
+
 
 ### Sectioning {#sectioning}
 
@@ -59,23 +62,26 @@ Refers to the partial application of infix operators.
    celebrate "dogs" -- "dogs woot!"
 ```
 
+
 ### Types {#types}
+
 
 #### Polymorphism {#polymorphism}
 
 1.  Parametric polymorphism
-    - Refers to type variables, or parameters, that are fully
-      polymorphic
-    - When unconstrained by a typeclass, the final concrete type could
-      be anything
+    -   Refers to type variables, or parameters, that are fully
+        polymorphic
+    -   When unconstrained by a typeclass, the final concrete type could
+        be anything
 2.  Constrained polymorphism
-    - Puts typeclass constraints on the variable, decreasing the number
-      of concrete types it could be, but increasing what you can
-      actually do with it by defining and bringing into scope a set of
-      operations
+    -   Puts typeclass constraints on the variable, decreasing the number
+        of concrete types it could be, but increasing what you can
+        actually do with it by defining and bringing into scope a set of
+        operations
 
 Numeric literals are polymorphic and stay so until given a more
 specific type.
+
 
 #### Parametricity {#parametricity}
 
@@ -84,6 +90,7 @@ the types its (parametric polymorphic) arguments is uniform. The
 behaviour cannot change just because it was applied to an argument of
 a different type.
 
+
 #### Making things more polymorphic {#making-things-more-polymorphic}
 
 ```haskell
@@ -91,6 +98,7 @@ a different type.
    -- e.g.
    6 / fromIntegral (length [1,2,3])
 ```
+
 
 ## Laziness and Performance {#laziness-and-performance}
 
@@ -104,6 +112,7 @@ unnecessary if the expression was going to be evaluated anyway.
 
 One can force eager evaluation by prepending a bang(`!`) in front of
 the expression.
+
 
 ## Type classes {#type-classes}
 
@@ -146,6 +155,7 @@ of our own:
 Typeclass instances are unique parings of the typeclass and a type.
 They define the ways to implement the typeclass methods for that type.
 
+
 ### IO {#io}
 
 An IO action is an action that, when performed, has side effects,
@@ -155,17 +165,20 @@ contain a return value.
 In `IO ()`, `()` denotes an empty tuple, referred to as a _unit_. A
 unit is both a value and a type, that has only one inhabitant.
 
+
 ### Summary {#summary}
 
-- A typeclass defines a set of functions and/or values;
-- Types have instances of that typeclass
-- The instances specify the ways that type uses the functions of the typeclass
+-   A typeclass defines a set of functions and/or values;
+-   Types have instances of that typeclass
+-   The instances specify the ways that type uses the functions of the typeclass
+
 
 ## Lists {#lists}
 
 ```haskell
   data [] a = [] | a : [a]
 ```
+
 
 ### Extracting portions of lists {#extracting-portions-of-lists}
 
@@ -179,6 +192,7 @@ unit is both a value and a type, that has only one inhabitant.
   takeWhile :: (a -> Bool) -> [a] -> [a]
   dropWhile :: (a -> Bool) -> [a] -> [a]
 ```
+
 
 ### Transforming lists of values {#transforming-lists-of-values}
 
@@ -207,6 +221,7 @@ unit is both a value and a type, that has only one inhabitant.
   zipWith (+) [1,2,3] [10,11,12] -- [11,13,15]
 ```
 
+
 ### Folding lists {#folding-lists}
 
 Folds as a general concept are called _catamorphisms_.
@@ -221,6 +236,7 @@ that structure.
       [] -> z
       (x:xs) -> f x (foldr f z xs)
 ```
+
 
 ## Algebraic Datatypes {#algebraic-datatypes}
 
@@ -254,6 +270,7 @@ synonyms or data declarations.
 8.  Data constructor for the empty list
 9.  Data constructor that takes two arguments, an a and also a [a]
 
+
 ### Data and type constructors {#data-and-type-constructors}
 
 Type constructors are used only at the type level, in type signatures
@@ -265,6 +282,7 @@ interact with at runtime.
 
 Type and data constructors that take no arguments are constants. They
 can only store a fixed type and amount of data.
+
 
 ### Type constructors and kinds {#type-constructors-and-kinds}
 
@@ -287,6 +305,7 @@ waiting to be applied.
 Both `Bool` and [Int] are fully applied, concrete types, so their kind
 signatures have no function arrows.
 
+
 ### Types vs Data {#types-vs-data}
 
 When data constructors take arguments, those arguments refer to other
@@ -301,6 +320,7 @@ types.
   -- data constructor b
   -- type argument [1]
 ```
+
 
 ### What makes these datatypes algebraic? {#what-makes-these-datatypes-algebraic}
 
@@ -322,6 +342,7 @@ cardinality as the type they contain.
 
 Here, `Goats` has the cardinality of `Int`.
 
+
 ### Sum Types {#sum-types}
 
 Cardinality is obtained through summation. Example, Bool:
@@ -333,6 +354,7 @@ Cardinality is obtained through summation. Example, Bool:
 In this case, the cardinality of `Bool` is the sum of the cardinality
 of `True` and `False`.
 
+
 ### Record syntax {#record-syntax}
 
 ```haskell
@@ -342,7 +364,9 @@ of `True` and `False`.
            deriving (Eq, Show)
 ```
 
+
 ## Signaling Adversity {#signaling-adversity}
+
 
 ### Maybe {#maybe}
 
@@ -365,6 +389,7 @@ of `True` and `False`.
 mkPerson is a _smart constructor_. It allows us to construct values
 only if it meets a certain criteria.
 
+
 ### Either {#either}
 
 We use an `either` to figure out which criteria is not met:
@@ -385,6 +410,7 @@ We use an `either` to figure out which criteria is not met:
 
 `Left` is used as the invalid or error constructor. `Functor` will not
 map over the left type argument because it has been applied away.
+
 
 #### Signalling Multiple errors {#signalling-multiple-errors}
 
@@ -421,6 +447,7 @@ map over the left type argument because it has been applied away.
   mkPerson' _ (Left badAge) = Left badAge
 ```
 
+
 ### Anamorphisms {#anamorphisms}
 
 _Anamorphisms_ are the dual of _catamorphisms_. Catamorphisms, or
@@ -440,6 +467,7 @@ structures.
   take 10 $ unfoldr (\b -> Just (b, b+1)) 0
   [0,1,2,3,4,5,6,7,8,9]
 ```
+
 
 ## Monoids {#monoids}
 
@@ -474,7 +502,9 @@ concatenation, among other things.
 `mappend` is how any two values that inhabit the type can be joined
 together. `mempty` is the identity value for that mappend operation.
 
+
 ### Examples of Monoids {#examples-of-monoids}
+
 
 #### List {#list}
 
@@ -491,12 +521,14 @@ together. `mempty` is the identity value for that mappend operation.
     mappend = (++)
 ```
 
+
 #### Integers {#integers}
 
 Integers form a monoid under summation and multiplication. Because it
 is unclear which rule is to be followed, there is no Monoid class
 under Integer, but there is the `Sum` and `Product` types that signal
 which Monoid instance is wanted.
+
 
 ### Newtype {#newtype}
 
@@ -525,6 +557,7 @@ Monoid instances must abide by the following laws:
 
   mconcat = foldr mappend mempty
 ```
+
 
 ### Monoid instances in `Bool` {#monoid-instances-in-bool}
 
@@ -558,6 +591,7 @@ value. `Last` returns the "last" or rightmost non-Nothing value.
   instance (Monoid a, Monoid, b, Monoid c) => Monoid (a,b,c)
 ```
 
+
 ## Semigroups {#semigroups}
 
 Semigroups are like monoids, but without the identity constraint. The
@@ -573,6 +607,7 @@ core operation remains binary and associative.
 ```haskell
   data NonEmpty a = a :| [a] deriving (Eq, Ord, Show)
 ```
+
 
 ## Functors {#functors}
 
@@ -616,7 +651,9 @@ _fmap_ specialises to different types as such:
   fmap :: (a -> b) -> Identity a -> Identity b
 ```
 
+
 ### Functor Laws {#functor-laws}
+
 
 #### Identity {#identity}
 
@@ -627,11 +664,13 @@ _fmap_ specialises to different types as such:
 If we fmap the identity function, it should have the same result as
 passing our value to identity.
 
+
 #### Composition {#composition}
 
 ```haskell
   fmap (f . g) == fmap f . fmap g
 ```
+
 
 #### Structure Preservation {#structure-preservation}
 
@@ -645,6 +684,7 @@ through the type of `fmap`, whatever the type is, we know it must be a
 type that can take an argument, as in `f a` and `f b` and that it will
 be the "structure" we're lifting the function over when we apply it to
 the value inside.
+
 
 ### Examples {#examples}
 
@@ -681,6 +721,7 @@ This is a law-breaking instance:
 In this instance, the structure -- not the values wrapped or contained
 within the structure -- change.
 
+
 ### Maybe and Either Functors {#maybe-and-either-functors}
 
 ```haskell
@@ -699,6 +740,7 @@ reduce the kindness by doing the following:
 Notice that we didn't apply `f` to `a`, because `a` is now part of the
 Functor structure, and is untouchable.
 
+
 ### Ignoring possibilities {#ignoring-possibilities}
 
 The Functor instances for the Maybe and Either datatypes are useful if
@@ -706,6 +748,7 @@ you tend to ignore the left cases, which are typically the error or
 failure cases. Because fmap doesn't touch those cases, you can map
 your function right to the values that you intend to work with and
 ignore failure cases.
+
 
 #### Maybe {#maybe}
 
@@ -718,6 +761,7 @@ ignore failure cases.
   incMaybe = fmap (+1)
 ```
 
+
 #### Either {#either}
 
 ```haskell
@@ -729,6 +773,7 @@ ignore failure cases.
   incEither :: Num a => Either e a => Either e a
   incEither = fmap (+1)
 ```
+
 
 ### Summary {#summary}
 
@@ -757,6 +802,7 @@ in the second case, into a list context.
 The context determines how the function will get applied: the context
 is the datatype, the definition of the datatype, and the Functor
 instance we have for that datatype.
+
 
 ## Applicative {#applicative}
 
@@ -839,6 +885,7 @@ and applies the function inside the functor. `<*>` is left associative.
     fs <*> xs = [f x | f <- fs, x <- xs]
 ```
 
+
 ## Monads {#monads}
 
 Monads are a natural extension to applicative functors. If you have a
@@ -891,7 +938,9 @@ The laws which govern `>>=` and `return` are:
   m >>= (\x -> k x >>= h) = (m >>= k) >>= h
 ```
 
+
 ### Built in Monads {#built-in-monads}
+
 
 #### Maybe {#maybe}
 
@@ -917,6 +966,7 @@ The laws which govern `>>=` and `return` are:
 
   -- applyMaybe is >>= for the Maybe monad
 ```
+
 
 #### Lists {#lists}
 
@@ -979,6 +1029,7 @@ The following two expressions are equivalent:
      return (x,y)
 ```
 
+
 ### Using Monads {#using-monads}
 
 We first analyse this state monad, built around a state type `s` that
@@ -1026,6 +1077,7 @@ bring a value into the monad.
 
 `readSM` brings the state out of the monad for observation while
 `updateSM` allows the user to alter the state in the monad.
+
 
 ## Do Notation {#do-notation}
 

@@ -5,10 +5,10 @@ draft = false
 +++
 
 tags
-: [Model Compression]({{<relref "model_compression.md" >}})
+: [Model Compression]({{<relref "model_compression.md#" >}})
 
 paper
-: ([Stock et al., n.d.](#org24f8374))
+: ([Stock et al., n.d.](#org5a6f15c))
 
 This method minimizes the loss reconstruction error for in-domain
 inputs, and does not require any labelled data.
@@ -26,8 +26,10 @@ high-dimensional space into a cartesian product of subspaces that are
 quantized separately. These are typically studied under the context of
 nearest neighbour search.
 
-## {#}
+
+##  {#}
+
 
 ## Bibliography {#bibliography}
 
-<a id="org24f8374"></a>Stock, Pierre, Armand Joulin, Rémi Gribonval, Benjamin Graham, and Hervé Jégou. n.d. “And the Bit Goes down: Revisiting the Quantization of Neural Networks.” <http://arxiv.org/abs/1907.05686v2>.
+<a id="org5a6f15c"></a>Stock, Pierre, Armand Joulin, Rémi Gribonval, Benjamin Graham, and Hervé Jégou. n.d. “And the Bit Goes down: Revisiting the Quantization of Neural Networks.” <http://arxiv.org/abs/1907.05686v2>.

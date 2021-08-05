@@ -5,13 +5,13 @@ draft = false
 +++
 
 tags
-: [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}})
+: [Spiking Neural Networks]({{<relref "spiking_neurons_lit_review.md#" >}})
 
 A Leaky Integrate-and-Fire neuron at layer \\(l\\) and index \\(i\\) can be
 described in differential form as:
 
 \begin{equation} \label{eq:lif}
-\tau\_{\mathrm{mem}} \frac{\mathrm{d} U\_{i}^{(l)}}{\mathrm{d} t}=-\left(U\_{i}^{(l)}-U\_{\mathrm{rest}}\right)+R I\_{i}^{(l)}
+  \tau\_{\mathrm{mem}} \frac{\mathrm{d} U\_{i}^{(l)}}{\mathrm{d} t}=-\left(U\_{i}^{(l)}-U\_{\mathrm{rest}}\right)+R I\_{i}^{(l)}
 \end{equation}
 
 where the terms denote:

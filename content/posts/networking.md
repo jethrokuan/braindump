@@ -5,9 +5,11 @@ draft = false
 +++
 
 tags
-: [Operating Systems]({{<relref "operating_systems.md" >}})
+: [Operating Systems]({{<relref "operating_systems.md#" >}})
+
 
 ## Introduction {#introduction}
+
 
 ### What is the Internet? {#what-is-the-internet}
 
@@ -30,11 +32,13 @@ the internet. The Internet's principal protocols are the Transmission
 Control Protocol (TCP) and the Internet Protocol (IP), known
 collectively as TCP/IP.
 
+
 ### What is a protocol? {#what-is-a-protocol}
 
 > A protocol defines the format and the order of messages exchanged
 > between two or more communicating entities, as well as the actions
 > taken on the transmission and/or receipt of a message or other event.
+
 
 ### The Network Edge {#the-network-edge}
 
@@ -50,6 +54,7 @@ common across enterprise, university campuses as well as in homes.
 Wide-area wireless access such as 4G and LTE provide wireless access
 to the Internet by sending and receiving packets through a base
 station.
+
 
 ### Physical Mediums {#physical-mediums}
 
@@ -71,7 +76,9 @@ are common in cable television systems.
 
 {{< figure src="/ox-hugo/SW-33020-6_3_2019-01-14_11-25-43.jpg" caption="Figure 2: A Coaxial cable" >}}
 
+
 ### The Network Core {#the-network-core}
+
 
 #### Packet Switching {#packet-switching}
 
@@ -106,6 +113,7 @@ source end system includes the destination IP address in the packet's
 header. Each router has a _forwarding table_ that maps destination
 addresses to its outbound links.
 
+
 #### Circuit Switching {#circuit-switching}
 
 In circuit-switched networks, the resources needed along apath
@@ -125,6 +133,7 @@ Packet switching is offers better sharing of transmission capacity
 than circuit switching, and is simpler and more efficient. However,
 circuit switching can be more suitable for real-time services.
 
+
 ### A Network of Networks {#a-network-of-networks}
 
 A PoP is a group of one or more routers in the provider's network
@@ -135,6 +144,7 @@ of its routers to a router at the PoP. Any ISP may choose to
 multi-home, that is, to connect to two or more provider ISPs.
 
 {{< figure src="/ox-hugo/screenshot_2019-01-14_12-14-13.png" caption="Figure 3: Interconnection of ISPs" >}}
+
 
 ### Delays in Packet-Switched Networks {#delays-in-packet-switched-networks}
 
@@ -156,15 +166,17 @@ will drop the packet.
 Given these delays, we can compute the end-to-end delay.
 
 \begin{equation}
-d\_{\text{e2e}} = N(d\_{\text{proc}} + d\_{\text{trans}} + d\_{\text{prop}})
+  d\_{\text{e2e}} = N(d\_{\text{proc}} + d\_{\text{trans}} + d\_{\text{prop}})
 \end{equation}
 
 This does not account for the average queuing delay of the node.
+
 
 ### Throughput {#throughput}
 
 The instantaneous throughput at any instant of time is the rate (in
 bits/sec) at which a host is receiving the file.
+
 
 ### Protocol Layers and Their Service Models {#protocol-layers-and-their-service-models}
 
@@ -176,30 +188,31 @@ consists of 7 layers.
 
 Application layer
 : network applications and application layer
-protocols reside here. These protocol include HTTP, SMUT and FTP.
-The packet of information at this layer is a **message**.
+    protocols reside here. These protocol include HTTP, SMUT and FTP.
+    The packet of information at this layer is a **message**.
 
 Transport Layer
 : in the Internet there are 2 transport protocols:
-TCP and UDP, each with their own use-case. Each transport-layer
-packet is called a segment.
+    TCP and UDP, each with their own use-case. Each transport-layer
+    packet is called a segment.
 
 Network Layer
 : responsible for moving packets known as **datagrams**
-from one host to another. It has many routing protocols.
+    from one host to another. It has many routing protocols.
 
 Link Layer
 : The network layer relies on this layer to deliver the
-datagram to the next node along the route. These
-services depend on the specific link-layer protocol
-employed for the link. For example, cable access
-networks may use the DOCSIS protocol. Link layer
-protocols include Ethernet and WiFi. Link-layer
-packets are referred to as **frames**.
+    datagram to the next node along the route. These
+    services depend on the specific link-layer protocol
+    employed for the link. For example, cable access
+    networks may use the DOCSIS protocol. Link layer
+    protocols include Ethernet and WiFi. Link-layer
+    packets are referred to as **frames**.
 
 Physical Layer
 : responsible of moving individual bits across
-physical mediums.
+    physical mediums.
+
 
 ## Application Layer {#application-layer}
 
@@ -215,6 +228,7 @@ Example of application-layer protocols include:
 2.  SMTP (Simple mail Transfer Protocol [RFC 821]), a protocol for mail
     exchange
 
+
 ### Client and Servers {#client-and-servers}
 
 A network application protocol typically has 2 parts, a client side
@@ -223,6 +237,7 @@ labeled the client. A host can act as both a client and server at the
 same time. As a concrete example, a mail server host runs the client
 side of SMTP (for sending email), and the server side of SMTP (for
 receiving email).
+
 
 ### Sockets {#sockets}
 
@@ -233,6 +248,7 @@ socket. It is the interface between the application layer and
 transport layer within a host.
 
 {{< figure src="/ox-hugo/screenshot_2019-01-25_10-53-43.png" caption="Figure 5: Application processes, sockets, and underlying transport protocol" >}}
+
 
 ### Addressing Processes {#addressing-processes}
 
@@ -254,6 +270,7 @@ the correct process on the system.
 The user agent is an interface between the user and the network
 application. For example, user agents for browsing the Web include
 Firefox and Chrome.
+
 
 ### Transmission Control Protocol (TCP) {#transmission-control-protocol--tcp}
 
@@ -285,6 +302,7 @@ TCP does not provide:
 1.  A guaranteed minimum transmission rate
 2.  Any delay guarantees
 
+
 ### User Datagram Protocol (UDP) {#user-datagram-protocol--udp}
 
 UDP is connectionless, so there is no handshaking before the 2
@@ -298,6 +316,7 @@ mechanism, so a sending process can pump data into a UDP socket at any
 rate.
 
 This protocol is largely used by real-time applications.
+
 
 ### HTTP {#http}
 
@@ -355,6 +374,7 @@ The response message looks like this:
 
 {{< figure src="/ox-hugo/screenshot_2019-01-25_11-26-41.png" caption="Figure 7: Format of a HTTP response message" >}}
 
+
 ### User-server Interaction: Cookies {#user-server-interaction-cookies}
 
 The HTTP server is stateless. This simplifies server design, and
@@ -373,10 +393,12 @@ Cookie consists of 4 components:
 
 {{< figure src="/ox-hugo/screenshot_2019-01-25_11-29-28.png" caption="Figure 8: Keeping user state with cookies" >}}
 
+
 ### Web Caching {#web-caching}
 
 A web cache -- also called a proxy server -- may satisfy HTTP requests
 on behalf of an origin Web server.
+
 
 ### DNS {#dns}
 
@@ -402,26 +424,27 @@ hierarchical fashion and distributed around the world.
 
 Local name servers
 : Each ISP -- such as a university -- has a
-local name server. when a host issues a DNS query message, the
-message is first sent to the host's local name server.
+    local name server. when a host issues a DNS query message, the
+    message is first sent to the host's local name server.
 
 Root name servers
 : There are a dozen or so root name servers,
-situated primarily in North America. When a local name server is
-unable to respond to a DNS query, it acts as a DNS client and
-makes a DNS query to a root name server.
+    situated primarily in North America. When a local name server is
+    unable to respond to a DNS query, it acts as a DNS client and
+    makes a DNS query to a root name server.
 
 Authoritative name servers
 : The root name server may not know the
-IP address of a particular host. Instead the root name server
-knows the IP address of the authoritative name server that has
-the desired mapping. A name server is authoritative for a host if
-it always has a DNS record that translates the host's hostname to
-that host's IP address. When an authoritative name server is
-queried by a root server, the authoritative name server responds
-with a reply containing the desired mapping.
+    IP address of a particular host. Instead the root name server
+    knows the IP address of the authoritative name server that has
+    the desired mapping. A name server is authoritative for a host if
+    it always has a DNS record that translates the host's hostname to
+    that host's IP address. When an authoritative name server is
+    queried by a root server, the authoritative name server responds
+    with a reply containing the desired mapping.
 
 <biblio.bib>
+
 
 ## Transport Layer {#transport-layer}
 
@@ -455,6 +478,7 @@ multiplexing/demultiplexing service. A transport protocol can possibly
 provide other services to invoking applications, including reliable
 data transfer, bandwidth guarantees and delay guarantees.
 
+
 ### Relationship between the transport layer and network layer {#relationship-between-the-transport-layer-and-network-layer}
 
 The transport layer lies just above the network layer. The
@@ -474,6 +498,7 @@ constrained by the service model of the underlying network-layer
 protocol. For example, if the network-layer protocol cannot provide
 bandwidth or delay guarantees, then the transport-layer protocol on
 top of it cannot as well.
+
 
 ### Overview of Transport layer in the Internet {#overview-of-transport-layer-in-the-internet}
 
@@ -506,6 +531,7 @@ Internet as a whole rather than a service provided to the invoking
 application. This is done by regulating the rate at which the
 sending-side TCPs can send traffic into the network.
 
+
 ### Multiplexing and Demultiplexing Applications {#multiplexing-and-demultiplexing-applications}
 
 The job of delivering the data in a transport-layer segment to the
@@ -525,6 +551,7 @@ uses port 80, and FTP uses port 21.
 
 To identify the appropriate host, the transport segment also contains
 the source and destination IP addresses.
+
 
 ### Connectionless Transport: UDP {#connectionless-transport-udp}
 
@@ -550,32 +577,33 @@ reasons:
 
 No connection establishment
 : TCP uses a three-way handshake before
-it starts to transfer data. UDP does not introduce any delay to
-establish a connection.
+    it starts to transfer data. UDP does not introduce any delay to
+    establish a connection.
 
 No connection state
 : TCP maintains connection state in the end
-systems. This connection state includes receive and send buffers,
-congestion control parameters, and sequence and acknowledgment
-number parameters. Hence, a server devoted to a particular
-application can typically support many more active clients over UDP.
+    systems. This connection state includes receive and send buffers,
+    congestion control parameters, and sequence and acknowledgment
+    number parameters. Hence, a server devoted to a particular
+    application can typically support many more active clients over UDP.
 
 Small packet header overhead
 : The TCP segment has 20 bytes of
-header overhead per segment, while UDP only has 8 bytes of overhead.
+    header overhead per segment, while UDP only has 8 bytes of overhead.
 
 Unregulated send rate
 : TCP has a congestion control mechanism
-that throttles the sender when one or more links between sender
-and receiver become excessively congested. This throttling can
-have severe impact on real-time applications. The speed at which
-UDP sends data is only constrained by the rate at which the
-application generates data, the capabilities of the source, and
-the access bandwidth to the Internet.
+    that throttles the sender when one or more links between sender
+    and receiver become excessively congested. This throttling can
+    have severe impact on real-time applications. The speed at which
+    UDP sends data is only constrained by the rate at which the
+    application generates data, the capabilities of the source, and
+    the access bandwidth to the Internet.
 
 TCP cannot be employed with mulitcast, multicast applications run
 over UDP. It is possible to have reliable data transfer using UDP, by
 building this into the application itself.
+
 
 #### UDP Segment Structure {#udp-segment-structure}
 
@@ -638,6 +666,7 @@ provides nothing for error recovery. Some implementations of UDP
 simply discard the damaged segment; others pass the damaged segment to
 the application with a warning.
 
+
 ### Principles of Reliable Data Transfer {#principles-of-reliable-data-transfer}
 
 The service abstraction provided to the upper-layer entities is that
@@ -653,22 +682,24 @@ by the fact that the layers beneath it may be unreliable. Here, we
 develop increasingly complex models for the sender and receiver sides
 of a reliable data transfer protocol.
 
+
 ## Network Layer {#network-layer}
 
 The network layer implements host-to-host communication service.
 Unlike the transport and application layer, there is a piece of the
 network layer in each and every host and router in the network.
 
+
 ### Forwarding and Routing {#forwarding-and-routing}
 
 Forwarding
 : Forwarding involves the transfer of a packet from an
-incoming link to an outgoing link within a single router.
+    incoming link to an outgoing link within a single router.
 
 Routing
 : Routing involves all of a routers, whose collective
-interactions via routing protocols determine the paths
-that packets take on their trips from source to destination.
+    interactions via routing protocols determine the paths
+    that packets take on their trips from source to destination.
 
 Every router has a forwarding table. A router forwards a packet by
 examining the value of a field in the arriving packet's header. and
@@ -688,17 +719,18 @@ handshaking with each other in order to set up state before
 network-layer data packets within a given source-to-destination can
 begin to flow. This process is referred to as _connection setup_.
 
+
 ### Services network protocols may provide {#services-network-protocols-may-provide}
 
 There are many potential services a network protocol may provide, and
 these include:
 
-- guaranteed delivery
-- guaranteed delivery with bounded delay
-- in-order packet delivery
-- guaranteed minimal bandwidth
-- guaranteed maximum jitter
-- security services
+-   guaranteed delivery
+-   guaranteed delivery with bounded delay
+-   in-order packet delivery
+-   guaranteed minimal bandwidth
+-   guaranteed maximum jitter
+-   security services
 
 The Internet's network layer protocol provides a single service,
 known as the best-effort service.
@@ -708,6 +740,7 @@ known as the best-effort service.
 It may seem like the Internet network-layer protocol provides no
 service at all. ATM networks provide service models with more services
 than the Internet IP protocol.
+
 
 ### Virtual Circuit and Datagram Networks {#virtual-circuit-and-datagram-networks}
 
@@ -720,6 +753,7 @@ The implementations of connection-oriented services in the transport
 layer and connection service in the network layer are fundamentally
 different: the network-layer connection service is implemented in the
 routers in the network core, as well as in the end systems.
+
 
 #### VC networks {#vc-networks}
 
@@ -763,9 +797,10 @@ The messages that are passed between routers to set up the VC are
 known as signalling messages, and the protocols to exchange these
 messages are referred to as signaling protocols.
 
+
 #### Datagram Networks {#datagram-networks}
 
-In a datagram network, each time an end system wants to send a
+In a datagram network, each time  an end system wants to send a
 packet, it stamps the packet with the address of the destination end
 system and then pops the packet into the network. There is no VC
 setup, and routers do not maintain any state information.
@@ -778,9 +813,11 @@ Routers typically use the longest prefix matching rule, which matches
 the packet's IP address to a prefix entry in the forwarding table to
 choose the link interface to forward the packet.
 
+
 ### The Internet Protocol (IP) {#the-internet-protocol--ip}
 
 {{< figure src="/ox-hugo/screenshot_2019-03-20_09-50-50.png" caption="Figure 12: Illustration of the Internet's network layer" >}}
+
 
 ### Datagram {#datagram}
 
@@ -796,47 +833,48 @@ Version number
 
 Header length
 : An IPv4 datgram may have variable header length,
-but most IP datagrams do not contain options.
+    but most IP datagrams do not contain options.
 
 Type of service
 : the specific level of service to be provided is a
-policy issue determined by the router's administrator. Services
-include high throughput, and low delay.
+    policy issue determined by the router's administrator. Services
+    include high throughput, and low delay.
 
 Datagram length
 : the total length of the IP datagram (header plus
-data), measured in bytes
+    data), measured in bytes
 
 Identifier flags, framentation offset
 : these concern IP
-fragmentation. IPv6 disallows fragmentation in the routers.
+    fragmentation. IPv6 disallows fragmentation in the routers.
 
 TTL
 : the time to live field ensure that datagrams do not circulate
-forever in the network.
+    forever in the network.
 
 Protocol
 : This fieldl is used only when an IP datagram reaches its
-final destination. The value indicates the specific
-transport-layer protocol (e.g. TCP) to which the data
-portion of the IP datagram should be passed.
+    final destination. The value indicates the specific
+    transport-layer protocol (e.g. TCP) to which the data
+    portion of the IP datagram should be passed.
 
 Header checksum
 : Aids a router in detecting bit errors in a
-received IP datagram. Routers typically discard erroneous
-datagrams.
+    received IP datagram. Routers typically discard erroneous
+    datagrams.
 
 Source and destination IP addresses
 : When a source creates a
-datagram, it inserts its IP address into the source IP address,
-and inserts the address of the destination into the destination
-IP address
+    datagram, it inserts its IP address into the source IP address,
+    and inserts the address of the destination into the destination
+    IP address
 
 Options
 : These allow extensions to the IP header.
 
 Data
 : The payload to transfer
+
 
 ### IP Datagram Fragmentation {#ip-datagram-fragmentation}
 
@@ -859,6 +897,7 @@ fragmentation offset fields in the datgram header.
 
 {{< figure src="/ox-hugo/screenshot_2019-03-20_10-04-20.png" caption="Figure 14: IP fragments" >}}
 
+
 ### IPv4 addressing {#ipv4-addressing}
 
 A host typically only has 1 link into the network. A router has
@@ -879,15 +918,16 @@ leftmost 24-bits of the 32-bit quantity define the subnet address.
 
 To determine the subnets in the system:
 
-- detach each interface from its host or router, creating islands of
-  isolated networks, with interfaces terminating the endpoints of the
-  isolated networks.
-- each of these isolated networks is a subnet.
+-   detach each interface from its host or router, creating islands of
+    isolated networks, with interfaces terminating the endpoints of the
+    isolated networks.
+-   each of these isolated networks is a subnet.
 
 The Internet's address alignment strategy is known as Classless
 Interdomain Routing (CIDR). An organization is typically assigned a
 block of contiguous addresses, that is, a range of addresses with a
 common prefix.
+
 
 #### Obtaining a block of addresses {#obtaining-a-block-of-addresses}
 
@@ -897,6 +937,7 @@ equal-sized contiguous address blocks, and give these blocks to
 organizations. Internet Corporation for Assigned Names and Numbers
 (ICANN) is the global authority on managing IP addresses, and is also
 responsible for the DNS root servers.
+
 
 #### Obtaining a host address: The dynamic host configuration protocol {#obtaining-a-host-address-the-dynamic-host-configuration-protocol}
 
@@ -931,6 +972,7 @@ For a newly arriving host, the DHCP protocol is a 4-step process:
 
 {{< figure src="/ox-hugo/screenshot_2019-03-20_10-26-56.png" caption="Figure 15: DHCP client-server interaction" >}}
 
+
 #### NAT {#nat}
 
 To address allocation of IP addresses in small networks, the network
@@ -938,15 +980,16 @@ translation protocol (NAT) has foundn increasingly widespread use.
 There are address spaces reserved for private networks, or a realm of
 private addresses. These are:
 
-- 10.0.0.0/8
-- 172.16.0.0/12
-- 192.168.0.0/16
+-   10.0.0.0/8
+-   172.16.0.0/12
+-   192.168.0.0/16
 
 These addresses can be used without coordination with IANA or an
 Internet registry. These IP addresses only have meaning within the
 private network.
 
 {{< figure src="/ox-hugo/screenshot_2019-03-28_16-32-35.png" caption="Figure 16: Network Address Translation" >}}
+
 
 #### Routing {#routing}
 
@@ -959,11 +1002,11 @@ There are 2 forms of routing:
 
 Intra-AS routing
 : intra-as routing finds a good patht between two
-routers within an AS. The 2 commonly used protocols are RIP and OSPF.
+    routers within an AS. The 2 commonly used protocols are RIP and OSPF.
 
 Inter-AS routing
 : inter-as routing handles the interfaces between
-ASs. The de facto protocol for this is BGP.
+    ASs. The de facto protocol for this is BGP.
 
 In intra-AS routing, there is a single administrator, so no policy
 decisions are needed. The routing policies here have a large focus on
@@ -995,7 +1038,7 @@ is taken:
 The Bellman-Ford equation is used to find the least-cost path:
 
 \begin{equation}
-d_x(y) = \textrm{min}\_v(c(x,v) + d_v(y))
+  d\_x(y) = \textrm{min}\_v(c(x,v) + d\_v(y))
 \end{equation}
 
 To find the least cost path, \\(x\\) needs to know the cost from each
@@ -1007,9 +1050,9 @@ In the Distance Vector algorithm, every router sends its distance
 vectors to its directly connected neighbours. When router $x4 finds
 out that $y4 is advertising a path to \\(z\\) than \\(x\\) currently knows:
 
-- \\(x\\) will update its distance vector to \\(z\\) accordingly
-- \\(x\\) will note down that all packets for \\(z\\) should be sent to \\(y\\).
-  This information will be used to create the forwarding table of \\(x\\).
+-   \\(x\\) will update its distance vector to \\(z\\) accordingly
+-   \\(x\\) will note down that all packets for \\(z\\) should be sent to \\(y\\).
+    This information will be used to create the forwarding table of \\(x\\).
 
 After every router has exchanged several rounds of updates, every
 router would be aware of the least-cost paths.

@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Gaussian Filter]({{<relref "gaussian_filter.md" >}}), [Bayes Filter]({{<relref "bayes_filter.md" >}})
+: [Gaussian Filter]({{<relref "gaussian_filter.md#" >}}), [Bayes Filter]({{<relref "bayes_filter.md#" >}})
+
 
 ## Key Idea {#key-idea}
 
@@ -17,7 +18,7 @@ information vector \\(\xi\\), where \\(\Omega = \Sigma^{-1}\\), and \\(\xi =
 The Gaussian can be redefined as follows:
 
 \begin{equation}
-p(x) = \eta \text{exp} \left\\{ - \frac{1}{2} x^T \Omega x + x^T \xi \right\\}
+  p(x) = \eta \text{exp} \left\\{ - \frac{1}{2} x^T \Omega x + x^T \xi \right\\}
 \end{equation}
 
 where \\(\eta\\) has been redefined to subsume a constant. The reason they
@@ -31,22 +32,24 @@ inccreases is different dimensions of the variable \\(x\\). A quadratic
 distance that is weighted by a matrix \\(\Omega\\) is called Mahalanobis
 distance.
 
+
 ## Algorithm {#algorithm}
 
 \begin{algorithm}
-\caption{Information Filter}
-\label{information_filter}
-\begin{algorithmic}[1]
-\Procedure{InformationFilter}{$\xi\_{t-1}, \Omega\_{t-1}, \mu\_t, \z\_t$}
-\State $\overline{\Omega}\_t = (A\_t \Omega\_{t-1}^{-1} A\_t^T + R\_t)^{-1}$
-\State $\overline{\xi}\_t = \overline{\Omega\_t}\left( A\_t
+  \caption{Information Filter}
+  \label{information\_filter}
+  \begin{algorithmic}[1]
+    \Procedure{InformationFilter}{$\xi\_{t-1}, \Omega\_{t-1}, \mu\_t, \z\_t$}
+    \State $\overline{\Omega}\_t = (A\_t \Omega\_{t-1}^{-1} A\_t^T + R\_t)^{-1}$
+    \State $\overline{\xi}\_t = \overline{\Omega\_t}\left( A\_t
       \Omega\_{t-1}^{-1} \xi\_{t-1} + B\_t u\_t  \right)$
-\State $\Omega\_t = C\_t^T Q\_t^{-1} C\_t + \overline{\Omega}\_t$
-\State $\xi\_t = C\_t^T Q\_t^{-1}z\_t + \overline{\xi}\_t$
-\State \Return $\xi\_t, \Omega\_t$
-\EndProcedure
-\end{algorithmic}
+    \State $\Omega\_t = C\_t^T Q\_t^{-1} C\_t + \overline{\Omega}\_t$
+    \State $\xi\_t = C\_t^T Q\_t^{-1}z\_t + \overline{\xi}\_t$
+    \State \Return $\xi\_t, \Omega\_t$
+    \EndProcedure
+  \end{algorithmic}
 \end{algorithm}
+
 
 ## Pros {#pros}
 
@@ -60,6 +63,7 @@ distance.
     form.
 4.  Information matrix may be sparse, lending itself to algorithms that
     are computationally efficient.
+
 
 ## Cons {#cons}
 

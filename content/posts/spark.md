@@ -15,34 +15,35 @@ Spark is a computational engine that is responsible for scheduling,
 distributing and monitoring applications consisting of many
 computational tasks across many worker machines.
 
+
 ## The Spark Stack {#the-spark-stack}
 
 Spark Core
 : contains basic functionality, including memory
-management, scheduling, fault recovery and interacting
-with storage systems. It contains the API for =RDD=s,
-which represent a collection of items distributed
-across many nodes that can be manipulated in parallel.
+    management, scheduling, fault recovery and interacting
+    with storage systems. It contains the API for =RDD=s,
+    which represent a collection of items distributed
+    across many nodes that can be manipulated in parallel.
 
 Spark SQL
 : allows querying of data via SQL, and supports many
-sources of data.
+    sources of data.
 
 Spark Streaming
 : Provides support for processing live streams of data.
 
 MLLib
 : Contains basic ML functionality, such as classification
-and regression.
+    and regression.
 
 GraphX
 : Library for manipulating graphs, and contains common graph
-algorithms like PageRank.
+    algorithms like PageRank.
 
 Cluster Managers
 : Library that enables auto-scaling via cluster
-managers such as Hadoop YARN, Apache Mesos, and its own
-Standalone Scheduler.
+    managers such as Hadoop YARN, Apache Mesos, and its own
+    Standalone Scheduler.
 
 For Data Scientists, Spark's builtin libraries help them visualize
 results of queries in the least amount of time. For Data Processing,
@@ -53,6 +54,7 @@ fault tolerance.
 While Spark supports all files stored in the Hahoop distributed
 filesystem (HDFS), it does not require Hadoop.
 
+
 ## Getting Started {#getting-started}
 
 Enter the shell with `spark-shell`, or `pyspark`.
@@ -62,6 +64,7 @@ Enter the shell with `spark-shell`, or `pyspark`.
   lines.count()
   lines.first()
 ```
+
 
 ## Core Spark Concepts {#core-spark-concepts}
 
@@ -83,6 +86,7 @@ them on the cluster.
   lines.filter(lambda line: "Machine" in line)
 ```
 
+
 ## Running a Python script on Spark {#running-a-python-script-on-spark}
 
 `bin/spark-submit` includes the Spark dependencies, setting up the
@@ -99,6 +103,7 @@ SparkContext.
   sc = SparkContext(conf=conf)
 ```
 
+
 ## Programming with RDDs {#programming-with-rdds}
 
 An RDD is a distributed collection of elements. All work is expressed
@@ -109,13 +114,14 @@ RDDs are created by: (1) loading an external dataset, or (2) creating
 a collection of objects in the driver program.
 
 Spark's RDDs are by default recomputed every time an action is run. To
-reuse an RDD in multiple actions, we can use `rdd.persist`. In
+reuse an RDD in multiple actions,  we can use `rdd.persist`. In
 practice, `persist()` is often used to load a subset of data into
 memory to be queried repeatedly.
 
 ```python
   lines = sc.parallelize(["pandas", "i like pandas"])
 ```
+
 
 ### RDD Operations {#rdd-operations}
 
@@ -139,26 +145,27 @@ execute until an action is seen.
 
 When passing a function that is a member of an object, or contains
 references to fields in an object, Spark sends the entire object to
-worker nodes, which can be larger than the information you need. This
+worker nodes, which can be larger than the information you need.  This
 can also cause the program to fail, if the class contains objects that
 Python cannot pickle.
 
 Basic Transformations:
 
-- `map()`, `flatMap()`
-- pseudo-set operations: `distinct()`, `union()`, `intersection()`,
-  `subtract()`
-- `cartesian()`
+-   `map()`, `flatMap()`
+-   pseudo-set operations: `distinct()`, `union()`, `intersection()`,
+    `subtract()`
+-   `cartesian()`
 
 Actions:
 
-- `reduce(lambda x, y: f(x,y))`
-- `fold(zero)(fn)` is reduce, but takes an additional zeroth-value parameter
-- `=take(n)=`, `=top(n)=`, `takeOrdered(n)(ordering)`,
-  `takeSample(withReplacement, num, [seed])`
-- `aggregate(zero)(seqOp, combOp)` is similar reduce, but used to return
-  a different type
-- `foreach(fn)`
+-   `reduce(lambda x, y: f(x,y))`
+-   `fold(zero)(fn)`  is reduce, but takes an additional zeroth-value parameter
+-   `=take(n)=`, `=top(n)=`, `takeOrdered(n)(ordering)`,
+    `takeSample(withReplacement, num, [seed])`
+-   `aggregate(zero)(seqOp, combOp)` is similar reduce, but used to return
+    a different type
+-   `foreach(fn)`
+
 
 ### Persistence {#persistence}
 
@@ -167,6 +174,7 @@ a node with persisted data goes down, Spark will recreate the RDD from
 the _lineage graph._
 
 {{< figure src="/ox-hugo/screenshot_2018-07-12_18-20-33.png" >}}
+
 
 ## Working with Key/Value Pairs {#working-with-key-value-pairs}
 
@@ -186,10 +194,11 @@ For Python and Scala, the RDD needs to be composed of tuples:
 Java does not have a built-in tuple type, so it uses the
 `scala.Tuple2` class.
 
+
 ### Transformations on Pair RDDs {#transformations-on-pair-rdds}
 
 | Function              | Purpose                                                                |
-| --------------------- | ---------------------------------------------------------------------- |
+|-----------------------|------------------------------------------------------------------------|
 | reduceByKey(func)     | Combines values with the same key                                      |
 | groupByKey()          | Group values with the same key                                         |
 | combineByKey(a,b,c,d) | Combine values with the same key using a different result type         |
@@ -202,7 +211,7 @@ Java does not have a built-in tuple type, so it uses the
 Set transformations:
 
 | Function       | Purpose                                                                        |
-| -------------- | ------------------------------------------------------------------------------ |
+|----------------|--------------------------------------------------------------------------------|
 | subtractByKey  | Remove elements with a key present in the other RDD.                           |
 | join           | Perform an inner join between the 2 RDDs                                       |
 | rightOuterJoin | Performs a join between 2 RDDs where the key must be present in the first RDD. |
@@ -212,10 +221,11 @@ Set transformations:
 Actions:
 
 | Function       | Purpose                                             |
-| -------------- | --------------------------------------------------- |
+|----------------|-----------------------------------------------------|
 | countByKey()   | Count the number of elements for each key.          |
 | collectAsMap() | Collect the result as a map to provide easy lookup  |
 | lookup(key)    | Return all values associated with the provided key. |
+
 
 ### Data Partitioning {#data-partitioning}
 
@@ -228,15 +238,15 @@ We use `partitionBy()` to return a new RDD that partitions the Spark
 frame efficiently. Below are the operations that benefit from
 partitioning:
 
-- cogroup
-- groupWith
-- join
-- leftOuterJoin
-- rightOuterJoin
-- groupByKey
-- reduceByKey
-- combineByKey
-- lookup
+-   cogroup
+-   groupWith
+-   join
+-   leftOuterJoin
+-   rightOuterJoin
+-   groupByKey
+-   reduceByKey
+-   combineByKey
+-   lookup
 
 Implementing a custom partitioner in Python is relatively simple:
 
@@ -252,6 +262,7 @@ Implementing a custom partitioner in Python is relatively simple:
 The hash function will be compared by identity to that of other RDDs,
 so a global function object needs to be passed, rather than creating a
 new lambda.
+
 
 ## Loading and Saving Your Data {#loading-and-saving-your-data}
 
@@ -279,6 +290,7 @@ allowing Spark to efficiently read them in parallel from multiple nodes.
   data.saveAsSequenceFile(outputFile)
 ```
 
+
 ### SparkSQL {#sparksql}
 
 SparkSQL can load any table supported by Apache Hive.
@@ -304,6 +316,7 @@ schema cross records.
   results = hiveCtx.sql("SELECT user.name, text FROM tweets")
 ```
 
+
 ## Advanced Spark Programming {#advanced-spark-programming}
 
 In this section, we look at some techniques that were not previously
@@ -312,22 +325,23 @@ information and _broadcast variables_ to efficiently distribute large
 values.
 
 ```json
-{
-  "address": "address here",
-  "band": "40m",
-  "callsign": "KK6JLK",
-  "city": "SUNNYVALE",
-  "contactlat": "37.384733",
-  "contactlong": "-122.032164",
-  "county": "Santa Clara",
-  "dxcc": "291",
-  "fullname": "MATTHEW McPherrin",
-  "id": 57779,
-  "mode": "FM",
-  "mylat": "37.751952821",
-  "mylong": "-122.4208688735"
-}
+  {
+    "address": "address here",
+    "band": "40m",
+    "callsign": "KK6JLK",
+    "city": "SUNNYVALE",
+    "contactlat": "37.384733",
+    "contactlong": "-122.032164",
+    "county": "Santa Clara",
+    "dxcc": "291",
+    "fullname": "MATTHEW McPherrin",
+    "id": 57779,
+    "mode": "FM",
+    "mylat": "37.751952821",
+    "mylong": "-122.4208688735"
+  }
 ```
+
 
 ### Accumulators {#accumulators}
 

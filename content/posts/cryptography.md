@@ -11,18 +11,18 @@ draft = false
 How can 2 people who never met agree on a secret key, without a man in
 a middle always listening, to figure the key out?
 
-- One-way function
+-   One-way function
 
 Consider a situation with 3 parties, Alice, Bob (the two parties
 trying to communicate) and Eve, the thief.
 
-- Alice and Bob agree on a public colour. Eve is able to detect the
-  public colour.
-- Alice and Bob choose a private colour, and mix their private colours
-  with the public colour and send the mixtures over. Eve is able to
-  collect these mixtures.
-- Alice and Bob add their private colour to the mixture sent by the
-  other person, to obtain the secret colour.
+-   Alice and Bob agree on a public colour. Eve is able to detect the
+    public colour.
+-   Alice and Bob choose a private colour, and mix their private colours
+    with the public colour and send the mixtures over. Eve is able to
+    collect these mixtures.
+-   Alice and Bob add their private colour to the mixture sent by the
+    other person, to obtain the secret colour.
 
 Eve is unable to obtain the secret colour because it requires the
 private colour to obtain.

@@ -22,16 +22,18 @@ sub-network to the original masked weights, performance can be maintained.
 
 How do we find such a sub-network?
 
+
 ## Iterative Magnitude Pruning (IMP) {#iterative-magnitude-pruning--imp}
 
-1.  Start with dense initialization \\(W_0\\), and train to convergence to obtain \\(W\_{T\_\*}^{(1)}\\)
+1.  Start with dense initialization \\(W\_0\\), and train to convergence to obtain \\(W\_{T\_\*}^{(1)}\\)
 2.  Determine the \\(s\\) percent smallest magnitude weights to create a binary mask \\(m^{(1)}\\)
-3.  Initialize the network with weights \\(m^{(1)} \cdot W_0\\), and repeat the pruning process
+3.  Initialize the network with weights \\(m^{(1)} \cdot W\_0\\), and repeat the pruning process
 4.  Halt when the desired sparsity is reached, or when performance drops significantly
 
 IMP was only restricted to small-scale tasks. A more robust pruning method was
 required for larger models (e.g. tuning learning rate schedules, LTH with
 rewinding).
+
 
 ## Resources {#resources}
 

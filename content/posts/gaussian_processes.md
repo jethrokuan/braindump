@@ -29,8 +29,10 @@ ignoring the infinitely many other points.
 
 The properties of a Gaussian process are controlled by its **covariance function**.
 
+
 ## <span class="org-todo todo TODO">TODO</span> [Gaussian Process, not quite for dummies - Yuge Shi](https://yugeten.github.io/posts/2019/09/GP/) {#gaussian-process-not-quite-for-dummies-yuge-shi}
+
 
 ## References {#references}
 
-- Gaussian Processes for Machine Learning
+-   Gaussian Processes for Machine Learning

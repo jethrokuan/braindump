@@ -32,7 +32,7 @@ action \\(a\\) and perceives evidence \\(e\\), then the new belief state is
 given by:
 
 \begin{equation}
-b'(s') = \alpha P(e | s') \sum_s P(s' | s, a) b(s)
+b'(s') = \alpha P(e | s') \sum\_s P(s' | s, a) b(s)
 \end{equation}
 
 where \\(\alpha\\) is a normalizing constant that makes the belief state sum
@@ -56,15 +56,15 @@ perceiving \\(e\\), given that \\(a\\) is was the action taken from belief
 state \\(b\\), is given by:
 
 \begin{align}
-P(e | a,b) &= \sum\_{s'} P(e | a, s', b) P(s' | a, b) \\\\\\
-&= \sum\_{s'} P(e|s')P(s'|a, b) \\\\\\
-&= \sum\_{s'} P(e | s')\sum\_{s'}P(s'|s, a)b(s)
+  P(e | a,b) &= \sum\_{s'} P(e | a, s', b) P(s' | a, b) \\\\\\
+             &= \sum\_{s'} P(e|s')P(s'|a, b) \\\\\\
+             &= \sum\_{s'} P(e | s')\sum\_{s'}P(s'|s, a)b(s)
 \end{align}
 
 \begin{align}
-P(b' | a, b) &= \sum_eP(b' | e, a, b) P(e | a, b) \\\\\\
-&= \sum_eP(b' | e, a, b)\sum\_{s'} P(e|s')\sum\_{s'} P(s'
-| s, a)b(s)
+  P(b' | a, b) &= \sum\_eP(b' | e, a, b) P(e | a, b) \\\\\\
+               &= \sum\_eP(b' | e, a, b)\sum\_{s'} P(e|s')\sum\_{s'} P(s'
+                 | s, a)b(s)
 \end{align}
 
 Where \\(P(b' | e, a, b) = 1\\) if \\(b' = FORWARD(b,a,e)\\) and \\(0\\)
@@ -72,6 +72,7 @@ otherwise.
 
 Because POMDPs have continuous state space, new algorithms for
 computing or approximating the optimal policies for MDPs do not apply here.
+
 
 ### Value iteration for POMDPs {#value-iteration-for-pomdps}
 
@@ -83,8 +84,8 @@ Consider conditional plans, and how the expected utility of executing
 a fixed conditional plan varies with the initial belief state.
 
 1.  Let the utility of executing a fixed conditional plan \\(p\\) starting
-    in physical state \\(s\\) be \\(\alpha_p(s)\\). Then the expected utility of
-    executing \\(p\\) in belief state \\(b\\) is \\(\sum_s b(s) \alpha_p (s)\\) Hence the
+    in physical state \\(s\\) be \\(\alpha\_p(s)\\). Then the expected utility of
+    executing \\(p\\) in belief state \\(b\\) is \\(\sum\_s b(s) \alpha\_p (s)\\) Hence the
     expected utility of a fixed conditional plan varies linearly with
     \\(b\\).
 2.  At any given belief state \\(b\\), the optimal policy will choose to
@@ -92,7 +93,7 @@ a fixed conditional plan varies with the initial belief state.
     the expected utility is just the utility of that conditional plan:
 
 \begin{equation}
-U(b) = U^{\pi^\*}(b) = max\_{p} b \cdot \alpha_p
+  U(b) = U^{\pi^\*}(b) = max\_{p} b \cdot \alpha\_p
 \end{equation}
 
 If the optimal policy \\(\pi^\*\\) chooses to execute \\(p\\) starting at \\(b\\),
@@ -107,7 +108,7 @@ Let \\(p\\) be a depth-d conditional plan whose initial action is \\(a\\) and
 whose depth-d-1 subplan for percept \\(e\\) is \\(p.e\\), then
 
 \begin{equation}
-\alpha_p{s} = R(s) + \gamma \left( \sum\_{s'} P(s' | s,a)\sum_e P(e|s')\alpha\_{p.e}(s') \right)
+  \alpha\_p{s} = R(s) + \gamma \left( \sum\_{s'} P(s' | s,a)\sum\_e P(e|s')\alpha\_{p.e}(s') \right)
 \end{equation}
 
 This recursion gives rise to a value iteration algorithm:

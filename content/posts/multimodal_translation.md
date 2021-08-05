@@ -5,16 +5,17 @@ draft = false
 +++
 
 Multi-modal translation is a sub-challenge in [multi-modal machine
-learning]({{<relref "multimodal_machine_learning.md" >}}), involving the translation of one modality to another. Some
+learning]({{<relref "multimodal_machine_learning.md#" >}}), involving the translation of one modality to another. Some
 applications of multi-modal translation involve speech synthesis,
 video description, and cross-modal retrieval. Image and video
 captioning is a particularly popular problem, with large multi-modal
 datasets available.
 
 Multi-modal translation can be categorized into _example-based_, and
-_generative_ approaches ([Baltrušaitis, Ahuja, and Morency, n.d.](#orge4b54d4)).
+_generative_ approaches ([Baltrušaitis, Ahuja, and Morency, n.d.](#org82f63fb)).
 
 {{< figure src="/ox-hugo/screenshot2020-02-19_16-17-33_.png" caption="Figure 1: Example-based and generative multi-modal translation" >}}
+
 
 ## Example-based {#example-based}
 
@@ -40,6 +41,7 @@ heuristics.
 Example-based approaches are often large and have slow inference
 speeds, because of the large dictionaries.
 
+
 ## Generative {#generative}
 
 The generative approach constructs a model that is able to produce a
@@ -60,12 +62,13 @@ encoding the source modality into a vectorial representation, and
 later decoding it to generate the target modality.
 
 **Continuous generation models** are intended for sequence translation,
-and produce outputs at every timestep in an online manner. These
-models are often seen in text-to-speech, speech-to-text, or
-video-to-text. Encoder-decoder approaches are common used. Continuous
-generation models have to tackle the additional difficulty of
-temporal consistency between modalities.
+ and produce outputs at every timestep in an online manner. These
+ models are often seen in text-to-speech, speech-to-text, or
+ video-to-text. Encoder-decoder approaches are common used. Continuous
+ generation models have to tackle the additional difficulty of
+ temporal consistency between modalities.
+
 
 ## Bibliography {#bibliography}
 
-<a id="orge4b54d4"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<a id="org82f63fb"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.

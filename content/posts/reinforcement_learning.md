@@ -6,19 +6,19 @@ draft = false
 +++
 
 tags
-: [Machine Learning]({{<relref "machine_learning.md" >}})
+: [Machine Learning]({{<relref "machine_learning.md#" >}})
 
 Reinforcement Learning is the field of learning and decision-making
 under uncertainty. An agent acts with a learnable behaviour policy in
 an environment with initially unknown dynamics and reward. The agent
-observes the environment's state (sometimes partially: [POMDPs]({{<relref "pomdp.md" >}})) and
+observes the environment's state (sometimes partially: [POMDPs]({{<relref "pomdp.md#" >}})) and
 chooses an action.
 
 behaviour
 : \\(\Pi(a | s)\\)
 
 action
-: \\(a_t \in A\\)
+: \\(a\_t \in A\\)
 
 reward
 : \\(r\_{t+1} \in R\\)
@@ -27,14 +27,15 @@ state
 : \\(s\_{t+1} \in S\\)
 
 dynamics
-: \\(T(s\_{t+1} | s_t, a_t)\\)
+: \\(T(s\_{t+1} | s\_t, a\_t)\\)
 
 reward
-: \\(R(r\_{t+1} | s_t, a_t)\\)
+: \\(R(r\_{t+1} | s\_t, a\_t)\\)
 
-The dynamics and rewards here reflect the [markovian assumption]({{<relref "markovian_assumption.md" >}}).
+The dynamics and rewards here reflect the [markovian assumption]({{<relref "markovian_assumption.md#" >}}).
 States can be represented in many ways: in a tabular fashion (state 1
 \\(\rightarrow\\) state 2) or as features.
+
 
 ## Key Challenges {#key-challenges}
 
@@ -42,12 +43,14 @@ States can be represented in many ways: in a tabular fashion (state 1
 2.  Function approximation
 3.  Credit Assignment
 
+
 ## Making Complex Decisions {#making-complex-decisions}
 
 Earlier, we were concerned with environments with one-shot, episodic
 decision problems. Sequential decision problems incorporate utilities,
 uncertainty and sensing. These include searching and planning problems
 as special cases.
+
 
 ### Utilities over time {#utilities-over-time}
 
@@ -60,11 +63,11 @@ It turns out that under stationarity, there are only 2 coherent ways
 to assign utilities to sequences:
 
 additive rewards
-: \\(U_h([s\_0, s\_1, \dots, s\_n]) = R(s_0) + R(s_1) + \dots + R(s_n)\\)
+: \\(U\_h([s\_0, s\_1, \dots, s\_n]) = R(s\_0) + R(s\_1) + \dots + R(s\_n)\\)
 
 discounted rewards
-: \\(U_h([s\_0, s\_1, \dots, s\_n]) = R(s_0) + \gamma \cdot R(s_1) + \dots +
-\gamma^2 \cdot R(s_n)\\)
+: \\(U\_h([s\_0, s\_1, \dots, s\_n]) = R(s\_0) + \gamma \cdot R(s\_1) + \dots +
+         \gamma^2 \cdot R(s\_n)\\)
 
 This discount factor \\(\gamma\\) is a number between 0 and 1. Assuming
 stationarity has several problems. First, if the environment does not
@@ -79,6 +82,7 @@ is called a **proper policy**, and the above issue goes away. Infinite
 sequences can be compared in terms of the average reward obtained per
 time step.
 
+
 ### Optimal policies and the utilities of states {#optimal-policies-and-the-utilities-of-states}
 
 First, we can derive the expected utility of executing a policy \\(\pi\\) in
@@ -89,7 +93,7 @@ U^\pi (s) = \mathbb{E} \left[ \sum\_{t=0}^\infty \gamma^t R(S\_t) \right]
 \end{equation}
 
 where the expectation is with respect to the probability distribution
-over state sequences. determined by \\(s\\) and \\(\pi\\). Then \$&pi;^\*(s) =
+over state sequences. determined by \\(s\\) and \\(\pi\\). Then $&pi;^\*(s) =
 argmax\_&pi; U^&pi; (s)\*.
 
 A consequence of using discounted utilities with infinite horizons is
@@ -99,13 +103,15 @@ The utility function allows the agent to select actions by using the
 principle of maximum expected utility from the earlier chapter: \\(\pi^\*(s)
 = argmax\_{a \in A(s) } \sum\_{s^{i}} P(s' |s, a)U(s')\\).
 
+
 ### Summary {#summary}
 
 | Problem    | Bellman Equation                                         | Algorithm                   |
-| ---------- | -------------------------------------------------------- | --------------------------- |
+|------------|----------------------------------------------------------|-----------------------------|
 | Prediction | Bellman Expectation Equation                             | Iterative Policy Evaluation |
 | Control    | Bellman Expectation Equation + Greedy Policy Improvement | Policy Iteration            |
 | Control    | Bellman Optimality Equation                              | Value Iteration             |
+
 
 ## Passive Reinforcement Learning {#passive-reinforcement-learning}
 
@@ -127,8 +133,9 @@ percepts receives the current state and the reward of the state.
 We write the utility as:
 
 \begin{equation}
-U^\pi (s) = E\left[\sum\_{t=0}^\infty \gamma^t R(S\_t) \right]
+  U^\pi (s) = E\left[\sum\_{t=0}^\infty \gamma^t R(S\_t) \right]
 \end{equation}
+
 
 ### Direct Utility Estimation (MC Learning) {#direct-utility-estimation--mc-learning}
 
@@ -153,6 +160,7 @@ for a fixed policy.
 We can view directed utility estimation as searching for \\(U\\) in a
 hypothesis space that is much larger than it needs to be, since it
 includes many functions that violate the Bellman equations.
+
 
 ### Adaptive Dynamic Programming {#adaptive-dynamic-programming}
 
@@ -202,12 +210,13 @@ the transition model.
 A more nuanced approach would be Bayesian reinforcement learning,
 which assumes a prior probability \\(P(h)\\) for each hypothesis \\(h\\) about
 what the true model is. The posterior probability \\(P(h|e)\\) is obtained
-via Bayes' rule. Then \\(\pi^\* = argmax\_\pi \sum_h P(h|e) u_h^\pi\\).
+via Bayes' rule. Then \\(\pi^\* = argmax\_\pi \sum\_h P(h|e) u\_h^\pi\\).
 
 Another approach, derived from robust control theory, allows for a set
 of possible models \\(H\\) and defines an optimal robust policy as one
 that gives the best outcome in the worst case over \\(H\\): \\(\pi^\* =
-argmax\_\pi min_h u_h^\pi\\).
+argmax\_\pi min\_h u\_h^\pi\\).
+
 
 ### Temporal-difference Learning {#temporal-difference-learning}
 
@@ -218,7 +227,7 @@ When a transition occurs from state \\(s\\) to state \\(s'\\), we apply the
 update rule:
 
 \begin{equation}
-U^\pi(s') \leftarrow U^\pi(s) + \alpha (R(s) + \gamma U^\pi(s') -U^\pi(s))
+  U^\pi(s') \leftarrow U^\pi(s) + \alpha (R(s) + \gamma U^\pi(s') -U^\pi(s))
 \end{equation}
 
 Where \\(\alpha\\) is the learning rate. The difference in utilities gives rise
@@ -260,6 +269,7 @@ environment model becomes more accurate, eliminating very long value
 iterations that occur early in learning due to large changes in the
 model.
 
+
 ## Active Reinforcement Learning {#active-reinforcement-learning}
 
 A passive learning agent has a fixed policy that determines its
@@ -272,9 +282,10 @@ this
 
 Next, the agent has a choice of actions. The utilities it learns are
 defined by the optimal policy, governed by the Bellman Equations.
-Having obtained a utility function for the given model, the agent can
+Having obtained a utility function for the given  model, the agent can
 extract an optimal action by one-step look-ahead to maximise the
 expected utility.
+
 
 ### Potential Pitfalls {#potential-pitfalls}
 
@@ -306,22 +317,24 @@ constraint equation to assign higher utility estimates to unexplored
 state-action pairs.
 
 \begin{equation}
-U^+(s) \leftarrow R(s) + \gamma max\_{a} f\left( \sum\_{s'} P(s' |
-s, a) U^+(s), N(s, a) \right)
+  U^+(s) \leftarrow R(s) + \gamma max\_{a} f\left( \sum\_{s'} P(s' |
+    s, a) U^+(s), N(s, a) \right)
 \end{equation}
 
 \\(f(u, n)\\) is called the exploration function. It determines how greed
 is traded off against curiosity. The function should be increasing in
 \\(u\\) and decreasing in \\(n\\).
 
+
 ### Learning an action-utility function {#learning-an-action-utility-function}
 
 An active TD agent is no longer equipped with a fixed policy, so if it
 learns a utility function \\(U\\), it will need to learn a model in order
 to be able choose an action based on \\(U\\) via one-step look-ahead. The
-[update rule for TD](#orgf4e5573) remains unchanged. IT can be shown that the TD
+[update rule for TD](#org5e72bf4) remains unchanged. IT can be shown that the TD
 algorithm will converge to the same values as ADP as the number of
 training sequences tends to infinity.
+
 
 ## RL Applications {#rl-applications}
 
@@ -334,18 +347,20 @@ Robotics
 Tutoring Systems
 : [Reinforcement Learning with People - NIPS 2017 - YouTube](https://www.youtube.com/watch?v=TqT9nIx27Eg)
 
+
 ## Resources {#resources}
 
-- [Katja Hofmann | Reinforcement Learning: Past, Present, and Future Perspective...](https://slideslive.com/38921493/reinforcement-learning-past-present-and-future-perspectives)
+-   [Katja Hofmann | Reinforcement Learning: Past, Present, and Future Perspective...](https://slideslive.com/38921493/reinforcement-learning-past-present-and-future-perspectives)
+
 
 ## Related {#related}
 
-- [Markov Decision Process]({{<relref "markov_decision_process.md" >}})
-- [Monte Carlo Tree Search]({{<relref "mcts.md" >}})
-- [Deep Reinforcement Learning]({{<relref "deep_rl.md" >}})
-- [Temporal Difference Learning]({{<relref "td_learning.md" >}})
-- [Policy Gradients]({{<relref "policy_gradients.md" >}})
-- [Actor-Critic]({{<relref "actor_critic.md" >}})
-- [Q-Learning]({{<relref "q_learning.md" >}})
+-   [Markov Decision Process]({{<relref "markov_decision_process.md#" >}})
+-   [Monte Carlo Tree Search]({{<relref "mcts.md#" >}})
+-   [Deep Reinforcement Learning]({{<relref "deep_rl.md#" >}})
+-   [Temporal Difference Learning]({{<relref "td_learning.md#" >}})
+-   [Policy Gradients]({{<relref "policy_gradients.md#" >}})
+-   [Actor-Critic]({{<relref "actor_critic.md#" >}})
+-   [Q-Learning]({{<relref "q_learning.md#" >}})
 
 <biblio.bib>

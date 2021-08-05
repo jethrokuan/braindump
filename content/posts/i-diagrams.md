@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Information Theory]({{<relref "information_theory.md" >}})
+: [Information Theory]({{<relref "information_theory.md#" >}})
 
 If we view random variables as sets, different information theory
 concepts can be represented using an information diagram.

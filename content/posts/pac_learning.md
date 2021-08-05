@@ -5,11 +5,12 @@ draft = false
 +++
 
 tags
-: [Machine Learning]({{<relref "machine_learning.md" >}})
+: [Machine Learning]({{<relref "machine_learning.md#" >}})
+
 
 ## ERM for finite hypothesis classes {#erm-for-finite-hypothesis-classes}
 
-We note that [Empirical Risk Minimization]({{<relref "erm.md" >}}) can easily overfit
+We note that [Empirical Risk Minimization]({{<relref "erm.md#" >}}) can easily overfit
 to the training data. To correct for this, we introduce inductive
 bias, restricting the hypothesis space \\(\mathcal{H}\\).
 
@@ -17,15 +18,15 @@ The simplest type of restriction is to impose an upper bound on the
 size of a class. Here, we show that if a hypothesis class is finite,
 then ERM will not overfit given a sufficiently large sample size.
 
-Let \\(h_S\\) denote the result of applying ERM to \\(S\\):
+Let \\(h\_S\\) denote the result of applying ERM to \\(S\\):
 
 \begin{equation}
-h_S \in \textrm{argmin}\_{h \in \mathcal{H}} L_S(h)
+  h\_S \in \textrm{argmin}\_{h \in \mathcal{H}} L\_S(h)
 \end{equation}
 
 We make 2 assumptions. First, the realizability assumption, implying
-that every ERM hypothesis we have that \\(L_S(h_S) = 0\\). However, we are
-more interested in the true risk \\(L\_{(D,f)}(h_S)\\) rather than the
+that every ERM hypothesis we have that \\(L\_S(h\_S) = 0\\). However, we are
+more interested in the true risk \\(L\_{(D,f)}(h\_S)\\) rather than the
 empirical risk.
 
 <div class="definition">
@@ -34,7 +35,7 @@ empirical risk.
 The Realizability Assumption: There exists \\(h^\* \in \mathcal{H}\\) such
 that \\(L\_{(D,f)}(h^\*)= 0\\). That is, with probability 1 over random
 samples \\(S\\), where the instances are sampled according to \\(D\\), and
-labelled according to \\(f\\), we have \\(L_S(h^\*) = 0\\).
+labelled according to \\(f\\), we have \\(L\_S(h^\*) = 0\\).
 
 </div>
 
@@ -42,7 +43,7 @@ Any guarantee on the error with respect to the underlying distribution
 \\(D\\), must depend on the relationship between \\(D\\) and \\(S\\). Here, we
 make the second assumption that the training examples are drawn i.i.d.
 
-Since \\(L\_{(D,f)}(h_S)\\) depends on the training set, which is drawn via
+Since \\(L\_{(D,f)}(h\_S)\\) depends on the training set, which is drawn via
 a random process, it is also a random variable.
 
 We introduce 2 parameters:
@@ -50,78 +51,79 @@ We introduce 2 parameters:
 1.  the probability of getting a non-representative sample, denoted by
     \\(\delta\\). We denote \\((1 - \delta)\\) the confidence parameter of our prediction.
 2.  We denote \\(\epsilon\\) as the accuracy parameter of the prediction.
-    The event that \\(L\_{(D,f)}(h_S) > \epsilon\\) is a failure of the
-    learner, while \\(L\_{(D,f)}(h_S) \le \epsilon\\) is the event where the
+    The event that \\(L\_{(D,f)}(h\_S) > \epsilon\\) is a failure of the
+    learner, while \\(L\_{(D,f)}(h\_S) \le \epsilon\\) is the event where the
     predictor is approximately correct.
 
 We are interested in upper bounding the probability to sample m-tuple
 of instances that will lead to failure of the learner. Formally, let
-\\(S_x = \left(x_1, \dots, x_m \right)\\) be the instances of the training
+\\(S\_x = \left(x\_1, \dots, x\_m \right)\\) be the instances of the training
 set. We would like to upper-bound:
 
 \begin{equation}
-D^M(\left\\{ S_x ; L\_{(D,f)}(h_S) > \epsilon \right\\})
+  D^M(\left\\{ S\_x ; L\_{(D,f)}(h\_S) > \epsilon \right\\})
 \end{equation}
 
-Let \\(H_B\\) be the set of bad hypotheses, that is,
+Let \\(H\_B\\) be the set of bad hypotheses, that is,
 
 \begin{equation}
-\mathcal{H}\_B = \left\\{ h \in \mathcal{H} : L\_{(D,f)}(h)> \epsilon \right\\}
+  \mathcal{H}\_B = \left\\{ h \in \mathcal{H} : L\_{(D,f)}(h)> \epsilon \right\\}
 \end{equation}
 
 In addition, let:
 
 \begin{equation}
-M = \left\\{ S_x: \exists h \in \mathcal{H}\_B, L_S(h) = 0 \right\\}
+M = \left\\{ S\_x: \exists h \in \mathcal{H}\_B, L\_S(h) = 0 \right\\}
 \end{equation}
 
-be the set of misleading samples. For every \\(S_x \in M\\), there is a
+be the set of misleading samples. For every \\(S\_x \in M\\), there is a
 bad hypothesis, \\(h \in \mathcal{H}\_B\\) that looks like a good
-hypothesis in \\(S_x\\).
+hypothesis in \\(S\_x\\).
 
-Since the realizability assumption implies \\(L_S(h_S) = 0\\), then the
-event \\(L\_{(D,f)}(h_S) > \epsilon\\) will only happen if our sample is
+Since the realizability assumption implies \\(L\_S(h\_S) = 0\\), then the
+event \\(L\_{(D,f)}(h\_S) > \epsilon\\) will only happen if our sample is
 in the set of misleading examples \\(M\\).
 
 Then:
 
 \begin{equation}
-D^m(\left\\{ S_x : L\_{(D,f)}(h_S) > \epsilon \right\\}) \le D^m(M)
-=D^m(\cup\_{h \in \mathcal{H}\_B} {S_x: L_S(h) = 0})
+  D^m(\left\\{ S\_x : L\_{(D,f)}(h\_S) > \epsilon \right\\}) \le D^m(M)
+  =D^m(\cup\_{h \in \mathcal{H}\_B} {S\_x: L\_S(h) = 0})
 \end{equation}
 
 Because the training samples are i.i.d.:
 
 \begin{align}
-D^m(\left\\{ S_x: L_S(h) = 0\right\\}) &= D^m(\left\\{ S_x: \forall i,
-h(x_i) = f(x_i) \right\\}) \\\\\\
-&= \prod\_{i=1}^{m}D(\left\\{ x_i: h(x_i) = f(x_i) \right\\})
+  D^m(\left\\{ S\_x: L\_S(h) = 0\right\\}) &= D^m(\left\\{ S\_x: \forall i,
+                                         h(x\_i) = f(x\_i) \right\\}) \\\\\\
+  &=  \prod\_{i=1}^{m}D(\left\\{ x\_i: h(x\_i) = f(x\_i) \right\\})
 \end{align}
 
 for each individual sampling of an element of the training set, we
 have:
 
 \begin{equation}
-D(\left\\{ x_i: h(x_i) = y_i \right\\}) = 1 - L\_{(D,f)}(h) \le 1- \epsilon
+  D(\left\\{ x\_i: h(x\_i) = y\_i \right\\}) = 1 - L\_{(D,f)}(h) \le 1- \epsilon
 \end{equation}
 
 Using the inequality \\(1 - \epsilon \le e^{-\epsilon}\\), we obtain that:
 
 \begin{equation}
-D^m(\left\\{ S_x: L_S(h) = 0 \right\\}) \le (1 - \epsilon)^m \le
-e^{-\epsilon m}
+  D^m(\left\\{ S\_x: L\_S(h) = 0 \right\\}) \le (1 - \epsilon)^m \le
+  e^{-\epsilon m}
 \end{equation}
 
 Applying the union bound, we get:
 
 \begin{equation}
-D^m(\left\\{ S_x: L\_{(D,f)}(h_S) > \epsilon \right\\}) \le \left| \mathcal{H}\_B \right|(1 - \epsilon)^m \le
-\left| \mathcal{H}\_B \right| e^{-\epsilon m}
+  D^m(\left\\{ S\_x: L\_{(D,f)}(h\_S) > \epsilon \right\\}) \le \left| \mathcal{H}\_B \right|(1 - \epsilon)^m \le
+  \left| \mathcal{H}\_B \right| e^{-\epsilon m}
 \end{equation}
 
 With this result, we can show that where \\(m \ge
-\frac{\log(|\mathcal{H}|/\delta)}{\epsilon}\\), the error \\(L\_{(D,f)(h_S)
-\le \epsilon}\\) for every ERM hypothesis \\(h_S\\).
+\frac{\log(|\mathcal{H}|/\delta)}{\epsilon}\\), the error \\(L\_{(D,f)(h\_S)
+\le \epsilon}\\) for every ERM hypothesis \\(h\_S\\).
+
 
 ## Formulation {#formulation}
 
@@ -150,6 +152,7 @@ Under the data access model, these approximations are inevitable: for
 example, the training set is randomly generated, and there is a chance
 the training samples will be non-informative.
 
+
 ### Sample Complexity {#sample-complexity}
 
 The function \\(m\_{\mathcal{H}}: (0,1)^2 \rightarrow \mathbb{N}\\)
@@ -161,14 +164,16 @@ We have shown previously that every finite hypothesis class is PAC
 learnable with sample complexity:
 
 \begin{equation}
-m\_{\mathcal{H}} (\epsilon, \delta) \le \lceil \frac{\log(|\mathcal{H}|/\delta)}{\epsilon} \rceil
+  m\_{\mathcal{H}} (\epsilon, \delta) \le \lceil \frac{\log(|\mathcal{H}|/\delta)}{\epsilon} \rceil
 \end{equation}
 
 There are infinite hypothesis classes that are PAC learnable, and the
 combinatorial measure called the VC dimension is what deterimines its
 PAC learnability.
 
+
 ## Generalizing the Learning Model {#generalizing-the-learning-model}
+
 
 ### Removing the Realizability Assumption {#removing-the-realizability-assumption}
 
@@ -181,6 +186,7 @@ The realizability assumption requires that there exists \\(h^\* \in
 \mathcal{H}\\) such that \\(\mathbb{P}\_{x \sim D} [h^\*(x) = f(x)] = 1\\). We
 replace the
 
+
 ### Learning Problems beyond binary classification {#learning-problems-beyond-binary-classification}
 
 Many learning tasks take a different form, such as regression tasks,
@@ -189,7 +195,7 @@ a probability distribution over \\(\mathcal{X} \times \mathcal{Y}\\),
 where \\(\mathcal{X}\\) is our domain set, and \\(\mathcal{Y}\\) is a set of
 labels. \\(\mathcal{D}\\) is a joint distribution over domain points and
 labels. We can think of it as being composed of two parts: a
-distribution \\(D_x\\) over unlabeled domain points, and a conditional
+distribution \\(D\_x\\) over unlabeled domain points, and a conditional
 probability over labels for each domain point, \\(D(x,y) | x\\).
 
 For a probability distribution \\(D\\), one can measure how likely \\(h\\) is
@@ -198,12 +204,13 @@ to make an error when labeled points are randomly drawn according to
 1.  We redefine the true error to be:
 
 \begin{equation}
-L_D(h) = D(\left\\{ (x,y): h(x) \ne y \right\\})
+  L\_D(h) = D(\left\\{ (x,y): h(x) \ne y \right\\})
 \end{equation}
 
 We would like to find a predictor \\(h\\) for which the error is
 minimized. However, the learner does not know \\(D\\), but instead has
 access to its training data, \\(S\\).
+
 
 ### The Bayes predictor {#the-bayes-predictor}
 
@@ -211,9 +218,9 @@ Given any probability distribution \\(D\\) over \\(X\\), the best label
 predicting function \\(X\\) to \\(\left\\{ 0,1 \right\\}\\) will be:
 
 \begin{equation}
-f_D(x) = \begin{cases}
-1 & \textrm{if } P[y=1|x] \ge \frac{1}{2} \\\\\\
-0 & \textrm{otherwise }
+f\_D(x) = \begin{cases}
+  1 & \textrm{if } P[y=1|x] \ge \frac{1}{2} \\\\\\
+  0 & \textrm{otherwise }
 \end{cases}
 \end{equation}
 
@@ -229,8 +236,9 @@ That is, the algorithm returns a hypothesis \\(h\\) such that with
 probability \\(1 - \delta\\):
 
 \begin{equation}
-L_D(h) \le \textrm{min}{h'\in \mathcal{H}} L_D(h') + \epsilon
+L\_D(h) \le \textrm{min}{h'\in \mathcal{H}} L\_D(h') + \epsilon
 \end{equation}
+
 
 ## Learning Via Uniform Convergence {#learning-via-uniform-convergence}
 
@@ -250,7 +258,7 @@ A training set \\(S\\) is called a $&epsilon;$-representative sample
 and distribution \\(D\\)) if
 
 \begin{equation}
-\forall h \in \mathcal{H}, | L_S(h) - L_D(h)| \le \epsilon
+  \forall h \in \mathcal{H}, | L\_S(h) - L\_D(h)| \le \epsilon
 \end{equation}
 
 </div>
@@ -285,13 +293,13 @@ value:
 <div class="definition">
   <div></div>
 
-Let \\(\theta_1, \dots, \theta_m\\) be a sequence of i.i.d. random
+Let \\(\theta\_1, \dots, \theta\_m\\) be a sequence of i.i.d. random
 variables, and assume that for all \\(i\\), \\(E[\theta\_i] = \mu\\) and P[a
-&le; &theta;\_i &le; b] = 1\$. Then for any \\(\epsilon > 0\\):
+&le; &theta;\_i &le; b] = 1$. Then for any \\(\epsilon > 0\\):
 
 \begin{equation}
-P\left[ \left| \frac{1}{m}\sum\_{i=1}^{m}\theta\_i - \mu \right| >
-\epsilon \right] \le 2 \textrm{exp} \left( \frac{-2m\epsilon^2}{(b-a)^2} \right)
+  P\left[ \left| \frac{1}{m}\sum\_{i=1}^{m}\theta\_i - \mu \right| >
+    \epsilon \right] \le 2 \textrm{exp} \left( \frac{-2m\epsilon^2}{(b-a)^2} \right)
 \end{equation}
 
 </div>

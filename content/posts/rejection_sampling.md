@@ -6,13 +6,15 @@ draft = false
 
 **Goal**: To sample from unknown distribution \\(p(x)\\).
 
+
 ## Assumptions {#assumptions}
 
-- we cannot sample from \\(p(x)\\)
-- we have a simple proposal density \\(q(x)\\) we can evaluate within a
-  multiplicative factor \\(Z_q\\)
-- We know the value of a constant \\(c\\), such that \\(cq^\star(x) >
-  p^\star(x)\\) for all \\(x\\)
+-   we cannot sample from \\(p(x)\\)
+-   we have a simple proposal density \\(q(x)\\) we can evaluate within a
+    multiplicative factor \\(Z\_q\\)
+-   We know the value of a constant \\(c\\), such that \\(cq^\star(x) >
+      p^\star(x)\\) for all \\(x\\)
+
 
 ## Method {#method}
 
@@ -23,6 +25,7 @@ draft = false
 4.  Evaluate \\(p^\star(x)\\)
 5.  If \\(u > p^\star(x)\\), reject, else accept, and add \\(x\\) to the set of
     samples
+
 
 ## Difficulties {#difficulties}
 

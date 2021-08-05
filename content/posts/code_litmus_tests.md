@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Software Engineering]({{<relref "software_engineering.md" >}})
+: [Software Engineering]({{<relref "software_engineering.md#" >}})
 
 Here are some questions you can ask yourself when evaluating the code
 you write:

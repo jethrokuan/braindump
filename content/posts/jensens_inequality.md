@@ -7,5 +7,5 @@ draft = false
 If \\(f\\) is a convex function, and \\(x\\) is a random variable then:
 
 \begin{equation}
-E\left[ f(x) \right] \ge f\left( E[x] \right)
+  E\left[ f(x) \right] \ge f\left( E[x] \right)
 \end{equation}

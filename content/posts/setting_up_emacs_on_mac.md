@@ -12,6 +12,7 @@ Setting up Dired requires the GNU version of `ls`. One can install it via Homebr
 brew install coreutils
 ```
 
+
 ## OpenPGP {#openpgp}
 
 Download GnuPG using Homebrew:

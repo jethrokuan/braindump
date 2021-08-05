@@ -6,67 +6,79 @@ draft = false
 
 ## Introduction to ROS {#introduction-to-ros}
 
+
 ### What is ROS? {#what-is-ros}
+
 
 #### Left {#left}
 
-- Meta-operating system, providing low level services:
-  - process communication over a network
-  - device control
-  - hardware abstraction
-- Distributed framework of processes
+-   Meta-operating system, providing low level services:
+    -   process communication over a network
+    -   device control
+    -   hardware abstraction
+-   Distributed framework of processes
+
 
 #### Right {#right}
 
 {{< figure src="/ox-hugo/ros-logo_2019-10-15_16-56-35.jpg" >}}
 
+
 ### Why use ROS? {#why-use-ros}
 
-- "Lightweight" framework that speeds up large-scale robotic
-  development
-- Many libraries developed on top of this framework that can be
-  reused:
-  - Physics simulation ([Gazebo](http://gazebosim.org/))
-  - Movement + Navigation ([ROS navigation](http://wiki.ros.org/navigation))
+-   "Lightweight" framework that speeds up large-scale robotic
+    development
+-   Many libraries developed on top of this framework that can be
+    reused:
+    -   Physics simulation ([Gazebo](http://gazebosim.org/))
+    -   Movement + Navigation ([ROS navigation](http://wiki.ros.org/navigation))
+
 
 ### ROS Concepts {#ros-concepts}
 
+
 #### Computational Graph {#computational-graph}
 
-- All computation is organized as a peer-to-peer network of communicating
-  processes.
+-   All computation is organized as a peer-to-peer network of communicating
+    processes.
+
 
 #### Nodes {#nodes}
 
-- Processes that perform any form of computation.
-- Nodes can communicate with one another.
-- Example of nodes:
-  - Publish sensor readings
-  - Receiving teleop commands and running them
-- Written with ROS client libraries ([rospy](http://wiki.ros.org/rospy), [roscpp](http://wiki.ros.org/roscpp))
+-   Processes that perform any form of computation.
+-   Nodes can communicate with one another.
+-   Example of nodes:
+    -   Publish sensor readings
+    -   Receiving teleop commands and running them
+-   Written with ROS client libraries ([rospy](http://wiki.ros.org/rospy), [roscpp](http://wiki.ros.org/roscpp))
+
 
 #### Master (Primary) Node {#master--primary--node}
 
-- Provides name registration, node lookup to all nodes in the
-  computational graph.
-- Enables communication between nodes.
+-   Provides name registration, node lookup to all nodes in the
+    computational graph.
+-   Enables communication between nodes.
+
 
 #### Parameter Server {#parameter-server}
 
-- "Distributed" key-value store: all nodes can access data stored in
-  these keys.
+-   "Distributed" key-value store: all nodes can access data stored in
+    these keys.
+
 
 #### Topics {#topics}
 
-- Nodes communicating via the publish-subscribe semantics do so by
-  publishing and subscribing to topics.
-- Every topic has a name, e.g. `/sensors/temp1`
-- No access permissions
+-   Nodes communicating via the publish-subscribe semantics do so by
+    publishing and subscribing to topics.
+-   Every topic has a name, e.g. `/sensors/temp1`
+-   No access permissions
+
 
 #### Services {#services}
 
-- Request-response semantics (think Web servers)
-- Requests are blocking
+-   Request-response semantics (think Web servers)
+-   Requests are blocking
+
 
 ### Example Computational Graph {#example-computational-graph}
 
@@ -85,12 +97,15 @@ draft = false
   }
 ```
 
+
 ## Getting Started With ROS {#getting-started-with-ros}
+
 
 ### ROS Environment Setup {#ros-environment-setup}
 
 Here I assume you have the ROS environment set up. If not, see [the
 appendix](#ros-installation).
+
 
 ### Creating a ROS Workspace {#creating-a-ros-workspace}
 
@@ -102,7 +117,9 @@ Catkin is ROS' package manager, built on top of CMake.
   catkin_make                     # Initial setup
 ```
 
+
 ### Exploring ROS shell commands [^fn:1] {#exploring-ros-shell-commands}
+
 
 #### rospack {#rospack}
 
@@ -112,6 +129,7 @@ Catkin is ROS' package manager, built on top of CMake.
   rospack find roscpp # /opt/ros/melodic/share/roscpp
 ```
 
+
 #### roscd {#roscd}
 
 roscd changes you to the directory of the ros package.
@@ -120,6 +138,7 @@ roscd changes you to the directory of the ros package.
   roscd roscpp
   pwd # /opt/ros/melodic/share/roscpp
 ```
+
 
 ### Creating a ROS package {#creating-a-ros-package}
 
@@ -135,6 +154,7 @@ We use the convenience script `catkin_create_pkg` to instantiate our package.
   # Successfully created files in /home/jethro/catkin_ws/src/workshop. Please adjust the values in package.xml.
 ```
 
+
 ### What's in a ROS package? {#what-s-in-a-ros-package}
 
 ```text
@@ -145,6 +165,7 @@ We use the convenience script `catkin_create_pkg` to instantiate our package.
       package.xml             # Details about the package
       src                     # Contains source code
 ```
+
 
 ### Starting ROS {#starting-ros}
 
@@ -164,7 +185,9 @@ We initialize the ROS master node with `roscore`.
 
 To kill it, press `Ctrl-C` in the same terminal.
 
+
 ### ROS Nodes {#ros-nodes}
+
 
 #### rosnode {#rosnode}
 
@@ -180,6 +203,7 @@ What happens if master is not running?
 ```bash
   rosnode list               # ERROR: Unable to communicate with master!
 ```
+
 
 #### Running a ROS node {#running-a-ros-node}
 
@@ -198,6 +222,7 @@ A ROS package may contain many ROS nodes.
 
 Exercise: reinspect the node list.
 
+
 ### ROS Topics {#ros-topics}
 
 Now we have a visual simulation of a turtle. How do we make it move?
@@ -206,9 +231,10 @@ Now we have a visual simulation of a turtle. How do we make it move?
 rosrun turtesim turtle_teleop_key
 ```
 
+
 #### What's going on? {#what-s-going-on}
 
-- `turtle_teleop_key` advertises on a ROS topic, and publishes each keystroke:
+-   `turtle_teleop_key` advertises on a ROS topic, and publishes each keystroke:
 
 <!--listend-->
 
@@ -217,10 +243,11 @@ rosrun turtesim turtle_teleop_key
   rostopic echo /turtle1/cmd_vel
 ```
 
+
 #### ROS Messages {#ros-messages}
 
-- ROS messages are pre-defined formats. They are binarized and
-  compressed before they are sent over the wire.
+-   ROS messages are pre-defined formats. They are binarized and
+    compressed before they are sent over the wire.
 
 <!--listend-->
 
@@ -228,11 +255,12 @@ rosrun turtesim turtle_teleop_key
   rostopic type /turtle1/cmd_vel   # geometry_msgs/Twist
 ```
 
+
 #### Monitoring the Topic {#monitoring-the-topic}
 
-- The rate at which messages is published is good to monitor (in Hz).
-- A topic that has too many messages can get congested, and buffer/drop
-  many messages, or congest the ROS network.
+-   The rate at which messages is published is good to monitor (in Hz).
+-   A topic that has too many messages can get congested, and buffer/drop
+    many messages, or congest the ROS network.
 
 <!--listend-->
 
@@ -243,10 +271,11 @@ rosrun turtesim turtle_teleop_key
   # min: 0.072s max: 0.072s std dev: 0.00000s window: 2
 ```
 
+
 #### Rosbag {#rosbag}
 
-- A bag is subscribes to one or more topics, and stores serialized
-  data that is received (for logging/replay)
+-   A bag is subscribes to one or more topics, and stores serialized
+    data that is received (for logging/replay)
 
 <!--listend-->
 
@@ -256,9 +285,10 @@ rosrun turtesim turtle_teleop_key
   # [ INFO] [1571294982.168808833]: Recording to 2019-10-17-14-49-42.bag
 ```
 
+
 ### ROS Services {#ros-services}
 
-- Services allow request-response interactions between nodes.
+-   Services allow request-response interactions between nodes.
 
 <!--listend-->
 
@@ -267,6 +297,7 @@ rosservice list
 rosservice call /clear
 rosservice type /spawn | rossrv show
 ```
+
 
 ### ROS Params {#ros-params}
 
@@ -282,7 +313,9 @@ data on the ROS Parameter server.&nbsp;[^fn:2]
   rosparam list           # list parameter names
 ```
 
+
 ## Pubsub {#pubsub}
+
 
 ### When do we use topics? {#when-do-we-use-topics}
 
@@ -293,8 +326,9 @@ subscriber.
 The pubsub interface is useful in situations where a response for each
 request is not required:
 
-- Sensor readings
-- Log info
+-   Sensor readings
+-   Log info
+
 
 ### A Simple Publisher {#a-simple-publisher}
 
@@ -313,6 +347,7 @@ workshop package `workshop/src/talker.py`:
       pub.publish("Hello")
 ```
 
+
 ### Executing the Publisher Node {#executing-the-publisher-node}
 
 We need to make our Python file executable:
@@ -327,6 +362,7 @@ We need to make our Python file executable:
 
 Exercise: monitor the output. What's wrong? (hint: Hz)
 
+
 ### Setting the rate of publishing {#setting-the-rate-of-publishing}
 
 We use the `Rate` object, and the `rate.sleep()` to set the rate of
@@ -338,6 +374,7 @@ publishing:
   rate.sleep()
   # ...
 ```
+
 
 ### Good Practice {#good-practice}
 
@@ -359,11 +396,13 @@ We often wrap all our logic in a function, and catch the
       pass
 ```
 
+
 ### Exercise: Write a time publisher (5 minutes) {#exercise-write-a-time-publisher--5-minutes}
 
 Goal: publish the current date-time onto a topic `/datetime.`
 
 Hint: Python has a `datetime` library.
+
 
 ### Subscriber {#subscriber}
 
@@ -385,6 +424,7 @@ We create a listener in `workshop/src/listener.py`
   listener()
 ```
 
+
 ### Summary {#summary}
 
 ```python
@@ -395,17 +435,20 @@ We create a listener in `workshop/src/listener.py`
   rospy.spin()                    # spin
 ```
 
+
 ## Services {#services}
+
 
 ### Msg and Srv {#msg-and-srv}
 
 msg
 : message files that define the format of a ROS message. These
-generate source code for different languages (think Apache Thrift,
-Protobuf).
+    generate source code for different languages (think Apache Thrift,
+    Protobuf).
 
 srv
 : describes a service (request/response)
+
 
 ### Creating a msg {#creating-a-msg}
 
@@ -418,6 +461,7 @@ Create a file `workshop/msg/Num.msg:`
 ```text
   int64 num
 ```
+
 
 ### Compiling the msg {#compiling-the-msg}
 
@@ -465,12 +509,14 @@ Compile the message:
   # [100%] Built target workshop_generate_messages
 ```
 
+
 ### Using the ROS msg {#using-the-ros-msg}
 
 ```bash
   rosmsg list                     # ... workshop/Num
   rosmsg show workshop/Num        # int64 num
 ```
+
 
 ### Creating a ROS srv {#creating-a-ros-srv}
 
@@ -487,9 +533,11 @@ In `workshop/srv/SumInts.srv`:
   int64 sum
 ```
 
+
 ### Compiling the ROS srv {#compiling-the-ros-srv}
 
 Since srv files are also compiled, the setup is [similar to compiling msgs](#compiling-the-msg).
+
 
 ### Writing a Service Node {#writing-a-service-node}
 
@@ -510,6 +558,7 @@ We can create a server that uses the service file we defined earlier:
 
   sumints_server()
 ```
+
 
 ### Writing a Client {#writing-a-client}
 
@@ -539,26 +588,31 @@ We can create a server that uses the service file we defined earlier:
 
 ```
 
+
 ### Exercise: Time Service (15 minutes) {#exercise-time-service--15-minutes}
 
 Write a service that:
 
-- requests nothing
-- responds with the current time
+-   requests nothing
+-   responds with the current time
 
 Write a client that sends the request and prints this response.
 
+
 ## What's Next? {#what-s-next}
+
 
 ### What's Next? {#what-s-next}
 
-- Run a simulator, model the robot using URDF
-- Look at community ROS packages
-  - **tf2:** maintain robotic coordinate frames (pose estimation)
-  - **gmapping/slam etc.:** navigation
-- Look at ROS 2
+-   Run a simulator, model the robot using URDF
+-   Look at community ROS packages
+    -   **tf2:** maintain robotic coordinate frames (pose estimation)
+    -   **gmapping/slam etc.:** navigation
+-   Look at ROS 2
+
 
 ## Appendix {#appendix}
+
 
 ### Common Pitfalls {#common-pitfalls}
 
@@ -575,11 +629,14 @@ Write a client that sends the request and prints this response.
 2.  I recommend using [direnv](https://direnv.net/), and sourcing it every time you enter
     the Catkin workspace.
 
+
 ### ROS Installation {#ros-installation}
+
 
 #### Ubuntu {#ubuntu}
 
 Follow the instructions on ROS Wiki.
+
 
 #### VM {#vm}
 

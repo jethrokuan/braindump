@@ -21,11 +21,12 @@ The implication of this is that the genome does not encode the
 connections directly, but rules in forming these connections.
 Evolution acts on the brain only indirectly through the genome.
 
+
 ## What this means for ANNs {#what-this-means-for-anns}
 
 1.  There may be an outer-loop (evolution) that optimizes learning
     mechanisms, and an inner-loop that allows us to learn inductive
-    biases quickly (i.e. [Meta Learning]({{<relref "meta_learning.md" >}}))
+    biases quickly (i.e. [Meta Learning]({{<relref "meta_learning.md#" >}}))
 2.  ANNs should attempt as much as possible to build on solutions to
     related problems (transfer learning)
 3.  Wiring rules and topology should be studies as a target for

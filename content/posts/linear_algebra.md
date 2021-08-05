@@ -9,30 +9,32 @@ draft = false
 A matrix of dimensions M-by-N looks like:
 
 \begin{equation}
-A = \begin{bmatrix}
-a\_{11} & a\_{12} & \dots & a\_{1N} \\\\\\
-a\_{21} & a\_{22} & \dots & a\_{2N} \\\\\\
-\vdots & \vdots & \vdots & \vdots \\\\\\
-a\_{M1} & a\_{M2} & \dots & a\_{MN}
-\end{bmatrix}
+  A = \begin{bmatrix}
+    a\_{11} & a\_{12} & \dots & a\_{1N} \\\\\\
+    a\_{21} & a\_{22} & \dots & a\_{2N} \\\\\\
+    \vdots & \vdots & \vdots & \vdots \\\\\\
+    a\_{M1} & a\_{M2} & \dots & a\_{MN}
+    \end{bmatrix}
 \end{equation}
 
 Its transpose flips the dimensions. In the below example transposing a
 N-by-1 matrix makes it a 1-by-N matrix.
 
 \begin{equation}
-a^T= \left[ a\_1, a\_2, \dots, a\_N \right]
+  a^T= \left[ a\_1, a\_2, \dots, a\_N \right]
 \end{equation}
 
-The magnitude of a vector is given by \\(\left| a \right| = \sqrt{a_1^2 +
-a_2^2 + \dots + a_n^2}\\).
+The magnitude of a vector is given by \\(\left| a \right| = \sqrt{a\_1^2 +
+a\_2^2 + \dots + a\_n^2}\\).
+
 
 ## Linear Independence {#linear-independence}
 
 A set of vectors \\(\mathbf{x}\\) is linearly dependent if there exist a set of
-scalars \\(\mathbf{\alpha}\\), not all zero, such that \\(\sum\_{i=1}^m \alpha_i x_i = 0\\).
-If the only way to satisfy the equation is to have \\(\alpha_i = 0 \forall i\\), then
+scalars \\(\mathbf{\alpha}\\), not all zero, such that \\(\sum\_{i=1}^m \alpha\_i x\_i = 0\\).
+If the only way to satisfy the equation is to have \\(\alpha\_i = 0 \forall i\\), then
 the set of vectors \\(\mathbf{x}\\) is linearly independent.
+
 
 ## Span {#span}
 
@@ -40,8 +42,9 @@ The "span" of \\(\hat{v}\\) and \\(\hat{w}\\) is the set of all their linear
 combinations:
 
 \begin{equation}
-a \hat{v} + b \hat{w}
+ a \hat{v} + b \hat{w}
 \end{equation}
+
 
 ## Basis {#basis}
 
@@ -49,7 +52,8 @@ The basis of a vector space is a set of linearly independent vectors
 that span the full space.
 
 If \\(\mathbf{v}\\) is the basis set, then any N-by-1 vector \\(x\\) can be
-written as \\(x = \sum^n\_{i=1}c_i v_i\\) for some scalar \\(c_i\\).
+written as \\(x = \sum^n\_{i=1}c\_i v\_i\\) for some scalar \\(c\_i\\).
+
 
 ## Special Matrices {#special-matrices}
 
@@ -65,15 +69,17 @@ symmetric matrix
 skew symmetric matrix
 : \\(A = -A^T\\)
 
+
 ## Matrix properties {#matrix-properties}
 
-- \\((AB)^-1 = B^-1 A^{-1}\\)
-- \\((AB)^T = B^T A^T\\)
-- \\((A^{-1})^T = (A^T)^{-1}\\)
-- \\(A^{-1}A = I\\)
-- \\((AB)C = A(BC)\\)
-- \\(A(B+C) = AB + AC\\)
-- \\((B+C)D = BD + CD\\)
+-   \\((AB)^-1 = B^-1 A^{-1}\\)
+-   \\((AB)^T = B^T A^T\\)
+-   \\((A^{-1})^T = (A^T)^{-1}\\)
+-   \\(A^{-1}A = I\\)
+-   \\((AB)C = A(BC)\\)
+-   \\(A(B+C) = AB + AC\\)
+-   \\((B+C)D = BD + CD\\)
+
 
 ## Solutions to linear systems {#solutions-to-linear-systems}
 
@@ -85,6 +91,7 @@ solution is \\(x = A^{-1}b\\).
 If \\(A\\) is a rectangular matrix of size M-by-N, and if \\(A^T A\\) is
 invertible (square and full rank), then the linear least squares
 solution to \\(x\\) is given by \\(x = (A^T A)^{-1} A^T b\\).
+
 
 ## Matrices as Linear Transformations {#matrices-as-linear-transformations}
 
@@ -99,6 +106,7 @@ only by recording how the basis vectors are transformed.
 
 {{< figure src="/ox-hugo/screenshot_2018-08-25_14-32-57.png" >}}
 
+
 ## Matrix Multiplication as Composition {#matrix-multiplication-as-composition}
 
 Often, we want to describe the effects of multiple linear
@@ -112,6 +120,7 @@ transformation, and can be described with a single matrix (see above).
 
 Hence, we can think about matrix multiplication as computing where the
 final basis vectors land.
+
 
 ## Determinant {#determinant}
 
@@ -129,24 +138,23 @@ In 3D space, the determinant is the volume of the parallelpiped.
 
 \begin{equation}
 det \left( \begin{bmatrix}
-a & b & c \\\\\\
-d & e & f \\\\\\
-g & h & i \\\\\\
-\end{bmatrix} \right) = a \cdot det \left( \begin{bmatrix}
-e & f \\\\\\
-h & i
+  a & b & c \\\\\\
+  d & e & f \\\\\\
+  g & h & i \\\\\\
+\end{bmatrix} \right)  = a \cdot det \left( \begin{bmatrix}
+  e & f \\\\\\
+  h & i
 \end{bmatrix} \right)
-
 - b \cdot det \left( \begin{bmatrix}
   d & f \\\\\\
   g & i
-  \end{bmatrix} \right)
-
-* c \cdot det \left( \begin{bmatrix}
+\end{bmatrix}  \right)
++ c \cdot det \left( \begin{bmatrix}
   d & e \\\\\\
   g & h
-  \end{bmatrix} \right)
-  \end{equation}
+\end{bmatrix} \right)
+\end{equation}
+
 
 ## Matrices for solving linear equations {#matrices-for-solving-linear-equations}
 
@@ -162,6 +170,7 @@ rotate the grid space anti-clockwise 90 degrees: \\(\vec{x} = A^{^{-1}}
 Suppose the determinant of the transformation is 0. Then we know that
 it does not have an inverse. However, solutions can still exist.
 
+
 ## Rank {#rank}
 
 The rank is the number of dimensions of the output of the
@@ -170,14 +179,16 @@ transformation is the original dimensions of the matrix. Rank
 corresponds to the maximal number of linearly independent columns of
 \\(A\\).
 
-- \\(r(AB) \le r(A)\\)
-- \\(r(AB) \le r(B)\\)
-- \\(r(AB) \le \text{min}(r(A), r(B))\\)
+-   \\(r(AB) \le r(A)\\)
+-   \\(r(AB) \le r(B)\\)
+-   \\(r(AB) \le \text{min}(r(A), r(B))\\)
+
 
 ## Column Space {#column-space}
 
 The column space of the matrix \\(A\\) is the set of all possible outputs of
 \\(A \vec{v}\\). It is also the span of all the columns.
+
 
 ## Dot Product {#dot-product}
 
@@ -194,21 +205,22 @@ just the \\(x\\) coordinate value of \\(\hat{\mu}\\).
 
 {{< figure src="/ox-hugo/screenshot_2018-08-25_16-03-15.png" >}}
 
-Hence, \\(\hat{i}\\) and \\(\hat{j}\\) land at \\(\mu_x\\) and \\(\mu_y\\) respectively. We
+Hence, \\(\hat{i}\\) and \\(\hat{j}\\) land at \\(\mu\_x\\) and \\(\mu\_y\\) respectively. We
 can easily see the duality between matrix-vector product and dot
 product here.
 
 {{< figure src="/ox-hugo/screenshot_2018-08-25_16-05-08.png" >}}
 
 \begin{equation}
-a \cdot b = |a||b| \cos \theta
+  a \cdot b = |a||b| \cos \theta
 \end{equation}
 
 sometimes, this is also notated as
 
 \begin{equation}
-\langle u, v \rangle = \sum\_{i=1}^{d}u_i v_i = u^T v
+ \langle u, v \rangle = \sum\_{i=1}^{d}u\_i v\_i = u^T v
 \end{equation}
+
 
 ## Cross Product {#cross-product}
 
@@ -227,16 +239,17 @@ cross product.
 
 {{< figure src="/ox-hugo/screenshot_2018-08-25_16-39-00.png" >}}
 
+
 ## How to translate a matrix {#how-to-translate-a-matrix}
 
 Suppose someone uses a different coordinate system (i.e. different
 basis vectors), which we can represent with a matrix:
 
 \begin{equation}
-\begin{bmatrix}
-2 & -1 \\\\\\
-1 & 1
-\end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\\\\\
+    1 & 1
+  \end{bmatrix}
 \end{equation}
 
 Suppose then that we want to apply a linear transformation to a vector
@@ -244,10 +257,10 @@ in her coordinate system. In the case of a rotation 90 degrees
 anti-clockwise, it would be represented in a matrix as:
 
 \begin{equation}
-\begin{bmatrix}
-0 & -1 \\\\\\
-1 & 0
-\end{bmatrix}
+  \begin{bmatrix}
+    0 & -1 \\\\\\
+    1 & 0
+  \end{bmatrix}
 \end{equation}
 
 In the "default" basis vector coordinate system. What does this
@@ -256,49 +269,50 @@ vector \\(\hat{v}\\) in the other language. First, we translate the
 vector into one in the default language:
 
 \begin{equation}
-\begin{bmatrix}
-2 & -1 \\\\\\
-1 & 1
-\end{bmatrix}
-\hat{v}
+  \begin{bmatrix}
+    2 & -1 \\\\\\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
 \end{equation}
 
 Then, we apply the transformation to the vector in the default
 language:
 
 \begin{equation}
-\begin{bmatrix}
-0 & -1 \\\\\\
-1 & 0
-\end{bmatrix}
-\begin{bmatrix}
-2 & -1 \\\\\\
-1 & 1
-\end{bmatrix}
-\hat{v}
+  \begin{bmatrix}
+    0 & -1 \\\\\\
+    1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\\\\\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
 \end{equation}
 
 Then, we apply to the inverse of the change in basis matrix, to return
 the vector to the other language:
 
 \begin{equation}
-\begin{bmatrix}
-2 & -1 \\\\\\
-1 & 1
-\end{bmatrix}^{-1}
-\begin{bmatrix}
-0 & -1 \\\\\\
-1 & 0
-\end{bmatrix}
-\begin{bmatrix}
-2 & -1 \\\\\\
-1 & 1
-\end{bmatrix}
-\hat{v}
+  \begin{bmatrix}
+    2 & -1 \\\\\\
+    1 & 1
+  \end{bmatrix}^{-1}
+  \begin{bmatrix}
+    0 & -1 \\\\\\
+    1 & 0
+  \end{bmatrix}
+  \begin{bmatrix}
+    2 & -1 \\\\\\
+    1 & 1
+  \end{bmatrix}
+  \hat{v}
 \end{equation}
 
 This form \\(A^{{-1}}MA\\) is frequently encountered when dealing with
 eigenvectors and eigenvalues.
+
 
 ## Eigenvectors and eigenvalues {#eigenvectors-and-eigenvalues}
 
@@ -311,18 +325,18 @@ constant is called the _eigenvalue_. Mathematically, this is expressed
 as:
 
 \begin{equation}
-A \hat{v} = \lambda \hat{v}
+  A \hat{v} = \lambda \hat{v}
 \end{equation}
 
 Consider a 3D rotation. If we can find an eigenvector for this 3D
 transformation, then we have found the axis of rotation.
 
 \begin{equation}
-\sum\_{i=1}^{n} \lambda_i = trace(A)
+  \sum\_{i=1}^{n} \lambda\_i = trace(A)
 \end{equation}
 
 \begin{equation}
-\prod\_{i=1}^{n}\lambda_i = \lvert A \rvert
+  \prod\_{i=1}^{n}\lambda\_i = \lvert A \rvert
 \end{equation}
 
 Eigenvectors corresponding to different eigenvalues are linearly
@@ -330,11 +344,13 @@ independent.
 
 Eigenvectors of a real symmetric matrix are orthogonal and real.
 
+
 ## Null Space {#null-space}
 
 The null space of a matrix \\(A\\) consists of all vectors \\(x\\) such that
 \\(Ax = 0\\). if \\(A\\) is rank-deficient, then there is a non-zero solution
 for \\(x\\).
+
 
 ## Singular Value Decomposition {#singular-value-decomposition}
 
@@ -342,8 +358,8 @@ Given an input data matrix \\(A\\) consisting of \\(m\\) documents and \\(n\\)
 terms, we can decompose it into 3 matrices.
 
 \begin{equation}
-A\_{[m \times n]} = U\_{[m \times r]} \Sigma\_{[r \times r]} V\_{[n
-\times r]}^T
+  A\_{[m \times n]} = U\_{[m \times r]} \Sigma\_{[r \times r]} V\_{[n
+    \times r]}^T
 \end{equation}
 
 \\(U\\) are left singular vectors of size \\(m \times r\\), which we can think of
@@ -371,7 +387,7 @@ SVD can be used to solve linear equations of the form \\(Ax = b\\), where
 write the solution for \\(x\\):
 
 \begin{equation}
-U \Sigma V^T x = 0
+  U \Sigma V^T x = 0
 \end{equation}
 
 If A is full-rank, then \\(x\\) must be the zero-vector. Else, \\(x\\) has a
@@ -379,6 +395,7 @@ non-zero solution equal to the linear combination of the last few rows
 of \\(V^T\\) corresponding to zero singular values.
 
 {{< figure src="/ox-hugo/screenshot_2018-11-18_17-32-26.png" >}}
+
 
 ## References {#references}
 

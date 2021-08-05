@@ -5,12 +5,13 @@ draft = false
 +++
 
 tags
-: [Operating Systems]({{<relref "operating_systems.md" >}}), [Programming Languages]({{<relref "prog_lang.md" >}})
+: [Operating Systems]({{<relref "operating_systems.md#" >}})
+
 
 ## Background {#background}
 
 In a _machine language_, instructions are encoded as 0's and 1's. This
-is unwieldy for programmers to write. Hence, to tell processors what
+is unwieldy for programmers  to write. Hence, to tell processors what
 to execute, programmers use an _assembly language_, writing these
 instructions in textual form, for example:
 
@@ -27,12 +28,14 @@ language, since the assembly language must support a different set of
 machine instructions. The design of the machine language encoding is
 called the _instruction set architecture (ISA)_.
 
+
 ## Memory Organization {#memory-organization}
 
-- Byte-addressable, 32-bit address space
-- little- or big-endian addressable
-- 32-bit word length
-- word, half-word and byte data transfers to and from processor registers
-- word and half-world transfers must be aligned
+-   Byte-addressable, 32-bit address space
+-   little- or big-endian addressable
+-   32-bit word length
+-   word, half-word and byte data transfers to and from processor registers
+-   word and half-world transfers must be aligned
+
 
 ## Arm {#arm}

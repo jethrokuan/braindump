@@ -6,28 +6,32 @@ draft = false
 +++
 
 tags
-: [System Design]({{<relref "system_design.md" >}}), [Databases]({{<relref "databases.md" >}}), [Hadoop]({{<relref "hadoop.md" >}})
+: [System Design]({{<relref "system_design.md#" >}}), [Databases]({{<relref "databases.md#" >}}), [Hadoop]({{<relref "hadoop.md#" >}})
 
 author
-: [Martin Kleppmann]({{<relref "martin_kleppmann.md" >}})
+: [Martin Kleppmann]({{<relref "martin_kleppmann.md#" >}})
+
 
 ## Preface {#preface}
 
-- Data abstractions are well-built (databases, etc.) but the
-  boundaries are blurring
-- Design decisions are highly centered around data requirements (both
-  functional and non-functional requirements)
-- How to build reliable, scalable, and maintainable applications
+-   Data abstractions are well-built (databases, etc.) but the
+    boundaries are blurring
+-   Design decisions are highly centered around data requirements (both
+    functional and non-functional requirements)
+-   How to build reliable, scalable, and maintainable applications
+
 
 ## Data Models {#data-models}
 
-- Prevalence of SQL
-- NoSQL has benefits of being schemaless (lower impedence mismatch)
-  and storage locality, when fetching whole documents
-  - joins are poorly implemented, can't access nested item in document efficiently
-- Graph DBs implement many-to-many relationships well, also somewhat schemaless
+-   Prevalence of SQL
+-   NoSQL has benefits of being schemaless (lower impedence mismatch)
+    and storage locality, when fetching whole documents
+    -   joins are poorly implemented, can't access nested item in document efficiently
+-   Graph DBs implement many-to-many relationships well, also somewhat schemaless
+
 
 ## Database Implementation {#database-implementation}
+
 
 ### SSTable {#sstable}
 
@@ -36,19 +40,20 @@ key-value lookups and range queries. They use a log-structure indexes
 to break the database down into segments, and always writes segments
 sequentially.
 
-- When a write comes in, add it into an in-memory balanced data
-  structure (e.g. [Red-Black Tree]({{<relref "red_black_tree.md" >}})). This is sometimes referred to as a _memtable_.
-- When the memtable becomes too big, write it out onto disk as an
-  SSTable file. The SSTable file becomes the most recent segment of
-  the database.
-- In order to serve a read request, the key is searched for in the
-  memtable, then in the most recent on-disk segment, and so-on.
-- From time to time, a merging and compaction process in the
-  background combines segment files, and discards overwritten or
-  deleted values.
-- In most cases, a log is kept in addition to the current memtable, to
-  restore the memtable during crashes. On a writeout, the current log
-  is also discarded.
+-   When a write comes in, add it into an in-memory balanced data
+    structure (e.g. [Red-Black Tree]({{<relref "red_black_tree.md#" >}})). This is sometimes referred to as a _memtable_.
+-   When the memtable becomes too big, write it out onto disk as an
+    SSTable file. The SSTable file becomes the most recent segment of
+    the database.
+-   In order to serve a read request, the key is searched for in the
+    memtable, then in the most recent on-disk segment, and so-on.
+-   From time to time, a merging and compaction process in the
+    background combines segment files, and discards overwritten or
+    deleted values.
+-   In most cases, a log is kept in addition to the current memtable, to
+    restore the memtable during crashes. On a writeout, the current log
+    is also discarded.
+
 
 ### LSM-Trees {#lsm-trees}
 
@@ -57,8 +62,9 @@ SSTables form the backbone of LSM-trees.
 The algorithm can be slow when looking up a key that does not exist in
 the database, because it will have to look through the _memtable_ and
 all segments before returning. Most database implementations such a
-[LevelDB](https://github.com/google/leveldb) and [RocksDB](https://github.com/facebook/rocksdb) use a [Bloom Filter]({{<relref "bloom_filter.md" >}}), which is a memory-efficient
+[LevelDB](https://github.com/google/leveldb) and [RocksDB](https://github.com/facebook/rocksdb) use a [Bloom Filter]({{<relref "bloom_filter.md#" >}}), which is a memory-efficient
 data structure for approximating the contents of a set.
+
 
 ### B-Trees {#b-trees}
 
@@ -80,6 +86,7 @@ B-trees are made reliable via a write-ahead log: an append-only file
 to which every B-tree modification must be written to before it can be
 applied on the pages of the tree itself.
 
+
 ### Comparing LSM-trees and B-trees {#comparing-lsm-trees-and-b-trees}
 
 As a rule of thumb, LSM-trees are faster for writes (append-only),
@@ -100,6 +107,7 @@ compaction process, interfering with ongoing reads and writes. Also,
 the bigger the database gets, the more disk bandwidth required for
 compaction.
 
+
 ### Indexes {#indexes}
 
 Both B-trees and LSM-trees can be used to build secondary indexes. The
@@ -112,9 +120,11 @@ duplicating data when multiple secondary indexes are present. If the
 performance penalty of this extra lookup is too big, it can be
 desirable to store the row directly within the index.
 
+
 ### Multi-dimensional Indexes {#multi-dimensional-indexes}
 
 Spatial indexes such as R-trees are typically used here.
+
 
 ### Full-text-search and Fuzzy Indexes {#full-text-search-and-fuzzy-indexes}
 
@@ -126,6 +136,7 @@ This requires a small in-memory index that is a sparse collection of
 some of the keys. In Lucene, this in-memory index is a Levenshtein
 automaton, which supports efficient search for words within a given
 edit distance.
+
 
 ### Column-oriented Storage {#column-oriented-storage}
 
@@ -147,6 +158,7 @@ different sort orders. This is the equivalent to having multiple
 sort-indexes. Different sort orders cater to different types of
 queries.
 
+
 ### Materialized Views {#materialized-views}
 
 An aggregate function, such as `COUNT`, `SUM`, `AVG`, `MIN` or `MAX`
@@ -160,6 +172,7 @@ make certain queries very fast. However, data cubes are limited in
 their capability: they cannot perform queries for dimensions that are
 not part of the data cube.
 
+
 ## Encoding and Evolution {#encoding-and-evolution}
 
 One key goal is evolvability: systems that can adapt to change. This
@@ -170,13 +183,13 @@ we need to maintain compatibility in both directions:
 
 Forward compatibility
 : newer code can read data that was written b
-y old code
+    y old code
 
 Backward compatibility
 : older code can read data that was written
-by newer code
+    by newer code
 
-Backward compatibility is not hard to achieve, but forward
+Backward compatibility is not hard to achieve, but  forward
 compatibility requires older code to ignore additions made by a newer
 version of the code.
 
@@ -207,6 +220,7 @@ struct  Person {
 A code generation tool takes these definitions, and generate classes
 that implement this schema in various programming languages.
 
+
 ### Schema Evolution {#schema-evolution}
 
 In Thrift and Protobuf, one can only add new fields to the schema, and
@@ -223,6 +237,7 @@ Avro is used in the context of Hadoop, for storing large files
 containing millions of records, all encoded with the same schema. The
 writer's schema is stored at the beginning, along with all these
 records.
+
 
 ### Dataflow {#dataflow}
 

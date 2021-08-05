@@ -12,14 +12,16 @@ function).
 Humans often act in ways that do not maximise their own benefit
 (irrational).
 
+
 ### Acting Humanly: Turing Test {#acting-humanly-turing-test}
 
 A computer would require:
 
-- natural language processing
-- knowledge representation
-- automated reasoning
-- machine learning
+-   natural language processing
+-   knowledge representation
+-   automated reasoning
+-   machine learning
+
 
 ### Thinking Humanly {#thinking-humanly}
 
@@ -27,9 +29,11 @@ Cognitive science brings together computer models and experimental
 techniques in psychology to construct testable and provable theories
 of the human mind.
 
+
 ### Thinking rationally {#thinking-rationally}
 
 Taking informal knowledge and expressing it in logical terms.
+
 
 ### Acting Rationally {#acting-rationally}
 
@@ -40,22 +44,25 @@ An agent is a function from percept histories to actions, i.e. \\(f: P^\*
 \rightarrow A\\). We seek the best-performing agent for a certain task;
 must consider computation limits.
 
+
 ## Intelligent Agents {#intelligent-agents}
 
-- Agents perceive the environment through sensors
-- Agents act upon the environment through actuators
+-   Agents perceive the environment through sensors
+-   Agents act upon the environment through actuators
+
 
 ### Rational Agents {#rational-agents}
 
-- For each possible percept sequence, select an action that is
-  expected to maximise its performance measure. The performance
-  measure is a function of a given sequence of environment states.
-- Given the evidence provided by the percept sequence and whatever
-  built-in knowledge the agent has.
-- Agents can perform actions that help them gather useful information
-  (exploration)
-- An agent is _autonomous_ if its behaviour is determined by its own
-  experience (with ability to learn and adapt)
+-   For each possible percept sequence, select an action that is
+    expected to maximise its performance measure. The performance
+    measure is a function of a given sequence of environment states.
+-   Given the evidence provided by the percept sequence and whatever
+    built-in knowledge the agent has.
+-   Agents can perform actions that help them gather useful information
+    (exploration)
+-   An agent is _autonomous_ if its behaviour is determined by its own
+    experience (with ability to learn and adapt)
+
 
 ### Exploration vs Exploitation {#exploration-vs-exploitation}
 
@@ -63,46 +70,51 @@ Doing actions that modify future percepts (information gathering) is
 an important part of rationality. In most scenarios, agents don't know
 the entire environment _a priori_.
 
+
 ### Specifying Task Environment (PEAS) {#specifying-task-environment--peas}
 
-- Performance measure
-- Environment
-- Actuators
-- Sensors
+-   Performance measure
+-   Environment
+-   Actuators
+-   Sensors
+
 
 ### Properties of Task Environments {#properties-of-task-environments}
 
 Fully observable
 : whether an agent's sensors gives it access to
-the complete state of the environment at any given point in time
+    the complete state of the environment at any given point in time
 
 Deterministic
 : if the next state is completely determined by the
-current environment. Otherwise it is **stochastic**.
+    current environment. Otherwise it is **stochastic**.
 
 Episodic
 : whether an agents experience is divided into atomic
-episodes. In each episode, an agent receives a percept
-and performs a single action. In **sequential**
-environments short-term actions can have long-term
-consequences. For this reason, episodic environments are
-generally simpler.
+    episodes. In each episode, an agent receives a percept
+    and performs a single action. In **sequential**
+    environments short-term actions can have long-term
+    consequences. For this reason, episodic environments are
+    generally simpler.
 
 Static
 : whether the environment can change while the agent is
-deliberating.
+    deliberating.
 
 Discrete
 : whether the state of the environment, how time is
-handled, and the percepts and actions of the agent
-discretely quantized.
+    handled, and the percepts and actions of the agent
+    discretely quantized.
 
 Single agent
 : in some environments, for example chess, there are
-multiple agents acting in the same environment. - **cooperative:** if the two agents need to work together. - **competitive:** if the two agents are working against each other.
+    multiple agents acting in the same environment.
+    -   **cooperative:** if the two agents need to work together.
+    -   **competitive:** if the two agents are working against each other.
 
 Known
 : whether the agent knows the outcome of its actions.
+
 
 ### Table-Driven Agent {#table-driven-agent}
 
@@ -110,6 +122,7 @@ Simple to implement, and works. However, the number of table entries
 is exponential in time: \\(\text{#percepts}^\text{time}\\). Hence it is
 doomed to failure. The key challenge to AI is to produce rational
 behaviour from a small program rather than a vast table.
+
 
 ### Reflex agents {#reflex-agents}
 
@@ -122,6 +135,7 @@ Basing actions on only the current percept can be highly limiting, and
 can also lead to infinite loops. Randomized actions of the right kind
 can help escape these infinite loops.
 
+
 ### Model-based Reflex Agents {#model-based-reflex-agents}
 
 The agent maintains some **internal state** that depends on percept
@@ -129,6 +143,7 @@ history and reflects at least some of the unobserved aspects of the
 current state. Information about how the world evolves independently
 from the agent is encoded into the agent. This knowledge is called a
 **model** of the world, and this agent is hence a **model-based** agent.
+
 
 ### Goal-based agents {#goal-based-agents}
 
@@ -140,6 +155,7 @@ are required to achieve the goal. Goal-based agents are flexible
 because the knowledge that supports its decisions is represented
 explicitly and can be modified, although it is less efficient.
 
+
 ### Utility-based agents {#utility-based-agents}
 
 Goals provide a binary distinction between good and bad states. A more
@@ -149,7 +165,8 @@ states according to exactly how good it is to the agent. An agent's
 An agent chooses actions to maximise its expected utility. A
 utility-based agents has to model and keep track of its environment.
 
-### Learning agents {#learning-agents}
+
+### Learning Agents {#learning-agents}
 
 A learning agent can be divided into four conceptual components.
 
@@ -157,17 +174,19 @@ learning element
 : responsible for making improvements
 
 performance element
-: responsible for selecting extrenal actions
+: responsible for selecting external actions
 
 problem generator
 : suggests actions that will lead to new and
-informative experiences
+    informative experiences
 
 the learning element takes in feedback from the **critic** on how the
 agent is doing and determines show the performance element should be
 modified to do better in the future.
 
+
 ### State representations {#state-representations}
+
 
 #### Atomic Representation {#atomic-representation}
 
@@ -175,6 +194,7 @@ In an atomic representation each state of the world is indivisible,
 and has no internal structure. Search, game-playing, hidden Markov
 models and Markov decision processes all work with atomic
 representations.
+
 
 #### Factored Representation {#factored-representation}
 
@@ -185,11 +205,13 @@ Constraint satisfaction algorithms, propositional logic, planning,
 Bayesian networks and machine learning algorithms work with factored
 representations.
 
+
 #### Structured Representations {#structured-representations}
 
 Structured representations underlie relational databases and
 first-order logic, first-order probability models, knowledge-based
 learning and much of natural language understanding.
+
 
 #### Implications {#implications}
 
@@ -197,6 +219,7 @@ A more expressive representation can capture, at least as concisely, a
 everything a more expressive one can capture, plus more. On the other
 hand, reasoning and learning become more complex as the expressive
 power of the representation increases.
+
 
 ## Problem-Solving {#problem-solving}
 
@@ -208,10 +231,12 @@ The process of looking for a sequence of actions that reaches the goal
 is called _search_. A search algorithm takes a problem as input and
 returns a _solution_ in the form of an action sequence.
 
+
 ## Classical Search {#classical-search}
 
 This addresses observable, deterministic, and known environments where
 the solution is a sequence of actions.
+
 
 ### How Search Algorithms Work {#how-search-algorithms-work}
 
@@ -233,14 +258,15 @@ action
 
 path-cost
 : the cost, traditionally denoted by \\(g(n)\\), of the path
-from the initial state to the node, as indicated by the
-parent pointers
+    from the initial state to the node, as indicated by the
+    parent pointers
+
 
 ### Measuring Performance {#measuring-performance}
 
 completeness
 : is the algorithm guaranteed to find a solution if
-it exists?
+    it exists?
 
 optimality
 : does the strategy find the optimal solution?
@@ -251,7 +277,9 @@ time complexity
 space complexity
 : how much memory is required to do the search?
 
+
 ### Uninformed Search Strategies {#uninformed-search-strategies}
+
 
 #### Breadth-first Search {#breadth-first-search}
 
@@ -259,7 +287,7 @@ The root node is expanded first, then all the successors of the root
 node are expanded next, then their successors, and so on.
 
 | performance      | rating       |
-| ---------------- | ------------ |
+|------------------|--------------|
 | completeness     | YES          |
 | optimal          | NO           |
 | time complexity  | \\(O(b^d)\\) |
@@ -273,6 +301,7 @@ used in the _frontier_ is \\(O(b^d)\\).
 In general, exponential-complexity search problems cannot be solved by
 uninformed methods for any but the smallest instances.
 
+
 #### Uniform-cost Search {#uniform-cost-search}
 
 Uniform-cost search expands the node \\(n\\) with the lowest path
@@ -282,7 +311,7 @@ for expansion rather than when it is first generated.
 This is equivalent to BFS if all step costs are qual.
 
 | performance  | rating                                                                                      |
-| ------------ | ------------------------------------------------------------------------------------------- |
+|--------------|---------------------------------------------------------------------------------------------|
 | completeness | MAYBE                                                                                       |
 | optimal      | YES                                                                                         |
 | time         | \\(O(b^{1+\lfloor{\frac{C^\*}{\epsilon}}\rfloor})\\), where \\(C^\*\\) is the optimal cost. |
@@ -292,13 +321,14 @@ Completeness is guaranteed only if the cost of every step exceeds some
 small positive constant \\(\epsilon\\). an infinite loop may occur if
 there is a path with an infinite sequence of zero-cost actions.
 
+
 #### Depth-first Search {#depth-first-search}
 
 Always expands the _deepest_ node in the current frontier of the
 search tree.
 
 | performance      | rating                                |
-| ---------------- | ------------------------------------- |
+|------------------|---------------------------------------|
 | completeness     | YES                                   |
 | optimal          | NO                                    |
 | time complexity  | \\(O(b^m)\\)                          |
@@ -313,6 +343,7 @@ at a time, modifying the current state description rather than copying
 it. Memory requirements reduce to one state description and \\(O(m)\\)
 actions.
 
+
 #### Depth-limited Search {#depth-limited-search}
 
 In depth-limited search, nodes at depth of pre-determined limit \\(l\\)
@@ -320,11 +351,12 @@ are treated as if they had no successors. This limit solves the
 infinite-path problem.
 
 | performance      | rating                                |
-| ---------------- | ------------------------------------- |
+|------------------|---------------------------------------|
 | completeness     | YES                                   |
 | optimal          | NO                                    |
 | time complexity  | \\(O(b^l)\\)                          |
 | space complexity | \\(O(b^l)\\), \\(O(l)\\) if backtrack |
+
 
 #### Iterative Deepening Depth-first Search {#iterative-deepening-depth-first-search}
 
@@ -337,7 +369,7 @@ Key idea is to gradually increase the depth limit: first 0, then
 complexity of \\(O(b^d)\\)
 
 | performance      | rating                                |
-| ---------------- | ------------------------------------- |
+|------------------|---------------------------------------|
 | completeness     | YES                                   |
 | optimal          | NO (unless step cost is 1)            |
 | time complexity  | \\(O(b^d)\\)                          |
@@ -347,6 +379,7 @@ complexity of \\(O(b^d)\\)
 2.  UCS is complete if \\(b\\) is finite and step cost is \\(\ge \epsilon\\).
 3.  BFS and IDS are optimal if all step costs are identical.
 
+
 #### Bidirectional Search {#bidirectional-search}
 
 Conduct two simultaneous searches -- one forward from the initial
@@ -354,7 +387,9 @@ state, and the other backward from the goal. This is implemented by
 replacing the goal test with a check to see whether the frontiers of
 two searches intersect. This reduces the time ad space complexity to \\(O(b^{d/2})\\).
 
+
 ### Informed Search Strategies {#informed-search-strategies}
+
 
 #### Greedy best-first search {#greedy-best-first-search}
 
@@ -368,6 +403,7 @@ space. The graph search version is complete in finite spaces, but not
 in infinite ones. The worst case time and space complexity is
 \\(O(b^m)\\). However, with a good heuristic function, the complexity can
 be reduced substantially.
+
 
 #### A\* search {#a-search}
 
@@ -407,15 +443,16 @@ the state space. For constant step costs, it is \\(O(b^{\epsilon d})\\),
 and the effective branching factor is \\(b^\epsilon\\).
 
 A\* keeps all generated nodes in memory, and hence it usually runs out
-of space long before it runs of time. Hence, it is not practical for
+of space  long before it runs of time. Hence, it is not practical for
 large-scale problems.
 
 Other memory-bounded heuristic searches include:
 
-- iterative-deepening A\* (IDA\*)
-- Recursive best-first search (RBFS)
-- Memory-bounded A\* (MA\*)
-- simplified MA\* (SMA\*)
+-   iterative-deepening A\* (IDA\*)
+-   Recursive best-first search (RBFS)
+-   Memory-bounded A\* (MA\*)
+-   simplified MA\* (SMA\*)
+
 
 ### Learning to Search Better {#learning-to-search-better}
 
@@ -426,16 +463,19 @@ experiences to avoid exploring unpromising subtrees. The goal of the
 learning is to minimise the total cost of problem solving, trading off
 computational expense and path cost.
 
+
 ## Heuristic Functions {#heuristic-functions}
 
-If for any node n \\(h_2(n) \ge h_1(n)\\), we say that \\(h_2\\) _dominates_
-\\(h_1\\). Domination translates directly into efficiency: A\* using \\(h_2\\)
-will never expand more nodes than \\(h_1\\). Hence it is generally better
+If for any node n \\(h\_2(n) \ge h\_1(n)\\), we say that \\(h\_2\\) _dominates_
+\\(h\_1\\). Domination translates directly into efficiency: A\* using \\(h\_2\\)
+will never expand more nodes than \\(h\_1\\). Hence it is generally better
 to use a heuristic function with higher value, while making sure it is
 consistent, and computing the heuristic function is computationally
 feasible.
 
+
 ### Generating Admissible Heuristics {#generating-admissible-heuristics}
+
 
 #### From Relaxed Problems {#from-relaxed-problems}
 
@@ -447,6 +487,7 @@ Because the derived heuristic is an exact cost for the relaxed
 problem, it must obey the triangle inequality and is therefore
 consistent.
 
+
 #### From Subproblems: Pattern Databases {#from-subproblems-pattern-databases}
 
 _Pattern Databases_ store exact solution costs for every possible
@@ -457,15 +498,17 @@ by taking the maximum value. Solutions to subproblems can overlap:
 _disjoint pattern databases_ account for this. These work by dividing
 the problem in a way that each move affects only one subproblem.
 
+
 #### From Experience {#from-experience}
 
 Inductive learning methods work best when supplied with _features_ of
 a state that are relevant to predicting the state's value. A common
 approach to combining features would be through a linear combination:
-\\(h(n) = c_1x_1(n) + c_2x_2(n)\\).
+\\(h(n) = c\_1x\_1(n) + c\_2x\_2(n)\\).
 
 These heuristics satisfy the requirement that \\(h(n) = 0\\) for goal
 states, but are not necessarily admissible or consistent.
+
 
 ## Beyond Classical Search {#beyond-classical-search}
 
@@ -489,6 +532,7 @@ include:
 2.  They can often find <span class="underline">reasonable solutions in large or infinite
     state spaces</span> where systematic algorithms are not suitable.
 
+
 ### Hill-climbing Search {#hill-climbing-search}
 
 The hill-climbing search is a loop that continually moves in the
@@ -509,28 +553,30 @@ among the set of best successors having the lowest \\(h\\).
 
 Hill-climbing algorithms can get stuck for the following reasons:
 
-- local maxima
-- sequence of local maxima
-- flat local maximum, or _shoulder_, from which progress
-  is possible.
+-   local maxima
+-   sequence of local maxima
+-   flat local maximum, or _shoulder_, from which progress
+    is possible.
+
 
 #### Variants {#variants}
 
 stochastic hill-climbing
 : chooses at random from among the uphill
-moves; the probability of selection can vary with the steepness
-of the uphill move. Usually converges more slowly, but finds
-better solutions.
+    moves; the probability of selection can vary with the steepness
+    of the uphill move. Usually converges more slowly, but finds
+    better solutions.
 
 first-choice hill-climbing
 : stochastic hill-climbing with randomly
-generated successors until one is generated that is better than
-the current state. Good when state has many successors.
+    generated successors until one is generated that is better than
+    the current state. Good when state has many successors.
 
 random-restart hill-climbing
 : conducts hill-climbing searches from
-randomly generated initial states, until a goal is found.
-Trivially complete with probability approaching 1.
+    randomly generated initial states, until a goal is found.
+    Trivially complete with probability approaching 1.
+
 
 ### Simulated Annealing {#simulated-annealing}
 
@@ -553,6 +599,7 @@ be stuck on a local maximum.
       else current ← next only with probability e^(𝞓E/T)
 ```
 
+
 ### Local Beam Search {#local-beam-search}
 
 <https://www.youtube.com/watch?v=RLWuzLLSIgw>
@@ -570,6 +617,7 @@ most progress is being made.
 Stochastic local beam search chooses \\(n\\) successors at random, with
 the probability of choosing a given successor being an increasing
 function of its value.
+
 
 ### Genetic Algorithms {#genetic-algorithms}
 
@@ -614,6 +662,7 @@ level of granularity at which the search operates.
     return APPEND(SUBSTRING(x,1,c), SUBSTRING(y, c+1, n))
 ```
 
+
 ### Local Search in Continuous Spaces {#local-search-in-continuous-spaces}
 
 One way to avoid continuous problems is simply to _discretize_ the
@@ -629,16 +678,17 @@ f(\mathbf{x})\\) and the update equation can be written in matrix-vector
 form as:
 
 \begin{align\*}
-\mathbf{x} \leftarrow \mathbf{x} - H_f^{-1}(\mathbf{x})\nabla f(\mathbf{x})
+\mathbf{x} \leftarrow \mathbf{x} - H\_f^{-1}(\mathbf{x})\nabla f(\mathbf{x})
 \end{align\*}
 
-where \\(H_f\\) is the _Hessian_ matrix of second derivatives. For
+where \\(H\_f\\) is the _Hessian_ matrix of second derivatives. For
 high-dimensional problems, computing the \\(n^2\\) entries of the Hessian
 and inverting it may be expensive, and approximate versions have been
 developed.
 
 Local search methods suffer from local maxima, ridges and plateaux
 in continuous spaces just as much as in discrete spaces.
+
 
 ### Searching with Non-deterministic Actions {#searching-with-non-deterministic-actions}
 
@@ -654,6 +704,7 @@ _contingency plan_
 
 The solutions for no-deterministic problems can contain nested
 if-then-else statements, meaning they are trees and not sequences.
+
 
 #### AND-OR search trees {#and-or-search-trees}
 
@@ -686,6 +737,7 @@ A solution for an AND-OR search problem is a subtree that:
 
 (stop at AIMA 4.4)
 
+
 ## Adversarial Search {#adversarial-search}
 
 Competitive environments, in which the agent's goals are in conflict,
@@ -705,9 +757,9 @@ complete search.
 A game can be formally defined as a search problem with the following
 elements:
 
-\\(S_0\\)
+\\(S\_0\\)
 : the _initial state_, which specifies how the game is set up
-at the start
+    at the start
 
 \\(Player(s)\\)
 : Defines which player has the move in a state
@@ -720,15 +772,16 @@ at the start
 
 \\(TerminalTest(s)\\)
 : Terminal test, which is true when the game is
-over, and false otherwise.
+    over, and false otherwise.
 
 \\(Utility(s,p)\\)
 : A utility function defines the numeric value for a
-game that ends in terminal state \\(s\\) for a player
-\\(p\\).
+    game that ends in terminal state \\(s\\) for a player
+    \\(p\\).
 
 The initial state, \\(Actions\\) function and \\(Result\\) function define the
 game tree for the game.
+
 
 ### Optimal Strategy {#optimal-strategy}
 
@@ -739,21 +792,23 @@ optimally from there to the nd of the game. The minimax value of a
 terminal state is its utility.
 
 \begin{align}
-Minimax(s) =
-\begin{cases}
-Utility(s), \text{ if } TerminalTest(s) \\\\\\
-max\_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) =
-Max} \\\\\\
-min\_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) = Min}
-\end{cases}
+  Minimax(s) =
+  \begin{cases}
+    Utility(s), \text{ if } TerminalTest(s) \\\\\\
+    max\_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) =
+      Max} \\\\\\
+    min\_{a \in Actions(s)}MINIMAX(Result(s,a)), \text{if Player(s) = Min}
+  \end{cases}
 \end{align}
 
 Minimax uses utility function on leaf nodes, backing up through the
 tree, setting the node value to be the minimum of the children.
 
+
 ### Alpha-Beta Pruning {#alpha-beta-pruning}
 
 Eliminate parts of the search tree that do not affect decision.
+
 
 ## Classical Planning {#classical-planning}
 
@@ -784,6 +839,7 @@ Actions are defined in terms of the **preconditions** and **effects**.
 Preconditions and effects are described in terms of a conjunction of
 literals.
 
+
 ### Complexities of classical planning {#complexities-of-classical-planning}
 
 **PlanSAT** is the question of whether there exists any plan that solves a
@@ -797,6 +853,7 @@ restrictions can reduce the questions into a P class problem.
 However, most agents would not be asked to derive plans for worst-case
 problem instances. For many problem domains, bounded PlanSAT is
 NP-complete, while PlanSAT is in P.
+
 
 ### State-space search for planning {#state-space-search-for-planning}
 
@@ -816,6 +873,7 @@ which looks for actions that can lead to the goal. Unlike forward
 search, backward search only explores relevant actions, hence has a
 low branching factor. However, backward search deals with sets, which
 are make it harder to derive good domain-independent heuristics.
+
 
 ### Heuristics for planning {#heuristics-for-planning}
 
@@ -849,9 +907,10 @@ into parts. **Subgoal independence** is the assumption that the cost
 of solving a conjunction of subgoals is approximated by the sum of the
 costs of solving a subgoal independently.
 
+
 ### Other classical planning approaches {#other-classical-planning-approaches}
 
-We can translate a problem description in PDDL to a form that can be
+We can translate a problem description in PDDL to  a form that can be
 processed by SATPlan. The steps are below:
 
 1.  Propositionalize the actions: replace each action schema with a set
@@ -867,7 +926,7 @@ processed by SATPlan. The steps are below:
     the form:
 
 \begin{equation}
-F^{t+1} \iff ActionCausesF^t \vee \left( F^t \wedge \neg ActionCausesNotF^t \right)
+  F^{t+1} \iff ActionCausesF^t \vee \left( F^t \wedge \neg ActionCausesNotF^t \right)
 \end{equation}
 
 Where \\(ActionCausesF\\) is a disjunction of all the ground actions that
@@ -895,6 +954,7 @@ all ground actions that have \\(F\\) in their delete list.
     return failure
 ```
 
+
 ## Decision Theory {#decision-theory}
 
 Reference: AIMA Chapter 16
@@ -903,6 +963,7 @@ Utility theory combines with probability theory to yield a
 decision-making agent, that can make rational decisions based on what
 it believes and what it wants. This is opposed to goal-based agents,
 that make binary decisions between good and bad states.
+
 
 ### Combining beliefs and desires under uncertainty {#combining-beliefs-and-desires-under-uncertainty}
 
@@ -918,7 +979,7 @@ which expresses the desirability of a state. We can calculate the
 expected utility of a function as follows:
 
 \begin{equation}
-EU(a | \mathbb{e}) = \sum\_{s'} P(RESULT(\alpha) = s' | a, \mathbb{e}) U(s')
+  EU(a | \mathbb{e}) = \sum\_{s'} P(RESULT(\alpha) = s' | a,  \mathbb{e}) U(s')
 \end{equation}
 
 The principle of maximum expected utility (MEU) says that a rational
@@ -926,6 +987,7 @@ agent should choose the action that maximizes the expected utility. If
 an agent acts to maximise a utility function that correctly reflects
 all possible outcomes, then it will achieve the highest possible
 performance score (averaged across all environments).
+
 
 ### Axioms of Utility Theory {#axioms-of-utility-theory}
 
@@ -952,25 +1014,26 @@ substitutability
 
 monotonicity
 : \\(A \succ B \Rightarrow (p > q) \iff [p, A; 1-p B] \succ [q, A; 1-q,
-B]\\)
+                      B]\\)
 
 Decomposability
 : \\([p, A; 1-p, [q, B; 1-q, C]] \sim[p, A;(1-p)q, B;
-(1-p)q, C]\\)
+         (1-p)q, C]\\)
 
 von Neumann and Morgenstern showed that following these axioms, it can
 be shown that.
 
 1.  **Utility functions exist**. \\(U(A) > U(B) \iff A \succ B\\) and \\((U(A) = U(B)
-    \iff A \sim B)\\).
+       \iff A \sim B)\\).
 2.  **The utility of a lottery**, can be represented as the sum of
     probability of each outcome, multiplied by the utility of that
-    outcome: \\(U([p\_1, S\_1; \dots; p\_n, S\_n]) = \sum_i p_iU(S_i)\\).
+    outcome: \\(U([p\_1, S\_1; \dots; p\_n, S\_n]) = \sum\_i p\_iU(S\_i)\\).
 
 Utility functions are not unique: in fact, that are not changed with
 affine transformations, of the form \\(U'(s) = aU(s) + b\\). This is
 because the agent only needs a preference on the ranking of states,
 and the actual value of the utility does not matter.
+
 
 ### Utility assessment and utility scales {#utility-assessment-and-utility-scales}
 
@@ -989,27 +1052,30 @@ asking the agent to choose between \\(S\\) and the standard lottery \\([p,
 u\_\top;1-p, u\_\bot]\\). \\(p\\) is adjusted until the agent is indifferent
 between \\(S\\) and the lottery. This is done for each prize \\(S\\).
 
+
 ### Multi-attribute utility functions {#multi-attribute-utility-functions}
 
 When outcomes are characterized by two or more attributes, we need a
 multi-attribute utility function.
 
+
 #### Dominance {#dominance}
 
-We say that there is strict dominance of \\(S_1\\) over \\(S_2\\) if \\(S_2\\) is
-lower on all attributes as compared to \\(S_1\\). Under uncertainty, we use
+We say that there is strict dominance of \\(S\_1\\) over \\(S\_2\\) if \\(S\_2\\) is
+lower on all attributes as compared to \\(S\_1\\). Under uncertainty, we use
 a more useful generalization: **stochastic dominance**.
 
-If \\(A_1\\) stochastically dominates \\(A_2\\), then for any monotonically
-increasing utility function \\(U(x)\\), the expected utility of \\(A_1\\) is at
-least as high as the expected utility of \\(A_2\\). We can understand this
-via the cumulative distribution. For any action \\(A_1\\) and \\(A_2\\), that
-lead to probability distributions \\(p_1(x)\\) and \\(p_2(x)\\) on the random
+If \\(A\_1\\) stochastically dominates \\(A\_2\\), then for any monotonically
+increasing utility function \\(U(x)\\), the expected utility of \\(A\_1\\) is at
+least as high as the expected utility of \\(A\_2\\). We can understand this
+via the cumulative distribution. For any action \\(A\_1\\) and \\(A\_2\\), that
+lead to probability distributions \\(p\_1(x)\\) and \\(p\_2(x)\\) on the random
 variable \\(X\\):
 
 \begin{equation}
-\forall x \int\_{-\infty}^{x} p_1(x')dx' \le \int\_{-\infty}^{x} p_2(x')dx'
+  \forall x \int\_{-\infty}^{x} p\_1(x')dx' \le \int\_{-\infty}^{x} p\_2(x')dx'
 \end{equation}
+
 
 #### Preference structure and multi-attribute utility {#preference-structure-and-multi-attribute-utility}
 
@@ -1019,16 +1085,16 @@ difficulty in expressing a utility function with many attributes and
 possible distinct values.
 
 One simple regularity in preference structures is called preference
-independence. Two attributes \\(X_1\\) and \\(X_2\\) are preferentially
-independent if the preference between outcomes \\((x_1, x_2, x_3)\\) and
-\\((x_1', x_2', x_3)\\) does not depend on the value of the value \\(x_3\\) of
-attribute \\(X_3\\).
+independence. Two attributes \\(X\_1\\) and \\(X\_2\\) are preferentially
+independent if the preference between outcomes \\((x\_1, x\_2, x\_3)\\) and
+\\((x\_1', x\_2', x\_3)\\) does not depend on the value of the value \\(x\_3\\) of
+attribute \\(X\_3\\).
 
 If all attributes are mutually preferentially independent, then an
 agent's preference can be described by maximising the function:
 
 \begin{equation}
-V(x_1, x_2, \dots, x_n) = \sum_i V_i(x_i)
+  V(x\_1, x\_2, \dots, x\_n) = \sum\_i V\_i(x\_i)
 \end{equation}
 
 An example is:
@@ -1045,14 +1111,15 @@ the attributes in \\(\mathbb{X}\\) are independent of the particular
 values of the attributes in \\(\mathbb{Y}\\).
 
 Mutual utility independence implies that the agent's behaviour can be
-described using a multiplicative utility function. If we denote \\(U_i\\)
-to be \\(U_i(x_i)\\), then a 3 attribute utility function can be expressed
+described using a multiplicative utility function. If we denote \\(U\_i\\)
+to be \\(U\_i(x\_i)\\), then a 3 attribute utility function can be expressed
 as:
 
 \begin{equation}
-U = k_1U_1 + k_2U_2 + k_3U_3 + k_1k_2U_1U_2 + k_1k_3U_1U_3 +
-k_2k_3U_2U_3 + k_1k_2k_3U_1U_2U_3
+ U = k\_1U\_1 + k\_2U\_2 + k\_3U\_3 + k\_1k\_2U\_1U\_2 + k\_1k\_3U\_1U\_3 +
+ k\_2k\_3U\_2U\_3 + k\_1k\_2k\_3U\_1U\_2U\_3
 \end{equation}
+
 
 #### Decision Networks {#decision-networks}
 
@@ -1068,7 +1135,7 @@ chance nodes (oval)
 
 decision nodes (rectangles)
 : these represent points where the
-decision maker has a choice of actions.
+    decision maker has a choice of actions.
 
 utility nodes (diamonds)
 : represent the agent's utility function
@@ -1080,12 +1147,13 @@ the utility node represents the expected utility associated with each
 action. This node is associated with an action-utility function (also
 known as Q-function).
 
+
 #### Information Value Theory {#information-value-theory}
 
 The value of a given piece of information is defined to be the
 difference in expected value between the best action before and after
-information is obtained. This is one of the most important parts of
-decision-making: knowing what information to obtain. Information has
+information is obtained.  This is one of the most important parts of
+decision-making: knowing what information to obtain.  Information has
 value to the extent that it is likely to cause a change of plan and to
 the extent that the new plan is significantly better than the old
 plan.
@@ -1093,8 +1161,8 @@ plan.
 Mathematically, the value of perfect information (VPI) is defined as:
 
 \begin{equation}
-VPI_e(E_j) = \left( \sum_k P(E_j = e\_{jk} | \mathbb{e})
-MEU(\alpha\_{e\_{jk}} | \mathbb{e}, E_j = e\_{jk}) \right) - MEU(\alpha |
+VPI\_e(E\_j) = \left( \sum\_k P(E\_j = e\_{jk} | \mathbb{e})
+  MEU(\alpha\_{e\_{jk}} | \mathbb{e}, E\_j = e\_{jk}) \right) - MEU(\alpha |
 \mathbb{e})
 \end{equation}
 
@@ -1105,55 +1173,57 @@ beliefs of its value.
 
 <!--list-separator-->
 
-- Properties of the value of information
+-  Properties of the value of information
 
-  First, the expected value of information is non-negative.
+    First, the expected value of information is non-negative.
 
-  \begin{equation}
-  \forall \mathbb{e}, E_j VPI\_{\mathbb{e}} (E_j) \ge 0
-  \end{equation}
+    \begin{equation}
+      \forall \mathbb{e}, E\_j VPI\_{\mathbb{e}} (E\_j) \ge 0
+    \end{equation}
 
-  The theorem is about the expected value, and not the real value. This
-  means that information can sometimes lead to a plan that is harmful.
+    The theorem is about the expected value, and not the real value. This
+    means that information can sometimes lead to a plan that is harmful.
 
-  It is important to note that VPI is dependent on the current state of
-  information. VPI is not additive in general:
+    It is important to note that VPI is dependent on the current state of
+    information. VPI is not additive in general:
 
-  \begin{equation}
-  VPI\_{\mathbb{e}}(E_j, E_k) \ne VPI\_{\mathbb{e}}(E_j) + VPI\_{\mathbb{e}}(E_k)
-  \end{equation}
+    \begin{equation}
+      VPI\_{\mathbb{e}}(E\_j, E\_k) \ne VPI\_{\mathbb{e}}(E\_j) + VPI\_{\mathbb{e}}(E\_k)
+    \end{equation}
 
-  VPI is order independent. That is:
+    VPI is order independent. That is:
 
-  \begin{equation}
-  VPI\_{\mathbb{e}}(E_j, E_k) = VPI\_{\mathbb{e}}(E_j) +
-  VPI\_{\mathbb{e}, e_j}(E_k) = VPI\_{\mathbb{e}}(E_k) +
-  VPI\_{\mathbb{e}, e_k}(E_j)
-  \end{equation}
+    \begin{equation}
+      VPI\_{\mathbb{e}}(E\_j, E\_k) = VPI\_{\mathbb{e}}(E\_j) +
+      VPI\_{\mathbb{e}, e\_j}(E\_k) = VPI\_{\mathbb{e}}(E\_k) +
+      VPI\_{\mathbb{e}, e\_k}(E\_j)
+    \end{equation}
 
 <!--list-separator-->
 
-- Information Gathering Agents
+-  Information Gathering Agents
 
-  we can implement a myopic information-gathering agent, by using the
-  VPI formula shortsightedly.
+    we can implement a myopic information-gathering agent, by using the
+    VPI formula shortsightedly.
 
-  ```text
-    function INFORMATION-GATHERING-AGENT(percept) returns an action
-      persistent: D, a decision network
+    ```text
+      function INFORMATION-GATHERING-AGENT(percept) returns an action
+        persistent: D, a decision network
 
-    integrate percept into D
-    j <- the value that maximises VPI(E_j) / Cost(E_j)
-    if VPI(E_j) > Cost(E_j)
-      return REQUEST(E_j)
-    else return the best action from D
-  ```
+      integrate percept into D
+      j <- the value that maximises VPI(E_j) / Cost(E_j)
+      if VPI(E_j) > Cost(E_j)
+        return REQUEST(E_j)
+      else return the best action from D
+    ```
 
-  If we know the associated cost of observing evidence, it simply
-  retrieves the evidence if the cost of observing it is less than the
-  value it provides.
+    If we know the associated cost of observing evidence, it simply
+    retrieves the evidence if the cost of observing it is less than the
+    value it provides.
+
 
 ## RANDOM {#random}
+
 
 ### Simon's Ant {#simon-s-ant}
 
@@ -1162,11 +1232,14 @@ Simon, noble prize in economics
 > The complexity of the behaviour is the manifestation of the complexity
 > of the environment and not the complexity of the program.
 
+
 ## REFILE {#refile}
 
 {{< figure src="/ox-hugo/screenshot_2018-11-09_13-55-33.png" >}}
 
+
 ## Papers {#papers}
+
 
 ### Improving Policy Gradient by Exploring Under-Appreciated Rewards {#improving-policy-gradient-by-exploring-under-appreciated-rewards}
 
@@ -1186,8 +1259,8 @@ Optimizing in the mean-seeking direction of the KL divergence is to
 learn a policy by following:
 
 \begin{equation}
-O\_{RAML}(\theta; \tau) = \mathcal{E}\_{h \sim p(h)}\left\\{ \tau
-\sum\_{a \in A} \pi\_\tau^\* (a | h) \log \pi\_\theta (a | h) \right\\}
+  O\_{RAML}(\theta; \tau) = \mathcal{E}\_{h \sim p(h)}\left\\{ \tau
+    \sum\_{a \in A} \pi\_\tau^\* (a | h) \log \pi\_\theta (a | h) \right\\}
 \end{equation}
 
 In RL, the reward landscape is unknown, hence sampling from
@@ -1200,15 +1273,15 @@ of normalized weights to approximate \\(O\_{RAML}(\theta; \tau | h)\\).
 \begin{equation}
 O\_{RAML} (\theta; \tau | h) \approx \tau
 \sum\_{k=1}^{K}\frac{w\_\tau(a^{(k)} | h)}{\sum\_{m=1}^{K}w\_\tau(a^{(m)}
-| h)} \log \pi\_\theta(a^{(k)} | h)
+  | h)} \log \pi\_\theta(a^{(k)} | h)
 \end{equation}
 
 where \\(w\_\tau(a^{(k)} | h) \propto \pi\_\tau^\* / \pi\_\theta\\) denotes an
 importance weight defined by:
 
 \begin{equation}
-w\_\tau (a^{(k)} | h) = exp \left\\{ \frac{1}{\tau}r (a^{(k)} | h) -
-\log \pi\_\theta (a^{(k)} | h) \right\\}
+  w\_\tau (a^{(k)} | h) = exp \left\\{ \frac{1}{\tau}r (a^{(k)} | h) -
+    \log \pi\_\theta (a^{(k)} | h) \right\\}
 \end{equation}
 
 One can view the weights as the discrepancy between scaled rewards \\(r /

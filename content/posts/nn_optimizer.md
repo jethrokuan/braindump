@@ -5,4 +5,4 @@ draft = false
 +++
 
 tags
-: [Machine Learning Algorithms]({{<relref "machine_learning_algorithms.md" >}})
+: [Machine Learning Algorithms]({{<relref "machine_learning_algorithms.md#" >}})

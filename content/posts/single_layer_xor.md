@@ -8,7 +8,8 @@ paper
 : <https://science.sciencemag.org/content/367/6473/83>
 
 tags
-: [Neuroscience ⭐]({{<relref "neuroscience.md" >}}), [Machine Learning]({{<relref "machine_learning.md" >}})
+: [Neuroscience ⭐]({{<relref "neuroscience.md#" >}}), [Machine Learning]({{<relref "machine_learning.md#" >}})
+
 
 ## Finding {#finding}
 
@@ -19,9 +20,10 @@ intensifies above the threshold.
 
 {{< figure src="/ox-hugo/gcJFiIZ2020-01-04_10-31-19_.jpg" >}}
 
+
 ## Why is this interesting? {#why-is-this-interesting}
 
-- XOR used to be impossible to compute without inhibitory mechanisms,
-  but this is makes that possible.
-- Hence the human brain can use a single-layered network to compute
-  the XOR function.
+-   XOR used to be impossible to compute without inhibitory mechanisms,
+    but this is makes that possible.
+-   Hence the human brain can use a single-layered network to compute
+    the XOR function.

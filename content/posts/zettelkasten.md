@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Productivity]({{<relref "productivity.md" >}}), [Note-taking]({{<relref "note_taking.md" >}})
+: [Productivity]({{<relref "productivity.md#" >}}), [Note-taking]({{<relref "note_taking.md#" >}})
+
 
 ## The original Zettelkasten Method {#the-original-zettelkasten-method}
 
@@ -15,16 +16,19 @@ them down onto a piece of paper with a source inside.
 In the evening, he would go through these notes and expand on them,
 writing about how they impact his current studies.
 
+
 ## Indexes in Zettelkasten {#indexes-in-zettelkasten}
 
 Indexes have very few terms. They don't serve as a broad overview of a
 topic, but more of an entry point.
 
+
 ## Zettelkasten Note Types {#zettelkasten-note-types}
 
 fleeting
 : notes taken as a reminder of what's in your head. These
-are to be removed after some time - In [Roam Research]({{<relref "roam_research.md" >}}) and Org-roam, make fleeting notes in daily notes
+    are to be removed after some time
+    -   In [Roam Research]({{<relref "roam_research.md#" >}}) and Org-roam, make fleeting notes in daily notes
 
 project-related
 : notes related to a project
@@ -32,11 +36,13 @@ project-related
 permanent
 : notes that are standalone, and make sense in their own context.
 
+
 ## Arguments Against Zettelkasten {#arguments-against-zettelkasten}
 
-- Densely interconnecting ideas across domains results in complex
-  mental models, may obscure reality (Source: [Venkatesh Rao, 2016
-  podcast with Farnam Street](https://fs.blog/venkatesh-rao/))
+-   Densely interconnecting ideas across domains results in complex
+    mental models, may obscure reality (Source: [Venkatesh Rao, 2016
+    podcast with Farnam Street](https://fs.blog/venkatesh-rao/))
+
 
 ## Why Zettelkasten {#why-zettelkasten}
 

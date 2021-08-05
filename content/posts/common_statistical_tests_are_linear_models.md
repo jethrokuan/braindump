@@ -6,13 +6,13 @@ draft = false
 
 source
 : [Common statistical tests are linear models (or: how to
-teach stats)](https://lindeloev.github.io/tests-as-linear/)
+    teach stats)](https://lindeloev.github.io/tests-as-linear/)
 
 author
 : Jonas Kristoffer Lindeløv
 
 tags
-: [Statistical Testing]({{<relref "statistical_testing.md" >}})
+: [Statistical Testing]({{<relref "statistical_testing.md#" >}})
 
 Linear models underlie common parametric and "non-parametric" tests.
 Non-parametric tests are often simply the parametric tests, but in

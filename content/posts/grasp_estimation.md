@@ -12,18 +12,20 @@ grasp. For 2D planar grasps, the grasp is constrained from one direction, so the
 2D in-plane position and 1D rotation angle. For 6DoF grasps the gripper can
 grasp the object from various angles.
 
+
 ## Evaluating Grasp Contact Points {#evaluating-grasp-contact-points}
 
 The first category of methods sample candidate grasp contact points, and use
 analytical methods or deep learning methods to evaluate the quality of the
 grasp. This relies on prior knowledge such as object geometry and physics
 models. [mahler\_dex-net\_2017: Dex-Net 2.0: Deep Learning to Plan Robust Grasps
-with Synthetic Point Clouds and Analytic Grasp Metrics]({{<relref "mahler_dex_net_2017.md" >}}) uses deep learning
+with Synthetic Point Clouds and Analytic Grasp Metrics]({{<relref "mahler_dex_net_2017.md#" >}}) uses deep learning
 methods to plan grasps.
 
-Other methods such as in (NO_ITEM_DATA:morrisonClosingLoopRobotic2018) generate pixel-wise
+Other methods such as in (NO\_ITEM\_DATA:morrisonClosingLoopRobotic2018) generate pixel-wise
 grasp affordance maps
+
 
 ## Bibliography {#bibliography}
 
-NO_ITEM_DATA:morrisonClosingLoopRobotic2018
+NO\_ITEM\_DATA:morrisonClosingLoopRobotic2018

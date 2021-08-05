@@ -6,7 +6,8 @@ draft = false
 
 ## Links {#links}
 
-- [matthewvowels1/Awesome-VAEs](https://github.com/matthewvowels1/Awesome-VAEs)
+-   [matthewvowels1/Awesome-VAEs](https://github.com/matthewvowels1/Awesome-VAEs)
+
 
 ## Variational Auto-encoder noise as encouraging code vectors to be far apart {#variational-auto-encoder-noise-as-encouraging-code-vectors-to-be-far-apart}
 
@@ -14,6 +15,6 @@ The VAE noise causes data points in the Z-space to be fuzzy, and may cause overl
 
 So additional constraints are added to the system:
 
-- Minimize square distances of balls to origin
-- Make centre of mass zero
-- Make size of balls close to 1 in each dimension
+-   Minimize square distances of balls to origin
+-   Make centre of mass zero
+-   Make size of balls close to 1 in each dimension

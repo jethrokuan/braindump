@@ -4,4 +4,4 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-[Emacs]({{<relref "emacs.md" >}}) as a [malleable system](https://malleable.systems/mission/).
+[Emacs]({{<relref "emacs.md#" >}}) as a [malleable system](https://malleable.systems/mission/).

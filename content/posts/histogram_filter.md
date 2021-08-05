@@ -9,27 +9,29 @@ cumulative posterior for each region is represented by a single
 probability value. In discrete spaces, these are known as discrete
 Bayes filters, while in continuous spaces, as histogram filters.
 
+
 ## Discrete Bayes Filter {#discrete-bayes-filter}
 
 The discrete Bayes filter is directly obtained from the Bayes filter,
 replacing the integral with a sum. The input is a discrete probability
 distribution \\(\\{p\_{k,t}\\}\\), and most recent control and measurement
-\\(u_t\\) and \\(z_t\\).
+\\(u\_t\\) and \\(z\_t\\).
 
 \begin{algorithm}
 \caption{Discrete Bayes Filter}
-\label{discrete_bayes_filter}
-\begin{algorithmic}[1]
-\Procedure{DiscreteBayesFilter}{$\left\\{p\_{k,t-1}\\}, u\_t, z\_t$}
-\ForAll{$k$}
-\State $\overline{p}\_{k,t} = \sum\_i p(X\_t = x\_k | u\_t, XK\_{t-1} =
+\label{discrete\_bayes\_filter}
+  \begin{algorithmic}[1]
+    \Procedure{DiscreteBayesFilter}{$\left\\{p\_{k,t-1}\\}, u\_t, z\_t$}
+    \ForAll{$k$}
+    \State $\overline{p}\_{k,t} = \sum\_i p(X\_t = x\_k | u\_t, XK\_{t-1} =
     x\_i) p\_{i, t-1}$
-\State $p\_{k,t} = \eta p(z\_t | X\_t = x\_k)\overline{p}\_{k, t}$
-\EndFor
-\State \Return $\\{p\_{k,t}\\}$
-\EndProcedure
-\end{algorithmic}
+    \State $p\_{k,t} = \eta p(z\_t | X\_t = x\_k)\overline{p}\_{k, t}$
+    \EndFor
+    \State \Return $\\{p\_{k,t}\\}$
+    \EndProcedure
+  \end{algorithmic}
 \end{algorithm}
+
 
 ## Histogram Filter {#histogram-filter}
 
@@ -37,19 +39,22 @@ Histogram filters decompose a continuous state space into finitely
 many regions:
 
 \begin{equation}
-\text{range}(X_t) = x\_{1,t} \cup x\_{2,t } \dots x\_{K, t}
+  \text{range}(X\_t) = x\_{1,t} \cup x\_{2,t } \dots x\_{K, t}
 \end{equation}
 
-where \\(X_t\\) is the random variable describing the robot at time \\(t\\).
+where \\(X\_t\\) is the random variable describing the robot at time \\(t\\).
 Each \\(x\_{k,t}\\) is a convex region, and form a partitioning of the
 state space. A simple decomposition is a multi-dimensional grid.
 
+
 ### Decomposition Techniques {#decomposition-techniques}
+
 
 #### Static Techniques {#static-techniques}
 
 Static techniques rely on a fixed decomposition that is chosen in
 advance. These are easier to implement, but can be computationally wasteful.
+
 
 #### Dynamic Techniques {#dynamic-techniques}
 

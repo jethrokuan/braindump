@@ -18,16 +18,15 @@ $1-\delta$ that
   E_{out}(g) \le E_{in}(g) + \sqrt{\frac{1}{2N}\ln \frac{2M}{\delta}}
 \end{align}
 
-Notice the error bound depends on $M$, the size of the hypothesis
-set $H$. Most learning models have infinite $H$, including the simple
-perceptron. Hence, to study generalisation in such models, we need to
-derive a counterpart that deals with infinite $H$.
+Notice the error bound depends on $M$, the size of the hypothesis set $H$. Most
+learning models have infinite $H$, including the simple perceptron. Hence, to
+study generalisation in such models, we need to derive a counterpart that deals
+with infinite $H$.
 
-Notice that the $M$ factor was obtained by taking the disjunction of
-events. Let $B_m$ be the bad event that $|E_{in}(h_m) - E_{out}(h_m)|
-> \epsilon$. Notice that these bad events are often strongly
-overlapping, and the disjunction of these events form a much smaller
-area.
+Notice that the $M$ factor was obtained by taking the disjunction of events. Let
+$B_m$ be the bad event that $|E_{in}(h_m) - E_{out}(h_m)| > \epsilon$. Notice
+that these bad events are often strongly overlapping, and the disjunction of
+these events form a much smaller area.
 
 The mathematical theory of generalisation hinges on this observation.
 Upon accounting for the overlaps of different hypotheses, we will be

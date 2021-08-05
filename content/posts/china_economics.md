@@ -5,7 +5,7 @@ slug = "china_economics"
 draft = false
 +++
 
-China has steadily accumulated U.S. Treasury securities over the decades. In December 2019, China owns about 5% (\$1.07 trillion) of the U.S. national debt.
+China has steadily accumulated U.S. Treasury securities over the decades. In December 2019, China owns about 5% ($1.07 trillion) of the U.S. national debt.
 
 China has been in a trade surplus with the US since 1985.
 

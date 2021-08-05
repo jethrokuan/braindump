@@ -26,8 +26,9 @@ Beam search can then be formulated as regularized decoding. Their experiments
 show that encouraging UID allieviates the text degradation that occurs when
 using high beam widths.
 
-(NO_ITEM_DATA:meisterIfBeamSearch2020)
+(NO\_ITEM\_DATA:meisterIfBeamSearch2020)
+
 
 ## Bibliography {#bibliography}
 
-NO_ITEM_DATA:meisterIfBeamSearch2020
+NO\_ITEM\_DATA:meisterIfBeamSearch2020

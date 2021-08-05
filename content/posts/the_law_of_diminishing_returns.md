@@ -4,7 +4,7 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-All components of [optionality]({{< relref "optionality" >}}) face diminishing returns: after some point, the
+All components of [optionality]({{<relref "optionality.md#" >}}) face diminishing returns: after some point, the
 advantages gained start to level off. For example, as a newbie fitness training
 may reap massive gains, but the improvement slows as time passes.
 

@@ -8,10 +8,12 @@ draft = false
 
 Integers in Python
 
+
 ### <span class="org-todo todo TODO">TODO</span> How Primitive Types are represented in {#how-primitive-types-are-represented-in}
 
 1.  Python
 2.  C++
+
 
 ### Primitive Types {#primitive-types}
 
@@ -22,57 +24,58 @@ specified in `sys.float_info`.
 
 <!--list-separator-->
 
-- Bit Manipulation
+-  Bit Manipulation
 
-  Computing the parity of a word.
+    Computing the parity of a word.
 
-  ```python
-    def parity(x):
-        result = 0
-        while x:
-            result ^= x & 1
-            x >>= 1
-        return result
-  ```
+    ```python
+      def parity(x):
+          result = 0
+          while x:
+              result ^= x & 1
+              x >>= 1
+          return result
+    ```
 
-  `x &` x - 1= Drops the lowest set bit of x.
+    `x &` x - 1= Drops the lowest set bit of x.
 
-  The parity of 11011111 is the same as the parity of 1101 XORed with 1111.
+    The parity of 11011111 is the same as the parity of 1101 XORed with 1111.
 
-  ```python
-    def parity(x):
-        x ^= x >> 32
-        x ^= x >> 16
-        x ^= x >> 8
-        x ^= x >> 4
-        x ^= x >> 2
-        x ^= x >> 1
-        return x & 0x1
-  ```
+    ```python
+      def parity(x):
+          x ^= x >> 32
+          x ^= x >> 16
+          x ^= x >> 8
+          x ^= x >> 4
+          x ^= x >> 2
+          x ^= x >> 1
+          return x & 0x1
+    ```
 
-  With time complexity of \\(O(\log n)\\).
-
-<!--list-separator-->
-
-- Swapping Bits
-
-  ```python
-    def swap_bits(x, i, j):
-        if (x >> i) & 1 != (x >> j) & 1: # if ith and jth bits differ
-            bit_mask = (1 << i) | (1 << j)
-            x ^= bit_mask
-        return x
-
-  ```
+    With time complexity of \\(O(\log n)\\).
 
 <!--list-separator-->
 
-- Cheatsheet
+-  Swapping Bits
 
-  | expression | output                           |
-  | ---------- | -------------------------------- |
-  | x & x - 1  | clears the lowest set bit of x   |
-  | x & ~(x-1) | extracts the lowest set bit of x |
+    ```python
+      def swap_bits(x, i, j):
+          if (x >> i) & 1 != (x >> j) & 1: # if ith and jth bits differ
+              bit_mask = (1 << i) | (1 << j)
+              x ^= bit_mask
+          return x
+
+    ```
+
+<!--list-separator-->
+
+-  Cheatsheet
+
+    | expression | output                           |
+    |------------|----------------------------------|
+    | x & x - 1  | clears the lowest set bit of x   |
+    | x & ~(x-1) | extracts the lowest set bit of x |
+
 
 ### Arrays {#arrays}
 
@@ -82,6 +85,7 @@ sequences.
 Insertion into a full array can be handled by resizing, allocating a
 new array with additional memory and copying over the entries from the
 original array.
+
 
 ### Linked List {#linked-list}
 
@@ -112,7 +116,9 @@ original array.
           node.next = node.next.next
 ```
 
+
 ### Queues {#queues}
+
 
 #### Queues with Circular Buffer {#queues-with-circular-buffer}
 
@@ -150,13 +156,11 @@ original array.
           return self._num_queue_elements
 ```
 
+
 ## Common Questions {#common-questions}
 
+
 ### Find kth largest in array {#find-kth-largest-in-array}
-
-| position | ease | box | interval | due |
-| -------- | ---- | --- | -------- | --- |
-
 
 ```python
   import operator
@@ -203,6 +207,7 @@ original array.
       return find_kth(operator.gt)
 ```
 
+
 ### Boyer-Moore String Search Algorithm {#boyer-moore-string-search-algorithm}
 
 The problem is to find a occurrences of string `p` in `t`. The pattern `p`
@@ -229,6 +234,7 @@ are no mismatches between `p` and `t`, or (b) `p` moves past `t`
 Another linear-time string search algorithm is the [Rabin-Karp
 algorithm](https://en.wikipedia.org/wiki/Rabin%25E2%2580%2593Karp%5Falgorithm), which uses a rolling hash.
 
+
 ### Delete Duplicates in Linked List {#delete-duplicates-in-linked-list}
 
 ```python
@@ -240,6 +246,7 @@ algorithm](https://en.wikipedia.org/wiki/Rabin%25E2%2580%2593Karp%5Falgorithm), 
           A = A.next
       return head
 ```
+
 
 ### Longest Increasing Subsequence (LIS) {#longest-increasing-subsequence--lis}
 
@@ -264,6 +271,7 @@ Then \\(L(i) = 1 + max(L[j])\\) where \\(0 < j < i\\) and \\(arr[j] < arr[i]\\) 
       return max(lis)
 ```
 
+
 ### Generating a Random Sample {#generating-a-random-sample}
 
 ```python
@@ -276,6 +284,7 @@ Then \\(L(i) = 1 + max(L[j])\\) where \\(0 < j < i\\) and \\(arr[j] < arr[i]\\) 
           A[i], A[r] = A[r], A[i]
       return A[:k]
 ```
+
 
 ### Generate a random sample from a stream {#generate-a-random-sample-from-a-stream}
 
@@ -300,6 +309,7 @@ with probability `k/(n+1)`.
       return sampling_results
 ```
 
+
 ### Checking sub-sequence {#checking-sub-sequence}
 
 ```python
@@ -311,12 +321,14 @@ with probability `k/(n+1)`.
   print(is_subsequence("hello", "no"))
 ```
 
+
 ### Flatten a List {#flatten-a-list}
 
 ```python
   def flatten(arr):
       return [item for sublist in l for item in sublist]
 ```
+
 
 ### has two sum {#has-two-sum}
 
@@ -335,6 +347,7 @@ with probability `k/(n+1)`.
 ```
 
 has three sum is the same, sort the array and run has two sum.
+
 
 ### Big Integer Multiply {#big-integer-multiply}
 
@@ -357,11 +370,8 @@ has three sum is the same, sort the array and run has two sum.
       return result
 ```
 
+
 ### Next Permutation {#next-permutation}
-
-| position | ease | box | interval | due |
-| -------- | ---- | --- | -------- | --- |
-
 
 ```python
   def next_permutation(perm):

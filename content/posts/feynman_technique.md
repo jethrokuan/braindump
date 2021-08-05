@@ -5,4 +5,4 @@ draft = false
 +++
 
 tags
-: [Richard Feynman]({{<relref "richard_feynman.md" >}})
+: [Richard Feynman]({{<relref "richard_feynman.md#" >}})

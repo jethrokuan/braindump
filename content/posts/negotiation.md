@@ -124,6 +124,7 @@ draft = false
 44. Identify your counterpart's negotiating style: accomodator,
     analyst, or assertive
 
+
 ## References {#references}
 
-- Never Split the Difference
+-   Never Split the Difference

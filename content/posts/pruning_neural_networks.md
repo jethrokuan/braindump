@@ -8,13 +8,15 @@ Pruning is the process of compressing neural networks. This typically involves
 setting a particular weight to 0, and freezing it for subsequent training. This
 can be easily achieved by multiplying the weights with a pruning mask.
 
+
 ## Why prune neural networks? {#why-prune-neural-networks}
 
-- Pruning can support generalization, by regularizing over-parameterized functions
-- Pruning reduces memory constraints during inference time, when the resultant
-  networks are smaller
-- Pruning reduces energy costs and computations, supporting fast inference and
-  deployment on mobile devices
+-   Pruning can support generalization, by regularizing over-parameterized functions
+-   Pruning reduces memory constraints during inference time, when the resultant
+    networks are smaller
+-   Pruning reduces energy costs and computations, supporting fast inference and
+    deployment on mobile devices
+
 
 ## Considerations of Pruning Algorithms {#considerations-of-pruning-algorithms}
 

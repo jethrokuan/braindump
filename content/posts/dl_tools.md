@@ -5,9 +5,11 @@ draft = false
 +++
 
 tags
-: [Deep Learning]({{<relref "deep_learning.md" >}})
+: [Deep Learning]({{<relref "deep_learning.md#" >}})
+
 
 ## Tensorflow {#tensorflow}
+
 
 ### What is Tensorflow {#what-is-tensorflow}
 
@@ -21,23 +23,26 @@ supports distributed computing.
 
 {{< figure src="/ox-hugo/image6_2018-09-15_14-26-09.png" >}}
 
+
 ### Glossary {#glossary}
 
 tensor
 : A tf.Tensor object represents a partially defined
-computation that will eventually produce a value.
-TensorFlow programs work by first building a graph of
-tf.Tensor objects, detailing how each tensor is computed
-based on the other available tensors and then by running
-parts of this graph to achieve the desired results.
+    computation that will eventually produce a value.
+    TensorFlow programs work by first building a graph of
+    tf.Tensor objects, detailing how each tensor is computed
+    based on the other available tensors and then by running
+    parts of this graph to achieve the desired results.
+
 
 ### TF Slim {#tf-slim}
+
 
 #### `arg_scope` {#arg-scope}
 
 <https://github.com/tensorflow/tensorflow/blob/master/tensorflow/contrib/framework/python/ops/arg%5Fscope.py>
 
-Example of how to use tf.contrib.framework.arg_scope:
+Example of how to use tf.contrib.framework.arg\_scope:
 
 ```python
   from third_party.tensorflow.contrib.layers.python import layers
@@ -59,7 +64,7 @@ The first call to conv2d will behave as follows:
                 regularizer=layers.l2_regularizer(0.05), scope='conv1')
 ```
 
-The second call to conv2d will also use the arg_scope's default for
+The second call to conv2d will also use the arg\_scope's default for
 padding:
 
 ```python
@@ -68,7 +73,7 @@ padding:
                 regularizer=layers.l2_regularizer(0.05), scope='conv2')
 ```
 
-Example of how to reuse an arg_scope:
+Example of how to reuse an arg\_scope:
 
 ```python
   with arg_scope([layers.conv2d], padding='SAME',
@@ -81,17 +86,19 @@ Example of how to reuse an arg_scope:
       net = layers.conv2d(net, 256, [5, 5], scope='conv2')
 ```
 
-Example of how to use tf.contrib.framework.add_arg_scope to enable your
-function to be called within an arg_scope later:
+Example of how to use tf.contrib.framework.add\_arg\_scope to enable your
+function to be called within an arg\_scope later:
 
 ```python
   @tf.contrib.framework.add_arg_scope
   def conv2d(*args, **kwargs)
 ```
 
+
 ### TF Serve {#tf-serve}
 
 <https://towardsdatascience.com/introducing-tfserve-simple-and-easy-http-server-for-tensorflow-model-inference-582ea1b07da8?source=rss----7f60cf5620c9---4>
+
 
 ### TF Estimator {#tf-estimator}
 
@@ -99,9 +106,9 @@ function to be called within an arg_scope later:
 
 References:
 
-- <http://ruder.io/text-classification-tensorflow-estimators/>
-- <https://developers.googleblog.com/2017/12/creating-custom-estimators-in-tensorflow.html>
-- <https://arxiv.org/abs/1708.02637>
+-   <http://ruder.io/text-classification-tensorflow-estimators/>
+-   <https://developers.googleblog.com/2017/12/creating-custom-estimators-in-tensorflow.html>
+-   <https://arxiv.org/abs/1708.02637>
 
 At the heart of our framework is Estimator, a class that both provides
 an interface for downstream infrastructure, as well as a convenient
@@ -114,7 +121,7 @@ serialization format which allows the model to be used in TensorFlow
 Serving, a prebuilt production server for TensorFlow models.
 
 | Estimator method | Mode parameter set |
-| ---------------- | ------------------ |
+|------------------|--------------------|
 | train()          | ModeKeys.TRAIN     |
 | evaluate()       | ModeKeys.EVAL      |
 | predict()        | ModeKeys.PREDICT   |
@@ -130,9 +137,10 @@ available,, how to save intermediate checkpoints etc.
 to produce two dictionaries: one containing Tensors with inputs
 (features), and one containing Tensors with labels.
 
+
 #### Predict {#predict}
 
-When `model_fn` is called with `mode == ModeKeys.PREDICT`, the model
+ When `model_fn` is called with `mode == ModeKeys.PREDICT`, the model
 function must return a `tf.estimator.EstimatorSpec` containing the
 following information:
 
@@ -150,6 +158,7 @@ following information:
   if mode == tf.estimator.ModeKeys.PREDICT:
      return tf.estimator.EstimatorSpec(mode, predictions=predictions)
 ```
+
 
 #### Eval {#eval}
 
@@ -177,6 +186,7 @@ We can also compute and return additional metrics.
          eval_metric_ops={'my_accuracy': accuracy})
 ```
 
+
 #### Train {#train}
 
 When `model_fn` is called with `mode == ModeKeys.TRAIN`, the model
@@ -197,6 +207,7 @@ function must train the model.
      train_op=train_op)
 ```
 
+
 ### TF Feature Columns {#tf-feature-columns}
 
 Reference:
@@ -207,6 +218,7 @@ Reference:
 Feature columns bridge raw data with the data your model needs.
 
 There are nine functions in the `tf.feature_column` api.
+
 
 #### Numeric column {#numeric-column}
 
@@ -220,6 +232,7 @@ There are nine functions in the `tf.feature_column` api.
   matrix_feature_column = tf.feature_column.numeric_column(key="MyMatrix",
                                                            shape=[10,5])
 ```
+
 
 #### Bucketized column {#bucketized-column}
 
@@ -240,6 +253,7 @@ We create the bucketized column from a numeric column:
       source_column = numeric_feature_column,
       boundaries = [1960, 1980, 2000])
 ```
+
 
 #### Categorical Identity Column {#categorical-identity-column}
 
@@ -267,6 +281,7 @@ This is a one-hot encoding, not a binary numerical encoding.
       return ({ 'Integer_1':[values], ..<etc>.., 'Integer_2':[values] },
               [Label_values])
 ```
+
 
 #### Categorical vocabulary column {#categorical-vocabulary-column}
 
@@ -308,6 +323,7 @@ via hashing:
           hash_buckets_size = 100) # The number of categories
 ```
 
+
 #### Feature Crosses {#feature-crosses}
 
 Combining features allows the model to learn separate weights
@@ -345,6 +361,7 @@ specifically for whatever that feature combination means.
       hash_bucket_size=1000) # No precise rule, maybe 1000 buckets will be good?
 ```
 
+
 #### Indicator and Embedding columns {#indicator-and-embedding-columns}
 
 Indicator columns treat each category as an element in a one-hot
@@ -374,6 +391,7 @@ of the number of categories.
       dimension=dimension_of_embedding_vector)
 ```
 
+
 ### Hooks {#hooks}
 
 Hooks are useful for custom processing that has to happen alongside
@@ -392,6 +410,7 @@ checkpointing, summaries and more.
               run_context.request_stop()
 ```
 
+
 ### Experiment {#experiment}
 
 The core of the distributed execution support is provided with the
@@ -406,6 +425,7 @@ which basically calls the Estimator `train` method with the training
 
 The primary mode of replica training in Estimators is between-graph
 replication and asynchronous training.
+
 
 ### Partial Run {#partial-run}
 
@@ -435,15 +455,18 @@ To use partial execution, a user first calls `partial_run_setup()` and then a se
 
 The optional `feed_dict` argument allows the caller to override the value of tensors in the graph.
 
+
 ### Debugging Memory Leaks {#debugging-memory-leaks}
 
 <https://dantkz.github.io/How-To-Debug-A-Memory-Leak-In-TensorFlow/>
+
 
 #### Finalize the session graph {#finalize-the-session-graph}
 
 Finalizing the graph ensures that no new nodes are being added to the
 graph on each session run, by marking the graph as read-only. Anything
 that tries to modify the graph will raise an Exception.
+
 
 #### Use [tcmalloc](https://goog-perftools.sourceforge.net/) {#use-tcmalloc}
 
@@ -455,6 +478,7 @@ freeing individual objects they use) with the default malloc.
 tcmalloc also has a heap profiler, which can be analyzed with the
 google-pprof tool.
 
+
 ### <span class="org-todo todo TODO">TODO</span> What happens when a session is created? {#what-happens-when-a-session-is-created}
 
 Context: created a dataflow job that created one session each run,
@@ -463,6 +487,7 @@ which was really slow: 200 workers 1 prediction/s.
 Figure out what a tf.Session contains, and how they are initialized
 with/without graphs.
 
+
 ### Optimizing the Input Pipeline {#optimizing-the-input-pipeline}
 
 <https://www.tensorflow.org/performance/datasets%5Fperformance>
@@ -470,15 +495,17 @@ with/without graphs.
 1.  Use `prefetch` to overlap the work of a producer and consumer
 2.  Cache the dataset into memory if it can fit
 
+
 ### Transitioning to TF 2.0 {#transitioning-to-tf-2-dot-0}
 
 If you are working on custom architectures, we suggest using tf.keras
-to build your models instead of Estimator. ([Tensorflow, n.d.](#orge19d707))
+to build your models instead of Estimator. ([Tensorflow, n.d.](#org5176731))
+
 
 ## Keras {#keras}
 
 Keras is a high-level neural networks API, compatible with multiple
-backends. ([Keras, n.d.](#orge95f9e8)) As of Tensorflow 2.0, Keras will be
+backends. ([Keras, n.d.](#org433b33e)) As of Tensorflow 2.0, Keras will be
 the primary API for building neural networks.
 
 The `Sequential` model is a simple model consisting of a linear stack of
@@ -507,10 +534,12 @@ layers.
   classes = model.predict(x_test, batch_size=128)
 ```
 
-#### {#}
+
+####  {#}
+
 
 ## Bibliography {#bibliography}
 
-<a id="orge95f9e8"></a>Keras. n.d. “Home Keras Documentation.” <https://keras.io/>.
+<a id="org433b33e"></a>Keras. n.d. “Home Keras Documentation.” <https://keras.io/>.
 
-<a id="orge19d707"></a>Tensorflow. n.d. “Standardizing on Keras: Guidance on High-Level APIs in TensorFlow 2.0.” <https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a>.
+<a id="org5176731"></a>Tensorflow. n.d. “Standardizing on Keras: Guidance on High-Level APIs in TensorFlow 2.0.” <https://medium.com/tensorflow/standardizing-on-keras-guidance-on-high-level-apis-in-tensorflow-2-0-bad2b04c819a>.

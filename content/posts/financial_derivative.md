@@ -6,6 +6,6 @@ draft = false
 
 Financial derivatives are based on other underlying financial instruments.
 
-- [Forward Contracts]({{< relref "forward_contracts" >}})
-- [Futures Contract]({{< relref "futures_contract" >}})
-- [Options (Finance)]({{< relref "options_finance" >}})
+-   [Forward Contracts]({{<relref "forward_contracts.md#" >}})
+-   [Futures Contract]({{<relref "futures_contract.md#" >}})
+-   [Options (Finance)]({{<relref "options_finance.md#" >}})

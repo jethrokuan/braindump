@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Statistics]({{<relref "statistics.md" >}}), [Bayesian Statistics]({{<relref "bayesian_statistics.md" >}})
+: [Statistics]({{<relref "statistics.md#" >}}), [Bayesian Statistics]({{<relref "bayesian_statistics.md#" >}})
+
 
 ## Introduction {#introduction}
 
@@ -16,25 +17,26 @@ response or dependent variable and one or more explanatory or
 predictor variables.
 
 We denote the response variable by \\(Y\\), and the set of predictor
-variables by \\(X_1, X_2, \dots, X_p\\), where \\(p\\) denotes the number of
+variables by \\(X\_1, X\_2, \dots, X\_p\\), where \\(p\\) denotes the number of
 predictor variables.
 
 The general regression model is specified as:
 
-\begin{equation} \label{dfn:general_regression}
-Y = f(X_1, X_2, \dots, X_p) + \epsilon
+\begin{equation} \label{dfn:general\_regression}
+  Y = f(X\_1, X\_2, \dots, X\_p) + \epsilon
 \end{equation}
 
 An example is the linear regression model:
 
 \begin{equation}
-Y = \beta_0 + \beta_1X_1 + \dots + \beta_pX_p + \epsilon
+  Y = \beta\_0 + \beta\_1X\_1 + \dots + \beta\_pX\_p + \epsilon
 \end{equation}
 
-where \\(\beta_0, \dots, \beta_p\\) called the regression paramaters or
+where \\(\beta\_0, \dots, \beta\_p\\) called the regression paramaters or
 coefficients, are unknown constants to be estimated from the data.
 \\(\epsilon\\) is the random error representing the discrepancy in the
 approximation.
+
 
 ### Steps in Regression Analysis {#steps-in-regression-analysis}
 
@@ -57,7 +59,7 @@ variables are quantitative while others are qualitative, regression
 analysis in these cases is called the _analysis of covariance_.
 
 | Type                   | Conditions                                                                                                                            |
-| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Univariate             | Only 1 quantitative RV                                                                                                                |
 | Multivariate           | 2 or more quantitative RV                                                                                                             |
 | Simple                 | Only 1 predictor variable                                                                                                             |
@@ -75,7 +77,7 @@ the set of predictor variables can be specified initially by experts
 in the area of study based on their knowledge or their objective
 and/or subjective judgments.
 
-We need to select the form of the function \\(f(X_1, X_2, \dots, X_p)\\)
+We need to select the form of the function \\(f(X\_1, X\_2, \dots, X\_p)\\)
 in <a name="dfn:general_regression"></a>.
 
 **4. Method of Fitting**
@@ -88,9 +90,9 @@ ridge regression and the principal components method.
 
 **5. Model Fitting**
 
-The estimates of the regression parameters \\(\beta_0, \beta_1, \dots,
-\beta_p\\) are denoted by \\(\hat{\beta_0}, \hat{\beta_1}, \dots,
-\hat{\beta_p}\\). the obtained \\(\hat{Y}\\) denotes the predicted value.
+The estimates of the regression parameters \\(\beta\_0, \beta\_1, \dots,
+\beta\_p\\) are denoted by \\(\hat{\beta\_0}, \hat{\beta\_1}, \dots,
+\hat{\beta\_p}\\). the obtained \\(\hat{Y}\\) denotes the predicted value.
 
 **6. Model Criticism and Selection**
 
@@ -103,6 +105,7 @@ the data and the model. We need to address the following questions:
 
 {{< figure src="/ox-hugo/screenshot_2019-01-15_13-10-29.png" caption="Figure 1: Flowchart illustrating the dynamic iterative regression process" >}}
 
+
 ## Simple Linear Regression {#simple-linear-regression}
 
 Simple linear regression is a straightforward approach for predicting
@@ -110,7 +113,7 @@ a quantitative response \\(Y\\) on the basis of a single predictor
 variable \\(X\\). Mathematically, we write this linear relationship as:
 
 \begin{equation} \label{eqn:slr}
-Y \approx \beta_0 + \beta_1 X
+  Y \approx \beta\_0 + \beta\_1 X
 \end{equation}
 
 We describe this as regressing \\(Y\\) on \\(X\\).
@@ -119,31 +122,31 @@ We wish to measure both the direction and strength of the relationship
 between \\(Y\\) and \\(X\\). Two related measures, known as the _covariance_ and
 the _correlation coefficient_ are developed later.
 
-We use our training data to produce estimates \\(\hat{\beta_0}\\) and
-\\(\hat{\beta_1}\\) for the model coefficients, and we can predict outputs
+We use our training data to produce estimates \\(\hat{\beta\_0}\\) and
+\\(\hat{\beta\_1}\\) for the model coefficients, and we can predict outputs
 by computing:
 
 \begin{equation}
-\hat{y} = \hat{\beta_0} + \hat{\beta_1} X
+  \hat{y} = \hat{\beta\_0} + \hat{\beta\_1} X
 \end{equation}
 
-Let \\(\hat{y_i} = \hat{\beta_0} + \hat{\beta_1}\\) be the prediction of
-\\(Y\\) based on the ith value of \\(X\\). Then \\(e_i = y_i - \hat{y_i}\\)
+Let \\(\hat{y\_i} = \hat{\beta\_0} + \hat{\beta\_1}\\) be the prediction of
+\\(Y\\) based on the ith value of \\(X\\). Then \\(e\_i = y\_i - \hat{y\_i}\\)
 represents the ith _residual_. We can define the residual sum of squares
 (RSS) as:
 
 \begin{equation} \label{eqn:dfn:rss}
-\mathrm{RSS} = e_1^2 + e_2^2 + \dots + e_n^2
+  \mathrm{RSS} = e\_1^2 + e\_2^2 + \dots + e\_n^2
 \end{equation}
 
-The least squares approach chooses \\(\hat{\beta_0}\\) and \\(\hat{\beta_1}\\)
+The least squares approach chooses \\(\hat{\beta\_0}\\) and \\(\hat{\beta\_1}\\)
 to minimise the RSS.
 
 If \\(f\\) is to be approximated by a linear function, then we can write
 the relationship as:
 
 \begin{equation}
-Y = \beta_0 + \beta_1 X + \epsilon
+  Y = \beta\_0 + \beta\_1 X + \epsilon
 \end{equation}
 
 where \\(\epsilon\\) is an error term -- the catch-all for what we miss
@@ -157,48 +160,48 @@ question by computing the standard error of \\(\hat{\mu}\\), written as
 \\(\mathrm{SE}(\hat{\mu})\\). This is given by:
 
 \begin{equation} \label{eqn:dfn:se}
-\mathrm{Var}(\hat{\mu}) = \mathrm{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}
+  \mathrm{Var}(\hat{\mu}) = \mathrm{SE}(\hat{\mu})^2 = \frac{\sigma^2}{n}
 \end{equation}
 
 where \\(\sigma\\) is the standard deviation of each of the realizations
-\\(y_i\\) of \\(Y\\).
+\\(y\_i\\) of \\(Y\\).
 
 Standard errors can be used to compute _confidence intervals_. A 95%
 confidence interval is defined as a range of values such that with 95%
 probability, the range will contain the true unknown value of the
 parameter. For linear regression, the 95% confidence interval for
-\\(\beta_1\\) approximately takes the form:
+\\(\beta\_1\\) approximately takes the form:
 
 \begin{equation}
-\hat{\beta_1} \pm 2 \cdot SE(\hat{\beta_1})
+  \hat{\beta\_1} \pm 2 \cdot SE(\hat{\beta\_1})
 \end{equation}
 
 Standard errors can also be used to perform hypothesis tests on the
 coefficients. The most common hypothesis test involves testing the
 null hypothesis of:
 
-\begin{equation} \label{eqn:dfn:null_hyp}
-H_0 : \mathrm{There is no relationship between X and Y} (\beta_1 = 0)
+\begin{equation} \label{eqn:dfn:null\_hyp}
+  H\_0 : \mathrm{There is no relationship between X and Y} (\beta\_1 = 0)
 \end{equation}
 
 versus the alternative hypothesis:
 
-\begin{equation} \label{eqn:dfn:alt_hyp}
-H_a : \mathrm{There is a relationship between X and Y} (\beta_1 \ne 0)
+\begin{equation} \label{eqn:dfn:alt\_hyp}
+  H\_a : \mathrm{There is a relationship between X and Y} (\beta\_1 \ne 0)
 \end{equation}
 
 To test the null hypothesis, we need to determine whether
-\\(\hat{\beta_1}\\) is sufficiently far from zero that we can be
-confident that \\(\beta_1\\) is non-zero. How far is far enough? This
-depends on the accuracy of \\(\hat{\beta_1}\\), or
-\\(\mathrm{SE}(\hat{\beta_1})\\). In practice, we compute a _t-statistic_,
+\\(\hat{\beta\_1}\\) is sufficiently far from zero that we can be
+confident that \\(\beta\_1\\) is non-zero. How far is far enough? This
+depends on the accuracy of \\(\hat{\beta\_1}\\), or
+\\(\mathrm{SE}(\hat{\beta\_1})\\). In practice, we compute a _t-statistic_,
 given by:
 
 \begin{equation} \label{eqn:dfn:t-statistic}
-t = \frac{\hat{\beta_1} - 0}{\mathrm{SE}(\hat{\beta_1})}
+  t = \frac{\hat{\beta\_1} - 0}{\mathrm{SE}(\hat{\beta\_1})}
 \end{equation}
 
-which measures the number of standard deviations that \\(\hat{\beta_1}\\)
+which measures the number of standard deviations that \\(\hat{\beta\_1}\\)
 is away from 0. If there really is no relationship between \\(X\\) and
 \\(Y\\), then we expect that Eq. <a name="eqn:dfn:t-statistic"></a> will have a
 t-distribution with \\(n-2\\) degrees of freedom. The t-distribution has a
@@ -207,9 +210,10 @@ similar to the normal distribution.
 
 It is a simple matter to compute the probability of observing any
 number equal to \\(\lVert t \rVert\\) or larger in absolute value,
-assuming \\(\beta_1 = 0\\). We call this probability the _p-value_. A small
+assuming \\(\beta\_1 = 0\\). We call this probability the _p-value_. A small
 p-value indicates that it is unlikely to observe such a substantial
 association between the predictor and the response due to chance.
+
 
 ### Assessing the accuracy of the model {#assessing-the-accuracy-of-the-model}
 
@@ -217,15 +221,16 @@ Once we have rejected the null hypothesis in favour of the alternative
 hypothesis, it is natural to want to quantify the extent to which the
 model fits the data.
 
+
 #### Residual Standard Error (RSE) {#residual-standard-error--rse}
 
 After we compute the least square estimates of the parameters of a
 linear model, we can compute the following quantities:
 
 \begin{align}
-\mathrm{SST} &= \sum(y_i - \bar{y})^2 \\\\\\
-\mathrm{SSR} &= \sum(\hat{y_i} - \bar{y})^2 \\\\\\
-\mathrm{SSE} &= \sum(y_i - \hat{y_i})^2
+\mathrm{SST} &= \sum(y\_i - \bar{y})^2 \\\\\\
+\mathrm{SSR} &= \sum(\hat{y\_i} - \bar{y})^2 \\\\\\
+\mathrm{SSE} &= \sum(y\_i - \hat{y\_i})^2
 \end{align}
 
 A fundamental equality in both simple and multiple regressions is
@@ -233,7 +238,8 @@ given by \\(\mathrm{SST} = \mathrm{SSR} + \mathrm{SSE}\\). This can be
 interpreted as: The deviation from the mean is equal to the deviation
 due to fit, plus the residual.
 
-#### \\(R^2\\) statistic {#r-2--statistic}
+
+#### \\(R^2\\) statistic {#r-2-statistic}
 
 The RSE provides an absolute measure of lack of fit of the model to
 the data. But since it is measured in the units of \\(Y\\), it is not
@@ -241,11 +247,11 @@ always clear what constitutes a good RSE. The \\(R^2\\) statistic provides
 an alternative measure of fit. It takes a form of a proportion, and
 takes values between 0 and 1, independent of the scale of \\(Y\\).
 
-\begin{equation} \label{eqn:dfn:r_squared}
-R^2 = \frac{\mathrm{SSR}}{\mathrm{SST}} = 1 - \frac{\mathrm{SSE}}{\mathrm{SST}}
+\begin{equation} \label{eqn:dfn:r\_squared}
+  R^2 = \frac{\mathrm{SSR}}{\mathrm{SST}} = 1 - \frac{\mathrm{SSE}}{\mathrm{SST}}
 \end{equation}
 
-where \\(\mathrm{SST} = \sum(y_i - \bar{y})^2\\) is the _total sum of
+where \\(\mathrm{SST} = \sum(y\_i - \bar{y})^2\\) is the _total sum of
 squares_. SST measures the total variance in the response \\(Y\\), and can
 be thought of as the amount of variability inherent in the response
 before the regression is performed. Hence, \\(R^2\\) measures the
@@ -255,40 +261,43 @@ Note that the correlation coefficient \\(r = \mathrm{Cor}(X, Y)\\) is
 related to the \\(R^2\\) in the simple linear regression setting: \\(r^2 =
 R^2\\).
 
+
 ## Multiple Linear Regression {#multiple-linear-regression}
 
 We can extend the simple linear regression model to accommodate
 multiple predictors:
 
 \begin{equation}
-Y = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \dots + \beta_p X_p + \epsilon
+  Y = \beta\_0 + \beta\_1 X\_1 + \beta\_2 X\_2 + \dots + \beta\_p X\_p + \epsilon
 \end{equation}
 
-We choose \\(\beta_0, \beta_1, \dots, \beta_p\\) to minimise the sum of
+We choose \\(\beta\_0, \beta\_1, \dots, \beta\_p\\) to minimise the sum of
 squared residuals:
 
 \begin{equation}
-\mathrm{RSS} = \sum\_{i=1}^{n} (y_i - \hat{y_i})^2
+  \mathrm{RSS} = \sum\_{i=1}^{n} (y\_i - \hat{y\_i})^2
 \end{equation}
 
 Unlike the simple regression estimates, the multiple regression
 coefficient estimates have complicated forms that are most easily
 represented using matrix algebra.
 
+
 ### Interpreting Regression Coefficients {#interpreting-regression-coefficients}
 
-\\(\beta_0\\), the constant coefficient, is the value of \\(Y\\) when \\(X_1 =
-X_2 \dots = X_p = 0\\), as in simple regression. The regression
-coefficient \\(\beta_j\\) has several interpretations.
+\\(\beta\_0\\), the constant coefficient, is the value of \\(Y\\) when \\(X\_1 =
+X\_2 \dots = X\_p = 0\\), as in simple regression. The regression
+coefficient \\(\beta\_j\\) has several interpretations.
 
 First, it may be interpreted as the change in \\(Y\\) corresponding to a
-unit change in \\(X_j\\) when all other predictor variables are held
+unit change in \\(X\_j\\) when all other predictor variables are held
 constant. In practice, predictor variables may be inherently related,
 and it is impossible to hold some of them constant while varying
-others. The regression coefficient \\(\beta_j\\) is also called the
-partial regression coefficient, because \\(\beta_j\\) represents the
-contribution of \\(X_j\\) to the response variable \\(Y\\) adjusted for other
+others. The regression coefficient \\(\beta\_j\\) is also called the
+partial regression coefficient, because \\(\beta\_j\\) represents the
+contribution of \\(X\_j\\) to the response variable \\(Y\\) adjusted for other
 predictor variables.
+
 
 ### Centering and Scaling {#centering-and-scaling}
 
@@ -304,45 +313,45 @@ need only to scale the variables.
 A centered variable is obtained by subtracting from each observation
 the mean of all observations. For example, the centered response
 variable is \\((Y - \bar{y})\\), and the centered jth predictor variable
-is \\((X_j - \bar{x}\_j)\\). The mean of a centered variable is 0.
+is \\((X\_j - \bar{x}\_j)\\). The mean of a centered variable is 0.
 
 The centered variables can also be scaled. Two types of scaling are
 usually performed: unit-length scaling and standardizing.
 
 Unit-length scaling of response variable \\(Y\\) and the jth predictor
-variable \\(X_j\\) is obtained as follows:
+variable \\(X\_j\\) is obtained as follows:
 
 \begin{align}
-\tilde{Z}\_y &= (Y - \bar{y})/L_y \\\\\\
-\tilde{Z}\_j &= (X - \bar{x}\_j)/L_j \\\\\\
+  \tilde{Z}\_y &= (Y - \bar{y})/L\_y \\\\\\
+  \tilde{Z}\_j &= (X - \bar{x}\_j)/L\_j \\\\\\
 \end{align}
 
 where:
 
 \begin{equation}
-L_y = \sqrt{\sum\_{i=1}^{n}(y_i - \bar{y})^2} \text{ and } L_j =
-\sqrt{\sum\_{i=1}^{n}(x\_{ij} - \bar{x}\_j)^2}\text{ , } j = 1,2,\dots,p
+  L\_y = \sqrt{\sum\_{i=1}^{n}(y\_i - \bar{y})^2} \text{ and } L\_j =
+  \sqrt{\sum\_{i=1}^{n}(x\_{ij} - \bar{x}\_j)^2}\text{ , } j = 1,2,\dots,p
 \end{equation}
 
-The quantities \\(L_y\\) is referred to as the length of the centered
+The quantities \\(L\_y\\) is referred to as the length of the centered
 variable \\(Y\_\bar{y}\\) because it measures the size or the magnitudes of
-the observations in \\(Y - \bar{y}\\). \\(L_j\\) has a similar interpretation.
+the observations in \\(Y - \bar{y}\\). \\(L\_j\\) has a similar interpretation.
 
 Unit length scaling has the following property:
 
 \begin{equation}
-\mathrm{Cor}(X_j, X_k) = \sum\_{i=1}^{n}z\_{ij}z\_{ik}
+  \mathrm{Cor}(X\_j, X\_k) = \sum\_{i=1}^{n}z\_{ij}z\_{ik}
 \end{equation}
 
 The second type of scaling is called standardizing, which is defined
 by:
 
 \begin{align}
-\tilde{Y} &= \frac{Y - \bar{y}}{s_y} \\\\\\
-\tilde{X}\_j &= \frac{X_j - \bar{x}\_j}{s_j} \text{ , } j = 1, \dots, p
+  \tilde{Y} &= \frac{Y - \bar{y}}{s\_y} \\\\\\
+  \tilde{X}\_j &= \frac{X\_j - \bar{x}\_j}{s\_j} \text{ , } j = 1, \dots, p
 \end{align}
 
-where \\(s_y\\) and \\(s_j\\) are the standard deviations of the response and
+where \\(s\_y\\) and \\(s\_j\\) are the standard deviations of the response and
 jth predictor variable respectively. The standardized variables have
 mean zero and unit standard deviations.
 
@@ -350,31 +359,33 @@ Since correlations are unaffected by centering or scaling, it is
 sufficient and convenient to deal with either unit-length scaled or
 standardized models.
 
+
 ### Properties of Least-square Estimators {#properties-of-least-square-estimators}
 
 Under certain regression assumptions, the least-square estimators have
 the following properties:
 
 1.  The estimator \\(\hat{\beta}\_j\\) is an unbiased estimate of
-    \\(\hat{\beta_j}\\) and has a variance of \\(\sigma^2 c\_{jj}\\), where
+    \\(\hat{\beta\_j}\\) and has a variance of \\(\sigma^2 c\_{jj}\\), where
     \\(c\_{jj}\\) is the jth diagonal element of the inverse of a matrix
     known as the corrected sums of squares and products matrix. The
     covariance between \\(\hat{\beta}\_i\\) and \\(\hat{\beta}\_j\\) is \\(\sigma^2
-    c\_{ij}\\). For all unbiased estimates that are linear in the
+       c\_{ij}\\). For all unbiased estimates that are linear in the
     observations the least squares estimators have the smallest
     variance.
 
 2.  The estimator \\(\hat{\beta}\_j\\), is normally distributed with mean
-    \\(\beta_j\\) and variance \\(\sigma^2 c\_{jj}\\).
+    \\(\beta\_j\\) and variance \\(\sigma^2 c\_{jj}\\).
 
 3.  \\(W = SSE/\sigma^2\\) has a \\(\chi^2\\) distribution with \\(n - p -1\\)
     degrees of freedom, and \\(\hat{\beta}\_j\\) and \\(\hat{\sigma}^2\\) are
     distributed independently from each other.
 
-4.  The vector \\(\hat{\beta} = (\hat{\beta}\_0, \hat{\beta_1}, \dots,
-    \hat{\beta_p})\\) has a $(p+1)$-dimensional normal distribution with
-    mean vector \\(\beta = (\beta_0, \beta_1, \dots, \beta_p)\\) and
-    variance-covariance matrix with elements \\(\sigma^2 c\_{ij}\\).
+4.  The vector \\(\hat{\beta} = (\hat{\beta}\_0, \hat{\beta\_1}, \dots,
+       \hat{\beta\_p})\\) has a $(p+1)$-dimensional normal distribution with
+    mean vector \\(\beta = (\beta\_0, \beta\_1, \dots, \beta\_p)\\) and
+    variance-covariance matrix with elements \\(\sigma^2  c\_{ij}\\).
+
 
 ### Important Questions in Multiple Regression Models {#important-questions-in-multiple-regression-models}
 
@@ -384,41 +395,41 @@ model:
 **1. Is there a relationship between the response and the predictors?**
 
 The strength of the linear relationship between \\(Y\\) and the set of
-predictors \\(X_1, X_2, \dots X_p\\) can be assessed through the
+predictors \\(X\_1, X\_2, \dots X\_p\\) can be assessed through the
 examination of the scatter plot of \\(Y\\) versus \\(\hat{Y}\\), and the
 correlation coefficient \\(\mathrm{Cor}(Y, \hat{Y})\\). The coefficient of
 determination \\(R^2 = [\mathrm{Cor}(Y, \hat{Y})]^2\\) may be interpreted
 as the proportion of total variability in the response variables \\(Y\\)
-that can be accounted for by the set of predictor variables \\(X_1, X_2,
-\dots, X_p\\).
+that can be accounted for by the set of predictor variables \\(X\_1, X\_2,
+\dots, X\_p\\).
 
-A quantity related to \\(R^2\\) knows as the adjusted R-squared, \\(R_a^2\\),
+A quantity related to \\(R^2\\) knows as the adjusted R-squared, \\(R\_a^2\\),
 is also used for judging the goodness of fit. It is defined as:
 
 \begin{align}
-R_a^2 &= 1 - \frac{SSE/(n-p-1)}{SST/(n-1)} \\\\\\
-&= 1 - \frac{n-1}{n-p-1}(1-R^2)
+  R\_a^2 &= 1 - \frac{SSE/(n-p-1)}{SST/(n-1)} \\\\\\
+        &= 1 - \frac{n-1}{n-p-1}(1-R^2)
 \end{align}
 
-\\(R_a^2\\) is sometimes used to compared models having different numbers
+\\(R\_a^2\\) is sometimes used to compared models having different numbers
 of predictor variables.
 
-If we do a hypothesis test on \\(H_1 : \beta_j \ne \beta_j^0\\), we can do
+If we do a hypothesis test on \\(H\_1 : \beta\_j \ne \beta\_j^0\\), we can do
 a t-test:
 
 \begin{equation}
-t_j = \frac{\hat{\beta_j} - \beta_j^0}{s.e.(\hat{\beta}\_j)}
+  t\_j = \frac{\hat{\beta\_j} - \beta\_j^0}{s.e.(\hat{\beta}\_j)}
 \end{equation}
 
 which has a Stundent's t-distribution with \\(n-p-1\\) degrees of freedom.
 The test is carried out by comparing the observed value with the
 appropriate critical value \\(t\_{(n-p-1), \alpha/2}\\).
 
-If we are comparing \\(H_0\\) <a name="eqn:dfn:null_hyp"></a> and \\(H_a\\)
+If we are comparing \\(H\_0\\) <a name="eqn:dfn:null_hyp"></a> and \\(H\_a\\)
 <a name="eqn:dfn:alt_hyp"></a>, and we do so by computing the _F-statistic_:
 
 \begin{equation} \label{eqn:dfn:f-statistic}
-F = \frac{(\mathrm{TSS} - \mathrm{RSS})/p}{\mathrm{RSS}/(n-p-1)}
+  F = \frac{(\mathrm{TSS} - \mathrm{RSS})/p}{\mathrm{RSS}/(n-p-1)}
 \end{equation}
 
 If the linear model is correct, one can show that:
@@ -427,7 +438,7 @@ If the linear model is correct, one can show that:
 E \\{RSS/(n-p-1)\\} = \sigma^2
 \end{equation}
 
-and that provided \\(H_0\\) is true,
+and that provided \\(H\_0\\) is true,
 
 \begin{equation}
 E \\{(\mathrm{TSS}-\mathrm{RSS})/p\\} = \sigma^2
@@ -435,7 +446,7 @@ E \\{(\mathrm{TSS}-\mathrm{RSS})/p\\} = \sigma^2
 
 Hence, when there is no relationship between the response and the
 predictors, one would expect the F-statistic to be close to 1. if
-\\(H_a\\) is true, then we expect \\(F\\) to be greater than 1.
+\\(H\_a\\) is true, then we expect \\(F\\) to be greater than 1.
 
 **2. Deciding on important variables**
 
@@ -444,7 +455,7 @@ response, but it is more often the case that the response is only
 related to a subset of the predictors. The task of determining which
 predictors are associated is referred to as _variable selection_.
 Various statistics can be used to judge the quality of a model. These
-include Mallow's \\(C_p\\), Akaike information criterion (AIC), Bayesian
+include Mallow's \\(C\_p\\), Akaike information criterion (AIC), Bayesian
 information criterion (BIC), and adjusted \\(R^2\\).
 
 There are \\(2^p\\) models that contains a subset of \\(p\\) variables. Unless
@@ -485,27 +496,27 @@ decrease in RSS is small relative to the increase in \\(p\\).
 
 Once we have fit the multiple regression model, it is straightforward
 to predict the response \\(Y\\) on the basis of a set of values for
-predictors \\(X_1, X_2, \dots, X_p\\). However, there are 3 sorts of
+predictors \\(X\_1, X\_2, \dots, X\_p\\). However, there are 3 sorts of
 uncertainty associated with this prediction:
 
-1.  The coefficient estimates \\(\hat{\beta_0}, \hat{\beta_1}, \dots,
-    \hat{\beta_p}\\) are estimates for \\(\beta_0, \beta_1, \dots,
-    \beta_p\\).
+1.  The coefficient estimates \\(\hat{\beta\_0}, \hat{\beta\_1}, \dots,
+       \hat{\beta\_p}\\) are estimates for \\(\beta\_0, \beta\_1, \dots,
+       \beta\_p\\).
 
 That is, the least squares plane:
 
 \begin{equation}
-\hat{Y} = \hat{\beta_0} + \hat{\beta_1}X_1 + \dots + \hat{\beta_p}X_p
+  \hat{Y} = \hat{\beta\_0} + \hat{\beta\_1}X\_1 + \dots + \hat{\beta\_p}X\_p
 \end{equation}
 
-is only an estimate for the true
+ is only an estimate for the true
 population regression plane:
 
 \begin{equation}
-f(X) = \beta_0 + \beta_1 X_1 + \dots + \beta_p X_p
+  f(X) = \beta\_0 + \beta\_1 X\_1 + \dots + \beta\_p X\_p
 \end{equation}
 
-This inaccuracy is related to the reducible error. We can compute a
+ This inaccuracy is related to the reducible error. We can compute a
 confidence interval in order to determine how close \\(\hat{Y}\\) will be
 to \\(f(X)\\).
 
@@ -520,6 +531,7 @@ to \\(f(X)\\).
     confidence intervals, because they incorporate both the error in
     the estimate for \\(f(X)\\), and the irreducible error.
 
+
 ### Qualitative Variables {#qualitative-variables}
 
 Thus far our discussion had been limited to quantitative variables.
@@ -530,16 +542,17 @@ For variables that take on only two values, we can create a dummy
 variable of the form (for example in gender):
 
 \begin{equation}
-x_i = \begin{cases}
-1 & \text{if ith person is female} \\\\\\
-0 & \text{if ith person is male}
-\end{cases}
+  x\_i = \begin{cases}
+    1 & \text{if ith person is female} \\\\\\
+    0 & \text{if ith person is male}
+    \end{cases}
 \end{equation}
 
 and use this variable as a predictor in the equation. We can also use
 the {-1, 1} encoding. For qualitative variables that take on more than
 2 values, a single dummy variable cannot represent all values. We can
 add additional variables, essentially performing a one-hot encoding.
+
 
 ### Extending the Linear Model {#extending-the-linear-model}
 
@@ -550,16 +563,16 @@ highly restrictive assumptions that are often violated in practice.
 The two most important assumptions of the linear regression model are
 that the relationship between the response and the predictors are:
 
-1.  _additive_: the effect of changes in a predictor \\(X_j\\) on the
+1.  _additive_: the effect of changes in a predictor \\(X\_j\\) on the
     response \\(Y\\) are independent of the values of the other predictors.
 2.  _linear_: the change in the response \\(Y\\) due to a one-unit change in
-    \\(X_j\\) is constant, regardless of the value of \\(X_j\\)
+    \\(X\_j\\) is constant, regardless of the value of \\(X\_j\\)
 
 How can we remove the additive assumption? We can add an interaction
-term for two variables \\(X_i\\) and \\(X_j\\) as follows:
+term for two variables \\(X\_i\\) and \\(X\_j\\) as follows:
 
 \begin{equation}
-\hat{Y_2} = \hat{Y_1} + \beta\_{p+1} X_i X_j
+\hat{Y\_2} = \hat{Y\_1} + \beta\_{p+1} X\_i X\_j
 \end{equation}
 
 We can analyze the importance of the interaction term by looking at
@@ -570,6 +583,7 @@ significant.
 
 How can we remove the assumption of linearity? A simple way is to use
 polynomial regression.
+
 
 ### Potential Problems {#potential-problems}
 
@@ -583,12 +597,13 @@ problems may occur. Most common among these are the following:
 5.  High-leverage points
 6.  Collinearity
 
+
 #### Non-linearity of the Data {#non-linearity-of-the-data}
 
 The assumption of a linear relationship between response and
 predictors aren't always true. _Residual plots_ are a useful graphical
 tool for identifying non-linearity. This is obtained by plotting the
-residuals \\(e_i = y_i - \hat{y_i}\\) versus the predictor \\(x_i\\). Ideally
+residuals \\(e\_i = y\_i - \hat{y\_i}\\) versus the predictor \\(x\_i\\). Ideally
 the residual plot will show no discernible pattern. The presence of a
 pattern may indicate a problem with some aspect of the linear model.
 
@@ -596,13 +611,15 @@ If the residual plots show that there are non-linear associations in
 the data, then a simple approach is to use non-linear transformations
 of the predictors, such as \\(\log X\\), \\(\sqrt{X}\\) and \\(X^2\\).
 
+
 #### Correlation of Error Terms {#correlation-of-error-terms}
 
 An important assumption of the linear regression model is that the
-error terms, \\(\epsilon_1, \epsilon_2, \dots, \epsilon_p\\) are
-uncorrelated. The standard errors for the estimated regression
+error terms, \\(\epsilon\_1, \epsilon\_2, \dots, \epsilon\_p\\) are
+uncorrelated.  The standard errors for the estimated regression
 coefficients are computed based on this assumption. This is mostly
 mitigated by proper experiment design.
+
 
 #### Non-constant Variance of Error Terms {#non-constant-variance-of-error-terms}
 
@@ -613,10 +630,11 @@ residual plot.
 
 {{< figure src="/ox-hugo/screenshot_2019-01-08_15-14-34.png" caption="Figure 2: Left: the funnel shape indicates heteroscedasticity, Right: the response has been log transformed, and there is now no evidence of heteroscedasticity" >}}
 
+
 #### Outliers {#outliers}
 
-An outlier is a point from which \\(y_i\\) is far from the value predicted
-by the model. It is atypical for an outlier that does not have an
+An outlier is a point from which \\(y\_i\\) is far from the value predicted
+by the model.  It is atypical for an outlier that does not have an
 unusual predictor value to have little effect on the least squares
 fit. However, it can cause other problems, such as dramatically
 altering the computed values of RSE, \\(R^2\\) and p-values.
@@ -626,18 +644,20 @@ simply remove the observation, but care must be taken to first
 identify whether the outlier is indicative of a deficiency with the
 model, such as a missing predictor.
 
+
 #### High Leverage Points {#high-leverage-points}
 
-Observations with high leverage have an unusual value for \\(x_i\\).
+Observations with high leverage have an unusual value for \\(x\_i\\).
 High leverage observations typically have a substantial impact on the
 regression line. These are easy to identify, by looking for values
 outside the normal range of the observations. We can also compute the
 leverage statistic. for a simple linear regression:
 
 \begin{equation}
-h_i = \frac{1}{n} + \frac{(x_i - \bar{x_i})^2}{\sum\_{i' =
-1}^n(x\_{i'} - \bar{x})^2}
+  h\_i = \frac{1}{n} + \frac{(x\_i - \bar{x\_i})^2}{\sum\_{i' =
+      1}^n(x\_{i'} - \bar{x})^2}
 \end{equation}
+
 
 #### Collinearity {#collinearity}
 
@@ -660,44 +680,46 @@ correlation matrix: it is possible for collinearity to exist between
 three or more variables even if no pairs of variables has a
 particularly high correlation. This situation is called
 _multicollinearity_. We instead compute the _variance inflation factor_
-(VIF). The VIF is the ratio of the variance of \\(\hat{\beta_j}\\) when
-fitting the full model divided by the variance of \\(\hat{\beta_j}\\) if
+(VIF). The VIF is the ratio of the variance of \\(\hat{\beta\_j}\\) when
+fitting the full model divided by the variance of \\(\hat{\beta\_j}\\) if
 fit on its own. The smallest possible value for VIF is 1, indicating a
 complete absence of collinearity. As a rule of thumb, a VIF exceeding
 values of 5 or 10 indicates a problematic amount of collinearity.
 
 \begin{equation} \label{eqn:dfn:vif}
-\mathrm{VIF}(\hat{\beta_j}) = \frac{1}{1-R^2\_{X_j|X\_{-j}}}
+  \mathrm{VIF}(\hat{\beta\_j}) = \frac{1}{1-R^2\_{X\_j|X\_{-j}}}
 \end{equation}
 
-where \\(R^2\_{X_j|X\_{-j}}\\) is the regression of \\(X_j\\) onto all of the
+where \\(R^2\_{X\_j|X\_{-j}}\\) is the regression of \\(X\_j\\) onto all of the
 other predictors.
 
 The data consists of \\(n\\) observations on a dependent or response
 variable \\(Y\\), and \\(p\\) predictor or explanatory variables. The
-relationship between \\(Y\\) and \\(X_1, X_2, \dots, X_p\\) is represented by:
+relationship between \\(Y\\) and \\(X\_1, X\_2, \dots, X\_p\\) is represented by:
+
 
 ## Linear Basis Function Models {#linear-basis-function-models}
 
 We can extend the class of models by considering linear combinations of fixed non-linear functions of the input variables, of the form:
 
 \begin{equation}
-y(\mathbf{x}, \mathbf{w}) = w_0 + \sum\_{j=1}^{M-1} w_j
-\phi_j(\mathbf{x}) = \mathbf{w}^T\mathbf{\phi}(\mathbf{x})
+  y(\mathbf{x}, \mathbf{w}) = w\_0 + \sum\_{j=1}^{M-1} w\_j
+  \phi\_j(\mathbf{x}) = \mathbf{w}^T\mathbf{\phi}(\mathbf{x})
 \end{equation}
 
 There are many choices on non-linear basis functions, such as the
 Gaussian basis function:
 
 \begin{equation}
-\phi_j(x) = \mathrm{exp}\left\\{ - \frac{(x - \mu_j)^2}{2s^2} \right\\}
+  \phi\_j(x) = \mathrm{exp}\left\\{ - \frac{(x - \mu\_j)^2}{2s^2} \right\\}
 \end{equation}
 
 or the sigmoidal basis function:
 
 \begin{equation}
-\phi_j(x) = \sigma\left( \frac{x - \mu_j}{s} \right)
+\phi\_j(x) = \sigma\left( \frac{x - \mu\_j}{s} \right)
 \end{equation}
+
 
 ## Regression Diagnostics {#regression-diagnostics}
 
@@ -707,22 +729,23 @@ The distribution theory, confidence intervals, and tests of hypotheses
 are valid and have meaning only if the standard regression assumptions
 are satisfied.
 
+
 ### The Standard Regression Assumptions {#the-standard-regression-assumptions}
 
 **Assumptions about the form of the model**: The model that relates the
-response \\(Y\\) to the predictors \\(X_1, X_2, \dots, X_p\\) is assumed to
-be linear in the regression parameters \\(\beta_0, \beta_1, \dots,
-\beta_p\\) respectively:
+   response \\(Y\\) to the predictors \\(X\_1, X\_2, \dots, X\_p\\) is assumed to
+   be linear in the regression parameters \\(\beta\_0, \beta\_1, \dots,
+   \beta\_p\\) respectively:
 
 \begin{equation}
-Y = \beta_0 + \beta_1X_1 + \dots + \beta_pX_p + \epsilon
+  Y = \beta\_0 + \beta\_1X\_1 + \dots + \beta\_pX\_p + \epsilon
 \end{equation}
 
 which implies that the ith observation can be written as:
 
 \begin{equation}
-y\_{i} = \beta_0 + \beta_1x\_{i1} + \dots \beta_px\_{ip} + \epsilon_i,
-i = 1,2,\dots,n
+  y\_{i} = \beta\_0 + \beta\_1x\_{i1} + \dots \beta\_px\_{ip} + \epsilon\_i,
+  i = 1,2,\dots,n
 \end{equation}
 
 Checking the linearity assumption can be done by examining the scatter
@@ -730,49 +753,49 @@ plot of \\(Y\\) versus \\(X\\), but linearity in multiple regression is more
 difficult due to the high dimensionality of the data. In some cases,
 data transformations can lead to linearity.
 
-**Assumptions about the errors**: The errors \\(\epsilon_1, \epsilon_2,
-\dots, \epsilon_n\\) are assumed to be independently and identically
-distributed normal random variables each with mean zero and a
-common variance \\(\sigma^2\\). Four assumptions are made here:
+**Assumptions about the errors**: The errors \\(\epsilon\_1, \epsilon\_2,
+  \dots, \epsilon\_n\\) are assumed to be independently and identically
+  distributed normal random variables each with mean zero and a
+  common variance \\(\sigma^2\\). Four assumptions are made here:
 
-- The error \\(\epsilon_i\\) has a normal distribution. This normality
-  assumption can be validated by examining appropriate graphs of
-  the residuals.
+-   The error \\(\epsilon\_i\\) has a normal distribution. This normality
+    assumption can be validated by examining appropriate graphs of
+    the residuals.
 
-- The errors \\(\epsilon_i\\) have mean 0.
+-   The errors \\(\epsilon\_i\\) have mean 0.
 
-- The errors \\(\epsilon_i\\) have the same (but unknown) variance
-  \\(\sigma^2\\). This is the constant variance assumption, also known
-  as the homogeneity or homoscedasticity assumption. When this
-  assumption does not hold, the problem is called the heterogeneity
-  or the heteroscedasticity problem.
+-   The errors \\(\epsilon\_i\\) have the same (but unknown) variance
+    \\(\sigma^2\\). This is the constant variance assumption, also known
+    as the homogeneity or homoscedasticity assumption. When this
+    assumption does not hold, the problem is called the heterogeneity
+    or the heteroscedasticity problem.
 
-- The errors \\(\epsilon_i\\) are independent of each other. When this
-  assumption doesn't hold, we have the auto-correlation problem.
+-   The errors \\(\epsilon\_i\\) are independent of each other. When this
+    assumption doesn't hold, we have the auto-correlation problem.
 
 **Assumption about the predictors**: Three assumptions are made here:
 
-- The predictor variables \\(X_1, X_2, \dots, X_p\\) are nonrandom. This
-  assumption is satisfied only when the experimenter can set the
-  values of the predictor variables at predetermined levels. When
-  the predictor variables are random variables, all inferences are
-  conditional, conditioned on the observed data.
+-   The predictor variables \\(X\_1, X\_2, \dots, X\_p\\) are nonrandom. This
+    assumption is satisfied only when the experimenter can set the
+    values of the predictor variables at predetermined levels. When
+    the predictor variables are random variables, all inferences are
+    conditional, conditioned on the observed data.
 
-- The values \\(x\_{1j}, x\_{2j}, \dots, x\_{nj}\\) are measured without
-  error. This assumption is hardly ever satisfied, and errors in
-  measurement will affect the residual variance, the multiple
-  correlation coefficient, and the individual estimates of the
-  regression coefficients. Correction for measurement errors of the
-  estimated regression coefficients, even in the simplest case
-  where all measurement errors are uncorrelated, requires a
-  knowledge of the ratio between the variances and the random
-  error. These quantities are seldom known.
+-   The values \\(x\_{1j}, x\_{2j}, \dots, x\_{nj}\\) are measured without
+    error. This assumption is hardly ever satisfied, and errors in
+    measurement will affect the residual variance, the multiple
+    correlation coefficient, and the individual estimates of the
+    regression coefficients. Correction for measurement errors of the
+    estimated regression coefficients, even in the simplest case
+    where all measurement errors are uncorrelated, requires a
+    knowledge of the ratio between the variances and the random
+    error. These quantities are seldom known.
 
-- The predictor variables \\(X_1, X_2, \dots, X_p\\) are assumed to be
-  linearly independent of each other. This assumption is required
-  to guarantee the uniqueness of the least squares solution. If
-  this assumption is violated, the problem is referred to as the
-  collinearity problem.
+-   The predictor variables \\(X\_1, X\_2, \dots, X\_p\\) are assumed to be
+    linearly independent of each other. This assumption is required
+    to guarantee the uniqueness of the least squares solution. If
+    this assumption is violated, the problem is referred to as the
+    collinearity problem.
 
 **Assumption about the observations**: All observations are equally
 reliable and have an approximately equal role in determining the
@@ -782,6 +805,7 @@ A feature of the method of least squares is that minor violations of
 the underlying assumptions do not invalidate the inferences or
 conclusions drawn from the analysis in a major way. However, gross
 violations can severely distort conclusions.
+
 
 ### Types of Residuals {#types-of-residuals}
 
@@ -796,28 +820,28 @@ When fitting the linear model to a set of data by least squares, we
 obtain the fitted values:
 
 \begin{equation}
-\hat{y}\_i = \hat{\beta}\_0 + \hat{\beta}1 x\_{i1} +\dots +
-\hat{\beta}\_p x\_{ip}
+  \hat{y}\_i = \hat{\beta}\_0 + \hat{\beta}1 x\_{i1} +\dots +
+  \hat{\beta}\_p x\_{ip}
 \end{equation}
 
 and the corresponding ordinary least squares residuals:
 
 \begin{equation}
-e_i = y_i - \hat{y}\_i
+e\_i = y\_i - \hat{y}\_i
 \end{equation}
 
 The fitted values can also be written in an alternative form as:
 
 \begin{equation}
-\hat{y_i} = p\_{i1}y_1 + p\_{i2}y_2 + \dots + p\_{in}y_n
+\hat{y\_i} = p\_{i1}y\_1 + p\_{i2}y\_2 + \dots + p\_{in}y\_n
 \end{equation}
 
 where the \\(p\_{ij}\\) are quantities that depend only on the values of
 the predictor variables. In simple regression \\(p\_{ij}\\) is given by:
 
 \begin{equation}
-p\_{ij} = \frac{1}{n} + \frac{\left( x_i + \overline{x} \right)
-\left( x_j - \overline{x} \right)}{\sum (x_i - \overline{x})^2}
+  p\_{ij} = \frac{1}{n} + \frac{\left( x\_i + \overline{x} \right)
+    \left( x\_j - \overline{x} \right)}{\sum (x\_i - \overline{x})^2}
 \end{equation}
 
 In multiple regression the \\(p\_{ij}\\) are elements of matrix known as
@@ -826,26 +850,26 @@ the hat or projection matrix.
 The value \\(p\_{ii}\\) is called the leverage value for the ith
 observation, because \\(\hat{y}\_i\\) is a weighted sum of all the
 observations in \\(Y\\) and \\(p\_{ii}\\) is the weight (leverage) given to
-\\(y_i\\) in determining the ith fitted value \\(\hat{y}\_i\\). Thus, we have
+\\(y\_i\\) in determining the ith fitted value \\(\hat{y}\_i\\). Thus, we have
 \\(n\\) leverage values, and they are denoted by:
 
 \begin{equation}
-p\_{11}, p\_{22}, \dots, p\_{nn}
+  p\_{11}, p\_{22}, \dots, p\_{nn}
 \end{equation}
 
-When the standard assumptions hold, the ordinary residuals, \\(e_1, e_2,
-\dots, e_n\\) will sum to zero, but they will not have the same variance
+When the standard assumptions hold, the ordinary residuals, \\(e\_1, e\_2,
+\dots, e\_n\\) will sum to zero, but they will not have the same variance
 because:
 
 \begin{equation}
-\textrm{Var}(e_i) = \sigma^2\left( 1 - p\_{ii} \right)
+  \textrm{Var}(e\_i) = \sigma^2\left( 1 - p\_{ii} \right)
 \end{equation}
 
 To over come the problem of unequal variances, we standardize the ith
-residual \\(e_i\\) by dividing by its standard deviation:
+residual \\(e\_i\\) by dividing by its standard deviation:
 
 \begin{equation}
-z_i = \frac{e_i}{\sigma \sqrt{1 - p\_{ii}}}
+  z\_i = \frac{e\_i}{\sigma \sqrt{1 - p\_{ii}}}
 \end{equation}
 
 This is called the ith standardized residual because it has mean zero
@@ -854,8 +878,8 @@ and standard deviation 1. The standardized residuals depend on
 \\(\sigma^2\\) is given by:
 
 \begin{equation}
-\hat{\sigma}^2 = \frac{\sum e_i^2}{n - p - 1} = \frac{\sum (y_i -
-\hat{y}\_i)^2}{n - p - 1} = \frac{\textrm{SSE}}{n -p-1}
+  \hat{\sigma}^2 = \frac{\sum e\_i^2}{n - p - 1} = \frac{\sum (y\_i -
+    \hat{y}\_i)^2}{n - p - 1} = \frac{\textrm{SSE}}{n -p-1}
 \end{equation}
 
 An alternative unbiased estimate of \\(\sigma^2\\) is given by:
@@ -870,17 +894,17 @@ model to the n - 1 observations by omitting the ith observation.
 Using \\(\hat{\sigma}\\) as an estamite of \\(\sigma\\), we obtain:
 
 \begin{equation}
-r_i = \frac{e_i}{\hat{\sigma}\sqrt{1 - p\_{ii}}}
+  r\_i = \frac{e\_i}{\hat{\sigma}\sqrt{1 - p\_{ii}}}
 \end{equation}
 
 which we term the internally studentized residual. Using teh other
 unbiased estimate, we get:
 
 \begin{equation}
-r_i^\* = \frac{e_i}{\hat{\sigma\_{(i)}}\sqrt{1 - p\_{ii}}}
+  r\_i^\* = \frac{e\_i}{\hat{\sigma\_{(i)}}\sqrt{1 - p\_{ii}}}
 \end{equation}
 
-which is a monotonic transformation of \\(r_i\\). This is termed the
+which is a monotonic transformation of \\(r\_i\\). This is termed the
 externally studentized residual. The standardized residuals do not sum
 to zero, but they all have the same variance.
 
@@ -891,7 +915,9 @@ normal distribution. The residuals are not strictly independently distributed, b
 with a large number of observations, the lack of independence may be
 ignored.
 
+
 ### Graphical methods {#graphical-methods}
+
 
 #### Before fitting the model {#before-fitting-the-model}
 
@@ -903,10 +929,10 @@ There are four categories of graphs:
 One-dimensional graphs give a general idea of the distribution of each
 individual variable. One of the following graphs may be used:
 
-- histogram
-- stem-and-leaf display
-- dot-plot
-- box-plot
+-   histogram
+-   stem-and-leaf display
+-   dot-plot
+-   box-plot
 
 These graphs indicate whether the variable is symmetric, or skewed.
 When a variable is skewed, it should be transformed, generally
@@ -928,6 +954,7 @@ may or may not show linear patterns.
 Beyond these, there are rotation plots and dynamic graphs which serve
 as powerful visualizations of the data in more than 2 dimensions.
 
+
 #### Graphs after fitting a model {#graphs-after-fitting-a-model}
 
 The graphs after fitting a model help check the assumptions and assess
@@ -941,41 +968,43 @@ discussed in the previous section. However, this quickly becomes
 difficult with many predictor variables. Plotting the standardized
 residuals can help check the linearity and normality assumptions.
 
-- Normal probability plot of the standardized residuals: This is a
-  plot of the ordered standardized residuals versus the normal scores.
-  The normal scores are what we would expect to obtain if we take a
-  sample of size \\(n\\) from a standard normal distribution. If the
-  residuals are normally distributed, the ordered residuals should be
-  approximately the same as the ordered normal scores. Under the
-  normality assumption, this plot should resemble a straight line with
-  intercept zero and slope of 1.
+-   Normal probability plot of the standardized residuals: This is a
+    plot of the ordered standardized residuals versus the normal scores.
+    The normal scores are what we would expect to obtain if we take a
+    sample of size \\(n\\) from a standard normal distribution. If the
+    residuals are normally distributed, the ordered residuals should be
+    approximately the same as the ordered normal scores. Under the
+    normality assumption, this plot should resemble a straight line with
+    intercept zero and slope of 1.
 
-- Scatter plots of the standardized residual against each of the
-  predictor variables: Under the standard assumptions, the
-  standardized residuals are uncorrelated with each of the predictor
-  variables. If the assumptions hold, the plot should be a random
-  scatter of points.
+-   Scatter plots of the standardized residual against each of the
+    predictor variables: Under the standard assumptions, the
+    standardized residuals are uncorrelated with each of the predictor
+    variables. If the assumptions hold, the plot should be a random
+    scatter of points.
 
-- Scatter plot of the standardized residual versus the fitted values:
-  Under the standard assumptions, the standardized residuals are also
-  uncorrelated with the fitted values. Hence, this plot should also be
-  a random scatter of points.
+-   Scatter plot of the standardized residual versus the fitted values:
+    Under the standard assumptions, the standardized residuals are also
+    uncorrelated with the fitted values. Hence, this plot should also be
+    a random scatter of points.
 
-- Index plot of the standardized residuals: we display the
-  standardized residuals versus the observation number. If the order
-  in which the observations were taken is immaterial, this plot is not
-  needed. However, if the order is important, a plot of the residuals
-  in serial order may be used to check the assumption of the
-  independence of the errors.
+-   Index plot of the standardized residuals: we display the
+    standardized residuals versus the observation number. If the order
+    in which the observations were taken is immaterial, this plot is not
+    needed. However, if the order is important, a plot of the residuals
+    in serial order may be used to check the assumption of the
+    independence of the errors.
 
 {{< figure src="/ox-hugo/screenshot_2019-03-27_21-15-45.png" caption="Figure 4: Scatter plots of residuals: (a) shows nonlinearity, and (b) shows heterogeneity" >}}
 
+
 ## References {#references}
 
-([Chatterjee and Hadi, n.d.](#org9262c5b); [James et al., n.d.](#orgf1e56a5))
+([Chatterjee and Hadi, n.d.](#org68f8fa5); [James et al., n.d.](#org3984e3b))
+
 
 ## Bibliography {#bibliography}
 
-<a id="org9262c5b"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
+<a id="org68f8fa5"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
 
-<a id="orgf1e56a5"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+<a id="org3984e3b"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.

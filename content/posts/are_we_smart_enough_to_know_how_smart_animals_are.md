@@ -14,9 +14,10 @@ personal rating
 : 4/5
 
 tags
-: [Books]({{<relref "books.md" >}}), [Neuroscience ⭐]({{<relref "neuroscience.md" >}})
+: [Books]({{<relref "books.md#" >}}), [Neuroscience ⭐]({{<relref "neuroscience.md#" >}})
 
 Why is it that facial expression is universally consistent?
+
 
 ## Language As Root Of Thought {#language-as-root-of-thought}
 
@@ -30,11 +31,13 @@ cognitive function without an equally powerful language.
 As humans, we are able to use language to communicate ideas that
 transcend time, and this has been essential for our survival.
 
+
 ## The Social Brain Hypothesis {#the-social-brain-hypothesis}
 
 The intelligence required to effectively deal with social networks may
 explain why the primate order underwent its remarkable brain
 expansion.
+
 
 ## Consciousness {#consciousness}
 
@@ -43,10 +46,12 @@ access the past and the future, but recent evidence shows otherwise.
 Either animals also posses consciousness, or consciousness is not a
 necessary ingredient for such introspection.
 
+
 ## Names {#names}
 
 Some species like dolphins use _signature whistles_, which is
 analogous to human names.
+
 
 ## Studying cognition {#studying-cognition}
 

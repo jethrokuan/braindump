@@ -6,10 +6,10 @@ draft = false
 +++
 
 tags
-: [Business]({{<relref "business.md" >}})
+: [Business]({{<relref "business.md#" >}})
 
 author
-: [Courtland Allen]({{<relref "courtland_allen.md" >}})
+: [Courtland Allen]({{<relref "courtland_allen.md#" >}})
 
 Executing the ideas require being strong in four main components:
 
@@ -17,6 +17,7 @@ Executing the ideas require being strong in four main components:
 2.  The distribution channel to reach customers
 3.  The monetization model
 4.  The solution to the problem (aka the product or service)
+
 
 ## What makes a good problem? {#what-makes-a-good-problem}
 
@@ -29,6 +30,7 @@ Executing the ideas require being strong in four main components:
 Always first search for a good problem. It may help to look at what
 people are allready paying money for.
 
+
 ## Avoid Common Mistakes {#avoid-common-mistakes}
 
 1.  Don't start with a solution in mind
@@ -36,25 +38,27 @@ people are allready paying money for.
 3.  Don't rule out high-value problems
 4.  Have a customer in mind
 
+
 ## Don't Skip Distribution {#don-t-skip-distribution}
 
 Knowing how to reach customers is important. There aren't many
 channels to investigate, so go through them all. Some examples of
 channels are:
 
-- SEO
-- press
-- content marketing
-- social media
-- sales
-- partnerships
-- ads
+-   SEO
+-   press
+-   content marketing
+-   social media
+-   sales
+-   partnerships
+-   ads
+
 
 ## Thinking about solutions {#thinking-about-solutions}
 
-- Solve problems in the opposite way of competitors
-- Solutions should be built on first principles
-- Product-market fit
-  - Stripe focus heavily on API design and documentation, because its
-    market is developers
-- Product-distribution fit
+-   Solve problems in the opposite way of competitors
+-   Solutions should be built on first principles
+-   Product-market fit
+    -   Stripe focus heavily on API design and documentation, because its
+        market is developers
+-   Product-distribution fit

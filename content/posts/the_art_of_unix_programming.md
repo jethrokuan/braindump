@@ -14,28 +14,28 @@ personal rating
 : 5/5
 
 tags
-: [Books]({{<relref "books.md" >}})
+: [Books]({{<relref "books.md#" >}})
 
 In The Art of Unix Programming, Ken Thompson was quoted to have
 provided the following design rules:
 
-- Build modular programs
-- Write readable programs
-- Use composition
-- Separate mechanisms from policy
-- Write simple programs
-- Write small programs
-- Write transparent programs
-- Write robust programs
-- Make data complicated when required, not the program
-- Build on potential users’ expected knowledge
-- Avoid unnecessary output
-- Write programs which fail in a way easy to diagnose
-- Value developer time over machine time
-- Write abstract programs that generate code instead of writing code by hand
-- Prototype software before polishing it
-- Write flexible and open programs
-- Make the program and protocols extensible
+-   Build modular programs
+-   Write readable programs
+-   Use composition
+-   Separate mechanisms from policy
+-   Write simple programs
+-   Write small programs
+-   Write transparent programs
+-   Write robust programs
+-   Make data complicated when required, not the program
+-   Build on potential users’ expected knowledge
+-   Avoid unnecessary output
+-   Write programs which fail in a way easy to diagnose
+-   Value developer time over machine time
+-   Write abstract programs that generate code instead of writing code by hand
+-   Prototype software before polishing it
+-   Write flexible and open programs
+-   Make the program and protocols extensible
 
 Particularly fascinating was the point on separating mechanisms from
 policy. The argument is that mechanisms don’t evolve as quickly as

@@ -4,7 +4,7 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-Smoothed [Spiking Neural Networks]({{<relref "spiking_neural_networks.md" >}}) ensure well-behaved gradients which are
+Smoothed [Spiking Neural Networks]({{<relref "spiking_neurons_lit_review.md#" >}}) ensure well-behaved gradients which are
 directly suitable for optimization. They come in 4 categories:
 
 1.  Soft non-linearity models
@@ -12,18 +12,20 @@ directly suitable for optimization. They come in 4 categories:
 3.  Models relying on rate or
 4.  Single-spike temporal codes
 
+
 ## Soft non-linearity models {#soft-non-linearity-models}
 
 This approach can be applied on all spiking neuron models which
 include a smooth spike generating process. These include:
 
-- Hodgkin-Huxley
-- Morris-Lecar
-- FitzHugh-Nagumo
+-   Hodgkin-Huxley
+-   Morris-Lecar
+-   FitzHugh-Nagumo
 
 The resultant network can be optimized using standard methods of BPTT.
 These smoothed models compromise on a key feature of SNNs: binary
 spike propagation.
+
 
 ## Probabilistic Models {#probabilistic-models}
 
@@ -35,6 +37,7 @@ studied in Restricted Boltzmann machines.
 With probabilistic models, the log-likelihood of a spike train is a
 smooth quantity, which can be optimized using gradient-descent.
 
+
 ## Gradients in rate-coding networks {#gradients-in-rate-coding-networks}
 
 In rate-coding networks, it is assumed that the spike rate carries the
@@ -45,6 +48,7 @@ firing rates, or longer averaging times.
 
 Probabilistic network implementations also use rate-coding at the
 output level.
+
 
 ## Single-spike-time-coding networks {#single-spike-time-coding-networks}
 

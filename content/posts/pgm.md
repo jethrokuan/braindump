@@ -47,6 +47,7 @@ only rarely provide a deterministic specification of the behaviour of
 a complex system. Probabilistic models allow us to make this explicit,
 and therefore provide a model that is more faithful to reality.
 
+
 ## Graphical Representation {#graphical-representation}
 
 Probabilistic graphical models use a graph-based representation as the
@@ -57,10 +58,11 @@ direct probabilistic interactions between them.
 
 {{< figure src="/ox-hugo/screenshot_2019-02-09_17-01-23.png" caption="Figure 1: Different perspectives on probabilistic graphical models" >}}
 
+
 ## Bayesian Networks {#bayesian-networks}
 
 The goal is to represent a joint distribution \\(P\\) over some set of
-random variables \\(\left\\{X_1, \dots, X_n\right\\}\\). Even in the
+random variables \\(\left\\{X\_1, \dots, X\_n\right\\}\\). Even in the
 simplest case where these numbers are binary-valued, a joint
 distribution requires the specification of \\(2^n-1\\) numbers. For all
 but the smallest \\(n\\), the joint distribution in unmanageable from
@@ -83,9 +85,9 @@ Bayesian networks build on the same intuitions as the naive Bayes
 model by exploiting conditional independence properties of the
 distribution in order to allow a compact and natural representation.
 The core of the Bayesian network representation is the directed graph
-\\(G = (V,E)\\) together with a random variable \\(x_i\\) for each node \\(i \in
-V\\), one conditional probability distribution (CPD) p(x_i | x<sub>A_i</sub>)
-per node, specifying the probability of \\(x_i\\) conditioned on its
+\\(G = (V,E)\\) together with a random variable \\(x\_i\\) for each node \\(i \in
+V\\), one conditional probability distribution (CPD) p(x\_i | x<sub>A\_i</sub>)
+per node, specifying the probability of \\(x\_i\\) conditioned on its
 parent's values.
 
 {{< figure src="/ox-hugo/screenshot_2019-02-09_17-26-56.png" caption="Figure 2: Example of a Bayesian Network graph" >}}
@@ -99,6 +101,7 @@ This graph \\(G\\) can be viewed in two very different ways:
 
 These two views, are in a strong sense, equivalent.
 
+
 ### Bayesian Network Semantics {#bayesian-network-semantics}
 
 We can formally define the Bayesian network structure as follows:
@@ -106,20 +109,20 @@ We can formally define the Bayesian network structure as follows:
 <div class="definition">
   <div></div>
 
-Let \\(\mathrm{Pa}\_{X_i}^G\\) denote the parents of \\(X_i\\) in G, and
-\\(\mathrm{NonDescendants}\_{X_i}\\) denote the variables in the graph that
-are not descendants of \\(X_i\\). Then \\(G\\) encodes the following set of
+Let \\(\mathrm{Pa}\_{X\_i}^G\\) denote the parents of \\(X\_i\\) in G, and
+\\(\mathrm{NonDescendants}\_{X\_i}\\) denote the variables in the graph that
+are not descendants of \\(X\_i\\). Then \\(G\\) encodes the following set of
 independence assumptions, called the local independencies, denoted by
-\\(I_l(G)\\):
+\\(I\_l(G)\\):
 
 \begin{equation}
-\text{ For each variable } X_i: \left( X_i \perp \mathrm{NonDescendants}\_{X_i}
-| \mathrm{Pa}\_{X_i}^G \right)
+  \text{ For each variable } X\_i: \left( X\_i \perp \mathrm{NonDescendants}\_{X\_i}
+         | \mathrm{Pa}\_{X\_i}^G \right)
 \end{equation}
 
 </div>
 
-In other words, the local independencies state that each node \\(X_i\\) is
+In other words, the local independencies state that each node \\(X\_i\\) is
 conditionally independent of its nondescendants given its parents.
 
 The formal semantics of a Bayesian network graph is as a set of
@@ -130,6 +133,7 @@ distribution \\(P\\) satisfies the local independencies associated with a
 graph \\(G\\) if and only if \\(P\\) is representable as a set of CPDs
 associated with the graph \\(G\\). We begin by formalizing the basic
 concepts.
+
 
 #### I-Maps {#i-maps}
 
@@ -151,6 +155,7 @@ mislead us regarding independencies of \\(P\\): any independence that \\(G\\)
 asserts must also hold in \\(P\\). Conversely, \\(P\\) may have additional
 independencies not reflected in \\(G\\).
 
+
 #### I-Map to Factorization {#i-map-to-factorization}
 
 A BN structure \\(G\\) encodes a set of conditional independence
@@ -162,8 +167,8 @@ rule for probability, we can decompose the distribution in the
 following way:
 
 \begin{equation}
-P(I, D, G, L, S) = P(I) P(D|I) P(G|I, D) P(L | I, D, G) P(S | I, D,
-G, L)
+  P(I, D, G, L, S) = P(I) P(D|I) P(G|I, D) P(L | I, D, G) P(S | I, D,
+  G, L)
 \end{equation}
 
 This decomposition requires no assumptions. We may however be able to
@@ -173,11 +178,11 @@ We say that a distribution \\(P\\) over the same space factorizes
 according to a BN graph \\(G\\) if \\(P\\) can be expressed as a product:
 
 \begin{equation}
-P(X_1, \dots, X_n) = \prod\_{i=1}^{n} P(X_i | \mathrm{Pa}\_{X_i}^G).
+  P(X\_1, \dots, X\_n) = \prod\_{i=1}^{n} P(X\_i | \mathrm{Pa}\_{X\_i}^G).
 \end{equation}
 
 This equation is called the chain rule for BNs. The individual factors
-\\(P(X_i | \mathrm{Pa}\_{X_i}^G)\\) are called conditional probability
+\\(P(X\_i | \mathrm{Pa}\_{X\_i}^G)\\) are called conditional probability
 distributions (CPDs) or local probabilistic models.
 
 We can now show that if \\(G\\) is a BN structure over a set of random
@@ -186,35 +191,37 @@ then if \\(G\\) is an I-map for \\(P\\), \\(P\\) factorizes according to \\(G\\)
 
 **Proof**:
 
-Assume, without loss of generality, that \\(X_1, \dots, X_n\\) is a
+Assume, without loss of generality, that \\(X\_1, \dots, X\_n\\) is a
 topological ordering of the variables in \\(X\\) relative to \\(G\\). First,
 we use the chain rule for probabilities:
 
 \begin{equation}
-P(X_1, \dots, X_n) = \prod\_{i=1}^{n}P(X_i | X_1, \dots, X\_{i-1}).
+  P(X\_1, \dots, X\_n) = \prod\_{i=1}^{n}P(X\_i | X\_1, \dots, X\_{i-1}).
 \end{equation}
 
-Now consider one of the factors \\(P(X_i|X_1, \dots, X\_{i-1})\\). As \\(G\\)
-is an I-map for \\(P\\), we have \\((X_i \perp \mathrm{ND}\_{X_i} |
-\mathrm{Pa}\_{X_i}^G) \in I(P)\\). By assumption, all of \\(X_i\\)'s parents
-are in the set \\(X_1, \dots, X\_{i-1}\\). Furthermore, none of \\(X_i\\)'s
+Now consider one of the factors \\(P(X\_i|X\_1, \dots, X\_{i-1})\\). As \\(G\\)
+is an I-map for \\(P\\), we have \\((X\_i \perp \mathrm{ND}\_{X\_i} |
+\mathrm{Pa}\_{X\_i}^G) \in I(P)\\). By assumption, all of \\(X\_i\\)'s parents
+are in the set \\(X\_1, \dots, X\_{i-1}\\). Furthermore, none of \\(X\_i\\)'s
 descendants can possibly be in the set. Hence
 
 \begin{equation}
-\left\\{ X_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X_i} \in \mathbf{Z}
+  \left\\{ X\_1, \dots, X\_{i-1} \right\\} = \mathrm{Pa}\_{X\_i} \in \mathbf{Z}
 \end{equation}
 
-where \\(\mathbf{Z} \in \mathrm{ND}\_{X_i}\\). Form the local
-independencies for \\(X_i\\) and from the position property it follows
-that \\(X_i \perp \mathbf{Z} | \mathrm{Pa}\_{X_i}\\). Hence \\(P(X_i| X_1,
-\dots X\_{i-1}) = P(X_i | \mathrm{Pa}\_{X_i})\\).
+where \\(\mathbf{Z} \in \mathrm{ND}\_{X\_i}\\). Form the local
+independencies for \\(X\_i\\) and from the position property it follows
+that \\(X\_i \perp \mathbf{Z} | \mathrm{Pa}\_{X\_i}\\). Hence \\(P(X\_i| X\_1,
+\dots X\_{i-1}) = P(X\_i | \mathrm{Pa}\_{X\_i})\\).
 
 Applying this transformation to all of the factors in the chain rule
 decomposition gives the desired result.
 
+
 #### Factorization to I-map {#factorization-to-i-map}
 
 This is simple to prove, by manipulation of probabilities.
+
 
 ### Independencies in Graphs {#independencies-in-graphs}
 
@@ -228,6 +235,7 @@ structure.
 
 The immediate question that arises is whether there exist independence
 properties that we can read off directly from \\(G\\).
+
 
 #### D-separation {#d-separation}
 
@@ -257,29 +265,29 @@ following holds:
 
 Casual trail
 : \\(X \leftarrow Y \leftarrow Z, Y \not\in O\\) active
-iff \\(Y\\) is not observed
+    iff \\(Y\\) is not observed
 
 Evidential trail
 : \\(X \rightarrow Y \rightarrow Z, Y \not\in O\\)
-active iff \\(Y\\) is not observed
+    active iff \\(Y\\) is not observed
 
 Common cause
 : \\(X \leftarrow Y \rightarrow Z, Y \not\in O\\) active
-iff \\(Y\\) is not observed
+    iff \\(Y\\) is not observed
 
 Common effect
 : \\(X \rightarrow Y \leftarrow Z, Y \text{ or any
-descendants} \in O\\) active iff either \\(Y\\) or one of
-\\(Y\\)'s descendants is observed
+                       descendants} \in O\\) active iff either \\(Y\\) or one of
+    \\(Y\\)'s descendants is observed
 
-Consider the general trail \\(X_1 \rightleftharpoons X_2
-\rightleftharpoons \dots \rightleftharpoons X_n\\). Let \\(\mathbf{Z}\\) be a
+Consider the general trail \\(X\_1 \rightleftharpoons X\_2
+\rightleftharpoons \dots \rightleftharpoons X\_n\\). Let \\(\mathbf{Z}\\) be a
 subset of observed variables. Then the trail is active given
 \\(\mathbf{Z}\\) if:
 
-- Whenever we have a v-structure \\(X\_{i-1} \rightarrow X_i \leftarrow
-  X\_{i+1}\\), then \\(X_i\\) or one of its descendants are in \\(\mathbf{Z}\\);
-- no other node along the trail is in \\(\mathbf{Z}\\).
+-   Whenever we have a v-structure \\(X\_{i-1} \rightarrow X\_i \leftarrow
+      X\_{i+1}\\), then \\(X\_i\\) or one of its descendants are in \\(\mathbf{Z}\\);
+-   no other node along the trail is in \\(\mathbf{Z}\\).
 
 Let \\(\mathbf{X}, \mathbf{Y}, \mathbf{Z}\\) be three sets of nodes in
 \\(\mathcal{G}\\). We say that \\(\mathbf{X}\\) and \\(\mathbf{Y}\\) are
@@ -291,8 +299,8 @@ if there is no active trail between any node \\(X \in \mathbf{X}\\), and
 correspond to d-separation:
 
 \begin{equation}
-\mathcal{I}(\mathcal{G}) = \left\\{ (\mathbf{X} \perp \mathbf{Y} |
-\mathbf{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z}) \right\\}
+  \mathcal{I}(\mathcal{G}) = \left\\{ (\mathbf{X} \perp \mathbf{Y} |
+    \mathbf{Z}) : \mathrm{d-sep}\_{\mathcal{G}}(\mathbf{X}; \mathbf{Y} | \mathbf{Z}) \right\\}
 \end{equation}
 
 This set is also called the set of _global Markov independencies_. These
@@ -301,53 +309,55 @@ every distribution over \\(G\\).
 
 A nice tutorial on d-separation can be found [here](http://bayes.cs.ucla.edu/BOOK-2K/d-sep.html).
 
+
 #### Markov Blanket {#markov-blanket}
 
-Consider a joint distribution \\(p(X_1, \dots, x_D)\\) represented by a
+Consider a joint distribution \\(p(X\_1, \dots, x\_D)\\) represented by a
 directed graph having \\(D\\) nodes. Consider the conditional distribution
-of a particular node with variables \\(x_i\\) conditioned on all the
+of a particular node with variables \\(x\_i\\) conditioned on all the
 remaining variables \\(x\_{j \ne i}\\). We have:
 
 \begin{equation}
-p(x_i | x\_{\\{j \ne i\\}}) = \frac{p(x_1, \dots, x_D)}{\int p(x_1,
-\dots, x_D) dx_i} = \frac{\prod\_{k}p(x_k | \textrm{pa}\_k)}{\prod_k
-p(x_k | \textrm{pa}\_k)dx_i}
+  p(x\_i | x\_{\\{j \ne i\\}}) = \frac{p(x\_1, \dots, x\_D)}{\int p(x\_1,
+    \dots, x\_D) dx\_i} = \frac{\prod\_{k}p(x\_k | \textrm{pa}\_k)}{\prod\_k
+  p(x\_k | \textrm{pa}\_k)dx\_i}
 \end{equation}
 
-We observe that any factor \\(p(x_k | \textrm{pa}\_k)\\) that does not have
-any functional dependence on \\(x_i\\) can be taken outside the integral,
+We observe that any factor \\(p(x\_k | \textrm{pa}\_k)\\) that does not have
+any functional dependence on \\(x\_i\\) can be taken outside the integral,
 and will therefore cancel between the numerator and the denominator.
 The only factors that will remain are the conditional distribution
-\\(p(x_i | \textrm{pa}\_i)\\) for the node \\(x_i\\) itself, and conditional
-distributions for any nodes \\(x_k\\) such that node \\(x_i\\) is in teh
-conditioning set of \\(p(x_k | \textrm{pa}\_k)\\), in other words for which
-\\(x_i\\) is a parent of \\(x_k\\). The conditional \\(p(x_i | \textrm{pa}\_i)\\)
-will depend on the parents of node \\(x_i\\), and the conditionals
-\\(p(x_k | \textrm{pa}\_k)\\) will depend on nthe children of \\(x_i\\), as
+\\(p(x\_i | \textrm{pa}\_i)\\) for the node \\(x\_i\\) itself, and conditional
+distributions for any nodes \\(x\_k\\) such that node \\(x\_i\\) is in teh
+conditioning set of \\(p(x\_k | \textrm{pa}\_k)\\), in other words for which
+\\(x\_i\\) is a parent of \\(x\_k\\). The conditional \\(p(x\_i | \textrm{pa}\_i)\\)
+will depend on the parents of node \\(x\_i\\), and the conditionals
+\\(p(x\_k | \textrm{pa}\_k)\\) will depend on nthe children of \\(x\_i\\), as
 well as the co-parents: variables corresponding to parents of node
-\\(x_k\\) other than \\(x_i\\). This set of nodes is called the _Markov Blanket_.
+\\(x\_k\\) other than \\(x\_i\\). This set of nodes is called the _Markov Blanket_.
 
 {{< figure src="/ox-hugo/240px-Diagram_of_a_Markov_blanket.svg_2019-03-28_11-26-58.png" caption="Figure 3: An illustration of the Markov Blanket. ([Source](https://en.wikipedia.org/wiki/Markov%5Fblanket))" >}}
+
 
 ### Soundness and Completeness {#soundness-and-completeness}
 
 Soundness
 : If a distribution \\(P\\) factorizes according to \\(G\\), then
-\\(\mathcal{I}(G) \subseteq \mathcal{I}(P)\\).
+    \\(\mathcal{I}(G) \subseteq \mathcal{I}(P)\\).
 
 Completeness
 : If we have 2 variables \\(X\\) and \\(Y\\) that are
-independent given \\(\mathbf{Z}\\), then \\(X\\) and \\(Y\\) are
-d-separated. We find that this is ill-defined,
-because it does not specify the distribution in
-which \\(X\\) and \\(Y\\) are independent.
+    independent given \\(\mathbf{Z}\\), then \\(X\\) and \\(Y\\) are
+    d-separated. We find that this is ill-defined,
+    because it does not specify the distribution in
+    which \\(X\\) and \\(Y\\) are independent.
 
 Faithful
 : A distribution \\(P\\) is faithful to \\(G\\) if, whenever \\((X
-\perp Y | \mathbf{Z}) \in I(P)\\), then
-\\(\mathrm{d-sep}\_{G}(X;Y|\mathbf{Z})\\). Any independence
-in \\(P\\) is reflected in the d-separation properties of
-the graph.
+                  \perp Y | \mathbf{Z}) \in I(P)\\), then
+    \\(\mathrm{d-sep}\_{G}(X;Y|\mathbf{Z})\\). Any independence
+    in \\(P\\) is reflected in the d-separation properties of
+    the graph.
 
 The notion of faithfulness is the converse of our notion of soundness.
 However, it can be shown that this desirable property of faithfulness
@@ -376,6 +386,7 @@ In fact, for almost all distributions \\(P\\) that factorize over \\(G\\),
 that is for all distributions except for a set of measure zero in the
 space of CPD parameterizations, we have \\(I(P) = I(G)\\).
 
+
 ### An algorithm for d-separation {#an-algorithm-for-d-separation}
 
 There is a linear-time (in the size of the graph) algorithm for
@@ -402,6 +413,7 @@ between them.
 
 {{< figure src="/ox-hugo/screenshot_2019-02-14_13-27-38.png" >}}
 
+
 ### I-equivalence {#i-equivalence}
 
 The notion of \\(I(G)\\) specifies a set of conditional independence
@@ -415,8 +427,8 @@ encode the same set of conditional independence assumptions.
 
 This brings us to the notion of **I-equivalence**:
 
-Two graphs \\(K_1\\) and \\(K_2\\) over \\(X\\) are I-equivalent if \\(I(K_1) =
-I(K_2)\\). The set of all graphs over \\(X\\) are partitioned into mutually
+Two graphs \\(K\_1\\) and \\(K\_2\\) over \\(X\\) are I-equivalent if \\(I(K\_1) =
+I(K\_2)\\). The set of all graphs over \\(X\\) are partitioned into mutually
 exclusive and exhaustive I-equivalence classes.
 
 This notion implies that any distribution \\(P\\) that can be factorized
@@ -425,6 +437,7 @@ Furthermore, there is no intrinsic property of \\(P\\) that would allow us
 to associate it with one graph rather than an equivalent one. This
 observation has important implications with respect to our ability to
 determine the directionality of influence.
+
 
 ### From Distributions to Graphs {#from-distributions-to-graphs}
 
@@ -435,6 +448,7 @@ and construct a graph \\(G\\) for it, as this is way too large. However,
 answering this question is an important contextual exercise, that h
 helps in understanding the process of constructing a BN that
 represents our model of the world.
+
 
 #### Minimal I-maps {#minimal-i-maps}
 
@@ -463,6 +477,7 @@ Minimal I-maps fail to capture all the independencies that hold in the
 distribution. Hence, that \\(G\\) is a minimal I-map for \\(P\\) is far from a
 guarantee that \\(G\\) captures the independence structure in \\(P\\).
 
+
 #### Perfect Maps {#perfect-maps}
 
 <div class="definition">
@@ -477,12 +492,13 @@ perfect map for \\(P\\) if \\(I(K) = I(P)\\).
 Unfortunately, not every distribution has a perfect map. There exists
 an algorithm for finding the DAG representing the P-map for a
 distribution of a P-map if it exists, but is quite involved. See
-([Koller, Friedman, and Bach, n.d.](#orgf55ddb9)).
+([Koller, Friedman, and Bach, n.d.](#org800d5c7)).
+
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
 (The bulk of the material is from Murphy's book
-([Murphy, n.d.](#org938f2fc)))
+([Murphy, n.d.](#orgc1e302c)))
 
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -492,11 +508,12 @@ We may form a DAG model with a 2d lattice topology as such:
 {{< figure src="/ox-hugo/screenshot_2019-02-15_13-15-34.png" caption="Figure 4: 2d lattice represented as a DAG." >}}
 
 However, representing the conditional probabilities in this way is
-rather unnatural: the Markov blanket of node \\(X_8\\) includes its
+rather unnatural: the Markov blanket of node \\(X\_8\\) includes its
 non-neighbours. Instead, we may want to use a UGM, or Markov Random
 Field (MRF).
 
 {{< figure src="/ox-hugo/screenshot_2019-02-15_13-16-41.png" caption="Figure 5: UGM representation of the lattice topology." >}}
+
 
 ### Conditional Independence Properties of UGMs {#conditional-independence-properties-of-ugms}
 
@@ -504,21 +521,22 @@ UGMs define CI relationships via simple graph separation as follows:
 
 global Markov property
 : \\(A \perp B | \mathbf{C}\\) if there is no
-path between A and B in the graph upon removing all nodes in \\(\mathbf{C}\\).
+    path between A and B in the graph upon removing all nodes in \\(\mathbf{C}\\).
 
 local Markov property
 : \\(A \perp V \setminus \\{\textrm{mb}(A),
-A\\} | \textrm{mb}(A)\\)
+         A\\} | \textrm{mb}(A)\\)
 
 pairwise Markov property
 : \\(A \perp B | V \setminus \left{ A,
-B\right}\\)
+         B\right}\\)
 
 The global Markov property implies the local and pairwise Markov
 properties. If \\(p(x) > 0\\) for all \\(x\\), then the pairwise Markov
 property implies the global Markov property. This result allows us to
 use pairwise CI statements to construct a graph from which global
 statements can be extracted.
+
 
 ### Representation Power {#representation-power}
 
@@ -542,6 +560,7 @@ distribution is _chordal_.
 
 </div>
 
+
 ### The Undirected alternative to d-separation {#the-undirected-alternative-to-d-separation}
 
 It is tempting tot simply convert the DGM to a UGM by dropping the
@@ -553,6 +572,7 @@ a connected undirected graph. This process is called **moralization**.
 
 Moralization loses some CI information, and therefore we cannot used a
 moralized UGM to determine CI properties of the DGM.
+
 
 ### Parameterization of MRFs {#parameterization-of-mrfs}
 
@@ -572,18 +592,19 @@ undirected graph \\(G\\) iff p can be represented as a product of
 factors, one per maximal clique, i.e.,
 
 \begin{equation}
-p(\mathbf{y}|\mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
-\prod\_{c\in \mathcal{C}} \Phi_c(\mathbf{y}\_c | \mathbf{\theta}\_c)
+  p(\mathbf{y}|\mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
+  \prod\_{c\in \mathcal{C}} \Phi\_c(\mathbf{y}\_c | \mathbf{\theta}\_c)
 \end{equation}
 
 were \\(C\\) is the set of all the (maximal) cliques of \\(G\\), and
 \\(Z(\mathbf{\theta})\\) is the partition function given by
 
 \begin{equation}
-Z(\mathbf{\theta}) = \sum\_{x} \prod\_{c \in \mathcal{C}} \Phi_c(\mathbf{y}\_c|\mathbf{\theta}\_c)
+  Z(\mathbf{\theta}) = \sum\_{x} \prod\_{c \in \mathcal{C}} \Phi\_c(\mathbf{y}\_c|\mathbf{\theta}\_c)
 \end{equation}
 
 </div>
+
 
 ### Connection between statistical physics {#connection-between-statistical-physics}
 
@@ -591,21 +612,22 @@ There is a model known as the Gibbs distribution, which can be written
 as follows:
 
 \begin{equation}
-p(\mathbf{y} | \mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
-\mathrm{exp} \left( - \sum\_{c} E(\mathbf{y}\_c | \mathbf{\theta}\_c) \right)
+  p(\mathbf{y} | \mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
+  \mathrm{exp} \left( - \sum\_{c} E(\mathbf{y}\_c | \mathbf{\theta}\_c) \right)
 \end{equation}
 
 where \\(E(\mathbf{y}\_c)\\) is the energy associated with the variables in
 clique \\(c\\). We can convert this to a UGM by defining:
 
 \begin{equation}
-\Phi_c(\mathbf{y}\_c | \mathbf{\theta}\_c) = \mathrm{exp}\left( - E(\mathbf{y}\_c | \mathbf{\theta}\_c) \right)
+  \Phi\_c(\mathbf{y}\_c | \mathbf{\theta}\_c) = \mathrm{exp}\left( - E(\mathbf{y}\_c | \mathbf{\theta}\_c) \right)
 \end{equation}
 
 Here we see that high probability states correspond to low energy
 configurations. We are also free to restrict the parameterization to
 the edges of the graph. A rather convenient formulation is the
 pairwise MRF.
+
 
 ### Representing Potential Functions {#representing-potential-functions}
 
@@ -619,16 +641,16 @@ A more general approach is to define the log potentials as a linear
 function of the parameters:
 
 \begin{equation}
-\log \psi_c (\mathbf{y}\_c) = \phi_c (\mathbf{y}\_c)^T \mathbf{\theta}\_c
+  \log \psi\_c (\mathbf{y}\_c) = \phi\_c (\mathbf{y}\_c)^T \mathbf{\theta}\_c
 \end{equation}
 
-where \\(\phi_c (\mathbf{x}\_c\_)\\) a feature vector derived from the
+where \\(\phi\_c (\mathbf{x}\_c\_)\\) a feature vector derived from the
 values of the variables \\(mathbf{y}\_c\\). The resultant log probability
 has the form:
 
 \begin{equation}
-\log p(\mathbf{y} | \mathbf{\theta}) = \sum\_{c}
-\phi_c(\mathbf{y}\_c)^T \mathbf{\theta}\_c - Z(\mathbf{\theta})
+  \log p(\mathbf{y} | \mathbf{\theta}) = \sum\_{c}
+  \phi\_c(\mathbf{y}\_c)^T \mathbf{\theta}\_c - Z(\mathbf{\theta})
 \end{equation}
 
 This is also known as the **maximum entropy** or **log linear** model.
@@ -636,22 +658,23 @@ This is also known as the **maximum entropy** or **log linear** model.
 Several popular probability models, such as the Ising model, Potts model and
 Hopfield networks, can be conveniently expressed as UGMs.
 
+
 ### Parameter Estimation in UGMs {#parameter-estimation-in-ugms}
 
 Consider an MRF in log-linear form:
 
 \begin{equation}
-p(\mathbf{y} | \mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
-\mathrm{exp} \left( \sum\_{c}\mathbf{\theta_c}^T \phi_c(\mathbf{y})\right)
+  p(\mathbf{y} | \mathbf{\theta}) = \frac{1}{Z(\mathbf{\theta})}
+  \mathrm{exp} \left( \sum\_{c}\mathbf{\theta\_c}^T \phi\_c(\mathbf{y})\right)
 \end{equation}
 
 where \\(c\\) indexes the cliques. The scaled log-likelihood is given by:
 
 \begin{equation}
-l(\mathbf{\theta}) =
-\frac{1}{N}\sum\_{i}\log(\mathbf{y}\_i|\mathbf{\theta}) =
-\frac{1}{N}\sum\_{i}\left[
-\sum\_{c}\mathbf{\theta}\_c^T\phi\_c(\mathbf{y}\_i) - \log Z(\mathbf{\theta}) \right]
+  l(\mathbf{\theta}) =
+  \frac{1}{N}\sum\_{i}\log(\mathbf{y}\_i|\mathbf{\theta}) =
+  \frac{1}{N}\sum\_{i}\left[
+    \sum\_{c}\mathbf{\theta}\_c^T\phi\_c(\mathbf{y}\_i) - \log Z(\mathbf{\theta}) \right]
 \end{equation}
 
 Since MRFs are in the exponential family, we know that this function
@@ -661,19 +684,19 @@ we can find using gradient-based optimizers.
 The derivative for the weights of a particular clique is given by:
 
 \begin{equation}
-\frac{\partial l}{\partial \mathbf{\theta}\_c} =
-\frac{1}{N}\sum\_{i}\left[ \phi\_c(\mathbf{y}\_i) -
-\frac{\partial}{\partial \mathbf{\theta}\_c} \log Z(\mathbf{\theta}) \right]
+  \frac{\partial l}{\partial \mathbf{\theta}\_c} =
+  \frac{1}{N}\sum\_{i}\left[ \phi\_c(\mathbf{y}\_i) -
+    \frac{\partial}{\partial \mathbf{\theta}\_c} \log Z(\mathbf{\theta}) \right]
 \end{equation}
 
 The derivative of the log partition function wrt to
-\\(\mathbf{\theta_c}\\) is just the expectation of the cth feature under
+\\(\mathbf{\theta\_c}\\) is just the expectation of the cth feature under
 the model, and hence the gradient of the log-likelihood is:
 
 \begin{equation}
-\frac{\partial l}{\partial \mathbf{\theta}\_c} =
-\frac{1}{N}\sum\_{i}\left[ \phi_c(\mathbf{y}\_i) -
-\mathcal{E}[\phi\_c(\mathbf{y})]\right]
+  \frac{\partial l}{\partial \mathbf{\theta}\_c} =
+  \frac{1}{N}\sum\_{i}\left[ \phi\_c(\mathbf{y}\_i) -
+    \mathcal{E}[\phi\_c(\mathbf{y})]\right]
 \end{equation}
 
 In the first term, we fix \\(\mathbf{y}\\) to its observed values; this is
@@ -681,6 +704,7 @@ sometimes called the clamped term. In the second term \\(\mathbf{y}\\) is
 free; this is sometimes called the unclamped term. Computing the
 unclamped term requires inference in the model, and must be done once
 per gradient step, making it much slower than DGM training.
+
 
 ### Approximate methods for computing the MLEs of MRFs {#approximate-methods-for-computing-the-mles-of-mrfs}
 
@@ -695,14 +719,15 @@ such as **pseudo likelihood**, and **stochastic maximum likelihood**.
 
 {{< figure src="/ox-hugo/screenshot_2019-02-15_15-11-45.png" caption="Figure 7: Iterative Proportional Fitting" >}}
 
+
 ### Conditional Random Fields (CRFs) {#conditional-random-fields--crfs}
 
 A CRF is a version of an MRF where all the clique potentials are
 conditioned on input features:
 
 \begin{equation}
-p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{x},
-\mathbf{w})} \prod\_{c} \psi_c(\mathbf{y}\_c | \mathbf{x}, \mathbf{w})
+  p(\mathbf{y} | \mathbf{x}, \mathbf{w}) = \frac{1}{Z(\mathbf{x},
+    \mathbf{w})} \prod\_{c} \psi\_c(\mathbf{y}\_c | \mathbf{x}, \mathbf{w})
 \end{equation}
 
 It can be thought of as a structured output extension of logistic
@@ -720,12 +745,14 @@ problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
 
+
 ## Bibliography {#bibliography}
 
-<a id="orgf55ddb9"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
+<a id="org800d5c7"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
 
-<a id="org938f2fc"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
+<a id="orgc1e302c"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
+
 
 ## Resources {#resources}
 
-- [Infer.NET Resources and References](https://dotnet.github.io/infer/userguide/Resources%20and%20References.html)
+-   [Infer.NET Resources and References](https://dotnet.github.io/infer/userguide/Resources%20and%20References.html)

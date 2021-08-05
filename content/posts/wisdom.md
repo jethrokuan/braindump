@@ -21,7 +21,7 @@ draft = false
 5.  Social contracts are powerful. When you tell people what you're
     going to do, you're generally serious about it.
 6.  The retirement that people want is not being old and sitting in a
-    nursing home. Retirement is when you stop sacrificing today for
+    nursing home.  Retirement is when you stop sacrificing today for
     something imaginary tomorrow.
 7.  When you're unhappy, look at the underlying desire that in
     unfulfilled. It's okay to have desires, but not too many. Pick the
@@ -38,5 +38,6 @@ draft = false
     one thing. If somebody can tell you when you have to go to work,
     what you have to wear, you're not truly free.
 12. [Coase Theorem](https://www.investopedia.com/terms/c/coase-theorem.asp) (??)
+
 
 ## ["How To Be Successful (At Your Career, Twitter Edition)"](https://twitter.com/sama/status/1214274038933020672?s=20) {#how-to-be-successful--at-your-career-twitter-edition}

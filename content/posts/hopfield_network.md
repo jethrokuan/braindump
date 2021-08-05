@@ -5,7 +5,7 @@ tags = ["machine-learning"]
 draft = false
 +++
 
-A Hopfield network is a fully connected [Ising model]({{<relref "ising_models.md" >}}) with a symmetric
+A Hopfield network is a fully connected [Ising model]({{<relref "ising_models.md#" >}}) with a symmetric
 weight matrix, \\(\mathbf{W} = \mathbf{W^T}\\). These weights plus the
 bias term \\(\mathbf{b}\\), can be learned from training data, using
 (approximate) maximum likelihood.
@@ -25,17 +25,18 @@ energy) state, given all its neighbours. The full conditional can be
 shown to be:
 
 \begin{equation}
-p(y_s = 1 | \mathbf{y\_{-s}}, \mathbf{\theta}) =
-\textrm{sigm}(\mathbf{w\_{s,:}}^T y\_{-s} + b_s)
+  p(y\_s = 1 | \mathbf{y\_{-s}}, \mathbf{\theta}) =
+  \textrm{sigm}(\mathbf{w\_{s,:}}^T y\_{-s} + b\_s)
 \end{equation}
 
-Picking the most probable state amounts to using the rule \\(y_s^\* = 1\\)
-if \\(\sum\_{t} w\_{st}y_t > b_s\\) and \\(y_s^ = 0\\) otherwise.
+Picking the most probable state amounts to using the rule \\(y\_s^\* = 1\\)
+if \\(\sum\_{t} w\_{st}y\_t > b\_s\\) and \\(y\_s^ = 0\\) otherwise.
 
 Boltzmann machines generalize the Hopfield/Ising model by including
 some hidden nodes, which makes the model representationally more
 powerful. Inference in such models often uses Gibbs sampling, which is
 a stochastic version of ICM.
+
 
 ## Binary Hopfield network {#binary-hopfield-network}
 
@@ -45,17 +46,17 @@ from neuron \\(j\\) to neuron \\(i\\).
 A Hopfield network consists of \\(I\\) neurons. They are fully connected
 through symmetric, bidirectional connections with weights \\(w\_{ij} =
 w\_{ji}\\). \\(w\_{ii} = 0\\) for all \\(i\\). The activity of neuron \\(i\\) is
-denoted by \\(x_i\\).
+denoted by \\(x\_i\\).
 
 a Hopfield network's activity rule is for each neuron to update its
 state as if it were a single neuron with the threshold activation
 function:
 
 \begin{equation}
-x(a) = \Theta(a) = \begin{cases}
-1 & a \ge 0 \\\\\\
--1 & a < 0
-\end{cases}
+  x(a) = \Theta(a) = \begin{cases}
+    1 & a \ge 0 \\\\\\
+    -1 & a < 0
+  \end{cases}
 \end{equation}
 
 Since there is feedback in a Hopfield network (every neurons' output
@@ -66,10 +67,10 @@ asynchronous.
 For synchronous updates, all neurons compute their activations:
 
 \begin{equation}
-a_i = \sum\_{j} w\_{ij} x_j
+  a\_i = \sum\_{j} w\_{ij} x\_j
 \end{equation}
 
-and update their states simultaneously to \\(x_i = \Theta(a_i)\\).
+and update their states simultaneously to \\(x\_i = \Theta(a\_i)\\).
 
 For asynchronous updates, one neuron at a time computes its
 activations and updates its state. The sequence of updates may be a
@@ -77,13 +78,13 @@ fixed or random sequence.
 
 The learning rule is intended to make a set of desired memories \\(\\{
 \mathbf{x^{(n)}}\\}\\) be stabel states of the Hopfield network's
-activity rule. Each memory is a binary pattern, with \\(x_i \in \\{ -1,
+activity rule. Each memory is a binary pattern, with \\(x\_i \in \\{ -1,
 +1\\}\\).
 
 The Hebb's rule of learning corresponds to the sum of outer products:
 
 \begin{equation}
-w\_{ij} = \eta \sum\_{n} x_i^{(n)}x_j^{(n)}
+  w\_{ij} = \eta \sum\_{n} x\_i^{(n)}x\_j^{(n)}
 \end{equation}
 
 where \\(\eta\\) is a constant, commonly chosen to be \\(\frac{1}{n}\\).

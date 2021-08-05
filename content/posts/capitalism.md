@@ -27,13 +27,13 @@ The rise of capitalism vastly improved living standards, for several reasons:
 
 technology
 : competing firms resulted in strong incentives to develop and
-adopt new technology, and to invest in capital goods that would have been
-beyond the reach of small-scale family enterprises
+    adopt new technology, and to invest in capital goods that would have been
+    beyond the reach of small-scale family enterprises
 
 specialization
 : workers specialized in the tasks they performed, resulting
-in increased labour productivity. Specialization can only occur when a person
-is able to obtain the goods and services they need by other means.
+    in increased labour productivity. Specialization can only occur when a person
+    is able to obtain the goods and services they need by other means.
 
 Hence, markets have allowed cooperation on a global scale. On the other hand,
 market competition provides a mechanism for weeding out those who under-perform.

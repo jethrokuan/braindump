@@ -14,7 +14,7 @@ the source sentence into a single vector. Attention mechanisms allow
 the decoder to attend to different parts of the source sentence at
 each step of the output generation.
 
-The decoder output word \\(y_t\\) now depends on a weighted combination of
+The decoder output word \\(y\_t\\) now depends on a weighted combination of
 all the input states, not just the last state. These attention weights
 \\(a\_{t,i}\\) are often normalized to sum to 1.
 

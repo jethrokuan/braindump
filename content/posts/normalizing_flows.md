@@ -8,10 +8,10 @@ Normalizing flows provide a way of constructing probability
 distributions over continuous random variables. In flow-based
 modelling, we would like to express a D-dimensional vector
 \\(\mathbf{x}\\) as a transformation \\(T\\) of a real vector \\(\mathbf{u}\\)
-sampled from \\(p_u(\mathbf{u})\\):
+sampled from \\(p\_u(\mathbf{u})\\):
 
 \begin{equation}
-\mathbf{x}=T(\mathbf{u}) \quad \text { where } \quad \mathbf{u} \sim p\_{\mathrm{u}}(\mathbf{u})
+  \mathbf{x}=T(\mathbf{u}) \quad \text { where } \quad \mathbf{u} \sim p\_{\mathrm{u}}(\mathbf{u})
 \end{equation}
 
 The transformation \\(T\\) must be invertible and both \\(T\\) and \\(T^{-1}\\)
@@ -21,14 +21,14 @@ D-dimensional. Under these conditions, the density of \\(x\\) is
 well-defined, and can be obtained via the change-of-variables theorem:
 
 \begin{equation}
-p\_{\mathbf{x}}(\mathbf{x})=p\_{\mathbf{u}}(\mathbf{u})\left|\operatorname{det} J\_{T}(\mathbf{u})\right|^{-1} \quad \text { where } \quad \mathbf{u}=T^{-1}(\mathbf{x})
+  p\_{\mathbf{x}}(\mathbf{x})=p\_{\mathbf{u}}(\mathbf{u})\left|\operatorname{det} J\_{T}(\mathbf{u})\right|^{-1} \quad \text { where } \quad \mathbf{u}=T^{-1}(\mathbf{x})
 \end{equation}
 
 The density can also be equivalently written in terms of the Jacobian
 of \\(T^{-1}\\):
 
 \begin{equation}
-p\_{\mathbf{x}}(\mathbf{x})=p\_{\mathbf{u}}\left(T^{-1}(\mathbf{x})\right)\left|\operatorname{det} J\_{T-1}(\mathbf{x})\right|
+  p\_{\mathbf{x}}(\mathbf{x})=p\_{\mathbf{u}}\left(T^{-1}(\mathbf{x})\right)\left|\operatorname{det} J\_{T-1}(\mathbf{x})\right|
 \end{equation}
 
 In practice, a flow-based model is constructed by implementing \\(T\\) or
@@ -44,7 +44,7 @@ Complex transformations can be constructed by composing simple
 transformations.
 
 \begin{aligned}
-\left(T\_{2} \circ T\_{1}\right)^{-1} &=T\_{1}^{-1} \circ T\_{2}^{-1} \\ \operatorname{det} J\_{T\_{2} \circ T\_{1}}(\mathbf{u}) &=\operatorname{det} J\_{T\_{2}}\left(T\_{1}(\mathbf{u})\right) \cdot \operatorname{det} J\_{T\_{1}}(\mathbf{u})
+  \left(T\_{2} \circ T\_{1}\right)^{-1} &=T\_{1}^{-1} \circ T\_{2}^{-1} \\ \operatorname{det} J\_{T\_{2} \circ T\_{1}}(\mathbf{u}) &=\operatorname{det} J\_{T\_{2}}\left(T\_{1}(\mathbf{u})\right) \cdot \operatorname{det} J\_{T\_{1}}(\mathbf{u})
 \end{aligned}
 
 Flow-based models provide 2 operations, with differing computational complexity:
@@ -55,12 +55,13 @@ Flow-based models provide 2 operations, with differing computational complexity:
 2.  Evaluating the model's density, requiring computing the inverse
     transformation \\(T^{-1}\\) and its Jacobian determinant.
 
-Flow-based models can represent any distribution \\(p_x(\mathbf{x})\\),
-under reasonable conditions on \\(p_x(\mathbf{x})\\).
+Flow-based models can represent any distribution \\(p\_x(\mathbf{x})\\),
+under reasonable conditions on \\(p\_x(\mathbf{x})\\).
+
 
 ## Flow-based models for modeling and inference {#flow-based-models-for-modeling-and-inference}
 
-Fitting a flow-based model \\(p_x(\mathbf{x}; \theta)\\) to a target
+Fitting a flow-based model \\(p\_x(\mathbf{x}; \theta)\\) to a target
 distribution \\(p\_{x^\star}(\mathbf{x})\\) can be done by minimizing some
 divergence or discrepancy between them. The minimization is performed
 with respect to the model's parameters, \\(\theta = \\{\phi, \psi\\}\\),
@@ -77,9 +78,9 @@ density \\(p\_{x^\star}(\mathbf{x})\\). We can estimate this expectation by
 Monte Carlo using samples from \\(p\_{x^\star}(\mathbf{x})\\).
 
 Fitting the model requires computing \\(T^{-1}\\), its Jacobian
-determinant and the density \\(p_u(\mathbf{u}; \psi)\\), and
+determinant and the density \\(p\_u(\mathbf{u}; \psi)\\), and
 differentiating through all three. We do not need to compute \\(T\\) or
-sample from \\(p_u(\mathbf{u}, \psi)\\), although these operations will be
+sample from \\(p\_u(\mathbf{u}, \psi)\\), although these operations will be
 needed if we want to sample from the model after fitting.
 
 The reverse KL-divergence is suitable when we have the ability to
@@ -93,6 +94,7 @@ via reverse KL-divergence is equivalent to fitting
 
 Alternative divergences include f-divergences, which use density
 ratios, or integral probability metrics (IPM) that uses differences.
+
 
 ## Computational Complexities {#computational-complexities}
 
@@ -108,13 +110,15 @@ that reduce the cost to \\(O(D)\\).
 
 Examples of such efficient sub-flow transformations include:
 
-- autoregressive flows
-- linear flows
-- residual flows
+-   autoregressive flows
+-   linear flows
+-   residual flows
+
 
 ## Practical Considerations {#practical-considerations}
 
 Composing a large number of flows bring their own challenges.
+
 
 ### Normalization {#normalization}
 
@@ -127,24 +131,26 @@ by the batch statistics, and the second has free parameters \\(\alpha\\)
 (scale) and \\(\beta\\) (translation):
 
 \begin{equation}
-\mathrm{BN}(\mathrm{z})=\alpha \odot \frac{\mathrm{z}-\hat{\mu}}{\sqrt{\hat{\sigma}^{2}+\epsilon}}+\beta, \quad \mathrm{BN}^{-1}\left(\mathrm{z}^{\prime}\right)=\hat{\mu}+\frac{\mathrm{z}^{\prime}-\beta}{\alpha} \odot \sqrt{\hat{\sigma}^{2}+\epsilon}
+  \mathrm{BN}(\mathrm{z})=\alpha \odot \frac{\mathrm{z}-\hat{\mu}}{\sqrt{\hat{\sigma}^{2}+\epsilon}}+\beta, \quad \mathrm{BN}^{-1}\left(\mathrm{z}^{\prime}\right)=\hat{\mu}+\frac{\mathrm{z}^{\prime}-\beta}{\alpha} \odot \sqrt{\hat{\sigma}^{2}+\epsilon}
 \end{equation}
 
 Glow uses a variant called activation normalization, which is
 preferable when training with small mini-batches since batch norm's
 statistics become noisy and can destabilize training.
 
+
 ### Multi-scale architectures {#multi-scale-architectures}
 
 Because \\(\mathbf{x}\\) and \\(\mathbf{u}\\) must have the same
-dimensionality, and \\(T_k\\) must preserve this dimensionality, the
+dimensionality, and \\(T\_k\\) must preserve this dimensionality, the
 transformations can be extremely expensive. To combat this issue, one
-can clamp sub-dimensions of the intermediate flow \\(z_k\\) such that no
+can clamp sub-dimensions of the intermediate flow \\(z\_k\\) such that no
 additional transformation is applied. Doing so allows us to apply
 steps to a subset of dimensions, which is less costly.
 
 This kind of optimization is natural when dealing with granular data
 types such as pixels.
+
 
 ## Continuous Flows {#continuous-flows}
 
@@ -152,11 +158,3 @@ We can construct flows in continuous time by parameterizing the flow's
 infinitesimal dynamics, and then integrating to find the corresponding
 transformation. The flow is defined by an ordinary differential
 equation (ODE) that describes the flow's evolution in time.
-
-## Resources {#resources}
-
-- Normalizing Flows for Probabilistic Modeling and Inference ([Papamakarios et al., n.d.](#org3e99799))
-
-## Bibliography {#bibliography}
-
-<a id="org3e99799"></a>Papamakarios, George, Eric Nalisnick, Danilo Jimenez Rezende, Shakir Mohamed, and Balaji Lakshminarayanan. n.d. “Normalizing Flows for Probabilistic Modeling and Inference.” <http://arxiv.org/abs/1912.02762v1>.

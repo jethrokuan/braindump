@@ -10,6 +10,7 @@ overcome this problem, we can restrict the search space to some
 hypothesis space \\(\mathcal{H}\\). This can be seen as introducing prior
 knowledge to the learning task. Is such prior knowledge necessary?
 
+
 ## The No-Free-Lunch Theorem {#the-no-free-lunch-theorem}
 
 The No-Free-Lunch theorem states that for binary classification tasks,
@@ -25,24 +26,25 @@ some distribution \\(D\\), we should have some prior knowledge on \\(D\\). One
 type of such prior knowledge is that \\(D\\) comes from some specific
 parametric family of distributions. Another type of such prior
 knowledge is that there exists \\(h\\) in some predefined hypothesis class
-\\(H\\), such that \\(L_D(h) = 0\\).
+\\(H\\), such that \\(L\_D(h) = 0\\).
+
 
 ## Error Decomposition {#error-decomposition}
 
-we can decompose the error of an \\(ERM_H\\) predictor into two components
-as follows. Let \\(h_S\\) be an \\(ERM_H\\) hypothesis. Then we can write:
+we can decompose the error of an \\(ERM\_H\\) predictor into two components
+as follows. Let \\(h\_S\\) be an \\(ERM\_H\\) hypothesis. Then we can write:
 
 \begin{equation}
-L_D(h_S) = \epsilon\_{\textrm{app}} + \epsilon\_{\textrm{est}}
+  L\_D(h\_S) = \epsilon\_{\textrm{app}} + \epsilon\_{\textrm{est}}
 \end{equation}
 
-where \\(\epsilon\_{\textrm{app}} = \textrm{min}\_{h\in H} L_D(h)=\\), and
-\\(\epsilon\_{\textrm{est}} = L_D(h_S) - \epsilon\_{\textrm{app}}\\).
+where \\(\epsilon\_{\textrm{app}} = \textrm{min}\_{h\in H} L\_D(h)=\\), and
+\\(\epsilon\_{\textrm{est}} = L\_D(h\_S) - \epsilon\_{\textrm{app}}\\).
 
 **The approximation error** is the minimum risk achievable by a predictor
 in the hypothesis class. This term measures how much risk we have
 because we restrict ourselves to a specific class (how much
-inductive bias we have). This approximation error does not depend on
+[inductive bias]({{<relref "inductive_bias.md#" >}}) we have). This approximation error does not depend on
 the sample size, and is solely determined by the hypothesis class
 chosen.
 

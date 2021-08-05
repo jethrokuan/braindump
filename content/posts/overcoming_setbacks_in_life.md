@@ -38,6 +38,7 @@ draft = false
     misfortunes from the past? Almost certainly not – in which case, why bother
     being distressed about this thing now?
 
+
 ## Questions to Ask When Someone Wrongs Me {#questions-to-ask-when-someone-wrongs-me}
 
 1.  Can I see a way that what they’ve done would have been reasonable from their point of view?
@@ -52,6 +53,7 @@ draft = false
 5.  If the above fails, can I just avoid this person in future, and pay them no
     further mind? Hopefully! In which case, problem solved and I can move on.
 
+
 ## Sources {#sources}
 
-- [A Simple Checklist For Overcoming Life and Career Setbacks](https://80000hours.org/2018/12/dealing-with-setbacks/)
+-   [A Simple Checklist For Overcoming Life and Career Setbacks](https://80000hours.org/2018/12/dealing-with-setbacks/)

@@ -6,18 +6,21 @@ draft = false
 +++
 
 author
-: [Benjamin Graham]({{<relref "benjamin_graham.md" >}})
+: [Benjamin Graham]({{<relref "benjamin_graham.md#" >}})
 
 tags
-: [Finance]({{<relref "finance.md" >}})
+: [Finance]({{<relref "finance.md#" >}})
+
 
 ## Book Notes {#book-notes}
+
 
 ### Being an intelligent investor is about developing emotional discipline {#being-an-intelligent-investor-is-about-developing-emotional-discipline}
 
 An intelligent investor refuses to stoop to the market's level of irrationality.
 They minimize the odds of irreversible gains, and maximize the odds of achieving
 sustainable gains.
+
 
 ### Investor vs Speculator {#investor-vs-speculator}
 
@@ -29,7 +32,9 @@ The defensive investor must confine himself to the shares of important companies
 2.  Deliberate protect yourself against serious losses
 3.  aspire to "adequate", not extraordinary performance
 
+
 ### The stock market is riskier when prices are higher {#the-stock-market-is-riskier-when-prices-are-higher}
+
 
 ### Stock market performance factors {#stock-market-performance-factors}
 
@@ -38,6 +43,7 @@ The performance of a stock market is dependent on 3 factors:
 1.  Real growth (rise of company's earnings and dividends)
 2.  Inflationary growth (rise of prices throughout the economy)
 3.  Speculative growth (increase or decrease in the investing public's appetite for stocks)
+
 
 ### Combating Inflation {#combating-inflation}
 
@@ -48,4 +54,4 @@ slash their purchases, depressing activity throughout the economy.
 To guard against inflation, a common advice is to buy stocks, but in truth
 stocks failed to keep up with inflation about one-fifth of the time.
 
-To combat inflation, additionally look into [REITs]({{<relref "reits.md" >}}), and government bonds.
+To combat inflation, additionally look into [REITs]({{<relref "reits.md#" >}}), and government bonds.

@@ -5,14 +5,16 @@ draft = false
 +++
 
 tags
-: [Operating Systems]({{<relref "operating_systems.md" >}}), [Linux]({{<relref "linux.md" >}})
+: [Operating Systems]({{<relref "operating_systems.md#" >}}), [Linux]({{<relref "linux.md#" >}})
+
 
 ## Memory {#memory}
 
 TODO: <https://people.freebsd.org/~lstewart/articles/cpumemory.pdf>
 
-([Drepper, n.d.](#org0f33a44))
+([Drepper, n.d.](#orgd84ab1e))
+
 
 ## Bibliography {#bibliography}
 
-<a id="org0f33a44"></a>Drepper, Ulrich. n.d. “What Every Programmer Should Know About Memory.”
+<a id="orgd84ab1e"></a>Drepper, Ulrich. n.d. “What Every Programmer Should Know About Memory.”

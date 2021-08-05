@@ -5,7 +5,7 @@ draft = false
 +++
 
 tags
-: [Pdf Tools]({{<relref "pdf_tools.md" >}})
+: [Pdf Tools]({{<relref "pdf_tools.md#" >}})
 
 Cropping PDFs can be done through `pdfcrop`. `pdfcrop` only takes a
 single argument, use a bash function to batch crop:

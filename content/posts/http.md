@@ -5,7 +5,8 @@ draft = false
 +++
 
 tags
-: [Web Development]({{<relref "web_dev.md" >}})
+: [Web Development]({{<relref "web_dev.md#" >}})
+
 
 ## GET Requests and Request Body {#get-requests-and-request-body}
 

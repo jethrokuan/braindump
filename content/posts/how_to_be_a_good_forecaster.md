@@ -8,9 +8,9 @@ The following ten commandments are lifted from _Superforecasting_ by Tetlock.
 
 1.  **Triage**: Focus on questions where hard work is likely to pay off.
 2.  **Break seemingly intractable problems into tractable sub-problems**: Perform
-    [the fermi estimate]({{< relref "the_fermi_estimate" >}}). Expose and examine assumptions.
+    [the fermi estimate]({{<relref "the_fermi_estimate.md#" >}}). Expose and examine assumptions.
 3.  **Strike the right balance between inside and outside views**. Nothing is 100%
-    unique. See [Outside/Inside View]({{<relref "outside_inside_view.md" >}}).
+    unique. See [Outside/Inside View]({{<relref "outside_inside_view.md#" >}}).
 4.  **Strike the right balance between over and under-reacting to evidence**.
     Bayesian belief updating pays off in the long term. This requires skillful
     processing of news flows.

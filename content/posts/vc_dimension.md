@@ -5,29 +5,31 @@ draft = false
 +++
 
 tags
-: [Bias-Complexity Tradeoff]({{<relref "bias_complexity_tradeoff.md" >}}), [PAC Learning]({{<relref "pac_learning.md" >}})
+: [Bias-Complexity Tradeoff]({{<relref "bias_complexity_tradeoff.md#" >}}), [PAC Learning]({{<relref "pac_learning.md#" >}})
 
-([Shalev-Shwartz and Ben-David, n.d.](#org02edac6))
+([Shalev-Shwartz and Ben-David, n.d.](#org5fd48c9))
 
 What makes one class learnable and another unlearnable? The family of
 learnable classes in the setup of binary valued classification with
 the zero-one loss relies on a combinatorial notion called the
 Vapnik-Chervonenkis dimension (VC-dimension).
 
+
 ## Infinite-size classes can be learnable {#infinite-size-classes-can-be-learnable}
 
 To see that this is true, we provide a counterexample.
 
 let \\(\mathcal{H}\\) be the set of threshold functions over the real
-line, namely, \\(\mathcal{H} = \left\\{h_a : a \in \mathbb{R}\right\\}\\),
-where \\(h_a : \mathbb{R} \rightarrow \left\\{ 0,1\rightarrow \right\\}\\) is a
-function such that \\(h_a(x) = \mathbb{I}\_{[x < a]}\\). Clearly \\(H\\) is of
+line, namely, \\(\mathcal{H} = \left\\{h\_a : a \in \mathbb{R}\right\\}\\),
+where \\(h\_a : \mathbb{R} \rightarrow \left\\{ 0,1\rightarrow \right\\}\\) is a
+function such that \\(h\_a(x) = \mathbb{I}\_{[x < a]}\\). Clearly \\(H\\) is of
 infinite size. However, we can easily show that \\(\mathcal{H}\\) is PAC
 learnable, with sample complexity:
 
 \begin{equation}
-m_H(\epsilon, \delta) \le \lceil \log (2/\delta) / \epsilon \rceil
+  m\_H(\epsilon, \delta) \le \lceil \log (2/\delta) / \epsilon \rceil
 \end{equation}
+
 
 ## The VC-dimension {#the-vc-dimension}
 
@@ -40,12 +42,12 @@ characterization of its learnability.
   <div></div>
 
 Let \\(\mathcal{H}\\) be a class of functions from \\(\mathcal{X}\\) to
-\\(\left\\{0,1\right\\}\\), and let \\(C = \\{c_1, \dots, c_m\\} \subset X\\). The
+\\(\left\\{0,1\right\\}\\), and let \\(C = \\{c\_1, \dots, c\_m\\} \subset X\\). The
 restriction of \\(\mathcal{H}\\) to \\(C\\) is the set of functions from \\(C\\)
 to \\(\\{0, 1\\}\\) that can be derived from \\(\mathcal{H}\\). That is:
 
 \begin{equation}
-\mathcal{H}\_C = \left\\{ h(c_1), \dots, h(c_m) : h \in \mathcal{H} \right\\}
+  \mathcal{H}\_C = \left\\{ h(c\_1), \dots, h(c\_m) : h \in \mathcal{H} \right\\}
 \end{equation}
 
 </div>
@@ -80,23 +82,27 @@ can shatter \\(C\\) of any arbitrary size, then \\(\mathcal{H}\\) has infinite V
 
 </div>
 
+
 ## Examples {#examples}
+
 
 ### Threshold Functions {#threshold-functions}
 
 Let \\(\mathcal{H}\\) be the class of threshold functions over
-\\(\mathbb{R}\\). We have shown that for an arbitrary set \\(C = \\{c_1\\}\\),
+\\(\mathbb{R}\\). We have shown that for an arbitrary set \\(C = \\{c\_1\\}\\),
 \\(\mathcal{H}\\) shatters \\(C\\). However, we have shown that for an
-arbitrary set \\(C = \\{c_1, c_2\\}\\) where \\(c_1 \le c_2\\), \\(\mathcal{H}\\)
+arbitrary set \\(C = \\{c\_1, c\_2\\}\\) where \\(c\_1 \le c\_2\\), \\(\mathcal{H}\\)
 does not shatter \\(C\\). Hence \\(\textrm{VCdim}(\mathcal{H}) = 1\\).
+
 
 ### Intervals {#intervals}
 
 Take \\(C = {1, 2}\\), and we see that \\(\mathcal{H}\\) shatters \\(C\\). Hence
 \\(\textrm{VCdim}(\mathcal{H}) \ge 2\\). However, take an arbitrary set \\(C
-= \\{c_1, c_2, c_3\\}\\) where \\(c_1 \le c_2 \le c_3\\). Then the labelling
+= \\{c\_1, c\_2, c\_3\\}\\) where \\(c\_1 \le c\_2 \le c\_3\\). Then the labelling
 (1,0,1) cannot be obtained by an interval. Therefore,
 \\(\textrm{VCdim}(\mathcal{H}) = 2\\).
+
 
 ## The Fundamental Theorem of Statistical Learning {#the-fundamental-theorem-of-statistical-learning}
 
@@ -110,6 +116,7 @@ Then the following are equivalent:
 4.  \\(\mathcal{H}\\) is PAC learnable.
 5.  Any ERM rule is a successful PAC learner for \\(\mathcal{H}\\).
 6.  \\(\mathcal{H}\\) has a finite VC-dimension.
+
 
 ## Sauer's Lemma and the Growth Function {#sauer-s-lemma-and-the-growth-function}
 
@@ -126,8 +133,8 @@ Let \\(\mathcal{H}\\) be a hypothesis class. Then the growth function of
 \mathbb{N}\\), is defined as:
 
 \begin{equation}
-\tau\_{\mathcal{H}}(m) = \textrm{max}\_{C \subset \mathcal{X} : |C| =
-m} |\mathcal{H}\_C|
+  \tau\_{\mathcal{H}}(m) = \textrm{max}\_{C \subset \mathcal{X} : |C| =
+    m} |\mathcal{H}\_C|
 \end{equation}
 
 </div>
@@ -144,13 +151,14 @@ Let \\(\mathcal{H}\\) be a hypothesis class with
 \\(\textrm{VCdim}(\mathcal{H}) \le d < \infty\\). Then for all \\(m\\),
 
 \begin{equation}
-\tau\_{\mathcal{H}}(m) \le \sum\_{i=0}^{d}{m \choose i}
+  \tau\_{\mathcal{H}}(m) \le \sum\_{i=0}^{d}{m \choose i}
 \end{equation}
 
 In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\).
 
 </div>
 
+
 ## Bibliography {#bibliography}
 
-<a id="org02edac6"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.
+<a id="org5fd48c9"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.

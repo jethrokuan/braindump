@@ -23,6 +23,7 @@ piano tuners in the city of Chicago. What numbers do we need to know?
 Often, getting an estimate within a factor of 10 or 20 is enough to make a
 decision.
 
+
 ## Resources {#resources}
 
-- [Fermi Estimates - LessWrong](https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates)
+-   [Fermi Estimates - LessWrong](https://www.lesswrong.com/posts/PsEppdvgRisz5xAHG/fermi-estimates)

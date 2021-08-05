@@ -4,9 +4,6 @@ author = ["Jethro Kuan"]
 draft = false
 +++
 
-tags
-: [Programming Languages]({{<relref "prog_lang.md" >}})
-
 ## Introduction to Scala {#introduction-to-scala}
 
 Scala's primary signature is its blend of object-oriented and
@@ -32,6 +29,7 @@ Many of Scala's operations map input values to output values, rather
 than mutate the data in place. Scala libraries define many more
 immutable data types on top of those found in the Java APIs.
 
+
 ### Why Scala? {#why-scala}
 
 1.  Scala has seamless interoperability with Java, compiling to JVM
@@ -43,11 +41,12 @@ immutable data types on top of those found in the Java APIs.
 3.  Scala is statically typed: it allows one to combine types, and hide
     details of types with abstract types
 
+
 ## Basic Scala {#basic-scala}
 
 {{< figure src="/ox-hugo/screenshot_2019-05-31_22-00-22.png" >}}
 
-Arrays are accessed with parantheses in Scala: `a(0)`. This is
+Arrays are accessed with parantheses in Scala: `a(0)`.  This is
 because arrays are simply instances of classes like any other class in
 Scala. Scala will transform the code into an invocation of a method
 named `apply` on that variable: `a.apply(0)`. Accessing an element of an
