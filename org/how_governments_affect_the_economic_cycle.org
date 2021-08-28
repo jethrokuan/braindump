@@ -1,0 +1,13 @@
+:PROPERTIES:
+:ID:       b1449196-777e-4997-a786-d0a41ab761cd
+:END:
+#+title: How Governments Affect the Economic Cycle
+
+Governments affect the economic cycle by using fiscal tools: i.e. taking and spending.
+
+To stimulate the economy, governments can cut taxes, increase spending, and
+distribute stimulus checks, making more money available for spending and
+investment.
+
+To slowdown the growth of an economy, governments can increase taxes or cut
+spending, reducing the demand in their economies.

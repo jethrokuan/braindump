@@ -2,6 +2,7 @@
 :ID:       c4816ea0-834b-4f78-ae53-cefd1b8e8a46
 :END:
 #+title: Markov Decision Process
+#+bibliography: biblio.bib
 
 A sequential decision problem for a fully observable, stochastic
 environment with a Markovian transition model and additive rewards is
@@ -36,7 +37,7 @@ that does not arise in deterministic search problems.
 \lim_{h \rightarrow \infty} E\left( \sum_{t=0}^{h} \frac{1}{h} r_t \right)
 \end{equation}
 
-* Learning Performance cite:kaelbling1996reinforcement
+* Learning Performance [cite:@kaelbling1996reinforcement]
 
 1. Asymptotic convergence:
 
@@ -62,6 +63,4 @@ No notion of "many small mistakes", or "few major mistakes".
 
 4. Uniform-PAC
 
-unifies notion of PAC and regret cite:dann2017unifying
-
-bibliography:biblio.bib
+unifies notion of PAC and regret [cite:@dann2017unifying]

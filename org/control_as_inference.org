@@ -2,6 +2,7 @@
 :ID:       0f3564b7-5a64-4191-b917-4d94399d193f
 :END:
 #+title: Control As Inference
+#+bibliography: biblio.bib
 
 - tags :: [[id:f1f42d87-f292-4654-bfbf-949bfa18d88f][Optimal Control and Planning]], [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
@@ -133,10 +134,7 @@ same derivations as [[id:e1d57bed-9909-4fe2-a0bb-cd4106280285][Hidden Markov Mod
 
 [[file:images/control_as_inference/screenshot2019-12-24_20-18-55_.png]]
 
-For more, see cite:levine18_reinf_learn_contr_as_probab_infer.
+For more, see [cite:@levine18_reinf_learn_contr_as_probab_infer].
 
 * Resources
 - [[https://www.youtube.com/watch?v=Pei6G8_3r8I&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=13][CS285 Fa19 10/16/19 - YouTube]] 
-
-
-bibliography:biblio.bib

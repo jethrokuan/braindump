@@ -2,6 +2,4 @@
 :ID:       44103051-bbf6-4780-962b-f23f7f1ead90
 :ROAM_ALIASES: ICP
 :END:
-#+hugo_slug: interactive_closest_point
-
 #+title: Interactive Closest Point

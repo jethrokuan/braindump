@@ -2,6 +2,7 @@
 :ID:       87bab6c2-5346-4253-9e11-697c4e63d62a
 :END:
 #+title: Surrogate Gradient Learning In Spiking Neural Networks
+#+bibliography: biblio.bib
 
 - paper :: https://arxiv.org/pdf/1901.09948v2.pdf
 
@@ -23,10 +24,7 @@ hidden layers.
 
 There are many different available surrogate functions used, and all
 have reportedly some success
-cite:neftci19_surrog_gradien_learn_spikin_neural_networ. All of the
+[cite:@neftci19_surrog_gradien_learn_spikin_neural_networ]. All of the
 functions used are non-linear and monotonically increasing towards the
 firing threshold. This suggests that the details of the surrogate are
 not crucial in ensuring success of the method.
-
-bibliography:biblio.bib
-

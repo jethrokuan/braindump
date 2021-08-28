@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       3fc0ffcb-be21-4156-b4ae-808190743ddc
+:END:
+#+title: The Market Cycle
+
+Price of assets in the market are primarily affected by development in two areas:
+
+1. Fundamentals: earnings, cash flow, and their outlook
+2. Psychology: how investors feel about the fundamentals, their appetite for
+   risk

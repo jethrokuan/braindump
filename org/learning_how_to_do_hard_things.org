@@ -1,11 +1,12 @@
 :PROPERTIES:
 :ID:       ed6e0839-d3e7-46ef-a856-2e9a4d0d9970
-:ROAM_REFS: cite:maciver_hard_things
+:ROAM_REFS: [cite:@maciver_hard_things]
 :END:
 #+title: Learning How To Do Hard Things
+#+bibliography: biblio.bib
 
 - tags :: [[id:54c22d91-285c-4dd4-835c-9fc737534cc9][Learning]]
-- paper :: cite:maciver_hard_things
+- paper :: [cite:@maciver_hard_things]
 
 The key is to isolate one aspect of the problem that is difficult and
 work on it. This provides a direct feedback loop.
@@ -21,5 +22,3 @@ work on it. This provides a direct feedback loop.
     4.  If you’re still stuck after trying the first three, it’s possible that you may have hit some sort of natural difficulty limit and may not be able to make progress. 
  5. If the original hard thing is now easy, you’re done. If not, go back to step 2.
 #+end_quote
-
-bibliography:biblio.bib

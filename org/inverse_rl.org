@@ -2,6 +2,7 @@
 :ID:       a273c750-9827-4083-a942-f720b5443349
 :END:
 #+title: Inverse Reinforcement Learning
+#+bibliography: biblio.bib
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
@@ -125,10 +126,4 @@ w.r.t $r_\psi$ brings us closer to the target distribution.
 
 * Resources
 - [[https://www.youtube.com/watch?v=DP0SJrNgV60&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=15&t=0s][CS285 Fa19 10/21/19 - YouTube]]
-
-* Papers
-- cite:abbeel2004apprenticeship
-- cite:ratliff2006maximum
-
-bibliography:biblio.bib
-
+- [cite:@ratliff2006maximum;@abbeel2004apprenticeship]

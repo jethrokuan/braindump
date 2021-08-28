@@ -32,7 +32,7 @@ DVS events (x, y, t, p) can be used in many applications, but some also require 
 
 * Event Generation Model
 
-INdependent pixels respond to changes in their log photocurrent $L = \log (I)$. In a noise-free scenario, an event $(\boldsymbol{x}_{k}, t_{k}, p_{k})$ is generated as soon as the brightness increment since the last event at the pixel:
+Independent pixels respond to changes in their log photocurrent $L = \log (I)$. In a noise-free scenario, an event $(\boldsymbol{x}_{k}, t_{k}, p_{k})$ is generated as soon as the brightness increment since the last event at the pixel:
 
 \begin{equation}
   \Delta L(\boldsymbol{x}_{k}, t_{k}) = L(\boldsymbol{x_{k}}, t_{k}) - L(\boldsymbol{x}_{k}, t_{k} - \Delta t_{k})

@@ -13,7 +13,6 @@
 #+begin_export latex
 \null\hfill\underline{\textbf{Jethro Kuan} -- \textit{\today}}
 #+end_export
-
 * Source Specification
   Predefined in global env: =undefined=, =NaN=,  =Infinity=
 #+attr_latex: :environment tabularx :width \textwidth :align |l|X|
