@@ -86,11 +86,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 -   Trust region policy optimization
-    ([Schulman et al., n.d.](#orge5e033c))
+    Schulman et al., n.d.n
 
 or algorithms that adaptively adjust parameters:
 
--   Q-Prop ([Gu et al., n.d.](#org73faa46))
+-   Q-Prop Gu et al., n.d.
 
 
 ### Problem Formulation {#problem-formulation}
@@ -106,9 +106,4 @@ or algorithms that adaptively adjust parameters:
     ([Tensorflow](https://github.com/openai/spinningup), [Pytorch](https://github.com/kashif/firedup/))
 3.  [David Silver's Deep RL ICML Tutorial](https://www.icml.cc/2016/tutorials/deep%5Frl%5Ftutorial.pdf)
 
-
-## Bibliography {#bibliography}
-
-<a id="org73faa46"></a>Gu, Shixiang, Timothy Lillicrap, Zoubin Ghahramani, Richard E. Turner, and Sergey Levine. n.d. “Q-Prop: Sample-Efficient Policy Gradient with an off-Policy Critic.” <http://arxiv.org/abs/1611.02247v3>.
-
-<a id="orge5e033c"></a>Schulman, John, Philipp Moritz, Sergey Levine, Michael Jordan, and Pieter Abbeel. n.d. “High-Dimensional Continuous Control Using Generalized Advantage Estimation.” <http://arxiv.org/abs/1506.02438v6>.
+<biblio.bib>

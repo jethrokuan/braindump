@@ -28,7 +28,7 @@ Computation
 > A robot that carries a notion of its own uncertainty that acts
 > accordingly is superior to one that does not.
 
-([Thrun, Burgard, and Fox, n.d.](#orgc418d8e))
+Thrun, Burgard, and Fox, n.d.
 
 
 ## Pros {#pros}
@@ -45,8 +45,3 @@ Computation
 
 -   Relatively computationally inefficient
 -   Requires approximation (exact posteriors are computationally intractable)
-
-
-## Bibliography {#bibliography}
-
-<a id="orgc418d8e"></a>Thrun, Sebastian, Wolfram Burgard, and Dieter Fox. n.d. _Probabilistic Robotics_. MIT press.

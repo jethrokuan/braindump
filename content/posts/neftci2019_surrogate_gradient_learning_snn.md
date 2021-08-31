@@ -25,12 +25,7 @@ hidden layers.
 
 There are many different available surrogate functions used, and all
 have reportedly some success
-([Neftci, Mostafa, and Zenke, n.d.](#org4eda480)). All of the
+Neftci, Mostafa, and Zenke, n.d.. All of the
 functions used are non-linear and monotonically increasing towards the
 firing threshold. This suggests that the details of the surrogate are
 not crucial in ensuring success of the method.
-
-
-## Bibliography {#bibliography}
-
-<a id="org4eda480"></a>Neftci, Emre O., Hesham Mostafa, and Friedemann Zenke. n.d. “Surrogate Gradient Learning in Spiking Neural Networks.” <http://arxiv.org/abs/1901.09948v2>.

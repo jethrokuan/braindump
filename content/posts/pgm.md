@@ -491,14 +491,12 @@ perfect map for \\(P\\) if \\(I(K) = I(P)\\).
 
 Unfortunately, not every distribution has a perfect map. There exists
 an algorithm for finding the DAG representing the P-map for a
-distribution of a P-map if it exists, but is quite involved. See
-([Koller, Friedman, and Bach, n.d.](#org800d5c7)).
+distribution of a P-map if it exists, but is quite involved. See Koller, Friedman, and Bach, n.d..
 
 
 ## Undirected Graphical Models {#undirected-graphical-models}
 
-(The bulk of the material is from Murphy's book
-([Murphy, n.d.](#orgc1e302c)))
+(The bulk of the material is from Murphy's book Murphy, n.d.)
 
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -744,13 +742,6 @@ data-dependent. For example, we can make the latent labels in an NLP
 problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
-
-
-## Bibliography {#bibliography}
-
-<a id="org800d5c7"></a>Koller, Daphne, Nir Friedman, and Francis Bach. n.d. _Probabilistic Graphical Models: Principles and Techniques_. MIT press.
-
-<a id="orgc1e302c"></a>Murphy, Kevin P. n.d. “Machine Learning: A Probabilistic Perspective. 2012,” 117.
 
 
 ## Resources {#resources}

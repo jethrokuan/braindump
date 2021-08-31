@@ -42,7 +42,7 @@ that does not arise in deterministic search problems.
 \end{equation}
 
 
-## Learning Performance ([Kaelbling, Littman, and Moore, n.d.](#org73e13bd)) {#learning-performance--kaelbling-littman-and-moore-n-dot-d-dot--org73e13bd}
+## Learning Performance Kaelbling, Littman, and Moore, n.d. {#learning-performance-kaelbling-littman-and-moore-n-dot-d-dot}
 
 1.  Asymptotic convergence:
 
@@ -68,11 +68,4 @@ No notion of "many small mistakes", or "few major mistakes".
 
 1.  Uniform-PAC
 
-unifies notion of PAC and regret ([Dann, Lattimore, and Brunskill, n.d.](#orgbb49735))
-
-
-## Bibliography {#bibliography}
-
-<a id="orgbb49735"></a>Dann, Christoph, Tor Lattimore, and Emma Brunskill. n.d. “Unifying PAC and Regret: Uniform PAC Bounds for Episodic Reinforcement Learning.” In _Advances in Neural Information Processing Systems_, 5713–23.
-
-<a id="org73e13bd"></a>Kaelbling, Leslie Pack, Michael L Littman, and Andrew W Moore. n.d. “Reinforcement Learning: A Survey” 4:237–85.
+unifies notion of PAC and regret Dann, Lattimore, and Brunskill, n.d.

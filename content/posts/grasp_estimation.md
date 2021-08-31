@@ -18,14 +18,8 @@ grasp the object from various angles.
 The first category of methods sample candidate grasp contact points, and use
 analytical methods or deep learning methods to evaluate the quality of the
 grasp. This relies on prior knowledge such as object geometry and physics
-models. [mahler\_dex-net\_2017: Dex-Net 2.0: Deep Learning to Plan Robust Grasps
-with Synthetic Point Clouds and Analytic Grasp Metrics]({{<relref "mahler_dex_net_2017.md#" >}}) uses deep learning
-methods to plan grasps.
+models. Dex-net 2.0 uses deep learning methods to plan grasps
+NO\_ITEM\_DATA:mahlerDexNetDeepLearning2017.
 
-Other methods such as in (NO\_ITEM\_DATA:morrisonClosingLoopRobotic2018) generate pixel-wise
+Other methods such as in NO\_ITEM\_DATA:morrisonClosingLoopRobotic2018a generate pixel-wise
 grasp affordance maps
-
-
-## Bibliography {#bibliography}
-
-NO\_ITEM\_DATA:morrisonClosingLoopRobotic2018

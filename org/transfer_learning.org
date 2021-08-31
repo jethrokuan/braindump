@@ -2,6 +2,7 @@
 :ID:       4178c3b6-6b7c-42a2-9e49-cdc12f49f15b
 :END:
 #+title: Transfer Learning
+#+bibliography: biblio.bib
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
@@ -57,7 +58,7 @@ Fine tuning is popular in the supervised learning setting.
    2. Little exploration at convergence
 
 To increase diversity and entropy, we can do maximum-entropy learning
-which acts as randomly as possible while collecting high rewards cite:pmlr-v70-haarnoja17a:
+which acts as randomly as possible while collecting high rewards [cite:@pmlr-v70-haarnoja17a]:
 
 \begin{equation}
   \pi(a|s) = \mathrm{exp} (Q_\phi(s,a)-V(s))
@@ -87,7 +88,7 @@ across multiple tasks.
 
 In model distillation, multiple policies are combined into one, for
 concurrent multi-task learning. Policy distillation
-cite:rusu15_polic_distil is able to:
+[cite:@rusu15_polic_distil] is able to:
 
 1. Compress policies learnt on single games into smaller models
 2. Build agents capable of playing multiple games

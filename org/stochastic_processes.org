@@ -2,6 +2,7 @@
 :ID:       142c8033-00a7-4a2a-83e5-33e1349ade5a
 :END:
 #+title: Stochastic Processes
+#+bibliography: biblio.bib
 
 A stochastic process $X(t), t \in T$ is a collection of random
 variables. For each $t \in T$, $X(t)$ is a random variable. The index
@@ -56,6 +57,4 @@ Example of stochastic process: Gambler's ruin
 | -1 |
 
 * Reference Textbooks
-cite:ross2014introduction,pinsky2010introduction
-
-bibliography:biblio.bib
+[cite:@ross2014introduction,@pinsky2010introduction]

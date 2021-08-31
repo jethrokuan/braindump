@@ -49,11 +49,4 @@ Example of stochastic process: Gambler's ruin
 
 ## Reference Textbooks {#reference-textbooks}
 
-([Ross, n.d.](#orgb1c3675); [Pinsky and Karlin, n.d.](#org7955735))
-
-
-## Bibliography {#bibliography}
-
-<a id="org7955735"></a>Pinsky, Mark, and Samuel Karlin. n.d. _An Introduction to Stochastic Modeling_. Academic press.
-
-<a id="orgb1c3675"></a>Ross, Sheldon M. n.d. _Introduction to Probability Models_. Academic press.
+, Ross, n.d., @pinsky2010introduction

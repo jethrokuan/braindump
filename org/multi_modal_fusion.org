@@ -3,6 +3,7 @@
 :END:
 #+hugo_slug: multimodal_fusion
 #+title: Multi-modal Fusion
+#+bibliography: biblio.bib
 
 Multi-modal fusion is the integration of information from multiple
 modalities with the goal of predicting an outcome measure (e.g.
@@ -17,7 +18,7 @@ Multi-modal fusion is motivated by 3 main reasons:
    missing
 
 Multi-modal fusion approaches can be classified as
-cite:baltrusaitis17:_multim_machin_learn:
+[cite:@baltrusaitis17:_multim_machin_learn]:
 
 - *Model-agnostic*
   - early fusion

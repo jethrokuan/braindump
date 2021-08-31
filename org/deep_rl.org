@@ -2,8 +2,7 @@
 :ID:       96858f4f-8174-44d1-ba24-91b9db21f35e
 :END:
 #+title: Deep Reinforcement Learning
-
-bibliographystyle:unsrt
+#+bibliography: biblio.bib
 
 - tags :: [[id:be63d7a1-322e-40df-a184-90ad2b8aabb4][Reinforcement Learning ⭐]]
 
@@ -72,11 +71,11 @@ Would like algorithms with favourable improvement and convergence
 properties:
 
 - Trust region policy optimization
-  cite:schulman15_high_dimen_contin_contr_using
+  [cite:@schulman15_high_dimen_contin_contr_using]n
 
 or algorithms that adaptively adjust parameters:
 
-- Q-Prop cite:gu16_q_prop
+- Q-Prop [cite:@gu16_q_prop]
 
 ** Problem Formulation
 

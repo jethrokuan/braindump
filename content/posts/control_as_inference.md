@@ -136,14 +136,9 @@ same derivations as [Hidden Markov Model]({{<relref "hidden_markov_model.md#" >}
 
 {{< figure src="/ox-hugo/screenshot2019-12-24_20-18-55_.png" >}}
 
-For more, see ([Levine, n.d.](#orgd79161e)).
+For more, see Levine, n.d..
 
 
 ## Resources {#resources}
 
 -   [CS285 Fa19 10/16/19 - YouTube](https://www.youtube.com/watch?v=Pei6G8%5F3r8I&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=13)
-
-
-## Bibliography {#bibliography}
-
-<a id="orgd79161e"></a>Levine, Sergey. n.d. “Reinforcement Learning and Control as Probabilistic Inference: Tutorial and Review.” <http://arxiv.org/abs/1805.00909v3>.

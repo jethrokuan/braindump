@@ -2,9 +2,9 @@
 :ID:       87167685-a73e-4f25-a606-9f7a7d247a1d
 :END:
 #+title: Hacking
+#+bibliography: biblio.bib
 
-* Search engines for Hackers
-cite:trimstray_se_hackers
+* Search engines for Hackers [cite:@trimstray_se_hackers]
 
 - https://censys.io/
 - https://www.shodan.io/
@@ -15,6 +15,3 @@ cite:trimstray_se_hackers
 - https://app.binaryedge.io/
 - https://hunter.io/
 - https://wigle.net/
-
-
-bibliography:biblio.bib

@@ -2,11 +2,12 @@
 :ID:       7903f842-6de0-418f-9f97-0c3a0c78ade9
 :END:
 #+title: Hadoop
+#+bibliography: biblio.bib
 
 Hadoop provides tools for working with big data, by raising the /level
 of abstraction/. 
 
-Most of this content comes from Hadoop: The Definitive Guide cite:White:2009:HDG:1717298
+Most of this content comes from Hadoop: The Definitive Guide [cite:@White:2009:HDG:1717298]
 
 * Data Storage and Analysis
 
@@ -368,12 +369,12 @@ Instead of storing Thrift structures in the Thrift binary format,
 Parquet uses a data converter to convert Thrift structures into
 Parquet format, a compressed, columnar data representation.
 
-cite:DBLP:books/oreilly/Kleppmann2014
+[cite:@DBLP:books/oreilly/Kleppmann2014]
 
 ** Parquet's Columnar Storage
 
 Parquet's columnar representation is inpired by Google's Dremel.
-cite:dremel
+[cite:@dremel]
 
 Thrift and Protocol Buffer's binary representations are field values
 laid out sequentially. Using a columnar-striped representation enables
@@ -410,7 +411,7 @@ field values and levels for each field, and append the values
 sequentially to the output records.
 
 Efficient algorithms for record shredding and assembly are provided in
-Appendix A of the Dremel paper. cite:dremel
+Appendix A of the Dremel paper. [cite:@dremel]
 
 * Beyond MapReduce
 
@@ -421,6 +422,3 @@ MillWheel - http://research.google.com/pubs/pub41378.html
 
 Beam is an open source, unified model for defining and executing data
 processing workflows.
-
-* 
-bibliography:biblio.bib

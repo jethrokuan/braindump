@@ -34,7 +34,7 @@ alignments across long sequences.
 
 Efficient transformer models attempt to alleviate the cost of computing the
 attention matrix, either by approximating the matrix, or by introducing
-sparsity. (NO\_ITEM\_DATA:tayEfficientTransformersSurvey2020) provides a good overview of
+sparsity. NO\_ITEM\_DATA:tayEfficientTransformersSurvey2020 provides a good overview of
 these efficient Transformer models. The key summary table in the paper is
 reproduced below.
 
@@ -71,10 +71,7 @@ sequence generation
 : input sequence is given to the encoder, and the decoder
     generates auto-regressively.
 
-
-## Bibliography {#bibliography}
-
-NO\_ITEM\_DATA:tayEfficientTransformersSurvey2020
+<biblio.bib>
 
 
 ### <span class="org-todo todo TODO">TODO</span> T5 {#t5}

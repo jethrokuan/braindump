@@ -2,6 +2,8 @@
 :ID:       6179f955-64ae-4920-b2eb-c3c4bf718705
 :END:
 #+title: Datacouncil.ai Conference Notes
+#+bibliography: biblio.bib
+#+filetags: conf
 
 - tags :: [[id:ce4150a8-2082-4f49-ad40-aac2943dfe07][Data Science]]
 
@@ -67,7 +69,7 @@ e.g. Factorization machines
 
 *** TODO xDeepFM
 
-cite:guo17_deepf,lian18_xdeep
+[cite:@guo17_deepf,@lian18_xdeep]
 
 ** TODO Deep Knowledge-aware Network cite:wang18_dkn
 

@@ -2,8 +2,7 @@
 :ID:       8b667a99-5a9a-40db-b3c2-58888c4edc46
 :END:
 #+title: Probabilistic Graph Models
-
-bibliographystyle:unsrt
+#+bibliography: biblio.bib
 
 * Motivation
 Most tasks require a person or an automated system to /reason/: to take
@@ -450,13 +449,11 @@ perfect map for $P$ if $I(K) = I(P)$.
 
 Unfortunately, not every distribution has a perfect map. There exists
 an algorithm for finding the DAG representing the P-map for a
-distribution of a P-map if it exists, but is quite involved. See
-cite:koller2009probabilistic.
+distribution of a P-map if it exists, but is quite involved. See [cite:@koller2009probabilistic].
 
 
 * Undirected Graphical Models
-(The bulk of the material is from Murphy's book
-cite:murphy2014machine)
+(The bulk of the material is from Murphy's book [cite:@murphy2014machine])
 
 For some domains, being forced to choose a direction for the edges, as
 required by a DGM is awkward. For example, if we're modelling an
@@ -687,8 +684,6 @@ data-dependent. For example, we can make the latent labels in an NLP
 problem depend on global properties of the sentence.
 
 However, CRF requires labeled training data, and are slower to train.
-
-bibliography:biblio.bib
 
 * Resources
 - [[https://dotnet.github.io/infer/userguide/Resources%20and%20References.html][Infer.NET Resources and References]]

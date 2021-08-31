@@ -2,6 +2,8 @@
 :ID:       1bc7c6a5-a438-489c-abb8-1852ae6e2248
 :END:
 #+title: Expectation Maximization and Mixture Models
+#+bibliography: biblio.bib
+#+cite_export: csl apa.csl
 
 * Introduction
 
@@ -326,8 +328,7 @@ by seeking to partially optimize $L(q, \mathbf{\theta})$ wrt
 $q(\mathbf{Z})$.
 
 
+[cite:@bishop2006pattern;@borman2004expectation]
+
 * References
-cite:borman2004expectation,bishop2006pattern
-
-
-bibliography:biblio.bib
+#+print_bibliography:

@@ -7,7 +7,7 @@ draft = false
 tags
 : [Bias-Complexity Tradeoff]({{<relref "bias_complexity_tradeoff.md#" >}}), [PAC Learning]({{<relref "pac_learning.md#" >}})
 
-([Shalev-Shwartz and Ben-David, n.d.](#org5fd48c9))
+Shalev-Shwartz and Ben-David, n.d.
 
 What makes one class learnable and another unlearnable? The family of
 learnable classes in the setup of binary valued classification with
@@ -158,7 +158,4 @@ In particular, if \\(m > d + 1\\), then \\(\tau\_{\mathcal{H}}(m) \le (em/d)^d\\
 
 </div>
 
-
-## Bibliography {#bibliography}
-
-<a id="org5fd48c9"></a>Shalev-Shwartz, Shai, and Shai Ben-David. n.d. _Understanding Machine Learning: From Theory to Algorithms_. Cambridge university press.
+<biblio.bib>

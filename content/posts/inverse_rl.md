@@ -85,7 +85,7 @@ first term is estimated with expert samples, and the second with the
 soft optimal policy under current reward.
 
 
-## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#orgbb7955e)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--orgbb7955e}
+## MaxEntropy Inverse RL ([Ziebart et al., n.d.](#org84c955f)) {#maxentropy-inverse-rl--ziebart-et-al-dot-n-dot-d-dot--org84c955f}
 
 1.  Given \\(\psi\\), compute [backward message]({{<relref "control_as_inference.md#" >}}) \\(\beta(s\_t, a\_t)\\)
 2.  Given \\(\psi\\), compute [forward message]({{<relref "control_as_inference.md#" >}}) \\(\alpha(s\_t)\\)
@@ -133,18 +133,9 @@ w.r.t \\(r\_\psi\\) brings us closer to the target distribution.
 ## Resources {#resources}
 
 -   [CS285 Fa19 10/21/19 - YouTube](https://www.youtube.com/watch?v=DP0SJrNgV60&list=PLkFD6%5F40KJIwhWJpGazJ9VSj9CFMkb79A&index=15&t=0s)
-
-
-## Papers {#papers}
-
--   ([Abbeel and Ng, n.d.](#org4015a60))
--   ([Ratliff, Bagnell, and Zinkevich, n.d.](#org78b9e47))
+-   (Ratliff, Nathan D and Bagnell, J Andrew and Zinkevich, Martin A, , Abbeel, Pieter and Ng, Andrew Y, )
 
 
 ## Bibliography {#bibliography}
 
-<a id="org4015a60"></a>Abbeel, Pieter, and Andrew Y Ng. n.d. “Apprenticeship Learning via Inverse Reinforcement Learning.” In _Proceedings of the Twenty-First International Conference on Machine Learning_, 1. ACM.
-
-<a id="org78b9e47"></a>Ratliff, Nathan D, J Andrew Bagnell, and Martin A Zinkevich. n.d. “Maximum Margin Planning.” In _Proceedings of the 23rd International Conference on Machine Learning_, 729–36. ACM.
-
-<a id="orgbb7955e"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.
+<a id="org84c955f"></a>Ziebart, Brian, Andrew Maas, J. Bagnell, and Anind Dey. n.d. “Maximum Entropy Inverse Reinforcement Learning.,” 1433–38.

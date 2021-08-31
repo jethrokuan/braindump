@@ -2,10 +2,11 @@
 :ID:       b4763515-8da5-4363-b7dc-b6f3b2227667
 :END:
 #+title: VC-Dimension
+#+bibliography: biblio.bib
 
 - tags :: [[id:26dd708c-44ba-4f4f-89d6-e40839693fb9][Bias-Complexity Tradeoff]], [[id:b35169d4-1829-401d-a473-0827592b2b78][PAC Learning]]
 
-cite:shalev2014understanding
+[cite:@shalev2014understanding]
 
 What makes one class learnable and another unlearnable? The family of
 learnable classes in the setup of binary valued classification with

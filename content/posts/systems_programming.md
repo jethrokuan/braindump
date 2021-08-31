@@ -12,9 +12,6 @@ tags
 
 TODO: <https://people.freebsd.org/~lstewart/articles/cpumemory.pdf>
 
-([Drepper, n.d.](#orgd84ab1e))
+Drepper, n.d.
 
-
-## Bibliography {#bibliography}
-
-<a id="orgd84ab1e"></a>Drepper, Ulrich. n.d. “What Every Programmer Should Know About Memory.”
+<biblio.bib>

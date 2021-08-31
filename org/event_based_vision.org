@@ -1,8 +1,9 @@
 :PROPERTIES:
 :ID:       39f98604-fb7a-4d5d-a77c-23a268d13604
-:ROAM_REFS: cite:gallego_event-based_2020
+:ROAM_REFS: [cite:@gallego_event-based_2020]
 :END:
 #+title: Event-based Vision
+#+bibliography: biblio.bib
 
 Event-based cameras are bio-inspired sensors. They asynchronously measure per-pixel brightness changes, and output a stream of digital events (or spikes) that encode the time, location and sign of the brightness changes.
 
@@ -19,7 +20,7 @@ The incident light at a pixel is a product of scene illumination and surface ref
 :ID:       55110410-a77e-4769-aff6-9ab86a2587df
 :END:
 
-DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled cite:gallego_event-based_2020.
+DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled [cite:@gallego_event-based_2020].
 
 DVS events (x, y, t, p) can be used in many applications, but some also require static output (i.e. absolute brightness). Cameras have been developed to concurrently output both dynamic and static information.
 
@@ -166,6 +167,3 @@ Segmentation of moving objects viewed by a stationary event camera is simple, be
 Event-based control changes the control commands asynchronously. It is justified by considering the trade-off between computation/communication cost. One should choose control frequencies based on changes in the plant dynamics. Event-triggered controllers can achieve the same performance with a fraction of computation.
 
 A key challenge is being able to find useful signals in the large number of events per second.
-
-* _
-bibliography:biblio.bib

@@ -2,6 +2,7 @@
 :ID:       3c2974e5-3e49-4c9f-8612-ee79baf47341
 :END:
 #+title: Regression
+#+bibliography: biblio.bib
 
 - tags :: [[id:3ec39abc-ea53-4087-8523-7ace154c6aa6][Statistics]], [[id:7f0fcd68-3fc2-4936-929c-51ef11ffe862][Bayesian Statistics]]
 
@@ -968,6 +969,4 @@ residuals can help check the linearity and normality assumptions.
 [[file:images/regression/screenshot_2019-03-27_21-15-45.png]]
 
 * References
-cite:chatterjee06_regres_analy_examp,james2013introduction
-
-bibliography:biblio.bib
+[cite:@chatterjee06_regres_analy_examp,@james2013introduction]

@@ -17,7 +17,8 @@ done by matching 3D data to their known CAD models. [Interactive Closest Point](
 can be used to calculate the alignment and best fitting of a cloud of points
 with respect to a reference CAD model.
 
-A fast voting scheme similar to the Generalized Hough Transform can be used improving the performance of [ICP]({{<relref "interactive_closest_point.md#" >}}).
+A fast voting scheme similar to the Generalized Hough Transform can be used
+improving the performance of [ICP]({{<relref "interactive_closest_point.md#" >}}).
 
 
 ### Deep Learning Methodologies for Bin Picking {#deep-learning-methodologies-for-bin-picking}

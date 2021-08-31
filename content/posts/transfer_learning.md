@@ -69,7 +69,7 @@ Fine tuning is popular in the supervised learning setting.
     2.  Little exploration at convergence
 
 To increase diversity and entropy, we can do maximum-entropy learning
-which acts as randomly as possible while collecting high rewards ([Haarnoja et al., n.d.](#orgf773a01)):
+which acts as randomly as possible while collecting high rewards Haarnoja et al., n.d.:
 
 \begin{equation}
   \pi(a|s) = \mathrm{exp} (Q\_\phi(s,a)-V(s))
@@ -101,16 +101,11 @@ across multiple tasks.
 
 In model distillation, multiple policies are combined into one, for
 concurrent multi-task learning. Policy distillation
-([Rusu et al., n.d.](#org2ee8d95)) is able to:
+Rusu et al., n.d. is able to:
 
 1.  Compress policies learnt on single games into smaller models
 2.  Build agents capable of playing multiple games
 3.  Improve the stability of the [DQN learning algorithm]({{<relref "q_learning.md#" >}}) by distilling
     online the policy of the best performing agent
 
-
-## Bibliography {#bibliography}
-
-<a id="orgf773a01"></a>Haarnoja, Tuomas, Haoran Tang, Pieter Abbeel, and Sergey Levine. n.d. “Reinforcement Learning with Deep Energy-Based Policies.” In _Proceedings of the 34th International Conference on Machine Learning_, edited by Doina Precup and Yee Whye Teh, 70:1352–61. Proceedings of Machine Learning Research. PMLR. <http://proceedings.mlr.press/v70/haarnoja17a.html>.
-
-<a id="org2ee8d95"></a>Rusu, Andrei A., Sergio Gomez Colmenarejo, Caglar Gulcehre, Guillaume Desjardins, James Kirkpatrick, Razvan Pascanu, Volodymyr Mnih, Koray Kavukcuoglu, and Raia Hadsell. n.d. “Policy Distillation.” <http://arxiv.org/abs/1511.06295v2>.
+<biblio.bib>

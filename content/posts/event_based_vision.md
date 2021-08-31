@@ -18,7 +18,7 @@ The incident light at a pixel is a product of scene illumination and surface ref
 
 ## DVS Cameras {#dvs-cameras}
 
-DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled (NO\_ITEM\_DATA:gallego\_event-based\_2020).
+DVS Cameras followed a frame-based silicon retina design, where the continuous-time photoreceptor was coupled to a readout circuit that was reset each time the pixel was sampled NO\_ITEM\_DATA:gallego\_event-based\_2020.
 
 DVS events (x, y, t, p) can be used in many applications, but some also require static output (i.e. absolute brightness). Cameras have been developed to concurrently output both dynamic and static information.
 
@@ -40,7 +40,7 @@ High Dynamic Range
 
 ## Event Generation Model {#event-generation-model}
 
-INdependent pixels respond to changes in their log photocurrent \\(L = \log (I)\\). In a noise-free scenario, an event \\((\boldsymbol{x}\_{k}, t\_{k}, p\_{k})\\) is generated as soon as the brightness increment since the last event at the pixel:
+Independent pixels respond to changes in their log photocurrent \\(L = \log (I)\\). In a noise-free scenario, an event \\((\boldsymbol{x}\_{k}, t\_{k}, p\_{k})\\) is generated as soon as the brightness increment since the last event at the pixel:
 
 \begin{equation}
   \Delta L(\boldsymbol{x}\_{k}, t\_{k}) = L(\boldsymbol{x\_{k}}, t\_{k}) - L(\boldsymbol{x}\_{k}, t\_{k} - \Delta t\_{k})
@@ -176,11 +176,3 @@ Segmentation of moving objects viewed by a stationary event camera is simple, be
 Event-based control changes the control commands asynchronously. It is justified by considering the trade-off between computation/communication cost. One should choose control frequencies based on changes in the plant dynamics. Event-triggered controllers can achieve the same performance with a fraction of computation.
 
 A key challenge is being able to find useful signals in the large number of events per second.
-
-
-## \_ {#}
-
-
-## Bibliography {#bibliography}
-
-NO\_ITEM\_DATA:gallego\_event-based\_2020

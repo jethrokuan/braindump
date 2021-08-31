@@ -7,7 +7,7 @@ draft = false
 Hadoop provides tools for working with big data, by raising the _level
 of abstraction_.
 
-Most of this content comes from Hadoop: The Definitive Guide ([White, n.d.](#orgf75dbda))
+Most of this content comes from Hadoop: The Definitive Guide White, n.d.
 
 
 ## Data Storage and Analysis {#data-storage-and-analysis}
@@ -374,13 +374,13 @@ Instead of storing Thrift structures in the Thrift binary format,
 Parquet uses a data converter to convert Thrift structures into
 Parquet format, a compressed, columnar data representation.
 
-([Kleppmann, n.d.](#orge0b9d8e))
+Kleppmann, n.d.
 
 
 ### Parquet's Columnar Storage {#parquet-s-columnar-storage}
 
 Parquet's columnar representation is inpired by Google's Dremel.
-([Melnik et al., n.d.](#org79f3ca6))
+Melnik et al., n.d.
 
 Thrift and Protocol Buffer's binary representations are field values
 laid out sequentially. Using a columnar-striped representation enables
@@ -417,7 +417,7 @@ field values and levels for each field, and append the values
 sequentially to the output records.
 
 Efficient algorithms for record shredding and assembly are provided in
-Appendix A of the Dremel paper. ([Melnik et al., n.d.](#org79f3ca6))
+Appendix A of the Dremel paper. Melnik et al., n.d.
 
 
 ## Beyond MapReduce {#beyond-mapreduce}
@@ -429,15 +429,3 @@ MillWheel - <http://research.google.com/pubs/pub41378.html>
 
 Beam is an open source, unified model for defining and executing data
 processing workflows.
-
-
-##  {#}
-
-
-## Bibliography {#bibliography}
-
-<a id="orge0b9d8e"></a>Kleppmann, Martin. n.d. _Designing Data-Intensive Applications: The Big Ideas behind Reliable, Scalable, and Maintainable Systems_. O’Reilly. <http://shop.oreilly.com/product/0636920032175.do>.
-
-<a id="org79f3ca6"></a>Melnik, Sergey, Andrey Gubarev, Jing Jing Long, Geoffrey Romer, Shiva Shivakumar, Matt Tolton, and Theo Vassilakis. n.d. “Dremel: Interactive Analysis of Web-Scale Datasets.” In _Proc. Of the 36th Int’l Conf on Very Large Data Bases_, 330–39. <http://www.vldb2010.org/accept.htm>.
-
-<a id="orgf75dbda"></a>White, Tom. n.d. _Hadoop: The Definitive Guide_. 1st ed. O’Reilly Media, Inc.

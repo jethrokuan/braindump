@@ -327,14 +327,7 @@ value is increased. Similarly, one can address the intractable E-step
 by seeking to partially optimize \\(L(q, \mathbf{\theta})\\) wrt
 \\(q(\mathbf{Z})\\).
 
+Bishop, n.d.; Borman, n.d.
+
 
 ## References {#references}
-
-([Borman, n.d.](#org33d1e68); [Bishop, n.d.](#orgb2e7ec7))
-
-
-## Bibliography {#bibliography}
-
-<a id="orgb2e7ec7"></a>Bishop, Christopher M. n.d. _Pattern Recognition and Machine Learning_. springer.
-
-<a id="org33d1e68"></a>Borman, Sean. n.d. “The Expectation Maximization Algorithm-a Short Tutorial” 41.

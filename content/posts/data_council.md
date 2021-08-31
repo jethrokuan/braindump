@@ -75,10 +75,10 @@ e.g. Factorization machines
 
 #### <span class="org-todo todo TODO">TODO</span> xDeepFM {#xdeepfm}
 
-([Guo et al., n.d.](#orgd7ff7e7); [Lian et al., n.d.](#org7933ba9))
+, Guo et al., n.d., @lian18
 
 
-### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network ([Wang et al., n.d.](#orgd087e91)) {#deep-knowledge-aware-network--wang-et-al-dot-n-dot-d-dot--orgd087e91}
+### <span class="org-todo todo TODO">TODO</span> Deep Knowledge-aware Network <sup id="fef749252ffc4be87873f182cdba0fad"><a href="#wang18_dkn" title="Wang, Zhang, Xie \&amp; Guo, Dkn: {{Deep}} Knowledge-Aware Network for News Recommendation, {CoRR}, v(), ().">wang18_dkn</a></sup> {#deep-knowledge-aware-network}
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -272,11 +272,5 @@ large jobs), [Apache Superset](https://superset.incubator.apache.org/)
 
 ##  {#}
 
-
-## Bibliography {#bibliography}
-
-<a id="orgd7ff7e7"></a>Guo, Huifeng, Ruiming Tang, Yunming Ye, Zhenguo Li, and Xiuqiang He. n.d. “Deepfm: A Factorization-Machine Based Neural Network for Ctr Prediction.” <http://arxiv.org/abs/1703.04247v1>.
-
-<a id="org7933ba9"></a>Lian, Jianxun, Xiaohuan Zhou, Fuzheng Zhang, Zhongxia Chen, Xing Xie, and Guangzhong Sun. n.d. “Xdeepfm: Combining Explicit and Implicit Feature Interactions for Recommender Systems.” <http://arxiv.org/abs/1803.05170v3>.
-
-<a id="orgd087e91"></a>Wang, Hongwei, Fuzheng Zhang, Xing Xie, and Minyi Guo. n.d. “Dkn: Deep Knowledge-Aware Network for News Recommendation.” <http://arxiv.org/abs/1801.08284v2>.
+# Bibliography
+<a id="wang18_dkn"></a>[wang18_dkn] Wang, Zhang, Xie & Guo, Dkn: Deep Knowledge-Aware Network for News Recommendation, <i>CoRR</i>,  . <a href="http://arxiv.org/abs/1801.08284v2">link</a>. [↩](#fef749252ffc4be87873f182cdba0fad)

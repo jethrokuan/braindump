@@ -2,17 +2,18 @@
 :ID:       1e986fb8-e87d-45f6-8f6f-446992d493d0
 :END:
 #+title: Information Bottleneck in Deep Neural Networks
+#+bibliography: biblio.bib
 
 The information bottleneck theory was recently used to study Deep
 Neural Networks. Shwartz-Ziv and Tishby proposed that the information
 bottleneck expresses the tradeoff between the mutual information
 measures $I(X,T)$ and $I(T,Y)$
-cite:shwartz-ziv17_openin_black_box_deep_neural.
+[cite:@shwartz-ziv17_openin_black_box_deep_neural].
 
 $I(X,T)$ and $I(X,Y)$ quantifies the amount of information that the
 layer contains about the input and output respectively.
 
-* Key Findings from cite:shwartz-ziv17_openin_black_box_deep_neural
+* Key Findings
 
 1. Most of the training epochs are spent on compression of the input
    to efficient representation, and not on fitting the training labels
@@ -30,5 +31,3 @@ layer contains about the input and output respectively.
 
 TL;DR: SGD has 2 phases: ERM, and representation compression. The
 latter phase is an explanation for the lack of overfitting in DL.
-
-bibliography:biblio.bib

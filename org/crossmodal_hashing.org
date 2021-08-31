@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       8e71e7a0-1ef8-4deb-9cb2-bd8ca223ce51
 :END:
-#+hugo_slug: crossmodal_hashing
 #+title: Cross-modal Hashing
+#+bibliography: biblio.bib
 
 Cross-modal hashing is the compression of high dimensional data into
 compact binary codes with similar binary codes for similar objects.
@@ -15,7 +15,7 @@ constraints are :
    hash code
 3. The space has to be similarity-preserving
 
-cite:baltrusaitis17:_multim_machin_learn has some good reference
+[cite:@baltrusaitis17:_multim_machin_learn] has some good reference
 papers.
 
 bibliography:biblio.bib

@@ -2,6 +2,7 @@
 :ID:       2391f312-dd1a-4cdf-9292-336cfaecbc04
 :END:
 #+title: Uncertainty in Robotics
+#+bibliography: biblio.bib
 
 Robotic applications increasingly deal with more unstructured
 environments. Robots that can perceive and deal with uncertainty are
@@ -20,7 +21,7 @@ A robot that carries a notion of its own uncertainty that acts
 accordingly is superior to one that does not.
 #+end_quote
 
-cite:thrun2005probabilistic
+[cite:@thrun2005probabilistic]
 
 * Pros
 1. Robust, and scale better to complex, unstructured environments
@@ -33,5 +34,3 @@ cite:thrun2005probabilistic
 * Cons
 - Relatively computationally inefficient
 - Requires approximation (exact posteriors are computationally intractable)
-
-bibliography:biblio.bib

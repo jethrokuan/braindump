@@ -1,8 +1,8 @@
 :PROPERTIES:
 :ID:       4394e05f-8c2d-4fa7-9dc5-6aa4d8723222
 :END:
-#+hugo_slug: multimodal_representation
 #+title: Multi-modal Representation
+#+bibliography: biblio.bib
 
 - tags :: [[id:c436cacf-5630-4dc6-99ff-e99d9484f85a][Multi-modal Machine Learning]]
 
@@ -16,7 +16,7 @@ a meaningful way is crucial to multimodal problems.
 - how to deal with missing data
 
 * Categories of multi-modal representations
-cite:baltrusaitis17:_multim_machin_learn proposes two categories of
+[cite:@baltrusaitis17:_multim_machin_learn] proposes two categories of
 multimodal representation:
 
 - joint :: combining unimodal signals into the same representation space.

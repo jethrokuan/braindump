@@ -18,7 +18,7 @@ Multi-modal fusion is motivated by 3 main reasons:
     missing
 
 Multi-modal fusion approaches can be classified as
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org94e2faf)):
+Baltrušaitis, Ahuja, and Morency, n.d.:
 
 -   **Model-agnostic**
     -   early fusion
@@ -66,7 +66,4 @@ from large amounts of data, and are able to learn complex decision
 boundaries. However, they lack interpretability, and require large
 amounts of training data.
 
-
-## Bibliography {#bibliography}
-
-<a id="org94e2faf"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<biblio.bib>

@@ -1000,11 +1000,4 @@ residuals can help check the linearity and normality assumptions.
 
 ## References {#references}
 
-([Chatterjee and Hadi, n.d.](#org68f8fa5); [James et al., n.d.](#org3984e3b))
-
-
-## Bibliography {#bibliography}
-
-<a id="org68f8fa5"></a>Chatterjee, Samprit, and Ali S. Hadi. n.d. _Regression Analysis by Example_. Wiley Series in Probability and Statistics. John Wiley & Sons, Inc. <https://doi.org/10.1002/0470055464>.
-
-<a id="org3984e3b"></a>James, Gareth, Daniela Witten, Trevor Hastie, and Robert Tibshirani. n.d. _An Introduction to Statistical Learning_. Vol. 112. Springer.
+, Chatterjee and Hadi, n.d., @james2013introduction

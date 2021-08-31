@@ -1,7 +1,6 @@
 +++
 title = "Multi-modal Representation"
 author = ["Jethro Kuan"]
-slug = "multimodal_representation"
 draft = false
 +++
 
@@ -22,7 +21,7 @@ a meaningful way is crucial to multimodal problems.
 
 ## Categories of multi-modal representations {#categories-of-multi-modal-representations}
 
-([Baltrušaitis, Ahuja, and Morency, n.d.](#org72e8113)) proposes two categories of
+Baltrušaitis, Ahuja, and Morency, n.d. proposes two categories of
 multimodal representation:
 
 joint
@@ -93,7 +92,4 @@ Other examples of structured coordinated spaces use enforce a partial
 order in the multimodal space. Another special case of this is
 [Canonical Correlation Analysis]({{<relref "canonical_correlation_analysis.md#" >}}).
 
-
-## Bibliography {#bibliography}
-
-<a id="org72e8113"></a>Baltrušaitis, Tadas, Chaitanya Ahuja, and Louis-Philippe Morency. n.d. “Multimodal Machine Learning: A Survey and Taxonomy.” <http://arxiv.org/abs/1705.09406v2>.
+<biblio.bib>
