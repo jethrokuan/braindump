@@ -11,6 +11,4 @@
 - Reward is often delayed
 
 TD errors ([[id:6bcdf2f0-6f2b-47bf-95c1-180a1d81f497][Temporal Difference Learning]]) model the activity of
-dopamine neurons cite:schultz97_neural_subst_predic_rewar
-
-bibliography:biblio.bib
+dopamine neurons [cite:@schultz97_neural_subst_predic_rewar]

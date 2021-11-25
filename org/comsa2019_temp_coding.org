@@ -5,7 +5,7 @@
 
 - tags :: [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]]
 
-* Temporal Coding with Alpha Synaptic Function cite:comsa19_tempor_codin_spikin_neural_networ
+* Temporal Coding with Alpha Synaptic Function [cite:@comsa19_tempor_codin_spikin_neural_networ]
 
 ** Motivation
 
@@ -167,5 +167,3 @@ layer occurring before the mean spike in the hidden layer.
 
 #+downloaded: /tmp/screenshot.png @ 2019-08-30 14:05:59
 [[file:images/temporal-coding-comsa/screenshot_2019-08-30_14-05-59.png]]
-
-bibliography:biblio.bib

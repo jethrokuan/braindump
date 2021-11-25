@@ -462,9 +462,5 @@ presence of a limited number of training observations, because it does
 make some assumptions about the form of the decision boundary.
 
 * Reference Textbooks
-1. An introduction to statistical learning cite:james2013introduction
-2. Understanding Machine Learning cite:shalev2014understanding
-
-bibliography:biblio.bib
-
-
+1. An introduction to statistical learning [cite:@james2013introduction]
+2. Understanding Machine Learning [cite:@shalev2014understanding]

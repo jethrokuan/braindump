@@ -2,7 +2,6 @@
 :ID:       7d98a4c0-1fd1-429a-a288-7ab9849aa617
 :ROAM_REFS: https://www.gjopen.com/
 :END:
-
 #+title: The Good Judgment Project
 
 The Good Judgment Project (GJP) is a project "harnessing the wisdom of the crowd

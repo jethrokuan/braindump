@@ -76,6 +76,4 @@ cross-modal retrieval, and image captioning.
 
 Other examples of structured coordinated spaces use enforce a partial
 order in the multimodal space. Another special case of this is
-[[id:ad0f8f03-f332-4484-9ef0-76e157b41eac][Canonical Correlation Analysis]]. 
-
-bibliography:biblio.bib
+[[id:ad0f8f03-f332-4484-9ef0-76e157b41eac][Canonical Correlation Analysis]].

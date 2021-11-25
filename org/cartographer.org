@@ -6,7 +6,7 @@
 * System Overview
 Google Cartographer provides a real-time solution for indoor mapping
 in the form of a sensor-equipped backpack that generates 2D grid maps
-with a $r = 5cm$ resolution cite:googlecartographer. It is built to
+with a $r = 5cm$ resolution [cite:@googlecartographer]. It is built to
 scale to large maps, where previous approaches face issues. For
 example, particle filter SLAM ([[id:521c87bc-95eb-47ca-990f-58695d65490d][Simultaneous Localization and Mapping
 (SLAM)]]) approaches become resource intensive as maps become large,
@@ -30,5 +30,3 @@ the optimization problem.
 
 #+downloaded: https://google-cartographer.readthedocs.io/en/latest/_images/high_level_system_overview.png @ 2019-11-05 14:15:55
 [[file:images/cartographer/high_level_system_overview2019-11-05_14-15-55_.png]]
-
-bibliography:biblio.bib

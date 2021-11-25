@@ -10,7 +10,7 @@ An option is defined as a tuple containing:
 3. A termination function (post-condition)
 
 This helps put learning and planning algorithms at the same level of
-abstraction. cite:stolle2002learning
+abstraction. [cite:@stolle2002learning]
 
 * Models vs Actions
 
@@ -24,5 +24,3 @@ model ([[id:6bcdf2f0-6f2b-47bf-95c1-180a1d81f497][Temporal Difference Learning]]
 
 * Related
 - [[id:1afc2277-e96b-4049-a1c0-2ea9ff26e0b0][Generalized Value Functions]]
-
-bibliography:biblio.bib

@@ -287,7 +287,7 @@ agents, it is better to learn a Q-function for what will actually
 happen rather than what the agent would like to happen.
 
 Q-learning has been shown to be sample efficient in the tabular
-setting cite:jin_q_learning_provably_efficient.
+setting [cite:@jin_q_learning_provably_efficient]
 
 * Q-learning with function approximation
 
@@ -316,5 +316,3 @@ triad".
 In the presence of all three, learning is unstable. DQN is the first
 algorithm that stabilized deep Q-learning ([[id:48f41ab0-c757-4e91-97b9-62b8ee8914e3][Playing Atari with Deep
 RL]]).
-  
-bibliography:biblio.bib

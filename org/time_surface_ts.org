@@ -4,7 +4,7 @@
 #+hugo_slug: time_surface_ts
 #+title: Time Surface
 
-Defined in cite:lagorce_hots_2017
+Defined in [cite:@lagorceHOTSHierarchyEventBased2017]
 
 Say we have a stream of visual events:
 
@@ -38,5 +38,3 @@ $\mathcal{T}$:
 The time surface provides dynamic spatiotemporal context around an event, and
 the exponential decay expands the activity of passed events and provides
 information about the history of the activity in the neighbourhood.
-
-bibliography:biblio.bib

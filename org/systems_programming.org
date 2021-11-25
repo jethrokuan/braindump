@@ -10,5 +10,3 @@
 TODO: https://people.freebsd.org/~lstewart/articles/cpumemory.pdf
 
 [cite:@drepper2007every]
-
-bibliography:biblio.bib

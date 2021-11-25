@@ -4,7 +4,7 @@
 #+title: How To Write a Technical Paper
 
 - tags :: [[id:464665d4-0806-422b-b984-e65bb0120e9f][Writing]], [[id:e45f2c4d-052e-48e7-b985-d9330d7a835d][Papers]]
-- paper :: cite:Whiteside2017HowTW
+- paper :: [cite:@Whiteside2017HowTW]
 
 * Abstract
 The abstract is what the reader reads to determine if the paper is
@@ -54,6 +54,3 @@ The conclusion sections elaborates on the impacts of using your
 approach. It also states limitations or disadvantages of your
 solution, and enables you to provide directions for future research in
 the field.
-
-
-bibliography:biblio.bib

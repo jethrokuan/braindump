@@ -21,11 +21,9 @@ in portfolio performance. Traditional methods either:
    causal inferences.
 
 Cerniglia and Tetlock propose using the Alpha-Brier system to disentangle skill
-from luck quicker cite:cernigliaAcceleratingLearningActive2019. This system
+from luck quicker [cite:@cernigliaAcceleratingLearningActive2019]. This system
 requires firms to first construct an analytical infrastructure that allows them
 to capture in real-time the accuracy of forecasting judgments underlying
 investment decisions. The Alpha-Brier process also facilitates learning by
 giving investors the explicit accuracy feedback they need for making
 well-calibrated forecasts on the drivers of market outcomes.
-
-bibliography:biblio.bib

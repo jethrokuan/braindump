@@ -21,6 +21,4 @@ There are several approaches to achieving speeding up NLP systems.
 Pruning removes "unimportant" weights from a network.
 E.g. Prune based on second-order derivatives: "Optimal Brain Damage" and "Optimal Brain Surgeon"
 
-** TODO [[id:f3a5b29f-6d27-48a5-bfca-ac7dd62a025d][Lottery Ticket Hypothesis]] in Transformer cite:brixSuccessfullyApplyingStabilized2020
-
-bibliography:biblio.bib
+** TODO [[id:f3a5b29f-6d27-48a5-bfca-ac7dd62a025d][Lottery Ticket Hypothesis]] in Transformer [cite:@brixSuccessfullyApplyingStabilized2020]

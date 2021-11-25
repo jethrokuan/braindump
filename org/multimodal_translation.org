@@ -11,7 +11,7 @@ captioning is a particularly popular problem, with large multi-modal
 datasets available.
 
 Multi-modal translation can be categorized into /example-based/, and
-/generative/ approaches cite:baltrusaitis17:_multim_machin_learn.
+/generative/ approaches [cite:@baltrusaitis17:_multim_machin_learn].
 
 #+caption: Example-based and generative multi-modal translation
 [[file:images/20200219160409_multimodal_translation/screenshot2020-02-19_16-17-33_.png]]
@@ -65,7 +65,3 @@ later decoding it to generate the target modality.
  video-to-text. Encoder-decoder approaches are common used. Continuous
  generation models have to tackle the additional difficulty of
  temporal consistency between modalities.
-
-bibliography:biblio.bib
-
-

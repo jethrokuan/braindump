@@ -1,0 +1,81 @@
+:PROPERTIES:
+:ID:       348f2de7-e5e9-461a-9d3f-f41aeb0f499a
+:END:
+#+title: Singapore to San Francisco Migration Guide
+
+Since I'm relocating to San Francisco early 2022, I've been asking around and
+gathering resources how to effectively make the transition. The following is a
+checklist of things that need to be done.
+
+* Checklist Overview
+Before arriving:
+
+1. [ ] [[packing]] for the move
+2. [ ] Check that you have passed [[https://www.cdc.gov/coronavirus/2019-ncov/travelers/testing-international-air-travelers.html][all the requirements]] for travel to the US
+3. [ ] Obtained your H-1B1 visa if you're Singaporean. The company you are going
+   to be employed with should guide you through the process.
+
+Upon arriving:
+
+1. [ ] Obtain a Social Security Number (SSN)
+2. [ ] Obtain a US banking account to receive paycheck
+
+* Packing <<packing>>
+- [ ] Toiletries:
+  - [ ] Shaver
+- [0/3] Equipment:
+  - [ ] Laptop (?)
+  - [ ] Kindle/Tablet
+  - [ ] Charging Cables and travel adapters
+- Clothing:
+  - [ ] Warm clothing: can get heattech from uniqlo
+- [ ] Travel necessities:
+  - [ ] Passport
+  - [ ] Driving License
+
+* Housing <<housing>>
+For housing there are a number of options:
+
+- Whether you want to stay alone or form a house (with friends or finding randos
+  on Craigslist)
+- Whether you want to stay inside or outside the city. Considerations:
+  - City is more bustling, can have better food
+  - Rent is more expensive in the city
+  - Driving is difficult in the city, if you travel outside often
+
+You can look for apartments on Craigslist or on Zillow. Housing leases are
+generally a year long.
+
+- Check if the office location is near to a Caltrain or BART. If so, staying
+  slightly further away outside the city might not be that big of an
+  incovenience. Also a consideration if in a remote-first company.
+- *Always look for an apartment in person*. Pictures can be deceiving: sometimes
+  pictures of an already occupied unit is shown to you instead.
+- Ask your friends if they have an empty slot (even if it's temporary). This can
+  be a temporary stay while looking for apartments on the ground.
+- Consider getting an Airbnb for a month while looking for apartments. These are
+  usually furnished with everything your need for your stay, until you find a
+  permanent location.
+
+** Staying in the City
+
+- Try to avoid Tenderloin and some parts of Mission (ask around)
+- Valencia st is nice (source: SY)
+
+* Setting up a Home Office
+* Banking
+
+You'll need to open a checking account and a savings account. You'll use your
+checking account for day-to-day expenses, and accumulate your paycheck into the
+savings account.
+
+Recommendations:
+- Chase Bank (source: [[https://blog.huikang.dev/2021/11/06/starting-out-h1b1][huikang]])
+
+To open a banking account, you usually need:
+
+- Proof of US residency
+- Passport
+
+* Useful Tools
+- [[https://smartasset.com/taxes/california-tax-calculator][California Tax Calculator]]

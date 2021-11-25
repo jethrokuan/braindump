@@ -7,7 +7,7 @@
 Co-learning is the technique of aiding of modeling of a
 (resource-poor) modality by exploiting knowledge from another
 (resource-rich) modality. The helper modality is only used in model
-training, and is not used during test-time. cite:baltrusaitis17:_multim_machin_learn
+training, and is not used during test-time. [cite:@baltrusaitis17:_multim_machin_learn]
 
 Parallel-data approaches require the data to be directly linked to
 observations in other modalites. Non-parallel approaches do not
@@ -32,5 +32,3 @@ Non-parallel methods only require that different modalities share
 similar categories or concepts. Methods include [[id:4178c3b6-6b7c-42a2-9e49-cdc12f49f15b][transfer learning]]
 using coordinated multimodal representations, or [[id:5cea9a5a-3901-423a-b253-374c379a4135][Concept Grounding]] via
 word similarity, or [[id:fceda897-3587-4a80-8059-1f58bb240778][zero-shot learning]].
-
-bibliography:biblio.bib

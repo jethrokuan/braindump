@@ -37,7 +37,7 @@ the algorithm, can we make $p_{data}(o_t) = p_{\pi_\theta}(o_t)$?
       observation.
    2. Perhaps a better model is to account for all observations.
    3. Problem: history exacerbates causal confusion
-      cite:haan19_causal_confus_imitat_learn
+      [cite:@haan19_causal_confus_imitat_learn]
 
 2. Multimodal behaviour
    1. Solutions:
@@ -81,5 +81,3 @@ Assuming: $\pi_{\theta}\left(\mathbf{a} \neq \pi^{\star}(\mathbf{s}) | \mathbf{s
 
 #+caption: The tightrope walking problem
 [[file:images/imitation_learning/screenshot2019-12-15_14-50-49_.png]]
-
-bibliography:biblio.bib

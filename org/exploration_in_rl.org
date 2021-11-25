@@ -81,7 +81,7 @@ choose $a$ according to $\mathrm{argmin}_a \frac{\Delta(a)^2}{g(a)}$.
 
 * Extending Exploration to RL
 
-** Count-based exploration cite:NIPS2016_6383
+** Count-based exploration [cite:@NIPS2016_6383]
 Use pseudo-counts:
 
 \begin{equation}
@@ -89,5 +89,3 @@ r_i^+ = r_i + \mathcal{B}(\hat{N}(s))
 \end{equation}
    
 There are many choices for the bonus.
-
-bibliography:biblio.bib

@@ -315,7 +315,7 @@ Meta supervised learning: {x, y} to {x, t, y}
 
 * Structuring Data Science Projects
 Cookiecutter Data Science provides a decent project structure, and
-uses the ubiquitous build tool ~Make~ to build data projects. cite:home_cookiec_data_scien 
+uses the ubiquitous build tool ~Make~ to build data projects. [cite:@home_cookiec_data_scien]
 
 #+begin_src text
 ├── LICENSE
@@ -364,12 +364,10 @@ uses the ubiquitous build tool ~Make~ to build data projects. cite:home_cookiec_
 └── tox.ini            <- tox file with settings for running tox; see tox.testrun.org
 #+end_src
 
-Stripe's approach cite:dan_reprod still primarily uses Jupyter notebooks, but
-has 2 main points. First, they strip the results from the Jupyter
-notebooks before committing. Second, they ensure that the notebooks
-can be reproduced on the work laptops and on their cloud infrastructure.
-
-bibliography:biblio.bib
+Stripe's approach [cite:@dan_reprod] still primarily uses Jupyter notebooks, but
+has 2 main points. First, they strip the results from the Jupyter notebooks
+before committing. Second, they ensure that the notebooks can be reproduced on
+the work laptops and on their cloud infrastructure.
 
 * Footnotes
 [fn:1] See [[https://drivendata.github.io/cookiecutter-data-science/][Home - Cookiecutter Data Science]].

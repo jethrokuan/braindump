@@ -24,5 +24,3 @@
   (see [[id:b3c6f8cb-e3fe-4a72-8f03-ddbe65024428][Multi-modal Fusion]])
 - co-learning :: Transferring knowledge between modalities, their
   representation, and predictive models. (see [[id:2b6e2383-41f1-4b28-a353-c87e21594bdb][Co-learning]])
-
-bibliography:biblio.bib

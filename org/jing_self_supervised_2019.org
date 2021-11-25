@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       35ebcb4b-c3c5-4269-8228-604bb748d810
-:ROAM_REFS: cite:jing_self-supervised_2019
+:ROAM_REFS: [cite:@jingSelfsupervisedVisualFeature2019]
 :END:
 #+title: jing_self-supervised_2019: Self-supervised Visual Feature Learning with Deep Neural Networks: A Survey
 

@@ -3,7 +3,7 @@
 :END:
 #+title: Recommender Systems
 
-* Are We Really Making Much Progress? cite:dacrema19_are_we_reall_makin_much_progr
+* Are We Really Making Much Progress (In RecSys)? [cite:@dacrema19_are_we_reall_makin_much_progr]
 :PROPERTIES:
 :ID:       e0b936d9-c24a-47d5-9c6e-ab469f9c8f43
 :END:
@@ -27,5 +27,3 @@ To alleviate these issues:
 1. Use appropriate evaluation methods
 2. Evaluate on appropriate datasets (size is important)
 3. Release reproducible code
-
-bibliography:biblio.bib

@@ -35,8 +35,6 @@ A typical robot grasp detection system can consist of 3 components.
 Execution time is the primary reason why grasping systems remain open-loop.
 However, closed-loop control via visual feedback is desirable because they are
 able to adapt to dynamic environments, and require less precise position control
-or camera calibration. cite:morrisonClosingLoopRobotic2018 uses neural network
+or camera calibration. [cite:@morrisonClosingLoopRobotic2018] uses neural network
 to synthesize a grasp quality image in real-time to achieve closed-loop
 grasping.
-
-bibliography:biblio.bib

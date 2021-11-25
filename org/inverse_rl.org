@@ -81,7 +81,7 @@ where $Z$ is the integral over all trajectories: $Z = \int p(\tau) \mathrm{exp}(
 first term is estimated with expert samples, and the second with the
 soft optimal policy under current reward.
 
-* MaxEntropy Inverse RL cite:ziebart2008_maxentrl
+* MaxEntropy Inverse RL [cite:@ziebart2008_maxentrl]
 
 1. Given $\psi$, compute [[id:0f3564b7-5a64-4191-b917-4d94399d193f][backward message]] $\beta(s_t, a_t)$
 2. Given $\psi$, compute [[id:0f3564b7-5a64-4191-b917-4d94399d193f][forward message]] $\alpha(s_t)$

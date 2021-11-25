@@ -3,6 +3,37 @@
 :END:
 #+title: Fitness
 
+* Understanding Pain
+
+One of the first models of pain was the gate control theory. This quickly became
+outdated, and 2 primary models remain: The neuromatrix theory of pain, and the
+biopsychosocial model.
+
+The biopsychosocial model of pain asserts that there are biological,
+psychological and social factors that influence pain within the body.
+
+- biological factors :: pain from repetitive stress, trauma, damage
+- psychological factors :: effect of emotions and thoughts, mood, attention, sleep etc.
+- social factors :: Social activities, work and occupation resulting in more isolation
+
+The neuromatrix model looks at six areas, namely:
+
+- cognitive issues :: memories of past experiences
+- sensory issues :: nociceptive inputs from cutaneous, visceral and musculature senses
+- emotional issues :: limbic system and stress mechanism
+- pain perception :: sensory, affectieve and cognitive dimensions
+- actions :: voluntary and involuntary actions
+- stress ::  immune system, cortisol, and other stress hormones
+
+Pain is a protective mechanism, not necessarily a symptom of damage. Not
+avoiding various activities due to pain, and not changing your lifestyle around
+the pain are critical during a rehabilitation process.
+
+The three most common causes of tightness in the back are pain, instability, or
+weakness. Your muscles may become tight to protect you from injury. Exercises
+that are aimed at strengthening and stabilizing the back tend to clear up such
+instances of back pain and tightness.
+
 * Posture
 :PROPERTIES:
 :ID:       4e31cb8d-f49c-4131-9a07-8e6dce8860d3
@@ -18,9 +49,6 @@ endurance and weakness rather than structural factors.
 
 The key to resolving pain and discomfort is improving strength and endurance of
 the appropriate musculature.
-
-TODO: The factors that lead to increased incidence of lower back pain are decreased
-muscle endurance and weakness rather than structural factors.
 
 ** Posture in real life
 
@@ -59,35 +87,3 @@ Mobility and stability exercises improve your range of motion through either
 dynamic movement or static holds. The strength and endurance movements
 contribute most to your ability to maintain good postural positioning in your
 daily activities.
-
-
-* Understanding Pain
-
-One of the first models of pain was the gate control theory. This quickly became
-outdated, and 2 primary models remain: The neuromatrix theory of pain, and the
-biopsychosocial model.
-
-The biopsychosocial model of pain asserts that there are biological,
-psychological and social factors that influence pain within the body.
-
-- biological factors :: pain from repetitive stress, trauma, damage
-- psychological factors :: effect of emotions and thoughts, mood, attention, sleep etc.
-- social factors :: Social activities, work and occupation resulting in more isolation
-
-The neuromatrix model looks at six areas, namely:
-
-- cognitive issues :: memories of past experiences
-- sensory issues :: nociceptive inputs from cutaneous, visceral and musculature senses
-- emotional issues :: limbic system and stress mechanism
-- pain perception :: sensory, affectieve and cognitive dimensions
-- actions :: voluntary and involuntary actions
-- stress ::  immune system, cortisol, and other stress hormones
-
-Pain is a protective mechanism, not necessarily a symptom of damage. Not
-avoiding various activities due to pain, and not changing your lifestyle around
-the pain are critical during a rehabilitation process.
-
-The three most common causes of tightness in the back are pain, instability, or
-weakness. Your muscles may become tight to protect you from injury. Exercises
-that are aimed at strengthening and stabilizing the back tend to clear up such
-instances of back pain and tightness.

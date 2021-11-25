@@ -3,7 +3,6 @@
 :END:
 #+title: Expectation Maximization and Mixture Models
 #+bibliography: biblio.bib
-#+cite_export: csl apa.csl
 
 * Introduction
 

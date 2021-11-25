@@ -133,5 +133,3 @@ $\textrm{VCdim}(\mathcal{H}) \le d < \infty$. Then for all $m$,
 
 In particular, if $m > d + 1$, then $\tau_{\mathcal{H}}(m) \le (em/d)^d$.
 #+end_definition
-
-bibliography:biblio.bib

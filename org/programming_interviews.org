@@ -1,0 +1,9 @@
+:PROPERTIES:
+:ID:       781b0b44-b7b5-4e87-8bd0-79f90480c154
+:END:
+#+title: Programming Interviews
+
+* Primitive Types
+
+1. Setting the lowest bit to 0: ~x & (x - 1)~
+2. Extracting the lowest bit: ~x & ~(x-1)~

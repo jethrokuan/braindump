@@ -455,11 +455,11 @@ https://www.tensorflow.org/performance/datasets_performance
 2. Cache the dataset into memory if it can fit
 ** Transitioning to TF 2.0
 If you are working on custom architectures, we suggest using tf.keras
-to build your models instead of Estimator. cite:tensorflow_stand_keras
+to build your models instead of Estimator. [cite:@tensorflow_stand_keras]
 
 * Keras 
 Keras is a high-level neural networks API, compatible with multiple
-backends. cite:home_keras_docum As of Tensorflow 2.0, Keras will be
+backends. [cite:@home_keras_docum] As of Tensorflow 2.0, Keras will be
 the primary API for building neural networks.
 
 The ~Sequential~ model is a simple model consisting of a linear stack of
@@ -487,6 +487,3 @@ layers.
   # Generate predictions on new data:
   classes = model.predict(x_test, batch_size=128)
 #+end_src
-
-*** 
-bibliography:biblio.bib

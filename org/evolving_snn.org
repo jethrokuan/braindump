@@ -21,7 +21,5 @@ threshold. This weight vector is compared to existing neurons in the
 repository. If neurons are too similar (e.g. small Euclidean distance
 between weight vectors), they are merged.
 
-See cite:schliebs13_evolv_spikin_neural_networ_survey for a
+See [cite:@schliebs13_evolv_spikin_neural_networ_survey] for a
 comprehensive review.
-
-bibliography:biblio.bib

@@ -5,7 +5,7 @@
 #+filetags: :paper:
 
 - tags :: [[id:b96c5fa6-8300-479c-911b-3de4c397b1d5][Model Compression]]
-- paper :: cite:stock19_and_bit_goes_down
+- paper :: [cite:@stock19_and_bit_goes_down]
 
 This method minimizes the loss reconstruction error for in-domain
 inputs, and does not require any labelled data.
@@ -22,7 +22,3 @@ Vector Quantization (VQ) and Product Quantization (PQ) decompose the
 high-dimensional space into a cartesian product of subspaces that are
 quantized separately. These are typically studied under the context of
 nearest neighbour search.
-
-* 
-bibliography:biblio.bib
-

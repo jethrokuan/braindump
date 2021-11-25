@@ -71,7 +71,7 @@ e.g. Factorization machines
 
 [cite:@guo17_deepf,@lian18_xdeep]
 
-** TODO Deep Knowledge-aware Network cite:wang18_dkn
+** TODO Deep Knowledge-aware Network [cite:@wang18_dkn]
 
 Multi-channel word-entity aligned knowledge aware CNN
 
@@ -245,7 +245,3 @@ Argo's DAG UI looks nice!
 
 E.g. stack Kinesis Data Firehose, S3, Airflow, EMR-Presto (Athena for
 large jobs), [[https://superset.incubator.apache.org/][Apache Superset]]
-
-* 
-bibliography:biblio.bib
-

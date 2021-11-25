@@ -5,64 +5,11 @@
 #+title: Math Problem-solving with Machine Learning
 
 * Papers
-** Measuring Mathematical Problem Solving With the MATH Dataset :paper:
-:PROPERTIES:
-:ID:       49176887-096a-4773-8e2a-5a36eb928ddf
-:ROAM_REFS: cite:hendrycksMeasuringMathematicalProblem2021 https://arxiv.org/abs/2103.03874
-:END:
-
-This paper is primarily a dataset paper. It introduces two datasets:
-
-1. MATH dataset: A challenging dataset (12,500 problems) which contains
-   questions, and step-by-step solutions, with answers in boxes
-   - Problems are categorized into seven subjects, and classified into 5
-     difficulties
-   - Question figures encoded using [[https://asymptote.sourceforge.io/][Asymptote language]] to allow language models
-     to learn to read/generate them.
-2. AMPS dataset: Large dataset for pretraining
-   - 100,000 problems from Khan Academy exercises
-   - 5 million problems generated from Mathematica scripts to help model learn
-     mathematics fundamentals
-
-Language models achieve poor accuracies on the MATH dataset (2.9% to 6.9%): it
-requires the models to learn advanced problem-solving techniques. Human
-performance is also relatively poor on the dataset (40% for non-advanced
-students, 90% for IMO medallist).
-
-*** Model Training
-
-GPT-2 pretrained on AMPS using the standard autoregressive language modelling
-objective.
-
-Fine-tuned model trained to output both solution and answer. Inputs are equal
-mix of:
-
-- <P> Final Answer: <Answer>
-- <P> Full Solution: <Solution>
-
-This allows the model to output both answer and solution based on prompt tuning.
-NOTE: Seems similar to T5's text-to-text format.
-
-Evaluation is performed by computing the probability that a correct answer has
-higher confidence than an incorrect answer (AUROC). Large models are more
-overconfident.
-
-*** Key Findings
-
-1. Accuracy increases slowly as model size increases: *suggests the need
-   for algorithmic improvements*
-2. Pretraining on AMPS results in ~25% increase in relative accuracy, suggesting
-   that algorithmically generated questions can be a useful pretraining step
-3. Having model generate step-by-step solution /decreases/ resulting accuracy
-   - Possibly because incorrect generation can derail the model
-4. Training the models with partially observed solutions is useful, but not by
-   much: only when the model sees 99% of the solutions is able to output the
-   answer with high accuracy.
-
+- [[id:49176887-096a-4773-8e2a-5a36eb928ddf][Measuring Mathematical Problem Solving With the MATH Dataset]]
 ** Entailment as Few-Shot Learner :paper:
 :PROPERTIES:
 :ID:       38ad6e87-d186-4719-8b46-7fb402c66c25
-:ROAM_REFS: https://arxiv.org/abs/2104.14690v1 cite:wangEntailmentFewShotLearner2021
+:ROAM_REFS: https://arxiv.org/abs/2104.14690v1 [cite:@wangEntailmentFewShotLearner2021]
 :END:
 *** Key Idea
 

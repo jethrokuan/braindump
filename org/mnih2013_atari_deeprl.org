@@ -3,7 +3,7 @@
 :END:
 #+title: Playing Atari with Deep RL
 
-* Playing Atari With Deep RL cite:mnih2013playing
+* Playing Atari With Deep RL [cite:@mnih2013playing]
 
 ** Preprocessing Steps
 
@@ -30,12 +30,10 @@ rapidly.
 3. Clip $\delta$ to $\left[1, -1\right]$
 
 * Improving DQN
-- Double Q-learning reduces bias cite:van2016deep
-- Average Q-learning reduces variance cite:anschel2017averaged
-- [[id:33b0e88f-317f-4fa1-b239-63ebbc04fa58][Hindsight Experience Replay]] cite:andrychowicz2017hindsight
-- Distributional RL cite:dabney2018distributional
+- Double Q-learning reduces bias [cite:@van2016deep]
+- Average Q-learning reduces variance [cite:@anschel2017averaged]
+- [[id:33b0e88f-317f-4fa1-b239-63ebbc04fa58][Hindsight Experience Replay]] [cite:@andrychowicz2017hindsight]
+- Distributional RL [cite:@dabney2018distributional]
 
 * References
 - [[https://davidsanwald.github.io/2016/12/11/Double-DQN-interfacing-OpenAi-Gym.html][Defeating the Deadly Triad: | random walks and lots of ♥s]]
-
-bibliography:biblio.bib

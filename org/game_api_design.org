@@ -5,7 +5,7 @@
 
 - tags :: [[id:b7503ab8-1c6f-4b0f-bcee-019ac9ad723a][Software Engineering]]
 
-* Core Tenets from Handmade cite:handmade_how_to_write_better
+* Core Tenets from Handmade [cite:@handmade_how_to_write_better]
 ** Maximize portability
 - Write in C99 if possible
 - Try to avoid:
@@ -34,5 +34,3 @@
   ParsePNGFileResult result = ParsePNGFile(png_file_data);
   if (result.error) { /* handle error */ }
 #+end_src
-
-bibliography:biblio.bib

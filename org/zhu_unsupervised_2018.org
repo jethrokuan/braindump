@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       01a14573-f8e8-4d91-8309-42c4ac7ae074
-:ROAM_REFS: cite:zhu_unsupervised_2018
+:ROAM_REFS: [cite:@zhu_unsupervised_2018]
 :END:
 #+title: zhu_unsupervised_2018: Unsupervised Event-based Learning of Optical Flow, Depth, and Egomotion
 
@@ -36,5 +36,3 @@ Given a set of $N$ input events $\left\{\left(x_{i}, y_{i}, t_{i}, p_{i}\right)\
   \end{aligned}
 
   where $k_{b}(a)$ is the bilinear sampling kernel.
-
-  bibliography:biblio.bib

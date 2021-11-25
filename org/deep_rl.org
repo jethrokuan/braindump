@@ -87,5 +87,3 @@ or algorithms that adaptively adjust parameters:
 2. [[https://spinningup.openai.com/en/latest/][Welcome to Spinning Up in Deep RL! — Spinning Up documentation]]
    ([[https://github.com/openai/spinningup][Tensorflow]], [[https://github.com/kashif/firedup/][Pytorch]])
 3. [[https://www.icml.cc/2016/tutorials/deep_rl_tutorial.pdf][David Silver's Deep RL ICML Tutorial]]
-
-bibliography:biblio.bib

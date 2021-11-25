@@ -63,5 +63,3 @@ image captioning tasks. Neural networks have the capacity to learn
 from large amounts of data, and are able to learn complex decision
 boundaries. However, they lack interpretability, and require large
 amounts of training data.
-
-bibliography:biblio.bib

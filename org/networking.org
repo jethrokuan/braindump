@@ -418,8 +418,6 @@ hierarchical fashion and distributed around the world.
      queried by a root server, the authoritative name server responds
      with a reply containing the desired mapping. 
 
-bibliography:biblio.bib
-
 * Transport Layer
 
 The transport layer resides between the application and network

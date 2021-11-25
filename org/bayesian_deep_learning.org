@@ -3,15 +3,14 @@
 :END:
 #+title: Bayesian Deep Learning
 #+hugo_tags: bayes deep-learning
-bibliographystyle:unsrt
 
-* The Case For Bayesian Learning cite:wilson2019bayesian
+* The Case For Bayesian Learning [cite:@wilson2019bayesian]
 - Vague parameter prior + structured model (e.g. CNN) = structured
   function prior!
 - The success of ensembles encourages Bayesians, since ensembles
   approximate the Bayesian Model Average
 
-* Bayesian Perspective on Generalization cite:smith_quoc_bayes_generalization_sgd
+* Bayesian Perspective on Generalization [cite:@smith_quoc_bayes_generalization_sgd]
 
 Bayesian model comparisons were first made on Neural Networks by
 Mackay. Consider a classification model $M$ with a single parameter
@@ -43,6 +42,3 @@ In models with many parameters, $P(y|x;M) \approx
 \frac{\lambda^{p/2}f^{-C(w_0)}} {| \nabla \nabla C(w) |_{w_0}^{1 / 2}}$,
 where the denominator can be thought of as an "Occam factor", causing
 the network to prefer broad minima.
-
-
-bibliography:biblio.bib

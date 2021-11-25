@@ -54,6 +54,4 @@ of neuron $i$ is given by the instantaneous synaptic currents $I_i$
 and the membrane voltage $U_i$.
 
 * References
-- cite:neftci19_surrog_gradien_learn_spikin_neural_networ
-
-bibliography:biblio.bib
+[cite:@neftci19_surrog_gradien_learn_spikin_neural_networ]

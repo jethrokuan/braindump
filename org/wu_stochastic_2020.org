@@ -1,6 +1,6 @@
 :PROPERTIES:
 :ID:       db4f01d1-d51f-490d-b6d2-c3fd045d33cf
-:ROAM_REFS: cite:wu_stochastic_2020
+:ROAM_REFS: [cite:@wu_stochastic_2020]
 :END:
 #+title: wu_stochastic_2020: Stochastic Normalizing Flows
 

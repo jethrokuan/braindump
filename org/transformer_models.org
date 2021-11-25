@@ -71,7 +71,5 @@ BART can then be fine-tuned for downstream applications:
 - token classification :: feed the complete document into the encoder and decoder, and use the top hidden state of the decoder as a representation for each word.
 - sequence generation :: input sequence is given to the encoder, and the decoder
   generates auto-regressively.
-  
-bibliography:biblio.bib
 
 ** TODO T5

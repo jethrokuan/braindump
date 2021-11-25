@@ -1,0 +1,7 @@
+:PROPERTIES:
+:ID:       b736bc57-6a5c-49da-8925-f21ea5263245
+:ROAM_REFS: [cite:@pengMathBERTPreTrainedModel2021]
+:ROAM_REFS+: http://arxiv.org/abs/2105.00377
+:END:
+#+title: MathBERT: A Pre-Trained Model for Mathematical Formula Understanding
+#+bibliography: biblio.bib

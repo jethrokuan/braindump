@@ -7,9 +7,9 @@
 Landing on Mars is challenging because there's is too much
 atmosphere to be ignored, but too little to cushion the landing.
 Hence, all Mars rovers will have a three phrases: Entry, Descent and
-Landing (abbrieviated EDL). cite:lakdawalla18_curios
+Landing (abbrieviated EDL). [cite:@lakdawalla18_curios]
 
-* TODO Read cite:systemsengineering_6575245
+* TODO Read [cite:@systemsengineering_6575245]
 
 * How the Curiosity Rover worked
 
@@ -24,7 +24,3 @@ Things to account for:
   heating table, and also had schedules to ensure that the various
   parts were heated to operating temperature before functioning.
 - Have a system collecting heat output from energy
-
-
-bibliography:biblio.bib
-

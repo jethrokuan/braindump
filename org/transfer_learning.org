@@ -94,5 +94,3 @@ concurrent multi-task learning. Policy distillation
 2. Build agents capable of playing multiple games
 3. Improve the stability of the [[id:ae0b04fd-500b-4592-a20b-556f26a1b69d][DQN learning algorithm]] by distilling
    online the policy of the best performing agent
-
-bibliography:biblio.bib

@@ -86,9 +86,3 @@ etc) and the allocation of applications into those resources.
 Two-level scheduler, compared to k8s one-level scheduler.
 
 Scheduler scales a lot better than k8s (earlier).
-
-
-* 
-
-bibliography:biblio.bib
-

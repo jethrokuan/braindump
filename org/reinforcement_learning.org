@@ -314,6 +314,3 @@ training sequences tends to infinity.
 - [[id:f90ef3b7-3d35-4af3-ba8f-00d27c6fa3c5][Policy Gradients]]
 - [[id:fc5a34fb-b009-4e9a-a779-d043e3e4e2db][Actor-Critic]]
 - [[id:ae0b04fd-500b-4592-a20b-556f26a1b69d][Q-Learning]]
-
-bibliography:biblio.bib
-

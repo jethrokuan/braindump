@@ -9,16 +9,9 @@
 - [[https://en.wikipedia.org/wiki/Rubin_causal_model][Rubin Causal Model (Wikipedia)]]
 
 * MDE
-
-
 - generally proportional to number of users
 - Statistical power and Minimum Detectable Effect (MDE)
   - MDE treated as smallest effect size (signals) you can find in your
     experiment with certain probability
 
 ** TODO [[https://blog.twitter.com/engineering/en_us/a/2016/power-minimal-detectable-effect-and-bucket-size-estimation-in-ab-tests.html][Power, minimal detectable effect, and bucket size estimation in A/B tests]]
-
-* 
-
-bibliography:biblio.bib
-

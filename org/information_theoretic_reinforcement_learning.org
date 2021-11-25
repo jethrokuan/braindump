@@ -16,7 +16,5 @@ Can we learn /without/ any reward function at all?
 - empowerment :: $\mathcal{I}(s_{t+1};a_t) = \mathcal{H}(s_{t+1}) - \mathcal{H}(s_{t+1}|a_t)$
 
 * Papers
-- Skew-Fit cite:pong19_skew_fit
-- Diversity is All your Need cite:eysenbach18_diver_is_all_you_need
-
-bibliography:biblio.bib
+- Skew-Fit [cite:@pong19_skew_fit]
+- Diversity is All your Need [cite:@eysenbach18_diver_is_all_you_need]
