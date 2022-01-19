@@ -1,0 +1,18 @@
+:PROPERTIES:
+:ID:       a4e17973-8f16-4e28-85c7-1235a1975ec7
+:END:
+#+title: Music Theory
+
+* 7th Chords
+
+A chord contains the root, third and fifth. A major 7th chord contains the 7th
+note in the major scale. The dominant 7th contains the minor 7th note. Minor 7th
+chords have a flat 7 and flat 3.
+
+- C major: C, E, G
+- Cmaj7: C, E, G, B <- 7th
+- C7: C, E, G, Bb
+- Cmin7: C, Eb, G, Bb
+
+In the history of music, dominant 7th were used as the 5th, to lead to
+somewhere. Jazz and the blues started using the dominant 7th chord everywhere.

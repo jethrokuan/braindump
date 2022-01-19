@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       608905ad-0b1d-49d5-bc00-fd6f7ebc07f1
+:END:
+#+title: Combining Zettelkasten and Spaced Repetition
+
+The Zettelkasten is designed to facilitate understanding and insight generation.
+Spaced repetition, on the other hand, facilitates memorization. We can use
+spaced repetition to test understanding of reference zettels.

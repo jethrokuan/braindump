@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       fcfa0f52-ea27-44b3-94c2-d214d69fedb0
-:END:
-#+title: Documentation

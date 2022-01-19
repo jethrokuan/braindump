@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       21d55fd0-129a-4f8c-ade0-70e9101b447f
+:ROAM_REFS: https://andymatuschak.org/prompts/
+:END:
+#+title: How To Write Good Spaced Repetition Prompts
+
+Good spaced repetition prompts should be:
+
+- Focused :: concentrate on one detail. Having no focus can result in incomplete retrieval.
+- Precise :: vague questions elicit vague answers
+- Consistent :: the same knowledge should be triggered and recalled for this
+  question. Otherwise, this may induce "retrieval-induced forgetting".
+- Tractable :: these prompts should almost always be able to be answered correctly
+- Effortful :: these prompts should actually involve the act of retrieval, and cannot be infered.
+
+Writing good prompts first require breaking knowledge into discrete components.

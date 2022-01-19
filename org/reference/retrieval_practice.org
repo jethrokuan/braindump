@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       2e753b8e-1301-47a5-abe6-e7b8f6aa421b
+:END:
+#+title: Retrieval Practice
+
+The act of retrieval (or recall) reinforces memories. This causes us to forget
+knowledge more slowly. If we strategically space out retrieval ([[id:55090bb9-dc8a-4c92-97fb-6617cf8d37b4][Spaced
+Repetition]]), then we can effectively halt forgetting.

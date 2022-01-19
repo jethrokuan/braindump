@@ -1,0 +1,152 @@
+:PROPERTIES:
+:ID:       3e969e14-b902-47b8-984a-823e9e6884e1
+:END:
+#+title: Building a Zettelkasten with Org-roam
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="custom.css" />
+#+filetags: :draft:article:
+
+As promised, this is how I personally use Org-roam to maintain my Zettelkasten.
+This is both a setup guide, as well as a stream of thought. (not quite sure
+what's the best platform for a Q&A yet).
+
+* Background
+
+Org-roam provides functionality on top of Org-mode that streamlines note-taking
+and linking between notes. I use it primarily to help:
+
+1. "Organize" my notes
+2. Find or create notes (via ~org-roam-node-find~)
+3. Link various notes together (via ~org-roam-node-insert~)
+
+Professionally I'm a Machine Learning Engineer at Abnormal Security. I try to
+keep up with recent developments in tech, and occasionally read technical papers
+relevant to my field or area of work. As a (serious) hobby I'm playing the
+guitar, and I'm also trying to integrate portions of my Zettelkasten into my
+music study.
+
+* Basic Setup
+:PROPERTIES:
+:ID:       87f79442-fc82-44a8-a823-c5d817ec5383
+:END:
+
+As per Luhmann's original implementation, I have two slipboxes.
+
+The first slipbox is the *reference slipbox*. It contains zettels that contain
+information from various sources I consume (books, articles, papers etc.). Each
+zettel points back to the original source.
+
+The second slipbox, for the lack of a better name, is the *main slipbox*. It
+contains my own ideas and concepts, extracted from the material I read. They
+often point back to reference slipbox zettels.
+
+Finally, I have an inbox file, where unprocessed ideas are captured.
+
+#+caption: My org-roam-directory structure. Each slipbox is contained in their own folder. My journals and written articles are also in their own folder.
+#+begin_src text
+.
+├── articles
+├── daily
+├── main
+├── reference
+├── inbox.org
+└── biblio.bib
+#+end_src
+
+This directory structure is reflected in my capture templates:
+
+#+begin_src emacs-lisp
+(setq org-roam-capture-templates
+      '(("d" "default" plain
+         "%?"
+         :if-new (file+head "${slug}.org"
+                            "#+title: ${title}\n")
+         :immediate-finish t
+         :unnarrowed t)
+        ("r" "reference" plain "%?"
+         :if-new
+         (file+head "reference/${title}.org" "#+title: ${title}\n")
+         :immediate-finish t
+         :unnarrowed t)))
+#+end_src
+
+Rationale:
+- I use two separate slipboxes, because i is important to maintain a strict
+  distinction between what's an original thought and what's from an external
+  source
+- It is also important to know where information from zettels come from to
+  attribute appropriately, and also to use it to dig deeper into lines of thought
+
+I find it important to maintain a high signal-to-noise ratio in my Zettelkasten.
+This means that I don't write simply write everything that comes to mind:
+unprocessed thoughts and ideas can only be found in ~inbox.org~. I sometimes use
+my dailies to keep track of what I'm working on each day, but I find that they
+otherwise provide little value.
+
+* Writing Zettels
+
+** Reference Zettels
+
+When I want to take notes from books, articles, or podcasts. I always create a
+single reference zettel for the source. Each reference zettel should have a
+~ROAM_REFS~ corresponding to the reference material. It is often desirable to
+also include specific locations (e.g. page numbers) just in case.
+
+My ~ROAM_REFS~ come in a few forms:
+
+- [cite:key] :: Org-mode 9.5 citations.
+- https://google.com :: Websites I visit (blogs etc.)
+
+I manage my citations with [[https://www.zotero.org/][Zotero]]. I also use the [[https://retorque.re/zotero-better-bibtex/][Better BibTeX]] plugin to
+auto-export all my files into a single ~biblio.bib~ file. I personally use
+Doom's biblio module, but there are many options for managing citations:
+
+- For Org-mode citations, I recommend the wonderful [[https://github.com/bdarcus/citar][citar]] package.
+- For Org-ref style citations, you can use [[https://github.com/jkitchin/org-ref][org-ref]].
+
+My recommendation is to use one or the other, and not mix both, although you
+certainly could.
+
+Andy has [[https://www.youtube.com/watch?v=kG2_6ToMZgI][a nice livestream]] on how he processes a review paper, that is worth
+watching. This should give you some ideas on how notes should be taken.
+
+** Every Zettel is a Draft until Declared Otherwise
+
+All zettels begin as unrefined notes. To keep my Zettelkasten high-quality, it
+is important for me to constantly revisit and refine these draft notes. Once I
+am satisfied with the draft zettels, I can then mark them as complete. Thi is
+similar to Andy Matuschak's concept of [[https://notes.andymatuschak.org/Evergreen_notes][evergreen notes]].
+
+I mark all of my new zettels with the tag ~draft~, by doing the following:
+
+#+begin_src emacs-lisp
+(add-hook 'org-roam-capture-new-node-hook (lambda ()
+                                            (org-roam-tag-add '("draft"))))
+#+end_src
+
+Note: I do not yet have a system for revisiting zettels.
+
+* Guiding Principles
+** Not Everything Needs To Be Done In Emacs :draft:article:
+:PROPERTIES:
+:ID:       3e969e14-b902-47b8-984a-823e9e6884e1
+:END:
+
+One common complaint about Org-roam is mobile support: it is non-trivial to get
+Emacs up and running on mobile, and even then adding notes on the fly is not so
+easy.
+
+There is also a strong desire for Org-roam to develop a solid publishing
+workflow. There are projects that are work-in-progress, but they all take
+significant amount of setup. Zettelkastens are not meant for public consumption.
+Notes should be written for yourself and yourself only. Published materials
+should be a thoughtful composition of multiple zettels, with a healthy injection
+of your own summaries.
+
+My initial motivation for publishing my notes was twofold. First, then I'd
+occasionally point friends to things I mention, but more often than not the
+zettels I had written were gibberish to them, since they were written for me.
+Second, I thought it'd be good to be able to review zettels on the go. I find
+that this was generally suboptimal use of my time.
+
+As an alternative, I am exploring using spaced repetition to deepen my
+understanding of the zettels I have written.
