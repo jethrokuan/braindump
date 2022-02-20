@@ -53,7 +53,7 @@ various parallel operations on a cluster. The driver program contains
 the application's =main= function and defines distributed datasets on
 the cluster.
 
-Driver programs access Spark thorugh a =SparkContext= object, which
+Driver programs access Spark through a =SparkContext= object, which
 represents a connection to a computing cluster.
 
 Once we have a SparkContext, we use it to create RDDs. Driver programs

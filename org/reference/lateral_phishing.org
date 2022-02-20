@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       d5cd2a5a-739d-411b-a34e-f5cd9ff1176b
+:END:
+#+title: Lateral Phishing
+
+Lateral phishing is defined as an attack where an adversary uses a compromised
+enterprise account to send phishing emails
+[cite:@hoDetectingCharacterizingLateral2019].

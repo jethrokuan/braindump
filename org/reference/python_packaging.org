@@ -9,3 +9,7 @@
 
 - sdist :: Source distribution packages are compressed archives containing one or more packages or modules
 - wheel :: A package format designed to ship libraries with compiled artifacts. The fastest installation option, preferred by ~pip~.
+
+* Distributing Shared Object files in Wheels
+
+[[https://github.com/pypa/auditwheel][auditwheel]] is generally required.

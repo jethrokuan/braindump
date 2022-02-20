@@ -1,0 +1,1067 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <!-- 2022-02-08 Tue 20:28 -->
+  <meta http-equiv="Content-Type" content=
+  "text/html; charset=us-ascii" />
+  <meta name="viewport" content=
+  "width=device-width, initial-scale=1" />
+
+  <title>How I Take Notes with Org-roam</title>
+  <meta name="author" content="Jethro Kuan" />
+  <meta name="generator" content="Org Mode" />
+  <style type="text/css">
+/*<![CDATA[*/
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
+  /*]]>*/
+  </style>
+  <link rel="stylesheet" href="sakura.css" type="text/css" />
+</head>
+
+<body>
+  <div id="content" class="content">
+    <h1 class="title">How I Take Notes with Org-roam</h1>
+
+    <div id="org163b89e" class="figure">
+      <p><img src="media/how_i_take_notes_in_org_roam/preview.png"
+      alt="preview.png" /></p>
+    </div>
+
+    <div id="outline-container-org2278f9e" class="outline-2">
+      <h2 id="org2278f9e">Preface</h2>
+
+      <div class="outline-text-2" id="text-org2278f9e">
+        <p>This is an internal guide explaining how I take notes in
+        Org-mode and Org-roam. I write this in hopes that this will
+        provide insight into my note-taking process. Please
+        understand that note-taking is a personal practice and what
+        works best for me may not work for you.</p>
+
+        <p>Let me first introduce myself. Professionally I&rsquo;m
+        a Machine Learning Engineer at Abnormal Security. I try to
+        keep up with recent developments in tech, and occasionally
+        read technical papers relevant to my field or area of work.
+        As a (serious) hobby I play the guitar, and I&rsquo;m also
+        trying to integrate portions of my music study into my
+        Zettelkasten. I&rsquo;ve been using <a href=
+        "https://www.gnu.org/software/emacs/">Emacs</a> and
+        <a href="https://orgmode.org/">Org-mode</a> to take notes
+        for several years, and the note-taking process I am now
+        documenting has evolved organically over the years, and is
+        always subject to minute optimizations. <a href=
+        "https://www.orgroam.com/">Org-roam</a> is a byproduct of
+        this process, which I&rsquo;ve made available for public
+        consumption.</p>
+
+        <p>I hope that while reading this document you keep close
+        at heart the guiding principles and purposes of
+        note-taking, in the context of your own work and life. If
+        you have specific questions/doubts along the way, you can
+        create a GitHub issue <a href=
+        "https://github.com/jethrokuan/org-roam-guide/issues">here</a>.</p>
+      </div>
+    </div>
+
+    <div id="outline-container-org7805705" class="outline-2">
+      <h2 id="org7805705">The Note-taking Mindset</h2>
+
+      <div class="outline-text-2" id="text-org7805705">
+        <p>I take notes because I want these notes to to <b>serve
+        me later on</b> in my life. This is system is meant to be
+        an extension of my physical brain: an evolving cache of
+        information that I will at some point want to recall.</p>
+
+        <p>This has several implications. This means that:</p>
+
+        <ol class="org-ol">
+          <li>I want the notes in my system to contain only
+          what&rsquo;s relevant to me. This changes over time: I
+          need a way to delete/add notes freely without
+          disruption.</li>
+
+          <li>All fleeting notes I take must be regularly
+          processed: turned into permanent notes, or discarded
+          entirely when no longer needed</li>
+
+          <li>Permanent notes should resurface when relevant to the
+          current topic at hand</li>
+        </ol>
+
+        <p>The first point has several implications. Notes must be
+        well-factored and self-contained, such that deleting them
+        will not result in a sudden gap in context.</p>
+
+        <p>These are some behaviour I observed in the wild that
+        don&rsquo;t quite gel with me:</p>
+
+        <dl class="org-dl">
+          <dt>taking too much notes</dt>
+
+          <dd>especially prevelant is the copying of text wholesale
+          from sources. Notes should be a distillation of what
+          you&rsquo;ve read: rewriting ideas and concepts in your
+          own words helps reinforce understanding.</dd>
+
+          <dt>taking notes about everything</dt>
+
+          <dd>To maintain a high signal-to-noise ratio, we need to
+          be picky about what is added into your Zettelkasten.</dd>
+
+          <dt>having an overly-complex note-taking workflow</dt>
+
+          <dd>Automation becomes detrimental to note-taking. The
+          quality of notes is highly correlated with the amount of
+          deliberation for each character you put into your
+          slipbox.</dd>
+        </dl>
+      </div>
+    </div>
+
+    <div id="outline-container-orgff6d028" class="outline-2">
+      <h2 id="orgff6d028">The Slipbox Setup</h2>
+
+      <div class="outline-text-2" id="text-orgff6d028">
+        <p>I keep my workspace simple. I maintain one mega
+        slip-box: all my notes are kept within
+        <code>org-roam-directory</code>. True to Luhmann&rsquo;s
+        original implementation, within the mega slip-box I keep
+        two primary slipboxes.</p>
+
+        <p>The first slipbox is the <b>reference slipbox</b>. It
+        contains zettels that contain information from various
+        sources I consume (books, articles, papers etc.). Each
+        reference zettel points back to the original source.</p>
+
+        <p>The second slipbox, for the lack of a better name, is
+        the <b>main slipbox</b>. It contains my own ideas and
+        concepts, extracted from the material I read. They point
+        back to reference slipbox zettels.</p>
+
+        <p>I maintain an additional <b>articles
+        &ldquo;slipbox&rdquo;</b>. This is a folder containing
+        articles that are a culmination of my ideas in the main
+        slipbox, as well as references from the reference slipbox.
+        This is an example of one such article.</p>
+
+        <p>Finally I have an inbox file, where unprocessed ideas
+        are captured.</p>
+
+        <p>Altogether, I have a directory structure that looks like
+        this:</p>
+
+        <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 1:</span> My org-roam-directory
+          structure. Each slipbox is contained in their own folder.
+          My journals and written articles are also in their own
+          folder.</label>
+          <pre class="src src-text">
+.
+&#9500;&#9472;&#9472; articles
+&#9500;&#9472;&#9472; main
+&#9500;&#9472;&#9472; reference
+&#9500;&#9472;&#9472; inbox.org
+&#9492;&#9472;&#9472; biblio.bib
+</pre>
+        </div>
+
+        <p>This directory structure is reflected in my three
+        capture templates, one for a main zettel, one for a
+        reference zettel, and one for an article.</p>
+
+        <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 2:</span> My Org-roam capture
+          templates. There is one for each zettel type.</label>
+          <pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">setq</span> <span style=
+"color: #00538b;">org-roam-capture-templates</span>
+      <span style="color: #5317ac;">'</span><span style=
+"color: #a8007f;">(</span><span style=
+"color: #005f88;">(</span><span style=
+"color: #2544bb;">"m"</span> <span style=
+"color: #2544bb;">"main"</span> plain
+         <span style="color: #2544bb;">"%?"</span>
+         <span style="color: #8f0075;">:if-new</span> <span style=
+"color: #904200;">(</span>file+head <span style=
+"color: #2544bb;">"main/${slug}.org"</span>
+                            <span style=
+"color: #2544bb;">"#+title: ${title}\n"</span><span style=
+"color: #904200;">)</span>
+         <span style="color: #8f0075;">:immediate-finish</span> t
+         <span style=
+"color: #8f0075;">:unnarrowed</span> t<span style=
+"color: #005f88;">)</span>
+        <span style="color: #005f88;">(</span><span style=
+"color: #2544bb;">"r"</span> <span style=
+"color: #2544bb;">"reference"</span> plain <span style=
+"color: #2544bb;">"%?"</span>
+         <span style="color: #8f0075;">:if-new</span>
+         <span style=
+"color: #904200;">(</span>file+head <span style=
+"color: #2544bb;">"reference/${title}.org"</span> <span style=
+"color: #2544bb;">"#+title: ${title}\n"</span><span style=
+"color: #904200;">)</span>
+         <span style="color: #8f0075;">:immediate-finish</span> t
+         <span style=
+"color: #8f0075;">:unnarrowed</span> t<span style=
+"color: #005f88;">)</span>
+        <span style="color: #005f88;">(</span><span style=
+"color: #2544bb;">"a"</span> <span style=
+"color: #2544bb;">"article"</span> plain <span style=
+"color: #2544bb;">"%?"</span>
+         <span style="color: #8f0075;">:if-new</span>
+         <span style=
+"color: #904200;">(</span>file+head <span style=
+"color: #2544bb;">"articles/${title}.org"</span> <span style=
+"color: #2544bb;">"#+title: ${title}\n#+filetags: :article:\n"</span><span style="color: #904200;">)</span>
+         <span style="color: #8f0075;">:immediate-finish</span> t
+         <span style=
+"color: #8f0075;">:unnarrowed</span> t<span style=
+"color: #005f88;">)</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+</pre>
+        </div>
+
+        <p>I use two separate slipboxes to maintain a strict
+        distinction between an original thought and an idea from an
+        external source. This allows for proper attribution, and
+        also allows us to return to the source to dig further if a
+        particular line of thought is extra intriguing.</p>
+
+        <p>It&rsquo;d of course also be useful to differentiate the
+        different types of zettels at completion time. This used to
+        be a feature in Org-roam v1, which I&rsquo;d removed.
+        Thankfully, the code is architectured such that you could
+        define your own properties on nodes. In this case, I want
+        to define the &ldquo;type&rdquo; of note based on its file
+        path. This is simple enough:</p>
+
+        <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 3:</span> Creating the property
+          &ldquo;type&rdquo; on my nodes.</label>
+          <pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">cl-defmethod</span> <span style=
+"color: #721045;">org-roam-node-type</span> <span style=
+"color: #a8007f;">(</span><span style=
+"color: #005f88;">(</span>node org-roam-node<span style=
+"color: #005f88;">)</span><span style="color: #a8007f;">)</span>
+  <span style=
+"color: #2a486a; font-style: italic;">"Return the TYPE of NODE."</span>
+  <span style="color: #a8007f;">(</span><span style=
+"color: #5317ac;">condition-case</span> nil
+      <span style="color: #005f88;">(</span><span style=
+"color: #0000c0;">file-name-nondirectory</span>
+       <span style="color: #904200;">(</span><span style=
+"color: #0000c0;">directory-file-name</span>
+        <span style="color: #000000;">(</span><span style=
+"color: #0000c0;">file-name-directory</span>
+         <span style="color: #a8007f;">(</span><span style=
+"color: #721045;">file-relative-name</span> <span style=
+"color: #005f88;">(</span><span style=
+"color: #721045;">org-roam-node-file</span> node<span style=
+"color: #005f88;">)</span> <span style=
+"color: #00538b;">org-roam-directory</span><span style=
+"color: #a8007f;">)</span><span style=
+"color: #000000;">)</span><span style=
+"color: #904200;">)</span><span style="color: #005f88;">)</span>
+    <span style="color: #005f88;">(</span><span style=
+"color: #721045;">error</span> <span style=
+"color: #2544bb;">""</span><span style=
+"color: #005f88;">)</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+</pre>
+        </div>
+
+        <p>Now, for <code>type</code> to show up in the completion
+        interface, I just add it to my display template:</p>
+
+        <div class="org-src-container">
+          <label class="org-src-name"><span class=
+          "listing-number">Listing 4:</span> Modifying the display
+          template to show the node &ldquo;type&rdquo;</label>
+          <pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">setq</span> <span style=
+"color: #00538b;">org-roam-node-display-template</span>
+      <span style="color: #a8007f;">(</span><span style=
+"color: #0000c0;">concat</span> <span style=
+"color: #2544bb;">"${type:15} ${title:*} "</span> <span style=
+"color: #005f88;">(</span><span style=
+"color: #0000c0;">propertize</span> <span style=
+"color: #2544bb;">"${tags:10}"</span> <span style=
+"color: #5317ac;">'</span><span style=
+"color: #0000c0;">face</span> <span style=
+"color: #5317ac;">'</span><span style=
+"color: #0000c0;">org-tag</span><span style=
+"color: #005f88;">)</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+</pre>
+        </div>
+
+        <p>And now it shows up!</p>
+
+        <div id="orgb2ed627" class="figure">
+          <p><img src=
+          "media/how_i_take_notes_in_org_roam/completion.png" alt=
+          "completion.png" /></p>
+
+          <p><span class="figure-number">Figure 1:</span> My zettel
+          types now show up in the red box</p>
+        </div>
+      </div>
+
+      <div id="outline-container-org01197fe" class="outline-3">
+        <h3 id="org01197fe">Zettel Structure</h3>
+
+        <div class="outline-text-3" id="text-org01197fe">
+          <div class="org-src-container">
+            <pre class="src src-org">
+<span style="color: #505050;">:PROPERTIES:</span>
+<span style="color: #505050;">:ID:</span>       <span style=
+"color: #093060;">575c27d4-7f15-4167-8fa2-d1c5c83b0cad</span>
+<span style="color: #505050;">:END:</span>
+<span style="color: #505050;">#+title:</span> <span style=
+"color: #093060; background-color: #ffffff; font-weight: bold;">Example Zettel</span>
+<span style="color: #505050;">#+filetags: :some:tags:</span>
+
+...
+</pre>
+          </div>
+
+          <p>I keep things simple by keeping my zettels file-based.
+          While Org-mode provides the facilities for using headline
+          hierarchy, I find that it provides little value to my
+          note-taking, and can have an adverse effect on my
+          thinking. It is possible to give ideas and thoughts
+          structure without relying on the Org-mode hierarchy,
+          through index/organizational zettels.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="outline-container-org170baae" class="outline-2">
+      <h2 id="org170baae">Capturing Thoughts</h2>
+
+      <div class="outline-text-2" id="text-org170baae">
+        <p>I capture any thoughts I have that I would want to
+        process into my slipbox using plain
+        <code>org-capture</code>:</p>
+
+        <div class="org-src-container">
+          <pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">setq</span> <span style=
+"color: #00538b;">org-capture-templates</span>
+      <span style=
+"color: #505050; font-style: italic;">;; </span><span style=
+"color: #505050; font-style: italic;">other capture templates</span>
+      <span style="color: #a8007f;">(</span><span style=
+"color: #2544bb;">"s"</span> <span style=
+"color: #2544bb;">"Slipbox"</span> entry  <span style=
+"color: #005f88;">(</span>file <span style=
+"color: #2544bb;">"braindump/org/inbox.org"</span><span style=
+"color: #005f88;">)</span>
+       <span style="color: #2544bb;">"* %?\n"</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">defun</span> <span style=
+"color: #721045;">jethro/org-capture-slipbox</span> <span style=
+"color: #a8007f;">()</span>
+  <span style="color: #a8007f;">(</span><span style=
+"color: #5317ac;">interactive</span><span style=
+"color: #a8007f;">)</span>
+  <span style="color: #a8007f;">(</span><span style=
+"color: #721045;">org-capture</span> nil <span style=
+"color: #2544bb;">"s"</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+</pre>
+        </div>
+
+        <p>You could use <code>org-roam-capture</code> for this,
+        but I see no point for the added complexity. I bind
+        <code>jethro/org-capture-slipbox</code> to a key of my
+        choice. Honestly, I find that I make much less use of this
+        than a typical academic would: this is because it is not my
+        business to produce original ideas or thoughts. My
+        zettelkasten is primarily for me to consume content and
+        reinforce understanding by forming links to material I have
+        already ingested.</p>
+      </div>
+    </div>
+
+    <div id="outline-container-orgc611a34" class="outline-2">
+      <h2 id="orgc611a34">Creating Zettels</h2>
+
+      <div class="outline-text-2" id="text-orgc611a34"></div>
+
+      <div id="outline-container-org9a8c3b9" class="outline-3">
+        <h3 id="org9a8c3b9">Reference Zettels</h3>
+
+        <div class="outline-text-3" id="text-org9a8c3b9">
+          <p>I create reference zettels when I&rsquo;m consuming
+          material I&rsquo;ve come across. Each reference zettel
+          has a corresponding <code>ROAM_REFS</code> key, which
+          corresponds to the canonical source. They come in two
+          main forms:</p>
+
+          <dl class="org-dl">
+            <dt>[cite:key]</dt>
+
+            <dd>For academic items, I use Org-mode 9.5 citations.
+            These include papers and books, which happen to be my
+            primary source of material.</dd>
+
+            <dt><a href=
+            "https://google.com">https://google.com</a></dt>
+
+            <dd>For websites, I use their canonical URL.</dd>
+          </dl>
+        </div>
+
+        <div id="outline-container-org6fb53bc" class="outline-4">
+          <h4 id="org6fb53bc">Citation Management</h4>
+
+          <div class="outline-text-4" id="text-org6fb53bc">
+            <p>I manage my citations with <a href=
+            "https://www.zotero.org/">Zotero</a>. I use the
+            <a href="https://retorque.re/zotero-better-bibtex/">Better
+            BibTeX</a> plugin to auto-export all my files into a
+            single <code>biblio.bib</code> file, located at the
+            root of my <code>org-roam-directory</code>. My
+            bibliography setup is not complex: in fact, it is
+            <a href="https://github.com/hlissner/doom-emacs">Doom
+            Emacs&rsquo;</a> default <a href=
+            "https://github.com/hlissner/doom-emacs/tree/master/modules/tools/biblio">
+            biblio module</a>.</p>
+
+            <div id="orgd477fe4" class="figure">
+              <p><img src=
+              "media/how_i_take_notes_in_org_roam/zotero.png" alt=
+              "zotero.png" /></p>
+
+              <p><span class="figure-number">Figure 2:</span>
+              Zotero, a bibliographic management system</p>
+            </div>
+
+            <p>What&rsquo;s crucial for me here the ability to
+            capture any source quickly into Zotero, using the
+            Zotero Web Connectors. For example, if I come across a
+            paper on Arxiv that I want to process, I can use the
+            Zotero Firefox connector to quickly add the citation
+            into Zotero. It will also fetch a copy of the paper for
+            me. I use these offline copies to make annotations on
+            these pdfs while reading, and the pdfs get synced
+            across my different computers by placing my Zotero
+            library within Dropbox. The citations themselves are
+            synced using Zotero&rsquo;s free online service.</p>
+          </div>
+        </div>
+
+        <div id="outline-container-orgc48eb0d" class="outline-4">
+          <h4 id="orgc48eb0d">Reference Citation Zettels</h4>
+
+          <div class="outline-text-4" id="text-orgc48eb0d">
+            <p>For each source, I create <i>one and exactly one</i>
+            zettel. Sometimes this can get unwieldy: one can
+            consider splitting by chapters if really necessary. To
+            create a reference citation zettel, I use a custom
+            function I wrote that picks out a citation key, and
+            creates a note for it:</p>
+
+            <div class="org-src-container">
+              <pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">defun</span> <span style=
+"color: #721045;">jethro/org-roam-node-from-cite</span> <span style="color: #a8007f;">(</span>keys-entries<span style="color: #a8007f;">)</span>
+    <span style="color: #a8007f;">(</span><span style=
+"color: #5317ac;">interactive</span> <span style=
+"color: #005f88;">(</span><span style=
+"color: #0000c0;">list</span> <span style=
+"color: #904200;">(</span><span style=
+"color: #721045;">citar-select-ref</span> <span style=
+"color: #8f0075;">:multiple</span> nil <span style=
+"color: #8f0075;">:rebuild-cache</span> t<span style=
+"color: #904200;">)</span><span style=
+"color: #005f88;">)</span><span style="color: #a8007f;">)</span>
+    <span style="color: #a8007f;">(</span><span style=
+"color: #5317ac;">let</span> <span style=
+"color: #005f88;">(</span><span style=
+"color: #904200;">(</span>title <span style=
+"color: #000000;">(</span><span style=
+"color: #721045;">citar--format-entry-no-widths</span> <span style=
+"color: #a8007f;">(</span><span style=
+"color: #0000c0;">cdr</span> keys-entries<span style=
+"color: #a8007f;">)</span>
+                                                <span style=
+"color: #2544bb;">"${author editor} :: ${title}"</span><span style=
+"color: #000000;">)</span><span style=
+"color: #904200;">)</span><span style="color: #005f88;">)</span>
+      <span style="color: #005f88;">(</span><span style=
+"color: #721045;">org-roam-capture-</span> <span style=
+"color: #8f0075;">:templates</span>
+                         <span style=
+"color: #5317ac;">'</span><span style=
+"color: #904200;">(</span><span style=
+"color: #000000;">(</span><span style=
+"color: #2544bb;">"r"</span> <span style=
+"color: #2544bb;">"reference"</span> plain <span style=
+"color: #2544bb;">"%?"</span> <span style=
+"color: #8f0075;">:if-new</span>
+                            <span style=
+"color: #a8007f;">(</span>file+head <span style=
+"color: #2544bb;">"reference/${citekey}.org"</span>
+                                       <span style=
+"color: #2544bb;">":PROPERTIES:</span>
+<span style="color: #2544bb;">:ROAM_REFS: [cite:@${citekey}]</span>
+<span style="color: #2544bb;">:END:</span>
+<span style=
+"color: #2544bb;">#+title: ${title}\n"</span><span style=
+"color: #a8007f;">)</span>
+                            <span style=
+"color: #8f0075;">:immediate-finish</span> t
+                            <span style=
+"color: #8f0075;">:unnarrowed</span> t<span style=
+"color: #000000;">)</span><span style="color: #904200;">)</span>
+                         <span style=
+"color: #8f0075;">:info</span> <span style=
+"color: #904200;">(</span><span style=
+"color: #0000c0;">list</span> <span style=
+"color: #8f0075;">:citekey</span> <span style=
+"color: #000000;">(</span><span style=
+"color: #0000c0;">car</span> keys-entries<span style=
+"color: #000000;">)</span><span style="color: #904200;">)</span>
+                         <span style=
+"color: #8f0075;">:node</span> <span style=
+"color: #904200;">(</span><span style=
+"color: #721045;">org-roam-node-create</span> <span style=
+"color: #8f0075;">:title</span> title<span style=
+"color: #904200;">)</span>
+                         <span style=
+"color: #8f0075;">:props</span> <span style=
+"color: #5317ac;">'</span><span style=
+"color: #904200;">(</span><span style=
+"color: #8f0075;">:finalize</span> find-file<span style=
+"color: #904200;">)</span><span style=
+"color: #005f88;">)</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+</pre>
+            </div><iframe width="100%" height="500" src=
+            "https://www.youtube.com/embed/ewfAaY6Pj8A" title=
+            "YouTube video player" frameborder="0" allow=
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen=""></iframe>
+
+            <p>The full flow is therefore as such:</p>
+
+            <ol class="org-ol">
+              <li>Use Zotero Web Connector to add source into
+              Zotero
+
+                <ol class="org-ol">
+                  <li>Zotero automatically fetches offline copy of
+                  source material, if possible. If not, I will
+                  manually fetch it and add it to the Zotero
+                  library.</li>
+                </ol>
+              </li>
+
+              <li>BetterBibTex automatically updates
+              <code>biblio.bib</code>, making it available to
+              Emacs.</li>
+
+              <li>I call
+              <code>jethro/org-roam-node-from-cite</code>, select
+              the correct reference, and a new reference zettel is
+              created.</li>
+
+              <li>I read the source material using a local program,
+              making multiple passes and annotate along the way. I
+              then jot notes, and find existing zettels in my
+              zettelkasten to link to.</li>
+            </ol>
+
+            <p>It&rsquo;s possible to write a function in similar
+            vein for website-based reference zettels, but I
+            didn&rsquo;t see a need to do so. For these, I key them
+            in manually.</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="outline-container-org94133df" class="outline-3">
+        <h3 id="org94133df">Every Zettel is a Draft until Declared
+        Otherwise</h3>
+
+        <div class="outline-text-3" id="text-org94133df">
+          <p>All zettels begin as unrefined notes. To keep my
+          Zettelkasten high-quality, it is important for me to
+          constantly revisit and refine these draft notes. Once I
+          am satisfied with the draft zettels, I can then mark them
+          as complete. This is similar to Andy Matuschak&rsquo;s
+          concept of <a href=
+          "https://notes.andymatuschak.org/Evergreen_notes">evergreen
+          notes</a>.</p>
+
+          <p>I mark all of my new zettels with the tag
+          <code>draft</code>, by doing the following:</p>
+
+          <div class="org-src-container">
+            <pre class="src src-emacs-lisp">
+<span style="color: #000000;">(</span><span style=
+"color: #5317ac;">defun</span> <span style=
+"color: #721045;">jethro/tag-new-node-as-draft</span> <span style=
+"color: #a8007f;">()</span>
+  <span style="color: #a8007f;">(</span><span style=
+"color: #721045;">org-roam-tag-add</span> <span style=
+"color: #5317ac;">'</span><span style=
+"color: #005f88;">(</span><span style=
+"color: #2544bb;">"draft"</span><span style=
+"color: #005f88;">)</span><span style=
+"color: #a8007f;">)</span><span style="color: #000000;">)</span>
+<span style="color: #000000;">(</span><span style=
+"color: #721045;">add-hook</span> <span style=
+"color: #5317ac;">'</span><span style=
+"color: #00538b;">org-roam-capture-new-node-hook</span> <span style="color: #5317ac;">#'</span><span style="color: #0000c0;">jethro/tag-new-node-as-draft</span><span style="color: #000000;">)</span>
+</pre>
+          </div>
+
+          <p>Note: I do not yet have a system for revisiting
+          zettels.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="outline-container-org30c2cdf" class="outline-2">
+      <h2 id="org30c2cdf">Guiding Principles</h2>
+
+      <div class="outline-text-2" id="text-org30c2cdf"></div>
+
+      <div id="outline-container-orgff7215b" class="outline-3">
+        <h3 id="orgff7215b">Not Everything Needs To Be Done In
+        Emacs</h3>
+
+        <div class="outline-text-3" id="text-orgff7215b">
+          <p>One common complaint about Org-roam is mobile support:
+          it is non-trivial to get Emacs up and running on mobile,
+          and even then adding notes on the fly is not so easy.</p>
+
+          <p>There is also a strong desire for Org-roam to develop
+          a solid publishing workflow. There are projects that are
+          work-in-progress, but they all take significant amount of
+          setup. Zettelkastens are not meant for public
+          consumption. Notes should be written for yourself and
+          yourself only. Published materials should be a thoughtful
+          composition of multiple zettels, with a healthy injection
+          of your own summaries.</p>
+
+          <p>My initial motivation for publishing my notes was
+          twofold. First, then I&rsquo;d occasionally point friends
+          to things I mention, but more often than not the zettels
+          I had written were gibberish to them, since they were
+          written for me. Second, I thought it&rsquo;d be good to
+          be able to review zettels on the go. I find that this was
+          generally suboptimal use of my time.</p>
+
+          <p>As an alternative, I am exploring using spaced
+          repetition to deepen my understanding of the zettels I
+          have written.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="outline-container-org6d63d81" class="outline-2">
+      <h2 id="org6d63d81">Further Reading</h2>
+
+      <div class="outline-text-2" id="text-org6d63d81">
+        <p>Congrats on making it here! If you&rsquo;re interested
+        in delving deeper into the note-taking rabbit hole, you can
+        browse the following links:</p>
+
+        <ul class="org-ul">
+          <li><a href="https://www.orgroam.com/manual.html">The
+          Org-roam Manual</a></li>
+
+          <li><a href=
+          "https://www.goodreads.com/book/show/34507927-how-to-take-smart-notes?from_search=true&amp;from_srp=true&amp;qid=Xl2S913FzU&amp;rank=1">
+          How To Take Smart notes</a></li>
+
+          <li><a href=
+          "https://notes.andymatuschak.org/About_these_notes?stackedNotes=z4SDCZQeRo4xFEQ8H4qrSqd68ucpgE6LU155C">
+          Andy&rsquo;s notes and note-taking practice</a></li>
+
+          <li><a href=
+          "https://www.youtube.com/watch?v=kG2_6ToMZgI">Andy&rsquo;s
+          Note-taking Practice Livestreamed</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="outline-container-org26c46ca" class="outline-2">
+      <h2 id="org26c46ca">Addendum</h2>
+
+      <div class="outline-text-2" id="text-org26c46ca"></div>
+
+      <div id="outline-container-org4b7a822" class="outline-3">
+        <h3 id="org4b7a822">Choosing Your Citation Package</h3>
+
+        <div class="outline-text-3" id="text-org4b7a822">
+          <p>Org-mode currently has 3 different citation keys:
+          Org-ref v2, Org-ref v3, Org-mode 9.5 native citation
+          keys.</p>
+
+          <p>For Org-mode citations, I recommend the wonderful
+          <a href="https://github.com/bdarcus/citar">citar</a>
+          package. For Org-ref style citations, you will be using
+          <a href=
+          "https://github.com/jkitchin/org-ref">org-ref</a>.</p>
+
+          <p>My recommendation is to use one or the other, and not
+          mix both, although you certainly could.</p>
+        </div>
+      </div>
+
+      <div id="outline-container-orgc344c04" class="outline-3">
+        <h3 id="orgc344c04"><span class="todo TODO">TODO</span> How
+        to Write Good Zettels</h3>
+
+        <div class="outline-text-3" id="text-orgc344c04">
+          <p>This is a really difficult skill, one that I&rsquo;m
+          still trying to get adept at as well. It&rsquo;s
+          obviously a lot more nuanced and complex than this, but
+          here&rsquo;s some guiding principles that I found
+          useful.</p>
+        </div>
+
+        <div id="outline-container-org463ade3" class="outline-4">
+          <h4 id="org463ade3">Zettels should be Atomic</h4>
+
+          <div class="outline-text-4" id="text-org463ade3">
+            <p>A large part of content understanding is being able
+            to break things down into simple concepts and linking
+            them together. If your zettels are getting extremely
+            long, it&rsquo;s a sign that you haven&rsquo;t yet
+            fully broken down the content in it. A good signal is
+            naming your zettels. If you can come up with a short
+            sentence to summarize the content of your zettel, you
+            should be good.</p>
+
+            <p>Zettel titles should be also <i>specific</i>. You
+            shouldn&rsquo;t run into name clashes on your
+            zettels.</p>
+          </div>
+        </div>
+
+        <div id="outline-container-orgbe013e1" class="outline-4">
+          <h4 id="orgbe013e1">Zettels should be Encapsulated</h4>
+
+          <div class="outline-text-4" id="text-orgbe013e1">
+            <p>A zettel should be readable on its own, without
+            surrounding context.</p>
+
+            <p>As someone from a tech background, this can be
+            unintuitive, but <b>it&rsquo;s okay to repeat
+            yourself</b>! If you have two notes that are related,
+            <code>X</code> and <code>Y</code>, it&rsquo;s okay to
+            write about how <code>Y</code> is related to
+            <code>X</code> in <code>X</code>, and how
+            <code>X</code> is related to <code>Y</code> in
+            <code>Y</code>. Imagine trying to follow the DRY
+            (Don&rsquo;t Repeat Yourself) principle here:
+            you&rsquo;ll end up &ldquo;refactoring&rdquo; the
+            <code>X</code> and <code>Y</code> notes by linking them
+            to a note <code>Z</code> that talks about how
+            <code>X</code> and <code>Y</code> are related. Then you
+            can&rsquo;t read either <code>X</code> or
+            <code>Y</code> without going to read
+            <code>Z</code>!</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="outline-container-orgb710b7b" class="outline-3">
+        <h3 id="orgb710b7b">What About Everything Else?</h3>
+
+        <div class="outline-text-3" id="text-orgb710b7b">
+          <p>Org-roam ships other features, but here&rsquo;s why I
+          don&rsquo;t use them.</p>
+
+          <p><b>Org-roam-protocol</b></p>
+
+          <p>Org-roam-protocol used to be my go-to method for
+          taking notes on content from all sorts of sources, from
+          websites to books. I mean, how convenient to be able to
+          pop up the note for the current source you&rsquo;re
+          reading!</p>
+
+          <p>Here I think too much convenience was a bad thing.
+          Over time I learnt to slow down and not be over-eager in
+          taking notes. Now I consume material in separate passes,
+          kind of like a loose version of the <a href=
+          "http://ccr.sigcomm.org/online/files/p83-keshavA.pdf">three-pass
+          approach</a>. I skim the material, assessing whether it
+          is worth reading in detail (and taking notes about) in
+          the first place. In a few other passes, I take brief
+          notes or highlight various parts that catch my eye.
+          Finally, I handcraft my notes. Comparatively, I take
+          fewer but more relevant notes.</p>
+
+          <p><b>Org-roam-dailies</b></p>
+
+          <p>I used to keep my scattered thoughts within daily
+          pages within Org-roam, but I find that these often add
+          more noise than signal into what should be a pristine
+          garden. I don&rsquo;t really need the date information
+          anyway: why should when I noted something down affect
+          whether something is relevant to me now?</p>
+
+          <p>So now I&rsquo;ve simplified and keep my unprocessed
+          thoughts in a single Org file. Journal entries, which are
+          admittedly few and far between, are kept separately.</p>
+        </div>
+      </div>
+
+      <div id="outline-container-org8a9f00e" class="outline-3">
+        <h3 id="org8a9f00e">What about Task Management?</h3>
+
+        <div class="outline-text-3" id="text-org8a9f00e">
+          <p>It&rsquo;s tempting to combine task management (e.g.
+          <a href="https://gettingthingsdone.com/">Getting Things
+          Done (GTD)</a>) with your Zettelkasten. This is the curse
+          of Emacs and Org-mode: it&rsquo;s just way too powerful
+          and multi-functional, and it&rsquo;s also the Emacs way
+          to use the same tool for everything.</p>
+
+          <p>I ultimately decided to keep the two systems separate,
+          despite using Org-mode for both of them. The primary
+          reason is that these systems are just too different. They
+          operate on different modes of thinking: note-taking and
+          knowledge creation will always require large amounts of
+          brain work. On the other hand, GTD makes task management
+          a simple, effortless process. Having separate systems
+          allows my brain to operate in these different modes as
+          required.</p>
+
+          <p>It&rsquo;s also tempting to leave todos within the
+          zettels, and use <code>org-agenda</code> to show
+          what&rsquo;s left to be processed. I prefered
+          centralizing todos and tasks elsewhere, keeping my
+          Zettelkasten clean (see <a href=
+          "https://en.wikipedia.org/wiki/Broken_windows_theory">broken
+          windows theory</a>).</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="outline-container-org4306c5e" class="outline-2">
+      <h2 id="org4306c5e">Versions</h2>
+
+      <div class="outline-text-2" id="text-org4306c5e">
+        <p>Here are versions of the relevant software I&rsquo;m
+        using.</p>
+        <pre class="example">
+Org: Org mode version 9.6 (9.6-??-0c9b30e @ /Users/jethro/.emacs.d/.local/straight/build-29.0.50/org/)
+Org-roam: v2.2.0-13-gaafe411
+</pre>
+      </div>
+    </div>
+  </div>
+
+  <div id="postamble" class="status">
+    <p class="author">Author: Jethro Kuan</p>
+
+    <p class="email">Email: <a href=
+    "mailto:jethrokuan95@gmail.com">jethrokuan95@gmail.com</a></p>
+
+    <p class="date">Created: 2022-02-08 Tue 20:28</p>
+  </div>
+</body>
+</html>

@@ -2,7 +2,6 @@
 :ID:       5a6f15fa-e5d4-474e-8ead-56b22d890512
 :END:
 #+title: Machine Learning
-#+filetags: :ml:
 #+bibliography: biblio.bib
 #+cite_export: csl
 

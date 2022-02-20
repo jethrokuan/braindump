@@ -12,3 +12,4 @@ org/private/
 /.ninja_log
 /build.ninja
 /org/daily/
+**/.DS_Store

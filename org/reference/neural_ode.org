@@ -69,7 +69,7 @@ step-changes, an infeasible task.
 To address this problem, deep residual neural networks were presented
 [cite:@he15_deep_resid_learn_image_recog;@dupont19_augmen_neural_odes].
 
-Instead of learning $h_{t+1} = f(h_t, \theta_t)$, deep [[id:d5cf4d0f-9087-4e7c-99bc-3a53d33234c6][residual neural networks]]
+Instead of learning $h_{t+1} = f(h_t, \theta_t)$, deep residual neural networks
 now learn the difference between the layers: $h_{t+1} = h_t + f(h_t, \theta_t)$.
 For example, feed-forward residual neural networks have a composition that looks
 like these:
@@ -271,7 +271,7 @@ choice of the ODE solver is still important.
 
 In this review, I did not cover the applications of Neural ODEs in
 other areas. First, they have a particularly convenient formulation
-for Continuous Normalizing Flows. [[id:0a267ec0-b62d-4d7d-b813-6fbb14dbcff0][Normalizing flows]] is a technique for
+for Continuous Normalizing Flows. [[id:0a267ec0-b62d-4d7d-b813-6fbb14dbcff0][Normalizing Flows]] is a technique for
 sampling from complex distributions via sampling from a simple
 distribution, and has applications in techniques like variational
 inference. 

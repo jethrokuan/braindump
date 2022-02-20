@@ -1,0 +1,22 @@
+:PROPERTIES:
+:ID:       e740b8f1-550b-46ad-84b8-9769b901464a
+:END:
+#+title: Spearphishing Attack Taxonomy
+
+Spearphishing attacks involve sending a targeted email designed to trick the
+recipient into performing a dangerous action. There are two stages to a
+successful spearphishing attack.
+
+The first key component is the lure: the attacker needs to convince the victim
+to perform some action. This is typically done through some form of impersonation.
+
+It is possible to spoof an address (the ~FROM~ and ~DISPLAY_NAME~ fields of an
+email). However, DKIM and DMARC blocks these impersonation models by
+signing their sent email headers with a cryptographic signature, and the
+receiving server can verify the signatures with another verification key [cite:@hoDetectingCredentialSpearphishing2017].
+
+Other forms of impersonations involve spoofing as an administrator from an
+external address, or using a compromised internal account ([[id:d5cd2a5a-739d-411b-a34e-f5cd9ff1176b][Lateral Phishing]]).
+
+The second component is the exploit: the victim performs some action, by opening
+a malicious payload, or visiting a URL that requests for credential input.

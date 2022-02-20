@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       d1125f42-4a2d-4287-b902-48a1df9a6761
-:END:
-#+title: Books
