@@ -1,0 +1,21 @@
+:PROPERTIES:
+:ID:       b14f8e6c-4b0d-4035-9f31-aef35799d4be
+:END:
+#+title: Structuring a Document with the SCQA Format
+
+The SCQA format can help with structuring any document. This can be useful when
+writing up technical documents.
+
+- Situation :: What is the relevant context? Example: We’ve been falling behind
+  our competition in shipping product features for two years. Last year, we
+  doubled our engineering team but shipped fewer features than the year before.
+- Complication :: why is the current situation problematic? Example: We plan to
+  double our engineering team again this year, but based on last year’s
+  experience, we think that will decrease velocity further while significantly
+  increasing our organizational budget.
+- Question :: What is the core question to address? Example: Should we keep
+  moving forward with our plan to double engineering this year?
+- Answer :: What is your best answer to the posed question? Example: We should
+  stop hiring for the next six months and focus on gelling our existing team.
+  Based on progress at that point, we should refresh our hiring plan for the
+  remainder of the year.

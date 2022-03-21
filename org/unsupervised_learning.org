@@ -1,0 +1,49 @@
+:PROPERTIES:
+:ID:       f3beaaa2-6bbe-42ff-90fc-9c1b7e11f7e6
+:END:
+#+title: Unsupervised Learning
+
+ In unsupervised learning, given a training set $S = \left(x_1, \dots,
+ x_m\right)$, without a labeled output, one must construct a "good"
+ model/description of the data.
+
+ Example use cases include:
+ - clustering
+ - dimension reduction to ind essential parts of the data and reduce
+   noise (e.g. PCA)
+ - minimises description length of data
+
+* K-means Clustering
+Input: $\{x^{(1), x^{(2)}, x^{(3)}, \dots, x^{(m)}}\}$.
+
+1. Randomly initialize cluster centroids.
+2. For all points, compute which cluster centroid is the closest.
+3. For each cluster centroid, move centroids to the average points
+   belonging to the cluster.
+4. Repeat until convergence.
+
+K-means is guaranteed to converge. To show this, we define a
+distortion function:
+
+\begin{equation}
+  J(c, \mu) = \sum_{i=1}^m || x^{(i)} - \mu_{c^{(i)}}||^2
+\end{equation}
+
+K means is coordinate ascent on J. Since $J$ always decreases, the
+algorithm converges.
+
+* Gaussian Mixture Model
+By Bayes' Theorem:
+
+\begin{equation}
+P(X^{(i)}, Z^{(i)}) = P(X^{(i)} | Z^{(i)})P(Z^{(i)})
+\end{equation}
+
+\begin{equation}
+Z^{(i)} \sim \text{multinomial}(\phi)
+\end{equation}
+
+\begin{equation}
+X^{(i)} | Z^{(j)} \sim \mathcal{N}(\mu_j, \Sigma_j)
+\end{equation}
+

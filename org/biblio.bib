@@ -1476,6 +1476,22 @@
   pages = {117}
 }
 
+@incollection{nabeelCADUEContentAgnosticDetection2021,
+  title = {{{CADUE}}: {{Content-Agnostic Detection}} of {{Unwanted Emails}} for {{Enterprise Security}}},
+  shorttitle = {{{CADUE}}},
+  booktitle = {24th {{International Symposium}} on {{Research}} in {{Attacks}}, {{Intrusions}} and {{Defenses}}},
+  author = {Nabeel, Mohamed and Altinisik, Enes and Sun, Haipei and Khalil, Issa and Wang, Hui (Wendy) and Yu, Ting},
+  date = {2021-10-06},
+  pages = {205--219},
+  publisher = {{Association for Computing Machinery}},
+  location = {{New York, NY, USA}},
+  url = {https://doi.org/10.1145/3471621.3471862},
+  urldate = {2022-02-20},
+  abstract = {End-to-end email encryption (E2EE) ensures that an email could only be decrypted and read by its intended recipients. E2EE’s strong security guarantee is particularly desirable for the enterprises in the event of breaches: even if attackers break into an email server, under E2EE no contents of emails are leaked. Meanwhile, E2EE brings significant challenges for an enterprise to detect and filter unwanted emails (spams and phishing emails). Most existing solutions rely heavily on email contents (i.e., email body and attachments), which would be difficult when email contents are encrypted. In this paper, we investigate how to detect unwanted emails in a content-agnostic manner, that is, without access to the contents of emails at all. Our key observation is that the communication patterns and relationships among internal users of an enterprise contain rich and reliable information about benign email communications. Combining such information with other metadata of emails (headers and subjects when available), unwanted emails can be accurately distinguished from legitimate ones without access to email contents. Specifically, we propose two types of novel enterprise features from enterprise email logs: sender profiling features, which capture the patterns of past emails from external senders to internal recipients; and enterprise graph features, which capture the co-recipient and the sender-recipient relationships between internal users. We design a classifier utilizing the above features along with existing meta-data features. We run extensive experiments over a real-world enterprise email dataset, and show that our approach, even without any content-based features, achieves high true positive rate of 95.2\% and low false positive rate of 0.3\% with such stringent constraints.},
+  isbn = {978-1-4503-9058-3},
+  keywords = {End-to-end email encryption,Enterprise logs,Phishing,Spam}
+}
+
 @article{nair15_massiv_paral_method_deep_reinf_learn,
   title = {Massively Parallel Methods for Deep Reinforcement Learning},
   author = {Nair, Arun and Srinivasan, Praveen and Blackwell, Sam and Alcicek, Cagdas and Fearon, Rory and Maria, Alessandro De and Panneershelvam, Vedavyas and Suleyman, Mustafa and Beattie, Charles and Petersen, Stig and Legg, Shane and Mnih, Volodymyr and Kavukcuoglu, Koray and Silver, David},
@@ -1808,6 +1824,22 @@
   issn = {0364-0213},
   doi = {10.1111/cogs.12290},
   url = {http://dx.doi.org/10.1111/cogs.12290}
+}
+
+@online{rahmanWhatAreAttackers2021,
+  title = {What Are the Attackers Doing Now? {{Automating}} Cyber Threat Intelligence Extraction from Text on Pace with the Changing Threat Landscape: {{A}} Survey},
+  shorttitle = {What Are the Attackers Doing Now?},
+  author = {Rahman, Md Rayhanur and Mahdavi-Hezaveh, Rezvan and Williams, Laurie},
+  date = {2021-09-14},
+  eprint = {2109.06808},
+  eprinttype = {arxiv},
+  primaryclass = {cs},
+  url = {http://arxiv.org/abs/2109.06808},
+  urldate = {2022-03-21},
+  abstract = {Cybersecurity researchers have contributed to the automated extraction of CTI from textual sources, such as threat reports and online articles, where cyberattack strategies, procedures, and tools are described. The goal of this article is to aid cybersecurity researchers understand the current techniques used for cyberthreat intelligence extraction from text through a survey of relevant studies in the literature. We systematically collect "CTI extraction from text"-related studies from the literature and categorize the CTI extraction purposes. We propose a CTI extraction pipeline abstracted from these studies. We identify the data sources, techniques, and CTI sharing formats utilized in the context of the proposed pipeline. Our work finds ten types of extraction purposes, such as extraction indicators of compromise extraction, TTPs (tactics, techniques, procedures of attack), and cybersecurity keywords. We also identify seven types of textual sources for CTI extraction, and textual data obtained from hacker forums, threat reports, social media posts, and online news articles have been used by almost 90\% of the studies. Natural language processing along with both supervised and unsupervised machine learning techniques such as named entity recognition, topic modelling, dependency parsing, supervised classification, and clustering are used for CTI extraction. We observe the technical challenges associated with these studies related to obtaining available clean, labelled data which could assure replication, validation, and further extension of the studies. As we find the studies focusing on CTI information extraction from text, we advocate for building upon the current CTI extraction work to help cybersecurity practitioners with proactive decision making such as threat prioritization, automated threat modelling to utilize knowledge from past cybersecurity incidents.},
+  archiveprefix = {arXiv},
+  keywords = {Computer Science - Computation and Language,Computer Science - Cryptography and Security,Computer Science - Machine Learning},
+  file = {/Users/jethro/Zotero/storage/9AGD9VNH/Rahman et al. - 2021 - What are the attackers doing now Automating cyber.pdf;/Users/jethro/Zotero/storage/YG6YLCY8/2109.html}
 }
 
 @online{RAIICppreferenceCom,

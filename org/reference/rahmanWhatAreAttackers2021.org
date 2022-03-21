@@ -1,0 +1,64 @@
+:PROPERTIES:
+:ROAM_REFS: [cite:@rahmanWhatAreAttackers2021]
+:ID:       7e6ee6cf-3920-449c-8b40-77524dbb9161
+:END:
+#+title: Rahman, Mahdavi-Hezaveh, Williams :: What Are the Attackers Doing Now? Automating Cyber Threat Intelligence Extraction from Text on Pace with the Changing Threat Landscape: A Survey
+
+The authors performed a literature review on how the existing methods and
+sources of extracting [[id:e33d50e1-cbac-4f84-b942-0439de3b41aa][threat intelligence]] from textual data. They classified the
+literature into the following catgories.
+
+* Identifying the Data Sources
+
+The sources of data are ranked in decreasing popularity:
+
+- Hacker and Darknet Forums :: scraping forums such as Cracking Arena, OpenSC,
+  and Crackingzilla.
+- Social Media :: scraping updates and news from cybersecurity researchers and vendors
+- Threat Reports :: Published threat reports from reputed cybersecurity vendors
+- Online blogs and articles :: A less reputable source of threat reports from individuals
+- Vulnerability Databases :: A repository of known vulnerability and exposures (CVEs)
+
+Less common ones include software repositories and scientific literature. Of
+particular note is how prevelant and widely available data is available from
+social media.
+
+A variety of different methods are adopted to collecting these data, ranging
+from manual labelling, to using web-based and PDF crawlers.
+
+* Learning
+To extract threat intelligence from the textual data, researchers use NLP
+techniques with various ML models. These models include:
+
+- Classifiers
+- [[id:deaba338-13bb-4333-997c-dd0a6531e85e][Topic Models]]
+- Clustering
+- Graph embeddings
+- Dependency Parsing
+- NER
+- POS tagging
+
+* Exporting to a Structured Format
+
+To use or present an extracted CTI, they are often exported to a structured
+format. Researchers used the following structured formats:
+
+- [[id:c6471d5d-59f8-44de-ae9a-2755acc7d171][STIX]]
+- [[id:304acac6-2f81-4786-a6f1-8e9f4727bbdb][MISP]]
+- [[id:e8ffac3d-361d-41a3-9c0a-5395f2f89d3b][OpenIoC]]
+
+* Applications
+
+These extracted CTI can then be used for:
+
+- Providing insights on the threat landscape
+- Presenting the extracted CTI in a queryable platform
+- Generating datasets
+- Establishing correlation between attack groups and key hackers
+- Improving malware protection
+- Increasing awareness of cyberattacks
+
+Of particular interest to me was that it was observed that 47% of IoCs were
+detected by anti-virus scanners or IP/URL scanners before they were reported by
+technical blogs. For the remaining IoCs, the duration between the first IoC
+being released and uploaded for a scan is between 0-2 days to more than 12 days.

@@ -1,0 +1,25 @@
+:PROPERTIES:
+:ID:       0e3f18c0-a623-4aba-b837-dd25cba1c896
+:END:
+#+title: Density Estimation
+
+/Density Estimation/ refers to the problem of modeling the probability
+distribution $p(x)$ of a random variable $x$, given a finite set $x_1,
+x_2, \dots, x_n$ of observations.
+
+We first look at parametric distributions, which are governed by a
+small number of adaptive parameters. In a frequentist treatment, we
+choose specific values for the parameters optimizing some criterion,
+such as the likelihood function. In a Bayesian treatment, we
+introduce prior distributions and then use Bayes' theorem to compute
+the corresponding posterior distribution given the observed data.
+
+An important role is played by /conjugate priors/, which yield
+posterior distributions of the same functional form.
+
+The maximum likelihood setting for parameters can give severely
+over-fitted results for small data sets. To develop a Bayesian
+treatment to this problem, we consider a form of prior distribution
+with similar form as the maximum likelihood function. this property is
+called /conjugacy/. For a binomial distribution, we can choose the
+beta distribution as the prior.
