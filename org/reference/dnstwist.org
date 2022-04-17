@@ -1,0 +1,16 @@
+:PROPERTIES:
+:ID:       5f63bc2a-a9d9-4ea5-9ac0-c45cc9015451
+:ROAM_REFS: https://github.com/elceef/dnstwist
+:END:
+#+title: dnstwist
+
+dnstwist is a [[id:e33d50e1-cbac-4f84-b942-0439de3b41aa][threat intelligence]] tool that finds lookalike domains. It detects
+typosquatters, [[id:89cbc3ae-e147-43b0-af7c-59500450a002][phishing attacks]], fraud and brand impersonation.
+
+It finds lookalike domains using:
+
+- A variety of highly effective domain fuzzing algorithms
+- Unicode domain names (IDN)
+- Additional domain permutations using dictionary files
+- Rogue MX host detection (intercepting misdirected e-mails)
+- GeoIP location

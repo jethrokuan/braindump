@@ -3,6 +3,6 @@
 :END:
 #+title: Lateral Phishing
 
-Lateral phishing is defined as an attack where an adversary uses a compromised
+Lateral phishing is defined as a [[id:89cbc3ae-e147-43b0-af7c-59500450a002][phishing attack]] where an adversary uses a compromised
 enterprise account to send phishing emails
 [cite:@hoDetectingCharacterizingLateral2019].
