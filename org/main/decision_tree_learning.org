@@ -13,4 +13,3 @@ It is most appropriate when:
 3. Disjunctive descriptions may be required
 4. The training data may contain errors
 5. The training data may contain missing attribute values
-
