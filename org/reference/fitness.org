@@ -40,7 +40,7 @@ instances of back pain and tightness.
 :END:
 
 Your current posture is the result of your body's adaptations to the demands you
-place on it (the SAID principle). Your body builds strength and flexibility
+place on it ([[id:4151d751-762b-4c4c-b457-cec74a475210][the SAID principle]]). Your body builds strength and flexibility
 where demand is placed on it, and loses strength and flexibility when no
 stressors are applied.
 

@@ -1,0 +1,84 @@
+:PROPERTIES:
+:ID:       a26f74cb-ba6c-4924-94f9-3585cda83da3
+:END:
+#+title: Daniels' Running Formula
+
+This is an instructional book on [[id:d1474eff-9e13-4eff-a792-1855a6ca322f][running]], written by running coach Jack Daniels.
+
+* Ingredients to Success
+
+Daniels argues that the following are the ingredients to successful running, in the following order of importance:
+
+- Inherent Ability :: The how well the body is biomechanically constructed for running
+- Intrinsic Motivation :: Why, or whether the runner wants to run
+- Opportunity :: Financial capabilities to travel to run etc.
+- Direction :: whether you have guidance in running training
+
+* How to Train
+
+Daniels argues that there is no best training program. Each individual runner is
+unique and will have different responses to the stress imposed on a runner ([[id:4151d751-762b-4c4c-b457-cec74a475210][SAID
+Principle]]). He says that it is paramount to maintain a stress table, to see how
+various factors of life such as sleep affect stress and the quality of runs.
+
+In addition, Daniels breaks down a training session into four variables:
+
+1. Workload: the total distance run (e.g. 5km)
+2. Intensity Factor: the cadence of the run (e.g. 3:40 per kilometer)
+3. Recovery: the amount of rest between each kilometer
+4. Frequency: the amount of times the training session is conducted per week
+
+Daniels' recommendation is to change only one variable at a time (e.g. increasing the workload, or the intensity factor).
+
+* Optimal Running
+
+Daniels measured the stride rate of Olympic Athletes, and found that these
+runners have an average stride rate of above 180 per minute. For short distance
+runs (like in the 800m races), the average stride rate was over 200 per minute.
+
+The recommended minimum stride rate is 180 per minute. Maintaining a high stride
+rate reduces the landing shock associated with running. The higher the stride
+rate, the lower the air time, and the lower the impact on landing.
+
+* Breathing
+
+Daniels recommends the 2-2 rhythm: taking a breath in and out every 2 steps. One can use a 3-3 breathing rhythm on easy long runs as a gauge of not working too hard.
+
+* Running Economy
+
+To measure running economy, one can measure the energy expended while running aerobically at sub-max speeds.
+
+To improve running, one can work towards improving the many variables that contribute to running economy, such as increasing their VO2 max or the running economy
+
+* Training Run Profiles
+
+** Easy Runs
+
+Easy runs are at about 65% to 78% of maximum heart rate. The goal of the easy run is to:
+
+- build a base resistance to injury
+- developing the heart muscle: the maximum force of each stroke of the heart is reached when the heart rate is about 60% of the maximum. As you run faster, the heart rate and amount of blood pumped with each heartbeat (stroke volume) increases, but stroke volume increases minimally
+- increase in vascularization and development of characteristics of the muscles involved in running
+
+Easy runs should be a minimum of 30 minutes, and a maximum of 150 minutes.
+
+** Long Runs
+
+Long runs are conducted at easy run pace, but should be  no more than 30% of the weekly mileage for runners who have less than 40 miles per week. We want to maintain weekly mileage for 4 weeks before increasing it.
+
+** Threshold Running
+
+Threshold runs should be comfortably hard, but manageable for a fairly long time. You should be able to race at T pace for 60 minutes, or even for a half marathon. The goal of the T run is to:
+
+- improve the ability to clear blood lactate and keep it at a manageable level
+
+T runs are about 88 to 90% of the maximum heart rate. There are two primary types of T-pace workouts. The tempo run, which is a steady run lasting about 20 minutes, and cruise intervals, which are a series of runs with a short break in between. Steady runs build confidence for keeping a demanding pace, while cruise intervals subject the body to a higher desired threshold intensity.
+
+** Interval Training
+
+The goal of interval training is to improve the body's aerobic power. It takes about 90 to 120 seconds to build up VO2 max, from complete recovery, so a good amount of time to spend running at I pace is 3 to 5 minutes.
+
+
+** Repetition Training
+
+Repetition training improves anaerobic power, speed and economy of running. The runs are at fairly fast speeds, and should accumulate no more than 5 miles and 5% of the weekly mileage.
