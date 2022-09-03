@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       c178794c-78d1-459d-9725-15f2f6cd970a
-:ROAM_REFS: [cite:@ZettelkastenMethodLessWrong]
-:END:
-#+title: The Zettelkasten Method
-

@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       4d01a82e-894b-421b-930d-04e1a0c83f75
-:END:
-#+hugo_slug: support_vector_machines
-#+title: Support Vector Machines

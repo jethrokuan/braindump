@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       242b8d43-d61d-4d41-b193-db903e181291
-:END:
-#+hugo_slug: business
-#+title: Business

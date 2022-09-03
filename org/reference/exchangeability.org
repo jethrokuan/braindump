@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       8e42b567-cb26-438c-b7fe-18a2c79b1c0c
-:END:
-#+title: Exchangeability
-
-A set of parameters $\theta = (\theta_{1}, \theta_{2}, \dots, \theta_{k})$ is exchangeable if the distribution of $\theta$ is unchanged when the parameter components are permuted. One's prior belief about $\theta_{j}$ will be the same as one's prior beliefs of $\theta_{k}$.

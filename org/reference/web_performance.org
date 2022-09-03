@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       1328387c-ca86-438e-8957-7ab03c88893c
-:END:
-#+title: Web Performance
-
-- tags :: [[id:d5337a2c-871b-4761-b625-0f304fb46def][Web Development]]
-
-* Resources
-- [[https://github.com/thedaviddias/Front-End-Performance-Checklist][thedaviddias/Front-End-Performance-Checklist]]

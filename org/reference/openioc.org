@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       e8ffac3d-361d-41a3-9c0a-5395f2f89d3b
-:END:
-#+title: OpenIoC
-
-OpenIoC is a format and decentralized framework for organizing information about
-an attacker's activity, malware, and other indicators of compromise.

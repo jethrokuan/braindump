@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       304acac6-2f81-4786-a6f1-8e9f4727bbdb
-:ROAM_REFS: https://www.misp-project.org/
-:END:
-#+title: MISP
-
-MISP is an open-source platform for creating and sharing [[id:e33d50e1-cbac-4f84-b942-0439de3b41aa][cyber threat
-intelligence]]. It features its own threat-intelligence format, and also supports
-exporting to standard formats such as xml, or [[id:c6471d5d-59f8-44de-ae9a-2755acc7d171][STIX]].

@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       d5de28a7-6858-42e9-b54f-0d0b13eba5dc
-:END:
-#+title: Three-pass Technique

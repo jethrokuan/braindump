@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       6ae9a254-5d85-4497-b80a-f98e54fd9d4d
-:END:
-#+hugo_slug: k_means
-#+title: K-means

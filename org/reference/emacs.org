@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       92f58861-2e04-43c9-8246-7cb4f4aaae66
-:END:
-#+title: Emacs
-
-Much of Emacs is written in [[id:6102ba8c-baa2-4880-8cd9-699de2b25f1d][Emacs Lisp]].
-
-* Iconic Blog Posts
-- [[https://sites.google.com/site/steveyegge2/tour-de-babel][tour-de-babel - steveyegge2]]

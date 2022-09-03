@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       0387821e-6b2c-4b6b-901a-9e1b0c4d98d3
-:ROAM_REFS: https://www.pulumi.com/
-:END:
-#+title: Pulumi
-
-
-Pulumi is like Terraform, but uses a real programming language for declaring infrastructure.

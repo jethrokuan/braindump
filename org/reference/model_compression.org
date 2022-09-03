@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       b96c5fa6-8300-479c-911b-3de4c397b1d5
-:END:
-#+title: Model Compression
-
-- tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]]

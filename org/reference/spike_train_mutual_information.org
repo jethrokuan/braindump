@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       7c4ae029-b788-418a-850f-76f8d5caf91b
-:END:
-#+title: Spike Train Mutual Information
-
-Would be nice to compute the mutual information between multi-neuronal spike
-trains in [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]]. Perhaps we can learn some low-level spike
-representation, and relate this somehow to [[id:1e986fb8-e87d-45f6-8f6f-446992d493d0][Information Bottleneck in Deep Neural
-Networks]].

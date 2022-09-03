@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       a268f669-98cc-4faf-9559-cc35973362eb
-:END:
-#+title: LaTeX
-
-* Useful Tools
-- [[https://mathpix.com/][Mathpix]] :: extracts LaTeX from PDFs
-- [[https://github.com/HarisIqbal88/PlotNeuralNet][HarisIqbal88/PlotNeuralNet]] :: plotting neural networks

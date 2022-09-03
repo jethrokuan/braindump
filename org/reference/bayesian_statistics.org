@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       7f0fcd68-3fc2-4936-929c-51ef11ffe862
-:END:
-#+title: Bayesian Statistics

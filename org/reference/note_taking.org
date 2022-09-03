@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       05a63abc-36d6-4a04-8693-bd1bfd5c46c8
-:END:
-#+title: Note-taking

@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       688d9fa9-0b74-4477-95e2-e0dae890cf9a
-:END:
-#+title: Restricted Boltzmann Machines

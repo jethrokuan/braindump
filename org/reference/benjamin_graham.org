@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       f87d978f-2ecf-44ef-acee-92a07ec8720f
-:END:
-#+title: Benjamin Graham

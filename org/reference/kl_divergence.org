@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       3cf8b996-d512-4791-8db1-9a0f8de928ef
-:END:
-#+title: Kl Divergence

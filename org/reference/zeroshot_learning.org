@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       fceda897-3587-4a80-8059-1f58bb240778
-:END:
-#+hugo_slug: zeroshot_learning
-#+title: Zero shot Learning
-
-Zero shot learning refers to recognizing a concept without having explicitly
-seen any examples of it. 

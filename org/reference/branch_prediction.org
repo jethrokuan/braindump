@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       4d9f50a9-3690-43c6-928e-3c414cd04553
-:END:
-#+title: Branch Prediction
-
-- tags :: [[id:e5f08144-5c0d-4a74-a10a-34a37b89b49c][Operating Systems]], [[id:a5dfff84-6468-4b04-bb55-bbde427a686f][Linux]]
-
-* TODO https://comparch.net/2013/06/30/why-tage-is-the-best/
-- https://github.com/sjdesai16/tage

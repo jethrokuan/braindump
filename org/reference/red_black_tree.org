@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       e5258b28-7243-4afd-a1a4-4d8cfefc6e31
-:END:
-#+hugo_slug: red_black_tree
-#+title: Red-Black Tree

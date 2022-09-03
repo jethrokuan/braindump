@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       cea56b27-54fa-4d40-8820-02ec141b280f
-:END:
-#+title: Version Control

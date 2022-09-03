@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       1be857e0-0197-44d1-853a-e0e5b74d1b7b
-:END:
-#+title: Neural Network Optimizer
-
-- tags :: [[id:fb39fedd-bece-4d0c-998d-e57d7a712408][Machine Learning Algorithms]]

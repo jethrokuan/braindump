@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       da6bc219-1cd9-4b33-a9f0-b4877d639a20
-:END:
-#+title: Latent Dirichlet Allocation

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       60a9d2b9-7cf5-4414-a545-cdcfdbc332b7
-:END:
-#+title: Awk
-
-* Links
-[[http://sparky.rice.edu/~hartigan/awk.html]]

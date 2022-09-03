@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       dd188129-5740-4141-a717-82796e10863b
-:END:
-#+title: Book: Mastering The Market Cycle
-#+filetags: :books:
-
-- author :: Howard Marks
-- links :: [[https://www.goodreads.com/book/show/37570460-mastering-the-market-cycle?ac=1&from_search=true&qid=5Cw5UGgdei&rank=1][goodreads]]

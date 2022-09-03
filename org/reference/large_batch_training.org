@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       1c9a7af1-fe4f-49b7-a19b-961bd125cdb8
-:END:
-#+title: Large Batch Training

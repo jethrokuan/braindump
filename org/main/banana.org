@@ -1,0 +1,8 @@
+:PROPERTIES:
+:ID:       f160e036-5c02-488c-b3fc-9fc92b007c6f
+:END:
+#+title: banana
+#+filetags: :draft:
+Dont we all love bananas?
+
+bananas are delicious

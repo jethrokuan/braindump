@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       8a78cb4c-8c24-48b1-9e9d-c5e743713733
-:END:
-#+title: Change of Variables Theorem

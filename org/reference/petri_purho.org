@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       7640cf0f-9611-4093-93cc-62b69d840271
-:END:
-#+hugo_slug: petri_purho
-#+title: Petri Purho

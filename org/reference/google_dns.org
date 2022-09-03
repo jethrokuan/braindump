@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       84f3c382-199b-44aa-8105-345df4088213
-:END:
-#+title: Google DNS
-
-Set the DHCP server to  addresses only, and value to =8.8.8.8,8.8.4.4=.

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       563dcf37-472a-4203-b037-5a1635084ae9
-:END:
-#+title: Productivity
-
-- [[id:6216e0a9-f46a-4bb7-9d8a-a463c7d5e86e][PARA Method]]
-- [[id:c178794c-78d1-459d-9725-15f2f6cd970a][Zettelkasten]]

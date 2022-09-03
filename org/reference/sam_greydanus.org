@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       33de8ffa-d5f8-4586-820c-4aa3aa0d5230
-:END:
-#+hugo_slug: sam_greydanus
-#+title: Sam Greydanus

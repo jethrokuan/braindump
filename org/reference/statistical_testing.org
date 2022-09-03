@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       c05a1fd7-78b1-44f1-b250-ece91604546a
-:END:
-#+title: Statistical Testing

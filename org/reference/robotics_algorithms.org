@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       6a3c8286-0448-49c9-85bd-10e62259e5fc
-:END:
-#+title: Robotics Algorithms
-
-* Resources
-- [[https://github.com/AtsushiSakai/PythonRobotics][AtsushiSakai/PythonRobotics]]

@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       68feccfb-7c55-486d-bfc5-f5b5244cad47
-:END:
-#+title: Org-Mode
-
-- Can add headline with numbers with ~(org-num-mode)~
-- ~C-c C-x -~ runs ~org-timer-item~, which is useful for taking notes.

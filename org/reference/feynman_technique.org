@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       0804353f-55ba-4e38-bd07-337699b5871d
-:END:
-#+title: Feynman Technique
-
-- tags :: [[id:915ee121-8a13-46dd-9005-73eba3f730a2][Richard Feynman]]

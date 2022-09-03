@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       be2cb275-12d3-44e8-8d6e-c711561740ee
-:END:
-#+title: Shell

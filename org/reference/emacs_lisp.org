@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       6102ba8c-baa2-4880-8cd9-699de2b25f1d
-:END:
-#+title: Emacs Lisp
-
-In preparation for submission to MELPA, one should run [[https://github.com/purcell/package-lint][package-lint]] on
-the code.
-
-- [[https://github.com/chrisdone/elisp-guide][GitHub - chrisdone/elisp-guide]]

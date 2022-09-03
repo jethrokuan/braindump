@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       ebc9efc8-2675-48b6-b296-033b87eb64ea
-:END:
-#+title: Lsof
-
-* Links
-[[https://medium.com/@copyconstruct/lsof-f2b224eee7b5][lsof - Cindy Sridharan - Medium]]

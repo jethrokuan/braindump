@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       e7fc725f-dc00-4f2c-9462-e76a78dafe88
-:END:
-#+hugo_slug: deep_boltzmann_machines
-#+title: Deep Boltzmann Machines

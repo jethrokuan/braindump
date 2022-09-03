@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       e1d57bed-9909-4fe2-a0bb-cd4106280285
-:END:
-#+title: Hidden Markov Model

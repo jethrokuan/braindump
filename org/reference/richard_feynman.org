@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       915ee121-8a13-46dd-9005-73eba3f730a2
-:END:
-#+hugo_slug: richard_feynman
-#+title: Richard Feynman

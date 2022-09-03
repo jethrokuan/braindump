@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       38fb9783-1202-416a-bc59-4f0df0e1e633
-:END:
-#+hugo_slug: game_design
-#+title: Game Design

@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       869867af-c30b-405f-8e12-7cecfc07898f
-:END:
-#+title: Local Registration

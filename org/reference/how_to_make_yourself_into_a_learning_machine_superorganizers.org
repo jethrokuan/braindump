@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       7c59bdd5-d4a4-404d-9008-faf743eeefba
-:ROAM_REFS: https://superorganizers.substack.com/p/how-to-build-a-learning-machine
-:END:
-#+title: How to Make Yourself Into a Learning Machine - Superorganizers

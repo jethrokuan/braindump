@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       3bf2c505-8e40-432d-81c6-1145379a8c34
-:END:
-#+title: Art
-
-* Resources
-- [[https://artres.xyz/][Art Resources and Tutorials]]
-- [[https://drawabox.com/][Drawabox]]

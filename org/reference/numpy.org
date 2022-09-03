@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       5e19170b-e156-488a-89c3-d7c7764e033e
-:END:
-#+title: Numpy
-
-- tags :: [[id:ce4150a8-2082-4f49-ad40-aac2943dfe07][Data Science]]
-
-* Resources
-- [[https://www.labri.fr/perso/nrougier/from-python-to-numpy/][From Python to Numpy]]

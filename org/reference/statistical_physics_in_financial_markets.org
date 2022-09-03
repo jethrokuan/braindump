@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       c1dfbbdb-9d2b-42bc-9457-778c86b28d0b
-:END:
-#+title: Statistical Mechanics in Financial Markets

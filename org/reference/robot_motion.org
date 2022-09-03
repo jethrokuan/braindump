@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       72afb7ef-945a-4213-a3aa-7bb34ef6d62e
-:END:
-#+title: Robot Motion
-
-Probabilistic robotics generalizes kinematics equations to the fact
-that the outcome of a control is uncertain, due to control noise or
-exogenous effects. The outcome of a control is described as a
-posterior probability.

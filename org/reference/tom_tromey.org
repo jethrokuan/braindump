@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       18c94073-e2b8-455b-84cc-ea96bf5df0b0
-:END:
-#+hugo_slug: tom_tromey
-#+title: Tom Tromey

@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       b85483b8-9e57-4b6d-babf-5013f99119a0
-:END:
-#+title: Fast Neural Network Training

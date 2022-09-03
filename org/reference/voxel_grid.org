@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       07d3d627-b04c-4a74-97cf-1bcd0b8afdce
-:END:
-#+hugo_slug: voxel_grid
-#+title: Voxel Grid

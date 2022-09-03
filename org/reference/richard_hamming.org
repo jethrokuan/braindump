@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       b3b67b6b-d063-46e5-85b4-a06ee5e65404
-:END:
-#+hugo_slug: richard_hamming
-#+title: Richard Hamming

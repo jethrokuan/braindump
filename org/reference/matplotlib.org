@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       d31643ca-71e3-442a-8b39-f6cd77bddaa7
-:END:
-#+title: Matplotlib

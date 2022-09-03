@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       3e6c472d-78ec-48e4-8d31-4262ef62c64d
-:END:
-#+title: Travel
-
-* Useful Links
-- [[https://www.seat61.com/][The Man in Seat Sixty-One - the train travel guide...]]

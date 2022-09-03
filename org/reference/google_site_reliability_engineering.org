@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       c7edce30-d780-49f5-bc8a-fa9de993b1cc
-:ROAM_REFS: https://landing.google.com/sre/books/
-:END:
-#+title: Google - Site Reliability Engineering
-
-
-- tags :: [[id:7fc3c0ad-1b12-46b3-a253-8692034d0601][Site Reliability]]

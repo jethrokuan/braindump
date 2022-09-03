@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       44103051-bbf6-4780-962b-f23f7f1ead90
-:ROAM_ALIASES: ICP
-:END:
-#+title: Interactive Closest Point

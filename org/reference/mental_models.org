@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       8ef1961b-a71d-495e-b077-fe7dba9d5d63
-:END:
-#+title: Mental Models
-
-* To Refile 
-** TODO [[https://fs.blog/2020/02/mental-models-in-space/][An Astronaut's Guide to Mental Models]]

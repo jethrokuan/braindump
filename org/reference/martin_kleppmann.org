@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       225d6194-03e3-4c6a-bea4-3877eaa34853
-:END:
-#+title: Martin Kleppmann

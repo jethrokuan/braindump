@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       d5337a2c-871b-4761-b625-0f304fb46def
-:END:
-#+title: Web Development
-
-* Tools
-- [[https://jakearchibald.github.io/svgomg/][SVGOMG - SVGO's Missing GUI]]
-- [[https://uptimerobot.com][Uptime Robot]]

@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       a3268b6d-203b-4be6-a4b6-de92585eba3d
-:END:
-#+title: Plain Text Is Not Enough
-
-Having lived within Emacs for a while, using [[https://github.com/org-roam/org-roam/][Org-roam]], I'm starting to think
-that building a memex entirely supported by the plain-text format is impossible.
-The internet is full of multimedia content, and we need a reliable way to refer
-and annotate this content, all with plain-text.

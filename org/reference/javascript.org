@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       36cfa399-66bc-437e-9d05-06c04be4caa6
-:END:
-#+title: JavaScript
-
-JavaScript is an interpreted programming language, originally designed
-for the [[id:d5337a2c-871b-4761-b625-0f304fb46def][web]]. 

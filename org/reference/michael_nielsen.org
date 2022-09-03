@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       3652626a-b6f0-41e9-9e12-ea6e028edc93
-:END:
-#+hugo_slug: michael_nielsen
-#+title: Michael Nielsen

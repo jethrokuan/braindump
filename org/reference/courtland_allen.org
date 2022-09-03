@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       a49e74c9-1a2e-4706-88d6-2fc646401c96
-:END:
-#+hugo_slug: courtland_allen
-#+title: Courtland Allen

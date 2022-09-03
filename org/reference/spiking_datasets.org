@@ -1,9 +1,0 @@
-:PROPERTIES:
-:ID:       a392ab66-9130-418d-b2ab-310ff80e00b8
-:END:
-#+title: Spiking Datasets
-
-Datasets for evaluating [[id:e013e4ea-4fd4-4a39-b159-76d1849190f9][Spiking Neural Networks]].
-
-- [[https://compneuro.net/][Spiking Heidelberg Digits (SHD) dataset and the Spiking Speech Command (SSC) dataset]]
-- [[https://www.garrickorchard.com/datasets][N-Caltech101, N-MNIST and Characters]]

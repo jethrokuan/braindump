@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       7a6cad9f-0564-4d4c-96bd-e6b40c790705
-:ROAM_REFS: https://malleable.systems/blog/2020/04/01/the-most-successful-malleable-system-in-history/
-:END:
-#+title: The most successful malleable system in history | Malleable Systems Collective
-
-
-[[id:92f58861-2e04-43c9-8246-7cb4f4aaae66][Emacs]] as a [[https://malleable.systems/mission/][malleable system]].

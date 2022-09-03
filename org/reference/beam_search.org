@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       2e7194d1-b67f-4656-a2a9-d9c0327d7177
-:END:
-#+title: Beam Search

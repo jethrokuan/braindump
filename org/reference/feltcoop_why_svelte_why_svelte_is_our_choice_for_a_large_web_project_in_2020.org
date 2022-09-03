@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       a6ee34db-92dc-4a0b-b222-bcf9796dcb6e
-:ROAM_REFS: https://github.com/feltcoop/why-svelte
-:END:
-#+title: Why Svelte is our choice for a large web project in 2020
-
-- source :: https://github.com/feltcoop/why-svelte
-- tag :: [[id:d5337a2c-871b-4761-b625-0f304fb46def][Web Development]], [[id:9bb4f873-24b3-42bb-9447-42772bc1c526][Svelte]]

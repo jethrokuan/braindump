@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       03759a94-7cea-456a-b14d-312776256bd8
-:END:
-#+title: Leslie Lamport

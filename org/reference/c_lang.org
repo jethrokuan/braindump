@@ -1,5 +1,0 @@
-:PROPERTIES:
-:ID:       08aab063-2472-457a-8c11-6acd19ae29d2
-:END:
-#+title: The C Language
-#+filetags: :prog_lang:

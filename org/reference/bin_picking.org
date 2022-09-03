@@ -1,4 +1,0 @@
-:PROPERTIES:
-:ID:       d182d7e9-d380-4a11-a024-6357bea704dd
-:END:
-#+title: Bin Picking

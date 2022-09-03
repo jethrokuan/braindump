@@ -1,7 +1,0 @@
-:PROPERTIES:
-:ID:       4be49603-2830-4bac-8e3f-92ef170b80d0
-:ROAM_REFS: https://www.khanacademy.org/partner-content/pixar/storytelling
-:END:
-#+title: The art of storytelling | Pixar in a Box | Partner content | Khan Academy
-
-- tags :: [[id:c7864eb5-4769-423f-a871-ded8ce014256][Storytelling]]

@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       ecf86077-01ff-424c-b5c2-6711475f6eef
-:END:
-#+hugo_slug: statistical_distributions
-#+title: Statistical Distributions
-
-* Overview of Distributions
-- [[http://www.math.wm.edu/~leemis/chart/UDR/UDR.html][Univariate Distribution Relationship Chart]]

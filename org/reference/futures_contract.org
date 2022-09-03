@@ -1,8 +1,0 @@
-:PROPERTIES:
-:ID:       46aac18b-5f53-43fb-a7eb-30b7a642bfe5
-:END:
-#+title: Futures Contract
-
-A futures contract involves the delivery of an asset at a fixed time in the
-future (maturity) at a fixed price. They are similar to [[id:f032febc-7ce2-46b2-b9e7-a8398f7db689][forward contracts]], but
-futures are standardized and traded on exchanges.
