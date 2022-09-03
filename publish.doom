@@ -1,0 +1,14 @@
+#!/usr/bin/env doomscript
+
+(defcli! export-notes (&args files)
+  (require 'doom-start)
+  (require 'find-lisp)
+  (progn
+    (find-file (car files))
+    (setq org-hugo-base-dir "../..")
+    (let ((org-id-extra-files (find-lisp-find-files org-roam-directory "\.org$")))
+      (org-hugo-export-wim-to-md))
+      ))
+
+(run! "export-notes" (cdr (member "--" argv)))
+

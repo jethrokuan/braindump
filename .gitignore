@@ -13,3 +13,4 @@ org/private/
 /build.ninja
 /org/daily/
 **/.DS_Store
+*.lock

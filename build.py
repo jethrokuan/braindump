@@ -1,14 +1,18 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 import glob
 from pathlib import Path
 
-files = glob.glob("org/*.org")
+files = glob.glob("org/**/*.org")
+
+IS_DOOM_EMACS = True
+EMACS_COMMAND = "emacs --batch -l ~/.emacs.d/init.el -l publish.el --eval \"(jethro/publish \"$in\")\""
+DOOM_EMACS_COMMAND = "~/.emacs.d/bin/doomscript publish.doom $in"
 
 with open('build.ninja', 'w') as ninja_file:
-    ninja_file.write("""
+    ninja_file.write(f"""
 rule org2md
-  command = emacs --batch -l ~/.emacs.d/init.el -l publish.el --eval \"(jethro/publish \\"$in\\")"
+  command = {DOOM_EMACS_COMMAND if IS_DOOM_EMACS else EMACS_COMMAND}
   description = org2md $in
 """)
     
