@@ -1,6 +1,0 @@
-:PROPERTIES:
-:ID:       fe03a945-25ab-44d0-a51b-fa9bbd859329
-:ROAM_REFS: https://dropbox.tech/infrastructure/-testing-our-new-sync-engine
-:END:
-#+title: Testing sync at Dropbox - Dropbox
-

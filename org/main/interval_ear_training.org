@@ -1,0 +1,19 @@
+:PROPERTIES:
+:ID:       18a9e4a2-8da1-4fd1-80f9-9f0213bb9573
+:END:
+#+title: Interval Ear Training
+
+Interval ear training involves using the ear to identify musical intervals. To solidify understanding
+
+- Minor 2nd :: creepy, suspenseful
+- Major 2nd :: Happy Birthday
+- Minor 3rd :: first two notes of minor pentantonic scale
+- Major 3rd :: simpsons theme song
+- Perfect 4th :: Auld Lang Syne/Amazing Grace
+- b5 :: ?
+- Perfect 5th :: twinkle twinkle little star
+- Minor 6th :: Halloween (John Carpenter)
+- Major 6th :: Jingle Bells
+- Minor 7th :: Can't stop (red hot chilli peppers)
+- Major 7th :: 1st/3rd note on somewhere over the rainbow
+- Octave :: 1st/2nd note on somewhere over the rainbow

@@ -1,0 +1,17 @@
+:PROPERTIES:
+:ID:       8c503991-0b87-4b1e-8a98-1b2bf19236f4
+:ROAM_REFS: https://numpy.org/doc/stable/user/basics.indexing.html
+:END:
+#+title: Basic Indexing vs Advanced Indexing in Numpy
+
+A key difference to take note of for indexing in [[id:5e19170b-e156-488a-89c3-d7c7764e033e][Numpy]] is that basic indexing
+always produces a view, while advanced indexing produces a copy of the data.
+Hence, advanced indexing can slow, and where basic indexing is sufficient it
+should be used instead.
+
+Basic indexing is triggered when the selection object is the standard ~x[obj]~
+syntax, where ~obj~ is a tuple. When ~obj~ is not a tuple (e.g. an array), then
+advanced selection is triggered.
+
+- Basic indexing :: ~x[1:2]~
+- Advanced indexing :: ~x[[1, 2]]~

@@ -1,0 +1,10 @@
+:PROPERTIES:
+:ID:       aa022a52-540a-4a38-8313-48aa3ef2f9e6
+:END:
+#+title: Ear Training
+#+filetags: music
+
+Ear training is to train the ear to be able to identify pitches, melodies,
+chords, intervals, rhythms and other elements of music with their ear.
+
+To train for relative pitch, one can do [[id:18a9e4a2-8da1-4fd1-80f9-9f0213bb9573][interval ear training]].
